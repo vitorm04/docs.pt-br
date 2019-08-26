@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378160"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968554"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
 <a name="top"></a> O retrocesso ocorre quando um padrão de expressão regular contém [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) opcionais ou [constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) e o mecanismo de expressões regulares retorna a um estado salvo anterior para retomar sua pesquisa por uma correspondência. O retrocesso é indispensável para o poder das expressões regulares, ele permite que as expressões sejam poderosas e flexíveis e correspondam a padrões muito complexos. No entanto, todo esse poder tem um custo. O retrocesso muitas vezes é o fator individual que mais afeta o desempenho do mecanismo de expressões regulares. Felizmente, o desenvolvedor tem controle sobre o comportamento do mecanismo de expressões regulares e como ele usa o retrocesso. Este tópico explica como o retrocesso funciona e como ele pode ser controlado.  
   
 > [!NOTE]
->  Em geral, um mecanismo de NFA (Automação Finita Não Determinística), como o mecanismo de expressões regulares .NET, coloca a responsabilidade pela criação de expressões regulares eficientes e rápidas nas mãos do desenvolvedor.  
+> Em geral, um mecanismo de NFA (Automação Finita Não Determinística), como o mecanismo de expressões regulares .NET, coloca a responsabilidade pela criação de expressões regulares eficientes e rápidas nas mãos do desenvolvedor.  
   
  Esse tópico contém as seguintes seções:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66378160"
  Do .NET Framework 4.5 em diante, você pode definir um valor de tempo limite que representa o intervalo mais longo durante o qual o mecanismo de expressão regular pesquisará uma única correspondência antes de abandonar a tentativa e gerar uma exceção <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Você especifica o intervalo de tempo limite ao fornecer um valor de <xref:System.TimeSpan> para o construtor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> para instanciar expressões regulares. Além disso, cada método de correspondência de padrão estático tem uma sobrecarga com um parâmetro <xref:System.TimeSpan> que permite a você especificar um valor de tempo limite. Por padrão, o intervalo de tempo limite é definido para <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, o que significa que o mecanismo de expressões regulares nunca excede o tempo limite.  
   
 > [!IMPORTANT]
->  É recomendável sempre definir um intervalo de tempo limite se a sua expressão regular depende de retrocesso.  
+> É recomendável sempre definir um intervalo de tempo limite se a sua expressão regular depende de retrocesso.  
   
  Uma exceção <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> indica que o mecanismo de expressões regulares não pôde localizar uma correspondência dentro do intervalo de tempo limite especificado, mas não indica como a exceção foi gerada. O motivo poderia ser o retrocesso excessivo, mas também é possível que o intervalo de tempo limite tenha sido definido como um valor muito baixo considerando a carga do sistema no momento em que a exceção foi gerada. Ao tratar a exceção, você pode escolher entre abandonar as correspondências adicionais com a cadeia de caracteres de entrada ou aumentar o intervalo de tempo limite e repetir a operação de correspondência.  
   

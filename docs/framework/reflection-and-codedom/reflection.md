@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940031"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexão no .NET Framework
 As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) e [tipos de valor](../../csharp/language-reference/keywords/value-types.md). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
   
- O carregador [Common Language Runtime](../../../docs/standard/clr.md) gerencia os [domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
+ O carregador [Common Language Runtime](../../standard/clr.md) gerencia os [domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
   
  Os [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) contêm módulos, os módulos contêm tipos e tipos contêm membros. A reflexão fornece objetos que encapsulam assemblies, módulos e tipos. É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente. Você pode então invocar os métodos do tipo ou acessar suas propriedades e campos. Usos típicos da reflexão incluem o seguinte:  
   
@@ -71,7 +71,7 @@ As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Ty
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|  
 |[Reflexão e tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Explica como a reflexão trata os parâmetros de tipo e argumentos de tipo de tipos genéricos e métodos genéricos.|  

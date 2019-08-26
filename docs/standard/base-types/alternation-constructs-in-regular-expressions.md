@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968568"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 <a name="top"></a> Os constructos de alternância modificam uma expressão regular para permitir uma correspondência condicional ou do tipo um/ou outro. O .NET dá suporte a três constructos de alternância:  
@@ -80,7 +80,7 @@ ms.locfileid: "68331759"
  em que `(?=`*expression*`)` é um constructo de asserção de largura zero. (Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)). Como o mecanismo de expressões regulares interpreta *expression* como uma âncora (uma asserção de largura zero), *expression* deve ser uma asserção de largura zero (para obter mais informações, confira [Âncoras](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) ou uma subexpressão que também está contida em *Yes*. Caso contrário, o padrão *sim* não pode ser correspondido.  
   
 > [!NOTE]
->  Se *expression* for um grupo de captura nomeado ou numerado, o constructo de alternância é interpretado como um teste de captura. Para saber mais, confira a seção a seguir [Correspondência condicional com base em um grupo capturado válido](#Conditional_Group). Em outras palavras, o mecanismo de expressões regulares não tenta corresponder a subcadeia de caracteres capturada, mas em vez disso, testa a presença ou ausência do grupo.  
+> Se *expression* for um grupo de captura nomeado ou numerado, o constructo de alternância é interpretado como um teste de captura. Para saber mais, confira a seção a seguir [Correspondência condicional com base em um grupo capturado válido](#Conditional_Group). Em outras palavras, o mecanismo de expressões regulares não tenta corresponder a subcadeia de caracteres capturada, mas em vez disso, testa a presença ou ausência do grupo.  
   
  O exemplo a seguir é uma variação do exemplo que aparece na seção [E/Ou Correspondência de Padrões com &#124;](#Either_Or). Ele usa a correspondência condicional para determinar se os três primeiros caracteres após um limite de palavra são dois dígitos seguidos por um hífen. Se forem, ele tenta corresponder a um EIN (Número de Identificação de Empregador) dos EUA. Se não, ele tenta corresponder a um SSN (cadastro de pessoas físicas).  
   

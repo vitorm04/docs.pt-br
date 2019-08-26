@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952818"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -22,7 +22,7 @@ O .NET Framework pretende tornar os aplicativos mais acessíveis para os usuári
 
 ## <a name="accessibility-switches"></a>Opções de acessibilidade
 
-Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for direcionado ao .NET Framework 4.7 ou a uma versão anterior, mas estiver em execução no .NET Framework 4.7.1 ou posterior. Além disso, configure seu aplicativo para usar recursos herdados (e não aproveitar os recursos de acessibilidade) se ele for direcionado ao .NET Framework 4.7.1 ou posterior. Cada versão do .NET Framework que inclui recursos de acessibilidade tem uma opção de acessibilidade específica à versão, que você adiciona ao elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo. Estas são as opções compatíveis:
+Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for direcionado ao .NET Framework 4.7 ou a uma versão anterior, mas estiver em execução no .NET Framework 4.7.1 ou posterior. Além disso, configure seu aplicativo para usar recursos herdados (e não aproveitar os recursos de acessibilidade) se ele for direcionado ao .NET Framework 4.7.1 ou posterior. Cada versão do .NET Framework que inclui recursos de acessibilidade tem uma opção de acessibilidade específica à versão, que você adiciona ao elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](../configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo. Estas são as opções compatíveis:
 
 |Versão|Alternar|
 |---|---|
@@ -32,7 +32,7 @@ Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for d
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Aproveitando as vantagens das melhorias de acessibilidade
 
-As novas funcionalidades de acessibilidade são habilitadas por padrão para os aplicativos direcionados ao .NET Framework 4.7.1 ou posterior. Além disso, os aplicativos direcionados a uma versão anterior do .NET Framework, mas que estão em execução no .NET Framework 4.7.1 ou posterior, podem recusar os comportamentos de acessibilidade herdados (e, portanto, aproveitar as melhorias de acessibilidade) adicionando opções ao elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `false`. O seguinte exemplo mostra como aceitar as melhorias de acessibilidade introduzidas no .NET Framework 4.7.1:
+As novas funcionalidades de acessibilidade são habilitadas por padrão para os aplicativos direcionados ao .NET Framework 4.7.1 ou posterior. Além disso, os aplicativos direcionados a uma versão anterior do .NET Framework, mas que estão em execução no .NET Framework 4.7.1 ou posterior, podem recusar os comportamentos de acessibilidade herdados (e, portanto, aproveitar as melhorias de acessibilidade) adicionando opções ao elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](../configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `false`. O seguinte exemplo mostra como aceitar as melhorias de acessibilidade introduzidas no .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -41,7 +41,7 @@ As novas funcionalidades de acessibilidade são habilitadas por padrão para os 
 </runtime>
 ```
 
-Se você optar por aceitar os recursos de acessibilidade em uma versão posterior do .NET Framework, deverá também aceitar explicitamente os recursos de versões anteriores do .NET Framework. A configuração do aplicativo para aproveitar as melhorias de acessibilidade do .NET Framework 4.7.1 e 4.7.2 exige o seguinte elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+Se você optar por aceitar os recursos de acessibilidade em uma versão posterior do .NET Framework, deverá também aceitar explicitamente os recursos de versões anteriores do .NET Framework. A configuração do aplicativo para aproveitar as melhorias de acessibilidade do .NET Framework 4.7.1 e 4.7.2 exige o seguinte elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <runtime>
@@ -50,7 +50,7 @@ Se você optar por aceitar os recursos de acessibilidade em uma versão posterio
 </runtime>
 ```
 
-A configuração do aplicativo para aproveitar as melhorias de acessibilidade do .NET Framework 4.7.1, 4.7.2 e 4.8 exige o seguinte elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+A configuração do aplicativo para aproveitar as melhorias de acessibilidade do .NET Framework 4.7.1, 4.7.2 e 4.8 exige o seguinte elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
 
 ```xml
 <runtime>
@@ -61,7 +61,7 @@ A configuração do aplicativo para aproveitar as melhorias de acessibilidade do
 
 ### <a name="restoring-legacy-behavior"></a>Restaurando o comportamento herdado
 
-Os aplicativos direcionados a versões do .NET Framework a começar pela 4.7.1 podem desabilitar os recursos de acessibilidade adicionando opções ao elemento [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `true`. Por exemplo, a seguinte configuração recusa os recursos de acessibilidade introduzidos no .NET Framework 4.7.2:
+Os aplicativos direcionados a versões do .NET Framework a começar pela 4.7.1 podem desabilitar os recursos de acessibilidade adicionando opções ao elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](../configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo e definindo seu valor como `true`. Por exemplo, a seguinte configuração recusa os recursos de acessibilidade introduzidos no .NET Framework 4.7.2:
 
 ```xml
 <runtime>

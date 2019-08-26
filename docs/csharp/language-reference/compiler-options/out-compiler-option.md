@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593025"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602599"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opções do compilador C#)
 A opção **-out** especifica o nome do arquivo de saída.  
@@ -66,6 +66,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Assemblies Amigáveis](../../../standard/assembly/friend-assemblies.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

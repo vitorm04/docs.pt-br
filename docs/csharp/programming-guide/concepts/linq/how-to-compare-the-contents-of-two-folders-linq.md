@@ -2,12 +2,12 @@
 title: 'Como: Comparar o conteúdo de duas pastas (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924233"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Como: Comparar o conteúdo de duas pastas (LINQ) (C#)
 Este exemplo demonstra três modos de se comparar duas listagens de arquivo:  
@@ -19,7 +19,7 @@ Este exemplo demonstra três modos de se comparar duas listagens de arquivo:
 - Consultando a diferença de conjunto para recuperar os arquivos que estão em uma pasta, mas não na outra.  
   
     > [!NOTE]
-    >  As técnicas mostradas aqui podem ser adaptadas para comparar sequências de objetos de qualquer tipo.  
+    > As técnicas mostradas aqui podem ser adaptadas para comparar sequências de objetos de qualquer tipo.  
   
  A classe `FileComparer` mostrada aqui demonstra como usar uma classe de comparação personalizada junto com operadores de consulta padrão. A classe não se destina ao uso em cenários do mundo real. Ela apenas utiliza o nome e o comprimento em bytes de cada arquivo para determinar se o conteúdo de cada pasta é idêntico ou não. Em um cenário do mundo real, você deve modificar esse comparador para executar uma verificação mais rigorosa de igualdade.  
   
@@ -130,5 +130,5 @@ namespace QueryCompareTwoDirs
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

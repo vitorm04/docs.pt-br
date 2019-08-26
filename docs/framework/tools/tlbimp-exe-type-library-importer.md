@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859677"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937972"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -71,7 +71,7 @@ tlbimp tlbFile [options]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 > [!NOTE]
->  As opções de linha de comando para Tlbimp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Portanto, **/n** é equivalente a **/nologo** e **/ou:** *outfile.dll* é equivalente a **/out:** *outfile.dll*.  
+> As opções de linha de comando para Tlbimp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Portanto, **/n** é equivalente a **/nologo** e **/ou:** *outfile.dll* é equivalente a **/out:** *outfile.dll*.  
   
 ## <a name="remarks"></a>Comentários  
  Tlbimp.exe realiza conversões em uma biblioteca de tipos ao mesmo tempo. Não é possível usar a ferramenta para gerar informações de tipo para um subconjunto dos tipos definidos dentro de uma única biblioteca de tipos.  

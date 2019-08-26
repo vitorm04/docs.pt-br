@@ -11,15 +11,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 699ae27df2423638f38a22cc17dc83b828383394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711338"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606758"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (opções do compilador C#)
-Cria um link para um recurso do .NET Framework no arquivo de saída. O arquivo de recurso não é adicionado ao arquivo de saída. Isso é diferente da opção [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) que insere um arquivo de recurso no arquivo de saída.  
+Cria um link para um recurso do .NET Framework no arquivo de saída. O arquivo de recurso não é adicionado ao arquivo de saída. Isso é diferente da opção [-resource](./resource-compiler-option.md) que insere um arquivo de recurso no arquivo de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ Cria um link para um recurso do .NET Framework no arquivo de saída. O arquivo d
 ## <a name="remarks"></a>Comentários  
  Por padrão, os recursos vinculados são públicos no assembly quando são criados usando o compilador C#. Para tornar os recursos privados, especifique `private` como o modificador de acessibilidade. Não é permitido nenhum outro modificador diferente de `public` ou de `private`.  
   
- **-linkresource** requer uma das opções [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) diferentes de **-target:module**.  
+ **-linkresource** requer uma das opções [-target](./target-compiler-option.md) diferentes de **-target:module**.  
   
  Se `filename` for um arquivo de recurso do .NET Framework criado, por exemplo, por [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros no namespace <xref:System.Resources>. Para obter mais informações, consulte <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Para todos os outros recursos, use os métodos `GetManifestResource` na classe <xref:System.Reflection.Assembly> para acessar o recurso em tempo de execução.  
   
@@ -76,7 +76,7 @@ gacutil -i A.dll
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)
 - [Como trabalhar com assemblies e o cache de assembly global](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

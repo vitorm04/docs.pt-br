@@ -6,18 +6,18 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 960d30f4e484238e9e7c23741578650a8c3005c8
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649407"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987148"
 ---
 # <a name="how-to-create-windows-services"></a>Como: Criar serviços Windows
 Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
   
 > [!WARNING]
->  O modelo de projeto do serviço Windows não está disponível na edição Express do Visual Studio.  
+> O modelo de projeto do serviço Windows não está disponível na edição Express do Visual Studio.  
   
  Para criar um serviço funcional, você deve, no mínimo:  
   
@@ -32,14 +32,14 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
 1. Crie um projeto de **Serviço Windows**.  
   
     > [!NOTE]
-    >  Para obter instruções sobre como escrever um serviço sem usar o modelo, confira [Como: Escrever serviços de forma programática](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > Para obter instruções sobre como escrever um serviço sem usar o modelo, confira [Como: Escrever serviços de forma programática](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 2. Na janela **Propriedades**, configure a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para seu serviço.  
   
      ![Defina a propriedade ServiceName.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
-    >  O valor da propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> sempre deve corresponder ao nome registrado nas classes do instalador. Se você alterar essa propriedade, também deverá atualizar a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> das classes do instalador.  
+    > O valor da propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> sempre deve corresponder ao nome registrado nas classes do instalador. Se você alterar essa propriedade, também deverá atualizar a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> das classes do instalador.  
   
 3. Defina qualquer uma das propriedades a seguir para determinar como seu serviço funcionará.  
   
@@ -52,7 +52,7 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para gravar entradas informativas no log de eventos do aplicativo quando seu serviço executa uma ação; `false` para desabilitar essa funcionalidade. Para obter mais informações, confira [Como: Registrar em log informações sobre serviços](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Observação:**  Por padrão, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> é definido como `true`.|  
   
     > [!NOTE]
-    >  Quando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> forem definidos como `false`, o **Gerenciador de Controle de Serviço** desabilitará as opções de menu correspondentes para parar, pausar ou continuar o serviço.  
+    > Quando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> ou <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> forem definidos como `false`, o **Gerenciador de Controle de Serviço** desabilitará as opções de menu correspondentes para parar, pausar ou continuar o serviço.  
   
 4. Acesse o Editor de código e preencha o processamento que você deseja para os procedimentos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> e <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
@@ -63,7 +63,7 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
 7. Compile o projeto selecionando **Compilar Solução** no menu **Compilar**.  
   
     > [!NOTE]
-    >  Pressione F5 para executar seu projeto. Você não pode executar um projeto de serviço dessa maneira.  
+    > Pressione F5 para executar seu projeto. Você não pode executar um projeto de serviço dessa maneira.  
   
 8. Instale o serviço. Para obter mais informações, confira [Como: Instalar e desinstalar serviços](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   

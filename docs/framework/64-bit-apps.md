@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815952"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988393"
 ---
 # <a name="64-bit-applications"></a>Aplicativos de 64 bits
 Ao compilar um aplicativo, você pode especificar se ele deve ser executado em um sistema operacional Windows de 64 bits como um aplicativo nativo ou no WOW64 (Windows de 32 bits em Windows de 64 bits). O WOW64 é um ambiente de compatibilidade que permite que um aplicativo de 32 bits seja executado em um sistema de 64 bits. O WOW64 está incluído em todas as versões de 64 bits do sistema operacional Windows.  
@@ -24,7 +24,7 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
  O Visual Studio instala a versão de 32 bits do CLR em um computador x86, e a versão de 32 bits e a versão de 64 bits apropriada do CLR em um computador Windows de 64 bits. (Como o Visual Studio é um aplicativo de 32 bits, quando ele é instalado em um sistema de 64 bits, ele é executado no WOW64.)  
   
 > [!NOTE]
->  Em razão do projeto da emulação do x86 e do subsistema do WOW64 para a família de processadores Itanium, os aplicativos são restritos à execução em um processador. Esses fatores reduzem o desempenho e escalabilidade de aplicativos do .NET Framework de 32 bits executados em sistemas baseados em Itanium. É recomendável usar o .NET Framework 4, que inclui suporte nativo a sistemas baseados em Itanium de 64 bits, para aumento de desempenho e escalabilidade.  
+> Em razão do projeto da emulação do x86 e do subsistema do WOW64 para a família de processadores Itanium, os aplicativos são restritos à execução em um processador. Esses fatores reduzem o desempenho e escalabilidade de aplicativos do .NET Framework de 32 bits executados em sistemas baseados em Itanium. É recomendável usar o .NET Framework 4, que inclui suporte nativo a sistemas baseados em Itanium de 64 bits, para aumento de desempenho e escalabilidade.  
   
  Por padrão, ao executar um aplicativo gerenciado de 64 bits em um sistema operacional Windows de 64 bits, você pode criar um objeto que não ultrapasse 2 GB. No entanto, no .NET Framework 4.5, você pode aumentar esse limite.  Para saber mais, confira o [\<elemento gcAllowVeryLargeObjects>](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
@@ -56,8 +56,8 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
   
 |Compilador|Opção de compilador|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform (Opções de compilador do C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform (Opções de compilador do C#)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|Você pode criar aplicativos MSIL (Microsoft Intermediate Language) independentes de plataforma usando **/clr:safe**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> O Visual C++ inclui um compilador separado para cada sistema operacional de 64 bits. Para saber mais sobre como usar o Visual C++ para criar aplicativos nativos que são executados em um sistema operacional Windows de 64 bits, confira [Programação de 64 bits](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinando o Status de um Arquivo .exe ou .dll  

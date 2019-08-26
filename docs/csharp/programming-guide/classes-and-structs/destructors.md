@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584381"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924493"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
 Os finalizadores (que também são chamados de **destruidores**) são usados para executar qualquer limpeza final necessária, quando uma instância da classe está sendo coletada pelo coletor de lixo.  
@@ -56,7 +56,7 @@ protected override void Finalize()
  Isso significa que o método `Finalize` é chamado de forma recursiva para todas as instâncias da cadeia de herança, da mais derivada à menos derivada.  
   
 > [!NOTE]
->  Finalizadores vazios não devem ser usados. Quando uma classe contém um finalizador, uma entrada é criada na fila `Finalize`. Quando o finalizador é chamado, o coletor de lixo é invocado para processar a fila. Um finalizador vazio apenas resulta na perda de desempenho desnecessária.  
+> Finalizadores vazios não devem ser usados. Quando uma classe contém um finalizador, uma entrada é criada na fila `Finalize`. Quando o finalizador é chamado, o coletor de lixo é invocado para processar a fila. Um finalizador vazio apenas resulta na perda de desempenho desnecessária.  
   
  O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto. 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [Implementando um método dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)  
+- [Instrução using](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria três classes que compõem uma cadeia de herança. A classe `First` é a classe base, `Second` é derivado de `First` e `Third` é derivado de `Second`. Todas as três têm finalizadores. Em `Main`, uma instância da classe mais derivada é criada. Quando o programa for executado, observe que os finalizadores das três classes são chamados automaticamente e em ordem, do mais derivado para o menos derivado.  
@@ -90,6 +90,6 @@ Para obter mais informações, confira a seção [Destruidores](~/_csharplang/sp
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.IDisposable>
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Guia de Programação em C#](../index.md)
+- [Construtores](./constructors.md)
 - [Coleta de lixo](../../../standard/garbage-collection/index.md)

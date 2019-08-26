@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613844"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942368"
 ---
 # <a name="time-based-cache-policies"></a>Políticas de cache baseadas em tempo
 Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. Ao definir uma política de cache baseada em tempo, é possível usar a política baseada em tempo de <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou criar uma política baseada em tempo personalizada. Ao usar a política baseada em tempo padrão para os recursos obtidos com o uso do protocolo HTTP, o comportamento de cache exato é determinado pelos cabeçalhos incluídos na resposta armazenada em cache e pelos comportamentos especificados nas seções 13 e 14 do RFC 2616, disponível no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/). Para obter um exemplo de código que demonstra como definir a política baseada em tempo padrão para recursos HTTP, confira [Como: Definir uma política de cache baseada em tempo padrão para um aplicativo](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Para obter exemplos de código que demonstram como criar e usar políticas de cache, consulte [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -39,7 +39,7 @@ Uma política de cache baseada em tempo define a atualização das entradas arma
 - Data de sincronização do cache  
   
 > [!NOTE]
->  O uso da política de cache baseada em tempo padrão não deve ser confundido com a configuração de uma política de cache padrão para o aplicativo. A política baseada em tempo padrão é uma política específica que pode ser usada no nível da solicitação ou do aplicativo. A política de cache padrão do aplicativo é uma política (baseada na localização ou em tempo) que entra em vigor quando nenhuma política é definida em uma solicitação. Para obter detalhes sobre como definir uma política de cache padrão para o aplicativo, consulte <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
+> O uso da política de cache baseada em tempo padrão não deve ser confundido com a configuração de uma política de cache padrão para o aplicativo. A política baseada em tempo padrão é uma política específica que pode ser usada no nível da solicitação ou do aplicativo. A política de cache padrão do aplicativo é uma política (baseada na localização ou em tempo) que entra em vigor quando nenhuma política é definida em uma solicitação. Para obter detalhes sobre como definir uma política de cache padrão para o aplicativo, consulte <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
 ### <a name="maximum-age"></a>Idade Máxima  
  O critério de política de idade máxima especifica o tempo durante o qual uma cópia armazenada em cache de um recurso pode ser usada. Se a cópia armazenada em cache do recurso for mais antiga que o tempo especificado, o recurso deverá ser revalidado com sua verificação em relação ao conteúdo no servidor. Se a idade máxima permitir que o recurso seja usado depois que ele expirar, esse critério não será respeitado, a menos que um valor de desatualização máxima também seja especificado.  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333932"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606994"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (opções do compilador C#)
-A opção **-checked** especifica se uma instrução de aritmética de inteiros que resulta em um valor fora do intervalo do tipo de dados e que não está no escopo de uma palavra-chave [checked](../../../csharp/language-reference/keywords/checked.md) ou [unchecked](../../../csharp/language-reference/keywords/unchecked.md), causa uma exceção de tempo de execução.  
+A opção **-checked** especifica se uma instrução de aritmética de inteiros que resulta em um valor fora do intervalo do tipo de dados e que não está no escopo de uma palavra-chave [checked](../keywords/checked.md) ou [unchecked](../keywords/unchecked.md), causa uma exceção de tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,7 +29,7 @@ A opção **-checked** especifica se uma instrução de aritmética de inteiros 
   
  Se uma instrução de aritmética de inteiros que não está no escopo de uma palavra-chave `checked` ou `unchecked` resultar em um valor fora do intervalo do tipo de dados e **-checked+** (ou **-checked**) for usado na compilação, a instrução causará uma exceção no tempo de execução. Se **-checked-** for usado na compilação, a instrução não causará uma exceção em tempo de execução.  
   
- O valor padrão para essa opção é **-checked-**. A verificação de estouro é desabilitada.
+ O valor padrão para essa opção é **-checked-** . A verificação de estouro é desabilitada.
  
  Às vezes, as ferramentas automatizadas que são usadas para compilar grandes aplicativos definem -checked como +. Um cenário para uso de -checked- é substituir o padrão global da ferramenta especificando -checked-.
  
@@ -54,5 +54,5 @@ csc t2.cs -checked
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

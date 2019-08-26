@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30be9fc661ce05a664f9e901edef621d9de62e34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713438"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988189"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>Como: Controlar a ordem em uma consulta PLINQ
 Estes exemplos mostram como controlar a ordem em uma consulta PLINQ usando o método de extensão <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
 > [!WARNING]
->  Esses exemplos têm como objetivo principal demonstrar o uso, e talvez não executem tão rápido quanto a consulta LINQ to Objects sequencial equivalente.  
+> Esses exemplos têm como objetivo principal demonstrar o uso, e talvez não executem tão rápido quanto a consulta LINQ to Objects sequencial equivalente.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir preserva a ordem da sequência de origem. Às vezes, isso é necessário; por exemplo, alguns operadores de consulta exigem uma sequência de origem ordenada para produzir resultados corretos.  

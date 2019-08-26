@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946551"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -24,7 +24,7 @@ O marshaling de interoperabilidade opera em regras que determinam como os dados 
  Esta seção identifica as características comportamentais padrão do serviço de marshaling de interoperabilidade. Ela apresenta informações detalhadas sobre o marshaling de matrizes, tipos boolianos, tipos char, representantes, classes, objetos, cadeias de caracteres e estruturas.  
   
 > [!NOTE]
->  Não há suporte para o marshaling de tipos genéricos. Para obter mais informações, consulte [Interoperando com tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> Não há suporte para o marshaling de tipos genéricos. Para obter mais informações, consulte [Interoperando com tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Gerenciamento de memória com o marshaler de interoperabilidade  
  O marshaler de interoperabilidade sempre tenta liberar a memória alocada pelo código não gerenciado. Esse comportamento está em conformidade com as regras de gerenciamento da memória COM, mas é diferente das regras que regem o C++ nativo.  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 Neste exemplo, quando os dois representantes realizam marshal como <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, o resultado é um `int` e um ponteiro para um `int`. Como os tipos de delegado estão realizando marshal, `int` representa um ponteiro para um void (`void*`), que é o endereço do delegado na memória. Em outras palavras, esse resultado só ocorre em sistemas Windows de 32 bits, pois `int` representa o tamanho do ponteiro de função.
 
 > [!NOTE]
->  Uma referência ao ponteiro de função para um representante gerenciado mantido por um código não gerenciado não impede o Common Language Runtime de executar a coleta de lixo no objeto gerenciado.  
+> Uma referência ao ponteiro de função para um representante gerenciado mantido por um código não gerenciado não impede o Common Language Runtime de executar a coleta de lixo no objeto gerenciado.  
   
  Por exemplo, o código a seguir está incorreto porque a referência ao objeto `cb`, passado para o método `SetChangeHandler`, não mantém `cb` ativo além da vida útil do método `Test`. Depois que o objeto `cb` é coletado como lixo, o ponteiro de função passado para `SetChangeHandler` não é mais válido.  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  O tipo de valor `Rect` deve ser passado por referência porque a API não gerenciada está esperando que um ponteiro para um `RECT` seja passado para a função. O tipo de valor `Point` é passado por valor porque a API não gerenciada espera que `POINT` seja passado na pilha. Essa diferença sutil é muito importante. As referências são passadas para um código não gerenciado como ponteiros. Os valores são passados para um código não gerenciado na pilha.  
   
 > [!NOTE]
->  Quando um tipo formatado tem o marshaling realizado como uma estrutura, apenas os campos no tipo são acessíveis. Se o tipo tiver métodos, propriedades ou eventos, eles poderão ser acessados por meio do código não gerenciado.  
+> Quando um tipo formatado tem o marshaling realizado como uma estrutura, apenas os campos no tipo são acessíveis. Se o tipo tiver métodos, propriedades ou eventos, eles poderão ser acessados por meio do código não gerenciado.  
   
  As classes também podem ter o marshaling realizado para um código não gerenciado como estruturas C-style, desde que tenham um layout de membro fixo. As informações de layout de membro de uma classe também são fornecidas com o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. A principal diferença entre os tipos de valor com layout fixo e classes com layout fixo é a maneira na qual eles tem o marshaling realizado para um código não gerenciado. Os tipos de valor são passados por valor (na pilha) e, consequentemente, as alterações feitas nos membros do tipo pelo receptor não são vistas pelo chamador. Os tipos de referência são passados por referência (uma referência ao tipo é passada na pilha); consequentemente, todas as alterações feitas nos membros do tipo blittable de um tipo pelo receptor são vistas pelo chamador.  
   
 > [!NOTE]
->  Se um tipo de referência tiver membros de tipos não blittable, a conversão será necessária duas vezes: na primeira vez, em que um argumento é passado para o lado não gerenciado e, na segunda, após o retorno da chamada. Devido a essa sobrecarga agregada, os parâmetros de Entrada/Saída devem ser aplicados explicitamente a um argumento se o chamador deseja ver as alterações feitas pelo receptor.  
+> Se um tipo de referência tiver membros de tipos não blittable, a conversão será necessária duas vezes: na primeira vez, em que um argumento é passado para o lado não gerenciado e, na segunda, após o retorno da chamada. Devido a essa sobrecarga agregada, os parâmetros de Entrada/Saída devem ser aplicados explicitamente a um argumento se o chamador deseja ver as alterações feitas pelo receptor.  
   
  No exemplo a seguir, a classe `SystemTime` tem um layout de membro sequencial e pode ser passada para a função **GetSystemTime** da API do Windows.  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  As mesmas regras usadas para realizar marshaling de valores e de referências para chamadas de invocação de plataforma são usadas durante o marshaling por meio de interfaces COM. Por exemplo, quando uma instância do tipo de valor `Point` é passada do .NET Framework para o COM, o `Point` é passado por valor. Se o tipo de valor `Point` é passado por referência, um ponteiro para um `Point` é passado na pilha. O marshaler de interoperabilidade não dá suporte a níveis mais altos de indireção (**Ponto** \*\*) em qualquer direção.  
   
 > [!NOTE]
->  Estruturas que têm o valor de enumeração <xref:System.Runtime.InteropServices.LayoutKind> definido como **Explicit** não podem ser usadas na interoperabilidade COM porque a biblioteca de tipos exportada não pode expressar um layout explícito.  
+> Estruturas que têm o valor de enumeração <xref:System.Runtime.InteropServices.LayoutKind> definido como **Explicit** não podem ser usadas na interoperabilidade COM porque a biblioteca de tipos exportada não pode expressar um layout explícito.  
   
 ### <a name="system-value-types"></a>Tipos de valor do sistema  
  O namespace <xref:System> tem vários tipos de valor que representam o formato demarcado dos tipos primitivos de tempo de execução. Por exemplo, a estrutura <xref:System.Int32?displayProperty=nameWithType> do tipo de valor representa o formato demarcado de **ELEMENT_TYPE_I4**. Em vez de realizar marshaling desses tipos como estruturas, assim como ocorre com outros tipos formatados, realize marshaling deles da mesma maneira como os tipos primitivos demarcados por eles. Portanto, **System.Int32** tem o marshaling realizado como **ELEMENT_TYPE_I4**, em vez de como uma estrutura que contém um único membro do tipo **long**. A tabela a seguir contém uma lista dos tipos de valor no namespace **System** que são representações demarcadas de tipos primitivos.  

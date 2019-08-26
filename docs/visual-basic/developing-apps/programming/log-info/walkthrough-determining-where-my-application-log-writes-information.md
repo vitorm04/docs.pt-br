@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 305c29e33f6cd421f39004e09d27c75b02ba8354
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912552"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Passo a passo: Determinar o local em que My.Application.Log grava informações (Visual Basic)
 
@@ -27,7 +27,7 @@ Para obter mais informações sobre os locais de saída padrão, consulte [Traba
 1. Localize o arquivo de configuração do assembly. Se você estiver desenvolvendo o assembly, poderá acessar o app.config em Visual Studio no **Gerenciador de Soluções**. Caso contrário, o nome do arquivo de configuração é o nome do assembly acrescentado com ".config" e ele está localizado no mesmo diretório do assembly.
 
     > [!NOTE]
-    >  Nem todo assembly tem um arquivo de configuração.
+    > Nem todo assembly tem um arquivo de configuração.
 
     O arquivo de configuração é um arquivo XML.
 

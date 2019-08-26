@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e6086772b807440570b94cfff268aa1d78fa048
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490011"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968257"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como: Determinar quais versões do .NET Framework estão instaladas
 
@@ -26,7 +26,7 @@ O .NET Framework consiste em dois componentes principais, que têm o controle de
 
 - Um conjunto de assemblies que são coleções de tipos e recursos que fornecem a funcionalidade para os aplicativos. O .NET Framework e assemblies que compartilham o mesmo número de versão.
 
-- O Common Language Runtime (CLR) que gerencia e executa o código dos aplicativos. O CLR é identificado pelo seu próprio número de versão (confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md)).
+- O Common Language Runtime (CLR) que gerencia e executa o código dos aplicativos. O CLR é identificado pelo seu próprio número de versão (confira [Versões e dependências](versions-and-dependencies.md)).
 
 > [!NOTE]
 > Cada nova versão do .NET Framework retém recursos de versões anteriores e adiciona novos recursos. Você pode carregar várias versões do .NET Framework em um único computador ao mesmo tempo, o que significa que você pode instalar o .NET Framework sem precisar desinstalar as versões anteriores. Em geral, você não deve desinstalar as versões anteriores do .NET Framework, porque um aplicativo que você usa pode depender de uma versão específica e pode ser interrompido caso essa versão seja removida.

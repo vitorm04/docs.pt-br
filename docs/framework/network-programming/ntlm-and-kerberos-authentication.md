@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 2efb2d25e1b7566e3405a699be1795b37d549091
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b05cd88fcb492ab27e1d311045b72208167508f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963929"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticação NTLM e Kerberos
 A autenticação padrão NTLM e a autenticação Kerberos usam as credenciais de usuário do Microsoft Windows NT associadas com o aplicativo de chamada para tentar a autenticação com o servidor. Ao usar a autenticação NTLM não padrão, o aplicativo define o tipo de autenticação para NTLM e usa um objeto <xref:System.Net.NetworkCredential> para passar o nome de usuário, senha e domínio para o host, conforme mostrado no exemplo a seguir.  
@@ -60,7 +60,7 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
  O módulo de autenticação negotiate determina se o servidor remoto está usando a autenticação NTLM ou Kerberos e envia a resposta apropriada.  
   
 > [!NOTE]
->  A autenticação NTLM não funciona por meio de um servidor proxy.  
+> A autenticação NTLM não funciona por meio de um servidor proxy.  
   
 ## <a name="see-also"></a>Consulte também
 

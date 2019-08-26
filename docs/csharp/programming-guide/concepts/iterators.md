@@ -2,20 +2,20 @@
 title: Iterar em coleções em C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 931f0662b71b4dd99ac4a419c279be5058c61e92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635515"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594969"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 
 Um *iterador* pode ser usado para percorrer coleções, como listas e matrizes.
 
-Um método iterador ou um acessador `get` realiza uma iteração personalizada em uma coleção. Um método iterador usa a instrução [yield return](../../../csharp/language-reference/keywords/yield.md) para retornar um elemento de cada vez. Quando uma instrução `yield return` for atingida, o local atual no código será lembrado. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.
+Um método iterador ou um acessador `get` realiza uma iteração personalizada em uma coleção. Um método iterador usa a instrução [yield return](../../language-reference/keywords/yield.md) para retornar um elemento de cada vez. Quando uma instrução `yield return` for atingida, o local atual no código será lembrado. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.
 
-Um iterador é consumido no código cliente, usando uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ou usando uma consulta LINQ.
+Um iterador é consumido no código cliente, usando uma instrução [foreach](../../language-reference/keywords/foreach-in.md) ou usando uma consulta LINQ.
 
 No exemplo a seguir, a primeira iteração do loop `foreach` faz que a execução continue no método iterador `SomeNumbers` até que a primeira instrução `yield return` seja alcançada. Essa iteração retorna um valor de 3 e o local atual no método iterador é mantido. Na próxima iteração do loop, a execução no método iterador continuará de onde parou, parando novamente quando alcançar uma instrução `yield return`. Essa iteração retorna um valor de 5 e o local atual no método iterador é mantido novamente. O loop terminará quando o final do método iterador for alcançado.
 
@@ -43,11 +43,11 @@ O tipo de retorno de um método iterador ou acessador `get` pode ser <xref:Syste
 Você pode usar uma instrução `yield break` para terminar a iteração.
 
 > [!NOTE]
-> Todos os exemplos neste tópico, exceto o exemplo Iterador Simples, incluem diretivas [using](../../../csharp/language-reference/keywords/using-directive.md) para os namespaces `System.Collections` e `System.Collections.Generic`.
+> Todos os exemplos neste tópico, exceto o exemplo Iterador Simples, incluem diretivas [using](../../language-reference/keywords/using-directive.md) para os namespaces `System.Collections` e `System.Collections.Generic`.
 
 ## <a name="simple-iterator"></a>Iterador simples
 
-O exemplo a seguir contém uma única instrução `yield return` que está dentro de um loop [for](../../../csharp/language-reference/keywords/for.md). Em `Main`, cada iteração do corpo da instrução `foreach` cria uma chamada à função iteradora, que avança para a próxima instrução `yield return`.
+O exemplo a seguir contém uma única instrução `yield return` que está dentro de um loop [for](../../language-reference/keywords/for.md). Em `Main`, cada iteração do corpo da instrução `foreach` cria uma chamada à função iteradora, que avança para a próxima instrução `yield return`.
 
 ```csharp
 static void Main()
@@ -336,7 +336,7 @@ Embora você escreva um iterador como um método, o compilador o traduz em uma c
 
 Para ver o que o compilador faz, você pode usar a ferramenta Ildasm.exe para exibir o código Microsoft Intermediate Language que é gerado para um método iterador.
 
-Quando você cria um iterador para uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md), não é necessário implementar toda a interface <xref:System.Collections.IEnumerator>. Quando o compilador detecta o iterador, ele gera automaticamente os métodos `Current`, `MoveNext` e `Dispose` da interface <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.
+Quando você cria um iterador para uma [classe](../../language-reference/keywords/class.md) ou [struct](../../language-reference/keywords/struct.md), não é necessário implementar toda a interface <xref:System.Collections.IEnumerator>. Quando o compilador detecta o iterador, ele gera automaticamente os métodos `Current`, `MoveNext` e `Dispose` da interface <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.
 
 A cada iteração sucessiva do loop `foreach` (ou a chamada direta ao `IEnumerator.MoveNext`), o próximo corpo de código do iterador continua, depois da instrução `yield return` anterior. Em seguida, ele continuará até a próxima instrução `yield return`, até que o final do corpo do iterador seja alcançado ou até que uma instrução `yield break` seja encontrada.
 
@@ -358,7 +358,7 @@ Os iteradores permitem que você mantenha a simplicidade de um loop `foreach` qu
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [Usando foreach com matrizes](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [Genéricos](../../../csharp/programming-guide/generics/index.md)
+- [foreach, in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [Usando foreach com matrizes](../arrays/using-foreach-with-arrays.md)
+- [Genéricos](../generics/index.md)

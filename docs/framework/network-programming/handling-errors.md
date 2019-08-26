@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940075"
 ---
 # <a name="handling-errors"></a>Manipulando erros
 As classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> geram exceções do sistema (como <xref:System.ArgumentException>) e exceções específicas à Web (que são <xref:System.Net.WebException> geradas pelo método <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -45,7 +45,7 @@ As classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> geram ex
   
  A tabela a seguir descreve os possíveis valores para a propriedade **Status**.  
   
-|Status|Descrição|  
+|Status|DESCRIÇÃO|  
 |------------|-----------------|  
 |ConnectFailure|O serviço remoto não pôde ser contatado no nível do transporte.|  
 |ConnectionClosed|A conexão foi fechada prematuramente.|  
@@ -169,5 +169,5 @@ End Try
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fundamentos do tratamento de exceções](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Fundamentos do tratamento de exceções](../../standard/exceptions/exception-handling-fundamentals.md)
 - [Solicitando dados](../../../docs/framework/network-programming/requesting-data.md)

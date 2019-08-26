@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b9a899a579a1a38cee3be7b742fd9f0dfa197fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783209"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966040"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Passo a passo: Manipulando arquivos usando métodos do .NET Framework (Visual Basic)
 Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a classe <xref:System.IO.StreamReader>, verificar se um arquivo está sendo acessado, pesquisar uma cadeia de caracteres dentro de um arquivo lido com uma instância da classe <xref:System.IO.StreamReader> e gravar em um arquivo usando a classe <xref:System.IO.StreamWriter>.  
@@ -66,7 +66,7 @@ Estas instruções passo a passo demonstram como abrir e ler um arquivo usando a
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
->  O IDE (ambiente de desenvolvimento integrado) do Visual Studio retornará ao Editor de código e posicionará o ponto de inserção dentro do manipulador de eventos, no qual você deve adicionar o código.  
+> O IDE (ambiente de desenvolvimento integrado) do Visual Studio retornará ao Editor de código e posicionará o ponto de inserção dentro do manipulador de eventos, no qual você deve adicionar o código.  
   
 1. Para gravar o arquivo, use o método <xref:System.IO.StreamWriter.Write%2A> da classe <xref:System.IO.StreamWriter>. Adicione o código a seguir diretamente após `Dim fw As StreamWriter`. Você não precisa se preocupar se uma exceção será gerada caso o arquivo não seja encontrado, porque ele será criado se ainda não existir.  
   

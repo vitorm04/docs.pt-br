@@ -2,15 +2,15 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: c66a818d48316279817fdc6b7919a7667b6b8eb8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9e20b2c7278787671c7a27646b7cbaac78b57d5f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484471"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591858"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
-O termo "LINQ to Objects" refere-se ao uso de consultas LINQ com qualquer coleção <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601> diretamente, sem o uso de uma API ou provedor LINQ intermediário como o [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) ou [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md). Você pode usar o LINQ para consultar qualquer coleção enumerável ​​como <xref:System.Collections.Generic.List%601>, <xref:System.Array> ou <xref:System.Collections.Generic.Dictionary%602>. A coleção pode ser definida pelo usuário ou pode ser devolvida por uma API do .NET Framework.  
+O termo "LINQ to Objects" refere-se ao uso de consultas LINQ com qualquer coleção <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601> diretamente, sem o uso de uma API ou provedor LINQ intermediário como o [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) ou [LINQ to XML](./linq-to-xml-overview.md). Você pode usar o LINQ para consultar qualquer coleção enumerável ​​como <xref:System.Collections.Generic.List%601>, <xref:System.Array> ou <xref:System.Collections.Generic.Dictionary%602>. A coleção pode ser definida pelo usuário ou pode ser devolvida por uma API do .NET Framework.  
   
  Basicamente, o LINQ to Objects representa uma nova abordagem às coleções. Na forma antiga, você precisava escrever loops `foreach` complexos que especificavam como recuperar dados de uma coleção. Na abordagem da LINQ, você escreve o código declarativo que descreve o que você deseja recuperar.  
   
@@ -27,20 +27,20 @@ O termo "LINQ to Objects" refere-se ao uso de consultas LINQ com qualquer coleç
  O objetivo desta seção é demonstrar a abordagem LINQ com alguns exemplos selecionados. Não pretendemos que ela seja detalhada.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)  
  Explica como a LINQ pode ser usada para consultar e transformar cadeias de caracteres e coleções de cadeias de caracteres. Também inclui links para tópicos que demonstram esses princípios.  
   
- [LINQ e reflexão (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
+ [LINQ e reflexão (C#)](./linq-and-reflection.md)  
  Contém um link para um exemplo que demonstra como a LINQ usa a reflexão.  
   
- [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)  
  Explica como a LINQ pode ser usada para interagir com sistemas de arquivos. Também inclui links para tópicos que demonstram esses conceitos.  
   
- [Como: Consultar uma ArrayList com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [Como: Consultar uma ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
  Demonstra como consultar um ArrayList no C#.  
   
- [Como: Adicionar métodos personalizados a consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Como: Adicionar métodos personalizados a consultas LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  Explica como estender o conjunto de métodos que você pode usar para consultas LINQ, adicionando os métodos de extensão à interface <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ (Consulta Integrada à Linguagem) (C#)](./index.md)  
  Fornece links para tópicos que explicam a LINQ e fornecem exemplos de código que realizam consultas.

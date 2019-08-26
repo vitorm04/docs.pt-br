@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301016"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927951"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Como: Referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
@@ -26,13 +26,13 @@ O processo para referenciar tipos ou recursos em um assembly de nome forte é no
  Uma referência de tempo de compilação ocorre quando você indica para o compilador que seu assembly faz referência explícita a outro assembly. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.  
   
 > [!NOTE]
->  Assembly de nome forte só pode usar tipos de outros assemblies de nome forte. Caso contrário, a segurança do assembly de nome forte estaria comprometida.  
+> Assembly de nome forte só pode usar tipos de outros assemblies de nome forte. Caso contrário, a segurança do assembly de nome forte estaria comprometida.  
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Para fazer uma referência no tempo de compilação a um assembly de nome forte  
   
 1. No prompt de comando, digite o seguinte comando:  
   
-     \<*comando do compilador*> **/reference:**\<*nome do assembly*>  
+     \<*comando do compilador*>  **/reference:** \<*nome do assembly*>  
   
      Nesse comando, o *comando do compilador* é o comando do compilador para a linguagem que você está usando, e *nome do assembly* é o nome do assembly de nome forte que está sendo referenciado. Você também pode usar outras opções de compilador, como a opção **/t:library** para criar um assembly de biblioteca.  
   
@@ -46,7 +46,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1. Quando você faz uma referência de tempo de execução a um assembly de nome forte (por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
   
-     \<*nome do assembly*>**,** \<*número da versão*>**,** \<*cultura*>**,** \<*token de chave pública*>  
+     \<*nome do assembly*> **,** \<*número da versão*> **,** \<*cultura*> **,** \<*token de chave pública*>  
   
      Por exemplo:  
   

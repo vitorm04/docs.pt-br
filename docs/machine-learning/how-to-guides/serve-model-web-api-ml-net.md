@@ -1,16 +1,16 @@
 ---
 title: Implantar um modelo em uma API Web do ASP.NET Core
 description: Usar um modelo de Machine Learning para Análise de Sentimento com ML.NET pela internet usando o ASP.NET Web API
-ms.date: 05/03/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641089"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666657"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Implantar um modelo em uma API Web do ASP.NET Core
 
@@ -189,7 +189,7 @@ Depois que tudo estiver definido, é hora de testar o aplicativo.
 1. Abra o Powershell e digite o seguinte código, em que PORT é a porta em que seu aplicativo está escutando.
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
     Se houver êxito, a saída deverá ser semelhante ao texto abaixo:

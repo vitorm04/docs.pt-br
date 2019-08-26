@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1de17ec2537282fe87b5613a63e2a954383aeab6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567325"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957968"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
 A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermediate Language) (como gravadores de compiladores, desenvolvedores de mecanismos de script etc.) a determinar se o código MSIL e os metadados associados atendem aos requisitos de segurança de tipo. Alguns compiladores só gerarão código fortemente tipado verificável se você evitar usar determinados constructos de linguagem. Se, como desenvolvedor, estiver usando um compilador assim, você talvez queira verificar se não comprometeu a segurança de tipo do código. Nessa situação, é possível executar a ferramenta PEVerify nos arquivos para verificar MSIL e metadados.  
@@ -57,7 +57,7 @@ peverify filename [options]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
- O Common Language Runtime depende na execução fortemente tipada do código de aplicativo para ajudar a impor mecanismos de segurança e isolamento. Normalmente, o código que não é [fortemente tipado verificável](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security) não pode ser executado, embora seja possível definir a política de segurança para permitir a execução de código confiável, mas não verificável.  
+ O Common Language Runtime depende na execução fortemente tipada do código de aplicativo para ajudar a impor mecanismos de segurança e isolamento. Normalmente, o código que não é [fortemente tipado verificável](../../standard/security/key-security-concepts.md#type-safety-and-security) não pode ser executado, embora seja possível definir a política de segurança para permitir a execução de código confiável, mas não verificável.  
   
  Se as opções **/md** ou **/il** não forem especificadas, Peverify.exe realizará ambos os tipos de verificações. Peverify.exe realiza as verificações de **/md** primeiro. Se não houver erros, as verificações de **/il** serão feitas. Se você especificar **/md** e **/il**, as verificações de **/il** serão feitas mesmo se houver erros nos metadados. Por isso, se não houver erros de metadados, **peverify** *filename* equivalerá a **peverify** *filename* **/md** **/il**.  
   
@@ -124,5 +124,5 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Escrevendo um código fortemente tipado verificável](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
-- [Segurança de tipos e proteção](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [Segurança de tipos e proteção](../../standard/security/key-security-concepts.md#type-safety-and-security)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

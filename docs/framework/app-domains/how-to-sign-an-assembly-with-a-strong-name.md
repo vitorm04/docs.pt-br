@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593558"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927929"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como: assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  
@@ -44,13 +44,13 @@ Há vários modos de assinar um assembly com um nome forte:
 4. Na caixa **Escolher um arquivo de chave com nome forte**, selecione **\<Procurar…>** e, em seguida, navegue até o arquivo de chave. Para criar um novo arquivo de chave, selecione **\<Novo…>** e digite o nome na caixa de diálogo **Criar Chave de Nome Forte**.  
   
 > [!NOTE]
->  Para [assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md), escolha um arquivo de chave pública.  
+> Para [assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md), escolha um arquivo de chave pública.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Para criar e assinar um assembly com um nome forte usando o Vinculador de Assembly.  
   
 - Com o [Prompt de Comando do Desenvolvedor para Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digite o seguinte comando:  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      em que:  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. Compile o arquivo de código-fonte normalmente.  
   
 > [!NOTE]
->  Os compiladores de C# e Visual Basic emitem avisos do compilador (CS1699 e BC41008, respectivamente) quando encontram o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> no código-fonte. Você pode ignorar os avisos.  
+> Os compiladores de C# e Visual Basic emitem avisos do compilador (CS1699 e BC41008, respectivamente) quando encontram o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> no código-fonte. Você pode ignorar os avisos.  
   
  O exemplo de código a seguir usa o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> com um arquivo de chave chamado `keyfile.snk`, localizado no diretório onde o assembly é compilado.  
   

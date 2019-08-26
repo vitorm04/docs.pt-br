@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296648"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937929"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Arguments
 
-|Argumento|Descrição|
+|Argumento|DESCRIÇÃO|
 |--------------|-----------------|
 |`resourceFile`|O arquivo de recurso a ser localizado. Esse arquivo deve ser um arquivo .resx ou .resources de formulário do Windows Forms gerado pelo designer do Visual Studio. Winres.exe não pode abrir arquivos .resx ou .resources genéricos.|
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
 
@@ -110,7 +110,7 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 
 2. Para abrir os recursos padrão que serão localizados por um formulário, clique no comando **Abrir** do menu **Arquivo** e navegue até o arquivo para abri-lo.
 
-     - ou -
+     -ou-
 
      Especifique o arquivo a ser aberto na linha de comando ao iniciar Winres.exe.
 
@@ -146,4 +146,4 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 - <xref:System.Resources.ResourceWriter>
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
-- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
+- [Globalização e localização](../../standard/globalization-localization/index.md)

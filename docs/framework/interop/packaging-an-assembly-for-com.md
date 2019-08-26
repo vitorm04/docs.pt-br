@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567237"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988162"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Como empacotar um assembly .NET Framework para o COM
 
@@ -33,13 +33,13 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
 
   Alguns tipos gerenciados são visíveis para COM; alguns são visíveis, mas não instanciável; e alguns são visíveis e instanciáveis. Um assembly pode incluir qualquer combinação de tipos invisíveis, visíveis, não instanciáveis e instanciáveis. Para fins de integridade, identifique os tipos em um assembly que você pretende expor ao COM, especialmente quando esses tipos são um subconjunto dos tipos expostos ao .NET Framework.
 
-  Para obter mais informações, consulte [Qualificando tipos do .NET para interoperação](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
+  Para obter mais informações, consulte [Qualificando tipos do .NET para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Instruções de controle de versão
 
   Classes gerenciadas que implementam a interface de classe (uma interface gerada por interoperabilidade COM) estão sujeitas a restrições de controle de versão.
 
-  Para obter diretrizes de como usar a interface de classe, consulte [Introdução à interface de classe](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
+  Para obter diretrizes de como usar a interface de classe, consulte [Introdução à interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
 - Instruções de implantação
 
@@ -94,8 +94,8 @@ A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Qualificando tipos .NET para interoperação](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Apresentando a interface de classe](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [Qualificando tipos .NET para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Apresentando a interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Considerações sobre segurança de assembly](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrando assemblies usando COM](registering-assemblies-with-com.md)

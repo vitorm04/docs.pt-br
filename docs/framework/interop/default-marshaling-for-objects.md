@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bc165c6f1a7cdc6b8a03db0b7648583d75cd7a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626329"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946661"
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling padrão para objetos
 Os parâmetros e os campos tipados como <xref:System.Object?displayProperty=nameWithType> podem ser expostos para um código não gerenciado como um dos seguintes tipos:  
@@ -87,7 +87,7 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  O marshaler de interoperabilidade libera automaticamente qualquer objeto alocado dentro na variante após a chamada.  
+> O marshaler de interoperabilidade libera automaticamente qualquer objeto alocado dentro na variante após a chamada.  
   
  O exemplo a seguir mostra um tipo de valor formatado.  
   
@@ -266,7 +266,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Tipo de valor demarcado correspondente.|  
 |**VT_VARIANT**|Sem suporte.|  
@@ -287,7 +287,7 @@ Variantes passadas por valor e por referência
   
  **Comportamento padrão de marshaling de objetos e variantes por referência**  
   
- Para propagar as alterações novamente para o chamador, os parâmetros devem ser passados por referência. Por exemplo, use a palavra-chave **ref** no C# (ou **ByRef** no código gerenciado do Visual Basic) para passar parâmetros por referência. No COM, os parâmetros de referência são passados usando um ponteiro, como uma **variante \***.  
+ Para propagar as alterações novamente para o chamador, os parâmetros devem ser passados por referência. Por exemplo, use a palavra-chave **ref** no C# (ou **ByRef** no código gerenciado do Visual Basic) para passar parâmetros por referência. No COM, os parâmetros de referência são passados usando um ponteiro, como uma **variante \*** .  
   
 - Ao passar um objeto para o COM por referência, o marshaler cria uma nova variante e copia o conteúdo da referência de objeto para a variante antes que a chamada seja feita. A variante é passada para a função não gerenciada, na qual o usuário é livre para alterar o conteúdo da variante. Após o retorno da chamada, todas as alterações feitas na variante no lado não gerenciado são propagadas novamente para o objeto original. Se o tipo da variante for diferente do tipo da variante passada para a chamada, as alterações serão propagadas novamente para um objeto de um tipo diferente. Ou seja, o tipo do objeto passado para a chamada pode ser diferente do tipo do objeto retornado da chamada.  
   

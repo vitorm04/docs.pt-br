@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 8d28ef1334df847865721783fa98aaa9d8c576be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528570"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602746"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (opções do compilador C#)
 A opção **-noconfig** informa que o compilador não deve compilar com o arquivo csc.rsp, localizado no mesmo diretório que o arquivo csc.exe e carregado dele.  
@@ -38,5 +38,5 @@ A opção **-noconfig** informa que o compilador não deve compilar com o arquiv
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

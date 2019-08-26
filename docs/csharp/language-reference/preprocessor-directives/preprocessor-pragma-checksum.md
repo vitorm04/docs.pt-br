@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 36e5602f0a0b872a4aa6cdac64b49b1d1c708795
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 4103b6262fc5085c1204f423a36c9c5c2053b497
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877519"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605657"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Referência de C#)
 Gera somas de verificação para os arquivos de origem para ajudar na depuração de páginas do ASP.NET.  
@@ -56,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Diretivas do pré-processador do C#](./index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963948"
 ---
 # <a name="managing-connections"></a>Gerenciando conexões
 Aplicativos que usam HTTP para se conectar aos recursos de dados podem usar as classes <xref:System.Net.ServicePoint> e <xref:System.Net.ServicePointManager> do .NET Framework para gerenciar conexões com a Internet e para ajudá-las a obter a melhor escala e desempenho.  
@@ -36,7 +36,7 @@ Aplicativos que usam HTTP para se conectar aos recursos de dados podem usar as c
  O número de conexões entre um cliente e um servidor pode ter um impacto significativo na taxa de transferência do aplicativo. Por padrão, um aplicativo usando a classe <xref:System.Net.HttpWebRequest> usa um máximo de duas conexões persistentes para um determinado servidor, mas você pode definir o número máximo de conexões usando o aplicativo como critério.  
   
 > [!NOTE]
->  A especificação HTTP/1.1 limita o número de conexões de um aplicativo para duas conexões por servidor.  
+> A especificação HTTP/1.1 limita o número de conexões de um aplicativo para duas conexões por servidor.  
   
  O número ideal de conexões depende das reais condições em que o aplicativo é executado. Aumentar o número de conexões disponíveis para o aplicativo pode não afetar o desempenho do aplicativo. Para determinar o impacto de mais conexões, execute testes de desempenho enquanto varia o número de conexões. Você pode alterar o número de conexões que um aplicativo usa alterando a propriedade <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> estática na classe **ServicePointManager** na inicialização do aplicativo, conforme mostrado no exemplo de código a seguir.  
   

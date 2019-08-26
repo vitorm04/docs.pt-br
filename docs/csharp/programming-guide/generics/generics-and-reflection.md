@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 84583f96ab8493ff05a4e80dcc843eff1cc7a5ef
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: be4b72414af8e5a18145330f5c44ae9a79a567cb
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347582"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659884"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos e reflexão (Guia de Programação em C#)
-Como o tempo de execução do CLR (Common Language Runtime) tem acesso às informações de tipo genérico em tempo de execução, você pode usar a reflexão para obter informações sobre tipos genéricos da mesma forma como para tipos não genéricos. Para obter mais informações, consulte [Genéricos em tempo de execução](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+Como o tempo de execução do CLR (Common Language Runtime) tem acesso às informações de tipo genérico em tempo de execução, você pode usar a reflexão para obter informações sobre tipos genéricos da mesma forma como para tipos não genéricos. Para obter mais informações, consulte [Genéricos em tempo de execução](./generics-in-the-run-time.md).  
   
  No .NET Framework 2.0, foram adicionados diversos novos membros à classe <xref:System.Type> para habilitar as informações em tempo de execução para tipos genéricos. Consulte a documentação dessas classes para obter mais informações sobre como usar esses métodos e propriedades. O namespace <xref:System.Reflection.Emit> também contém novos membros que dão suporte a genéricos. Confira [Como definir um tipo genérico com a emissão de reflexão](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
@@ -47,7 +47,7 @@ Como o tempo de execução do CLR (Common Language Runtime) tem acesso às infor
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Genéricos](../../../csharp/programming-guide/generics/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Genéricos](./index.md)
 - [Reflexão e tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Genéricos](~/docs/standard/generics/index.md)
+- [Genéricos](../../../standard/generics/index.md)

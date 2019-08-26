@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946839"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
 A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Windows. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
@@ -43,7 +43,7 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
   
      [C#] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método com os modificadores **static** e **extern**.  
   
-     [C++] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método wrapper ou a função com **extern "C"**.  
+     [C++] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método wrapper ou a função com **extern "C"** .  
   
 4. [Chame uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
   
@@ -65,7 +65,7 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
 3. Localiza o endereço da função na memória e efetua push de seus argumentos para a pilha, realizando marshaling dos dados, conforme necessário.  
   
     > [!NOTE]
-    >  A localização e o carregamento da DLL, bem como a localização do endereço da função na memória, ocorrem apenas na primeira chamada à função.  
+    > A localização e o carregamento da DLL, bem como a localização do endereço da função na memória, ocorrem apenas na primeira chamada à função.  
   
 4. Transfere o controle para a função não gerenciada.  
   

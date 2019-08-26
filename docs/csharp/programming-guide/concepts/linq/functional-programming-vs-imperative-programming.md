@@ -2,12 +2,12 @@
 title: Programação com funcional. Programação obrigatória (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596694"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594320"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Programação com funcional. Programação obrigatória (C#)
 Este tópico compara e contrasta programação funcional com programação (procedural) imperativa mais tradicional.  
@@ -52,6 +52,6 @@ Este tópico compara e contrasta programação funcional com programação (proc
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Transformações XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refatoração em funções puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refatoração em funções puras (C#)](./refactoring-into-pure-functions.md)

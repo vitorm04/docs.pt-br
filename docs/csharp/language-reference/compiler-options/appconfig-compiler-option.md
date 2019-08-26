@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922515"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (opções do compilador C#)
 A opção do compilador **-appconfig** permite que um aplicativo em C# especifique o local de um arquivo de configuração de aplicativo (app.config) de um assembly para o CLR (Common Language Runtime) em tempo de associação do assembly.  
@@ -38,7 +38,7 @@ A opção do compilador **-appconfig** permite que um aplicativo em C# especifiq
  O compilador passa o local do arquivo para a lógica de associação de assembly do CLR.  
   
 > [!NOTE]
->  Caso o MSBuild (Microsoft Build Engine) seja usado para compilar o aplicativo, é possível definir a opção do compilador **-appconfig** adicionando uma marcação de propriedade ao arquivo .csproj. Para usar o arquivo app.config que já está definido no projeto, adicione a marca de propriedade `<UseAppConfigForCompiler>` ao arquivo .csproj e defina seu valor para `true`. Para especificar um arquivo app.config diferente, adicione a marca de propriedade `<AppConfigForCompiler>` e defina seu valor para o local do arquivo.  
+> Caso o MSBuild (Microsoft Build Engine) seja usado para compilar o aplicativo, é possível definir a opção do compilador **-appconfig** adicionando uma marcação de propriedade ao arquivo .csproj. Para usar o arquivo app.config que já está definido no projeto, adicione a marca de propriedade `<UseAppConfigForCompiler>` ao arquivo .csproj e defina seu valor para `true`. Para especificar um arquivo app.config diferente, adicione a marca de propriedade `<AppConfigForCompiler>` e defina seu valor para o local do arquivo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra um arquivo app.config que habilita um aplicativo a referenciar as implementações do .NET Framework e do .NET Framework para Silverlight de qualquer assembly do .NET Framework que exista em ambas as implementações. A opção do compilador **-appconfig** especifica o local desse arquivo app.config.  
@@ -57,4 +57,4 @@ A opção do compilador **-appconfig** permite que um aplicativo em C# especifiq
 ## <a name="see-also"></a>Consulte também
 
 - [Elemento \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
-- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [Opções do compilador de C# listadas em ordem alfabética](./listed-alphabetically.md)

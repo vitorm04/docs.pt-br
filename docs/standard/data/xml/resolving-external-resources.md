@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664482"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918202"
 ---
 # <a name="resolving-external-resources"></a>Resolvendo recursos externos
 A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocument** para localizar os recursos que não são embutidos nos dados XML, como definições de tipo de documento (DTDs), entidades e esquemas externos. Esses itens podem ser localizados em uma rede ou em uma unidade local, e são identificáveis por Uniform Resource Identifier (URI). Isso permite que o **XmlDocument** resolva os nós de **EntityReference** presentes no documento e valide o documento de acordo com DTDs ou esquema externos.  
@@ -48,7 +48,7 @@ A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocum
  Defina o XmlResolver para conter as credenciais corretas permite acesso aos recursos externos.  
   
 > [!NOTE]
->  Não é possível recuperar a propriedade **XmlResolver**. Isso ajuda a impedir que um usuário reutilize um **XmlResolver** em que as credenciais foram definidas. Além disso, se um **XmlTextReader** ou um <xref:System.Xml.XmlReader> de validação for usado para carregar o **XmlDocument** e o **XmlDocument** tiver um resolvedor definido, os resolvedores desses leitores não serão armazenados em cache pelo **XmlDocument** após a fase de **Carga**, pois isso também apresenta um risco de segurança.  
+> Não é possível recuperar a propriedade **XmlResolver**. Isso ajuda a impedir que um usuário reutilize um **XmlResolver** em que as credenciais foram definidas. Além disso, se um **XmlTextReader** ou um <xref:System.Xml.XmlReader> de validação for usado para carregar o **XmlDocument** e o **XmlDocument** tiver um resolvedor definido, os resolvedores desses leitores não serão armazenados em cache pelo **XmlDocument** após a fase de **Carga**, pois isso também apresenta um risco de segurança.  
   
  Para obter mais informações, consulte a seção de Comentários da página de referência <xref:System.Xml.XmlResolver>.  
   

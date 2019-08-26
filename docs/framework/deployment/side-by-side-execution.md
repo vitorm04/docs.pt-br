@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641031"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911004"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  
@@ -75,17 +75,17 @@ A execução lado a lado é a capacidade de executar várias versões de um apli
   
  Se houver um arquivo de configuração de aplicativo, o tempo de execução determinará a versão do tempo de execução apropriada a ser carregada com base nos resultados do processo a seguir:  
   
-1. O tempo de execução examina o elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no arquivo de configuração de aplicativo. Se uma ou mais das versões com suporte no tempo de execução especificadas no elementos **\<supportedRuntime>** existirem, o tempo de execução carrega a versão de tempo de execução especificada pelo primeiro elementos **\<supportedRuntime>**. Se essa versão não estiver disponível, o tempo de execução examina o próximo elemento  **\<supportedRuntime>** e tenta carregar a versão de tempo de execução especificada nele. Se esta versão do tempo de execução não estiver disponível, os elementos **\<supportedRuntime>** subsequentes serão examinados. Se nenhuma das versões com suporte no tempo de execução estiver disponível, ele não poderá carregar uma versão de tempo de execução e exibirá uma mensagem para o usuário (consulte a etapa 3).  
+1. O tempo de execução examina o elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no arquivo de configuração de aplicativo. Se uma ou mais das versões com suporte no tempo de execução especificadas no elementos **\<supportedRuntime>** existirem, o tempo de execução carrega a versão de tempo de execução especificada pelo primeiro elementos **\<supportedRuntime>** . Se essa versão não estiver disponível, o tempo de execução examina o próximo elemento  **\<supportedRuntime>** e tenta carregar a versão de tempo de execução especificada nele. Se esta versão do tempo de execução não estiver disponível, os elementos **\<supportedRuntime>** subsequentes serão examinados. Se nenhuma das versões com suporte no tempo de execução estiver disponível, ele não poderá carregar uma versão de tempo de execução e exibirá uma mensagem para o usuário (consulte a etapa 3).  
   
 2. O tempo de execução lê o cabeçalho do arquivo PE do arquivo executável do aplicativo. Se a versão do tempo de execução especificada pelo cabeçalho do arquivo PE estiver disponível, o tempo de execução carregará a versão. Se a versão de tempo de execução especificada não estiver disponível, o tempo de execução procurará por uma versão de tempo de execução determinada pela Microsoft como compatível com a versão de tempo de execução no cabeçalho PE. Se tal versão não for encontrada, o processo continua na etapa 3.  
   
 3. O tempo de execução exibe uma mensagem informando que a versão de tempo de execução com suporte no aplicativo está indisponível. O tempo de execução não está carregado.  
   
     > [!NOTE]
-    >  Você pode suprimir a exibição dessa mensagem usando o valor de NoGuiFromShim na chave do Registro HKLM\Software\Microsoft\\.NETFramework ou usando a variável de ambiente COMPLUS_NoGuiFromShim. Por exemplo, você pode suprimir a mensagem para aplicativos que normalmente não interagem com o usuário, como instalações autônomas ou serviços do Windows. Quando a exibição dessa mensagem é suprimida, o tempo de execução grava uma mensagem no log de eventos.  Defina o valor do Registro NoGuiFromShim como 1 para suprimir esta mensagem para todos os aplicativos em um computador. Outra opção é definir a variável de ambiente COMPLUS_NoGuiFromShim como 1 para suprimir a mensagem para aplicativos executados em um contexto de usuário específico.  
+    > Você pode suprimir a exibição dessa mensagem usando o valor de NoGuiFromShim na chave do Registro HKLM\Software\Microsoft\\.NETFramework ou usando a variável de ambiente COMPLUS_NoGuiFromShim. Por exemplo, você pode suprimir a mensagem para aplicativos que normalmente não interagem com o usuário, como instalações autônomas ou serviços do Windows. Quando a exibição dessa mensagem é suprimida, o tempo de execução grava uma mensagem no log de eventos.  Defina o valor do Registro NoGuiFromShim como 1 para suprimir esta mensagem para todos os aplicativos em um computador. Outra opção é definir a variável de ambiente COMPLUS_NoGuiFromShim como 1 para suprimir a mensagem para aplicativos executados em um contexto de usuário específico.  
   
 > [!NOTE]
->  Depois que uma versão de tempo de execução é carregada, os redirecionamentos de associação de assembly pode especificar que uma versão diferente de um assembly do .NET Framework individual será carregada. Tais redirecionamentos de associação afetam somente o assembly específico que é redirecionado.  
+> Depois que uma versão de tempo de execução é carregada, os redirecionamentos de associação de assembly pode especificar que uma versão diferente de um assembly do .NET Framework individual será carregada. Tais redirecionamentos de associação afetam somente o assembly específico que é redirecionado.  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>Nomes parcialmente qualificados e execução lado a lado do assembly  
  Como eles são uma fonte potencial de problemas de lado a lado, referências parcialmente qualificadas do assembly podem ser usadas apenas para associar aos assemblies dentro de um diretório de aplicativo. Evite usar referências de assembly parcialmente qualificadas no seu código.  
@@ -107,11 +107,11 @@ publicKeyToken=...,
  Sempre que um assembly carregar referências da instrução `myAssembly`, essas definições do arquivo de configuração fazem com que o tempo de execução realize automaticamente a conversão da referência `myAssembly` parcialmente qualificada em uma referência totalmente qualificada. Por exemplo, Assembly.Load("myAssembly") vira Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral").  
   
 > [!NOTE]
->  Você pode usar o método **LoadWithPartialName** para ignorar a restrição do Common Language Runtime que proíbe que assemblies parcialmente referenciados sejam carregados do cache de assembly global. Esse método deve ser usado apenas em cenários de comunicação remota, pois pode facilmente causar problemas na execução lado a lado.  
+> Você pode usar o método **LoadWithPartialName** para ignorar a restrição do Common Language Runtime que proíbe que assemblies parcialmente referenciados sejam carregados do cache de assembly global. Esse método deve ser usado apenas em cenários de comunicação remota, pois pode facilmente causar problemas na execução lado a lado.  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
 |[Configurando o redirecionamento de associação de assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  

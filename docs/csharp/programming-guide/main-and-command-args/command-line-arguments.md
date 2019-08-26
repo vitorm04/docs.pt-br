@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923879"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de linha de comando (Guia de Programação em C#)
 Você pode enviar argumentos para o método `Main` definindo o método de uma das seguintes maneiras:  
@@ -20,7 +20,7 @@ Você pode enviar argumentos para o método `Main` definindo o método de uma da
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  Para habilitar os argumentos de linha de comando no método `Main` em um aplicativo do Windows Forms, você deve modificar manualmente a assinatura de `Main` em program.cs. O código gerado pelo Designer de Formulários do Windows cria um `Main` sem um parâmetro de entrada. Você também pode usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> ou <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para acessar os argumentos de linha de comando de qualquer ponto em um console ou um aplicativo do Windows.  
+> Para habilitar os argumentos de linha de comando no método `Main` em um aplicativo do Windows Forms, você deve modificar manualmente a assinatura de `Main` em program.cs. O código gerado pelo Designer de Formulários do Windows cria um `Main` sem um parâmetro de entrada. Você também pode usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> ou <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para acessar os argumentos de linha de comando de qualquer ponto em um console ou um aplicativo do Windows.  
   
  O parâmetro do método `Main` é uma matriz <xref:System.String> que representa os argumentos de linha de comando. Geralmente você determina se os argumentos existem testando a propriedade `Length`, por exemplo:  
   
@@ -70,15 +70,15 @@ long num = Convert.ToInt64(s);
 5. O comando produz esta saída: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](/visualstudio/ide/reference/debug-page-project-designer).  
+> Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Para obter mais exemplos sobre como usar argumentos de linha de comando, confira [Como criar e usar assemblies usando a linha de comando](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Para obter mais exemplos sobre como usar argumentos de linha de comando, confira [Como criar e usar assemblies usando a linha de comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Guia de Programação em C#](../index.md)
+- [Main() e argumentos de linha de comando](./index.md)
+- [Como: exibir argumentos de linha de comando](./how-to-display-command-line-arguments.md)
+- [Valores de retorno de Main()](./main-return-values.md)
+- [Classes](../classes-and-structs/classes.md)

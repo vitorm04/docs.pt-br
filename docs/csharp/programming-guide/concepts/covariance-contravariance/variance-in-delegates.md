@@ -2,12 +2,12 @@
 title: Variação em delegados (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924375"
 ---
 # <a name="variance-in-delegates-c"></a>Variação em delegados (C#)
 O .NET Framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados do C#. Isso significa que você pode atribuir a delegados não apenas os métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos mais derivados (covariância) ou que aceitam parâmetros que têm tipos menos derivados (contravariância) do que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genéricos.  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- Para obter mais informações, consulte [Usando variação em delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) e [Usando variação para os delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Para obter mais informações, consulte [Usando variação em delegados (C#)](./using-variance-in-delegates.md) e [Usando variação para os delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Variação em parâmetros de tipo genérico  
  No .NET Framework 4 ou posterior, agora você pode habilitar a conversão implícita entre delegados, de modo que delegados genéricos que têm tipos diferentes especificados por parâmetros de tipo genérico podem ser atribuídos uns aos outros, se os tipos forem herdados uns dos outros como é obrigatório de acordo com a variação.  
@@ -122,7 +122,7 @@ public static void Test()
   
 - O delegado <xref:System.Converter%602>  
   
- Para obter mais informações e exemplos, consulte [Usando variação para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Para obter mais informações e exemplos, consulte [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Declarando parâmetros de tipo variante em delegados genéricos  
  Se um delegado genérico tiver parâmetros de tipo genérico covariantes ou contravariantes, ele poderá ser considerado um *delegado genérico variante*.  
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  Os parâmetros `ref`, `in` e `out` em C# não podem ser marcados como variantes.  
+> Os parâmetros `ref`, `in` e `out` em C# não podem ser marcados como variantes.  
   
  Também é possível dar suporte à variância e à covariância no mesmo delegado, mas para parâmetros de tipo diferente. Isso é mostrado no exemplo a seguir.  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>Consulte também
 
-- [Genéricos](~/docs/standard/generics/index.md)
-- [Usando variação para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Como: combinar delegados (delegados multicast)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Genéricos](../../../../standard/generics/index.md)
+- [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Como: combinar delegados (delegados multicast)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300631"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666311"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -97,7 +97,7 @@ Cada tarefa recebe um ID inteiro que a identifica exclusivamente em um domínio 
 
 A maioria das APIs que criam tarefas fornecem sobrecargas que aceitam um parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>. Ao especificar uma dessas opções, você informa o agendador de tarefas como agendar a tarefa no pool de threads. A tabela a seguir lista as várias opções de criação de tarefas.
 
-|Valor do parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>|Descrição|
+|Valor do parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>|DESCRIÇÃO|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|O padrão quando nenhuma opção é especificada. O agendador usa sua heurística padrão para agendar a tarefa.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Especifica que a tarefa deve ser agendada de modo que as tarefas criadas antes sejam mais propensas a ser executadas mais cedo, e as tarefas criadas posteriormente sejam mais propensas a ser executadas mais tarde.|
@@ -268,13 +268,13 @@ A TPL possui vários novos tipos públicos que são úteis em cenários paralelo
 
 ## <a name="custom-task-types"></a>Tipos de tarefa personalizados
 
-Recomendamos que você não herde de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou de <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Em vez disso, recomenda-se usar a propriedade <xref:System.Threading.Tasks.Task.AsyncState%2A> para associar dados adicionais ou o estado a um objeto <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Você também pode usar os métodos de extensão para estender a funcionalidade de <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Para obter mais informações sobre métodos de extensão, consulte [Métodos de extensão](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) e [Métodos de extensão](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+Recomendamos que você não herde de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou de <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Em vez disso, recomenda-se usar a propriedade <xref:System.Threading.Tasks.Task.AsyncState%2A> para associar dados adicionais ou o estado a um objeto <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Você também pode usar os métodos de extensão para estender a funcionalidade de <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Para obter mais informações sobre métodos de extensão, consulte [Métodos de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md) e [Métodos de extensão](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
 Se for necessário herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>, você não poderá usar <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A> ou <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, ou as classes <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> para criar instâncias de seu tipo de tarefa personalizada, pois esses mecanismos criam somente objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Além disso, você não pode usar os mecanismos de continuação de tarefas fornecidos por <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> e <xref:System.Threading.Tasks.TaskFactory%601> para criar instâncias de seu tipo de tarefa personalizada porque esses mecanismos também criam apenas objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Título|DESCRIÇÃO|
 |-|-|
 |[Encadeando tarefas usando tarefas de continuação](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Descreve como as continuações funcionam.|
 |[Tarefas filho anexadas e desanexadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Descreve a diferença entre tarefas filhas anexadas e desanexadas.|

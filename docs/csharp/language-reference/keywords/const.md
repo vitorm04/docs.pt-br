@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: 2a2e4bb45d21708ea3971d2f5b784280b9d13d0d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307883"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605888"
 ---
 # <a name="const-c-reference"></a>const (Referência de C#)
 
-Use a palavra-chave `const` para declarar um campo constante ou um local constante. Campos e locais constantes não são variáveis ​​e não podem ser modificados. As constantes podem ser números, valores boolianos, cadeias de caracteres ou uma referência nula. Não crie uma constante para representar informações que você espera mudar a qualquer momento. Por exemplo, não use um campo constante para armazenar o preço de um serviço, um número de versão de produto ou a marca de uma empresa. Esses valores podem mudar ao longo do tempo e como os compiladores propagam constantes, outro código compilado com as bibliotecas terá que ser recompilado para ver as alterações. Veja também a palavra-chave [readonly](../../../csharp/language-reference/keywords/readonly.md). Por exemplo:
+Use a palavra-chave `const` para declarar um campo constante ou um local constante. Campos e locais constantes não são variáveis ​​e não podem ser modificados. As constantes podem ser números, valores boolianos, cadeias de caracteres ou uma referência nula. Não crie uma constante para representar informações que você espera mudar a qualquer momento. Por exemplo, não use um campo constante para armazenar o preço de um serviço, um número de versão de produto ou a marca de uma empresa. Esses valores podem mudar ao longo do tempo e como os compiladores propagam constantes, outro código compilado com as bibliotecas terá que ser recompilado para ver as alterações. Veja também a palavra-chave [readonly](./readonly.md). Por exemplo:
 
 ```csharp
 const int X = 0;
@@ -47,7 +47,7 @@ public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]
-> A palavra-chave [readonly](../../../csharp/language-reference/keywords/readonly.md) é diferente da palavra-chave `const`. O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser inicializado na declaração ou em um construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, embora um campo `const` seja uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de tempo de execução, como nesta linha: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
+> A palavra-chave [readonly](./readonly.md) é diferente da palavra-chave `const`. O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser inicializado na declaração ou em um construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, embora um campo `const` seja uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de tempo de execução, como nesta linha: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
 
 ## <a name="example"></a>Exemplo
 
@@ -65,8 +65,8 @@ Este exemplo demonstra como usar constantes como variáveis ​​locais.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
-- [readonly](../../../csharp/language-reference/keywords/readonly.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](./index.md)
+- [Modificadores](./modifiers.md)
+- [readonly](./readonly.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362912"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666410"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Diretrizes de uso de Memory\<T> e Span\<T>
 
@@ -78,7 +78,7 @@ Use a interface <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithTy
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-Podemos também escrever este exemplo com [`using`](~/docs/csharp/language-reference/keywords/using-statement.md):
+Podemos também escrever este exemplo com [`using`](../../csharp/language-reference/keywords/using-statement.md):
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ Na verdade, se combinarmos esta regra com a Regra 1, poderemos fazer ainda melho
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-O método `DisplayBufferToConsole` agora funciona praticamente com todos os tipos de buffer possíveis: `T[]`, armazenamento alocado com [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md), e assim por diante. Você pode, inclusive, passar um <xref:System.String> diretamente nele!
+O método `DisplayBufferToConsole` agora funciona praticamente com todos os tipos de buffer possíveis: `T[]`, armazenamento alocado com [stackalloc](../../csharp/language-reference/operators/stackalloc.md), e assim por diante. Você pode, inclusive, passar um <xref:System.String> diretamente nele!
 
 **Regra 3: se o método aceitar o Memory\<T> e retornar `void`, não usar a instância de Memory\<T>, quando o método for retornado.**
 
@@ -246,7 +246,7 @@ Os componentes que transferem a propriedade da instância de <xref:System.Buffer
 
 **Regra 9: se estiver encapsulando um método de P/Invoke síncrono, a API deverá aceitar Span\<T> como parâmetro.**
 
-De acordo com a Regra 1, <xref:System.Span%601> geralmente é o tipo correto a ser usado para APIs síncronas. Você pode fixar instâncias do <xref:System.Span%601> por meio da palavra-chave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), como no exemplo a seguir.
+De acordo com a Regra 1, <xref:System.Span%601> geralmente é o tipo correto a ser usado para APIs síncronas. Você pode fixar instâncias do <xref:System.Span%601> por meio da palavra-chave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md), como no exemplo a seguir.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **Regra 10: se estiver encapsulando um método de P/Invoke assíncrono, a API deverá aceitar Memory\<T> como parâmetro.**
 
-Como não é possível usar a palavra-chave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) em operações assíncronas, use o método <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> para fixar instâncias de <xref:System.Memory%601>, independentemente do tipo de memória contígua que a instância representar. O exemplo a seguir mostra como usar esta API para executar uma chamada de P/Invoke assíncrona.
+Como não é possível usar a palavra-chave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) em operações assíncronas, use o método <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> para fixar instâncias de <xref:System.Memory%601>, independentemente do tipo de memória contígua que a instância representar. O exemplo a seguir mostra como usar esta API para executar uma chamada de P/Invoke assíncrona.
 
 ```csharp
 using System.Runtime.InteropServices;

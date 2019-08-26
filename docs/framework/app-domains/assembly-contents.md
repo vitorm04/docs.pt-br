@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1334f8c8e1b5898e93697461f609429d4aae764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921696"
 ---
 # <a name="assembly-contents"></a>Conteúdo de um assembly
 Em geral, um assembly estático pode consistir em quatro elementos:  
@@ -40,7 +40,7 @@ Em geral, um assembly estático pode consistir em quatro elementos:
  ![Diagrama que mostra um assembly de vários arquivos.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
->  Os arquivos que compõem um assembly de vários arquivos não estão fisicamente vinculados pelo sistema de arquivos. Em vez disso, eles estão vinculados por meio do manifesto de assembly, e o Common Language Runtime os gerencia como uma unidade.  
+> Os arquivos que compõem um assembly de vários arquivos não estão fisicamente vinculados pelo sistema de arquivos. Em vez disso, eles estão vinculados por meio do manifesto de assembly, e o Common Language Runtime os gerencia como uma unidade.  
   
  Nesta ilustração, todos os três arquivos pertencem a um assembly, conforme descrito no manifesto de assembly contido em MyAssembly.dll. No sistema de arquivos, eles são três arquivos separados. Observe que o arquivo Util.netmodule foi compilado como um módulo porque não contém informações de assembly. Quando o assembly foi criado, o manifesto do assembly foi adicionado a MyAssembly.dll, indicando seu relacionamento com Util.netmodule e Graphic.bmp.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928077"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores para marcações de documentação (Guia de Programação em C#)
 O uso de comentários do documento XML requer delimitadores, que indicam ao compilador em que um comentário de documentação começa e termina. Você pode usar os seguintes tipos de delimitadores com as marcas de documentação XML:  
@@ -21,7 +21,7 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
  O delimitador de linha única. Este é o formulário mostrado nos exemplos de documentação e usado pelos modelos de projeto do Visual C#. Se houver um caractere de espaço em branco depois do delimitador, esse caractere não estará incluído na saída XML.  
   
 > [!NOTE]
->  A IDE do Visual Studio tem um recurso chamado Edição de Comentário Inteligente que insere automaticamente as marcas \<summary> e \</summary> e move o cursor dentro dessas marcas depois que você digita o delimitador `///` no Editor de Código. Você pode ativar ou desativar esse recurso na [caixa de diálogo Opções](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
+> A IDE do Visual Studio tem um recurso chamado Edição de Comentário Inteligente que insere automaticamente as marcas \<summary> e \</summary> e move o cursor dentro dessas marcas depois que você digita o delimitador `///` no Editor de Código. Você pode ativar ou desativar esse recurso na [caixa de diálogo Opções](/visualstudio/ide/reference/options-text-editor-csharp-advanced).  
   
  `/** */`  
  Delimitadores multilinha.  
@@ -80,7 +80,7 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/index.md)
-- [-doc (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Comentários da documentação XML](./index.md)
+- [-doc (opções do compilador do C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Comentários da documentação XML](./index.md)

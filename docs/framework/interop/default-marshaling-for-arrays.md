@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946699"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
 Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  
@@ -175,7 +175,7 @@ void New3(ref String ar);
  Ao realizar marshaling de matrizes de código não gerenciado para código gerenciado, o marshaler verifica o **MarshalAsAttribute** associado ao parâmetro para determinar o tamanho da matriz. Se o tamanho da matriz não for especificado, somente um elemento terá o marshaling realizado.  
   
 > [!NOTE]
->  O **MarshalAsAttribute** não tem nenhum efeito no marshaling de matrizes gerenciadas para código não gerenciado. Nessa direção, o tamanho da matriz é determinado pelo exame. Não há nenhuma maneira de realizar marshaling de um subconjunto de uma matriz gerenciada.  
+> O **MarshalAsAttribute** não tem nenhum efeito no marshaling de matrizes gerenciadas para código não gerenciado. Nessa direção, o tamanho da matriz é determinado pelo exame. Não há nenhuma maneira de realizar marshaling de um subconjunto de uma matriz gerenciada.  
   
  O marshaler de interoperabilidade usa os métodos **CoTaskMemAlloc** e **CoTaskMemFree** para alocar e recuperar a memória. A alocação de memória executada pelo código não gerenciado também deve usar esses métodos.  
   
@@ -185,12 +185,12 @@ void New3(ref String ar);
 |Tipo de matriz gerenciada|Exportado como|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo é fornecido na assinatura. A classificação é sempre 1 e o limite inferior é sempre 0. O tamanho é sempre conhecido em tempo de execução.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo, a classificação e os limites são fornecidos na assinatura. O tamanho é sempre conhecido em tempo de execução.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> O tipo, a classificação, os limites e o tamanho são sempre conhecidos em tempo de execução.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> O tipo, a classificação e os limites são fornecidos na assinatura. O tamanho é sempre conhecido em tempo de execução.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> O tipo, a classificação, os limites e o tamanho são sempre conhecidos em tempo de execução.|  
   
  Há uma limitação na Automação OLE relativa a matrizes de estruturas que contêm LPSTR ou LPWSTR.  Portanto, os campos **String** precisam ter o marshaling realizado como **UnmanagedType.BSTR**. Caso contrário, uma exceção será gerada.  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
+### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  Quando um método que contém um parâmetro **ELEMENT_TYPE_SZARRAY** (matriz unidimensional) é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo. As mesmas regras de conversão se aplicam a tipos de elemento da matriz. O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**. Por exemplo:  
   
 #### <a name="managed-signature"></a>Assinatura gerenciada  
@@ -248,7 +248,7 @@ HRESULT New(LPStr ar[]);
   
  Embora o marshaler tenha as informações de tamanho necessárias para realizar marshaling da matriz, o tamanho da matriz geralmente é passado como um argumento separado para transmitir o tamanho para o receptor.  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
+### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
  Quando um método que contém um parâmetro **ELEMENT_TYPE_ARRAY** é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro de matriz é convertido em uma **SAFEARRAY** de determinado tipo. O conteúdo da matriz gerenciada é copiado automaticamente da memória gerenciada para a **SAFEARRAY**. Por exemplo:  
   
 #### <a name="managed-signature"></a>Assinatura gerenciada  
@@ -311,7 +311,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
  Quando um método que contém um parâmetro <xref:System.Array?displayProperty=nameWithType> é exportado de um assembly .NET para uma biblioteca de tipos, o parâmetro da matriz é convertido em uma interface **_Array**. O conteúdo da matriz gerenciada é acessível somente por meio dos métodos e das propriedades da interface **_Array**. **System.Array** também pode ter o marshaling realizado como uma **SAFEARRAY** usando o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Ao ter o marshaling realizado como uma matriz segura, os elementos da matriz têm o marshaling realizado como variantes. Por exemplo:  
   
 #### <a name="managed-signature"></a>Assinatura gerenciada  

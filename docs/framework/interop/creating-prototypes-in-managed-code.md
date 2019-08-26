@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42aa63c20e1643bc3f5377fa0ad66b63c1d4433a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e8d51149c01b4c8018609ca9313cc4eea2afbb5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422599"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946570"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -32,7 +32,7 @@ Este tópico descreve como acessar funções não gerenciadas e apresenta vário
  Antes de poder acessar uma função de DLL não gerenciada no código gerenciado, você precisa saber o nome da função e o nome da DLL que a exporta. Com essas informações, você pode começar a escrever a definição gerenciada para uma função não gerenciada que é implementada em uma DLL. Além disso, você pode ajustar a maneira como essa invocação de plataforma cria a função e realiza marshaling dos dados bidirecionalmente na função.  
   
 > [!NOTE]
->  As funções de API do Windows que alocam uma cadeia de caracteres permitem que você libere a cadeia de caracteres usando um método como `LocalFree`. A invocação de plataforma manipula esses parâmetros de maneira diferente. Para chamadas de invocação de plataforma, torne o parâmetro um tipo `IntPtr`, em vez de um tipo `String`. Use métodos que são fornecidos pela classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> para converter o tipo em uma cadeia de caracteres manualmente e libere-a manualmente.  
+> As funções de API do Windows que alocam uma cadeia de caracteres permitem que você libere a cadeia de caracteres usando um método como `LocalFree`. A invocação de plataforma manipula esses parâmetros de maneira diferente. Para chamadas de invocação de plataforma, torne o parâmetro um tipo `IntPtr`, em vez de um tipo `String`. Use métodos que são fornecidos pela classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> para converter o tipo em uma cadeia de caracteres manualmente e libere-a manualmente.  
   
 ## <a name="declaration-basics"></a>Noções básicas sobre a declaração  
  As definições gerenciadas para funções não gerenciadas são dependentes de idioma, como é possível ver nos exemplos a seguir. Para obter exemplos de código mais completos, consulte [Exemplos de invocação de plataforma](platform-invoke-examples.md).  

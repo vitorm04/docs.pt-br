@@ -5,19 +5,19 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833356"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606982"
 ---
 # <a name="command-line-build-with-cscexe"></a>Build pela linha de comando com csc.exe
 Você pode invocar o compilador do C#, digitando o nome do seu arquivo executável (*csc.exe*) em um prompt de comando.
 
 Se você usar a janela do **Prompt de Comando do Desenvolvedor do Visual Studio**, todas as variáveis de ambiente necessárias serão definidas para você. Para obter informações sobre como acessar essa ferramenta, consulte o tópico [Prompt de comando do desenvolvedor para o Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md). 
 
-Se você usa uma janela de Prompt de Comando padrão, deve ajustar seu caminho antes de invocar o *csc.exe* de qualquer subdiretório em seu computador. Você também deve executar o *vsvars32.bat* para definir as variáveis de ambiente adequadas para dar suporte aos builds de linha de comando. Para obter mais informações sobre *vsvars32.bat*, incluindo instruções de como localizar e executá-lo, confira [Como: configurar variáveis de ambiente para a linha de comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Se você usa uma janela de Prompt de Comando padrão, deve ajustar seu caminho antes de invocar o *csc.exe* de qualquer subdiretório em seu computador. Você também deve executar o *vsvars32.bat* para definir as variáveis de ambiente adequadas para dar suporte aos builds de linha de comando. Para obter mais informações sobre *vsvars32.bat*, incluindo instruções de como localizar e executá-lo, confira [Como: configurar variáveis de ambiente para a linha de comando do Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Se estiver trabalhando em um computador que tenha apenas o SDK (Software Development Kit) do Windows, você poderá usar o compilador do C# no **Prompt de Comando do SDK**, que é aberto na opção de menu **Microsoft .NET Framework SDK**.
 
@@ -97,10 +97,10 @@ Não há arquivos de objeto ( *.obj*) criados como resultado da invocação do c
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)
-- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
-- [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [Opções do compilador de C#](./index.md)
+- [Opções do compilador de C# listadas em ordem alfabética](./listed-alphabetically.md)
+- [Opções do compilador de C# listadas por categoria](./listed-by-category.md)
+- [Main() e argumentos de linha de comando](../../programming-guide/main-and-command-args/index.md)
+- [Argumentos de linha de comando](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [Como: exibir argumentos de linha de comando](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Valores de retorno de Main()](../../programming-guide/main-and-command-args/main-return-values.md)

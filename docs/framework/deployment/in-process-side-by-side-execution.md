@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911108"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em processo para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
@@ -45,7 +45,7 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
     |4|Sim|Sim|Não aplicável|  
   
 > [!NOTE]
->  As versões 3.0 e 3.5 do .NET Framework são criadas de forma incremental na versão 2.0 e não precisam ser executadas lado a lado. Elas são inerentemente a mesma versão.  
+> As versões 3.0 e 3.5 do .NET Framework são criadas de forma incremental na versão 2.0 e não precisam ser executadas lado a lado. Elas são inerentemente a mesma versão.  
   
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Cenários comuns de hospedagem lado a lado  

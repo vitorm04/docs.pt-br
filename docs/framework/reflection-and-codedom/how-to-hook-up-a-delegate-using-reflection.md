@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935721"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como: Conectar um delegado usando a reflexão
-Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  
+Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  
   
 > [!NOTE]
->  Para encontrar outra maneira de conectar um delegado manipulador de evento, consulte o exemplo de código para o método <xref:System.Reflection.EventInfo.AddEventHandler%2A> da classe <xref:System.Reflection.EventInfo>.  
+> Para encontrar outra maneira de conectar um delegado manipulador de evento, consulte o exemplo de código para o método <xref:System.Reflection.EventInfo.AddEventHandler%2A> da classe <xref:System.Reflection.EventInfo>.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>Para conectar um delegado usando reflexão  
   
@@ -57,7 +57,7 @@ Quando você usa a reflexão para carregar e executar assemblies, não pode usar
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Obtenha o método do acessador `add` e invoque-o para conectar o evento. Todos os eventos têm um acessador `add` e um acessador `remove`, que estão ocultos pela sintaxe de linguagens de alto nível. Por exemplo, o C# usa o operador `+=` para conectar eventos e o Visual Basic usa a [instrução AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). O código a seguir obtém o acessador `add` do evento <xref:System.Windows.Forms.Control.Click> e o invoca com associação tardia, passando a instância do delegado. Os argumentos devem ser passados como uma matriz.  
+6. Obtenha o método do acessador `add` e invoque-o para conectar o evento. Todos os eventos têm um acessador `add` e um acessador `remove`, que estão ocultos pela sintaxe de linguagens de alto nível. Por exemplo, o C# usa o operador `+=` para conectar eventos e o Visual Basic usa a [instrução AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md). O código a seguir obtém o acessador `add` do evento <xref:System.Windows.Forms.Control.Click> e o invoca com associação tardia, passando a instância do delegado. Os argumentos devem ser passados como uma matriz.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

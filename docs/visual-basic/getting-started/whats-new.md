@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238644"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666873"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -51,7 +51,7 @@ Visual Basic / Visual Studio .NET 2002 A primeira versão do Visual Basic .NET
 
 **Ponto flutuante otimizado para a conversão de inteiro**
 
-Nas versões anteriores do Visual Basic, a conversão de valores [Duplos](../language-reference/data-types/double-data-type.md) e [Únicos](../language-reference/data-types/single-data-type.md) como inteiros apresentava um desempenho relativamente baixo. O Visual Basic 15.8 melhora significativamente o desempenho das conversões de ponto flutuante para inteiros quando você passa o valor retornado por qualquer um dos seguintes métodos para uma das [funções de conversão de inteiros intrínsecas do Visual Basic](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) ou quando o valor retornado por qualquer um dos métodos a seguir é implicitamente convertido em um tipo integral quando [Opção Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) está definida como `Off`:
+Nas versões anteriores do Visual Basic, a conversão de valores [Duplos](../language-reference/data-types/double-data-type.md) e [Únicos](../language-reference/data-types/single-data-type.md) como inteiros apresentava um desempenho relativamente baixo. O Visual Basic 15.8 melhora significativamente o desempenho das conversões de ponto flutuante para inteiros quando você passa o valor retornado por qualquer um dos seguintes métodos para uma das [funções de conversão de inteiros intrínsecas do Visual Basic](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) ou quando o valor retornado por qualquer um dos métodos a seguir é implicitamente convertido em um tipo integral quando [Opção Strict](../language-reference/statements/option-strict-statement.md) está definida como `Off`:
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

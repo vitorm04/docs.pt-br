@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5240ee24a2f017e37b057c9fb74e551927b8bee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 043c37a17375bf2dcdad9e4b429cfca7b96ef7cb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590166"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966969"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Entradas para a classe de XslCompiledTransform
 O método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> aceita três tipos de entrada para o documento de origem: um objeto que implementa a interface de <xref:System.Xml.XPath.IXPathNavigable> , um objeto de <xref:System.Xml.XmlReader> que lê o documento de origem, ou URI de uma cadeia de caracteres.  
   
 > [!NOTE]
->  A classe de <xref:System.Xml.Xsl.XslCompiledTransform> preserva o espaço em branco por padrão. Isso está de acordo com a [seção 3.4 da recomendação do XSLT 1.0 do W3C](https://www.w3.org/TR/xslt.html#strip).  
+> A classe de <xref:System.Xml.Xsl.XslCompiledTransform> preserva o espaço em branco por padrão. Isso está de acordo com a [seção 3.4 da recomendação do XSLT 1.0 do W3C](https://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>Interface de IXPathNavigable  
  A interface de <xref:System.Xml.XPath.IXPathNavigable> é implementada nas classes de <xref:System.Xml.XmlNode> e de <xref:System.Xml.XPath.XPathDocument> . Essas classes representam um cache de memória de dados XML.  
@@ -29,7 +29,7 @@ O método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> aceita trê
 - A classe de <xref:System.Xml.XPath.XPathDocument> é um repositório de dados somente leitura com base no modelo de dados XPath. <xref:System.Xml.XPath.XPathDocument> é a classe recomendada para processar XSLT. Fornece um desempenho mais rápido quando comparada a <xref:System.Xml.XmlNode> a classe.  
   
 > [!NOTE]
->  As transformações são aplicadas ao documento no dataset. Ou seja se você passar em um nó que não seja o nó de diretório base, isso não impede que o processo de transformação acessar todos os nós do documento carregado. Para transformar um fragmento de nó, você deve criar um objeto que contém apenas o fragmento de nó, e passa esse objeto para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> . Para obter mais informações, confira [Como: Transformar um Fragmento de Nó](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
+> As transformações são aplicadas ao documento no dataset. Ou seja se você passar em um nó que não seja o nó de diretório base, isso não impede que o processo de transformação acessar todos os nós do documento carregado. Para transformar um fragmento de nó, você deve criar um objeto que contém apenas o fragmento de nó, e passa esse objeto para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> . Para obter mais informações, confira [Como: Transformar um Fragmento de Nó](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
   
  O exemplo a seguir usa o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> para transformar o arquivo de books.xml para o arquivo de books.html usando a folha de estilos de transform.xsl. Os arquivos books.xml e transform.xls podem ser encontrados neste tópico: [Como: Execute uma Transformação XSLT usando um Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   

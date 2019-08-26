@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a16f51408de5ed7b2a0a7d45af81113fe8c7b386
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586153"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928287"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Como: Definir um método genérico com a emissão de reflexão
 O primeiro procedimento mostra como criar um método genérico simples com dois parâmetros de tipo e como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo.  
@@ -26,7 +26,7 @@ O primeiro procedimento mostra como criar um método genérico simples com dois 
  O terceiro procedimento mostra como invocar o método genérico.  
   
 > [!IMPORTANT]
->  Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. Um método genérico pode aparecer em um tipo não genérico, como neste exemplo. Para obter um exemplo de um método não genérico em um tipo genérico, confira [Como: definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+> Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. Um método genérico pode aparecer em um tipo não genérico, como neste exemplo. Para obter um exemplo de um método não genérico em um tipo genérico, confira [Como: definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-method"></a>Para definir um método genérico  
   
@@ -155,7 +155,7 @@ O primeiro procedimento mostra como criar um método genérico simples com dois 
  Quando o código é executado, o assembly dinâmico é salvo como DemoGenericMethod1.dll e pode ser examinado usando o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   
 > [!NOTE]
->  Uma boa maneira de aprender como emitir o código é escrever um programa Visual Basic, C# ou Visual C++ que executa a tarefa que você está tentando emitir e usa o desmontador para examinar o MSIL produzido pelo compilador.  
+> Uma boa maneira de aprender como emitir o código é escrever um programa Visual Basic, C# ou Visual C++ que executa a tarefa que você está tentando emitir e usa o desmontador para examinar o MSIL produzido pelo compilador.  
   
  O exemplo de código inclui o código-fonte que é equivalente ao método emitido. O método emitido é invocado com associação tardia e também usando um delegado genérico declarado no exemplo de código.  
   

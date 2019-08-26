@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584473"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921514"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Como: Receber notificações de exceção de primeira tentativa
 O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.AppDomain> permite que você receba uma notificação de que uma exceção foi lançada, antes de o Common Language Runtime começar a procurar por manipuladores de exceção.
@@ -91,7 +91,7 @@ O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.App
  Cada vez que o método `Thrower` gera uma exceção no `AD1`, o evento <xref:System.AppDomain.FirstChanceException> é gerado no `AD1` e o manipulador de eventos exibe uma mensagem. Em seguida, o tempo de execução procura um manipulador de exceção. No primeiro caso, o manipulador de exceção é encontrado em `AD1`. No segundo caso, a exceção é tratada no `AD1` e, em vez disso, é capturada no domínio do aplicativo padrão.
 
 > [!NOTE]
->  O nome do domínio do aplicativo padrão é igual ao nome do executável.
+> O nome do domínio do aplicativo padrão é igual ao nome do executável.
 
  Se você adicionar um manipulador ao evento <xref:System.AppDomain.FirstChanceException> para o domínio do aplicativo padrão, o evento será disparado e tratado antes de o domínio de aplicativo padrão lidar com a exceção. Para ver isso, adicione o código C# `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (no Visual Basic, `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) no início de `Main()`.
 

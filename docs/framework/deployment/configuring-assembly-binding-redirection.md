@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965752"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurando o redirecionamento de associações de assemblies
 Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que acompanha a versão do tempo de execução usada para compilar o aplicativo. Você pode usar o atributo **appliesTo** no elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.  
@@ -20,7 +20,7 @@ Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que 
  O atributo **appliesTo** foi introduzido no.NET Framework versão 1.1; ele é ignorado pelo .NET Framework versão 1.0. Isso significa que todos os elementos **\<assemblyBinding>** são aplicados ao usar o .NET Framework versão 1.0, mesmo se um atributo **appliesTo** for especificado.  
   
 > [!NOTE]
->  Use o atributo **appliesTo** para limitar o redirecionamento de associação de assembly para uma versão específica do tempo de execução.  
+> Use o atributo **appliesTo** para limitar o redirecionamento de associação de assembly para uma versão específica do tempo de execução.  
   
  Por exemplo, para redirecionar a associação de assembly para um assembly do .NET Framework versão 1.0, inclua código XML a seguir no seu arquivo de configuração de aplicativo.  
   

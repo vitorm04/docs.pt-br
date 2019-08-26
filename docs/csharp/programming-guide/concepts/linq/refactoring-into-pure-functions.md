@@ -2,19 +2,19 @@
 title: Refatoração em funções puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924202"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
 
 Um aspecto importante de transformações e puras é aprender como o código do refatorar usando funções puras.  
   
 > [!NOTE]
->  A nomenclatura comuns em programação funcional é que você refatora programa usando funções puras. No Visual Basic e C++, isso alinha com o uso das funções em linguagens respectivos. No entanto, em C#, as funções são chamadas métodos. Para fins desta discussão, uma função pura é implementada como um método em C#.  
+> A nomenclatura comuns em programação funcional é que você refatora programa usando funções puras. No Visual Basic e C++, isso alinha com o uso das funções em linguagens respectivos. No entanto, em C#, as funções são chamadas métodos. Para fins desta discussão, uma função pura é implementada como um método em C#.  
   
  Conforme observado anteriormente nesta seção, uma função pura tem duas características úteis:  
   
@@ -24,7 +24,7 @@ Um aspecto importante de transformações e puras é aprender como o código do 
   
  Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas. Dessa maneira, você pode criar versões puras de função do código existente.  
   
- Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando o conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) mostra como manipular um documento WordprocessingML e inclui dois exemplos de como fazer a refatoração usando uma função pura.  
+ Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando o conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) mostra como manipular um documento WordprocessingML e inclui dois exemplos de como fazer a refatoração usando uma função pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminando efeitos colaterais e dependências externas  
  Os seguintes exemplos contrastam duas funções não puras e uma função pura.  
@@ -81,7 +81,7 @@ public class Program
  Esta versão do programa gerenciar as mesmas saída que a primeira versão, porque a função de `HyphenatedConcat` alterou o valor (estado) do primeiro parâmetro chamar a função de membro de <xref:System.Text.StringBuilder.Append%2A> . Observe que essa mudança ocorre independentemente do fato de que `HyphenatedConcat` usa passar o parâmetro de atendimento-por- valor.  
   
 > [!IMPORTANT]
->  Para tipos de referência, se você passa um parâmetro por valor, ele resulta em uma cópia de referência a um objeto que está sendo passado. Esta cópia ainda está associada com os mesmos dados de instância que a referência original (até que a variável de referência é atribuído a um novo objeto). a Atendimento-por- referência não necessariamente é necessária para uma função modifique um parâmetro.  
+> Para tipos de referência, se você passa um parâmetro por valor, ele resulta em uma cópia de referência a um objeto que está sendo passado. Esta cópia ainda está associada com os mesmos dados de instância que a referência original (até que a variável de referência é atribuído a um novo objeto). a Atendimento-por- referência não necessariamente é necessária para uma função modifique um parâmetro.  
   
 ### <a name="pure-function"></a>Função pura  
 Esta próxima versão do programa mostra como implementar a função `HyphenatedConcat` como uma função pura.  
@@ -110,9 +110,9 @@ class Program
 ## <a name="standard-query-operators"></a>Operadores de consulta padrão  
  Uma característica importante dos operadores de consulta padrão é que são implementados como funções puras.  
   
- Para obter mais informações, consulte [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Para obter mais informações, consulte [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Programação funcional versus Programação obrigatória (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
+- [Programação funcional versus Programação obrigatória (C#)](./functional-programming-vs-imperative-programming.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305033"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939457"
 ---
 # <a name="traversing-xml-schemas"></a>Percorrer esquemas XML
 Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece acesso aos elementos, a atributos, e tipos armazenados no SOM. Percorrer um esquema XML carregado no SOM também é a primeira etapa em editar um esquema XML usando o SOM API.  
@@ -35,7 +35,7 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (fornece acesso aos atributos que não pertencem ao namespace de esquema)|  
   
 > [!NOTE]
->  Todas as propriedades listadas na tabela anterior, exceto para a propriedade de <xref:System.Xml.Schema.XmlSchema.Items%2A> , são as propriedades de (PSCI) de POST-Esquema- compilação - Infoset que não estão disponíveis até que o esquema foi criado. A propriedade de <xref:System.Xml.Schema.XmlSchema.Items%2A> é uma propriedade de pre-esquema- compilação que pode ser usada antes que o esquema foi criado para acessar e editar todos os elementos, atributos, e tipos de nível globais.  
+> Todas as propriedades listadas na tabela anterior, exceto para a propriedade de <xref:System.Xml.Schema.XmlSchema.Items%2A> , são as propriedades de (PSCI) de POST-Esquema- compilação - Infoset que não estão disponíveis até que o esquema foi criado. A propriedade de <xref:System.Xml.Schema.XmlSchema.Items%2A> é uma propriedade de pre-esquema- compilação que pode ser usada antes que o esquema foi criado para acessar e editar todos os elementos, atributos, e tipos de nível globais.  
 >   
 >  A propriedade de <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> fornece acesso a todos os atributos que não pertencem ao namespace de esquema. Esses atributos não são processadas pelo processador de esquema.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191881"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938013"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -30,7 +30,7 @@ A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](.
  A ferramenta Nome Forte é instalada automaticamente com o Visual Studio. Para iniciar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
->  Em computadores 64 bits, execute a versão de 32 bits do Sn.exe usando o Prompt de Comando do Desenvolvedor para Visual Studio e a versão de 64 bits usando o Prompt de Comando Win64 x64 do Visual Studio. 
+> Em computadores 64 bits, execute a versão de 32 bits do Sn.exe usando o Prompt de Comando do Desenvolvedor para Visual Studio e a versão de 64 bits usando o Prompt de Comando Win64 x64 do Visual Studio. 
   
  No prompt de comando, digite o seguinte:  
   
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|Gera dados <xref:System.Reflection.AssemblySignatureKeyAttribute> para migrar a chave de identidade para a chave de assinatura de um arquivo.|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|Gera dados <xref:System.Reflection.AssemblySignatureKeyAttribute> para migrar a chave de identidade para a chave de assinatura de um contêiner de chave.|  
@@ -77,13 +77,13 @@ sn [-quiet][option [parameter(s)]]
 |**-?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 > [!NOTE]
->  Todas as opções de Sn.exe diferenciam maiúsculas de minúsculas e devem ser digitadas exatamente conforme mostrado para serem reconhecidas pela ferramenta.  
+> Todas as opções de Sn.exe diferenciam maiúsculas de minúsculas e devem ser digitadas exatamente conforme mostrado para serem reconhecidas pela ferramenta.  
   
 ## <a name="remarks"></a>Comentários  
  As opções **-R** e **–Rc** são úteis com assemblies assinados com atraso. Nesse cenário, apenas a chave pública foi definida no tempo de compilação e a assinatura será realizada posteriormente, quando a chave privada será conhecida.  
   
 > [!NOTE]
->  Para parâmetros (por exemplo, –**Vr**) gravados em recursos protegidos como, por exemplo, o Registro, execute SN.exe como um administrador.  
+> Para parâmetros (por exemplo, –**Vr**) gravados em recursos protegidos como, por exemplo, o Registro, execute SN.exe como um administrador.  
   
 A ferramenta Nome Forte pressupõe que os pares de chaves pública/privada são gerados com o identificador de algoritmo `AT_SIGNATURE`. Os pares de chaves pública/privada gerados com o algoritmo `AT_KEYEXCHANGE` geram um erro. 
 

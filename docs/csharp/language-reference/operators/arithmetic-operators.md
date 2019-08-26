@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661541"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608375"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referência do C#)
 
@@ -45,7 +45,7 @@ Esses operadores dão suporte a todos os tipos numéricos [integrais](../builtin
 
 ## <a name="increment-operator-"></a>Operador de incremento ++
 
-O operador de incremento unário `++` incrementa seu operando em 1. O operando precisa ser uma variável, um acesso de [propriedade](../../programming-guide/classes-and-structs/properties.md) ou um acesso de [indexador](../../../csharp/programming-guide/indexers/index.md).
+O operador de incremento unário `++` incrementa seu operando em 1. O operando precisa ser uma variável, um acesso de [propriedade](../../programming-guide/classes-and-structs/properties.md) ou um acesso de [indexador](../../programming-guide/indexers/index.md).
 
 Há duas formas de suporte para o operador de incremento: o operador de incremento pós-fixado, `x++`, e o operador de incremento pré-fixado, `++x`.
 
@@ -63,7 +63,7 @@ O resultado de `++x` é o valor de `x` *após* a operação, como mostra o exemp
 
 ## <a name="decrement-operator---"></a>Operador de decremento --
 
-O operador de decremento unário `--` decrementa o operando em 1. O operando precisa ser uma variável, um acesso de [propriedade](../../programming-guide/classes-and-structs/properties.md) ou um acesso de [indexador](../../../csharp/programming-guide/indexers/index.md).
+O operador de decremento unário `--` decrementa o operando em 1. O operando precisa ser uma variável, um acesso de [propriedade](../../programming-guide/classes-and-structs/properties.md) ou um acesso de [indexador](../../programming-guide/indexers/index.md).
 
 Há duas formas de suporte para o operador de decremento: o operador de decremento pós-fixado, `x--`, e o operador de decremento pré-fixado, `--x`.
 

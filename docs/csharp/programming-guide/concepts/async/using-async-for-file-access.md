@@ -2,12 +2,12 @@
 title: Usando o Async para acessar arquivos (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 6ca47157575ef4569a43f334dae4f99a1986a7ce
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330943"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595539"
 ---
 # <a name="using-async-for-file-access-c"></a>Usando o Async para acessar arquivos (C#)
 Você pode usar o recurso async para acessar arquivos. Usando o recurso async, você pode chamar os métodos assíncronos sem usar retornos de chamada ou dividir seu código em vários métodos ou expressões lambda. Para tornar síncrono um código assíncrono, basta chamar um método assíncrono em vez de um método síncrono e adicionar algumas palavras-chave ao código.  
@@ -75,10 +75,10 @@ Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
 await theTask;  
 ```  
   
- A primeira instrução retorna uma tarefa e faz com que o processamento do arquivo seja iniciado. A segunda instrução com o await faz com que o método saia imediatamente e retorne uma tarefa diferente. Quando o processamento do arquivo é concluído posteriormente, a execução retorna para a instrução após a await. Para obter mais informações, consulte [Fluxo de controle em programas assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ A primeira instrução retorna uma tarefa e faz com que o processamento do arquivo seja iniciado. A segunda instrução com o await faz com que o método saia imediatamente e retorne uma tarefa diferente. Quando o processamento do arquivo é concluído posteriormente, a execução retorna para a instrução após a await. Para obter mais informações, consulte [Fluxo de controle em programas assíncronos (C#)](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Lendo texto  
- O exemplo a seguir lê o texto de um arquivo. O texto é armazenado em buffer e, nesse caso, colocado em um <xref:System.Text.StringBuilder>. Diferentemente do exemplo anterior, a avaliação de await produz um valor. O método <xref:System.IO.Stream.ReadAsync%2A> retorna um <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, portanto, a avaliação do await produz um valor `Int32` (`numRead`) após a conclusão da operação. Para obter mais informações, consulte [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ O exemplo a seguir lê o texto de um arquivo. O texto é armazenado em buffer e, nesse caso, colocado em um <xref:System.Text.StringBuilder>. Diferentemente do exemplo anterior, a avaliação de await produz um valor. O método <xref:System.IO.Stream.ReadAsync%2A> retorna um <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, portanto, a avaliação do await produz um valor `Int32` (`numRead`) após a conclusão da operação. Para obter mais informações, consulte [Tipos de retorno assíncronos (C#)](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  
@@ -172,10 +172,10 @@ public async Task ProcessWriteMultAsync()
 }  
 ```  
   
- Ao usar os métodos <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, você pode especificar um <xref:System.Threading.CancellationToken>, que pode ser usado para cancelar o fluxo intermediário da operação. Para obter mais informações, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) e [Cancelamento em threads gerenciados](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ Ao usar os métodos <xref:System.IO.Stream.WriteAsync%2A> e <xref:System.IO.Stream.ReadAsync%2A>, você pode especificar um <xref:System.Threading.CancellationToken>, que pode ser usado para cancelar o fluxo intermediário da operação. Para obter mais informações, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md) e [Cancelamento em threads gerenciados](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Fluxo de controle em programas assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Programação assíncrona com async e await (C#)](./index.md)
+- [Tipos de retorno assíncronos (C#)](./async-return-types.md)
+- [Fluxo de controle em programas assíncronos (C#)](./control-flow-in-async-programs.md)

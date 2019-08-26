@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: d7073fe35d58c9c538afa52911a5555b0002bfcf
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f042042f36e373ec05e8f0f15c14027463653578
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486277"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924311"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformações de dados com LINQ (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] não se trata apenas de recuperação de dados. Também é uma ferramenta poderosa para transformação de dados. Ao usar uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você pode usar uma sequência de origem como entrada e modificá-la de várias maneiras para criar uma nova sequência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] não se trata apenas de recuperação de dados. Também é uma ferramenta poderosa para transformação de dados. Ao usar uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você pode usar uma sequência de origem como entrada e modificá-la de várias maneiras para criar uma nova sequência de saída. Você pode modificar a própria sequência sem modificar os respectivos elementos, classificando-os e agrupando-os. Mas talvez o recurso mais poderoso das consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é a capacidade de criar novos tipos. Isso é feito na cláusula [select](../../../language-reference/keywords/select-clause.md). Por exemplo, é possível executar as seguintes tarefas:  
   
 - Mesclar várias sequências de entrada em uma única sequência de saída que tenha um novo tipo.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66486277"
   
  [!code-csharp[CSLinqGettingStarted#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#8)]  
   
- Para obter mais informações, consulte [cláusula join](../../../../csharp/language-reference/keywords/join-clause.md) e [cláusula select](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Para obter mais informações, consulte [cláusula join](../../../language-reference/keywords/join-clause.md) e [cláusula select](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="selecting-a-subset-of-each-source-element"></a>Selecionando um Subconjunto de Cada Elemento de Origem  
  Há duas maneiras principais de selecionar um subconjunto de cada elemento na sequência de origem:  
@@ -58,7 +58,7 @@ ms.locfileid: "66486277"
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- Para obter mais informações, consulte [Inicializadores de coleção e de objeto](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) e [Tipos anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Para obter mais informações, consulte [Inicializadores de coleção e de objeto](../../classes-and-structs/object-and-collection-initializers.md) e [Tipos anônimos](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformando Objetos na Memória em XML  
  As consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilitam a transformação de dados entre estruturas de dados na memória, bancos de dados SQL, conjuntos de dados ADO.NET e fluxos ou documentos XML. O exemplo a seguir transforma objetos de uma estrutura de dados na memória em elementos XML.  
@@ -87,21 +87,21 @@ ms.locfileid: "66486277"
 </Root>  
 ```  
   
- Para obter mais informações, consulte [Criando árvores XML em C# (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md).  
+ Para obter mais informações, consulte [Criando árvores XML em C# (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Realizando Operações em Elementos de Origem  
  Uma sequência de saída pode não conter os elementos ou propriedades de elementos da sequência de origem. Em vez disso, a saída pode ser uma sequência de valores que é calculada usando os elementos de origem como argumentos de entrada. Esta simples consulta a seguir, quando executada, produz uma sequência de cadeias de caracteres cujos valores representam um cálculo com base na sequência de origem de elementos do tipo `double`.  
   
 > [!NOTE]
->  Não há suporte para chamar métodos em expressões de consulta se a consulta será movida para outro domínio. Por exemplo, você não pode chamar um método comum de C# no [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] porque o SQL Server não tem contexto para ele. No entanto, você pode mapear procedimentos armazenados para os métodos e chamá-los. Para obter mais informações, consulte [Procedimentos armazenados](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
+> Não há suporte para chamar métodos em expressões de consulta se a consulta será movida para outro domínio. Por exemplo, você não pode chamar um método comum de C# no [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] porque o SQL Server não tem contexto para ele. No entanto, você pode mapear procedimentos armazenados para os métodos e chamá-los. Para obter mais informações, consulte [Procedimentos armazenados](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
  [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ (consulta integrada à linguagem) (C#)](./index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
-- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
-- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Cláusula select](../../../../csharp/language-reference/keywords/select-clause.md)
+- [LINQ to XML (C#)](./linq-to-xml-overview.md)
+- [Expressões de consulta LINQ](../../linq-query-expressions/index.md)
+- [Cláusula select](../../../language-reference/keywords/select-clause.md)

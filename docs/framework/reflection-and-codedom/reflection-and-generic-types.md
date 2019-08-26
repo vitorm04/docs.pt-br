@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364038"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967197"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexão e tipos genéricos
 <a name="top"></a> Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo comum é que um tipo genérico tem associado a ele um conjunto de parâmetros de tipo (se for uma definição de tipo genérico) ou argumentos de tipo (se for um tipo construído). Um método genérico é diferente de um método comum da mesma maneira.  
@@ -32,7 +32,7 @@ ms.locfileid: "68364038"
 - Os parâmetros de tipo de definições de tipo genérico e definições de método genérico são representadas por instâncias da classe <xref:System.Type>.  
   
     > [!NOTE]
-    >  Muitas propriedades e métodos de <xref:System.Type> têm um comportamento diferente quando um objeto <xref:System.Type> representa um parâmetro de tipo genérico. Essas diferenças são documentadas nos tópicos de propriedade e método. Por exemplo, veja <xref:System.Type.IsAutoClass%2A> e <xref:System.Type.DeclaringType%2A>. Além disso, alguns membros são válidos somente quando um objeto <xref:System.Type> representa um parâmetro de tipo genérico. Por exemplo, veja <xref:System.Type.GetGenericTypeDefinition%2A>.  
+    > Muitas propriedades e métodos de <xref:System.Type> têm um comportamento diferente quando um objeto <xref:System.Type> representa um parâmetro de tipo genérico. Essas diferenças são documentadas nos tópicos de propriedade e método. Por exemplo, veja <xref:System.Type.IsAutoClass%2A> e <xref:System.Type.DeclaringType%2A>. Além disso, alguns membros são válidos somente quando um objeto <xref:System.Type> representa um parâmetro de tipo genérico. Por exemplo, veja <xref:System.Type.GetGenericTypeDefinition%2A>.  
   
 - Se uma instância do <xref:System.Type> representa um tipo genérico, ela inclui uma matriz de tipos que representam os parâmetros de tipo (para definições de tipo genérico) ou os argumentos de tipo (para tipos construídos). O mesmo é verdadeiro para uma instância da classe <xref:System.Reflection.MethodInfo> que representa um método genérico.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68364038"
   
  Para um exemplo de código que demonstra os métodos discutidos aqui, veja [: Examinar tipos genéricos e criar instâncias deles com a reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
- A discussão a seguir pressupõe familiaridade com a terminologia de genéricos, como a diferença entre os parâmetros e argumentos de tipo e tipos construídos abertos ou fechados. Para obter mais informações, consulte [Genéricos](../../../docs/standard/generics/index.md).  
+ A discussão a seguir pressupõe familiaridade com a terminologia de genéricos, como a diferença entre os parâmetros e argumentos de tipo e tipos construídos abertos ou fechados. Para obter mais informações, consulte [Genéricos](../../standard/generics/index.md).  
   
  Esta visão geral é composta pelas seguintes seções:  
   
@@ -131,7 +131,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  A propriedade <xref:System.Type.GenericParameterAttributes%2A> obtém um valor <xref:System.Reflection.GenericParameterAttributes> que indica a variância (covariância ou contravariância) e as restrições especiais de um parâmetro de tipo.  
   
 #### <a name="covariance-and-contravariance"></a>Covariância e contravariância  
- Para determinar se um parâmetro de tipo é covariante ou contravariante, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, o parâmetro de tipo será invariável. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
+ Para determinar se um parâmetro de tipo é covariante ou contravariante, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, o parâmetro de tipo será invariável. Consulte [Covariância e contravariância](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Restrições especiais  
  Para determinar as restrições especiais de um parâmetro de tipo, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, não haverá nenhuma restrição especial. Um parâmetro de tipo pode ser restringido para ser um tipo de referência, para ser um tipo de valor não nulo e para ter um construtor sem parâmetros.  
@@ -150,6 +150,6 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Como: Examinar tipos genéricos e criar instâncias deles com a reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra como usar as propriedades e os métodos de <xref:System.Type> e <xref:System.Reflection.MethodInfo> para examinar tipos genéricos.|  
-|[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso de genéricos e como ele tem suporte no .NET Framework.|  
+|[Genéricos](../../standard/generics/index.md)|Descreve o recurso de genéricos e como ele tem suporte no .NET Framework.|  
 |[Como: Definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Mostra como usar a emissão de reflexão para gerar tipos genéricos nos assemblies dinâmicos.|  
 |[Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|

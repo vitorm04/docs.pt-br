@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77dff7af6a5d869c6635d5fe0caaf70bc31c3ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949400"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 Arquivos de recurso desempenham um papel central em aplicativos localizados. Eles permitem que um aplicativo exiba cadeias de caracteres, imagens e outros dados no idioma e na cultura do usuário e forneça dados alternativos se esses recursos não estiverem disponíveis. O .NET Framework usa um modelo de hub e spoke para localizar e recuperar os recursos localizados. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, que é chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; ela é usada quando não há recursos localizados disponíveis. Você usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para designar a cultura da cultura padrão do aplicativo. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura localizada, mas não contém nenhum código. Como os assemblies satélite não fazem parte do assembly principal, você pode facilmente atualizar ou substituir recursos que correspondem a uma cultura específica sem substituir o assembly principal do aplicativo.  
   
 > [!NOTE]
->  Os recursos da cultura padrão de um aplicativo também podem ser armazenados em um assembly satélite. Para fazer isso, você atribui ao atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> um valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
+> Os recursos da cultura padrão de um aplicativo também podem ser armazenados em um assembly satélite. Para fazer isso, você atribui ao atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> um valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Nome e local do assembly satélite  
  Esse modelo hub e spoke requer que você coloque recursos em locais específicos, para que possam ser facilmente localizados e usados. Se você não compilar e nomear os recursos conforme esperado, ou se não colocá-los nos locais corretos, o CLR não poderá localizá-los e usará os recursos da cultura padrão. O Gerenciador de Recursos do .NET Framework, representado por um objeto <xref:System.Resources.ResourceManager>, é usado para acessar automaticamente os recursos localizados. O Gerenciador de Recursos requer o seguinte:  
@@ -46,7 +46,7 @@ Arquivos de recurso desempenham um papel central em aplicativos localizados. Ele
 - Deve haver um subdiretório separado no diretório do aplicativo para cada cultura localizada que armazena os recursos da cultura. O nome do subdiretório deve ser igual ao nome de cultura. Como alternativa, você pode armazenar seus assemblies satélites no cache de assembly global. Nesse caso, o componente de informações de cultura do nome forte do assembly deve indicar sua cultura. (Consulte a seção [Instalação dos assemblies de satélite no cache de assembly global](#SN), mais adiante neste tópico.)  
   
     > [!NOTE]
-    >  Se o aplicativo incluir recursos para subculturas, coloque cada subcultura em um subdiretório separado no diretório do aplicativo. Não coloque subculturas em subdiretórios no diretório principal da sua cultura.  
+    > Se o aplicativo incluir recursos para subculturas, coloque cada subcultura em um subdiretório separado no diretório do aplicativo. Não coloque subculturas em subdiretórios no diretório principal da sua cultura.  
   
 - O assembly satélite deve ter o mesmo nome que o aplicativo e usar a extensão de nome de arquivo ".resources.dll". Por exemplo, se um aplicativo for denominado Example.exe, o nome de cada assembly satélite deverá ser Example.resources.dll. Observe que o nome do assembly satélite não indica a cultura dos seus arquivos de recursos. No entanto, o assembly satélite aparece em um diretório que especifica a cultura.  
   
@@ -75,7 +75,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  A tabela a seguir descreve em detalhes as opções de Al.exe usadas nesses comandos.  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**-target:** lib|Especifica que o seu assembly satélite é compilado em um arquivo de biblioteca (. dll). Como um assembly satélite não contém código executável e não é um assembly principal do aplicativo, você deve salvar assemblies satélites como DLLs.|  
 |**-embed:** strings.de.resources|Especifica o nome do arquivo de recurso incorporado quando o Al.exe compila o assembly. Você pode incorporar vários arquivos .resources em um assembly satélite, mas se estiver seguindo o modelo hub e spoke, compile um assembly satélite para cada cultura. No entanto, você pode criar arquivos .resources separados para cadeias de caracteres e objetos.|  

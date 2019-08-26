@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960325"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987176"
 ---
 # <a name="character-encoding-in-net"></a>Codificação de caracteres no .NET
 Os caracteres são entidades abstratas que podem ser representadas de muitas maneiras diferentes. Uma codificação de caracteres é um sistema que emparelha cada caractere em um conjunto de caracteres com suporte com algum valor que representa esse caractere. Por exemplo, o código Morse é uma codificação de caracteres que emparelha cada caractere do alfabeto romano com um padrão de pontos e traços adequados para transmissão por linhas telegráficas. Uma codificação de caracteres para computadores emparelha cada caractere em um conjunto de caracteres com suporte com um valor numérico que representa esse caractere. Uma codificação de caracteres tem dois componentes distintos:  
@@ -31,7 +31,7 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
  A codificação de caracteres descreve as regras por meio das quais um codificador e um decodificador são operados. Por exemplo, a classe <xref:System.Text.UTF8Encoding> descreve as regras de codificação para UTF-8 (Formato de Transformação Unicode de 8 bits), e de decodificação desse formato, que usa de um a quatro bytes para representar um único caractere Unicode. Codificar e decodificar também podem incluir a validação. Por exemplo, a classe <xref:System.Text.UnicodeEncoding> verifica todos os substitutos para certificar-se de eles constituem pares alternativos válidos. (Um par alternativo consiste em um caractere com um ponto de código que varia de U+D800 a U+DBFF seguido por um caractere com um ponto de código que varia de U+DC00 a U+DFFF.)  Uma estratégia de fallback determina como um codificador lida com caracteres inválidos ou como um decodificador lida com bytes inválidos.  
   
 > [!WARNING]
->  As classes de codificação .NET fornecem uma maneira de armazenar e converter dados de caractere. Elas não devem ser usadas para armazenar dados binários no formato de cadeia de caracteres. Dependendo da codificação usada, a conversão de dados binários em formato de cadeia de caracteres com classes de codificação pode introduzir um comportamento inesperado e produzir dados imprecisos ou corrompidos. Para converter dados binários em um formulário de cadeia de caracteres, use o método <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType>.  
+> As classes de codificação .NET fornecem uma maneira de armazenar e converter dados de caractere. Elas não devem ser usadas para armazenar dados binários no formato de cadeia de caracteres. Dependendo da codificação usada, a conversão de dados binários em formato de cadeia de caracteres com classes de codificação pode introduzir um comportamento inesperado e produzir dados imprecisos ou corrompidos. Para converter dados binários em um formulário de cadeia de caracteres, use o método <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType>.  
   
  O .NET usa a codificação UTF-16 (representado pela classe <xref:System.Text.UnicodeEncoding>) para representar caracteres e cadeias de caracteres. Aplicativos que segmentam o Common Language Runtime e usam codificadores para mapear representações de caracteres Unicode com suporte pelo common language runtime para outros esquemas de codificação. Eles usam decodificadores para mapear caracteres de codificações não Unicode para Unicode.  
   
@@ -60,13 +60,13 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
 - Chame o método <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, que retorna qualquer padrão, página de código ou codificação DBCS disponível no .NET. As sobrecargas permitem especificar um objeto de fallback para o codificador e o decodificador.  
   
 > [!NOTE]
->  O padrão Unicode atribui um ponto de código (um número) e um nome a cada caractere em todos os scripts com suporte. Por exemplo, o caractere "A" é representado pelo ponto de código de U+0041 e o nome "LETRA MAIÚSCULA LATINA A". As codificações UTF (Unicode Transformation Format) definem maneiras de codificar esse ponto de código em uma sequência de um ou mais bytes. Um esquema de codificação Unicode simplifica o desenvolvimento de aplicativos prontos para o mundo, porque ele permite que qualquer conjunto de caracteres sejam representados em uma única codificação. Os desenvolvedores de aplicativos não precisam mais controlar o esquema de codificação usado para gerar caracteres para um idioma específico ou sistema de gravação e os dados podem ser compartilhados entre sistemas internacionalmente sem serem corrompidos.  
+> O padrão Unicode atribui um ponto de código (um número) e um nome a cada caractere em todos os scripts com suporte. Por exemplo, o caractere "A" é representado pelo ponto de código de U+0041 e o nome "LETRA MAIÚSCULA LATINA A". As codificações UTF (Unicode Transformation Format) definem maneiras de codificar esse ponto de código em uma sequência de um ou mais bytes. Um esquema de codificação Unicode simplifica o desenvolvimento de aplicativos prontos para o mundo, porque ele permite que qualquer conjunto de caracteres sejam representados em uma única codificação. Os desenvolvedores de aplicativos não precisam mais controlar o esquema de codificação usado para gerar caracteres para um idioma específico ou sistema de gravação e os dados podem ser compartilhados entre sistemas internacionalmente sem serem corrompidos.  
 >   
 >  O .NET dá suporte a três codificações definidas pelo padrão Unicode: UTF-8, UTF-16 e UTF-32. Para obter mais informações, consulte Padrão Unicode na [página inicial do Unicode](https://www.unicode.org/).  
   
  Você pode recuperar informações sobre todas as codificações disponíveis no .NET chamando o método <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. O .NET dá suporte aos sistemas de codificação de caracteres listados na tabela a seguir.  
   
-|Codificando|Classe|Descrição|Vantagens/desvantagens|  
+|Codificando|Classe|DESCRIÇÃO|Vantagens/desvantagens|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Codifica um intervalo limitado de caracteres usando os menores sete bits de um byte.|Como essa codificação só dá suporte a valores de caracteres de U+0000 a U+007F, na maioria dos casos, ela é inadequada para aplicativos internacionalizados.|  
 |UTF-7|<xref:System.Text.UTF7Encoding>|Representa caracteres como sequências de caracteres ASCII de 7 bits. Caracteres Unicode não ASCII são representados por uma sequência de escape de caracteres ASCII.|O UTF-7 dá suporte a protocolos como os de email e de grupos de notícias. No entanto, o UTF-7 não é particularmente seguro ou robusto. Em alguns casos, alterar um bit pode alterar radicalmente a interpretação de toda uma cadeia de caracteres UTF-7. Em outros casos, diferentes cadeias de caracteres UTF-7 podem codificar o mesmo texto. Para as sequências que incluem caracteres não ASCII, o UTF-7 requer mais espaço do que o UTF-8 e a codificação/decodificação é mais lenta. Consequentemente, você deve usar o UTF-8 em vez do UTF-7, se possível.|  
@@ -137,19 +137,19 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
 - Fallback de exceção  
   
 > [!IMPORTANT]
->  Os problemas mais comuns em operações de codificação ocorrem quando um caractere Unicode não pode ser mapeado para uma determinada codificação de página de código. Os problemas mais comuns em operações de decodificação ocorrem quando sequências de bytes inválidas não podem ser convertidas em caracteres Unicode válidos. Por esses motivos, você deve saber qual estratégia de fallback um objeto de codificação específico usa. Sempre que possível, você deve especificar a estratégia de fallback usada por um objeto de codificação quando você criar uma instância do objeto.  
+> Os problemas mais comuns em operações de codificação ocorrem quando um caractere Unicode não pode ser mapeado para uma determinada codificação de página de código. Os problemas mais comuns em operações de decodificação ocorrem quando sequências de bytes inválidas não podem ser convertidas em caracteres Unicode válidos. Por esses motivos, você deve saber qual estratégia de fallback um objeto de codificação específico usa. Sempre que possível, você deve especificar a estratégia de fallback usada por um objeto de codificação quando você criar uma instância do objeto.  
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Fallback de melhor ajuste  
  Quando um caractere não tiver uma correspondência exata na codificação de destino, o codificador pode tentar mapeá-lo para um caractere semelhante. (O fallback de melhor ajuste é sobretudo uma codificação em vez de um problema de decodificação. Há poucas páginas de código que contêm caracteres que não podem ser mapeados com êxito para Unicode.) O fallback de melhor ajuste é o padrão para a página de código e para codificações de conjuntos de caracteres de byte duplo recuperados pelas sobrecargas <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> e <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Na teoria, as classes de codificação Unicode fornecidas no .NET (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> e <xref:System.Text.UTF32Encoding>) dão suporte a todos os caracteres em cada conjunto de caracteres para que eles possam ser usados para eliminar problemas de fallback de melhor ajuste.  
+> Na teoria, as classes de codificação Unicode fornecidas no .NET (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> e <xref:System.Text.UTF32Encoding>) dão suporte a todos os caracteres em cada conjunto de caracteres para que eles possam ser usados para eliminar problemas de fallback de melhor ajuste.  
   
  Estratégias de melhor ajuste variam para páginas de código diferentes. Por exemplo, para algumas páginas de código, caracteres latinos de largura inteira mapeiam para os caracteres latinos de meia largura mais comuns. Para outras páginas de código, esse mapeamento não é feito. Mesmo em uma estratégia de melhor ajuste agressiva, não há nenhum ajuste imaginável para alguns caracteres em algumas codificações. Por exemplo, um ideograma chinês tem nenhum mapeamento razoável para a página de código 1252. Nesse caso, é usada uma cadeia de caracteres de substituição. Por padrão, essa cadeia de caracteres é apenas um PONTO DE INTERROGAÇÃO (U+003F).  
   
 > [!NOTE]
->  Estratégias de melhor ajuste não estão documentadas em detalhes. No entanto, várias páginas de código estão documentadas no site [do consórcio Unicode](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Examine o arquivo **leiame.txt** nessa pasta para obter uma descrição de como interpretar os arquivos de mapeamento.
+> Estratégias de melhor ajuste não estão documentadas em detalhes. No entanto, várias páginas de código estão documentadas no site [do consórcio Unicode](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Examine o arquivo **leiame.txt** nessa pasta para obter uma descrição de como interpretar os arquivos de mapeamento.
   
  O exemplo a seguir usa a página de código 1252 (a página de código do Windows para idiomas da Europa Ocidental) para ilustrar o mapeamento de melhor ajuste e suas desvantagens. O método <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> é usado para recuperar um objeto de codificação de página de código 1252. Por padrão, ele usa um mapeamento de melhor ajuste para caracteres Unicode aos quais ele não dá suporte. O exemplo cria uma instância de uma cadeia de caracteres que contém três caracteres não ASCII – LETRA MAIÚSCULA LATINA S CIRCULADA (U+24C8), CINCO SOBRESCRITO (U+2075) e INFINITO (U+221E) – separados por espaços. Como mostra a saída de exemplo, quando a cadeia de caracteres é codificada, os três caracteres originais sem espaço são substituídos pelo PONTO DE INTERROGAÇÃO (U+003F), DÍGITO CINCO (U+0035) e DÍGITO OITO (U+0038). DÍGITO OITO é um substituto especialmente ruim para o caractere INFINITO sem suporte e o PONTO DE INTERROGAÇÃO indica que nenhum mapeamento estava disponível para o caractere original.  
   
@@ -159,7 +159,7 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
  O mapeamento de melhor ajuste é o comportamento padrão para um objeto <xref:System.Text.Encoding> que codifica dados Unicode em dados da página de código e há aplicativos herdados que se baseiam nesse comportamento. No entanto, a maioria dos novos aplicativos devem evitar o comportamento de melhor ajuste por motivos de segurança. Por exemplo, os aplicativos não devem colocar um nome de domínio por meio de uma codificação de melhor ajuste.  
   
 > [!NOTE]
->  Você também pode implementar um mapeamento de fallback de melhor ajuste personalizado para uma codificação. Para obter mais informações, consulte a seção [Implementando uma estratégia de fallback personalizada](../../../docs/standard/base-types/character-encoding.md#Custom).  
+> Você também pode implementar um mapeamento de fallback de melhor ajuste personalizado para uma codificação. Para obter mais informações, consulte a seção [Implementando uma estratégia de fallback personalizada](../../../docs/standard/base-types/character-encoding.md#Custom).  
   
  Se o fallback mais adequado for o padrão para um objeto de codificação, você poderá escolher outra estratégia de fallback ao recuperar um objeto <xref:System.Text.Encoding> chamando a sobrecarga <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> ou <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType>. A seção a seguir inclui um exemplo que substitui cada caractere que não pode ser mapeado para a página de código 1252 com um asterisco (*).  
   
@@ -179,7 +179,7 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
  [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
   
 > [!NOTE]
->  Você também pode implementar uma classe de substituição para uma codificação. Para obter mais informações, consulte a seção [Implementando uma estratégia de fallback personalizada](../../../docs/standard/base-types/character-encoding.md#Custom).  
+> Você também pode implementar uma classe de substituição para uma codificação. Para obter mais informações, consulte a seção [Implementando uma estratégia de fallback personalizada](../../../docs/standard/base-types/character-encoding.md#Custom).  
   
  Além de PONTO DE INTERROGAÇÃO (U+003F), o CARACTERE DE SUBSTITUIÇÃO Unicode (U+FFFD) normalmente é usado como uma cadeia de caracteres de substituição, especialmente ao decodificar sequências de bytes que não podem ser convertidas com êxito em caracteres Unicode. No entanto, você está livre para escolher qualquer cadeia de caracteres de substituição e ela pode conter vários caracteres.  
   
@@ -191,7 +191,7 @@ Os caracteres são entidades abstratas que podem ser representadas de muitas man
  [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  
   
 > [!NOTE]
->  Você também pode implementar um manipulador de exceção personalizado para uma operação de codificação. Para obter mais informações, consulte a seção [Implementando uma estratégia de fallback personalizada](../../../docs/standard/base-types/character-encoding.md#Custom).  
+> Você também pode implementar um manipulador de exceção personalizado para uma operação de codificação. Para obter mais informações, consulte a seção [Implementando uma estratégia de fallback personalizada](../../../docs/standard/base-types/character-encoding.md#Custom).  
   
  Os objetos <xref:System.Text.EncoderFallbackException> e <xref:System.Text.DecoderFallbackException> fornecem as seguintes informações sobre a condição que causou a exceção:  
   

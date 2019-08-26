@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911592"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 
@@ -640,6 +640,6 @@ No .NET Framework versão 2.0, a única interação com o serviço de imagem nat
 ## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Processo de execução gerenciada](../../../docs/standard/managed-execution-process.md)
+- [Processo de execução gerenciada](../../standard/managed-execution-process.md)
 - [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

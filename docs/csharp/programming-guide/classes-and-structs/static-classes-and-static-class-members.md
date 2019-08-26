@@ -9,16 +9,16 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 11cbe6600a75b2db6174841790aa69efdf5da035
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 57ab0282c88a85b59c8fed7506ef811c8cced58f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398287"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924440"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes static e membros de classes static (Guia de Programação em C#)
 
-Uma classe [static](../../../csharp/language-reference/keywords/static.md) é basicamente o mesmo que uma classe não estática, mas há uma diferença: uma classe estática não pode ser instanciada. Em outras palavras, você não pode usar o operador [new](../../../csharp/language-reference/operators/new-operator.md) para criar uma variável do tipo de classe. Como não há nenhuma variável de instância, você acessa os membros de uma classe estática usando o próprio nome de classe. Por exemplo, se houver uma classe estática chamada `UtilityClass` com um método público chamado `MethodA`, chame o método, como mostra o exemplo a seguir:  
+Uma classe [static](../../language-reference/keywords/static.md) é basicamente o mesmo que uma classe não estática, mas há uma diferença: uma classe estática não pode ser instanciada. Em outras palavras, você não pode usar o operador [new](../../language-reference/operators/new-operator.md) para criar uma variável do tipo de classe. Como não há nenhuma variável de instância, você acessa os membros de uma classe estática usando o próprio nome de classe. Por exemplo, se houver uma classe estática chamada `UtilityClass` com um método público chamado `MethodA`, chame o método, como mostra o exemplo a seguir:  
   
 ```csharp  
 UtilityClass.MethodA();  
@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Como é o caso com todos os tipos de classe, as informações de tipo de uma classe estática são carregadas pelo CLR (Common Language Runtime) do .NET Framework quando o programa que faz referência à classe é carregado. O programa não pode especificar exatamente quando a classe é carregada. No entanto, é garantido que ela será carregada e terá seus campos inicializados e seu construtor estático chamado antes que a classe seja referenciada pela primeira vez em seu programa. Um construtor estático é chamado apenas uma vez e uma classe estática permanece na memória pelo tempo de vida do domínio do aplicativo em que seu programa reside.  
   
 > [!NOTE]
->  Para criar uma classe não estática que permite que apenas uma instância de si mesma seja criada, consulte [Implementando singleton no C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
+> Para criar uma classe não estática que permite que apenas uma instância de si mesma seja criada, consulte [Implementando singleton no C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
   
  A lista a seguir fornece os principais recursos de uma classe estática:  
   
@@ -51,11 +51,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 - É lacrada.  
   
-- Não pode conter [Construtores de instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- Não pode conter [Construtores de instância](./instance-constructors.md).  
   
  Criar uma classe estática é, portanto, basicamente o mesmo que criar uma classe que contém apenas membros estáticos e um construtor particular. Um construtor particular impede que a classe seja instanciada. A vantagem de usar uma classe estática é que o compilador pode verificar se nenhum membro de instância foi adicionado acidentalmente. O compilador garantirá que as instâncias dessa classe não possam ser criadas.  
   
- Classes estáticas são lacradas e, portanto, não podem ser herdadas. Elas não podem herdar de qualquer classe, exceto por <xref:System.Object>. Classes estáticas não podem conter um construtor de instância. No entanto, elas podem conter um construtor estático. Classes não estáticas também devem definir um construtor estático se a classe contiver membros estáticos que exigem inicialização não trivial. Para obter mais informações, consulte [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+ Classes estáticas são lacradas e, portanto, não podem ser herdadas. Elas não podem herdar de qualquer classe, exceto por <xref:System.Object>. Classes estáticas não podem conter um construtor de instância. No entanto, elas podem conter um construtor estático. Classes não estáticas também devem definir um construtor estático se a classe contiver membros estáticos que exigem inicialização não trivial. Para obter mais informações, consulte [Construtores estáticos](./static-constructors.md).  
   
 ## <a name="example"></a>Exemplo  
  Temos aqui um exemplo de uma classe estática que contém dois métodos que convertem a temperatura de Celsius em Fahrenheit e de Fahrenheit em Celsius:  
@@ -69,7 +69,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Métodos estáticos podem ser sobrecarregados, mas não substituídos, porque pertencem à classe e não a qualquer instância da classe.  
   
- Embora um campo não possa ser declarado como `static const`, um campo [const](../../../csharp/language-reference/keywords/const.md) é essencialmente estático em seu comportamento. Ele pertence ao tipo e não a instâncias do tipo. Portanto, campos constantes podem ser acessados usando a mesma notação `ClassName.MemberName` usada para campos estáticos. Nenhuma instância de objeto é necessária.  
+ Embora um campo não possa ser declarado como `static const`, um campo [const](../../language-reference/keywords/const.md) é essencialmente estático em seu comportamento. Ele pertence ao tipo e não a instâncias do tipo. Portanto, campos constantes podem ser acessados usando a mesma notação `ClassName.MemberName` usada para campos estáticos. Nenhuma instância de objeto é necessária.  
   
  O C# não dá suporte a variáveis locais estáticas (variáveis que são declaradas no escopo do método).  
   
@@ -91,9 +91,9 @@ Para saber mais, confira [Classes estáticas](~/_csharplang/spec/classes.md#stat
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [static](../../../csharp/language-reference/keywords/static.md)
-- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
-- [Construtores de instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+- [Guia de Programação em C#](../index.md)
+- [static](../../language-reference/keywords/static.md)
+- [Classes](./classes.md)
+- [class](../../language-reference/keywords/class.md)
+- [Construtores estáticos](./static-constructors.md)
+- [Construtores de instância](./instance-constructors.md)

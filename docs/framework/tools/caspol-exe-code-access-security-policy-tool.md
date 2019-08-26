@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489684"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959062"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
   
 > [!IMPORTANT]
->  Desde o .NET Framework 4, o Caspol.exe não afeta a política de CAS, a menos que o [elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como `true`. Todas as configurações mostradas ou modificadas por CasPol.exe só afetarão aplicativos que optarem por usar a política de CAS. Para saber mais, confira [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
+> Desde o .NET Framework 4, o Caspol.exe não afeta a política de CAS, a menos que o [elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como `true`. Todas as configurações mostradas ou modificadas por CasPol.exe só afetarão aplicativos que optarem por usar a política de CAS. Para saber mais, confira [Alterações de segurança](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
->  Os computadores 64 bits incluem versões 64 e 32 bits da política de segurança. Para verificar se as alterações na política se aplicam a aplicativos 32 e 64 bits, execute as versões 32 e 64 bits de Caspol.exe.  
+> Os computadores 64 bits incluem versões 64 e 32 bits da política de segurança. Para verificar se as alterações na política se aplicam a aplicativos 32 e 64 bits, execute as versões 32 e 64 bits de Caspol.exe.  
   
  A ferramenta Política de Segurança de Acesso a Códigos é instalada automaticamente com o .NET Framework e o Visual Studio. É possível encontrar o Caspol.exe em %windir%\Microsoft.NET\Framework\\*version* em sistemas 32 bits ou em %windir%\Microsoft.NET\Framework64\\*version* em sistemas 64 bits. (Por exemplo, o local é %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe para o .NET Framework 4 em um sistema 64 bits.) Várias versões da ferramenta poderão ser instaladas se o computador estiver executando várias versões do .NET Framework lado a lado. É possível executar a ferramenta no diretório de instalação. Entretanto, recomendamos que você use os [Prompts de comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md), que não exigem que você navegue até a pasta de instalação.  
   
@@ -45,7 +45,7 @@ caspol [options]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> ou<br /><br /> **-af** *assembly_file*|Adiciona um assembly que implementa um objeto de segurança personalizado (como uma permissão personalizada ou uma condição de associação personalizada) à lista de assemblies de confiança total para um nível de política específico. O argumento *assembly_file* especifica o assembly a ser adicionado. Esse arquivo deve ser assinado com um [nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md). Você pode assinar um assembly com um nome forte usando a [Ferramenta Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).<br /><br /> Sempre que um conjunto de permissões contendo uma permissão personalizada for adicionado à política, o assembly que implementa a permissão personalizada deverá ser adicionado à lista de confiança total desse nível de política. Assemblies que implementam objetos de segurança personalizados (como grupos de códigos ou condições de associação) usados em uma política de segurança (como a política do computador) devem ser adicionados à lista de assemblies de confiança total. **Cuidado:**  Se o assembly que implementa o objeto de segurança personalizado fizer referência a outros assemblies, você deverá adicionar os assemblies referenciados à lista de assemblies de confiança total. Objetos de segurança personalizados criados usando-se Visual Basic, do C++ e JScript fazem referência a Microsoft.VisualBasic.dll, Microsoft.VisualC.dll ou Microsoft.JScript.dll, respectivamente. Esses assemblies não estão na lista de assemblies de confiança total por padrão. Você deverá adicionar a lista de assemblies apropriada à lista de confiança total antes de adicionar um objeto de segurança personalizado. Deixar de fazer isso interromperá o sistema de segurança, causando falha no carregamento dos assemblies. Nessa situação, a opção **-all -reset** de Caspol.exe não reparará a segurança. Para reparar segurança, você deve editar manualmente os arquivos de segurança a fim de remover o objeto de segurança personalizado.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> ou<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Adiciona um novo grupo de códigos à hierarquia do grupo de códigos. É possível especificar o *parent_label* ou o *parent_name*. O argumento *parent_label* especifica o rótulo (como 1. ou 1.1) o nome do grupo de códigos que é o pai do grupo de códigos sendo adicionado. O argumento *parent_name* especifica o nome do grupo de códigos que é o pai do grupo de códigos sendo adicionado. Como *parent_label* e *parent_name* podem ser usados alternadamente, o Caspol.exe deve ser capaz de diferenciá-los. Por isso, *parent_name* não pode começar com um número. Além disso, *parent_name* só pode conter A-Z, 0-9 e o caractere de sublinhado.<br /><br /> O argumento *mship* especifica a condição de associação para o novo grupo de códigos. Para obter mais informações, consulte a tabela de argumentos *mship* posteriormente nesta seção.<br /><br /> O argumento *pset_name* é o nome do conjunto de permissões que será associado ao novo grupo de códigos. Também é possível definir um ou mais *flags* para o novo grupo. Para obter mais informações, consulte a tabela de argumentos *flags* posteriormente nesta seção.|  
@@ -81,7 +81,7 @@ caspol [options]
   
  O argumento *mship*, que especifica a condição de associação para um grupo de códigos, pode ser usado com as opções **-addgroup** e **-chggroup**. Cada argumento *mship* é implementado como uma classe do .NET Framework. Para especificar *mship,* use uma das opções a seguir.  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**-allcode**|Especifica qualquer código. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Especifica o diretório do aplicativo. Se você especificar **–appdir** como a condição de associação, a evidência de URL do código será comparada com a evidência do diretório de aplicativo do código. Se ambos os valores de evidência forem iguais, essa condição de associação será atendida. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
@@ -95,7 +95,7 @@ caspol [options]
   
  O argumento *flags*, que pode ser usado com as opções **–addgroup** e **–chggroup**, é especificado usando um dos valores a seguir.  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |**-description** "*descrição*"|Se usado com a opção **–addgroup**, especifica a descrição de um grupo de códigos a ser adicionado. Se usado com a opção **–chggroup**, especifica a descrição de um grupo de códigos a ser editado. O argumento *description* deve ser colocado entre aspas duplas.|  
 |**-exclusive** {**on**&#124;**off**}|Quando definido como **on**, indica que apenas o conjunto de permissões associado ao grupo de códigos que você está adicionando ou modificando é levado em consideração quando algum código se ajusta à condição de associação do grupo de códigos. Quando essa opção é definida como **off**, Caspol.exe leva em consideração os conjuntos de permissões de todos os grupos de códigos compatíveis no nível da política.|  

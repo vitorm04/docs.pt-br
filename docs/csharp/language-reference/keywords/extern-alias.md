@@ -9,18 +9,18 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: cfb662203216aa6ca208ceec20d55164c65163dc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626653"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924689"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (Referência de C#)
 Talvez seja necessário referenciar duas versões de assemblies que têm os mesmos nomes de tipo totalmente qualificado. Por exemplo, você pode ter que usar duas ou mais versões de um assembly no mesmo aplicativo. Ao usar um alias de assembly externo, os namespaces de cada assembly podem ser encapsulados dentro de namespaces de nível raiz nomeados pelo alias, permitindo que eles sejam utilizados no mesmo arquivo.  
   
 > [!NOTE]
->  A palavra-chave [extern](../../../csharp/language-reference/keywords/extern.md) também é usada como um modificador de método, declarando um método escrito em código não gerenciado.  
+> A palavra-chave [extern](./extern.md) também é usada como um modificador de método, declarando um método escrito em código não gerenciado.  
   
  Para referenciar dois assemblies com os mesmos nomes de tipo totalmente qualificado, um alias deve ser especificado em um prompt de comando, da seguinte maneira:  
   
@@ -43,8 +43,8 @@ Talvez seja necessário referenciar duas versões de assemblies que têm os mesm
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
-- [/reference (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](./index.md)
+- [:: ??](../operators/namespace-alias-qualifier.md)
+- [/reference (opções do compilador do C#)](../compiler-options/reference-compiler-option.md)

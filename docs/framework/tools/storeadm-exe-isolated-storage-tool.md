@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647247"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929900"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Ferramenta de Armazenamento Isolado)
 A ferramenta Armazenamento Isolado lista ou remove todos os repositórios existentes para o usuário atual.  
@@ -32,7 +32,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/h**[**elp**]|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/list**|Exibe todos os repositórios existentes para o usuário atual. Isso inclui os repositórios de todos os aplicativos ou assemblies executados por esse usuário.|  
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - O repositório do computador é comum a todos os usuários em um computador e é armazenado em um diretório comum nesse computador.  
   
     > [!NOTE]
-    >  O repositório do computador é novo na versão 2.0 do .NET Framework.  
+    > O repositório do computador é novo na versão 2.0 do .NET Framework.  
   
  Independentemente do roaming estar efetivamente habilitado para o usuário, isso não afeta a administração de Storeadm.exe. A execução da ferramenta sem opções se aplica a todas as ações no repositório local. A execução da ferramenta com a opção **/roaming** se aplica a todas as ações no repositório compatível com roaming. A execução da ferramenta com a opção **/machine** se aplica a todas as ações no repositório do computador.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamentos isolado](../../standard/io/isolated-storage.md)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

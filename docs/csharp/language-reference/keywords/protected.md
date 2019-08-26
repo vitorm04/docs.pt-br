@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: 55fbcf6fbc5148143e2d559ab8192e3ea10ab43c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633306"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69601978"
 ---
 # <a name="protected-c-reference"></a>protected (Referência de C#)
 
@@ -53,8 +53,8 @@ Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spe
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Modificadores de acesso](access-modifiers.md)
 - [Níveis de acessibilidade](accessibility-levels.md)

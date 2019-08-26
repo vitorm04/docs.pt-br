@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6188af0ffea699899212e4bcf20b7c19f68858b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924340"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introdução a consultas LINQ (C#)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas normalmente são expressas em uma linguagem de consulta especializada. Diferentes linguagens foram desenvolvidas ao longo do tempo para os diversos tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que eles tinham que oferecer suporte. O [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica essa situação ao oferecer um modelo consistente para trabalhar com os dados entre vários tipos de fontes e formatos de dados. Em uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, conjuntos de dados do ADO.NET coleções do .NET e qualquer outro formato para o qual um provedor [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] estiver disponível.  
@@ -56,15 +56,15 @@ IQueryable<Customer> custQuery =
  Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os diversos provedores do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. No entanto, a regra básica é muito simples: uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é qualquer objeto que dá suporte à interface genérica <xref:System.Collections.Generic.IEnumerable%601> ou uma interface que herda dela.  
   
 > [!NOTE]
->  Tipos, como <xref:System.Collections.ArrayList>, que dão suporte à interface <xref:System.Collections.IEnumerable> não genérica também podem ser usados como uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, confira [Como: Consultar uma ArrayList com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+> Tipos, como <xref:System.Collections.ArrayList>, que dão suporte à interface <xref:System.Collections.IEnumerable> não genérica também podem ser usados como uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, confira [Como: Consultar uma ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="query"></a> A consulta  
  A consulta especifica quais informações devem ser recuperadas da fonte (ou fontes) de dados. Opcionalmente, uma consulta também especifica como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. Uma consulta é armazenada em uma variável de consulta e é inicializada com uma expressão de consulta. Para tornar mais fácil escrever consultas, o C# introduziu uma nova sintaxe de consulta.  
   
- A consulta no exemplo anterior retorna todos os números pares da matriz de inteiros. A expressão de consulta contém três cláusulas: `from`, `where` e `select`. (Se você estiver familiarizado com o SQL, deve ter percebido que a ordem das cláusulas é invertida em relação à ordem no SQL). A cláusula `from` especifica a fonte de dados, a cláusula `where` aplica o filtro e a cláusula `select` especifica o tipo dos elementos retornados. Essas e outras cláusulas de consulta são discutidas detalhadamente na seção [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md). Por enquanto, o ponto importante é que, no [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a variável de consulta não faz nada e não retorna nenhum dado. Ele apenas armazena as informações necessárias para produzir os resultados quando a consulta for executada em um momento posterior. Para obter mais informações sobre como as consultas são construídas nos bastidores, consulte [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ A consulta no exemplo anterior retorna todos os números pares da matriz de inteiros. A expressão de consulta contém três cláusulas: `from`, `where` e `select`. (Se você estiver familiarizado com o SQL, deve ter percebido que a ordem das cláusulas é invertida em relação à ordem no SQL). A cláusula `from` especifica a fonte de dados, a cláusula `where` aplica o filtro e a cláusula `select` especifica o tipo dos elementos retornados. Essas e outras cláusulas de consulta são discutidas detalhadamente na seção [Expressões de consulta LINQ](../../linq-query-expressions/index.md). Por enquanto, o ponto importante é que, no [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a variável de consulta não faz nada e não retorna nenhum dado. Ele apenas armazena as informações necessárias para produzir os resultados quando a consulta for executada em um momento posterior. Para obter mais informações sobre como as consultas são construídas nos bastidores, consulte [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md).  
   
 > [!NOTE]
->  As consultas também podem ser expressas usando a sintaxe de método. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+> As consultas também podem ser expressas usando a sintaxe de método. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="query-execution"></a>Execução da Consulta  
   
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Passo a passo: Escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
-- [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+- [Introdução a LINQ em C#](./getting-started-with-linq.md)
+- [Passo a passo: Escrevendo consultas em C#](./walkthrough-writing-queries-linq.md)
+- [Expressões de consulta LINQ](../../linq-query-expressions/index.md)
+- [foreach, in](../../../language-reference/keywords/foreach-in.md)
+- [Palavras-chave de Consulta (LINQ)](../../../language-reference/keywords/query-keywords.md)

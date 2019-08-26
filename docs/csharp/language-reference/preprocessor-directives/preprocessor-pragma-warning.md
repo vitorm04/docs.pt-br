@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc221235e78a187f921815ed6e6c7750778014d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495098"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922270"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (Referência de C#)
 O `#pragma warning` pode habilitar ou desabilitar determinados avisos.  
@@ -31,7 +31,7 @@ O `#pragma warning` pode habilitar ou desabilitar determinados avisos.
  Quando não houver números de aviso especificados, o `disable` desabilita todos os avisos e o `restore` habilita todos os avisos.  
   
 > [!NOTE]
->  Para localizar números de aviso no Visual Studio, compile o projeto e, em seguida, procure os números de aviso na janela de **Saída**.  
+> Para localizar números de aviso no Visual Studio, compile o projeto e, em seguida, procure os números de aviso na janela de **Saída**.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -61,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [Erros do Compilador do C#](../../../csharp/language-reference/compiler-messages/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Diretivas do pré-processador do C#](./index.md)
+- [Erros do Compilador do C#](../compiler-messages/index.md)

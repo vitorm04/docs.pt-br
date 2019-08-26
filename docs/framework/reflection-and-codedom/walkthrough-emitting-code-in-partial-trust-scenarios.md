@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742468"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956632"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.  
   
 > [!NOTE]
->  Antes do .NET Framework 3.5, a emissão de código necessitava de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Essa permissão é incluída por padrão nos conjuntos de permissões denominados `FullTrust` e `Intranet`, mas não no conjunto de permissões `Internet`. Portanto, uma biblioteca poderia ser usada da confiança parcial somente se tivesse o atributo <xref:System.Security.SecurityCriticalAttribute> e também executasse um método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O .NET Framework 3.5 permite que o código seja emitido em cenários de confiança parcial sem a emissão de nenhuma demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que bibliotecas que emitem código sejam transparentes de segurança e elimina a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de modo que escrever uma biblioteca de segurança não exige uma análise minuciosa da segurança.  
+> Antes do .NET Framework 3.5, a emissão de código necessitava de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Essa permissão é incluída por padrão nos conjuntos de permissões denominados `FullTrust` e `Intranet`, mas não no conjunto de permissões `Internet`. Portanto, uma biblioteca poderia ser usada da confiança parcial somente se tivesse o atributo <xref:System.Security.SecurityCriticalAttribute> e também executasse um método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O .NET Framework 3.5 permite que o código seja emitido em cenários de confiança parcial sem a emissão de nenhuma demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que bibliotecas que emitem código sejam transparentes de segurança e elimina a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de modo que escrever uma biblioteca de segurança não exige uma análise minuciosa da segurança.  
   
  Esta explicação passo a passo ilustra as seguintes tarefas:  
   
@@ -85,7 +85,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
  Por exemplo, um host pode conceder permissões da Internet a aplicativos da Internet mais ADM para que um aplicativo da Internet possa emitir código que acessa dados particulares em seus próprios assemblies. Como o acesso é limitado aos assemblies de confiança igual ou inferior, um aplicativo da Internet não pode acessar membros de assemblies totalmente confiáveis, como assemblies do .NET Framework.  
   
 > [!NOTE]
->  Para evitar a elevação de privilégio, as informações de pilha para o assembly de emissão são incluídas quando ps métodos dinâmicos hospedados anonimamente são construídos. Quando o método é invocado, as informações de pilha são verificadas. Dessa forma, um método dinâmico hospedado anonimamente que é invocado do código totalmente confiável ainda é limitado ao nível de confiança do assembly de emissão.  
+> Para evitar a elevação de privilégio, as informações de pilha para o assembly de emissão são incluídas quando ps métodos dinâmicos hospedados anonimamente são construídos. Quando o método é invocado, as informações de pilha são verificadas. Dessa forma, um método dinâmico hospedado anonimamente que é invocado do código totalmente confiável ainda é limitado ao nível de confiança do assembly de emissão.  
   
 #### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Criar um domínio do aplicativo com confiança parcial mais ADM  
   
@@ -97,7 +97,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      O método <xref:System.Security.PermissionSet.AddPermission%2A> adiciona a permissão ao conjunto de concessões se ele não já estiver incluído. Se a permissão já estiver incluída no conjunto de concessões, os sinalizadores especificados serão adicionados à permissão existente.  
   
     > [!NOTE]
-    >  O ADM é um recurso de métodos dinâmicos hospedados anonimamente. Quando métodos dinâmicos comuns ignoram verificações de visibilidade JIT, o código emitido requer confiança total.  
+    > O ADM é um recurso de métodos dinâmicos hospedados anonimamente. Quando métodos dinâmicos comuns ignoram verificações de visibilidade JIT, o código emitido requer confiança total.  
   
 2. Crie o domínio do aplicativo especificando as informações de configuração do domínio do aplicativo e o conjunto de concessões.  
   
@@ -135,7 +135,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      O método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> cria o objeto no domínio do aplicativo de destino e retorna um proxy pode ser usado para chamar as propriedades e métodos do objeto.  
   
     > [!NOTE]
-    >  Se você usar esse código em Visual Studio, deverá alterar o nome da classe para incluir o namespace. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
+    > Se você usar esse código em Visual Studio, deverá alterar o nome da classe para incluir o namespace. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.  
   
 6. Adicionar código para chamar o método `SimpleEmitDemo`. É realizado marshaling na chamada além do limite de domínio do aplicativo e o código é executado no domínio do aplicativo em área restrita.  
   
@@ -147,7 +147,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
  Métodos dinâmicos hospedados anonimamente são associados a um assembly transparente que é fornecido pelo sistema. Portanto, o código que eles contêm é transparente. Métodos dinâmicos comuns, por outro lado, devem ser associados a um módulo existente (especificado diretamente ou inferido de um tipo associado) e usar o nível de segurança desse módulo.  
   
 > [!NOTE]
->  A única maneira de associar um método dinâmico ao assembly que fornece hospedagem anônima é usar os construtores descritos no procedimento a seguir. Não é possível especificar explicitamente um módulo no assembly hospedagem anônima.  
+> A única maneira de associar um método dinâmico ao assembly que fornece hospedagem anônima é usar os construtores descritos no procedimento a seguir. Não é possível especificar explicitamente um módulo no assembly hospedagem anônima.  
   
  Métodos dinâmicos comuns têm acesso os membros internos do módulo aos quais estão associados ou aos membros privados do tipo aos quais estão associados. Como os métodos dinâmicos hospedados anonimamente são isolados do código, eles não tem acesso a dados particulares. No entanto, eles têm uma capacidade restrita para ignorar verificações de visibilidade JIT para obter acesso aos dados particulares. Essa capacidade é limitada a assemblies com níveis de confiança igual ou inferior ao nível de confiança do assembly que emite o código.  
   
@@ -174,12 +174,12 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
      Métodos dinâmicos hospedados anonimamente podem usar essa capacidade restrita para ignorar as verificações de visibilidade JIT somente se o aplicativo host conceder <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. A demanda por essa permissão é realizada quando o método é invocado.  
   
     > [!NOTE]
-    >  Informações de pilha de chamadas para o assembly de emissão são incluídas quando o método dinâmico é construído. Portanto, a demanda é feita em relação às permissões do assembly de emissão, em vez do assembly que invoca o método. Isso impede que o código emitido seja executado com permissões elevadas.  
+    > Informações de pilha de chamadas para o assembly de emissão são incluídas quando o método dinâmico é construído. Portanto, a demanda é feita em relação às permissões do assembly de emissão, em vez do assembly que invoca o método. Isso impede que o código emitido seja executado com permissões elevadas.  
   
      O [exemplo de código completo](#Example) no final dessa instrução passo a passo demonstra o uso e as limitações de acesso de membro restrito. Sua classe `Worker` inclui um método que pode criar métodos dinâmicos hospedados anonimamente com ou sem o recurso restrito para ignorar as verificações de visibilidade e o exemplo mostra o resultado da execução desse método em domínios do aplicativo com níveis diferentes de confiança.  
   
     > [!NOTE]
-    >  A capacidade restrita de ignorar as verificações de visibilidade é um recurso de métodos dinâmicos hospedados anonimamente. Quando métodos dinâmicos comuns ignoram verificações de visibilidade JIT, eles devem receber confiança total.  
+    > A capacidade restrita de ignorar as verificações de visibilidade é um recurso de métodos dinâmicos hospedados anonimamente. Quando métodos dinâmicos comuns ignoram verificações de visibilidade JIT, eles devem receber confiança total.  
   
 <a name="Example"></a>   
 ## <a name="example"></a>Exemplo  

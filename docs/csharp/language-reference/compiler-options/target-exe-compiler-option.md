@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331306"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606458"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opções do compilador C#)
 A opção **-target:exe** faz com que o compilador crie um aplicativo de console executável (EXE).  
@@ -27,13 +27,13 @@ A opção **-target:exe** faz com que o compilador crie um aplicativo de console
 ## <a name="remarks"></a>Comentários  
  A opção **-target:exe** está em vigor por padrão. O arquivo executável será criado com a extensão .exe.  
   
- Use [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) para criar um executável de programa do Windows.  
+ Use [-target:winexe](./target-winexe-compiler-option.md) para criar um executável de programa do Windows.  
   
- A menos que seja especificado de outra forma com a opção [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usará o nome do arquivo de entrada que contém o método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ A menos que seja especificado de outra forma com a opção [-out](./out-compiler-option.md), o nome do arquivo de saída usará o nome do arquivo de entrada que contém o método [Main](../../programming-guide/main-and-command-args/index.md).  
   
  Quando especificado na linha de comando, todos os arquivos até a próxima opção **-out** ou **-target:module** serão usados para criar o arquivo .exe  
   
- Somente um método **Main** é necessário nos arquivos de código-fonte que são compilados em um arquivo .exe. A opção do compilador [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) permite especificar qual classe contém o método **Main**, nos casos em que o código tem mais de uma classe com um método **Main**.  
+ Somente um método **Main** é necessário nos arquivos de código-fonte que são compilados em um arquivo .exe. A opção do compilador [-main](./main-compiler-option.md) permite especificar qual classe contém o método **Main**, nos casos em que o código tem mais de uma classe com um método **Main**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -55,5 +55,5 @@ csc in.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (opções do compilador do C#)](./target-compiler-option.md)
+- [Opções do compilador de C#](./index.md)

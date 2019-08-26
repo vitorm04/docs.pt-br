@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910342"
 ---
 # <a name="mutexes"></a>Mutexes
 Você pode usar um objeto <xref:System.Threading.Mutex> para fornecer acesso exclusivo a um recurso. A classe <xref:System.Threading.Mutex> usa mais recursos do sistema do que a classe <xref:System.Threading.Monitor>, mas pode realizar marshaling entre limites de domínio de aplicativo, pode ser usada com vários esperas e pode ser usada para sincronizar threads em processos diferentes. Para obter uma comparação dos mecanismos de sincronização gerenciados, confira [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -35,7 +35,7 @@ Você pode usar um objeto <xref:System.Threading.Mutex> para fornecer acesso exc
  Se um thread é encerrado sem liberar um <xref:System.Threading.Mutex>, diz-se que o mutex está abandonado. Isso geralmente indica um erro grave de programação, pois o recurso que o mutex está protegendo pode ser deixado em um estado inconsistente. No .NET Framework versão 2.0, uma <xref:System.Threading.AbandonedMutexException> é gerada no próximo thread que adquire o mutex.  
   
 > [!NOTE]
->  No .NET Framework versões 1.0 e 1.1, um <xref:System.Threading.Mutex> abandonado é definido como o estado sinalizado, e o próxima thread em espera obtém a propriedade. Se nenhum thread estiver esperando, o <xref:System.Threading.Mutex> permanecerá em um estado sinalizado. Nenhuma exceção é lançada.  
+> No .NET Framework versões 1.0 e 1.1, um <xref:System.Threading.Mutex> abandonado é definido como o estado sinalizado, e o próxima thread em espera obtém a propriedade. Se nenhum thread estiver esperando, o <xref:System.Threading.Mutex> permanecerá em um estado sinalizado. Nenhuma exceção é lançada.  
   
  No caso de um mutex de todo o sistema, um mutex abandonado pode indicar que um aplicativo foi finalizado abruptamente (por exemplo, usando o Gerenciador de Tarefas do Windows).  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592729"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927794"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
 Se você pretender compartilhar um assembly com vários aplicativos, será necessário instalá-lo no cache de assembly global. Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador. O cache de assembly global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador. Um assembly deve ter um nome forte para ser instalado no cache de assembly global.  
   
 > [!NOTE]
->  Assemblies colocados no cache de assembly global devem ter o mesmo nome de assembly e de arquivo (não incluindo a extensão de nome de arquivo). Por exemplo, um assembly com o nome de myAssembly deve ter um nome de arquivo de myAssembly.exe ou myAssembly.dll.  
+> Assemblies colocados no cache de assembly global devem ter o mesmo nome de assembly e de arquivo (não incluindo a extensão de nome de arquivo). Por exemplo, um assembly com o nome de myAssembly deve ter um nome de arquivo de myAssembly.exe ou myAssembly.dll.  
   
  Você deve compartilhar assemblies instalando-os no cache de assembly global somente quando necessário. Como diretriz geral, mantenha as dependências de um assembly particulares e localize os assemblies no diretório de aplicativo, a menos que o compartilhamento de um assembly seja explicitamente obrigatório. Além disso, você não precisa instalar assemblies no cache de assembly global a fim de torná-los acessíveis para interoperabilidade COM ou código não gerenciado.  
   

@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40d7ef11dde882d99c21fe541c2689c52a634edf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915945"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilação do esquema de XmlSchemaCollection
 **XmlSchemaCollection** é um cache ou uma biblioteca em que esquemas XDR (XML-Data Reduced) e XSD (XML Schema definition language) podem ser armazenados e validados. **XmlSchemaCollection** melhora o desempenho armazenando em cache esquemas na memória em vez de acessá-los de um arquivo ou de uma URL.  
   
 > [!NOTE]
->  Embora a classe de **XmlSchemaCollection** armazene esquemas XDR e XML, qualquer método e propriedade que receba ou retorne um objeto **XmlSchema** dá suporte somente a esquemas XML.  
+> Embora a classe de **XmlSchemaCollection** armazene esquemas XDR e XML, qualquer método e propriedade que receba ou retorne um objeto **XmlSchema** dá suporte somente a esquemas XML.  
   
 > [!IMPORTANT]
->  A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Adicionar à coleção esquemas  
  Os esquemas são carregados na coleção usando o método **Add** de **XmlSchemaCollection**, quando o esquema é associado ao URI de um namespace. Para esquemas XML, URI do namespace será normalmente o namespace de destino para o esquema. Para esquemas XDR, o URI de namespace é namespace especificado quando o esquema foi adicionado à coleção.  

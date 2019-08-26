@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963416"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
 O .NET fornece vários métodos para comparar os valores de cadeias de caracteres. A tabela a seguir lista e descreve os métodos de comparação de valores.  
@@ -46,12 +46,12 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
 |Valor retornado|Condição|  
 |------------------|---------------|  
-|Um inteiro negativo|A primeira cadeia de caracteres precede a segunda cadeia de caracteres na ordem de classificação.<br /><br /> - ou -<br /><br /> A primeira cadeia de caracteres é `null`.|  
-|0|A primeira cadeia de caracteres e a segunda cadeia de caracteres são iguais.<br /><br /> - ou -<br /><br /> Ambas as cadeias de caracteres são `null`.|  
-|Um inteiro positivo<br /><br /> - ou -<br /><br /> 1|A primeira cadeia de caracteres segue a segunda cadeia de caracteres na ordem de classificação.<br /><br /> - ou -<br /><br /> A segunda cadeia de caracteres é `null`.|  
+|Um inteiro negativo|A primeira cadeia de caracteres precede a segunda cadeia de caracteres na ordem de classificação.<br /><br /> -ou-<br /><br /> A primeira cadeia de caracteres é `null`.|  
+|0|A primeira cadeia de caracteres e a segunda cadeia de caracteres são iguais.<br /><br /> -ou-<br /><br /> Ambas as cadeias de caracteres são `null`.|  
+|Um inteiro positivo<br /><br /> -ou-<br /><br /> 1|A primeira cadeia de caracteres segue a segunda cadeia de caracteres na ordem de classificação.<br /><br /> -ou-<br /><br /> A segunda cadeia de caracteres é `null`.|  
   
 > [!IMPORTANT]
->  O método <xref:System.String.Compare%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+> O método <xref:System.String.Compare%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
   
  O exemplo a seguir usa o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para determinar os valores relativos das duas cadeias de caracteres.  
   
@@ -67,7 +67,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
  O método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> compara dois objetos de cadeia de caracteres sem considerar a cultura local. Os valores de retorno desse método são idênticos aos valores retornados pelo método **Compare** na tabela anterior.  
   
 > [!IMPORTANT]
->  O método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+> O método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
   
  O exemplo a seguir usa o método **CompareOrdinal** para comparar os valores de duas cadeias de caracteres.  
   
@@ -81,7 +81,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
  O método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> compara a cadeia de caracteres que o objeto atual de cadeia de caracteres encapsula com outro objeto ou cadeia de caracteres. Os valores de retorno desse método são idênticos aos valores retornados pelo método <xref:System.String.Compare%2A?displayProperty=nameWithType> na tabela anterior.  
   
 > [!IMPORTANT]
->  O método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
+> O método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
   
  O exemplo a seguir usa o método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para comparar o objeto `string1` ao objeto `string2`.  
   

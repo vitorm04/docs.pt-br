@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: dc0071d1fddf99bd712ebe8aea5c61bbc3522f93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916523"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Segurança e Registro (Visual Basic)
 Esta página discute as implicações de segurança de armazenar dados no Registro.  
@@ -36,7 +36,7 @@ Esta página discute as implicações de segurança de armazenar dados no Regist
  Ao criar um valor de Registro, é necessário decidir o que fazer se esse valor já existir. Outro processo, talvez um mal-intencionado, pode já ter criado o valor e tem acesso a ele. Ao colocar dados no valor de Registro, os dados estarão disponíveis para o outro processo. Para impedir isso, use o método `GetValue`. Ele retornará `Nothing` se a chave ainda não existir.  
   
 > [!IMPORTANT]
->  Ao ler o Registro em um aplicativo Web, a identidade do usuário atual depende da autenticação e da representação implementadas no aplicativo Web.  
+> Ao ler o Registro em um aplicativo Web, a identidade do usuário atual depende da autenticação e da representação implementadas no aplicativo Web.  
   
 ## <a name="see-also"></a>Consulte também
 

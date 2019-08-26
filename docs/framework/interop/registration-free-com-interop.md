@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363967"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957465"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidade COM sem registro
 A interoperabilidade COM sem registro ativa um componente sem usar o Registro do Windows para armazenar informações de assembly. Em vez de registrar um componente em um computador durante a implantação, você pode criar arquivos de manifesto estilo Win32 em tempo de design que contêm informações sobre associação e a ativação. Esses arquivos de manifesto, em vez de chaves do Registro, direcionam a ativação de um objeto.  
@@ -52,7 +52,7 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
      Ativação sem registro é opcional para componentes COM instalados no Windows XP. Para obter instruções detalhadas de como adicionar um assembly lado a lado a um aplicativo, confira [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies) (Usando assemblies lado a lado).  
   
     > [!NOTE]
-    >  A execução lado a lado é um recurso do .NET que habilita várias versões do tempo de execução e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador, ao mesmo tempo. Execução lado a lado e assemblies lado a lado são mecanismos diferentes para fornecer funcionalidade de lado a lado.  
+    > A execução lado a lado é um recurso do .NET que habilita várias versões do tempo de execução e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador, ao mesmo tempo. Execução lado a lado e assemblies lado a lado são mecanismos diferentes para fornecer funcionalidade de lado a lado.  
   
 ## <a name="see-also"></a>Consulte também
 

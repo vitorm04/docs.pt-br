@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939405"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validando um documento XML no DOM
 A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objeto de Documento) em um esquema da linguagem XSD ou uma DTD (definição de tipo de documento) por padrão; o XML é verificado somente se está bem-formado.  
@@ -76,7 +76,7 @@ A classe <xref:System.Xml.XmlDocument> não valida o XML no DOM (Modelo de Objet
  Os erros de validação são tratados pelo <xref:System.Xml.Schema.ValidationEventHandler>. Se um <xref:System.Xml.Schema.ValidationEventHandler> tiver sido atribuído à instância <xref:System.Xml.XmlReaderSettings> ou passado para o método <xref:System.Xml.XmlDocument.Validate%2A> da classe <xref:System.Xml.XmlDocument>, o <xref:System.Xml.Schema.ValidationEventHandler> tratará os erros de validação de esquema; caso contrário, um <xref:System.Xml.Schema.XmlSchemaValidationException> será gerado quando um erro de validação de esquema for localizado.  
   
 > [!NOTE]
->  Os dados XML são carregados no DOM apesar dos erros de validação do esquema a menos que seu <xref:System.Xml.Schema.ValidationEventHandler> gere uma exceção para interromper o processo.  
+> Os dados XML são carregados no DOM apesar dos erros de validação do esquema a menos que seu <xref:System.Xml.Schema.ValidationEventHandler> gere uma exceção para interromper o processo.  
 >   
 >  Os avisos do esquema de validação não são reportados a menos que o sinalizador <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> tenha sido especificado para o objeto <xref:System.Xml.XmlReaderSettings>.  
   

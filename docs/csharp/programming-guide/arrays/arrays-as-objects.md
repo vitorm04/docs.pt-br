@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: 8500cf508b77a0fa7e348ce0fe6b1f16fd2bab25
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fd4496e0f84953204ad8c3f40db699e911c3f477
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977157"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597353"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Matrizes como objetos (Guia de Programação em C#)
 
@@ -28,8 +28,8 @@ No C#, as matrizes são objetos e não apenas regiões endereçáveis de memóri
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Matrizes](../../../csharp/programming-guide/arrays/index.md)
-- [Matrizes unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [Matrizes multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-- [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [Guia de Programação em C#](../index.md)
+- [Matrizes](./index.md)
+- [Matrizes unidimensionais](./single-dimensional-arrays.md)
+- [Matrizes multidimensionais](./multidimensional-arrays.md)
+- [Matrizes denteadas](./jagged-arrays.md)

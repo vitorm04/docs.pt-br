@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567197"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946373"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
 O Assembly Linker gera um arquivo com um manifesto de assembly com base em um ou mais arquivos que são arquivos de módulos ou de recurso. Um módulo é um arquivo IL (intermediate language) que não tem um manifesto de assembly.
 
 > [!NOTE]
-> Desde o Visual Studio 2008, os compiladores do C# e Visual Basic inserem automaticamente um manifesto Win32 no assembly. Para obter mais informações, consulte [/win32manifest (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Desde o Visual Studio 2008, os compiladores do C# e Visual Basic inserem automaticamente um manifesto Win32 no assembly. Para obter mais informações, consulte [/win32manifest (opções do compilador C#)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -41,7 +41,7 @@ al sources options
 | ------ | ----------- |
 |`file`[,`target`]|Copia o conteúdo de `file` (um módulo) para o nome de arquivo especificado por `target`. Depois de copiar, o *Al.exe* compila `target` em um assembly.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Insere o recurso especificado por `file` na imagem que contém o manifesto do assembly; *Al.exe* copia o conteúdo de `file` na imagem PE.<br /><br /> O parâmetro `name` é um identificador interno do recurso. Por padrão, os recursos são públicos no assembly (visível para outros assemblies). A especificação de `private` deixa o recurso não visível para outros assemblies.<br /><br /> Se `file` for um arquivo de recurso do .NET Framework criado, por exemplo, pelo [Gerador de Arquivos de Recurso (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros nos <xref:System.Resources>. Para obter mais informações, consulte <xref:System.Resources.ResourceManager>. Para todos os outros recursos, use os métodos `GetManifestResource`* no <xref:System.Reflection.Assembly> para acessar o recurso no tempo de execução.<br /><br /> Se apenas os arquivos de recurso forem passados para *Al.exe*, o arquivo de saída será um assembly de recurso satélite.|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|Vincula um arquivo de recurso a um assembly. O recurso especificado por `file` se torna parte do assembly; o arquivo não é copiado. O parâmetro `file` pode estar em qualquer formato de arquivo. Por exemplo, é possível especificar uma DLL nativa como o parâmetro `file`. Isso transformará a parte DLL nativa do assembly de maneira que possa ser instalado no cache de assembly global e acessado no código gerenciado no assembly. Também é possível fazer isso usando a opção do compilador **/linkresource**. Para obter mais informações, consulte [/linkresource (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> O parâmetro `name` é um identificador interno do recurso. O parâmetro `target` especifica um caminho e um nome de arquivo para o qual o *Al.exe* copia o `file` *.* Depois de copiar, o *Al.exe* compila `target` em um assembly. Por padrão, os recursos são públicos no assembly (visível para outros assemblies). A especificação de `private` deixa o recurso não visível para outros assemblies.<br /><br /> Se `file` for um arquivo de recurso do .NET Framework criado, por exemplo, pelo Gerador de Arquivos de Recurso (*Resgen.exe*) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros no namespace <xref:System.Resources>. Para obter mais informações, consulte <xref:System.Resources.ResourceManager>. Para todos os outros recursos, use os métodos `GetManifestResource` * na classe <xref:System.Reflection.Assembly> para acessar o recurso no tempo de execução.<br /><br /> Se apenas os arquivos de recurso forem passados para *Al.exe*, o arquivo de saída será um assembly de recurso satélite.|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|Vincula um arquivo de recurso a um assembly. O recurso especificado por `file` se torna parte do assembly; o arquivo não é copiado. O parâmetro `file` pode estar em qualquer formato de arquivo. Por exemplo, é possível especificar uma DLL nativa como o parâmetro `file`. Isso transformará a parte DLL nativa do assembly de maneira que possa ser instalado no cache de assembly global e acessado no código gerenciado no assembly. Também é possível fazer isso usando a opção do compilador **/linkresource**. Para obter mais informações, consulte [/linkresource (opções do compilador C#)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> O parâmetro `name` é um identificador interno do recurso. O parâmetro `target` especifica um caminho e um nome de arquivo para o qual o *Al.exe* copia o `file` *.* Depois de copiar, o *Al.exe* compila `target` em um assembly. Por padrão, os recursos são públicos no assembly (visível para outros assemblies). A especificação de `private` deixa o recurso não visível para outros assemblies.<br /><br /> Se `file` for um arquivo de recurso do .NET Framework criado, por exemplo, pelo Gerador de Arquivos de Recurso (*Resgen.exe*) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros no namespace <xref:System.Resources>. Para obter mais informações, consulte <xref:System.Resources.ResourceManager>. Para todos os outros recursos, use os métodos `GetManifestResource` * na classe <xref:System.Reflection.Assembly> para acessar o recurso no tempo de execução.<br /><br /> Se apenas os arquivos de recurso forem passados para *Al.exe*, o arquivo de saída será um assembly de recurso satélite.|
 
 É possível especificar `options` a seguir; você deve especificar **/out**.
 

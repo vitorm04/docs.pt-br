@@ -2,12 +2,12 @@
 title: Execução adiada e avaliação lenta em LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487558"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594560"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Execução adiada e avaliação lenta em LINQ to XML (C#)
 As operações de consulta e eixo são geralmente implementadas para usar a execução adiada. Este tópico explica os requisitos e as vantagens da execução adiada, além de algumas considerações sobre a implementação.  
@@ -17,7 +17,7 @@ As operações de consulta e eixo são geralmente implementadas para usar a exec
   
  As tecnologias LINQ usam de modo intenso a execução adiada em ambos os membros das classes <xref:System.Linq?displayProperty=nameWithType> centrais e nos métodos de extensão nos diversos namespaces LINQ, como <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
   
- A execução adiada tem suporte direto na linguagem C# pela palavra-chave [yield](../../../../csharp/language-reference/keywords/yield.md) (na forma da instrução `yield-return`) quando usada dentro de um bloco de iterador. Tal iterador deve retornar uma coleção do tipo <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601> (ou um tipo derivado).  
+ A execução adiada tem suporte direto na linguagem C# pela palavra-chave [yield](../../../language-reference/keywords/yield.md) (na forma da instrução `yield-return`) quando usada dentro de um bloco de iterador. Tal iterador deve retornar uma coleção do tipo <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601> (ou um tipo derivado).  
   
 ## <a name="eager-vs-lazy-evaluation"></a>Avaliação ansiosa vs. lenta  
  Quando você escreve um método que implementa a execução adiada, também precisa decidir se deve implementar o método usando a avaliação lenta ou a avaliação ansiosa.  
@@ -31,11 +31,11 @@ As operações de consulta e eixo são geralmente implementadas para usar a exec
 ## <a name="next-steps"></a>Próximas etapas  
  O próximo tópico deste tutorial ilustra a execução adiada:  
   
-- [Exemplo de execução adiada (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Exemplo de execução adiada (C#)](./deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Encadeando consultas (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [Conceitos e terminologia (transformação funcional) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Operações de agregação (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [Tutorial: Encadeando consultas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Conceitos e terminologia (transformação funcional) (C#)](./concepts-and-terminology-functional-transformation.md)
+- [Operações de agregação (C#)](./aggregation-operations.md)
+- [yield](../../../language-reference/keywords/yield.md)

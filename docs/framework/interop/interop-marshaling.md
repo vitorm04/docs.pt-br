@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469710"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946711"
 ---
 # <a name="interop-marshaling"></a>Realizando marshaling de interoperabilidade
 <a name="top"></a> O marshaling de interoperabilidade controla como os dados são passados em argumentos de método e valores retornados entre memória gerenciada e não gerenciada e durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.  
@@ -91,7 +91,7 @@ ms.locfileid: "65469710"
 - Altere o thread principal, definindo o thread de cliente para STA ou MTA. Por exemplo, se o cliente C# chama muitos componentes COM STA, você pode evitar marshaling entre apartments definindo o thread principal para STA.  
   
     > [!NOTE]
-    >  Depois que o thread de um cliente C# for definido para STA, chamadas para componentes COM MTA exigirão marshaling entre apartments.  
+    > Depois que o thread de um cliente C# for definido para STA, chamadas para componentes COM MTA exigirão marshaling entre apartments.  
   
  Para obter instruções sobre como selecionar explicitamente um modelo de apartment, consulte [Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469710"
 - Um cliente gerenciado obtém uma referência para um objeto gerenciado de um objeto COM que obtém essa referência de um host remoto. O mecanismo de comunicação remota é DCOM.  
   
     > [!NOTE]
-    >  A biblioteca de tipos exportada do servidor gerenciado deve ser registrada.  
+    > A biblioteca de tipos exportada do servidor gerenciado deve ser registrada.  
   
  O número de limites de processo entre o chamador e o receptor é irrelevante; a mesma referência direta ocorre para chamadas em processo e fora de processo.  
   
@@ -138,7 +138,7 @@ Chamadas remotas através de firewalls usando SOAP ou a classe TcpChannel
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Comportamento de marshaling padrão](default-marshaling-behavior.md)|Descreve as regras que o serviço de marshaling de interoperabilidade usa para realizar marshaling de dados.|  
 |[Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)|Descreve como declarar parâmetros de método e passar argumentos para funções exportadas por bibliotecas não gerenciadas.|  

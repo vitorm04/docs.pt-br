@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648966"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987210"
 ---
 # <a name="changing-case-in-net"></a>Como alterar a capitalização no .NET
 Se você gravar um aplicativo que aceita a inserção de informações por um usuário, talvez você nunca tenha certeza se ele ou ela usará maiúsculas ou minúsculas para inserir os dados. Muitas vezes, você quer que as cadeias de caracteres tenham a grafia de maiúsculas e minúsculas consistente, especialmente se você estiver exibindo-as na interface do usuário. A tabela seguinte descreve três métodos de alteração de capitalização. Os primeiros dois métodos fornecem uma sobrecarga que aceita uma cultura.  
@@ -34,7 +34,7 @@ Se você gravar um aplicativo que aceita a inserção de informações por um us
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Converte uma cadeia de caracteres para capitalização de título.|  
   
 > [!WARNING]
->  Observe que os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> não devem ser usados para converter cadeias de caracteres a fim de compará-las ou testá-las quanto à igualdade. Confira mais informações na seção [Comparação de cadeias de caracteres em maiúsculas e minúsculas](#Comparing).  
+> Observe que os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> não devem ser usados para converter cadeias de caracteres a fim de compará-las ou testá-las quanto à igualdade. Confira mais informações na seção [Comparação de cadeias de caracteres em maiúsculas e minúsculas](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Comparando cadeias de caracteres em maiúsculas e minúsculas  

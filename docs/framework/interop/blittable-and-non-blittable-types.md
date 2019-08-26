@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953187"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos blittable e não blittable
 A maioria dos tipos de dados tem uma representação comum na memória gerenciada e não gerenciada e não exige manipulação especial pelo marshaler de interoperabilidade. Esses tipos são chamados *tipos blittable* porque não exigem conversão quando são passados entre o código gerenciado e não gerenciado.  
@@ -71,7 +71,7 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Converte em uma estrutura com um layout de memória fixo.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
   
- Há suporte para tipos de objeto e de classe apenas na interoperabilidade COM. Para tipos correspondentes no Visual Basic, C# e C++, consulte a [Visão geral da biblioteca de classes](../../../docs/standard/class-library-overview.md).  
+ Há suporte para tipos de objeto e de classe apenas na interoperabilidade COM. Para tipos correspondentes no Visual Basic, C# e C++, consulte a [Visão geral da biblioteca de classes](../../standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Consulte também
 

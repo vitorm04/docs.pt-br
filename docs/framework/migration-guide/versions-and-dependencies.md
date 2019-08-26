@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: c082e5dbb1f7b2bb8c5236d0c480302a6e387ebe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911001"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versões e dependências do .NET Framework
 Cada versão do .NET Framework contém o CLR (Common Language Runtime), as bibliotecas de classes base e outras bibliotecas gerenciadas. Esse tópico descreve os principais recursos do .NET Framework por versão, fornece informações sobre as versões do CLR subjacentes e os ambientes de desenvolvimento associados e identifica as versões instaladas pelo sistema operacional Windows.  
   
 > [!NOTE]
->  Para obter mais informações sobre como baixar e instalar o .NET Framework, consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).  
+> Para obter mais informações sobre como baixar e instalar o .NET Framework, consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).  
   
  A tabela a seguir resume o histórico da versão do .NET Framework e correlaciona cada versão com Visual Studio, Windows e Windows Server. Observe que o Visual Studio possui capacidade multiplataforma para que você não fique limitado à versão do .NET Framework listada.  
   

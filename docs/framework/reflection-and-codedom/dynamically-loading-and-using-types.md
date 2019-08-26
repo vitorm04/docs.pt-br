@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469672"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915472"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
 A reflexão fornece a infraestrutura usada pelos compiladores de linguagem para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O Visual Basic permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
@@ -44,7 +44,7 @@ End Module
 ## <a name="custom-binding"></a>Associação personalizado  
  Além de ser usado implicitamente por compiladores para associação tardia, a reflexão pode ser usada explicitamente no código para realizar a associação tardia.  
   
- O [Common Language Runtime](../../../docs/standard/clr.md) dá suporte a várias linguagens de programação e as regras de associação dessas linguagens são diferentes. No caso de associação antecipada, os geradores de código podem controlar essa associação completamente. No entanto, na associação tardia por meio de reflexão, a associação deve ser controlada pela associação personalizada. A classe <xref:System.Reflection.Binder> fornece controle personalizado do membro de seleção e da invocação.  
+ O [Common Language Runtime](../../standard/clr.md) dá suporte a várias linguagens de programação e as regras de associação dessas linguagens são diferentes. No caso de associação antecipada, os geradores de código podem controlar essa associação completamente. No entanto, na associação tardia por meio de reflexão, a associação deve ser controlada pela associação personalizada. A classe <xref:System.Reflection.Binder> fornece controle personalizado do membro de seleção e da invocação.  
   
  Usando a associação personalizada, você pode carregar um assembly no tempo de execução, obter informações sobre tipos nesse assembly, especificar o tipo que você deseja e, em seguida, invocar métodos ou acessar campos ou propriedades nesse tipo. Essa técnica é útil se você não souber o tipo de um objeto no tempo de compilação, como quando o tipo de objeto depende da entrada do usuário.  
   
@@ -79,7 +79,7 @@ End Module
   
  No caso 3 do exemplo de código, um argumento real do tipo **String** com um valor de “5.5” é passado para um método com um argumento formal do tipo **Double**. Para que a invocação seja bem-sucedida, o valor da cadeia de caracteres “5.5” deve ser convertido em um valor duplo. O **ChangeType** executa essa conversão.  
   
- O **ChangeType** executa apenas [coerções de expansão](../../../docs/standard/base-types/type-conversion.md) ou sem perdas, conforme mostrado na tabela a seguir.  
+ O **ChangeType** executa apenas [coerções de expansão](../../standard/base-types/type-conversion.md) ou sem perdas, conforme mostrado na tabela a seguir.  
   
 |Tipo de origem|Tipo de destino|  
 |-----------------|-----------------|  
@@ -104,4 +104,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Conversão de tipos no .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+- [Conversão de tipos no .NET Framework](../../standard/base-types/type-conversion.md)

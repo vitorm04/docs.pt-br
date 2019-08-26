@@ -2,12 +2,12 @@
 title: Classificação de operadores de consulta padrão pelo modo de execução (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711766"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924288"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Classificação de operadores de consulta padrão pelo modo de execução (C#)
 As implementações de LINQ to Objects dos métodos de operador de consulta padrão em uma das duas maneiras principais: imediata ou adiada. Os operadores de consulta que usam a execução adiada podem ser divididos em mais duas categorias: streaming e não streaming. Se você souber como os operadores de consulta diferentes são executados, isso poderá ajudá-lo a entender os resultados que serão obtidos de uma determinada consulta. Isso é especialmente verdadeiro se a fonte de dados está sendo alterada ou se você estiver criando uma consulta sobre outra consulta. Este tópico classifica os operadores de consulta padrão de acordo com o modo de execução.  
@@ -32,7 +32,7 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
  A tabela a seguir classifica cada método de operador de consulta padrão de acordo com o respectivo método de execução.  
   
 > [!NOTE]
->  Se um operador estiver marcado em duas colunas, duas sequências de entrada estarão envolvidas na operação e cada sequência será avaliada de forma diferente. Nesses casos, a primeira sequência na lista de parâmetros é a que sempre será avaliada de maneira adiada e em modo streaming.  
+> Se um operador estiver marcado em duas colunas, duas sequências de entrada estarão envolvidas na operação e cada sequência será avaliada de forma diferente. Nesses casos, a primeira sequência na lista de parâmetros é a que sempre será avaliada de maneira adiada e em modo streaming.  
   
 |Operador de consulta padrão|Tipo de retorno|Execução Imediata|Execução adiada de streaming|Execução adiada de não streaming|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -90,6 +90,6 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.Enumerable>
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Sintaxe de expressão de consulta para operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
+- [Sintaxe de expressão de consulta para operadores de consulta padrão (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

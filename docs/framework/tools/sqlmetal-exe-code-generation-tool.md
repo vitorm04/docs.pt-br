@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f435c93f68feb564aaca0f52842e567aa688ac64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938002"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
 A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] do .NET Framework. Aplicando-se opções exibidas mais à frente neste tópico, é possível instruir SqlMetal para executar diversas ações diferentes, dentre as quais estão:  
@@ -28,7 +28,7 @@ A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o c
  Essa ferramenta é instalada automaticamente com o Visual Studio. Por padrão, o arquivo está localizado em `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Se não instalar o Visual Studio, você também poderá obter o arquivo SQLMetal baixando o [SDK do Windows](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
->  Os desenvolvedores que usam o Visual Studio também podem usar o Object Relational Designer para gerar classes da entidade. A abordagem de linha de comando é bem dimensionada para bancos de dados grandes. Como SqlMetal é uma ferramenta de linha de comando, é possível usá-lo em um processo de compilação.  
+> Os desenvolvedores que usam o Visual Studio também podem usar o Object Relational Designer para gerar classes da entidade. A abordagem de linha de comando é bem dimensionada para bancos de dados grandes. Como SqlMetal é uma ferramenta de linha de comando, é possível usá-lo em um processo de compilação.  
   
  Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md). No prompt de comando, digite o seguinte:  
   
@@ -130,7 +130,7 @@ sqlmetal [options] [<input file>]
  **sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
   
 > [!NOTE]
->  Ao usar a opção **/pluralize** com o banco de dados de exemplo Northwind, observe o comportamento a seguir. Quando SqlMetal cria nomes de tipo de linha para tabelas, os nomes de tabela são singulares. Quando ele cria propriedades <xref:System.Data.Linq.DataContext> para tabelas, os nomes de tabela serão plurais. Coincidentemente, as tabelas no banco de dados de exemplo Northwind já são plurais. Por isso, você não vê essa parte funcionando. Embora seja uma prática comum nomear tabelas de banco de dados singulares, também é uma prática comum no .NET nomear as coleções plurais.  
+> Ao usar a opção **/pluralize** com o banco de dados de exemplo Northwind, observe o comportamento a seguir. Quando SqlMetal cria nomes de tipo de linha para tabelas, os nomes de tabela são singulares. Quando ele cria propriedades <xref:System.Data.Linq.DataContext> para tabelas, os nomes de tabela serão plurais. Coincidentemente, as tabelas no banco de dados de exemplo Northwind já são plurais. Por isso, você não vê essa parte funcionando. Embora seja uma prática comum nomear tabelas de banco de dados singulares, também é uma prática comum no .NET nomear as coleções plurais.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af1dc3e1ce22112d76ad566873f40c1c2ac05c9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968693"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Passo a passo: Filtrando a saída de My.Application.Log (Visual Basic)
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.  
@@ -44,7 +44,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
      Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre a localização do arquivo de log do aplicativo, confira [Passo a passo: Determinando o local em que My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
-    >  Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.  
+    > Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.  
   
      No exemplo acima, a segunda chamada para o método <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> e a chamada para o método <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> produzem a saída de log, enquanto as primeira e última chamadas para o método `WriteEntry` não. Isso ocorre porque os níveis de gravidade de `WriteEntry` e `WriteException` são "Information" e "Error", que são permitidos pela filtragem de log padrão do objeto `My.Application.Log`. No entanto, os eventos com os níveis de gravidade "Start" e "Stop" são impedidos de produzir a saída de log.  
   
@@ -65,7 +65,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
 |`Off`|Todas as mensagens são bloqueadas.|  
   
 > [!NOTE]
->  Os métodos `WriteEntry` e `WriteException` têm uma sobrecarga que não especifica um nível de gravidade. O nível de gravidade implícito para a sobrecarga `WriteEntry` é "Information" e o nível de gravidade implícito para a sobrecarga `WriteException` é "Error".  
+> Os métodos `WriteEntry` e `WriteException` têm uma sobrecarga que não especifica um nível de gravidade. O nível de gravidade implícito para a sobrecarga `WriteEntry` é "Information" e o nível de gravidade implícito para a sobrecarga `WriteException` é "Error".  
   
  Esta tabela explica a saída de log mostrada no exemplo anterior: com a configuração de `DefaultSwitch` padrão de "Information", apenas a segunda chamada para o método `WriteEntry` e a chamada para o método `WriteException` produzem a saída de log.  
   
@@ -73,7 +73,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.  
   
-     - ou -  
+     -ou-  
   
      Se não houver nenhum arquivo app.config:  
   
@@ -135,7 +135,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
 9. Altere o valor do atributo `value` de volta para "Information".  
   
     > [!NOTE]
-    >  A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> do .NET Framework se comportam.  
+    > A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType> e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> do .NET Framework se comportam.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtragem individual de ouvintes de My.Application.Log  
  O exemplo anterior mostra como alterar a filtragem para toda a saída `My.Application.Log`. Este exemplo demonstra como filtrar um ouvinte de log individual. Por padrão, um aplicativo tem dois ouvintes que gravam na saída de depuração do aplicativo e no arquivo de log.  
@@ -148,7 +148,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
   
-     - ou -  
+     -ou-  
   
      Se não houver nenhum arquivo app.config:  
   

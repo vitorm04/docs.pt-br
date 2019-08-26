@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927991"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
@@ -46,7 +46,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
 - Aplicativos individuais podem ser interrompidos sem interromper o processo inteiro. Usar domínios de aplicativo permite que você descarregue o código em execução em um único aplicativo.  
   
     > [!NOTE]
-    >  Você não pode descarregar assemblies ou tipos individuais. Apenas um domínio completo pode ser descarregado.  
+    > Você não pode descarregar assemblies ou tipos individuais. Apenas um domínio completo pode ser descarregado.  
   
 - O código em execução em um aplicativo não pode diretamente acessar o código ou os recursos de outro aplicativo. O Common Language Runtime impõe esse isolamento, impedindo chamadas diretas entre objetos em domínios de aplicativo diferentes. Objetos que passam entre domínios são copiados ou acessados pelo proxy. Se o objeto for copiado, a chamada para o objeto será local. Ou seja, tanto o chamador quanto o objeto referenciado estão no mesmo domínio de aplicativo. Se o objeto for acessado por meio de um proxy, a chamada para o objeto será remota. Nesse caso, o chamador e o objeto referenciado estão em domínios diferentes. Chamadas entre domínios usam a mesma infraestrutura de chamada remota entre dois processos ou entre dois computadores. Assim, os metadados para o objeto referenciado devem estar disponíveis para ambos os domínios de aplicativo para permitir que a chamada de método seja compilada corretamente por JIT. Se o domínio de chamada não tiver acesso aos metadados do objeto que está sendo chamado, a compilação poderá falhar com uma exceção do tipo <xref:System.IO.FileNotFoundException>. Para obter mais informações, confira [Objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). O mecanismo para determinar como objetos podem ser acessados em domínios é determinado pelo objeto. Para obter mais informações, consulte <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
@@ -110,7 +110,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  O <xref:System.AppDomain> é a interface programática para domínios de aplicativo. Essa classe inclui métodos para criar e descarregar domínios, para criar instâncias de tipos em domínios e registrar várias notificações como o descarregamento de domínio do aplicativo. A tabela a seguir lista os métodos <xref:System.AppDomain> mais usados.  
   
-|Método AppDomain|Descrição|  
+|Método AppDomain|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Cria um novo domínio de aplicativo. É recomendável usar uma sobrecarga desse método que especifique um objeto <xref:System.AppDomainSetup>. Essa é a maneira preferencial para definir as propriedades de um novo domínio, como a base do aplicativo ou o diretório raiz do aplicativo; o local do arquivo de configuração do domínio e o caminho de pesquisa que o Common Language Runtime deve usar para carregar assemblies dentro do domínio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> e <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Executa um assembly no domínio do aplicativo. Como esse é um método de instância, ele pode ser usado para executar código em outro domínio de aplicativo para o qual você tenha uma referência.|  
@@ -118,11 +118,11 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
 |<xref:System.AppDomain.Unload%2A>|Executa um desligamento elegante do domínio. O domínio do aplicativo não é descarregado até que todos os threads em execução no domínio tenham sido interrompidos ou não estejam mais no domínio.|  
   
 > [!NOTE]
->  Como o Common Language Runtime não dá suporte à serialização de métodos globais, representantes não podem ser usados para executar métodos globais em outros domínios de aplicativo.  
+> Como o Common Language Runtime não dá suporte à serialização de métodos globais, representantes não podem ser usados para executar métodos globais em outros domínios de aplicativo.  
   
  As interfaces não gerenciadas descritas na Especificação Hospedando Interfaces do Common Language Runtime também dão acesso a domínios de aplicativo. Hosts em tempo de execução podem usar interfaces do código não gerenciado para criar e obter acesso aos domínios de aplicativo dentro de um processo.  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>A variável de ambiente COMPLUS_LoaderOptimization
+## <a name="the-complus_loaderoptimization-environment-variable"></a>A variável de ambiente COMPLUS_LoaderOptimization
 
  Uma variável de ambiente que define a política padrão de otimização do carregador de um aplicativo executável.  
   

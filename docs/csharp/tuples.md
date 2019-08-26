@@ -3,12 +3,12 @@ title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882058"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988403"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C#
 
@@ -53,7 +53,7 @@ Você cria uma tupla nomeada especificando os nomes de cada elemento. Uma maneir
 
 Esses sinônimos são manipulados pelo compilador e pela linguagem para que você possa usar as tuplas nomeadas de forma eficaz. Os editores e IDEs podem ler esses nomes semânticos usando APIs Roslyn. É possível fazer referência aos elementos de uma tupla nomeada com nomes semânticos em qualquer lugar no mesmo assembly. O compilador substitui os nomes que você definiu com equivalentes `Item*` ao gerar a saída compilada. A MSIL (Microsoft Intermediate Language) compilada não inclui os nomes que você atribuiu a esses elementos.
 
-Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)**. O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
+Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)** . O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -245,7 +245,7 @@ public class Point
 ```
 
 > [!WARNING]
->  Você não pode combinar as declarações existentes com as declarações dentro dos parênteses. Por exemplo, o seguinte não é permitido: `(var x, y) = MyMethod();`. Isso gera o erro CS8184 porque *x* está declarado dentro dos parênteses e *y* já foi declarado em outro lugar.
+> Você não pode combinar as declarações existentes com as declarações dentro dos parênteses. Por exemplo, o seguinte não é permitido: `(var x, y) = MyMethod();`. Isso gera o erro CS8184 porque *x* está declarado dentro dos parênteses e *y* já foi declarado em outro lugar.
 
 ### <a name="deconstructing-user-defined-types"></a>Desconstruindo tipos definidos pelo usuário
 

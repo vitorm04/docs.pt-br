@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268220"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963407"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -175,7 +175,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  Para incluir uma barra invertida em uma cadeia de caracteres de resultado, você deve escapá-la com outra barra invertida (`\\`).  
   
 > [!NOTE]
->  Alguns compiladores, como os compiladores C++ e C#, também podem interpretar um único caractere de barra invertida como um caractere de escape. Para garantir que uma cadeia de caracteres seja interpretada corretamente quando formatada, você poderá usar o caractere literal de cadeia de caracteres textual (o caractere @) antes da cadeia de caracteres em C# ou adicionar outro caractere de barra invertida antes de cada barra invertida em C# e em C++. O exemplo de C# a seguir ilustra ambas as abordagens.  
+> Alguns compiladores, como os compiladores C++ e C#, também podem interpretar um único caractere de barra invertida como um caractere de escape. Para garantir que uma cadeia de caracteres seja interpretada corretamente quando formatada, você poderá usar o caractere literal de cadeia de caracteres textual (o caractere @) antes da cadeia de caracteres em C# ou adicionar outro caractere de barra invertida antes de cada barra invertida em C# e em C++. O exemplo de C# a seguir ilustra ambas as abordagens.  
   
  O exemplo a seguir usa o caractere de escape para impedir que a operação de formatação interprete os caracteres "#", "0" e "\\" como caracteres de escape ou especificadores de formato. Os exemplos em C# usam uma barra invertida adicional para garantir que uma barra invertida seja interpretada como um caractere literal.  
   

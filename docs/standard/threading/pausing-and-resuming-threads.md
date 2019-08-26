@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644928"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963571"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausando e interrompendo threads
 
@@ -41,7 +41,7 @@ As formas mais comuns para sincronizar as atividades de threads são segmentos d
  Você pode interromper um thread em espera chamando o método <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> no thread bloqueado para lançar um <xref:System.Threading.ThreadInterruptedException>, o que remove o thread da chamada de bloqueio. O thread deve capturar o <xref:System.Threading.ThreadInterruptedException> e fazer o que for apropriado para continuar funcionando. Se o thread ignorar a exceção, o tempo de execução capturará a exceção e interromperá o thread.  
   
 > [!NOTE]
->  Se o thread de destino não for bloqueado quando <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> for chamado, o thread não será interrompido até ser bloqueado. Se o thread nunca for bloqueado, ele poderá ser concluído sem nunca ser interrompido.  
+> Se o thread de destino não for bloqueado quando <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> for chamado, o thread não será interrompido até ser bloqueado. Se o thread nunca for bloqueado, ele poderá ser concluído sem nunca ser interrompido.  
   
  Se uma espera for uma espera gerenciada, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ativarão o thread imediatamente. Se uma espera for uma espera não gerenciada (por exemplo, uma chamada de invocação de plataforma para a função Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)), <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> não poderão assumir o controle do thread até que ele chame o código gerenciado ou retorne a ele. No código gerenciado, o comportamento é o seguinte:  
   

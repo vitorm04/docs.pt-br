@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a04c56391b70ddc887b0ff2f7bcd6a169887d2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591521"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933673"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 O Visualizador de Log de Associação do Assembly exibe detalhes das associações de assembly. Essas informações ajudam a diagnosticar por que o .NET Framework não pode localizar um assembly no tempo de execução. Essas falhas normalmente são o resultado de um assembly implantado no local incorreto, de uma imagem nativa que não é mais válida ou de uma incompatibilidade em números de versão ou culturas. A falha no Common Language Runtime em localizar um assembly costuma aparecer como um <xref:System.TypeLoadException> em seu aplicativo.  
   
 > [!IMPORTANT]
->  Você deve executar fuslogvw.exe com privilégios de administrador.  
+> Você deve executar fuslogvw.exe com privilégios de administrador.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7) com credenciais de administrador. Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -41,7 +41,7 @@ fuslogvw
 2. Selecione o botão de opção **Personalizar** para exibir falhas de associação em um diretório personalizado especificado. Você deve especificar o local personalizado no qual deseja que o tempo de execução armazene os logs definindo o local de log personalizado na caixa de diálogo **Configurações de Log** como um nome de diretório válido. Esse diretório deve estar limpo e conter apenas arquivos gerados pelo tempo de execução. Se ele contiver um executável que gere uma falha a ser registrada em log, a falha não será registrada em log porque a ferramenta tenta criar um diretório com o mesmo nome do executável. Além disso, haverá falha em uma tentativa de executar um executável com base no local do log.  
   
     > [!NOTE]
-    >  O local de associação padrão é preferível ao local de associação personalizado. O tempo de execução armazena o local de associação padrão no cache de wininet e, assim, o limpa automaticamente. Se especificar um local de associação personalizado, você será responsável por limpá-lo.  
+    > O local de associação padrão é preferível ao local de associação personalizado. O tempo de execução armazena o local de associação padrão no cache de wininet e, assim, o limpa automaticamente. Se especificar um local de associação personalizado, você será responsável por limpá-lo.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Para exibir detalhes sobre uma falha específica  
   
@@ -206,7 +206,7 @@ Discarding native image.
      Consulte a observação Importante a respeito de assemblies carregados como tendo domínio neutro.  
   
 > [!IMPORTANT]
->  Quando um assembly é carregado como tendo domínio neutro, por exemplo, definindo-se a propriedade <xref:System.AppDomainSetup.LoaderOptimization%2A> como <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> ou a <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, a ativação do registro em log pode causar perda de memória em alguns casos. Isso poderá acontecer se uma entrada de log for feita quando um módulo de domínio neutro for carregado em um domínio do aplicativo e, posteriormente, o domínio do aplicativo for descarregado. A entrada de log talvez não seja liberada até o término do processo. Alguns depuradores ativam o registro em log automaticamente.  
+> Quando um assembly é carregado como tendo domínio neutro, por exemplo, definindo-se a propriedade <xref:System.AppDomainSetup.LoaderOptimization%2A> como <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> ou a <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, a ativação do registro em log pode causar perda de memória em alguns casos. Isso poderá acontecer se uma entrada de log for feita quando um módulo de domínio neutro for carregado em um domínio do aplicativo e, posteriormente, o domínio do aplicativo for descarregado. A entrada de log talvez não seja liberada até o término do processo. Alguns depuradores ativam o registro em log automaticamente.  
   
 #### <a name="to-enable-a-custom-log-path"></a>Para habilitar um caminho de log personalizado  
   
@@ -215,7 +215,7 @@ Discarding native image.
 2. Digite o caminho na caixa de texto **Caminho de log personalizado**.  
   
 > [!NOTE]
->  O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários na caixa de diálogo Opções da Internet do IE.  
+> O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários na caixa de diálogo Opções da Internet do IE.  
 >   
 >  Se o aplicativo não gerenciado hospedar o Common Language Runtime implementando as interfaces `IHostAssemblyManager` e `IHostAssemblyStore`, as entradas de log não poderão ser armazenadas no cache de wininet.  Para exibir entradas de log para hosts personalizadas que implementam essas interfaces, você deve especificar um caminho de log alternativo.  
   
@@ -226,7 +226,7 @@ Discarding native image.
 2. Marque a caixa de seleção **Habilitar registro em log imersivo**.  
   
     > [!NOTE]
-    >  Essa caixa só está habilitada no Windows 8 ou posterior.  
+    > Essa caixa só está habilitada no Windows 8 ou posterior.  
   
 ## <a name="see-also"></a>Consulte também
 

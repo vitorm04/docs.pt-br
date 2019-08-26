@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d556bc3b8746fe2d05a8e225b91ecf59bd404fd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221183"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963935"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Rastreamento de rede no .NET Framework
 O rastreamento de rede no .NET Framework fornece acesso a informações sobre invocações de método e tráfego de rede geradas por um aplicativo gerenciado. Esse recurso é útil para a depuração de aplicativos em desenvolvimento e para analisar aplicativos implantados. A saída fornecida pelo rastreamento de rede é personalizável para oferecer suporte a diferentes cenários de uso em tempo de desenvolvimento e em um ambiente de produção.  
@@ -33,7 +33,7 @@ O rastreamento de rede no .NET Framework fornece acesso a informações sobre in
  Quando o rastreamento for habilitado, você poderá coletar informações de rastreamento emitidas pelas classes **System.Net**. Os membros da classe de rede que gerenciam as informações de rastreamento incluem esta nota na seção Observações da documentação da biblioteca de classes do NET Framework:  
   
 > [!NOTE]
->  Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte Rastreamento de rede.  
+> Esse membro emite o rastreamento de informações quando você ativa o rastreamento de rede em seu aplicativo. Para obter mais informações, consulte Rastreamento de rede.  
   
 ## <a name="see-also"></a>Consulte também
 

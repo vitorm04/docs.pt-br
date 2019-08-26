@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3fda2af84ff74e129c36dc966bad247bdf9e20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4f0f254b7794ce1cd4c765bee70c78e3c60a14aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427130"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946488"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Como: Adicionar referências a bibliotecas de tipos
 O Visual Studio gera um assembly de interoperabilidade que contém metadados quando você adiciona uma referência a uma biblioteca de tipos. Se um assembly de interoperabilidade primário estiver disponível, o Visual Studio usará o assembly existente antes de gerar um novo assembly de interoperabilidade.  
@@ -36,7 +36,7 @@ O Visual Studio gera um assembly de interoperabilidade que contém metadados qua
 7. Na janela **Propriedades**, verifique se a propriedade **Inserir Tipos de Interoperabilidade** está definida como **True**. Isso faz com que o Visual Studio insira informações sobre tipos para tipos COM em seus executáveis, eliminando a necessidade de implantar assemblies de interoperabilidade primário com seu aplicativo.  
   
 > [!NOTE]
->  As opções de menu e de caixa de diálogo podem variar, dependendo da versão do Visual Studio que você está usando.  
+> As opções de menu e de caixa de diálogo podem variar, dependendo da versão do Visual Studio que você está usando.  
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Para adicionar uma referência a uma biblioteca de tipos para compilação da linha de comando  
   

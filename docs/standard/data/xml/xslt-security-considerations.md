@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910484"
 ---
 # <a name="xslt-security-considerations"></a>Considerações de segurança XSLT
 O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e flexibilidade. Inclui muitos recursos que, quando úteis, podem também ser explorados por fontes fora. Para usar com segurança XSLT, você deve compreender os tipos de problemas de segurança que ocorrem ao usar XSLT, e as estratégias básicas que você pode usar para atenuar esses riscos.  
@@ -39,7 +39,7 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
 - Ao executar a transformação, <xref:System.Xml.XmlResolver> é usado para resolver a função de `document()` .  
   
     > [!NOTE]
-    >  A função de `document()` é desativada por padrão na classe de <xref:System.Xml.Xsl.XslCompiledTransform> . Esse recurso pode ser ativado definindo a propriedade de <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> a `true` e passando o objeto de <xref:System.Xml.Xsl.XsltSettings> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> .  
+    > A função de `document()` é desativada por padrão na classe de <xref:System.Xml.Xsl.XslCompiledTransform> . Esse recurso pode ser ativado definindo a propriedade de <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> a `true` e passando o objeto de <xref:System.Xml.Xsl.XsltSettings> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> .  
   
  Os métodos cada um de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> e de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> incluem as sobrecargas que aceitam <xref:System.Xml.XmlResolver> como um dos argumentos. Se <xref:System.Xml.XmlResolver> não for especificado, <xref:System.Xml.XmlUrlResolver> padrão sem credenciais é usado.  
   

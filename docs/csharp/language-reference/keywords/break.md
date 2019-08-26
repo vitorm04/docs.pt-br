@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 15b193d9f294c01826b6b60587678ad76248e976
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422069"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602252"
 ---
 # <a name="break-c-reference"></a>break (Referência de C#)
 
-A instrução `break` termina o loop delimitador mais próximo ou a instrução [switch](../../../csharp/language-reference/keywords/switch.md) na qual ele aparece. Controle é passado para a instrução que segue a instrução encerrada, se houver.
+A instrução `break` termina o loop delimitador mais próximo ou a instrução [switch](./switch.md) na qual ele aparece. Controle é passado para a instrução que segue a instrução encerrada, se houver.
 
 ## <a name="example"></a>Exemplo
 
@@ -33,7 +33,7 @@ Neste exemplo, a instrução `break` é usada para interromper um loop aninhado 
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo demonstra o uso de `break` em uma instrução [switch](../../../csharp/language-reference/keywords/switch.md).
+Este exemplo demonstra o uso de `break` em uma instrução [switch](./switch.md).
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -50,7 +50,7 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [switch](../../../csharp/language-reference/keywords/switch.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](./index.md)
+- [switch](./switch.md)
