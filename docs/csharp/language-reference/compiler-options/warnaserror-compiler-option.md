@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329083"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606270"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (opções do compilador C#)
 A opção **-warnaserror+** trata todos os avisos como erros  
@@ -27,11 +27,11 @@ A opção **-warnaserror+** trata todos os avisos como erros
 ## <a name="remarks"></a>Comentários  
  Quaisquer mensagens que seriam, normalmente, ser relatadas como avisos, são relatadas como erros e o processo de build é interrompido (os arquivos de saída não são compilados).  
   
- Por padrão, a opção **-warnaserror-** está em vigor, o que faz com que os avisos não impeçam a geração de um arquivo de saída. A **-warnaserror**, que é a mesma que **-warnaserror+**, faz com que os avisos sejam tratados como erros.  
+ Por padrão, a opção **-warnaserror-** está em vigor, o que faz com que os avisos não impeçam a geração de um arquivo de saída. A **-warnaserror**, que é a mesma que **-warnaserror+** , faz com que os avisos sejam tratados como erros.  
   
  Opcionalmente, se você deseja que apenas avisos específicos sejam tratados como erros, você pode especificar uma lista separada por vírgulas de números de aviso para serem tratados como erros.  
   
- Use [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md) para especificar o nível de avisos que você deseja que o compilador exiba. Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para desabilitar determinados avisos.  
+ Use [-warn](./warn-compiler-option.md) para especificar o nível de avisos que você deseja que o compilador exiba. Use [-nowarn](./nowarn-compiler-option.md) para desabilitar determinados avisos.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -53,5 +53,5 @@ csc -warnaserror:642,649,652 in.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

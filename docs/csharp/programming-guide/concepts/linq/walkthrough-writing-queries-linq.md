@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483215"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924106"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Passo a passo: Escrevendo consultas em C# (LINQ)
 Essas instruções passo a passo demonstram os recursos de linguagem C# que são usados para gravar expressões de consulta LINQ.  
@@ -20,7 +20,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
 ## <a name="create-a-c-project"></a>Criar um Projeto C#  
   
 > [!NOTE]
->  As instruções a seguir são para o Visual Studio. Se você estiver usando um ambiente de desenvolvimento diferente, crie um projeto de console com uma referência a System.Core.dll e uma diretiva `using` para o namespace <xref:System.Linq?displayProperty=nameWithType>.  
+> As instruções a seguir são para o Visual Studio. Se você estiver usando um ambiente de desenvolvimento diferente, crie um projeto de console com uma referência a System.Core.dll e uma diretiva `using` para o namespace <xref:System.Linq?displayProperty=nameWithType>.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Para criar um projeto no Visual Studio  
   
@@ -47,7 +47,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 - A lista em si é inicializada com um inicializador de coleção.  
   
- Essa estrutura de dados inteira será inicializada e instanciada sem chamadas explícitas para nenhum construtor ou acesso de membro explícito. Para obter mais informações sobre esses novos recursos, consulte [Propriedades autoimplementadas](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) e [Inicializadores de objeto e coleção](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Essa estrutura de dados inteira será inicializada e instanciada sem chamadas explícitas para nenhum construtor ou acesso de membro explícito. Para obter mais informações sobre esses novos recursos, consulte [Propriedades autoimplementadas](../../classes-and-structs/auto-implemented-properties.md) e [Inicializadores de objeto e coleção](../../classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Para adicionar a fonte de dados  
   
@@ -63,7 +63,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 #### <a name="to-create-a-simple-query"></a>Para criar uma consulta simples  
   
-- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../../csharp/language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter mais informações sobre `var`, consulte [Variáveis locais de tipo implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter mais informações sobre `var`, consulte [Variáveis locais de tipo implícito](../../classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Observe também que a variável de intervalo da consulta, `student`, também funciona como uma referência para cada `Student` na fonte, fornecendo acesso ao membro para cada objeto.  
   
@@ -91,7 +91,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Para obter mais informações, consulte [Cláusula where](../../../../csharp/language-reference/keywords/where-clause.md).  
+     Para obter mais informações, consulte [Cláusula where](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="modify-the-query"></a>Modificar a Consulta  
   
@@ -115,7 +115,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     Para obter mais informações, consulte [Cláusula orderby](../../../../csharp/language-reference/keywords/orderby-clause.md).  
+     Para obter mais informações, consulte [Cláusula orderby](../../../language-reference/keywords/orderby-clause.md).  
   
 #### <a name="to-group-the-results"></a>Para agrupar os resultados  
   
@@ -129,7 +129,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 3. Execute o aplicativo e exiba os resultados na janela **Console**.  
   
-     Para obter mais informações, consulte [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md).  
+     Para obter mais informações, consulte [Cláusula group](../../../language-reference/keywords/group-clause.md).  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>Para deixar as variáveis tipadas implicitamente  
   
@@ -137,7 +137,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
-     Para obter mais informações sobre [var](../../../../csharp/language-reference/keywords/var.md), consulte [Variáveis locais de tipo implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+     Para obter mais informações sobre [var](../../../language-reference/keywords/var.md), consulte [Variáveis locais de tipo implícito](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>Para ordenar os grupos pelo valor da chave  
   
@@ -153,11 +153,11 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     Para obter mais informações, consulte [Cláusula let](../../../../csharp/language-reference/keywords/let-clause.md).  
+     Para obter mais informações, consulte [Cláusula let](../../../language-reference/keywords/let-clause.md).  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Para usar a sintaxe do método em uma expressão de consulta  
   
-1. Conforme descrito em [Sintaxe de consulta e sintaxe de método em LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), algumas operações de consulta podem ser expressadas somente usando a sintaxe de método. O código a seguir calcula a pontuação total para cada `Student` na sequência de origem e então chama o método `Average()` nos resultados da consulta para calcular a pontuação média da classe.
+1. Conforme descrito em [Sintaxe de consulta e sintaxe de método em LINQ](./query-syntax-and-method-syntax-in-linq.md), algumas operações de consulta podem ser expressadas somente usando a sintaxe de método. O código a seguir calcula a pontuação total para cada `Student` na sequência de origem e então chama o método `Average()` nos resultados da consulta para calcular a pontuação média da classe.
   
      [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
@@ -174,15 +174,15 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
 ## <a name="next-steps"></a>Próximas etapas  
  Depois que estiver familiarizado com os aspectos básicos de como trabalhar com consultas em C#, você estará pronto para ler a documentação e exemplos para o tipo específico de provedor LINQ que lhe interessam:  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](./linq-to-xml-overview.md)  
   
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](./linq-to-objects.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ (consulta integrada à linguagem) (C#)](./index.md)
+- [Expressões de consulta LINQ](../../linq-query-expressions/index.md)

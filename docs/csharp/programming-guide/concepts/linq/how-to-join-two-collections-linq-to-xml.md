@@ -2,34 +2,34 @@
 title: 'Como: Unir duas coleções (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: 893966f3b803b92efbc89a65870623f10195c85f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485371"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593202"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Como: Unir duas coleções (LINQ to XML) (C#)
-Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referência a outro elemento ou atributo. Por exemplo, o documento XML [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) contém uma lista de clientes e uma lista de ordens. Cada elemento `Customer` contém um atributo `CustomerID`. Cada elemento `Order` contém um atributo `CustomerID`. O elemento `CustomerID` em cada pedido faz referência ao atributo `CustomerID` em um cliente.  
+Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referência a outro elemento ou atributo. Por exemplo, o documento XML [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) contém uma lista de clientes e uma lista de ordens. Cada elemento `Customer` contém um atributo `CustomerID`. Cada elemento `Order` contém um atributo `CustomerID`. O elemento `CustomerID` em cada pedido faz referência ao atributo `CustomerID` em um cliente.  
   
- O tópico [Arquivo XSD de exemplo: Clientes e ordens](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contém um XSD que pode ser usado para validar esse documento. Usa os recursos de XSD `xs:key` e `xs:keyref` para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave, e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order`, e o atributo `CustomerID` em cada elemento `Customer`.  
+ O tópico [Arquivo XSD de exemplo: Clientes e ordens](./sample-xsd-file-customers-and-orders1.md) contém um XSD que pode ser usado para validar esse documento. Usa os recursos de XSD `xs:key` e `xs:keyref` para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave, e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order`, e o atributo `CustomerID` em cada elemento `Customer`.  
   
  Com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode tirar proveito dessa relação usando a cláusula `join`.  
   
  Observe que como não existe nenhum índice disponível, essa junção terá um desempenho inadequado em tempo de execução.  
   
- Para obter informações mais detalhadas sobre `join`, consulte [Operações de junção (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md).  
+ Para obter informações mais detalhadas sobre `join`, consulte [Operações de junção (C#)](./join-operations.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir une os elementos `Customer` aos elementos `Order` e gera um novo documento XML que inclui o elemento `CompanyName` nos pedidos.  
   
- Antes de executar a consulta, o exemplo valida que o documento está de acordo com o esquema de [Arquivo XSD de exemplo: Clientes e ordens](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md). Isso garante que a cláusula join sempre funcionará.  
+ Antes de executar a consulta, o exemplo valida que o documento está de acordo com o esquema de [Arquivo XSD de exemplo: Clientes e ordens](./sample-xsd-file-customers-and-orders1.md). Isso garante que a cláusula join sempre funcionará.  
   
  Esta consulta retorna primeiro todos os elementos `Customer` e, em seguida, une-os aos elementos `Order`. A consulta seleciona apenas os pedidos de clientes com um `CustomerID` maior que "K". Em seguida, projeta um novo elemento `Order` que contém as informações do cliente dentro de cada pedido.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- Este exemplo usa o seguinte esquema XSD: [Arquivo XSD de exemplo: Clientes e ordens](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md).  
+ Este exemplo usa o seguinte esquema XSD: [Arquivo XSD de exemplo: Clientes e ordens](./sample-xsd-file-customers-and-orders1.md).  
   
  Observe que a junção dessa forma não será muito bem-executada. As junções são executadas por meio de uma pesquisa linear. Não há nenhuma tabela de hash ou índice para ajudar no desempenho.  
   

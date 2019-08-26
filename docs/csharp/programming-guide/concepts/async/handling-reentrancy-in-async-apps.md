@@ -2,12 +2,12 @@
 title: Tratando a reentrada em aplicativos assíncronos (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480866"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595648"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Tratando a reentrada em aplicativos assíncronos (C#)
 
@@ -141,7 +141,7 @@ Como resultado das alterações, o botão não responderá enquanto `AccessTheWe
 
 Em vez de desabilitar o botão **Iniciar**, você pode manter o botão ativo, mas, se o usuário escolher esse botão novamente, cancele a operação que já está em execução e permita que a operação iniciada mais recentemente continue.
 
-Para obter mais informações sobre o cancelamento, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Para obter mais informações sobre o cancelamento, consulte [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md).
 
 Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.
 
@@ -724,5 +724,5 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: acesso à Web com o uso de Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Passo a passo: acesso à Web com o uso de Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programação assíncrona com async e await (C#)](./index.md)

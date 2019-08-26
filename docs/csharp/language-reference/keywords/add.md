@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 1f699e5729354d13bfbe29810bf2c4baf91d2382
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1cf82e3d048e465d533e87dc639a13071b41544a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147908"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606048"
 ---
 # <a name="add-c-reference"></a>add (Referência de C#)
-A palavra-chave contextual `add` é usada para definir um acessador de evento personalizado que é invocado quando o código cliente assina seu [evento](../../../csharp/language-reference/keywords/event.md). Se você fornecer um acessador `add` personalizado, também será fornecer um acessador [remove](../../../csharp/language-reference/keywords/remove.md).  
+A palavra-chave contextual `add` é usada para definir um acessador de evento personalizado que é invocado quando o código cliente assina seu [evento](./event.md). Se você fornecer um acessador `add` personalizado, também será fornecer um acessador [remove](./remove.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra um evento que tem acessadores `add` e [remove](../../../csharp/language-reference/keywords/remove.md) personalizados. Para ver o exemplo completo, confira [Como  implementar eventos de interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
+ O exemplo a seguir mostra um evento que tem acessadores `add` e [remove](./remove.md) personalizados. Para ver o exemplo completo, confira [Como  implementar eventos de interface](../../programming-guide/events/how-to-implement-interface-events.md).  
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
@@ -26,4 +26,4 @@ A palavra-chave contextual `add` é usada para definir um acessador de evento pe
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Eventos](../../programming-guide/events/index.md)

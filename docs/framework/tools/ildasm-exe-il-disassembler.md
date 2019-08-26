@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567314"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912487"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -53,7 +53,7 @@ As opções adicionais a seguir estão disponíveis para arquivos *.exe*, *.dll*
 |**/linenum**|Inclua referências para linhas de origem.|
 |**/nobar**|Suprime a janela pop-up do indicador de andamento da desmontagem.|
 |**/noca**|Suprime a saída de atributos personalizados.|
-|**/project**|Exibe metadados da maneira como são exibidos para o código gerenciado, e não da maneira como são exibidos no Windows Runtime nativo. Se `PEfilename` não for um arquivo de metadados do Windows ( *.winmd*), esta opção não terá nenhum efeito. Consulte [Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Exibe metadados da maneira como são exibidos para o código gerenciado, e não da maneira como são exibidos no Windows Runtime nativo. Se `PEfilename` não for um arquivo de metadados do Windows ( *.winmd*), esta opção não terá nenhum efeito. Consulte [Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Desmonta apenas tipos e membros públicos. Equivalente a **/visibility:PUB**.|
 |**/quoteallnames**|Inclui todos os nomes entre aspas simples.|
 |**/raweh**|Mostra cláusulas de tratamento de exceções na forma bruta.|
@@ -188,5 +188,5 @@ Um tipo aninhado deve ser precedido por sua classe de contenção, delimitada po
 
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Processo de execução gerenciada](../../../docs/standard/managed-execution-process.md)
+- [Processo de execução gerenciada](../../standard/managed-execution-process.md)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

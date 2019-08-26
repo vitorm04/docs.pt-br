@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: ef19b80e7f4c32830aabfcf1ad595348c2107228
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fae526f5dcd452fbc381ee86c892b72e61956f0b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599986"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596846"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como: definir propriedades abstract (Guia de Programação em C#)
-O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/language-reference/keywords/abstract.md). Uma declaração de propriedade abstract não fornece uma implementação dos acessadores da propriedade – ela declara que a classe dá suporte às propriedades, mas deixa a implementação do acessador para classes derivadas. O exemplo a seguir demonstra como implementar as propriedades abstract herdadas de uma classe base.  
+O exemplo a seguir mostra como definir propriedades [abstract](../../language-reference/keywords/abstract.md). Uma declaração de propriedade abstract não fornece uma implementação dos acessadores da propriedade – ela declara que a classe dá suporte às propriedades, mas deixa a implementação do acessador para classes derivadas. O exemplo a seguir demonstra como implementar as propriedades abstract herdadas de uma classe base.  
   
  Esse exemplo consiste em três arquivos, cada um deles é compilado individualmente e seu assembly resultante é referenciado pela próxima compilação:  
   
@@ -41,7 +41,7 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/l
     public abstract double Area  
     ```  
   
-- Ao declarar uma propriedade abstract (como `Area` neste exemplo), você simplesmente indica quais acessadores de propriedade estão disponíveis, mas não os implementa. Neste exemplo, apenas um acessador [get](../../../csharp/language-reference/keywords/get.md) está disponível, assim, a propriedade é somente leitura.  
+- Ao declarar uma propriedade abstract (como `Area` neste exemplo), você simplesmente indica quais acessadores de propriedade estão disponíveis, mas não os implementa. Neste exemplo, apenas um acessador [get](../../language-reference/keywords/get.md) está disponível, assim, a propriedade é somente leitura.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra três subclasses de `Shape` e como elas substituem a propriedade `Area` para fornecer sua própria implementação.  
@@ -55,8 +55,8 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/l
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Classes e membros de classes abstract e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Guia de Programação em C#](../index.md)
+- [Classes e Structs](./index.md)
+- [Classes e membros de classes abstract e sealed](./abstract-and-sealed-classes-and-class-members.md)
+- [Propriedades](./properties.md)
 - [Como: criar e usar assemblies usando a linha de comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).

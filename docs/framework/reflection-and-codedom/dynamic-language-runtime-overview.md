@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b550f504ecbc05e6790652ee1432da3a26ceacb6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632963"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915583"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Visão geral do Dynamic Language Runtime
 
@@ -95,7 +95,7 @@ O DLR usa associadores em sites de chamada para se comunicar não apenas com o .
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
-- [Common Language Runtime](../../../docs/standard/clr.md)
+- [Common Language Runtime](../../standard/clr.md)
 - [Árvores de expressão (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Árvores de expressão (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Passo a passo: Criar e usar objetos dinâmicos](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Passo a passo: Criar e usar objetos dinâmicos](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

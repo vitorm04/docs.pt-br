@@ -2,19 +2,19 @@
 title: Criando interfaces genéricas variantes (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: ad82ba27a98d27a18d9cff1e65ab929cd9d711a6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673750"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595313"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Criando interfaces genéricas variantes (C#)
 
 Você pode declarar parâmetros de tipo genérico em interfaces como covariantes ou contravariantes. A *Covariância* permite que os métodos de interface tenham tipos de retorno mais derivados que aqueles definidos pelos parâmetros de tipo genérico. A *Contravariância* permite que os métodos de interface tenham tipos de argumentos que são menos derivados que aqueles especificados pelos parâmetros genéricos. Uma interface genérica que tenha parâmetros de tipo genérico covariantes ou contravariantes é chamada de *variante*.
 
 > [!NOTE]
-> O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. Para obter a lista das interfaces de variantes no .NET Framework, consulte [Variância em interfaces genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+> O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. Para obter a lista das interfaces de variantes no .NET Framework, consulte [Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Declarando interfaces genéricas variantes
 
@@ -37,7 +37,7 @@ Você pode declarar um parâmetro de tipo genérico como covariante usando a pal
     }
     ```
 
-    Há uma exceção a essa regra. Se você tiver um delegado genérico contravariante como um parâmetro de método, você poderá usar o tipo como um parâmetro de tipo genérico para o delegado. Isso é ilustrado pelo tipo `R` no exemplo a seguir. Para obter mais informações, consulte [Variância em delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) e [Usando variância para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).
+    Há uma exceção a essa regra. Se você tiver um delegado genérico contravariante como um parâmetro de método, você poderá usar o tipo como um parâmetro de tipo genérico para o delegado. Isso é ilustrado pelo tipo `R` no exemplo a seguir. Para obter mais informações, consulte [Variância em delegados (C#)](./variance-in-delegates.md) e [Usando variância para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md).
 
     ```csharp
     interface ICovariant<out R>
@@ -192,5 +192,5 @@ Neste exemplo, não está especificado como o método `pets.GetEnumerator` escol
 
 ## <a name="see-also"></a>Consulte também
 
-- [Variância em interfaces genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Usando variação para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md)
+- [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

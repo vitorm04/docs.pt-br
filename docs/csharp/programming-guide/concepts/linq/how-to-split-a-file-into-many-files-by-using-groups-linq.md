@@ -2,12 +2,12 @@
 title: 'Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: f38cfebae17ea6db9df2445f71852f7f4e6f201f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 171d0aababfe4ff4ba5be4c8d307c917474671fc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584352"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592377"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
 Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.  
@@ -130,5 +130,5 @@ Criar um projeto de aplicativo de console em C# com diretivas `using` para os na
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ e diretórios de arquivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
+- [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

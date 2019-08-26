@@ -6,18 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 93f02b8a0f828be89c6a1b7bfcdc6ba2a2a93e81
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398555"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597186"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anônimos (Guia de Programação em C#)
 
 Os tipos anônimos fornecem um modo conveniente de encapsular um conjunto de propriedades somente leitura em um único objeto sem a necessidade de primeiro definir explicitamente um tipo. O nome do tipo é gerado pelo compilador e não está disponível no nível do código-fonte. O tipo de cada propriedade é inferido pelo compilador.  
   
- Crie tipos anônimos, usando o operador [new](../../../csharp/language-reference/operators/new-operator.md) com um inicializador de objeto. Para obter mais informações sobre inicializadores de objeto, consulte [Inicializadores de Objeto e Coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Crie tipos anônimos, usando o operador [new](../../language-reference/operators/new-operator.md) com um inicializador de objeto. Para obter mais informações sobre inicializadores de objeto, consulte [Inicializadores de Objeto e Coleção](./object-and-collection-initializers.md).  
   
  O exemplo a seguir mostra um tipo anônimo que é inicializado com duas propriedades chamadas `Amount` e `Message`.  
   
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- Os tipos anônimos são normalmente usados na cláusula [select](../../../csharp/language-reference/keywords/select-clause.md) de uma expressão de consulta para retornar um subconjunto das propriedades de cada objeto na sequência de origem. Para obter mais informações sobre consultas, consulte [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md).  
+ Os tipos anônimos são normalmente usados na cláusula [select](../../language-reference/keywords/select-clause.md) de uma expressão de consulta para retornar um subconjunto das propriedades de cada objeto na sequência de origem. Para obter mais informações sobre consultas, consulte [Expressões de Consulta LINQ](../linq-query-expressions/index.md).  
   
  Os tipos anônimos contêm uma ou mais propriedades públicas somente leitura. Nenhum outro tipo de membros da classe, como métodos ou eventos, é válido. A expressão que é usada para inicializar uma propriedade não pode ser `null`, uma função anônima ou um tipo de ponteiro.  
   
@@ -39,7 +39,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- Normalmente, ao usar um tipo anônimo para inicializar uma variável, a variável é declarada como uma variável local de tipo implícito usando [var](../../../csharp/language-reference/keywords/var.md). O nome do tipo não pode ser especificado na declaração da variável, porque apenas o compilador tem acesso ao nome subjacente do tipo anônimo. Para obter mais informações sobre `var`, consulte [Variáveis de local digitadas implicitamente](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Normalmente, ao usar um tipo anônimo para inicializar uma variável, a variável é declarada como uma variável local de tipo implícito usando [var](../../language-reference/keywords/var.md). O nome do tipo não pode ser especificado na declaração da variável, porque apenas o compilador tem acesso ao nome subjacente do tipo anônimo. Para obter mais informações sobre `var`, consulte [Variáveis de local digitadas implicitamente](./implicitly-typed-local-variables.md).  
   
  Você pode criar uma matriz de elementos de tipo anônimo combinando uma variável local de tipo implícito e uma matriz de tipo implícito, como mostrado no exemplo a seguir.  
   
@@ -48,7 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Os tipos anônimos são tipos [class](../../../csharp/language-reference/keywords/class.md) que derivam diretamente de [object](../../../csharp/language-reference/keywords/object.md) e que não podem ser convertidos para qualquer tipo, exceto [object](../../../csharp/language-reference/keywords/object.md). O compilador fornece um nome para cada tipo anônimo, embora o seu aplicativo não possa acessá-lo. Do ponto de vista do Common Language Runtime, um tipo anônimo não é diferente de qualquer outro tipo de referência.  
+ Os tipos anônimos são tipos [class](../../language-reference/keywords/class.md) que derivam diretamente de [object](../../language-reference/keywords/object.md) e que não podem ser convertidos para qualquer tipo, exceto [object](../../language-reference/keywords/object.md). O compilador fornece um nome para cada tipo anônimo, embora o seu aplicativo não possa acessá-lo. Do ponto de vista do Common Language Runtime, um tipo anônimo não é diferente de qualquer outro tipo de referência.  
   
  Se dois ou mais inicializadores de objeto anônimos em um assembly especificarem uma sequência de propriedades que estão na mesma ordem e que têm os mesmos nomes e tipos, o compilador tratará os objetos como instâncias do mesmo tipo. Eles compartilham o mesmo tipo de informação gerado pelo compilador.  
   
@@ -58,7 +58,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Inicializadores de objeto e coleção](./object-and-collection-initializers.md)
+- [Introdução a LINQ em C#](../concepts/linq/getting-started-with-linq.md)
+- [Expressões de consulta LINQ](../linq-query-expressions/index.md)

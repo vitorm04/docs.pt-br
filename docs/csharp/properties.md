@@ -2,12 +2,12 @@
 title: Propriedades
 description: Saiba mais sobre propriedades C#, que incluem recursos de validação, valores computados, avaliação lenta e notificações de alteração de propriedade.
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878276"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587412"
 ---
 # <a name="properties"></a>Propriedades
 
@@ -104,7 +104,7 @@ Uma propriedade não precisa simplesmente retornar o valor de um campo de membro
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-O exemplo acima usa o recurso de [interpolação de cadeia de caracteres](../csharp/language-reference/tokens/interpolated.md) para criar a cadeia de caracteres formatada do nome completo.
+O exemplo acima usa o recurso de [interpolação de cadeia de caracteres](./language-reference/tokens/interpolated.md) para criar a cadeia de caracteres formatada do nome completo.
 
 Use também um *membro com corpo da expressão*, que fornece uma maneira mais sucinta de criar a propriedade `FullName` computada:
 

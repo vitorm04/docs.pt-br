@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: cccb338d2dbed7889512428a53804324795c66bd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498283"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587661"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -31,17 +31,17 @@ ms.locfileid: "57498283"
  cref = " `member`"  
  Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída.`member` deve ser exibido entre aspas duplas (" ").  
   
- Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](../../../csharp/programming-guide/xmldoc/see.md).  
+ Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](./see.md).  
   
 ## <a name="remarks"></a>Comentários  
- A marca \<seealso > permite especificar o texto que você quer que seja exibido na seção Ver também. Use [\<see>](../../../csharp/programming-guide/xmldoc/see.md) para especificar um link de dentro do texto.  
+ A marca \<seealso > permite especificar o texto que você quer que seja exibido na seção Ver também. Use [\<see>](./see.md) para especificar um link de dentro do texto.  
   
- Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Consulte [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) para obter um exemplo sobre o uso de \<seealso>.  
+ Consulte [\<summary>](./summary.md) para obter um exemplo sobre o uso de \<seealso>.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Guia de Programação em C#](../index.md)
+- [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

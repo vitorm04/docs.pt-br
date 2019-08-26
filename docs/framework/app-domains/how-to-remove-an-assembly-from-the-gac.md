@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66df15f7a33acac85804d6abf2e2878c1132f5d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593573"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921464"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Como: Remover um assembly do cache de assembly global
 Há duas maneiras de remover um assembly do GAC (cache de assemblies global):  
@@ -49,7 +49,7 @@ gacutil -u hello
 1. No aplicativo **Programas e Recursos**, em **Painel de Controle**, selecione o aplicativo que você deseja desinstalar. Se o pacote de instalação tiver colocado assemblies no GAC, o Windows Installer os removerá se não forem usados por outro aplicativo.  
   
     > [!NOTE]
-    >  O Windows Installer mantém uma contagem de referência para os assemblies instalados no GAC. Um assembly será removido do GAC apenas quando sua contagem de referência atingir zero, o que indica que ele não é usado por qualquer aplicativo instalado por um pacote do Windows Installer.  
+    > O Windows Installer mantém uma contagem de referência para os assemblies instalados no GAC. Um assembly será removido do GAC apenas quando sua contagem de referência atingir zero, o que indica que ele não é usado por qualquer aplicativo instalado por um pacote do Windows Installer.  
   
 ## <a name="see-also"></a>Consulte também
 

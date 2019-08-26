@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 16b4e8d2d62c2930411bb61abd4d4b65ab7989fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e81a95102100d3b0f3fdc84cf2113abf6ae35351
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487831"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588134"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -28,14 +28,14 @@ ms.locfileid: "57487831"
  Uma descrição do exemplo de código.  
   
 ## <a name="remarks"></a>Comentários  
- A marca \<example> permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolve o uso da marca [\<code>](../../../csharp/programming-guide/xmldoc/code.md).  
+ A marca \<example> permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolve o uso da marca [\<code>](./code.md).  
   
- Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Guia de Programação em C#](../index.md)
+- [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

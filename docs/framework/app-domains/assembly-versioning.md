@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593650"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921658"
 ---
 # <a name="assembly-versioning"></a>Controle de versão de assemblies
 Todo o controle de versão de assemblies que usam o Common Language Runtime é feito no nível do assembly. A versão específica de um assembly e as versões de assemblies dependentes são registradas no manifesto do assembly. A política de versão padrão do tempo de execução diz que aplicativos só são executados com as versões com que foram compilados e testados, a menos que essa política de versão seja substituída pela política de versão explícita em arquivos de configuração (o arquivo de configuração do aplicativo, o arquivo de política do editor e o arquivo de configuração do administrador do computador).  
   
 > [!NOTE]
->  O controle de versão só é feito em assemblies com nomes fortes.  
+> O controle de versão só é feito em assemblies com nomes fortes.  
   
  O ambiente de execução realiza várias etapas para resolver uma solicitação de associação de assembly:  
   
@@ -65,7 +65,7 @@ Todo o controle de versão de assemblies que usam o Common Language Runtime é f
  A versão informativa é uma cadeia de caracteres que anexa informações adicionais de versão a um assembly apenas para fins informativos; essa informação não é usada no tempo de execução. A versão informativa com base em texto corresponde à literatura de marketing, ao empacotamento ou ao nome do produto e não é usada pelo tempo de execução. Por exemplo, uma versão informativa poderia ser "Common Language Runtime versão 1.0" ou "NET Control SP 2". Na guia Versão da caixa de diálogo de propriedades do arquivo no Microsoft Windows, essas informações são exibidas no item "Versão do Produto".  
   
 > [!NOTE]
->  Embora você possa especificar qualquer texto, uma mensagem de aviso aparecerá durante a compilação se a cadeia de caracteres não estiver no formato usado pelo número de versão do assembly ou se ela estiver no formato correto, mas contiver curingas. Esse aviso é inofensivo.  
+> Embora você possa especificar qualquer texto, uma mensagem de aviso aparecerá durante a compilação se a cadeia de caracteres não estiver no formato usado pelo número de versão do assembly ou se ela estiver no formato correto, mas contiver curingas. Esse aviso é inofensivo.  
   
  A versão informativa é representada usando-se o atributo personalizado <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Para saber mais sobre o atributo da versão informativa, confira [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   

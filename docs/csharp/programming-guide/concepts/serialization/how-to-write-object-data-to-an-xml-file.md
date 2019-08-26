@@ -2,12 +2,12 @@
 title: 'Como: Gravar dados de objeto em um arquivo XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 77d3a45f6213bc390e0b3da0d30cfbc55235b1d1
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5da79d68bf7e1c955cb6edededb3914bd9c898e5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170244"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590693"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Como: Gravar dados de objeto em um arquivo XML (C#)
 Este exemplo grava o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -64,5 +64,5 @@ public class XMLWrite
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO.StreamWriter>
-- [Como: Ler dados de objeto de um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+- [Como: Ler dados de objeto de um arquivo XML (C#)](./how-to-read-object-data-from-an-xml-file.md)
+- [Serialização (C#)](./index.md)

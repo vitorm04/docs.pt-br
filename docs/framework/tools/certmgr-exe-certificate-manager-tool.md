@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948580"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -28,7 +28,7 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
  O Gerenciador de Certificados é instalado automaticamente com o Visual Studio. Para iniciar a ferramenta, use os [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  A ferramenta Gerenciador de Certificados (Certmgr.exe) é um utilitário de linha de comando, e Certificados (Certmgr.msc) é um snap-in MMC (Console de Gerenciamento Microsoft). Como Certmgr.msc costuma ser encontrado no diretório do sistema do Windows, a digitação de `certmgr` na linha de comando pode carregar o snap-in do MMC de Certificados, mesmo que você tenha aberto o Prompt de Comando do Desenvolvedor para Visual Studio. Isso ocorre porque o caminho para o snap-in precede o caminho para a ferramenta Gerenciador de Certificados na variável de ambiente PATH. Se encontrar esse problema, você poderá executar comandos de Certmgr.exe especificando-se o caminho do executável.  
+> A ferramenta Gerenciador de Certificados (Certmgr.exe) é um utilitário de linha de comando, e Certificados (Certmgr.msc) é um snap-in MMC (Console de Gerenciamento Microsoft). Como Certmgr.msc costuma ser encontrado no diretório do sistema do Windows, a digitação de `certmgr` na linha de comando pode carregar o snap-in do MMC de Certificados, mesmo que você tenha aberto o Prompt de Comando do Desenvolvedor para Visual Studio. Isso ocorre porque o caminho para o snap-in precede o caminho para a ferramenta Gerenciador de Certificados na variável de ambiente PATH. Se encontrar esse problema, você poderá executar comandos de Certmgr.exe especificando-se o caminho do executável.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -46,12 +46,12 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |*sourceStorename*|O repositório de certificados que contém os certificados, as CTLs ou as CRLs existentes que serão adicionados, excluídos, salvos ou exibidos. Ele pode ser um arquivo de repositório ou um repositório de sistemas.|  
 |*destinationStorename*|O repositório ou o arquivo de certificados de saída.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/add**|Adiciona certificados, CTLs e CRLs a um repositório de certificados.|  
 |**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções **/add** ou **/del**. A opção **/all** não pode ser usada com **/put**.|  

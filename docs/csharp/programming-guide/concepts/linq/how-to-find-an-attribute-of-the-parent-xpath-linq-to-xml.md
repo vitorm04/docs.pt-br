@@ -2,12 +2,12 @@
 title: 'Como: Localizar um atributo do pai (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: f30c810483d8253132b9fe3e0959d04a8b4d26a0
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 2e6c124d2653fb4426b3abb693f0b58daa5413c2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690066"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593618"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Como: Localizar um atributo do pai (XPath-LINQ to XML) (C#)
 
@@ -21,7 +21,7 @@ A expressão XPath é:
 
 Este exemplo localiza primeiro um elemento de `Author` . Localiza no atributo de `id` de elemento pai.
 
-Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");

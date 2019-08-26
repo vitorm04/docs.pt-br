@@ -2,12 +2,12 @@
 title: 'Como: Consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: 11f065594ed6b6c162ac95e0a1e6c502c1ad8de5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e478364f07c08a334692ba54ae1a95880b95519e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584282"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592773"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Como: Consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (C#)
 Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado. Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em tempo de execução. Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".  
@@ -71,4 +71,4 @@ Criar um projeto de aplicativo de console em C# com diretivas `using` para os na
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e cadeias de caracteres (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)

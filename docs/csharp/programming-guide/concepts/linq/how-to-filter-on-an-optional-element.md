@@ -2,12 +2,12 @@
 title: 'Como: Filtrar em um elemento opcional (C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 9b2ee9bf0cbed5504b96937fb37cf98728a15335
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710124"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593803"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Como: Filtrar em um elemento opcional (C#)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
@@ -100,5 +100,5 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operações de projeção (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
+- [Operações de projeção (C#)](./projection-operations.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937993"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|Descrição|  
+|Argumento|DESCRIÇÃO|  
 |--------------|-----------------|  
 |*assemblyName*|O assembly para o qual uma biblioteca de tipos deve ser exportada.|  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Especifica o local de pesquisa dos assemblies. Se usar essa opção, você deverá especificar explicitamente os locais de pesquisa dos assemblies referenciados, incluindo o diretório atual.<br /><br /> Quando você usa a opção **asmpath**, o Exportador da Biblioteca de Tipos não procurará um assembly no GAC (cache de assembly global).|  
 |**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
@@ -54,13 +54,13 @@ tlbexp assemblyName [options]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 > [!NOTE]
->  As opções de linha de comando para Tlbexp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Por exemplo, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
+> As opções de linha de comando para Tlbexp.exe não diferenciam maiúsculas de minúsculas e podem ser fornecidas em qualquer ordem. Você só precisa especificar o suficiente da opção para identificá-la com exclusividade. Por exemplo, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Comentários  
  Tlbexp.exe gera uma biblioteca de tipos que contém definições dos tipos definidos no assembly. Aplicativos como o Visual Basic 6.0 podem usar a biblioteca de tipos gerada na associação com os tipos do .NET definidos no assembly.  
   
 > [!IMPORTANT]
->  Não é possível usar Tlbexp.exe para exportar arquivos de metadados do Windows (.winmd). Não há suporte para a exportação de assemblies do Tempo de Execução do Windows.  
+> Não é possível usar Tlbexp.exe para exportar arquivos de metadados do Windows (.winmd). Não há suporte para a exportação de assemblies do Tempo de Execução do Windows.  
   
  Todo o assembly é convertido de uma só vez. Não é possível usar Tlbexp.exe para gerar informações de tipo para um subconjunto dos tipos definidos em um assembly.  
   

@@ -2,12 +2,12 @@
 title: LINQ e diretórios de arquivos (C#)
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: b2153d755b63e1ec14c11b5e94116f7d6b9490f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d2109fe7f4f907317275188057fa6e5e71b2679
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652365"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591977"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ e diretórios de arquivos (C#)
 Muitas operações do sistema de arquivos são essencialmente consultas e, portanto, são ideais para a abordagem do LINQ.  
@@ -16,25 +16,25 @@ Muitas operações do sistema de arquivos são essencialmente consultas e, porta
   
  Esta seção contém os tópicos a seguir:  
   
- [Como: Consultar arquivos com um atributo ou um nome especificado (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ [Como: Consultar arquivos com um atributo ou um nome especificado (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)  
  Mostra como pesquisar arquivos, examinando uma ou mais propriedades de seu objeto <xref:System.IO.FileInfo>.  
   
- [Como: Agrupar arquivos por extensão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Como: Agrupar arquivos por extensão (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)  
  Mostra como retornar grupos de objetos <xref:System.IO.FileInfo> com base em sua extensão de nome de arquivo.  
   
- [Como: Consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
+ [Como: Consultar o número total de bytes em um conjunto de pastas (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)  
  Mostra como retornar o número total de bytes em todos os arquivos de uma árvore de diretórios especificada.  
   
- [Como: Comparar o conteúdo de duas pastas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)  
+ [Como: Comparar o conteúdo de duas pastas (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)  
  Mostra como retornar todos os arquivos que estão presentes em duas pastas especificadas e também todos os arquivos que estão presentes em uma pasta, mas não na outra.  
   
- [Como: Consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [Como: Consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
  Mostra como retornar o maior ou o menor arquivo ou um número especificado de arquivos, em uma árvore de diretório.  
   
- [Como: Consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ [Como: Consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
  Mostra como agrupar todos os nomes de arquivo que ocorrem em mais de um local em uma árvore de diretórios especificada. Também mostra como realizar comparações mais complexas com base em um comparador personalizado.  
   
- [Como: Consultar o conteúdo de arquivos em uma pasta (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md)  
+ [Como: Consultar o conteúdo de arquivos em uma pasta (LINQ) (C#)](./how-to-query-the-contents-of-files-in-a-folder-lin.md)  
  Mostra como iterar pelas pastas em uma árvore, abrir cada arquivo e consultar o conteúdo do arquivo.  
   
 ## <a name="comments"></a>Comentários  
@@ -42,4 +42,4 @@ Muitas operações do sistema de arquivos são essencialmente consultas e, porta
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

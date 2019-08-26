@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398584"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597181"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
 
 ## <a name="reference-types"></a>Tipos de referência  
-Um tipo que é definido como uma [classe](../../../csharp/language-reference/keywords/class.md) é um *tipo de referência*. No tempo de execução, quando você declara uma variável de um tipo de referência, a variável contém o valor [null](../../../csharp/language-reference/keywords/null.md) até que você crie explicitamente uma instância da classe usando o operador [new](../../../csharp/language-reference/operators/new-operator.md) ou atribua a ela um objeto de um tipo compatível que foi criado em outro lugar, conforme mostrado no exemplo a seguir:
+Um tipo que é definido como uma [classe](../../language-reference/keywords/class.md) é um *tipo de referência*. No tempo de execução, quando você declara uma variável de um tipo de referência, a variável contém o valor [null](../../language-reference/keywords/null.md) até que você crie explicitamente uma instância da classe usando o operador [new](../../language-reference/operators/new-operator.md) ou atribua a ela um objeto de um tipo compatível que foi criado em outro lugar, conforme mostrado no exemplo a seguir:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -31,7 +31,7 @@ Quando o objeto é criado, memória suficiente é alocada no heap gerenciado par
   
 ## <a name="declaring-classes"></a>Declarando Classes
 
- As classes são declaradas usando a palavra-chave [class](../../../csharp/language-reference/keywords/class.md), seguida por um identificador exclusivo, conforme mostrado no exemplo a seguir:
+ As classes são declaradas usando a palavra-chave [class](../../language-reference/keywords/class.md), seguida por um identificador exclusivo, conforme mostrado no exemplo a seguir:
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -70,7 +70,7 @@ Embora eles sejam usados algumas vezes de maneira intercambiável, uma classe e 
   
 ## <a name="class-inheritance"></a>Herança de classe  
 
-As classes dão suporte completo à *herança*, uma característica fundamental da programação orientada a objetos. Ao criar uma classe, você pode herdar de outra interface ou classe que não está definida como [selada](../../../csharp/language-reference/keywords/sealed.md), e outras classes podem herdar de sua classe e substituir seus métodos virtuais.
+As classes dão suporte completo à *herança*, uma característica fundamental da programação orientada a objetos. Ao criar uma classe, você pode herdar de outra interface ou classe que não está definida como [selada](../../language-reference/keywords/sealed.md), e outras classes podem herdar de sua classe e substituir seus métodos virtuais.
 
 A herança é realizada usando uma *derivação*, o que significa que uma classe é declarada usando uma *classe base*, da qual ela herda o comportamento e os dados. Uma classe base é especificada ao acrescentar dois-pontos e o nome de classe base depois do nome de classe derivada, dessa maneira:  
 

@@ -2,12 +2,12 @@
 title: 'Como: Criar assemblies amigáveis com sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7715726a200150b044fb8e97216fa02d0e784838
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582977"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595931"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Como: Criar assemblies amigáveis com sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
@@ -79,7 +79,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`.  Para obter mais informações, consulte [/out (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`.  Para obter mais informações, consulte [/out (opções do compilador C#)](../../../language-reference/compiler-options/out-compiler-option.md).  
   
 7. Execute o arquivo friend_signed_B.exe.  
   
@@ -93,8 +93,8 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
-- [Como: Criar assemblies amigáveis sem sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [Como: Criar assemblies amigáveis sem sinal (C#)](./how-to-create-unsigned-friend-assemblies.md)
+- [/keyfile](../../../language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (Ferramenta Nome Forte)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Criar e usar assemblies de nomes fortes](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Criar e usar assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Guia de Programação em C#](../../index.md)

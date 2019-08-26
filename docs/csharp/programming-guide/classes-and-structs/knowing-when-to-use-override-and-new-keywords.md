@@ -7,16 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398437"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596479"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Quando usar as palavras-chave override e new (Guia de Programação em C#)
 
-No C#, um método em uma classe derivada pode ter o mesmo nome que um método na classe base. É possível especificar a maneira como os métodos interagem usando as palavras-chave [new](../../../csharp/language-reference/keywords/new-modifier.md) e [override](../../../csharp/language-reference/keywords/override.md). O modificador `override` *estende* o método `virtual` da classe base e o modificador`new` *oculta* um método de classe base acessível. A diferença é ilustrada nos exemplos deste tópico.  
+No C#, um método em uma classe derivada pode ter o mesmo nome que um método na classe base. É possível especificar a maneira como os métodos interagem usando as palavras-chave [new](../../language-reference/keywords/new-modifier.md) e [override](../../language-reference/keywords/override.md). O modificador `override` *estende* o método `virtual` da classe base e o modificador`new` *oculta* um método de classe base acessível. A diferença é ilustrada nos exemplos deste tópico.  
   
  Em um aplicativo de console, declare as duas classes a seguir, `BaseClass` e `DerivedClass`. `DerivedClass` herda de `BaseClass`.  
   
@@ -115,7 +115,7 @@ public new void Method2()
 }  
 ```  
   
- Execute o programa novamente para verificar se a saída não foi alterada. Verifique também se o aviso não é mais exibido. Usando `new`, você está declarando que está ciente de que o membro que ele modifica oculta um membro herdado da classe base. Para obter mais informações sobre a ocultação de nome por meio de herança, consulte [Novo modificador](../../../csharp/language-reference/keywords/new-modifier.md).  
+ Execute o programa novamente para verificar se a saída não foi alterada. Verifique também se o aviso não é mais exibido. Usando `new`, você está declarando que está ciente de que o membro que ele modifica oculta um membro herdado da classe base. Para obter mais informações sobre a ocultação de nome por meio de herança, consulte [Novo modificador](../../language-reference/keywords/new-modifier.md).  
   
  Para comparar esse comportamento com os efeitos de usar `override`, adicione o seguinte método a `DerivedClass`. O modificador `override` pode ser adicionado antes ou depois de `public`.  
   
@@ -545,8 +545,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [Guia de Programação em C#](../index.md)
+- [Classes e Structs](./index.md)
+- [Controle de versão com as palavras-chave override e new](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

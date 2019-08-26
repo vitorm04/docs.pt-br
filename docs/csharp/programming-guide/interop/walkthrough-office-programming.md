@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: a9b7a32cc3eb9d65b7c4a8e241eedca14cbf11bb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8ed6e759f682f0db76938661fdcf668bec1eef1c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398147"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588977"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
 
 O Visual Studio oferece funcionalidades no C# e no Visual Basic que melhoram a programação do Microsoft Office. As funcionalidades úteis do C# incluem argumentos nomeados e opcionais e valores retornados do tipo `dynamic`. Na programação COM, você pode omitir a palavra-chave `ref` e obter acesso a propriedades indexadas. As funcionalidades do Visual Basic incluem propriedades autoimplementadas, instruções em expressões lambda e inicializadores de coleção.
 
-Ambas as linguagens permitem incorporar as informações de tipo, que permitem a implantação de assemblies que interagem com componentes COM sem implantar assemblies de interoperabilidade primários (PIAs) no computador do usuário. Para obter mais informações, confira [Passo a passo: inserir tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+Ambas as linguagens permitem incorporar as informações de tipo, que permitem a implantação de assemblies que interagem com componentes COM sem implantar assemblies de interoperabilidade primários (PIAs) no computador do usuário. Para obter mais informações, confira [Passo a passo: inserir tipos de assemblies gerenciados](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
 
 Este passo a passo demonstra essas funcionalidades no contexto de programação do Office, mas muitos deles também são úteis na programação em geral. No passo a passo, você usa um aplicativo Suplemento do Excel para criar uma pasta de trabalho do Excel. Em seguida, você cria um documento do Word que contém um link para a pasta de trabalho. Por fim, você vê como habilitar e desabilitar a dependência de PIA.
 
@@ -94,7 +94,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 
     - O método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tem um *parâmetro opcional* para especificar um modelo específico. Os parâmetros opcionais, novos no C# 4, permitem omitir o argumento para esse parâmetro se você quiser usar o valor padrão do parâmetro. Como nenhum argumento é enviado no código anterior, `Add` usa o modelo padrão e cria uma nova pasta de trabalho. A instrução equivalente em versões anteriores do C# requer um argumento de espaço reservado: `excelApp.Workbooks.Add(Type.Missing)`.
 
-         Para obter mais informações, consulte [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).
+         Para obter mais informações, consulte [Argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md).
 
     - As propriedades `Range` e `Offset` do objeto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usam o recurso de *propriedades indexadas*. Este recurso permite consumir essas propriedades de tipos COM usando a sintaxe típica do C# a seguir. Propriedades indexadas também permitem que você use a propriedade `Value` do objeto `Range`, eliminando a necessidade de usar a propriedade `Value2`. A propriedade `Value` é indexada, mas o índice é opcional. Argumentos opcionais e propriedades indexadas trabalham juntos no exemplo a seguir.
 
@@ -106,7 +106,7 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 
          Não é possível criar propriedades indexadas de sua preferência. O recurso dá suporte apenas ao consumo de propriedades indexadas existentes.
 
-         Para obter mais informações, confira [Como: usar propriedades indexadas na programação para interoperabilidade COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md).
+         Para obter mais informações, confira [Como: usar propriedades indexadas na programação para interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md).
 
 2. Adicione o seguinte código no final de `DisplayInExcel` para ajustar as larguras das colunas para adequar o conteúdo.
 
@@ -114,13 +114,13 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Essas adições demonstram outro recurso no C#: tratar valores `Object` retornados de hosts COM como o Office, como se eles tivessem o tipo [dinâmico](../../../csharp/language-reference/keywords/dynamic.md). Isso acontece automaticamente quando **Inserir Tipos de Interoperabilidade** está definido como o valor padrão, `True` ou, de forma equivalente, quando o assembly é referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md). O tipo `dynamic` permite a vinculação posterior, já disponível no Visual Basic, e evita a conversão explícita necessária no C# 3.0 e em versões anteriores da linguagem.
+     Essas adições demonstram outro recurso no C#: tratar valores `Object` retornados de hosts COM como o Office, como se eles tivessem o tipo [dinâmico](../../language-reference/keywords/dynamic.md). Isso acontece automaticamente quando **Inserir Tipos de Interoperabilidade** está definido como o valor padrão, `True` ou, de forma equivalente, quando o assembly é referenciado pela opção do compilador [/link](../../language-reference/compiler-options/link-compiler-option.md). O tipo `dynamic` permite a vinculação posterior, já disponível no Visual Basic, e evita a conversão explícita necessária no C# 3.0 e em versões anteriores da linguagem.
 
      Por exemplo, `excelApp.Columns[1]` retorna um `Object` e `AutoFit` é um método [Range](<xref:Microsoft.Office.Interop.Excel.Range>) do Excel. Sem `dynamic`, você deve converter o objeto retornado em `excelApp.Columns[1]` como uma instância de `Range` antes de chamar o método `AutoFit`.
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     Para obter mais informações sobre como inserir tipos de interoperabilidade, consulte os procedimentos "Para localizar a referência de PIA" e "Para restaurar a dependência de PIA" posteriormente neste tópico. Para obter mais informações sobre `dynamic`, consulte [dynamic](../../../csharp/language-reference/keywords/dynamic.md) ou [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).
+     Para obter mais informações sobre como inserir tipos de interoperabilidade, consulte os procedimentos "Para localizar a referência de PIA" e "Para restaurar a dependência de PIA" posteriormente neste tópico. Para obter mais informações sobre `dynamic`, consulte [dynamic](../../language-reference/keywords/dynamic.md) ou [Usando o tipo dynamic](../types/using-type-dynamic.md).
 
 ### <a name="to-invoke-displayinexcel"></a>Para invocar DisplayInExcel
 
@@ -192,20 +192,20 @@ Você deve ter o Microsoft Office Excel e o Microsoft Office Word instalados no 
 ## <a name="see-also"></a>Consulte também
 
 - [Propriedades autoimplementadas (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Propriedades autoimplementadas (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [Propriedades autoimplementadas (C#)](../classes-and-structs/auto-implemented-properties.md)
 - [Inicializadores de Coleção](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
 - [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [Passando Argumentos por Posição e Nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
-- [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [Argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md)
 - [Associação Antecipada e Tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [Usando o tipo dynamic](../types/using-type-dynamic.md)
 - [Expressões lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Expressões lambda [C#]](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Como: usar propriedades indexadas na programação para interoperabilidade COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Expressões lambda [C#]](../statements-expressions-operators/lambda-expressions.md)
+- [Como: usar propriedades indexadas na programação para interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Passo a passo: inserir informações de tipo de assemblies do Microsoft Office no Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Passo a passo: inserindo tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Passo a passo: inserindo tipos de assemblies gerenciados](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Passo a passo: criando seu primeiro suplemento do VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Interoperabilidade](../../../csharp/programming-guide/interop/index.md)
+- [Interoperabilidade](./index.md)

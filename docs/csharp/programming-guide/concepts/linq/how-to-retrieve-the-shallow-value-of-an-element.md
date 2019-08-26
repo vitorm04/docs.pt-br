@@ -2,12 +2,12 @@
 title: 'Como: Recuperar o valor superficial de um elemento (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 570f9837d04352fb291f0b79f85fb9d7f68ff09d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2b37cc19e2ec5149589131497b36ad381900336b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485044"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592507"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Como: Recuperar o valor superficial de um elemento (C#)
 Este tópico mostra como obter o valor raso de um elemento. O valor raso é o valor do elemento específico somente, diferentemente de valor maior, que inclui os valores de todos os elementos descendentes concatenados em uma única cadeia de caracteres.  
@@ -81,4 +81,4 @@ Column  Name="Name"         =Customer.Name
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eixos do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)
+- [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

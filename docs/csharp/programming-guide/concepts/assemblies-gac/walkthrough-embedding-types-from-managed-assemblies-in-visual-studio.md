@@ -2,12 +2,12 @@
 title: 'Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 5e6494f133128e3982aa07323d2c65b9fa5de47b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844879"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595800"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)
 
@@ -61,7 +61,7 @@ Neste passo a passo, você fará o seguinte:
 
 4. Clique com o botão direito do mouse no projeto TypeEquivalenceInterface e clique em **Propriedades**. Clique na guia **Build**. Defina o caminho de saída para um local válido no computador de desenvolvimento, como `C:\TypeEquivalenceSample`. Esse local também será usado em uma etapa posterior neste passo a passo.
 
-5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave com nome forte**, clique em **\<Novo...>**. Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
+5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave com nome forte**, clique em **\<Novo...>** . Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
 
 6. Abra o arquivo ISampleInterface.cs. Adicione o seguinte código ao arquivo de classe ISampleInterface para criar a interface ISampleInterface.
 
@@ -109,7 +109,7 @@ Neste passo a passo, você fará o seguinte:
 
 4. Clique com o botão direito do mouse no projeto TypeEquivalenceRuntime e clique em **Propriedades**. Clique na guia **Build**. Defina o caminho de saída para o mesmo local usado no projeto TypeEquivalenceInterface, por exemplo, `C:\TypeEquivalenceSample`.
 
-5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave com nome forte**, clique em **\<Novo...>**. Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
+5. Enquanto ainda estiver editando as propriedades do projeto, clique na guia **Assinatura**. Selecione a opção **Assinar o assembly**. Na lista **Escolha um arquivo de chave com nome forte**, clique em **\<Novo...>** . Na caixa **Nome de arquivo de chave**, digite `key.snk`. Desmarque a caixa de seleção **Proteger o arquivo de chaves com senha**. Clique em **OK**.
 
 6. Clique com o botão direito do mouse no projeto TypeEquivalenceRuntime e clique em **Adicionar Referência**. Clique na guia **Procurar** e navegue até a pasta do caminho de saída. Selecione o arquivo TypeEquivalenceInterface.dll e clique em **OK**.
 
@@ -235,7 +235,7 @@ Neste passo a passo, você fará o seguinte:
 
 ## <a name="see-also"></a>Consulte também
 
-- [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [/link (opções do compilador C#)](../../../language-reference/compiler-options/link-compiler-option.md)
+- [Guia de Programação em C#](../../index.md)
 - [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assemblies no .NET](../../../../standard/assembly/index.md)

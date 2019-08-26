@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033474"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915910"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Otimização da hospedagem Web compartilhada
 Se você for o administrador de um servidor que é compartilhado ao hospedar vários sites pequenos, poderá otimizar o desempenho e aumentar a capacidade do site adicionando a seguinte configuração `gcTrimCommitOnLowMemory` ao nó `runtime` no arquivo Aspnet.config no diretório .NET:  
@@ -22,7 +22,7 @@ Se você for o administrador de um servidor que é compartilhado ao hospedar vá
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  Essa configuração é recomendada somente para cenários de hospedagem na Web compartilhada.  
+> Essa configuração é recomendada somente para cenários de hospedagem na Web compartilhada.  
   
  Como o coletor de lixo retém a memória para alocações futuras, seu espaço confirmado pode ser superior a o que é estritamente necessário. Você pode reduzir esse espaço para acomodar quando houver uma carga pesada na memória do sistema. Reduzir esse espaço confirmado melhora o desempenho e expande a capacidade de hospedar mais sites.  
   

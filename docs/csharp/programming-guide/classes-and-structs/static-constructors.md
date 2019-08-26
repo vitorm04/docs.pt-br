@@ -6,15 +6,15 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433565"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596037"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Construtores estáticos (Guia de Programação em C#)
-Um construtor estático é usado para inicializar quaisquer dados [estáticos](../../../csharp/language-reference/keywords/static.md) ou para executar uma ação específica que precisa ser executada apenas uma vez. Ele é chamado automaticamente antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados.  
+Um construtor estático é usado para inicializar quaisquer dados [estáticos](../../language-reference/keywords/static.md) ou para executar uma ação específica que precisa ser executada apenas uma vez. Ele é chamado automaticamente antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
  
@@ -31,9 +31,9 @@ Construtores estáticos têm as seguintes propriedades:
 
 - O usuário não tem controle sobre quando o construtor estático é executado no programa.
   
-- Um construtor estático é chamado automaticamente para inicializar a [classe](../../../csharp/language-reference/keywords/class.md) antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados. Um construtor estático será executado antes de um construtor de instância. Observe que um construtor de tipo estático é chamado quando um método estático atribuído a um evento ou um delegado é invocado, e não quando ele é atribuído. Se os inicializadores de variável de campo estático estiverem presentes na classe do construtor estático, eles serão executados na ordem textual na qual eles aparecem na declaração de classe imediatamente antes da execução do construtor estático.
+- Um construtor estático é chamado automaticamente para inicializar a [classe](../../language-reference/keywords/class.md) antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados. Um construtor estático será executado antes de um construtor de instância. Observe que um construtor de tipo estático é chamado quando um método estático atribuído a um evento ou um delegado é invocado, e não quando ele é atribuído. Se os inicializadores de variável de campo estático estiverem presentes na classe do construtor estático, eles serão executados na ordem textual na qual eles aparecem na declaração de classe imediatamente antes da execução do construtor estático.
 
-- Se você não fornecer um construtor estático para inicializar campos estáticos, todos os campos estáticos serão inicializados com seu valor padrão, conforme listado na [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md). 
+- Se você não fornecer um construtor estático para inicializar campos estáticos, todos os campos estáticos serão inicializados com seu valor padrão, conforme listado na [Tabela de Valores Padrão](../../language-reference/keywords/default-values-table.md). 
   
 - Se um construtor estático gera uma exceção, o tempo de execução não o invocará uma segunda vez e o tipo permanecerá não inicializado durante o tempo de vida do domínio do aplicativo no qual o programa está sendo executado. Normalmente, uma exceção <xref:System.TypeInitializationException> é lançada quando um construtor estático não consegue instanciar um tipo ou uma exceção sem tratamento que ocorre em um construtor estático. Para construtores estáticos implícitos que não são definidos explicitamente no código-fonte, a solução de problemas pode exigir inspeção do código de linguagem intermediária (IL).
 
@@ -61,10 +61,10 @@ Para saber mais, confira a seção [Construtores estáticos](~/_csharplang/spec/
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Classes static e membros de classes static](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Guia de Programação em C#](../index.md)
+- [Classes e Structs](./index.md)
+- [Construtores](./constructors.md)
+- [Classes static e membros de classes static](./static-classes-and-static-class-members.md)
+- [Finalizadores](./destructors.md)
 - [Diretrizes de design de construtor](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
 - [Aviso de segurança - CA2121: Construtores estáticos devem ser particulares](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

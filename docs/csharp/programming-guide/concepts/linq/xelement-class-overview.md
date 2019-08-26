@@ -2,12 +2,12 @@
 title: Visão geral da classe XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 815b7b6523afe7106fcdcbe242d667c5ad6aa56e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e742741f56f3e39f93b9f1d6be30a54a4ede67f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487012"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590886"
 ---
 # <a name="xelement-class-overview-c"></a>Visão geral da classe XElement (C#)
 A classe <xref:System.Xml.Linq.XElement> é uma das classes fundamentais no [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Representa um elemento XML. Você pode usar essa classe para criar elementos; alterar o conteúdo do elemento; adicionar, alterar ou excluir elementos filho; adicionar atributos a um elemento; ou serializar o conteúdo de um elemento no formulário de texto. Você também pode interoperar com outras classes no <xref:System.Xml?displayProperty=nameWithType>, como <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> e <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -17,9 +17,9 @@ Este tópico descreve a funcionalidade fornecida pela classe <xref:System.Xml.Li
 ## <a name="constructing-xml-trees"></a>Construindo árvores XML  
  Você pode construir árvores XML em uma variedade de maneiras, incluindo:  
   
-- Você pode construir uma árvore XML em código. Para obter mais informações, consulte [Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
+- Você pode construir uma árvore XML em código. Para obter mais informações, consulte [Criando árvores XML (C#)](./linq-to-xml-overview.md).  
   
-- Você pode analisar XML de várias fontes, incluindo <xref:System.IO.TextReader>, arquivos de texto ou um endereço Web (URL). Para obter mais informações, consulte [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md).  
+- Você pode analisar XML de várias fontes, incluindo <xref:System.IO.TextReader>, arquivos de texto ou um endereço Web (URL). Para obter mais informações, consulte [Analisando XML (C#)](./how-to-parse-a-string.md).  
   
 - Você pode usar um <xref:System.Xml.XmlReader> para popular a árvore. Para obter mais informações, consulte <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
@@ -78,22 +78,22 @@ Console.WriteLine(xmlTree);
 ## <a name="serializing-xml-trees"></a>Serializando árvores XML  
  Você pode serializar a árvore XML para um <xref:System.IO.File>, um <xref:System.IO.TextWriter> ou um <xref:System.Xml.XmlWriter>.  
   
- Para obter mais informações, consulte [Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ Para obter mais informações, consulte [Serializando árvores XML (C#)](./preserving-white-space-while-serializing.md).  
   
 ## <a name="retrieving-xml-data-via-axis-methods"></a>Recuperando dados XML por meio de métodos de eixo  
  Você pode usar métodos de eixo para recuperar atributos, elementos filho, elementos descendentes e elementos ancestrais. As consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operam em métodos de eixo e fornecem várias maneiras flexíveis e avançadas de navegar por uma árvore XML e de processá-la.  
   
- Para obter mais informações, consulte [Eixos LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md).  
+ Para obter mais informações, consulte [Eixos LINQ to XML (C#)](./linq-to-xml-axes-overview.md).  
   
 ## <a name="querying-xml-trees"></a>Consultando árvores XML  
  Você pode escrever consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que extraem dados de uma árvore XML.  
   
- Para obter mais informações, consulte [Consultando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md).  
+ Para obter mais informações, consulte [Consultando árvores XML (C#)](./how-to-find-an-element-with-a-specific-attribute.md).  
   
 ## <a name="modifying-xml-trees"></a>Modificando árvores XML  
  Você pode modificar um elemento de várias maneiras, incluindo alterar seu conteúdo ou atributos. Você também pode remover um elemento de seu pai.  
   
- Para obter mais informações, consulte [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
+ Para obter mais informações, consulte [Modificando árvores XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
 ## <a name="see-also"></a>Consulte também
 

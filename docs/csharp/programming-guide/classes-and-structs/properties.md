@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583053"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596144"
 ---
 # <a name="properties-c-programming-guide"></a>Propriedades (Guia de Programação em C#)
 
@@ -23,12 +23,12 @@ Uma propriedade é um membro que oferece um mecanismo flexível para ler, gravar
   
 - As propriedades permitem que uma classe exponha uma forma pública de obter e definir valores, enquanto oculta o código de implementação ou de verificação.  
   
-- Um acessador de propriedade [get](../../../csharp/language-reference/keywords/get.md) é usado para retornar o valor da propriedade e um acessador de propriedade [set](../../../csharp/language-reference/keywords/set.md) é usado para atribuir um novo valor. Esses acessadores podem ter diferentes níveis de acesso. Para obter mais informações, consulte [Restringindo a acessibilidade aos acessadores](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- Um acessador de propriedade [get](../../language-reference/keywords/get.md) é usado para retornar o valor da propriedade e um acessador de propriedade [set](../../language-reference/keywords/set.md) é usado para atribuir um novo valor. Esses acessadores podem ter diferentes níveis de acesso. Para obter mais informações, consulte [Restringindo a acessibilidade aos acessadores](./restricting-accessor-accessibility.md).  
   
-- A palavra-chave [value](../../../csharp/language-reference/keywords/value.md) é usada para definir o valor que está sendo atribuído pelo acessador `set`.  
+- A palavra-chave [value](../../language-reference/keywords/value.md) é usada para definir o valor que está sendo atribuído pelo acessador `set`.  
 - As propriedades podem ser de *leitura/gravação* (elas têm um acessador `get` e `set`), *somente leitura* (elas têm um acessador `get`, mas nenhum `set`) ou *somente gravação* (elas têm um acessador `set`, mas nenhum `get`). As propriedades somente gravação são raras e são mais comumente usadas para restringir o acesso a dados confidenciais.
 
-- As propriedades simples que não exigem nenhum código de acessador personalizado podem ser implementadas como definições de corpo da expressão ou como [propriedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).
+- As propriedades simples que não exigem nenhum código de acessador personalizado podem ser implementadas como definições de corpo da expressão ou como [propriedades autoimplementadas](./auto-implemented-properties.md).
  
 ## <a name="properties-with-backing-fields"></a>Propriedades com campos de suporte
 
@@ -60,15 +60,15 @@ Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverã
 
 ## <a name="related-sections"></a>Seções relacionadas  
   
-- [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Usando propriedades](./using-properties.md)  
   
-- [Propriedades de interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Propriedades de interface](./interface-properties.md)  
   
-- [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparação entre propriedades e indexadores](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [Restringindo a acessibilidade ao acessador](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restringindo a acessibilidade ao acessador](./restricting-accessor-accessibility.md)  
   
-- [Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Propriedades Autoimplementadas](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
@@ -76,8 +76,8 @@ Para obter mais informações, veja [Propriedades](~/_csharplang/spec/classes.md
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)
-- [Palavra-chave get](../../../csharp/language-reference/keywords/get.md)
-- [Palavra-chave set](../../../csharp/language-reference/keywords/set.md)
+- [Guia de Programação em C#](../index.md)
+- [Usando propriedades](./using-properties.md)
+- [Indexadores](../indexers/index.md)
+- [Palavra-chave get](../../language-reference/keywords/get.md)
+- [Palavra-chave set](../../language-reference/keywords/set.md)

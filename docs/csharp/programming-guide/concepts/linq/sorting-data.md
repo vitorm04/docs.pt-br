@@ -2,12 +2,12 @@
 title: Classificando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125714"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591045"
 ---
 # <a name="sorting-data-c"></a>Classificando dados (C#)
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.  
@@ -20,7 +20,7 @@ Uma operação de classificação ordena os elementos de uma sequência com base
   
 ## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|DESCRIÇÃO|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Classifica valores em ordem crescente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Classifica valores em ordem decrescente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -129,7 +129,7 @@ foreach (string str in query)
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq>
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Cláusula orderby](../../../../csharp/language-reference/keywords/orderby-clause.md)
-- [Como: Ordenar os resultados de uma cláusula JOIN](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
+- [Cláusula orderby](../../../language-reference/keywords/orderby-clause.md)
+- [Como: Ordenar os resultados de uma cláusula JOIN](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

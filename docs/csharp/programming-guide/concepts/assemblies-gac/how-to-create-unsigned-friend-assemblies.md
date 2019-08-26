@@ -2,12 +2,12 @@
 title: 'Como: criar assemblies amigáveis sem sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5dadd725234048c4b6a4f9a0fa9b38dbf92671aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318228"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595912"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Como: criar assemblies amigáveis sem sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies não assinados.  
@@ -81,7 +81,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
     ```  
   
-     O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`. Para obter mais informações, consulte [/out (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`. Para obter mais informações, consulte [/out (opções do compilador C#)](../../../language-reference/compiler-options/out-compiler-option.md).  
   
 6. Execute o arquivo friend_unsigned_B.exe.  
   
@@ -95,5 +95,5 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Assemblies Amigáveis](../../../../standard/assembly/friend-assemblies.md)
-- [Como: Criar assemblies amigáveis com sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Como: Criar assemblies amigáveis com sinal (C#)](./how-to-create-signed-friend-assemblies.md)
+- [Guia de Programação em C#](../../index.md)

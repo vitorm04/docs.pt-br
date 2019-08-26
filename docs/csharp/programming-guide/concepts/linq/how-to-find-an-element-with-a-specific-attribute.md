@@ -2,12 +2,12 @@
 title: 'Como: Localizar um elemento com um atributo específico (C#)'
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 0362ded5984ff797a1ced93076679b7b975b998c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: da2d1691af6268a97e1f586e92c26bbb26906100
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709950"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593597"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Como: Localizar um elemento com um atributo específico (C#)
 Este tópico mostra como localizar um elemento que tem um atributo que tem um valor específico.  
@@ -15,7 +15,7 @@ Este tópico mostra como localizar um elemento que tem um atributo que tem um va
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como localizar o elemento `Address` que tem um atributo `Type` com um valor de “faturamento”.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [Visão geral de namespaces (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordem de compra típica em um namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordem de compra típica em um namespace](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -73,5 +73,5 @@ foreach (XElement el in address)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operações de projeção (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
+- [Operações de projeção (C#)](./projection-operations.md)

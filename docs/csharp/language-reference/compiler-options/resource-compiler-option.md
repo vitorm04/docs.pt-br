@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302563"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602529"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (opções do compilador C#)
 Insere o recurso especificado no arquivo de saída.  
@@ -38,7 +38,7 @@ Insere o recurso especificado no arquivo de saída.
  A acessibilidade do recurso: público ou privado. O padrão é público.  
   
 ## <a name="remarks"></a>Comentários  
- Use [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) para vincular um recurso a um assembly e não adicionar o arquivo de recurso ao arquivo de saída.  
+ Use [-linkresource](./linkresource-compiler-option.md) para vincular um recurso a um assembly e não adicionar o arquivo de recurso ao arquivo de saída.  
   
  Por padrão, recursos são públicos no assembly quando são criados usando o compilador C#. Para tornar os recursos privados, especifique `private` como o modificador de acessibilidade. Não é permitida nenhuma outra acessibilidade diferente de `public` ou `private`.  
   
@@ -69,5 +69,5 @@ csc -resource:rf.resource in.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: cc2beb78cc6594a3de594b50c1c45d23b30966f6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423492"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589771"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classes genéricas (Guia de Programação em C#)
 As classes genéricas encapsulam operações que não são específicas de um determinado tipo de dados. O uso mais comum das classes genéricas é com coleções, como listas vinculadas, tabelas de hash, pilhas, filas, árvores e assim por diante. As operações como adicionar e remover itens da coleção são realizadas basicamente da mesma maneira, independentemente do tipo de dados que estão sendo armazenados.  
@@ -24,7 +24,7 @@ As classes genéricas encapsulam operações que não são específicas de um de
   
      Como uma regra, quanto mais tipos você puder parametrizar, mais flexível e reutilizável seu código se tornará. No entanto, generalização em excesso poderá criar um código que seja difícil de ser lido ou entendido por outros desenvolvedores.  
   
-- Quais restrições, se houver, aplicar aos parâmetros de tipo (consulte [Restrições a parâmetros de tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
+- Quais restrições, se houver, aplicar aos parâmetros de tipo (consulte [Restrições a parâmetros de tipo](./constraints-on-type-parameters.md)).  
   
      Uma boa regra é aplicar o máximo de restrições, de maneira que ainda seja possível manipular os tipos que você precisa manipular. Por exemplo, se você souber que a classe genérica é destinada a ser usada apenas com tipos de referência, aplique a restrição da classe. Isso impedirá o uso não intencional de sua classe com tipos de valor e permitirá que você use o operador `as` em `T` e verificar se há valores nulos.  
   
@@ -36,7 +36,7 @@ As classes genéricas encapsulam operações que não são específicas de um de
   
      Por exemplo, se você estiver projetando uma classe que será usada para criar itens em uma coleção com base em classes genéricas, poderá ser necessário implementar uma interface como a <xref:System.IComparable%601>, em que `T` é o tipo de sua classe.  
   
- Para obter um exemplo de uma classe genérica simples, consulte [Introdução aos genéricos](../../../csharp/programming-guide/generics/index.md).  
+ Para obter um exemplo de uma classe genérica simples, consulte [Introdução aos genéricos](./index.md).  
   
  As regras para parâmetros de tipo e restrições têm várias implicações para o comportamento de classes genéricas, especialmente em relação à acessibilidade de membro e herança. Antes de prosseguir, você deve compreender alguns termos. Para uma classe genérica `Node<T>,`, o código cliente pode fazer referência à classe, especificando um argumento de tipo para criar um tipo construído fechado (`Node<int>`). Como alternativa, ele pode deixar o parâmetro de tipo não especificado para criar um tipo construído aberto (`Node<T>`), como ao especificar uma classe base genérica. As classes genéricas podem herdar de classes base construídas concretas, fechadas ou abertas:  
   
@@ -69,7 +69,7 @@ As classes genéricas encapsulam operações que não são específicas de um de
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Collections.Generic>
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Genéricos](../../../csharp/programming-guide/generics/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Genéricos](./index.md)
 - [Salvar o estado de enumeradores](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
 - [Um enigma de herança, parte 1](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

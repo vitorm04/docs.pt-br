@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: bccc22f5362b22540dadf08e6b21a07cbc578327
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 1608cd7b888a67af3ccb98b16323e74a9c5ad4a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433855"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608399"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restrição de tipo genérico) (Referência de C#)
 
@@ -55,9 +55,9 @@ Observe que a sintaxe para descrever as restrições de parâmetro de tipo em de
 
 [!code-csharp[where constraints with generic methods](../../../../samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
 
-Para obter informações sobre delegados genéricos, consulte [Delegados genéricos](../../../csharp/programming-guide/generics/generic-delegates.md).
+Para obter informações sobre delegados genéricos, consulte [Delegados genéricos](../../programming-guide/generics/generic-delegates.md).
 
-Para obter detalhes sobre a sintaxe e o uso de restrições, consulte [Restrições a parâmetros de tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
+Para obter detalhes sobre a sintaxe e o uso de restrições, consulte [Restrições a parâmetros de tipo](../../programming-guide/generics/constraints-on-type-parameters.md).
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
@@ -65,8 +65,8 @@ Para obter detalhes sobre a sintaxe e o uso de restrições, consulte [Restriç�
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Introdução aos genéricos](../../../csharp/programming-guide/generics/index.md)
-- [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)
-- [Restrições a parâmetros de tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Introdução aos genéricos](../../programming-guide/generics/index.md)
+- [Restrição new](./new-constraint.md)
+- [Restrições a parâmetros de tipo](../../programming-guide/generics/constraints-on-type-parameters.md)

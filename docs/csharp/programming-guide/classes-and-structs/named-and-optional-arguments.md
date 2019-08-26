@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796561"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922203"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos nomeados e opcionais (Guia de Programação em C#)
 O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem especificar um argumento para um parâmetro específico associando o argumento ao nome do parâmetro e não com à posição do parâmetro na lista de parâmetros. *Argumentos opcionais* permitem omitir argumentos para alguns parâmetros. Ambas as técnicas podem ser usadas com os métodos, indexadores, construtores e delegados.  
@@ -47,7 +47,7 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _começando com o C# 7.2_ , sejam usados na posição correta. No exemplo a seguir, o parâmetro `orderNum` está na posição correta, mas não está explicitamente nomeado.
+- _começando com o C# 7.2_, sejam usados na posição correta. No exemplo a seguir, o parâmetro `orderNum` está na posição correta, mas não está explicitamente nomeado.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
@@ -70,9 +70,9 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
   
 - uma expressão de constante;  
   
-- uma expressão da forma `new ValType()`, em que `ValType` é um tipo de valor, como um [enum](../../../csharp/language-reference/keywords/enum.md) ou um [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+- uma expressão da forma `new ValType()`, em que `ValType` é um tipo de valor, como um [enum](../../language-reference/keywords/enum.md) ou um [struct](./structs.md);  
   
-- uma expressão da forma [default(ValType)](../../../csharp/language-reference/operators/default.md), em que `ValType` é um tipo de valor.  
+- uma expressão da forma [default(ValType)](../../language-reference/operators/default.md), em que `ValType` é um tipo de valor.  
   
  Os parâmetros opcionais são definidos no final da lista de parâmetros, depois de todos os parâmetros obrigatórios. Se o chamador fornecer um argumento para qualquer um de uma sucessão de parâmetros opcionais, ele deverá fornecer argumentos para todos os parâmetros opcionais anteriores. Não há suporte para intervalos separados por vírgula na lista de argumentos. Por exemplo, no código a seguir, método de instância `ExampleMethod` está definido com um parâmetro obrigatório e dois opcionais.  
   
@@ -91,7 +91,7 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
  ![Captura de tela mostrando as Informações Rápidas do IntelliSense para o método ExampleMethod.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  Você também pode declarar parâmetros opcionais usando a classe <xref:System.Runtime.InteropServices.OptionalAttribute> do .NET. Os parâmetros `OptionalAttribute` não exigem um valor padrão.  
+> Você também pode declarar parâmetros opcionais usando a classe <xref:System.Runtime.InteropServices.OptionalAttribute> do .NET. Os parâmetros `OptionalAttribute` não exigem um valor padrão.  
   
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, o construtor para `ExampleClass` tem um parâmetro, que é opcional. O método de instância `ExampleMethod` tem um parâmetro obrigatório, `required` e dois parâmetros opcionais, `optionalstr` e `optionalint`. O código em `Main` mostra as diferentes maneiras como o construtor e o método podem ser invocados.  
@@ -113,7 +113,7 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Para obter mais informações e exemplos, confira [Como usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) e [Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Para obter mais informações e exemplos, confira [Como usar argumentos nomeados e opcionais na programação do Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) e [Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Resolução de sobrecarga  
  O uso de argumentos nomeados e opcionais afeta a resolução de sobrecarga das seguintes maneiras:  
@@ -129,7 +129,7 @@ O C# 4 apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Usando construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Usando indexadores](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [Como: usar argumentos nomeados e opcionais na programação do Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Usando o tipo dynamic](../types/using-type-dynamic.md)
+- [Usando construtores](./using-constructors.md)
+- [Usando indexadores](../indexers/using-indexers.md)

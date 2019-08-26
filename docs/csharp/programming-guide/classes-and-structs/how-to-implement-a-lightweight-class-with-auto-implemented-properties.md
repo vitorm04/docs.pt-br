@@ -6,22 +6,22 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398494"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596908"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Como: implementar uma classe leve com propriedades autoimplementadas (Guia de Programação em C#)
 
 Este exemplo mostra como criar uma classe leve imutável que serve apenas para encapsular um conjunto de propriedades autoimplementadas. Use esse tipo de constructo em vez de um struct quando for necessário usar a semântica do tipo de referência.
 
 É possível tornar uma propriedade imutável de duas maneiras:
-- É possível declarar o acessador [set](../../../csharp/language-reference/keywords/set.md) como [privado](../../../csharp/language-reference/keywords/private.md).  A propriedade será configurável somente dentro do tipo, mas será imutável para os consumidores.
+- É possível declarar o acessador [set](../../language-reference/keywords/set.md) como [privado](../../language-reference/keywords/private.md).  A propriedade será configurável somente dentro do tipo, mas será imutável para os consumidores.
 
   Ao declarar um acessador privado `set`, não é possível usar um inicializador de objeto para inicializar a propriedade. É necessário usar um construtor ou um método de fábrica.
-- É possível declarar somente o acessador [get](../../../csharp/language-reference/keywords/get.md), o que torna a propriedade imutável em todos os lugares, exceto no construtor do tipo.
+- É possível declarar somente o acessador [get](../../language-reference/keywords/get.md), o que torna a propriedade imutável em todos os lugares, exceto no construtor do tipo.
 
 ## <a name="example"></a>Exemplo
 
@@ -120,6 +120,6 @@ O compilador cria campos de suporte para cada propriedade autoimplementada. Os c
 
 ## <a name="see-also"></a>Consulte também
 
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Propriedades](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [Inicializadores de objeto e coleção](./object-and-collection-initializers.md)

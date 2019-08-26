@@ -7,16 +7,16 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 7aa820d87ec36f1963183b7e4e2e46de998a08c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487494"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597347"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrizes de tipo implícito (Guia de Programação em C#)
 
-É possível criar uma matriz de tipo implícito na qual o tipo da instância da matriz é inferido com base nos elementos especificados no inicializador de matriz. As regras para qualquer variável de tipo implícito também se aplicam a matrizes de tipo implícito. Para obter mais informações, consulte [Variáveis locais de tipo implícito](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).
+É possível criar uma matriz de tipo implícito na qual o tipo da instância da matriz é inferido com base nos elementos especificados no inicializador de matriz. As regras para qualquer variável de tipo implícito também se aplicam a matrizes de tipo implícito. Para obter mais informações, consulte [Variáveis locais de tipo implícito](../classes-and-structs/implicitly-typed-local-variables.md).
 
 Geralmente, as matrizes de tipo implícito são usadas em expressões de consulta juntamente com objetos e tipos anônimos e inicializadores de coleção.
 
@@ -34,10 +34,10 @@ Ao criar um tipo anônimo que contém uma matriz, ela deve ser de tipo implícit
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Variáveis Locais Tipadas Implicitamente](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
-- [Matrizes](../../../csharp/programming-guide/arrays/index.md)
-- [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Variáveis Locais Tipadas Implicitamente](../classes-and-structs/implicitly-typed-local-variables.md)
+- [Matrizes](./index.md)
+- [Tipos Anônimos](../classes-and-structs/anonymous-types.md)
+- [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
+- [var](../../language-reference/keywords/var.md)
+- [Expressões de consulta LINQ](../linq-query-expressions/index.md)

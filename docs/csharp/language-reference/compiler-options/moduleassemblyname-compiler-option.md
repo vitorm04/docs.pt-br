@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d57279128c0909ba3e62d55d596705cfde6be75c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593051"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606671"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opção do compilador C#)
 Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
@@ -37,7 +37,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
   
 - O assembly existente concedeu acesso de assembly amigável ao assembly no qual o .netmodule será compilado.  
   
- Para obter mais informações sobre a compilação de um .netmodule, consulte [-target:module (Opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Para obter mais informações sobre a compilação de um .netmodule, consulte [-target:module (Opções do compilador do C#)](./target-module-compiler-option.md).  
   
  Para obter mais informações sobre assemblies amigos, consulte [Assemblies Amigáveis](../../../standard/assembly/friend-assemblies.md).  
   
@@ -97,5 +97,5 @@ class A {
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

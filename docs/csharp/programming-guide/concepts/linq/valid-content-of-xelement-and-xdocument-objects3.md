@@ -2,12 +2,12 @@
 title: Conteúdo válido de objetos XElement e XDocument3
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483274"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590937"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Conteúdo válido de objetos XElement e XDocument
 Este tópico descreve os argumentos válidos que podem ser passados para os construtores e os métodos que você usa para adicionar conteúdo a elementos e documentos.  
@@ -75,7 +75,7 @@ Este tópico descreve os argumentos válidos que podem ser passados para os cons
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Construtores e funções que permitem adicionar conteúdo  
  Os métodos a seguir permitem adicionar conteúdo filho a um <xref:System.Xml.Linq.XElement> ou a um <xref:System.Xml.Linq.XDocument>:  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Constrói um <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Constrói um <xref:System.Xml.Linq.XDocument>.|  
@@ -90,4 +90,4 @@ Este tópico descreve os argumentos válidos que podem ser passados para os cons
   
 ## <a name="see-also"></a>Consulte também
 
-- [Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Criando árvores XML (C#)](./linq-to-xml-overview.md)

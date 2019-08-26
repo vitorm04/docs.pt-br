@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 765a150953075cf9afb2dd3bde7a66cfe3ff6eb5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398153"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589129"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como: acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
 
@@ -95,7 +95,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     O C# 4, e versões posteriores, converterão o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Embed Interop Types** do Excel estiver definida como true. True é o valor padrão para essa propriedade.
+     O C# 4, e versões posteriores, converterão o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Embed Interop Types** do Excel estiver definida como true. True é o valor padrão para essa propriedade.
 
 ## <a name="to-run-the-project"></a>Para executar o projeto
 
@@ -137,9 +137,9 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Para definir a propriedade Inserir Tipos Interop
 
-1. Melhorias adicionais são possíveis quando você chama um tipo COM que não requer um assembly de interoperabilidade primário (PIA) no tempo de execução. A remoção da dependência nos PIAs resulta na independência de versão e em uma implantação mais fácil. Para saber mais sobre as vantagens de programação sem PIAs, confira [Instruções passo a passo: inserir tipos de assemblies gerenciados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+1. Melhorias adicionais são possíveis quando você chama um tipo COM que não requer um assembly de interoperabilidade primário (PIA) no tempo de execução. A remoção da dependência nos PIAs resulta na independência de versão e em uma implantação mais fácil. Para saber mais sobre as vantagens de programação sem PIAs, confira [Instruções passo a passo: inserir tipos de assemblies gerenciados](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
 
-     Além disso, a programação é mais fácil porque os tipos necessários e retornados por métodos COM podem ser representados usando o tipo `dynamic`, em vez de `Object`. Variáveis com o tipo `dynamic` não são avaliadas até o tempo de execução, o que elimina a necessidade de conversão explícita. Para obter mais informações, veja [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).
+     Além disso, a programação é mais fácil porque os tipos necessários e retornados por métodos COM podem ser representados usando o tipo `dynamic`, em vez de `Object`. Variáveis com o tipo `dynamic` não são avaliadas até o tempo de execução, o que elimina a necessidade de conversão explícita. Para obter mais informações, veja [Usando o tipo dynamic](../types/using-type-dynamic.md).
 
      No C# 4, a inserção de informações de tipo, em vez do uso de PIAs, é o comportamento padrão. Devido a esse padrão, vários dos exemplos anteriores são simplificados pois a conversão explícita não é necessária. Por exemplo, a declaração de `worksheet` em `DisplayInExcel` é escrita como `Excel._Worksheet workSheet = excelApp.ActiveSheet`, em vez de `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. As chamadas para `AutoFit` no mesmo método também exigem conversão explícita sem o padrão, pois `ExcelApp.Columns[1]` retorna um `Object`, e `AutoFit` é um método do Excel. O código a seguir mostra a conversão.
 
@@ -149,7 +149,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
 3. Se você não conseguir ver a janela **Propriedades**, pressione **F4**.
 
-4. Localize **Inserir Tipos Interop** na lista de propriedades e altere seu valor para **False**. De maneira equivalente, você pode compilar usando a opção do compilador [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) em vez de [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) em um prompt de comando.
+4. Localize **Inserir Tipos Interop** na lista de propriedades e altere seu valor para **False**. De maneira equivalente, você pode compilar usando a opção do compilador [/reference](../../language-reference/compiler-options/reference-compiler-option.md) em vez de [/link](../../language-reference/compiler-options/link-compiler-option.md) em um prompt de comando.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Para adicionar formatação adicional à tabela
 
@@ -176,7 +176,7 @@ O código a seguir mostra um exemplo completo.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Como: usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [dynamic](../../language-reference/keywords/dynamic.md)
+- [Usando o tipo dynamic](../types/using-type-dynamic.md)
+- [Argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md)
+- [Como: usar argumentos nomeados e opcionais na programação do Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

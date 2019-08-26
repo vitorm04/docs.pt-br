@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641467"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666517"
 ---
 # <a name="target-frameworks"></a>Frameworks de destino
 
 Ao destinar a uma estrutura em um aplicativo ou uma biblioteca, você está especificando o conjunto de APIs que deseja disponibilizar para o aplicativo ou a biblioteca. Você especifica a estrutura de destino em seu arquivo de projeto usando os TFMs (Monikers da Estrutura de Destino).
 
-Um aplicativo ou uma biblioteca pode ser destinada a uma versão do [.NET Standard](~/docs/standard/net-standard.md). As versões do .NET Standard representam conjuntos de APIs padronizadas entre todas as implementações do .NET. Por exemplo, uma biblioteca pode se destinar ao NET Standard 1.6 e obter acesso a APIs que funcionam no .NET Core e .NET Framework usando a mesma base de código.
+Um aplicativo ou uma biblioteca pode ser destinada a uma versão do [.NET Standard](net-standard.md). As versões do .NET Standard representam conjuntos de APIs padronizadas entre todas as implementações do .NET. Por exemplo, uma biblioteca pode se destinar ao NET Standard 1.6 e obter acesso a APIs que funcionam no .NET Core e .NET Framework usando a mesma base de código.
 
 Um aplicativo ou uma biblioteca também pode se destinar a uma implementação específica do .NET para obter acesso a APIs específicas de implementação. Por exemplo, um aplicativo que tem como destino o Xamarin.iOS (por exemplo, `Xamarin.iOS10`) obtém acesso aos wrappers da API fornecidos para Xamarin iOS do iOS 10 ou um aplicativo que tem como destino a UWP (Plataforma Universal do Windows, `uap10.0`) tem acesso a APIs que são compiladas para dispositivos que executam o Windows 10.
 
@@ -27,7 +27,7 @@ Para estruturas de destino com base em pacote (por exemplo, .NET Standard e .NET
 
 ## <a name="latest-target-framework-versions"></a>Versões mais recentes de estrutura de destino
 
-A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](~/docs/standard/net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um TFM (Moniker da Estrutura de Destino) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou uma biblioteca do .NET.
+A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um TFM (Moniker da Estrutura de Destino) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou uma biblioteca do .NET.
 
 | Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |

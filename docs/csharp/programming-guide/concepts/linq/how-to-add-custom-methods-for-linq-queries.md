@@ -2,18 +2,18 @@
 title: 'Como: Adicionar métodos personalizados para consultas LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: 5aca346c182d63967f02a7f5444c5fd6d86ae3d1
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610893"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594152"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Como: Adicionar métodos personalizados para consultas LINQ (C#)
 
 Você pode estender o conjunto de métodos que você pode usar para consultas LINQ, adicionando os métodos de extensão à interface <xref:System.Collections.Generic.IEnumerable%601>. Por exemplo, além do padrão médio ou máximo de operações, você pode criar um método de agregação personalizado para calcular um único valor de uma sequência de valores. Você também pode criar um método que funciona como um filtro personalizado ou como uma transformação de dados específicos para uma sequência de valores e que retorna uma nova sequência. Exemplos desses métodos são <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.
 
-Ao estender a interface <xref:System.Collections.Generic.IEnumerable%601>, você pode aplicar seus métodos personalizados para qualquer coleção enumerável. Para obter mais informações, consulte [Métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).
+Ao estender a interface <xref:System.Collections.Generic.IEnumerable%601>, você pode aplicar seus métodos personalizados para qualquer coleção enumerável. Para obter mais informações, consulte [Métodos de extensão](../../classes-and-structs/extension-methods.md).
 
 ## <a name="adding-an-aggregate-method"></a>Adicionando um método de agregação
 
@@ -217,4 +217,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Métodos de Extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Métodos de Extensão](../../classes-and-structs/extension-methods.md)

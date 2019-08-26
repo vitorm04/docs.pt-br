@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635300"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589381"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Olá, Mundo – seu primeiro programa (Guia de programação em C#)
 
@@ -62,7 +62,7 @@ Você também pode comentar um bloco de texto, colocando-o entre os caracteres `
 
 Um aplicativo de console do C# deve conter um método `Main`, no qual o controle começa e termina. O método `Main` é o local em que você cria objetos e executa outros métodos.
 
-O método `Main` é um método [estático](../../../csharp/language-reference/keywords/static.md) que reside dentro de uma classe ou um struct. No exemplo de "Hello World!" anterior, ele reside em uma classe chamada `Hello`. Você pode declarar o método `Main` de uma das seguintes maneiras:
+O método `Main` é um método [estático](../../language-reference/keywords/static.md) que reside dentro de uma classe ou um struct. No exemplo de "Hello World!" anterior, ele reside em uma classe chamada `Hello`. Você pode declarar o método `Main` de uma das seguintes maneiras:
 
 - Ele pode retornar `void`.
 
@@ -76,13 +76,13 @@ O método `Main` é um método [estático](../../../csharp/language-reference/ke
 
      [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-     - ou -
+     -ou-
 
      [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 O parâmetro do método `Main`, `args`, é um matriz `string` que contém os argumentos de linha de comando usados para invocar o programa. Ao contrário do C++, a matriz não inclui o nome do arquivo executável (exe).
 
-Para saber mais sobre como usar argumentos de linha de comando, confira os exemplos em [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Como criar e usar assemblies usando a linha de comando](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
+Para saber mais sobre como usar argumentos de linha de comando, confira os exemplos em [Main() e argumentos de linha de comando](../main-and-command-args/index.md) e [Como criar e usar assemblies usando a linha de comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
 
 A chamada para <xref:System.Console.ReadKey%2A> ao final do método `Main` impede que a janela de console seja fechada antes que você tenha a oportunidade de ler a saída, ao executar o programa no modo de depuração, pressionando F5.
 
@@ -116,7 +116,7 @@ Você pode compilar o programa "Hello World!" usando a linha de comando em vez d
 
     - Habilitar builds de linha de comando em uma janela de Prompt de Comando padrão.
 
-         Confira [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+         Confira [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 3. Na janela do prompt de comando, navegue até a pasta que contém seu arquivo `Hello.cs`.
 
@@ -130,14 +130,14 @@ Você pode compilar o programa "Hello World!" usando a linha de comando em vez d
 
      `Hello`
 
- Para obter mais informações sobre o compilador do C# e suas opções, consulte [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md).
+ Para obter mais informações sobre o compilador do C# e suas opções, consulte [Opções do compilador do C#](../../language-reference/compiler-options/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Por dentro de um programa em C#](../../../csharp/programming-guide/inside-a-program/index.md)
-- [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Por dentro de um programa em C#](./index.md)
+- [Cadeias de Caracteres](../strings/index.md)
 - [Exemplos e tutoriais](../../../samples-and-tutorials/index.md)
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Referência de C#](../../language-reference/index.md)
+- [Main() e argumentos de linha de comando](../main-and-command-args/index.md)
 - [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

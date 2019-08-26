@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: b2e91b868c35773033418c796b7c43b08e87a28b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480371"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587753"
 ---
 # <a name="remarks-c-programming-guide"></a>\<remarks> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -28,14 +28,14 @@ ms.locfileid: "57480371"
  Uma descrição do membro.  
   
 ## <a name="remarks"></a>Comentários  
- A marca \<remarks> é usada para adicionar informações sobre o tipo, complementando as informações especificadas com [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md). Essas informações são exibidas na janela do Pesquisador de Objetos.  
+ A marca \<remarks> é usada para adicionar informações sobre o tipo, complementando as informações especificadas com [\<summary>](./summary.md). Essas informações são exibidas na janela do Pesquisador de Objetos.  
   
- Compile com [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Guia de Programação em C#](../index.md)
+- [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

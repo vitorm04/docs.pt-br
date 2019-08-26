@@ -2,20 +2,20 @@
 title: Refatoração usando uma função pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484005"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591316"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refatoração usando uma função pura (C#)
-O exemplo a seguir refatora o exemplo anterior, [Refatoração usando um método de extensão (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura. Neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
+O exemplo a seguir refatora o exemplo anterior, [Refatoração usando um método de extensão (C#)](./refactoring-using-an-extension-method.md), para usar uma função pura. Neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. O código refactored é chamado nos comentários no código a seguir.  
   
- Para obter instruções para criar o documento de origem deste exemplo, consulte [Criando o documento do Office Open XML de origem (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obter instruções para criar o documento de origem deste exemplo, consulte [Criando o documento do Office Open XML de origem (C#)](./creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -177,10 +177,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Próximas etapas  
  O exemplo a seguir mostra como projetar XML em uma forma diferente:  
   
-- [Projetando XML em uma forma diferente (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Projetando XML em uma forma diferente (C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Refatoração usando um método de extensão (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Refatoração em funções puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Refatoração usando um método de extensão (C#)](./refactoring-using-an-extension-method.md)
+- [Refatoração em funções puras (C#)](./refactoring-into-pure-functions.md)

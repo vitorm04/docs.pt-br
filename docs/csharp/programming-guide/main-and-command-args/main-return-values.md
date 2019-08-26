@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 1be04f98a4dec1317c485c7e482568cfe48ea9bf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878924"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588886"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -95,7 +95,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Guia de Programação em C#](../index.md)
 - [Referência de C#](../index.md)
 - [Main() e argumentos de linha de comando](index.md)
-- [Como: exibir argumentos de linha de comando](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Como: exibir argumentos de linha de comando](./how-to-display-command-line-arguments.md)

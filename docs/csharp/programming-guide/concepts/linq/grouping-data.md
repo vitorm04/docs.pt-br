@@ -2,12 +2,12 @@
 title: Agrupando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753918"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594196"
 ---
 # <a name="grouping-data-c"></a>Agrupando dados (C#)
 O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.  
@@ -20,9 +20,9 @@ O agrupamento refere-se à operação de colocação de dados em grupos, de modo
   
 ## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|DESCRIÇÃO|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Agrupa elementos que compartilham um atributo comum. Cada grupo é representado por um objeto <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> - ou -<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|Agrupa elementos que compartilham um atributo comum. Cada grupo é representado por um objeto <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> -ou-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Insere os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.|Não aplicável.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Exemplo de sintaxe de expressão de consulta  
@@ -62,10 +62,10 @@ foreach (var group in query)
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq>
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md)
-- [Como: Criar um grupo aninhado](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
-- [Como: Agrupar arquivos por extensão (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Como: Agrupar resultados de consultas](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
-- [Como: Executar uma subconsulta em uma operação de agrupamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
+- [Cláusula group](../../../language-reference/keywords/group-clause.md)
+- [Como: Criar um grupo aninhado](../../linq-query-expressions/how-to-create-a-nested-group.md)
+- [Como: Agrupar arquivos por extensão (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Como: Agrupar resultados de consultas](../../linq-query-expressions/how-to-group-query-results.md)
+- [Como: Executar uma subconsulta em uma operação de agrupamento](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

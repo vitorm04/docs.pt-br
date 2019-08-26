@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966961"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Dados XML de inserção usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para irmão, o filho, e nós de atributo de inserção em um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - Se o prefixo bem como o URI de namespace no contexto de objeto de <xref:System.Xml.XmlReader> e no contexto de objeto de <xref:System.Xml.XPath.XPathNavigator> são o mesmo, nenhuma nova declaração de namespace é adicionada ao nó recentemente inserido.  
   
 > [!NOTE]
->  A descrição anterior também se aplica às declarações namespace com `string` vazia como um prefixo (por exemplo, a declaração de namespace padrão).  
+> A descrição anterior também se aplica às declarações namespace com `string` vazia como um prefixo (por exemplo, a declaração de namespace padrão).  
   
  Estes são os conflitos possíveis de `xml:lang` .  
   
@@ -256,7 +256,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  A tabela a seguir descreve os métodos da classe <xref:System.Xml.XmlWriter> não suportados pela classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
-|Método|Descrição|  
+|Método|DESCRIÇÃO|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Gerencie uma exceção de <xref:System.NotSupportedException> .|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Ignorado no nível raiz e em gera uma exceção de <xref:System.NotSupportedException> se chamado em qualquer outro o nível no documento XML.|  

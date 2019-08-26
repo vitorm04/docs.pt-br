@@ -2,12 +2,12 @@
 title: 'Como: Usar árvores de expressão para compilar consultas dinâmicas (C#)'
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: dc8ff7504464e05ce19df3f0dfe907476a17413a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 400668e51fda4a728b42679c37a07399d1f73326
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170327"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595067"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Como: Usar árvores de expressão para compilar consultas dinâmicas (C#)
 No LINQ, as árvores de expressão são usadas para representar consultas estruturadas que se destinam a fontes de dados que implementam <xref:System.Linq.IQueryable%601>. Por exemplo, o provedor LINQ implementa a interface <xref:System.Linq.IQueryable%601> para consultar repositórios de dados relacionais. O compilador do C# compila as consultas que se destinam a essas fontes de dados, no código que cria uma árvore de expressão em tempo de execução. O provedor de consultas pode percorrer a estrutura de dados da árvore de expressão e convertê-la em uma linguagem de consulta apropriada para a fonte de dados.  
@@ -107,6 +107,6 @@ foreach (string company in results)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Árvores de expressão (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [Como: executar árvores de expressão (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Como: Especificar filtros de predicado dinamicamente em tempo de execução](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Árvores de expressão (C#)](./index.md)
+- [Como: executar árvores de expressão (C#)](./how-to-execute-expression-trees.md)
+- [Como: Especificar filtros de predicado dinamicamente em tempo de execução](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)

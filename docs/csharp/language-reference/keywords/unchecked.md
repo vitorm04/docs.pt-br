@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 0d96b9af0eaee81da8532c1facbfa8b1d1a8128f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633505"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608422"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (Referência de C#)
 
@@ -41,8 +41,8 @@ Esse exemplo mostra como usar a palavra-chave `unchecked`.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Checked e Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

@@ -2,12 +2,12 @@
 title: Preservar espaço em branco para carregar ou ao analisar XML
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 263121468b3010884c14c9e593a857d01dc253ef
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: d015c21813df2224356bb49212fe282fa5372d03
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868812"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591548"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Preservar espaço em branco para carregar ou ao analisar XML
 Este tópico descreve como controlar o comportamento de espaço em branco de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -16,7 +16,7 @@ Este tópico descreve como controlar o comportamento de espaço em branco de [!I
   
  Outro cenário comum é ler e modificar XML que já foi recuado intencionalmente. Você pode não querer modificar este recuo de nenhuma forma. Para fazer isso em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você preserva o espaço em branco quando você carregar ou analisar XML e desativa o formatação quando você serializa XML.  
   
- Este tópico descreve o comportamento de espaço em branco dos métodos que preenchem árvores XML. Para obter informações sobre o controle de espaço em branco ao serializar árvores XML, consulte [Preservar espaço em branco ao serializar](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ Este tópico descreve o comportamento de espaço em branco dos métodos que preenchem árvores XML. Para obter informações sobre o controle de espaço em branco ao serializar árvores XML, consulte [Preservar espaço em branco ao serializar](./preserving-white-space-while-serializing.md).  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Comportamento dos métodos que preenchem árvores XML  
  Os seguintes métodos nas classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XDocument> preenchem uma árvore XML. Você pode preencher uma árvore XML de um arquivo, um <xref:System.IO.TextReader>, um <xref:System.Xml.XmlReader>, ou de uma cadeia de caracteres:  

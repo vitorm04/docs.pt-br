@@ -6,21 +6,21 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 58023498c499569eebb9a0506bea434d2669de45
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398079"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596001"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controle de versão com as palavras-chave override e new (Guia de Programação em C#)
-A linguagem C# foi projetada para que o controle de versão entre classes derivadas e [base](../../../csharp/language-reference/keywords/base.md) em diferentes bibliotecas possa evoluir e manter a compatibilidade com versões anteriores. Isso significa, por exemplo, que a introdução de um novo membro em uma [classe](../../../csharp/language-reference/keywords/class.md) base com o mesmo nome que um membro em uma classe derivada tem suporte completo pelo C# e não leva a comportamento inesperado. Isso também significa que uma classe deve declarar explicitamente se um método destina-se a substituir um método herdado ou se um método é um novo método que oculta um método herdado de nome semelhante.  
+A linguagem C# foi projetada para que o controle de versão entre classes derivadas e [base](../../language-reference/keywords/base.md) em diferentes bibliotecas possa evoluir e manter a compatibilidade com versões anteriores. Isso significa, por exemplo, que a introdução de um novo membro em uma [classe](../../language-reference/keywords/class.md) base com o mesmo nome que um membro em uma classe derivada tem suporte completo pelo C# e não leva a comportamento inesperado. Isso também significa que uma classe deve declarar explicitamente se um método destina-se a substituir um método herdado ou se um método é um novo método que oculta um método herdado de nome semelhante.  
   
  No C#, as classes derivadas podem conter métodos com o mesmo nome que os métodos da classe base.  
   
-- O método de classe base deve ser definido como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+- O método de classe base deve ser definido como [virtual](../../language-reference/keywords/virtual.md).  
   
-- Se o método na classe derivada não for precedido pelas palavras-chave [new](../../../csharp/language-reference/keywords/new-modifier.md) ou [override](../../../csharp/language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
+- Se o método na classe derivada não for precedido pelas palavras-chave [new](../../language-reference/keywords/new-modifier.md) ou [override](../../language-reference/keywords/override.md), o compilador emitirá um aviso e o método se comportará como se a palavra-chave `new` estivesse presente.  
   
 - Se o método na classe derivada for precedido pela palavra-chave `new`, o método será definido como sendo independente do método na classe base.  
   
@@ -77,11 +77,11 @@ A linguagem C# foi projetada para que o controle de versão entre classes deriva
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
- Para obter mais exemplos de `new` e `override`, consulte [Quando usar as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ Para obter mais exemplos de `new` e `override`, consulte [Quando usar as palavras-chave override e new](./knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Guia de Programação em C#](../index.md)
+- [Classes e Structs](./index.md)
+- [Métodos](./methods.md)
+- [Herança](./inheritance.md)

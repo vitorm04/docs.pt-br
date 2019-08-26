@@ -12,19 +12,19 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 42519a74be1bd6934bc7a3304d154321697d128c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483404"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591013"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relacionamentos de tipo em operações de consulta LINQ (C#)
 Para escrever consultas com eficiência, você precisa entender como os tipos de variáveis em uma operação de consulta completa se relacionam entre si. Se compreender esses relacionamentos, você compreenderá com maior facilidade os exemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e exemplos de código na documentação. Além disso, você compreenderá o que ocorre nos bastidores quando variáveis são tipadas de forma implícita usando `var`.  
   
  Operações de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são fortemente tipadas na fonte de dados, na própria consulta e na execução da consulta. O tipo das variáveis na consulta deve ser compatível com o tipo dos elementos na fonte de dados e com o tipo da variável de iteração na instrução `foreach`. Essa tipagem forte garante que erros de tipo sejam capturados em tempo de compilação, quando podem ser corrigidos antes que os usuários os encontrem.  
   
- Para demonstrar essas relações de tipo, a maioria dos exemplos a seguir usam tipagem explícita para todas as variáveis. O último exemplo mostra como os mesmos princípios se aplicam mesmo quando você usa tipagem implícita usando [var](../../../../csharp/language-reference/keywords/var.md).  
+ Para demonstrar essas relações de tipo, a maioria dos exemplos a seguir usam tipagem explícita para todas as variáveis. O último exemplo mostra como os mesmos princípios se aplicam mesmo quando você usa tipagem implícita usando [var](../../../language-reference/keywords/var.md).  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Consultas que não transformam os dados de origem  
  A ilustração a seguir mostra uma operação de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects que não executa transformações nos dados. A fonte contém uma sequência de cadeias de caracteres e a saída da consulta também é uma sequência de cadeias de caracteres.  
@@ -59,8 +59,8 @@ Para escrever consultas com eficiência, você precisa entender como os tipos de
 3. Como o tipo da variável de consulta é implícito, a variável de iteração no loop `foreach` também deve ser implícito.  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>Deixando o compilador inferir informações de tipo  
- Embora você precise entender as relações de tipo em uma operação de consulta, você tem a opção de permitir que o compilador fazer todo o trabalho. A palavra-chave [var](../../../../csharp/language-reference/keywords/var.md) pode ser usada para qualquer variável local em uma operação de consulta. A ilustração a seguir é semelhante ao exemplo número 2 que foi discutido anteriormente. No entanto, o compilador fornece o tipo forte para cada variável na operação de consulta.  
+ Embora você precise entender as relações de tipo em uma operação de consulta, você tem a opção de permitir que o compilador fazer todo o trabalho. A palavra-chave [var](../../../language-reference/keywords/var.md) pode ser usada para qualquer variável local em uma operação de consulta. A ilustração a seguir é semelhante ao exemplo número 2 que foi discutido anteriormente. No entanto, o compilador fornece o tipo forte para cada variável na operação de consulta.  
   
  ![Diagrama que mostra o fluxo de tipo com tipagem implícita.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
- Para obter mais informações sobre `var`, consulte [Variáveis de local digitadas implicitamente](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Para obter mais informações sobre `var`, consulte [Variáveis de local digitadas implicitamente](../../classes-and-structs/implicitly-typed-local-variables.md).  

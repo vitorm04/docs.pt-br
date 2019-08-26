@@ -6,15 +6,15 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c02e4f62aabb17213ce172e7e3a773e86d1e9908
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cdd425970442e284d6fd6488bbb13394c12e939a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201593"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596445"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propriedades de interface (Guia de Programação em C#)
-As propriedades podem ser declaradas em uma [interface](../../../csharp/language-reference/keywords/interface.md). Este é um exemplo de um acessador de propriedade de interface:  
+As propriedades podem ser declaradas em uma [interface](../../language-reference/keywords/interface.md). Este é um exemplo de um acessador de propriedade de interface:  
   
  [!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]  
   
@@ -27,7 +27,7 @@ As propriedades podem ser declaradas em uma [interface](../../../csharp/language
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
- Isso é denominado [Implementação explícita da interface](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Por exemplo, se a classe `Employee` estiver implementando duas interfaces `ICitizen` e `IEmployee` e as duas interfaces tiverem a propriedade `Name`, será necessária a implementação explícita de membro da interface. Ou seja, a seguinte declaração de propriedade:  
+ Isso é denominado [Implementação explícita da interface](../interfaces/explicit-interface-implementation.md). Por exemplo, se a classe `Employee` estiver implementando duas interfaces `ICitizen` e `IEmployee` e as duas interfaces tiverem a propriedade `Name`, será necessária a implementação explícita de membro da interface. Ou seja, a seguinte declaração de propriedade:  
   
  [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
   
@@ -53,9 +53,9 @@ As propriedades podem ser declaradas em uma [interface](../../../csharp/language
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Propriedades](./properties.md)
+- [Usando propriedades](./using-properties.md)
+- [Comparação entre propriedades e indexadores](../indexers/comparison-between-properties-and-indexers.md)
+- [Indexadores](../indexers/index.md)
+- [Interfaces](../interfaces/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Usar namespaces – Guia de Programação em C#
+title: Usando namespaces – Guia de Programação em C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b27a2fa42fc8e0d9ff0d1524c5d1bc19acbfbdb0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039465"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588859"
 ---
-# <a name="using-namespaces-c-programming-guide"></a>Usar namespaces (Guia de Programação em C#)
+# <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 
 Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
   
@@ -93,8 +93,8 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
-- [Operador .](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
-- [Alias extern](../../../csharp/language-reference/keywords/extern-alias.md)
+- [Guia de Programação em C#](../index.md)
+- [Namespaces](./index.md)
+- [Operador .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [Alias extern](../../language-reference/keywords/extern-alias.md)

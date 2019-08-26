@@ -2,12 +2,12 @@
 title: 'Como: Criar uma união do C/C++ usando atributos (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599030"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595366"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Como: Criar uma união do C/C++ usando atributos (C#)
 Usando atributos, você pode personalizar como structs são dispostos na memória. Por exemplo, você pode criar o que é conhecido como uma união no C/C++ usando os atributos `StructLayout(LayoutKind.Explicit)` e `FieldOffset`.  
@@ -70,9 +70,9 @@ Usando atributos, você pode personalizar como structs são dispostos na memóri
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
-- [Atributos](../../../../../docs/standard/attributes/index.md)
-- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Criando atributos personalizados (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Guia de Programação em C#](../../index.md)
+- [Atributos](../../../../standard/attributes/index.md)
+- [Reflexão (C#)](../reflection.md)
+- [Atributos (C#)](./index.md)
+- [Criando atributos personalizados (C#)](./creating-custom-attributes.md)
+- [Acessando atributos usando reflexão (C#)](./accessing-attributes-by-using-reflection.md)

@@ -2,12 +2,12 @@
 title: 'Como: Ler dados de objeto de um arquivo XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d6ec71b9e408e1536063fc3d8f1badc0f38551e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595238"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590745"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Como: Ler dados de objeto de um arquivo XML (C#)
 Este exemplo lê dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Substitua o nome de arquivo "c:\temp\SerializationOverview.xml" pelo nome do arquivo que contém os dados serializados. Para obter mais informações sobre como serializar dados, confira [Como: Gravar dados de objeto em um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Substitua o nome de arquivo "c:\temp\SerializationOverview.xml" pelo nome do arquivo que contém os dados serializados. Para obter mais informações sobre como serializar dados, confira [Como: Gravar dados de objeto em um arquivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md).  
   
  A classe deve ter um construtor público sem parâmetros.  
   
@@ -64,6 +64,6 @@ public void ReadXML()
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO.StreamWriter>
-- [Como: Gravar dados de objeto em um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Como: Gravar dados de objeto em um arquivo XML (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Serialização (C#)](./index.md)
+- [Guia de Programação em C#](../../index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: a9e1f1fafcee4723c4aed37a0473c0f75512e11a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 4141c64ff6dbbec60b53a41862a4273df6ef51ab
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169869"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588352"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Usando o tipo dynamic (Guia de Programação em C#)
 
@@ -66,7 +66,7 @@ O DLR (Dynamic Language Runtime) é uma nova API no .NET Framework 4. Ele fornec
 
 O C# 4 inclui vários recursos que aprimoram a experiência de interoperar com APIs COM, como as APIs de Automação do Office. Entre os aperfeiçoamentos estão o uso do tipo `dynamic` e de [argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md).
 
-Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno, especificando os tipos como `object`. Isso exigiu a conversão explícita dos valores para coordenar com variáveis fortemente tipadas no C#. Se você compilar usando a opção [/link (opções do compilador C#)](../../../csharp/language-reference/compiler-options/link-compiler-option.md), a introdução do tipo `dynamic` permitirá que você trate as ocorrências de `object` em assinaturas COM como se fossem do tipo `dynamic` e, portanto, evitar muito da conversão. Por exemplo, as seguintes instruções de contrastam como acessar uma célula em uma planilha do Microsoft Office Excel com o tipo `dynamic` e sem o tipo `dynamic`.
+Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno, especificando os tipos como `object`. Isso exigiu a conversão explícita dos valores para coordenar com variáveis fortemente tipadas no C#. Se você compilar usando a opção [/link (opções do compilador C#)](../../language-reference/compiler-options/link-compiler-option.md), a introdução do tipo `dynamic` permitirá que você trate as ocorrências de `object` em assinaturas COM como se fossem do tipo `dynamic` e, portanto, evitar muito da conversão. Por exemplo, as seguintes instruções de contrastam como acessar uma célula em uma planilha do Microsoft Office Excel com o tipo `dynamic` e sem o tipo `dynamic`.
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 

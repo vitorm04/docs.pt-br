@@ -2,18 +2,18 @@
 title: Coleções (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481100"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595286"
 ---
 # <a name="collections-c"></a>Coleções (C#)
 
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.
 
-As matrizes são mais úteis ao criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../../../csharp/programming-guide/arrays/index.md).
+As matrizes são mais úteis ao criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../arrays/index.md).
 
 As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Ao contrário das matrizes, o grupo de objetos com o qual você trabalha pode crescer e reduzir dinamicamente conforme as necessidades do aplicativo são alteradas. Para algumas coleções, você pode atribuir uma chave para qualquer objeto que colocar na coleção para que você possa recuperar rapidamente o objeto, usando a chave.
 
@@ -22,7 +22,7 @@ Uma coleção é uma classe, portanto você deve declarar uma instância da clas
 Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.
 
 > [!NOTE]
-> Para os exemplos neste tópico, inclua diretivas [using](../../../csharp/language-reference/keywords/using-directive.md) para os namespaces `System.Collections.Generic` e `System.Linq`.
+> Para os exemplos neste tópico, inclua diretivas [using](../../language-reference/keywords/using-directive.md) para os namespaces `System.Collections.Generic` e `System.Linq`.
 
  **Neste tópico**
 
@@ -52,7 +52,7 @@ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar
 
 Os exemplos nesta seção usam a classe genérica <xref:System.Collections.Generic.List%601>, que habilita você a trabalhar com uma lista de objetos fortemente tipados.
 
-O exemplo a seguir cria uma lista de cadeias de caracteres e, em seguida, itera nas cadeias de caracteres usando uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md).
+O exemplo a seguir cria uma lista de cadeias de caracteres e, em seguida, itera nas cadeias de caracteres usando uma instrução [foreach](../../language-reference/keywords/foreach-in.md).
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Se o conteúdo de uma coleção for conhecido com antecedência, você poderá usar um *inicializador de coleção* para inicializar a coleção. Para obter mais informações, consulte [Inicializadores de coleção e objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+Se o conteúdo de uma coleção for conhecido com antecedência, você poderá usar um *inicializador de coleção* para inicializar a coleção. Para obter mais informações, consulte [Inicializadores de coleção e objeto](../classes-and-structs/object-and-collection-initializers.md).
 
 O exemplo a seguir é igual ao exemplo anterior, exceto que um inicializador de coleção é usado para adicionar elementos à coleção.
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Você pode usar uma instrução [for](../../../csharp/language-reference/keywords/for.md) em vez de uma instrução `foreach` para iterar em uma coleção. Você realiza isso acessando os elementos da coleção pela posição do índice. O índice dos elementos começa em 0 e termina na contagem de elementos, menos de 1.
+Você pode usar uma instrução [for](../../language-reference/keywords/for.md) em vez de uma instrução `foreach` para iterar em uma coleção. Você realiza isso acessando os elementos da coleção pela posição do índice. O índice dos elementos começa em 0 e termina na contagem de elementos, menos de 1.
 
 O exemplo a seguir itera nos elementos de uma coleção usando `for` em vez de `foreach`.
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-O exemplo a seguir remove elementos de uma lista genérica. Em vez de uma instrução `foreach`, é usada uma instrução [for](../../../csharp/language-reference/keywords/for.md) que itera em ordem decrescente. Isso é feito porque o método <xref:System.Collections.Generic.List%601.RemoveAt%2A> faz com que os elementos após um elemento removido tenham um valor de índice menor.
+O exemplo a seguir remove elementos de uma lista genérica. Em vez de uma instrução `foreach`, é usada uma instrução [for](../../language-reference/keywords/for.md) que itera em ordem decrescente. Isso é feito porque o método <xref:System.Collections.Generic.List%601.RemoveAt%2A> faz com que os elementos após um elemento removido tenham um valor de índice menor.
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -200,7 +200,7 @@ Você pode criar uma coleção genérica usando uma das classes no namespace <xr
 
 A tabela a seguir lista algumas das classes frequentemente usadas do namespace <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Classe|Descrição|
+|Classe|DESCRIÇÃO|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Representa uma coleção de pares chave-valor organizados com base na chave.|
 |<xref:System.Collections.Generic.List%601>|Representa uma lista de objetos que podem ser acessados por índice. Fornece métodos para pesquisar, classificar e modificar listas.|
@@ -230,7 +230,7 @@ Sempre que possível, você deve usar as coleções genéricas no namespace <xre
 
 A tabela a seguir lista algumas das classes frequentemente usadas no namespace `System.Collections`:
 
-|Classe|Descrição|
+|Classe|DESCRIÇÃO|
 |---|---|
 |<xref:System.Collections.ArrayList>|Representa uma matriz de objetos cujo tamanho é aumentado dinamicamente conforme necessário.|
 |<xref:System.Collections.Hashtable>|Representa uma coleção de pares chave-valor organizados com base no código hash da chave.|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Usando LINQ para acessar uma coleção
 
-A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [Introdução à LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).
+A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [Introdução à LINQ em C#](./linq/getting-started-with-linq.md).
 
 O exemplo a seguir executa uma consulta LINQ em uma `List` genérica. A consulta LINQ retorna uma coleção diferente que contém os resultados.
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Iterators
 
-Um *iterador* é usado para realizar uma iteração personalizada em uma coleção. Um iterador pode ser um método ou um acessador `get`. Um iterador usa uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) para retornar um elemento da coleção por vez.
+Um *iterador* é usado para realizar uma iteração personalizada em uma coleção. Um iterador pode ser um método ou um acessador `get`. Um iterador usa uma instrução [yield return](../../language-reference/keywords/yield.md) para retornar um elemento da coleção por vez.
 
-Você chama um iterador usando uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Cada iteração do loop `foreach` chama o iterador. Quando uma instrução `yield return` é alcançada no iterador, uma expressão é retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que o iterador for chamado.
+Você chama um iterador usando uma instrução [foreach](../../language-reference/keywords/foreach-in.md). Cada iteração do loop `foreach` chama o iterador. Quando uma instrução `yield return` é alcançada no iterador, uma expressão é retornada e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que o iterador for chamado.
 
-Para obter mais informações, consulte [Iteradores (C#)](../../../csharp/programming-guide/concepts/iterators.md).
+Para obter mais informações, consulte [Iteradores (C#)](./iterators.md).
 
-O exemplo a seguir usa um método iterador. O método iterador tem uma instrução `yield return` que está dentro de um loop [for](../../../csharp/language-reference/keywords/for.md). No método `ListEvenNumbers`, cada iteração do corpo da instrução `foreach` cria uma chamada ao método iterador, que avança para a próxima instrução `yield return`.
+O exemplo a seguir usa um método iterador. O método iterador tem uma instrução `yield return` que está dentro de um loop [for](../../language-reference/keywords/for.md). No método `ListEvenNumbers`, cada iteração do corpo da instrução `foreach` cria uma chamada ao método iterador, que avança para a próxima instrução `yield return`.
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>Consulte também
 
-- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
+- [Conceitos de programação (C#)](./index.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Coleções e Estruturas de Dados](../../../standard/collections/index.md)
 - [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)

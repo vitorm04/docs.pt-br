@@ -2,12 +2,12 @@
 title: 'Como: Criar e usar assemblies usando a linha de comando (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586026"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595973"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Como: Criar e usar assemblies usando a linha de comando (C#)
 Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
@@ -105,6 +105,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+- [Guia de Programação em C#](../../index.md)
 - [Assemblies no .NET](../../../../standard/assembly/index.md)
 - [Criando uma classe para conter funções de DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

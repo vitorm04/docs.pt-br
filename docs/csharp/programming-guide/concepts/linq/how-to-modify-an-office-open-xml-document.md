@@ -2,12 +2,12 @@
 title: 'Como: Modificar um documento Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac46dc1b0051613457b7306a9fe0e8d419afe35f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486653"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593138"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Como: Modificar um documento Office Open XML (C#)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, modifica-o e salva-o.  
@@ -141,7 +141,7 @@ class Program
   
  Se você abrir o `SampleDoc.docx` depois de executar este programa, verá que este programa converteu o primeiro parágrafo no documento para maiúsculas.  
   
- Quando executado com o documento Open XML de exemplo descrito em [Criando o documento do Office Open XML de origem (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
+ Quando executado com o documento Open XML de exemplo descrito em [Criando o documento do Office Open XML de origem (C#)](./creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

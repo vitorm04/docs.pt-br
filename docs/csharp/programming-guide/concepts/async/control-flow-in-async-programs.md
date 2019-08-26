@@ -2,18 +2,18 @@
 title: Fluxo de controle em programas assíncronos (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8adf4bcf193d9fa8d7335996539933ce71282bac
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599747"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595853"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Fluxo de controle em programas assíncronos (C#)
 
 Você pode escrever e manter programas assíncronos mais facilmente usando as palavras-chave `async` e `await`. No entanto, os resultados podem surpreendê-lo se você não entender o funcionamento do seu programa. Este tópico rastreia o fluxo de controle por meio de um programa assíncrono simples para mostrar quando o controle se move de um método para o outro e quais informações são transferidas a cada vez.
 
-Em geral, você marca os métodos que contêm código assíncrono com o modificador [async (C#)](../../../../csharp/language-reference/keywords/async.md). Em um método marcado com um modificador assíncrono, você pode usar um operador [await (C#)](../../../../csharp/language-reference/keywords/await.md) para especificar o local em que o método faz uma pausa para esperar pela conclusão de um processo assíncrono que foi chamado. Para obter mais informações, consulte [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).
+Em geral, você marca os métodos que contêm código assíncrono com o modificador [async (C#)](../../../language-reference/keywords/async.md). Em um método marcado com um modificador assíncrono, você pode usar um operador [await (C#)](../../../language-reference/keywords/await.md) para especificar o local em que o método faz uma pausa para esperar pela conclusão de um processo assíncrono que foi chamado. Para obter mais informações, consulte [Programação assíncrona com async e await (C#)](./index.md).
 
 O exemplo a seguir usa os métodos assíncronos para baixar o conteúdo de um site especificado como uma cadeia de caracteres e exibir o comprimento da cadeia de caracteres. O exemplo contém os dois métodos a seguir.
 
@@ -117,7 +117,7 @@ Para executar o projeto, realize as seguintes etapas:
 
      A caixa de diálogo **Novo Projeto** é aberta.
 
-3. Escolha a categoria **Instalado** > **Visual C#** > **Área de Trabalho do Windows** e, em seguida, escolha **Aplicativo WPF** na lista de modelos de projeto.
+3. Escolha a categoria **Instalado** > **Visual C#**  > **Área de Trabalho do Windows** e, em seguida, escolha **Aplicativo WPF** na lista de modelos de projeto.
 
 4. Digite `AsyncTracer` como o nome do projeto e, em seguida, escolha o botão **OK**.
 
@@ -274,9 +274,9 @@ Para executar o projeto, realize as seguintes etapas:
 
 As duas primeiras linhas de exibição rastreiam o caminho conforme `startButton_Click` chama `AccessTheWebAsync` e `AccessTheWebAsync` chama o método <xref:System.Net.Http.HttpClient> assíncrono <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. A imagem a seguir delineia as chamadas de método a método.
 
-![Etapas UM e DOIS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![Etapas UM e DOIS](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
 
-O tipo de retorno de ambos `AccessTheWebAsync` e `client.GetStringAsync` é <xref:System.Threading.Tasks.Task%601>. Para `AccessTheWebAsync`, TResult é um inteiro. Para `GetStringAsync`, TResult é uma cadeia de caracteres. Para obter mais informações sobre tipos de retorno de método assíncrono, consulte [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).
+O tipo de retorno de ambos `AccessTheWebAsync` e `client.GetStringAsync` é <xref:System.Threading.Tasks.Task%601>. Para `AccessTheWebAsync`, TResult é um inteiro. Para `GetStringAsync`, TResult é uma cadeia de caracteres. Para obter mais informações sobre tipos de retorno de método assíncrono, consulte [Tipos de retorno assíncronos (C#)](./async-return-types.md).
 
 Um método assíncrono de retorno de tarefas retorna uma instância de tarefa, quando o controle volta para o chamador. O controle retorna de um método assíncrono para seu chamador quando um operador `await` é encontrado no método chamado ou quando o método chamado termina. As linhas de exibição rotuladas como "TRÊS"até "SEIS" rastreiam essa parte do processo.
 
@@ -306,7 +306,7 @@ string urlContents = await getStringTask;
 
  A imagem a seguir mostra o fluxo de controle de `client.GetStringAsync` para a atribuição ao `getStringTask` e da criação de `getStringTask` para a aplicação de um operador de espera.
 
- ![Etapa TRÊS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
+ ![Etapa TRÊS](./media/asynctrace-three.png "AsyncTrace-Three")
 
  A expressão await suspende `AccessTheWebAsync` até que `client.GetStringAsync` retorne. Enquanto isso, o controle retorna para o chamador de `AccessTheWebAsync`, `startButton_Click`.
 
@@ -341,7 +341,7 @@ int contentLength = await getLengthTask;
 
  Na ilustração a seguir, as setas mostram o fluxo de controle da expressão await em `AccessTheWebAsync` para a atribuição de um valor para `getLengthTask`, seguido pelo processamento normal de `startButton_Click` até que `getLengthTask` seja aguardada.
 
- ![Etapa QUATRO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![Etapa QUATRO](./media/asynctrace-four.png "AsyncTrace-FOUR")
 
 ### <a name="step-five"></a>Etapa CINCO
 
@@ -358,7 +358,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  A imagem a seguir mostra a transferência de controle após `client.GetStringAsync` (e `getStringTask`) estarem concluídas.
 
- ![Etapa CINCO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
+ ![Etapa CINCO](./media/asynctrace-five.png "AsyncTrace-FIVE")
 
  `AccessTheWebAsync` é executado até a conclusão e o controle retorna ao `startButton_Click`, que está aguardando a conclusão.
 
@@ -383,11 +383,11 @@ int contentLength = await getLengthTask;
 
  A imagem a seguir mostra o retorno do controle de `AccessTheWebAsync` para `startButton_Click`.
 
- ![Etapa SEIS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")
+ ![Etapa SEIS](./media/asynctrace-six.png "AsyncTrace-SIX")
 
 ## <a name="see-also"></a>Consulte também
 
-- [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Passo a passo: acesso à Web com o uso de Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programação assíncrona com async e await (C#)](./index.md)
+- [Tipos de retorno assíncronos (C#)](./async-return-types.md)
+- [Passo a passo: acesso à Web com o uso de Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Exemplo de Async: Fluxo de controle em programas assíncronos (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

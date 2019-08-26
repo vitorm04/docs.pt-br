@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053640"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963599"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Gerar automaticamente um classificador binário usando a CLI
 
@@ -47,7 +47,7 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
 1. Baixe [o arquivo zip do conjunto de dados de frases rotuladas por sentimento do UCI (consulte citações na observação abaixo)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e descompacte-o na pasta que você escolher.
 
     > [!NOTE]
-    > Os conjuntos de dados neste tutorial usam um conjunto de dados de 'From Group to Individual Labels using Deep Features' (de grupo para rótulos individuais usando recursos aprofundados), Kotzias et al., KDD 2015, e hospedados no UCI Machine Learning Repository – Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+    > Os conjuntos de dados neste tutorial usam um conjunto de dados de 'From Group to Individual Labels using Deep Features' (de grupo para rótulos individuais usando recursos aprofundados), Kotzias et al., KDD 2015, e hospedados no UCI Machine Learning Repository – Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 2. Copie o arquivo `yelp_labelled.txt` em qualquer pasta que você criou anteriormente (assim como `/cli-test`).
 
@@ -116,7 +116,7 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
     Para obter métricas adicionais e muito mais **informações detalhadas sobre as métricas** (tais como precisão, AUC, AUCPR, pontuação F1) usadas para avaliar os modelos diferentes, você pode ler [Noções básicas sobre métricas do ML.NET](../resources/metrics.md)
 
     > [!NOTE]
-    >  Você pode experimentar esse mesmo conjunto de dados e especificar alguns minutos para `--max-exploration-time` (por exemplo, três minutos, então você especifica 180 segundos) que encontrará um "melhor modelo" para você com uma configuração de pipeline de treinamento diferente para esse conjunto de dados (que é bem pequeno, 1.000 linhas). 
+    > Você pode experimentar esse mesmo conjunto de dados e especificar alguns minutos para `--max-exploration-time` (por exemplo, três minutos, então você especifica 180 segundos) que encontrará um "melhor modelo" para você com uma configuração de pipeline de treinamento diferente para esse conjunto de dados (que é bem pequeno, 1.000 linhas). 
         
     Para localizar um modelo de "melhor/boa qualidade" que é um "modelo de produção" destinado a conjuntos de dados maiores, você deve fazer experimentos com a CLI, geralmente especificando muito mais tempo de exploração, dependendo do tamanho do conjunto de dados. Na verdade, em muitos casos você poderá exigir várias horas de tempo de exploração, especialmente se o conjunto de dados for grande em linhas e colunas. 
 

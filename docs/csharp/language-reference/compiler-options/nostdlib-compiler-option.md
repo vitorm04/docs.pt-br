@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545823"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602695"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opções do compilador C#)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54545823"
 
 Use essa opção se desejar definir ou criar seus próprios objetos e namespace System.
 
-Se você não especificar **-nostdlib**, o mscorlib.dll será importado no programa (o mesmo que especificar **-nostdlib-**). Especificar **-nostdlib** é o mesmo que especificar **-nostdlib+**.
+Se você não especificar **-nostdlib**, o mscorlib.dll será importado no programa (o mesmo que especificar **-nostdlib-** ). Especificar **-nostdlib** é o mesmo que especificar **-nostdlib+** .
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio
 
@@ -50,4 +50,4 @@ Para saber mais sobre como definir essa opção do compilador programaticamente,
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)

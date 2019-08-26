@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 777eb3be5cbefe0a136bf49f826ad67685a8456d
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401082"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590406"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como: realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
@@ -83,7 +83,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
     };  
     ```  
   
-     É importante observar que você não pode, com facilidade, cancelar a assinatura de um evento se tiver usado uma função anônima para assiná-lo. Para cancelar a assinatura nesse cenário, é necessário voltar ao código em que você assinou o evento, armazenar o método anônimo em uma variável do delegado e, então, adicionar o delegado ao evento. De modo geral, é recomendável que você não use funções anônimas para assinar eventos se precisar cancelar a assinatura do evento posteriormente no código. Para obter mais informações sobre funções anônimas, consulte [Funções anônimas](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+     É importante observar que você não pode, com facilidade, cancelar a assinatura de um evento se tiver usado uma função anônima para assiná-lo. Para cancelar a assinatura nesse cenário, é necessário voltar ao código em que você assinou o evento, armazenar o método anônimo em uma variável do delegado e, então, adicionar o delegado ao evento. De modo geral, é recomendável que você não use funções anônimas para assinar eventos se precisar cancelar a assinatura do evento posteriormente no código. Para obter mais informações sobre funções anônimas, consulte [Funções anônimas](../statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="unsubscribing"></a>Cancelando a assinatura  
  Para impedir que o manipulador de eventos seja invocado quando o evento for gerado, cancele a assinatura do evento. Para evitar perda de recursos, cancele a assinatura de eventos antes de descartar um objeto de assinante. Até que você cancele a assinatura de um evento, o delegado multicast subjacente ao evento no objeto de publicação terá uma referência ao delegado que encapsula o manipulador de eventos do assinante. Desde que o objeto de publicação contenha essa referência, a coleta de lixo não excluirá seu objeto de assinante.  
@@ -100,8 +100,8 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Eventos](./index.md)
+- [event](../../language-reference/keywords/event.md)
+- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operadores - e -=](../../language-reference/operators/subtraction-operator.md)
 - [Operadores + e +=](../../language-reference/operators/addition-operator.md)

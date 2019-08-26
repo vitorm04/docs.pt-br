@@ -5,12 +5,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 704b66e6cdec5caa47f85ed8e3acbd2a6a73b730
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 81d60782cf8e16d55889fb3c7c05858070a97741
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598237"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602066"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador de parâmetro out (Referência de C#)
 A palavra-chave `out` faz com que os argumentos sejam passados por referência. Ela torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. É como a palavra-chave [ref](ref.md), exceto pelo fato de que `ref` requer que a variável seja inicializada antes de ser passada. Também é como a palavra-chave [in](in-parameter-modifier.md), exceto que `in` não permite que o método chamado modifique o valor do argumento. Para usar um parâmetro `out`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `out`. Por exemplo:  
@@ -44,9 +44,9 @@ Propriedades não são variáveis e portanto não podem ser passadas como parâm
   
 Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes tipos de métodos:  
   
-- Métodos assíncronos, que você define usando o modificador [async](../../../csharp/language-reference/keywords/async.md).  
+- Métodos assíncronos, que você define usando o modificador [async](./async.md).  
   
-- Métodos de iterador, que incluem uma instrução [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
+- Métodos de iterador, que incluem uma instrução [yield return](./yield.md) ou `yield break`.  
 
 ## <a name="declaring-out-parameters"></a>Declarando parâmetros `out`   
 
@@ -73,7 +73,7 @@ No exemplo anterior, a variável `number` é fortemente tipada como um `int`. Vo
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [Parâmetros de método](../../../csharp/language-reference/keywords/method-parameters.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](./index.md)
+- [Parâmetros de método](./method-parameters.md)

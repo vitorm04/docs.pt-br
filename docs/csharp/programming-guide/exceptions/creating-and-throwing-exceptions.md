@@ -8,15 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595348"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590308"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
-As exceções são usadas para indicar que ocorreu um erro durante a execução do programa. Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../../csharp/language-reference/keywords/throw.md). Então, o tempo de execução procura o manipulador de exceção mais compatível.  
+As exceções são usadas para indicar que ocorreu um erro durante a execução do programa. Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../language-reference/keywords/throw.md). Então, o tempo de execução procura o manipulador de exceção mais compatível.  
   
  Os programadores devem lançar exceções quando uma ou mais das seguintes condições forem verdadeiras:  
   
@@ -68,7 +68,7 @@ Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.m
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Exceções e manipulação de exceções](./index.md)
 - [Hierarquia de exceções](../../../standard/exceptions/index.md)
-- [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Tratamento de Exceção](./exception-handling.md)

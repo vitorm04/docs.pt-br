@@ -2,12 +2,12 @@
 title: Operações de junção (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411454"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592086"
 ---
 # <a name="join-operations-c"></a>Operações de junção (C#)
 Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte de dados, com objetos que compartilham um atributo comum em outra fonte de dados.  
@@ -22,7 +22,7 @@ Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte
   
 ## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|DESCRIÇÃO|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Join|Une duas sequências com base nas funções de seletor de chave e extrai pares de valores.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Une duas sequências baseadas em funções de seletor de chave e agrupa as correspondências resultantes para cada elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -30,15 +30,15 @@ Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq>
-- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
+- [Tipos Anônimos](../../classes-and-structs/anonymous-types.md)
 - [Formular junções e consultas entre produtos](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
-- [Cláusula join](../../../../csharp/language-reference/keywords/join-clause.md)
-- [Como: Unir usando chaves compostas](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
-- [Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
-- [Como: Ordenar os resultados de uma cláusula JOIN](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Como: Executar operações de junção personalizadas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [Como: Executar junções agrupadas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
-- [Como: Executar junções internas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
-- [Como: Executar junções externas esquerdas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
-- [Como: Popular coleções de objetos de várias fontes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Cláusula join](../../../language-reference/keywords/join-clause.md)
+- [Como: Unir usando chaves compostas](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Como: Ordenar os resultados de uma cláusula JOIN](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Como: Executar operações de junção personalizadas](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [Como: Executar junções agrupadas](../../linq-query-expressions/how-to-perform-grouped-joins.md)
+- [Como: Executar junções internas](../../linq-query-expressions/how-to-perform-inner-joins.md)
+- [Como: Executar junções externas esquerdas](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [Como: Popular coleções de objetos de várias fontes (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

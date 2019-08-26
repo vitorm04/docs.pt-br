@@ -8,12 +8,12 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: a4a55090cf465d0eac05303392ba7500dd96ee90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c82e3019e1a1e3ba45a7000312b54b9d7f64a2db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679364"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606747"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (opções do compilador C#)
 A opção -recurse permite compilar arquivos de código-fonte em todos os diretórios filho do diretório especificado (dir) ou do diretório do projeto.  
@@ -53,5 +53,5 @@ csc -target:library -out:dir2.dll -recurse:dir1\dir2\*.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

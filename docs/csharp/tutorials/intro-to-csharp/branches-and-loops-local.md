@@ -3,12 +3,12 @@ title: Tutorial Branches e loops – introdução ao C#
 description: Neste tutorial sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0da446a71f5d7a7183a8323c470087c8726bc02f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427247"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587218"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
@@ -143,6 +143,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -205,7 +206,7 @@ Há outro operador novo neste exemplo. O `++` após a variável `counter` é o o
 O loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. O loop do while é mostrado no código a seguir:
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -220,7 +221,7 @@ Esse loop `do` e o loop `while` anterior produzem a mesma saída.
 O loop **for** é usado normalmente em C#. Tente este código em seu método Main():
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
 }

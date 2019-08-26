@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 3cef2f2d2af2d285504daea14aa57c55b9e9a21b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 81b2110e6a571e174693fd272d1c6b4bf44dbae3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833466"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588225"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversões de ponteiro (Guia de Programação em C#)
 A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As conversões implícitas podem ocorrer em diversas situações, incluindo instruções de atribuição e invocações de método.  
@@ -41,9 +41,9 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Tipos de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Tipos](../../../csharp/language-reference/keywords/types.md)
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
-- [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../../csharp/language-reference/operators/stackalloc.md)
+- [Guia de Programação em C#](../index.md)
+- [Tipos de ponteiro](./pointer-types.md)
+- [Tipos](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Instrução fixed](../../language-reference/keywords/fixed-statement.md)
+- [stackalloc](../../language-reference/operators/stackalloc.md)

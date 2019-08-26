@@ -2,15 +2,15 @@
 title: Encadeando operadores de consulta padrão juntos (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 89cf7f526bdc60881e901d7ca8f556e97488b220
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487608"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594834"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Encadeando operadores de consulta padrão juntos (C#)
-Este é o tópico final no [Tutorial: Encadeando consultas (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+Este é o tópico final no [Tutorial: Encadeando consultas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Os operadores de consulta padrão podem também ser encadeados juntos. Por exemplo, você pode interject o operador de <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> , e também funciona em uma forma lazy. Resultados intermediária é materializado por ele.  
   

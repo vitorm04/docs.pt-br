@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859586"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606152"
 ---
 # <a name="abstract-c-reference"></a>abstract (Referência de C#)
 O modificador `abstract` indica que o item que está sendo modificado tem uma implementação ausente ou incompleta. O modificador abstrato pode ser usado com classes, métodos, propriedades, indexadores e eventos. Use o modificador `abstract` em uma declaração de classe para indicar que uma classe se destina somente a ser uma classe base de outras classes, não instanciada por conta própria. Membros marcados como abstratos precisam ser implementados por classes não abstratas que derivam da classe abstrata.
@@ -29,7 +29,7 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
   
 - Uma classe abstrata pode conter acessadores e métodos abstratos.  
   
-- Não é possível modificar uma classe abstrata com o modificador [sealed](../../../csharp/language-reference/keywords/sealed.md) porque os dois modificadores têm significados opostos. O modificador `sealed` impede que uma classe seja herdada e o modificador `abstract` requer uma classe a ser herdada.  
+- Não é possível modificar uma classe abstrata com o modificador [sealed](./sealed.md) porque os dois modificadores têm significados opostos. O modificador `sealed` impede que uma classe seja herdada e o modificador `abstract` requer uma classe a ser herdada.  
   
 - Uma classe não abstrata derivada de uma classe abstrata deve incluir implementações reais de todos os acessadores e métodos abstratos herdados.  
   
@@ -47,17 +47,17 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
     public abstract void MyMethod();  
     ```  
   
-     A implementação é fornecida por uma [substituição](../../../csharp/language-reference/keywords/override.md) de método, que é um membro de uma classe não abstrata.  
+     A implementação é fornecida por uma [substituição](./override.md) de método, que é um membro de uma classe não abstrata.  
   
-- É um erro usar os modificadores [static](../../../csharp/language-reference/keywords/static.md) ou [virtual](../../../csharp/language-reference/keywords/virtual.md) em uma declaração de método abstrato.  
+- É um erro usar os modificadores [static](./static.md) ou [virtual](./virtual.md) em uma declaração de método abstrato.  
   
  Propriedades abstratas se comportam como métodos abstratos, exceto pelas diferenças na sintaxe de declaração e chamada.  
   
 - É um erro usar o modificador `abstract` em uma propriedade estática.  
   
-- Uma propriedade herdada abstrata pode ser substituída em uma classe derivada incluindo uma declaração de propriedade que usa o modificador [override](../../../csharp/language-reference/keywords/override.md).  
+- Uma propriedade herdada abstrata pode ser substituída em uma classe derivada incluindo uma declaração de propriedade que usa o modificador [override](./override.md).  
   
- Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
  Uma classe abstrata deve fornecer uma implementação para todos os membros de interface.  
   
@@ -83,9 +83,9 @@ Você receberá uma mensagem de erro informando que o compilador não pode criar
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Modificadores](./modifiers.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [Palavras-chave do C#](./index.md)

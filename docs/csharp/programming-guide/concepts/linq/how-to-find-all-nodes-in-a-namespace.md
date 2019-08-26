@@ -2,12 +2,12 @@
 title: 'Como: Localizar todos os nós em um namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: d94a6c517a76e8ed91f20a17e798ad3806a34a70
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486824"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593646"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Como: Localizar todos os nós em um namespace (C#)
 Você pode filtrar no namespace de cada elemento ou atributo para localizar todos os nós nesse namespace específico.  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Exemplo  
  O arquivo XML acessado pela consulta contém pedidos de compra em dois namespaces diferentes. A consulta cria uma nova árvore com apenas os elementos em uma namespaces.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordens de compra consolidadas](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Ordens de compra consolidadas](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

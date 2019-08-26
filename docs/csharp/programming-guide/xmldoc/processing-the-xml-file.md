@@ -6,16 +6,16 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: f40e14163850716204584f5d5651a08715b80241
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634774"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587858"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Processando o arquivo XML (Guia de Programação em C#)
 
-O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [Marcas recomendadas para comentários da documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo XML podem usar a cadeia de identificação para identificar o item de metadados/reflexão do .NET Framework correspondente ao qual a documentação se aplica.
+O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [Marcas recomendadas para comentários da documentação](./recommended-tags-for-documentation-comments.md).) A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo XML podem usar a cadeia de identificação para identificar o item de metadados/reflexão do .NET Framework correspondente ao qual a documentação se aplica.
 
  O arquivo XML não é uma representação hierárquica de seu código; é uma lista simples com uma ID gerada para cada elemento.
 
@@ -25,7 +25,7 @@ O compilador gera uma cadeia de identificação para cada constructo no seu cód
 
 - A primeira parte da cadeia de identificação identifica o tipo de membro que está sendo identificado por meio de um único caractere seguido por dois-pontos. São usados os seguintes tipos de membro:
 
-    |Caractere|Descrição|
+    |Caractere|DESCRIÇÃO|
     |---------------|-----------------|
     |N|namespace<br /><br /> Não é possível adicionar comentários de documentação a um namespace, mas será possível fazer referências cref a eles se houver suporte.|
     |T|tipo: classe, interface, struct, enumeração, delegado|
@@ -85,6 +85,6 @@ Os exemplos a seguir mostram como as cadeias de identificação para uma classe 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [-doc (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/index.md)
+- [Guia de Programação em C#](../index.md)
+- [-doc (opções do compilador do C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Comentários da documentação XML](./index.md)

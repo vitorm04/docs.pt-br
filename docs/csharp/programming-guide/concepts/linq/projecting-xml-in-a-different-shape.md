@@ -2,12 +2,12 @@
 title: Projetando XML em uma forma diferente (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 3b992b9eb56f978ce92f3b0210223da978f44e2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484039"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591539"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projetando XML em uma forma diferente (C#)
 Este tópico mostra um exemplo de projetar XML que está em uma forma diferente do XML fonte.  
@@ -17,7 +17,7 @@ Este tópico mostra um exemplo de projetar XML que está em uma forma diferente 
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo e o texto de cada parágrafo. Finalmente, o exemplo em XML com uma forma diferente. Este exemplo cria nos exemplos anteriores neste tutorial. A nova declaração que faz a projeção é chamada nos comentários no código a seguir.  
   
- Para obter instruções para criar o documento de origem deste exemplo, consulte [Criando o documento do Office Open XML de origem (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obter instruções para criar o documento de origem deste exemplo, consulte [Criando o documento do Office Open XML de origem (C#)](./creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -233,5 +233,5 @@ class Program
 ## <a name="next-steps"></a>Próximas etapas  
  No exemplo a seguir, você consultará para localizar todo o texto em um documento do Word:  
   
-- [Localizando texto em documentos do Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Localizando texto em documentos do Word (C#)](./finding-text-in-word-documents.md)  
   

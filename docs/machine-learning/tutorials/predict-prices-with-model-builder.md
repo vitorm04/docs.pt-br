@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331702"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611448"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Prever os preços usando regressão com o Construtor de Modelo
 
@@ -202,7 +202,6 @@ Neste tutorial, você aprendeu como:
 Para saber mais sobre os tópicos mencionados neste tutorial, visite os seguintes recursos:
 
 - [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios)
-- [Formatos de Dados do Construtor de Modelo](../automate-training-with-model-builder.md#data-formats)
 - [Regressão](../resources/glossary.md#regression)
 - [Métricas do Modelo de Regressão](../resources/metrics.md#metrics-for-regression)
 - [Conjunto de dados Corrida de Táxi da NYC TLC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

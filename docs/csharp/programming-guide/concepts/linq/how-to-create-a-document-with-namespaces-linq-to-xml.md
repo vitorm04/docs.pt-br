@@ -2,12 +2,12 @@
 title: 'Como: Criar um documento com namespaces (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710001"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593888"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como: Criar um documento com namespaces (C#) (LINQ to XML)
 Este tópico mostra como criar documentos com namespaces.  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  Essa abordagem tem implicações de desempenho. Cada vez que você passa uma cadeia de caracteres que contém um nome expandido para o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] deve analisar o nome, localizar o namespace atomizado e localizar o nome atomizado. Esse processo utiliza tempo de CPU. Se o desempenho for importante, convém declarar e usar um objeto <xref:System.Xml.Linq.XNamespace> explicitamente.  
   
- Se o desempenho for uma questão importante, consulte [Pré-atomização de objetos XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) para obter mais informações  
+ Se o desempenho for uma questão importante, consulte [Pré-atomização de objetos XName (LINQ to XML) (C#)](./pre-atomization-of-xname-objects-linq-to-xml.md) para obter mais informações  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

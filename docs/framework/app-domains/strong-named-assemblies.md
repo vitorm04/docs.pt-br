@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592699"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988366"
 ---
 # <a name="strong-named-assemblies"></a>Assemblies de nomes fortes
 Uma nomeação forte na assembly cria uma única identidade para assembly e pode evitar conflitos de assembly.  
@@ -25,7 +25,7 @@ Uma nomeação forte na assembly cria uma única identidade para assembly e pode
  Quando um assembly de nome forte é criado, ele contém o nome de texto simples do assembly, o número de versão, informação cultural opcional, uma assinatura digital e uma chave pública que corresponde a uma chave privada utilizada para assinar.  
   
 > [!WARNING]
->  Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.  
+> Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.  
   
 ## <a name="why-strong-name-your-assemblies"></a>Por que usar um nome forte em seus assemblies?  
  Quando você usa um assembly de nome forte como referência, espera obter determinados benefícios, como controle de versão e proteção de nomenclatura. Assemblies com nomes fortes podem ser instalados no Cache de Assembly Global, que é necessário para habilitar alguns cenários.  

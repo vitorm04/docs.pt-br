@@ -3,12 +3,12 @@ title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609304"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587184"
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 No entanto, não há método de embaralhamento na biblioteca padrão, portanto, você precisará escrever o seu. O método de embaralhamento que você criará ilustra várias técnicas que você usará com programas baseados em LINQ. Portanto, cada parte desse processo será explicado nas etapas.
 
-Para adicionar funcionalidade ao seu modo de interação com o <xref:System.Collections.Generic.IEnumerable%601> recebido de volta das consultas do LINQ, precisará escrever alguns tipos especiais de métodos chamados [métodos de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md). Em resumo, um método de extensão é um *método estático* de objetivo especial que adiciona novas funcionalidades a um tipo já existentes, sem ter que modificar o tipo original ao qual você deseja adicionar funcionalidade.
+Para adicionar funcionalidade ao seu modo de interação com o <xref:System.Collections.Generic.IEnumerable%601> recebido de volta das consultas do LINQ, precisará escrever alguns tipos especiais de métodos chamados [métodos de extensão](../programming-guide/classes-and-structs/extension-methods.md). Em resumo, um método de extensão é um *método estático* de objetivo especial que adiciona novas funcionalidades a um tipo já existentes, sem ter que modificar o tipo original ao qual você deseja adicionar funcionalidade.
 
 Dê aos seus métodos de extensão uma nova casa adicionando um novo arquivo de classe *estático* ao seu programa chamado `Extensions.cs`, depois, comece a criar o primeiro método de extensão:
 

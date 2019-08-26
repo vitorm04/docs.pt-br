@@ -2,15 +2,15 @@
 title: -target:appcontainerexe (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09ae01d95138b72a0012f294189d288fc71c74b2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311065"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606540"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (opções do compilador C#)
-Se você usar a opção do compilador **-target:appcontainerexe**, o compilador criará um arquivo executável (.exe) do Windows que deverá ser executado em um contêiner de aplicativos. Essa opção é equivalente a [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), mas foi projetada para aplicativos [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
+Se você usar a opção do compilador **-target:appcontainerexe**, o compilador criará um arquivo executável (.exe) do Windows que deverá ser executado em um contêiner de aplicativos. Essa opção é equivalente a [-target:winexe](./target-winexe-compiler-option.md), mas foi projetada para aplicativos [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -21,7 +21,7 @@ Se você usar a opção do compilador **-target:appcontainerexe**, o compilador 
 ## <a name="remarks"></a>Comentários  
  Para exigir que o aplicativo seja executado em um contêiner de aplicativos, esta opção define um bit no arquivo [PE](/windows/desktop/Debug/pe-format). Quando esse bit estiver definido, ocorrerá um erro se o método CreateProcess tentar inicializar o arquivo executável fora de um contêiner de aplicativos.  
   
- A menos que você use a opção [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usará o nome do arquivo de entrada que contém o método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ A menos que você use a opção [-out](./out-compiler-option.md), o nome do arquivo de saída usará o nome do arquivo de entrada que contém o método [Main](../../programming-guide/main-and-command-args/index.md).  
   
  Quando você especifica essa opção em um prompt de comando, todos os arquivos até a próxima opção **-out** ou **-target** são usados para criar o arquivo executável.  
   
@@ -44,6 +44,6 @@ csc -target:appcontainerexe filename.cs
   
 ## <a name="see-also"></a>Consulte também
 
-- [-target (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [-target:winexe (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (opções do compilador do C#)](./target-compiler-option.md)
+- [-target:winexe (opções do compilador do C#)](./target-winexe-compiler-option.md)
+- [Opções do compilador de C#](./index.md)

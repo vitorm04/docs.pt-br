@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 0ec661e5fb0e13eaf8c3c8e4a7b274ab58853f58
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978079"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590253"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Como: executar código de limpeza usando finally (Guia de Programação em C#)
 O propósito de uma instrução `finally` é garantir que a limpeza necessária de objetos, normalmente objetos que estão mantendo recursos externos, ocorra imediatamente, mesmo que uma exceção seja lançada. Um exemplo dessa limpeza é chamar <xref:System.IO.Stream.Close%2A> em um <xref:System.IO.FileStream> imediatamente após o uso, em vez de esperar que o objeto passe pela coleta de lixo feita pelo Common Language Runtime, da seguinte maneira:  
@@ -30,10 +30,10 @@ O propósito de uma instrução `finally` é garantir que a limpeza necessária 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)
-- [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)
-- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Guia de Programação em C#](../index.md)
+- [Exceções e manipulação de exceções](./index.md)
+- [Tratamento de Exceção](./exception-handling.md)
+- [Instrução using](../../language-reference/keywords/using-statement.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

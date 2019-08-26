@@ -6,15 +6,15 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cea8d157e89597ddf4633cf7f7d3df7044db9ec7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608570"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589444"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indexadores em interfaces (Guia de Programação em C#)
-Os indexadores podem ser declarados em uma [interface](../../../csharp/language-reference/keywords/interface.md). Acessadores de indexadores de interface diferem dos acessadores de indexadores de [classe](../../../csharp/language-reference/keywords/class.md) das seguintes maneiras:  
+Os indexadores podem ser declarados em uma [interface](../../language-reference/keywords/interface.md). Acessadores de indexadores de interface diferem dos acessadores de indexadores de [classe](../../language-reference/keywords/class.md) das seguintes maneiras:  
   
 - Os acessadores de interface não usam modificadores.  
   
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
+- [Guia de Programação em C#](../index.md)
+- [Indexadores](./index.md)
+- [Propriedades](../classes-and-structs/properties.md)
+- [Interfaces](../interfaces/index.md)

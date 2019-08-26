@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674135"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909679"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Remova os dados XML usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos usados para remover os nós e valores de um documento XML. Para usar esses métodos, o objeto <xref:System.Xml.XPath.XPathNavigator> deve ser editável, ou seja, sua propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> deve ser `true`.  
@@ -33,7 +33,7 @@ A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métod
  Uma operação de exclusão não afeta a posição de nenhum objeto de <xref:System.Xml.XPath.XPathNavigator> posicionado sobre o nó excluído. Esses objetos de <xref:System.Xml.XPath.XPathNavigator> são válidos no sentido que podem mover dentro da sub-árvore excluída, mas não podem ser movidos à árvore do nó usando os métodos definidos de navegação do nó normal da classe de <xref:System.Xml.XPath.XPathNavigator> .  
   
 > [!NOTE]
->  O método de <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> pode ser usado para mover esses objetos de <xref:System.Xml.XPath.XPathNavigator> de novo na árvore do nó principal, ou de árvore nó principal da subárvore excluída.  
+> O método de <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> da classe de <xref:System.Xml.XPath.XPathNavigator> pode ser usado para mover esses objetos de <xref:System.Xml.XPath.XPathNavigator> de novo na árvore do nó principal, ou de árvore nó principal da subárvore excluída.  
   
  No exemplo a seguir, o elemento de `price` do primeiro elemento de `book` do arquivo de `contosoBooks.xml` é excluído usando o método <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A> . A posição do objeto de <xref:System.Xml.XPath.XPathNavigator> após o elemento de `price` é excluída está no elemento pai de `book` .  
   

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dc876f609643b7112c0f54574bd202c7c19cb119
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345086"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924776"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opções do compilador C#)
 Esta opção fornece uma maneira conveniente de relatar um erro interno do compilador do C# à Microsoft.  
   
 > [!NOTE]
->  No Windows Vista e Windows Server 2008, as configurações de relatório de erros que você faz para o Visual Studio não substituem as configurações feitas pelo WER (Relatório de Erros do Windows). As configurações do WER sempre têm precedência sobre as configurações de relatório de erros do Visual Studio.  
+> No Windows Vista e Windows Server 2008, as configurações de relatório de erros que você faz para o Visual Studio não substituem as configurações feitas pelo WER (Relatório de Erros do Windows). As configurações do WER sempre têm precedência sobre as configurações de relatório de erros do Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,4 +63,4 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opções do compilador de C#](./index.md)
