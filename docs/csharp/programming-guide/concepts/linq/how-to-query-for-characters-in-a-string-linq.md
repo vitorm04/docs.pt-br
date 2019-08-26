@@ -2,18 +2,18 @@
 title: 'Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: b31dfb4c9fb7f7efc439a1703f13aafca3053e6a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584445"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592881"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="3489d-102">Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="3489d-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
-<span data-ttu-id="3489d-103">Já que a classe <xref:System.String> implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, qualquer cadeia de caracteres pode ser consultada como uma sequência de caracteres.</span><span class="sxs-lookup"><span data-stu-id="3489d-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="3489d-104">No entanto, esse não é um uso comum da LINQ.</span><span class="sxs-lookup"><span data-stu-id="3489d-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="3489d-105">Para operações de correspondência de padrões complexas, use a classe <xref:System.Text.RegularExpressions.Regex>.</span><span class="sxs-lookup"><span data-stu-id="3489d-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="86d0b-102">Como: Consultar caracteres em uma cadeia de caracteres (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="86d0b-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
+<span data-ttu-id="86d0b-103">Já que a classe <xref:System.String> implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, qualquer cadeia de caracteres pode ser consultada como uma sequência de caracteres.</span><span class="sxs-lookup"><span data-stu-id="86d0b-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="86d0b-104">No entanto, esse não é um uso comum da LINQ.</span><span class="sxs-lookup"><span data-stu-id="86d0b-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="86d0b-105">Para operações de correspondência de padrões complexas, use a classe <xref:System.Text.RegularExpressions.Regex>.</span><span class="sxs-lookup"><span data-stu-id="86d0b-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3489d-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3489d-106">Example</span></span>  
- <span data-ttu-id="3489d-107">O exemplo a seguir consulta uma cadeia de caracteres para determinar quantos dígitos numéricos ela contém.</span><span class="sxs-lookup"><span data-stu-id="3489d-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="3489d-108">Observe que a consulta é "reutilizada" depois que é executada pela primeira vez.</span><span class="sxs-lookup"><span data-stu-id="3489d-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="3489d-109">Isso é possível porque a consulta em si não armazena nenhum resultado real.</span><span class="sxs-lookup"><span data-stu-id="3489d-109">This is possible because the query itself does not store any actual results.</span></span>  
+## <a name="example"></a><span data-ttu-id="86d0b-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="86d0b-106">Example</span></span>  
+ <span data-ttu-id="86d0b-107">O exemplo a seguir consulta uma cadeia de caracteres para determinar quantos dígitos numéricos ela contém.</span><span class="sxs-lookup"><span data-stu-id="86d0b-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="86d0b-108">Observe que a consulta é "reutilizada" depois que é executada pela primeira vez.</span><span class="sxs-lookup"><span data-stu-id="86d0b-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="86d0b-109">Isso é possível porque a consulta em si não armazena nenhum resultado real.</span><span class="sxs-lookup"><span data-stu-id="86d0b-109">This is possible because the query itself does not store any actual results.</span></span>  
   
 ```csharp  
 class QueryAString  
@@ -54,10 +54,10 @@ class QueryAString
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3489d-110">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="3489d-110">Compiling the Code</span></span>  
- <span data-ttu-id="3489d-111">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="3489d-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="86d0b-110">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="86d0b-110">Compiling the Code</span></span>  
+ <span data-ttu-id="86d0b-111">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="86d0b-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3489d-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3489d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86d0b-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="86d0b-112">See also</span></span>
 
-- [<span data-ttu-id="3489d-113">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="3489d-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="3489d-114">Como: Combinar consultas LINQ com expressões regulares (C#)</span><span class="sxs-lookup"><span data-stu-id="3489d-114">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [<span data-ttu-id="86d0b-113">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="86d0b-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="86d0b-114">Como: Combinar consultas LINQ com expressões regulares (C#)</span><span class="sxs-lookup"><span data-stu-id="86d0b-114">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>](./how-to-combine-linq-queries-with-regular-expressions.md)

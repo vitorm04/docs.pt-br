@@ -2,20 +2,20 @@
 title: 'Como: Criar uma hierarquia usando o agrupamento (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 685c8ad1360ba2959dc81632ae084b935bd37c47
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485847"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593845"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="0b72b-102">Como: Criar uma hierarquia usando o agrupamento (C#)</span><span class="sxs-lookup"><span data-stu-id="0b72b-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
-<span data-ttu-id="0b72b-103">Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.</span><span class="sxs-lookup"><span data-stu-id="0b72b-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="033ee-102">Como: Criar uma hierarquia usando o agrupamento (C#)</span><span class="sxs-lookup"><span data-stu-id="033ee-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
+<span data-ttu-id="033ee-103">Este exemplo mostra como agrupar dados, e gerencia em XML baseado em agrupamento.</span><span class="sxs-lookup"><span data-stu-id="033ee-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0b72b-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="0b72b-104">Example</span></span>  
- <span data-ttu-id="0b72b-105">Este exemplo primeiro agrupa dados por uma categoria, então gerencia um novo arquivo XML na hierarquia XML reflete o agrupamento.</span><span class="sxs-lookup"><span data-stu-id="0b72b-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="033ee-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="033ee-104">Example</span></span>  
+ <span data-ttu-id="033ee-105">Este exemplo primeiro agrupa dados por uma categoria, então gerencia um novo arquivo XML na hierarquia XML reflete o agrupamento.</span><span class="sxs-lookup"><span data-stu-id="033ee-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="0b72b-106">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0b72b-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="033ee-106">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Dados numéricos (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="033ee-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="0b72b-107">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="0b72b-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="033ee-107">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="033ee-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
