@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914667"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -170,7 +170,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Charles Richardson. Padrão: gateway de API/back-end para front-end** \
+- **Chris Richardson. Padrão: gateway de API/back-end para front-end** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Padrão de Gateway de API** \

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939638"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regras para inferir tipos de nó e estrutura de esquema
 Este tópico descreve como o processo de inferência de esquema converte os tipos de nós em um documento XML a estrutura do idioma da definição de esquema XML (XSD).  
@@ -35,7 +35,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
 8. Elemento com uma sequência das opções de elementos filho e atributos  
   
 > [!NOTE]
->  Todas as declarações de `complexType` são inferidas como tipos anônimos. O único elemento global é inferido o elemento raiz; todos os outros elementos são locais.  
+> Todas as declarações de `complexType` são inferidas como tipos anônimos. O único elemento global é inferido o elemento raiz; todos os outros elementos são locais.  
   
  Para saber mais sobre o processo de inferência de esquema, consulte [Inferência de esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -79,7 +79,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
  A tabela a seguir mostra XML conectado ao método de <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> , e o esquema XML gerado. Os elementos negritos mostram o esquema inferido para um elemento com uma sequência de elementos filhos.  
   
 > [!NOTE]
->  Se um elemento é apenas um elemento filho, ainda é tratado como uma sequência.  
+> Se um elemento é apenas um elemento filho, ainda é tratado como uma sequência.  
   
  Para saber mais sobre o processo de inferência de esquema, consulte [Inferência de esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -91,7 +91,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
  A tabela a seguir mostra XML conectado ao método de <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> , e o esquema XML gerado. Os elementos negritos mostram o esquema inferido para um elemento com uma sequência de elementos filho e atributos.  
   
 > [!NOTE]
->  Se um elemento é apenas um elemento filho, ainda é tratado como uma sequência.  
+> Se um elemento é apenas um elemento filho, ainda é tratado como uma sequência.  
   
  Para saber mais sobre o processo de inferência de esquema, consulte [Inferência de esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -103,7 +103,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
  A tabela a seguir mostra XML conectado ao método de <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> , e o esquema XML gerado. Os elementos negritos mostram o esquema inferido para um elemento com uma sequência e uma opção de elementos filhos.  
   
 > [!NOTE]
->  O atributo de `maxOccurs` do elemento de `xs:choice` é definido como `"unbounded"` no esquema inferido.  
+> O atributo de `maxOccurs` do elemento de `xs:choice` é definido como `"unbounded"` no esquema inferido.  
   
  Para saber mais sobre o processo de inferência de esquema, consulte [Inferência de esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -115,7 +115,7 @@ Este tópico descreve como o processo de inferência de esquema converte os tipo
  A tabela a seguir mostra XML conectado ao método de <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> , e o esquema XML gerado. Os elementos negritos mostram o esquema inferido para um elemento com uma sequência e uma escolha dos elementos filho e atributos.  
   
 > [!NOTE]
->  O atributo de `maxOccurs` do elemento de `xs:choice` é definido como `"unbounded"` no esquema inferido.  
+> O atributo de `maxOccurs` do elemento de `xs:choice` é definido como `"unbounded"` no esquema inferido.  
   
  Para saber mais sobre o processo de inferência de esquema, consulte [Inferência de esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298898"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946450"
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
 Este exemplo contém dados de exemplo no formato .csv e os métodos que os transformam em coleções na memória de Customers, Products, Orders e Order Details. Para fazer novas experiências com PLINQ, cole os exemplos de código de outros tópicos no código deste tópico e invoque o método `Main`. Você também pode usar esses dados com suas próprias consultas PLINQ.  
@@ -23,7 +23,7 @@ Este exemplo contém dados de exemplo no formato .csv e os métodos que os trans
  Os dados representam um subconjunto do banco de dados da Northwind. São incluídos cinquenta (50) registros de clientes, mas não todos os campos. É incluído um subconjunto das linhas dos dados de Orders e os dados de Order_Detail correspondentes para todos os clientes (Customers). Todos os produtos estão incluídos.  
   
 > [!NOTE]
->  O conjunto de dados não é grande o suficiente para demonstrar que o PLINQ é mais rápido do que o LINQ to Objects em consultas que contêm apenas as cláusulas `where` e `select` básicas. Para observar os aumentos na velocidade de pequenos conjuntos de dados como esses, use as consultas que contêm operações de computação dispendiosas em todos os elementos do conjunto de dados.  
+> O conjunto de dados não é grande o suficiente para demonstrar que o PLINQ é mais rápido do que o LINQ to Objects em consultas que contêm apenas as cláusulas `where` e `select` básicas. Para observar os aumentos na velocidade de pequenos conjuntos de dados como esses, use as consultas que contêm operações de computação dispendiosas em todos os elementos do conjunto de dados.  
   
 ### <a name="to-set-up-this-sample"></a>Para configurar este exemplo  
   

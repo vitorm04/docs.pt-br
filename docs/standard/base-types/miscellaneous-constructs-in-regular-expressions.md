@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959477"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construtores diversos em expressões regulares
 As expressões regulares em .NET incluem três constructos diversos de linguagem. Um deles permite habilitar ou desabilitar opções específicas de correspondência no meio de um padrão de expressão regular. Os dois restantes permitem incluir comentários em uma expressão regular.  
@@ -31,7 +31,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  Você lista as opções que deseja habilitar após o ponto de interrogação e as opções que deseja desabilitar após o sinal de subtração. A tabela a seguir descreve cada opção. Para obter mais informações sobre cada opção, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Opção|Descrição|  
+|Opção|DESCRIÇÃO|  
 |------------|-----------------|  
 |`i`|Correspondência sem diferenciação entre maiúsculas e minúsculas.|  
 |`m`|Modo multilinha.|  
@@ -42,7 +42,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
  Qualquer alteração nas opções de expressões regulares definida pelo constructo `(?imnsx-imnsx)` permanece em vigor até o fim do grupo delimitador.  
   
 > [!NOTE]
->  O constructo de agrupamento `(?imnsx-imnsx:`*subexpression*`)` oferece uma funcionalidade idêntica para uma subexpressão. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> O constructo de agrupamento `(?imnsx-imnsx:`*subexpression*`)` oferece uma funcionalidade idêntica para uma subexpressão. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  O exemplo a seguir usa as opções `i`, `n` e `x` para desabilitar a diferenciação entre maiúsculas e minúsculas e habilitar e capturas explícitas, bem como ignorar o espaço em branco no padrão de expressão regular no meio de uma expressão regular.  
   
@@ -51,7 +51,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  O exemplo define duas expressões regulares. A primeira, `\b(D\w+)\s(d\w+)\b`, corresponde a duas palavras consecutivas que começam com um “D” maiúsculo e um “d” minúsculo. A segunda expressão regular, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opções embutidas para modificar esse padrão, conforme descrito na tabela a seguir. Uma comparação dos resultados confirma o efeito do constructo `(?ixn)`.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(D\w+)`|Corresponder a um “D” maiúsculo seguido por um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -65,7 +65,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  O exemplo a seguir repete o primeiro padrão de expressão regular do exemplo na seção anterior. Ele adiciona dois comentários embutidos na expressão regular para indicar se a comparação diferencia maiúsculas de minúsculas. O padrão de expressão regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, é definido da seguinte forma.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(?# case-sensitive comparison)`|Um comentário. Não afeta o comportamento de correspondência.|  
@@ -86,7 +86,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\{`|Corresponder a uma chave de abertura.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  

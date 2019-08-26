@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933892"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilando aplicativos de console no .NET Framework
 Os aplicativos do .NET Framework podem usar a classe <xref:System.Console?displayProperty=nameWithType> para ler e gravar caracteres no console. Os dados do console são lidos a partir do fluxo de entrada padrão, os dados para o console são gravados no fluxo de saída padrão e os dados de erro do console são gravados no fluxo de saída de erro padrão. Esses fluxos são automaticamente associados ao console quando o aplicativo é iniciado e são apresentados como as propriedades <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> e <xref:System.Console.Error%2A>, respectivamente.  
@@ -22,7 +22,7 @@ Os aplicativos do .NET Framework podem usar a classe <xref:System.Console?displa
  O valor da propriedade <xref:System.Console.In%2A?displayProperty=nameWithType> é um objeto <xref:System.IO.TextReader?displayProperty=nameWithType>, ao passo que os valores das propriedades <xref:System.Console.Out%2A?displayProperty=nameWithType> e <xref:System.Console.Error%2A?displayProperty=nameWithType> são objetos <xref:System.IO.TextWriter?displayProperty=nameWithType>. Você pode associar essas propriedades com fluxos que não representam o console, tornando possível apontar para o fluxo em um local diferente de entrada ou saída. Por exemplo, você pode redirecionar a saída para um arquivo ao definir a propriedade <xref:System.Console.Out%2A?displayProperty=nameWithType> para um <xref:System.IO.StreamWriter?displayProperty=nameWithType> que encapsula um <xref:System.IO.FileStream?displayProperty=nameWithType> pelo método <xref:System.Console.SetOut%2A?displayProperty=nameWithType>. As propriedades <xref:System.Console.In%2A?displayProperty=nameWithType> e <xref:System.Console.Out%2A?displayProperty=nameWithType> não precisam fazer referência ao mesmo fluxo.  
   
 > [!NOTE]
->  Para mais informações sobre a compilação de aplicativos de console, incluindo exemplos em C #, Visual Basic e C++, consulte a documentação da classe <xref:System.Console>.  
+> Para mais informações sobre a compilação de aplicativos de console, incluindo exemplos em C #, Visual Basic e C++, consulte a documentação da classe <xref:System.Console>.  
   
  Se o console não existir, como em um aplicativo baseado no Windows, a gravação de saída no fluxo de saída padrão não será visível, uma vez que não haverá nenhum console para gravar as informações. A gravação de informações em um console inacessível não gera uma exceção.  
   

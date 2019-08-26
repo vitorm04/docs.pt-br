@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939613"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Validação de esquema usando XPathNavigator
 Se você usar a classe <xref:System.Xml.XmlDocument>, poderá validar o conteúdo XML contido em um objeto <xref:System.Xml.XmlDocument> de duas maneiras. A primeira maneira é validar o conteúdo XML usando um objeto <xref:System.Xml.XmlReader> de validação, e a segunda maneira é usar o método <xref:System.Xml.XmlDocument.Validate%2A> da classe <xref:System.Xml.XmlDocument>. Você também pode executar a validação somente leitura do conteúdo XML usando a classe <xref:System.Xml.XPath.XPathDocument>.  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  A propriedade <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> pode ser usada para determinar se um atributo ou um elemento individual é válido para acessar atributos ou elementos com a classe <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  Quando um documento XML é carregado para um objeto <xref:System.Xml.XmlDocument> com um esquema associado que define os valores padrão, o objeto <xref:System.Xml.XmlDocument> trata esses padrões como se eles tivessem aparecido no documento XML. Isso significa que a propriedade <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> sempre retorna `false` para um elemento do esquema que é usado como padrão, mesmo se o documento XML tiver sido criado como um elemento vazio.  
+> Quando um documento XML é carregado para um objeto <xref:System.Xml.XmlDocument> com um esquema associado que define os valores padrão, o objeto <xref:System.Xml.XmlDocument> trata esses padrões como se eles tivessem aparecido no documento XML. Isso significa que a propriedade <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> sempre retorna `false` para um elemento do esquema que é usado como padrão, mesmo se o documento XML tiver sido criado como um elemento vazio.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validando um documento com o método Validate  
  O método <xref:System.Xml.XmlDocument.Validate%2A> da classe <xref:System.Xml.XmlDocument> valida o documento XML contido em um objeto <xref:System.Xml.XmlDocument> em relação aos esquemas especificados na propriedade <xref:System.Xml.XmlDocument> do objeto <xref:System.Xml.XmlDocument.Schemas%2A> e executa o aumento do conjunto de informações. O resultado é um documento XML anteriormente não tipado no objeto <xref:System.Xml.XmlDocument> substituído por um documento tipado.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423861"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950689"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
@@ -115,7 +115,7 @@ public class AsyncExample
  Se você usar as sobrecargas de invocação múltipla, seu código precisará monitorar os objetos `userState` (IDs de tarefa) para as tarefas pendentes. Para cada chamada para `Method1Async(string param, object userState)`, você geralmente gera um novo objeto `userState` exclusivo e o adiciona a uma coleção. Quando a tarefa correspondente a esse objeto `userState` eleva o evento de conclusão, sua implementação do método de conclusão irá examinar <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> e removê-lo da coleção. Usado dessa forma, o parâmetro `userState` assume a função de uma ID de tarefa.  
   
 > [!NOTE]
->  Você deve ter o cuidado de fornecer um valor exclusivo para `userState` em suas chamadas para sobrecargas de invocação múltipla. IDs de tarefa não exclusivos farão com que a classe assíncrona lance um <xref:System.ArgumentException>.  
+> Você deve ter o cuidado de fornecer um valor exclusivo para `userState` em suas chamadas para sobrecargas de invocação múltipla. IDs de tarefa não exclusivos farão com que a classe assíncrona lance um <xref:System.ArgumentException>.  
   
 ### <a name="canceling-pending-operations"></a>Cancelando Operações Pendentes  
  É importante poder cancelar operações assíncronas a qualquer momento antes de sua conclusão. Classes que implementam o Padrão Assíncrono baseado em Evento terão um método `CancelAsync` (se houver somente um método assíncrono) ou um método _MethodName_**AsyncCancel** (se houver vários métodos assíncronos).  

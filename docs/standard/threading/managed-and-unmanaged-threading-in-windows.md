@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913235"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 
@@ -27,7 +27,7 @@ O gerenciamento de todos os threads, inclusive de threads criados pelo Common La
  No threading gerenciado, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> é a identificação estável do thread gerenciado. Durante seu tempo de vida, o thread não colidirá com os valores de outros threads, independente do domínio do aplicativo para o qual você obtém esse valor.  
   
 > [!NOTE]
->  Um **ThreadId** do sistema operacional não tem relação fixa com um thread gerenciado porque hosts não gerenciados podem controlar a relação entre threads gerenciados e não gerenciados. Mais especificamente, hosts sofisticados podem usar a API Fiber para agendar muitos threads gerenciados no mesmo thread do sistema operacional ou para mover um thread gerenciado por diferentes threads do sistema operacional.  
+> Um **ThreadId** do sistema operacional não tem relação fixa com um thread gerenciado porque hosts não gerenciados podem controlar a relação entre threads gerenciados e não gerenciados. Mais especificamente, hosts sofisticados podem usar a API Fiber para agendar muitos threads gerenciados no mesmo thread do sistema operacional ou para mover um thread gerenciado por diferentes threads do sistema operacional.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Mapeando do threading do Win32 para o threading gerenciado
 
@@ -57,7 +57,7 @@ Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [sin
  Se o estado do apartment não for definido antes do início do thread, o thread será iniciado como MTA (multithreaded apartment). O thread finalizador e todos os threads controlados por <xref:System.Threading.ThreadPool> são do tipo MTA.  
   
 > [!IMPORTANT]
->  No caso do código de inicialização do aplicativo, a única forma de controlar o estado do apartment é aplicar <xref:System.MTAThreadAttribute> ou <xref:System.STAThreadAttribute> ao procedimento do ponto de entrada. No .NET Framework 1.0 e 1.1, você pode definir a propriedade <xref:System.Threading.Thread.ApartmentState%2A> como a primeira linha de código. Isso não é permitido no .NET Framework 2.0.  
+> No caso do código de inicialização do aplicativo, a única forma de controlar o estado do apartment é aplicar <xref:System.MTAThreadAttribute> ou <xref:System.STAThreadAttribute> ao procedimento do ponto de entrada. No .NET Framework 1.0 e 1.1, você pode definir a propriedade <xref:System.Threading.Thread.ApartmentState%2A> como a primeira linha de código. Isso não é permitido no .NET Framework 2.0.  
   
  Os objetos gerenciados que são expostos ao comportamento COM comportam-se como se houvesse um marshaler de thread livre agregado a eles. Em outras palavras, eles podem ser chamados por qualquer apartment COM no modo de threading livre. Os únicos objetos gerenciados que não apresentam esse comportamento são os objetos derivados de <xref:System.EnterpriseServices.ServicedComponent> ou <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.  
   

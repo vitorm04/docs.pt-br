@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdf8d41a99328a8c8fd31eca974e52082abb7e79
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3e39ee597f5142f2b3ccbd4ded49e59d6700ec8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490779"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960138"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
 A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para cancelamento cooperativo de operações assíncronas ou síncronas de longa execução. Este modelo é baseado em um objeto leve chamado token de cancelamento. O objeto que invoca uma ou mais operações canceláveis, por exemplo criando novos tópicos ou tarefas, passa o token para cada operação. As operações individuais podem, por sua vez, passar cópias do token para outras operações. Posteriormente, o objeto que criou o token pode usá-lo para solicitar que as operações parem o que estão fazendo. Somente o objeto solicitante pode emitir a solicitação de cancelamento, e cada ouvinte é responsável por perceber a solicitação e respondê-la de forma apropriada e oportuna.  
@@ -31,7 +31,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
 - Chame o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> para fornecer uma notificação de cancelamento.  
   
 > [!IMPORTANT]
->  A classe <xref:System.Threading.CancellationTokenSource> implementa a interface <xref:System.IDisposable>. Certifique-se de chamar o método <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> quando terminar de usar a fonte de token de cancelamento para liberar todos os recursos não gerenciados detidos.  
+> A classe <xref:System.Threading.CancellationTokenSource> implementa a interface <xref:System.IDisposable>. Certifique-se de chamar o método <xref:System.Threading.CancellationTokenSource.Dispose%2A?displayProperty=nameWithType> quando terminar de usar a fonte de token de cancelamento para liberar todos os recursos não gerenciados detidos.  
   
  A ilustração a seguir mostra o relacionamento entre uma fonte de token e todas as cópias de seu token.  
   
@@ -54,7 +54,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
 ## <a name="cancellation-types"></a>Tipos de cancelamento  
  A estrutura de cancelamento é implementada como um conjunto de tipos relacionados, que estão listados na tabela a seguir.  
   
-|Nome de tipo|Descrição|  
+|Nome de tipo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|O objeto que cria um token de cancelamento, e também emite o pedido de cancelamento para todas as cópias desse token.|  
 |<xref:System.Threading.CancellationToken>|O tipo de valor leve passado a um ou mais ouvintes, normalmente como um parâmetro de método. Os ouvintes monitoram o valor da propriedade `IsCancellationRequested` do token por sondagem, retorno de chamada ou identificador de espera.|  
@@ -66,7 +66,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
  No exemplo a seguir, o objeto solicitante cria um objeto <xref:System.Threading.CancellationTokenSource> e, em seguida, passa sua propriedade <xref:System.Threading.CancellationTokenSource.Token%2A> para a operação cancelável. A operação que recebe a solicitação monitora o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token por sondagem. Quando o valor se torna `true`, o ouvinte pode concluir de qualquer maneira apropriada. Neste exemplo, o método apenas sai, que é tudo necessário em muitos casos.  
   
 > [!NOTE]
->  O exemplo usa o método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para demonstrar que a nova estrutura de cancelamento é compatível com as APIs legadas. Para obter um exemplo que usa o novo tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> preferencial, veja [Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> O exemplo usa o método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para demonstrar que a nova estrutura de cancelamento é compatível com as APIs legadas. Para obter um exemplo que usa o novo tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> preferencial, veja [Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  

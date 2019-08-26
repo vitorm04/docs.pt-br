@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960048"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 A classe <xref:System.Threading.EventWaitHandle> permite que os threads se comuniquem entre si por meio da sinalização e aguardando sinais. Identificadores de espera de eventos (conhecidos simplesmente como eventos) são identificadores de espera que podem ser sinalizados a fim de liberar um ou mais threads de espera. Após a sinalização, um identificador de espera de eventos é redefinido manualmente ou automaticamente. A classe <xref:System.Threading.EventWaitHandle> pode representar um identificador de espera de evento local (evento local) ou um identificador de espera evento de evento do sistema nomeado (evento nomeado ou evento do sistema, visível a todos os processos).  
   
 > [!NOTE]
->  Os identificadores de espera de eventos não são [eventos](../events/index.md) do .NET. Não há delegados ou manipuladores de eventos envolvidos. A palavra "evento" é usada para descrevê-los, pois eles têm sido chamados tradicionalmente de eventos do sistema operacional, e porque o ato de sinalização do identificador de espera indica aos threads de espera que um evento ocorreu.  
+> Os identificadores de espera de eventos não são [eventos](../events/index.md) do .NET. Não há delegados ou manipuladores de eventos envolvidos. A palavra "evento" é usada para descrevê-los, pois eles têm sido chamados tradicionalmente de eventos do sistema operacional, e porque o ato de sinalização do identificador de espera indica aos threads de espera que um evento ocorreu.  
   
  Os identificadores de espera de eventos local e nomeado usam objetos de sincronização do sistema, que são protegidos por wrappers <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> a fim de garantir a liberação de recursos. Você pode usar o método <xref:System.Threading.WaitHandle.Dispose%2A> para liberar os recursos imediatamente ao terminar de usar o objeto.  
   
@@ -31,7 +31,7 @@ A classe <xref:System.Threading.EventWaitHandle> permite que os threads se comun
  Os eventos de redefinição automática geralmente são usados para fornecer acesso exclusivo a um recurso para um thread por vez. Um thread solicita o recurso chamando o método <xref:System.Threading.WaitHandle.WaitOne%2A>. Se nenhum outro thread estiver usando o identificador de espera, o método retornará `true`, e o thread de chamada terá o controle do recurso.  
   
 > [!IMPORTANT]
->  Assim como ocorre com todos os mecanismos de sincronização, você deve garantir que todos os caminhos de código aguardem o identificador de espera apropriado antes de acessar um recurso protegido. A sincronização do thread é cooperativa.  
+> Assim como ocorre com todos os mecanismos de sincronização, você deve garantir que todos os caminhos de código aguardem o identificador de espera apropriado antes de acessar um recurso protegido. A sincronização do thread é cooperativa.  
   
  Se um evento de redefinição automática for sinalizado quando não houver threads em espera, ele permanecerá sinalizado até que um thread tente esperar por ele. O evento libera o thread e redefine imediatamente, bloqueando os threads subsequentes.  
   
@@ -53,14 +53,14 @@ A classe <xref:System.Threading.EventWaitHandle> permite que os threads se comun
  Você pode criar um objeto <xref:System.Threading.EventWaitHandle> que representa um evento de sistema nomeado usando um dos construtores que especifica um nome de evento.  
   
 > [!NOTE]
->  Como os eventos nomeados servem para todo o sistema, é possível ter vários objetos <xref:System.Threading.EventWaitHandle> que representam o mesmo evento nomeado. Cada vez que você chama um construtor ou o método <xref:System.Threading.EventWaitHandle.OpenExisting%2A>, um novo objeto <xref:System.Threading.EventWaitHandle> é criado. Especificar o mesmo nome repetidas vezes cria vários objetos que representam o mesmo evento nomeado.  
+> Como os eventos nomeados servem para todo o sistema, é possível ter vários objetos <xref:System.Threading.EventWaitHandle> que representam o mesmo evento nomeado. Cada vez que você chama um construtor ou o método <xref:System.Threading.EventWaitHandle.OpenExisting%2A>, um novo objeto <xref:System.Threading.EventWaitHandle> é criado. Especificar o mesmo nome repetidas vezes cria vários objetos que representam o mesmo evento nomeado.  
   
  Tenha cuidado ao usar eventos nomeados. Como eles servem para todo o sistema, outro processo que usa o mesmo nome pode bloquear seus threads inesperadamente. Código mal-intencionado em execução no mesmo computador pode usar isso como base de um ataque de negação de serviço.  
   
  Use a segurança de controle de acesso para proteger um objeto <xref:System.Threading.EventWaitHandle> que representa um evento nomeado, preferencialmente usando um construtor que especifica um objeto <xref:System.Security.AccessControl.EventWaitHandleSecurity>. Também é possível aplicar a segurança de controle de acesso usando o método <xref:System.Threading.EventWaitHandle.SetAccessControl%2A>, mas isso deixa uma janela de vulnerabilidade entre o momento em que o identificador em espera de evento é criado e o momento em que ele é protegido. Proteger eventos com a segurança de controle de acesso ajuda a impedir ataques mal-intencionados, mas não resolve o problema de colisão de nome não intencional.  
   
 > [!NOTE]
->  Ao contrário da classe <xref:System.Threading.EventWaitHandle>, as classes derivadas <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent> podem representar somente identificadores em espera locais. Eles não podem representar eventos nomeados do sistema.  
+> Ao contrário da classe <xref:System.Threading.EventWaitHandle>, as classes derivadas <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent> podem representar somente identificadores em espera locais. Eles não podem representar eventos nomeados do sistema.  
   
 ## <a name="see-also"></a>Consulte também
 

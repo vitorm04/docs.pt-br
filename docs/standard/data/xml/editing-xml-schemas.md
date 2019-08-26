@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308712"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948478"
 ---
 # <a name="editing-xml-schemas"></a>Esquemas XML de edição
 Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (SOM) de esquema. Todas as propriedades de pre-esquema- compilação de SOM podem ser usadas para alterar os valores existentes em um esquema XML. O esquema XML pode então ser recompilado para refletir as alterações.  
@@ -93,7 +93,7 @@ Editar um esquema XML é um dos recursos mais importantes do modelo de objeto (S
 8. Efetua iterações sobre cada <xref:System.Xml.Schema.XmlSchemaObject> na coleção de <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pre-esquema- compilação.  
   
 > [!NOTE]
->  Como o elemento de `FirstName` não é um elemento global no esquema, não está disponível em coleções de <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> ou de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> . O exemplo de código posicionar o elemento de `FirstName` posicionando o primeiro elemento de `Customer` .  
+> Como o elemento de `FirstName` não é um elemento global no esquema, não está disponível em coleções de <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> ou de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> . O exemplo de código posicionar o elemento de `FirstName` posicionando o primeiro elemento de `Customer` .  
 >   
 >  O primeiro exemplo de código atravessou o esquema usando a coleção de <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> de POST-esquema- compilação. Nesse exemplo, a coleção de <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pre-esquema- compilação é usada para percorrer o esquema. Quando ambas as coleções fornecem acesso aos elementos globais no esquema, iterar através da coleção de <xref:System.Xml.Schema.XmlSchema.Items%2A> é mais demorado porque você deve iterar todos os elementos globais no esquema e não tem nenhuma propriedades de PSCI. Coleções de PSCI (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>, e assim por diante) fornecem acesso direto a seus elementos, atributos globais, tipos e suas propriedades de PSCI.  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ac1f2283ad30499748511e6fed6d5ce98da7fd14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960099"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> é um primitivo de sincronização que desbloqueia seus threads em espera após ser sinalizado um determinado número de vezes. <xref:System.Threading.CountdownEvent> foi projetado para cenários em que, caso contrário, seria necessário usar um <xref:System.Threading.ManualResetEvent> ou um <xref:System.Threading.ManualResetEventSlim> e diminuir manualmente uma variável antes de sinalizar o evento. Por exemplo, em um cenário de bifurcação/junção, basta criar um <xref:System.Threading.CountdownEvent> que tenha uma contagem de sinal de 5 e, em seguida, iniciar cinco itens de trabalho no pool de threads e fazer com que cada item de trabalho chame <xref:System.Threading.CountdownEvent.Signal%2A> quando ele for concluído. Cada chamada para <xref:System.Threading.CountdownEvent.Signal%2A> diminui a contagem de sinal em 1. No thread principal, a chamada para <xref:System.Threading.CountdownEvent.Wait%2A> será bloqueada até que a contagem de sinal seja zero.  
   
 > [!NOTE]
->  No caso do código que não têm que interagir com as APIs de sincronização herdadas do .NET Framework, considere o uso de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objetos ou o método <xref:System.Threading.Tasks.Parallel.Invoke%2A> para uma abordagem ainda mais fácil para expressar o paralelismo bifurcação-junção.  
+> No caso do código que não têm que interagir com as APIs de sincronização herdadas do .NET Framework, considere o uso de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objetos ou o método <xref:System.Threading.Tasks.Parallel.Invoke%2A> para uma abordagem ainda mais fácil para expressar o paralelismo bifurcação-junção.  
   
  <xref:System.Threading.CountdownEvent> tem estes recursos adicionais:  
   

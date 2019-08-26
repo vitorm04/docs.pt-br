@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589972"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939583"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocos de script usando msxsl:script
 A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts inserido usando o elemento `msxsl:script`. Quando a folha de estilos é carregada, todas as funções definidas são compiladas para Microsoft Intermediate Language (MSIL) pelo Code Document Object Model (CodeDOM) e executadas durante o tempo de execução. O assembly gerado no bloco de script inserido é separado do assembly gerado para a folha de estilos.  
@@ -22,7 +22,7 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
  O suporte a scripts inseridos é uma configuração XSLT opcional na classe <xref:System.Xml.Xsl.XslCompiledTransform>. O suporte a script é desabilitado por padrão. Para habilitar o suporte a script, crie um objeto <xref:System.Xml.Xsl.XsltSettings> com a propriedade <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> definida para `true` e passe o objeto para o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
 > [!NOTE]
->  O script XSLT deverá ser habilitado somente se você precisar de suporte a script e estiver trabalhando em um ambiente totalmente confiável.  
+> O script XSLT deverá ser habilitado somente se você precisar de suporte a script e estiver trabalhando em um ambiente totalmente confiável.  
   
 ## <a name="msxslscript-element-definition"></a>Definição do elemento msxsl:script  
  O elemento `msxsl:script` é uma extensão da Microsoft para a recomendação XSLT 1.0 e tem a seguinte definição:  
@@ -38,7 +38,7 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
  O atributo `implements-prefix` é obrigatório. Esse atributo é usado para declarar um namespace e associá-lo ao bloco de script. O valor desse atributo é o prefixo que representa o namespace. Este prefixo pode ser definido em qualquer lugar de uma folha de estilos.  
   
 > [!NOTE]
->  Ao usar o elemento `msxsl:script`, é altamente recomendável que o script, independentemente da linguagem, seja colocado em uma seção CDATA. Como o script pode conter operadores, identificadores ou delimitadores para uma linguagem específica, caso ele não esteja em uma seção CDATA, ele podes ser interpretado incorretamente como XML. O XML a seguir mostra um modelo da seção CDATA em que o código pode ser inserido.  
+> Ao usar o elemento `msxsl:script`, é altamente recomendável que o script, independentemente da linguagem, seja colocado em uma seção CDATA. Como o script pode conter operadores, identificadores ou delimitadores para uma linguagem específica, caso ele não esteja em uma seção CDATA, ele podes ser interpretado incorretamente como XML. O XML a seguir mostra um modelo da seção CDATA em que o código pode ser inserido.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  

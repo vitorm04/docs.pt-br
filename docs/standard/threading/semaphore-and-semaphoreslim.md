@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550481"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968433"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa um sinal com nome (em todo o sistema) ou local. É um wrapper fino em torno do objeto de sinal Win32. Sinais do Win32 são contagem de sinais que podem ser usadas para controlar o acesso a um pool de recursos.  
@@ -40,7 +40,7 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
  Você pode criar um objeto <xref:System.Threading.Semaphore> que representa um sinal de sistema com nome usando um dos construtores que especifica um nome.  
   
 > [!NOTE]
->  Como os sinais com nome são para todo o sistema, é possível ter vários objetos <xref:System.Threading.Semaphore> que representam o mesmo sinal com nome. Cada vez que você chamar um construtor ou o método <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>, um novo objeto <xref:System.Threading.Semaphore> é criado. Especificar o mesmo nome repetidas vezes cria vários objetos que representam o mesmo sinal com nome.  
+> Como os sinais com nome são para todo o sistema, é possível ter vários objetos <xref:System.Threading.Semaphore> que representam o mesmo sinal com nome. Cada vez que você chamar um construtor ou o método <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>, um novo objeto <xref:System.Threading.Semaphore> é criado. Especificar o mesmo nome repetidas vezes cria vários objetos que representam o mesmo sinal com nome.  
   
  Tenha cuidado ao usar sinais com nome. Como eles são para todo o sistema, outro processo que usa o mesmo nome pode inserir seu sinal inesperadamente. Código mal-intencionado em execução no mesmo computador pode usar isso como base de um ataque de negação de serviço.  
   

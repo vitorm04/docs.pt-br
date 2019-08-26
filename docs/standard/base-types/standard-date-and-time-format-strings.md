@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267920"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949594"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 Uma cadeia de caracteres de formato de data e hora padrão usa um especificador de formato único para definir a representação do texto de um valor de data e hora. Qualquer cadeia de caracteres de formato de data e hora que contém mais de um caractere, incluindo espaço em branco, é interpretada como uma cadeia de caracteres de formato de data e hora personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Uma cadeia de caracteres de formato padrão ou personalizado pode ser usada de duas maneiras:  
@@ -79,7 +79,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  Para obter informações sobre como personalizar os padrões ou as cadeias de caracteres usados na formatação de valores de data e hora, consulte o tópico da classe <xref:System.Globalization.NumberFormatInfo>.  
+> Para obter informações sobre como personalizar os padrões ou as cadeias de caracteres usados na formatação de valores de data e hora, consulte o tópico da classe <xref:System.Globalization.NumberFormatInfo>.  
   
  Em alguns casos, a cadeia de caracteres de formato padrão funciona como uma abreviação conveniente de uma cadeia de caracteres de formato personalizado maior que é invariável. Quatro cadeias de caracteres de formato padrão se enquadram nesta categoria: "O" (ou "o"), "R" (ou "r"), "s" e "u". Estas cadeias de caracteres correspondem às cadeias de caracteres de formato personalizado definidas pela cultura invariável. Elas produzem representações de cadeias de caracteres de valores de data e hora que são feitos para ser idênticos entre culturas. A tabela a seguir fornece informações sobre essas quatro cadeias de caracteres de formato de data e hora padrão.  
   

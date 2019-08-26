@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 09e9a51fe9c1fd25a6791cf924180329718138c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915886"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 Este tópico fornece uma visão geral de interfaces genéricas que fornecem funcionalidade comum entre famílias de tipos genéricos.  
@@ -24,7 +24,7 @@ Este tópico fornece uma visão geral de interfaces genéricas que fornecem func
  As interfaces genéricas fornecem contrapartes fortemente tipadas para interfaces não genéricas para fins de comparações de ordenação e de igualdade, e para a funcionalidade que é compartilhada por tipos de coleção genérica.  
   
 > [!NOTE]
->  A partir do .NET Framework 4, os parâmetros de tipo de várias interfaces genéricas são marcados como covariantes ou contravariantes, fornecendo mais flexibilidade na atribuição e usando tipos que implementam essas interfaces. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> A partir do .NET Framework 4, os parâmetros de tipo de várias interfaces genéricas são marcados como covariantes ou contravariantes, fornecendo mais flexibilidade na atribuição e usando tipos que implementam essas interfaces. Consulte [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Comparações de ordem e igualdade  
  No namespace <xref:System>, as interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> e <xref:System.IEquatable%601?displayProperty=nameWithType>, assim como suas contrapartes não genéricas, definem métodos para comparações de classificação e de igualdade, respectivamente. Os tipos implementam essas interfaces para permitir a execução dessas comparações.  

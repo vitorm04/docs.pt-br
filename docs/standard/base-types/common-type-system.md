@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782628"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934771"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -82,7 +82,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 |exportado ou não exportado|Indica se uma classe está visível fora do assembly em que ela está definida. Essa característica só se aplica a classes de nível superior e não a classes aninhadas.|  
   
 > [!NOTE]
->  Uma classe também pode ser aninhada em uma classe ou estrutura pai. Classes aninhadas também têm características de membro. Para obter mais informações, consulte [Tipos aninhados](#NestedTypes).  
+> Uma classe também pode ser aninhada em uma classe ou estrutura pai. Classes aninhadas também têm características de membro. Para obter mais informações, consulte [Tipos aninhados](#NestedTypes).  
   
  Membros da classe que não tenham implementação são membros abstratos. Uma classe que tenha um ou mais membros abstratos é ela própria abstrata. Não é possível criar novas instâncias dessa classe. Algumas linguagens que segmentam o tempo de execução permitem marcar uma classe como abstrata mesmo que nenhum de seus membros seja abstrato. É possível usar uma classe abstrata quando você deseja encapsular um conjunto básico de funcionalidades que as classes derivadas podem herdar ou substituir quando apropriado. Classes que não são abstratas são chamadas de classes concretas.  
   
@@ -115,7 +115,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 - Elas não podem ser genéricas, a menos que sejam genéricas apenas por estarem aninhadas dentro de um tipo genérico. Ou seja, uma enumeração não pode ter parâmetros de tipo próprios.  
   
     > [!NOTE]
-    >  Tipos aninhados (incluindo enumerações) criados com o Visual Basic, C# e C++ incluem os parâmetros de tipo de todos os tipos genéricos e, portanto, serão genéricos mesmo se não tiverem parâmetros de tipo próprios. Para obter mais informações, consulte "Tipos Aninhados" no tópico de referência <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
+    > Tipos aninhados (incluindo enumerações) criados com o Visual Basic, C# e C++ incluem os parâmetros de tipo de todos os tipos genéricos e, portanto, serão genéricos mesmo se não tiverem parâmetros de tipo próprios. Para obter mais informações, consulte "Tipos Aninhados" no tópico de referência <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
   
  O atributo <xref:System.FlagsAttribute> denota um tipo especial de enumeração chamado campo de bits. O próprio tempo de execução não faz distinção entre enumerações tradicionais e campos de bits, mas a linguagem pode fazer isso. Quando é feita essa distinção, operadores bit a bit podem ser usados em campos de bits, mas não em enumerações, para gerar valores sem nome. Enumerações geralmente são usadas para listas de elementos exclusivos, como dias da semana, país ou nomes de região etc. Os campos de bits são geralmente usados para listas de qualidades ou quantidades que possam ocorrer em combinação, como `Red And Big And Fast`.  
   
@@ -157,14 +157,14 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Como representantes herdam de <xref:System.MulticastDelegate>, um representante tem uma lista de invocação, que é uma lista dos métodos que o representante representa e que são executados quando o representante é invocado. Todos os métodos na lista recebem os argumentos fornecidos quando o delegado é invocado.  
   
 > [!NOTE]
->  O valor retornado não é definido para um delegado que tenha mais de um método na lista de invocação, mesmo que o delegado tenha um tipo de retorno.  
+> O valor retornado não é definido para um delegado que tenha mais de um método na lista de invocação, mesmo que o delegado tenha um tipo de retorno.  
   
  Em muitos casos, como acontece com métodos de retorno de chamada, um delegado representa apenas um método e as únicas ações que você precisa realizar são criar e invocar o delegado.  
   
  Para representantes que representam vários métodos, o .NET fornece métodos das classes de representante <xref:System.Delegate> e <xref:System.MulticastDelegate> para dar suporte a operações como adicionar um método à lista de invocação de um representante (o método <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), remover um método (o método <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) e obter a lista de invocação (o método <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
->  Não é necessário usar esses métodos para representantes de manipuladores de eventos em C#, C++ e Visual Basic, porque essas linguagens fornecem sintaxe para adicionar e remover manipuladores de eventos.  
+> Não é necessário usar esses métodos para representantes de manipuladores de eventos em C#, C++ e Visual Basic, porque essas linguagens fornecem sintaxe para adicionar e remover manipuladores de eventos.  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Definições de tipo  
@@ -307,7 +307,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Cada membro de tipo tem uma assinatura exclusiva. Assinaturas de método consistem no nome de método e em uma lista de parâmetros (a ordem e os tipos dos argumentos do método). Os vários métodos com o mesmo nome podem ser definidos em um tipo desde que suas assinaturas sejam diferentes. Quando dois ou mais métodos com o mesmo nome forem definidos, diz-se que o método está sobrecarregado. Por exemplo, em <xref:System.Char?displayProperty=nameWithType>, o método <xref:System.Char.IsDigit%2A> está sobrecarregado. Um método utiliza um <xref:System.Char>. O outro método utiliza um <xref:System.String> e um <xref:System.Int32>.  
   
 > [!NOTE]
->  O tipo de retorno não é considerado parte da assinatura do método. Ou seja, os métodos não poderão ser sobrecarregados se diferirem somente pelo tipo de retorno.  
+> O tipo de retorno não é considerado parte da assinatura do método. Ou seja, os métodos não poderão ser sobrecarregados se diferirem somente pelo tipo de retorno.  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>Herança, substituição e membros ocultos  
  Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses membros são definidos e disponibilizados para o tipo derivado. O comportamento, ou qualidades, de membros herdados pode ser modificado de duas maneiras:  
