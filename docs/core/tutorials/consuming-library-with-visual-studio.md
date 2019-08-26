@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362386"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660575"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Consumir uma biblioteca .NET Standard no Visual Studio 2017
 
@@ -30,7 +30,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Abra a solução `ClassLibraryProjects` criada no tópico [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Compilando uma biblioteca de classes em C# com o .NET Core no Visual Studio 2017). No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto** no menu de contexto.
 
-1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual C#** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
+1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual C#** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
 
    ![Caixa de diálogo Adicionar Novo Projeto do Visual Studio – C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
@@ -60,7 +60,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Abra a solução `ClassLibraryProjects` criada no tópico [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Compilando uma biblioteca de classes com o Visual Basic e com o .NET Core no Visual Studio 2017). No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto** no menu de contexto.
 
-1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
+1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
 
    ![Caixa de diálogo Adicionar Novo Projeto do Visual Studio – Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
@@ -93,7 +93,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 
 ## <a name="distributing-the-library-in-a-nuget-package"></a>Distribuindo a biblioteca em um pacote do NuGet
 
-Você pode fazer com que sua biblioteca de classes esteja amplamente disponível ao publicá-la como um pacote do NuGet. O Visual Studio não dá suporte à criação de pacotes do NuGet. Para criar um, use o [Utilitário de linha de comando do `dotnet`](../../core/tools/dotnet.md):
+Você pode fazer com que sua biblioteca de classes esteja amplamente disponível ao publicá-la como um pacote do NuGet. O Visual Studio não dá suporte à criação de pacotes do NuGet. Para criar um, use o [Utilitário de linha de comando do `dotnet`](../tools/dotnet.md):
 
 1. Abra uma janela de console. Por exemplo, na caixa de texto **Pergunte-me alguma coisa** na barra de tarefas do Windows, insira `Command Prompt` (ou `cmd` de forma abreviada) e abra uma janela de console selecionando o aplicativo da área de trabalho **Prompt de Comando** ou pressionando Enter se ele estiver selecionado nos resultados da pesquisa.
 
@@ -104,4 +104,4 @@ Você pode fazer com que sua biblioteca de classes esteja amplamente disponível
    > [!TIP]
    > Se o diretório que contém *dotnet.exe* não está no seu PATH, você pode encontrar seu local digitando `where dotnet.exe` na janela do console.
 
-Para obter mais informações sobre a criação de pacotes do NuGet, consulte [Como criar um pacote do NuGet com ferramentas de plataforma cruzada](../../core/deploying/creating-nuget-packages.md).
+Para obter mais informações sobre a criação de pacotes do NuGet, consulte [Como criar um pacote do NuGet com ferramentas de plataforma cruzada](../deploying/creating-nuget-packages.md).

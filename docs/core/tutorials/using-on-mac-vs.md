@@ -4,12 +4,12 @@ description: Este tópico explica como compilar um aplicativo de console simples
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 7dd8d5e8828c5337a52e9d1ea207aa5ef568556e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870540"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660498"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introdução ao .NET Core no macOS, usando o Visual Studio para Mac
 
@@ -22,7 +22,7 @@ O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Confira o tópico [Pré-requisitos para .NET Core no Mac](../../core/macos-prerequisites.md).
+Confira o tópico [Pré-requisitos para .NET Core no Mac](../macos-prerequisites.md).
 
 Verifique o guia [Suporte do .NET Core](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) para garantir que você esteja usando uma versão compatível do .NET Core.
 

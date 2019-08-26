@@ -1,14 +1,14 @@
 ---
 title: Introdução ao C# – tutoriais interativos
 description: Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento
-ms.date: 01/30/2018
+ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 580339f6724066c9fb33ee734ff35a34081e1426
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634505"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015014"
 ---
 # <a name="introduction-to-c"></a>Introdução ao C\#
 

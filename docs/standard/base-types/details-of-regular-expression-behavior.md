@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567473"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963386"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 O mecanismo de expressões regulares do .NET Framework é um correspondente de expressão regular de retrocesso que incorpora um mecanismo de NFA (Automação Finita Não Determinística) tradicional, como o usado pelo Perl, Python, Emacs e Tcl. Isso o distingue de mecanismos de DFA (Autômato finito determinístico) de expressões regulares puras mais rápidos, porém mais limitados, como os encontrados em awk, egrep ou lex. Também o distingue de NFAs POSIX padronizados, porém mais lentos. A seção a seguir descreve os três tipos de mecanismos de expressões regulares e explica por que as expressões regulares no .NET Framework são implementadas usando um mecanismo de NFA tradicional.  
@@ -31,7 +31,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
  Os mecanismos de NFA tradicionais são favorecidos por programadores porque oferecem maior controle sobre a correspondência da cadeia de caracteres do que mecanismos de DFA ou NFA POSIX. Embora, na pior das hipóteses, possam ser executados mais lentamente, você pode orientá-los para encontrar correspondências em tempo linear ou polinomial usando padrões que reduzem ambiguidades e limitam o retrocesso. Em outras palavras, apesar de os mecanismos de NFA trocarem o desempenho por força e flexibilidade, na maioria dos casos, eles oferecem um desempenho bom ou aceitável se uma expressão regular for bem escrita e evitar casos em que o retrocesso degrada o desempenho exponencialmente.  
   
 > [!NOTE]
->  Para obter informações sobre a penalidade de desempenho causada por retrocesso excessivo e maneiras de criar uma expressão regular para solucioná-lo, consulte [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Para obter informações sobre a penalidade de desempenho causada por retrocesso excessivo e maneiras de criar uma expressão regular para solucioná-lo, consulte [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="net-framework-engine-capabilities"></a>Recursos do mecanismo do .NET Framework  
  Para tirar proveito dos benefícios de um mecanismo de NFA tradicional, o mecanismo de expressões regulares do .NET Framework inclui um conjunto completo de constructos para permitir que os programadores conduzam o mecanismo de retrocesso. Tais constructos podem ser usados para encontrar correspondências mais rapidamente ou favorecer expansões específicas em detrimento de outras.  

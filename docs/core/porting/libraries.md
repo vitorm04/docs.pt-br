@@ -4,12 +4,12 @@ description: Saiba como realizar a portabilidade de projetos de biblioteca do .N
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745554"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660707"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portabilidade de bibliotecas do .NET Framework para o .NET Core
 
@@ -29,16 +29,16 @@ Você também deve se familiarizar com o conteúdo dos tópicos a seguir:
 [.NET Standard](../../standard/net-standard.md)\
 Este tópico descreve a especificação formal de APIs do .NET que devem estar disponíveis em todas as implementações do .NET.
 
-[Pacotes, metapacotes e estruturas](~/docs/core/packages.md)   
+[Pacotes, metapacotes e estruturas](../packages.md)   
 Este artigo discute como o .NET Core define e usa pacotes, e como os pacotes dão suporte ao código em execução em várias implementações do .NET.
 
-[Desenvolver bibliotecas com as ferramentas de plataforma cruzada](~/docs/core/tutorials/libraries.md)   
+[Desenvolver bibliotecas com as ferramentas de plataforma cruzada](../tutorials/libraries.md)   
 Este tópico explica como escrever bibliotecas para .NET usando ferramentas de CLI de plataforma cruzada.
 
-[Adições ao formato *csproj* para .NET Core](~/docs/core/tools/csproj.md)   
+[Adições ao formato *csproj* para .NET Core](../tools/csproj.md)   
 Este artigo descreve as alterações adicionadas aos arquivos de projeto como parte da mudança para *csproj* e o MSBuild.
 
-[Portabilidade para .NET Core – análise de suas dependências de terceiros](~/docs/core/porting/third-party-deps.md)   
+[Portabilidade para .NET Core – análise de suas dependências de terceiros](third-party-deps.md)   
 Este tópico discute a portabilidade das dependências de terceiros e o que fazer quando uma dependência de pacote do NuGet não é executada no .NET Core.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Redirecionar seu código do .NET Framework para o .NET Framework 4.7.2

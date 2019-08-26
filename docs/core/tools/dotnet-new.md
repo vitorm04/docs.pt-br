@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
 ms.date: 05/06/2019
-ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878310"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660549"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -54,7 +54,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet new` fornece uma maneira conveniente de inicializar um projeto .NET Core válido.
 
@@ -711,7 +711,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-**console, xunit, mstest, web, webapi** 
+**console, xunit, mstest, web, webapi**
 
 `-f|--framework <FRAMEWORK>` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1`. O valor padrão é `netcoreapp1.0`.
 
@@ -774,6 +774,6 @@ Crie um *global.json* no diretório atual definindo a versão do SDK como 2.0.0 
 ## <a name="see-also"></a>Consulte também
 
 - [Modelos personalizados para dotnet new](custom-templates.md)
-- [Create a custom template for dotnet new](~/docs/core/tutorials/create-custom-template.md) (Criar um modelo personalizado para dotnet new)
+- [Create a custom template for dotnet new](../tutorials/create-custom-template.md) (Criar um modelo personalizado para dotnet new)
 - [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Modelos disponíveis para dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
