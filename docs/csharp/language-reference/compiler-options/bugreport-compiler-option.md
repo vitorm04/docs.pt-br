@@ -8,53 +8,53 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587384"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603076"
 ---
-# <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="c9fa0-102">-bugreport (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="c9fa0-102">-bugreport (C# Compiler Options)</span></span>
-<span data-ttu-id="c9fa0-103">Especifica que as informações de depuração devem ser colocadas em um arquivo para análise posterior.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-103">Specifies that debug information should be placed in a file for later analysis.</span></span>  
+# <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="bb794-102">-bugreport (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="bb794-102">-bugreport (C# Compiler Options)</span></span>
+<span data-ttu-id="bb794-103">Especifica que as informações de depuração devem ser colocadas em um arquivo para análise posterior.</span><span class="sxs-lookup"><span data-stu-id="bb794-103">Specifies that debug information should be placed in a file for later analysis.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9fa0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c9fa0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb794-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bb794-104">Syntax</span></span>  
   
 ```console  
 -bugreport:file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="c9fa0-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="c9fa0-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="bb794-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="bb794-105">Arguments</span></span>  
  `file`  
- <span data-ttu-id="c9fa0-106">O nome do arquivo que conterá o relatório de bug.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-106">The name of the file that you want to contain your bug report.</span></span>  
+ <span data-ttu-id="bb794-106">O nome do arquivo que conterá o relatório de bug.</span><span class="sxs-lookup"><span data-stu-id="bb794-106">The name of the file that you want to contain your bug report.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c9fa0-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="c9fa0-107">Remarks</span></span>  
- <span data-ttu-id="c9fa0-108">A opção **-bugreport** especifica que as informações a seguir devem ser colocadas em `file`:</span><span class="sxs-lookup"><span data-stu-id="c9fa0-108">The **-bugreport** option specifies that the following information should be placed in `file`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb794-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="bb794-107">Remarks</span></span>  
+ <span data-ttu-id="bb794-108">A opção **-bugreport** especifica que as informações a seguir devem ser colocadas em `file`:</span><span class="sxs-lookup"><span data-stu-id="bb794-108">The **-bugreport** option specifies that the following information should be placed in `file`:</span></span>  
   
-- <span data-ttu-id="c9fa0-109">Uma cópia de todos os arquivos de código-fonte na compilação.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-109">A copy of all source code files in the compilation.</span></span>  
+- <span data-ttu-id="bb794-109">Uma cópia de todos os arquivos de código-fonte na compilação.</span><span class="sxs-lookup"><span data-stu-id="bb794-109">A copy of all source code files in the compilation.</span></span>  
   
-- <span data-ttu-id="c9fa0-110">Uma lista das opção do compilador usadas na compilação.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-110">A listing of the compiler options used in the compilation.</span></span>  
+- <span data-ttu-id="bb794-110">Uma lista das opção do compilador usadas na compilação.</span><span class="sxs-lookup"><span data-stu-id="bb794-110">A listing of the compiler options used in the compilation.</span></span>  
   
-- <span data-ttu-id="c9fa0-111">Informações de versão sobre o compilador, o tempo de execução e o sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-111">Version information about your compiler, run time, and operating system.</span></span>  
+- <span data-ttu-id="bb794-111">Informações de versão sobre o compilador, o tempo de execução e o sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="bb794-111">Version information about your compiler, run time, and operating system.</span></span>  
   
-- <span data-ttu-id="c9fa0-112">Assemblies e módulos referenciados, salvos como dígitos hexadecimais, exceto os assemblies que vêm com o .NET Framework e o SDK.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-112">Referenced assemblies and modules, saved as hexadecimal digits, except assemblies that ship with the .NET Framework and SDK.</span></span>  
+- <span data-ttu-id="bb794-112">Assemblies e módulos referenciados, salvos como dígitos hexadecimais, exceto os assemblies que vêm com o .NET Framework e o SDK.</span><span class="sxs-lookup"><span data-stu-id="bb794-112">Referenced assemblies and modules, saved as hexadecimal digits, except assemblies that ship with the .NET Framework and SDK.</span></span>  
   
-- <span data-ttu-id="c9fa0-113">Saída do compilador, se houver.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-113">Compiler output, if any.</span></span>  
+- <span data-ttu-id="bb794-113">Saída do compilador, se houver.</span><span class="sxs-lookup"><span data-stu-id="bb794-113">Compiler output, if any.</span></span>  
   
-- <span data-ttu-id="c9fa0-114">Uma solicitação de descrição do problema.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-114">A description of the problem, which you will be prompted for.</span></span>  
+- <span data-ttu-id="bb794-114">Uma solicitação de descrição do problema.</span><span class="sxs-lookup"><span data-stu-id="bb794-114">A description of the problem, which you will be prompted for.</span></span>  
   
-- <span data-ttu-id="c9fa0-115">Uma solicitação de como você acha que o problema deve ser corrigido.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-115">A description of how you think the problem should be fixed, which you will be prompted for.</span></span>  
+- <span data-ttu-id="bb794-115">Uma solicitação de como você acha que o problema deve ser corrigido.</span><span class="sxs-lookup"><span data-stu-id="bb794-115">A description of how you think the problem should be fixed, which you will be prompted for.</span></span>  
   
- <span data-ttu-id="c9fa0-116">Se essa opção for usada com **-errorreport:prompt** ou **-errorreport:send**, as informações no arquivo serão enviadas à Microsoft Corporation.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-116">If this option is used with **-errorreport:prompt** or **-errorreport:send**, the information in the file will be sent to Microsoft Corporation.</span></span>  
+ <span data-ttu-id="bb794-116">Se essa opção for usada com **-errorreport:prompt** ou **-errorreport:send**, as informações no arquivo serão enviadas à Microsoft Corporation.</span><span class="sxs-lookup"><span data-stu-id="bb794-116">If this option is used with **-errorreport:prompt** or **-errorreport:send**, the information in the file will be sent to Microsoft Corporation.</span></span>  
   
- <span data-ttu-id="c9fa0-117">Como uma cópia de todos os arquivos de código-fonte será colocada no `file`, talvez seja desejável reproduzir o suposto defeito do código no programa mais curto possível.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-117">Because a copy of all source code files will be placed in `file`, you might want to reproduce the suspected code defect in the shortest possible program.</span></span>  
+ <span data-ttu-id="bb794-117">Como uma cópia de todos os arquivos de código-fonte será colocada no `file`, talvez seja desejável reproduzir o suposto defeito do código no programa mais curto possível.</span><span class="sxs-lookup"><span data-stu-id="bb794-117">Because a copy of all source code files will be placed in `file`, you might want to reproduce the suspected code defect in the shortest possible program.</span></span>  
   
- <span data-ttu-id="c9fa0-118">Essa opção do compilador não está disponível no Visual Studio e não pode ser alterada programaticamente.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-118">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="bb794-118">Essa opção do compilador não está disponível no Visual Studio e não pode ser alterada programaticamente.</span><span class="sxs-lookup"><span data-stu-id="bb794-118">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
- <span data-ttu-id="c9fa0-119">Observe que os conteúdos do arquivo gerado expõem o código-fonte, o que pode resultar na divulgação acidental de informações.</span><span class="sxs-lookup"><span data-stu-id="c9fa0-119">Notice that contents of the generated file expose source code that could result in inadvertent information disclosure.</span></span>  
+ <span data-ttu-id="bb794-119">Observe que os conteúdos do arquivo gerado expõem o código-fonte, o que pode resultar na divulgação acidental de informações.</span><span class="sxs-lookup"><span data-stu-id="bb794-119">Notice that contents of the generated file expose source code that could result in inadvertent information disclosure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9fa0-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c9fa0-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bb794-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bb794-120">See also</span></span>
 
-- [<span data-ttu-id="c9fa0-121">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="c9fa0-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="c9fa0-122">-errorreport (opções do compilador do C#)</span><span class="sxs-lookup"><span data-stu-id="c9fa0-122">-errorreport (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
-- [<span data-ttu-id="c9fa0-123">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="c9fa0-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="bb794-121">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="bb794-121">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="bb794-122">-errorreport (opções do compilador do C#)</span><span class="sxs-lookup"><span data-stu-id="bb794-122">-errorreport (C# Compiler Options)</span></span>](./errorreport-compiler-option.md)
+- [<span data-ttu-id="bb794-123">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="bb794-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

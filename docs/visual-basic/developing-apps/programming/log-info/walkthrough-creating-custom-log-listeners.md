@@ -5,109 +5,109 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593325"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965268"
 ---
-# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a><span data-ttu-id="2dbf4-102">Passo a passo: Criar ouvintes de log personalizados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2dbf4-102">Walkthrough: Creating Custom Log Listeners (Visual Basic)</span></span>
-<span data-ttu-id="2dbf4-103">Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-103">This walkthrough demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.</span></span>  
+# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a><span data-ttu-id="2e931-102">Passo a passo: Criar ouvintes de log personalizados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e931-102">Walkthrough: Creating Custom Log Listeners (Visual Basic)</span></span>
+<span data-ttu-id="2e931-103">Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2e931-103">This walkthrough demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.</span></span>  
   
-## <a name="getting-started"></a><span data-ttu-id="2dbf4-104">Guia de Introdução</span><span class="sxs-lookup"><span data-stu-id="2dbf4-104">Getting Started</span></span>  
- <span data-ttu-id="2dbf4-105">Ouvintes de log devem herdar da classe <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-105">Log listeners must inherit from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
+## <a name="getting-started"></a><span data-ttu-id="2e931-104">Guia de Introdução</span><span class="sxs-lookup"><span data-stu-id="2e931-104">Getting Started</span></span>  
+ <span data-ttu-id="2e931-105">Ouvintes de log devem herdar da classe <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="2e931-105">Log listeners must inherit from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
-#### <a name="to-create-the-listener"></a><span data-ttu-id="2dbf4-106">Para criar o ouvinte</span><span class="sxs-lookup"><span data-stu-id="2dbf4-106">To create the listener</span></span>  
+#### <a name="to-create-the-listener"></a><span data-ttu-id="2e931-106">Para criar o ouvinte</span><span class="sxs-lookup"><span data-stu-id="2e931-106">To create the listener</span></span>  
   
-- <span data-ttu-id="2dbf4-107">Em seu aplicativo, crie uma classe denominada `SimpleListener` que herda de <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-107">In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.</span></span>  
+- <span data-ttu-id="2e931-107">Em seu aplicativo, crie uma classe denominada `SimpleListener` que herda de <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="2e931-107">In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
-     <span data-ttu-id="2dbf4-108">Os métodos <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A>, exigidos pela classe base, chamam `MsgBox` para exibir sua entrada.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-108">The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.</span></span>  
+     <span data-ttu-id="2e931-108">Os métodos <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A>, exigidos pela classe base, chamam `MsgBox` para exibir sua entrada.</span><span class="sxs-lookup"><span data-stu-id="2e931-108">The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.</span></span>  
   
-     <span data-ttu-id="2dbf4-109">O atributo <xref:System.Security.Permissions.HostProtectionAttribute> é aplicado aos métodos <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A> para que seus atributos coincidam com os métodos da classe base.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-109">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods.</span></span> <span data-ttu-id="2dbf4-110">O atributo <xref:System.Security.Permissions.HostProtectionAttribute> permite que o host que executa o código determine que o código expõe a sincronização de proteção de host.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-110">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.</span></span>  
+     <span data-ttu-id="2e931-109">O atributo <xref:System.Security.Permissions.HostProtectionAttribute> é aplicado aos métodos <xref:System.Diagnostics.TraceListener.Write%2A> e <xref:System.Diagnostics.TraceListener.WriteLine%2A> para que seus atributos coincidam com os métodos da classe base.</span><span class="sxs-lookup"><span data-stu-id="2e931-109">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods.</span></span> <span data-ttu-id="2e931-110">O atributo <xref:System.Security.Permissions.HostProtectionAttribute> permite que o host que executa o código determine que o código expõe a sincronização de proteção de host.</span><span class="sxs-lookup"><span data-stu-id="2e931-110">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="2dbf4-111">O atributo <xref:System.Security.Permissions.HostProtectionAttribute> é eficaz somente em aplicativos não gerenciados que hospedam o Common Language Runtime e implementam a proteção de host, como o SQL Server.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-111">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.</span></span>  
+    > <span data-ttu-id="2e931-111">O atributo <xref:System.Security.Permissions.HostProtectionAttribute> é eficaz somente em aplicativos não gerenciados que hospedam o Common Language Runtime e implementam a proteção de host, como o SQL Server.</span><span class="sxs-lookup"><span data-stu-id="2e931-111">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.</span></span>  
   
- <span data-ttu-id="2dbf4-112">Para garantir que o `My.Application.Log` use o ouvinte de log, você deve nomear fortemente o assembly que contém o ouvinte de log.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-112">To ensure that `My.Application.Log` uses your log listener, you should strongly name the assembly that contains your log listener.</span></span>  
+ <span data-ttu-id="2e931-112">Para garantir que o `My.Application.Log` use o ouvinte de log, você deve nomear fortemente o assembly que contém o ouvinte de log.</span><span class="sxs-lookup"><span data-stu-id="2e931-112">To ensure that `My.Application.Log` uses your log listener, you should strongly name the assembly that contains your log listener.</span></span>  
   
- <span data-ttu-id="2dbf4-113">O procedimento seguinte fornece algumas etapas simples para criar um assembly de ouvinte de log de nome forte.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-113">The next procedure provides some simple steps for creating a strongly named log-listener assembly.</span></span> <span data-ttu-id="2dbf4-114">Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="2dbf4-114">For more information, see [Creating and Using Strong-Named Assemblies](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).</span></span>  
+ <span data-ttu-id="2e931-113">O procedimento seguinte fornece algumas etapas simples para criar um assembly de ouvinte de log de nome forte.</span><span class="sxs-lookup"><span data-stu-id="2e931-113">The next procedure provides some simple steps for creating a strongly named log-listener assembly.</span></span> <span data-ttu-id="2e931-114">Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="2e931-114">For more information, see [Creating and Using Strong-Named Assemblies](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).</span></span>  
   
-#### <a name="to-strongly-name-the-log-listener-assembly"></a><span data-ttu-id="2dbf4-115">Para nomear fortemente o assembly de ouvinte de log</span><span class="sxs-lookup"><span data-stu-id="2dbf4-115">To strongly name the log-listener assembly</span></span>  
+#### <a name="to-strongly-name-the-log-listener-assembly"></a><span data-ttu-id="2e931-115">Para nomear fortemente o assembly de ouvinte de log</span><span class="sxs-lookup"><span data-stu-id="2e931-115">To strongly name the log-listener assembly</span></span>  
   
-1. <span data-ttu-id="2dbf4-116">Selecione um projeto no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="2dbf4-117">No menu **Projeto**, escolha **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-117">On the **Project** menu, choose **Properties**.</span></span>   
+1. <span data-ttu-id="2e931-116">Selecione um projeto no **Gerenciador de Soluções**.</span><span class="sxs-lookup"><span data-stu-id="2e931-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="2e931-117">No menu **Projeto**, escolha **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="2e931-117">On the **Project** menu, choose **Properties**.</span></span>   
   
-2. <span data-ttu-id="2dbf4-118">Clique na guia **Assinatura**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-118">Click the **Signing** tab.</span></span>  
+2. <span data-ttu-id="2e931-118">Clique na guia **Assinatura**.</span><span class="sxs-lookup"><span data-stu-id="2e931-118">Click the **Signing** tab.</span></span>  
   
-3. <span data-ttu-id="2dbf4-119">Marque a caixa **Assinar o assembly**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-119">Select the **Sign the assembly** box.</span></span>  
+3. <span data-ttu-id="2e931-119">Marque a caixa **Assinar o assembly**.</span><span class="sxs-lookup"><span data-stu-id="2e931-119">Select the **Sign the assembly** box.</span></span>  
   
-4. <span data-ttu-id="2dbf4-120">Selecione **Novo\<** da lista suspensa **Escolha um arquivo de chave de nome forte**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-120">Select **\<New>** from the **Choose a strong name key file** drop-down list.</span></span>  
+4. <span data-ttu-id="2e931-120">Selecione **Novo\<** da lista suspensa **Escolha um arquivo de chave de nome forte**.</span><span class="sxs-lookup"><span data-stu-id="2e931-120">Select **\<New>** from the **Choose a strong name key file** drop-down list.</span></span>  
   
-     <span data-ttu-id="2dbf4-121">A caixa de diálogo **Criar Chave de Nome Forte** é aberta.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-121">The **Create Strong Name Key** dialog box opens.</span></span>  
+     <span data-ttu-id="2e931-121">A caixa de diálogo **Criar Chave de Nome Forte** é aberta.</span><span class="sxs-lookup"><span data-stu-id="2e931-121">The **Create Strong Name Key** dialog box opens.</span></span>  
   
-5. <span data-ttu-id="2dbf4-122">Forneça um nome para o arquivo de chaves na caixa **Nome de arquivo de chaves**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-122">Provide a name for the key file in the **Key file name** box.</span></span>  
+5. <span data-ttu-id="2e931-122">Forneça um nome para o arquivo de chaves na caixa **Nome de arquivo de chaves**.</span><span class="sxs-lookup"><span data-stu-id="2e931-122">Provide a name for the key file in the **Key file name** box.</span></span>  
   
-6. <span data-ttu-id="2dbf4-123">Digite uma senha nas caixas **Digite a senha** e **Confirmar senha** caixas.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-123">Enter a password in the **Enter password** and **Confirm password** boxes.</span></span>  
+6. <span data-ttu-id="2e931-123">Digite uma senha nas caixas **Digite a senha** e **Confirmar senha** caixas.</span><span class="sxs-lookup"><span data-stu-id="2e931-123">Enter a password in the **Enter password** and **Confirm password** boxes.</span></span>  
   
-7. <span data-ttu-id="2dbf4-124">Clique em **OK**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-124">Click **OK**.</span></span>  
+7. <span data-ttu-id="2e931-124">Clique em **OK**.</span><span class="sxs-lookup"><span data-stu-id="2e931-124">Click **OK**.</span></span>  
   
-8. <span data-ttu-id="2dbf4-125">Recompile o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-125">Rebuild the application.</span></span>  
+8. <span data-ttu-id="2e931-125">Recompile o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="2e931-125">Rebuild the application.</span></span>  
   
-## <a name="adding-the-listener"></a><span data-ttu-id="2dbf4-126">Adicionando o ouvinte</span><span class="sxs-lookup"><span data-stu-id="2dbf4-126">Adding the Listener</span></span>  
- <span data-ttu-id="2dbf4-127">Agora que o assembly tem um nome forte, você precisa determinar o nome forte do ouvinte para que `My.Application.Log` use seu ouvinte de log.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-127">Now that the assembly has a strong name, you need to determine the strong name of the listener so that `My.Application.Log` uses your log listener.</span></span>  
+## <a name="adding-the-listener"></a><span data-ttu-id="2e931-126">Adicionando o ouvinte</span><span class="sxs-lookup"><span data-stu-id="2e931-126">Adding the Listener</span></span>  
+ <span data-ttu-id="2e931-127">Agora que o assembly tem um nome forte, você precisa determinar o nome forte do ouvinte para que `My.Application.Log` use seu ouvinte de log.</span><span class="sxs-lookup"><span data-stu-id="2e931-127">Now that the assembly has a strong name, you need to determine the strong name of the listener so that `My.Application.Log` uses your log listener.</span></span>  
   
- <span data-ttu-id="2dbf4-128">O formato de um tipo de nome forte é o seguinte.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-128">The format of a strongly named type is as follows.</span></span>  
+ <span data-ttu-id="2e931-128">O formato de um tipo de nome forte é o seguinte.</span><span class="sxs-lookup"><span data-stu-id="2e931-128">The format of a strongly named type is as follows.</span></span>  
   
- <span data-ttu-id="2dbf4-129">\<nome do tipo>, \<nome do assembly>, \<número de versão>, \<cultura>, \<nome forte></span><span class="sxs-lookup"><span data-stu-id="2dbf4-129">\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name></span></span>  
+ <span data-ttu-id="2e931-129">\<nome do tipo>, \<nome do assembly>, \<número de versão>, \<cultura>, \<nome forte></span><span class="sxs-lookup"><span data-stu-id="2e931-129">\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name></span></span>  
   
-#### <a name="to-determine-the-strong-name-of-the-listener"></a><span data-ttu-id="2dbf4-130">Para determinar o nome forte do ouvinte</span><span class="sxs-lookup"><span data-stu-id="2dbf4-130">To determine the strong name of the listener</span></span>  
+#### <a name="to-determine-the-strong-name-of-the-listener"></a><span data-ttu-id="2e931-130">Para determinar o nome forte do ouvinte</span><span class="sxs-lookup"><span data-stu-id="2e931-130">To determine the strong name of the listener</span></span>  
   
-- <span data-ttu-id="2dbf4-131">O código a seguir mostra como determinar o tipo de nome forte de `SimpleListener`.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-131">The following code shows how to determine the strongly named type name for `SimpleListener`.</span></span>  
+- <span data-ttu-id="2e931-131">O código a seguir mostra como determinar o tipo de nome forte de `SimpleListener`.</span><span class="sxs-lookup"><span data-stu-id="2e931-131">The following code shows how to determine the strongly named type name for `SimpleListener`.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
-     <span data-ttu-id="2dbf4-132">O nome forte do tipo depende de seu projeto.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-132">The strong name of the type depends on your project.</span></span>  
+     <span data-ttu-id="2e931-132">O nome forte do tipo depende de seu projeto.</span><span class="sxs-lookup"><span data-stu-id="2e931-132">The strong name of the type depends on your project.</span></span>  
   
- <span data-ttu-id="2dbf4-133">Com o nome forte, você pode adicionar o ouvinte à coleção de ouvintes de log `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-133">With the strong name, you can add the listener to the `My.Application.Log` log-listener collection.</span></span>  
+ <span data-ttu-id="2e931-133">Com o nome forte, você pode adicionar o ouvinte à coleção de ouvintes de log `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="2e931-133">With the strong name, you can add the listener to the `My.Application.Log` log-listener collection.</span></span>  
   
-#### <a name="to-add-the-listener-to-myapplicationlog"></a><span data-ttu-id="2dbf4-134">Para adicionar o ouvinte a My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="2dbf4-134">To add the listener to My.Application.Log</span></span>  
+#### <a name="to-add-the-listener-to-myapplicationlog"></a><span data-ttu-id="2e931-134">Para adicionar o ouvinte a My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="2e931-134">To add the listener to My.Application.Log</span></span>  
   
-1. <span data-ttu-id="2dbf4-135">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-135">Right-click on app.config in the **Solution Explorer** and choose **Open**.</span></span>  
+1. <span data-ttu-id="2e931-135">Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="2e931-135">Right-click on app.config in the **Solution Explorer** and choose **Open**.</span></span>  
   
-     <span data-ttu-id="2dbf4-136">- ou -</span><span class="sxs-lookup"><span data-stu-id="2dbf4-136">-or-</span></span>  
+     <span data-ttu-id="2e931-136">-ou-</span><span class="sxs-lookup"><span data-stu-id="2e931-136">-or-</span></span>  
   
-     <span data-ttu-id="2dbf4-137">Se houver um arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="2dbf4-137">If there is an app.config file:</span></span>  
+     <span data-ttu-id="2e931-137">Se houver um arquivo app.config:</span><span class="sxs-lookup"><span data-stu-id="2e931-137">If there is an app.config file:</span></span>  
   
-    1. <span data-ttu-id="2dbf4-138">No menu **Projeto**, escolha **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-138">On the **Project** menu, choose **Add New Item**.</span></span>  
+    1. <span data-ttu-id="2e931-138">No menu **Projeto**, escolha **Adicionar Novo Item**.</span><span class="sxs-lookup"><span data-stu-id="2e931-138">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2. <span data-ttu-id="2dbf4-139">Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-139">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
+    2. <span data-ttu-id="2e931-139">Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="2e931-139">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3. <span data-ttu-id="2dbf4-140">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-140">Click **Add**.</span></span>  
+    3. <span data-ttu-id="2e931-140">Clique em **Adicionar**.</span><span class="sxs-lookup"><span data-stu-id="2e931-140">Click **Add**.</span></span>  
   
-2. <span data-ttu-id="2dbf4-141">Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", localizado na seção `<sources>`.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-141">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section.</span></span> <span data-ttu-id="2dbf4-142">A seção `<sources>` está localizada na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-142">The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+2. <span data-ttu-id="2e931-141">Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", localizado na seção `<sources>`.</span><span class="sxs-lookup"><span data-stu-id="2e931-141">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section.</span></span> <span data-ttu-id="2e931-142">A seção `<sources>` está localizada na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="2e931-142">The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-3. <span data-ttu-id="2dbf4-143">Adicione esse elemento à seção `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="2dbf4-143">Add this element to the `<listeners>` section:</span></span>  
+3. <span data-ttu-id="2e931-143">Adicione esse elemento à seção `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="2e931-143">Add this element to the `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4. <span data-ttu-id="2dbf4-144">Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-144">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
+4. <span data-ttu-id="2e931-144">Localize a seção `<sharedListeners>`, na seção `<system.diagnostics>`, na seção `<configuration>` superior.</span><span class="sxs-lookup"><span data-stu-id="2e931-144">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-5. <span data-ttu-id="2dbf4-145">Adicione esse elemento a essa seção `<sharedListeners>`:</span><span class="sxs-lookup"><span data-stu-id="2dbf4-145">Add this element to that `<sharedListeners>` section:</span></span>  
+5. <span data-ttu-id="2e931-145">Adicione esse elemento a essa seção `<sharedListeners>`:</span><span class="sxs-lookup"><span data-stu-id="2e931-145">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   
-     <span data-ttu-id="2dbf4-146">Altere o valor de `SimpleLogStrongName` para ser o nome forte do ouvinte.</span><span class="sxs-lookup"><span data-stu-id="2dbf4-146">Change the value of `SimpleLogStrongName` to be the strong name of the listener.</span></span>  
+     <span data-ttu-id="2e931-146">Altere o valor de `SimpleLogStrongName` para ser o nome forte do ouvinte.</span><span class="sxs-lookup"><span data-stu-id="2e931-146">Change the value of `SimpleLogStrongName` to be the strong name of the listener.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2dbf4-147">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2dbf4-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e931-147">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2e931-147">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [<span data-ttu-id="2dbf4-148">Trabalhando com logs de aplicativo</span><span class="sxs-lookup"><span data-stu-id="2dbf4-148">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="2dbf4-149">Como: registrar exceções</span><span class="sxs-lookup"><span data-stu-id="2dbf4-149">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [<span data-ttu-id="2dbf4-150">Como: gravar mensagens de log</span><span class="sxs-lookup"><span data-stu-id="2dbf4-150">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [<span data-ttu-id="2dbf4-151">Passo a passo: alterando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="2dbf4-151">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="2e931-148">Trabalhando com logs de aplicativo</span><span class="sxs-lookup"><span data-stu-id="2e931-148">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="2e931-149">Como: registrar exceções</span><span class="sxs-lookup"><span data-stu-id="2e931-149">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [<span data-ttu-id="2e931-150">Como: gravar mensagens de log</span><span class="sxs-lookup"><span data-stu-id="2e931-150">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [<span data-ttu-id="2e931-151">Passo a passo: alterando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="2e931-151">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

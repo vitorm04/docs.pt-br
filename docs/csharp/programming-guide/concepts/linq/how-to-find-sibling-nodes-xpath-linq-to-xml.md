@@ -2,24 +2,24 @@
 title: 'Como: Localizar nós irmãos (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c64806c4505b507a9058a03d5cb882412f6868da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485396"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593406"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="4bd23-102">Como: Localizar nós irmãos (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4bd23-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="4bd23-103">Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico.</span><span class="sxs-lookup"><span data-stu-id="4bd23-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="4bd23-104">A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.</span><span class="sxs-lookup"><span data-stu-id="4bd23-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="aad38-102">Como: Localizar nós irmãos (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="aad38-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="aad38-103">Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico.</span><span class="sxs-lookup"><span data-stu-id="aad38-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="aad38-104">A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.</span><span class="sxs-lookup"><span data-stu-id="aad38-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="4bd23-105">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="4bd23-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="aad38-105">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="aad38-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="4bd23-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4bd23-106">Example</span></span>  
- <span data-ttu-id="4bd23-107">Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`.</span><span class="sxs-lookup"><span data-stu-id="4bd23-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="4bd23-108">A coleção resultante inclui o nó de contexto.</span><span class="sxs-lookup"><span data-stu-id="4bd23-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="aad38-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="aad38-106">Example</span></span>  
+ <span data-ttu-id="aad38-107">Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`.</span><span class="sxs-lookup"><span data-stu-id="aad38-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="aad38-108">A coleção resultante inclui o nó de contexto.</span><span class="sxs-lookup"><span data-stu-id="aad38-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="4bd23-109">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4bd23-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="aad38-109">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="aad38-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="4bd23-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="4bd23-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="aad38-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="aad38-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
