@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634716"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988818"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 <a name="top"></a> O mecanismo de expressões regulares no .NET é uma ferramenta poderosa e repleta de recursos que processa o texto com base em correspondências de padrões em vez de em comparar e corresponder o texto literal. Na maioria dos casos, ele realiza a correspondência de padrões de forma rápida e eficiente. No entanto, em alguns casos, o mecanismo de expressões regulares pode parecer ser muito lento. Em casos extremos, pode até mesmo parecer parar de responder enquanto processa uma entrada relativamente pequena em um período de horas ou até mesmo dias.  
@@ -54,7 +54,7 @@ ms.locfileid: "64634716"
  O último tipo de texto é particularmente problemático para uma expressão regular que foi escrita para lidar com entradas restritas. Se essa expressão regular também depender de [retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) abrangente, o mecanismo de expressões regulares poderá gastar um período fora do normal (em alguns casos, muitas horas ou dias) processando texto aparentemente inócuo.  
   
 > [!WARNING]
->  O exemplo a seguir usa uma expressão regular que é propensa a retrocesso excessivo e que pode rejeitar endereços de email válidos. Você não deve usá-lo em uma rotina de validação de email. Se você desejar uma expressão regular que valide endereços de email, veja [Como: verificar se as cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+> O exemplo a seguir usa uma expressão regular que é propensa a retrocesso excessivo e que pode rejeitar endereços de email válidos. Você não deve usá-lo em uma rotina de validação de email. Se você desejar uma expressão regular que valide endereços de email, veja [Como: verificar se as cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Por exemplo, considere uma expressão regular muito usada, mas extremamente problemática, para validar o alias de um endereço de email. A expressão regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` é escrita para processar o que é considerado um endereço de email válido, o que consiste em um caractere alfanumérico seguido por zero ou mais caracteres que podem ser alfanuméricos, pontos ou hifens. A expressão regular deve terminar com um caractere alfanumérico. No entanto, como mostra o exemplo a seguir, embora esta expressão regular manipule entradas válidas facilmente, seu desempenho é muito ineficiente ao processar uma entrada quase válida.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634716"
  No coração do modelo de objeto de expressões regulares do .NET está a classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, a qual representa o mecanismo de expressões regulares. Muitas vezes, o maior fator individual que afeta o desempenho das expressões regulares é a forma como o mecanismo <xref:System.Text.RegularExpressions.Regex> é usado. Definir uma expressão regular envolve o acoplamento vigoroso do mecanismo de expressões regulares com um padrão de expressão regular. Esse processo de acoplamento, seja envolvendo a instanciação de um objeto <xref:System.Text.RegularExpressions.Regex> ao passar para seu construtor um padrão de expressão regular ou chamando um método estático ao passar o padrão de expressão regular com a cadeia de caracteres a ser analisada, é necessariamente caro.  
   
 > [!NOTE]
->  Para obter uma discussão mais detalhada das implicações de desempenho de usar expressões regulares interpretadas e compiladas, veja [Otimizando o desempenho de expressões regulares, parte II: Assumindo o comando de recuo](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) no blog da Equipe de BCL.  
+> Para obter uma discussão mais detalhada das implicações de desempenho de usar expressões regulares interpretadas e compiladas, veja [Otimizando o desempenho de expressões regulares, parte II: Assumindo o comando de recuo](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) no blog da Equipe de BCL.  
   
  É possível acoplar o mecanismo de expressões regulares com um padrão específico de expressão regular e usar o mecanismo para fazer a correspondência com texto de várias maneiras:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634716"
  A maneira específica como você chama métodos de correspondência de expressões regulares pode ter impacto significativo em seu aplicativo. As seções a seguir abordam quando usar chamadas de métodos estáticos, expressões regulares interpretadas e expressões regulares compiladas para melhorar o desempenho do seu aplicativo.  
   
 > [!IMPORTANT]
->  A forma da chamada de método (estático, interpretada, compilada) afeta o desempenho se a mesma expressão regular é usada repetidamente em chamadas de método ou se um aplicativo faz uso extensivo de objetos de expressão regular.  
+> A forma da chamada de método (estático, interpretada, compilada) afeta o desempenho se a mesma expressão regular é usada repetidamente em chamadas de método ou se um aplicativo faz uso extensivo de objetos de expressão regular.  
   
 ### <a name="static-regular-expressions"></a>Expressões regulares estáticas  
  Os métodos de expressões regulares estáticas são recomendados como uma alternativa a criar repetidamente instâncias de um objeto de expressão regular com a mesma expressão regular. Ao contrário de padrões de expressões regulares usados por objetos de expressões regulares, os códigos de operação ou a linguagem intermediária compilada da Microsoft (MSIL) de padrões usados em chamadas de métodos são armazenados em cache internamente pelo mecanismo de expressões regulares.  
@@ -177,7 +177,7 @@ ms.locfileid: "64634716"
  Normalmente, o mecanismo de expressões regulares usa progressão linear para percorrer uma cadeia de caracteres de entrada e compará-la a uma expressão regular padrão. No entanto, quando quantificadores indefinidos, como `*`, `+` e `?` são usados em uma expressão regular padrão, o mecanismo de expressões regulares pode desistir de uma parte das correspondências parciais com êxito e retornar a um estado salvo anteriormente para procurar uma correspondência com êxito para o padrão inteiro. Esse processo é conhecido como retrocesso.  
   
 > [!NOTE]
->  Para saber mais sobre o retrocesso, confira [Detalhes do comportamento de expressões regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para uma discussão detalhada do retrocesso, veja [Otimizando o desempenho de expressões regulares, parte II: Assumindo o comando de recuo](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) no blog da Equipe de BCL.  
+> Para saber mais sobre o retrocesso, confira [Detalhes do comportamento de expressões regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para uma discussão detalhada do retrocesso, veja [Otimizando o desempenho de expressões regulares, parte II: Assumindo o comando de recuo](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) no blog da Equipe de BCL.  
   
  O suporte ao retrocesso proporciona poder e flexibilidade às expressões regulares. Ele também coloca a responsabilidade por controlar o funcionamento do mecanismo de expressões regulares nas mãos dos desenvolvedores de expressões regulares. Como os desenvolvedores geralmente não estão cientes dessa responsabilidade, o uso indevido do retrocesso ou a confiança no retrocesso excessivo geralmente exerce o papel mais significativo na degradação do desempenho da expressão regular. Em um cenário de pior caso, o tempo de execução pode dobrar para cada caractere adicional na cadeia de caracteres de entrada. Na verdade, quando o retrocesso é usado excessivamente, é fácil criar o equivalente programático de um loop infinito se a entrada quase corresponder ao padrão da expressão regular; o mecanismo de expressões regulares pode levar horas ou mesmo dias para processar uma cadeia de caracteres de entrada relativamente curta.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634716"
  Em muitos casos, o retrocesso é essencial para corresponder um padrão de expressão regular ao texto de entrada. No entanto, o retrocesso excessivo pode prejudicar severamente o desempenho e criar a impressão de que um aplicativo parou de responder. Em particular, isso acontece quando quantificadores são aninhados e o texto que corresponde à subexpressão externa é um subconjunto do texto que corresponde à subexpressão interna.  
   
 > [!WARNING]
->  Além de evitar retrocessos excessivos, você deve usar o recurso de tempo limite para garantir que retrocessos excessivos não degradem severamente o desempenho da expressão regular. Para obter mais informações, confira a seção [Usar valores de tempo limite](#Timeouts).  
+> Além de evitar retrocessos excessivos, você deve usar o recurso de tempo limite para garantir que retrocessos excessivos não degradem severamente o desempenho da expressão regular. Para obter mais informações, confira a seção [Usar valores de tempo limite](#Timeouts).  
   
  Por exemplo, o padrão de expressão regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` destina-se a corresponder a um número de peça que consiste em pelo menos um caractere alfanumérico. Todos os demais caracteres podem consistir em um caractere alfanumérico, um hífen, um sublinhado ou um ponto, embora o último caractere deva ser alfanumérico. Um cifrão termina o número da peça. Em alguns casos, esse padrão de expressão regular pode exibir um desempenho muito ruim porque os quantificadores estão aninhados e porque a subexpressão `[0-9A-Z]` é um subconjunto da subexpressão `[-.\w]*`.  
   
