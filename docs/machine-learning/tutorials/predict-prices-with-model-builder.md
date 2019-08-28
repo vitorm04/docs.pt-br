@@ -178,7 +178,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
     Console.ReadKey();
     ```
 
-    A saída gerada pelo programa deve ser semelhante ao trecho a seguir:
+    A saída gerada pelo programa deve ser semelhante ao snippet a seguir:
 
     ```bash
     Predicted Fare: 16.82245

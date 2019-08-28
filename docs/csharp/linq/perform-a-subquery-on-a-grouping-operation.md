@@ -25,7 +25,7 @@ Para obter mais informações sobre continuações, consulte [into](../language-
 
 [!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
 
-A consulta no trecho acima também pode ser escrita usando a sintaxe de método. O trecho de código a seguir tem uma consulta semanticamente equivalente escrita usando a sintaxe de método.
+A consulta no snippet acima também pode ser escrita usando a sintaxe de método. O snippet de código a seguir tem uma consulta semanticamente equivalente escrita usando a sintaxe de método.
 
 [!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
 

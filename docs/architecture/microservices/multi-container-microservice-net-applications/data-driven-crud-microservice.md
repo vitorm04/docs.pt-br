@@ -265,7 +265,7 @@ Os aplicativos precisam ser registrados no Active Directory da organização, pa
 
 Confira a *documentação Conceitos do Key Vault* para obter mais detalhes.
 
-### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implementando o controle de versão em APIs Web ASP.NET
+### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implementando o controle de versão em ASP.NET Web APIs
 
 À medida que os requisitos de negócios mudam, novas coleções de recursos podem ser adicionadas, as relações entre os recursos podem mudar e a estrutura dos dados nos recursos pode ser corrigida. Atualizar uma API Web para lidar com novos requisitos é um processo relativamente simples, mas você precisa considerar os efeitos que essas alterações causarão nos aplicativos cliente que consomem a API Web. Embora o desenvolvedor que projeta e implementa uma API Web tenha o controle total sobre essa API, ele não tem o mesmo nível de controle sobre aplicativos cliente que possam ter sido criados por organizações terceiras operando remotamente.
 
