@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963373"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -59,7 +59,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  em que *subexpression* é qualquer padrão de expressão regular válido. As capturas que usam parênteses são numeradas automaticamente, da esquerda para a direita, com base na ordem do parêntese de abertura na expressão regular, começando em um. A captura que recebe o número zero é o texto que coincide com todo o padrão da expressão regular.  
   
 > [!NOTE]
->  Por padrão, o elemento da linguagem `(`*subexpression*`)` captura a subexpressão correspondente. Porém, se o parâmetro <xref:System.Text.RegularExpressions.RegexOptions> de um padrão de expressão regular que corresponde ao método inclui o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> ou se a opção `n` é aplicada a essa subexpressão (consulte [Opções de grupo](#group_options) mais adiante neste tópico), a subexpressão coincidente não é capturada.  
+> Por padrão, o elemento da linguagem `(`*subexpression*`)` captura a subexpressão correspondente. Porém, se o parâmetro <xref:System.Text.RegularExpressions.RegexOptions> de um padrão de expressão regular que corresponde ao método inclui o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> ou se a opção `n` é aplicada a essa subexpressão (consulte [Opções de grupo](#group_options) mais adiante neste tópico), a subexpressão coincidente não é capturada.  
   
  Você pode acessar os grupos capturados de quatro formas:  
   
@@ -108,7 +108,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  em que *name* é um nome de grupo válido e *subexpression* é qualquer padrão de expressão regular válido. *name* não deve conter caracteres de pontuação nem começar com um número.  
   
 > [!NOTE]
->  Se o parâmetro <xref:System.Text.RegularExpressions.RegexOptions> de um padrão de expressão regular que corresponde ao método inclui o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> ou se a opção `n` é aplicada a essa subexpressão (consulte [Opções de grupo](#group_options) mais adiante neste tópico), a única forma de capturar uma subexpressão é atribuir nomes explícitos a grupos de captura.  
+> Se o parâmetro <xref:System.Text.RegularExpressions.RegexOptions> de um padrão de expressão regular que corresponde ao método inclui o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> ou se a opção `n` é aplicada a essa subexpressão (consulte [Opções de grupo](#group_options) mais adiante neste tópico), a única forma de capturar uma subexpressão é atribuir nomes explícitos a grupos de captura.  
   
  Você pode acessar grupos capturados nomeados destas formas:  
   
@@ -190,7 +190,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  A definição de grupo de balanceamento usa *name2* como pilha. O caractere inicial de cada construção aninhada é colocado no grupo e em sua coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Quando o caractere de fechamento passa pela correspondência, seu caractere de abertura é removido do grupo e a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A> diminui em um. Depois da correspondência dos caracteres de abertura e fechamento de todas as construções aninhadas, *name2* fica vazio.  
   
 > [!NOTE]
->  Depois de modificar a expressão regular do exemplo a seguir para usar o caractere de abertura e fechamento adequado de um constructo aninhado, você pode usá-lo para gerenciar a maioria dos constructo aninhados, como expressões matemáticas ou linhas do código do programa que incluem diversas chamadas de método aninhado.  
+> Depois de modificar a expressão regular do exemplo a seguir para usar o caractere de abertura e fechamento adequado de um constructo aninhado, você pode usá-lo para gerenciar a maioria dos constructo aninhados, como expressões matemáticas ou linhas do código do programa que incluem diversas chamadas de método aninhado.  
   
  O exemplo a seguir usa uma definição de grupo de balanceamento para estabelecer a correspondência entre os sinais de menor e maior (<>) em uma cadeia de caracteres de entrada. O exemplo define dois grupos nomeados, `Open` e `Close`, que são usados como pilha para acompanhar a correspondência entre esses sinais. Cada sinal de menor capturado é enviado para a coleção da captura do grupo `Open` e cada sinal de maior capturado é enviado para a coleção de captura do grupo `Close`. A definição do grupo de balanceamento assegura que há um sinal de maior para cada sinal de menor. Caso não haja, o subpadrão final `(?(Open)(?!))`, só será avaliado se o grupo `Open` não estiver vazio, ou seja, se todas as construções aninhadas não tiverem sido fechadas. Se o subpadrão final for avaliado, a correspondência falha, porque o subpadrão `(?!)` é uma asserção lookahead negativa de largura zero que sempre falha.  
   
@@ -211,7 +211,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |`[^<>]*`|Corresponde a zero ou mais caracteres que não são sinais de menor nem maior.|  
 |`(?'Open'<)`|Corresponde a um sinal de menor e o atribui a um grupo nomeado `Open`.|  
 |`[^<>]*`|Corresponde a zero ou mais caracteres que não são sinais de menor nem maior.|  
-|`((?'Open'<)[^<>]*) +`|Corresponde uma ou mais ocorrências de um sinal de menor, seguida por zero ou mais caracteres que não são sinais de menor ou maior. Este é o segundo grupo de captura.|  
+|`((?'Open'<)[^<>]*)+`|Corresponde uma ou mais ocorrências de um sinal de menor, seguida por zero ou mais caracteres que não são sinais de menor ou maior. Este é o segundo grupo de captura.|  
 |`(?'Close-Open'>)`|Corresponde a um sinal de maior, atribui a subcadeia de caracteres entre o grupo `Open` e o grupo atual ao grupo `Close` e exclui a definição do grupo `Open`.|  
 |`[^<>]*`|Corresponde a zero ou mais ocorrências de caracteres que não são sinais de menor ou maior.|  
 |`((?'Close-Open'>)[^<>]*)+`|Corresponde a uma ou mais ocorrências de sinal de menor seguidas por zero ou mais ocorrências de qualquer caractere que não seja um sinal de menor ou maior. Ao estabelecer a correspondência de um sinal de maior, atribua a subcadeia de caracteres entre o grupo `Open` e o grupo atual ao grupo `Close` e exclua a definição do grupo `Open`. Este é o terceiro grupo de captura.|  
@@ -234,13 +234,13 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |7|`[^<>]*`|Procura caracteres que não sejam sinais de menor e maior depois do sinal de maior e não encontra correspondências.|  
 |8|`)+`|O valor do terceiro grupo capturado é ">".<br /><br /> O próximo caractere na cadeia de caracteres de entrada não é um sinal de maior. Por isso, o mecanismo de expressão regular não volta para o subpadrão `((?'Close-Open'>)[^<>]*)`.|  
 |9|`)*`|O valor do primeiro grupo capturado é "\<abc>".<br /><br /> O próximo caractere na cadeia de caracteres de entrada é um sinal de menor. Por isso, o mecanismo de expressão regular volta para o subpadrão `(((?'Open'<)`.|  
-|10|`(((?'Open'<)`|Corresponde ao sinal de menor em "\<mno>" e o atribui ao grupo `Open`. Agora, sua coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> tem um único valor, "<".|  
+|10|`(((?'Open'<)`|Corresponde ao sinal de menor em "\<mno" e o atribui ao grupo `Open`. Agora, sua coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> tem um único valor, "<".|  
 |11|`[^<>]*`|Corresponde a "mno".|  
 |12|`)+`|"<mno" é o valor do segundo grupo capturado.<br /><br /> O próximo caractere na cadeia de caracteres de entrada é um sinal de menor. Por isso, o mecanismo de expressão regular volta para o subpadrão `(?'Open'<)[^<>]*)`.|  
-|13|`(((?'Open'<)`|Corresponde ao sinal de menor em "\<xyz>" e o atribui ao grupo `Open`. Agora, a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> do grupo `Open` inclui duas capturas: o sinal de menor de "\<mno>" e o sinal de menor de "\<xyz>".|  
+|13|`(((?'Open'<)`|Corresponde ao sinal de menor em "\<xyz>" e o atribui ao grupo `Open`. Agora, a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> do grupo `Open` inclui duas capturas: o sinal de menor de "\<mno" e o sinal de menor de "\<xyz>".|  
 |14|`[^<>]*`|Corresponde a "xyz".|  
 |15|`)+`|"<xyz" é o valor do segundo grupo capturado.<br /><br /> O próximo caractere na cadeia de caracteres de entrada não é um sinal de menor. Por isso, o mecanismo de expressão regular não volta para o subpadrão `(?'Open'<)[^<>]*)`.|  
-|16|`((?'Close-Open'>)`|Corresponde ao sinal de maior em "\<xyz>". "xyz" atribui a subcadeia de caracteres entre o grupo `Open` e o sinal de maior ao grupo `Close` e exclui o valor atual do grupo `Open`. O valor da captura anterior (ao sinal de menor em "\<mno>") torna-se o valor atual do grupo `Open`. Agora, a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A> do grupo `Open` inclui uma única captura: o sinal de menor de "\<xyz>".|  
+|16|`((?'Close-Open'>)`|Corresponde ao sinal de maior em "\<xyz>". "xyz" atribui a subcadeia de caracteres entre o grupo `Open` e o sinal de maior ao grupo `Close` e exclui o valor atual do grupo `Open`. O valor da captura anterior (o sinal de menor em "\<mno") torna-se o valor atual do grupo `Open`. Agora, a coleção <xref:System.Text.RegularExpressions.Group.Captures%2A> do grupo `Open` inclui uma única captura: o sinal de menor de "\<xyz>".|  
 |17|`[^<>]*`|Procura caracteres que não sejam sinais de menor e maior e não encontra correspondências.|  
 |18|`)+`|O valor do terceiro grupo capturado é ">".<br /><br /> O próximo caractere na cadeia de caracteres de entrada é um sinal de maior. Por isso, o mecanismo de expressão regular volta para o subpadrão `((?'Close-Open'>)[^<>]*)`.|  
 |19|`((?'Close-Open'>)`|Corresponde ao sinal de maior final de "xyz>>", atribui "mno\<xyz>" (a subcadeia de caracteres entre o grupo `Open` e o sinal de maior) ao grupo `Close` e exclui o valor atual do grupo `Open`. Agora, o grupo `Open` está vazio.|  
@@ -261,7 +261,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  em que *subexpression* é qualquer padrão de expressão regular válido. O constructo de grupo de não captura geralmente é usada quando um quantificador é aplicado a um grupo, mas as subcadeias de caracteres capturadas pelo grupo não são úteis.  
   
 > [!NOTE]
->  Se uma expressão regular inclui constructos aninhados de agrupamento, um constructo de grupo de não captura externo não se aplica às construções aninhadas internas de grupo.  
+> Se uma expressão regular inclui constructos aninhados de agrupamento, um constructo de grupo de não captura externo não se aplica às construções aninhadas internas de grupo.  
   
  O exemplo a seguir mostra uma expressão regular que inclui grupos de não captura. O resultado não inclui grupos capturados.  
   
@@ -287,7 +287,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  em que *subexpression* é qualquer padrão de expressão regular válido. Por exemplo, `(?i-s:)` ativa a diferenciação de maiúsculas e minúsculas e desabilita o modo de linha única. Para saber mais sobre as opções embutidas que você pode especificar, veja [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Você pode especificar opções que se aplicam a toda uma expressão regular, em vez de a uma subexpressão, usando um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método estático. Você também pode especificar opções embutidas que são aplicadas após um ponto específico de uma expressão regular, usando o constructo de linguagem `(?imnsx-imnsx)`.  
+> Você pode especificar opções que se aplicam a toda uma expressão regular, em vez de a uma subexpressão, usando um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método estático. Você também pode especificar opções embutidas que são aplicadas após um ponto específico de uma expressão regular, usando o constructo de linguagem `(?imnsx-imnsx)`.  
   
  O constructo de opções de grupo não é um grupo de captura. Ou seja, embora todas as porções de uma cadeia de caracteres que são capturadas pela *subexpressão* sejam incluídas na correspondência, elas não são incluídas em grupos capturados, nem usadas para preencher o objeto <xref:System.Text.RegularExpressions.GroupCollection>.  
   
@@ -396,7 +396,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a *subexpressão* não deve ocorrer na cadeia de caracteres de entrada à esquerda da posição atual. No entanto, todas as subcadeias de caracteres que não corresponderem a `subexpression`, não serão incluídas no resultado.  
   
- As asserções lookbehind negativas de largura zero geralmente são usadas no início de expressões regulares. O padrão definido por elas elimina uma correspondência na cadeia de caracteres seguinte. Elas também são usadas para limitar o retrocesso quando o último caractere de um grupo capturado não precisar ser um ou mais caracteres que corresponde ao padrão de expressão regular desse grupo. Por exemplo, se um grupo captura todos os caracteres de palavras em sequência, você pode usar uma asserção lookbehind positiva de largura zero para que o primeiro caractere não seja um sublinhado (_).  
+ As asserções lookbehind negativas de largura zero geralmente são usadas no início de expressões regulares. O padrão definido por elas elimina uma correspondência na cadeia de caracteres seguinte. Elas também são usadas para limitar o retrocesso quando o último caractere de um grupo capturado não precisar ser um ou mais caracteres que corresponde ao padrão de expressão regular desse grupo. Por exemplo, se um grupo capturar todos os caracteres de palavras em sequência, você poderá usar uma asserção lookbehind positiva de largura zero para que o primeiro caractere não seja um sublinhado (\_).  
   
  O exemplo a seguir estabelece a correspondência de data para qualquer dia da semana que não seja sábado nem domingo.  
   
@@ -459,16 +459,16 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- O padrão da expressão regular `\b(\w+)\W+)+` extrai palavras, uma a uma, da cadeia de caracteres. Ele é definido conforme mostrado na tabela a seguir.  
+ O padrão da expressão regular `(\b(\w+)\W+)+` extrai palavras, uma a uma, da cadeia de caracteres. Ele é definido conforme mostrado na tabela a seguir.  
   
 |Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Juntos, esses caracteres compõem uma palavra. Este é o segundo grupo de captura.|  
 |`\W+`|Estabeleça a correspondência com um ou mais caracteres que não compõem palavras.|  
-|`(\w+)\W+)+`|Corresponde ao padrão de um ou mais caracteres de palavra, seguido por um ou mais caracteres que não compõem palavras, uma ou mais vezes. Este é o primeiro grupo de captura.|  
+|`(\b(\w+)\W+)`|Corresponde ao padrão de um ou mais caracteres de palavra, seguido por um ou mais caracteres que não compõem palavras, uma ou mais vezes. Este é o primeiro grupo de captura.|  
   
- O primeiro grupo de captura corresponde a cada palavra da sentença. O segundo grupo de captura corresponde a cada palavras com a pontuação ou o espaço em branco que segue a palavra em questão. O objeto <xref:System.Text.RegularExpressions.Group>, cujo índice é 2, fornece informações sobre o texto correspondente ao segundo grupo de captura. O conjunto completo de palavras capturadas pelo grupo de captura está disponível no objeto <xref:System.Text.RegularExpressions.CaptureCollection>, retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
+ O segundo grupo de captura corresponde a cada palavra da frase. O primeiro grupo de captura corresponde a cada palavra com a pontuação e o espaço em branco que a segue. O objeto <xref:System.Text.RegularExpressions.Group>, cujo índice é 2, fornece informações sobre o texto correspondente ao segundo grupo de captura. O conjunto completo de palavras capturadas pelo grupo de captura está disponível no objeto <xref:System.Text.RegularExpressions.CaptureCollection>, retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

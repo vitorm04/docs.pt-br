@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922384"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -38,43 +38,43 @@ Somente a herança única é permitida em C#. Em outras palavras, uma classe pod
 |Nenhuma, implementa duas interfaces|`class ImplClass: IFace1, IFace2 { }`|
 |Única, implementa uma interface|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-Classes que você declara diretamente dentro de um namespace, não aninhadas em outras classes, podem ser [públicas](../../../csharp/language-reference/keywords/public.md) ou [internas](../../../csharp/language-reference/keywords/internal.md). As classes são `internal` por padrão.
+Classes que você declara diretamente dentro de um namespace, não aninhadas em outras classes, podem ser [públicas](./public.md) ou [internas](./internal.md). As classes são `internal` por padrão.
 
 Os membros da classe, incluindo classes aninhadas, podem ser [públicos](public.md), [internos protegidos](protected-internal.md), [protegidos](protected.md), [internos](internal.md), [privados](private.md) ou [protegidos privados](private-protected.md). Os membros são `private` por padrão.
 
-Para obter mais informações, consulte [Modificadores de Acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Para obter mais informações, consulte [Modificadores de Acesso](../../programming-guide/classes-and-structs/access-modifiers.md).
 
-É possível declarar classes genéricas que têm parâmetros de tipo. Para obter mais informações, consulte [Classes genéricas](../../../csharp/programming-guide/generics/generic-classes.md).
+É possível declarar classes genéricas que têm parâmetros de tipo. Para obter mais informações, consulte [Classes genéricas](../../programming-guide/generics/generic-classes.md).
 
 Uma classe pode conter declarações dos seguintes membros:
 
-- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Construtores](../../programming-guide/classes-and-structs/constructors.md)
 
-- [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [Constantes](../../programming-guide/classes-and-structs/constants.md)
 
-- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Campos](../../programming-guide/classes-and-structs/fields.md)
 
-- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Finalizadores](../../programming-guide/classes-and-structs/destructors.md)
 
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Métodos](../../programming-guide/classes-and-structs/methods.md)
 
-- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Propriedades](../../programming-guide/classes-and-structs/properties.md)
 
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)
+- [Indexadores](../../programming-guide/indexers/index.md)
 
-- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Operadores](../operators/index.md)
 
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Eventos](../../programming-guide/events/index.md)
 
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Delegados](../../programming-guide/delegates/index.md)
 
-- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Classes](../../programming-guide/classes-and-structs/classes.md)
 
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
+- [Interfaces](../../programming-guide/interfaces/index.md)
 
-- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Estruturas](../../programming-guide/classes-and-structs/structs.md)
 
-- [Enumerações](../../../csharp/programming-guide/enumeration-types.md)
+- [Enumerações](../../programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>Exemplo
 
@@ -94,7 +94,7 @@ Acessar membros particulares de `Child` de `Main` seria possível apenas se `Mai
 
 Tipos declarados dentro de uma classe sem um modificador de acesso têm o valor padrão de `private`, portanto, os membros de dados neste exemplo ainda seriam `private` se a palavra-chave fosse removida.
 
-Por fim, observe que, para o objeto criado usando o construtor padrão (`child3`), o campo `age` foi inicializado como zero por padrão.
+Por fim, observe que, para o objeto criado usando o construtor sem parâmetro (`child3`), o campo `age` foi inicializado como zero por padrão.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
@@ -102,7 +102,7 @@ Por fim, observe que, para o objeto criado usando o construtor padrão (`child3`
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
-- [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](./index.md)
+- [Tipos de referência](./reference-types.md)

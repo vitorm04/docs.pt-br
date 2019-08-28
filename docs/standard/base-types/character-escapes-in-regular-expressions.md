@@ -18,12 +18,12 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934827"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de caracteres em expressões regulares
 A barra invertida (\\) em uma expressão regular indica uma das situações a seguir:  
@@ -33,12 +33,12 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 - Um caractere que, caso contrário, seria interpretado como um constructo de linguagem sem escape deve ser interpretado literalmente. Por exemplo, uma chave (`{`) inicia a definição de um quantificador, mas uma barra invertida seguida por uma chave (`\{`) indica que o mecanismo de expressão regular deve corresponder à chave. Da mesma forma, uma única barra invertida marca o início de um constructo de linguagem com escape, mas duas barras invertidas (`\\`) indicam que o mecanismo de expressão regular deve corresponder à barra invertida.  
   
 > [!NOTE]
->  Escapes de caracteres são reconhecidos em padrões de expressão regulares, mas não em padrões de substituição.  
+> Escapes de caracteres são reconhecidos em padrões de expressão regulares, mas não em padrões de substituição.  
   
 ## <a name="character-escapes-in-net"></a>Escapes de caracteres em .NET  
  A tabela a seguir lista os escapes de caracteres com suporte das expressões regulares em .NET.  
   
-|Caractere ou sequência|Descrição|  
+|Caractere ou sequência|DESCRIÇÃO|  
 |---------------------------|-----------------|  
 |Todos os caracteres, exceto pelos seguintes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Caracteres diferentes dos listados na coluna **Caractere ou sequência** não têm significado especial em expressões regulares; eles correspondem a si mesmos.<br /><br /> Os caracteres incluídos na coluna **Caractere ou sequência** são elementos especiais na linguagem de expressão regular. Para que seja feita a correspondência com eles em uma expressão regular, eles devem receber um escape ou ser incluídos em um [grupo de caracteres positivo](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por exemplo, a expressão regular `\$\d+` ou `[$]\d+` corresponde a "$1200".|  
 |`\a`|Corresponde a um caractere de sino (alarme), `\u0007`.|  
@@ -49,10 +49,10 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
 |`\f`|Corresponde a um avanço de página, `\u000C`.|  
 |`\n`|Corresponde a uma nova linha, `\u000A`.|  
 |`\e`|Corresponde a um escape, `\u001B`.|  
-|`\` *nnn*|Corresponde a um caractere ASCII, em que *nnn* consiste em dois ou três dígitos que representam o código de caracteres octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)).|  
+|`\` *nnn*|Corresponde a um caractere ASCII, em que *nnn* é composto por dois ou três dígitos que representam o código de caractere octal. Por exemplo, `\040` representa um caractere de espaço. Esse constructo é interpretado como referência inversa se tiver apenas um dígito (por exemplo, `\2`) ou se corresponder ao número de um grupo de captura. (Confira [Constructos de referência inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Corresponde a um caractere ASCII, em que *nn* é um código de caractere hexadecimal com dois dígitos.|  
 |`\c` *X*|Corresponde a um caractere de controle ASCII, em que X é a letra do caractere de controle. Por exemplo, `\cC` é CTRL-C.|  
-|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O .NET não dá suporte para o caractere de escape Perl 5 que é usado para especificar Unicode. O caractere de escape Perl 5 tem o formato `\x{`*####*`…}`, em que *####*`…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
+|`\u` *nnnn*|Corresponde a uma unidade de código UTF-16 cujo valor é *nnnn* hexadecimal. **Observação:**  O .NET não dá suporte para o caractere de escape Perl 5 que é usado para especificar Unicode. O caractere de escape Perl 5 tem o formato `\x{` *####* `…}`, em que *####* `…` é uma série de dígitos hexadecimais. Em vez disso, use `\u`*nnnn*.|  
 |`\`|Quando seguido por um caractere que não é reconhecido como um caractere com escape, corresponde a esse caractere. Por exemplo, `\*` corresponde a um asterisco (*) e é igual a `\x2A`.|  
   
 ## <a name="an-example"></a>Um Exemplo  
@@ -63,7 +63,7 @@ A barra invertida (\\) em uma expressão regular indica uma das situações a se
   
  A expressão regular `\G(.+)[\t|\u007c](.+)\r?\n` é interpretada conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\G`|Inicia a correspondência onde a última correspondência terminou.|  
 |`(.+)`|Corresponde qualquer caractere uma ou mais vezes. Este é o primeiro grupo de captura.|  

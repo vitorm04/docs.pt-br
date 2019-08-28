@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378461"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958002"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Gerador de Arquivo de Recurso)
 O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt ou .restext) e arquivos de recurso com base em XML (.resx) em arquivos binários do Common Language Runtime (.resources) que podem ser inseridos em um executável binário do tempo de execução ou em um assembly satélite. (Consulte [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Parâmetro ou opção|Descrição|  
+|Parâmetro ou opção|DESCRIÇÃO|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Do .NET Framework 4.5 em diante, dá suporte à compilação condicional em arquivos de recurso com base em texto (.txt ou .restext). Se *symbol* corresponder a um símbolo incluído no arquivo de texto de entrada dentro de um constructo `#ifdef`, o recurso da cadeia de caracteres associado estará incluído no arquivo .resources. Se o arquivo de texto de entrada incluir uma declaração `#if !` com um símbolo não definido pela opção `/define`, o recurso da cadeia de caracteres associado será incluído no arquivo de recursos.<br /><br /> `/define` será ignorado se for usado com arquivos que não sejam de texto. Os símbolos diferenciam maiúsculas de minúsculas.<br /><br /> Para obter mais informações sobre essa opção, consulte [Compilando Recursos Condicionalmente](#Conditional) mais à frente neste tópico.|  
 |`useSourcePath`|Especifica que o diretório atual do arquivo de entrada deve ser usado para resolver caminhos de arquivo relativos.|  
@@ -90,7 +90,7 @@ resgen filename.extension [outputDirectory]
  Os arquivos de texto (.txt ou .restext) só podem conter recursos de cadeia de caracteres. Os recursos de cadeia de caracteres serão úteis se você estiver gravando um aplicativo que deve ter cadeias de caracteres convertidas em várias linguagens. Por exemplo, é possível regionalizar facilmente cadeias de caracteres de menu usando o recurso de cadeia de caracteres apropriado. Resgen.exe lê arquivos de texto que contêm pares de nome/valor, em que o nome é uma cadeia de caracteres que descreve o recurso e o valor é a própria cadeia de caracteres de recursos.  
   
 > [!NOTE]
->  Para obter informações sobre o formato de arquivos .txt e .restext, consulte a seção "Recursos em arquivos de texto" de [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+> Para obter informações sobre o formato de arquivos .txt e .restext, consulte a seção "Recursos em arquivos de texto" de [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  Um arquivo de texto que contém recursos deve ser salvo com codificação UTF-8 ou Unicode (UTF-16), a menos que ele contenha apenas caracteres no intervalo Latim Básico (para U+007F). Resgen.exe remove caracteres ANSI estendidos ao processar um arquivo de texto salvo usando a codificação ANSI.  
   
@@ -220,7 +220,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
  Se estiver desenvolvendo um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], você poderá usar recursos de um aplicativo da área de trabalho existente. No entanto, os dois tipos de aplicativos dão suporte a formatos de arquivo diferentes. Em aplicativos da área de trabalho, recursos em arquivos de texto (.txt ou .restext) ou .resx são compilados em arquivos .resources binários. Em aplicativos do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], os arquivos .resw são compilados em arquivo de índice de recurso do pacote (PRI) binários. É possível usar Resgen.exe para preencher essa lacuna extraindo-se recursos de um executável ou de um assembly satélite e gravando-os em um ou mais arquivos .resw que podem ser usados durante o desenvolvimento de um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 > [!IMPORTANT]
->  O Visual Studio identifica automaticamente todas as conversões necessárias à incorporação dos recursos em uma biblioteca portátil em um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. O uso de Resgen.exe para converter diretamente os recursos em um assembly em formato de arquivo .resw é de interesse apenas dos desenvolvedores que queiram desenvolver um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] fora do Visual Studio.  
+> O Visual Studio identifica automaticamente todas as conversões necessárias à incorporação dos recursos em uma biblioteca portátil em um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. O uso de Resgen.exe para converter diretamente os recursos em um assembly em formato de arquivo .resw é de interesse apenas dos desenvolvedores que queiram desenvolver um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] fora do Visual Studio.  
   
  A sintaxe para gerar arquivos .resw com base em um assembly é:  
   
@@ -302,7 +302,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *classname*  
  O nome da classe de recurso fortemente tipado. Isso deve corresponder ao nome da raiz do arquivo .resources. Por exemplo, se Resgen.exe gerar um arquivo .resources chamado MyCompany.Libraries.Strings.resources, o nome da classe de recurso fortemente tipado será Strings. Se *classname* for omitido, a classe gerada será derivada do nome da raiz de `outputFilename`. Se `outputFilename` for omitido, a classe gerada será derivada do nome da raiz de `inputFilename`.  
   
- *classname* não pode conter caracteres inválidos como espaços inseridos. Se *classname* contiver espaços inseridos ou se *classname* for gerado por padrão com base em *inputFilename* e *inputFilename* contiver espaços inseridos, Resgen.exe substituirá todos os caracteres inválidos por um sublinhado (_).  
+ *classname* não pode conter caracteres inválidos como espaços inseridos. Se *classname* contiver espaços inseridos ou se *classname* for gerado por padrão com base em *inputFilename* e *inputFilename* contiver espaços inseridos, Resgen.exe substituirá todos os caracteres inválidos por um sublinhado (\_).  
   
  *filename*  
  O nome do arquivo de classe.  
@@ -311,7 +311,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  Torna pública a classe de recurso fortemente tipada em vez de `internal` (no C#) ou `Friend` (no Visual Basic). Isso permite que os recursos sejam acessados fora do assembly no qual estão inseridos.  
   
 > [!IMPORTANT]
->  Quando você cria uma classe de recurso fortemente tipada, o nome do arquivo .resources deve corresponder ao namespace e ao nome da classe do código gerado. No entanto, Resgen.exe permite especificar opções que produzam um arquivo .resources que tenha um nome incompatível. Para contornar esse comportamento, renomeie o arquivo de saída depois de ter sido gerado.  
+> Quando você cria uma classe de recurso fortemente tipada, o nome do arquivo .resources deve corresponder ao namespace e ao nome da classe do código gerado. No entanto, Resgen.exe permite especificar opções que produzam um arquivo .resources que tenha um nome incompatível. Para contornar esse comportamento, renomeie o arquivo de saída depois de ter sido gerado.  
   
  A classe de recurso fortemente tipada tem os seguintes membros:  
   

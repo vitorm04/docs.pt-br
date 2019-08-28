@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916030"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Notas de implementação de suporte do tipo XML
 Este tópico descreve alguns detalhes de implementação de que você deseja estar ciente.  
@@ -34,7 +34,7 @@ Este tópico descreve alguns detalhes de implementação de que você deseja est
   
  A classe de <xref:System.TimeSpan> não suporta este pedido parcial. Em vez disso, escolher um número específico de dias para 1 e 1 ano mês; 365 dias e 30 dias respectivamente.  
   
- Para obter mais informações sobre o tipo `xs:duration`, confira a Parte 2 do [Esquema XML do W3C: recomendação de tipos de dados](https://www.w3.org/TR/xmlschema-2/).
+ Para saber mais sobre o tipo `xs:duration`, confira a Parte 2 do [Esquema XML do W3C: recomendação de tipos de dados](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, tipos gregorianos de data, e System.DateTime  
  Quando um valor de `xs:time` é mapeado para um objeto de <xref:System.DateTime> , o campo de <xref:System.DateTime.MinValue> é usado para inicializar propriedades de data do objeto de <xref:System.DateTime> (como <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>) para o valor possível com o menor de <xref:System.DateTime> .  
@@ -42,7 +42,7 @@ Este tópico descreve alguns detalhes de implementação de que você deseja est
  Da mesma forma, as instâncias de `xs:gMonth`, `xs:gDay`, `xs:gYear`, `xs:gYearMonth` e `xs:gMonthDay` também são mapeados para um objeto de <xref:System.DateTime> . As propriedades não usado no objeto de <xref:System.DateTime> são inicializadas àquelas de <xref:System.DateTime.MinValue>.  
   
 > [!NOTE]
->  Você não pode depender no valor de <xref:System.DateTime.Year%2A?displayProperty=nameWithType> quando o conteúdo está digitado como `xs:gMonthDay`. O valor de <xref:System.DateTime.Year%2A?displayProperty=nameWithType> é sempre definido como 1904 nesse caso.  
+> Você não pode depender no valor de <xref:System.DateTime.Year%2A?displayProperty=nameWithType> quando o conteúdo está digitado como `xs:gMonthDay`. O valor de <xref:System.DateTime.Year%2A?displayProperty=nameWithType> é sempre definido como 1904 nesse caso.  
   
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI e System.Uri  
  Quando uma instância de `xs:anyURI` que representa o URL relativa é mapeada a <xref:System.Uri>, o objeto de <xref:System.Uri> não tem URI base.  

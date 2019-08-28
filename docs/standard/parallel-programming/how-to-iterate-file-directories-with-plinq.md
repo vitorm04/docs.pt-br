@@ -1,5 +1,5 @@
 ---
-title: 'Como: Fazer iterações de diretórios de arquivos com PLINQ'
+title: 'Como: iterar diretórios de arquivos com PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3f80f1903c4187a8da93d42ec6de363d097bcc37
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45689321"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988174"
 ---
-# <a name="how-to-iterate-file-directories-with-plinq"></a>Como: Fazer iterações de diretórios de arquivos com PLINQ
+# <a name="how-to-iterate-file-directories-with-plinq"></a>Como: iterar diretórios de arquivos com PLINQ
 Este exemplo mostra duas maneiras simples de paralelizar operações em diretórios de arquivos. A primeira consulta usa o método <xref:System.IO.Directory.GetFiles%2A> para preencher uma matriz de nomes de arquivo em um diretório e em todos os subdiretórios. Este método não retorna até que toda a matriz esteja preenchida e, portanto, pode apresentar latência no início da operação. No entanto, após o preenchimento da matriz, PLINQ pode processá-la em paralelo rapidamente.  
   
  A segunda consulta usa métodos <xref:System.IO.Directory.EnumerateDirectories%2A> e <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> estáticos que começam a retornar os resultados imediatamente. Essa abordagem pode ser mais rápida quando você estiver iterando em árvores de diretório grandes, embora o tempo de processamento em comparação o primeiro exemplo possa depender de vários fatores.  
   
 > [!WARNING]
->  Esses exemplos têm como objetivo demonstrar o uso, e talvez não executem tão rápido quanto a consulta LINQ to Objects sequencial equivalente. Para saber mais sobre agilização, confira [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Esses exemplos têm como objetivo demonstrar o uso, e talvez não executem tão rápido quanto a consulta LINQ to Objects sequencial equivalente. Para saber mais sobre agilização, confira [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como iterar nos diretórios de arquivos em cenários simples, quando você tem acesso a todos os diretórios na árvore, os tamanhos de arquivos não são muito grandes e os tempos de acesso não são consideráveis. Essa abordagem envolve um período de latência no início, enquanto a matriz de nomes de arquivo está sendo construída.  
