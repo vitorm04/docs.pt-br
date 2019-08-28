@@ -2,44 +2,44 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 815f6917413afebc71f0ec6e1c81eb1de14547a4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876797"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044923"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para o gerenciamento de sessão. Esse canal permite a comunicação entre serviços Windows Communication Foundation (WCF) e os clientes do ASMX ou entre clientes do WCF e serviços ASMX.  
+Este exemplo demonstra como criar um canal de protocolo personalizado para usar cookies HTTP para gerenciamento de sessão. Esse canal permite a comunicação entre os serviços de Windows Communication Foundation (WCF) e os clientes ASMX ou entre clientes WCF e serviços ASMX.  
   
- Quando um cliente chama um método Web em um Web service ASMX que é baseada em sessão, o mecanismo do ASP.NET faz o seguinte:  
+ Quando um cliente chama um método Web em um serviço Web ASMX baseado em sessão, o mecanismo ASP.NET faz o seguinte:  
   
 - Gera uma ID exclusiva (ID de sessão).  
   
-- Gera o objeto de sessão e a associa a ID exclusiva.  
+- Gera o objeto de sessão e o associa com a ID exclusiva.  
   
-- Adiciona a ID exclusiva para um cabeçalho de resposta HTTP Set-Cookie e o envia ao cliente.  
+- Adiciona a ID exclusiva a um cabeçalho de resposta HTTP Set-cookie e a envia ao cliente.  
   
-- Identifica o cliente em chamadas subsequentes com base na ID de sessão envia a ele.  
+- Identifica o cliente em chamadas subsequentes com base na ID de sessão que ele envia a ele.  
   
- O cliente inclui a ID de sessão em suas solicitações subsequentes para o servidor. O servidor usa a ID de sessão do cliente para carregar o objeto de sessão apropriado para o contexto HTTP atual.  
+ O cliente inclui essa ID de sessão em suas solicitações subsequentes para o servidor. O servidor usa a ID de sessão do cliente para carregar o objeto de sessão apropriado para o contexto HTTP atual.  
   
 > [!IMPORTANT]
->  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+> Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
-## <a name="httpcookiesession-channel-message-exchange-pattern"></a>Padrão de troca de mensagem de canal HttpCookieSession  
- Este exemplo permite que as sessões para cenários semelhantes ASMX. Na parte inferior da nossa pilha de canais, temos o transporte HTTP que dá suporte a <xref:System.ServiceModel.Channels.IRequestChannel> e <xref:System.ServiceModel.Channels.IReplyChannel>. É o trabalho do canal para fornecer sessões para os níveis mais altos da pilha de canais. O exemplo implementa dois canais, (<xref:System.ServiceModel.Channels.IRequestSessionChannel> e <xref:System.ServiceModel.Channels.IReplySessionChannel>) que dão suporte a sessões.  
+## <a name="httpcookiesession-channel-message-exchange-pattern"></a>Padrão de troca de mensagens do canal HttpCookieSession  
+ Este exemplo habilita sessões para cenários semelhantes a ASMX. Na parte inferior da pilha do canal, temos o transporte HTTP que dá suporte <xref:System.ServiceModel.Channels.IRequestChannel> a <xref:System.ServiceModel.Channels.IReplyChannel>e. É o trabalho do canal para fornecer sessões para os níveis mais altos da pilha de canais. O exemplo implementa dois canais (<xref:System.ServiceModel.Channels.IRequestSessionChannel> e <xref:System.ServiceModel.Channels.IReplySessionChannel>) que dão suporte a sessões.  
   
 ## <a name="service-channel"></a>Canal de serviço  
- O exemplo fornece um canal de serviço no `HttpCookieReplySessionChannelListener` classe. Essa classe implementa a <xref:System.ServiceModel.Channels.IChannelListener> interface e converte os <xref:System.ServiceModel.Channels.IReplyChannel> canal da menor na pilha de canais para um <xref:System.ServiceModel.Channels.IReplySessionChannel>. Esse processo pode ser dividido nas seguintes partes:  
+ O exemplo fornece um canal de serviço na `HttpCookieReplySessionChannelListener` classe. Essa classe implementa a <xref:System.ServiceModel.Channels.IChannelListener> interface e converte o <xref:System.ServiceModel.Channels.IReplyChannel> canal de baixo na pilha de canais para um <xref:System.ServiceModel.Channels.IReplySessionChannel>. Esse processo pode ser dividido nas seguintes partes:  
   
-- Quando o ouvinte de canais é aberto, ele aceita um canal interno de seu ouvinte interno. Como o ouvinte interno é um ouvinte de datagrama e o tempo de vida de um canal aceito é dissociado do tempo de vida do ouvinte, podemos fechar o ouvinte interno e apenas manter o canal interno  
+- Quando o ouvinte de canal é aberto, ele aceita um canal interno de seu ouvinte interno. Como o ouvinte interno é um ouvinte de datagrama e o tempo de vida de um canal aceito é dissociado do tempo de vida do ouvinte, podemos fechar o ouvinte interno e manter apenas o canal interno  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
-- Quando o processo de abertura é concluída, configuramos um loop de mensagem para receber mensagens do canal interno.  
+- Quando o processo aberto é concluído, configuramos um loop de mensagem para receber mensagens do canal interno.  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,29 +63,29 @@ Este exemplo demonstra como criar um canal de protocolo personalizado para usar 
     }  
     ```  
   
-- Quando uma mensagem chega, o canal de serviço examina o identificador de sessão e desprovisionar multiplexa as para o canal de sessão apropriado. O ouvinte de canais mantém um dicionário que mapeia os identificadores de sessão para as instâncias de canal de sessão.  
+- Quando uma mensagem chega, o canal de serviço examina o identificador de sessão e os demultiplexs para o canal de sessão apropriado. O ouvinte de canal mantém um dicionário que mapeia os identificadores de sessão para as instâncias de canal de sessão.  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- O `HttpCookieReplySessionChannel` classe implementa <xref:System.ServiceModel.Channels.IReplySessionChannel>. Chamada de pilha de níveis superiores do canal a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> método para solicitações de leitura para esta sessão. Cada canal de sessão tem uma fila de mensagens particular que é preenchida pelo canal de serviço.  
+ A `HttpCookieReplySessionChannel` classe implementa <xref:System.ServiceModel.Channels.IReplySessionChannel>. Níveis mais altos da pilha de canal chamam <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> o método para ler solicitações para esta sessão. Cada canal de sessão tem uma fila de mensagens privada que é populada pelo canal de serviço.  
   
 ```  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- No caso de quando alguém chama o <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> método e não existem mensagens na fila de mensagens, o canal espera por um período especificado de tempo antes de desligar em si. Isso limpa os canais de sessão criados para clientes não WCF.  
+ No caso em que alguém chama o <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> método e não há mensagens na fila de mensagens, o canal aguarda um período de tempo especificado antes de desligá-lo. Isso limpa os canais de sessão criados para clientes não WCF.  
   
- Podemos usar o `channelMapping` para acompanhar o `ReplySessionChannels`, e não vamos fechar nosso subjacente `innerChannel` até que todos os canais aceitos foram fechados. Dessa maneira `HttpCookieReplySessionChannel` podem existir além do tempo de vida de `HttpCookieReplySessionChannelListener`. Nós também não precisa se preocupar sobre o ouvinte do lixo coletado sob nós, porque os canais aceitos manter uma referência ao seu ouvinte por meio de Introdução a `OnClosed` retorno de chamada.  
+ Usamos o `channelMapping` para acompanhar o `ReplySessionChannels`e não fechamos nosso subjacente `innerChannel` até que todos os canais aceitos tenham sido fechados. Dessa forma `HttpCookieReplySessionChannel` , pode existir além do tempo `HttpCookieReplySessionChannelListener`de vida de. Também não precisamos nos preocupar com o ouvinte que está recebendo o lixo para baixo, pois os canais aceitos mantêm uma referência ao ouvinte por meio do retorno de `OnClosed` chamada.  
   
-## <a name="client-channel"></a>Canal do cliente  
- O canal do cliente correspondente está no `HttpCookieSessionChannelFactory` classe. Durante a criação do canal, a fábrica de canais encapsula o canal de solicitação interna com um `HttpCookieRequestSessionChannel`. O `HttpCookieRequestSessionChannel` classe encaminha as chamadas para o canal de solicitação subjacente. Quando o cliente fecha o proxy, `HttpCookieRequestSessionChannel` envia uma mensagem para o serviço que indica que o canal está sendo fechado. Portanto, a pilha de canais de serviço normalmente pode encerrar o canal de sessão que está em uso.  
+## <a name="client-channel"></a>Canal de cliente  
+ O canal do cliente correspondente está na `HttpCookieSessionChannelFactory` classe. Durante a criação do canal, a fábrica de canais encapsula o canal de solicitação `HttpCookieRequestSessionChannel`interno com um. A `HttpCookieRequestSessionChannel` classe encaminha as chamadas para o canal de solicitação subjacente. Quando o cliente fecha o proxy, `HttpCookieRequestSessionChannel` o envia uma mensagem para o serviço que indica que o canal está sendo fechado. Assim, a pilha de canais de serviço pode desligar normalmente o canal de sessão que está em uso.  
   
-## <a name="binding-and-binding-element"></a>Associação e o elemento de associação  
- Depois de criar os canais de cliente e de serviço, a próxima etapa é integrá-los ao runtime do WCF. Canais são expostos para o WCF por meio de associações e elementos de associação. Uma associação consiste em um ou vários elementos de associação. O WCF oferece várias associações definidas pelo sistema; Por exemplo, BasicHttpBinding ou WSHttpBinding. O `HttpCookieSessionBindingElement` classe contém a implementação para o elemento de associação. Ele substitui o ouvinte de canais e os métodos de criação de fábrica de canal para fazer o canal necessário instanciações de fábrica de ouvinte ou de canal.  
+## <a name="binding-and-binding-element"></a>Elemento Binding e Binding  
+ Depois de criar os canais de serviço e cliente, a próxima etapa é integrá-los ao tempo de execução do WCF. Os canais são expostos ao WCF por meio de associações e elementos de associação. Uma associação consiste em um ou vários elementos de associação. O WCF oferece várias associações definidas pelo sistema; por exemplo, BasicHttpBinding ou WSHttpBinding. A `HttpCookieSessionBindingElement` classe contém a implementação para o elemento de associação. Ele substitui o ouvinte do canal e os métodos de criação de fábrica de canal para fazer as instanciações necessárias do canal ou do ouvinte de canal.  
   
- O exemplo usa as declarações de política para a descrição do serviço. Isso permite que o exemplo publicar seus requisitos de canal para outros clientes que podem consumir o serviço. Por exemplo, este elemento de associação publica as declarações de política para permitir que clientes potenciais sabe que ele oferece suporte a sessões. Como o exemplo permite que o `ExchangeTerminateMessage` propriedade na configuração do elemento de associação, ele adiciona as declarações necessárias para mostrar que o serviço oferece suporte a uma ação de troca extras de mensagem para encerrar a conversa de sessão. Os clientes podem, em seguida, usar essa ação. O código WSDL a seguir mostra as declarações de política criadas a partir de `HttpCookieSessionBindingElement`.  
+ O exemplo usa declarações de política para a descrição do serviço. Isso permite que o exemplo publique seus requisitos de canal para outros clientes que podem consumir o serviço. Por exemplo, esse elemento de associação publica declarações de política para permitir que clientes potenciais saibam que ele dá suporte a sessões. Como o exemplo habilita a `ExchangeTerminateMessage` Propriedade na configuração do elemento de associação, ele adiciona as declarações necessárias para mostrar que o serviço dá suporte a uma ação de troca de mensagens extra para encerrar a conversa da sessão. Os clientes podem usar essa ação. O código WSDL a seguir mostra as declarações de política criadas a `HttpCookieSessionBindingElement`partir do.  
   
 ```xml  
 <wsp:Policy wsu:Id="HttpCookieSessionBinding_IWcfCookieSessionService_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
@@ -98,13 +98,13 @@ InputQueue<RequestContext> requestQueue;
 </wsp:Policy>  
 ```  
   
- O `HttpCookieSessionBinding` classe é uma associação fornecida pelo sistema que usa o elemento de associação descrito anteriormente.  
+ A `HttpCookieSessionBinding` classe é uma associação fornecida pelo sistema que usa o elemento de associação descrito anteriormente.  
   
-## <a name="adding-the-channel-to-the-configuration-system"></a>Adicionando o canal para o sistema de configuração  
- O exemplo fornece duas classes que expõem o canal de exemplo por meio da configuração. A primeira é uma <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> para o `HttpCookieSessionBindingElement`. A maior parte da implementação é delegada para o `HttpCookieSessionBindingConfigurationElement`, que é derivada de <xref:System.ServiceModel.Configuration.StandardBindingElement>. O `HttpCookieSessionBindingConfigurationElement` tem propriedades que correspondem às propriedades no `HttpCookieSessionBindingElement`.  
+## <a name="adding-the-channel-to-the-configuration-system"></a>Adicionando o canal ao sistema de configuração  
+ O exemplo fornece duas classes que expõem o canal de exemplo por meio da configuração. O primeiro é um <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> para o `HttpCookieSessionBindingElement`. A maior parte da implementação é delegada para o `HttpCookieSessionBindingConfigurationElement`, que deriva de. <xref:System.ServiceModel.Configuration.StandardBindingElement> O `HttpCookieSessionBindingConfigurationElement` tem propriedades que correspondem às propriedades em `HttpCookieSessionBindingElement`.  
   
-### <a name="binding-element-extension-section"></a>Seção de extensão de elemento de associação  
- A seção `HttpCookieSessionBindingElementSection` é um <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> que expõe `HttpCookieSessionBindingElement` ao sistema de configuração. Com algumas substituições, o nome da seção de configuração, o tipo do elemento de associação e como criar o elemento de associação são definidos. Em seguida, podemos pode registrar a seção de extensão em um arquivo de configuração da seguinte maneira:  
+### <a name="binding-element-extension-section"></a>Seção de extensão do elemento de associação  
+ A seção `HttpCookieSessionBindingElementSection` é um <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> que expõe `HttpCookieSessionBindingElement` para o sistema de configuração. Com algumas substituições do nome da seção de configuração, o tipo do elemento de associação e como criar o elemento de associação são definidos. Em seguida, podemos registrar a seção de extensão em um arquivo de configuração da seguinte maneira:  
   
 ```xml  
 <configuration>        
@@ -133,9 +133,9 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Código de teste  
- Código de teste para usar esse transporte de exemplo está disponível nos diretórios de cliente e serviço. Ele consiste em dois testes — um teste usa uma associação com `allowCookies` definido como `true` no cliente. O segundo teste permite que o desligamento explícito (usando a troca de mensagens terminate) na associação.  
+ O código de teste para usar esse transporte de exemplo está disponível nos diretórios de cliente e serviço. Ele consiste em dois testes: um teste usa uma associação com `allowCookies` definido como `true` no cliente. O segundo teste habilita o desligamento explícito (usando a troca de mensagens de encerramento) na associação.  
   
- Quando você executar o exemplo, você verá a seguinte saída:  
+ Ao executar o exemplo, você deverá ver a seguinte saída:  
   
 ```  
 Simple binding:  
@@ -158,14 +158,14 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Instale usando o seguinte comando do ASP.NET 4.0.  
+1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  

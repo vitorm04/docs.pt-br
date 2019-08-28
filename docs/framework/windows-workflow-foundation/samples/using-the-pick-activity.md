@@ -2,12 +2,12 @@
 title: Usando a atividade de picareta
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 50946571c1ca3b3fb66d7da11e402f61739c9962
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637772"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037874"
 ---
 # <a name="using-the-pick-activity"></a>Usando a atividade de picareta
 Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statements.Pick> .
@@ -22,33 +22,33 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 ## <a name="discussion"></a>Discussão
  O exemplo inclui um fluxo de trabalho do designer e fluxo de trabalho codificado.
 
- Versão de designer o Designer de fluxo de trabalho de exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
+ Fluxo de trabalho do designer a versão do designer do exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
-- Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
+- Program.cs: Inclui a `Main` função que executa o fluxo de trabalho de exemplo.
 
-- ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
+- ReadString.cs: Uma atividade personalizada que lê algumas entradas do console.
 
-- Sequence1.xaml: Um fluxo de trabalho criado usando o designer que usa a picareta.
+- Sequence1. XAML: Um fluxo de trabalho criado usando o designer que usa escolher.
 
- O fluxo de trabalho codificado a versão codificado de exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
+ Fluxo de trabalho codificado a versão codificada do exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
-- Program.cs : Inclui o `Main` função que executa o fluxo de trabalho de exemplo.
+- Program.cs: Inclui a `Main` função que executa o fluxo de trabalho de exemplo.
 
-- ReadString.cs: Uma atividade personalizado que lê algumas entradas do console.
+- ReadString.cs: Uma atividade personalizada que lê algumas entradas do console.
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1. Usando o Visual Studio 2010, abra o arquivo de solução de Pick.
+1. Usando o Visual Studio 2010, abra o arquivo de solução escolher. sln.
 
 2. Para criar a solução, pressione CTRL+SHIFT+B.
 
 3. Para executar a solução, pressione F5.
 
 > [!IMPORTANT]
->  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+> Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

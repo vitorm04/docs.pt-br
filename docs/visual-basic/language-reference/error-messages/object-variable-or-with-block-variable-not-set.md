@@ -4,51 +4,51 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07c215d373e4ac1cbadf82a48b8cb3d90efdbdb4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750682"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040552"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Variável de objeto ou variável com bloco não definida
-Uma variável de objeto inválido está sendo referenciada.   Esse erro pode ocorrer por várias razões:
+Uma variável de objeto inválida está sendo referenciada.   Esse erro pode ocorrer por várias razões:
 
-- Uma variável foi declarada sem especificar um tipo. Se uma variável é declarada sem especificar um tipo, ele assume como padrão para o tipo `Object`.
+- Uma variável foi declarada sem especificar um tipo. Se uma variável for declarada sem especificar um tipo, o padrão será `Object`Type.
 
-    Por exemplo, uma variável declarada com `Dim x` seria do tipo `Object;` uma variável declarada com `Dim x As String` seria do tipo `String`.
+    Por exemplo, uma `Dim x` variável declarada com seria do tipo `Object;` uma variável declarada com `Dim x As String` seria `String`do tipo.
 
     > [!TIP]
-    >  O `Option Strict` instrução não permite digitação implícita que resulta em um `Object` tipo. Se você omitir o tipo, ocorrerá um erro de tempo de compilação. Ver [opção Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).
+    > A `Option Strict` instrução não permite a digitação implícita que resulta em `Object` um tipo. Se você omitir o tipo, ocorrerá um erro de tempo de compilação. Consulte a [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).
 
 - Você está tentando fazer referência a um objeto que foi definido como `Nothing`.
 
-- Você está tentando acessar um elemento de uma variável de matriz não foi declarada corretamente.
+- Você está tentando acessar um elemento de uma variável de matriz que não foi declarada corretamente.
 
-    Por exemplo, uma matriz declarada como `products() As String` disparará o erro se você tentar fazer referência a um elemento da matriz `products(3) = "Widget"`. A matriz não tem nenhum elemento e é tratada como um objeto.
+    Por exemplo, uma matriz declarada como `products() As String` irá disparar o erro se você tentar fazer referência a um elemento da matriz. `products(3) = "Widget"` A matriz não tem elementos e é tratada como um objeto.
 
-- Você está tentando fazer o código de acesso dentro de um `With...End With` bloquear antes do bloco foi inicializado.   Um `With...End With` deve ser inicializado, executando o `With` ponto de entrada de instrução.
+- Você está tentando acessar o código dentro de um `With...End With` bloco antes que o bloco tenha sido inicializado.   Um `With...End With` bloco deve ser inicializado executando o `With` ponto de entrada da instrução.
 
 > [!NOTE]
-> Em versões anteriores do Visual Basic ou VBA esse erro também foi disparado, atribuindo um valor a uma variável sem usar o `Set` palavra-chave (`x = "name"` em vez de `Set x = "name"`). O `Set` palavra-chave não é mais válida no Visual Basic .net.
+> Em versões anteriores do Visual Basic ou do VBA, esse erro também foi disparado por meio da atribuição de um valor a `Set` uma variável`x = "name"` sem usar `Set x = "name"`a palavra-chave (em vez de). A `Set` palavra-chave não é mais válida no Visual Basic .net.
 
 ## <a name="to-correct-this-error"></a>Para corrigir este erro
 
-1. Definir `Option Strict` para `On` , adicionando o seguinte código ao início do arquivo:
+1. Defina `Option Strict` como`On` adicionando o seguinte código ao início do arquivo:
 
     ```vb
     Option Strict On
     ```
 
-    Quando você executa o projeto, um erro do compilador aparecerá na **Error List** para qualquer variável que foi especificado sem um tipo.
+    Quando você executar o projeto, um erro do compilador será exibido no **lista de erros** para qualquer variável que foi especificada sem um tipo.
 
-2. Se você não quiser habilitar `Option Strict`, pesquise o código para todas as variáveis que foram especificadas sem um tipo (`Dim x` em vez de `Dim x As String`) e adicione o tipo desejado para a declaração.
+2. Se você não quiser habilitar `Option Strict`o, pesquise o código em busca de variáveis que foram especificadas sem um tipo (`Dim x` em `Dim x As String`vez de) e adicione o tipo pretendido à declaração.
 
-3. Verifique se você não está fazendo referência a uma variável de objeto que foi definida como `Nothing`.  Pesquise o código para a palavra-chave `Nothing`e revisar seu código para que o objeto não está definido como `Nothing` até após você ter referenciado.
+3. Verifique se você não está se referindo a uma variável de objeto que `Nothing`foi definida como.  Pesquise seu código para a palavra `Nothing`-chave e revise seu código para que o objeto não seja `Nothing` definido como até que você o tenha referenciado.
 
-4. Certifique-se de que todas as variáveis de matriz são dimensionadas antes de você acessá-los. Você pode atribuir uma dimensão quando você cria a matriz (`Dim x(5) As String` em vez de `Dim x() As String`), ou usar o `ReDim` palavra-chave para definir as dimensões da matriz antes de acessar pela primeira vez.
+4. Certifique-se de que todas as variáveis de matriz sejam dimensionadas antes de acessá-las. Você pode atribuir uma dimensão quando criar a matriz (`Dim x(5) As String` em vez de), ou usar a `ReDim` palavra-chave para definir as dimensões da matriz antes de `Dim x() As String`acessá-la pela primeira vez.
 
-5. Certifique-se de sua `With` bloco é inicializado executando o `With` ponto de entrada de instrução.
+5. Verifique se o `With` bloco foi inicializado executando o `With` ponto de entrada da instrução.
 
 ## <a name="see-also"></a>Consulte também
 

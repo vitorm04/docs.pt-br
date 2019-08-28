@@ -2,12 +2,12 @@
 title: Esquema de base de dados de persistência
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962891"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038330"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de dados de persistência
 Este tópico descreve as visualizações públicas suportadas por instância Store de fluxo de trabalho SQL.  
@@ -44,7 +44,7 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |Revisão|BigInt|O número de revisão de versão de fluxo de trabalho.|  
   
 > [!CAUTION]
->  A exibição **instâncias** também contém um gatilho DELETE. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o tempo de execução de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o tempo de execução de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum tempo de execução ativa que pode operar nessas instâncias.  
+> A exibição **instâncias** também contém um gatilho DELETE. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o tempo de execução de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o tempo de execução de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum tempo de execução ativa que pode operar nessas instâncias.  
   
 ## <a name="servicedeployments-view"></a>O modo de ServiceDeployments  
  A exibição de implantações contém informações de implantação para todos os serviços de fluxo de trabalho hospedados na Web (IIS/WAS). Cada instância de fluxo de trabalho hospedada na Web conterá um serviceInstance que se refere a uma linha nessa exibição.  

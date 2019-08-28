@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: b433263cc4d72b6418cf75c278316444c83ada8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc23aff2f049f205d02e2fb1b5f8798c7f6a9931
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933501"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044231"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir rastreamentos e definir níveis de rastreamento, definir rastreamento de atividade e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  
@@ -145,7 +145,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
  Você também pode configurar um ouvinte de rastreamento programaticamente. Para obter mais informações, confira [Como: Criar e inicializar ouvintes](https://go.microsoft.com/fwlink/?LinkId=94648) de rastreamento e [criar um TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
->  Como `System.Diagnostics.XmlWriterTraceListener` o não é thread-safe, a origem do rastreamento pode bloquear recursos exclusivamente durante a saída de rastreamentos. Quando muitos threads geram rastreamentos para uma origem de rastreamento configurada para usar esse ouvinte, pode ocorrer contenção de recursos, o que resulta em um problema de desempenho significativo. Para resolver esse problema, você deve implementar um ouvinte personalizado que seja thread-safe.  
+> Como `System.Diagnostics.XmlWriterTraceListener` o não é thread-safe, a origem do rastreamento pode bloquear recursos exclusivamente durante a saída de rastreamentos. Quando muitos threads geram rastreamentos para uma origem de rastreamento configurada para usar esse ouvinte, pode ocorrer contenção de recursos, o que resulta em um problema de desempenho significativo. Para resolver esse problema, você deve implementar um ouvinte personalizado que seja thread-safe.  
   
 ## <a name="trace-level"></a>Nível de rastreamento:  
  O nível de rastreamento é controlado pela `switchValue` configuração da origem do rastreamento. Os níveis de rastreamento disponíveis são descritos na tabela a seguir.  
@@ -164,7 +164,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
  Os níveis de detalhado para crítico são empilhados em cima um do outro, ou seja, cada nível de rastreamento inclui todos os níveis acima dele, exceto o nível desativado. Por exemplo, um ouvinte ouvindo no nível de aviso recebe rastreamentos críticos, de erro e de aviso. O nível All inclui eventos de detalhado para eventos de rastreamento de atividade e críticos.  
   
 > [!CAUTION]
->  Os níveis de informações, detalhados e ActivityTracing geram muitos rastreamentos, o que pode afetar negativamente a taxa de transferência de mensagens se você tiver usado todos os recursos disponíveis no computador.  
+> Os níveis de informações, detalhados e ActivityTracing geram muitos rastreamentos, o que pode afetar negativamente a taxa de transferência de mensagens se você tiver usado todos os recursos disponíveis no computador.  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Configurando o rastreamento de atividade e a propagação para correlação  
  O `activityTracing` valor especificado para o `switchValue` atributo é usado para habilitar o rastreamento de atividade, que emite rastreamentos para limites de atividade e transferências em pontos de extremidade.  

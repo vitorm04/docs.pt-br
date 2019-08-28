@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910726"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041144"
 ---
 # <a name="using-the-assert-method"></a>Usando o método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910726"
  <xref:System.Security.CodeAccessPermission.Assert%2A>é um método que pode ser chamado em classes de permissão de acesso ao código <xref:System.Security.PermissionSet> e na classe. Você pode usar **Assert** para habilitar seu código (e chamadores downstream) para executar ações que seu código tem permissão para fazer, mas seus chamadores podem não ter permissão para fazer. Uma asserção de segurança altera o processo normal que o tempo de execução executa durante uma verificação de segurança. Quando você declara uma permissão, ele diz ao sistema de segurança para não verificar os chamadores do seu código para a permissão declarada.  
   
 > [!CAUTION]
->  Use as asserções com cuidado porque elas podem abrir brechas de segurança e prejudicar o mecanismo do tempo de execução para impor restrições de segurança.  
+> Use as asserções com cuidado porque elas podem abrir brechas de segurança e prejudicar o mecanismo do tempo de execução para impor restrições de segurança.  
   
  As asserções são úteis em situações em que uma biblioteca chama código não gerenciado ou faz uma chamada que requer uma permissão que não é obviamente relacionada ao uso pretendido da biblioteca. Por exemplo, todo código gerenciado que chama o código não gerenciado deve ter **SecurityPermission** com o sinalizador **UnmanagedCode** especificado. O código que não é originário do computador local, como o código baixado da intranet local, não receberá essa permissão por padrão. Portanto, para que o código que é baixado da intranet local seja capaz de chamar uma biblioteca que usa código não gerenciado, ele deve ter a permissão declarada pela biblioteca. Além disso, algumas bibliotecas podem fazer chamadas que não são vistas aos chamadores e exigem permissões especiais.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910726"
  Por exemplo, suponha que sua classe de biblioteca altamente confiável tenha um método que exclui arquivos. Ele acessa o arquivo chamando uma função Win32 não gerenciada. Um chamador invoca o método **delete** de seu código, passando o nome do arquivo a ser excluído, C:\test.txt. Dentro do método **delete** , seu código cria um <xref:System.Security.Permissions.FileIOPermission> objeto que representa o acesso de gravação para C:\test.txt. (É necessário acesso de gravação para excluir um arquivo.) Em seguida, seu código invoca uma verificação de segurança imperativa chamando o método de **demanda** do objeto **FileIOPermission** . Se um dos chamadores na pilha de chamadas não tiver essa permissão, um <xref:System.Security.SecurityException> será gerado. Se nenhuma exceção for gerada, você saberá que todos os chamadores têm o direito de acessar o C:\Test.txt. Como você acredita que a maioria dos seus chamadores não terá permissão para acessar o código não gerenciado, seu código cria um <xref:System.Security.Permissions.SecurityPermission> objeto que representa o direito de chamar o código não gerenciado e chama o método **Assert** do objeto. Por fim, ele chama a função Win32 não gerenciada para excluir C:\Text.txt e retorna o controle para o chamador.  
   
 > [!CAUTION]
->  Você deve ter certeza de que seu código não usa declarações em situações em que seu código pode ser usado por outro código para acessar um recurso protegido pela permissão que você está declarando. Por exemplo, no código que grava em um arquivo cujo nome é especificado pelo chamador como um parâmetro, você não deve declarar o **FileIOPermission** para gravar em arquivos porque seu código estaria aberto para uso indevido de terceiros.  
+> Você deve ter certeza de que seu código não usa declarações em situações em que seu código pode ser usado por outro código para acessar um recurso protegido pela permissão que você está declarando. Por exemplo, no código que grava em um arquivo cujo nome é especificado pelo chamador como um parâmetro, você não deve declarar o **FileIOPermission** para gravar em arquivos porque seu código estaria aberto para uso indevido de terceiros.  
   
  Quando você usa a sintaxe de segurança imperativa, chamar o método **Assert** em várias permissões no mesmo método faz com que uma exceção de segurança seja gerada. Em vez disso, você deve criar um objeto **PermissionSet** , passá-lo para as permissões individuais que deseja invocar e, em seguida, chamar o método **Assert** no objeto **PermissionSet** . Você pode chamar o método **Assert** mais de uma vez ao usar a sintaxe de segurança declarativa.  
   

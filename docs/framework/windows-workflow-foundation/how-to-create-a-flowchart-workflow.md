@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 6d67629503d5acfeff7e14e1889a047444a8d399
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962384"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044408"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Como: criar um fluxo de trabalho de fluxograma
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.Flowchart> atividade, e as atividades personalizadas da seção [como: Criar um tópico](how-to-create-an-activity.md) de atividade. O fluxo de trabalho modela um jogo de palpite de número.  
@@ -52,7 +52,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 9. Clique em **criar variável**.  
   
     > [!TIP]
-    >  Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.Flowchart> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
+    > Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.Flowchart> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
   
 10. Digite `Guess` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
@@ -80,7 +80,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     ```  
   
     > [!TIP]
-    >  Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
+    > Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
   
 3. Arraste uma atividade de **prompt** da seção **NumberGuessWorkflowActivities** da **caixa de ferramentas**, solte-a abaixo da atividade **atribuir** da etapa anterior e conecte a atividade de **prompt** à atividade **atribuir** . Há três modos de conectar as duas atividades. A primeira maneira é conectá-los à medida que você remove a atividade **prompt** no fluxo de trabalho. Conforme você está arrastando a atividade de **prompt** para o fluxo de trabalho, passe o mouse sobre a atividade **atribuir** e solte-a em um dos quatro triângulos que aparecem quando a atividade de **prompt** está sobre a atividade **atribuir** . A segunda maneira é descartar a atividade de **prompt** no fluxo de trabalho no local desejado. Em seguida, passe o mouse sobre a atividade **atribuir** e arraste um dos retângulos que aparece até a atividade de **prompt** . Arraste o mouse para que a linha de conexão da atividade **atribuir** se conecte a um dos retângulos da atividade de **prompt** e, em seguida, solte o botão do mouse. A terceira maneira é muito semelhante à primeira maneira, exceto que, em vez de arrastar a atividade **prompt** da **caixa de ferramentas**, você a arrasta de seu local na superfície de design do fluxo de trabalho, passa o mouse sobre a atividade **atribuir** e a solta em uma das triângulos que aparece.  
   
@@ -95,7 +95,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     ```  
   
     > [!TIP]
-    >  Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .  
+    > Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .  
   
 5. Arraste uma atividade **atribuir** da seção **primitivos** da caixa de **ferramentas** e conecte-a usando um dos métodos descritos na etapa anterior para que ela esteja abaixo da atividade de **prompt** .  
   
@@ -114,7 +114,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 8. Arraste outra atividade **FlowDecision** da **caixa de ferramentas** e solte-a abaixo da primeira. Conecte as duas atividades arrastando do retângulo rotulado como **falso** na atividade **FlowDecision** superior para o retângulo na parte superior da segunda atividade **FlowDecision** .  
   
     > [!TIP]
-    >  Se você não vir os rótulos **verdadeiro** e **falso** no **FlowDecision**, passe o mouse sobre o **FlowDecision**.  
+    > Se você não vir os rótulos **verdadeiro** e **falso** no **FlowDecision**, passe o mouse sobre o **FlowDecision**.  
   
 9. Clique na segunda atividade **FlowDecision** para selecioná-la. Na **janela Propriedades**, digite a expressão a seguir na caixa valor da propriedade de **condição** .  
   

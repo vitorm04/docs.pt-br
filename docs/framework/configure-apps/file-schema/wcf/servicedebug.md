@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936261"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041274"
 ---
 # <a name="servicedebug"></a>\<> de imdebug
 Especifica recursos de depuração e de informações de ajuda para um serviço Windows Communication Foundation (WCF).  
@@ -62,7 +62,7 @@ Especifica recursos de depuração e de informações de ajuda para um serviço 
  Configuração `includeExceptionDetailInFaults` <xref:System.ServiceModel.FaultContractAttribute>para `true` permite que o serviço retorne qualquer exceção que é lançada pelo código do aplicativo, mesmo se a exceção não for declarada usando o. Essa configuração é útil ao depurar casos em que o servidor está lançando uma exceção inesperada. Usando esse atributo, uma forma serializada da exceção desconhecida é retornada e você pode examinar mais detalhes da exceção.  
   
 > [!CAUTION]
->  Retornar informações de exceção gerenciada aos clientes pode ser um risco de segurança, pois os detalhes da exceção expõem informações sobre a implementação do serviço interno que poderia ser usada por clientes não autorizados. Devido aos problemas de segurança envolvidos, é altamente recomendável que você faça isso apenas em cenários de depuração controlados. Você deve definir `includeExceptionDetailInFaults` como `false` ao implantar seu aplicativo.  
+> Retornar informações de exceção gerenciada aos clientes pode ser um risco de segurança, pois os detalhes da exceção expõem informações sobre a implementação do serviço interno que poderia ser usada por clientes não autorizados. Devido aos problemas de segurança envolvidos, é altamente recomendável que você faça isso apenas em cenários de depuração controlados. Você deve definir `includeExceptionDetailInFaults` como `false` ao implantar seu aplicativo.  
   
  Para obter detalhes sobre os problemas de segurança relacionados à exceção gerenciada, consulte [especificando e manipulando falhas em contratos e serviços](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Para obter um exemplo de código, consulte [comportamento de depuração do serviço](../../../wcf/samples/service-debug-behavior.md).  
   

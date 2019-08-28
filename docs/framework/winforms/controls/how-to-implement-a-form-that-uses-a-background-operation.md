@@ -16,19 +16,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: df7c6caf7b23824a596e94e1bd62205907b0b56a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592416"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046198"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Como: Implementar um formulário que usa uma operação em segundo plano
-O programa de exemplo a seguir cria um formulário que calcula números Fibonacci. O cálculo é executado em um thread que está separado do thread da interface do usuário, portanto, a interface do usuário continuará a ser executado sem atrasos conforme o cálculo prossegue.  
+O programa de exemplo a seguir cria um formulário que calcula os números de Fibonacci. O cálculo é executado em um thread separado do thread da interface do usuário, portanto, a interface do usuário continua a ser executada sem atrasos conforme o cálculo continua.  
   
  Há um suporte abrangente para esta tarefa no Visual Studio.  
   
- Consulte também [passo a passo: Implementando um formulário que usa uma operação em segundo plano](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
+ Consulte [também o passo a passos: Implementação de um formulário que usa uma operação](walkthrough-implementing-a-form-that-uses-a-background-operation.md)em segundo plano.  
   
 ## <a name="example"></a>Exemplo  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -43,7 +43,7 @@ O programa de exemplo a seguir cria um formulário que calcula números Fibonacc
 ## <a name="robust-programming"></a>Programação robusta  
   
 > [!CAUTION]
->  O uso de multithreading de qualquer tipo pode expor o computador a bugs muito sérios e complexos. Consulte as [Melhores práticas de threading gerenciado](../../../standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
+> O uso de multithreading de qualquer tipo pode expor o computador a bugs muito sérios e complexos. Consulte as [Melhores práticas de threading gerenciado](../../../standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
   
 ## <a name="see-also"></a>Consulte também
 

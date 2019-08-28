@@ -2,15 +2,15 @@
 title: Designer de compostos personalizados - apresentador de item de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 239f7ccd81d5bb60eed32298220df215b09e3e47
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622619"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038367"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Designer de compostos personalizados - apresentador de item de fluxo de trabalho
-O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chave no WF designer modelo de programação que permite a criação de um "soltar" onde uma atividade arbitrária pode ser colocada. Este exemplo mostra como criar um designer de atividade que surija tal uma "zona de descarte."
+O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chave no modelo de programação WF designer que permite a criação de uma "área de destino" em que uma atividade arbitrária pode ser colocada. Este exemplo mostra como criar um designer de atividade que superfícies como uma "área de destino".
 
  Este exemplo demonstra:
 
@@ -63,7 +63,7 @@ O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chav
 </sap:ActivityDesigner>
 ```
 
- Observe o uso de associação de dados de WPF associar a `ModelItem.Body`. `ModelItem` é a propriedade em <xref:System.Activities.Presentation.ActivityDesigner> que se refere ao objeto subjacente que o designer está sendo usado para, nesse caso, **SimpleNativeActivity**.
+ Observe o uso de associação de dados de WPF associar a `ModelItem.Body`. `ModelItem`é a propriedade <xref:System.Activities.Presentation.ActivityDesigner> que se refere ao objeto subjacente para o qual o designer está sendo usado, nesse caso, **SimpleNativeActivity**.
 
 #### <a name="to-setup-build-and-run-the-sample"></a>A configuração, compilação, e executar o exemplo
 
@@ -72,13 +72,13 @@ O <xref:System.Activities.Presentation.WorkflowItemPresenter> é um tipo de chav
 2. Pressione F5 para compilar e executar o aplicativo.
 
 > [!IMPORTANT]
->  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+> Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>Consulte também
 

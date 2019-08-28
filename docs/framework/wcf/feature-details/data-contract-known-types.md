@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945266"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040191"
 ---
 # <a name="data-contract-known-types"></a>Tipos de contratos de dados conhecidos
 A <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que você especifique, com antecedência, os tipos que devem ser incluídos para consideração durante a desserialização. Para obter um exemplo de trabalho, consulte o exemplo [tipos conhecidos](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -77,7 +77,7 @@ A <xref:System.Runtime.Serialization.KnownTypeAttribute> classe permite que voc�
  No exemplo a seguir, um contrato de dados armazena um número e uma operação a ser executada no número. O `Numbers` membro de dados pode ser um inteiro, uma matriz de inteiros ou um <xref:System.Collections.Generic.List%601> que contenha inteiros.  
   
 > [!CAUTION]
->  Isso só funcionará no lado do cliente se SVCUTIL. EXE é usado para gerar um proxy WCF. SVCUTIL. EXE recupera os metadados do serviço, incluindo todos os tipos conhecidos. Sem essas informações, um cliente não poderá desserializar os tipos.  
+> Isso só funcionará no lado do cliente se SVCUTIL. EXE é usado para gerar um proxy WCF. SVCUTIL. EXE recupera os metadados do serviço, incluindo todos os tipos conhecidos. Sem essas informações, um cliente não poderá desserializar os tipos.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

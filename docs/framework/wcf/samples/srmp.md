@@ -2,50 +2,50 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3015e7185fd52a1161b91c74dee57f694fbeebd
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007832"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044711"
 ---
 # <a name="srmp"></a>SRMP
-Este exemplo demonstra como executar transacionada comunicação em fila usando o serviço de enfileiramento de mensagens (MSMQ) em HTTP.  
+Este exemplo demonstra como executar a comunicação em fila transacionada usando o MSMQ (enfileiramento de mensagens) via HTTP.  
   
- Comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens a uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisa estar em execução ao mesmo tempo para se comunicar usando uma fila.  
+ Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens para uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.  
   
- MSMQ permite o uso de HTTP (incluindo o uso de HTTPS) para enviar mensagens para uma fila. Neste exemplo, vamos demonstrar o usar o Windows Communication Foundation (WCF) na fila para a comunicação e como enviar mensagens via HTTP. MSMQ usa um protocolo chamado SRMP, que é um protocolo baseado em SOAP para a comunicação por HTTP.  
+ O MSMQ permite o uso de HTTP (incluindo o uso de HTTPS) para enviar mensagens a uma fila. Neste exemplo, demonstramos o uso da comunicação em fila do Windows Communication Foundation (WCF) e como enviar mensagens por HTTP. O MSMQ usa um protocolo chamado SRMP, que é um protocolo baseado em SOAP para comunicação via HTTP.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4. Antes de executar a amostra **Adicionar/remover componentes do Windows**, certifique-se de que o MSMQ está instalado com o suporte a HTTP. Instalando o suporte a HTTP automaticamente instala os serviços de informações da Internet (IIS) e adiciona o suporte de protocolo no IIS para o MSMQ.  
+4. Antes de executar o exemplo em **Adicionar/remover componentes do Windows**, verifique se o MSMQ está instalado com o suporte a http. A instalação do suporte a HTTP instala automaticamente Serviços de Informações da Internet (IIS) e adiciona o suporte de protocolo no IIS para MSMQ.  
   
-5. Se você quiser ter certeza de que o HTTP é usado para comunicação, você pode habilitar o MSMQ seja executado no modo protegido. Isso garante que nenhuma mensagem para qualquer fila hospedada na máquina pode chegar usando qualquer transporte não HTTP.  
+5. Se você quiser ter certeza de que o HTTP é usado para comunicação, você pode habilitar o MSMQ para ser executado no modo protegido. Isso garante que nenhuma mensagem para qualquer fila hospedada no computador possa chegar usando qualquer transporte não HTTP.  
   
-6. Depois que você tiver selecionado o MSMQ seja executado no modo protegido, o computador requer a reinicialização do computador em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Depois de selecionar o MSMQ para execução no modo de proteção, o computador exigirá uma reinicialização [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]em.  
   
 7. Executar o serviço.  
   
-8. Execute o cliente. Certifique-se de que você altere o endereço do ponto de extremidade para apontar para o nome do computador ou endereço IP em vez do localhost. O cliente envia uma mensagem e sai.  
+8. Execute o cliente. Certifique-se de alterar o endereço do ponto de extremidade para apontar para o nome do computador ou endereço IP em vez de localhost. O cliente envia uma mensagem e sai.  
   
 ## <a name="requirements"></a>Requisitos  
- Para executar este exemplo, o IIS deve ser instalado sobre o serviço e os computadores cliente, além de MSMQ.  
+ Para executar este exemplo, o IIS deve ser instalado no serviço e nos computadores cliente, além do MSMQ.  
   
 ## <a name="demonstrates"></a>Demonstra  
- O exemplo demonstra como enviar WCF usando o MSMQ em HTTP de mensagens na fila. Isso também é chamado de mensagens SRMP. Quando uma mensagem na fila foi enviada, MSMQ em transferências de máquina as mensagens de envio para o Gerenciador de fila de recebimento pelo transporte TCP ou HTTP. Escolhendo SRMP, o usuário indica a escolha de HTTP como um transporte para a transferência da fila. Proteger SRMP permite o uso de HTTPS.  
+ O exemplo demonstra o envio de mensagens em fila do WCF usando o MSMQ sobre HTTP. Isso também é chamado de sistema de mensagens SRMP. Quando uma mensagem em fila é enviada, o MSMQ no computador de envio transfere as mensagens para o Gerenciador de filas de recebimento por transporte TCP ou HTTP. Escolhendo SRMP, o usuário indica a opção de HTTP como um transporte para transferência de fila. SRMP Secure permite o uso de HTTPS.  
   
 ## <a name="example"></a>Exemplo  
- O código de exemplo se baseia na amostra transacionada. Como você pode envia uma mensagem à fila e recebe uma mensagem da fila usando SRMP equivale a enviar e receber mensagens usando um protocolo nativo.  
+ O código de exemplo é baseado no exemplo transacionado. Como você envia uma mensagem para a fila e recebe uma mensagem da fila usando SRMP é o mesmo que enviar e receber mensagens usando um protocolo nativo.  
   
- A configuração para o cliente é alterada para indicar que a opção de protocolo de transferência de fila. O protocolo de transferência de fila pode ser um dos nativo, SRMP ou SrmpSecure. Por padrão, o protocolo de transferência é nativo. O cliente e o serviço especificam na configuração para usar SRMP neste exemplo.  
+ A configuração do cliente é alterada para indicar a escolha do protocolo de transferência de fila. O protocolo de transferência de fila pode ser nativo, SRMP ou SrmpSecure. Por padrão, o protocolo de transferência é nativo. O cliente e o serviço especificam na configuração para usar SRMP neste exemplo.  
   
- Há limitações para SRMP em relação à segurança de transporte. A segurança do transporte MSMQ padrão requer o Active Directory que exige que o Gerenciador de fila de envio e o Gerenciador de fila de recebimento residam no mesmo domínio do Windows. Isso não é possível quando o envio de mensagens por limites HTTP. Como tal, a segurança de transporte padrão não funciona. A segurança de transporte deve ser definida para o certificado se segurança de transporte é desejada. Segurança de mensagem também pode ser usada para proteger a mensagem. Neste exemplo, segurança de transporte e de mensagem é desativada para ilustrar SRMP de mensagens.  
+ Há limitações para SRMP em relação à segurança de transporte. A segurança de transporte MSMQ padrão requer Active Directory que exija que o Gerenciador de filas de envio e o Gerenciador de filas de recebimento residam no mesmo domínio do Windows. Isso não é possível ao enviar mensagens por limite HTTP. Como tal, a segurança de transporte padrão não funciona. A segurança de transporte deverá ser definida como certificado se a segurança de transporte for desejada. A segurança da mensagem também pode ser usada para proteger a mensagem. Neste exemplo, a segurança de transporte e de mensagem é desativada para ilustrar mensagens SRMP.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -75,7 +75,7 @@ Este exemplo demonstra como executar transacionada comunicação em fila usando 
 </configuration>  
 ```  
   
- Executar o exemplo produz a saída a seguir.  
+ A execução da amostra produz a saída a seguir.  
   
 ```  
 Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
@@ -88,10 +88,10 @@ OrderDetails
 ```  
   
 > [!IMPORTANT]
->  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+> Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

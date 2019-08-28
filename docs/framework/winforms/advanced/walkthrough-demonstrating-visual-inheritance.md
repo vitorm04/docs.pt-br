@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040315"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046146"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Passo a passo: demonstrando herança visual
 
@@ -35,19 +35,19 @@ Por fim, este passo a passo demonstrará a diferença entre controles particular
 > [!CAUTION]
 > Nem todos os controles dão suporte à herança visual de um formulário de base. Os seguintes controles não dão suporte ao cenário descrito neste passo a passo:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Esses controles no formulário herdado sempre são somente leitura, independentemente dos modificadores que você usar (`private`, `protected` ou `public`).
+> Esses controles no formulário herdado sempre são somente leitura, independentemente dos modificadores que você usar (`private`, `protected` ou `public`).
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Criar um projeto de biblioteca de classes que contém um formulário base
 
@@ -61,7 +61,7 @@ Por fim, este passo a passo demonstrará a diferença entre controles particular
 
 5. No menu **Arquivo**, escolha **Salvar Tudo** para salvar o projeto e os arquivos no local padrão.
 
- Os dois procedimentos seguintes adicionam botões ao formulário de base. Para demonstrar a herança visual, você dará aos botões diferentes níveis de acesso configurando suas propriedades `Modifiers`.
+Os dois procedimentos seguintes adicionam botões ao formulário de base. Para demonstrar a herança visual, você dará aos botões diferentes níveis de acesso configurando suas propriedades `Modifiers`.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Adicionar um botão que os herdeiros do formulário base podem modificar
 
@@ -135,7 +135,7 @@ Por fim, este passo a passo demonstrará a diferença entre controles particular
 
 5. Abra o formulário herdado (**Form2**) no designer clicando duas vezes nele, se ele ainda não estiver aberto.
 
-     No designer, os botões herdados têm um símbolo (![Captura de tela do símbolo de herança de Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) no seu canto superior, indicando que eles são herdados.
+    No designer, os botões herdados têm um símbolo (![Captura de tela do símbolo de herança de Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) no seu canto superior, indicando que eles são herdados.
 
 6. Selecione o botão **Say Hello** e observe as alças de redimensionamento. Como esse botão é protegido, os herdeiros podem movê-lo, redimensioná-lo, alterar sua legenda e fazer outras modificações.
 

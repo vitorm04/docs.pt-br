@@ -13,19 +13,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: a4bc24c5a514beaa17fdb201329b9729ec712406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f86a2934e799e4604693491dacbecc517d44d810
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603549"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046219"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>Como: Desabilitar ToolStripMenuItems
-Você pode limitar ou ampliar os comandos que um usuário pode fazer ao habilitar e desabilitar itens de menu em resposta a atividades do usuário. Itens de menu são habilitados por padrão, quando eles são criados, mas isso pode ser ajustado por meio de <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propriedade. Você pode manipular essa propriedade em tempo de design na janela **Propriedades** ou programaticamente configurando ela no código.  
+Você pode limitar ou ampliar os comandos que um usuário pode fazer ao habilitar e desabilitar itens de menu em resposta a atividades do usuário. Os itens de menu são habilitados por padrão quando são criados, mas isso pode ser ajustado <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> por meio da propriedade. Você pode manipular essa propriedade em tempo de design na janela **Propriedades** ou programaticamente configurando ela no código.  
   
-### <a name="to-disable-a-menu-item-programmatically"></a>Para desabilitar um item de menu por meio de programação  
+### <a name="to-disable-a-menu-item-programmatically"></a>Para desabilitar um item de menu programaticamente  
   
-- Dentro do método em que você definir as propriedades do item de menu, adicionar código para definir a <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propriedade para `false`.  
+- Dentro do método em que você define as propriedades do item de menu, adicione o código para <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> definir a `false`Propriedade como.  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -40,7 +40,7 @@ Você pode limitar ou ampliar os comandos que um usuário pode fazer ao habilita
     ```  
   
     > [!TIP]
-    >  Desabilitar o item de menu de nível superior ou primeiro em um menu oculta todos os itens de menu contidos no menu, mas não desabilitá-los. Da mesma forma, desabilitar um item de menu que tem itens de submenu oculta os itens de submenu, mas não desabilitá-los. Se todos os comandos em um determinado menu estiverem indisponíveis para o usuário, ocultar e desabilitar todo o menu será considerado uma boa prática de programação, pois isso apresenta uma interface do usuário mais enxuta. Você deve ocultar e desabilitar o menu e desabilitar cada item e o item de submenu no menu, pois ocultando sozinho não impede o acesso a um comando de menu por meio de uma tecla de atalho. Defina as <xref:System.Windows.Forms.ToolStripItem.Visible%2A> propriedade de um item de menu de nível superior para `false` para ocultar o menu inteiro.  
+    > Desabilitar o primeiro ou o item de menu de nível superior em um menu oculta todos os itens de menu contidos no menu, mas não os desabilita. Da mesma forma, desabilitar um item de menu que tem itens de submenu oculta os itens de submenu, mas não os desabilita. Se todos os comandos em um determinado menu estiverem indisponíveis para o usuário, ocultar e desabilitar todo o menu será considerado uma boa prática de programação, pois isso apresenta uma interface do usuário mais enxuta. Você deve ocultar e desabilitar o menu e desabilitar todos os itens de item e submenu no menu, pois a ocultação sozinha não impede o acesso a um comando de menu por meio de uma tecla de atalho. Defina a <xref:System.Windows.Forms.ToolStripItem.Visible%2A> propriedade de um item de menu de nível superior `false` como para ocultar o menu inteiro.  
   
 ## <a name="see-also"></a>Consulte também
 

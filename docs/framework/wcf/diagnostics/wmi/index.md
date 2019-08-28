@@ -2,22 +2,22 @@
 title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591245"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046011"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
-Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço em tempo de execução através de um provedor de instrumentação de gerenciamento do Windows (WMI) do WCF.  
+Windows Communication Foundation (WCF) expõe os dados de inspeção de um serviço em tempo de execução por meio de um provedor de Instrumentação de Gerenciamento do Windows do WCF (WMI).  
   
 ## <a name="enabling-wmi"></a>Habilitando o WMI  
- O WMI é a implementação da Microsoft do Web-Based Enterprise Management (WBEM) padrão. Para obter mais informações sobre o SDK do WMI, consulte [instrumentação de gerenciamento do Windows](/windows/desktop/WmiSdk/wmi-start-page). O WBEM é um padrão do setor para como os aplicativos expõem instrumentação de gerenciamento para as ferramentas de gerenciamento externo.  
+ O WMI é a implementação do padrão Web-Based Enterprise Management (WBEM) da Microsoft. Para obter mais informações sobre o SDK do WMI, consulte [Instrumentação de gerenciamento do Windows](/windows/desktop/WmiSdk/wmi-start-page). O WBEM é um padrão do setor para a forma como os aplicativos expõem a instrumentação de gerenciamento para ferramentas de gerenciamento externas.  
   
- Um provedor WMI é um componente que expõe a instrumentação no tempo de execução por meio de uma interface compatível com a iniciativa WBEM. Ele consiste em um conjunto de objetos WMI que têm pares de atributo/valor. Pares podem ser de um número de tipos simples. Ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. O WCF expõe atributos de serviços, como endereços, associações, comportamentos e ouvintes.  
+ Um provedor WMI é um componente que expõe a instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ele consiste em um conjunto de objetos WMI que têm pares de atributo/valor. Os pares podem ser de vários tipos simples. As ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. O WCF expõe atributos de serviços como endereços, associações, comportamentos e ouvintes.  
   
- O provedor WMI interno pode ser ativado no arquivo de configuração do aplicativo. Isso é feito por meio das `wmiProviderEnabled` atributo do [ \<diagnóstico >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) no [ \<System. ServiceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) seção, conforme mostrado no exemplo a seguir configuração.  
+ O provedor WMI interno pode ser ativado no arquivo de configuração do aplicativo. Isso é feito por meio `wmiProviderEnabled` do atributo [ \<do > de diagnóstico](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) na [ \<seção System. ServiceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <system.serviceModel>  
@@ -27,51 +27,51 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
 </system.serviceModel>  
 ```  
   
- Essa entrada de configuração expõe uma interface WMI. Aplicativos de gerenciamento agora podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
+ Essa entrada de configuração expõe uma interface WMI. Os aplicativos de gerenciamento agora podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
   
 ## <a name="accessing-wmi-data"></a>Acessando dados do WMI  
- Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos Visual Basic, C++ aplicativos e o .NET Framework. Para obter mais informações, consulte [WMI usando](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ Os dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece APIs WMI para scripts, Visual Basic aplicativos C++ , aplicativos e .NET Framework. Para obter mais informações, consulte [usando o WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
->  Se você usar o .NET Framework ofereceu métodos para acessar programaticamente os dados do WMI, você deve estar ciente de que esses métodos podem gerar exceções quando a conexão é estabelecida. A conexão não for estabelecida durante a construção do <xref:System.Management.ManagementObject> instância, mas, na primeira solicitação que envolve a troca de dados real. Portanto, você deve usar um `try..catch` bloco para capturar possíveis exceções.  
+> Se você usar os métodos .NET Framework fornecidos para acessar os dados do WMI programaticamente, você deve estar ciente de que esses métodos podem gerar exceções quando a conexão é estabelecida. A conexão não é estabelecida durante a construção da <xref:System.Management.ManagementObject> instância, mas na primeira solicitação que envolve a troca de dados real. Portanto, você deve usar um `try..catch` bloco para capturar as possíveis exceções.  
   
- Você pode alterar o rastreamento e nível de log de mensagem, bem como opções de log de mensagem para o `System.ServiceModel` origem de rastreamento no WMI. Isso pode ser feito, acessando o [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instância, que expõe essas propriedades Boolianas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`, e `TraceLevel`. Portanto, se você configura um ouvinte de rastreamento para o log de mensagens, mas definir essas opções para `false` na configuração, você pode alterar a `true` quando o aplicativo está em execução. Isso permitirá que o log de mensagens em tempo de execução com eficiência. Da mesma forma, se você habilitar o registro em log no arquivo de configuração de mensagem, você pode desabilitá-lo em tempo de execução usando o WMI.  
+ Você pode alterar o rastreamento e o nível de log de mensagens, bem como as opções de `System.ServiceModel` log de mensagens para a origem do rastreamento no WMI. Isso pode ser feito acessando a instância [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , que expõe essas propriedades booleanas `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, `LogMalformedMessages`, e `TraceLevel`. Portanto, se você configurar um ouvinte de rastreamento para o log de mensagens, mas `false` definir essas opções como em configuração, você poderá `true` alterá-las posteriormente para quando o aplicativo estiver em execução. Isso habilitará efetivamente o registro em log de mensagens em tempo de execução. Da mesma forma, se você habilitar o log de mensagens em seu arquivo de configuração, poderá desabilitá-lo em tempo de execução usando o WMI.  
   
- Você deve estar ciente que, se nenhum log de mensagem rastrear ouvintes para receber mensagens em log ou não `System.ServiceModel` ouvintes de rastreamento para rastreamento são especificados no arquivo de configuração, nenhuma de suas alterações ficam em vigor, mesmo que as alterações sejam aceitas pelo WMI. Para obter mais informações sobre como configurar corretamente os respectivos ouvintes, consulte [Configurando o log de mensagens](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) e [Configurando o rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). O nível de rastreamento de todas as outras origens de rastreamento especificado por configuração é eficaz quando o aplicativo é iniciado e não pode ser alterado.  
+ Você deve estar ciente de que, se nenhum ouvinte de rastreamento de log de mensagens do `System.ServiceModel` log de mensagens ou nenhum ouvinte de rastreamento para rastreamento for especificado no arquivo de configuração, nenhuma das alterações será levada em vigor, mesmo que as alterações sejam aceitas pelo WMI. Para obter mais informações sobre como configurar corretamente os respectivos ouvintes, consulte Configurando o [log de mensagens](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) e Configurando o [rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). O nível de rastreamento de todas as outras origens de rastreamento especificadas pela configuração é efetivo quando o aplicativo é iniciado e não pode ser alterado.  
   
- O WCF expõe um `GetOperationCounterInstanceName` método para execução de scripts. Esse método retorna um nome de instância do contador de desempenho se fornecê-la com um nome de operação. No entanto, ele não valida sua entrada. Portanto, se você fornecer um nome de operação incorreta, um nome de contador incorreto é retornado.  
+ O WCF expõe `GetOperationCounterInstanceName` um método para scripts. Esse método retornará um nome de instância do contador de desempenho se você fornecê-lo com um nome de operação. No entanto, ele não valida sua entrada. Portanto, se você fornecer um nome de operação incorreto, um nome de contador incorreto será retornado.  
   
- O `OutgoingChannel` propriedade do `Service` instância não conta canais abertos por um serviço para se conectar a outro serviço, se o cliente do WCF para o serviço de destino não for criado dentro de `Service` método.  
+ A `OutgoingChannel` propriedade `Service` da instância não conta canais abertos por um serviço para se conectar a outro serviço, se o cliente WCF para o serviço de destino não for criado dentro do método. `Service`  
   
- **Cuidado** WMI dá suporte apenas a um <xref:System.TimeSpan> decimais até 3 de valor. Por exemplo, se seu serviço define uma de suas propriedades para <xref:System.TimeSpan.MaxValue>, seu valor é truncado após 3 pontos decimais quando visualizado por meio do WMI.  
+ **Cuidado** O WMI só dá <xref:System.TimeSpan> suporte a um valor de até 3 pontos decimais. Por exemplo, se o serviço definir uma de suas propriedades como <xref:System.TimeSpan.MaxValue>, seu valor será truncado após 3 pontos decimais quando exibido por meio do WMI.  
   
 ## <a name="security"></a>Segurança  
- Como o provedor de WMI do WCF permite a descoberta de serviços em um ambiente, você deve ter muito cuidado para conceder acesso a ele. Se você relaxar o acesso de somente de administrador padrão, você pode permitir o acesso de partes menos confiável a dados confidenciais em seu ambiente. Especificamente, se você Flexibilize as permissões de acesso WMI remoto, ataques de inundação podem ocorrer. Se um processo é a inundação de excesso de solicitações WMI, seu desempenho pode ser prejudicado.  
+ Como o provedor WMI WCF permite a descoberta de serviços em um ambiente, você deve ter muito cuidado para conceder acesso a ele. Se você relaxar o acesso padrão somente ao administrador, poderá permitir que partes menos confiáveis acessem dados confidenciais em seu ambiente. Especificamente, se você afrouxar permissões no acesso WMI remoto, poderão ocorrer ataques de inundação. Se um processo for inundado por solicitações excessivas do WMI, seu desempenho poderá ser degradado.  
   
- Além disso, se você relaxar as permissões de acesso para o arquivo MOF, partes de menos confiáveis podem manipular o comportamento de WMI e alterar os objetos que são carregados no esquema do WMI. Por exemplo, os campos podem ser removidos, de modo que os dados críticos são escondidos do administrador ou campos que não preencher ou fazer com que as exceções são adicionados ao arquivo.  
+ Além disso, se você relaxar as permissões de acesso para o arquivo MOF, partes menos confiáveis poderão manipular o comportamento do WMI e alterar os objetos que são carregados no esquema WMI. Por exemplo, os campos podem ser removidos de modo que os dados críticos sejam ocultados do administrador ou que os campos que não populem ou façam com que exceções sejam adicionadas ao arquivo.  
   
- Por padrão, o provedor WMI do WCF concede "método de execução", "gravação do provedor" e "Habilitar conta" permissão de administrador e a permissão "Habilitar conta" para ASP.NET, serviço Local e serviço de rede. Em particular, em não -[!INCLUDE[wv](../../../../../includes/wv-md.md)] plataformas, a conta do ASP.NET tem acesso de leitura ao namespace WMI ServiceModel. Se você não quiser conceder esses privilégios a um grupo de usuários, você deve desativar o provedor WMI (desabilitado por padrão) ou desabilite o acesso para o grupo de usuários específicos.  
+ Por padrão, o provedor WCF WMI concede a permissão "executar método", "gravação do provedor" e "Habilitar conta" para o administrador e a permissão "Habilitar conta" para ASP.NET, serviço local e serviço de rede. Em particular, em não[!INCLUDE[wv](../../../../../includes/wv-md.md)] plataformas, a conta ASP.net tem acesso de leitura ao namespace WMI ServiceModel. Se você não quiser conceder esses privilégios a um grupo de usuários específico, desative o provedor WMI (ele está desabilitado por padrão) ou desabilite o acesso para o grupo de usuários específico.  
   
- Além disso, quando você tentar ativar o WMI por meio da configuração, o WMI não pode ser habilitado devido ao privilégio de usuário insuficientes. No entanto, nenhum evento é gravado no log de eventos para registrar essa falha.  
+ Além disso, quando você tenta habilitar o WMI por meio da configuração, o WMI pode não ser habilitado devido a um privilégio de usuário insuficiente. No entanto, nenhum evento é gravado no log de eventos para registrar essa falha.  
   
- Para modificar os níveis de privilégio de usuário, use as etapas a seguir.  
+ Para modificar os níveis de privilégio do usuário, use as etapas a seguir.  
   
-1. Clique em Iniciar e, em seguida, executar e digite **compmgmt. msc**.  
+1. Clique em Iniciar e em executar e digite **compmgmt. msc**.  
   
-2. Clique com botão direito **serviços e os controles de aplicativo/WMI** para selecionar **propriedades**.  
+2. Clique com o botão direito do mouse em **serviços e aplicativos/controles WMI** para selecionar **Propriedades**.  
   
-3. Selecione o **segurança** guia e navegue até a **raiz/ServiceModel** namespace. Clique o **segurança** botão.  
+3. Selecione a guia **segurança** e navegue até o namespace **raiz/ServiceModel** . Clique no botão **segurança** .  
   
-4. Selecione o grupo específico ou usuário que você deseja controlar o acesso e usar o **Allow** ou **Deny** caixa de seleção para configurar permissões.  
+4. Selecione o grupo ou usuário específico para o qual você deseja controlar o acesso e use a caixa de seleção **permitir** ou **negar** para configurar permissões.  
   
-## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Conceder permissões de registro de WMI do WCF a usuários adicionais  
- O WCF expõe dados de gerenciamento ao WMI. Ele faz isso por um provedor WMI no processo, às vezes chamado de "provedor desacoplado" de hospedagem. Para os dados de gerenciamento a ser exposta, a conta que registre este provedor deve ter as permissões apropriadas. No Windows, somente um pequeno conjunto de contas com privilégios pode registrar os provedores desacoplados por padrão. Esse é um problema porque os usuários normalmente desejam expor dados WMI do serviço WCF executado em uma conta que não está no conjunto padrão.  
+## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Concedendo permissões de registro do WCF WMI a usuários adicionais  
+ O WCF expõe dados de gerenciamento para o WMI. Ele faz isso hospedando um provedor WMI em processo, às vezes chamado de "provedor desacoplado". Para que os dados de gerenciamento sejam expostos, a conta que registra esse provedor deve ter as permissões apropriadas. No Windows, apenas um pequeno conjunto de contas com privilégios pode registrar provedores dissociados por padrão. Isso é um problema porque os usuários normalmente desejam expor dados WMI de um serviço WCF em execução em uma conta que não está no conjunto padrão.  
   
  Para fornecer esse acesso, um administrador deve conceder as seguintes permissões para a conta adicional na seguinte ordem:  
   
-1. Permissão para acessar o Namespace de WMI do WCF.  
+1. Permissão para acessar o namespace WCF WMI.  
   
-2. Permissão para registrar o provedor de WMI do WCF separados.  
+2. Permissão para registrar o provedor WMI dissociado do WCF.  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>Para conceder permissão de acesso do namespace WMI  
   
@@ -110,17 +110,17 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
     write-host ""  
     ```  
   
-     Este script do PowerShell usa SDDL Security Descriptor Definition Language () para conceder o acesso de grupo interno usuários para o namespace do WMI "raiz/servicemodel". Especifica as seguintes ACLs:  
+     Esse script do PowerShell usa SDDL (Security Descriptor Definition Language) para conceder ao grupo usuários internos acesso ao namespace WMI "root/ServiceModel". Ele especifica as seguintes ACLs:  
   
-    - Administrador interno (BA) - já tinham acesso.  
+    - Administrador interno (BA)-já tinha acesso.  
   
-    - (NS) - serviço de rede já tinha acesso.  
+    - Serviço de rede (NS)-já tinha acesso.  
   
-    - Sistema local (LS) - já tinham acesso.  
+    - Sistema local (LS)-já tinha acesso.  
   
-    - Usuários internos - o grupo para conceder acesso a.  
+    - Usuários internos-o grupo ao qual conceder acesso.  
   
-#### <a name="to-grant-provider-registration-access"></a>Para conceder o provedor de registro de acesso  
+#### <a name="to-grant-provider-registration-access"></a>Para conceder acesso ao registro do provedor  
   
 1. Execute o seguinte script do PowerShell.  
   
@@ -140,36 +140,36 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
     write-host ""  
     ```  
   
-### <a name="granting-access-to-arbitrary-users-or-groups"></a>Concedendo acesso a outros usuários ou grupos  
- O exemplo nesta seção concede privilégios de registro do provedor WMI para todos os usuários locais. Se você quiser conceder acesso a um usuário ou grupo que não é interno, você deve obter esse usuário ou segurança SID do grupo de (identificador). Não há nenhuma maneira simples de obter o SID para um usuário arbitrários. Um método é fazer logon como o usuário desejado e, em seguida, emita o seguinte comando de shell.  
+### <a name="granting-access-to-arbitrary-users-or-groups"></a>Concedendo acesso a usuários ou grupos arbitrários  
+ O exemplo nesta seção concede privilégios de registro do provedor WMI a todos os usuários locais. Se você quiser conceder acesso a um usuário ou grupo que não esteja interno, deverá obter o SID (identificador de segurança) do usuário ou do grupo. Não há uma maneira simples de obter o SID para um usuário arbitrário. Um método é fazer logon como o usuário desejado e, em seguida, emitir o comando do Shell a seguir.  
   
 ```  
 Whoami /user  
 ```  
   
- Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467) ferramenta da [Windows 2000 Resource Kit Tools para tarefas administrativas](https://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio) e como um lado efeito imprime os dois SIDs à linha de comando. Para obter mais informações, consulte [SIDs bem conhecidos](https://go.microsoft.com/fwlink/?LinkId=186468).  
+ Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar a ferramenta [Getsid. exe](https://go.microsoft.com/fwlink/?LinkId=186467) das ferramentas do [Windows 2000 Resource Kit para tarefas administrativas](https://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio) e, como um efeito colateral, imprime os dois SIDs na linha de comando. Para obter mais informações, consulte [SIDs bem conhecidos](https://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Acessando instâncias de objeto WMI remoto  
- Se você precisar acessar instâncias do WMI do WCF em um computador remoto, você deve habilitar privacidade de pacote nas ferramentas de que você usa para acesso. A seção a seguir descreve como conseguir isto usando o CIM Studio WMI, o Testador de instrumentação de gerenciamento do Windows, bem como os SDK do .NET 2.0.  
+ Se você precisar acessar as instâncias WMI do WCF em um computador remoto, deverá habilitar a privacidade do pacote nas ferramentas que você usa para acesso. A seção a seguir descreve como fazer isso usando o WMI CIM Studio, o Instrumentação de Gerenciamento do Windows Tester, bem como o SDK do .NET 2,0.  
   
-### <a name="wmi-cim-studio"></a>CIM Studio do WMI  
- Se você tiver instalado [ferramentas administrativas do WMI](https://go.microsoft.com/fwlink/?LinkId=95185), você pode usar o CIM Studio WMI para acessar instâncias do WMI. As ferramentas estão na seguinte pasta  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio  
+ Se você tiver instalado as [Ferramentas administrativas do WMI](https://go.microsoft.com/fwlink/?LinkId=95185), poderá usar o WMI CIM Studio para acessar as instâncias do WMI. As ferramentas estão na seguinte pasta  
   
- **Ferramentas de Files\WMI %Windir%\Program\\**  
+ **Ferramentas do%windir%\Program Files\WMI\\**  
   
-1. No **conectar-se ao namespace:** , digite **root\ServiceModel** e clique em **Okey.**  
+1. Na janela **conectar ao namespace:** , digite **root\ServiceModel** e clique em **OK.**  
   
-2. No **WMI CIM Studio Login** janela, clique no **opções >>** botão para expandir a janela. Selecione **privacidade de pacote** para **nível de autenticação**e clique em **Okey**.  
+2. Na janela de **logon do WMI CIM Studio** , clique no botão **Opções > >** para expandir a janela. Selecione **privacidade de pacote** para **nível de autenticação**e clique em **OK**.  
   
-### <a name="windows-management-instrumentation-tester"></a>Testador de instrumentação de gerenciamento do Windows  
- Essa ferramenta é instalada pelo Windows. Para executá-lo, inicie um console de comando digitando **cmd.exe** na **iniciar/executar** caixa de diálogo e clique em **Okey**. Em seguida, digite **wbemtest.exe** na janela de comando. A ferramenta do Testador de instrumentação de gerenciamento do Windows, em seguida, é iniciada.  
+### <a name="windows-management-instrumentation-tester"></a>Instrumentação de Gerenciamento do Windows testador  
+ Essa ferramenta é instalada pelo Windows. Para executá-lo, inicie um console de comando digitando **cmd. exe** na caixa de diálogo **Iniciar/Executar** e clique em **OK**. Em seguida, digite **WBEMTest. exe** na janela de comando. Em seguida, a ferramenta de testador Instrumentação de Gerenciamento do Windows é iniciada.  
   
-1. Clique o **Connect** botão no canto superior direito da janela.  
+1. Clique no botão **conectar** no canto superior direito da janela.  
   
-2. Na nova janela, insira **root\ServiceModel** para o **Namespace** campo e selecione **privacidade de pacote** para **nível de autenticação**. Clique em **Conectar**.  
+2. Na nova janela, insira **root\ServiceModel** para o campo **namespace** e selecione privacidade de **pacote** para o **nível de autenticação**. Clique em **Conectar**.  
   
 ### <a name="using-managed-code"></a>Usando código gerenciado  
- Você também pode acessar instâncias remotas do WMI programaticamente usando classes fornecidas pelo <xref:System.Management> namespace. O exemplo de código a seguir demonstra como fazer isso.  
+ Você também pode acessar instâncias WMI remotas programaticamente usando classes fornecidas <xref:System.Management> pelo namespace. O exemplo de código a seguir demonstra como fazer isso.  
   
 ```csharp
 String wcfNamespace = $@"\\{this.serviceMachineName}\Root\ServiceModel");

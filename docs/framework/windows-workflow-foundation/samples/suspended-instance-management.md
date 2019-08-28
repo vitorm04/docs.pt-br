@@ -2,12 +2,12 @@
 title: Gerenciamento suspenso da instância
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: c23d2dfd48ecb57a3fb418734c916586178986e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a2f36ac2c127376eea56601f54aa5e571d66a55
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622415"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037888"
 ---
 # <a name="suspended-instance-management"></a>Gerenciamento suspenso da instância
 Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que foram suspensas.  A ação padrão para <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é `AbandonAndSuspend`. Isso significa que por padrão, as exceções não tratadas lançadas de uma instância de fluxo de trabalho hospedada em <xref:System.ServiceModel.WorkflowServiceHost> causarão a instância a ser descartado de memória (abandonada) e de bens/versão armazenado de instância a ser marcada como suspendida. Uma instância suspendida de fluxo de trabalho não poderá executar até que estado unsuspended.
@@ -15,7 +15,7 @@ Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que fo
  O exemplo mostra como um utilitário de linha de comando pode ser implementado para consultar instâncias suspensas, e como conceder ao usuário a opção continuar ou finalizar a instância. Nesse exemplo, um serviço de fluxo de trabalho intencionalmente lança uma exceção, fazendo com que fique suspenso. O utilitário de linha de comando pode então ser usado para consultar a instância e posteriormente para continuar ou finalizar a instância.
 
 ## <a name="demonstrates"></a>Demonstra
- <xref:System.ServiceModel.WorkflowServiceHost> com o <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> e <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> no Windows Workflow Foundation (WF).
+ <xref:System.ServiceModel.WorkflowServiceHost>com <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> e<xref:System.ServiceModel.Activities.WorkflowControlEndpoint> em Windows Workflow Foundation (WF).
 
 ## <a name="discussion"></a>Discussão
  O utilitário de linha de comando implementado nesse exemplo é específico da implementação da instância do SQL que envia em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Se você tiver uma implementação personalizada de armazenamento de instância, então você pode adaptar este utilitário substituindo as implementações de `WorkflowInstanceCommand` no exemplo com as implementações que são específicas para seu armazenamento de instância.
@@ -32,7 +32,7 @@ Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que fo
 
 2. Configurar o base de dados SQL Server.
 
-    1. Em um prompt de comando do Visual Studio 2010, execute "Setup. cmd" do diretório de SuspendedInstanceManagement, que faz o seguinte:
+    1. Em um prompt de comando do Visual Studio 2010, execute "setup. cmd" no diretório de exemplo SuspendedInstanceManagement, que faz o seguinte:
 
         1. Cria um base de dados de persistência usando o SQL Server Express. Se o base de dados de persistência já existir, então é solto e re-criada
 
@@ -42,23 +42,23 @@ Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que fo
 
 3. Configurar a fila de serviço.
 
-    1. No Visual Studio 2010, clique com botão direito do **SampleWorkflowApp** do projeto e clique em **definir como projeto de inicialização**.
+    1. No Visual Studio 2010, clique com o botão direito do mouse no projeto **SampleWorkflowApp** e clique em **definir como projeto de inicialização**.
 
-    2. Compilar e executar o SampleWorkflowApp pressionando **F5**. Isso criará a fila necessário.
+    2. Compile e execute o SampleWorkflowApp pressionando **F5**. Isso criará a fila necessário.
 
-    3. Pressione **Enter** para interromper o SampleWorkflowApp.
+    3. Pressione **Enter** para parar o SampleWorkflowApp.
 
     4. Abra o console de Gerenciamento do Computador executando Compmgmt.msc de um prompt de comando.
 
-    5. Expandir **aplicativos e serviços**, **enfileiramento**, **privativas**.
+    5. Expanda **serviço e aplicativos**, Enfileiramento de **mensagens**, **filas privadas**.
 
-    6. Clique com botão direito do **ReceiveTx** da fila e selecione **propriedades**.
+    6. Clique com o botão direito do mouse na fila **ReceiveTx** e selecione **Propriedades**.
 
-    7. Selecione o **segurança** guia e permitir **Everyone** ter permissões para **receber mensagem**, **inspecionar mensagem**, e  **Enviar mensagem**.
+    7. Selecione a guia **segurança** e permitir que **todos** tenham permissões para **receber mensagens**, **Inspecionar mensagem**e **Enviar mensagem**.
 
 4. Agora, executar o exemplo.
 
-    1. No Visual Studio 2010, execute o projeto de SampleWorkflowApp novamente sem depuração pressionando **Ctrl + F5**. Dois endereços de ponto de extremidade será impresso na janela do console: um para o ponto final do aplicativo e então outro de <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Uma instância de fluxo de trabalho é criada em seguida, e os registros de controle para essa instância aparecerá na janela do console. A instância de fluxo de trabalho irá acionar uma exceção que causou a instância a ser suspendida e anuladas.
+    1. No Visual Studio 2010, execute o projeto SampleWorkflowApp novamente sem Depurar pressionando **Ctrl + F5**. Dois endereços de ponto de extremidade será impresso na janela do console: um para o ponto final do aplicativo e então outro de <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Uma instância de fluxo de trabalho é criada em seguida, e os registros de controle para essa instância aparecerá na janela do console. A instância de fluxo de trabalho irá acionar uma exceção que causou a instância a ser suspendida e anuladas.
 
     2. O utilitário de linha de comando pode então ser usado para executar uma ação adicional em uma destas instâncias. A sintaxe para argumentos de linha de comando é como o follows::
 
@@ -70,17 +70,17 @@ Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que fo
 
 1. Abra o console de Gerenciamento do Computador executando Compmgmt.msc de um prompt de comando `vs2010` .
 
-2. Expandir **aplicativos e serviços**, **enfileiramento**, **privativas**.
+2. Expanda **serviço e aplicativos**, Enfileiramento de **mensagens**, **filas privadas**.
 
-3. Excluir o **ReceiveTx** fila.
+3. Exclua a fila **ReceiveTx** .
 
 4. Para remover o base de dados de persistência, cleanup.cmd execução.
 
 > [!IMPORTANT]
->  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+> Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

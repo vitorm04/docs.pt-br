@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962281"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044346"
 ---
 # <a name="how-to-run-a-workflow"></a>Como: executar um fluxo de trabalho
 Este tópico é uma continuação do Windows Workflow Foundation introdução tutorial e discute como criar um host de fluxo de trabalho e executar o fluxo de trabalho definido no [seguinte como: Criar um tópico](how-to-create-a-workflow.md) de fluxo de trabalho.
@@ -28,7 +28,7 @@ Este tópico é uma continuação do Windows Workflow Foundation introdução tu
 2. Clique com o botão direito do mouse na solução **WF45GettingStartedTutorial** em **Gerenciador de soluções** e selecione **Adicionar**, **novo projeto**.  
   
     > [!TIP]
-    >  Se a janela de **Gerenciador de soluções** não for exibida, selecione **Gerenciador de soluções** no menu **Exibir** .
+    > Se a janela de **Gerenciador de soluções** não for exibida, selecione **Gerenciador de soluções** no menu **Exibir** .
 
 3. No nó **instalado** , selecione **Visual C#** , **fluxo de trabalho** (ou **Visual Basic**, fluxo de **trabalho**).
 
@@ -46,7 +46,7 @@ Este tópico é uma continuação do Windows Workflow Foundation introdução tu
 1. Clique duas vezes em **Program.cs** ou **Module1. vb** em **Gerenciador de soluções** para exibir o código.
 
     > [!TIP]
-    >  Se a janela de **Gerenciador de soluções** não for exibida, selecione **Gerenciador de soluções** no menu **Exibir** .
+    > Se a janela de **Gerenciador de soluções** não for exibida, selecione **Gerenciador de soluções** no menu **Exibir** .
 
      Como esse projeto foi criado usando o modelo de **aplicativo do console de fluxo de trabalho** , **Program.cs** ou **Module1. vb** contém o código de hospedagem do fluxo de trabalho básico a seguir.
 

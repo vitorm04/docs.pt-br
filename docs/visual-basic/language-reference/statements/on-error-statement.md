@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963541"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046508"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrução On Error (Visual Basic)
 Habilita uma rotina de tratamento de erros e especifica o local da rotina dentro de um procedimento; também pode ser usado para desabilitar uma rotina de tratamento de erros. A `On Error` instrução é usada no tratamento de erros não estruturado e pode ser usada em vez de manipulação de exceção estruturada. A [manipulação de exceção estruturada](../../../standard/exceptions/index.md) é criada no .net, geralmente é mais eficiente e, portanto, é recomendada ao lidar com erros de tempo de execução em seu aplicativo.
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  Os erros do sistema durante chamadas para DLLs (bibliotecas de vínculo dinâmico) do Windows não geram exceções e não podem ser interceptados com Visual Basic interceptação de erro. Ao chamar as funções de dll, você deve verificar cada valor de retorno para êxito ou falha (de acordo com as especificações de API) e, em caso de falha, verificar o `Err` valor na `LastDLLError` Propriedade do objeto.
+> Os erros do sistema durante chamadas para DLLs (bibliotecas de vínculo dinâmico) do Windows não geram exceções e não podem ser interceptados com Visual Basic interceptação de erro. Ao chamar as funções de dll, você deve verificar cada valor de retorno para êxito ou falha (de acordo com as especificações de API) e, em caso de falha, verificar o `Err` valor na `LastDLLError` Propriedade do objeto.
 
 ## <a name="example"></a>Exemplo
  Este exemplo primeiro usa a `On Error GoTo` instrução para especificar o local de uma rotina de tratamento de erros dentro de um procedimento. No exemplo, uma tentativa de dividir por zero gera o erro número 6. O erro é tratado na rotina de tratamento de erros e, em seguida, o controle é retornado para a instrução que causou o erro. A `On Error GoTo 0` instrução desativa o trapping de erros. Em seguida `On Error Resume Next` , a instrução é usada para adiar o trapping de erros para que o contexto para o erro gerado pela próxima instrução possa ser conhecido para determinados. Observe que `Err.Clear` é usado para limpar as `Err` Propriedades do objeto depois que o erro é manipulado.

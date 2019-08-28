@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940876"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046401"
 ---
 # <a name="drag-and-drop-overview"></a>Visão geral de arrastar e soltar
 Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e soltar" em aplicativos do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Normalmente, o recurso do tipo "arrastar e soltar" se refere a um método de transferência de dados que envolve o uso de um mouse (ou algum outro dispositivo apontador) para selecionar um ou mais objetos, arrastá-los sobre um destino de soltar desejado na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e soltá-los.  
@@ -166,7 +166,7 @@ Este tópico fornece uma visão geral do suporte ao recurso do tipo "arrastar e 
  O <xref:System.Windows.DragDrop.QueryContinueDrag> evento é gerado continuamente enquanto a origem do arrasto está sendo arrastada. Você pode manipular esse evento para determinar qual ação encerra a operação do tipo "arrastar e soltar", de acordo com o estado das teclas ESC, SHIFT, CTRL e ALT, bem como o estado dos botões do mouse. O manipulador padrão desse evento cancela a operação do tipo "arrastar e soltar" se a tecla ESC é pressionada e solta os dados se o botão do mouse é liberado.  
   
 > [!CAUTION]
->  Esses eventos são acionados continuamente durante a operação do tipo "arrastar e soltar". Portanto, você deve evitar tarefas com uso intensivo de recursos nos manipuladores de eventos.  Por exemplo, use um cursor em cache em vez de criar um novo cursor a cada <xref:System.Windows.DragDrop.GiveFeedback> vez que o evento for gerado.  
+> Esses eventos são acionados continuamente durante a operação do tipo "arrastar e soltar". Portanto, você deve evitar tarefas com uso intensivo de recursos nos manipuladores de eventos.  Por exemplo, use um cursor em cache em vez de criar um novo cursor a cada <xref:System.Windows.DragDrop.GiveFeedback> vez que o evento for gerado.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Habilitando um elemento a ser um destino de soltar  
  Um objeto que é um destino de soltar é responsável por:  

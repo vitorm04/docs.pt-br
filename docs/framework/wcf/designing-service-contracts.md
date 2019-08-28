@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965612"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040624"
 ---
 # <a name="designing-service-contracts"></a>Criando contratos de serviço
 Este tópico descreve o que são contratos de serviço, como eles são definidos, quais operações estão disponíveis (e as implicações para as trocas de mensagens subjacentes), quais tipos de dados são usados e outros problemas que ajudam você a projetar operações que atendam às requisitos do seu cenário.  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  Para obter um exemplo de como criar um serviço e um cliente que acessa esse serviço, consulte [como: Crie um contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) duplex e [como: Acesse os serviços com um](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)contrato duplex. Para obter um exemplo funcional, consulte [duplex](../../../docs/framework/wcf/samples/duplex.md). Para obter mais informações sobre problemas usando contratos duplex, consulte [Serviços duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
->  Quando um serviço recebe uma mensagem duplex, ele examina o `ReplyTo` elemento nessa mensagem de entrada para determinar para onde enviar a resposta. Se o canal usado para receber a mensagem não estiver protegido, um cliente não confiável poderá enviar uma mensagem mal-intencionada com um computador `ReplyTo`de destino, levando a uma negação de serviço (dos) desse computador de destino.  
+> Quando um serviço recebe uma mensagem duplex, ele examina o `ReplyTo` elemento nessa mensagem de entrada para determinar para onde enviar a resposta. Se o canal usado para receber a mensagem não estiver protegido, um cliente não confiável poderá enviar uma mensagem mal-intencionada com um computador `ReplyTo`de destino, levando a uma negação de serviço (dos) desse computador de destino.  
   
 ##### <a name="out-and-ref-parameters"></a>Parâmetros out e ref  
  Na maioria dos casos, você pode `in` usar parâmetros`ByVal` ( `ref` em Visual Basic) `out` e parâmetros (`ByRef` em Visual Basic). Como ambos `out` os `ref` parâmetros e indicam que os dados são retornados de uma operação, uma assinatura de operação como a seguinte especifica que uma operação de solicitação/resposta é necessária, embora a assinatura de operação retorne `void`.  

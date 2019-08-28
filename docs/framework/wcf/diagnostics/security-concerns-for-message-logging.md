@@ -2,12 +2,12 @@
 title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5db9fbf0dfb91ecb903660ebfb42c33f55b27bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933608"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044262"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais de serem expostos em logs de mensagens, bem como eventos gerados pelo log de mensagens.  
@@ -91,7 +91,7 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
  O administrador do computador e o implantador de aplicativos devem ter muito cuidado ao usar essas duas opções. Se o log de PII estiver habilitado, as chaves de segurança e PII serão registradas. Se estiver desabilitado, os dados confidenciais e específicos do aplicativo ainda serão registrados em cabeçalhos e corpos de mensagens. Para obter uma discussão mais detalhada sobre privacidade e proteger a PII de ser exposta, consulte [privacidade do usuário](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
->  PII não está oculta em mensagens malformadas. Essa mensagem é registrada como está sem qualquer modificação. Os atributos mencionados anteriormente não têm nenhum efeito sobre isso.  
+> PII não está oculta em mensagens malformadas. Essa mensagem é registrada como está sem qualquer modificação. Os atributos mencionados anteriormente não têm nenhum efeito sobre isso.  
   
 ### <a name="custom-trace-listener"></a>Ouvinte de rastreamento personalizado  
  A adição de um ouvinte de rastreamento personalizado na origem do rastreamento de log de mensagens é um privilégio que deve ser restrito ao administrador. Isso ocorre porque os ouvintes personalizados mal-intencionados podem ser configurados para enviar mensagens remotamente, o que leva à divulgação de informações confidenciais. Além disso, se você configurar um ouvinte personalizado para enviar mensagens na conexão, como, para um banco de dados remoto, deverá impor o controle de acesso apropriado nos logs de mensagens no computador remoto.  

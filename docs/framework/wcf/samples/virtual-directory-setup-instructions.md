@@ -2,12 +2,12 @@
 title: Instruções de definição de diretório virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966734"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038641"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instruções de definição de diretório virtual
 Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar um diretório virtual comum denominado servicemodelsamples que é mapeado para a pasta%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -36,10 +36,10 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
 7. Clique em **OK**. O aplicativo Web agora é criado para os exemplos do WCF.  
   
     > [!NOTE]
-    >  Essa tarefa deve ser executada apenas uma vez, porque todos os exemplos do WCF usam o mesmo aplicativo Web servicemodelsamples.  
+    > Essa tarefa deve ser executada apenas uma vez, porque todos os exemplos do WCF usam o mesmo aplicativo Web servicemodelsamples.  
   
     > [!NOTE]
-    >  Para a finalidade desta documentação, o termo `virtual directory` é sinônimo `Web application`de.  
+    > Para a finalidade desta documentação, o termo `virtual directory` é sinônimo `Web application`de.  
   
      Além de criar o diretório virtual, você também deve definir suas propriedades para permitir que os serviços WCF sejam executados. Veja mais detalhes a seguir.  
   
@@ -66,7 +66,7 @@ Os exemplos de Windows Communication Foundation (WCF) destinam-se a compartilhar
 8. Clique em **Avançar**e em **concluir** para concluir o assistente.  
   
     > [!NOTE]
-    >  Esta tarefa deve ser executada apenas uma vez porque todos os exemplos do WCF usam o mesmo diretório virtual servicemodelsamples.  
+    > Esta tarefa deve ser executada apenas uma vez porque todos os exemplos do WCF usam o mesmo diretório virtual servicemodelsamples.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Para definir propriedades de diretório virtual adicionais no IIS 7,0 ou 7,5  
   

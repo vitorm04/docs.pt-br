@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962356"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044394"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Como: criar um fluxo de trabalho da máquina de estado
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.StateMachine> atividade, e as atividades personalizadas da seção [como: Criar um tópico](how-to-create-an-activity.md) de atividade. O fluxo de trabalho modela um jogo de palpite de número.  
@@ -52,7 +52,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 9. Clique em **criar variável**.  
   
     > [!TIP]
-    >  Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.StateMachine> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
+    > Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.StateMachine> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
   
 10. Digite `Guess` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
@@ -67,7 +67,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 1. Clique em **State1** para selecioná-lo. Na **janela Propriedades**, altere o **DisplayName** para `Initialize Target`.  
   
     > [!TIP]
-    >  Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .  
+    > Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .  
   
 2. Clique duas vezes no estado de destino de **inicialização** renomeado recentemente no designer de fluxo de trabalho para expandi-lo.  
   
@@ -82,7 +82,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     ```  
   
     > [!TIP]
-    >  Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
+    > Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
   
 4. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988660"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045845"
 ---
 # <a name="serialization-and-deserialization"></a>Serialização e desserialização
 Windows Communication Foundation (WCF) inclui um novo mecanismo de serialização, <xref:System.Runtime.Serialization.DataContractSerializer>o. O <xref:System.Runtime.Serialization.DataContractSerializer> se traduz entre objetos .NET Framework e XML, em ambas as direções. Este tópico explica como o serializador funciona.  
@@ -138,7 +138,7 @@ Windows Communication Foundation (WCF) inclui um novo mecanismo de serializaçã
 - Esse recurso pode fazer o processo de serialização e desserialização ser executado mais lentamente. Embora os dados não precisem ser replicados, as comparações adicionais de objeto devem ser executadas nesse modo.  
   
 > [!CAUTION]
->  Quando o modo `preserveObjectReferences` está ativado, ele é especialmente importante para definir o valor de `maxItemsInObjectGraph` para a cota correta. Devido à maneira como as matrizes são tratadas nesse modo, é fácil para que um invasor construir uma pequena mensagem mal-intencionada que resulta em um grande consumo de memória limitada somente pela cota de `maxItemsInObjectGraph`.  
+> Quando o modo `preserveObjectReferences` está ativado, ele é especialmente importante para definir o valor de `maxItemsInObjectGraph` para a cota correta. Devido à maneira como as matrizes são tratadas nesse modo, é fácil para que um invasor construir uma pequena mensagem mal-intencionada que resulta em um grande consumo de memória limitada somente pela cota de `maxItemsInObjectGraph`.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Especificando um substituto para os contratos de dados  
  Algumas sobrecargas de construtor do `DataContractSerializer` têm um parâmetro `dataContractSurrogate`, que pode ser definido como `null` por padrão. Caso contrário, você pode usá-lo para especificar um *substituto de contrato de dados*, que é um <xref:System.Runtime.Serialization.IDataContractSurrogate> tipo que implementa a interface. Você pode, em seguida, usar a interface para personalizar o processo de serialização e desserialização. Para obter mais informações, consulte substitutos de [contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  

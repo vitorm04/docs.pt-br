@@ -2,12 +2,12 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 8814a48df8933cf08db78e397c24d42f2da26026
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7952e6cc4d2fe7eaa77e297a650f7ffbd7aec785
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919226"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040936"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 Contém dados de configuração para <xref:System.Runtime.Serialization.DataContractSerializer>o.  
@@ -48,7 +48,7 @@ Contém dados de configuração para <xref:System.Runtime.Serialization.DataCont
  Consulte a <xref:System.Runtime.Serialization.DataContractSerializer> documentação para obter mais informações sobre tipos conhecidos.  
   
 > [!CAUTION]
->  O `<dataContractSerializer>` elemento Behavior (se presente) sempre deve aparecer antes do `<enableWebScript>` elemento Behavior no arquivo de configuração. Caso contrário, o comportamento resultante será indefinido.  
+> O `<dataContractSerializer>` elemento Behavior (se presente) sempre deve aparecer antes do `<enableWebScript>` elemento Behavior no arquivo de configuração. Caso contrário, o comportamento resultante será indefinido.  
   
 ## <a name="see-also"></a>Consulte também
 
