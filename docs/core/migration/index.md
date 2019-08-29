@@ -3,12 +3,12 @@ title: Migração do .NET Core com project.json
 description: Saiba como migrar um projeto .NET Core mais antigo usando project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663331"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105302"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migração de projetos do .NET Core com project.json
 
@@ -78,13 +78,13 @@ Se você ainda estiver usando o DNX para desenvolvimento no .NET Core, o process
 
 O formato csproj do .NET Core foi mudando e evoluindo com cada nova versão de pré-lançamento da ferramenta. Não há nenhuma ferramenta que migrará seu arquivo de projeto de versões anteriores do csproj para a versão mais recente. Sendo assim, você precisa editar manualmente o arquivo de projeto. As etapas reais dependem da versão do arquivo de projeto que você está migrando. A seguir, há algumas diretrizes para serem consideradas com base nas alterações que ocorreram entre as versões:
 
-* Remova a propriedade de versão das ferramentas do elemento `<Project>`, se ele existir.
-* Remova o namespace de XML (`xmlns`) do elemento `<Project>`.
-* Se ele não existir, adicione o atributo `Sdk` ao elemento `<Project>` e defina-o como `Microsoft.NET.Sdk` ou `Microsoft.NET.Sdk.Web`. Esse atributo especifica que o projeto usa o SDK que será utilizado. `Microsoft.NET.Sdk.Web` é usado em aplicativos Web.
-* Remova as instruções `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` da parte superior e inferior do projeto. Essas instruções estão implícitas no SDK. Portanto, não é necessário que elas estejam no projeto.
-* Se os itens `Microsoft.NETCore.App` ou `NETStandard.Library` `<PackageReference>` estiverem em seu projeto, você deverá removê-los. Essas referências do pacote estão [implícitas no SDK](https://aka.ms/sdkimplicitrefs).
-* Remova o elemento `Microsoft.NET.Sdk` `<PackageReference>`, se ele existir. A referência do SDK é fornecida por meio do atributo `Sdk` no elemento `<Project>`.
-* Remova os [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que estão [implícitos no SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Deixar esses globs em seu projeto causará um erro no build, uma vez que os itens de compilação serão duplicados.
+- Remova a propriedade de versão das ferramentas do elemento `<Project>`, se ele existir.
+- Remova o namespace de XML (`xmlns`) do elemento `<Project>`.
+- Se ele não existir, adicione o atributo `Sdk` ao elemento `<Project>` e defina-o como `Microsoft.NET.Sdk` ou `Microsoft.NET.Sdk.Web`. Esse atributo especifica que o projeto usa o SDK que será utilizado. `Microsoft.NET.Sdk.Web` é usado em aplicativos Web.
+- Remova as instruções `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` da parte superior e inferior do projeto. Essas instruções estão implícitas no SDK. Portanto, não é necessário que elas estejam no projeto.
+- Se os itens `Microsoft.NETCore.App` ou `NETStandard.Library` `<PackageReference>` estiverem em seu projeto, você deverá removê-los. Essas referências do pacote estão [implícitas no SDK](https://aka.ms/sdkimplicitrefs).
+- Remova o elemento `Microsoft.NET.Sdk` `<PackageReference>`, se ele existir. A referência do SDK é fornecida por meio do atributo `Sdk` no elemento `<Project>`.
+- Remova os [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que estão [implícitos no SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Deixar esses globs em seu projeto causará um erro no build, uma vez que os itens de compilação serão duplicados.
 
 Após essas etapas, seu projeto deverá estar totalmente compatível com o formato csproj do RTM .NET Core.
 

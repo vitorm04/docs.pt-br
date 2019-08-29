@@ -4,12 +4,12 @@ description: Este artigo ensina como controlar a versão do SDK do .NET Core (se
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646859"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104952"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
@@ -36,8 +36,8 @@ A terceira posição do número de versão do SDK comunica o número de patch e 
 
 OBSERVAÇÕES:
 
-* Se o SDK tiver 10 atualizações de recurso antes de uma atualização de recurso de tempo de execução, os números de versão serão passados na série 1000 com números como 2.2.1000 de acordo com a versão do recurso 2.2.900 a seguir. Essa situação não deve ocorrer.
-* As versões de patch 99 sem uma versão do recurso não ocorrerão. Se uma versão se aproximar desse número, ela forçará uma versão do recurso.
+- Se o SDK tiver 10 atualizações de recurso antes de uma atualização de recurso de tempo de execução, os números de versão serão passados na série 1000 com números como 2.2.1000 de acordo com a versão do recurso 2.2.900 a seguir. Essa situação não deve ocorrer.
+- As versões de patch 99 sem uma versão do recurso não ocorrerão. Se uma versão se aproximar desse número, ela forçará uma versão do recurso.
 
 Você poderá ver mais detalhes na proposta inicial no repositório [dotnet/designs](https://github.com/dotnet/designs/pull/29).
 
@@ -55,24 +55,24 @@ As partes `PRERELEASE` e `BUILDNUMBER` opcionais nunca farão parte das versões
 
 `MAJOR` é incrementado quando:
 
-* Ocorrem alterações significativas no produto ou uma nova direção de produto.
-* Alterações da falha foram identificadas. Há um alto padrão para aceitar alterações da falha.
-* Não há mais suporte para uma versão mais antiga.
-* Uma versão `MAJOR` mais nova de uma dependência existente é adotada.
+- Ocorrem alterações significativas no produto ou uma nova direção de produto.
+- Alterações da falha foram identificadas. Há um alto padrão para aceitar alterações da falha.
+- Não há mais suporte para uma versão mais antiga.
+- Uma versão `MAJOR` mais nova de uma dependência existente é adotada.
 
 `MINOR` é incrementado quando:
 
-* Uma área de superfície de API pública é adicionada.
-* Um novo comportamento é adicionado.
-* Uma versão `MINOR` mais nova de uma dependência existente é adotada.
-* Uma nova dependência é introduzida.
+- Uma área de superfície de API pública é adicionada.
+- Um novo comportamento é adicionado.
+- Uma versão `MINOR` mais nova de uma dependência existente é adotada.
+- Uma nova dependência é introduzida.
 
 `PATCH` é incrementado quando:
 
-* Correções de bug são feitas.
-* O suporte para uma plataforma mais recente é adicionado.
-* Uma versão `PATCH` mais nova de uma dependência existente é adotada.
-* Qualquer outra alteração que não se enquadre em um dos casos anteriores.
+- Correções de bug são feitas.
+- O suporte para uma plataforma mais recente é adicionado.
+- Uma versão `PATCH` mais nova de uma dependência existente é adotada.
+- Qualquer outra alteração que não se enquadre em um dos casos anteriores.
 
 Quando há várias alterações, o elemento mais alto afetado por alterações individuais é incrementado e os seguintes são redefinidos como zero. Por exemplo, quando `MAJOR` é incrementado, `MINOR` e `PATCH` são redefinidos como zero. Quando `MINOR` é incrementado, `PATCH` é redefinido como zero enquanto `MAJOR` permanece inalterado.
 

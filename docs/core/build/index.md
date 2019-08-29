@@ -4,12 +4,12 @@ description: Saiba como compilar o .NET Core e a CLI do .NET Core no código-fon
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650876"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105395"
 ---
 # <a name="build-net-core-from-source"></a>Compilar Build .NET Core da origem
 
@@ -22,28 +22,28 @@ O código-fonte para o .NET CoreCLR pode ser encontrado no repositório [dotnet/
 
 O build atualmente depende dos seguintes pré-requisitos:
 
-* [Git](https://git-scm.com/)
-* [CMake](https://cmake.org/)
-* [Python](https://www.python.org/)
-* um compilador C++.
+- [Git](https://git-scm.com/)
+- [CMake](https://cmake.org/)
+- [Python](https://www.python.org/)
+- um compilador C++.
 
 Após instalar esses pré-requisitos, você poderá compilar o CLR ao invocar o script de build (`build.cmd` no Windows ou `build.sh` no Linux e no macOS) na base do repositório [dotnet/coreclr](https://github.com/dotnet/coreclr/).
 
 A instalação dos componentes será diferente dependendo do sistema operacional (SO). Confira as instruções de build do seu sistema operacional específico:
 
-* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
-* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
-* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
-* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
-* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+- [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+- [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+- [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+- [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+- [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 Não há nenhuma compilação cruzada entre sistemas operacionais (apenas para ARM, que é criado em X64).  
 Você precisa estar na plataforma específica para criar essa plataforma.  
 
 O build tem dois `buildTypes` principais:
 
-* Debug (padrão) – compila o tempo de execução com otimizações mínimas e verificações de tempo de execução adicionais (declarações). Essa redução no nível de otimização e as verificações adicionais tornam a execução do tempo de execução mais lenta, mas são importantes para a depuração. Essa é a configuração recomendada para ambientes de desenvolvimento e teste.
-* Versão – compila o tempo de execução com otimizações completas e sem verificações de tempo de execução adicionais. Isso produzirá um desempenho muito mais rápido no tempo de execução, mas pode demorar um pouco mais para compilar e pode ser difícil de depurar. Passe `release` para o script de build para selecionar este tipo de build.
+- Debug (padrão) – compila o tempo de execução com otimizações mínimas e verificações de tempo de execução adicionais (declarações). Essa redução no nível de otimização e as verificações adicionais tornam a execução do tempo de execução mais lenta, mas são importantes para a depuração. Essa é a configuração recomendada para ambientes de desenvolvimento e teste.
+- Versão – compila o tempo de execução com otimizações completas e sem verificações de tempo de execução adicionais. Isso produzirá um desempenho muito mais rápido no tempo de execução, mas pode demorar um pouco mais para compilar e pode ser difícil de depurar. Passe `release` para o script de build para selecionar este tipo de build.
 
 Além disso, por padrão, o build não só cria os executáveis de tempo de execução, mas também compila todos os testes.
 Há alguns testes, tomando a uma quantidade significativa de tempo que não é necessária se quiser apenas experimentar as alterações.
@@ -65,7 +65,7 @@ O exemplo anterior mostrou como compilar o tipo `Debug`, que tem verificações 
 
 O build coloca todos os arquivos gerados sob o diretório `bin` na base do repositório.
 Há um diretório *bin\Log* que contém os arquivos de log gerados durante o build (mais útil quando o build falha).
-A saída real é colocada em um diretório *bin\Product\[plataforma]. [ Arquitetura de CPU]. [tipo de build]*, como *bin\Product\Windows_NT.x64.Release*.
+A saída real é colocada em um diretório *bin\Product\[plataforma]. [ Arquitetura de CPU]. [tipo de build]* , como *bin\Product\Windows_NT.x64.Release*.
 
 Embora a saída “bruta” do build, às vezes, seja útil, normalmente, você só está interessado nos pacotes NuGet, que são colocados no subdiretório `.nuget\pkg` do diretório de saída anterior.
 
@@ -86,12 +86,12 @@ O código-fonte para a CLI do .NET Core pode ser encontrado no repositório [dot
 
 Para criar a CLI do .NET Core, será necessário os seguintes itens instalados em seu computador.
 
-* Windows e Linux:
-  * git no CAMINHO
-* macOS:
-  * git no CAMINHO
-  * Xcode
-  * OpenSSL
+- Windows e Linux:
+  - git no CAMINHO
+- macOS:
+  - git no CAMINHO
+  - Xcode
+  - OpenSSL
 
 Para criar, execute `build.cmd` no Windows ou `build.sh` no Linux e macOS da raiz. Se não desejar executar testes, execute `build.cmd -t:Compile` ou `./build.sh -t:Compile`. Para criar a CLI em macOS Sierra, é necessário definir a variável de ambiente DOTNET_RUNTIME_ID executando `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
