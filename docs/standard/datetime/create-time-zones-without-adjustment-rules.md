@@ -12,58 +12,58 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff4cfe2b492b676c061043f018390844f1807440
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 510112c8b19ec002d1dcf918eb983b55dee68fd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586403"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106662"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>Como: criar fusos horários sem regras de ajuste
 
-As informações precisas de fuso horário que são exigidas por um aplicativo não podem estar presentes em um determinado sistema por diversos motivos:
+As informações precisas de fuso horário exigidas por um aplicativo podem não estar presentes em um sistema específico por vários motivos:
 
-* O fuso horário nunca foi definido no registro do sistema local.
+- O fuso horário nunca foi definido no registro do sistema local.
 
-* Dados sobre o fuso horário foi modificados ou removidos do registro.
+- Os dados sobre o fuso horário foram modificados ou removidos do registro.
 
-* O fuso horário existe, mas não tem informações precisas sobre ajustes de fuso horário para um determinado período de histórico.
+- O fuso horário existe, mas não tem informações precisas sobre os ajustes de fuso horário de um período histórico específico.
 
-Nesses casos, você pode chamar o <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método para definir o fuso horário exigido pelo seu aplicativo. Você pode usar as sobrecargas desse método para criar um fuso horário com ou sem regras de ajuste. Se o fuso horário der suporte ao horário de verão, você pode definir ajustes com a regras de ajuste fixa ou flutuante. (Para obter definições desses termos, consulte a seção "Terminologia de fuso horário" em [visão geral do fuso horário](../../../docs/standard/datetime/time-zone-overview.md).)
+Nesses casos, você pode chamar o <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método para definir o fuso horário exigido pelo seu aplicativo. Você pode usar as sobrecargas desse método para criar um fuso horário com ou sem regras de ajuste. Se o fuso horário der suporte ao horário de verão, você poderá definir ajustes com regras de ajuste fixos ou flutuantes. (Para obter as definições desses termos, consulte a seção "terminologia de fuso horário" em [visão geral de fuso horário](../../../docs/standard/datetime/time-zone-overview.md).)
 
 > [!IMPORTANT]
-> Fusos horários personalizados criados ao chamar o <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método não são adicionados ao registro. Em vez disso, eles podem ser acessados apenas pela referência de objeto retornada pelo <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> chamada de método.
+> Os fusos horários personalizados criados chamando <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> o método não são adicionados ao registro. Em vez disso, eles podem ser acessados somente por meio da <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> referência de objeto retornada pela chamada de método.
 
-Este tópico mostra como criar um fuso horário sem regras de ajuste. Para criar um fuso horário que dá suporte a regras de ajuste de horário de verão, consulte [como: Criar fusos horários com regras de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+Este tópico mostra como criar um fuso horário sem regras de ajuste. Para criar um fuso horário que dê suporte às regras de ajuste de horário [de verão, consulte Como: Crie fusos horários com regras](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)de ajuste.
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>Para criar um fuso horário sem regras de ajuste
 
-1. Defina nome de exibição do fuso horário.
+1. Defina o nome de exibição do fuso horário.
 
-   O nome de exibição segue um formato padrão no qual o deslocamento do fuso horário do tempo Universal Coordenado (UTC) é colocado entre parênteses e é seguido por uma cadeia de caracteres que identifica o fuso horário, uma ou mais das cidades no fuso horário ou em um ou mais do cou ntries ou regiões no fuso horário.
+   O nome de exibição segue um formato bastante padrão no qual o deslocamento do fuso horário do UTC (tempo Universal Coordenado) é incluído entre parênteses e é seguido por uma cadeia de caracteres que identifica o fuso horário, uma ou mais cidades no fuso horário ou um ou mais dos cou ntries ou regiões no fuso horário.
 
-2. Defina o nome do horário de padrão do fuso horário. Normalmente, essa cadeia de caracteres também é usada como identificador do fuso horário.
+2. Defina o nome do horário padrão do fuso horário. Normalmente, essa cadeia de caracteres também é usada como o identificador do fuso horário.
 
-3. Se você quiser usar um identificador diferente do nome do padrão do fuso horário, defina o identificador de fuso horário.
+3. Se você quiser usar um identificador diferente do nome padrão do fuso horário, defina o identificador de fuso horário.
 
-4. Criar uma instância de um <xref:System.TimeSpan> objeto que define o deslocamento do fuso horário do UTC. Fusos horários com horários posteriores ao UTC têm um deslocamento positivo. Fusos horários com horários anteriores ao UTC têm um deslocamento negativo.
+4. Crie uma <xref:System.TimeSpan> instância de um objeto que define o deslocamento do fuso horário do UTC. Fusos horários com horas posteriores a UTC têm um deslocamento positivo. Fusos horários com horários que são anteriores ao UTC têm um deslocamento negativo.
 
-5. Chamar o <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> método para instanciar o novo fuso horário.
+5. Chame o <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> método para instanciar o novo fuso horário.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir define um fuso horário personalizado para Mawson, Antártica, que não tem a nenhuma regra de ajuste.
+O exemplo a seguir define um fuso horário personalizado para Mawson, Antártica, que não tem nenhuma regra de ajuste.
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
 [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
 
-A cadeia de caracteres atribuída para o <xref:System.TimeZoneInfo.DisplayName%2A> propriedade segue um formato padrão no qual o deslocamento do fuso horário do UTC é seguido por uma descrição amigável do fuso horário.
+A cadeia de caracteres atribuída <xref:System.TimeZoneInfo.DisplayName%2A> à propriedade segue um formato padrão no qual o deslocamento do fuso horário do UTC é seguido por uma descrição amigável do fuso horário.
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
 Este exemplo requer:
 
-* Se os seguintes namespaces sejam importados:
+- Que os seguintes namespaces sejam importados:
 
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]

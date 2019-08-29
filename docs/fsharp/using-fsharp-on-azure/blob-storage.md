@@ -3,12 +3,12 @@ title: Introdução ao armazenamento de Blobs do Azure usando F#
 description: Armazene dados não estruturados na nuvem com o armazenamento de BLOBs do Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630513"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107116"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando o F\#
 
@@ -186,9 +186,9 @@ Consulte [noções básicas sobre blobs de blocos, blobs de páginas e blobs de 
 
 Para dar suporte ao acesso simultâneo a um blob de vários clientes ou várias instâncias de processo, você pode usar ETags ou concessões.
 
-* **ETag** – fornece uma maneira de detectar que o BLOB ou o contêiner foi modificado por outro processo
+- **ETag** – fornece uma maneira de detectar que o BLOB ou o contêiner foi modificado por outro processo
 
-* **Concessão** -fornece uma maneira de obter acesso exclusivo, renovável, gravar ou excluir a um blob por um período de tempo
+- **Concessão** -fornece uma maneira de obter acesso exclusivo, renovável, gravar ou excluir a um blob por um período de tempo
 
 Para obter mais informações, consulte Gerenciando a [simultaneidade no armazenamento do Microsoft Azure](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 

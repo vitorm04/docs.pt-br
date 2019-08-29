@@ -1,32 +1,32 @@
 ---
 title: Expressões de computação
-description: Saiba como criar uma sintaxe conveniente para criar cálculos F# que pode ser sequenciado e combinados usando o controle construções de fluxo e associações.
+description: Saiba como criar uma sintaxe conveniente para escrever cálculos no F# que pode ser sequenciada e combinada usando construções e associações de fluxo de controle.
 ms.date: 03/15/2019
-ms.openlocfilehash: b352c5541bc31b5c583904b99651de9180c8afb3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152025"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106577"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
-Expressões de computação no F# fornecem uma sintaxe conveniente para criar cálculos que podem ser sequenciados e combinados usando construções de fluxo de controle e associações. Dependendo do tipo de expressão de computação, elas podem ser consideradas como uma maneira de expressar monads, monoids, transformadores monad e functors applicative. No entanto, ao contrário de outras linguagens (como *notação* em Haskell), eles não estão vinculados a uma única abstração e não dependem de macros ou outras formas de metaprogramação para realizar uma sintaxe conveniente e sensível ao contexto.
+As expressões de F# computação no fornecem uma sintaxe conveniente para escrever computações que podem ser sequenciadas e combinadas usando construções e associações de fluxo de controle. Dependendo do tipo de expressão de computação, eles podem ser considerados como uma maneira de expressar monads, monoids, transformadores do Monad e Applicative transmissão functors. No entanto, ao contrário de outras linguagens (como o *-Notation* no Haskell), elas não estão vinculadas a uma única abstração e não dependem de macros ou de outras formas de metaprogramação para realizar uma sintaxe conveniente e sensível ao contexto.
 
 ## <a name="overview"></a>Visão geral
 
-Computações podem assumir várias formas. A forma mais comum de computação é execução single-threaded, que é fácil de entender e modificar. No entanto, nem todos os formulários de computação são tão simples como execução single-threaded. Eis alguns exemplos:
+As computações podem ter muitas formas. A forma mais comum de computação é a execução de thread único, que é fácil de entender e modificar. No entanto, nem todas as formas de computação são tão simples quanto a execução de thread único. Eis alguns exemplos:
 
-* Cálculos não determinísticas
-* Computações assíncronas
-* Computações effectful
-* Computações produtivas
+- Computações não determinísticas
+- Computações assíncronas
+- Cálculos de efeito
+- Computações de geração
 
-De modo geral, há *contextual* cálculos que você deve executar em determinadas partes de um aplicativo. Escrever o código sensível ao contexto pode ser um desafio, pois é fácil de computações "vaze" fora de um determinado contexto sem abstrações para impedir que você fazer isso. Essas abstrações geralmente são um desafio para escrever por conta própria, razão pela qual F# tem uma maneira generalizada fazer chamados **expressões de computação**.
+Em geral, há cálculos *sensíveis ao contexto* que você deve executar em determinadas partes de um aplicativo. Escrever código sensível ao contexto pode ser desafiador, pois é fácil "vazar" cálculos fora de um determinado contexto sem abstrações para impedir que você faça isso. Muitas vezes, essas abstrações são desafiadoras de escrever por conta própria F# , e é por isso que tem uma maneira generalizada de fazer isso, chamado de **expressões de computação**.
 
-Expressões de computação oferecem um modelo uniforme de sintaxe e abstração para codificação de cálculos sensíveis ao contexto.
+As expressões de computação oferecem uma sintaxe uniforme e um modelo de abstração para codificar cálculos sensíveis ao contexto.
 
-Cada expressão de computação é apoiado por um *construtor* tipo. O tipo de construtor define as operações que estão disponíveis para a expressão de computação. Ver [criando uma nova expressão de tipo de computação](computation-expressions.md#creating-a-new-type-of-computation-expression), que mostra como criar uma expressão de cálculo personalizado.
+Cada expressão de computação é apoiada por um tipo de *Construtor* . O tipo de construtor define as operações que estão disponíveis para a expressão de computação. Consulte [criando um novo tipo de expressão de computação](computation-expressions.md#creating-a-new-type-of-computation-expression), que mostra como criar uma expressão de computação personalizada.
 
 ### <a name="syntax-overview"></a>Visão geral da sintaxe
 
@@ -36,7 +36,7 @@ Todas as expressões de computação têm o seguinte formato:
 builder-expr { cexper }
 ```
 
-em que `builder-expr` é o nome de um tipo de construtor que define a expressão de computação, e `cexper` é o corpo de expressão da expressão de computação. Por exemplo, `async` código de expressão de cálculo pode ter esta aparência:
+em `builder-expr` que é o nome de um tipo de construtor que define a expressão de `cexper` computação e é o corpo da expressão da expressão de computação. Por exemplo, `async` o código de expressão de computação pode ser assim:
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-Há uma sintaxe especial, adicional disponível dentro de uma expressão de computação, conforme mostrado no exemplo anterior. Os formulários de expressão a seguir são possíveis com expressões de computação:
+Há uma sintaxe adicional e especial disponível em uma expressão de computação, conforme mostrado no exemplo anterior. Os formulários de expressão a seguir são possíveis com expressões de computação:
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Cada uma dessas palavras-chave e outro standard F# palavras-chave só estão disponíveis em uma expressão de computação se eles tiverem sido definidos no tipo de construtor de backup. É a única exceção a isso `match!`, que é a própria açúcar sintático para o uso de `let!` seguido por uma correspondência de padrões no resultado.
+Cada uma dessas palavras-chave e outras palavras- F# chave padrão só estarão disponíveis em uma expressão de computação se elas tiverem sido definidas no tipo de construtor de backup. A única exceção é `match!`, que é, por sua vez, uma simplificação sintática para o uso de `let!` seguido por um padrão de correspondência no resultado.
 
-O tipo de construtor é um objeto que define os métodos especiais que regem a forma como os fragmentos da expressão de computação são combinados; ou seja, a seus métodos controlam o comportamento da expressão de computação. Outra maneira de descrever uma classe de construtor é dizer que ele permite que você personalize a operação de vários F# construções como loops e associações.
+O tipo de construtor é um objeto que define métodos especiais que regem a maneira como os fragmentos da expressão de computação são combinados; ou seja, seus métodos controlam a forma como a expressão de computação se comporta. Outra maneira de descrever uma classe de construtor é dizer que ela permite que você personalize a operação de muitas F# construções, como loops e associações.
 
 ### `let!`
 
-O `let!` palavra-chave associa o resultado de uma chamada para outra expressão de computação para um nome:
+A `let!` palavra-chave associa o resultado de uma chamada a outra expressão de computação a um nome:
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-Se você associar a chamada para uma expressão de computação com `let`, você não obterá o resultado da expressão de computação. Em vez disso, você será tiver associado o valor de *não realizado* chamada para essa expressão de computação. Use `let!` para associar ao resultado.
+Se você associar a chamada a uma expressão de computação `let`com, não obterá o resultado da expressão de computação. Em vez disso, você terá associado o valor da chamada não *realizada* a essa expressão de computação. Use `let!` para associar ao resultado.
 
-`let!` é definido pelo `Bind(x, f)` membro no tipo de construtor.
+`let!`é definido pelo `Bind(x, f)` membro no tipo de construtor.
 
 ### `do!`
 
-O `do!` palavra-chave é para chamar uma expressão de cálculo que retorna um `unit`-como o tipo (definido pelo `Zero` membro no construtor de):
+A `do!` palavra-chave é para chamar uma expressão de computação `unit`que retorna um `Zero` tipo-like (definido pelo membro no Construtor):
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-Para o [fluxo de trabalho assíncrono](asynchronous-workflows.md), esse tipo é `Async<unit>`. Para outras expressões de cálculo, o tipo é provavelmente será `CExpType<unit>`.
+Para o [fluxo de trabalho assíncrono](asynchronous-workflows.md), esse `Async<unit>`tipo é. Para outras expressões de computação, é provável que o tipo `CExpType<unit>`seja.
 
-`do!` é definido pela `Bind(x, f)` membro no tipo de construtor, onde `f` produz um `unit`.
+`do!`é definido pelo `Bind(x, f)` membro no tipo de construtor, onde `f` produz um `unit`.
 
 ### `yield`
 
-O `yield` palavra-chave é para retornar um valor de expressão de computação para que ele possa ser consumido como um <xref:System.Collections.Generic.IEnumerable%601>:
+A `yield` palavra-chave é para retornar um valor da expressão de computação para que ela possa ser consumida como um <xref:System.Collections.Generic.IEnumerable%601>:
 
 ```fsharp
 let squares =
@@ -112,13 +112,13 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Assim como acontece com o [palavra-chave na linguagem c# yield](../../csharp/language-reference/keywords/yield.md), cada elemento na expressão de cálculo é rendido de volta como ele é iterado.
+Assim como acontece com a [palavra C#-chave yield em ](../../csharp/language-reference/keywords/yield.md), cada elemento na expressão de computação é devolvido conforme é iterado.
 
-`yield` é definido pela `Yield(x)` membro no tipo de construtor, onde `x` é o item para gerar novamente.
+`yield`é definido pelo `Yield(x)` membro no tipo de construtor, em que `x` é o item a ser devolvido.
 
 ### `yield!`
 
-O `yield!` palavra-chave é para mesclar uma coleção de valores de uma expressão de cálculo:
+A `yield!` palavra-chave é para mesclar uma coleção de valores de uma expressão de computação:
 
 ```fsharp
 let squares =
@@ -140,13 +140,13 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-Quando avaliada, a expressão de computação chamado pelo `yield!` serão seus itens produziram back---individualmente, simplificar o resultado.
+Quando avaliado, a expressão de computação chamada `yield!` por terá seus itens devolvidos um-por-um, mesclando o resultado.
 
-`yield!` é definido pela `YieldFrom(x)` membro no tipo de construtor, onde `x` é uma coleção de valores.
+`yield!`é definido pelo `YieldFrom(x)` membro no tipo de construtor, em que `x` é uma coleção de valores.
 
 ### `return`
 
-O `return` palavra-chave encapsula um valor no tipo correspondente à expressão de cálculo. Além das expressões de computação usando `yield`, ele é usado para "complete" uma expressão de computação:
+A `return` palavra-chave encapsula um valor no tipo correspondente à expressão de computação. Além das expressões de computação `yield`usando o, ele é usado para "Concluir" uma expressão de computação:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +159,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return` é definido pela `Return(x)` membro no tipo de construtor, onde `x` é o item a ser encapsulado.
+`return`é definido pelo `Return(x)` membro no tipo de construtor, em que `x` é o item a ser quebrado.
 
 ### `return!`
 
-O `return!` palavra-chave percebe que o valor de uma expressão de computação e encapsula o resultado no tipo correspondente à expressão de cálculo:
+A `return!` palavra-chave percebe o valor de uma expressão de computação e encapsulamentos que resultam no tipo correspondente à expressão de computação:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,11 +175,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!` é definido pela `ReturnFrom(x)` membro no tipo de construtor, onde `x` é outra expressão de computação.
+`return!`é definido pelo `ReturnFrom(x)` membro no tipo de construtor, em que `x` é outra expressão de computação.
 
 ### `match!`
 
-Começando com F# 4.5, o `match!` palavra-chave permite que você embutir uma chamada para outra correspondência de expressão e o padrão de computação em seu resultado:
+A partir F# do 4,5, `match!` a palavra-chave permite embutir uma chamada para outra expressão de computação e correspondência de padrão em seu resultado:
 
 ```fsharp
 let doThingsAsync url =
@@ -190,45 +190,45 @@ let doThingsAsync url =
     }
 ```
 
-Ao chamar uma expressão de computação com `match!`, ele obterá o resultado da chamada, como `let!`. Isso geralmente é usado ao chamar uma expressão de computação em que o resultado é um [opcional](options.md).
+Ao chamar uma expressão de computação `match!`com o, ele perceberá o resultado da chamada `let!`como. Isso geralmente é usado ao chamar uma expressão de computação em que o resultado é um [opcional](options.md).
 
-## <a name="built-in-computation-expressions"></a>Expressões de computação interna
+## <a name="built-in-computation-expressions"></a>Expressões de computação internas
 
-O F# biblioteca principal define três expressões de computação interna: [Expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de consulta](query-expressions.md).
+A F# biblioteca principal define três expressões de computação internas: [Expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md)e expressões de [consulta](query-expressions.md).
 
-## <a name="creating-a-new-type-of-computation-expression"></a>Criar um novo tipo de expressão de computação
+## <a name="creating-a-new-type-of-computation-expression"></a>Criando um novo tipo de expressão de computação
 
-Você pode definir as características de suas próprias expressões de cálculo, criando uma classe de construtor e definindo determinados métodos especiais na classe. A classe de construtor, opcionalmente, pode definir os métodos, conforme listado na tabela a seguir.
+Você pode definir as características de suas próprias expressões de computação criando uma classe de construtor e definindo determinados métodos especiais na classe. A classe Builder pode, opcionalmente, definir os métodos conforme listados na tabela a seguir.
 
-A tabela a seguir descreve os métodos que podem ser usados em uma classe de construtor do fluxo de trabalho.
+A tabela a seguir descreve os métodos que podem ser usados em uma classe do construtor de fluxo de trabalho.
 
-|**Método**|**Típica assinatura (s)**|**Descrição**|
+|**Método**|**Assinaturas típicas**|**Descrição**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Chamado para `let!` e `do!` em expressões de computação.|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Encapsula uma expressão de computação como uma função.|
 |`Return`|`'T -> M<'T>`|Chamado para `return` em expressões de computação.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|Chamado para `return!` em expressões de computação.|
 |`Run`|`M<'T> -> M<'T>` ou<br /><br />`M<'T> -> 'T`|Executa uma expressão de computação.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` ou<br /><br />`M<unit> * M<'T> -> M<'T>`|Chamado para o sequenciamento em expressões de computação.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` ou<br /><br />`M<unit> * M<'T> -> M<'T>`|Chamado para sequenciamento em expressões de computação.|
 |`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` ou<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Chamado para `for...do` expressões em expressões de computação.|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Chamado para `try...finally` expressões em expressões de computação.|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Chamado para `try...with` expressões em expressões de computação.|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Chamado para `use` ligações em expressões de computação.|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Chamado para `use` associações em expressões de computação.|
 |`While`|`(unit -> bool) * M<'T> -> M<'T>`|Chamado para `while...do` expressões em expressões de computação.|
 |`Yield`|`'T -> M<'T>`|Chamado para `yield` expressões em expressões de computação.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Chamado para `yield!` expressões em expressões de computação.|
-|`Zero`|`unit -> M<'T>`|Chamado para vazio `else` ramificações de `if...then` expressões em expressões de computação.|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica que a expressão de computação é passado para o `Run` membro como uma cotação. Ele converte todas as instâncias de um cálculo em uma cotação.|
+|`Zero`|`unit -> M<'T>`|Chamado para ramificações vazias `else` de `if...then` expressões em expressões de computação.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica que a expressão de computação é passada para `Run` o membro como uma cotação. Ele traduz todas as instâncias de uma computação em uma cotação.|
 
-Muitos dos métodos em uma classe de construtor usam e retornam um `M<'T>` constructo, que geralmente é um tipo definido separadamente que caracteriza o tipo de computações sendo combinados, por exemplo, `Async<'T>` para fluxos de trabalho assíncronos e `Seq<'T>` para fluxos de trabalho da sequência. As assinaturas desses métodos habilitá-los a serem combinados e aninhados uns com os outros, para que o objeto de fluxo de trabalho retornado por uma construção que pode ser passado para o próximo. O compilador, quando ele analisa uma expressão de computação, converte a expressão em uma série de chamadas de função aninhada usando os métodos na tabela anterior e o código na expressão de cálculo.
+Muitos dos métodos em uma classe de Construtor usam e retornam `M<'T>` uma construção, que normalmente é um tipo definido separadamente que caracteriza o tipo de cálculo que está sendo combinado, por exemplo `Async<'T>` , para fluxos de trabalho `Seq<'T>` assíncronos e para fluxos de trabalho de sequência. As assinaturas desses métodos permitem que eles sejam combinados e aninhados entre si, para que o objeto de fluxo de trabalho retornado de uma construção possa ser passado para o próximo. O compilador, quando analisa uma expressão de cálculo, converte a expressão em uma série de chamadas de função aninhadas usando os métodos na tabela anterior e o código na expressão de computação.
 
-A expressão aninhada é da seguinte forma:
+A expressão aninhada é do seguinte formato:
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não estão definidos na classe de construtor de expressão de computação. O corpo da expressão de computação, aqui é denotado como `{| cexpr |}`, é convertida em chamadas envolvendo os métodos da classe de construtor pelas conversões descritas na tabela a seguir. A expressão de cálculo `{| cexpr |}` é definido recursivamente acordo com essas traduções em que `expr` é um F# expressão e `cexpr` é uma expressão de computação.
+No código acima, as chamadas para `Run` e `Delay` serão omitidas se não estiverem definidas na classe do construtor de expressões de computação. O corpo da expressão de computação, aqui indicado como, é `{| cexpr |}`traduzido em chamadas que envolvem os métodos da classe Builder pelas traduções descritas na tabela a seguir. A `{| cexpr |}` expressão de computação é definida recursivamente de acordo com essas traduções F# em que `cexpr` `expr` é uma expressão e é uma expressão de cálculo.
 
 |Expressão|Conversão|
 |----------|-----------|
@@ -253,9 +253,9 @@ No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não es
 |<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
 |<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-Na tabela anterior, `other-expr` descreve uma expressão que não esteja listada na tabela de caso contrário. Uma classe de construtor não precisa implementar todos os métodos e dar suporte a todas as conversões listadas na tabela anterior. Essas construções que não são implementadas não estão disponíveis em expressões de computação desse tipo. Por exemplo, se você não deseja oferecer suporte a `use` palavra-chave em suas expressões de computação, você pode omitir a definição de `Use` em sua classe de construtor.
+Na tabela anterior, `other-expr` descreve uma expressão que não é listada de outra forma na tabela. Uma classe de construtor não precisa implementar todos os métodos e dar suporte a todas as conversões listadas na tabela anterior. As construções que não estão implementadas não estão disponíveis em expressões de computação desse tipo. Por exemplo, se você não quiser dar suporte `use` à palavra-chave em suas expressões de computação, poderá omitir a definição de `Use` na classe do construtor.
 
-O exemplo de código a seguir mostra uma expressão de computação que encapsula uma computação de uma série de etapas que podem ser avaliadas uma etapa por vez. Um tipo de união de discriminada `OkOrException`, codifica o estado de erro da expressão, conforme avaliado até o momento. Esse código demonstra vários padrões típicos que você pode usar em suas expressões de computação, como as implementações de texto clichê de alguns dos métodos de construtor.
+O exemplo de código a seguir mostra uma expressão de computação que encapsula uma computação como uma série de etapas que podem ser avaliadas uma etapa por vez. Um tipo de união discriminada `OkOrException`,, codifica o estado de erro da expressão como avaliado até agora. Esse código demonstra vários padrões típicos que você pode usar em suas expressões de computação, como implementações padronizadas de alguns dos métodos do Builder.
 
 ```fsharp
 // Computations that can be run step by step
@@ -378,17 +378,17 @@ comp |> step |> step
 comp |> step |> step |> step |> step 
 ```
 
-Uma expressão de computação tem um tipo subjacente, que retorna a expressão. O tipo subjacente pode representar um resultado calculado ou uma computação atrasada que pode ser executada ou ela pode fornecer uma maneira para iterar por meio de algum tipo de coleção. No exemplo anterior, o tipo subjacente foi **eventualmente**. Uma expressão de sequência, o tipo subjacente é <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Uma expressão de consulta, o tipo subjacente é <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Para um fluxo de trabalho assíncrono, o tipo subjacente é [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). O `Async` objeto representa o trabalho seja realizado para calcular o resultado. Por exemplo, você chama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para executar um cálculo e retornar o resultado.
+Uma expressão de computação tem um tipo subjacente, que a expressão retorna. O tipo subjacente pode representar um resultado calculado ou uma computação atrasada que pode ser executada ou pode fornecer uma maneira de iterar por meio de algum tipo de coleção. No exemplo anterior, o tipo subjacente era **eventualmente**. Para uma expressão de sequência, o tipo subjacente <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>é. Para uma expressão de consulta, o tipo subjacente <xref:System.Linq.IQueryable?displayProperty=nameWithType>é. Para um fluxo de trabalho assíncrono, o tipo [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)subjacente é. O `Async` objeto representa o trabalho a ser executado para calcular o resultado. Por exemplo, você chama [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para executar uma computação e retornar o resultado.
 
 ## <a name="custom-operations"></a>Operações personalizadas
 
-Você pode definir uma operação personalizada em uma expressão de computação e usar uma operação personalizada como um operador em uma expressão de computação. Por exemplo, você pode incluir um operador de consulta em uma expressão de consulta. Quando você define uma operação personalizada, você deve definir o rendimento e métodos na expressão de cálculo. Para definir uma operação personalizada, coloque-o em uma classe de construtor para a expressão de cálculo e, em seguida, aplicar a [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Esse atributo usa uma cadeia de caracteres como um argumento, que é o nome a ser usado em uma operação personalizada. Esse nome entra em escopo no início da chave de abertura da expressão de computação. Portanto, você não deve usar identificadores que têm o mesmo nome que uma operação personalizada neste bloco. Por exemplo, evite o uso de identificadores como `all` ou `last` em expressões de consulta.
+Você pode definir uma operação personalizada em uma expressão de computação e usar uma operação personalizada como um operador em uma expressão de computação. Por exemplo, você pode incluir um operador de consulta em uma expressão de consulta. Ao definir uma operação personalizada, você deve definir o yield e os métodos na expressão de computação. Para definir uma operação personalizada, coloque-a em uma classe de construtor para a expressão de computação e aplique [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)o. Esse atributo usa uma cadeia de caracteres como um argumento, que é o nome a ser usado em uma operação personalizada. Esse nome entra no escopo no início da chave de computação da expressão de cálculo. Portanto, você não deve usar identificadores que têm o mesmo nome que uma operação personalizada neste bloco. Por exemplo, evite o uso de identificadores como `all` ou `last` em expressões de consulta.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Estendendo construtores existentes com novas operações personalizadas
 
-Se você já tiver uma classe de construtor, suas operações personalizadas podem ser estendidas de fora dessa classe de construtor. As extensões devem ser declaradas em módulos. Namespaces não podem conter membros de extensão, exceto no mesmo arquivo e o mesmo grupo de declaração de namespace no qual o tipo é definido.
+Se você já tiver uma classe de construtor, suas operações personalizadas poderão ser estendidas de fora dessa classe do construtor. As extensões devem ser declaradas em módulos. Os namespaces não podem conter membros de extensão, exceto no mesmo arquivo e no mesmo grupo de declarações de namespace em que o tipo é definido.
 
-O exemplo a seguir mostra a extensão da existente `Microsoft.FSharp.Linq.QueryBuilder` classe.
+O exemplo a seguir mostra a extensão da classe `Microsoft.FSharp.Linq.QueryBuilder` existente.
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with

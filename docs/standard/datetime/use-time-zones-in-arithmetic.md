@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 417d8f00c9323f096a2d6228e853a55b1573f48c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588533"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106710"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Como: usar fusos horários em aritmética de data e hora
 
-Normalmente, quando você executar data e hora usando aritmética <xref:System.DateTime> ou <xref:System.DateTimeOffset> valores, o resultado não reflete quaisquer regras de ajuste de fuso horário. Isso é verdadeiro mesmo quando o fuso horário do valor de data e hora é claramente identificável (por exemplo, quando o <xref:System.DateTime.Kind%2A> estiver definida como <xref:System.DateTimeKind.Local>). Este tópico mostra como executar operações aritméticas em valores de data e hora que pertencem a um determinado fuso horário. Os resultados das operações aritméticas refletirão as regras de ajuste do fuso horário.
+Normalmente, quando você executa cálculos de data e hora <xref:System.DateTime> usando <xref:System.DateTimeOffset> valores ou, o resultado não reflete nenhuma regra de ajuste de fuso horário. Isso é verdadeiro mesmo quando o fuso horário do valor de data e hora é claramente identificável (por exemplo, quando a <xref:System.DateTime.Kind%2A> propriedade é definida como <xref:System.DateTimeKind.Local>). Este tópico mostra como executar operações aritméticas em valores de data e hora que pertencem a um determinado fuso horário. Os resultados das operações aritméticas refletirão as regras de ajuste do fuso horário.
 
 ### <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>Para aplicar as regras de ajuste à aritmética de data e hora
 
-1. Implemente um método de acoplamento próximo de um valor de data e hora com o fuso horário ao qual ele pertence. Por exemplo, declare uma estrutura que inclui o valor de data e hora e seu fuso horário. O exemplo a seguir usa essa abordagem para vincular um <xref:System.DateTime> valor com seu fuso horário.
+1. Implemente um método de acoplamento próximo de um valor de data e hora com o fuso horário ao qual ele pertence. Por exemplo, declare uma estrutura que inclui o valor de data e hora e seu fuso horário. O exemplo a seguir usa essa abordagem para vincular <xref:System.DateTime> um valor com seu fuso horário.
 
    [!code-csharp[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#6)]
    [!code-vb[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#6)]
 
-2. Converter uma hora para o tempo Universal Coordenado (UTC) chamando o <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> método ou o <xref:System.TimeZoneInfo.ConvertTime%2A> método.
+2. Converta uma hora em UTC (tempo Universal Coordenado) chamando o <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> método ou o <xref:System.TimeZoneInfo.ConvertTime%2A> método.
 
 3. Execute a operação aritmética na hora UTC.
 
-4. Converta a hora de UTC para a zona de tempo associada da hora original chamando o <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> método.
+4. Converta a hora de UTC para o fuso horário associado do tempo original chamando o <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> método.
 
 ## <a name="example"></a>Exemplo
 
@@ -43,24 +43,24 @@ O exemplo a seguir adiciona duas horas e trinta minutos a 9 de março de 2008, �
 [!code-csharp[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual8.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual8.vb#8)]
 
-Ambos <xref:System.DateTime> e <xref:System.DateTimeOffset> valores serão desassociados de qualquer fuso horário ao qual eles podem pertencer. Para executar a aritmética de data e hora de uma maneira que aplique automaticamente as regras de ajuste de um fuso horário, o fuso horário ao qual qualquer valor de data e hora pertence deve ser imediatamente identificável. Isso significa que uma data e hora e seu fuso horário associado devem estar estritamente acoplados. Há várias maneiras de fazer isso, que incluem o seguinte:
+Os <xref:System.DateTime> valores <xref:System.DateTimeOffset> e são desassociados de qualquer fuso horário ao qual possam pertencer. Para executar a aritmética de data e hora de uma maneira que aplique automaticamente as regras de ajuste de um fuso horário, o fuso horário ao qual qualquer valor de data e hora pertence deve ser imediatamente identificável. Isso significa que uma data e hora e seu fuso horário associado devem estar estritamente acoplados. Há várias maneiras de fazer isso, que incluem o seguinte:
 
-* Supor que todas as horas usadas em um aplicativo pertencem a um fuso horário específico. Embora adequada em alguns casos, essa abordagem oferece flexibilidade limitada e possivelmente portabilidade limitada.
+- Supor que todas as horas usadas em um aplicativo pertencem a um fuso horário específico. Embora adequada em alguns casos, essa abordagem oferece flexibilidade limitada e possivelmente portabilidade limitada.
 
-* Definir um tipo que acople estritamente uma data e hora e seu fuso horário associado incluindo ambas como campos do tipo. Essa abordagem é usada no exemplo de código, que define uma estrutura para armazenar a data e hora e o fuso horário em dois campos de membro.
+- Definir um tipo que acople estritamente uma data e hora e seu fuso horário associado incluindo ambas como campos do tipo. Essa abordagem é usada no exemplo de código, que define uma estrutura para armazenar a data e hora e o fuso horário em dois campos de membro.
 
-O exemplo ilustra como executar operações aritméticas em <xref:System.DateTime> valores para que as regras de ajuste de fuso horário são aplicadas ao resultado. No entanto, <xref:System.DateTimeOffset> valores podem ser usados facilmente. O exemplo a seguir ilustra como o código de exemplo original pode ser adaptado para uso <xref:System.DateTimeOffset> em vez de <xref:System.DateTime> valores.
+O exemplo ilustra como executar operações aritméticas em <xref:System.DateTime> valores para que as regras de ajuste de fuso horário sejam aplicadas ao resultado. No entanto, <xref:System.DateTimeOffset> os valores podem ser usados com a mesma facilidade. O exemplo a seguir ilustra como o código no exemplo original pode ser adaptado para <xref:System.DateTimeOffset> uso em <xref:System.DateTime> vez de valores.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#7)]
 
-Observe que, se esta adição for simplesmente realizada no <xref:System.DateTimeOffset> valor sem primeiro convertê-lo para UTC, o resultado reflete o ponto correto no tempo, mas seu deslocamento não reflete o mesmo que o do fuso horário designado para aquela hora.
+Observe que, se essa adição for simplesmente executada no <xref:System.DateTimeOffset> valor sem primeiro convertê-la para UTC, o resultado refletirá o ponto correto no tempo, mas seu deslocamento não refletirá o fuso horário designado para esse tempo.
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
 Este exemplo requer:
 
-* Que o <xref:System> namespace sejam importados com o `using` instrução (necessária em código c#).
+- Que o <xref:System> namespace seja importado `using` com a instrução ( C# obrigatória no código).
 
 ## <a name="see-also"></a>Consulte também
 

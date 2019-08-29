@@ -2,20 +2,20 @@
 title: Extensões de tipo
 description: Saiba como F# as extensões de tipo permitem adicionar novos membros a um tipo de objeto definido anteriormente.
 ms.date: 02/08/2019
-ms.openlocfilehash: 502b8636052139b39c800447870c6076a8cd2643
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d31d87095d3381e66dc32da4b6d7bb746886406
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630194"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106852"
 ---
 # <a name="type-extensions"></a>Extensões de tipo
 
 Extensões de tipo (tambémchamadas de aumentos) são uma família de recursos que permitem adicionar novos membros a um tipo de objeto definido anteriormente. Os três recursos são:
 
-* Extensões de tipo intrínseco
-* Extensões de tipo opcionais
-* Métodos de extensão
+- Extensões de tipo intrínseco
+- Extensões de tipo opcionais
+- Métodos de extensão
 
 Cada um pode ser usado em diferentes cenários e tem compensações diferentes.
 
@@ -66,9 +66,9 @@ type Variant with
 
 O uso de uma extensão de tipo permite que você separe cada uma das seguintes opções:
 
-* A declaração de um `Variant` tipo
-* Funcionalidade para imprimir a `Variant` classe dependendo de sua "forma"
-* Uma maneira de acessar a funcionalidade de impressão com a notação de estilo `.`de objeto
+- A declaração de um `Variant` tipo
+- Funcionalidade para imprimir a `Variant` classe dependendo de sua "forma"
+- Uma maneira de acessar a funcionalidade de impressão com a notação de estilo `.`de objeto
 
 Essa é uma alternativa à definição de tudo como um membro `Variant`. Embora não seja uma abordagem inerentemente melhor, pode ser uma representação mais limpa da funcionalidade em algumas situações.
 
@@ -121,9 +121,9 @@ type IEnumerable<'T> with
 
 Não há como obter esse código para trabalhar com uma extensão de tipo opcional:
 
-* Como está, o `Sum` membro tem uma restrição diferente em `'T` (`static member get_Zero` e `static member (+)`) do que a extensão de tipo define.
-* A modificação da extensão de tipo para ter a mesma `Sum` restrição que não corresponderá mais à `IEnumerable<'T>`restrição definida em.
-* Alterar `member this.Sum` para`member inline this.Sum` dará um erro informando que as restrições de tipo são incompatíveis.
+- Como está, o `Sum` membro tem uma restrição diferente em `'T` (`static member get_Zero` e `static member (+)`) do que a extensão de tipo define.
+- A modificação da extensão de tipo para ter a mesma `Sum` restrição que não corresponderá mais à `IEnumerable<'T>`restrição definida em.
+- Alterar `member this.Sum` para`member inline this.Sum` dará um erro informando que as restrições de tipo são incompatíveis.
 
 O que é desejado são métodos estáticos que "flutuam no espaço" e podem ser apresentados como se estivessem estendendo um tipo. É aí que os métodos de extensão se tornam necessários.
 
@@ -150,22 +150,22 @@ Quando usado, esse código fará com que ele apareça como `Sum` se estiver defi
 
 As extensões de tipo também têm os seguintes atributos:
 
-* Qualquer tipo que possa ser acessado pode ser estendido.
-* Extensões intrínsecas e opcionais de tipo podem definir _qualquer_ tipo de membro, não apenas métodos. Portanto, as propriedades de extensão também são possíveis, por exemplo.
-* O `self-identifier` token na [sintaxe](type-extensions.md#syntax) representa a instância do tipo que está sendo invocado, assim como os membros comuns.
-* Os membros estendidos podem ser membros estáticos ou de instância.
-* Variáveis de tipo em uma extensão de tipo devem corresponder às restrições do tipo declarado.
+- Qualquer tipo que possa ser acessado pode ser estendido.
+- Extensões intrínsecas e opcionais de tipo podem definir _qualquer_ tipo de membro, não apenas métodos. Portanto, as propriedades de extensão também são possíveis, por exemplo.
+- O `self-identifier` token na [sintaxe](type-extensions.md#syntax) representa a instância do tipo que está sendo invocado, assim como os membros comuns.
+- Os membros estendidos podem ser membros estáticos ou de instância.
+- Variáveis de tipo em uma extensão de tipo devem corresponder às restrições do tipo declarado.
 
 As seguintes limitações também existem para extensões de tipo:
 
-* As extensões de tipo não dão suporte a métodos virtuais ou abstratos.
-* As extensões de tipo não oferecem suporte a métodos de substituição como aumentos.
-* As extensões de tipo não dão suporte a [parâmetros de tipo resolvidos estaticamente](./generics/statically-resolved-type-parameters.md).
-* Extensões de tipo opcional não dão suporte a construtores como aumentos.
-* Extensões de tipo não podem ser definidas em abreviações de [tipo](type-abbreviations.md).
-* Extensões de tipo não são válidas para `byref<'T>` (embora possam ser declaradas).
-* Extensões de tipo não são válidas para atributos (embora possam ser declaradas).
-* Você pode definir extensões que sobrecarregam outros métodos de mesmo nome, mas F# o compilador dá preferência a métodos que não são de extensão se houver uma chamada ambígua.
+- As extensões de tipo não dão suporte a métodos virtuais ou abstratos.
+- As extensões de tipo não oferecem suporte a métodos de substituição como aumentos.
+- As extensões de tipo não dão suporte a [parâmetros de tipo resolvidos estaticamente](./generics/statically-resolved-type-parameters.md).
+- Extensões de tipo opcional não dão suporte a construtores como aumentos.
+- Extensões de tipo não podem ser definidas em abreviações de [tipo](type-abbreviations.md).
+- Extensões de tipo não são válidas para `byref<'T>` (embora possam ser declaradas).
+- Extensões de tipo não são válidas para atributos (embora possam ser declaradas).
+- Você pode definir extensões que sobrecarregam outros métodos de mesmo nome, mas F# o compilador dá preferência a métodos que não são de extensão se houver uma chamada ambígua.
 
 Por fim, se existirem várias extensões de tipo intrínsecos para um tipo, todos os membros deverão ser exclusivos. Para extensões de tipo opcionais, os membros em extensões de tipo diferentes para o mesmo tipo podem ter os mesmos nomes. Os erros de ambiguidade ocorrem somente se o código do cliente abrir dois escopos diferentes que definem os mesmos nomes de membro.
 
