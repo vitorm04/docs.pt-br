@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fa729d600f25b73028bae0dd6d9248b5839dd4c
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054218"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133868"
 ---
 # <a name="themedictionary-markup-extension"></a>Extensão de marcação ThemeDictionary
 Fornece uma maneira para autores de controles personalizados ou aplicativos que integram controles de terceiros de carregar os dicionários de recursos específicos de temas para uso ao aplicar estilo ao controle.  
@@ -41,15 +41,15 @@ Fornece uma maneira para autores de controles personalizados ou aplicativos que 
 |`assemblyUri`|O [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] do assembly que contém informações de tema. Normalmente, esse é um URI "pack://" que referencia um assembly no pacote maior. Recursos de assembly e URIs "pack://" simplificam os problemas de implantação. Para obter mais informações, consulte [URIs "pack://" no WPF](../app-development/pack-uris-in-wpf.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Essa extensão destina-se a preencher apenas um valor de propriedade específico: um valor para <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.  
+ Esta extensão destina-se a preencher apenas um valor de propriedade específico: um <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>valor para.  
   
- Usando essa extensão, você pode especificar um único assembly apenas de recursos que contém alguns estilos a serem usados somente quando o tema [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] é aplicado ao sistema do usuário, outros estilos quando o tema Luna estiver ativo, e assim por diante. Usando essa extensão, o conteúdo de um dicionário de recursos específico do controle pode ser invalidado e recarregado automaticamente para ser específico para outro tema quando necessário.  
+ Usando essa extensão, você pode especificar um único assembly somente de recursos que contém alguns estilos para usar somente quando o tema Windows Aero é aplicado ao sistema do usuário, outros estilos somente quando o tema Luna está ativo e assim por diante. Usando essa extensão, o conteúdo de um dicionário de recursos específico do controle pode ser invalidado e recarregado automaticamente para ser específico para outro tema quando necessário.  
   
- O `assemblyUri` cadeia de caracteres (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> valor da propriedade) constitui a base de uma convenção de nomenclatura que identifica qual dicionário se aplica um tema específico. O <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> lógica para `ThemeDictionary` conclui a convenção gerando um [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que aponta para uma variante do dicionário de tema específico, conforme contido em um assembly de recursos pré-compilado. A descrição dessa convenção, ou as interações dos temas com estilos gerais de controle e estilos de nível de página/aplicativo como um conceito não é abordado completamente aqui. O cenário básico para usar `ThemeDictionary` é especificar o <xref:System.Windows.ResourceDictionary.Source%2A> propriedade de um `ResourceDictionary` declarado no nível do aplicativo. Quando você fornece um [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para o assembly por meio de uma extensão `ThemeDictionary` em vez de um [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] direto, a lógica da extensão fornecerá lógica de invalidação que se aplica sempre que o tema do sistema for alterado.  
+ A `assemblyUri` cadeia de<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> caracteres (valor da propriedade) forma a base de uma Convenção de nomenclatura que identifica qual dicionário se aplica a um tema específico. A <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> lógica para `ThemeDictionary` conclui a Convenção gerando um [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que aponta para uma variante de dicionário de tema específico, como contido em um assembly de recurso pré-compilado. A descrição dessa convenção, ou as interações dos temas com estilos gerais de controle e estilos de nível de página/aplicativo como um conceito não é abordado completamente aqui. O cenário básico para usar `ThemeDictionary` é especificar a <xref:System.Windows.ResourceDictionary.Source%2A> propriedade de um `ResourceDictionary` declarado no nível do aplicativo. Quando você fornece um [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para o assembly por meio de uma extensão `ThemeDictionary` em vez de um [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] direto, a lógica da extensão fornecerá lógica de invalidação que se aplica sempre que o tema do sistema for alterado.  
   
  A sintaxe de atributo é a sintaxe mais comum usada com essa extensão de marcação. O token da cadeia de caracteres fornecido após a cadeia de caracteres identificadora `ThemeDictionary` é atribuído como o valor <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> da classe de extensão subjacente <xref:System.Windows.ThemeDictionaryExtension>.  
   
- `ThemeDictionary` também pode ser usado na sintaxe de elemento de objeto. Nesse caso, especificando o valor da <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propriedade é necessária.  
+ `ThemeDictionary` também pode ser usado na sintaxe de elemento de objeto. Nesse caso, é necessário especificar o valor da <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propriedade.  
   
  `ThemeDictionary` também pode ser usado em um atributo detalhado que especifica a propriedade <xref:System.Windows.Markup.StaticExtension.Member%2A> como sendo o par propriedade=valor:  
   
@@ -59,7 +59,7 @@ Fornece uma maneira para autores de controles personalizados ou aplicativos que 
   
  O uso detalhado geralmente é útil para as extensões que têm mais de uma propriedade configurável, ou caso algumas propriedades sejam opcionais. Como `ThemeDictionary` tem apenas uma propriedade configurável, que é necessária, esse uso detalhado não é típico.  
   
- No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementação do processador, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.ThemeDictionaryExtension> classe.  
+ Na implementação do <xref:System.Windows.ThemeDictionaryExtension> processador, o tratamento para essa extensão de marcação é definido pela classe. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
  `ThemeDictionary` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usam os caracteres { e } na sintaxe de atributo, que é a convenção pela qual um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconhece que uma extensão de marcação deve processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
   

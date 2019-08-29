@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914598"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133795"
 ---
 # <a name="ui-automation-overview"></a>Visão geral de automação da interface do usuário
 > [!NOTE]
@@ -26,9 +26,9 @@ ms.locfileid: "69914598"
   
  Os aplicativos cliente de automação da interface do usuário podem ser escritos com a garantia de que funcionarão em várias estruturas. O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] núcleo mascara quaisquer diferenças nas estruturas que se basear em várias partes [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]do. Por exemplo, a `Content` propriedade de um [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] botão, a `Caption` propriedade de um [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] botão e a `ALT` propriedade de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] uma imagem HTML são mapeadas para uma única propriedade, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, na exibição.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]fornece funcionalidade completa no [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]e [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)].  
+A automação da interface do usuário fornece funcionalidade completa em sistemas operacionais Windows com suporte que executam o .NET Framework (Confira [.NET Framework requisitos do sistema](../get-started/system-requirements.md) ou versões do .NET Core a partir do .net Core 3,0.  
   
- Os provedores de automação da interface do usuário oferecem algum suporte para aplicativos cliente do Microsoft Acessibilidade Ativa, por meio de um serviço de ponte interno.  
+ Os provedores de automação da interface do usuário oferecem algum suporte para aplicativos cliente do Microsoft Acessibilidade Ativa por meio de um serviço de ponte interno.  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>Provedores e clientes  

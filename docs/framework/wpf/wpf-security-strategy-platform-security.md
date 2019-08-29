@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817890"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133758"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
 Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] para fornecer um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
@@ -33,7 +33,7 @@ Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviç
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Segurança do sistema operacional  
- O nível mínimo de sistema operacional exigido pelo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] é. [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] O núcleo do [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fornece vários recursos de segurança que formam a base de segurança para todos os aplicativos do Windows, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]incluindo os criados com o. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]incorpora os recursos de segurança do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] e os estende ainda mais. Este tópico aborda a amplitude desses recursos de segurança que são importantes para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]o, bem [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] como a integração com eles para fornecer mais proteção aprofundada.  
+O núcleo do Windows fornece vários recursos de segurança que formam a base de segurança para todos os aplicativos do Windows, incluindo os criados com o WPF. Este tópico aborda a amplitude desses recursos de segurança que são importantes para o WPF, além de como o WPF se integra a eles para fornecer mais proteção aprofundada.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>SP2 (Microsoft Windows XP Service Pack 2)  
@@ -57,21 +57,21 @@ Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviç
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]os usuários [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] do se beneficiarão dos aprimoramentos de segurança adicionais do sistema operacional, incluindo "acesso de usuário com privilégios mínimos", verificações de integridade de código e isolamento de privilégio.  
+Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segurança adicionais do sistema operacional, incluindo "acesso de usuário com privilégios mínimos", verificações de integridade de código e isolamento de privilégio.  
   
 #### <a name="user-account-control-uac"></a>UAC (Controle de Conta de Usuário)  
  Hoje, os usuários do Windows tendem a executar com privilégios de administrador, pois muitos aplicativos exigem a instalação ou execução, ou ambos. Ter a capacidade de escrever configurações de aplicativo padrão no Registro é um exemplo.  
   
  De fato, a execução com privilégios de administrador significa que os aplicativos são executados em processos que receberam privilégios de administrador. O impacto de segurança disto é que qualquer código mal-intencionado que sequestre um processo executado com privilégios de administrador herdará automaticamente esses privilégios, incluindo o acesso a recursos críticos do sistema.  
   
- Uma maneira de se proteger contra essa ameaça de segurança é executar aplicativos com o mínimo de privilégios necessários. Isso é conhecido como o princípio de privilégios mínimos e é um recurso básico do [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] sistema operacional. Esse recurso é chamado de UAC (controle de conta de usuário) e é [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] usado pelo UAC de duas maneiras principais:  
+ Uma maneira de se proteger contra essa ameaça de segurança é executar aplicativos com o mínimo de privilégios necessários. Isso é conhecido como o princípio de privilégios mínimos e é um recurso básico do sistema operacional Windows. Esse recurso é chamado de UAC (controle de conta de usuário) e é usado pelo Windows UAC de duas maneiras principais:  
   
 - Para executar a maioria dos aplicativos com privilégios UAC por padrão, mesmo se o usuário for um administrador; somente os aplicativos que precisam de privilégios de administrador serão executados com privilégios de administrador. Para serem executados com privilégios administrativos, os aplicativos devem ser explicitamente marcados em seus manifestos do aplicativo ou como uma entrada na política de segurança.  
   
 - Para fornecer soluções de compatibilidade como virtualização. Por exemplo, vários aplicativos tentam gravar em localizações restritas como C:\Program Files. Para os aplicativos executados no UAC, existe uma localização alternativa por usuário que não exige privilégios de administrador para ser usada para gravação. Para os aplicativos executados no UAC, o UAC virtualiza C:\Program Files para que os aplicativos que acreditam que estão fazendo gravações nele, na verdade, estão gravando na localização alternativa por usuário. Esse tipo de trabalho de compatibilidade permite que o sistema operacional execute vários aplicativos que anteriormente não podiam ser executados no UAC.  
   
 #### <a name="code-integrity-checks"></a>Verificações de integridade de código  
- O [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] incorpora verificações de integridade de código mais profundas para ajudar a impedir que um código mal-intencionado seja injetado em arquivos do sistema ou no kernel em tempo de carregamento/execução. Isso vai além da proteção de arquivo do sistema.  
+ O Windows Vista incorpora verificações de integridade de código mais profundas para ajudar a impedir que códigos mal-intencionados sejam injetados em arquivos do sistema ou no kernel em tempo de carga/execução. Isso vai além da proteção de arquivo do sistema.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Processos com direitos limitados para aplicativos hospedados pelo navegador  
