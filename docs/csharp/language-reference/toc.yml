@@ -85,6 +85,7 @@
           href: keywords/abstract.md
         - name: async
           href: keywords/async.md
+          displayName: await
         - name: const
           href: keywords/const.md
         - name: evento
@@ -201,10 +202,6 @@
           href: keywords/new-constraint.md
         - name: onde
           href: keywords/where-generic-type-constraint.md
-    - name: Palavras-chave de operador
-      items:
-        - name: await
-          href: keywords/await.md
     - name: Palavras-chave de acesso
       items:
         - name: base
@@ -239,7 +236,7 @@
           href: keywords/set.md
         - name: when (condição de filtro)
           href: keywords/when.md
-        - name: Valor
+        - name: 'Valor '
           href: keywords/value.md
         - name: yield
           href: keywords/yield.md
@@ -327,6 +324,9 @@
     - name: 'Operador ::'
       href: operators/namespace-alias-qualifier.md
       displayName: 'namespace alias qualifier, global namespace'
+    - name: operador await
+      href: operators/await.md
+      displayName: async
     - name: operador padrão
       href: operators/default.md
       displayName: 'default value, default literal, type default'
