@@ -41,7 +41,7 @@ Seria preciso outro guia para abordar o SOLID em detalhes. Portanto, este guia e
 - **Inversão de Contêineres de Controle e o padrão de Injeção de Dependência** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith. New is Glue** \ ("New" é como cola)
+- **Steve Smith. "New" é como cola** \
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]

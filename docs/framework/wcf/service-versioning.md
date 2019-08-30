@@ -99,7 +99,7 @@ Após a implantação inicial e, potencialmente, várias vezes durante o tempo d
  Semelhante ao controle de versão de contrato de dados, o controle de versão de contrato de serviço também envolve a adição, alteração e remoção de operações.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Especificando o nome, o namespace e a ação  
- Por padrão, o nome de um contrato de serviço é o nome da interface. Seu namespace padrão é "http://tempuri.org ", e cada ação de operação é "http://tempuri.org/contractname/methodname". É recomendável especificar explicitamente um nome e um namespace para o contrato de serviço, e uma ação para cada operação para evitar o uso http://tempuri.org de "" e impedir que os nomes de interface e método sejam expostos no contrato do serviço.  
+ Por padrão, o nome de um contrato de serviço é o nome da interface. Seu namespace padrão é "http://tempuri.org", e cada ação de operação é "http://tempuri.org/contractname/methodname". É recomendável especificar explicitamente um nome e um namespace para o contrato de serviço, e uma ação para cada operação para evitar o uso "http://tempuri.org" de e impedir que os nomes de interface e método sejam expostos no contrato do serviço.  
   
 ### <a name="adding-parameters-and-operations"></a>Adicionando parâmetros e operações  
  A adição de operações de serviço expostas pelo serviço é uma alteração sem interrupção porque os clientes existentes não precisam se preocupar com essas novas operações.  
