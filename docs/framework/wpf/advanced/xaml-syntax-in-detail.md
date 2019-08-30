@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958796"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168999"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
@@ -62,7 +62,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
 - A marca de abertura deve ser concluída por um colchete angular direito (>). Outros elementos de objeto, elementos de propriedade ou texto interno podem vir após a marca de abertura. Exatamente que conteúdo pode estar contido aqui é normalmente restrito pelo modelo de objeto do elemento. A marca de fechamento equivalente para o elemento de objeto também deve existir, com aninhamento e equilíbrio adequados em relação a outros pares de marca de abertura e fechamento.  
   
- XAML, conforme implementado pelo .NET, tem um conjunto de regras que mapeiam elementos de objeto para tipos, atributos para propriedades ou eventos e, por fim namespaces XAML para namespaces CLR mais assembly. Para o WPF e o .NET Framework, elementos de objeto XAML são mapeados para tipos do [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] conforme definido em assemblies referenciados, enquanto os atributos são mapeados para membros desses tipos. Quando você referencia um tipo CLR em XAML, você tem acesso também aos membros herdados desse tipo.  
+ XAML, conforme implementado pelo .NET, tem um conjunto de regras que mapeiam elementos de objeto para tipos, atributos para propriedades ou eventos e, por fim namespaces XAML para namespaces CLR mais assembly. Para WPF e .NET, os elementos de objeto XAML são mapeados para tipos .NET, conforme definido em assemblies referenciados, e os atributos são mapeados para os membros desses tipos. Quando você referencia um tipo CLR em XAML, você tem acesso também aos membros herdados desse tipo.  
   
  Por exemplo, o exemplo a seguir é uma sintaxe de elemento de objeto que instancia uma nova <xref:System.Windows.Controls.Button> instância da classe e também especifica <xref:System.Windows.FrameworkElement.Name%2A> um atributo e um valor para esse atributo:  
   

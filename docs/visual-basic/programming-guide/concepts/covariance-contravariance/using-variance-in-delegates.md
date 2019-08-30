@@ -1,15 +1,15 @@
 ---
-title: Usando variação em delegados (Visual Basic)
+title: Usando a variação em delegados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787251"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169077"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>Usando variação em delegados (Visual Basic)
+# <a name="using-variance-in-delegates-visual-basic"></a>Usando a variação em delegados (Visual Basic)
 
 Quando você atribui um método a um delegado, a *covariância* e a *contravariância* fornece flexibilidade para corresponder um tipo de delegado a uma assinatura de método. A covariância permite que um método tenha o tipo de retorno mais derivado do que o definido no delegado. A contravariância permite que um método que tem tipos de parâmetro menos derivados do que no tipo delegado.
 
@@ -48,7 +48,21 @@ End Class
 
 ### <a name="description"></a>Descrição
 
-Este exemplo demonstra como delegados podem ser usados com métodos que têm parâmetros de um tipo que são tipos base do tipo de parâmetro de assinatura do delegado. Com a contravariância, você pode usar um manipulador de eventos em vez de manipuladores separados. Por exemplo, você pode criar um manipulador de eventos que aceita um parâmetro de entrada `EventArgs` e usá-lo com um evento `Button.MouseClick` que envia um tipo `MouseEventArgs` como um parâmetro e também com um evento `TextBox.KeyDown` que envia um parâmetro `KeyEventArgs`.
+Este exemplo demonstra como os delegados podem ser usados com métodos que têm parâmetros cujos tipos são tipos base do tipo de parâmetro de assinatura de representante. Com a contravariância, você pode usar um manipulador de eventos em vez de manipuladores separados. O exemplo a seguir usa dois delegados:
+
+- Um <xref:System.Windows.Forms.KeyEventHandler> delegado que define a assinatura do evento [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) . Sua assinatura é:
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- Um <xref:System.Windows.Forms.MouseEventHandler> delegado que define a assinatura do evento [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) . Sua assinatura é:
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+O exemplo define um manipulador de eventos com <xref:System.EventArgs> um parâmetro e o usa para lidar com `Button.KeyDown` os `Button.MouseClick` eventos e. Isso pode fazer isso porque <xref:System.EventArgs> é um tipo base <xref:System.Windows.Forms.KeyEventArgs> de e <xref:System.Windows.Forms.MouseEventArgs>.
 
 ### <a name="code"></a>Código
 

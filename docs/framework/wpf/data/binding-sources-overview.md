@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944691"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169102"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.  
@@ -42,7 +42,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 ### <a name="other-characteristics"></a>Outras características  
  A lista a seguir fornece outros pontos importantes a serem observados:  
   
-- Se você quiser criar o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a classe deverá ter um construtor sem parâmetros. Em alguns [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] idiomas, como C#, o construtor sem parâmetros pode ser criado para você.  
+- Se você quiser criar o objeto no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a classe deverá ter um construtor sem parâmetros. Em algumas linguagens .NET, como C#, o construtor sem parâmetros pode ser criado para você.  
   
 - As propriedades que você usa como propriedades de origem da associação para uma associação devem ser propriedades públicas da sua classe. As propriedades de interface definidas explicitamente não podem ser acessadas para fins de associação, nem podem ser propriedades protegidas, particulares, internas ou virtuais que não têm implementação de base.  
   
