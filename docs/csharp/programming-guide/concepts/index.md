@@ -2,12 +2,12 @@
 title: Conceitos de programação (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594990"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168339"
 ---
 # <a name="programming-concepts-c"></a>Conceitos de programação (C#)
 Esta seção explica conceitos de programação na linguagem C#.  
@@ -17,7 +17,7 @@ Esta seção explica conceitos de programação na linguagem C#.
 |Título|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Assemblies no .NET](../../../standard/assembly/index.md)|Descreve como criar e usar um assemblies.|  
-|[Programação assíncrona com async e await (C#)](./async/index.md)|Descreve como criar soluções assíncronas usando as palavras-chave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/keywords/await.md) no C#. Inclui um passo a passo.|  
+|[Programação assíncrona com async e await (C#)](./async/index.md)|Descreve como criar soluções assíncronas usando as palavras-chave [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md) no C#. Inclui um passo a passo.|  
 |[Atributos (C#)](./attributes/index.md)|Discute como fornecer informações adicionais sobre como programar elementos como tipos, campos, métodos e propriedades por meio de atributos.|  
 |[Informações do chamador (C#)](./caller-information.md)|Descreve como obter informações sobre o chamador de um método. Essas informações incluem o caminho do arquivo e o número de linha do código-fonte e o nome do membro do chamador.|  
 |[Coleções (C#)](./collections.md)|Descreve alguns dos tipos de coleções fornecidos pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.|  
