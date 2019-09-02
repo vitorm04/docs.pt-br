@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb39ead1fe15e3bfcf67370e4675dcae3bbf9801
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034419"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203903"
 ---
-# <a name="creating-a-datareader"></a><span data-ttu-id="80976-102">Criar um DataReader</span><span class="sxs-lookup"><span data-stu-id="80976-102">Creating a DataReader</span></span>
-<span data-ttu-id="80976-103">O <xref:System.Data.DataTable> e <xref:System.Data.DataSet> classes têm uma <xref:System.Data.DataTable.CreateDataReader%2A> método que retorna o conteúdo dos <xref:System.Data.DataTable> ou o conteúdo da <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Tables%2A> coleção como um ou mais conjuntos de resultados somente leitura, somente encaminhamento.</span><span class="sxs-lookup"><span data-stu-id="80976-103">The <xref:System.Data.DataTable> and <xref:System.Data.DataSet> classes have a <xref:System.Data.DataTable.CreateDataReader%2A> method that returns the contents of the <xref:System.Data.DataTable> or the contents of the <xref:System.Data.DataSet> object's <xref:System.Data.DataSet.Tables%2A> collection as one or more read-only, forward-only result sets.</span></span>  
+# <a name="creating-a-datareader"></a><span data-ttu-id="463b0-102">Criar um DataReader</span><span class="sxs-lookup"><span data-stu-id="463b0-102">Creating a DataReader</span></span>
+<span data-ttu-id="463b0-103">As <xref:System.Data.DataTable> classes <xref:System.Data.DataSet> e têm um <xref:System.Data.DataTable.CreateDataReader%2A> método que retorna o <xref:System.Data.DataSet> conteúdo do <xref:System.Data.DataTable> ou o conteúdo da coleção do <xref:System.Data.DataSet.Tables%2A> objeto como um ou mais conjuntos de resultados somente de encaminhamento e somente leitura.</span><span class="sxs-lookup"><span data-stu-id="463b0-103">The <xref:System.Data.DataTable> and <xref:System.Data.DataSet> classes have a <xref:System.Data.DataTable.CreateDataReader%2A> method that returns the contents of the <xref:System.Data.DataTable> or the contents of the <xref:System.Data.DataSet> object's <xref:System.Data.DataSet.Tables%2A> collection as one or more read-only, forward-only result sets.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="80976-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="80976-104">Example</span></span>  
- <span data-ttu-id="80976-105">O aplicativo de console a seguir cria um <xref:System.Data.DataTable> instância.</span><span class="sxs-lookup"><span data-stu-id="80976-105">The following console application creates a <xref:System.Data.DataTable> instance.</span></span> <span data-ttu-id="80976-106">O exemplo, em seguida, passa o preenchido <xref:System.Data.DataTable> para um procedimento que chama o <xref:System.Data.DataTable.CreateDataReader%2A> método, que itera pelos resultados da contidos o <xref:System.Data.DataTableReader>.</span><span class="sxs-lookup"><span data-stu-id="80976-106">The example then passes the filled <xref:System.Data.DataTable> to a procedure that calls the <xref:System.Data.DataTable.CreateDataReader%2A> method, which iterates through the results contained within the <xref:System.Data.DataTableReader>.</span></span>  
+## <a name="example"></a><span data-ttu-id="463b0-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="463b0-104">Example</span></span>  
+ <span data-ttu-id="463b0-105">O aplicativo de console a seguir <xref:System.Data.DataTable> cria uma instância do.</span><span class="sxs-lookup"><span data-stu-id="463b0-105">The following console application creates a <xref:System.Data.DataTable> instance.</span></span> <span data-ttu-id="463b0-106">Em seguida, o exemplo passa <xref:System.Data.DataTable> o preenchido para um procedimento que <xref:System.Data.DataTable.CreateDataReader%2A> chama o método, que itera pelos resultados contidos <xref:System.Data.DataTableReader>no.</span><span class="sxs-lookup"><span data-stu-id="463b0-106">The example then passes the filled <xref:System.Data.DataTable> to a procedure that calls the <xref:System.Data.DataTable.CreateDataReader%2A> method, which iterates through the results contained within the <xref:System.Data.DataTableReader>.</span></span>  
   
  [!code-csharp[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/VB/source.vb#1)]  
   
- <span data-ttu-id="80976-107">O exemplo exibe a seguinte saída na janela do console:</span><span class="sxs-lookup"><span data-stu-id="80976-107">The example displays the following output in the console window:</span></span>  
+ <span data-ttu-id="463b0-107">O exemplo exibe a seguinte saída na janela do console:</span><span class="sxs-lookup"><span data-stu-id="463b0-107">The example displays the following output in the console window:</span></span>  
   
 ```  
 1 Mary  
@@ -30,9 +30,9 @@ ms.locfileid: "62034419"
 4 Russ  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="80976-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="80976-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="463b0-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="463b0-108">See also</span></span>
 
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
-- [<span data-ttu-id="80976-109">DataTableReaders</span><span class="sxs-lookup"><span data-stu-id="80976-109">DataTableReaders</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
-- <span data-ttu-id="80976-110">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="80976-110">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+- [<span data-ttu-id="463b0-109">DataTableReaders</span><span class="sxs-lookup"><span data-stu-id="463b0-109">DataTableReaders</span></span>](datatablereaders.md)
+- <span data-ttu-id="463b0-110">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="463b0-110">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
