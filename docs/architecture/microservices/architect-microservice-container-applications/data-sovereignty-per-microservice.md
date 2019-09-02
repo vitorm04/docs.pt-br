@@ -47,7 +47,7 @@ A DDD se beneficia dos microsserviços ao obter limites reais na forma de micros
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão: Database per service** \ (Padrão: banco de dados por serviço)
+- **Chris Richardson. Padrão:  banco de dados por serviço** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler. BoundedContext** \

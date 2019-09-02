@@ -43,7 +43,7 @@ Dessas, apenas as três primeiras serão abordadas ou introduzidas neste guia. O
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Mark Russinovich. Microservices: An application revolution powered by the cloud** \ (Microsserviços: uma revolução de aplicativos proporcionada pela nuvem)
+- **Mark Russinovich. Microsserviços: uma revolução de aplicativos proporcionada pela nuvem** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
 - **Martin Fowler. Microsserviços** \

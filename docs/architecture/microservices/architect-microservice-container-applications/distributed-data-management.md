@@ -98,7 +98,7 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 - **Exibição materializada** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Roe. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \ (ACID versus BASE: a mudança de pH no processamento de transações de banco de dados)
+- **Charles Roe. ACID vs. BASE: ACID versus BASE: a mudança de pH no processamento de transações de banco de dados** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Transação de compensação** \
