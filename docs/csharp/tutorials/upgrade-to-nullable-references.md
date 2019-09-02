@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195841"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105769"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrar o código existente com tipos de referência anuláveis
 
@@ -17,10 +17,10 @@ O C# 8 introduz **tipos de referência que permitem valor nulo** que complementa
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Habilitar verificações de referência nula enquanto trabalha com o código.
-> * Diagnosticar e corrigir avisos diferentes relacionados a valores nulos.
-> * Gerenciar a interface entre contextos habilitados para anulável e desabilitados para anulável.
-> * Controlar contextos de anotação anuláveis.
+> - Habilitar verificações de referência nula enquanto trabalha com o código.
+> - Diagnosticar e corrigir avisos diferentes relacionados a valores nulos.
+> - Gerenciar a interface entre contextos habilitados para anulável e desabilitados para anulável.
+> - Controlar contextos de anotação anuláveis.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

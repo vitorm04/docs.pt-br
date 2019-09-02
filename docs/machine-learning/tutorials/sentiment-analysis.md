@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um aplicativo de console do .NET Co
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238365"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107174"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Analisar sentimento de comentários de um site com classificação binária em ML.NET
 
@@ -17,21 +17,21 @@ Este tutorial mostra como criar um aplicativo de console do .NET Core que classi
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
-> * Criar um aplicativo de console
-> * Preparar dados
-> * Carregar os dados
-> * Criar e treinar o modelo
-> * Avaliar o modelo
-> * Usar o modelo para fazer uma previsão
-> * Ver os resultados
+> - Criar um aplicativo de console
+> - Preparar dados
+> - Carregar os dados
+> - Criar e treinar o modelo
+> - Avaliar o modelo
+> - Usar o modelo para fazer uma previsão
+> - Ver os resultados
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "Desenvolvimento multiplataforma do .NET Core" instalada
+- [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "Desenvolvimento multiplataforma do .NET Core" instalada
 
-* [Conjunto de dados de Sentenças de sentimentos rotuladas da UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (arquivo zip)
+- [Conjunto de dados de Sentenças de sentimentos rotuladas da UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (arquivo zip)
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
@@ -62,8 +62,8 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 2. Crie dois campos globais para armazenar o caminho do arquivo de conjunto de dados baixado recentemente e o caminho do arquivo de modelo salvo:
 
-    * `_dataPath` tem o demarcador para o conjunto de dados usado para treinar o modelo.
-    * `_modelPath` tem o demarcador em que o modelo treinado é salvo.
+    - `_dataPath` tem o demarcador para o conjunto de dados usado para treinar o modelo.
+    - `_modelPath` tem o demarcador em que o modelo treinado é salvo.
 
 3. Adicione o seguinte código à linha logo acima do método `Main` para especificar os caminhos:
 
@@ -125,9 +125,9 @@ Você prepara o aplicativo e, em seguida, carrega os dados:
 
     O método `LoadData()` executa as seguintes tarefas:
 
-    * Carrega os dados.
-    * Divide o conjunto de dados carregado em conjuntos de treinamento e teste.
-    * Retorna os conjuntos de treinamento e teste.
+    - Carrega os dados.
+    - Divide o conjunto de dados carregado em conjuntos de treinamento e teste.
+    - Retorna os conjuntos de treinamento e teste.
 
 4. Adicione o seguinte código como a primeira linha do método `LoadData()`:
 
@@ -157,10 +157,10 @@ Ao preparar um modelo, você usa parte do conjunto de dados para treiná-lo e pa
 
     O método `BuildAndTrainModel()` executa as seguintes tarefas:
 
-    * Extrai e transforma os dados.
-    * Treina o modelo.
-    * Prevê o sentimento com base nos dados de teste.
-    * Retorna o modelo.
+    - Extrai e transforma os dados.
+    - Treina o modelo.
+    - Prevê o sentimento com base nos dados de teste.
+    - Retorna o modelo.
 
 2. Crie o método `BuildAndTrainModel()`, logo após o método `Main()`, usando o seguinte código:
 
@@ -225,10 +225,10 @@ Depois que o modelo é treinado, use os dados de teste para validar o desempenho
 
     O método `Evaluate()` executa as seguintes tarefas:
 
-    * Carrega o conjunto de dados de teste.
-    * Cria o avaliador BinaryClassification.
-    * Avalia o modelo e cria métricas.
-    * Exibe as métricas.
+    - Carrega o conjunto de dados de teste.
+    - Cria o avaliador BinaryClassification.
+    - Avalia o modelo e cria métricas.
+    - Exibe as métricas.
 
 2. Adicione uma chamada ao novo método a partir do método `Main()`, logo abaixo da chamada do método `BuildAndTrainModel()`, usando o seguinte código:
 
@@ -252,11 +252,11 @@ Use o código a seguir para exibir as métricas:
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
-* A métrica `Accuracy` obtém a precisão de um modelo, que é a proporção de previsões corretas no conjunto de teste.
+- A métrica `Accuracy` obtém a precisão de um modelo, que é a proporção de previsões corretas no conjunto de teste.
 
-* A métrica `AreaUnderRocCurve` indica a confiabilidade do modelo ao classificar corretamente as classes positivas e negativas. Você deseja que o `AreaUnderRocCurve` seja o mais próximo possível de um.
+- A métrica `AreaUnderRocCurve` indica a confiabilidade do modelo ao classificar corretamente as classes positivas e negativas. Você deseja que o `AreaUnderRocCurve` seja o mais próximo possível de um.
 
-* A métrica `F1Score` obtém a pontuação F1 do modelo, que é uma medida do equilíbrio entre [precisão](../resources/glossary.md#precision) e [recall](../resources/glossary.md#recall).  Você deseja que o `F1Score` seja o mais próximo possível de um.
+- A métrica `F1Score` obtém a pontuação F1 do modelo, que é uma medida do equilíbrio entre [precisão](../resources/glossary.md#precision) e [recall](../resources/glossary.md#recall).  Você deseja que o `F1Score` seja o mais próximo possível de um.
 
 ### <a name="predict-the-test-data-outcome"></a>Prever o resultado dos dados de teste
 
@@ -271,10 +271,10 @@ Use o código a seguir para exibir as métricas:
 
     O método `UseModelWithSingleItem()` executa as seguintes tarefas:
 
-    * Cria um único comentário dos dados de teste.
-    * Prevê o sentimento com base nos dados de teste.
-    * Combina dados de teste e previsões para relatórios.
-    * Exibe os resultados previstos.
+    - Cria um único comentário dos dados de teste.
+    - Prevê o sentimento com base nos dados de teste.
+    - Combina dados de teste e previsões para relatórios.
+    - Exibe os resultados previstos.
 
 2. Adicione uma chamada ao novo método a partir do método `Main()`, logo abaixo da chamada do método `Evaluate()`, usando o seguinte código:
 
@@ -315,10 +315,10 @@ Use o código a seguir para exibir as métricas:
 
     O método `UseModelWithBatchItems()` executa as seguintes tarefas:
 
-    * Cria dados de teste em lote.
-    * Prevê o sentimento com base nos dados de teste.
-    * Combina dados de teste e previsões para relatórios.
-    * Exibe os resultados previstos.
+    - Cria dados de teste em lote.
+    - Prevê o sentimento com base nos dados de teste.
+    - Combina dados de teste e previsões para relatórios.
+    - Exibe os resultados previstos.
 
 2. Adicione uma chamada ao novo método a partir do método `Main`, logo abaixo da chamada do método `UseModelWithSingleItem()`, usando o seguinte código:
 
@@ -383,13 +383,13 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
-> * Criar um aplicativo de console
-> * Preparar dados
-> * Carregar os dados
-> * Criar e treinar o modelo
-> * Avaliar o modelo
-> * Usar o modelo para fazer uma previsão
-> * Ver os resultados
+> - Criar um aplicativo de console
+> - Preparar dados
+> - Carregar os dados
+> - Criar e treinar o modelo
+> - Avaliar o modelo
+> - Usar o modelo para fazer uma previsão
+> - Ver os resultados
 
 Avançar para o próximo tutorial para saber mais
 > [!div class="nextstepaction"]

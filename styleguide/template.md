@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616346"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106909"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadados e modelo Markdown
 
@@ -61,12 +61,12 @@ O Markdown usa caracteres especiais, como \*, \` e \# para formatação. Se dese
 
 Os nomes de arquivo usam as seguintes regras:
 
-* Conter apenas letras minúsculas, números e hifens.
-* Sem espaços nem caracteres de pontuação. Use os hifens para separar palavras e números no nome do arquivo.
-* Use verbos de ação específicos, como desenvolver, comprar, compilar, solucionar problemas. Sem palavras no gerúndio.
-* Sem palavras pequenas – não inclua artigos nem preposições.
-* Deve estar em Markdown e usar a extensão de arquivo .md.
-* Mantenha os nomes de arquivo razoavelmente curtos. Eles fazem parte da URL dos artigos.
+- Conter apenas letras minúsculas, números e hifens.
+- Sem espaços nem caracteres de pontuação. Use os hifens para separar palavras e números no nome do arquivo.
+- Use verbos de ação específicos, como desenvolver, comprar, compilar, solucionar problemas. Sem palavras no gerúndio.
+- Sem palavras pequenas – não inclua artigos nem preposições.
+- Deve estar em Markdown e usar a extensão de arquivo .md.
+- Mantenha os nomes de arquivo razoavelmente curtos. Eles fazem parte da URL dos artigos.
 
 ## <a name="headings"></a>Títulos
 
@@ -244,22 +244,22 @@ Você pode incluir o código usando a seguinte sintaxe:
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>` (*opcional*, mas *recomendado*)
-  * Linguagem do snippet de código que está sendo referenciado. Para obter uma lista de valores compatíveis, confira [Linguagens compatíveis](#supported-languages).
+- `-<language>` (*opcional*, mas *recomendado*)
+  - Linguagem do snippet de código que está sendo referenciado. Para obter uma lista de valores compatíveis, confira [Linguagens compatíveis](#supported-languages).
 
-* `<name>` (*opcional*)
-  * Nome do snippet de código. Ele não tem nenhum impacto no HTML de saída, mas você pode usá-lo para melhorar a legibilidade da fonte Markdown.
+- `<name>` (*opcional*)
+  - Nome do snippet de código. Ele não tem nenhum impacto no HTML de saída, mas você pode usá-lo para melhorar a legibilidade da fonte Markdown.
 
-* `<pathToFile>` (*obrigatório*)
-  * Caminho relativo no sistema de arquivos que indica o arquivo de snippet de código a ser referenciado.
+- `<pathToFile>` (*obrigatório*)
+  - Caminho relativo no sistema de arquivos que indica o arquivo de snippet de código a ser referenciado.
 
-* `<queryoption>` e `<queryoptionvalue>` (*opcional*)
-  * Usados em conjunto para especificar como o código deve ser recuperado do arquivo:
-    * `#`: `#L{startlinenumber}-L{endlinenumber}` (intervalo de linhas) *ou* `#{tagname}` (nome da marca).
+- `<queryoption>` e `<queryoptionvalue>` (*opcional*)
+  - Usados em conjunto para especificar como o código deve ser recuperado do arquivo:
+    - `#`: `#L{startlinenumber}-L{endlinenumber}` (intervalo de linhas) *ou* `#{tagname}` (nome da marca).
     Não incentivamos o uso de números de linha, pois são muito frágeis. O nome da marca é a maneira preferencial de referenciar snippets de código.
-    * `range`: `?range=1,3-5` Um intervalo de linhas. Esse exemplo inclui as linhas 1, 3, 4 e 5.
-    * `dedent`: `?dedent=8` Remove o recuo das linhas por um número de espaços – nesse caso, 8. Isso pode ser combinado com o `range` e outras opções de consulta que selecionam um subconjunto das linhas de um arquivo.
-    * `outdent`: `?outdent=8` Inverte o recuo das linhas por um número de espaços – nesse caso, 8. Isso pode ser combinado com `range` e outras opções de consulta que selecionam um subconjunto das linhas de um arquivo.
+    - `range`: `?range=1,3-5` Um intervalo de linhas. Esse exemplo inclui as linhas 1, 3, 4 e 5.
+    - `dedent`: `?dedent=8` Remove o recuo das linhas por um número de espaços – nesse caso, 8. Isso pode ser combinado com o `range` e outras opções de consulta que selecionam um subconjunto das linhas de um arquivo.
+    - `outdent`: `?outdent=8` Inverte o recuo das linhas por um número de espaços – nesse caso, 8. Isso pode ser combinado com `range` e outras opções de consulta que selecionam um subconjunto das linhas de um arquivo.
 
 Recomendamos o uso da opção de nome da marca sempre que possível. O nome da marca é o nome de uma região ou de um comentário de código no formato `Snippettagname` presente no código-fonte. O seguinte exemplo mostra como referenciar o nome da marca `1`:
 
@@ -448,11 +448,11 @@ Você pode inserir o Markdown de um arquivo em outro usando uma inclusão.
 Um estilo personalizado está disponível para listas. Você pode renderizar listas com marcas de seleção verdes.
 
 > [!div class="checklist"]
-> * Como criar um aplicativo do .NET Core
-> * Como adicionar uma referência ao pacote Microsoft.XmlSerializer.Generator
-> * Como editar o MyApp.csproj para adicionar dependências
-> * Como adicionar uma classe e um XmlSerializer
-> * Como compilar e executar o aplicativo
+> - Como criar um aplicativo do .NET Core
+> - Como adicionar uma referência ao pacote Microsoft.XmlSerializer.Generator
+> - Como editar o MyApp.csproj para adicionar dependências
+> - Como adicionar uma classe e um XmlSerializer
+> - Como compilar e executar o aplicativo
 
 Veja um exemplo de listas selecionadas em ação na [documentação do .NET Core](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator).
 

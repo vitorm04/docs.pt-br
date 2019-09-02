@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54eb9723f44924919ca1b4631e35e1e4da4af2af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666353"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169031"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: executar ações quando um bloco de fluxo de dados recebe dados
 Os tipos de *Blocos de fluxo de dados de execução* chamam um representante fornecido pelo usuário ao receber dados. As classes <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> são tipos de blocos de fluxo de dados de execução. Você pode usar a palavra-chave `delegate` (`Sub` em Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> ou uma expressão lambda ao fornecer uma função de trabalho a um bloco de fluxo de dados de execução. Este documento descreve como usar <xref:System.Func%602> e as expressões lambda para executar a ação em blocos de execução.  
@@ -34,7 +34,7 @@ Os tipos de *Blocos de fluxo de dados de execução* chamam um representante for
  A seção Resumo de tipos de representantes no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) resume os tipos de representantes que você pode oferecer aos objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. A tabela também especifica se o tipo de representante opera de forma síncrona ou assíncrona.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- Este exemplo fornece um representante do tipo <xref:System.Func%602> ao objeto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> para executar a tarefa do bloco de fluxo de dados de forma síncrona. Para habilitar o bloco de fluxo de dados para se comportar de forma assíncrona, forneça um representante do tipo <xref:System.Func%601> ao bloco de fluxo de dados. Quando um bloco de fluxo de dados se comporta de forma assíncrona, a tarefa do bloco de fluxo de dados só será concluída quando o objeto <xref:System.Threading.Tasks.Task%601>retornado for concluído. O exemplo a seguir modifica o método `CountBytes` e usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/keywords/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) em Visual Basic) para calcular de forma assíncrona o número total de bytes que tem o valor zero no arquivo fornecido. O método <xref:System.IO.FileStream.ReadAsync%2A> executa operações de leitura de arquivo de forma assíncrona.  
+ Este exemplo fornece um representante do tipo <xref:System.Func%602> ao objeto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> para executar a tarefa do bloco de fluxo de dados de forma síncrona. Para habilitar o bloco de fluxo de dados para se comportar de forma assíncrona, forneça um representante do tipo <xref:System.Func%601> ao bloco de fluxo de dados. Quando um bloco de fluxo de dados se comporta de forma assíncrona, a tarefa do bloco de fluxo de dados só será concluída quando o objeto <xref:System.Threading.Tasks.Task%601>retornado for concluído. O exemplo a seguir modifica o método `CountBytes` e usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) em Visual Basic) para calcular de forma assíncrona o número total de bytes que tem o valor zero no arquivo fornecido. O método <xref:System.IO.FileStream.ReadAsync%2A> executa operações de leitura de arquivo de forma assíncrona.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

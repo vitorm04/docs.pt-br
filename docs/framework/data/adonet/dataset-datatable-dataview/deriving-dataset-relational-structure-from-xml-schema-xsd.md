@@ -2,17 +2,17 @@
 title: Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934461"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203783"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, uma tabela é gerada `DataSet`no. A estrutura da tabela é determinada pela definição do tipo complexo. As `DataSet` tabelas são criadas no para elementos de nível superior no esquema. No entanto, uma tabela é criada somente para um elemento `complexType` de nível superior `complexType` quando o elemento é aninhado dentro de outro `complexType` elemento; nesse `complexType` caso, o elemento aninhado é `DataSet`mapeado para um `DataTable` dentro do.  
   
- Para obter mais informações sobre o XSD, consulte o esquema XML World Wide Web Consortium [(W3C) parte 0: Recomendação](https://www.w3.org/TR/xmlschema-0/)do primer, [parte 1 do esquema XML: Recomendação](https://www.w3.org/TR/xmlschema-1/)de estruturas e o [esquema XML parte 2: Recomendação](https://www.w3.org/TR/xmlschema-2/)de tipos de texto.  
+ Para obter mais informações sobre o XSD, consulte o esquema XML World Wide Web Consortium [(W3C) parte 0: Recomendação](https://www.w3.org/TR/xmlschema-0/)do primer, [parte 1 do esquema XML: Recomendação](https://www.w3.org/TR/xmlschema-1/)de estruturas e o [esquema XML parte 2: recomendação de tipos de dados](https://www.w3.org/TR/xmlschema-2/).  
   
  O exemplo a seguir demonstra um esquema XML `customers` em que é o elemento filho `MyDataSet` do elemento, que é um elemento **DataSet** .  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Descreve os elementos de esquema XML usados para criar restrições de chave estrangeira e exclusivas em um `DataSet`.  
   
- [Gerando relações de conjunto de dados do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Descreve os elementos de esquema XML usados para criar relações entre colunas de tabela `DataSet`em um.  
   
- [Relações e restrições de esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [Relações e restrições de esquema XML](xml-schema-constraints-and-relationships.md)  
  Descreve como as relações são criadas implicitamente ao usar elementos de esquema XML para criar restrições `DataSet`em um.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
+ [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
  Descreve como carregar e manter a estrutura relacional e os dados em um `DataSet` como dados XML.  
   
 ## <a name="see-also"></a>Consulte também

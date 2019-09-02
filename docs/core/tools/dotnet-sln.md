@@ -2,12 +2,12 @@
 title: Comando dotnet sln
 description: O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução.
 ms.date: 06/13/2018
-ms.openlocfilehash: a88e22c68f639f2a42e59f9a271e431f04e24a2b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3f18d6a2851d955d07cecc0cbc4c161cf0ec3e08
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169138"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202795"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -19,7 +19,7 @@ ms.locfileid: "53169138"
 
 ## <a name="synopsis"></a>Sinopse
 
-```
+```console
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -28,13 +28,13 @@ dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet sln` oferece uma maneira conveniente de adicionar, remover e listar projetos em um arquivo de solução.
 
 Para usar o comando `dotnet sln`, o arquivo de solução já deve existir. Se você precisar criar um, use o comando [dotnet new](dotnet-new.md), como no exemplo a seguir:
 
-```
+```console
 dotnet new sln
 ```
 

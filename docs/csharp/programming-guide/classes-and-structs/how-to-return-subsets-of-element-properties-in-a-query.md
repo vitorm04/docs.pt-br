@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2c9fea2189819058187020c2e67b8826659fbed4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596839"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205440"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Como: retornar subconjuntos de propriedades de elementos em uma consulta (Guia de Programação em C#)
 Use um tipo anônimo em uma expressão de consulta quando essas duas condições se aplicarem:  
@@ -21,7 +21,7 @@ Use um tipo anônimo em uma expressão de consulta quando essas duas condições
   
  Se você deseja retornar apenas uma propriedade ou campo de cada elemento de origem, use somente o operador de ponto na cláusula `select`. Por exemplo, para retornar somente a `ID` de cada `student`, escreva a cláusula `select` da seguinte maneira:  
   
-```  
+```csharp  
 select student.ID;  
 ```  
   
@@ -32,7 +32,7 @@ select student.ID;
   
  Observe que o tipo anônimo usa nomes do elemento de origem para suas propriedades, se nenhum nome for especificado. Para fornecer novos nomes para as propriedades no tipo anônimo, escreva a instrução `select` da seguinte maneira:  
   
-```  
+```csharp  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   

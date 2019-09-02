@@ -2,12 +2,12 @@
 title: Tratando a reentrada em aplicativos assíncronos (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595648"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204303"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Tratando a reentrada em aplicativos assíncronos (C#)
 
@@ -36,7 +36,7 @@ No exemplo deste tópico, os usuários escolhem um botão **Iniciar** para inici
 
 O exemplo a seguir mostra a saída esperada, caso o usuário escolha o botão **Iniciar** apenas uma vez. É exibida uma lista dos sites baixados com o tamanho, em bytes, de cada site. O número total de bytes é exibido no final.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -51,7 +51,7 @@ TOTAL bytes returned:  890591
 
 No entanto, se o usuário escolhe o botão mais de uma vez, o manipulador de eventos é invocado repetidamente e o processo de download é reinserido a cada vez. Como resultado, várias operações assíncronas estarão em execução ao mesmo tempo, a saída intercalará os resultados e o número total de bytes será confuso.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -270,7 +270,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 
 Se você escolher o botão **Iniciar** várias vezes enquanto este aplicativo estiver em execução, ele deverá produzir resultados semelhantes à saída a seguir.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -308,7 +308,7 @@ Para configurar esse cenário, faça as seguintes alterações no código básic
 
 A saída a seguir mostra o resultado, caso o usuário escolha o botão **Iniciar** apenas uma vez. O rótulo de letra A indica que o resultado é da primeira vez que o botão **Iniciar** foi escolhido. Os números mostram a ordem das URLs na lista de destinos de download.
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -328,7 +328,7 @@ TOTAL bytes returned:  918876
 
 Se o usuário escolher o botão **Iniciar** três vezes, o aplicativo produzirá uma saída semelhante à das linhas a seguir. As linhas de informações que começam com um sinal de jogo da velha (#) rastreiam o progresso do aplicativo.
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -499,7 +499,7 @@ A saída mostra os padrões a seguir.
 
 - Um grupo pode ser iniciado enquanto um grupo anterior estiver exibindo a saída, mas a exibição da saída do grupo anterior não será interrompida.
 
-    ```
+    ```output
     #Starting group A.
     #Task assigned for group A. Download tasks are active.
 
@@ -537,7 +537,7 @@ A saída mostra os padrões a seguir.
 
 - As duas linhas a seguir sempre aparecem juntas na saída. O código nunca é interrompido entre o início de uma operação de um grupo em `StartButton_Click` e a atribuição de uma tarefa para o grupo para `pendingWork`.
 
-    ```
+    ```output
     #Starting group B.
     #Task assigned for group B. Download tasks are active.
     ```

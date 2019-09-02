@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: bc406659bec3fd8d5da87b597356a3411c7a2605
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567404"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206175"
 ---
 # <a name="mcprocesscontent-attribute"></a>Atributo mc:ProcessContent
 Especifica quais [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementos ainda devem ter conteúdo processado por elementos pai relevantes, mesmo que o elemento pai imediato possa ser ignorado por um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processador devido à especificação do [atributo MC: Ignorable](mc-ignorable-attribute.md). O atributo `mc:ProcessContent` dá suporte à compatibilidade de marcação para o mapeamento de namespace personalizado e para controle de versão de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -44,7 +44,7 @@ Especifica quais [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml
   
  Vários prefixos podem ser especificados no atributo, usando um separador de espaço, `mc:ProcessContent="ignore:Element1 ignore:Element2"`por exemplo:.  
   
- O [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] namespace define outros elementos e atributos que não estão documentados nessa área do SDK. Para obter mais informações, consulte [Especificação de compatibilidade de marcação XML](https://go.microsoft.com/fwlink/?LinkId=73824).  
+ O `http://schemas.openxmlformats.org/markup-compatibility/2006` namespace define outros elementos e atributos que não estão documentados nessa área do SDK. Para obter mais informações, consulte [Especificação de compatibilidade de marcação XML](https://go.microsoft.com/fwlink/?LinkId=73824).  
   
 ## <a name="see-also"></a>Consulte também
 

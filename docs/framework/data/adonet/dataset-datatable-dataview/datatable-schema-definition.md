@@ -2,12 +2,12 @@
 title: Definição do esquema de DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952353"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204986"
 ---
 # <a name="datatable-schema-definition"></a>Definição do esquema de DataTable
 O esquema, ou a estrutura, de uma tabela é representado por colunas e restrições. Você define o esquema de uma <xref:System.Data.DataTable> usando objetos <xref:System.Data.DataColumn>, bem como objetos <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>. As colunas em uma tabela podem ser mapeadas para colunas em uma fonte de dados, contêm valores calculados de expressões, incrementam automaticamente seus valores ou contêm valores de chave primária.  
@@ -20,22 +20,22 @@ O esquema, ou a estrutura, de uma tabela é representado por colunas e restriç�
 > A <xref:System.Data.DataTable.CaseSensitive%2A> propriedade da **DataTable** não afeta esse comportamento. A propriedade **CaseSensitive** aplica-se aos dados em uma tabela e afeta a classificação, a pesquisa, a filtragem, a imposição de restrições e assim por diante, mas não referências às colunas, relações e restrições.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Adicionando colunas a um DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Adicionando colunas a um DataTable](adding-columns-to-a-datatable.md)  
  Descreve como definir as colunas de uma tabela usando objetos **DataColumn** .  
   
- [Criar colunas de expressão](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Criar colunas de expressão](creating-expression-columns.md)  
  Explica como a propriedade **expression** de uma coluna pode ser usada para calcular valores com base nos valores de outras colunas na linha.  
   
- [Criando colunas de incremento automático](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [Criando colunas de incremento automático](creating-autoincrement-columns.md)  
  Descreve como uma coluna pode ser definida para incrementar automaticamente valores numéricos para garantir um valor de coluna exclusivo por linha.  
   
- [Definindo chaves primárias](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Definindo chaves primárias](defining-primary-keys.md)  
  Descreve como especificar a chave primária de uma tabela de um ou mais objetos de **DataColumn** .  
   
- [Restrições de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Restrições de DataTable](datatable-constraints.md)  
  Descreve como definir a chave estrangeira e restrições exclusivas para colunas em uma tabela.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTables](datatables.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

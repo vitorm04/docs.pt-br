@@ -4,12 +4,12 @@ description: Este artigo ensina você a habilitar o preenchimento com TAB na CLI
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203331"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202494"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Como habilitar o preenchimento com TAB para a CLI do .NET Core
 
@@ -19,7 +19,7 @@ Começando no SDK do .NET Core 2.0, a CLI do .NET Core dá suporte ao preenchime
 
 Depois de configurado, o preenchimento com TAB na CLI do .NET Core é disparado pela digitação de um comando `dotnet` no shell e, em seguida, pelo pressionamento da tecla TAB. A linha de comando atual é enviada para o comando `dotnet complete`, e os resultados são processados pelo shell. Teste os resultados sem habilitar o preenchimento com TAB enviando algo diretamente para o comando `dotnet complete`. Por exemplo:
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean

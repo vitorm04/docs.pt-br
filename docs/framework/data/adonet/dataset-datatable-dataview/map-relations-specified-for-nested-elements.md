@@ -2,17 +2,17 @@
 title: Mapear relações especificadas para elementos aninhados
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd0fd66fe70be4b8dea14ac7420e95c4b8bb1158
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 510a5e676df7bac274c6086b94e9a23e7540da20
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604011"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204640"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Mapear relações especificadas para elementos aninhados
-Um esquema pode incluir um **msdata:Relationship** anotação para especificar explicitamente o mapeamento entre dois elementos no esquema. Os dois elementos especificados em **msdata:Relationship** podem ser aninhadas no esquema, mas não precisa ser. Usa o processo de mapeamento **msdata:Relationship** no esquema para gerar a relação de chave estrangeira/chave primária entre as duas colunas.  
+Um esquema pode incluir uma anotação **MSDATA: relationship** para especificar explicitamente o mapeamento entre quaisquer dois elementos no esquema. Os dois elementos especificados em **MSDATA: relationship** podem ser aninhados no esquema, mas não precisam ser. O processo de mapeamento usa a **relação MSDATA:** no esquema para gerar a relação de chave primária/chave estrangeira entre as duas colunas.  
   
- O exemplo a seguir mostra um esquema XML no qual o **OrderDetail** é um elemento filho do **ordem**. O **msdata:Relationship** identifica essa relação de pai-filho e especifica que o **OrderNumber** coluna resultantes **ordem** tabela está relacionada com o **OrderNo** coluna resultantes **OrderDetail** tabela.  
+ O exemplo a seguir mostra um esquema XML no qual o elemento **OrderDetail** é um elemento filho de **Order**. A **relação MSDATA:** identifica essa relação pai-filho e especifica que a coluna **OrderNumber** da tabela de **ordem** resultante está relacionada à coluna **orderno** da tabela **OrderDetail** resultante.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -52,16 +52,16 @@ Um esquema pode incluir um **msdata:Relationship** anotação para especificar e
 </xs:schema>  
 ```  
   
- O processo de mapeamento de esquema XML cria o seguinte no <xref:System.Data.DataSet>:  
+ O processo de mapeamento de esquema XML cria o seguinte <xref:System.Data.DataSet>no:  
   
-- Uma **ordem** e uma **OrderDetail** tabela.  
+- Uma **ordem** e uma tabela **OrderDetail** .  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** propriedade para essa relação é definida como **verdadeiro** porque o **ordem** e **OrderDetail** elementos são aninhados no esquema .  
+- Uma relação entre as tabelas **Order** e **OrderDetail** . A Propriedade aninhada para essa relação é definida como **true** porque os elementos **Order** e **OrderDetail** estão aninhados no esquema.  
   
     ```  
     ParentTable: Order  
@@ -72,10 +72,10 @@ Um esquema pode incluir um **msdata:Relationship** anotação para especificar e
     Nested: True  
     ```  
   
- O processo de mapeamento não cria todas as restrições.  
+ O processo de mapeamento não cria nenhuma restrição.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerando relações de conjunto de dados do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

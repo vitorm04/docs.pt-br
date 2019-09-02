@@ -2,12 +2,12 @@
 title: Localizando o estilo de parágrafo padrão (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 702d3906f51b996f59dcd15067702b6de07c60a5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594369"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204108"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Localizando o estilo de parágrafo padrão (C#)
 A primeira tarefa no tutorial Manipulando informações em um documento de WordprocessingML é localizar o estilo padrão dos parágrafos no documento.  
@@ -79,7 +79,7 @@ Console.WriteLine("The default style is: {0}", defaultStyle);
 ### <a name="comments"></a>Comentários  
  Este exemplo gera a seguinte saída:  
   
-```  
+```output  
 The default style is: Normal  
 ```  
   
@@ -87,4 +87,3 @@ The default style is: Normal
  No exemplo a seguir, você criará uma consulta semelhante que localiza todos os parágrafos em um documento e seus estilos:  
   
 - [Recuperando os parágrafos e seus estilos (C#)](./retrieving-the-paragraphs-and-their-styles.md)  
-  

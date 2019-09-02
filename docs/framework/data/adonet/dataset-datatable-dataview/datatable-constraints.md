@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034353"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205054"
 ---
 # <a name="datatable-constraints"></a>Restrições de DataTable
-Você pode usar restrições para impor restrições nos dados em um <xref:System.Data.DataTable>, para manter a integridade dos dados. Uma restrição é uma regra automática, aplicada a uma coluna ou colunas relacionadas, que determina o curso de ação quando o valor de uma linha é modificado de alguma maneira. Restrições são aplicadas quando o `System.Data.DataSet.EnforceConstraints` propriedade do <xref:System.Data.DataSet> é **verdadeiro**. Para um exemplo de código que mostra como definir a propriedade `EnforceConstraints`, consulte o tópico de referência <xref:System.Data.DataSet.EnforceConstraints%2A>.  
+Você pode usar restrições para impor restrições nos dados em um <xref:System.Data.DataTable>, para manter a integridade dos dados. Uma restrição é uma regra automática, aplicada a uma coluna ou colunas relacionadas, que determina o curso de ação quando o valor de uma linha é modificado de alguma maneira. As restrições são impostas quando `System.Data.DataSet.EnforceConstraints` a propriedade <xref:System.Data.DataSet> de é **verdadeira**. Para um exemplo de código que mostra como definir a propriedade `EnforceConstraints`, consulte o tópico de referência <xref:System.Data.DataSet.EnforceConstraints%2A>.  
   
- Há dois tipos de restrições no ADO.NET: o <xref:System.Data.ForeignKeyConstraint> e o <xref:System.Data.UniqueConstraint>. Por padrão, ambas as restrições são criadas automaticamente quando você cria uma relação entre duas ou mais tabelas adicionando um <xref:System.Data.DataRelation> para o **conjunto de dados**. No entanto, você pode desativar esse comportamento especificando **createConstraints** = **falso** ao criar a relação.  
+ Há dois tipos de restrições no ADO.NET: o <xref:System.Data.ForeignKeyConstraint> e o <xref:System.Data.UniqueConstraint>. Por padrão, ambas as restrições são criadas automaticamente quando você cria uma relação entre duas ou mais tabelas adicionando um <xref:System.Data.DataRelation> ao **conjunto**de informações. No entanto, você pode desabilitar esse comportamento = especificando createConstraints**false** ao criar a relação.  
   
 ## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
- Um **ForeignKeyConstraint** impõe regras sobre como as atualizações e exclusões para tabelas relacionadas são propagadas. Por exemplo, se um valor em uma linha de uma tabela é atualizado ou excluído e esse mesmo valor também é usado em uma ou mais tabelas relacionadas, uma **ForeignKeyConstraint** determina o que acontece nas tabelas relacionadas.  
+ Um **ForeignKeyConstraint** impõe regras sobre como as atualizações e exclusões para tabelas relacionadas são propagadas. Por exemplo, se um valor em uma linha de uma tabela for atualizado ou excluído e esse mesmo valor também for usado em uma ou mais tabelas relacionadas, um **ForeignKeyConstraint** determinará o que acontece nas tabelas relacionadas.  
   
- O <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> e <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> propriedades da **ForeignKeyConstraint** definem a ação a ser tomada quando o usuário tenta excluir ou atualizar uma linha em uma tabela relacionada. A tabela a seguir descreve as diferentes configurações disponíveis para o **DeleteRule** e **UpdateRule** propriedades do **ForeignKeyConstraint**.  
+ As <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> propriedades <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> e de **ForeignKeyConstraint** definem a ação a ser tomada quando o usuário tenta excluir ou atualizar uma linha em uma tabela relacionada. A tabela a seguir descreve as diferentes configurações disponíveis para as propriedades **DeleteRule** e **UpdateRule** do **ForeignKeyConstraint**.  
   
 |Configuração de regra|Descrição|  
 |------------------|-----------------|  
 |**Cascata**|Excluir ou atualizar linhas relacionadas.|  
-|**SetNull**|Definir valores em linhas relacionadas ao **DBNull**.|  
+|**SetNull**|Defina valores em linhas relacionadas como **DBNull**.|  
 |**SetDefault**|Definir valores em linhas relacionadas para o valor padrão.|  
 |**Nenhum**|Nenhuma ação em linhas relacionadas. Esse é o padrão.|  
   
- Um **ForeignKeyConstraint** pode restringir, e também propagar, alterações de colunas relacionadas. Dependendo das propriedades definidas para o **ForeignKeyConstraint** de uma coluna, se o **EnforceConstraints** propriedade do **conjunto de dados** é **true**, executar determinadas operações na linha pai resultará em uma exceção. Por exemplo, se o **DeleteRule** propriedade da **ForeignKeyConstraint** está **None**, uma linha pai não pode ser excluída se tiver alguma linha filho.  
+ Um **ForeignKeyConstraint** pode restringir, bem como propagar, alterações em colunas relacionadas. Dependendo das propriedades definidas para o **ForeignKeyConstraint** de uma coluna, se a propriedade **EnforceConstraints** do **conjunto** de dado for **true**, executar determinadas operações na linha pai resultará em uma exceção. Por exemplo, se a propriedade **DeleteRule** de **ForeignKeyConstraint** for **None**, uma linha pai não poderá ser excluída se tiver qualquer linha filho.  
   
- Você pode criar uma restrição de chave estrangeira entre colunas únicas ou entre uma matriz de colunas usando o **ForeignKeyConstraint** construtor. Passar resultante **ForeignKeyConstraint** do objeto para o **Add** método da tabela **restrições** propriedade, que é um **ConstraintCollection**. Você também pode passar argumentos de construtor para várias sobrecargas do **Add** método de um **ConstraintCollection** para criar um **ForeignKeyConstraint**.  
+ Você pode criar uma restrição FOREIGN KEY entre colunas únicas ou entre uma matriz de colunas usando o construtor **ForeignKeyConstraint** . Passe o objeto **ForeignKeyConstraint** resultante para o método **Add** da propriedade Constraints da tabela, que é uma **ConstraintCollection**. Você também pode passar argumentos de construtor para várias sobrecargas do método **Add** de uma **ConstraintCollection** para criar um **ForeignKeyConstraint**.  
   
- Durante a criação de um **ForeignKeyConstraint**, você pode passar a **DeleteRule** e **UpdateRule** valores para o construtor como argumentos, ou você podem defini-los como propriedades como mostra a exemplo a seguir (em que o **DeleteRule** valor é definido como **None**).  
+ Ao criar um **ForeignKeyConstraint**, você pode passar os valores **DeleteRule** e **UpdateRule** para o construtor como argumentos, ou pode defini-los como propriedades, como no exemplo a seguir (em que o valor **DeleteRule** está definido como  **Nenhum**).  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
@@ -54,7 +54,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 ```  
   
 ### <a name="acceptrejectrule"></a>AcceptRejectRule  
- Alterações em linhas podem ser aceitas usando o **AcceptChanges** método ou ser canceladas usando o **RejectChanges** método da **conjunto de dados**, **DataTable**, ou **DataRow**. Quando um **DataSet** contém **ForeignKeyConstraints**, invocando o **AcceptChanges** ou **RejectChanges** métodos impõe o  **AcceptRejectRule**. O **AcceptRejectRule** propriedade da **ForeignKeyConstraint** determina qual ação será tomada no filho quando as linhas **AcceptChanges** ou  **RejectChanges** é chamado na linha pai.  
+ As alterações nas linhas podem ser aceitas usando o método **AcceptChanges** ou canceladas usando o método **RejectChanges** do **DataSet**, **DataTable**ou **DataRow**. Quando um **conjunto** de um DataSet contém **ForeignKeyConstraint**, invocar os métodos **AcceptChanges** ou **RejectChanges** impõe o **AcceptRejectRule**. A propriedade **AcceptRejectRule** de **ForeignKeyConstraint** determina qual ação será executada nas linhas filhas quando **AcceptChanges** ou **RejectChanges** for chamado na linha pai.  
   
  A tabela a seguir lista as configurações disponíveis para o **AcceptRejectRule**.  
   
@@ -70,11 +70,11 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
 ## <a name="uniqueconstraint"></a>UniqueConstraint  
- O **UniqueConstraint** objeto, que pode ser atribuído a uma única coluna ou em uma matriz de colunas em uma **DataTable**, garante que todos os dados da coluna especificada ou as colunas são exclusivos por linha. Você pode criar uma restrição exclusiva para uma coluna ou uma matriz de colunas usando o **UniqueConstraint** construtor. Passar resultante **UniqueConstraint** do objeto para o **Add** método da tabela **restrições** propriedade, que é um **ConstraintCollection**. Você também pode passar argumentos de construtor para várias sobrecargas do **Add** método de um **ConstraintCollection** para criar um **UniqueConstraint**. Ao criar uma **UniqueConstraint** para uma coluna ou colunas, você pode especificar se a coluna ou colunas são uma chave primária.  
+ O objeto **UniqueConstraint** , que pode ser atribuído a uma única coluna ou a uma matriz de colunas em uma **DataTable**, garante que todos os dados na coluna ou colunas especificadas sejam exclusivos por linha. Você pode criar uma restrição exclusiva para uma coluna ou matriz de colunas usando o construtor **UniqueConstraint** . Passe o objeto **UniqueConstraint** resultante para o método **Add** da propriedade Constraints da tabela, que é uma **ConstraintCollection**. Você também pode passar argumentos de construtor para várias sobrecargas do método **Add** de uma **ConstraintCollection** para criar um **UniqueConstraint**. Ao criar um **UniqueConstraint** para uma coluna ou colunas, você pode opcionalmente especificar se a coluna ou as colunas são uma chave primária.  
   
- Você também pode criar uma restrição exclusiva para uma coluna, definindo o **Unique** propriedade da coluna a ser **verdadeiro**. Como alternativa, definir a **Unique** propriedade de uma única coluna para **falso** remove qualquer restrição exclusiva que possam existir. Definir uma coluna ou colunas como uma chave primária para uma tabela criará automaticamente uma restrição exclusiva para a coluna ou colunas especificadas. Se você remover uma coluna a partir de **PrimaryKey** propriedade de um **DataTable**, o **UniqueConstraint** é removido.  
+ Você também pode criar uma restrição exclusiva para uma coluna definindo a propriedade **Unique** da coluna como **true**. Como alternativa, definir a propriedade **Unique** de uma única coluna como **false** remove qualquer restrição exclusiva que possa existir. Definir uma coluna ou colunas como uma chave primária para uma tabela criará automaticamente uma restrição exclusiva para a coluna ou colunas especificadas. Se você remover uma coluna da propriedade **PrimaryKey** de uma **DataTable**, o **UniqueConstraint** será removido.  
   
- O exemplo a seguir cria uma **UniqueConstraint** para duas colunas de uma **DataTable**.  
+ O exemplo a seguir cria um **UniqueConstraint** para duas colunas de uma **DataTable**.  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -98,6 +98,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
-- [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [Definição de esquema de DataTable](datatable-schema-definition.md)
+- [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

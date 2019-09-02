@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038031"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168161"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>C# de teste de unidade com MSTest e .NET Core
 
@@ -20,7 +20,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 Abra uma janela do shell. Crie um diretório chamado *unit-testing-using-mstest* no qual manter a solução. Nesse diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste. Em seguida, crie um diretório *PrimeService*. O seguinte esquema mostra a estrutura de arquivo e diretório até aqui:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -49,7 +49,7 @@ Altere o diretório de volta para o diretório *unit-testing-using-mstest*. Exec
 
 Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a estrutura do diretório:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -70,7 +70,7 @@ Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projet
 
 O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new` da etapa anterior adicionou o SDK do MSTest, a estrutura de teste do MSTest e o executor do MSTest. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -78,7 +78,7 @@ Você pode ver o arquivo inteiro no [repositório de exemplos](https://github.co
 
 O seguinte esquema mostra o layout da solução final:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService

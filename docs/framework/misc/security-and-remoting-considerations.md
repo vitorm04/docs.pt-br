@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910702"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206089"
 ---
 # <a name="security-and-remoting-considerations"></a>Considerações sobre segurança e comunicação remota
 A comunicação remota permite que você configure a chamada transparente entre domínios de aplicativo, processos ou computadores. No entanto, a movimentação de pilha de segurança de acesso ao código não pode cruzar os limites do processo ou da máquina (ela se aplica entre os domínios do aplicativo do mesmo processo).  
   
  Qualquer classe que seja remota (derivada de uma <xref:System.MarshalByRefObject> classe) precisa assumir a responsabilidade pela segurança. O código deve ser usado somente em ambientes fechados em que o código de chamada pode ser implicitamente confiável, ou as chamadas remotas devem ser projetadas para que não sejam sujeitas a código protegido a entradas externas que poderiam ser usadas maliciosamente.  
   
- Geralmente, você nunca deve expor métodos, propriedades ou eventos que são protegidos por [LinkDemand](../../../docs/framework/misc/link-demands.md) e <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> verificações de segurança declarativas. Com a comunicação remota, essas verificações não são impostas. Outras verificações de segurança, <xref:System.Security.Permissions.SecurityAction.Demand>como, [Assert](../../../docs/framework/misc/using-the-assert-method.md)e assim por diante, funcionam entre domínios de aplicativo dentro de um processo, mas não funcionam em cenários de processo cruzado ou entre máquinas.  
+ Geralmente, você nunca deve expor métodos, propriedades ou eventos que são protegidos por [LinkDemand](link-demands.md) e <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> verificações de segurança declarativas. Com a comunicação remota, essas verificações não são impostas. Outras verificações de segurança, <xref:System.Security.Permissions.SecurityAction.Demand>como, [Assert](using-the-assert-method.md)e assim por diante, funcionam entre domínios de aplicativo dentro de um processo, mas não funcionam em cenários de processo cruzado ou entre máquinas.  
   
 ## <a name="protected-objects"></a>Objetos protegidos  
  Alguns objetos mantêm o estado de segurança em si. Esses objetos não devem ser passados para código não confiável, o que, por sua conta, adquiriria a autorização de segurança além de suas próprias permissões.  

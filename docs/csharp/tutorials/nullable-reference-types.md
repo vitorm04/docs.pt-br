@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195831"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105851"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
@@ -17,10 +17,10 @@ O C# 8 introduz **tipos de referência que permitem valor nulo** que complementa
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Incorporar tipos de referência que permitem valores nulos e tipos de referência que não permitem valores nulos aos designs
-> * Habilitar verificações de tipo de referência que permitem valor nulo em todo o código.
-> * Gravar código em locais onde o compilador imponha essas decisões de design.
-> * Usar o recurso de referência que permite valor nulo em seus próprios designs
+> - Incorporar tipos de referência que permitem valores nulos e tipos de referência que não permitem valores nulos aos designs
+> - Habilitar verificações de tipo de referência que permitem valor nulo em todo o código.
+> - Gravar código em locais onde o compilador imponha essas decisões de design.
+> - Usar o recurso de referência que permite valor nulo em seus próprios designs
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

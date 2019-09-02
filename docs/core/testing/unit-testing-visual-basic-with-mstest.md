@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6081e7b6b52d85615cfde701e364eb87d69f42bf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9daa152c319f8cc72b4fd230758f2063cebf2a9a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626422"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168232"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e MSTest
 
@@ -22,7 +22,7 @@ Abra uma janela do shell. Crie um diretório chamado *unit-testing-vb-mstest* pa
 Nesse novo diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Essa prática facilita gerenciar a biblioteca de classes e o projeto de teste de unidade.
 No diretório da solução, crie um diretório *PrimeService*. Você tem a seguinte estrutura de arquivo e diretório até aqui:
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
@@ -48,7 +48,7 @@ Altere o diretório de volta para o diretório *unit-testing-vb-using-mstest*. E
 
 Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a estrutura do diretório:
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
@@ -69,7 +69,7 @@ Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projet
 
 O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new`, na etapa anterior, adicionou MSTest e o executor de MSTest. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -77,7 +77,7 @@ Você pode ver o arquivo inteiro no [repositório de exemplos](https://github.co
 
 Você tem o seguinte layout de solução final:
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService

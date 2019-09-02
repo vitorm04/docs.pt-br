@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 3a6dd2cc4565cd4f8716b691d564a782887be1e0
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306211"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205927"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar uma transação implícita usando o escopo da transação
 O <xref:System.Transactions.TransactionScope> classe fornece uma maneira simples para marcar um bloco de código como participar de uma transação, sem a necessidade de interagir com a própria transação. Selecione um escopo de transação e gerenciar a transação ambiente automaticamente. Devido à sua facilidade de uso e a eficiência, é recomendável que você use o <xref:System.Transactions.TransactionScope> classe ao desenvolver um aplicativo de transação.  
@@ -23,46 +23,46 @@ O <xref:System.Transactions.TransactionScope> classe fornece uma maneira simples
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- O escopo da transação é iniciado depois que você criar um novo <xref:System.Transactions.TransactionScope> objeto.  Conforme ilustrado no exemplo de código, é recomendável que você crie escopos com um **usando** instrução. O **usando** instrução está disponível no C# e no Visual Basic e funciona como um **try... por fim** bloco para garantir que o escopo é descartado corretamente.  
+ O escopo da transação é iniciado depois que você cria <xref:System.Transactions.TransactionScope> um novo objeto.  Conforme ilustrado no exemplo de código, é recomendável que você crie escopos com uma instrução **using** . A instrução **using** está disponível em C# e em Visual Basic e funciona como uma **instrução try... finally** para garantir que o escopo seja Descartado corretamente.  
   
- Quando você cria uma instância <xref:System.Transactions.TransactionScope>, o Gerenciador de transações determina qual transação para participar. Uma vez determinado, o escopo sempre participa dessa transação. A decisão se baseia em dois fatores: se uma transação de ambiente está presente e o valor de **TransactionScopeOption** parâmetro no construtor. A transação ambiente é a transação na qual o código é executado. Você pode obter uma referência para a transação de ambiente chamando estático <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> propriedade o <xref:System.Transactions.Transaction> classe. Para obter mais informações sobre como esse parâmetro é usado, consulte a [Gerenciando o fluxo de transações usando TransactionScopeOption](#ManageTxFlow) seção deste tópico.  
+ Quando você cria uma instância <xref:System.Transactions.TransactionScope>, o Gerenciador de transações determina qual transação para participar. Uma vez determinado, o escopo sempre participa dessa transação. A decisão se baseia em dois fatores: se uma transação de ambiente está presente e o valor do parâmetro **TransactionScopeOption** no construtor. A transação ambiente é a transação na qual o código é executado. Você pode obter uma referência para a transação de ambiente chamando estático <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> propriedade o <xref:System.Transactions.Transaction> classe. Para obter mais informações sobre como esse parâmetro é usado, consulte a seção Gerenciando o [fluxo de transações usando o TransactionScopeOption](#ManageTxFlow) deste tópico.  
   
 ## <a name="completing-a-transaction-scope"></a>Concluindo um escopo de transação  
- Quando seu aplicativo conclui todo o trabalho que deseja executar em uma transação, você deve chamar o <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> método apenas uma vez para informar o Gerenciador de transações que é aceitável para confirmar a transação. É muito bom colocar a chamada para <xref:System.Transactions.TransactionScope.Complete%2A> como a última instrução na **usando** bloco.  
+ Quando seu aplicativo conclui todo o trabalho que deseja executar em uma transação, você deve chamar o <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> método apenas uma vez para informar o Gerenciador de transações que é aceitável para confirmar a transação. É uma prática recomendada colocar a chamada <xref:System.Transactions.TransactionScope.Complete%2A> como a última instrução no bloco **using** .  
   
- Falha ao chamar esse método anula a transação, porque o Gerenciador de transações interpretará isso como uma falha do sistema, ou equivalente a uma exceção lançada dentro do escopo da transação. No entanto, chamar este método não garante que a transação será ser confirmada. É simplesmente uma maneira de informar o Gerenciador de transações do seu status. Depois de chamar o <xref:System.Transactions.TransactionScope.Complete%2A> método, você não pode acessar a transação de ambiente usando o <xref:System.Transactions.Transaction.Current%2A> propriedade e tentar fazer isso resultará em uma exceção é lançada.  
+ A falha ao chamar esse método anula a transação, pois o Gerenciador de transações interpreta isso como uma falha do sistema ou equivalente a uma exceção gerada no escopo da transação. No entanto, chamar este método não garante que a transação será ser confirmada. É simplesmente uma maneira de informar o Gerenciador de transações do seu status. Depois de chamar o <xref:System.Transactions.TransactionScope.Complete%2A> método, você não pode acessar a transação de ambiente usando o <xref:System.Transactions.Transaction.Current%2A> propriedade e tentar fazer isso resultará em uma exceção é lançada.  
   
- Se o <xref:System.Transactions.TransactionScope> do objeto criou a transação inicialmente, o trabalho real de confirmação da transação, o Gerenciador de transações ocorre após a última linha do código em de **usando** bloco. Se ele não criou a transação, a confirmação ocorre sempre que <xref:System.Transactions.CommittableTransaction.Commit%2A> é chamado pelo proprietário do <xref:System.Transactions.CommittableTransaction> objeto. Nesse momento o Gerenciador de transações chama o recurso gerentes e informá-los para confirmar ou reverter, com base em se a <xref:System.Transactions.TransactionScope.Complete%2A> método foi chamado no <xref:System.Transactions.TransactionScope> objeto.  
+ Se o <xref:System.Transactions.TransactionScope> objeto criou a transação inicialmente, o trabalho real de confirmar a transação pelo Gerenciador de transações ocorrerá após a última linha de código no bloco **using** . Se ele não criou a transação, a confirmação ocorre sempre que <xref:System.Transactions.CommittableTransaction.Commit%2A> é chamado pelo proprietário do <xref:System.Transactions.CommittableTransaction> objeto. Nesse ponto, o Gerenciador de transações chama os gerenciadores de recursos e os informa para confirmação ou reversão, com base no <xref:System.Transactions.TransactionScope.Complete%2A> fato de o método ser <xref:System.Transactions.TransactionScope> chamado no objeto.  
   
- O **usando** instrução garante que o <xref:System.Transactions.TransactionScope.Dispose%2A> método da <xref:System.Transactions.TransactionScope> objeto seja chamado mesmo se ocorrer uma exceção. O <xref:System.Transactions.TransactionScope.Dispose%2A> método marca o final do escopo da transação. Exceções que ocorrem depois de chamar esse método não podem afetar a transação. Esse método também restaura a transação de ambiente para ele estado anterior.  
+ A instrução **using** garante que o <xref:System.Transactions.TransactionScope.Dispose%2A> método do <xref:System.Transactions.TransactionScope> objeto seja chamado mesmo se ocorrer uma exceção. O <xref:System.Transactions.TransactionScope.Dispose%2A> método marca o final do escopo da transação. Exceções que ocorrem depois de chamar esse método não podem afetar a transação. Esse método também restaura a transação de ambiente para ele estado anterior.  
   
  Um <xref:System.Transactions.TransactionAbortedException> será lançada se o escopo cria a transação e a transação for anulada. Um <xref:System.Transactions.TransactionInDoubtException> será lançada se o Gerenciador de transações não pode chegar a uma decisão de confirmação. Nenhuma exceção é gerada se a transação for confirmada.  
   
 ## <a name="rolling-back-a-transaction"></a>Reverter uma transação  
  Se você quiser reverter uma transação, você não deve chamar o <xref:System.Transactions.TransactionScope.Complete%2A> método dentro do escopo da transação. Por exemplo, você pode lançar uma exceção dentro do escopo. A transação na qual participa também será revertida.  
   
-## <a name="ManageTxFlow"></a> Gerenciando o fluxo de transações usando TransactionScopeOption  
+## <a name="ManageTxFlow"></a>Gerenciando o fluxo de transações usando TransactionScopeOption  
  Escopo da transação pode ser aninhado, chamando um método que usa um <xref:System.Transactions.TransactionScope> de dentro de um método que usa seu próprio escopo, como é o caso com o `RootMethod` método no exemplo a seguir,  
   
 ```csharp  
-void RootMethod()  
-{  
-     using(TransactionScope scope = new TransactionScope())  
-     {  
-          /* Perform transactional work here */  
-          SomeMethod();  
-          scope.Complete();  
-     }  
-}  
-  
-void SomeMethod()  
-{  
-     using(TransactionScope scope = new TransactionScope())  
-     {  
-          /* Perform transactional work here */  
-          scope.Complete();  
-     }  
-}  
+void RootMethod()
+{
+    using(TransactionScope scope = new TransactionScope())
+    {
+        /* Perform transactional work here */
+        SomeMethod();
+        scope.Complete();
+    }
+}
+
+void SomeMethod()
+{
+    using(TransactionScope scope = new TransactionScope())
+    {
+        /* Perform transactional work here */
+        scope.Complete();
+    }
+}
 ```  
   
  O escopo da transação mais alto é conhecido como o escopo raiz.  
@@ -81,7 +81,7 @@ void SomeMethod()
   
  Se o escopo é instanciado com <xref:System.Transactions.TransactionScopeOption.RequiresNew>, é sempre o escopo raiz. Ele inicia uma nova transação, e sua transação se torna a nova transação ambiente dentro do escopo.  
   
- Se o escopo é instanciado com <xref:System.Transactions.TransactionScopeOption.Suppress>, ele nunca faz parte de uma transação, independentemente de se uma transação de ambiente está presente. Um escopo instanciado com esse valor sempre ter **nulo** como sua transação de ambiente.  
+ Se o escopo é instanciado com <xref:System.Transactions.TransactionScopeOption.Suppress>, ele nunca faz parte de uma transação, independentemente de se uma transação de ambiente está presente. Um escopo instanciado com esse valor sempre tem **nulo** como sua transação de ambiente.  
   
  As opções acima são resumidas na tabela a seguir.  
   
@@ -99,53 +99,50 @@ void SomeMethod()
  A exemplo a seguir mostra um <xref:System.Transactions.TransactionScope> que cria três objetos de escopo aninhado, cada instanciados com outro objeto <xref:System.Transactions.TransactionScopeOption> valor.  
   
 ```csharp  
-using(TransactionScope scope1 = new TransactionScope())   
-//Default is Required   
-{   
-     using(TransactionScope scope2 = new   
-      TransactionScope(TransactionScopeOption.Required))   
-     {  
-     ...  
-     }   
+using(TransactionScope scope1 = new TransactionScope())
+//Default is Required
+{
+    using(TransactionScope scope2 = new TransactionScope(TransactionScopeOption.Required))
+    {
+        //...
+    }
+
+    using(TransactionScope scope3 = new TransactionScope(TransactionScopeOption.RequiresNew))   
+    {
+        //...  
+    }
   
-     using(TransactionScope scope3 = new TransactionScope(TransactionScopeOption.RequiresNew))   
-     {  
-     ...  
-     }   
-  
-     using(TransactionScope scope4 = new   
-        TransactionScope(TransactionScopeOption.Suppress))   
-    {  
-     ...  
-    }   
-}  
+    using(TransactionScope scope4 = new TransactionScope(TransactionScopeOption.Suppress))
+    {
+        //...  
+    }
+}
 ```  
   
- O exemplo mostra um bloco de código sem qualquer transação ambiente criando um novo escopo (`scope1`) com <xref:System.Transactions.TransactionScopeOption.Required>. O escopo `scope1` é um escopo de raiz quando ele cria uma nova transação (uma transação) e faz com que a transação A transação de ambiente. `Scope1` em seguida, cria três mais objetos, cada um com outro <xref:System.Transactions.TransactionScopeOption> valor. Por exemplo, `scope2` é criado com <xref:System.Transactions.TransactionScopeOption.Required>, e como há uma transação de ambiente, ele adiciona a primeira transação criada pelo `scope1`. Observe que `scope3` é o escopo da raiz de uma nova transação e que `scope4` não tem nenhuma transação de ambiente.  
+ O exemplo mostra um bloco de código sem qualquer transação ambiente criando um novo escopo (`scope1`) com <xref:System.Transactions.TransactionScopeOption.Required>. O escopo `scope1` é um escopo de raiz quando ele cria uma nova transação (uma transação) e faz com que a transação A transação de ambiente. `Scope1`em seguida, cria mais três objetos, cada um <xref:System.Transactions.TransactionScopeOption> com um valor diferente. Por exemplo, `scope2` é criado com <xref:System.Transactions.TransactionScopeOption.Required>, e como há uma transação de ambiente, ele adiciona a primeira transação criada pelo `scope1`. Observe que `scope3` é o escopo da raiz de uma nova transação e que `scope4` não tem nenhuma transação de ambiente.  
   
  Embora o padrão e mais comumente usado o valor de <xref:System.Transactions.TransactionScopeOption> é <xref:System.Transactions.TransactionScopeOption.Required>, cada um dos outros valores tem sua finalidade exclusiva.  
 
-### <a name="non-transactional-code-inside-a-transaction-scope"></a>Código não-transacional dentro de um escopo de transação
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>Código não transacional dentro de um escopo de transação
 
- <xref:System.Transactions.TransactionScopeOption.Suppress> é útil quando você quiser preservar as operações executadas pela seção de código e não deseja anular a transação ambiente se as operações de falham. Por exemplo, quando você deseja executar um log ou operações de auditoria ou quando desejar publicar eventos para assinantes, independentemente de se a transação de ambiente confirma ou anula. Esse valor permite que você tenha uma seção de código não-transacional dentro de um escopo de transação, como mostrado no exemplo a seguir.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress>é útil quando você deseja preservar as operações executadas pela seção de código e não deseja anular a transação de ambiente se as operações falharem. Por exemplo, quando você deseja executar um log ou operações de auditoria ou quando desejar publicar eventos para assinantes, independentemente de se a transação de ambiente confirma ou anula. Esse valor permite que você tenha uma seção de código não-transacional dentro de um escopo de transação, como mostrado no exemplo a seguir.  
   
 ```csharp  
-using(TransactionScope scope1 = new TransactionScope())  
-{  
-     try  
-     {  
-          //Start of non-transactional section   
-          using(TransactionScope scope2 = new  
-             TransactionScope(TransactionScopeOption.Suppress))  
-          {  
-               //Do non-transactional work here  
-          }  
-          //Restores ambient transaction here  
-   }  
-     catch  
-     {}  
-   //Rest of scope1  
-}  
+using(TransactionScope scope1 = new TransactionScope())
+{
+    try
+    {
+        //Start of non-transactional section
+        using(TransactionScope scope2 = new
+            TransactionScope(TransactionScopeOption.Suppress))  
+        {  
+            //Do non-transactional work here  
+        }  
+        //Restores ambient transaction here
+   }
+   catch {}  
+   //Rest of scope1
+}
 ```  
   
 ### <a name="voting-inside-a-nested-scope"></a>Votação dentro de um escopo aninhado  
@@ -168,7 +165,7 @@ using(TransactionScope scope1 = new TransactionScope())
  Quando usando aninhadas <xref:System.Transactions.TransactionScope> objetos, todos os escopos aninhados devem ser configurados para usar exatamente o mesmo nível de isolamento se deseja unir a transação de ambiente. Se um aninhada <xref:System.Transactions.TransactionScope> objeto tentar unir a transação ambiente ainda Especifica um nível de isolamento diferente, um <xref:System.ArgumentException> é lançada.  
   
 ## <a name="interop-with-com"></a>Interoperação com COM+  
- Quando você cria um novo <xref:System.Transactions.TransactionScope> instância, você pode usar o <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração em um dos construtores para especificar como interagir com COM+. Para obter mais informações sobre isso, consulte [interoperabilidade com serviços da empresa e transações COM+](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Quando você cria um novo <xref:System.Transactions.TransactionScope> instância, você pode usar o <xref:System.Transactions.EnterpriseServicesInteropOption> enumeração em um dos construtores para especificar como interagir com COM+. Para obter mais informações sobre isso, consulte interoperabilidade [com os serviços corporativos e as transações com+](interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Consulte também
 

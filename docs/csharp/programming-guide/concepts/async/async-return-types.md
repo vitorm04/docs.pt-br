@@ -2,12 +2,12 @@
 title: Tipos de retorno assíncronos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922033"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168392"
 ---
 # <a name="async-return-types-c"></a>Tipos de retorno assíncronos (C#)
 Métodos assíncronos podem conter os seguintes tipos de retorno:
@@ -31,7 +31,7 @@ No exemplo a seguir, o método assíncrono `GetLeisureHours` contém uma instru�
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-Quando `GetLeisureHours` é chamado de dentro de uma expressão await no método `ShowTodaysInfo`, a expressão await recupera o valor inteiro (o valor de `leisureHours`) que está armazenado na tarefa que é retornada pelo método `GetLeisureHours`. Para obter mais informações sobre expressões await, consulte [await](../../../language-reference/keywords/await.md).  
+Quando `GetLeisureHours` é chamado de dentro de uma expressão await no método `ShowTodaysInfo`, a expressão await recupera o valor inteiro (o valor de `leisureHours`) que está armazenado na tarefa que é retornada pelo método `GetLeisureHours`. Para obter mais informações sobre expressões await, consulte [await](../../../language-reference/operators/await.md).  
   
 Você pode entender melhor como isso acontece, separando a chamada ao `GetLeisureHours` da aplicação do `await`, como mostrado no código a seguir. Uma chamada ao método `GetLeisureHours` que não é aguardada imediatamente, retorna um `Task<int>`, como você esperaria da declaração do método. A tarefa é atribuída à variável `integerTask` no exemplo. Já que `integerTask` é um <xref:System.Threading.Tasks.Task%601>, ele contém uma propriedade <xref:System.Threading.Tasks.Task%601.Result> do tipo `TResult`. Nesse caso, `TResult` representa um tipo inteiro. Quando `await` é aplicado à `integerTask`, a expressão await é avaliada como o conteúdo da propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> de `integerTask`. O valor é atribuído à variável `ret`.  
   
@@ -83,4 +83,4 @@ O .NET fornece a estrutura <xref:System.Threading.Tasks.ValueTask%601?displayPro
 - [Passo a passo: acesso à Web com o uso de Async e Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Fluxo de controle em programas assíncronos (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043944"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204050"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Adicionando colunas a um DataTable
 Um <xref:System.Data.DataTable> contém uma coleção de <xref:System.Data.DataColumn> objetos referenciados pela propriedade **Columns** da tabela. Esta coleção de colunas, junto com quaisquer restrições, define o esquema, ou a estrutura, da tabela.  
@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- No exemplo, observe que as propriedades da coluna **CustID** estão definidas para não permitir valores **DBNull** e para restringir valores a serem exclusivos. No entanto, se você definir a coluna CustID como a coluna de chave primária da tabela, a propriedade **AllowDBNull** será automaticamente definida **como false** e a propriedade **Unique** será definida automaticamente como **true**. Para obter mais informações, consulte [definindo chaves primárias](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ No exemplo, observe que as propriedades da coluna **CustID** estão definidas para não permitir valores **DBNull** e para restringir valores a serem exclusivos. No entanto, se você definir a coluna CustID como a coluna de chave primária da tabela, a propriedade **AllowDBNull** será automaticamente definida **como false** e a propriedade **Unique** será definida automaticamente como **true**. Para obter mais informações, consulte [definindo chaves primárias](defining-primary-keys.md).  
   
 > [!CAUTION]
 > Se um nome de coluna não for fornecido para uma coluna, a coluna receberá um nome padrão incremental da coluna*N,* começando com "Column1", quando ela for adicionada aoDataColumnCollection. Recomendamos que você evite a Convenção de nomenclatura de "coluna*N*" ao fornecer um nome de coluna, pois o nome que você fornece pode entrar em conflito com um nome de coluna padrão existente no DataColumnCollection. Se o nome fornecido já existir, será gerada uma exceção.  
@@ -56,6 +56,6 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
-- [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Definição de esquema de DataTable](datatable-schema-definition.md)
+- [DataTables](datatables.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

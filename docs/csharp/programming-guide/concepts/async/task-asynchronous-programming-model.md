@@ -2,12 +2,12 @@
 title: O modelo TAP (programação assíncrona de tarefa) com async e await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595608"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167896"
 ---
 # <a name="task-asynchronous-programming-model"></a>Modelo de programação assíncrona de tarefa
 
@@ -38,7 +38,7 @@ A abordagem baseada em assincronia adiciona o equivalente de uma transmissão au
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Os métodos assíncronos são mais fáceis de escrever
 
-As palavras-chave [async](../../../language-reference/keywords/async.md) e [await](../../../language-reference/keywords/await.md) em C# são a parte central da programação assíncrona. Ao usar essas duas palavras-chave, você poderá usar recursos do .NET Framework, do .NET Core ou do Windows Runtime para criar um método assíncrono quase que tão facilmente quanto criar um método síncrono. Os métodos assíncronos que você define usando a palavra-chave `async` são chamados de *métodos assíncronos*.
+As palavras-chave [async](../../../language-reference/keywords/async.md) e [await](../../../language-reference/operators/await.md) em C# são a parte central da programação assíncrona. Ao usar essas duas palavras-chave, você poderá usar recursos do .NET Framework, do .NET Core ou do Windows Runtime para criar um método assíncrono quase que tão facilmente quanto criar um método síncrono. Os métodos assíncronos que você define usando a palavra-chave `async` são chamados de *métodos assíncronos*.
 
 O exemplo a seguir mostra um método assíncrono. Quase tudo no código deve ser completamente familiar para você.
 
@@ -156,7 +156,7 @@ A abordagem baseada em async para a programação assíncrona é preferível às
 
 Se você especificar que um método é assíncrono usando um modificador [async](../../../language-reference/keywords/async.md), você habilitará os dois recursos a seguir.
 
-- O método assíncrono marcado pode usar [await](../../../language-reference/keywords/await.md) para designar pontos de suspensão. O operador `await` informa ao compilador que o método assíncrono não poderá continuar além daquele ponto até que o processo assíncrono aguardado seja concluído. Enquanto isso, o controle retorna para o chamador do método assíncrono.
+- O método assíncrono marcado pode usar [await](../../../language-reference/operators/await.md) para designar pontos de suspensão. O operador `await` informa ao compilador que o método assíncrono não poderá continuar além daquele ponto até que o processo assíncrono aguardado seja concluído. Enquanto isso, o controle retorna para o chamador do método assíncrono.
 
      A suspensão de um método assíncrono em uma expressão `await` não constitui uma saída de método e os blocos de `finally` não são executados.
 
@@ -168,7 +168,7 @@ Um método assíncrono normalmente contém uma ou mais ocorrências de um operad
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Tipos e parâmetros de retorno
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>Consulte também
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programação assíncrona](../../../async.md)
 - [Visão geral da assincronia](../../../../standard/async.md)
+ 

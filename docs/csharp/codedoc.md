@@ -3,12 +3,12 @@ title: Documentando seu código com comentários em XML
 description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633729"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104779"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -212,12 +212,12 @@ Ferramentas de geração de documentação internas ou personalizadas também po
 
 Documentar o código é recomendável por vários motivos. A seguir, temos algumas práticas recomendadas, cenários de caso de uso gerais e coisas que você precisa saber ao usar marcas de documentação XML em seu código C#.
 
-* Para fins de consistência, todos os tipos visíveis publicamente e seus membros devem ser documentados. Se você precisar fazer isso, faça tudo.
-* Membros particulares também podem ser documentados usando comentários XML. No entanto, isso expõe o funcionamento interno (potencialmente confidencial) de sua biblioteca.
-* No mínimo, os tipos e seus membros devem ter uma marca `<summary>`, porque seu conteúdo é necessário para o IntelliSense.
-* O texto da documentação deve ser escrito usando frases terminadas com ponto final.
-* Classes parciais têm suporte total e informações da documentação serão concatenadas em uma única entrada para esse tipo.
-* O compilador verifica a sintaxe das marcas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` e `<typeparam>`.
+- Para fins de consistência, todos os tipos visíveis publicamente e seus membros devem ser documentados. Se você precisar fazer isso, faça tudo.
+- Membros particulares também podem ser documentados usando comentários XML. No entanto, isso expõe o funcionamento interno (potencialmente confidencial) de sua biblioteca.
+- No mínimo, os tipos e seus membros devem ter uma marca `<summary>`, porque seu conteúdo é necessário para o IntelliSense.
+- O texto da documentação deve ser escrito usando frases terminadas com ponto final.
+- Classes parciais têm suporte total e informações da documentação serão concatenadas em uma única entrada para esse tipo.
+- O compilador verifica a sintaxe das marcas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` e `<typeparam>`.
 - O compilador valida os parâmetros que contêm caminhos de arquivo e referências para outras partes do código.
 
 ## <a name="see-also"></a>Consulte também

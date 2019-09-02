@@ -3,35 +3,35 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347454"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105723"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
 O C# 7.0 adiciona vários recursos novos à linguagem C#:
-* [Variáveis `out`](#out-variables)
+- [Variáveis `out`](#out-variables)
   - Declare valores `out` embutidos como argumentos para o método em que eles são usados.
-* [Tuplas](#tuples)
+- [Tuplas](#tuples)
   - Você pode criar tipos simples e sem nome que contêm vários campos públicos. Compiladores e ferramentas IDE entendem a semântica desses tipos.
-* [Descarta](#discards)
+- [Descarta](#discards)
   - Descartes são variáveis temporárias de somente gravação usadas em atribuições quando o valor atribuído não tem importância. Eles são mais úteis ao desconstruir tuplas e tipos definidos pelo usuário, bem como ao chamar métodos com parâmetros `out`.
-* [Correspondência Padrão](#pattern-matching)
+- [Correspondência Padrão](#pattern-matching)
   - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
-* [locais e retornos de `ref`](#ref-locals-and-returns)
+- [locais e retornos de `ref`](#ref-locals-and-returns)
   - As variáveis locais do método e os valores de retorno podem ser referências a outros armazenamentos.
-* [Funções Locais](#local-functions)
+- [Funções Locais](#local-functions)
   - Você pode aninhar funções dentro de outras funções para limitar seu escopo e visibilidade.
-* [Mais membros aptos para expressão](#more-expression-bodied-members)
+- [Mais membros aptos para expressão](#more-expression-bodied-members)
   - A lista de membros que podem ser criados usando expressões cresceu.
-* [Expressões `throw`](#throw-expressions)
+- [Expressões `throw`](#throw-expressions)
   - Gere exceções em constructos de código que anteriormente não eram permitidos devido ao fato de `throw` ser uma instrução.
-* [Tipos de retorno assíncrono generalizado](#generalized-async-return-types)
+- [Tipos de retorno assíncrono generalizado](#generalized-async-return-types)
   - Os métodos declarados com o modificador `async` podem retornar outros tipos além de `Task` e `Task<T>`.
-* [Aprimoramentos da sintaxe de literais numéricos](#numeric-literal-syntax-improvements)
+- [Aprimoramentos da sintaxe de literais numéricos](#numeric-literal-syntax-improvements)
   - Novos tokens aprimoram a legibilidade para constantes numéricas.
 
 O restante deste artigo fornece uma visão geral de cada recurso. Para cada recurso, você aprenderá o raciocínio por trás dele. Você aprenderá a sintaxe. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
@@ -51,9 +51,9 @@ Você talvez queira especificar o tipo da variável `out` para maior clareza, co
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* O código é mais fácil de ler.
+- O código é mais fácil de ler.
   - Você declara a variável out onde a usa, não em outra linha acima.
-* Não é necessário atribuir um valor inicial.
+- Não é necessário atribuir um valor inicial.
   - Ao declarar a variável `out` no local em que ela é usada em uma chamada de método, você não pode usá-la acidentalmente antes de ela ser atribuída.
 
 ## <a name="tuples"></a>Tuplas
@@ -95,10 +95,10 @@ Geralmente, ao desconstruir uma tupla ou chamar um método com parâmetros `out`
 
 Os descartes são compatíveis com os seguintes cenários:
 
-* Ao desconstruir tuplas ou tipos definidos pelo usuário.
-* Ao chamar métodos com parâmetros [out](../language-reference/keywords/out-parameter-modifier.md).
-* Em uma operação de correspondência de padrões com as instruções [is](../language-reference/keywords/is.md) e [switch](../language-reference/keywords/switch.md).
-* Como um identificador autônomo quando você deseja identificar explicitamente o valor de uma atribuição como um descarte.
+- Ao desconstruir tuplas ou tipos definidos pelo usuário.
+- Ao chamar métodos com parâmetros [out](../language-reference/keywords/out-parameter-modifier.md).
+- Em uma operação de correspondência de padrões com as instruções [is](../language-reference/keywords/is.md) e [switch](../language-reference/keywords/switch.md).
+- Como um identificador autônomo quando você deseja identificar explicitamente o valor de uma atribuição como um descarte.
 
 O exemplo a seguir define um método `QueryCityDataForYears` que retorna uma tupla de 6 que contém dados de dois anos diferentes para uma cidade. A chamada do método no exemplo é relacionada somente com os dois valores de população retornados pelo método e, por isso, trata os valores restantes na tupla como descartes ao desconstruir a tupla.
 
@@ -180,15 +180,15 @@ Você pode declarar o valor retornado como uma `ref` e modificar esse valor na m
 
 A linguagem C# tem várias regras que protegem contra o uso indevido de locais e retornos de `ref`:
 
-* É necessário adicionar a palavra-chave `ref` à assinatura do método e a todas as instruções `return` em um método.
+- É necessário adicionar a palavra-chave `ref` à assinatura do método e a todas as instruções `return` em um método.
   - Isso torna claro que o método é retornado por referência em todo o método.
-* Um `ref return` pode ser atribuído a uma variável de valor ou a uma variável `ref`.
+- Um `ref return` pode ser atribuído a uma variável de valor ou a uma variável `ref`.
   - O chamador controla se o valor retornado é copiado ou não. A omissão do modificador `ref` ao atribuir o valor retornado indica que o chamador deseja obter uma cópia do valor, não uma referência ao armazenamento.
-* Não é possível atribuir um valor retornado do método padrão a uma variável local de `ref`.
+- Não é possível atribuir um valor retornado do método padrão a uma variável local de `ref`.
   - Isso proíbe que instruções como `ref int i = sequence.Count();`
-* Não é possível retornar um `ref` para uma variável cujo tempo de vida não se estende para além da execução do método.
+- Não é possível retornar um `ref` para uma variável cujo tempo de vida não se estende para além da execução do método.
   - Isso significa que não é possível retornar uma referência a uma variável local ou a uma variável com um escopo semelhante.
-* O locais e retornos de `ref` não podem ser usados com métodos assíncronos.
+- O locais e retornos de `ref` não podem ser usados com métodos assíncronos.
   - O compilador não consegue saber se a variável referenciada foi definida com o valor final quando o método assíncrono retorna.
 
 A adição de locais e retornos de ref permite algoritmos que são mais eficientes evitando a cópia de valores ou a execução múltipla de operações de desreferenciamento.

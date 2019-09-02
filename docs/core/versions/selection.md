@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539297"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104943"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
@@ -32,8 +32,8 @@ O restante deste documento examina esses quatro cenários.
 
 Os comandos do SDK incluem `dotnet new` e `dotnet run`. A CLI do .NET Core precisa escolher uma versão do SDK para todos os comandos `dotnet`. Por padrão, ela usa o SDK mais recente instalado no computador, mesmo se:
 
-* O projeto se destinar a uma versão anterior do tempo de execução do .NET Core.
-* A versão mais recente do SDK do .NET Core for uma versão prévia.
+- O projeto se destinar a uma versão anterior do tempo de execução do .NET Core.
+- A versão mais recente do SDK do .NET Core for uma versão prévia.
 
 Você pode aproveitar os recursos e as melhorias mais recentes do SDK mesmo ao direcionar a versões anteriores de tempo de execução do .NET Core. Você pode direcionar a várias versões de tempo de execução do .NET Core em projetos diferentes, usando as mesmas ferramentas do SDK para todos os projetos.
 

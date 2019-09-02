@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927991"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040743"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  Quando definido como 1, o sinalizador de ambiente COMPLUS_LoaderOptimization força o host do tempo de execução a carregar todos os assemblies de maneira de domínio não neutro, conhecido como SingleDomain. SingleDomain não carrega assemblies como neutros em relação ao domínio, exceto Mscorlib, que é sempre carregado como neutro em relação ao domínio. Essa configuração é chamada de domínio único, porque ela normalmente é usada quando o host está executando apenas um único aplicativo no processo.  
   
 > [!CAUTION]
->  O sinalizador de ambiente COMPLUS_LoaderOptimization foi projetado para ser usado em cenários de diagnóstico e de teste. Ter o sinalizador ativado pode causar uma grave lentidão e aumentar o uso de memória.  
+> O sinalizador de ambiente COMPLUS_LoaderOptimization foi projetado para ser usado em cenários de diagnóstico e de teste. Ter o sinalizador ativado pode causar uma grave lentidão e aumentar o uso de memória.  
   
 ### <a name="code-example"></a>Exemplo de código
 

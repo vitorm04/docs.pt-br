@@ -2,12 +2,12 @@
 title: 'Como: Controlar o tipo de uma projeção (C#)'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 559cfb2a38ba76fb37a17100f0441498223852d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a44f7616beba3e07f6e44cc279c67468abc779e3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594030"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204099"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Como: Controlar o tipo de uma projeção (C#)
 A projeção é o processo de receber um dataset, de filtre-o, para alterar sua forma, e mesmo de alterar seu tipo. A maioria das expressões de consulta executam projeções. A maioria das expressões de consulta mostradas nesta seção valor para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, mas você pode controlar o tipo de projeção para criar coleções de outros tipos. Este tópico mostra como fazer isso.  
@@ -62,7 +62,7 @@ class Program
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  

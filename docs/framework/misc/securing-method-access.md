@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e981d75ead5ec2e7f95a854da8c0fa42f476d9da
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1157d93585a564f83bf3809ba2fc3a26949fb711
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910782"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206119"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "69910782"
   
 - Exigir classes derivadas que substituam métodos específicos para ter uma identidade ou permissão especificada.  
   
- O exemplo a seguir mostra como ajudar a proteger uma classe pública para acesso limitado, exigindo que os chamadores sejam assinados com um nome forte específico. Este exemplo usa o <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> com uma **demanda** para o nome forte. Para obter informações baseadas em tarefas sobre como assinar um assembly com um nome forte, consulte [criando e usando assemblies de nome forte](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ O exemplo a seguir mostra como ajudar a proteger uma classe pública para acesso limitado, exigindo que os chamadores sejam assinados com um nome forte específico. Este exemplo usa o <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> com uma **demanda** para o nome forte. Para obter informações baseadas em tarefas sobre como assinar um assembly com um nome forte, consulte [criando e usando assemblies de nome forte](../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -60,9 +60,9 @@ public class Class1
  Use as declarações mostradas nesta seção para impedir que classes e métodos específicos, bem como propriedades e eventos, sejam usados pelo código parcialmente confiável. Aplicando essas declarações a uma classe, você aplica a proteção a todos os seus métodos, propriedades e eventos; no entanto, observe que o acesso ao campo não é afetado pela segurança declarativa. Observe também que as demandas de link ajudam a proteger contra apenas os chamadores imediatos e podem ainda estar sujeitos a ataques chamariz.  
   
 > [!NOTE]
-> Um novo modelo de transparência foi introduzido no .NET Framework 4. O [código de segurança transparente, modelo de nível 2,](../../../docs/framework/misc/security-transparent-code-level-2.md) identifica o código <xref:System.Security.SecurityCriticalAttribute> seguro com o atributo. O código de segurança crítica exige que os chamadores e os herdeiros sejam totalmente confiáveis. Os assemblies que estão em execução nas regras de segurança de acesso ao código de versões anteriores do .NET Framework podem chamar assemblies de nível 2. Nesse caso, os atributos de segurança crítica serão tratados como demandas de link para confiança total.  
+> Um novo modelo de transparência foi introduzido no .NET Framework 4. O [código de segurança transparente, modelo de nível 2,](security-transparent-code-level-2.md) identifica o código <xref:System.Security.SecurityCriticalAttribute> seguro com o atributo. O código de segurança crítica exige que os chamadores e os herdeiros sejam totalmente confiáveis. Os assemblies que estão em execução nas regras de segurança de acesso ao código de versões anteriores do .NET Framework podem chamar assemblies de nível 2. Nesse caso, os atributos de segurança crítica serão tratados como demandas de link para confiança total.  
   
- Em assemblies de nome forte, um [LinkDemand](../../../docs/framework/misc/link-demands.md) é aplicado a todos os métodos, propriedades e eventos publicamente acessíveis para restringir seu uso a chamadores totalmente confiáveis. Para desabilitar esse recurso, você deve aplicar o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Portanto, marcar explicitamente as classes para excluir chamadores não confiáveis é necessário apenas para assemblies não assinados ou assemblies com esse atributo; Você pode usar essas declarações para marcar um subconjunto de tipos que não se destinam a chamadores não confiáveis.  
+ Em assemblies de nome forte, um [LinkDemand](link-demands.md) é aplicado a todos os métodos, propriedades e eventos publicamente acessíveis para restringir seu uso a chamadores totalmente confiáveis. Para desabilitar esse recurso, você deve aplicar o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Portanto, marcar explicitamente as classes para excluir chamadores não confiáveis é necessário apenas para assemblies não assinados ou assemblies com esse atributo; Você pode usar essas declarações para marcar um subconjunto de tipos que não se destinam a chamadores não confiáveis.  
   
  Os exemplos a seguir mostram como impedir que classes e membros sejam usados por código não confiável.  
   

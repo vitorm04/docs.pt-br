@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401514"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167876"
 ---
 # <a name="for-c-reference"></a>for (referência de C#)
 
@@ -53,7 +53,7 @@ As instruções na seção de *inicializador* são executadas apenas uma vez, an
 
   - criação de um objeto usando o operador [new](../operators/new-operator.md)
 
-  - expressão [await](await.md)
+  - expressão [await](../operators/await.md)
 
 A seção *inicializador* no exemplo acima declara e inicializa a variável de loop local `i`:
 
@@ -85,7 +85,7 @@ A seção *iterador* define o que acontece depois de cada iteração do corpo do
 
 - criação de um objeto usando o operador [new](../operators/new-operator.md)
 
-- expressão [await](await.md)
+- expressão [await](../operators/await.md)
 
 A seção *iterador* no exemplo acima incrementa a variável de loop local:
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611448"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107138"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Prever os preços usando regressão com o Construtor de Modelo
 
@@ -21,12 +21,12 @@ O modelo de previsão de preço do Construtor de Modelo pode ser usado em qualqu
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
-> * Preparar e compreender os dados
-> * Escolha um cenário
-> * Carregar os dados
-> * Treinar o modelo
-> * Avaliar o modelo
-> * Usar o modelo para previsões
+> - Preparar e compreender os dados
+> - Escolha um cenário
+> - Carregar os dados
+> - Treinar o modelo
+> - Avaliar o modelo
+> - Usar o modelo para previsões
 
 > [!NOTE]
 > O Construtor de Modelo está atualmente na Versão Prévia.
@@ -59,13 +59,13 @@ Cada linha no conjunto de dados `taxi-fare-train.csv` contém os detalhes de cor
 
     O conjunto de dados fornecido contém as seguintes colunas:
 
-    * **vendor_id:** A ID do taxista é um recurso.
-    * **rate_code:** O tipo de tarifa da corrida de táxi é um recurso.
-    * **passenger_count:** O número de passageiros na corrida é um recurso.
-    * **trip_time_in_secs:** O tempo que levou a corrida.
-    * **trip_distance:** A distância da corrida é um recurso.
-    * **payment_type:** A forma de pagamento (dinheiro ou cartão de crédito) é um recurso.
-    * **fare_amount:** A tarifa total de táxi paga é o rótulo.
+    - **vendor_id:** A ID do taxista é um recurso.
+    - **rate_code:** O tipo de tarifa da corrida de táxi é um recurso.
+    - **passenger_count:** O número de passageiros na corrida é um recurso.
+    - **trip_time_in_secs:** O tempo que levou a corrida.
+    - **trip_distance:** A distância da corrida é um recurso.
+    - **payment_type:** A forma de pagamento (dinheiro ou cartão de crédito) é um recurso.
+    - **fare_amount:** A tarifa total de táxi paga é o rótulo.
 
 O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regressão, o objetivo é prever um valor numérico. Nesse cenário de previsão de preço, o custo de uma corrida de táxi está sendo previsto. Portanto, o **fare_amount** é o rótulo. Os `features` identificados são as entradas que você atribui ao modelo para prever o `label`. Nesse caso, o restante das colunas é usado como recursos ou entradas para prever o valor da tarifa.
 
@@ -190,12 +190,12 @@ Se precisar fazer referência aos projetos gerados em um momento posterior dentr
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
-> * Preparar e compreender os dados
-> * Escolha um cenário
-> * Carregar os dados
-> * Treinar o modelo
-> * Avaliar o modelo
-> * Usar o modelo para previsões
+> - Preparar e compreender os dados
+> - Escolha um cenário
+> - Carregar os dados
+> - Treinar o modelo
+> - Avaliar o modelo
+> - Usar o modelo para previsões
 
 ### <a name="additional-resources"></a>Recursos adicionais
 

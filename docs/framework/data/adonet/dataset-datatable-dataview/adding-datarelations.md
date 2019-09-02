@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fde1e2ace09e31234d199876ae7f063e01e7a7e4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034502"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203973"
 ---
 # <a name="adding-datarelations"></a>Adicionando DataRelations
 Em um <xref:System.Data.DataSet> com vários objetos <xref:System.Data.DataTable>, você pode usar objetos <xref:System.Data.DataRelation> para relacionar uma tabela a outra, para navegar pelas tabelas e para retornar as linhas filho ou pai de uma tabela relacionada.  
   
- Os argumentos necessários para criar uma **DataRelation** são um nome para o **DataRelation** que está sendo criado e uma matriz de um ou mais <xref:System.Data.DataColumn> referências para as colunas que servem como o pai e filho colunas na relação. Depois de criar uma **DataRelation**, você pode usá-lo para navegar entre as tabelas e para recuperar valores.  
+ Os argumentos necessários para criar uma **DataRelation** são um nome para a **DataRelation** que está sendo criada e uma matriz de uma ou <xref:System.Data.DataColumn> mais referências às colunas que servem como as colunas pai e filho na relação. Depois de criar uma **DataRelation**, você pode usá-la para navegar entre tabelas e recuperar valores.  
   
- Adicionando um **DataRelation** para um <xref:System.Data.DataSet> adiciona, por padrão, uma <xref:System.Data.UniqueConstraint> para a tabela pai e um <xref:System.Data.ForeignKeyConstraint> à tabela filho. Para obter mais informações sobre essas restrições padrão, consulte [restrições de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Adicionar uma **DataRelation** a um <xref:System.Data.DataSet> ADDS, <xref:System.Data.UniqueConstraint> por padrão, a à tabela pai e <xref:System.Data.ForeignKeyConstraint> a à tabela filho. Para obter mais informações sobre essas restrições padrão, consulte as [restrições de DataTable](datatable-constraints.md).  
   
- O exemplo de código a seguir cria uma **DataRelation** usando duas <xref:System.Data.DataTable> objetos em um <xref:System.Data.DataSet>. Cada <xref:System.Data.DataTable> contém uma coluna denominada **CustID**, que serve como um link entre os dois <xref:System.Data.DataTable> objetos. O exemplo adiciona um único **DataRelation** para o **relações** coleção do <xref:System.Data.DataSet>. O primeiro argumento, o exemplo especifica o nome da **DataRelation** que está sendo criado. O segundo argumento define o pai **DataColumn** e o terceiro argumento define o filho **DataColumn**.  
+ O exemplo de código a seguir cria uma DataRelation <xref:System.Data.DataTable> usando dois objetos <xref:System.Data.DataSet>em um. Cada <xref:System.Data.DataTable> contém uma coluna chamada **CustID**, que serve como um link entre os dois <xref:System.Data.DataTable> objetos. O exemplo adiciona uma única **DataRelation** à <xref:System.Data.DataSet>coleção **Relations** do. O primeiro argumento no exemplo especifica o nome da DataRelation que está sendo criada. O segundo argumento define a **DataColumn** pai e o terceiro argumento define o filho **DataColumn**.  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -33,9 +33,9 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- Um **DataRelation** também tem um **Nested** propriedade que, quando definido como **verdadeiro**, faz com que as linhas da tabela filho sejam aninhadas na linha associada da tabela pai quando gravadas como elementos XML usando <xref:System.Data.DataSet.WriteXml%2A> . Para obter mais informações, consulte [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet).  
+ Uma **DataRelation** também tem uma Propriedade aninhada que, quando definida como **true**, faz com que as linhas da tabela filho sejam aninhadas dentro da linha associada da tabela pai quando gravadas como elementos <xref:System.Data.DataSet.WriteXml%2A> XML usando. Para obter mais informações, consulte [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usando XML em um DataSet).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

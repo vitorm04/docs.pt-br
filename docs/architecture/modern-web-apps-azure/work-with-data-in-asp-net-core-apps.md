@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f765acce89bec1fd73e9c43a6e7d75d78be785d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672813"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105451"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -25,11 +25,15 @@ Caso você esteja escrevendo um novo aplicativo ASP.NET Core que precisa trabalh
 
 Para usar o EF Core com um banco de dados do SQL Server, execute o seguinte comando da CLI do dotnet:
 
+```console
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
 
 Para adicionar suporte para uma fonte de dados InMemory para teste:
 
+```console
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
+```
 
 ### <a name="the-dbcontext"></a>O DbContext
 

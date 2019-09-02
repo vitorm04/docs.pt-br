@@ -3,12 +3,12 @@ title: Gerar e consumir fluxos assíncronos
 description: Este tutorial avançado ilustra os cenários em que gerar e consumir fluxos assíncronos oferecem uma forma mais natural de trabalhar com sequências de dados que podem ser geradas de forma assíncrona.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308543"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105862"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Gerar e consumir fluxos assíncronos usando o C# 8.0 e .NET Core 3.0
 
@@ -17,9 +17,9 @@ O C#8.0 apresenta **fluxos assíncronos**, que modelam uma fonte de dados de str
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
-> * Criar uma fonte de dados que gera uma sequência de elementos de dados de forma assíncrona.
-> * Consumir essa fonte de dados de forma assíncrona.
-> * Reconhecer quando a nova interface e a fonte de dados forem preferenciais para sequências anteriores de dados síncronos.
+> - Criar uma fonte de dados que gera uma sequência de elementos de dados de forma assíncrona.
+> - Consumir essa fonte de dados de forma assíncrona.
+> - Reconhecer quando a nova interface e a fonte de dados forem preferenciais para sequências anteriores de dados síncronos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

@@ -4,12 +4,12 @@ description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 927facd271d6590cac2b0ce10790a16c88482020
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733409"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168132"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
@@ -30,7 +30,7 @@ dotnet new sln
  
 Em seguida, crie um diretório *PrimeService*. A seguinte estrutura de tópicos mostra a estrutura de arquivo e o diretório até aqui:
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -69,7 +69,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a estrutura do diretório:
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -98,7 +98,7 @@ Você pode ver o arquivo inteiro no [repositório de exemplos](https://github.co
 
 O seguinte esquema mostra o layout da solução final:
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService

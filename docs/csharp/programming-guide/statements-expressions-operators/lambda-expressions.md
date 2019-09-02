@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 1a608a9102e5fb19e40294761c0de98f7e008133
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671703"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168976"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
 
@@ -90,7 +90,7 @@ Os lambdas de instrução não podem ser usados para criar árvores de expressã
   
 ## <a name="async-lambdas"></a>Lambdas assíncronos
 
-Você pode facilmente criar expressões e instruções lambda que incorporem processamento assíncrono, ao usar as palavras-chaves [async](../../language-reference/keywords/async.md) e [await](../../language-reference/keywords/await.md). Por exemplo, o exemplo do Windows Forms a seguir contém um manipulador de eventos que chama e espera um método assíncrono `ExampleMethodAsync`.
+Você pode facilmente criar expressões e instruções lambda que incorporem processamento assíncrono, ao usar as palavras-chaves [async](../../language-reference/keywords/async.md) e [await](../../language-reference/operators/await.md). Por exemplo, o exemplo do Windows Forms a seguir contém um manipulador de eventos que chama e espera um método assíncrono `ExampleMethodAsync`.
 
 ```csharp
 public partial class Form1 : Form

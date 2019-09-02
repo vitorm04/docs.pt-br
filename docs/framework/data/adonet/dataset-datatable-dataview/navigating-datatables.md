@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
-ms.openlocfilehash: 91db42acb0e09b8fc99b0ee710a60800d40938ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5837d647b72f8dd17c4a6d3664faf8976243d36
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607255"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204563"
 ---
 # <a name="navigating-datatables"></a>Navegar DataTables
 O <xref:System.Data.DataTableReader> obtém o conteúdo de um ou mais objetos <xref:System.Data.DataTable> na forma de um ou mais conjuntos de resultados somente leitura de somente avanço.  
   
- Um <xref:System.Data.DataTableReader> pode conter vários conjuntos de resultados, se ela for criada usando o <xref:System.Data.DataSet.CreateDataReader%2A> método. Quando há mais de um conjunto de resultados, o <xref:System.Data.DataTableReader.NextResult%2A> método avança o cursor para o próximo conjunto de resultados. Esse é um processo de somente avanço. Não é possível retornar a um conjunto de resultados anteriores.  
+ Um <xref:System.Data.DataTableReader> pode conter vários conjuntos de resultados se ele for criado usando o <xref:System.Data.DataSet.CreateDataReader%2A> método. Quando há mais de um conjunto de resultados, o <xref:System.Data.DataTableReader.NextResult%2A> método avança o cursor para o próximo conjunto de resultados. Esse é um processo somente de encaminhamento. Não é possível retornar a um conjunto de resultados anterior.  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, o `TestConstructor` método cria dois <xref:System.Data.DataTable> instâncias. Para demonstrar esse construtor para o <xref:System.Data.DataTableReader> classe, o exemplo cria um novo **DataTableReader** com base em uma matriz que contém os dois **DataTables**e executa uma operação simple, Imprimir o conteúdo de algumas colunas primeiro à janela do console.  
+ No exemplo a seguir, o `TestConstructor` método cria duas <xref:System.Data.DataTable> instâncias. Para demonstrar esse construtor para a <xref:System.Data.DataTableReader> classe, o exemplo cria um novo **DataTableReader** com base em uma matriz que contém as duas **tabelas**e executa uma operação simples, imprimindo o conteúdo dos primeiros colunas na janela do console.  
   
  [!code-csharp[DataWorks DataTableReader.NextResult#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks DataTableReader.NextResult#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [DataTableReaders](datatablereaders.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

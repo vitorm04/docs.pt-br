@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025099"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168509"
 ---
 # <a name="methods"></a>Métodos
 
@@ -257,7 +257,7 @@ Para obter mais informações, consulte [Métodos de extensão](programming-guid
 
 Usando o recurso async, você pode invocar métodos assíncronos sem usar retornos de chamada explícitos ou dividir manualmente seu código entre vários métodos ou expressões lambda.
 
-Se marcar um método com o modificador [async](language-reference/keywords/async.md), você poderá usar o operador [await](language-reference/keywords/await.md) no método. Quando o controle atingir uma expressão `await` no método assíncrono, o controle retornará para o chamador se a tarefa aguardada não estiver concluída e o progresso no método com a palavra-chave `await` será suspenso até a tarefa aguardada ser concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método.
+Se marcar um método com o modificador [async](language-reference/keywords/async.md), você poderá usar o operador [await](language-reference/operators/await.md) no método. Quando o controle atingir uma expressão `await` no método assíncrono, o controle retornará para o chamador se a tarefa aguardada não estiver concluída e o progresso no método com a palavra-chave `await` será suspenso até a tarefa aguardada ser concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método.
 
 > [!NOTE]
 > Um método assíncrono retorna para o chamador quando encontra o primeiro objeto esperado que ainda não está completo ou chega ao final do método assíncrono, o que ocorrer primeiro.

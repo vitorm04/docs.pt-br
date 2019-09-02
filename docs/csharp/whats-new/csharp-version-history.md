@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363883"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105678"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -19,11 +19,11 @@ Este artigo fornece um histórico de cada versão principal da linguagem C#. A e
 
 As ferramentas de compilação do C# consideram a versão mais recente da linguagem principal como a versão padrão da linguagem. Pode haver versões de ponto entre as versões principais, detalhadas em outros artigos nesta seção. Para usar as últimas funcionalidades em uma versão de ponto, você precisa [configurar a versão da linguagem do compilador](../language-reference/configure-language-version.md) e selecionar a versão. Já houve três versões de ponto desde o C# 7.0:
 
-* [C# 7.3](csharp-7-3.md):
+- [C# 7.3](csharp-7-3.md):
   - O C# 7.3 está disponível a partir do [Visual Studio 2017 versão 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
-* [C# 7.2](csharp-7-2.md):
+- [C# 7.2](csharp-7-2.md):
   - O C# 7.2 está disponível a partir do [Visual Studio 2017 versão 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
-* [C# 7.1](csharp-7-1.md):
+- [C# 7.1](csharp-7-1.md):
   - O C# 7.1 está disponível a partir do [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# versão 1.0
@@ -124,7 +124,7 @@ O C# versão 5.0 era uma versão focada da linguagem. Quase todo o esforço para
 
 ### <a name="see-also"></a>Veja também
 
-* [Projeto de código: Atributos de informações do chamador no C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Projeto de código: Atributos de informações do chamador no C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 O atributo de informações do chamador permite facilmente recuperar informações sobre o contexto no qual você está executando sem recorrer a uma infinidade de código de reflexão clichê. Ele tem muitos usos em diagnóstico e tarefas de registro em log.
 

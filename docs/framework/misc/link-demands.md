@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910915"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206017"
 ---
 # <a name="link-demands"></a>Demandas de link
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "69910915"
   
  Os <xref:System.Security.CodeAccessPermission.Assert%2A>modificadores de <xref:System.Security.CodeAccessPermission.PermitOnly%2A> movimentação de pilha, <xref:System.Security.CodeAccessPermission.Deny%2A>e não afetam a avaliação de demandas de link.  Como as demandas de link não executam uma movimentação de pilha, os modificadores de movimentação de pilha não têm nenhum efeito nas demandas de link.  
   
- Se um método protegido por uma demanda de link for acessado por meio de [reflexão](../../../docs/framework/reflection-and-codedom/reflection.md), uma demanda de link verificará o chamador imediato do código acessado por meio de reflexão. Isso é verdadeiro para a descoberta de método e para invocação de método executada usando reflexão. Por exemplo, suponha que o código use a reflexão <xref:System.Reflection.MethodInfo> para retornar um objeto que representa um método protegido por uma demanda de link e, em seguida, passe esse objeto **MethodInfo** para algum outro código que usa o objeto para invocar o método original. Nesse caso, a verificação de demanda de link ocorre duas vezes: uma vez para o código que retorna o objeto **MethodInfo** e uma vez para o código que o invoca.  
+ Se um método protegido por uma demanda de link for acessado por meio de [reflexão](../reflection-and-codedom/reflection.md), uma demanda de link verificará o chamador imediato do código acessado por meio de reflexão. Isso é verdadeiro para a descoberta de método e para invocação de método executada usando reflexão. Por exemplo, suponha que o código use a reflexão <xref:System.Reflection.MethodInfo> para retornar um objeto que representa um método protegido por uma demanda de link e, em seguida, passe esse objeto **MethodInfo** para algum outro código que usa o objeto para invocar o método original. Nesse caso, a verificação de demanda de link ocorre duas vezes: uma vez para o código que retorna o objeto **MethodInfo** e uma vez para o código que o invoca.  
   
 > [!NOTE]
 > Uma demanda de link executada em um construtor de classe estática não protege o construtor porque construtores estáticos são chamados pelo sistema, fora do caminho de execução de código do aplicativo. Como resultado, quando uma demanda de link é aplicada a uma classe inteira, ela não pode proteger o acesso a um construtor estático, embora proteja o restante da classe.  
@@ -57,4 +57,4 @@ public static string ReadData()
 ## <a name="see-also"></a>Consulte também
 
 - [Atributos](../../standard/attributes/index.md)
-- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)
+- [Segurança de acesso do código](code-access-security.md)

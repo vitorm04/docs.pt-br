@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af000d104a3b0821e69f11c1bce1392f04fe8f5e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607560"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203225"
 ---
 # <a name="row-error-information"></a>Informações de erro de linha
-Para evitar precisar responder a erros de linha durante a edição de valores em um <xref:System.Data.DataTable>, você pode adicionar as informações de erro para a linha para uso posterior. O <xref:System.Data.DataRow> objeto fornece um <xref:System.Data.DataRow.RowError%2A> propriedade em cada linha para essa finalidade. Adicionando dados a **RowError** propriedade de uma **DataRow** define o <xref:System.Data.DataRow.HasErrors%2A> propriedade do **DataRow** para **true**. Se o **DataRow** faz parte de uma **DataTable**, e **DataRow.HasErrors** é **true**, o **DataTable.HasErrors** também é de propriedade **verdadeiro**. Isso se aplica também à **DataSet** ao qual o **DataTable** pertence. Quando os testes de erros, você pode verificar a **HasErrors** propriedade para determinar se as informações de erro foi adicionadas para todas as linhas. Se **HasErrors** é **verdadeiro**, você pode usar o <xref:System.Data.DataTable.GetErrors%2A> método da **DataTable** para retornar e examinar apenas as linhas com erros, conforme mostrado no exemplo a seguir.  
+Para evitar a resposta a erros de linha durante a edição de valores <xref:System.Data.DataTable>em um, você pode adicionar as informações de erro à linha para uso posterior. O <xref:System.Data.DataRow> objeto fornece uma <xref:System.Data.DataRow.RowError%2A> Propriedade em cada linha para essa finalidade. A adição de dados à propriedade usererror de uma DataRow <xref:System.Data.DataRow.HasErrors%2A> define a propriedade da **DataRow** como **true**. Se a **DataRow** for parte de uma **DataTable**e **DataRow. HasErrors** for **true**, a propriedade **DataTable. HasErrors** também será **verdadeira**. Isso se aplica também ao **conjunto de conjuntos** ao qual a **DataTable** pertence. Ao testar erros, você pode verificar a propriedade **HasErrors** para determinar se as informações de erro foram adicionadas a qualquer linha. Se o **HasErrors** for **true**, você poderá usar <xref:System.Data.DataTable.GetErrors%2A> o método da **DataTable** para retornar e examinar apenas as linhas com erros, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -82,5 +82,5 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipulação de dados em uma DataTable](manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

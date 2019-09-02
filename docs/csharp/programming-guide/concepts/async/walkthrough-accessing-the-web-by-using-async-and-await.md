@@ -2,12 +2,12 @@
 title: 'Passo a passo: Acessando a Web usando async e await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595516"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168373"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: Acessando a Web usando async e await (C#)
 
@@ -237,7 +237,7 @@ Observe que são necessários alguns segundos para exibir as contagens. Durante 
 
 2. `GetResponseAsync` retorna um <xref:System.Threading.Tasks.Task%601>. Nesse caso, a *variável de retorno de tarefa*, `TResult`, tem o tipo <xref:System.Net.WebResponse>. A tarefa é uma promessa de produzir um objeto `WebResponse` verdadeiro após os dados solicitados terem sido baixados e a tarefa ter sido executada até a conclusão.
 
-     Para recuperar o valor `WebResponse` da tarefa, aplique um operador [await](../../../language-reference/keywords/await.md) à chamada para `GetResponseAsync`, como mostra o código a seguir.
+     Para recuperar o valor `WebResponse` da tarefa, aplique um operador [await](../../../language-reference/operators/await.md) à chamada para `GetResponseAsync`, como mostra o código a seguir.
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [Exemplo de Async: Como acessar o passo a passo da Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Programação assíncrona com async e await (C#)](./index.md)
 - [Tipos de retorno assíncronos (C#)](./async-return-types.md)
 - [TAP (programação assíncrona baseada em tarefas)](https://www.microsoft.com/download/details.aspx?id=19957)

@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ca9e93a413622c84325ca9fc8bac17268b990c5a
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "69576963"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107347"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Implantar um aplicativo .NET para Apache Spark no Databricks
 
@@ -18,17 +18,17 @@ Este tutorial ensina a implantar um aplicativo do .NET para Apache Spark para o 
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
-> * Preparar o Microsoft.Spark.Worker
-> * Publicar seu aplicativo Spark .NET
-> * Implantar seu aplicativo no Databricks
-> * Executar seu aplicativo
+> - Preparar o Microsoft.Spark.Worker
+> - Publicar seu aplicativo Spark .NET
+> - Implantar seu aplicativo no Databricks
+> - Executar seu aplicativo
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Antes de começar, faça o seguinte:
 
-* Baixe a [CLI do Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
-* Baixe o [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) para seu computador local. Esse é um script auxiliar que você usa posteriormente para copiar arquivos dependentes do .NET para Apache Spark para os nós de trabalho do cluster do Spark.
+- Baixe a [CLI do Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
+- Baixe o [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) para seu computador local. Esse é um script auxiliar que você usa posteriormente para copiar arquivos dependentes do .NET para Apache Spark para os nós de trabalho do cluster do Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Preparar dependências de trabalho
 
@@ -62,9 +62,9 @@ O **Microsoft.Spark.Worker** é um componente de back-end que reside nos nós de
 
 4. Carregue o seguinte para um sistema de arquivos distribuído (por exemplo, DBFS) ao qual seu cluster tem acesso:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Esse jar é incluído como parte do pacote do NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) e é colocado no diretório de saída do build do aplicativo.
-   * `<your app>.zip`
-   * Arquivos (como arquivos de dependência ou dados comuns acessíveis a cada trabalho) ou assemblies (como DLLs que contêm suas funções definidas pelo usuário ou bibliotecas das quais seu aplicativo depende) serão colocados no diretório de trabalho de cada executor.
+   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Esse jar é incluído como parte do pacote do NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) e é colocado no diretório de saída do build do aplicativo.
+   - `<your app>.zip`
+   - Arquivos (como arquivos de dependência ou dados comuns acessíveis a cada trabalho) ou assemblies (como DLLs que contêm suas funções definidas pelo usuário ou bibliotecas das quais seu aplicativo depende) serão colocados no diretório de trabalho de cada executor.
 
 ## <a name="deploy-to-databricks"></a>Implantar no Databricks
 

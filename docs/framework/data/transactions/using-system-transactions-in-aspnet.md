@@ -2,24 +2,24 @@
 title: Usar System.Transactions no ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 866d7b69fa6c18f6edfb48655b213e140a095a28
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfc75661ea538ac52b244e38eb10e6ae37a8fd62
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880229"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205830"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Usar System.Transactions no ASP.NET
-Este tópico descreve como você pode usar com êxito <xref:System.Transactions> dentro de um aplicativo ASP.NET.  
+Este tópico descreve como você pode usar <xref:System.Transactions> com êxito dentro de um aplicativo ASP.net.  
   
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>Habilitar DistributedTransactionPermission no ASP.NET  
- <xref:System.Transactions> dá suporte a chamadores parcialmente confiáveis e é marcado com o **AllowPartiallyTrustedCallers** atributo (APTCA). Níveis de confiança para <xref:System.Transactions> são definidos com base nos tipos de recursos (por exemplo, memória do sistema, recursos compartilhados de todo o processo, recursos de todo o sistema e outros recursos), que <xref:System.Transactions> expõe e o nível de confiança deve ser necessária para acessar esses recursos. Em um ambiente de confiança parcial, um assembly de confiança total não pode usar somente as transações dentro do domínio de aplicativo (nesse caso, o único recurso que está sendo protegido é a memória do sistema), a menos que ele recebe o <xref:System.Transactions.DistributedTransactionPermission>.  
+ <xref:System.Transactions>dá suporte a chamadores parcialmente confiáveis e é marcado com o atributo **AllowPartiallyTrustedCallers** (APTCA). Níveis de confiança para <xref:System.Transactions> são definidos com base nos tipos de recursos (por exemplo, memória do sistema, recursos compartilhados de todo o processo, recursos de todo o sistema e outros recursos), que <xref:System.Transactions> expõe e o nível de confiança deve ser necessária para acessar esses recursos. Em um ambiente de confiança parcial, um assembly de confiança total não pode usar somente as transações dentro do domínio de aplicativo (nesse caso, o único recurso que está sendo protegido é a memória do sistema), a menos que ele recebe o <xref:System.Transactions.DistributedTransactionPermission>.  
   
- <xref:System.Transactions.DistributedTransactionPermission> é solicitada sempre que o gerenciamento de transações é escalonado para ser gerenciado pelo Microsoft Distributed Transaction coordenador (MSDTC). Esse tipo de cenário usa recursos de todo o processo e especialmente um recurso global, que é o espaço reservado no log do MSDTC. Um exemplo dessa utilização é uma Web front-end para um banco de dados ou um aplicativo que usa um banco de dados como parte dos serviços que ele fornece.  
+ <xref:System.Transactions.DistributedTransactionPermission>é exigido sempre que o gerenciamento de transações é escalonado para ser gerenciado pelo Microsoft Coordenador de Transações Distribuídas (MSDTC). Esse tipo de cenário usa recursos de todo o processo e especialmente um recurso global, que é o espaço reservado no log do MSDTC. Um exemplo dessa utilização é uma Web front-end para um banco de dados ou um aplicativo que usa um banco de dados como parte dos serviços que ele fornece.  
   
- ASP.NET tem seu próprio conjunto de níveis de confiança e associa um conjunto específico de permissões esses níveis de confiança por meio de arquivos de política. Para obter mais informações, consulte [níveis de confiança do ASP.NET e arquivos de política](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Quando você instala o SDK do Windows inicialmente, nenhum dos arquivos de política padrão do ASP.NET estão associados a <xref:System.Transactions.DistributedTransactionPermission>. Dessa forma, quando sua transação em um aplicativo ASP.NET é escalonada para ser gerenciado pelo MSDTC, o escalonamento falhará com um <xref:System.Security.SecurityException> após exigindo a <xref:System.Transactions.DistributedTransactionPermission>. Para habilitar o escalonamento de bloqueios de transação em um ambiente de confiança parcial do ASP.NET, você deve conceder a <xref:System.Transactions.DistributedTransactionPermission> em que os níveis de confiança padrão mesmo que as de <xref:System.Data.SqlClient.SqlClientPermission>. Você pode configurar seu próprio arquivo de nível e a diretiva de confiança personalizadas para dar suporte a isso ou você pode modificar os arquivos de política padrão, que são **Web_hightrust** e **Web_mediumtrust**.  
+ O ASP.NET tem seu próprio conjunto de níveis de confiança e associa um conjunto específico de permissões a esses níveis de confiança por meio de arquivos de política. Para obter mais informações, consulte [níveis de confiança e arquivos de política do ASP.net](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Ao instalar inicialmente o SDK do Windows, nenhum dos arquivos de política ASP.NET padrão está associado <xref:System.Transactions.DistributedTransactionPermission>ao. Dessa forma, quando sua transação em um aplicativo ASP.net é escalonada para ser gerenciada pelo MSDTC, o escalonamento falha com um <xref:System.Security.SecurityException> após exigir o. <xref:System.Transactions.DistributedTransactionPermission> Para habilitar o escalonamento de transações em um ambiente de confiança parcial ASP.net, você deve <xref:System.Transactions.DistributedTransactionPermission> conceder o nos mesmos níveis de confiança padrão que <xref:System.Data.SqlClient.SqlClientPermission>os do. Você pode configurar seu próprio nível de confiança personalizado e arquivo de política para dar suporte a isso, ou pode modificar os arquivos de política padrão, que são o **Web_hightrust. config** e o **web_mediumtrust. config**.  
   
- Para modificar os arquivos de política, adicione uma **SecurityClass** elemento para **DistributedTransactionPermission** para o **SecurityClasses** elemento sob o  **PolicyLevel** elemento e adicione um correspondente **IPermission** elemento sob o ASP.NET **NamedPermissionSet** para System. Transactions. O arquivo de configuração a seguir demonstra isso.  
+ Para modificar os arquivos de política, adicione um elemento **SecurityClass** para **DistributedTransactionPermission** ao elemento **SecurityClasses** sob o elemento **PolicyLevel** e adicione um elemento **IPermission** correspondente em ASP.NET **NamedPermissionSet** para System. Transactions. O arquivo de configuração a seguir demonstra isso.  
   
 ```xml  
 <SecurityClasses>  
@@ -40,10 +40,10 @@ Este tópico descreve como você pode usar com êxito <xref:System.Transactions>
 </PermissionSet>  
 ```  
   
- Para obter mais informações sobre a política de segurança do ASP.NET, consulte [securityPolicy Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100)).  
+ Para obter mais informações sobre a política de segurança do ASP.NET, consulte [elemento SecurityPolicy (esquema de configurações do ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100)).  
   
 ## <a name="dynamic-compilation"></a>Compilação dinâmica  
- Se você deseja importar e usar <xref:System.Transactions> em um aplicativo ASP.NET que é compilado dinamicamente no access, você deve colocar uma referência para o <xref:System.Transactions> assembly no arquivo de configuração. Especificamente, a referência deve ser adicionada sob a **compilação**/**assemblies** seção da raiz padrão **Web. config** arquivo de configuração, ou um arquivo de configuração de um aplicativo Web específico. O exemplo a seguir demonstra isso.  
+ Se você quiser importar e usar <xref:System.Transactions> o <xref:System.Transactions> em um aplicativo ASP.NET que é compilado dinamicamente no Access, você deve inserir uma referência ao assembly no arquivo de configuração. Especificamente, a referência deve ser adicionada na seção**assemblies** de **compilação**/do arquivo de configuração **Web. config** de raiz padrão ou em um arquivo de configuração do aplicativo Web específico. O exemplo a seguir demonstra isso.  
   
 ```xml  
 <configuration>  
@@ -57,10 +57,10 @@ Este tópico descreve como você pode usar com êxito <xref:System.Transactions>
 </configuration>  
 ```  
   
- Para obter mais informações, consulte [adicione o elemento para assemblies de compilação (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100)).  
+ Para obter mais informações, consulte [Adicionar elemento para assemblies para compilação (esquema de configurações de ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Níveis de confiança do ASP.NET e arquivos de política](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
-- [securityPolicy Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
-- [Escalonamento de gerenciamento de transações](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+- [ASP.NET de níveis de confiança e arquivos de política](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
+- [Elemento securityPolicy (esquema de configurações de ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
+- [Escalonamento de gerenciamento de transações](transaction-management-escalation.md)

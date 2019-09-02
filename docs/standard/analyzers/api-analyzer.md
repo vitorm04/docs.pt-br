@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063351"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107382"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -23,7 +23,7 @@ O Analisador de API é fornecido como um pacote NuGet [Microsoft.DotNet.Analyzer
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* Visual Studio 2017 e versões posteriores ou Visual Studio para Mac (todas as versões).
+- Visual Studio 2017 e versões posteriores ou Visual Studio para Mac (todas as versões).
 
 ## <a name="discovering-deprecated-apis"></a>Descobrindo APIs preteridas
 
@@ -48,18 +48,18 @@ A janela **Lista de Erros** contém avisos com uma ID exclusiva por API preterid
 
 Clicando na ID, você vai para uma página da Web com informações detalhadas sobre por que a API foi preterida e sugestões sobre APIs alternativas que podem ser usadas.
 
-Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro realçado e selecionando **Suprimir \<ID de diagnóstico>**. Há duas maneiras de suprimir avisos: 
+Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro realçado e selecionando **Suprimir \<ID de diagnóstico>** . Há duas maneiras de suprimir avisos: 
 
-* [localmente (no código-fonte)](#suppressing-warnings-locally)
-* [globalmente (em um arquivo de supressão)](#suppressing-warnings-globally) ‒ recomendado
+- [localmente (no código-fonte)](#suppressing-warnings-locally)
+- [globalmente (em um arquivo de supressão)](#suppressing-warnings-globally) ‒ recomendado
 
 ### <a name="suppressing-warnings-locally"></a>Como suprimir avisos localmente
 
-Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico* \<ID de diagnóstico >** > **na Fonte**. A diretiva de pré-processador de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela do código enquadrado com o aviso #pragma desabilitado"](media/api-analyzer/suppress-in-source.jpg)
+Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico* \<ID de diagnóstico >**  > **na Fonte**. A diretiva de pré-processador de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela do código enquadrado com o aviso #pragma desabilitado"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Como suprimir avisos globalmente
 
-Para suprimir avisos globalmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico*\<ID de diagnóstico >** > **no Arquivo de Supressão**.
+Para suprimir avisos globalmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico*\<ID de diagnóstico >**  > **no Arquivo de Supressão**.
 
 !["Captura de tela da API WebClient com linha irregular verde e lâmpada à esquerda"](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -95,11 +95,11 @@ Você também pode compilar condicionalmente por estrutura/sistema operacional d
 
 Atualmente, o analisador trata dos seguintes casos:
 
-* Uso de uma API padrão do .NET que gera <xref:System.PlatformNotSupportedException> (PC001).
-* Uso de uma API padrão do .NET que não está disponível no .NET Framework 4.6.1 (PC002).
-* Uso de uma API nativa que não existe no UWP (PC003).
-* Uso das APIs Delegate.BeginInvoke e EndInvoke (PC004).
-* Uso de uma API que está marcada como preterida (DEXXXX).
+- Uso de uma API padrão do .NET que gera <xref:System.PlatformNotSupportedException> (PC001).
+- Uso de uma API padrão do .NET que não está disponível no .NET Framework 4.6.1 (PC002).
+- Uso de uma API nativa que não existe no UWP (PC003).
+- Uso das APIs Delegate.BeginInvoke e EndInvoke (PC004).
+- Uso de uma API que está marcada como preterida (DEXXXX).
 
 ## <a name="ci-machine"></a>Máquina de CI
 

@@ -2,43 +2,43 @@
 title: Manipulando dados em uma DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785418"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203498"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulando dados em uma DataTable
-Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, você pode executar as mesmas atividades que faria ao usar uma tabela em um banco de dados. Você pode adicionar, exibir, editar e excluir dados na tabela; você pode monitorar erros e eventos; e pode consultar os dados na tabela. Ao modificar dados em um **DataTable**, você também pode verificar se as alterações são precisas e determinam se deseja aceitar ou rejeitar as alterações de forma programática.  
+Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, você pode executar as mesmas atividades que faria ao usar uma tabela em um banco de dados. Você pode adicionar, exibir, editar e excluir dados na tabela; você pode monitorar erros e eventos; e pode consultar os dados na tabela. Ao modificar dados em uma **DataTable**, você também pode verificar se as alterações são precisas e determinar se as alterações devem ser aceitas ou rejeitadas programaticamente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Adicionando dados a um DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
+ [Adicionando dados a um DataTable](adding-data-to-a-datatable.md)  
  Explica como criar novas linhas e adicioná-las a uma tabela.  
   
- [Exibindo dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/viewing-data-in-a-datatable.md)  
+ [Exibindo dados em uma DataTable](viewing-data-in-a-datatable.md)  
  Descreve como acessar os dados em uma linha, incluindo as versões originais e atuais dos dados.  
   
- [O método Load](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
- Descreve o uso do **Load** método para preencher uma **DataTable** com linhas.  
+ [O método Load](the-load-method.md)  
+ Descreve o uso do método **Load** para preencher uma **DataTable** com linhas.  
   
- [Edições de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
+ [Edições de DataTable](datatable-edits.md)  
  Explica como alterar os dados em uma linha, incluindo suspensão das alterações em uma linha até que as alterações propostas sejam verificadas e aceitas.  
   
- [Estados e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Estados e versões de linha](row-states-and-row-versions.md)  
  Fornece informações sobre os estados diferentes de uma linha.  
   
- [Exclusão de DataRow](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  
+ [Exclusão de DataRow](datarow-deletion.md)  
  Descreve como remover uma linha de uma tabela.  
   
- [Informações de erro de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
+ [Informações de erro de linha](row-error-information.md)  
  Explica como inserir informações de erro por linha, para ajudar a resolver problemas com os dados em um aplicativo.  
   
- [AcceptChanges e RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
+ [AcceptChanges e RejectChanges](acceptchanges-and-rejectchanges.md)  
  Explica como aceitar ou rejeitar alterações feitas em uma linha.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [Manipulação de eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [DataTables](datatables.md)
+- [Manipulação de eventos de DataTable](handling-datatable-events.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

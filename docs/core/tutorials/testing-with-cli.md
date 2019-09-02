@@ -4,12 +4,12 @@ description: Este tutorial explica como organizar e testar projetos do .NET Core
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a8724c971521b8d65700d61a1ce523c1dfdddf0a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051949"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203003"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
 
@@ -107,7 +107,7 @@ Navegue de volta para a pasta *src* e crie uma pasta *test* com uma pasta *NewTy
 
 No momento, o projeto de teste não pode testar os tipos no `NewTypes` e requer uma referência de projeto para o projeto `NewTypes`. Para adicionar uma referência de projeto, use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
@@ -188,7 +188,7 @@ Inicie no diretório *test/NewTypesTests*. Restaure o projeto de teste com o com
 
 Conforme o esperado, o teste falha e o console exibe a seguinte saída:
 
-```
+```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -222,7 +222,7 @@ Altere as asserções de seus testes de `Assert.NotEqual` para `Assert.Equal`:
 
 Execute novamente os testes com o comando `dotnet test` e obtenha a seguinte saída:
 
-```
+```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.

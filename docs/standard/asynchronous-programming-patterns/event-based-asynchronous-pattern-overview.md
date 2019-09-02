@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950689"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046478"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
@@ -45,7 +45,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
  O Padrão Assíncrono baseado em Evento requer que uma operação assíncrona possa ser cancelada, e o controle <xref:System.Windows.Forms.PictureBox> oferece suporte a esse requisito com seu método <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. Chamar <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> envia uma solicitação para interromper o download pendente e, quando a tarefa é cancelada, o evento <xref:System.Windows.Forms.PictureBox.LoadCompleted> é elevado.  
   
 > [!CAUTION]
->  É possível que o download termine assim que a solicitação <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> seja enviada, por isso, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> pode não refletir a solicitação de cancelamento. Isso é chamado de *condição de corrida* e é um problema comum na programação com multi-thread. Para saber mais sobre problemas de programação multi-thread, confira [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> É possível que o download termine assim que a solicitação <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> seja enviada, por isso, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> pode não refletir a solicitação de cancelamento. Isso é chamado de *condição de corrida* e é um problema comum na programação com multi-thread. Para saber mais sobre problemas de programação multi-thread, confira [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características do Padrão Assíncrono baseado em Evento  
  O Padrão Assíncrono baseado em Evento pode assumir diversos formatos, dependendo da complexidade das operações compatíveis com uma classe específica. As classes mais simples podem ter um único método _MethodName_**Async** e um evento _MethodName_**Completed** correspondente. Classes mais complexas podem ter vários métodos _MethodName_**Async**, cada um com um evento _MethodName_**Completed** correspondente, bem como versões síncronas desses métodos. As classes podem opcionalmente oferecer suporte a cancelamento, relatórios de progresso e resultados incrementais para cada método assíncrono.  

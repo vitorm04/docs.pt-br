@@ -3,12 +3,12 @@ title: Classes e objetos em C# - um tour pela linguagem C#
 description: Novato em C#? Leia esta visão geral de classes, objetos e herança
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971465"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105625"
 ---
 # <a name="classes-and-objects"></a>Classes e objetos
 
@@ -32,42 +32,42 @@ Os membros de uma classe são membros estáticos ou membros de instância. Os me
 
 O exemplo a seguir fornece uma visão geral dos tipos de membros que uma classe pode conter.
 
-* Constantes
+- Constantes
   - Valores constantes associados à classe
-* Campos
+- Campos
   - Variáveis de classe
-* Métodos
+- Métodos
   - Os cálculos e as ações que podem ser executados pela classe
-* Propriedades
+- Propriedades
   - Ações associadas à leitura e à gravação de propriedades nomeadas da classe
-* Indexadores
+- Indexadores
   - Ações associadas a instâncias de indexação da classe como uma matriz
-* Eventos
+- Eventos
   - Notificações que podem ser geradas pela classe
-* Operadores
+- Operadores
   - Operadores de conversões e expressão com suporte da classe
-* Construtores
+- Construtores
   - Ações necessárias para inicializar instâncias da classe ou a própria classe
-* Finalizadores
+- Finalizadores
   - Ações a serem executadas antes de as instâncias da classe serem descartadas permanentemente
-* Tipos
+- Tipos
   - Tipos aninhados declarados pela classe
 
 ## <a name="accessibility"></a>Acessibilidade
 
 Cada membro de uma classe tem uma acessibilidade associada, que controla as regiões de texto do programa que são capazes de acessar o membro. Existem seis formas possíveis de acessibilidade. Elas são resumidas abaixo.
 
-* `public`
+- `public`
   - Acesso não limitado
-* `protected`
+- `protected`
   - Acesso limitado a essa classe ou classes derivadas dessa classe
-* `internal`
+- `internal`
   - Acesso limitado ao assembly atual (.exe, .dll, etc.)
-* `protected internal`
+- `protected internal`
   - Acesso limitado à classe recipiente, classes derivadas da classe recipiente ou classes dentro do mesmo assembly
-* `private`
+- `private`
   - Acesso limitado a essa classe
-* `private protected`
+- `private protected`
   - Acesso limitado à classe ou classes recipiente derivadas do tipo recipiente dentro do mesmo assembly
 
 ## <a name="type-parameters"></a>Parâmetros de tipo

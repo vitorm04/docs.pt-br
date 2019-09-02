@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666575"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169114"
 ---
 # <a name="async-in-depth"></a>Assincronia detalhada
 
@@ -21,8 +21,8 @@ Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o mode
 
 Tarefas são constructos usados para implementar o que é conhecido como o [modelo de promessa de simultaneidade](https://en.wikipedia.org/wiki/Futures_and_promises).  Em resumo, elas oferecem a você uma “promessa” de que o trabalho será concluído em um momento posterior, permitindo que você coordene a promessa com uma API limpa.
 
-* `Task` representa uma única operação que não retorna um valor.
-* `Task<T>` representa uma única operação que retorna um valor do tipo `T`.
+- `Task` representa uma única operação que não retorna um valor.
+- `Task<T>` representa uma única operação que retorna um valor do tipo `T`.
 
 É importante pensar nas tarefas como abstrações do trabalho ocorrendo de maneira assíncrona e *não* uma abstração de threading. Por padrão, as tarefas são executadas no thread atual e delegam o trabalho para o sistema operacional, conforme apropriado. Opcionalmente, as tarefas podem ser solicitadas explicitamente para serem executadas em um thread separado por meio da API `Task.Run`.
 
@@ -90,9 +90,9 @@ Embora o descrito acima possa parecer muito trabalho a ser feito, quando medido 
 
 0-1————————————————————————————————————————————————–2-3
 
-* O tempo gasto dos pontos `0` até `1` é tudo até um método assíncrono gerar o controle para seu chamador.
-* O tempo gasto dos pontos `1` até `2` é o tempo gasto na E/S, sem custo de CPU.
-* Por fim, o tempo gasto dos pontos `2` até `3` está passando o controle de volta (e potencialmente um valor) para o método assíncrono, ponto no qual está sendo executado novamente.
+- O tempo gasto dos pontos `0` até `1` é tudo até um método assíncrono gerar o controle para seu chamador.
+- O tempo gasto dos pontos `1` até `2` é o tempo gasto na E/S, sem custo de CPU.
+- Por fim, o tempo gasto dos pontos `2` até `3` está passando o controle de volta (e potencialmente um valor) para o método assíncrono, ponto no qual está sendo executado novamente.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>O que isso significa para um cenário de servidor?
 

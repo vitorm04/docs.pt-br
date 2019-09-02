@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 6e7a1dfc739278eecfa8582bb0a9f8938c561acf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92787b7a64f0d77aea625625722ef18f7efb9dab
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924455"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168484"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 Um método é um bloco de código que contém uma série de instruções. Um programa faz com que as instruções sejam executadas chamando o método e especificando os argumentos de método necessários. No C#, todas as instruções executadas são realizadas no contexto de um método. O método Main é o ponto de entrada para todos os aplicativos C# e é chamado pelo CLR (Common Language Runtime) quando o programa é iniciado.  
@@ -113,7 +113,7 @@ public static void FillMatrix(int[,] matrix)
 ## <a name="async-methods"></a>Métodos assíncronos  
  Usando o recurso async, você pode invocar métodos assíncronos sem usar retornos de chamada explícitos ou dividir manualmente seu código entre vários métodos ou expressões lambda. 
   
- Se marcar um método com o modificador [async](../../language-reference/keywords/async.md), você poderá usar o operador [await](../../language-reference/keywords/await.md) no método. Quando o controle atinge uma expressão await no método assíncrono, ele retorna para o chamador e o progresso no método é suspenso até a tarefa aguardada ser concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método.  
+ Se marcar um método com o modificador [async](../../language-reference/keywords/async.md), você poderá usar o operador [await](../../language-reference/operators/await.md) no método. Quando o controle atinge uma expressão await no método assíncrono, ele retorna para o chamador e o progresso no método é suspenso até a tarefa aguardada ser concluída. Quando a tarefa for concluída, a execução poderá ser retomada no método.  
   
 > [!NOTE]
 > Um método assíncrono retorna para o chamador quando encontra o primeiro objeto esperado que ainda não está completo ou chega ao final do método assíncrono, o que ocorrer primeiro.  

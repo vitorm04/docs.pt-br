@@ -4,12 +4,12 @@ description: Uma visão geral do que são as Ferramentas Globais do .NET Core e 
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631733"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202581"
 ---
 # <a name="net-core-global-tools-overview"></a>Visão geral das Ferramentas Globais do .NET Core
 
@@ -63,7 +63,7 @@ dotnet tool install -g <package-name> --version <version-number>
 
 Se a instalação for bem-sucedida, será exibida uma mensagem mostrando o comando usado para chamar a ferramenta e a versão instalada, de maneira semelhante ao seguinte exemplo:
 
-```
+```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```

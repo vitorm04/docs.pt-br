@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607924"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203366"
 ---
 # <a name="merging-dataset-contents"></a>Mesclando conteúdo do DataSet
 
@@ -35,7 +35,7 @@ Os objetos <xref:System.Data.DataTable> podem opcionalmente receber um valor de 
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-Quando você passa uma matriz de `DataSet`, de `DataTable` ou de `DataRow` para o método `Merge`, pode incluir parâmetros opcionais que especificam se as alterações devem ou não ser preservadas no `DataSet` existente, e como tratar novos elementos de esquema encontrados nos dados de entrada. O primeiro desses parâmetros após os dados de entrada é um sinalizador booliano, <xref:System.Data.LoadOption.PreserveChanges>, que especifica se as alterações devem ou não ser preservadas no `DataSet` existente. Se o sinalizador `PreserveChanges` estiver definido como `true`, os valores de entrada não substituirão os valores existentes na versão de linha `Current` da linha existente. Se o sinalizador `PreserveChanges` estiver definido como `false`, os valores de entrada substituirão os valores existentes na versão de linha `Current` da linha existente. Se o sinalizador `PreserveChanges` não for especificado, ele será definido como `false` por padrão. Para obter mais informações sobre as versões de linha, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+Quando você passa uma matriz de `DataSet`, de `DataTable` ou de `DataRow` para o método `Merge`, pode incluir parâmetros opcionais que especificam se as alterações devem ou não ser preservadas no `DataSet` existente, e como tratar novos elementos de esquema encontrados nos dados de entrada. O primeiro desses parâmetros após os dados de entrada é um sinalizador booliano, <xref:System.Data.LoadOption.PreserveChanges>, que especifica se as alterações devem ou não ser preservadas no `DataSet` existente. Se o sinalizador `PreserveChanges` estiver definido como `true`, os valores de entrada não substituirão os valores existentes na versão de linha `Current` da linha existente. Se o sinalizador `PreserveChanges` estiver definido como `false`, os valores de entrada substituirão os valores existentes na versão de linha `Current` da linha existente. Se o sinalizador `PreserveChanges` não for especificado, ele será definido como `false` por padrão. Para obter mais informações sobre versões de linha, consulte [Estados de linha e versões de linha](row-states-and-row-versions.md).
 
 Quando `PreserveChanges` é `true`, os dados da linha existente são mantidos na versão de linha <xref:System.Data.DataRowVersion.Current> da linha existente, enquanto os dados da versão de linha <xref:System.Data.DataRowVersion.Original> da linha existente são substituídos pelos dados da versão de linha `Original` da nova linha. O <xref:System.Data.DataRow.RowState%2A> da linha existente é definido como <xref:System.Data.DataRowState.Modified>. As seguintes exceções se aplicam:
 
@@ -69,9 +69,9 @@ Com o método `Merge`, as restrições não são verificadas até que todos os n
 Considere um caso onde uma linha existente em um `DataSet` seja uma linha `Unchanged` com um valor de chave primária de 1. Durante uma operação de mesclagem com uma nova linha `Modified` com um valor de chave primária `Original` de 2 e um valor de chave primária `Current` de 1, a linha existente e a nova linha não são consideradas coincidentes porque os valores de chave primária `Original` diferem. Entretanto, quando a mesclagem é concluída e restrições são verificadas, uma exceção é gerada pois os valores de chave primária `Current` violam a restrição exclusiva para a coluna de chave primária.
 
 > [!NOTE]
-> Quando linhas são inseridas em uma tabela de banco de dados contendo uma coluna de incremento automático, como uma coluna de identidade, o valor da coluna de identidade retornado pela inserção talvez não corresponda ao valor no `DataSet`, causando as linhas retornados a serem adicionadas, e não mescladas. Para obter mais informações, consulte [recuperando identidade ou valores de Autonumber](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Quando linhas são inseridas em uma tabela de banco de dados contendo uma coluna de incremento automático, como uma coluna de identidade, o valor da coluna de identidade retornado pela inserção talvez não corresponda ao valor no `DataSet`, causando as linhas retornados a serem adicionadas, e não mescladas. Para obter mais informações, consulte [recuperando identidade ou valores de numeração automática](../retrieving-identity-or-autonumber-values.md).
 
-O exemplo de código a seguir mescla dois `DataSet` objetos com esquemas diferentes em uma `DataSet` com esquemas combinados dos dois novos `DataSet` objetos.
+O exemplo de código a seguir mescla `DataSet` dois objetos com esquemas diferentes em um `DataSet` com os esquemas combinados dos dois objetos de entrada `DataSet` .
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ O exemplo de código a seguir usa um `DataSet` existente com atualizações e pa
 
 ## <a name="see-also"></a>Consulte também
 
-- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [Estados e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [DataAdapters e DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [Recuperando identidade ou valores de Autonumber](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
+- [Estados e versões de linha](row-states-and-row-versions.md)
+- [DataAdapters e DataReaders](../dataadapters-and-datareaders.md)
+- [Retrieving and Modifying Data in ADO.NET](../retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [Recuperando identidade ou valores de Autonumber](../retrieving-identity-or-autonumber-values.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

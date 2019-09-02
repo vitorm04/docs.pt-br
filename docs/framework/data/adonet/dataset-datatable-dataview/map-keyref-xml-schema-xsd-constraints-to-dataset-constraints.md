@@ -2,29 +2,29 @@
 title: Mapear restrições de esquema XML (XSD) keyref para restrições de DataSet
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604030"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203447"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear restrições de esquema XML (XSD) keyref para restrições de DataSet
-O **keyref** elemento permite estabelecer links entre elementos dentro de um documento. Isso é semelhante a uma relação de chave estrangeira no banco de dados relacional. Se um esquema Especifica a **keyref** elemento, o elemento é convertido durante o processo de mapeamento de esquema para uma restrição de chave estrangeira correspondente nas colunas nas tabelas da <xref:System.Data.DataSet>. Por padrão, o **keyref** elemento também gera uma relação com o **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** propriedades especificadas na relação.  
+O elemento **keyref** permite que você estabeleça links entre elementos dentro de um documento. Isso é semelhante a uma relação de chave estrangeira em um banco de dados relacional. Se um esquema especificar o elemento **keyref** , o elemento será convertido durante o processo de mapeamento de esquema para uma restrição de chave estrangeira correspondente nas colunas nas tabelas do <xref:System.Data.DataSet>. Por padrão, o elemento **keyref** também gera uma relação, com as **Propriedades parentID**, **ChildTable**, **ParentColumn**e **ChildColumn** especificadas na relação.  
   
- A tabela a seguir descreve o **msdata** atributos que você pode especificar o **keyref** elemento.  
+ A tabela a seguir descreve os atributos **MSDATA** que você pode especificar no elemento **keyref** .  
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Se **ConstraintOnly = "true"** for especificado na **keyref** elemento no esquema, uma restrição é criada, mas nenhuma relação é criada. Se esse atributo não for especificado (ou é definido como **falsos**), a restrição e a relação são criados na **conjunto de dados**.|  
-|**msdata:ConstraintName**|Se o **ConstraintName** atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo da **keyref** elemento no esquema fornece o nome da restrição no **conjunto de dados**.|  
-|**msdata:UpdateRule**|Se o **UpdateRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído para o **UpdateRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **UpdateRule** estiver definida como **Cascade**.|  
-|**msdata:DeleteRule**|Se o **DeleteRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído para o **DeleteRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **DeleteRule** estiver definida como **Cascade**.|  
-|**msdata:AcceptRejectRule**|Se o **AcceptRejectRule** atributo é especificado no **keyref** elemento no esquema, seu valor é atribuído para o **AcceptRejectRule** propriedade restrição no  **Conjunto de dados**. Caso contrário, o **AcceptRejectRule** estiver definida como **None**.|  
+|**msdata:ConstraintOnly**|Se **ConstraintOnly = "true"** for especificado no elemento **keyref** no esquema, uma restrição será criada, mas nenhuma relação será criada. Se esse atributo não for especificado (ou estiver definido como **false**), a restrição e a relação serão criadas no **conjunto**de um.|  
+|**msdata:ConstraintName**|Se o atributo ConstraintName for especificado, seu valor será usado como o nome da restrição. Caso contrário, o atributo **Name** do elemento **keyref** no esquema fornecerá o nome da restrição no **DataSet**.|  
+|**msdata:UpdateRule**|Se o atributo **UpdateRule** for especificado no elemento **keyref** no esquema, seu valor será atribuído à propriedade de restrição **UpdateRule** no **conjunto**de valores. Caso contrário, a propriedade **UpdateRule** será definida como **Cascade**.|  
+|**msdata:DeleteRule**|Se o atributo **DeleteRule** for especificado no elemento **keyref** no esquema, seu valor será atribuído à propriedade de restrição **DeleteRule** no **conjunto**de valores. Caso contrário, a propriedade **DeleteRule** será definida como **Cascade**.|  
+|**msdata:AcceptRejectRule**|Se o atributo **AcceptRejectRule** for especificado no elemento **keyref** no esquema, seu valor será atribuído à propriedade de restrição **AcceptRejectRule** no **conjunto**de valores. Caso contrário, a propriedade **AcceptRejectRule** será definida como **None**.|  
   
- O exemplo a seguir contém um esquema que especifica o **chave** e **keyref** relações entre as **OrderNumber** elemento filho do **ordem**  elemento e o **OrderNo** elemento filho do **OrderDetail** elemento.  
+ O exemplo a seguir contém um esquema que especifica as relações de **chave** e **keyref** entre o elemento filho **OrderNumber** do elemento **Order** e o elemento filho **orderno** de **OrderDetail** elementos.  
   
- No exemplo, o **OrderNumber** elemento filho do **OrderDetail** elemento refere-se ao **OrderNo** elemento chave filho do **ordem**elemento.  
+ No exemplo, o elemento filho **OrderNumber** do elemento **OrderDetail** refere-se ao elemento filho da chave **orderno** do elemento **Order** .  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -66,16 +66,16 @@ O **keyref** elemento permite estabelecer links entre elementos dentro de um doc
 </xs:schema>  
 ```  
   
- O processo de mapeamento de esquema de linguagem XSD do esquema XML definição produz a seguinte **conjunto de dados** com duas tabelas:  
+ O processo de mapeamento de esquema XSD (linguagem de definição de esquema XML) produz o seguinte **conjunto** de um com duas tabelas:  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Além disso, o **conjunto de dados** define as seguintes restrições:  
+ Além disso, o **conjunto** de os define as seguintes restrições:  
   
-- Uma restrição exclusiva na **ordem** tabela.  
+- Uma restrição UNIQUE na tabela de **pedidos** .  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** estiver definida como **falso** porque os dois elementos não estão aninhados no esquema.  
+- Uma relação entre as tabelas **Order** e **OrderDetail** . A Propriedade aninhada está definida como **false** porque os dois elementos não estão aninhados no esquema.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- Uma restrição de chave estrangeira na **OrderDetail** tabela.  
+- Uma restrição FOREIGN KEY na tabela **OrderDetail** .  
   
     ```  
               ConstraintName: OrderNoRef  
@@ -111,6 +111,6 @@ Order(OrderNumber, EmpNumber)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Gerando relações de conjunto de dados do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

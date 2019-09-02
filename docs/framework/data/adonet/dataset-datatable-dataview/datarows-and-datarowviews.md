@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a98dc44eda9ebda09235193c58bd831fc52d04d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879821"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205097"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRows e DataRowViews
-Um <xref:System.Data.DataView> expõe uma coleção enumerável de <xref:System.Data.DataRowView> objetos. O **DataRowView** objetos expõem valores como matrizes de objetos que são indexados pelo nome ou a referência ordinal da coluna na tabela subjacente. Você pode acessar o <xref:System.Data.DataRow> que é exposto pelo **DataRowView** usando o <xref:System.Data.DataRowView.Row%2A> propriedade do **DataRowView**.  
+Um <xref:System.Data.DataView> expõe uma coleção enumerável <xref:System.Data.DataRowView> de objetos. Os objetos **DataRowView** expõem valores como matrizes de objetos que são indexados pelo nome ou pela referência ordinal da coluna na tabela subjacente. Você pode acessar o <xref:System.Data.DataRow> que é exposto pelo **DataRowView** usando a <xref:System.Data.DataRowView.Row%2A> propriedade de **DataRowView**.  
   
- Quando você exibe valores usando um **DataRowView**, o <xref:System.Data.DataView.RowStateFilter%2A> propriedade o **DataView** determina qual versão de linha de base **DataRow** é exposto. Para obter informações sobre como acessar as diferentes versões de linha usando um **DataRow**, consulte [estados de linha e versões de linha](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Quando você exibe valores usando um **DataRowView**, a <xref:System.Data.DataView.RowStateFilter%2A> propriedade de **DataView** determina qual versão de linha da **DataRow** subjacente é exposta. Para obter informações sobre como acessar versões de linha diferentes usando uma **DataRow**, consulte [Estados de linha e versões de linha](row-states-and-row-versions.md).  
   
  O exemplo de código a seguir exibe todos os valores atuais e originais em uma tabela.  
   
@@ -65,5 +65,5 @@ public static void WriteView(DataView thisDataView)
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](dataviews.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

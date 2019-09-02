@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135652"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105909"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 
@@ -141,7 +141,7 @@ A investigação otimizada por assemblies satélite é um recurso opcional. Ou s
 O processo de fallback de recurso do .NET CORE envolve as seguintes etapas:
 
 1. O tempo de execução tenta carregar um assembly satélite para a cultura solicitada.
-     * Verifica no diretório do assembly em execução se há um diretório que corresponda à cultura solicitada. Se ele encontrar o subdiretório, procurará nesse subdiretório um assembly satélite válido para a cultura solicitada e o carregará.
+     - Verifica no diretório do assembly em execução se há um diretório que corresponda à cultura solicitada. Se ele encontrar o subdiretório, procurará nesse subdiretório um assembly satélite válido para a cultura solicitada e o carregará.
 
        > [!NOTE]
        > Em sistemas operacionais com sistemas de arquivos que diferenciam maiúscula de minúscula (ou seja, Linux e macOS), a pesquisa de subdiretório de nome de cultura diferenciará maiúsculas de minúsculas. O nome do subdiretório deve corresponder exatamente à capitalização do <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (por exemplo, `es` ou `es-MX`).
@@ -149,8 +149,8 @@ O processo de fallback de recurso do .NET CORE envolve as seguintes etapas:
        > [!NOTE]
        > Se o programador tiver derivado um contexto de carregamento de assembly personalizado do <xref:System.Runtime.Loader.AssemblyLoadContext>, a situação será complicada. Se o assembly em execução tiver sido carregado no contexto personalizado, o tempo de execução carregará o assembly satélite no contexto personalizado. Os detalhes estão fora do escopo deste documento. Consulte <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-     * Se um assembly satélite não for encontrado, o <xref:System.Runtime.Loader.AssemblyLoadContext> gerará o evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> para indicar que não é possível localizar o assembly satélite. Se você optar por tratar do evento, o manipulador de eventos poderá carregar e retornar uma referência ao assembly satélite.
-     * Se um assembly satélite ainda não tiver sido encontrado, o AssemblyLoadContext fará com que o AppDomain dispare um evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que não é capaz de localizar o assembly satélite. Se você optar por tratar do evento, o manipulador de eventos poderá carregar e retornar uma referência ao assembly satélite.
+     - Se um assembly satélite não for encontrado, o <xref:System.Runtime.Loader.AssemblyLoadContext> gerará o evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> para indicar que não é possível localizar o assembly satélite. Se você optar por tratar do evento, o manipulador de eventos poderá carregar e retornar uma referência ao assembly satélite.
+     - Se um assembly satélite ainda não tiver sido encontrado, o AssemblyLoadContext fará com que o AppDomain dispare um evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que não é capaz de localizar o assembly satélite. Se você optar por tratar do evento, o manipulador de eventos poderá carregar e retornar uma referência ao assembly satélite.
 
 2. Se o assembly satélite for encontrado, o tempo de execução pesquisará o recurso solicitado. Se encontrar o recurso no assembly, ele o utiliza. Se não encontrar o recurso, ele continua a pesquisa.
 

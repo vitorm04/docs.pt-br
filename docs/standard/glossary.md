@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674504"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106917"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -38,7 +38,7 @@ Confira [Documentação do ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-Um arquivo *.dll*/*.exe* que contém uma coleção de APIs que podem ser chamadas por aplicativos ou outros assemblies.
+Um arquivo *.dll*/ *.exe* que contém uma coleção de APIs que podem ser chamadas por aplicativos ou outros assemblies.
 
 Um assembly pode incluir tipos como interfaces, classes, estruturas, enumerações e delegados. Às vezes, os assemblies em uma pasta *bin* de projeto são chamados de *binários*. Consulte também [biblioteca](#library).
 
@@ -85,9 +85,9 @@ O termo "Ecossistema do .NET" difere de termos semelhantes, como "Pilha do .NET"
 Em geral, uma coleção abrangente de APIs que facilita o desenvolvimento e a implantação de aplicativos que são baseados em uma tecnologia específica. Nesse sentido geral, o ASP.NET Core e o Windows Forms são exemplos de estruturas de aplicativo. Consulte também [biblioteca](#library).
 
 A palavra "estrutura" tem um significado técnico mais específico nos seguintes termos:
-* [.NET Framework](#net-framework)
-* [estrutura de destino](#target-framework)
-* [TFM (Moniker de Estrutura de Destino)](#tfm)
+- [.NET Framework](#net-framework)
+- [estrutura de destino](#target-framework)
+- [TFM (Moniker de Estrutura de Destino)](#tfm)
 
 Na documentação existente, "estrutura" às vezes se refere a uma [implementação do .NET](#implementation-of-net). Por exemplo, um artigo pode chamar o .NET Core de uma estrutura. Planejamos eliminar da documentação esse uso confuso da palavra.
 

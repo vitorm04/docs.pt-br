@@ -11,88 +11,90 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 1d8f501e90f3942bbfd95fc06e9fdd79d8f6430e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: eb38a95891afaf4cab98e43a250b67823fa5eb24
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334205"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040882"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Como: Solicitar dados usando a classe WebRequest
-O procedimento a seguir descreve as etapas usadas para solicitar um recurso, como uma página da Web ou um arquivo, de um servidor. O recurso deve ser identificado por um URI.  
-  
-## <a name="to-request-data-from-a-host-server"></a>Para solicitar dados de um servidor host  
-  
-1. Crie uma instância de <xref:System.Net.WebRequest> chamando <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> com o URI de um recurso. Por exemplo: 
-  
-    ```csharp  
-    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");  
-    ```  
-  
-    ```vb  
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")  
-    ```  
-  
+
+O procedimento a seguir descreve as etapas usadas para solicitar um recurso, como uma página da Web ou um arquivo, de um servidor. O recurso deve ser identificado por um URI.
+
+## <a name="to-request-data-from-a-host-server"></a>Para solicitar dados de um servidor host
+
+1. Crie uma instância de <xref:System.Net.WebRequest> chamando <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> com o URI de um recurso. Por exemplo:
+
+    ```csharp
+    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");
+    ```
+
+    ```vb
+    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")
+    ```
+
     > [!NOTE]
-    > O .NET Framework fornece classes específicas de protocolo derivadas das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> para URIs que começam com *http:*, *https:*, *ftp:* e *file:*.
-    Caso precise definir ou ler propriedades específica de protocolo, converta o objeto <xref:System.Net.WebRequest> ou <xref:System.Net.WebResponse> em um tipo de objeto específico de protocolo. Para obter mais informações, confira [Programando protocolos conectáveis](programming-pluggable-protocols.md). 
-  
-2. Defina os valores de propriedade necessários no objeto `WebRequest`. Por exemplo, para habilitar a autenticação, defina a propriedade <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> como uma instância da classe <xref:System.Net.NetworkCredential>:  
-  
-    ```csharp  
-    request.Credentials = CredentialCache.DefaultCredentials;  
-    ```  
-  
-    ```vb  
-    request.Credentials = CredentialCache.DefaultCredentials  
-    ```  
-  
+    > O .NET Framework fornece classes específicas de protocolo derivadas das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> para URIs que começam com *http:* , *https:* , *ftp:* e *file:* .
+
+    Caso precise definir ou ler propriedades específica de protocolo, converta o objeto <xref:System.Net.WebRequest> ou <xref:System.Net.WebResponse> em um tipo de objeto específico de protocolo. Para obter mais informações, confira [Programando protocolos conectáveis](programming-pluggable-protocols.md).
+
+2. Defina os valores de propriedade necessários no objeto `WebRequest`. Por exemplo, para habilitar a autenticação, defina a propriedade <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> como uma instância da classe <xref:System.Net.NetworkCredential>:
+
+    ```csharp
+    request.Credentials = CredentialCache.DefaultCredentials;
+    ```
+
+    ```vb
+    request.Credentials = CredentialCache.DefaultCredentials
+    ```
+
 3. Envie a solicitação para o servidor chamando <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Esse método retorna um objeto que contém a resposta do servidor. O tipo do objeto <xref:System.Net.WebResponse> retornado é determinado pelo esquema do URI da solicitação. Por exemplo:
-  
-    ```csharp  
-    WebResponse response = request.GetResponse();  
-    ```  
-  
-    ```vb  
-    Dim response As WebResponse = request.GetResponse()  
-    ```  
-  
-4. Você pode acessar as propriedades do objeto `WebResponse` ou convertê-lo em uma instância específica de protocolo para ler propriedades específicas de protocolo. 
+
+    ```csharp
+    WebResponse response = request.GetResponse();
+    ```
+
+    ```vb
+    Dim response As WebResponse = request.GetResponse()
+    ```
+
+4. Você pode acessar as propriedades do objeto `WebResponse` ou convertê-lo em uma instância específica de protocolo para ler propriedades específicas de protocolo.
 
     Por exemplo, para acessar as propriedades específicas de HTTP de <xref:System.Net.HttpWebResponse>, converta o objeto `WebResponse` em uma referência `HttpWebResponse`. O seguinte exemplo de código mostra como exibir a propriedade <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> específica de HTTP enviada com uma resposta:
-  
-    ```csharp  
-    Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
-    ```  
-  
-    ```vb  
-    Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
-    ```  
-  
-5. Para obter o fluxo que contém os dados de resposta enviados pelo servidor, chame o método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>. Por exemplo:  
-  
-    ```csharp  
-    Stream dataStream = response.GetResponseStream();  
-    ```  
-  
-    ```vb  
-    Dim dataStream As Stream = response.GetResponseStream()  
-    ```  
-  
-6. Depois de ler os dados do objeto de resposta, feche-o com o método <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> ou feche o fluxo de resposta com o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Se você não fechar o objeto de resposta ou o fluxo, seu aplicativo poderá ficar sem conexões com o servidor e sem a capacidade de processar solicitações adicionais. Como o método `WebResponse.Close` chama `Stream.Close` quando ele fecha a resposta, não é necessário chamar `Close` nos objetos de resposta e de fluxo, embora fazer isso não seja prejudicial. Por exemplo:
-  
-    ```csharp  
-    response.Close();  
-    ```  
-  
-    ```vb  
-    response.Close()  
-    ```  
-  
-## <a name="example"></a>Exemplo  
 
-O seguinte exemplo de código mostra como criar uma solicitação para um servidor Web e ler os dados na resposta:  
-  
+    ```csharp
+    Console.WriteLine (((HttpWebResponse)response).StatusDescription);
+    ```
+
+    ```vb
+    Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)
+    ```
+
+5. Para obter o fluxo que contém os dados de resposta enviados pelo servidor, chame o método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>. Por exemplo:
+
+    ```csharp
+    Stream dataStream = response.GetResponseStream();
+    ```
+
+    ```vb
+    Dim dataStream As Stream = response.GetResponseStream()
+    ```
+
+6. Depois de ler os dados do objeto de resposta, feche-o com o método <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> ou feche o fluxo de resposta com o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Se você não fechar o objeto de resposta ou o fluxo, seu aplicativo poderá ficar sem conexões com o servidor e sem a capacidade de processar solicitações adicionais. Como o método `WebResponse.Close` chama `Stream.Close` quando ele fecha a resposta, não é necessário chamar `Close` nos objetos de resposta e de fluxo, embora fazer isso não seja prejudicial. Por exemplo:
+
+    ```csharp
+    response.Close();
+    ```
+
+    ```vb
+    response.Close()
+    ```
+
+## <a name="example"></a>Exemplo
+
+O seguinte exemplo de código mostra como criar uma solicitação para um servidor Web e ler os dados na resposta:
+
 [!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
 [!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 

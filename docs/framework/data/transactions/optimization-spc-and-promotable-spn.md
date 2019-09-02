@@ -2,12 +2,12 @@
 title: Otimização usando commit de fase única e notificação de fase única promovível
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793621"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205902"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Otimização usando commit de fase única e notificação de fase única promovível
 
@@ -32,9 +32,9 @@ Se o <xref:System.Transactions> transação nunca requer escalonamento, quando a
 Se o <xref:System.Transactions> transação deverá ser escalonado (por exemplo, para oferecer suporte a vários RMs), <xref:System.Transactions> informa ao Gerenciador de recursos, chamando o <xref:System.Transactions.ITransactionPromoter.Promote%2A> método no <xref:System.Transactions.ITransactionPromoter> interface, da qual o <xref:System.Transactions.IPromotableSinglePhaseNotification> interface deriva. O Gerenciador de recursos converte a transação interna de uma transação local (que não exigem registro em log) para um objeto de transação que é capaz de participar de uma transação do DTC e associa o trabalho já realizado. Quando a transação é solicitada a confirmar, o Gerenciador de transações ainda envia o <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> notificação para o Gerenciador de recursos, que confirma a transação distribuída que criou durante a expansão.
 
 > [!NOTE]
-> O **TransactionCommitted** rastreamentos (que são gerados quando uma confirmação é invocada na transação escalada) contém a ID da atividade de transação do DTC.
+> Os rastreamentos de **TransactionCommitted** (gerados quando uma confirmação é invocada na transação escalonada) contêm a ID de atividade da transação do DTC.
 
-Para obter mais informações sobre o escalonamento de gerenciamento, consulte [escalonamento de gerenciamento de transações](../../../../docs/framework/data/transactions/transaction-management-escalation.md).
+Para saber mais sobre escalonamento de gerenciamento, confira [escalonamento de gerenciamento de transações](transaction-management-escalation.md).
 
 ## <a name="transaction-management-escalation-scenario"></a>Cenário de escalonamento de gerenciamento de transações
 
@@ -46,11 +46,11 @@ Nesse cenário,
 
 2. Quando a segunda conexão, CN2 chama <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>, a chamada falhará porque não há outra inscrição podem ser promovida envolvidas. Por isso, CN2 deve obter uma transação do DTC para passá-lo para SQL. Para fazer isso, ele usa um dos métodos fornecidos pelo <xref:System.Transactions.TransactionInterop> classe para produzir um formato da transação que pode ser determinado para SQL.
 
-3. <xref:System.Transactions> chamadas a <xref:System.Transactions.ITransactionPromoter.Promote%2A> método no <xref:System.Transactions.ITransactionPromoter> interface implementada pelo CN1.
+3. <xref:System.Transactions>chama o <xref:System.Transactions.ITransactionPromoter.Promote%2A> método <xref:System.Transactions.ITransactionPromoter> na interface implementada por CN1.
 
 4. Neste ponto, CN1 aumenta a transação, usando um mecanismo específico para o SQL 2005 e <xref:System.Data>.
 
-5. O valor de retorno de <xref:System.Transactions.ITransactionPromoter.Promote%2A> método é uma matriz de bytes que contém um token de propagação da transação. <xref:System.Transactions> usa esse token de propagação para criar uma transação do DTC que ele pode incorporar a transação local.
+5. O valor de retorno de <xref:System.Transactions.ITransactionPromoter.Promote%2A> método é uma matriz de bytes que contém um token de propagação da transação. <xref:System.Transactions>usa esse token de propagação para criar uma transação do DTC que pode ser incorporada à transação local.
 
 6. Neste ponto, CN2 pode usar os dados recebidos de chamar um dos métodos por <xref:System.Transactions.TransactionInterop> para passar a transação para SQL.
 
@@ -58,13 +58,13 @@ Nesse cenário,
 
 ## <a name="single-phase-commit-optimization"></a>Otimização de confirmação de fase única
 
-O protocolo de confirmação de fase única é mais eficiente em tempo de execução, como todas as atualizações são realizadas sem qualquer coordenação explícita. Para tirar proveito dessa otimização, você deve implementar um Gerenciador de recursos usando <xref:System.Transactions.ISinglePhaseNotification> para o recurso de interface e se inscrever em uma transação usando o <xref:System.Transactions.Transaction.EnlistDurable%2A> ou <xref:System.Transactions.Transaction.EnlistVolatile%2A> método. Especificamente, o *EnlistmentOptions* deve ser igual ao parâmetro <xref:System.Transactions.EnlistmentOptions.None> para garantir que uma confirmação de fase única seria realizada.
+O protocolo de confirmação de fase única é mais eficiente em tempo de execução, como todas as atualizações são realizadas sem qualquer coordenação explícita. Para tirar proveito dessa otimização, você deve implementar um Gerenciador de recursos usando <xref:System.Transactions.ISinglePhaseNotification> para o recurso de interface e se inscrever em uma transação usando o <xref:System.Transactions.Transaction.EnlistDurable%2A> ou <xref:System.Transactions.Transaction.EnlistVolatile%2A> método. Especificamente, o parâmetro enlistoptions deve ser <xref:System.Transactions.EnlistmentOptions.None> igual a para garantir que uma única confirmação de fase seja executada.
 
 Como o <xref:System.Transactions.ISinglePhaseNotification> interface deriva de <xref:System.Transactions.IEnlistmentNotification> a interface, se o RM não está qualificado para confirmação de fase única, ele pode ainda receber a fase de duas notificações de confirmação. Se receber o RM um <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> notificação do TM, ele deve tentar fazer o trabalho necessário para confirmar e proporcionalmente informam o Gerenciador de transações se a transação deve ser confirmada ou revertida chamando o <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A>, <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A>, ou <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> método o <xref:System.Transactions.SinglePhaseEnlistment> parâmetro. Uma resposta de <xref:System.Transactions.Enlistment.Done%2A> sobre a inscrição neste estágio implica a semântica de somente leitura. Portanto, você não deve responder <xref:System.Transactions.Enlistment.Done%2A> além de qualquer um dos outros métodos.
 
-Se houver apenas uma inscrição volátil e nenhuma inscrição durável, a inscrição volátil recebe notificação SPC. Se houver qualquer inscrições voláteis e apenas uma inscrição durável, as inscrições voláteis recebem 2PC. Quando ele for concluído, a distribuição durável recebe SPC.
+Se houver apenas uma inscrição volátil e nenhuma inscrição durável, a inscrição volátil receberá uma notificação do SPC. Se houver qualquer inscrições voláteis e apenas uma inscrição durável, as inscrições voláteis receberão 2PC. Quando ele for concluído, a distribuição durável recebe SPC.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Inscrição de recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
-- [Confirmar uma transação de fase única e de várias fases](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+- [Inscrição de recursos como participantes em uma transação](enlisting-resources-as-participants-in-a-transaction.md)
+- [Confirmar uma transação de fase única e de várias fases](committing-a-transaction-in-single-phase-and-multi-phase.md)

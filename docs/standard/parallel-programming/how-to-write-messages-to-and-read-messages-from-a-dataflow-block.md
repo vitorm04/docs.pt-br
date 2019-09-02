@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cc4dc3a0692000958d66222e6cdc30acf874189
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 22d0f8abd1481bfd75a0d08f49b28cebf78bb4cb
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666372"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169147"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Como: gravar mensagens em um bloco de fluxo de dados e ler mensagens dele
 Este documento descreve como usar a Biblioteca de fluxo de dados TPL para gravar mensagens e ler mensagens de um bloco de fluxo de dados. A Biblioteca de fluxo de dados TPL fornece métodos síncronos e assíncronos para escrever mensagens e ler mensagens de um bloco de fluxo de dados. Este documento usa a classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. A classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> armazenas as memórias e se comporta como uma fonte de mensagem e como um alvo de mensagem.  
@@ -40,7 +40,7 @@ Este documento descreve como usar a Biblioteca de fluxo de dados TPL para gravar
  [!code-vb[TPLDataflow_ReadWrite#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#4)]  
   
 ## <a name="writing-to-and-reading-from-a-dataflow-block-asynchronously"></a>Gravar e ler um bloco de fluxo de dados de forma assíncrona  
- O exemplo a seguir usa o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> para gravar de forma assíncrona para um objeto <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> e o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> para ler de forma assíncrona a partir do mesmo objeto. Este exemplo usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/keywords/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) no Visual Basic) para enviar dados de forma assíncrona e ler dados do bloco de destino. O método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> é útil quando você deve habilitar um bloco de fluxo de dados para adiar mensagens. O método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> é útil quando você deseja atuar nos dados quando esses dados se tornam disponíveis. Para obter mais informações sobre como as mensagens se propagam entre os blocos de mensagens, confira a seção Passagem de mensagem em [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
+ O exemplo a seguir usa o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> para gravar de forma assíncrona para um objeto <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> e o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> para ler de forma assíncrona a partir do mesmo objeto. Este exemplo usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) no Visual Basic) para enviar dados de forma assíncrona e ler dados do bloco de destino. O método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> é útil quando você deve habilitar um bloco de fluxo de dados para adiar mensagens. O método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> é útil quando você deseja atuar nos dados quando esses dados se tornam disponíveis. Para obter mais informações sobre como as mensagens se propagam entre os blocos de mensagens, confira a seção Passagem de mensagem em [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
   
  [!code-csharp[TPLDataflow_ReadWrite#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#5)]
  [!code-vb[TPLDataflow_ReadWrite#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#5)]  

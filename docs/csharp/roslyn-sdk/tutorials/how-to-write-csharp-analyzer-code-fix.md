@@ -3,12 +3,12 @@ title: 'Tutorial: crie seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870556"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105752"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: crie seu primeiro analisador e correção de código
 
@@ -18,8 +18,8 @@ Neste tutorial, você explorará a criação de um **analisador** e uma **corre�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-* [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
 Será necessário instalar o **SDK do .NET Compiler Platform** por meio do Instalador do Visual Studio:
 
@@ -51,9 +51,9 @@ Console.WriteLine(x);
 
 A análise para determinar se uma variável pode ser tornada constante está envolvida, exigindo análise sintática, análise constante da expressão de inicializador e também análise de fluxo de dados, para garantir que nunca ocorram gravações na variável. O .NET Compiler Platform fornece APIs que facilitam essa análise. A primeira etapa é criar um novo em projeto de **Analisador com correção de código** do C#.
 
-* No Visual Studio, escolha **Arquivo > Novo > Projeto...** para exibir a caixa de diálogo Novo Projeto.
-* Em **Visual C# > Extensibilidade**, escolha **Analisador com correção de código (.NET Standard)** .
-* Nomeie seu projeto como "**MakeConst**" e clique em OK.
+- No Visual Studio, escolha **Arquivo > Novo > Projeto...** para exibir a caixa de diálogo Novo Projeto.
+- Em **Visual C# > Extensibilidade**, escolha **Analisador com correção de código (.NET Standard)** .
+- Nomeie seu projeto como "**MakeConst**" e clique em OK.
 
 O analisador com modelo de correção de código cria três projetos: um contém o analisador e a correção de código, o segundo é um projeto de teste de unidade e o terceiro é o projeto VSIX. O projeto de inicialização padrão é o projeto VSIX. Pressione **F5** para iniciar o projeto VSIX. Isso inicia uma segunda instância do Visual Studio que tenha carregado o seu novo analisador.
 
@@ -77,8 +77,8 @@ Você não precisa iniciar uma segunda cópia do Visual Studio e criar um novo c
 
 O modelo cria a classe inicial `DiagnosticAnalyzer`, no arquivo **MakeConstAnalyzer.cs**. Esse analisador inicial mostra duas propriedades importantes de cada analisador.
 
-* Cada analisador de diagnóstico deve fornecer um atributo `[DiagnosticAnalyzer]` que descreve a linguagem em que opera.
-* Cada analisador de diagnóstico deve derivar da classe <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer>.
+- Cada analisador de diagnóstico deve fornecer um atributo `[DiagnosticAnalyzer]` que descreve a linguagem em que opera.
+- Cada analisador de diagnóstico deve derivar da classe <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer>.
 
 O modelo também mostra os recursos básicos que fazem parte de qualquer analisador:
 
@@ -89,9 +89,9 @@ Registrar ações na substituição do método <xref:Microsoft.CodeAnalysis.Diag
 
 A primeira etapa é atualizar as constantes de registro e o método `Initialize`, de modo que essas constantes indiquem seu analisador "Make Const". A maioria das constantes de cadeia de caracteres é definida no arquivo de recurso de cadeia de caracteres. Você deve seguir essa prática para uma localização mais fácil. Abra o arquivo **Resources.resx** para o projeto do analisador **MakeConst**. Isso exibe o editor de recursos. Atualize os recursos de cadeia de caracteres da seguinte maneira:
 
-* Altere `AnalyzerTitle` para "A variável pode ser tornada constante".
-* Altere `AnalyzerMessageFormat` para "Pode ser tornada constante".
-* Altere `AnalyzerDescription` para "Tornar Constante".
+- Altere `AnalyzerTitle` para "A variável pode ser tornada constante".
+- Altere `AnalyzerMessageFormat` para "Pode ser tornada constante".
+- Altere `AnalyzerDescription` para "Tornar Constante".
 
 Além disso, lembre-se de alterar a lista suspensa **Modificador de Acesso** para `public`. Isso facilita o uso dessas constantes em testes de unidade. Quando você terminar, o editor de recursos deverá aparecer como mostrado na figura a seguir:
 
@@ -329,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 Esse teste é aprovado também. Em seguida, adicione as constantes para as condições que você ainda não manipulou ainda:
 
-* Declarações que já são `const`, porque elas já são const:
+- Declarações que já são `const`, porque elas já são const:
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* Declarações que não têm nenhum inicializador, porque não há nenhum valor a ser usado:
+- Declarações que não têm nenhum inicializador, porque não há nenhum valor a ser usado:
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* Declarações em que o inicializador não é uma constante, porque elas não podem ser constantes de tempo de compilação:
+- Declarações em que o inicializador não é uma constante, porque elas não podem ser constantes de tempo de compilação:
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -364,9 +364,9 @@ Execute os testes novamente e você verá esses novos casos de teste falharem.
 
 Você precisa de algumas melhorias no método `AnalyzeNode` do analisador para filtrar o código que corresponde a essas condições. Elas são todas condições relacionadas, portanto, alterações semelhantes corrigirão todas essas condições. Faça as alterações a seguir em `AnalyzeNode`:
 
-* A análise semântica examinou uma única declaração de variável. Esse código deve estar em um loop de `foreach` que examina todas as variáveis declaradas na mesma instrução.
-* Cada variável declarada precisa ter um inicializador.
-* O inicializador de cada variável declarada precisa ser uma constante de tempo de compilação.
+- A análise semântica examinou uma única declaração de variável. Esse código deve estar em um loop de `foreach` que examina todas as variáveis declaradas na mesma instrução.
+- Cada variável declarada precisa ter um inicializador.
+- O inicializador de cada variável declarada precisa ser uma constante de tempo de compilação.
 
 No seu método `AnalyzeNode`, substitua a análise semântica original:
 
@@ -487,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 Você precisa escrever um pouco mais de código no seu provedor de correção de código para substituir a palavra-chave var' com o nome do tipo correto. Retorne ao **CodeFixProvider.cs**. O código que você adicionará realizará as seguintes etapas:
 
-* Verifique se a declaração é uma declaração `var` e se afirmativo:
-* Crie um novo tipo para o tipo inferido.
-* Certifique-se de que a declaração de tipo não é um alias. Em caso afirmativo, é legal declarar `const var`.
-* Certifique-se de que `var` não é um nome de tipo neste programa. (Em caso afirmativo, `const var` é legal).
-* Simplificar o nome completo do tipo
+- Verifique se a declaração é uma declaração `var` e se afirmativo:
+- Crie um novo tipo para o tipo inferido.
+- Certifique-se de que a declaração de tipo não é um alias. Em caso afirmativo, é legal declarar `const var`.
+- Certifique-se de que `var` não é um nome de tipo neste programa. (Em caso afirmativo, `const var` é legal).
+- Simplificar o nome completo do tipo
 
 Isso soa como muito código. Mas não é. Substitua a linha que declara e inicializa `newLocal` com o código a seguir. Ele é colocado imediatamente após a inicialização de `newModifiers`:
 
@@ -505,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 Execute seus testes, que devem todos ser aprovados. Dê parabéns a si mesmo, executando seu analisador concluído. Pressione Ctrl + F5 para executar o projeto do analisador em uma segunda instância do Visual Studio com a extensão de versão prévia do Roslyn carregada.
 
-* Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console de C# e adicione `int x = "abc";` ao método Main. Graças à primeira correção de bug, nenhum aviso deve ser relatado para esta declaração de variável local (embora haja um erro do compilador, conforme esperado).
-* Em seguida, adicione `object s = "abc";` ao método Main. Devido à segunda correção de bug, nenhum aviso deve ser relatado.
-* Por fim, adicione outra variável local que usa a palavra-chave `var`. Você verá que um aviso é relatado e uma sugestão é exibida abaixo e a esquerda.
-* Mova o cursor do editor sobre o sublinhado ondulado e pressione Ctrl +. para exibir a correção de código sugerida. Ao selecionar a correção de código, observe que a palavra-chave var' agora é manipulada corretamente.
+- Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console de C# e adicione `int x = "abc";` ao método Main. Graças à primeira correção de bug, nenhum aviso deve ser relatado para esta declaração de variável local (embora haja um erro do compilador, conforme esperado).
+- Em seguida, adicione `object s = "abc";` ao método Main. Devido à segunda correção de bug, nenhum aviso deve ser relatado.
+- Por fim, adicione outra variável local que usa a palavra-chave `var`. Você verá que um aviso é relatado e uma sugestão é exibida abaixo e a esquerda.
+- Mova o cursor do editor sobre o sublinhado ondulado e pressione Ctrl +. para exibir a correção de código sugerida. Ao selecionar a correção de código, observe que a palavra-chave var' agora é manipulada corretamente.
 
 Por fim, adicione o seguinte código:
 

@@ -2,12 +2,12 @@
 title: 'Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 414d9764d8de0a1d7cd395a3192a097d48983856
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594097"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205370"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.  
@@ -16,7 +16,7 @@ Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em segu
   
 1. Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em segu
   
 2. Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto. Observe que os dois arquivos tem alguns nomes em comum.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

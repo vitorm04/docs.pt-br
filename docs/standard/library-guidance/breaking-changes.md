@@ -4,12 +4,12 @@ description: Práticas recomendadas para navegar por alterações da falha ao cr
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564218"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104652"
 ---
 # <a name="breaking-changes"></a>Alterações da falha
 
@@ -19,11 +19,11 @@ ms.locfileid: "54564218"
 
 O modo como uma biblioteca é usada pela comunidade do .NET altera o efeito das alterações de falha sobre os desenvolvedores para o usuário final.
 
-* **Bibliotecas de nível médio e baixo**, tais como um serializador, analisador HTML, mapeador relacional de objeto de banco de dados ou estrutura da Web, são mais afetados por alterações da falha.
+- **Bibliotecas de nível médio e baixo**, tais como um serializador, analisador HTML, mapeador relacional de objeto de banco de dados ou estrutura da Web, são mais afetados por alterações da falha.
 
   Pacotes de blocos de construção são usados tanto por desenvolvedores para o usuário final, a fim de criar aplicativos, quanto por outras bibliotecas, como dependências do NuGet. Por exemplo, você está criando um aplicativo e usando um cliente de software livre para chamar um serviço Web. Uma atualização da falha para uma dependência que o cliente usa não é algo que você pode consertar. É o cliente de software livre que precisa ser alterado e você não tem controle sobre ele. Você precisa localizar as versões compatíveis das bibliotecas ou enviar uma correção para a biblioteca de clientes e aguardar uma nova versão. A pior situação é quando você deseja usar duas bibliotecas que dependem de versões mutuamente incompatíveis de uma biblioteca de terceiro.
 
-* **Bibliotecas de alto nível**, tais como um pacote de controles de interface do usuário, são menos sensíveis a alterações da falha.
+- **Bibliotecas de alto nível**, tais como um pacote de controles de interface do usuário, são menos sensíveis a alterações da falha.
 
   Bibliotecas de alto nível são referenciadas diretamente em um aplicativo do usuário final. Se ocorrerem alterações da falha, o desenvolvedor poderá optar por atualizar para a versão mais recente ou poderá modificar seu aplicativo para funcionar com a alteração da falha.
 

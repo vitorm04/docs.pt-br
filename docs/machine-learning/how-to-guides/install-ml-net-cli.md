@@ -3,12 +3,12 @@ title: Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.N
 description: Visão geral e instalação da ferramenta da CLI (Interface de Linha de Comando) do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832929"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106893"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
 
@@ -106,9 +106,9 @@ No computador em que você deseja habilitar o preenchimento, você precisará fa
 
 2. Adicionar o script de shim apropriado ao seu perfil de shell. Talvez você precise criar um arquivo de perfil de shell. O script de shim vai encaminhar solicitações de conclusão do seu shell para a ferramenta `dotnet-suggest`, que delega ao aplicativo baseado em `System.CommandLine` apropriado.
 
-    * Para o bash, adicione o conteúdo de [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) a `~/.bash_profile`.
+    - Para o bash, adicione o conteúdo de [dotnet-suggest-shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) a `~/.bash_profile`.
 
-    * Para o PowerShell, adicione o conteúdo do [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) a seu perfil do PowerShell. Você pode encontrar o caminho esperado para seu perfil do PowerShell executando o comando a seguir em seu console:
+    - Para o PowerShell, adicione o conteúdo do [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) a seu perfil do PowerShell. Você pode encontrar o caminho esperado para seu perfil do PowerShell executando o comando a seguir em seu console:
 
     ```console
     echo $profile

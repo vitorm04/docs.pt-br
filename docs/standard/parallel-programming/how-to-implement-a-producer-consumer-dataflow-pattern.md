@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 044e726a1c668335780fe3d4322fbce83d8dcbba
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 6f57c0e2098cbd73edc34f34ba6e309bbf68fac9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666354"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167928"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Como: implementar um padrão de fluxo de dados de produtor-consumidor
 Este documento descreve como usar a Biblioteca de fluxo de dados TPL para implementar um padrão de produtor-consumidor. Nesse padrão, o *produtor* envia mensagens a um bloco de mensagens e o *consumidor* lê mensagens nesse bloco.  
@@ -27,7 +27,7 @@ Este documento descreve como usar a Biblioteca de fluxo de dados TPL para implem
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra um modelo básico de produtor-consumidor que usa o fluxo de dados. O método `Produce` grava matrizes que contêm bytes de dados aleatórios em um objeto <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> e o método `Consume` lê bytes de um objeto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType>. Ao agir nas interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> e <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>, em vez de seus tipos derivados, você pode gravar o código reutilizável que pode agir em uma variedade de tipos de bloco de fluxo de dados. Este exemplo usa a classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601>. Como a classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> atua como um bloco de origem e um bloco de destino, o produtor e consumidor podem usar um objeto compartilhado para transferir dados.  
   
- O método `Produce` chama o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> em um loop para gravar dados de forma síncrona no bloco de destino. Após o método `Produce` gravar todos os dados no bloco de destino, ele chama o método <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> para indicar que o bloco nunca terá dados adicionais disponíveis. O método `Consume` usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/keywords/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) em Visual Basic) para calcular de forma assíncrona o número total de bytes que são recebidos do objeto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>. Para agir de forma assíncrona, o método `Consume` chama o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> para receber uma notificação quando o bloco de origem tiver dados disponíveis e o bloco de origem nunca terá outros dados disponíveis.  
+ O método `Produce` chama o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> em um loop para gravar dados de forma síncrona no bloco de destino. Após o método `Produce` gravar todos os dados no bloco de destino, ele chama o método <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> para indicar que o bloco nunca terá dados adicionais disponíveis. O método `Consume` usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) em Visual Basic) para calcular de forma assíncrona o número total de bytes que são recebidos do objeto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>. Para agir de forma assíncrona, o método `Consume` chama o método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> para receber uma notificação quando o bloco de origem tiver dados disponíveis e o bloco de origem nunca terá outros dados disponíveis.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#1)]
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  

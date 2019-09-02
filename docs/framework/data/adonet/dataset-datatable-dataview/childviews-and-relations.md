@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 0e56b97ad7b375c69184e0f1928183612abfef42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034444"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205188"
 ---
 # <a name="childviews-and-relations"></a>ChildViews e relações
-Se existir uma relação entre tabelas em um <xref:System.Data.DataSet>, você pode criar um <xref:System.Data.DataView> que contém linhas da tabela filho relacionada, usando o <xref:System.Data.DataRowView.CreateChildView%2A> método da <xref:System.Data.DataRowView> para as linhas na tabela pai. Por exemplo, o código a seguir exibe **categorias** e seus relacionados **produtos** em ordem alfabética, classificado por **CategoryName** e **ProductName** .  
+Se existir uma relação entre as tabelas em <xref:System.Data.DataSet>um, você poderá criar <xref:System.Data.DataView> uma linha contendo a partir da tabela filho relacionada <xref:System.Data.DataRowView> usando <xref:System.Data.DataRowView.CreateChildView%2A> o método do para as linhas na tabela pai. Por exemplo, o código a seguir exibe **categorias** e seus **produtos** relacionados em ordem alfabética classificada por **NomeDaCategoria** e **NomeDoProduto**.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -78,5 +78,5 @@ foreach (DataRowView catDRV in catView)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](dataviews.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

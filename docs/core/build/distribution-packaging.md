@@ -4,19 +4,19 @@ description: Aprenda a empacotar, nomear e controlar a versão do .NET Core para
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585252"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105409"
 ---
 # <a name="net-core-distribution-packaging"></a>Pacote de distribuição do .NET Core
 
 À medida que o .NET Core fica disponível em mais plataformas, é muito útil saber como empacotar, nomear e controlar a versão dele. Dessa forma, os mantenedores do pacote podem ajudar a garantir uma experiência consistente, independentemente de onde os usuários escolhem executar o .NET. Este artigo é útil para usuários que estão:
 
-* Tentando criar o .NET Core com base na origem.
-* Querendo fazer alterações à CLI do .NET Core que poderiam afetar o layout resultante ou os pacotes produzidos.
+- Tentando criar o .NET Core com base na origem.
+- Querendo fazer alterações à CLI do .NET Core que poderiam afetar o layout resultante ou os pacotes produzidos.
 
 ## <a name="disk-layout"></a>Layout de disco
 
@@ -71,7 +71,7 @@ A pasta **compartilhada** contém estruturas. Uma estrutura compartilhada fornec
 
 O controle de versão do .NET Core é baseado nos números de versão `[major].[minor]` do componente de tempo de execução.
 A versão do SDK usa o mesmo `[major].[minor]` e tem um `[patch]` independente que combina as semânticas de recurso e de patch para o SDK.
-Por exemplo: O SDK versão 2.2.302 é a segunda versão de patch da terceira versão do recurso do SDK que dá suporte ao tempo de execução 2.2. Para obter mais informações sobre como o controle de versão funciona, veja [Visão geral do controle de versão do .NET Core](../versions/index.md).
+Por exemplo:  O SDK versão 2.2.302 é a segunda versão de patch da terceira versão do recurso do SDK que dá suporte ao tempo de execução 2.2. Para obter mais informações sobre como o controle de versão funciona, veja [Visão geral do controle de versão do .NET Core](../versions/index.md).
 
 Alguns pacotes incluem parte do número de versão no nome deles. Isso permite que você instale uma versão específica.
 O restante da versão não está incluído no nome da versão. Isso permite ao gerenciador de pacotes de SO atualize os pacotes (por exemplo, instalando automaticamente correções de segurança). Gerenciadores de pacotes com suporte são específicos do Linux.

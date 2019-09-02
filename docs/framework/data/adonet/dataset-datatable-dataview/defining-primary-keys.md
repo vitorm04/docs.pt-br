@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbfd8a8b207c0da9403ac1f8ab36557c4abe383b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607304"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204917"
 ---
 # <a name="defining-primary-keys"></a>Definir chaves primárias
-Uma tabela de banco de dados geralmente tem uma coluna ou um grupo de colunas que identifica exclusivamente cada linha na tabela. Esta coluna de identificação ou grupo de colunas é chamado de chave primária.  
+Uma tabela de banco de dados normalmente tem uma coluna ou grupo de colunas que identifica exclusivamente cada linha na tabela. Essa coluna de identificação ou grupo de colunas é chamada de chave primária.  
   
- Quando você identificar um único <xref:System.Data.DataColumn> como o <xref:System.Data.DataTable.PrimaryKey%2A> para um <xref:System.Data.DataTable>, a tabela define automaticamente o <xref:System.Data.DataColumn.AllowDBNull%2A> propriedade da coluna a ser **falso** e o <xref:System.Data.DataColumn.Unique%2A> propriedade para  **True**. Para várias colunas chaves primárias, somente o **AllowDBNull** propriedade é definida automaticamente como **falso**.  
+ Quando você identifica um único <xref:System.Data.DataColumn> como o <xref:System.Data.DataTable.PrimaryKey%2A> para um <xref:System.Data.DataTable>, a tabela define automaticamente a <xref:System.Data.DataColumn.AllowDBNull%2A> propriedade da coluna como **false** e a <xref:System.Data.DataColumn.Unique%2A> Propriedade como **true**. Para chaves primárias de várias colunas, somente a propriedade **AllowDBNull** é definida automaticamente como **false**.  
   
- O **PrimaryKey** propriedade de uma <xref:System.Data.DataTable> recebe como seu valor de uma matriz de um ou mais **DataColumn** objetos, conforme mostrado nos exemplos a seguir. O primeiro exemplo define uma única coluna como a chave primária.  
+ A propriedade **PrimaryKey** de um <xref:System.Data.DataTable> recebe como seu valor uma matriz de um ou mais objetos **DataColumn** , conforme mostrado nos exemplos a seguir. O primeiro exemplo define uma única coluna como a chave primária.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -68,6 +68,6 @@ workTable.PrimaryKey = keyColumn;
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Data.DataTable>
-- [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Definição de esquema de DataTable](datatable-schema-definition.md)
+- [DataTables](datatables.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

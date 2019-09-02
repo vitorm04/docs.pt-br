@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica seu projeto .NET Core em um diretório.
 ms.date: 05/29/2018
-ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 188a136c3e024f71f9b3e89d8e797fa3053f7e4c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331035"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202602"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -21,7 +21,7 @@ ms.locfileid: "68331035"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```
+```console
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
@@ -29,7 +29,7 @@ dotnet publish [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```
+```console
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
     [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
@@ -37,7 +37,7 @@ dotnet publish [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
     [--version-suffix]
 dotnet publish [-h|--help]
@@ -49,10 +49,10 @@ dotnet publish [-h|--help]
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
-* Código IL (Linguagem Intermediária) em um assembly com uma extensão *dll*.
-* Arquivo *.deps.json* que inclui todas as dependências do projeto.
-* O arquivo *.runtimeconfig.json* que especifica o tempo de execução compartilhado esperado pelo aplicativo, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
-* As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
+- Código IL (Linguagem Intermediária) em um assembly com uma extensão *dll*.
+- Arquivo *.deps.json* que inclui todas as dependências do projeto.
+- O arquivo *.runtimeconfig.json* que especifica o tempo de execução compartilhado esperado pelo aplicativo, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
+- As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
 
 A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o tempo de execução compartilhado do .NET Core instalado. Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md). Para a estrutura de diretórios de um aplicativo publicado, veja [Estrutura do diretório](/aspnet/core/hosting/directory-structure).
 

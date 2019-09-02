@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250994"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202963"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 
@@ -34,13 +34,13 @@ Para identificar uma literal de cadeia de caracteres como uma cadeia de caracter
 
 A estrutura de um item com uma expressão de interpolação é da seguinte maneira:
 
-```
+```csharp
 {<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Os elementos entre colchetes são opcionais. A seguinte tabela descreve cada elemento:
 
-|Elemento|Descrição|
+|Elemento|DESCRIÇÃO|
 |-------------|-----------------|
 |`interpolationExpression`|A expressão que produz um resultado a ser formatado. A representação de cadeia de caracteres do resultado `null` é <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|A expressão de constante cujo valor define o número mínimo de caracteres da representação de cadeia de caracteres do resultado da expressão de interpolação. Se for positiva, a representação de cadeia de caracteres será alinhada à direita; se for negativa, será alinhada à esquerda. Para obter mais informações, consulte [Componente de alinhamento](../../../standard/base-types/composite-formatting.md#alignment-component).|

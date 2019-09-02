@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626346"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202813"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,7 +21,7 @@ ms.locfileid: "68626346"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```
+```console
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
 dotnet restore [-h|--help]
@@ -29,7 +29,7 @@ dotnet restore [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```
+```console
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
@@ -55,15 +55,15 @@ O comportamento do comando `dotnet restore` será afetado pelas configurações 
 
 Há três configurações específicas que são ignoradas por `dotnet restore`:
 
-* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+- [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
   Os redirecionamentos de associação não funcionam com elementos `<PackageReference>` e o .NET Core só dá suporte a elementos `<PackageReference>` em pacotes NuGet.
 
-* [solution](/nuget/schema/nuget-config-file#solution-section)
+- [solution](/nuget/schema/nuget-config-file#solution-section)
 
   Essa configuração é específica do Visual Studio e não se aplica ao .NET Core. O .NET Core não usa um arquivo `packages.config` e, em vez disso, usa elementos `<PackageReference>` para pacotes NuGet.
 
-* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+- [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   Essa configuração não é aplicável, pois o [NuGet ainda não dá suporte à verificação de multiplataforma](https://github.com/NuGet/Home/issues/7939) de pacotes confiáveis.
 

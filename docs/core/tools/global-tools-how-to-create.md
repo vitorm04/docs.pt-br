@@ -4,12 +4,12 @@ description: Descreve como criar uma Ferramenta Global. A Ferramenta Global é u
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612661"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202771"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Criar uma Ferramenta Global do .NET Core usando a CLI do .NET Core
 
@@ -174,7 +174,7 @@ O parâmetro `--add-source` instrui a CLI do .NET Core a usar temporariamente a 
 
 Se a instalação for bem-sucedida, será exibida uma mensagem mostrando o comando usado para chamar a ferramenta e a versão instalada, de maneira semelhante ao seguinte exemplo:
 
-```
+```output
 You can invoke the tool using the following command: botsay
 Tool 'botsay' (version '1.0.0') was successfully installed.
 ```

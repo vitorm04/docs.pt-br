@@ -2,12 +2,12 @@
 title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796600"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105545"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
 
@@ -17,13 +17,13 @@ O C# 7.1 adiciona a [seleção de versão da linguagem](../language-reference/co
 
 Os novos recursos de linguagem nesta versão são:
 
-* [`async` Método `Main`](#async-main)
+- [`async` Método `Main`](#async-main)
   - O ponto de entrada para um aplicativo pode ter o modificador `async`.
-* [`default` Expressões literais](#default-literal-expressions)
+- [`default` Expressões literais](#default-literal-expressions)
   - Use expressões literais padrão em expressões de valor padrão quando o tipo de destino pode ser inferido.
-* [Nomes de elementos de tupla inferidos](#inferred-tuple-element-names)
+- [Nomes de elementos de tupla inferidos](#inferred-tuple-element-names)
   - Em muitos casos, os nomes dos elementos de tupla podem ser inferidos com base na inicialização da tupla.
-* [Correspondência de padrões em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
+- [Correspondência de padrões em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
   - Você pode usar expressões de correspondência de padrão em variáveis cujo tipo é um parâmetro de tipo genérico.
 
 Por fim, o compilador traz duas opções `-refout` e `-refonly`, que controlam a [geração de assembly de referência](#reference-assembly-generation).

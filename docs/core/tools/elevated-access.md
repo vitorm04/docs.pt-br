@@ -3,12 +3,12 @@ title: Acesso elevado para os comandos dotnet
 description: Conheça as melhores práticas para os comandos dotnet que exigem acesso elevado.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410624"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105085"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acesso elevado para os comandos dotnet
 
@@ -33,9 +33,9 @@ As instruções a seguir mostram a maneira recomendada para instalar, executar e
 
 Se a pasta `%ProgramFiles%\dotnet-tools` já existir, faça o seguinte para verificar se o grupo “Usuários” tem permissão para gravar ou modificar esse diretório:
 
-* Clique com o botão direito do mouse na pasta `%ProgramFiles%\dotnet-tools` e selecione **Propriedades**. A caixa de diálogo **Propriedades Comuns** é aberta. 
-* Clique na guia **Segurança**. Em **Nomes de grupo ou usuário**, verifique se o grupo “Usuários” tem permissão para gravar ou modificar o diretório. 
-* Se o grupo “Usuários” puder gravar ou modificar o diretório, use um nome de diretório diferente ao instalar as ferramentas em vez de *dotnet-tools*.
+- Clique com o botão direito do mouse na pasta `%ProgramFiles%\dotnet-tools` e selecione **Propriedades**. A caixa de diálogo **Propriedades Comuns** é aberta. 
+- Clique na guia **Segurança**. Em **Nomes de grupo ou usuário**, verifique se o grupo “Usuários” tem permissão para gravar ou modificar o diretório. 
+- Se o grupo “Usuários” puder gravar ou modificar o diretório, use um nome de diretório diferente ao instalar as ferramentas em vez de *dotnet-tools*.
 
 Para instalar as ferramentas, execute o seguinte comando no prompt com privilégios elevados. Ele criará a pasta *dotnet-tools* durante a instalação.
 
@@ -105,4 +105,4 @@ Durante o desenvolvimento, talvez você precise de acesso com privilégios eleva
 
 ## <a name="see-also"></a>Consulte também
 
-* [Visão geral das Ferramentas Globais do .NET Core](global-tools.md)
+- [Visão geral das Ferramentas Globais do .NET Core](global-tools.md)

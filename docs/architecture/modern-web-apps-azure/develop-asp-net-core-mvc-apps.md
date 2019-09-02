@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971200"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105459"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -43,7 +43,7 @@ Em sua essência, os aplicativos ASP.NET Core mapeiam as solicitações de entra
 Os aplicativos ASP.NET Core MVC podem usar rotas convencionais, rotas de atributo ou ambas. As rotas convencionais são definidas no código, especificando as _convenções_ de roteamento com uma sintaxe parecida com o exemplo abaixo:
 
 ```csharp
-app.UseMvc(routes =>;
+app.UseMvc(routes =>
 {
     routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
 });
@@ -208,7 +208,7 @@ Além do suporte interno para Áreas, você também pode usar sua própria estru
 O ASP.NET Core usa tipos de convenção internos para controlar seu comportamento. Você pode modificar ou substituir essas convenções. Por exemplo, você pode criar uma convenção que receberá automaticamente o nome de recurso para determinado controlador com base em seu namespace (que geralmente se correlaciona com a pasta na qual o controlador está localizado):
 
 ```csharp
-FeatureConvention : IControllerModelConvention
+public class FeatureConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
@@ -474,7 +474,7 @@ public class Program
     public static void Main(string[] args)
     {
         StartConnectionAsync();
-        _connection.On("receiveMessage", (arguments) =>;
+        _connection.On("receiveMessage", (arguments) =>
         {
             Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });

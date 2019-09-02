@@ -5,17 +5,18 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 54306c79bc2856996925756ee4261fbe67692aea
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 9dcc1837ca9c5c1fae3cd6a2a9d03b7e80423627
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606982"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040375"
 ---
 # <a name="command-line-build-with-cscexe"></a>Build pela linha de comando com csc.exe
+
 Você pode invocar o compilador do C#, digitando o nome do seu arquivo executável (*csc.exe*) em um prompt de comando.
 
-Se você usar a janela do **Prompt de Comando do Desenvolvedor do Visual Studio**, todas as variáveis de ambiente necessárias serão definidas para você. Para obter informações sobre como acessar essa ferramenta, consulte o tópico [Prompt de comando do desenvolvedor para o Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md). 
+Se você usar a janela do **Prompt de Comando do Desenvolvedor do Visual Studio**, todas as variáveis de ambiente necessárias serão definidas para você. Para obter informações sobre como acessar essa ferramenta, consulte o tópico [Prompt de comando do desenvolvedor para o Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
 
 Se você usa uma janela de Prompt de Comando padrão, deve ajustar seu caminho antes de invocar o *csc.exe* de qualquer subdiretório em seu computador. Você também deve executar o *vsvars32.bat* para definir as variáveis de ambiente adequadas para dar suporte aos builds de linha de comando. Para obter mais informações sobre *vsvars32.bat*, incluindo instruções de como localizar e executá-lo, confira [Como: configurar variáveis de ambiente para a linha de comando do Visual Studio](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
@@ -26,7 +27,7 @@ Você também pode usar o MSBuild para compilar programas em C# programaticament
 O arquivo executável *csc.exe* normalmente está localizado na pasta Microsoft.NET\Framework\\ *\<Versão>* no diretório *Windows*. O local pode variar dependendo da configuração exata de um computador específico. Se mais de uma versão do .NET Framework estiver instalada em seu computador, você encontrará várias versões desse arquivo. Para obter mais informações sobre essas instalações, consulte [Determinando qual versão do .NET Framework está instalada](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
->  Quando você compila um projeto usando o IDE do Visual Studio, você pode exibir o comando **csc** e suas opções de compilador associadas na janela **Saída**. Para exibir essas informações, siga as instruções em [Como exibir, salvar e configurar arquivos de log de build](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) para alterar o nível de detalhamento dos dados de log para **Normal** ou **Detalhado**. Depois de recompilar o projeto, pesquise na janela **Saída** por **csc** para localizar a invocação do compilador do C#.
+> Quando você compila um projeto usando o IDE do Visual Studio, você pode exibir o comando **csc** e suas opções de compilador associadas na janela **Saída**. Para exibir essas informações, siga as instruções em [Como exibir, salvar e configurar arquivos de log de build](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) para alterar o nível de detalhamento dos dados de log para **Normal** ou **Detalhado**. Depois de recompilar o projeto, pesquise na janela **Saída** por **csc** para localizar a invocação do compilador do C#.
 
  **Neste tópico**
 
@@ -59,7 +60,7 @@ O compilador do C# usa as seguintes regras para interpretar os argumentos fornec
 - Compila o *File.cs* produzindo o *File.exe*:
 
 ```console
-csc File.cs 
+csc File.cs
 ```
 
 - Compila o *File.cs* produzindo o *File.dll*:

@@ -3,12 +3,12 @@ title: Interpretando Expressões
 description: Aprenda como escrever código para examinar a estrutura de um árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211238"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202977"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -34,7 +34,7 @@ Console.WriteLine($"The value of the constant value is {constant.Value}");
 
 Isso imprimirá o seguinte:
 
-```
+```output
 This is an Constant expression type
 The type of the constant value is System.Int32
 The value of the constant value is 24
@@ -80,7 +80,7 @@ Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name
 
 Este exemplo imprime a seguinte saída:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -218,7 +218,7 @@ Esse algoritmo é a base de um algoritmo que pode visitar qualquer `LambdaExpres
 
 Quando executa esse visitante na expressão de adição mostrada acima, você obtém a saída a seguir:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -271,7 +271,7 @@ Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 
 Crie um visitante para essa soma e execute o visitante; você verá esta saída:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -309,7 +309,7 @@ Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 
 Esta é a saída do visitante:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -451,7 +451,7 @@ public class MethodCallVisitor : Visitor
 
 E a saída da árvore de expressão seria:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32

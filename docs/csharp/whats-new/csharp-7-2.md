@@ -2,12 +2,12 @@
 title: Novidades no C# 7.2
 description: Uma visão geral dos novos recursos no C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347420"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105741"
 ---
 # <a name="whats-new-in-c-72"></a>Novidades no C# 7.2
 
@@ -20,15 +20,15 @@ O C# 7.2 usa o elemento de configuração de [seleção de versão de linguagem]
 
 Os novos recursos de linguagem nesta versão são:
 
-* [Técnicas para escrever código eficiente seguro](#safe-efficient-code-enhancements)
+- [Técnicas para escrever código eficiente seguro](#safe-efficient-code-enhancements)
   - Uma combinação de aprimoramentos de sintaxe que permitem trabalhar com tipos de valor usando a semântica de referência.
-* [Argumentos nomeados que não estejam à direita](#non-trailing-named-arguments)
+- [Argumentos nomeados que não estejam à direita](#non-trailing-named-arguments)
   - Os argumentos nomeados podem ser seguidos por argumentos posicionais.
-* [Sublinhados à esquerda em literais numéricos](#leading-underscores-in-numeric-literals)
+- [Sublinhados à esquerda em literais numéricos](#leading-underscores-in-numeric-literals)
   - Agora os literais numéricos podem ter sublinhados à esquerda, antes dos dígitos impressos.
-* [Modificador de acesso `private protected`](#private-protected-access-modifier)
+- [Modificador de acesso `private protected`](#private-protected-access-modifier)
   - O modificador de acesso `private protected` permite o acesso a classes derivadas no mesmo assembly.
-* [Expressões `ref` condicionais](#conditional-ref-expressions)
+- [Expressões `ref` condicionais](#conditional-ref-expressions)
   - O resultado de uma expressão condicional (`?:`) agora já pode ser uma referência.
 
 O restante deste artigo fornece uma visão geral de cada recurso. Para cada recurso, você aprenderá o raciocínio por trás dele. Você aprenderá a sintaxe. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
@@ -63,7 +63,7 @@ Por exemplo:
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>modificador de acesso _protegido privado_
+## <a name="_private-protected_-access-modifier"></a>modificador de acesso _protegido privado_
 
 Um novo modificador de acesso composto: `private protected` indica que um membro pode ser acessado pela classe que o contém ou por classes derivadas que são declaradas no mesmo assembly. Enquanto que `protected internal` permite o acesso por classes derivadas ou classes que estejam no mesmo assembly, o `private protected` limita o acesso a tipos derivados declarados no mesmo assembly.
 

@@ -2,12 +2,12 @@
 title: Scripts dotnet-install
 description: Saiba mais sobre os scripts dotnet-install para instalar as ferramentas da CLI do .NET Core e o tempo de execução compartilhado.
 ms.date: 01/16/2019
-ms.openlocfilehash: 6404a8332a7196f0e6fdfe649c2c180970390775
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 8eb021c25ac218f2665932c224dc05a7d295e2b7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204789"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105113"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
@@ -25,14 +25,14 @@ macOS/Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O scripts `dotnet-install` são usados para executar uma instalação não administrativa do SDK do .NET Core, que inclui as ferramentas de CLI e o tempo de execução compartilhado do .NET Core.
 
 É recomendável usar a versão estável que está hospedada no [site principal do .NET Core](https://dot.net). Os caminhos diretos para os scripts são:
 
-* <https://dot.net/v1/dotnet-install.sh> (bash, UNIX)
-* <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
+- <https://dot.net/v1/dotnet-install.sh> (bash, UNIX)
+- <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
 
 A principal utilidade desses scripts é para cenários de automação e instalações não administrativas. Há dois scripts, um do PowerShell que funciona no Windows e um script bash que funciona no Linux/macOS. Ambos os scripts têm o mesmo comportamento. O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
 
@@ -46,96 +46,96 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
 
 ## <a name="options"></a>Opções
 
-* **`-Channel <CHANNEL>`**
+- **`-Channel <CHANNEL>`**
 
   Especifica o canal de origem da instalação. Os valores possíveis são:
 
-  * `Current`: versão mais atual.
-  * `LTS`: canal de suporte de longo prazo (versão mais atual compatível).
-  * Versão de duas partes no formato X.Y que representa uma versão específica (por exemplo, `2.0` ou `1.0`).
-  * Nome do branch. Por exemplo, `release/2.0.0`, `release/2.0.0-preview2` ou `master` (para versões noturnas).
+  - `Current`: versão mais atual.
+  - `LTS`: canal de suporte de longo prazo (versão mais atual compatível).
+  - Versão de duas partes no formato X.Y que representa uma versão específica (por exemplo, `2.0` ou `1.0`).
+  - Nome do branch. Por exemplo, `release/2.0.0`, `release/2.0.0-preview2` ou `master` (para versões noturnas).
 
   O valor padrão é `LTS`. Para saber mais sobre os canais de suporte do .NET, consulte a página [Política de suporte do .NET](https://www.microsoft.com/net/platform/support-policy#dotnet-core).
 
-* **`-Version <VERSION>`**
+- **`-Version <VERSION>`**
 
   Representa uma versão específica do build. Os valores possíveis são:
 
-  * `latest`: build mais recente no canal (usado com a opção `-Channel`).
-  * `coherent`: build coerente mais recente no canal; usa a combinação de pacotes estáveis mais recente (usado com as opções `-Channel` do nome do Branch).
-  * Versão de três partes no formato X.Y.Z que representa uma determinada versão do build; substitui a opção `-Channel`. Por exemplo: `2.0.0-preview2-006120`.
+  - `latest`: build mais recente no canal (usado com a opção `-Channel`).
+  - `coherent`: build coerente mais recente no canal; usa a combinação de pacotes estáveis mais recente (usado com as opções `-Channel` do nome do Branch).
+  - Versão de três partes no formato X.Y.Z que representa uma determinada versão do build; substitui a opção `-Channel`. Por exemplo: `2.0.0-preview2-006120`.
 
   Se não for especificada, a `-Version` assumirá o padrão `latest`.
 
-* **`-InstallDir <DIRECTORY>`**
+- **`-InstallDir <DIRECTORY>`**
 
   Especifica o caminho da instalação. O diretório será criado se não existir. O valor padrão é *%LocalAppData%\Microsoft\dotnet*. Os binários são colocados diretamente nesse diretório.
 
-* **`-Architecture <ARCHITECTURE>`**
+- **`-Architecture <ARCHITECTURE>`**
 
   Arquitetura dos binários do .NET Core para instalação. Os valores possíveis são `<auto>`, `amd64`, `x64`, `x86`, `arm64` e `arm`. O valor padrão é `<auto>`, que representa a arquitetura do sistema operacional em execução no momento.
 
-* **`-SharedRuntime`**
+- **`-SharedRuntime`**
 
   > [!NOTE]
   > Esse parâmetro está obsoleto e pode ser removido em uma versão futura do script. A alternativa recomendada é a opção `Runtime`.
 
   Instala apenas os bits de tempo de execução compartilhado, não todo o SDK. Isso é equivalente a especificar `-Runtime dotnet`.
 
-* **`-Runtime <RUNTIME>`**
+- **`-Runtime <RUNTIME>`**
 
   Instala apenas o tempo de execução compartilhado, não todo o SDK. Os valores possíveis são:
 
-  * `dotnet`: o tempo de execução compartilhado `Microsoft.NETCore.App`.
-  * `aspnetcore`: o tempo de execução compartilhado `Microsoft.AspNetCore.App`.
+  - `dotnet`: o tempo de execução compartilhado `Microsoft.NETCore.App`.
+  - `aspnetcore`: o tempo de execução compartilhado `Microsoft.AspNetCore.App`.
 
-* **`-DryRun`**
+- **`-DryRun`**
 
   Se definido, o script não executará a instalação. Em vez disso, exibirá qual linha de comando deve ser usada para instalar de forma consistente a versão atualmente solicitada da CLI do .NET Core. Por exemplo, se você especificar a versão `latest`, será exibido um link com a versão específica, para que este comando possa ser usado de forma determinista em um script de build. Ele também exibirá o local dos binários, caso você prefira instalá-lo ou baixá-lo por conta própria.
 
-* **`-NoPath`**
+- **`-NoPath`**
 
   Se definida, a pasta de instalação não será exportada para o caminho da sessão atual. Por padrão, o script modifica o PATH, o que torna as ferramentas da CLI disponíveis imediatamente após a instalação.
 
-* **`-Verbose`**
+- **`-Verbose`**
 
   Exibe informações de diagnóstico.
 
-* **`-AzureFeed`**
+- **`-AzureFeed`**
 
   Especifica a URL para o feed do Azure para o instalador. Não recomendamos alterar esse valor. O valor padrão é `https://dotnetcli.azureedge.net/dotnet`.
 
-* **`-UncachedFeed`**
+- **`-UncachedFeed`**
 
   Permite alterar a URL do feed não armazenado em cache usado por esse instalador. Não recomendamos alterar esse valor.
 
-* **`-NoCdn`**
+- **`-NoCdn`**
 
   Desabilita o download da [Rede de Distribuição de Conteúdo (CDN) Azure](https://docs.microsoft.com/azure/cdn/cdn-overview) e usa o feed não armazenado em cache diretamente.
 
-* **`-FeedCredential`**
+- **`-FeedCredential`**
 
   Usado como uma cadeia de caracteres de consulta para acrescentar ao feed do Azure. Permite alterar a URL para usar contas de armazenamento de blobs não públicos.
 
-* **`-ProxyAddress`**
+- **`-ProxyAddress`**
 
   Se for definido, o instalador usará o proxy ao fazer solicitações da Web. (Válido somente para Windows)
 
-* **`ProxyUseDefaultCredentials`**
+- **`ProxyUseDefaultCredentials`**
 
   Se definido, o instalador usará as credenciais do usuário atual ao usar o endereço de proxy. (Válido somente para Windows)
 
-* **`-SkipNonVersionedFiles`**
+- **`-SkipNonVersionedFiles`**
 
   Ignora a instalação de arquivos sem controle de versão, como *dotnet.exe*, se já existirem.
 
-* **`-Help`**
+- **`-Help`**
 
   Imprime a ajuda do script.
 
 ## <a name="examples"></a>Exemplos
 
-* Instale a versão LTS (suportada a longo prazo) no local padrão:
+- Instale a versão LTS (suportada a longo prazo) no local padrão:
 
   Windows:
 
@@ -149,7 +149,7 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
   ./dotnet-install.sh --channel LTS
   ```
 
-* Instale a visualização mais recente do canal 2.0 no local especificado:
+- Instale a visualização mais recente do canal 2.0 no local especificado:
 
   Windows:
 
@@ -163,7 +163,7 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
   ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
   ```
 
-* Instale a versão 1.1.0 do tempo de execução compartilhado:
+- Instale a versão 1.1.0 do tempo de execução compartilhado:
 
   Windows:
 
@@ -177,14 +177,14 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
   ./dotnet-install.sh --runtime dotnet --version 1.1.0
   ```
 
-* Obtenha o script e instale a versão 2.1.2 atrás de um proxy corporativo (somente Windows):
+- Obtenha o script e instale a versão 2.1.2 atrás de um proxy corporativo (somente Windows):
 
   ```powershell
   Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-* Obtenha o script e instale exemplos de uma linha da CLI do .NET Core:
+- Obtenha o script e instale exemplos de uma linha da CLI do .NET Core:
 
   Windows:
 

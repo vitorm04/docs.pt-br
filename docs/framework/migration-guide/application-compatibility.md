@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623785"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106478"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
@@ -22,9 +22,9 @@ A compatibilidade é uma meta muito importante de cada versão do .NET. A compat
 
 Cada aplicativo se destina a uma versão específica do .NET Framework, que pode ser especificada por meio da:
 
-* Definição de uma estrutura de destino no Visual Studio.
-* Especificação da estrutura de destino em um arquivo de projeto.
-* Aplicação de um <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ao código-fonte.
+- Definição de uma estrutura de destino no Visual Studio.
+- Especificação da estrutura de destino em um arquivo de projeto.
+- Aplicação de um <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ao código-fonte.
 
 Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade. A versão do .NET Framework para a qual um aplicativo é direcionado é determinada pela versão de destino do assembly de entrada para o domínio do aplicativo no qual o código está em execução. Todos os assemblies adicionais carregados nesse domínio do aplicativo são direcionados a essa versão do .NET Framework. Por exemplo, no caso de um executável, a estrutura à qual o executável é direcionado é o modo de compatibilidade no qual todos os assemblies desse AppDomain serão executados.
 
@@ -71,8 +71,8 @@ Cada problema inclui as seguintes informações:
 ## <a name="usage"></a>Uso
 Para começar, selecione o tipo de alteração de compatibilidade abaixo:
 
-* [Alterações de redirecionamento](./retargeting/index.md)
-* [Alterações no tempo de execução](./runtime/index.md)
+- [Alterações de redirecionamento](./retargeting/index.md)
+- [Alterações no tempo de execução](./runtime/index.md)
 
 ## <a name="see-also"></a>Consulte também
 

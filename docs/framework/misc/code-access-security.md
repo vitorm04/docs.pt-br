@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f089a4482173fd9697738c1643c33c05da4212
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910954"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205651"
 ---
 # <a name="code-access-security"></a>Segurança de acesso do código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,11 +34,11 @@ ms.locfileid: "69910954"
  O .NET Framework fornece um mecanismo de segurança chamado segurança de acesso ao código para ajudar a proteger sistemas de computador contra código móvel mal-intencionado, para permitir que o código de origens desconhecidas seja executado com proteção e para ajudar a impedir que códigos confiáveis sejam executados intencionalmente ou acidentalmente comprometendo a segurança. A segurança de acesso ao código permite que o código seja confiável para graus variados, dependendo de onde o código se origina e em outros aspectos da identidade do código. A segurança de acesso ao código também impõe os diversos níveis de confiança no código, o que minimiza a quantidade de código que deve ser totalmente confiável para ser executado. O uso da segurança de acesso ao código pode reduzir a probabilidade de que seu código seja usado por código mal-intencionado ou com preenchimento de erro. Ele pode reduzir sua responsabilidade, pois você pode especificar o conjunto de operações que seu código deve ter permissão para executar. A segurança de acesso ao código também pode ajudar a minimizar os danos que podem resultar de vulnerabilidades de segurança em seu código.  
   
 > [!NOTE]
-> Alterações importantes foram feitas na segurança de acesso ao código no .NET Framework 4. A alteração mais notável foi a [transparência da segurança](../../../docs/framework/misc/security-transparent-code.md), mas também há outras alterações significativas que afetam a segurança de acesso do código. Para obter informações sobre essas alterações, consulte [Security Changes](../../../docs/framework/security/security-changes.md).  
+> Alterações importantes foram feitas na segurança de acesso ao código no .NET Framework 4. A alteração mais notável foi a [transparência da segurança](security-transparent-code.md), mas também há outras alterações significativas que afetam a segurança de acesso do código. Para obter informações sobre essas alterações, consulte [Security Changes](../security/security-changes.md).  
   
- A segurança de acesso ao código afeta principalmente o código da biblioteca e os aplicativos parcialmente confiáveis. Os desenvolvedores de biblioteca devem proteger seu código contra o acesso não autorizado de aplicativos parcialmente confiáveis. Aplicativos parcialmente confiáveis são aplicativos que são carregados de fontes externas, como a Internet. Os aplicativos instalados em sua área de trabalho ou na intranet local são executados com confiança total. Os aplicativos de confiança total não são afetados pela segurança de acesso ao código, a menos que estejam marcados como de [segurança transparente](../../../docs/framework/misc/security-transparent-code.md), pois são totalmente confiáveis. A única limitação para aplicativos de confiança total é que os aplicativos marcados com o <xref:System.Security.SecurityTransparentAttribute> atributo não podem chamar o código marcado com o <xref:System.Security.SecurityCriticalAttribute> atributo. Aplicativos parcialmente confiáveis devem ser executados em uma área restrita (por exemplo, no Internet Explorer) para que a segurança de acesso ao código possa ser aplicada. Se você baixar um aplicativo da Internet e tentar executá-lo na área de trabalho, receberá um <xref:System.NotSupportedException> com a mensagem: "Foi feita uma tentativa de carregar um assembly a partir de um local de rede, o que faria com que o assembly estivesse em área restrita em versões anteriores do .NET Framework. Essa versão do .NET Framework não habilita a política de CAS por padrão, portanto, essa carga pode ser perigosa. " Se você tiver certeza de que o aplicativo pode ser confiável, poderá habilitá-lo para ser executado como confiança total usando o [ \<elemento de > loadFromRemoteSources](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obter informações sobre como executar um aplicativo em uma área [restrita, consulte Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ A segurança de acesso ao código afeta principalmente o código da biblioteca e os aplicativos parcialmente confiáveis. Os desenvolvedores de biblioteca devem proteger seu código contra o acesso não autorizado de aplicativos parcialmente confiáveis. Aplicativos parcialmente confiáveis são aplicativos que são carregados de fontes externas, como a Internet. Os aplicativos instalados em sua área de trabalho ou na intranet local são executados com confiança total. Os aplicativos de confiança total não são afetados pela segurança de acesso ao código, a menos que estejam marcados como de [segurança transparente](security-transparent-code.md), pois são totalmente confiáveis. A única limitação para aplicativos de confiança total é que os aplicativos marcados com o <xref:System.Security.SecurityTransparentAttribute> atributo não podem chamar o código marcado com o <xref:System.Security.SecurityCriticalAttribute> atributo. Aplicativos parcialmente confiáveis devem ser executados em uma área restrita (por exemplo, no Internet Explorer) para que a segurança de acesso ao código possa ser aplicada. Se você baixar um aplicativo da Internet e tentar executá-lo na área de trabalho, receberá um <xref:System.NotSupportedException> com a mensagem: "Foi feita uma tentativa de carregar um assembly a partir de um local de rede, o que faria com que o assembly estivesse em área restrita em versões anteriores do .NET Framework. Essa versão do .NET Framework não habilita a política de CAS por padrão, portanto, essa carga pode ser perigosa. " Se você tiver certeza de que o aplicativo pode ser confiável, poderá habilitá-lo para ser executado como confiança total usando o [ \<elemento de > loadFromRemoteSources](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obter informações sobre como executar um aplicativo em uma área [restrita, consulte Como: Executar o código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
- Todo o código gerenciado que tem como alvo o Common Language Runtime recebe os benefícios da segurança de acesso ao código, mesmo que esse código não faça uma chamada de segurança de acesso de código única. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../docs/framework/misc/code-access-security-basics.md).  
+ Todo o código gerenciado que tem como alvo o Common Language Runtime recebe os benefícios da segurança de acesso ao código, mesmo que esse código não faça uma chamada de segurança de acesso de código única. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](code-access-security-basics.md).  
   
 <a name="key_functions"></a>   
 ## <a name="key-functions-of-code-access-security"></a>Principais funções de segurança de acesso a código  
@@ -58,7 +58,7 @@ ms.locfileid: "69910954"
   
  A ilustração a seguir mostra a movimentação de pilha que resulta quando um método no assembly A4 exige que seus chamadores tenham a permissão P.  
   
- ![Segurança de acesso do código](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")  
+ ![Segurança de acesso do código](media/slide-10a.gif "slide_10a")  
 Movimentação da pilha de segurança  
   
 <a name="related_topics"></a>   
@@ -66,9 +66,9 @@ Movimentação da pilha de segurança
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Noções Básicas da Segurança de Acesso do Código](../../../docs/framework/misc/code-access-security-basics.md)|Descreve a segurança de acesso do código e seus usos mais comuns.|  
-|[Segurança-código Transparent, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Descreve o modelo de transparência de segurança no .NET Framework 4.|  
-|[Usando bibliotecas de código parcialmente confiável](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Descreve como habilitar bibliotecas para uso com código não gerenciado e como usar bibliotecas de código não gerenciado.|  
+|[Noções Básicas da Segurança de Acesso do Código](code-access-security-basics.md)|Descreve a segurança de acesso do código e seus usos mais comuns.|  
+|[Segurança-código Transparent, nível 2](security-transparent-code-level-2.md)|Descreve o modelo de transparência de segurança no .NET Framework 4.|  
+|[Usando bibliotecas de código parcialmente confiável](using-libraries-from-partially-trusted-code.md)|Descreve como habilitar bibliotecas para uso com código não gerenciado e como usar bibliotecas de código não gerenciado.|  
 |[Principais conceitos de segurança](../../standard/security/key-security-concepts.md)|Fornece uma visão geral de muitos dos principais termos e conceitos usados no sistema de segurança .NET Framework.|  
 |[Segurança baseada em Função](../../standard/security/role-based-security.md)|Descreve como incorporar a segurança com base em funções.|  
 |[Serviços criptográficos](../../standard/security/cryptographic-services.md)|Descreve como incorporar a criptografia em seus aplicativos.|

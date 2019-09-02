@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 99c52b93cee858511d50aba2f30f2b9f96d91ccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2548ad9382b406978dac0a3d366207626278f501
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034366"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205137"
 ---
 # <a name="creating-autoincrement-columns"></a>Criar colunas AutoIncrement
-Para garantir que os valores de coluna exclusiva, você pode definir os valores de coluna para incrementar automaticamente quando novas linhas são adicionadas à tabela. Para criar um incremento automático <xref:System.Data.DataColumn>, defina a <xref:System.Data.DataColumn.AutoIncrement%2A> propriedade da coluna a ser **verdadeiro**. O <xref:System.Data.DataColumn> , em seguida, começa com o valor definido na <xref:System.Data.DataColumn.AutoIncrementSeed%2A> propriedade e, em cada linha adicionada o valor da **AutoIncrement** aumenta o valor definido na coluna a <xref:System.Data.DataColumn.AutoIncrementStep%2A> propriedade da coluna.  
+Para garantir valores de coluna exclusivos, você pode definir os valores de coluna para incrementar automaticamente quando novas linhas forem adicionadas à tabela. Para criar um incremento <xref:System.Data.DataColumn>automático, defina a <xref:System.Data.DataColumn.AutoIncrement%2A> propriedade da coluna como **true**. Em seguida, começa com o <xref:System.Data.DataColumn.AutoIncrementSeed%2A> valor definido na propriedade e, com cada linha adicionada, o valor da coluna AutoIncrement <xref:System.Data.DataColumn.AutoIncrementStep%2A> aumenta pelo valor definido na propriedade da coluna. <xref:System.Data.DataColumn>  
   
- Para **AutoIncrement** colunas, é recomendável que o <xref:System.Data.DataColumn.ReadOnly%2A> propriedade do **DataColumn** ser definido como **true**.  
+ Para colunas de **incremento automático** , recomendamos <xref:System.Data.DataColumn.ReadOnly%2A> que a propriedade de **DataColumn** seja definida como **true**.  
   
- O exemplo a seguir demonstra como criar uma coluna que começa com um valor de 200 e adiciona de forma incremental nas etapas de 3.  
+ O exemplo a seguir demonstra como criar uma coluna que começa com um valor de 200 e adiciona incrementalmente em etapas de 3.  
   
 ```vb  
 Dim workColumn As DataColumn = workTable.Columns.Add( _  
@@ -38,6 +38,6 @@ workColumn.AutoIncrementStep = 3;
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Data.DataColumn>
-- [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Definição de esquema de DataTable](datatable-schema-definition.md)
+- [DataTables](datatables.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

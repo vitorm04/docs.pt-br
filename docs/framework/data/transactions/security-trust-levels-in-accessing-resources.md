@@ -2,12 +2,12 @@
 title: Níveis de confiança de segurança ao acessar recursos
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948713"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205873"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Níveis de confiança de segurança ao acessar recursos
 Este tópico discute como o acesso está restrito a tipos de recursos que <xref:System.Transactions> expõe.  
@@ -38,7 +38,7 @@ Este tópico discute como o acesso está restrito a tipos de recursos que <xref:
   
  Para habilitar a recuperação, esse tipo de aplicativo tem a capacidade de consumir permanentemente os recursos do sistema. Isso ocorre porque o Gerenciador de transações recuperável deve se lembrar de transações que foram confirmadas até que ele possa confirmar que todos os gerenciadores de recursos duráveis que participam da transação tem recebido o resultado. Portanto, esse tipo de aplicativo requer confiança total e não deve ser executado, a menos que nível de confiança recebeu.  
   
- Para obter mais informações sobre inlistagens duráveis e recuperação, consulte os tópicos [Inscrevendo recursos como participantes em uma transação](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) e [executando a recuperação](../../../../docs/framework/data/transactions/performing-recovery.md) .  
+ Para obter mais informações sobre inlistagens duráveis e recuperação, consulte os tópicos [Inscrevendo recursos como participantes em uma transação](enlisting-resources-as-participants-in-a-transaction.md) e [executando a recuperação](performing-recovery.md) .  
   
  Aplicativos que executam o trabalho com herdado interoperabilidade com COM+ também precisam ter confiança total.  
   

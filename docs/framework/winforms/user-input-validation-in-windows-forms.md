@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916288"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206128"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validação da entrada do usuário no Windows Forms
 Quando os usuários inserem dados em seu aplicativo, convém verificar se os dados são válidos antes de seu aplicativo utilizá-los. Você pode exigir que determinados campos de texto não sejam de comprimento zero, que um campo seja formatado como um número de telefone ou outros tipos de dados bem formados ou que uma cadeia de caracteres não contenha caracteres desprotegidos que poderiam ser usados para comprometer a segurança de um banco de dados. O Windows Forms fornece várias maneiras para validar a entrada em seu aplicativo.  
@@ -85,7 +85,7 @@ Quando os usuários inserem dados em seu aplicativo, convém verificar se os dad
   
 - Chamando o <xref:System.Windows.Forms.Form.Close%2A> método programaticamente.  
   
- No entanto, em alguns casos, você talvez queira permitir que o usuário feche o formulário independentemente se os valores nos controles são válidos. Você pode substituir a validação e fechar um formulário que ainda contém dados inválidos criando um manipulador para o <xref:System.Windows.Forms.Form.Closing> evento do formulário. No evento, defina a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Propriedade como. `false` Isso força o formulário a fechar. Para obter mais informações e um exemplo, consulte <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ No entanto, em alguns casos, você talvez queira permitir que o usuário feche o formulário independentemente se os valores nos controles são válidos. Você pode substituir a validação e fechar um formulário que ainda contém dados inválidos criando um manipulador para o <xref:System.Windows.Forms.Form.FormClosing> evento do formulário. No evento, defina a <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> Propriedade como. `false` Isso força o formulário a fechar. Para obter mais informações e um exemplo, consulte <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>.  
   
 > [!NOTE]
 > Se você forçar o formulário a fechar desta maneira, todos os dados nos controles do formulário que ainda não tiverem sido salvos serão perdidos. Além disso, os formulários modais não validam o conteúdo dos controles quando eles são fechados. Você ainda pode usar a validação de controle para bloquear o foco em um controle, mas você não precisa se preocupar com o comportamento associado ao fechamento do formulário.  
@@ -93,7 +93,7 @@ Quando os usuários inserem dados em seu aplicativo, convém verificar se os dad
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [Controle MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md)
 - [Exemplos de expressões regulares](../../standard/base-types/regular-expression-examples.md)

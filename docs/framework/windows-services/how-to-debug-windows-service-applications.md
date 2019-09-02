@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988522"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044437"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Como: Depurar aplicativos do serviço Windows
 Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle de Serviços, em vez de dentro do Visual Studio. Por esse motivo, depurar um serviço não é tão simples como depurar outros tipos de aplicativos do Visual Studio. Para depurar um serviço, você deve iniciar o serviço e, em seguida, anexar um depurador ao processo no qual ele está sendo executado. Em seguida, você pode depurar seu aplicativo usando todas as funcionalidades de depuração padrão do Visual Studio.  
   
 > [!CAUTION]
->  Você não deve anexá-lo a um processo, a menos que você saiba qual é o processo e entenda as consequências da anexação, possivelmente eliminando esse processo. Por exemplo, se você anexá-lo ao processo WinLogon e interromper a depuração, o sistema será interrompido porque ele não pode operar sem o WinLogon.  
+> Você não deve anexá-lo a um processo, a menos que você saiba qual é o processo e entenda as consequências da anexação, possivelmente eliminando esse processo. Por exemplo, se você anexá-lo ao processo WinLogon e interromper a depuração, o sistema será interrompido porque ele não pode operar sem o WinLogon.  
   
  Você pode anexar o depurador somente a um serviço em execução. O processo de anexação interrompe o funcionamento atual do seu serviço. Na verdade, ele não para ou pausa o processamento do serviço. Ou seja, se o serviço está sendo executado quando você inicia a depuração, ele ainda está tecnicamente num estado inicial conforme você depura, mas seu processamento foi suspenso.  
   
@@ -55,7 +55,7 @@ Um serviço deve ser executado de dentro do contexto do Gerenciador de Controle 
 8. Na seção **Processos Disponíveis**, escolha o processo para o serviço e, em seguida, escolha **Anexar**.  
   
     > [!TIP]
-    >  O processo terá o mesmo nome que o arquivo executável do serviço.  
+    > O processo terá o mesmo nome que o arquivo executável do serviço.  
   
      A caixa de diálogo **Anexar ao Processo** é exibida.  
   

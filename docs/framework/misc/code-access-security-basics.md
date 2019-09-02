@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910978"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205620"
 ---
 # <a name="code-access-security-basics"></a>Noções básicas da segurança de acesso do código
 
@@ -32,13 +32,13 @@ Você deve estar familiarizado com os seguintes conceitos de segurança de acess
 
 - **Proteger bibliotecas de classes**: Uma biblioteca de classes segura usa as demandas de segurança para garantir que os chamadores da biblioteca tenham permissão para acessar os recursos expostos pela biblioteca. Por exemplo, uma biblioteca de classes segura pode ter um método para criar arquivos que exigem que seus chamadores tenham permissões para criar arquivos. O .NET Framework consiste em bibliotecas de classes seguras. Você deve estar ciente das permissões necessárias para acessar qualquer biblioteca que seu código usa. Para obter mais informações, consulte a seção [usando bibliotecas de classes seguras](#secure_library) mais adiante neste tópico.
 
-- **Código**Transparent: Começando com o .NET Framework 4, além de identificar permissões específicas, você também deve determinar se o seu código deve ser executado como segurança transparente. O código de segurança transparente não pode chamar tipos ou membros que são identificados como segurança crítica. Essa regra se aplica a aplicativos de confiança total, bem como a aplicativos parcialmente confiáveis. Para obter mais informações, consulte [código de segurança transparente](../../../docs/framework/misc/security-transparent-code.md).
+- **Código**Transparent: Começando com o .NET Framework 4, além de identificar permissões específicas, você também deve determinar se o seu código deve ser executado como segurança transparente. O código de segurança transparente não pode chamar tipos ou membros que são identificados como segurança crítica. Essa regra se aplica a aplicativos de confiança total, bem como a aplicativos parcialmente confiáveis. Para obter mais informações, consulte [código de segurança transparente](security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>Escrevendo um código fortemente tipado verificável
 
-A compilação JIT (just-in-time) executa um processo de verificação que examina o código e tenta determinar se o código é de tipo seguro. O código que é comprovado durante a verificação para ser digitado com segurança é chamado de *código de tipo seguro verificável*. O código pode ser de tipo seguro, mas pode não ser verificável com segurança devido às limitações do processo de verificação ou do compilador. Nem todas as linguagens são de tipo seguro, e alguns compiladores de linguagem, como C++o Microsoft Visual, não podem gerar código gerenciado com segurança de tipo verificável. Para determinar se o compilador de linguagem que você usa gera um código com segurança de tipo verificável, consulte a documentação do compilador. Se você usar um compilador de linguagem que gera código de tipo seguro, apenas quando você evita determinadas construções de linguagem, convém usar a [ferramenta PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md) para determinar se o seu código é verificamente seguro.
+A compilação JIT (just-in-time) executa um processo de verificação que examina o código e tenta determinar se o código é de tipo seguro. O código que é comprovado durante a verificação para ser digitado com segurança é chamado de *código de tipo seguro verificável*. O código pode ser de tipo seguro, mas pode não ser verificável com segurança devido às limitações do processo de verificação ou do compilador. Nem todas as linguagens são de tipo seguro, e alguns compiladores de linguagem, como C++o Microsoft Visual, não podem gerar código gerenciado com segurança de tipo verificável. Para determinar se o compilador de linguagem que você usa gera um código com segurança de tipo verificável, consulte a documentação do compilador. Se você usar um compilador de linguagem que gera código de tipo seguro, apenas quando você evita determinadas construções de linguagem, convém usar a [ferramenta PEVerify](../tools/peverify-exe-peverify-tool.md) para determinar se o seu código é verificamente seguro.
 
 O código que não é verificável de tipo seguro pode tentar executar se a política de segurança permitir que o código ignore a verificação. No entanto, como a segurança de tipo é uma parte essencial do mecanismo do tempo de execução para isolar assemblies, a segurança não poderá ser imposta de forma confiável se o código violar as regras de segurança de tipo. Por padrão, o código que não é de tipo seguro pode ser executado somente se for originado do computador local. Portanto, o código móvel deve ser de tipo seguro.
 
@@ -55,7 +55,7 @@ A segurança de acesso ao código não elimina a possibilidade de erro humano em
 A sintaxe de segurança declarativa usa [atributos](../../standard/attributes/index.md) para posicionar informações de segurança nos [metadados](../../standard/metadata-and-self-describing-components.md) do seu código. Os atributos podem ser colocados no nível de assembly, classe ou membro, para indicar o tipo de solicitação, demanda ou substituição que você deseja usar. As solicitações são usadas em aplicativos direcionados à Common Language Runtime para informar o sistema de segurança de tempo de execução sobre as permissões que seu aplicativo precisa ou não deseja. As demandas e substituições são usadas em bibliotecas para ajudar a proteger recursos de chamadores ou para substituir o comportamento de segurança padrão.
 
 > [!NOTE]
-> No .NET Framework 4, houve alterações importantes na .NET Framework modelo e terminologia de segurança. Para obter mais informações sobre essas alterações, consulte [Security Changes](../../../docs/framework/security/security-changes.md).
+> No .NET Framework 4, houve alterações importantes na .NET Framework modelo e terminologia de segurança. Para obter mais informações sobre essas alterações, consulte [Security Changes](../security/security-changes.md).
 
 Para usar chamadas de segurança declarativas, você deve inicializar os dados de estado do objeto de permissão para que ele represente a forma específica de permissão necessária. Cada permissão interna tem um atributo que é passado como uma <xref:System.Security.Permissions.SecurityAction> enumeração para descrever o tipo de operação de segurança que você deseja executar. No entanto, as permissões também aceitam seus próprios parâmetros que são exclusivos para eles.
 
@@ -105,7 +105,7 @@ A sintaxe de segurança imperativa emite uma chamada de segurança criando uma n
 
 Antes de fazer a chamada de segurança, você deve inicializar os dados de estado do objeto de permissão para que ele represente a forma específica da permissão necessária. Por exemplo, ao criar um <xref:System.Security.Permissions.FileIOPermission> objeto, você pode usar o construtor para inicializar o objeto **FileIOPermission** para que ele represente o acesso irrestrito a todos os arquivos ou nenhum acesso aos arquivos. Ou, você pode usar um objeto **FileIOPermission** diferente, passando parâmetros que indicam o tipo de acesso que você deseja que o objeto represente (ou seja, leitura, acréscimo ou gravação) e quais arquivos você deseja que o objeto proteja.
 
-Além de usar a sintaxe de segurança imperativa para invocar um único objeto de segurança, você pode usá-lo para inicializar um grupo de permissões em um conjunto de permissões. Por exemplo, essa técnica é a única maneira de executar chamadas [Assert](../../../docs/framework/misc/using-the-assert-method.md) de forma confiável em várias permissões em um método. Use as <xref:System.Security.PermissionSet> classes <xref:System.Security.NamedPermissionSet> e para criar um grupo de permissões e, em seguida, chame o método apropriado para invocar a chamada de segurança desejada.
+Além de usar a sintaxe de segurança imperativa para invocar um único objeto de segurança, você pode usá-lo para inicializar um grupo de permissões em um conjunto de permissões. Por exemplo, essa técnica é a única maneira de executar chamadas [Assert](using-the-assert-method.md) de forma confiável em várias permissões em um método. Use as <xref:System.Security.PermissionSet> classes <xref:System.Security.NamedPermissionSet> e para criar um grupo de permissões e, em seguida, chame o método apropriado para invocar a chamada de segurança desejada.
 
 Você pode usar a sintaxe imperativa para executar demandas e substituições, mas não solicitações. Você pode usar a sintaxe imperativa para demandas e substituições em vez de sintaxe declarativa quando as informações necessárias para inicializar o estado de permissão se tornarem conhecidas somente no tempo de execução. Por exemplo, se você quiser garantir que os chamadores tenham permissão para ler um determinado arquivo, mas não souber o nome desse arquivo até o tempo de execução, use uma demanda imperativa. Você também pode optar por usar verificações imperativas em vez de verificações declarativas quando precisar determinar em tempo de execução se uma condição mantiver e, com base no resultado do teste, fazer uma demanda de segurança (ou não).
 
@@ -164,8 +164,8 @@ Se você quiser que seu aplicativo execute uma operação que requer o acesso a 
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Assert](../../../docs/framework/misc/using-the-assert-method.md)
-- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)
-- [Noções Básicas da Segurança de Acesso do Código](../../../docs/framework/misc/code-access-security-basics.md)
+- [Assert](using-the-assert-method.md)
+- [Segurança de acesso do código](code-access-security.md)
+- [Noções Básicas da Segurança de Acesso do Código](code-access-security-basics.md)
 - [Atributos](../../standard/attributes/index.md)
 - [Metadados e componentes autodescritivos](../../standard/metadata-and-self-describing-components.md)

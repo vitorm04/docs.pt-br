@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666474"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106949"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Usando objetos que implementam IDisposable
 
 O coletor de lixo do Common Language Runtime recupera a memória usada por objetos gerenciados, mas os tipos que usam recursos não gerenciados implementam a interface <xref:System.IDisposable> para permitir que a memória alocada para esses recursos não gerenciados seja recuperada. Após terminar de usar um objeto que implementa <xref:System.IDisposable>, você deverá chamar a implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> do objeto. Você pode fazer isso de duas maneiras:  
   
-* Com a instrução `using` do C# ou a instrução `Using` do Visual Basic.  
+- Com a instrução `using` do C# ou a instrução `Using` do Visual Basic.  
   
-* Implementando um bloco `try/finally`.  
+- Implementando um bloco `try/finally`.  
 
 ## <a name="the-using-statement"></a>A instrução using
 
@@ -49,9 +49,9 @@ A instrução `using` do C# também permite que você adquira vários recursos e
 
 Em vez de incluir um bloco `try/finally` em uma instrução `using`, você pode optar por implementar diretamente o bloco `try/finally`. Esse pode ser o estilo pessoal de codificação ou talvez você queira fazer isso por um dos seguintes motivos:  
   
-* Para incluir um bloco `catch` para lidar com algumas exceções geradas no bloco `try`. Caso contrário, todas as exceções geradas pela instrução `using` não são manipuladas, assim como em quaisquer exceções geradas dentro do bloco `using` se um bloco `try/catch` não estiver presente.  
+- Para incluir um bloco `catch` para lidar com algumas exceções geradas no bloco `try`. Caso contrário, todas as exceções geradas pela instrução `using` não são manipuladas, assim como em quaisquer exceções geradas dentro do bloco `using` se um bloco `try/catch` não estiver presente.  
   
-* Para criar uma instância de um objeto que implementa <xref:System.IDisposable> cujo escopo não é local para o bloco dentro do qual é declarado.  
+- Para criar uma instância de um objeto que implementa <xref:System.IDisposable> cujo escopo não é local para o bloco dentro do qual é declarado.  
   
 O exemplo a seguir é semelhante ao exemplo anterior, exceto que ele usa um bloco `try/catch/finally` para criar uma instância, usar e descartar um objeto <xref:System.IO.StreamReader> e também para manipular todas as exceções lançadas pelo construtor <xref:System.IO.StreamReader> e pelo método <xref:System.IO.StreamReader.ReadToEnd%2A>. Observe que o código no bloco `finally` verifica se o objeto que implementa <xref:System.IDisposable> não é `null` antes de chamar o método <xref:System.IDisposable.Dispose%2A>. Não fazer isso poderá levar a uma exceção de <xref:System.NullReferenceException> em tempo de execução.  
   

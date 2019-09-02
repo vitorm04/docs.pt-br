@@ -2,12 +2,12 @@
 title: Processamento de transações
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793660"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205912"
 ---
 # <a name="transaction-processing"></a>Processamento de transações
 Ao comprar um livro de livrarias online, você troca money (na forma de crédito) de um livro. Se o crédito é boa, uma série de operações relacionadas garante que você obtenha o livro e a livraria obtém seu dinheiro. No entanto, se uma única operação na série falhar durante a troca, toda a troca falhará. Você não obtiver o livro e a livraria não obter seu dinheiro.  
@@ -19,10 +19,10 @@ Ao comprar um livro de livrarias online, você troca money (na forma de crédito
  Esta seção fornece informações gerais sobre o processamento de transações e informações específicas sobre como escrever aplicativos transacionais e gerenciadores de recursos usando o Microsoft .NET Framework.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Transaction Fundamentals](../../../../docs/framework/data/transactions/transaction-fundamentals.md) (Conceitos básicos de transação)  
+ [Transaction Fundamentals](transaction-fundamentals.md) (Conceitos básicos de transação)  
  Apresenta os termos e conceitos de processamento de transações básicas.  
   
- [Features Provided by System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) (Recursos fornecidos por System.Transactions)  
+ [Features Provided by System.Transactions](features-provided-by-system-transactions.md) (Recursos fornecidos por System.Transactions)  
  Descreve como usar recursos do System. Transactions para escrever seu próprio aplicativo transacional.  
   
 ## <a name="reference"></a>Referência  

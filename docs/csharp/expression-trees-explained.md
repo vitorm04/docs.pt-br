@@ -3,12 +3,12 @@ title: Árvores de Expressão Explicadas
 description: Saiba mais sobre árvores de expressão e como elas são úteis em algoritmos de conversão para execução externa e inspeção do código antes de executá-lo.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613415"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104804"
 ---
 # <a name="expression-trees-explained"></a>Árvores de Expressão Explicadas
 
@@ -33,11 +33,11 @@ A expressão é `1 + 2`. Essa é uma expressão binária. Mais especificamente, 
 Visualmente, a declaração inteira é uma árvore: você pode começar no nó raiz e viajar até cada nó da árvore para ver o código que constitui a instrução:
 
 - Instrução de declaração de variável com atribuição (`var sum = 1 + 2;`)
-  * Declaração de tipo de variável implícita (`var sum`)
+  - Declaração de tipo de variável implícita (`var sum`)
     - Palavra-chave var implícita (`var`)
     - Declaração de nome de variável (`sum`)
-  * Operador de atribuição (`=`)
-  * Expressão de adição binária (`1 + 2`)
+  - Operador de atribuição (`=`)
+  - Expressão de adição binária (`1 + 2`)
     - Operando esquerdo (`1`)
     - Operador de adição (`+`)
     - Operando direito (`2`)

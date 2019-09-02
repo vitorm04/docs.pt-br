@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034505"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205483"
 ---
 # <a name="adding-data-to-a-datatable"></a>Adicionando dados a um DataTable
-Depois de criar <xref:System.Data.DataTable> e definir sua estrutura usando colunas e restrições, você pode adicionar novas linhas de dados à tabela. Para adicionar uma nova linha, declare uma nova variável como tipo <xref:System.Data.DataRow>. Uma nova **DataRow** objeto é retornado ao chamar o <xref:System.Data.DataTable.NewRow%2A> método. O **DataTable** , em seguida, cria a **DataRow** objeto com base na estrutura da tabela, conforme definido pelo <xref:System.Data.DataColumnCollection>.  
+Depois de criar <xref:System.Data.DataTable> e definir sua estrutura usando colunas e restrições, você pode adicionar novas linhas de dados à tabela. Para adicionar uma nova linha, declare uma nova variável como tipo <xref:System.Data.DataRow>. Um novo objeto **DataRow** é retornado quando você chama o <xref:System.Data.DataTable.NewRow%2A> método. Em seguida, a **DataTable** cria o objeto **DataRow** com base na estrutura da tabela, conforme <xref:System.Data.DataColumnCollection>definido pelo.  
   
- O exemplo a seguir demonstra como criar uma nova linha chamando o **NewRow** método.  
+ O exemplo a seguir demonstra como criar uma nova linha chamando o método **NewRow** .  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Depois que dados são inseridos na nova linha, o **Add** método é usado para adicionar a linha para o <xref:System.Data.DataRowCollection>, conforme mostrado no código a seguir.  
+ Depois que os dados são inseridos na nova linha, o método **Add** é usado para adicionar a linha <xref:System.Data.DataRowCollection>ao, mostrada no código a seguir.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Você também pode chamar o **Add** para adicionar uma nova linha passando uma matriz de valores, tipada como <xref:System.Object>, conforme mostrado no exemplo a seguir.  
+ Você também pode chamar o método **Add** para adicionar uma nova linha passando uma matriz de valores, digitada como <xref:System.Object>, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Passando uma matriz de valores, digitada como **objeto**, para o **Add** método cria uma nova linha dentro da tabela e define seus valores de coluna com os valores na matriz de objetos. Observe que os valores na matriz são correspondidos sequencialmente a colunas, com base na ordem na qual aparecem na tabela.  
+ Passar uma matriz de valores, tipado como **objeto**, para o método **Add** cria uma nova linha dentro da tabela e define seus valores de coluna para os valores na matriz de objetos. Observe que os valores na matriz são correspondidos sequencialmente a colunas, com base na ordem na qual aparecem na tabela.  
   
- O exemplo a seguir adiciona 10 linhas ao recém-criado **clientes** tabela.  
+ O exemplo a seguir adiciona 10 linhas à tabela **Customers** recém-criada.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipulação de dados em uma DataTable](manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

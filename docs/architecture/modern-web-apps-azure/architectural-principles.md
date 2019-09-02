@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675573"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105481"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -101,8 +101,8 @@ No mínimo, os aplicativos Web individuais devem tentar ser seu próprio context
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-* [JAVA Design Patterns: Principles](https://java-design-patterns.com/principles/) (Padrões de design do JAVA: princípios)
-* [Contexto limitado](https://martinfowler.com/bliki/BoundedContext.html)
+- [JAVA Design Patterns: Principles](https://java-design-patterns.com/principles/) (Padrões de design do JAVA: princípios)
+- [Contexto limitado](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Anterior](choose-between-traditional-web-and-single-page-apps.md)

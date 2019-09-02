@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: e8d5b565bc04a0beb30142247b4ee8d94dcce86b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 867b6e3c9c647cd302b0635de1d02573485e89c7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626443"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168254"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e xUnit
 
@@ -22,7 +22,7 @@ Abra uma janela do shell. Crie um diretório chamado *unit-testing-vb-using-dotn
 Nesse novo diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Essa prática facilita gerenciar a biblioteca de classes e o projeto de teste de unidade.
 No diretório da solução, crie um diretório *PrimeService*. Você tem a seguinte estrutura de arquivo e diretório até aqui:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -46,7 +46,7 @@ Altere o diretório de volta para o diretório *unit-testing-vb-using-dotnet-tes
 
 Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a estrutura do diretório:
 
-```
+```console
 /unit-testing-vb-using-dotnet-test
     unit-testing-vb-using-dotnet-test.sln
     /PrimeService
@@ -67,7 +67,7 @@ Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projet
 
 O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new` na etapa anterior adicionou xUnit e o executor de xUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -75,7 +75,7 @@ Você pode ver o arquivo inteiro no [repositório de exemplos](https://github.co
 
 Você tem o seguinte layout de pasta final:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService

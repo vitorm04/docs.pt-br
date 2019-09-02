@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910747"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206110"
 ---
 # <a name="securing-wrapper-code"></a>Protegendo código de wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910747"
 ## <a name="link-demands-and-wrappers"></a>Demandas de link e wrappers  
  Um caso de proteção especial com demandas de link foi reforçado na infraestrutura de segurança, mas ainda é uma fonte de possível fraqueza em seu código.  
   
- Se o código totalmente confiável chamar uma propriedade, evento ou método protegido por um [LinkDemand](../../../docs/framework/misc/link-demands.md), a chamada terá sucesso se a verificação de permissão de **LinkDemand** para o chamador for satisfeita. Além disso, se o código totalmente confiável expõe uma classe que usa o nome de uma propriedade e chama seu acessador **Get** usando reflexão, essa chamada para o acessador **Get** é bem sucedido, embora o código do usuário não tenha o direito de acessar essa propriedade. Isso ocorre porque o **LinkDemand** verifica apenas o chamador imediato, que é o código totalmente confiável. Em essência, o código totalmente confiável é fazer uma chamada privilegiada em nome do código do usuário sem ter certeza de que o código do usuário tem o direito de fazer essa chamada.  
+ Se o código totalmente confiável chamar uma propriedade, evento ou método protegido por um [LinkDemand](link-demands.md), a chamada terá sucesso se a verificação de permissão de **LinkDemand** para o chamador for satisfeita. Além disso, se o código totalmente confiável expõe uma classe que usa o nome de uma propriedade e chama seu acessador **Get** usando reflexão, essa chamada para o acessador **Get** é bem sucedido, embora o código do usuário não tenha o direito de acessar essa propriedade. Isso ocorre porque o **LinkDemand** verifica apenas o chamador imediato, que é o código totalmente confiável. Em essência, o código totalmente confiável é fazer uma chamada privilegiada em nome do código do usuário sem ter certeza de que o código do usuário tem o direito de fazer essa chamada.  
   
  Para ajudar a evitar tais brechas de segurança, a Common Language Runtime estende o check-in para uma demanda completa de movimentação de pilha em qualquer chamada indireta para um método, Construtor, propriedade ou evento protegido por um **LinkDemand**. Essa proteção incorre em alguns custos de desempenho e altera a semântica da verificação de segurança; a demanda completa de movimentação de pilha pode falhar onde a verificação mais rápida e de um nível teria passado.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910747"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand>Especifica a movimentação da pilha de segurança de acesso ao código. Todos os chamadores na pilha devem ter a permissão ou a identidade especificada para passar. A **demanda** ocorre em cada chamada porque a pilha pode conter chamadores diferentes. Se você chamar um método repetidamente, essa verificação de segurança ocorrerá a cada vez. A **demanda** é uma boa proteção contra ataques chamariz; o código não autorizado que está tentando passar por ele será detectado.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) ocorre no tempo de compilação JIT (just-in-time) e verifica apenas o chamador imediato. Essa verificação de segurança não verifica o chamador do chamador. Quando essa verificação é aprovada, não há nenhuma sobrecarga de segurança adicional, não importa quantas vezes o chamador pode chamar. No entanto, também não há nenhuma proteção contra ataques chamariz. Com **LinkDemand**, qualquer código que passa pelo teste e pode fazer referência a seu código pode potencialmente interromper a segurança, permitindo que o código mal-intencionado chame usando o código autorizado. Portanto, não use **LinkDemand** , a menos que todos os possíveis pontos fracos possam ser totalmente evitados.  
+- [LinkDemand](link-demands.md) ocorre no tempo de compilação JIT (just-in-time) e verifica apenas o chamador imediato. Essa verificação de segurança não verifica o chamador do chamador. Quando essa verificação é aprovada, não há nenhuma sobrecarga de segurança adicional, não importa quantas vezes o chamador pode chamar. No entanto, também não há nenhuma proteção contra ataques chamariz. Com **LinkDemand**, qualquer código que passa pelo teste e pode fazer referência a seu código pode potencialmente interromper a segurança, permitindo que o código mal-intencionado chame usando o código autorizado. Portanto, não use **LinkDemand** , a menos que todos os possíveis pontos fracos possam ser totalmente evitados.  
   
     > [!NOTE]
-    > No .NET Framework 4, as <xref:System.Security.SecurityCriticalAttribute> demandas de link foram substituídas pelo atributo em <xref:System.Security.SecurityRuleSet.Level2> assemblies. O <xref:System.Security.SecurityCriticalAttribute> é equivalente a uma demanda de link para confiança total; no entanto, ele também afeta as regras de herança. Para obter mais informações sobre essa alteração, consulte [código de segurança transparente, nível 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > No .NET Framework 4, as <xref:System.Security.SecurityCriticalAttribute> demandas de link foram substituídas pelo atributo em <xref:System.Security.SecurityRuleSet.Level2> assemblies. O <xref:System.Security.SecurityCriticalAttribute> é equivalente a uma demanda de link para confiança total; no entanto, ele também afeta as regras de herança. Para obter mais informações sobre essa alteração, consulte [código de segurança transparente, nível 2](security-transparent-code-level-2.md).  
   
  As precauções extras necessárias ao usar **LinkDemand** devem ser programadas individualmente; o sistema de segurança pode ajudar na imposição. Qualquer erro abre uma vulnerabilidade de segurança. Todo o código autorizado que usa seu código deve ser responsável por implementar segurança adicional fazendo o seguinte:  
   

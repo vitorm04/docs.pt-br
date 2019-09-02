@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876943"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104629"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -15,10 +15,10 @@ Agradecemos seu interesse em contribuir com a documentação do .NET.
 
 O documento aborda o processo para contribuir para os artigos e exemplos de código hospedados no [site de documentação do .NET](https://docs.microsoft.com/dotnet). As contribuições podem ser tão simples quanto correções de erro de digitação ou tão complexas quanto novos artigos.
 
-* [Processo de contribuição](#process-for-contributing)
-* [A experiência interativa em C#](#the-c-interactive-experience)
-* [O que FAZER e o que NÃO FAZER](#dos-and-donts)
-* [Contrato de Licença do Colaborador](#contributor-license-agreement)
+- [Processo de contribuição](#process-for-contributing)
+- [A experiência interativa em C#](#the-c-interactive-experience)
+- [O que FAZER e o que NÃO FAZER](#dos-and-donts)
+- [Contrato de Licença do Colaborador](#contributor-license-agreement)
 
 Esse repositório contém a documentação conceitual do .NET. O site de documentação do .NET foi criado com base em vários repositórios, além desse:
 
@@ -35,7 +35,7 @@ Você precisa de uma compreensão básica do [Git e do GitHub.com](https://guide
 **Etapa 1:** Ignore esta etapa para pequenas alterações (por exemplo, se você estiver corrigindo um erro de digitação ou abrindo imediatamente uma solicitação de pull para resolver um problema encontrado nos documentos). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
 O conteúdo dentro da pasta **docs** é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
 
-- ou -
+-ou-
 
 Também é possível escolher entre as questões existentes, para as quais contribuições da comunidade são bem-vindas. [Projetos para os colaboradores da comunidade do .NET](https://github.com/dotnet/docs/projects/35) lista vários itens de trabalho que estão disponíveis para os colaboradores da comunidade. Dependendo de seus interesses e nível de compromisso, você pode escolher entre questões nas seguintes categorias:
 
@@ -103,7 +103,7 @@ Fazemos a seguinte distinção para o código existente em nosso repositório:
 Todos os códigos residem no repositório [dotnet/samples](https://github.com/dotnet/samples). Estamos trabalhando para criar um modelo em que nossa estrutura de pastas de amostras corresponda à nossa estrutura de pastas de documentos. Os padrões que seguimos são:
 
 - A pasta *snippets* de nível superior contém snippets para amostras pequenas e dedicadas.
-- Exemplos de referência de API ficam em uma pasta seguindo este padrão: *snippets/\<idioma>/api/\<namespace>/\<nomeapi>*.
+- Exemplos de referência de API ficam em uma pasta seguindo este padrão: *snippets/\<idioma>/api/\<namespace>/\<nomeapi>* .
 - Outras pastas de nível superior correspondem às pastas de nível superior do repositório *docs*. Por exemplo, o repositório docs tem uma pasta *machine-learning/tutorials*, e as amostras para tutoriais de aprendizado por máquina estão na pasta *samples/machine-learning/tutorials*.
 
 Além disso, todas as amostras nas pastas *core* e *standard* devem ser compiladas e executadas em todas as plataformas compatíveis com o .NET Core. Nosso sistema de build de CI força isso. A pasta de nível superior *framework* contém exemplos que só são compilados e validados no Windows.
