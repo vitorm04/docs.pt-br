@@ -169,7 +169,7 @@ Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos 
 - **Vaughn Vernon. Modelagem de agregações com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Pontos de dados – Codificação para o design controlado por domínio: Tips for Data-Focused Devs** \ (Codificando para o design controlado por domínio: dicas para desenvolvedores com foco em dados)
+- **Julie Lerman. Codificando para o design controlado por domínio: dicas para desenvolvedores com foco em dados** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
