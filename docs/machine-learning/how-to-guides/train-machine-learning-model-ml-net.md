@@ -1,16 +1,16 @@
 ---
 title: Treinar e avaliar um modelo
 description: Saiba como criar modelos de machine learning, coletar métricas e medir o desempenho com o ML.NET. Um modelo de machine learning identifica padrões nos dados de treinamento para fazer previsões usando novos dados.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397635"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169040"
 ---
 # <a name="train-and-evaluate-a-model"></a>Treinar e avaliar um modelo
 
@@ -20,7 +20,7 @@ Saiba como criar modelos de machine learning, coletar métricas e medir o desemp
 
 A meta de um modelo de machine learning é identificar padrões nos dados de treinamento. Esses padrões são usados para fazer previsões usando novos dados.
 
-Considerando o modelo de dados a seguir:
+Os dados podem ser modelados por uma classe como `HousingData`.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Carregue os dados para um [`IDataView`](xref:Microsoft.ML.IDataView):
+Considerando os dados a seguir, que são carregados em uma [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 HousingData[] housingData = new HousingData[]

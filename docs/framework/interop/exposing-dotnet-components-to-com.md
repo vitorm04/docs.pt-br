@@ -1,5 +1,5 @@
 ---
-title: Expondo componentes do .NET Framework para COM
+title: Como expor componentes .NET ao COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d550a526336cf3e9de9cb53a16ddcf86f3af5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946522"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205810"
 ---
-# <a name="exposing-net-framework-components-to-com"></a>Expondo componentes do .NET Framework para COM
+# <a name="exposing-net-components-to-com"></a>Como expor componentes .NET ao COM
 
 A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado são atividades distintas para desenvolvedores. Esta seção descreve várias dicas para escrever um código gerenciado que interopera com clientes COM:
 

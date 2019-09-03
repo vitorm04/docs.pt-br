@@ -4,12 +4,12 @@ description: Saiba mais sobre o Pacote de Compatibilidade do Windows e como voc�
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717889"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202555"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usar o Pacote de Compatibilidade do Windows para fazer a portabilidade pra o .NET Core
 
@@ -43,7 +43,7 @@ Ele fornece cerca de 20.000 APIs, incluindo APIs somente Windows, bem como APIs 
 * Cache do Windows Runtime
 * Serviços Windows
 
-Para obter mais informações, consulte as [especificações do pacote de compatibilidade](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
+Para obter mais informações, confira a [especificação do pacote de compatibilidade](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Introdução
 
@@ -53,7 +53,7 @@ Para obter mais informações, consulte as [especificações do pacote de compat
 
 3. Caso deseje permanecer no Windows, você estará pronto.
 
-4. Se desejar executar o aplicativo .NET Core ou a biblioteca .NET Standard no Linux ou macOS, use o [Analisador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) para localizar o uso de APIs que não funcionarão com multiplataforma.
+4. Se desejar executar o aplicativo .NET Core ou a biblioteca .NET Standard no Linux ou macOS, use o [Analisador de API](../../standard/analyzers/api-analyzer.md) para localizar o uso de APIs que não funcionarão com multiplataforma.
 
 5. Remova os usos dessas APIs, substitua-os por alternativas de multiplataforma ou proteja-os usando uma verificação de plataforma, como:
 

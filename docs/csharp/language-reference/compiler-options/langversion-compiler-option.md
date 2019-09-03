@@ -1,6 +1,6 @@
 ---
 title: -langversion (opções do compilador C#)
-ms.date: 05/14/2018
+ms.date: 08/23/2019
 f1_keywords:
 - /langversion
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f34b5d512a8054b0ab0d3fba54525801eb560143
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602833"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040467"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opções do compilador C#)
 
@@ -46,6 +46,8 @@ Faz com que o compilador aceite somente a sintaxe incluída na especificação d
 |3|O compilador aceita somente a sintaxe incluída em C# 3.0 ou inferior <sup id="TCS3">[CS3](#FCS3)</sup>|
 |ISO-2|O compilador aceita somente a sintaxe incluída em C# ISO/IEC 23270:2006 (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup>|
 |ISO-1|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2003 C# (1.0/1.2) <sup id="TISO1">[ISO1](#FISO1)</sup>|  
+
+A versão da linguagem padrão depende da estrutura de destino do aplicativo e da versão do SDK ou do Visual Studio instalado. Essas regras são definidas no artigo sobre como [Configurar a versão da linguagem](../configure-language-version.md#defaults)
 
 ## <a name="remarks"></a>Comentários
 

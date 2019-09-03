@@ -2,16 +2,18 @@
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais como a versão da linguagem C# é determinada com base em seu projeto e os diferentes valores para os quais você pode ajustá-la manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796537"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040346"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
-O compilador C# determina uma versão da linguagem padrão com base na estrutura de destino ou nas estruturas de seu projeto. Isso ocorre porque a linguagem C# pode ter recursos que dependem de tipos ou de componentes de tempo de execução que não estão disponíveis em todas as implementações do .NET. Com isso, independentemente do destino no qual seu projeto é criado, você obtém a versão da linguagem mais compatível por padrão.
+O compilador do C# mais recente determina uma versão da linguagem padrão com base nas estruturas de destino do projeto. Isso ocorre porque a linguagem C# pode ter recursos que dependem de tipos ou de componentes de tempo de execução que não estão disponíveis em todas as implementações do .NET. Com isso, independentemente do destino no qual seu projeto é criado, você obtém a versão da linguagem mais compatível por padrão.
+
+As regras deste artigo se aplicam ao compilador fornecido com o Visual Studio 2019 ou o SDK do .NET Core 3.0. Os compiladores do C# que fazem parte da instalação do Visual Studio 2017 ou de versões anteriores do SDK do .NET Core são direcionados ao C# 7.0 por padrão. 
 
 ## <a name="defaults"></a>Padrão
 

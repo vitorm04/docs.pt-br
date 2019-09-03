@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327159"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105211"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Como: Portar um aplicativo da área de trabalho do Windows Forms para o .NET Core
 
@@ -18,7 +18,7 @@ Este artigo descreve como portar seu aplicativo da área de trabalho baseado no 
 
 Neste artigo, vários nomes são usados a fim de identificar os tipos de arquivos usados para migração. Ao migrar seu projeto, seus arquivos receberão nomes diferentes; portanto, relacione-os mentalmente aos listados abaixo:
 
-| Arquivo | Descrição |
+| Arquivo | DESCRIÇÃO |
 | ---- | ----------- |
 | **MyApps.sln** | O nome do arquivo da solução. |
 | **MyForms.csproj** | O nome do projeto do Windows Forms do .NET Framework a ser portado. |
@@ -54,7 +54,7 @@ Ao portar um aplicativo do Windows Forms do .NET Framework, há alguns pontos a 
 
 01. O [Pacote de Compatibilidade do Windows][compat-pack] pode ajudar você na migração.
 
-    Algumas APIs disponíveis no .NET Framework não estão disponíveis no .NET Core 3.0. O [Pacote de Compatibilidade do Windows][compat-pack] adiciona muitas dessas APIs e podem ajudar seu aplicativo do Windows Forms a se tornar compatível com o .NET Core.
+    Algumas APIs disponíveis no .NET Framework não estão disponíveis no .NET Core 3.0. O [Pacote de Compatibilidade do Windows][compat-pack] adiciona muitas dessas APIs e pode ajudar o aplicativo do Windows Forms a se tornar compatível com o .NET Core.
 
 01. Atualize os pacotes do NuGet usados pelo seu projeto.
 
@@ -189,7 +189,7 @@ Se você tem um projeto de biblioteca de controles do Windows Forms para portar,
 
 Usando o exemplo da etapa anterior, vamos expandir os projetos e arquivos com que estamos trabalhando.
 
-| Arquivo | Descrição |
+| Arquivo | DESCRIÇÃO |
 | ---- | ----------- |
 | **MyApps.sln** | O nome do arquivo da solução. |
 | **MyControls.csproj** | O nome do projeto de controles do Windows Forms do .NET Framework a ser portado. |
@@ -300,7 +300,7 @@ Depois que o Visual Studio 2019 oferecer suporte ao Designer de Formulários do 
  
 ## <a name="next-steps"></a>Próximas etapas
 
-* Leia mais sobre o [Pacote de Compatibilidade do Windows][compat-pack].
-* Assista a um [vídeo sobre como portar](https://www.youtube.com/watch?v=upVQEUc_KwU) seu projeto do Windows Forms do .NET Framework para o .NET Core.
+- Leia mais sobre o [Pacote de Compatibilidade do Windows][compat-pack].
+- Assista a um [vídeo sobre como portar](https://www.youtube.com/watch?v=upVQEUc_KwU) seu projeto do Windows Forms do .NET Framework para o .NET Core.
 
 [compat-pack]: windows-compat-pack.md

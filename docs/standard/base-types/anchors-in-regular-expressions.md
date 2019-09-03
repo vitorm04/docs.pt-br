@@ -19,17 +19,17 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634743"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046464"
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 <a name="top"></a> Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
   
-|Âncora|Descrição|  
+|Âncora|DESCRIÇÃO|  
 |------------|-----------------|  
 |`^`|Por padrão, a correspondência deve ocorrer no início da cadeia de caracteres. No modo multilinha, deve ocorrer no início da linha. Para saber mais, veja [Início da cadeia de caracteres ou linha](#Start).|  
 |`$`|Por padrão, a correspondência deve ocorrer no fim da cadeia de caracteres ou antes de `\n` no fim da cadeia de caracteres. No modo multilinha, deve ocorrer no fim da linha ou antes de `\n` no fim da linha. Para saber mais, veja [Fim da cadeia de caracteres ou linha](#End).|  
@@ -55,10 +55,10 @@ ms.locfileid: "64634743"
   
  O padrão de expressão regular `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres de entrada (ou o início da linha se o método for chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
-|`((\w+(\s?)){2,}`|Corresponde a um ou mais caracteres de palavra seguidos por zero ou um espaço exatamente duas vezes. Este é o primeiro grupo de captura. Esta expressão também define um segundo e um terceiro grupo de captura: O segundo consiste na palavra capturada e o terceiro consiste nos espaços capturados.|  
+|`((\w+(\s?)){2,}`|Corresponde a um ou mais caracteres de palavra seguidos por zero ou um espaço, pelo menos, duas vezes. Este é o primeiro grupo de captura. Esta expressão também define um segundo e um terceiro grupo de captura: O segundo consiste na palavra capturada e o terceiro consiste no espaço em branco capturado.|  
 |`,\s`|Corresponde a uma vírgula seguida por um caractere de espaço em branco.|  
 |`(\w+\s\w+)`|Corresponde a um ou mais caracteres de palavra seguidos por um espaço, seguido por um ou mais caracteres de palavra. Este é o quarto grupo de captura.|  
 |`,`|Corresponde a uma vírgula.|  
@@ -128,7 +128,7 @@ ms.locfileid: "64634743"
   
  A expressão regular `\G(\w+\s?\w*),?` é interpretada conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\G`|Começa onde a última correspondência terminou.|  
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|  
@@ -150,7 +150,7 @@ ms.locfileid: "64634743"
   
  O padrão da expressão regular é interpretado conforme a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`are`|Corresponde à subcadeia de caracteres “are”.|  
@@ -170,7 +170,7 @@ ms.locfileid: "64634743"
   
  O padrão da expressão regular é interpretado conforme a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\B`|Não começa a correspondência em um limite de palavra.|  
 |`qu`|Corresponde à subcadeia de caracteres “qu”.|  

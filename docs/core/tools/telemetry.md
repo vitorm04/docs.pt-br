@@ -1,133 +1,141 @@
 ---
 title: Telemetria do SDK do .NET Core
 description: Descubra os recursos de telemetria do SDK do .NET Core que coletam informações de uso para análise, quais dados são coletados e como desabilitá-los.
-author: richlander
-ms.date: 06/20/2018
+author: KathleenDollard
+ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397753"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133695"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
-O [SDK do .NET Core](index.md) inclui um [recurso de telemetria](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) que coleta informações de uso. É importante que a Equipe do .NET entenda como as ferramentas são usadas para que possa melhorá-las. Para obter mais informações, consulte [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/) (O que aprendemos com a telemetria do SDK do .NET Core).
+O [SDK do .NET Core](index.md) inclui um recurso de telemetria que coleta dados de uso e informações de exceção em caso de falha da CLI do .NET Core. A CLI do .NET Core é fornecida com o SDK do .NET Core e consiste no conjunto de verbos que permitem criar, testar e publicar os aplicativos .NET Core. É importante que a equipe do .NET entenda como as ferramentas são usadas para poder melhorá-las. As informações sobre falhas ajudam a equipe a resolver problemas e corrigir bugs.
 
-Os dados coletados são anônimos e são publicados de forma agregada para serem usados pela Microsoft e pela comunidade sob a [Licença de Atribuição Creative Commons](https://creativecommons.org/licenses/by/4.0/).
+Os dados coletados são anônimos e publicados em agregação sob a [Licença de Atribuição da Creative Commons](https://creativecommons.org/licenses/by/4.0/). 
 
 ## <a name="scope"></a>Escopo
 
-O comando `dotnet` é usado para inicializar os aplicativos e a CLI do .NET Core. O comando `dotnet` em si não realiza coletas de telemetria. Os comandos da CLI do .NET Core são executados pelo comando `dotnet` para realizar coletas de telemetria.
+`dotnet` tem duas funções: executar aplicativos e executar comandos da CLI. A telemetria *não é coletada* durante o uso de `dotnet` para iniciar um aplicativo no seguinte formato:
 
-A telemetria *não é habilitada* ao usar o comando `dotnet` em si sem nenhum comando anexado:
+- `dotnet [path-to-app].dll`
 
-- `dotnet`
-- `dotnet [path-to-app]`
-
-A telemetria *é habilitada* ao usar os [comandos da CLI do .NET Core](index.md), como:
+A telemetria *é coletada* durante o uso de um dos [comandos da CLI do .NET Core](index.md), como:
 
 - `dotnet build`
 - `dotnet pack`
-- `dotnet restore`
 - `dotnet run`
 
 ## <a name="how-to-opt-out"></a>Como recusar
 
-O recurso de telemetria do SDK do .NET Core é habilitado por padrão. Recuse o recurso de telemetria configurando a variável de ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` como `1` ou `true`.
+O recurso de telemetria do SDK do .NET Core é habilitado por padrão. Para recusar o recurso de telemetria, defina a variável de ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` como `1` ou `true`. 
 
-## <a name="data-points"></a>Pontos de dados
-
-O recurso coleta os seguintes dados:
-
-- Carimbo de data/hora da invocação&#8224;
-- Comando invocado (por exemplo, "build")&#8224;
-- Três endereços IP octet usados para determinar a localização geográfica&#8224;
-- `ExitCode` do comando
-- Executor de teste (para projetos de teste)
-- Sistema operacional e versão&#8224;
-- Se as IDs de tempo de execução estão presentes no nó de tempos de execução
-- Versão do SDK do .NET Core&#8224;
-
-&#8224;Essa métrica é publicada.
-
-A partir do SDK do .NET Core 2.0, novos pontos de dados são coletados:
-
-- opções e argumentos de comando do `dotnet`: somente argumentos e opções conhecidos são coletados (não cadeias de caracteres arbitrárias).
-- Se o SDK está em execução em um contêiner.
-- Estruturas de destino.
-- Endereço MAC com hash: uma ID única e criptograficamente anônima (SHA256) para um computador. Essa métrica não é publicada.
-- Diretório de trabalho atual com hash.
-
-O recurso não coleta dados pessoais como nomes de usuário ou endereços de emails. Ele não examina seu código e não extrai dados de nível de projeto confidenciais, como nome, repositório ou autor. Os dados são enviados com segurança para os servidores Microsoft usando a tecnologia [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/), mantidos em acesso restrito e publicados sob controles de segurança rigorosos dos sistemas do [Armazenamento do Microsoft Azure](https://azure.microsoft.com/services/storage/) seguros.
-
-A equipe do .NET quer saber como as ferramentas são usadas e se elas estão funcionando bem, e não o que você está compilando com as ferramentas. Se você suspeita que a telemetria está coletando dados confidenciais ou que os dados estão sendo manipulados de modo inseguro ou inadequado, registre um problema no repositório [dotnet/cli](https://github.com/dotnet/cli/issues) para investigação.
-
-## <a name="published-data"></a>Dados publicados
-
-Os dados publicados estão disponíveis trimestralmente e são listados em [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md) (Dados de uso do SDK do .NET Core). As colunas de um arquivo de dados são:
-
-- Timestamp
-- Ocorrências&#8224;
-- Comando
-- Geografia&#8225;
-- OSFamily
-- RuntimeID
-- OSVersion
-- SDKVersion
-
-&#8224;A coluna *Ocorrências* exibe uma contagem agregada do uso desse comando para as métricas dessa linha naquele dia.
-
-&#8225;Normalmente, a coluna *Geografia* exibe o nome de um país/região. Em alguns casos, continente da Antártida aparece na coluna, devido ao fato de os pesquisadores usarem o .NET Core na Antártida ou a dados de localização incorretos.
-
-### <a name="example"></a>Exemplo
-
-| Timestamp      | Ocorrências | Comando | Geografia | OSFamily | RuntimeID     | OSVersion | SDKVersion |
-| -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | executar     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
-
-### <a name="datasets"></a>Conjuntos de dados
-
-- [2016 – T3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
-- [2016 – T4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
-- [2017 – T1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
-- [2017 – T2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
-- [2017 – T3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
-- [2017 – T4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
-
-Outros conjuntos de dados são publicados usando um formato de URL padrão. Substitua `<YEAR>` pelo ano e substitua `<QUARTER>` pelo trimestre do ano (use `1`, `2`, `3` ou `4`). Os arquivos estão no formato *TSV* (valores separados por tabulação).
-
-`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
-
-## <a name="license"></a>Licença
-
-A distribuição da Microsoft do .NET Core é licenciada com os [Termos de licença de software da Microsoft: Biblioteca do Microsoft .NET](https://aka.ms/dotnet-core-eula). Para obter detalhes sobre a coleta e o processamento de dados, veja a seção intitulada "Dados".
-
-Os [Pacotes NuGet do .NET](https://www.nuget.org/profiles/dotnetframework) usam essa mesma licença, mas não habilitam a telemetria (consulte o [Escopo](#scope)).
+Uma única entrada de telemetria também é enviada pelo instalador do SDK do .NET Core quando ocorre uma instalação bem-sucedida. Para recusá-la, defina a variável de ambiente `DOTNET_CLI_TELEMETRY_OPTOUT` antes de instalar o SDK do .NET Core.
 
 ## <a name="disclosure"></a>Divulgação
 
-O SDK do .NET Core exibe o texto a seguir quando você executa pela primeira vez um dos [comandos da CLI do .NET Core](index.md) (por exemplo, `dotnet restore`). O texto pode variar um pouco dependendo da versão do SDK que você está executando. Essa experiência de “primeira execução” é como a Microsoft notifica você sobre a coleta de dados.
+O SDK do .NET Core exibe um texto semelhante ao mostrado a seguir quando você executa um dos [comandos da CLI do .NET Core](index.md) pela primeira vez (por exemplo, `dotnet build`). O texto pode variar um pouco dependendo da versão do SDK que você está executando. Essa experiência de “primeira execução” é como a Microsoft notifica você sobre a coleta de dados.
 
 ```console
-Welcome to .NET Core!
----------------------
-Learn more about .NET Core: https://aka.ms/dotnet-docs
-Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
-
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience.
-The data is anonymous and doesn't include command-line arguments.
-The data is collected by Microsoft and shared with the community.
-You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
+## <a name="data-points"></a>Pontos de dados
+
+O recurso de telemetria não coleta dados pessoais, como nomes de usuário ou endereços de email. Ele não examina o código nem extrai dados no nível de projeto, como nome, repositório ou autor. Os dados são enviados com segurança para os servidores Microsoft usando a tecnologia [Azure Monitor](https://azure.microsoft.com/services/monitor/), mantidos em acesso restrito e publicados sob controles de segurança rigorosos por meio dos sistemas seguros do [Armazenamento do Azure](https://azure.microsoft.com/services/storage/).
+
+A proteção de sua privacidade é importante para nós. Se você suspeita que a telemetria está coletando dados confidenciais ou que os dados estão sendo manipulados de modo inseguro ou inadequado, registre um problema no repositório [dotnet/cli](https://github.com/dotnet/cli/issues) ou envie um email para [dotnet@microsoft.com](mailto:dotnet@microsoft.com) para investigação.
+
+O recurso de telemetria coleta os seguintes dados:
+
+| Versões do SDK | Dados |
+|--------------|------|
+| Todos          | Carimbo de data/hora da invocação. |
+| Todos          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
+| Todos          | Três endereços IP de octeto usados para determinar a localização geográfica. |
+| Todos          | Sistema operacional e versão. |
+| Todos          | RID (ID de runtime) em que o SDK está em execução. |
+| Todos          | Versão do SDK do .NET Core. |
+| Todos          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
+| >=2.0        | Opções e argumentos de comando: várias opções e vários argumentos são coletados (não cadeias de caracteres arbitrárias). Confira [Opções coletadas](#collected-options). Com hash após 2.1.300. |
+| >=2.0         | Se o SDK está em execução em um contêiner. |
+| >=2.0         | Estruturas de destino (do evento `TargetFramework`), com hash começando em 2.1. |
+| >=2.0         | Endereço MAC (controle de acesso à mídia) com hash: uma ID exclusiva e criptograficamente anônima (SHA256) para um computador. |
+| >=2.0         | Diretório de trabalho atual com hash. |
+| >=2.0         | Instale o relatório de êxito com o nome de arquivo exe do instalador com hash. |
+| >=2.1.300     | Versão do kernel. |
+| >=2.1.300     | Versão/liberação da Libc. |
+| >=3.0.100     | Indica se a saída foi redirecionada (verdadeiro ou falso). |
+| >=3.0.100     | Em uma falha da CLI/do SDK, o tipo de exceção e seu rastreamento de pilha (somente o código da CLI/do SDK é incluído no rastreamento de pilha enviado). Para obter mais informações, confira [Telemetria de exceção de falha da CLI/do SDK do .NET Core coletada](#net-core-clisdk-crash-exception-telemetry-collected). |
+
+### <a name="collected-options"></a>Opções coletadas
+
+Alguns comandos enviam dados adicionais. Um subconjunto de comandos envia o primeiro argumento:
+
+| Comando               | Dados do primeiro argumento enviados                |
+|-----------------------|-----------------------------------------|
+| `dotnet help <arg>`   | A ajuda do comando está sendo consultada.  |
+| `dotnet new <arg>`    | O nome do modelo (com hash).             |
+| `dotnet add <arg>`    | A palavra `package` ou `reference`.      |
+| `dotnet remove <arg>` | A palavra `package` ou `reference`.      |
+| `dotnet list <arg>`   | A palavra `package` ou `reference`.      |
+| `dotnet sln <arg>`    | A palavra `add`, `list` ou `remove`.    |
+| `dotnet nuget <arg>`  | A palavra `delete`, `locals` ou `push`. |
+
+Um subconjunto de comandos envia as opções selecionadas se elas são usadas, juntamente com seus valores:
+
+| Opção                  | Comandos                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------|
+| `--verbosity`           | Todos os comandos                                                                                   |
+| `--language`            | `dotnet new`                                                                                   |
+| `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
+| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
+| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
+| `--platform`            | `dotnet vstest`                                                                                |
+| `--logger`              | `dotnet vstest`                                                                                |
+| `--sdk-package-version` | `dotnet migrate`                                                                               |
+
+Exceto para `--verbosity` e `--sdk-package-version`, todos os outros valores são codificados no SDK 2.1.100 do .NET Core em diante.
+
+## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>Telemetria de exceção de falha do SDK/da CLI do .NET Core coletada
+
+Se a CLI/o SDK do .NET Core falhar, o nome da exceção e o rastreamento de pilha do código da CLI/do SDK serão coletados. Essas informações são coletadas para avaliar problemas e melhorar a qualidade do SDK e da CLI do .NET Core. Este artigo fornece informações sobre os dados que coletamos. Ele também fornece dicas sobre como os usuários que criam sua própria versão do SDK do .NET Core podem evitar a divulgação não intencional de informações pessoais ou confidenciais.
+
+### <a name="types-of-collected-data"></a>Tipos de dados coletados
+
+A CLI do .NET Core coleta informações apenas das exceções da CLI/do SDK, não das exceções no aplicativo. Os dados coletados contêm o nome da exceção e o rastreamento de pilha. Esse rastreamento de pilha é do código da CLI/do SDK.
+
+O seguinte exemplo mostra os tipos de dados coletados:
+
+```
+System.IO.IOException
+at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+at System.IO.StreamWriter.Write(Char[] buffer)
+at System.IO.TextWriter.WriteLine()
+at System.IO.TextWriter.SyncTextWriter.WriteLine()
+at Microsoft.DotNet.Cli.Utils.Reporter.WriteLine()
+at Microsoft.DotNet.Tools.Run.RunCommand.EnsureProjectIsBuilt()
+at Microsoft.DotNet.Tools.Run.RunCommand.Execute()
+at Microsoft.DotNet.Tools.Run.RunCommand.Run(String[] args)
+at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryClient)
+at Microsoft.DotNet.Cli.Program.Main(String[] args)
+```
+
+### <a name="avoid-inadvertent-disclosure-information"></a>Evitar a divulgação não intencional de informações
+
+Os colaboradores do .NET Core e qualquer outra pessoa que estejam executando uma versão do SDK do .NET Core criada por conta própria devem considerar o caminho para o código-fonte do SDK. Se ocorrer uma falha durante o uso de um SDK do .NET Core que seja um build de depuração personalizado ou configurado com arquivos de símbolo de build personalizado, o caminho do arquivo de origem do SDK do computador de build será coletado como parte do rastreamento de pilha e não terá hash.
+
+Por isso, os builds personalizados do SDK do .NET Core não devem estar localizados em diretórios cujos nomes de caminho exponham informações pessoais ou confidenciais. 
+
 ## <a name="see-also"></a>Consulte também
 
-- [O que aprendemos com a telemetria do SDK do .NET Core](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
+- [Telemetria da CLI do .NET Core – dados do T2 de 2019](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
 - [Fonte de referência de telemetria (repositório dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
-- [Dados de uso do SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

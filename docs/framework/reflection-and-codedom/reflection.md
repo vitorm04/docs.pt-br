@@ -1,8 +1,8 @@
 ---
-title: Reflexão no .NET Framework
+title: Reflexão no .NET
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940031"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133751"
 ---
-# <a name="reflection-in-the-net-framework"></a>Reflexão no .NET Framework
+# <a name="reflection-in-net"></a>Reflexão no .NET
 As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../app-domains/assemblies-in-the-common-language-runtime.md) carregados e os tipos definidos neles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) e [tipos de valor](../../csharp/language-reference/keywords/value-types.md). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
   
  O carregador [Common Language Runtime](../../standard/clr.md) gerencia os [domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
@@ -62,7 +62,7 @@ As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Ty
  Há outros usos para reflexão. Os compiladores de linguagens como o JScript usam reflexão para criar tabelas de símbolos. As classes no namespace <xref:System.Runtime.Serialization> usam reflexão para acessar dados e para determinar quais campos persistir. As classes do namespace <xref:System.Runtime.Remoting> usa a reflexão indiretamente por meio da serialização.  
   
 ## <a name="runtime-types-in-reflection"></a>Tipos do tempo de execução na reflexão  
- A reflexão fornece classes, como <xref:System.Type> e <xref:System.Reflection.MethodInfo>, para representar tipos, membros, parâmetros e outras entidades de código. No entanto, quando você usa a reflexão não trabalha diretamente com essas classes, a maioria das quais é abstrata (`MustInherit` no Visual Basic). Em vez disso, você trabalha com tipos fornecidos pelo CLR (Common Language Runtime).  
+ A reflexão fornece classes, como <xref:System.Type> e <xref:System.Reflection.MethodInfo>, para representar tipos, membros, parâmetros e outras entidades de código. No entanto, ao usar a reflexão, você não trabalha diretamente com essas classes, a maioria das quais é abstrata (`MustInherit` no Visual Basic). Em vez disso, você trabalha com tipos fornecidos pelo CLR (Common Language Runtime).  
   
  Por exemplo, quando você usa o operador `typeof` C# (`GetType` no Visual Basic) para obter um objeto <xref:System.Type>, o objeto é na verdade um `RuntimeType`. `RuntimeType` deriva de <xref:System.Type> e fornece implementações de todos os métodos abstratos.  
   

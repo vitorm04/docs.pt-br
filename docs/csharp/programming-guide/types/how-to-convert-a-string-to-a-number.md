@@ -8,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8b2e6fdc6248ca65213ea83942d792f983bd3b3b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588386"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133714"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como: converter uma cadeia de caracteres em um número (Guia de Programação em C#)
 
@@ -59,4 +59,4 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
 
 - [Tipos](./index.md)
 - [Como: determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [.NET Framework 4 Formatting Utility](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
