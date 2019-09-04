@@ -3,12 +3,12 @@ title: Atualizar interfaces com segurança usando membros de interface padrão e
 description: Este tutorial avançado explora como adicionar novos recursos com segurança às definições de interface existentes sem interromper todas as classes e structs que implementam essa interface.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971431"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252912"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Atualizar interfaces com membros da interface padrão no C# 8.0
 
@@ -37,7 +37,7 @@ Eles definiram uma segunda interface que representava um pedido:
 
 Dessas interfaces, a equipe poderia criar uma biblioteca para os usuários criarem uma experiência melhor para os clientes. A meta era criar um relacionamento mais profundo com os clientes existentes e melhorar o relacionamento com clientes novos.
 
-Agora é hora de atualizar a biblioteca para a próxima versão. Um dos recursos solicitados habilitará um desconto de fidelidade para os clientes que tiverem muitos pedidos. Esse novo desconto de fidelidade é aplicado sempre que um cliente faz um pedido. O desconto específico é uma propriedade de cada cliente. Cada implementação de ICustomer pode definir regras diferentes para o desconto de fidelidade. 
+Agora é hora de atualizar a biblioteca para a próxima versão. Um dos recursos solicitados habilitará um desconto de fidelidade para os clientes que tiverem muitos pedidos. Esse novo desconto de fidelidade é aplicado sempre que um cliente faz um pedido. O desconto específico é uma propriedade de cada cliente. Cada implementação do `ICustomer` pode definir regras diferentes para o desconto de fidelidade. 
 
 A forma mais natural de adicionar essa funcionalidade é melhorar a interface `ICustomer` com um método para aplicar qualquer desconto de fidelidade. Essa sugestão de design causou preocupação entre desenvolvedores experientes: "Interfaces são imutáveis depois que são lançadas! Esta é uma alteração da falha!" O C# 8.0 adiciona *implementações de interface padrão* para interfaces de atualização. Os autores de biblioteca podem adicionar novos membros à interface e fornecer uma implementação padrão para esses membros.
 
@@ -47,7 +47,7 @@ Implementações de interface padrão permitem que os desenvolvedores atualizem 
 
 A equipe concordou na implementação padrão mais provável: um desconto de fidelidade para os clientes.
 
-A atualização deve fornecer a funcionalidade para definir duas propriedades: o número de pedidos necessários para ser qualificado para o desconto e o percentual de desconto. Isso se constitui em um cenário perfeito para membros de interface padrão. Você pode adicionar um método à interface ICustomer e fornecer a implementação mais provável. Todas as implementações novas e existentes podem usar a implementação padrão ou fornecer as suas próprias.
+A atualização deve fornecer a funcionalidade para definir duas propriedades: o número de pedidos necessários para ser qualificado para o desconto e o percentual de desconto. Isso se constitui em um cenário perfeito para membros de interface padrão. Você pode adicionar um método à `ICustomer` interface e fornecer a implementação mais provável. Todas as implementações novas e existentes podem usar a implementação padrão ou fornecer as suas próprias.
 
 Primeiro, adicione o novo método à implementação:
 
@@ -69,7 +69,7 @@ Esse é um bom início. Porém, a implementação padrão é restritiva demais. 
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-Há vários recursos novos de linguagem mostrados nesse pequeno fragmento de código. Agora as interfaces podem incluir membros estáticos, incluindo campos e métodos. Modificadores de acesso diferentes também estão habilitados. Os campos adicionais são particulares, o novo método é público. Qualquer dos modificadores são permitidos em membros de interface.
+Há muitos novos recursos de linguagem mostrados no fragmento de código pequeno. Agora as interfaces podem incluir membros estáticos, incluindo campos e métodos. Modificadores de acesso diferentes também estão habilitados. Os campos adicionais são particulares, o novo método é público. Qualquer dos modificadores são permitidos em membros de interface.
 
 Aplicativos que usam a fórmula geral para calcular o desconto de fidelidade, mas que usam parâmetros diferentes, não precisam fornecer uma implementação personalizada; eles podem definir os argumentos por meio de um método estático. Por exemplo, o código a seguir define um "agradecimento ao cliente" que recompensa qualquer cliente com mais de um mês de associação:
 

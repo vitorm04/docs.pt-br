@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988427"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252984"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -107,7 +107,7 @@ Para mais informações sobre formatação de tipos .NET, confira [Tipos de form
 ## <a name="null-strings-and-empty-strings"></a>Cadeias de caracteres nulas e cadeias de caracteres vazias  
  Uma cadeia de caracteres vazia é uma instância de um objeto <xref:System.String?displayProperty=nameWithType> que contém zero caractere. As cadeias de caracteres vazias geralmente são usadas em vários cenários de programação para representar um campo de texto em branco. Você pode chamar métodos em cadeias de caracteres vazias porque eles são objetos <xref:System.String?displayProperty=nameWithType> válidos. As cadeias de caracteres vazias são inicializadas da seguinte maneira:  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   
@@ -129,7 +129,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Como: modificar o conteúdo de uma cadeia de caracteres](../../how-to/modify-string-contents.md)|Ilustra as técnicas para transformar cadeias de caracteres e modificar o conteúdo delas.|  
 |[Como: comparar cadeias de caracteres](../../how-to/compare-strings.md)|Mostra como executar comparações ordinais e específicas da cultura de cadeias de caracteres.|  

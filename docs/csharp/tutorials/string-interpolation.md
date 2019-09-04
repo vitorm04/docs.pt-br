@@ -2,13 +2,13 @@
 title: Interpolação de cadeias de caracteres em C#
 description: Saiba como incluir resultados de expressão formatada em uma cadeia de caracteres de resultado em C# com a interpolação de cadeia de caracteres.
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251022"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252920"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeias de caracteres em C\#
 
@@ -26,7 +26,7 @@ Para identificar uma literal de cadeia de caracteres como uma cadeia de caracter
 
 Como mostra o exemplo, você inclui uma expressão em uma cadeia de caracteres interpolada colocando-a com chaves:
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ Cadeia de caracteres interpoladas são compatíveis com todos os recursos do rec
 
 Especifique uma cadeia de caracteres de formato compatível com o tipo do resultado de expressão seguindo a expressão de interpolação com dois-pontos (":") e a cadeia de caracteres de formato:
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ Para obter mais informações, consulte a seção [Componente de cadeia de carac
 
 Você especifica a largura mínima do campo e o alinhamento do resultado de expressão formatada seguindo a expressão de interpolação com uma vírgula (",") e a expressão de constante:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ Se o valor *alignment* for positivo, o resultado da expressão formatada será a
 
 Caso precise especificar o alinhamento e uma cadeia de caracteres de formato, comece com o componente de alinhamento:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ Para obter mais informações, consulte a seção [Componente de alinhamento](..
 
 Cadeias de caracteres interpoladas dão suporte a todas as sequências de escape que podem ser usadas em literais de cadeia de caracteres comuns. Para obter mais informações, consulte [Sequências de escape de cadeia de caracteres](../programming-guide/strings/index.md#string-escape-sequences).
 
-Para interpretar sequências de escape literalmente, use um literal de cadeia de caracteres [textual](../language-reference/tokens/verbatim.md). Uma cadeia de caracteres interpolada textual começa com o caractere `$` seguido pelo caractere `@`.
+Para interpretar sequências de escape literalmente, use um literal de cadeia de caracteres [textual](../language-reference/tokens/verbatim.md). Uma cadeia de `@` caracteres textual interpolada começa `$` com o caractere seguido pelo caractere. A partir C# do 8,0, você pode usar `$` os `@` tokens e em qualquer ordem `$@"..."` : `@$"..."` e são cadeias de caracteres idênticas interpoladas válidas.
 
 Para incluir uma chave, "{" ou "}", em uma cadeia de caracteres de resultado, use duas chaves, "{{" ou "}}". Para obter mais informações, consulte a seção [Chaves de escape](../../standard/base-types/composite-formatting.md#escaping-braces) do tópico [Formatação composta](../../standard/base-types/composite-formatting.md).
 

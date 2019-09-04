@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
-ms.translationtype: HT
+ms.openlocfilehash: 82dc1e36ae5a0eede7099c8e13ac9a2393bbb904
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026036"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253978"
 ---
 # <a name="formatting-types-in-net"></a>Tipos de formatação no .NET
 

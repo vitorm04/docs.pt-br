@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972193"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254064"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF
 
@@ -143,7 +143,7 @@ Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.
 
 1. Defina como "`ExpenseIt - Home`". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Defina os `DesignHeight` valores `DesignWidth` de elemento e como 300 pixels.
+1. Defina o `DesignHeight` para 350 pixels e o `DesignWidth` para 500 pixels.
 
     O XAML agora aparece da seguinte maneira para Visual Basic:
 
@@ -184,7 +184,7 @@ Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.
 
 1. Defina como "`ExpenseIt - View Expense`". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Defina os `DesignHeight` valores `DesignWidth` de elemento e como 300 pixels.
+1. Defina o `DesignHeight` para 350 pixels e o `DesignWidth` para 500 pixels. 
 
     *ExpenseReportPage. XAML* agora é semelhante ao seguinte no Visual Basic:
 

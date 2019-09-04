@@ -2,12 +2,12 @@
 title: 'Como: Unir duas coleções (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 82083a24da9a5356a8ff8e8430b61bb5d41f7c72
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593202"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253572"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Como: Unir duas coleções (LINQ to XML) (C#)
 Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referência a outro elemento ou atributo. Por exemplo, o documento XML [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) contém uma lista de clientes e uma lista de ordens. Cada elemento `Customer` contém um atributo `CustomerID`. Cada elemento `Order` contém um atributo `CustomerID`. O elemento `CustomerID` em cada pedido faz referência ao atributo `CustomerID` em um cliente.  
@@ -76,7 +76,7 @@ if (!errors)
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

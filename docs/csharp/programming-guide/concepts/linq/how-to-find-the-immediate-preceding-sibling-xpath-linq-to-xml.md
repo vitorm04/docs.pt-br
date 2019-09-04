@@ -2,12 +2,12 @@
 title: 'Como: Localizar o irmão imediatamente anterior (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 7d1d49f262b13f769ab1d28de8b75d214d8abe64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: bc0a3250cf1f56ebf9a367f6472be8f3230cee5a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486720"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253627"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Como: Localizar o irmão imediatamente anterior (XPath-LINQ to XML) (C#)
 Às vezes você deseja encontrar o irmão anterior imediato a um nó. Devido a diferença na semântica de predicados posicionais para os eixos anterior irmãos no XPath ao contrário de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], essa é uma das comparações mais interessantes.  
@@ -47,7 +47,7 @@ Console.WriteLine(el1);
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```output  
 Results are identical  
 <Child3 />  
 ```  

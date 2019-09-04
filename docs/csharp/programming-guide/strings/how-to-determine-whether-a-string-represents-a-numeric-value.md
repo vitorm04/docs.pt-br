@@ -7,17 +7,17 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8fc5051893882a6dbdbb4c9097949794d4430a93
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921775"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252946"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Como: determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)
 Para determinar se uma cadeia de caracteres é uma representação válida de um tipo numérico especificado, use o método estático `TryParse` implementado por todos os tipos numéricos primitivos e também por tipos como <xref:System.DateTime> e <xref:System.Net.IPAddress>. O exemplo a seguir mostra como determinar se "108" é um [int](../../language-reference/builtin-types/integral-numeric-types.md) válido.  
   
-```  
+```csharp  
 int i = 0;   
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  

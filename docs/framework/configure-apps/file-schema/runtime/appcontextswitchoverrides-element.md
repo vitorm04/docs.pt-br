@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7fe354a929aad93ba4d4a6ea3cb43b2607be1f05
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920919"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252877"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Elemento de > AppContextSwitchOverrides
 Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.  
   
- \<configuration>  
- \<runtime>  
-\<AppContextSwitchOverrides>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<AppContextSwitchOverrides>**  
   
 ## <a name="syntax"></a>Sintaxe  
   

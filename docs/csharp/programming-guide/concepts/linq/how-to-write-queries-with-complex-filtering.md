@@ -2,12 +2,12 @@
 title: 'Como: Escrever consultas com filtragem complexa (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 3fe62b4a3c78c61de28311adf3feec1a613ff167
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7759a02c1b9ef0ae0c1af4bfb2600543b21cdf0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592177"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253182"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Como: Escrever consultas com filtragem complexa (C#)
 Muitas vezes, você deseja escrever consultas LINQ to XML com filtros complexos. Por exemplo, você pode ter que localizar todos os elementos que têm um elemento filho com um nome e um valor específicos. Este tópico dá um exemplo de como escrever uma consulta com filtragem complexa.  
@@ -37,7 +37,7 @@ foreach (XElement el in purchaseOrders)
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 99505  
 ```  
   
@@ -65,7 +65,7 @@ foreach (XElement el in purchaseOrders)
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 99505  
 ```  
   

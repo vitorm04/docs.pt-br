@@ -2,12 +2,12 @@
 title: 'Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 14f9c9917aedbc0beeeddae789b835613d1badc8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593166"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253546"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)
 
@@ -17,7 +17,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
   
 1. Copie as seguintes linhas para um arquivo chamado *scores.csv* e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
   
 2. Copie as seguintes linhas para um arquivo chamado *names.csv* e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  
