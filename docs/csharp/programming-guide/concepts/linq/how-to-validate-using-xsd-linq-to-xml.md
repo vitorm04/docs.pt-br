@@ -2,12 +2,12 @@
 title: 'Como: Validar usando o XSD (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 47704a5aa06bb837c9d76516762330e4aa24e074
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0e35e12efa9530fd5bbcf7a21e86ed03c1325bc4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592233"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253251"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Como: Validar usando o XSD (LINQ to XML) (C#)
 O namespace <xref:System.Xml.Schema> contém métodos de extensão que facilitam a validação de uma árvore XML em um arquivo XSD. Para obter mais informações, consulte a documentação do método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
@@ -66,7 +66,7 @@ Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```output  
 Validating doc1  
 doc1 validated  
   
@@ -111,7 +111,7 @@ Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```output  
 Attempting to validate  
 custOrdDoc validated  
   

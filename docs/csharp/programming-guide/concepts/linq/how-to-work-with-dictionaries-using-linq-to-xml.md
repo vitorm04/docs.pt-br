@@ -2,12 +2,12 @@
 title: 'Como: Trabalhar com dicionários usando o LINQ to XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 55512e6039010d74d390c805c119935c436f9834
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484720"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253233"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Como: Trabalhar com dicionários usando o LINQ to XML (C#)
 É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.  
@@ -59,10 +59,9 @@ foreach (string str in dict.Keys)
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
 Child4:Value4  
 ```  
-  

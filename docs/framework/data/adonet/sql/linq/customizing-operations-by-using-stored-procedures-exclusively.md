@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 61230ffc5cd055ee64de9d519cdfb4d76c856ca3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a242ecdc774d67721aee640e75847317c1b815d6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038045"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247541"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Personalizando operações usando procedimentos armazenados exclusivamente
 Acesso a dados usando somente procedimentos armazenados é um cenário comum.  
@@ -18,7 +18,7 @@ Acesso a dados usando somente procedimentos armazenados é um cenário comum.
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Você pode modificar o exemplo fornecido nos [personalizando operações por usando procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) , substituindo mesmo a primeira consulta (que faz com que a execução dinâmico SQL) por uma chamada de método que encapsula um procedimento armazenado.  
+ Você pode modificar o exemplo fornecido em [Personalizando operações usando procedimentos armazenados](customizing-operations-by-using-stored-procedures.md) substituindo até mesmo a primeira consulta (o que causa a execução SQL dinâmica) com uma chamada de método que encapsula um procedimento armazenado.  
   
  Suponha `CustomersByCity` é o método, como no exemplo a seguir.  
   
@@ -33,4 +33,4 @@ Acesso a dados usando somente procedimentos armazenados é um cenário comum.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Responsabilidades do desenvolvedor em substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [Responsabilidades do desenvolvedor em substituir o comportamento padrão](responsibilities-of-the-developer-in-overriding-default-behavior.md)

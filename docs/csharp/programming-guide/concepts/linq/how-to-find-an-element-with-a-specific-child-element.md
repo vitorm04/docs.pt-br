@@ -2,12 +2,12 @@
 title: 'Como: Localizar um elemento com um elemento filho específico (C#)'
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 80539c7ccd21bc38967479d7b724e6f3361d24ac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593553"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253748"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Como: Localizar um elemento com um elemento filho específico (C#)
 Este tópico mostra como localizar determinado elemento que tem um elemento filho com um valor específico.  
@@ -29,7 +29,7 @@ foreach (XElement el in tests)
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 0002  
 0006  
 ```  
@@ -52,7 +52,7 @@ foreach (XElement el in tests)
   
  Esse código gera a seguinte saída:  
   
-```  
+```output  
 0002  
 0006  
 ```  

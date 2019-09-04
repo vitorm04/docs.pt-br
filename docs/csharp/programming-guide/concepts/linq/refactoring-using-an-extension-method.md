@@ -2,12 +2,12 @@
 title: Refatoração usando um método de extensão (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591304"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253095"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refatoração usando um método de extensão (C#)
 Este exemplo se baseia no exemplo anterior, [Recuperando o texto dos parágrafos (C#)](./retrieving-the-text-of-the-paragraphs.md), refatorando a concatenação de cadeias de caracteres usando uma função pura implementada como um método de extensão.  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```output  
 onetwothree  
 one:two:three:  
 123  
@@ -221,7 +221,7 @@ class Program
   
  Este exemplo produz a seguinte saída quando aplicado ao documento descrito em [Criando o documento do Office Open XML de origem (C#)](./creating-the-source-office-open-xml-document.md).  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

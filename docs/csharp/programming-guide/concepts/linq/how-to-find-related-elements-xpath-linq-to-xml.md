@@ -2,12 +2,12 @@
 title: 'Como: Localizar elementos relacionados (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 63ecdc2bf3c3415c7355b1ac06c710d21accefec
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2aa3f6c6c2c2ac327ff2dffc206cdd294e12d7a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593398"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253637"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Como: Localizar elementos relacionados (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter um elemento que seleciona em um atributo que é chamada pelo valor de outro elemento.  
@@ -66,7 +66,7 @@ Console.WriteLine(customer1);
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```output  
 Results are identical  
 <Customer CustomerID="HUNGC">  
   <CompanyName>Hungry Coyote Import Store</CompanyName>  

@@ -2,12 +2,12 @@
 title: Consultas estaticamente compiladas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 9f10d93e0e5add02dbfb8c8867031ce68e58c0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924153"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253026"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Consultas estaticamente compiladas (LINQ to XML) (C#)
 Um de desempenho mais importante beneficia LINQ to XML, diferentemente de <xref:System.Xml.XmlDocument>, é que as consultas em LINQ to XML são compiladas estaticamente, enquanto as consultas XPath devem ser interpretado em tempo de execução. Esse recurso é interna a LINQ to XML, portanto você não precisa executar etapas adicionais para aproveitá-lo, mas é útil entender a diferença ao escolher entre as duas tecnologias. Este tópico explica a diferença.  
@@ -15,11 +15,7 @@ Um de desempenho mais importante beneficia LINQ to XML, diferentemente de <xref:
 ## <a name="statically-compiled-queries-vs-xpath"></a>Consultas estaticamente compilado contra. XPath  
  O exemplo a seguir mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
   
- O seguinte é a expressão XPath equivalente:  
-  
-```  
-//Address[@Type='Shipping']  
-```  
+ A seguir está a expressão XPath equivalente:`//Address[@Type='Shipping']`
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -92,4 +88,3 @@ reader.Close();
 - Itera através de nós, selecionando adequadamente os nós para o conjunto de resultados com base na avaliação da expressão.  
   
  Este é significativamente mais do que o trabalho feito pela consulta correspondente LINQ to XML. A diferença desempenho específico variam para tipos diferentes de consultas, mas em geral LINQ to XML consultas menos trabalho e, portanto, executam melhor do que as expressões XPath de avaliação usando <xref:System.Xml.XmlDocument>.  
-  

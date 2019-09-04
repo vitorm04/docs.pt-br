@@ -4,12 +4,12 @@ description: Neste tutorial, você aprenderá como colocar em contêiner um apli
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331047"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253959"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Colocar em contêiner um aplicativo .NET Core
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 A árvore de pastas terá aparência semelhante à seguinte:
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ O comando `FROM` instrui o Docker a extrair a imagem marcada **2.2** do reposit�
 
 Salve o arquivo *Dockerfile*. A estrutura de diretório da pasta de trabalho deve ser semelhante à mostrada a seguir. Algumas das pastas e arquivos de nível mais profundo foram eliminados para economizar espaço no artigo:
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 O Docker fornece o comando `docker run` para criar e executar o contêiner como um único comando. Este comando elimina a necessidade de executar `docker create` e, em seguida, `docker start`. Você também pode definir esse comando para excluir automaticamente o contêiner quando o contêiner for interrompido. Por exemplo, use `docker run -it --rm` para fazer duas coisas: primeiro, use automaticamente o terminal atual para se conectar ao contêiner e, quando o contêiner terminar, remova-o:
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 Com `docker run -it`, o comando <kbd>Ctrl+C</kbd> interromperá o processo em execução no contêiner, que, por sua vez, interrompe o contêiner. Como o parâmetro `--rm` foi fornecido, o contêiner é automaticamente excluído quando o processo é interrompido. Verifique se ele não existe:
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```

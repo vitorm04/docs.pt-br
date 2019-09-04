@@ -2,12 +2,12 @@
 title: 'Como: Classificar elementos em várias chaves (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13444214efb2d7c4bcfec712d565d114abced204
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592449"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253314"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Como: Classificar elementos em várias chaves (C#)
 
@@ -38,7 +38,7 @@ foreach (var r in sortedElements)
 
 Esse código gera a seguinte saída:
 
-```
+```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997
@@ -90,7 +90,7 @@ foreach (var r in sortedElements)
 
 Esse código gera a seguinte saída:
 
-```
+```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997

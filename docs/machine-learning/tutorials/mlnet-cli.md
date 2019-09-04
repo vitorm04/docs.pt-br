@@ -1,19 +1,19 @@
 ---
-title: Geração automática de um classificador binário usando a CLI do ML.NET
+title: Analisar o sentimentos usando a CLI do ML.NET
 description: Gerar automaticamente um modelo de ML e o código C# relacionado de um conjunto de dados de exemplo
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107271"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254153"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Gerar automaticamente um classificador binário usando a CLI
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar o sentimentos usando a CLI do ML.NET
 
 Saiba como usar a CLI do ML.NET para gerar automaticamente um modelo do ML.NET e o código C# subjacente. Você fornece o conjunto de dados e a tarefa de aprendizado de máquina que deseja implementar e a CLI usa o mecanismo de AutoML para criar o código-fonte de implantação e geração de modelo, bem como o modelo binário.
 

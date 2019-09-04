@@ -6,28 +6,27 @@ f1_keywords:
 - vb.AutoImplementedProperty
 helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
-- properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f2e25c7bcd3556f93dfedee7aa8e49bb14888123
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649668"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254027"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriedades autoimplementadas (Visual Basic)
 *Propriedades autoimplementadas* permitem que você especifique uma propriedade de uma classe rapidamente sem a necessidade de escrever código para as propriedades `Get` e `Set` . uando você escreve código criando uma propriedade implementada automaticamente, o compilador do Visual Basic cria automaticamente um campo *private* para armazenar a variável de propriedade, além de criar os procedimentos `Get` e `Set` associados.  
   
- Com Propriedades autoimplementadas, uma propriedade, incluindo um valor padrão, pode ser declarada em uma única linha. O exemplo a seguir mostra três declarações de propriedade.  
+ Com propriedades implementadas automaticamente, uma propriedade, incluindo um valor padrão, pode ser declarada em uma única linha. O exemplo a seguir mostra três declarações de propriedade.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
- Uma propriedade implementada automaticamente é equivalente a uma propriedade para o qual o valor da propriedade é armazenado em um campo particular. O exemplo de código a seguir mostra uma propriedade implementada automaticamente.  
+ Uma propriedade implementada automaticamente é equivalente a uma propriedade para a qual o valor da propriedade é armazenado em um campo particular. O exemplo de código a seguir mostra uma propriedade implementada automaticamente.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
- O exemplo de código a seguir mostra o código equivalente no exemplo anterior da propriedade implementada automaticamente.  
+ O exemplo de código a seguir mostra o código equivalente para o exemplo de propriedade implementada automaticamente anterior.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
@@ -45,57 +44,57 @@ Class Customer
 End Class  
 ```  
   
- Você pode atribuir a propriedade com expressões de inicialização, conforme mostrado no exemplo, ou você pode atribuir às propriedades do construtor do tipo recipiente.  Você pode atribuir a campos de suporte das propriedades somente leitura a qualquer momento.  
+ Você pode atribuir a propriedade com expressões de inicialização, conforme mostrado no exemplo, ou você pode atribuir às propriedades do construtor do tipo recipiente.  Você pode atribuir aos campos de backup das propriedades ReadOnly a qualquer momento.  
   
-## <a name="backing-field"></a>Campo de suporte  
+## <a name="backing-field"></a>Campo de apoio  
  Quando você declara uma propriedade implementada automaticamente, o Visual Basic cria automaticamente um campo particular oculto chamado o *campo de support* para conter o valor da propriedade. O nome do campo de suporte é o nome da propriedade implementada automaticamente precedido por um sublinhado (_). Por exemplo, se você declarar uma propriedade implementada automaticamente denominada `ID`, o campo de suporte é denominado `_ID`. Se você incluir um membro da sua classe que também é chamado `_ID`, isso produzirá um conflito de nomeação e o Visual Basic vai relatar um erro de compilação.  
   
  O campo de suporte também tem as seguintes características:  
   
-- O modificador de acesso para o campo de suporte é sempre `Private`, mesmo quando a própria propriedade tem um nível de acesso diferentes, como `Public`.  
+- O modificador de acesso para o campo de backup `Private`é sempre, mesmo quando a própria propriedade tem um nível de acesso diferente `Public`, como.  
   
-- Se a propriedade é marcada como `Shared`, o campo de suporte também é compartilhado.  
+- Se a propriedade estiver marcada como `Shared`, o campo de backup também será compartilhado.  
   
-- Atributos especificados para a propriedade não se aplicam ao campo de suporte.  
+- Os atributos especificados para a propriedade não se aplicam ao campo de backup.  
   
 - O campo de suporte pode ser acessado do código dentro da classe e de ferramentas de depuração, como a janela de inspeção. No entanto, o campo de suporte não aparece na lista de conclusão do IntelliSense word.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inicializando uma propriedade implementada automaticamente  
- Qualquer expressão que pode ser usada para inicializar um campo é válida para a inicialização de uma propriedade implementada automaticamente. Quando você inicializa uma propriedade implementada automaticamente, a expressão é avaliada e passada para o `Set` procedimento para a propriedade. Os exemplos de código a seguir mostram algumas propriedades autoimplementadas que incluem valores iniciais.  
+ Qualquer expressão que pode ser usada para inicializar um campo é válida para a inicialização de uma propriedade implementada automaticamente. Quando você Inicializa uma propriedade implementada automaticamente, a expressão é avaliada e passada para `Set` o procedimento para a propriedade. Os exemplos de código a seguir mostram algumas propriedades implementadas automaticamente que incluem valores iniciais.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
- Você não pode inicializar uma propriedade autoimplementada que é um membro de um `Interface`, ou que está marcado como `MustOverride`.  
+ Não é possível inicializar uma propriedade implementada automaticamente que seja membro de um `Interface`ou um que esteja marcado como `MustOverride`.  
   
- Quando você declara uma propriedade implementada automaticamente como um membro de um `Structure`, você só pode inicializar a propriedade implementada automaticamente se ele está marcado como `Shared`.  
+ Ao declarar uma propriedade autoimplementada como membro de um `Structure`, você só poderá inicializar a propriedade autoimplementada se ela estiver marcada como. `Shared`  
   
- Quando você declara uma propriedade implementada automaticamente como uma matriz, você não pode especificar os limites de matriz explícita. No entanto, você pode fornecer um valor usando um inicializador de matriz, conforme mostrado nos exemplos a seguir.  
+ Quando você declara uma propriedade implementada automaticamente como uma matriz, não é possível especificar limites de matriz explícitos. No entanto, você pode fornecer um valor usando um inicializador de matriz, conforme mostrado nos exemplos a seguir.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
-## <a name="property-definitions-that-require-standard-syntax"></a>Definições de propriedade que exigem a sintaxe padrão  
- Propriedades autoimplementadas são convenientes e dar suporte a muitos cenários de programação. No entanto, há situações em que você não pode usar uma propriedade implementada automaticamente e em vez disso, deve usar o padrão, ou *expandido*, sintaxe de propriedade.  
+## <a name="property-definitions-that-require-standard-syntax"></a>Definições de propriedade que exigem sintaxe padrão  
+ As propriedades implementadas automaticamente são convenientes e dão suporte a muitos cenários de programação. No entanto, há situações em que você não pode usar uma propriedade autoimplementada e, em vez disso, usar a sintaxe de propriedade Standard ou *Expanded*.  
   
- Você precisa usar a sintaxe de definição de propriedade expandido se você quiser fazer qualquer um dos seguintes:  
+ Você precisa usar a sintaxe de definição de propriedade expandida se desejar fazer um dos seguintes:  
   
-- Adicione código para o `Get` ou `Set` procedimento de uma propriedade, como o código para validar valores de entrada no `Set` procedimento. Por exemplo, você talvez queira verificar se uma cadeia de caracteres que representa um número de telefone contém o número necessário de numerais antes de definir o valor da propriedade.  
+- Adicione código ao `Get` procedimento ou `Set` de uma propriedade, como código para `Set` validar os valores de entrada no procedimento. Por exemplo, talvez você queira verificar se uma cadeia de caracteres que representa um número de telefone contém o número necessário de numerais antes de definir o valor da propriedade.  
   
-- Especificar a acessibilidade diferente para o `Get` e `Set` procedimento. Por exemplo, você talvez queira fazer a `Set` procedimento `Private` e o `Get` procedimento `Public`.  
+- Especifique a acessibilidade diferente para `Get` o `Set` procedimento e. Por exemplo, talvez você queira fazer `Set` o procedimento `Private` e o `Get` procedimento `Public`.  
   
-- Criar propriedades que são `WriteOnly`.  
+- Crie propriedades que são `WriteOnly`.  
   
-- Usar propriedades parametrizadas (incluindo `Default` propriedades). Você deve declarar uma propriedade expandida para especificar um parâmetro para a propriedade, ou para especificar parâmetros adicionais para o `Set` procedimento.  
+- Use propriedades parametrizadas (incluindo `Default` Propriedades). Você deve declarar uma propriedade expandida para especificar um parâmetro para a propriedade ou para especificar parâmetros adicionais para o `Set` procedimento.  
   
-- Colocar um atributo no campo de suporte, ou alterar o nível de acesso do campo de backup.  
+- Coloque um atributo no campo de apoio ou altere o nível de acesso do campo de backup.  
   
-- Fornece comentários XML para o campo de suporte.  
+- Forneça comentários XML para o campo de backup.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Expandindo uma propriedade implementada automaticamente  
- Se você precisar converter uma propriedade implementada automaticamente a uma propriedade expandida que contém um `Get` ou `Set` procedimento, o Editor de código do Visual Basic pode gerar automaticamente o `Get` e `Set` eprocedimentos`End Property`instrução para a propriedade. O código é gerado se você colocar o cursor em uma linha em branco após o `Property` instrução, digite um `G` (para `Get`) ou uma `S` (para `Set`) e pressione ENTER. Editor de código do Visual Basic gera automaticamente a `Get` ou `Set` procedimento para propriedades somente leitura e somente gravação ao pressionar ENTER no final de um `Property` instrução.  
+ Se você precisar converter uma propriedade implementada automaticamente em uma propriedade expandida que contém um `Get` procedimento `Set` ou, o editor de código Visual Basic poderá gerar automaticamente `Get` os procedimentos e `Set` `End Property`instrução para a propriedade. O código será gerado se você colocar o cursor em uma linha em branco após `Property` a instrução, digite `G` um ( `Get`para) ou `S` um ( `Set`para) e pressione Enter. O editor de código Visual Basic gera automaticamente `Get` o `Set` procedimento ou para propriedades somente leitura e somente gravação quando você pressiona Enter no final de uma `Property` instrução.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Como: Declare e chame uma propriedade padrão em Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)

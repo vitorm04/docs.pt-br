@@ -3,12 +3,12 @@ title: Introdução à análise semântica
 description: Este tutorial fornece uma visão geral de como trabalhar com análise semântica usando o SDK do .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611738"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252942"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introdução à análise semântica
 
@@ -40,7 +40,7 @@ Você pode ver o código concluído para essa amostra no [nosso repositório do 
 Criar um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#:
 
 * No Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** para exibir a caixa de diálogo Novo Projeto.
-* Em **Visual C#** > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**.
+* Em **Visual C#**  > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**.
 * Nomeie o projeto "**SemanticQuickStart**" e clique em OK.
 
 Você analisará o programa "Olá, Mundo!" básico mostrado anteriormente.
@@ -78,7 +78,7 @@ Do objeto <xref:Microsoft.CodeAnalysis.SymbolInfo>, você pode obter o <xref:Mic
 
 Execute o programa e você deverá ver a seguinte saída:
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -135,7 +135,7 @@ Você pode também compilar a consulta completa usando a sintaxe de consulta LIN
 
 Compile e execute o programa. Você deverá ver a seguinte saída:
 
-```
+```output
 Join
 Substring
 Trim

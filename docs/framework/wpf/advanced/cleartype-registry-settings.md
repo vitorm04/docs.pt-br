@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015604"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254170"
 ---
 # <a name="cleartype-registry-settings"></a>Configurações do Registro de ClearType
 Este tópico fornece uma visão geral das configurações do registro do Microsoft ClearType que são usadas por aplicativos do WPF.  
@@ -19,7 +19,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
 ## <a name="technology-overview"></a>Visão geral da tecnologia  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]os aplicativos que renderizam texto para um dispositivo de vídeo usam recursos de ClearType para fornecer uma experiência de leitura aprimorada. O ClearType é uma tecnologia de software desenvolvida pela Microsoft que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType funciona acessando os elementos da faixa de cor vertical individual em cada pixel de uma tela de LCD. Para obter mais informações sobre ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
   
- O texto que é processado com ClearType pode parecer significativamente diferente quando exibido em vários dispositivos de vídeo. Por exemplo, um pequeno número de monitores implementam os elementos de faixas de cores na ordem azul, verde e vermelha em vez da ordem mais comum de vermelho, [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]verde, azul ().  
+ O texto que é processado com ClearType pode parecer significativamente diferente quando exibido em vários dispositivos de vídeo. Por exemplo, um pequeno número de monitores implementam os elementos de faixas de cores na ordem azul, verde e vermelha em vez da ordem mais comum de vermelho, verde, azul (RGB).  
   
  O texto que é processado com ClearType também pode ser significativamente diferente quando exibido por indivíduos com níveis variados de sensibilidade de cores. Algumas pessoas podem detectar pequenas diferenças nas cores melhor do que outras.  
   
