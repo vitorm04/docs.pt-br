@@ -2,18 +2,18 @@
 title: 'Como: Projetar um grafo de objeto (C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: dcfdd8cba95d729a1f9bda3adb4b5fd8690b724a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592996"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253491"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="c4d44-102">Como: Projetar um grafo de objeto (C#)</span><span class="sxs-lookup"><span data-stu-id="c4d44-102">How to: Project an Object Graph (C#)</span></span>
-<span data-ttu-id="c4d44-103">Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.</span><span class="sxs-lookup"><span data-stu-id="c4d44-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="ab24b-102">Como: Projetar um grafo de objeto (C#)</span><span class="sxs-lookup"><span data-stu-id="ab24b-102">How to: Project an Object Graph (C#)</span></span>
+<span data-ttu-id="ab24b-103">Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.</span><span class="sxs-lookup"><span data-stu-id="ab24b-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c4d44-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c4d44-104">Example</span></span>  
- <span data-ttu-id="c4d44-105">O seguinte código popula um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="c4d44-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="ab24b-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ab24b-104">Example</span></span>  
+ <span data-ttu-id="ab24b-105">O seguinte código popula um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="ab24b-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -214,11 +214,11 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="c4d44-106">Nesse exemplo, o resultado da consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é retornado como um <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="c4d44-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="c4d44-107">Os itens na classe de `PurchaseOrder` são do tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="c4d44-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="c4d44-108">O código usa o método de extensão de <xref:System.Linq.Enumerable.ToList%2A> para criar uma coleção de <xref:System.Collections.Generic.List%601> dos resultados da consulta.</span><span class="sxs-lookup"><span data-stu-id="c4d44-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="ab24b-106">Nesse exemplo, o resultado da consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] é retornado como um <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="ab24b-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="ab24b-107">Os itens na classe de `PurchaseOrder` são do tipo <xref:System.Collections.Generic.IEnumerable%601> de `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="ab24b-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="ab24b-108">O código usa o método de extensão de <xref:System.Linq.Enumerable.ToList%2A> para criar uma coleção de <xref:System.Collections.Generic.List%601> dos resultados da consulta.</span><span class="sxs-lookup"><span data-stu-id="ab24b-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="c4d44-109">O exemplo produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="c4d44-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="ab24b-109">O exemplo produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="ab24b-109">The example produces the following output:</span></span>  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c4d44-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c4d44-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab24b-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ab24b-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

@@ -2,20 +2,20 @@
 title: 'Como: Recuperar um único atributo (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 4a1be51c7f0e89a8f211ae523eb102282bd9747b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592655"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253403"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a><span data-ttu-id="67b64-102">Como: Recuperar um único atributo (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="67b64-102">How to: Retrieve a Single Attribute (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="67b64-103">Este tópico explica como recuperar um único atributo de um elemento, dado o nome do atributo.</span><span class="sxs-lookup"><span data-stu-id="67b64-103">This topic explains how to retrieve a single attribute of an element, given the attribute name.</span></span> <span data-ttu-id="67b64-104">Isso é útil para gravar as expressões de consulta onde você deseja localizar um elemento que possui um atributo específico.</span><span class="sxs-lookup"><span data-stu-id="67b64-104">This is useful for writing query expressions where you want to find an element that has a particular attribute.</span></span>  
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a><span data-ttu-id="1b027-102">Como: Recuperar um único atributo (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1b027-102">How to: Retrieve a Single Attribute (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="1b027-103">Este tópico explica como recuperar um único atributo de um elemento, dado o nome do atributo.</span><span class="sxs-lookup"><span data-stu-id="1b027-103">This topic explains how to retrieve a single attribute of an element, given the attribute name.</span></span> <span data-ttu-id="1b027-104">Isso é útil para gravar as expressões de consulta onde você deseja localizar um elemento que possui um atributo específico.</span><span class="sxs-lookup"><span data-stu-id="1b027-104">This is useful for writing query expressions where you want to find an element that has a particular attribute.</span></span>  
   
- <span data-ttu-id="67b64-105">O método de <xref:System.Xml.Linq.XElement.Attribute%2A> da classe de <xref:System.Xml.Linq.XElement> retorna <xref:System.Xml.Linq.XAttribute> com o nome especificado.</span><span class="sxs-lookup"><span data-stu-id="67b64-105">The <xref:System.Xml.Linq.XElement.Attribute%2A> method of the <xref:System.Xml.Linq.XElement> class returns the <xref:System.Xml.Linq.XAttribute> with the specified name.</span></span>  
+ <span data-ttu-id="1b027-105">O método de <xref:System.Xml.Linq.XElement.Attribute%2A> da classe de <xref:System.Xml.Linq.XElement> retorna <xref:System.Xml.Linq.XAttribute> com o nome especificado.</span><span class="sxs-lookup"><span data-stu-id="1b027-105">The <xref:System.Xml.Linq.XElement.Attribute%2A> method of the <xref:System.Xml.Linq.XElement> class returns the <xref:System.Xml.Linq.XAttribute> with the specified name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67b64-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="67b64-106">Example</span></span>  
- <span data-ttu-id="67b64-107">O exemplo a seguir usa o método <xref:System.Xml.Linq.XElement.Attribute%2A>.</span><span class="sxs-lookup"><span data-stu-id="67b64-107">The following example uses the <xref:System.Xml.Linq.XElement.Attribute%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="1b027-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1b027-106">Example</span></span>  
+ <span data-ttu-id="1b027-107">O exemplo a seguir usa o método <xref:System.Xml.Linq.XElement.Attribute%2A>.</span><span class="sxs-lookup"><span data-stu-id="1b027-107">The following example uses the <xref:System.Xml.Linq.XElement.Attribute%2A> method.</span></span>  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -33,17 +33,17 @@ foreach (XElement el in elList)
     Console.WriteLine((string)el.Attribute("type"));  
 ```  
   
- <span data-ttu-id="67b64-108">Este exemplo localiza os descendentes na árvore chamada `Phone`, e localiza o atributo chamado `type`.</span><span class="sxs-lookup"><span data-stu-id="67b64-108">This example finds all the descendants in the tree named `Phone`, and then finds the attribute named `type`.</span></span>  
+ <span data-ttu-id="1b027-108">Este exemplo localiza os descendentes na árvore chamada `Phone`, e localiza o atributo chamado `type`.</span><span class="sxs-lookup"><span data-stu-id="1b027-108">This example finds all the descendants in the tree named `Phone`, and then finds the attribute named `type`.</span></span>  
   
- <span data-ttu-id="67b64-109">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="67b64-109">This code produces the following output:</span></span>  
+ <span data-ttu-id="1b027-109">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="1b027-109">This code produces the following output:</span></span>  
   
-```  
+```output  
 home  
 work  
 ```  
   
-## <a name="example"></a><span data-ttu-id="67b64-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="67b64-110">Example</span></span>  
- <span data-ttu-id="67b64-111">Se você deseja recuperar o valor do atributo, você pode convertê-lo, exatamente como você faz para com objetos de <xref:System.Xml.Linq.XElement> .</span><span class="sxs-lookup"><span data-stu-id="67b64-111">If you want to retrieve the value of the attribute, you can cast it, just as you do for with <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="67b64-112">O exemplo a seguir demonstra isso.</span><span class="sxs-lookup"><span data-stu-id="67b64-112">The following example demonstrates this.</span></span>  
+## <a name="example"></a><span data-ttu-id="1b027-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1b027-110">Example</span></span>  
+ <span data-ttu-id="1b027-111">Se você deseja recuperar o valor do atributo, você pode convertê-lo, exatamente como você faz para com objetos de <xref:System.Xml.Linq.XElement> .</span><span class="sxs-lookup"><span data-stu-id="1b027-111">If you want to retrieve the value of the attribute, you can cast it, just as you do for with <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="1b027-112">O exemplo a seguir demonstra isso.</span><span class="sxs-lookup"><span data-stu-id="1b027-112">The following example demonstrates this.</span></span>  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -61,17 +61,17 @@ foreach (XElement el in elList)
     Console.WriteLine((string)el.Attribute("type"));  
 ```  
   
- <span data-ttu-id="67b64-113">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="67b64-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="1b027-113">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="1b027-113">This code produces the following output:</span></span>  
   
-```  
+```output  
 home  
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="67b64-114">fornece operadores cast explícitos para a classe <xref:System.Xml.Linq.XAttribute> para `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` e `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="67b64-114">provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="1b027-114">fornece operadores cast explícitos para a classe <xref:System.Xml.Linq.XAttribute> para `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` e `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="1b027-114">provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67b64-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="67b64-115">Example</span></span>  
- <span data-ttu-id="67b64-116">O exemplo a seguir mostra o mesmo código para um atributo que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="67b64-116">The following example shows the same code for an attribute that is in a namespace.</span></span> <span data-ttu-id="67b64-117">Para obter mais informações, consulte [Visão geral de namespaces (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="67b64-117">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="1b027-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1b027-115">Example</span></span>  
+ <span data-ttu-id="1b027-116">O exemplo a seguir mostra o mesmo código para um atributo que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="1b027-116">The following example shows the same code for an attribute that is in a namespace.</span></span> <span data-ttu-id="1b027-117">Para obter mais informações, consulte [Visão geral de namespaces (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1b027-117">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -90,13 +90,13 @@ foreach (XElement el in elList)
     Console.WriteLine((string)el.Attribute(aw + "type"));  
 ```  
   
- <span data-ttu-id="67b64-118">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="67b64-118">This code produces the following output:</span></span>  
+ <span data-ttu-id="1b027-118">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="1b027-118">This code produces the following output:</span></span>  
   
-```  
+```output  
 home  
 work  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="67b64-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="67b64-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b027-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1b027-119">See also</span></span>
 
-- [<span data-ttu-id="67b64-120">Eixos do LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="67b64-120">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="1b027-120">Eixos do LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="1b027-120">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
