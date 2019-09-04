@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: 'Criar um aplicativo Olá, Mundo no Visual Basic com o .NET Core no Visual Studio 2017'
           href: core/tutorials/vb-with-visual-studio.md
-        - name: Criar um aplicativo do .NET Core com plug-ins
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 'Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: 'Publicar um aplicativo Olá, Mundo com o Visual Studio 2017'
@@ -219,6 +217,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
           href: core/tutorials/libraries.md
+        - name: Criar um aplicativo do .NET Core com plug-ins
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: Como desenvolver aplicativos ASP.NET Core
           href: core/tutorials/aspnet-core.md
         - name: Como hospedar o .NET Core com base no código nativo
