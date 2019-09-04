@@ -2,20 +2,20 @@
 title: 'Como: Gerenciar arquivos de texto no XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 51828c11b54f99131b89e0a30979f3f3acdb12ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593352"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253588"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="f8a7b-102">Como: Gerenciar arquivos de texto no XML (C#)</span><span class="sxs-lookup"><span data-stu-id="f8a7b-102">How to: Generate Text Files from XML (C#)</span></span>
-<span data-ttu-id="f8a7b-103">Este exemplo mostra como gerar um arquivo separado por vírgulas de (CSV) dos valores de um arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="f8a7b-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="40431-102">Como: Gerenciar arquivos de texto no XML (C#)</span><span class="sxs-lookup"><span data-stu-id="40431-102">How to: Generate Text Files from XML (C#)</span></span>
+<span data-ttu-id="40431-103">Este exemplo mostra como gerar um arquivo separado por vírgulas de (CSV) dos valores de um arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="40431-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8a7b-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f8a7b-104">Example</span></span>  
- <span data-ttu-id="f8a7b-105">A versão de C# este exemplo usa a sintaxe método e o operador de `Aggregate` para gerar um arquivo CSV de um documento XML em uma única expressão.</span><span class="sxs-lookup"><span data-stu-id="f8a7b-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="f8a7b-106">Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](./query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="f8a7b-106">For more information, see [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="40431-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="40431-104">Example</span></span>  
+ <span data-ttu-id="40431-105">A versão de C# este exemplo usa a sintaxe método e o operador de `Aggregate` para gerar um arquivo CSV de um documento XML em uma única expressão.</span><span class="sxs-lookup"><span data-stu-id="40431-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="40431-106">Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](./query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="40431-106">For more information, see [Query Syntax and Method Syntax in LINQ](./query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- <span data-ttu-id="f8a7b-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="f8a7b-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
+ <span data-ttu-id="40431-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="40431-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -44,15 +44,15 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- <span data-ttu-id="f8a7b-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="f8a7b-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="40431-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="40431-108">This code produces the following output:</span></span>  
   
-```  
+```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
 HUNGC,Hungry Coyote Import Store,Yoshi Latimer,Sales Representative,(503) 555-6874,City Center Plaza 516 Main St.,Elgin,OR,97827,USA  
 LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orchestra Terrace,Walla Walla,WA,99362,USA  
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f8a7b-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f8a7b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40431-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40431-109">See also</span></span>
 
-- [<span data-ttu-id="f8a7b-110">Projeções e transformações (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f8a7b-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](./projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="40431-110">Projeções e transformações (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="40431-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](./projections-and-transformations-linq-to-xml.md)
