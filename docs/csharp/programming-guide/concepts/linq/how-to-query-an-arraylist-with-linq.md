@@ -2,19 +2,19 @@
 title: 'Como: Consultar uma ArrayList com LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: dca201a23b316cc16bc746ea920303814c8c7c87
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 51c42296b8acb6be1c9c4505f9af3d6fbaf248ce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592928"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253446"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Como: Consultar uma ArrayList com LINQ (C#)
 Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver um <xref:System.Collections.ArrayList> de objetos `Student`, sua [cláusula from](../../../language-reference/keywords/from-clause.md) deverá ter uma aparência semelhante a esta:  
   
-```  
+```csharp  
 var query = from Student s in arrList  
-...  
+//...
 ```  
   
  Especificando o tipo da variável de intervalo, você está convertendo cada item na <xref:System.Collections.ArrayList> em um `Student`.  

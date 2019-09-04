@@ -2,16 +2,16 @@
 title: Funções canônicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760630"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250301"
 ---
 # <a name="math-canonical-functions"></a>Funções canônicas matemáticas
 
-Entity SQL inclui as seguintes funções canônicas de matemáticas:
+Entity SQL inclui as seguintes funções canônicas de matemática:
   
 ## <a name="absvalue"></a>Abs (valor)
 
@@ -19,7 +19,7 @@ Retorna o valor absoluto de `value`.
 
 **Argumentos**
 
-Uma `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, e `Decimal`.
+Um `Int16`, `Int32`, ,`Byte`,, e`Double`. `Int64` `Single` `Decimal`
 
 **Valor retornado**
 
@@ -35,7 +35,7 @@ Retorna o número inteiro o menor que não é menor que `value`.
 
 **Argumentos**
 
-Um `Single`, `Double`, e `Decimal`.
+A `Single`, `Double`, e `Decimal`.
 
 **Valor retornado**
 
@@ -52,7 +52,7 @@ Retorna o número inteiro maior que não é maior do que `value`.
 
 **Argumentos**
 
-Um `Single`, `Double`, e `Decimal`.
+A `Single`, `Double`, e `Decimal`.
 
 **Valor retornado**
 
@@ -72,7 +72,7 @@ Retorna o resultado de `value` especificado a `exponent`especificado.
 |  |  |
 |--|--|
 |`value` | Um `Int32, Int64, Double` ou `Decimal`. |
-|`exponent` | Uma `Int64`, `Double`, ou `Decimal`. |
+|`exponent` | Um `Int64`, `Double`, ou `Decimal`. |
 
 **Valor retornado**
 
@@ -88,7 +88,7 @@ Retorna a parte inteira de `value`, arredondada para o inteiro mais próximo.
 
 **Argumentos**
 
-Um `Single`, `Double`, e `Decimal`.
+A `Single`, `Double`, e `Decimal`.
 
 **Valor retornado**
 
@@ -138,8 +138,8 @@ O tipo de `value`.
   
  Essas funções retornará `null` se entrada dada de `null` .  
   
- Funcionalidade equivalente está disponível no provedor gerenciado cliente do Microsoft SQL. Para obter mais informações, consulte [SqlClient para funções de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ Funcionalidade equivalente está disponível no provedor gerenciado cliente do Microsoft SQL. Para obter mais informações, consulte [SqlClient para funções de Entity Framework](../sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) (Funções canônicas)
+- [Canonical Functions](canonical-functions.md) (Funções canônicas)

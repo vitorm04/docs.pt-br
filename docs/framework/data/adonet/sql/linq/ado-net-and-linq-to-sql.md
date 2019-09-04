@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964136"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248112"
 ---
 # <a name="adonet-and-linq-to-sql"></a>O ADO.NET e LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]faz parte da família de tecnologias ADO.NET. Ele se baseia em serviços fornecidos pelo modelo de provedor ADO.NET. Portanto, você pode [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] misturar código com aplicativos ADO.net existentes e migrar soluções ADO.NET [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]atuais para o. A ilustração a seguir fornece uma exibição de alto nível de relacionamento.  
   
- ![LINQ to SQL e ADO.net](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
+ ![LINQ to SQL e ADO.net](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Conexões  
  Você pode fornecer uma conexão ADO.NET existente ao criar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. <xref:System.Data.Linq.DataContext> Todas as operações em <xref:System.Data.Linq.DataContext> relação ao (incluindo consultas) usam essa conexão fornecida. Se a conexão já estiver aberta, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] o deixará como está quando você tiver terminado.  
@@ -59,5 +59,5 @@ ms.locfileid: "69964136"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Como: Reutilizar uma conexão entre um comando ADO.NET e um DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Informações gerais](background-information.md)
+- [Como: Reutilizar uma conexão entre um comando ADO.NET e um DataContext](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

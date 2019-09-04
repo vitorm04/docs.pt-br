@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b65711ad8c404d1c4f54a6197faf598e2215226f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663777"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252657"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<Elemento de > disableFusionUpdatesFromADManager
 Especifica se o comportamento padrão, que é permitir que o host de tempo de execução substitua as definições de configuração de um domínio de aplicativo, está desabilitado.  
   
- \<Elemento de > de configuração  
-\<Elemento de > de tempo de execução  
-\<disableFusionUpdatesFromADManager>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableFusionUpdatesFromADManager>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Especifica se o comportamento padrão, que é permitir que o host de tempo de ex
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se a capacidade padrão de substituir as configurações de fusão está desabilitada.|  
+|enabled|Atributo obrigatório.<br /><br /> Especifica se a capacidade padrão de substituir as configurações de fusão está desabilitada.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

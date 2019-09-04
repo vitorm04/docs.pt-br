@@ -2,12 +2,12 @@
 title: 'Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958446"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251415"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Como: usar EdmGen.exe para gerar o modelo e arquivos de mapeamento
 Este tópico mostra como usar a ferramenta Gerador de EDM (EdmGen.exe) para gerar os seguintes arquivos com base no banco de dados da escola:  
@@ -22,7 +22,7 @@ Este tópico mostra como usar a ferramenta Gerador de EDM (EdmGen.exe) para gera
   
 - Exibir arquivos.  
   
- A ferramenta EdmGen.exe usa /mode:FullGeneration para gerar os arquivos listados acima. Para obter mais informações sobre os comandos EdmGen. exe, consulte [EDM Generator (EdmGen. exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
+ A ferramenta EdmGen.exe usa /mode:FullGeneration para gerar os arquivos listados acima. Para obter mais informações sobre os comandos EdmGen. exe, consulte [EDM Generator (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
  Se você usar EdmGen. exe para gerar o modelo e os arquivos de mapeamento, ainda precisará configurar seu projeto do Visual Studio para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]usar o. Para obter mais informações, confira [Como: Configurar manualmente um projeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))de Entity Framework.  
   
@@ -55,8 +55,8 @@ Este tópico mostra como usar a ferramenta Gerador de EDM (EdmGen.exe) para gera
   
 ## <a name="see-also"></a>Consulte também
 
-- [Modelagem e mapeamento](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [Modelagem e mapeamento](modeling-and-mapping.md)
 - [Como: Configurar manualmente um projeto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Como: Pré-gerar exibições para melhorar o desempenho da consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [Ferramentas de Modelo de Dados de Entidade de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Como: Usar EdmGen. exe para validar arquivos de modelo e de mapeamento](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Como: Usar EdmGen. exe para validar arquivos de modelo e de mapeamento](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

@@ -4,12 +4,12 @@ description: Um guia sobre qual implementação de .NET você deve considerar ao
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107284"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254212"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
@@ -28,7 +28,7 @@ Use o .NET Framework para o aplicativo para servidores se:
 - Seu aplicativo usar o .NET Framework atualmente (a recomendação é estender em vez de migrar).
 - Seu aplicativo usa bibliotecas .NET de terceiros ou pacotes NuGet não disponíveis para o .NET Core.
 - Seu aplicativo usa tecnologias .NET que não estão disponíveis para o .NET Core.
-- Seu aplicativo usa uma plataforma que não oferece suporte ao .NET Core.
+- Seu aplicativo usa uma plataforma que não oferece suporte ao .NET Core. Windows, macOS e Linux dão suporte ao .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Quando escolher o .NET Core
 

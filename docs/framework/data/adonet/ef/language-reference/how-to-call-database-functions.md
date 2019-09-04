@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 79038efa-15bf-464a-83e2-35fe145252ce
-ms.openlocfilehash: dd440be3f73eb2f02a269a8cad29f0fe30920836
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9cb8d32227447d3808dc250a39fef0867257a77
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936031"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250777"
 ---
 # <a name="how-to-call-database-functions"></a>Como: Chamar funções de banco de dados
 A classe de <xref:System.Data.Objects.SqlClient.SqlFunctions> contém os métodos que expõe funções do SQL Server para usar em consultas LINQ to Entities. Quando você usa métodos de <xref:System.Data.Objects.SqlClient.SqlFunctions> em consultas LINQ to Entities, as funções de base de dados correspondentes são executadas em base de dados.  
@@ -35,5 +35,5 @@ A classe de <xref:System.Data.Objects.SqlClient.SqlFunctions> contém os método
   
 ## <a name="see-also"></a>Consulte também
 
-- [Chamando funções em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Chamando funções em consultas LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)
+- [Consultas no LINQ to Entities](queries-in-linq-to-entities.md)

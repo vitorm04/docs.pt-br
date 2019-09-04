@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b1ac2900707ddb39c62b34b0ebfbc4547cdd2653
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663491"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252355"
 ---
 # <a name="relativebindforresources-element"></a>\<Elemento de > relativeBindForResources
 Otimiza o teste para assemblies satélites.  
   
- \<Elemento de > de configuração  
-\<Elemento de > de tempo de execução  
-\<Elemento de > relativeBindForResources  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>Sintaxe  
   

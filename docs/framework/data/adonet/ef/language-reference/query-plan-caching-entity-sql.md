@@ -2,12 +2,12 @@
 title: Armazenamento em cache do plano de consulta (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 9b809962e11ee74a99f736769b47bf3052af5e8a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca95f3aed5c092247a97bbfe5b0237a45b95ae16
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641461"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249291"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Armazenamento em cache do plano de consulta (Entity SQL)
 Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consulta pesquisa seu cache do plano de consulta para ver se a consulta exata já está compilada e disponível. Em caso afirmativo, reutiliza o plano armazenado em cachê em vez de criar um novo. Se uma correspondência não for encontrada no cache do plano de consulta, a consulta é criada e armazenadas em cachê. Uma consulta é identificada por sua coleção de texto e o parâmetro de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (nomes e tipos). Todas as comparações de texto diferenciam maiúsculas de minúsculas.  
@@ -50,4 +50,4 @@ Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consul
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](entity-sql-overview.md)

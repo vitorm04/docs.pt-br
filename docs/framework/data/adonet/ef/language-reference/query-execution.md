@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: ee63b6df4f99415e5d36f0717ff325d9fbabd9e3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fcf0d3eed95d36f7764ca048da62b589779d8d47
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641600"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249543"
 ---
 # <a name="query-execution"></a>Execução da Consulta
 Depois de ser criada por um usuário, uma consulta LINQ é convertida em uma árvore de comando. Uma árvore de comando é uma representação de uma consulta compatível com o Entity Framework. Em seguida, a árvore de comando é executada na fonte de dados. Em tempo de execução de consulta, todas as expressões e consulta (isto é, todos os componentes da consulta) são avaliados, incluindo essas expressões usadas na materialização do resultado.  
   
- O ponto onde as expressões de consulta são executadas pode variar. As consultas LINQ são sempre executadas quando a variável de consulta é iterada sobre, não quando a variável de consulta é criada. Isso é chamado *execução adiada*. Você também pode forçar a execução imediata de uma consulta, o que é útil para armazenar os resultados da consulta em cache. Isso é descrito mais adiante neste tópico.  
+ O ponto onde as expressões de consulta são executadas pode variar. As consultas LINQ são sempre executadas quando a variável de consulta é iterada sobre, não quando a variável de consulta é criada. Isso é chamado de *execução adiada*. Você também pode forçar a execução imediata de uma consulta, o que é útil para armazenar os resultados da consulta em cache. Isso é descrito mais adiante neste tópico.  
   
  Quando uma consulta LINQ to Entities é executada, algumas expressões da consulta podem ser executadas no servidor e algumas partes podem ser executadas localmente no cliente. A avaliação de uma expressão do lado do cliente ocorre antes de a consulta ser executada no servidor. Se uma expressão for avaliada no cliente, o resultado da avaliação será substituído para a expressão na consulta, e a consulta será executada no servidor. Como as consultas são executadas na fonte de dados, a configuração da fonte de dados substitui o comportamento especificado no cliente. Por exemplo, manipulação de valor nulo e a precisão numérica dependem das configurações do servidor. Todas as exceções geradas durante a execução da consulta no servidor são passadas diretamente até o cliente.  
  
 > [!TIP]
-> Para obter um resumo conveniente dos operadores de consulta no formato de tabela, que permite que você identifique rapidamente o comportamento de execução de um operador, consulte [classificação de operadores de consulta padrão pelo modo de execução (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Para obter um resumo conveniente dos operadores de consulta em formato de tabela, que permite identificar rapidamente o comportamento de execução de um operador, consulte [classificação de operadores de consulta padrãoC#por meio da execução ()](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Execução de consulta adiada  
- Em uma consulta, que retorna uma sequência de valores, a variável de consulta nunca contém os resultados da consulta e armazena somente os comandos da consulta. A execução da consulta é adiada até que a variável da consulta seja iterada em um loop `foreach` ou `For Each`. Isso é conhecido como *execução adiada*; ou seja, execução da consulta ocorre algum tempo depois que a consulta é construída. Isso significa que você pode executar uma consulta com a frequência que desejar. Isso é útil quando, por exemplo, você tem um banco de dados que está sendo atualizado por outros aplicativos. Em seu aplicativo, você pode criar uma consulta para recuperar as informações mais recentes e executar a consulta repetidamente, retornando informações atualizadas sempre.  
+ Em uma consulta, que retorna uma sequência de valores, a variável de consulta nunca contém os resultados da consulta e armazena somente os comandos da consulta. A execução da consulta é adiada até que a variável da consulta seja iterada em um loop `foreach` ou `For Each`. Isso é conhecido como *execução adiada*; ou seja, a execução da consulta ocorre algum tempo depois que a consulta é construída. Isso significa que você pode executar uma consulta com a frequência que desejar. Isso é útil quando, por exemplo, você tem um banco de dados que está sendo atualizado por outros aplicativos. Em seu aplicativo, você pode criar uma consulta para recuperar as informações mais recentes e executar a consulta repetidamente, retornando informações atualizadas sempre.  
   
  A execução adiada permite que várias consultas sejam combinadas ou que uma consulta seja estendida. Quando é estendida, a consulta é modificada para incluir as novas operações, e a execução eventual refletirá as alterações. No exemplo a seguir, a primeira consulta retorna todos os produtos. A segunda consulta estende a primeira usando `Where` para retornar todos os produtos de tamanho “L”:  
   
@@ -47,7 +47,7 @@ Depois de ser criada por um usuário, uma consulta LINQ é convertida em uma ár
   
  Determinadas operações são sempre executadas no cliente, como a associação de valores, as subexpressões, as subconsultas de fechamentos e a materialização de objetos nos resultados da consulta. O efeito líquido disso é que esses elementos (por exemplo, valores de parâmetros) não podem ser atualizados durante a execução. Tipos anônimos também podem ser construídos embutidos na fonte de dados, mas não devem ser supostos a fazer isso. Os agrupamentos embutidos podem ser construídos na fonte de dados, também, mas isso não deve ser suposto em cada instância. Em geral, é melhor não fazer nenhuma suposição sobre o que é construído no servidor.  
   
- Esta seção descreve os cenários em que o código é executado localmente no cliente. Para obter mais informações sobre quais tipos de expressões são executados localmente, consulte [expressões em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
+ Esta seção descreve os cenários em que o código é executado localmente no cliente. Para obter mais informações sobre quais tipos de expressões são executados localmente, consulte [expressões em consultas LINQ to Entities](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literais e parâmetros  
  Variáveis locais, como a variável `orderID` no exemplo a seguir, são avaliadas no cliente.  

@@ -2,15 +2,15 @@
 title: Literais nulos e inferência de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641821"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249820"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literais nulos e inferência de tipo (Entity SQL)
-Literais nulos são compatíveis com qualquer no sistema de tipos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . No entanto, para o tipo de um literal nulo para ser inferido corretamente, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impõe determinadas restrições em onde um literal nulo pode ser usado.  
+Literais nulos são compatíveis com qualquer no sistema de tipos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . No entanto, para que o tipo de um literal nulo seja inferido [!INCLUDE[esql](../../../../../../includes/esql-md.md)] corretamente, o impõe certas restrições em que um literal nulo pode ser usado.  
   
 ## <a name="typed-nulls"></a>Tipado nulos  
  Tipado anula pode ser usado em qualquer lugar. Inferência de tipos não é necessária para tipado anula porque o tipo é conhecido. Por exemplo, você pode construir um zero do tipo Int16 com a seguir compilação de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] :  
@@ -42,4 +42,4 @@ Literais nulos são compatíveis com qualquer no sistema de tipos de [!INCLUDE[e
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](entity-sql-overview.md)

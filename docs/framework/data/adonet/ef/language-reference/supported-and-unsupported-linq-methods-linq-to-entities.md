@@ -2,18 +2,18 @@
 title: Métodos suportados e sem suporte LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 338069b5139999a046d1b1b10a8eac4acb1d9e06
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 54805e8d3f0d5081c2d7d8fdbdcfbdcb63f9bcb6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539424"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249003"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos suportados e sem suporte LINQ (LINQ to Entities)
-Esta seção fornece informações sobre os operadores de consulta padrão de consulta integrada à linguagem (LINQ) que são suportados ou sem suporte em LINQ para consultas de entidades. Muitos dos operadores de consulta padrão LINQ têm uma versão sobrecarregada que aceita um argumento integer. O argumento integer corresponde a um índice baseado em zero na sequência que está sendo operada, uma <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Salvo indicação caso contrário, essas versões sobrecarregadas dos operadores de consulta padrão LINQ não são suportadas, e tentar usá-los irá acionar uma exceção.  
+Esta seção fornece informações sobre os operadores de consulta padrão do LINQ (consulta integrada à linguagem) com suporte ou sem suporte em consultas do LINQ to Entities. Muitos dos operadores de consulta padrão LINQ têm uma versão sobrecarregada que aceita um argumento integer. O argumento inteiro corresponde a um índice de base zero na sequência que está sendo operada em, um <xref:System.Collections.Generic.IEqualityComparer%601>ou. <xref:System.Collections.Generic.IComparer%601> Salvo indicação caso contrário, essas versões sobrecarregadas dos operadores de consulta padrão LINQ não são suportadas, e tentar usá-los irá acionar uma exceção.  
   
 ## <a name="projection-and-restriction-methods"></a>Métodos de projeção e de restrição  
- A maioria dos métodos de projeção e de restrição LINQ têm suporte em LINQ para consultas de entidades, exceto para aqueles que aceitam um argumento posicional. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e sem suporte a projeção e de restrição.  
+ A maioria dos métodos de projeção e de restrição do LINQ tem suporte em consultas LINQ to Entities, com exceção daqueles que aceitam um argumento posicional. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e sem suporte a projeção e de restrição.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -27,7 +27,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.Where%2A>|Sem suporte|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>Métodos de junção  
- Os métodos de junção LINQ têm suporte em LINQ to Entities, exceto aquelas que aceitam um `IEqualityComparer` porque o comparer não pode ser convertido para a fonte de dados. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista o suportados e sem suporte de adição a métodos.  
+ Os métodos de junção LINQ têm suporte no LINQ to Entities, com exceção daqueles que aceitam um `IEqualityComparer` porque o comparador não pode ser convertido na fonte de dados. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista o suportados e sem suporte de adição a métodos.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -37,7 +37,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.Join%2A>|Sem suporte|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>Definir métodos  
- A maioria dos métodos definidos LINQ são suportados em LINQ para consultas de entidades, exceto aquelas que usam um <xref:System.Collections.Generic.EqualityComparer%601>. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos definidos suportados e sem suporte.  
+ A maioria dos métodos set do LINQ tem suporte em consultas LINQ to Entities, com exceção daqueles que usam um <xref:System.Collections.Generic.EqualityComparer%601>. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos definidos suportados e sem suporte.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.Union%2A>|Sem suporte|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>Métodos de ordenação  
- A maioria de LINQ de ordenação métodos é suportados em LINQ to Entities, exceto aquelas que aceitam um <xref:System.Collections.Generic.IComparer%601>, porque o comparer não pode ser convertido para a fonte de dados. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e classificação sem suporte.  
+ A maioria dos métodos de ordenação do LINQ tem suporte no LINQ to Entities, com exceção daqueles que aceitam um <xref:System.Collections.Generic.IComparer%601>, porque o comparador não pode ser convertido na fonte de dados. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e classificação sem suporte.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.Reverse%2A>|Sem suporte|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>Métodos de agrupamento  
- A maioria dos métodos de agrupamento LINQ são suportados em LINQ to Entities, exceto aquelas que aceitam um <xref:System.Collections.Generic.IEqualityComparer%601>, porque o comparer não pode ser convertido para a fonte de dados. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e sem suporte de agrupamento.  
+ A maioria dos métodos de agrupamento do LINQ tem suporte no LINQ to Entities, com exceção daqueles que aceitam <xref:System.Collections.Generic.IEqualityComparer%601>um, porque o comparador não pode ser convertido na fonte de dados. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e sem suporte de agrupamento.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -88,7 +88,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.GroupBy%2A>|Sem suporte|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>Métodos de agregação  
- A maioria dos métodos de agregação que aceitam tipos de dados primitivos são suportados em LINQ to Entities. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos agregados suportados e sem suporte.  
+ A maioria dos métodos agregados que aceitam tipos de dados primitivos tem suporte no LINQ to Entities. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos agregados suportados e sem suporte.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -145,7 +145,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.Sum%2A>|Sem suporte|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Métodos de tipo  
- Operadores de consulta padrão LINQ que lidam com conversão de tipo CLR e teste têm suporte no Entity Framework. Somente tipos de CLR que mapeiam para tipos de modelo conceitual são suportados em LINQ to Entities. Para obter uma lista dos tipos de modelo conceitual, consulte [tipos de modelo conceituais (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). A tabela a seguir lista os métodos suportados e sem suporte de tipo.  
+ Os operadores de consulta padrão do LINQ que lidam com conversão de tipo CLR e teste têm suporte no Entity Framework. Somente tipos de CLR que mapeiam para tipos de modelo conceitual são suportados em LINQ to Entities. Para obter uma lista de tipos de modelo conceitual, consulte [CSDL (tipos de modelo conceitual)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). A tabela a seguir lista os métodos suportados e sem suporte de tipo.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -153,7 +153,7 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
 |<xref:System.Linq.Queryable.OfType%2A>|Suporte para <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Métodos de paginação  
- Um número de LINQ a paginação métodos não têm suporte em LINQ para consultas de entidades. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e sem suporte de paginação.  
+ Não há suporte para um número de métodos de paginação LINQ em consultas LINQ to Entities. Para obter mais informações, consulte [operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md). A tabela a seguir lista os métodos suportados e sem suporte de paginação.  
   
 |Método|Suporte|Assinatura de função do Visual Basic|Assinatura de método C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -180,4 +180,4 @@ Esta seção fornece informações sobre os operadores de consulta padrão de co
   
 ## <a name="see-also"></a>Consulte também
 
-- [Operadores de consulta padrão em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+- [Operadores de consulta padrão em consultas LINQ to Entities](standard-query-operators-in-linq-to-entities-queries.md)

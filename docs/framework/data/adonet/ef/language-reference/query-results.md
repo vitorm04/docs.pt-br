@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539750"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249263"
 ---
 # <a name="query-results"></a>Resultados da Consulta
-Depois que uma consulta LINQ to Entities é convertido em árvores de comando e executado, os resultados da consulta geralmente são retornados como um dos seguintes:  
+Depois que uma consulta LINQ to Entities é convertida em árvores de comando e executada, os resultados da consulta geralmente são retornados como um dos seguintes:  
   
 - Uma coleção de zero ou mais objetos de entidade tipados ou uma projeção de tipos complexos no modelo conceitual.  
   
@@ -25,7 +25,7 @@ Depois que uma consulta LINQ to Entities é convertido em árvores de comando e 
   
  Quando a consulta executar contra a fonte de dados, os resultados são materializados em tipos de CLR e retornados para o cliente. Qualquer materialization de objeto é executado por [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Todos os erros que resultarem de uma incapacidade mapeamento entre [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] e CLR causarão exceções a ser geradas durante o materialization de objeto.  
   
- Se a execução da consulta retorna tipos primitivos de modelo conceitual, os resultados consistem de tipos de CLR que são autônomos e desconectado de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. No entanto, se a consulta retorna uma coleção de objetos de entidade tipados, representado por <xref:System.Data.Objects.ObjectQuery%601>, os tipos são controlados pelo contexto de objeto. Todos objeto comportamento (como coleções pai/filho, controle de alterações, polimorfismo e assim por diante) são definidos na [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Essa funcionalidade pode ser usada em sua capacidade, conforme definido no [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Para obter mais informações, consulte [trabalhando com objetos](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+ Se a execução da consulta retorna tipos primitivos de modelo conceitual, os resultados consistem de tipos de CLR que são autônomos e desconectado de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. No entanto, se a consulta retorna uma coleção de objetos de entidade tipados, representado por <xref:System.Data.Objects.ObjectQuery%601>, os tipos são controlados pelo contexto de objeto. Todo o [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]comportamento do objeto (como coleções filho/pai, controle de alterações, polimorfismo e assim por diante) é definido no. Essa funcionalidade pode ser usada em sua capacidade, conforme definido no [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Para obter mais informações, consulte [trabalhando com objetos](../working-with-objects.md).  
   
  Os tipos de Estrutura retornados de consultas (como tipos anônimos e tipos complexos anuláveis) podem ser de valor de `null` . Uma propriedade de <xref:System.Data.Objects.DataClasses.EntityCollection%601> de uma entidade retornado também pode ser o valor de `null` . Isso pode resultar de projetar a propriedade de coleção de uma entidade que é o valor de `null` , como chamar <xref:System.Linq.Queryable.FirstOrDefault%2A> em <xref:System.Data.Objects.ObjectQuery%601> que não tiver nenhum elemento.  
   

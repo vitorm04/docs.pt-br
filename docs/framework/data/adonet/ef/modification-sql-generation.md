@@ -2,18 +2,18 @@
 title: Geração de alteração SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034120"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248567"
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.
 
-Para obter informações sobre a geração de SQL para instruções select, consulte [geração SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).
+Para obter informações sobre a geração de SQL para instruções SELECT, consulte [geração de SQL](sql-generation.md).
 
 ## <a name="overview-of-modification-command-trees"></a>Visão geral das árvores de alteração de comando
 
@@ -27,11 +27,11 @@ Um DbModificationCommandTree é uma representação do modelo de objeto de uma o
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree e suas implementações que são produzidas pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sempre representam uma operação única linha. Esta seção descreve esses tipos com as restrições no .NET Framework versão 3.5.
+DbModificationCommandTree e suas implementações que são produzidas [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] pelo sempre representam uma única operação de linha. Esta seção descreve esses tipos com as restrições no .NET Framework versão 3.5.
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree tem uma propriedade de destino que representa o destino definido para a operação de alteração. A propriedade da expressão de destino, que define o conjunto de entrada é sempre DbScanExpression.  Um DbScanExpression pode representar uma tabela ou exibição, ou um conjunto de dados definidos com uma consulta se a propriedade de metadados "Que define a consulta" do seu destino for não nulo.
+DbModificationCommandTree tem uma propriedade de destino que representa o destino definido para a operação de alteração. A propriedade da expressão de destino, que define o conjunto de entrada é sempre DbScanExpression.  Um DbScanExpression pode representar uma tabela ou uma exibição, ou um conjunto de dados definido com uma consulta se a propriedade de metadados "definindo consulta" de seu destino for não nula.
 
 Um DbScanExpression que representa uma consulta somente poderia alcançar um provedor como um destino de alteração se o dataset foi definido usando uma consulta de definição no modelo mas em nenhuma função foi fornecido para a operação correspondente de alteração. Os provedores não podem ser capaz de suportar esse cenário (SqlClient, por exemplo, não faz).
 
@@ -74,11 +74,11 @@ O valor especifica o novo valor com que para atualizar a propriedade. É do tipo
 
 O predicado especifica o predicado usado para determinar quais membros da coleção de destino devem ser atualizados ou excluídos. É uma árvore de expressão compilada da seguir subconjunto de DbExpressions:
 
-- DbComparisonExpression de semelhantes Amáveis, com o filho à direita que são um DbPropertyExpression como restrito abaixo e o filho esquerdo um DbConstantExpression.
+- DbComparisonExpression de Kind é igual a, com o filho correto sendo um DbPropertyExpression como restrito abaixo e o filho esquerdo a DbConstantExpression.
 
 - DbConstantExpression
 
-- DbIsNullExpression sobre um DbPropertyExpression como restrito abaixo
+- DbIsNullExpression em um DbPropertyExpression como restrito abaixo
 
 - DbPropertyExpression sobre um DbVariableReferenceExpression que representa uma referência ao destino de DbModificationCommandTree correspondente.
 
@@ -90,7 +90,7 @@ O predicado especifica o predicado usado para determinar quais membros da coleç
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Geração SQL alteração no provedor exemplo
 
-O [provedor de exemplo do Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstra os componentes de provedores de dados ADO.NET que dão suporte a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tem como alvo um base de dados do SQL Server 2005 e é implementado como um wrapper sobre o provedor de dados do ADO.NET .NET 2.0.
+O [provedor de exemplo Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstra os componentes de provedores de dados ADO.NET que [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]dão suporte ao. Tem como alvo um base de dados do SQL Server 2005 e é implementado como um wrapper sobre o provedor de dados do ADO.NET .NET 2.0.
 
 O módulo de geração SQL de alteração do provedor de exemplo (localizado na geração SQL do arquivo DmlSqlGenerator.cs \) usa uma entrada DbModificationCommandTree e gerencia uma única instrução SQL de alteração seguida possivelmente por uma instrução select para retornar um leitor se especificado pelo DbModificationCommandTree. Observe que a forma de comandos gerados é afetada por base de dados SQL Server de destino.
 
@@ -116,7 +116,7 @@ Dado que a instância de DbPropertyExpression sempre representa a tabela de entr
 
 Para um DbInsertCommandTree determinado no provedor de exemplo, o comando gerado de inserção segue um dos dois modelos de inserção abaixo.
 
-O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento de predicado "\@ @ROWCOUNT > 0" é verdadeiro se uma linha foi inserida. O elemento de predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" leva a forma "keyMemberI = SCOPE_IDENTITY ()" apenas se keyMemberI é uma chave store-gerado, porque SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna Store-gerado).
+O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento de predicado "\@ @ROWCOUNT > 0" será true se uma linha for inserida. O elemento predicado "keymemberi = &#124; SCOPE_IDENTITY ()" usa a forma "keymemberi = SCOPE_IDENTITY ()" somente se keymemberi for uma chave gerada pelo repositório, porque SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo armazenamento).
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-A cláusula set tem a cláusula set falso ("@i = 0") somente se nenhum conjunto de cláusulas forem especificado. Este é garantir que todas as colunas Store- computadas recalculados.
+A cláusula SET terá a cláusula SET falsa ("@i = 0") somente se nenhuma cláusula SET for especificada. Este é garantir que todas as colunas Store- computadas recalculados.
 
 Somente se a propriedade retornando não é nulo, uma instrução SELECT é gerada para retornar as propriedades especificadas na propriedade retornando.
 
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>Consulte também
 
-- [Escrevendo um Provedor de Dados do Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Escrevendo um Provedor de Dados do Entity Framework](writing-an-ef-data-provider.md)

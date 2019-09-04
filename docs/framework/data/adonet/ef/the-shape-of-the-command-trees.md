@@ -2,12 +2,12 @@
 title: A forma das árvores de comando
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763978"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248216"
 ---
 # <a name="the-shape-of-the-command-trees"></a>A forma das árvores de comando
 
@@ -25,7 +25,7 @@ Consulte uma semântica mais rica de suporte das árvores de comando do SQL: con
 
 A propriedade de DBQueryCommandTree.Query é a raiz da árvore de expressão que descreve a lógica de consulta. A propriedade de DBQueryCommandTree.Parameters contém uma lista de parâmetros que são usados na consulta. A árvore de expressão é composta de objetos de DbExpression.
 
-Um objeto de DbExpression representa qualquer computação. Vários tipos de expressões são fornecidos por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] composto expressões de consulta, incluindo constantes, variáveis, funções, construtores, e operadores relacionais padrões como filtro e join. Cada objeto de DbExpression tem uma propriedade de ResultType que representa o tipo do resultado produzido por essa expressão. Esse tipo é expresso como um TypeUsage.
+Um objeto de DbExpression representa qualquer computação. Vários tipos de expressões são fornecidos por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] composto expressões de consulta, incluindo constantes, variáveis, funções, construtores, e operadores relacionais padrões como filtro e join. Cada objeto DbExpression tem uma propriedade ResultType que representa o tipo do resultado produzido por essa expressão. Esse tipo é expresso como um TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Formas da árvore de comando de consulta de saída
 
@@ -75,9 +75,9 @@ Os seguintes tipos de função podem ser passados:
 
 - Funções definidas pelo usuário.
 
-Funções canônicas (consulte [funções canônicas](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) para obter mais informações) são especificados como parte do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], e os provedores devem fornecer implementações das funções canônicas com base nas especificações. Funções de Store são baseados nas especificações no manifesto correspondente do provedor. As funções definidas pelo usuário são baseadas nas especificações em SSDL.
+Funções canônicas (consulte [funções canônicas](./language-reference/canonical-functions.md) para obter mais informações) são especificadas como [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]parte do e os provedores devem fornecer implementações para funções canônicas com base nessas especificações. Funções de Store são baseados nas especificações no manifesto correspondente do provedor. As funções definidas pelo usuário são baseadas nas especificações em SSDL.
 
-Além disso, as funções que têm o atributo de NiladicFunction não têm nenhum argumento e devem ser traduzidas sem o parêntese no final.  Ou seja, para  *\<functionName >* em vez de  *\<functionName > ()*.
+Além disso, as funções que têm o atributo de NiladicFunction não têm nenhum argumento e devem ser traduzidas sem o parêntese no final.  Ou seja, para  *\<FunctionName >* em vez de  *\<FunctionName > ()* .
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -87,7 +87,7 @@ DbNewInstanceExpression pode ocorrer somente nos dois seguintes casos:
 
   - O tipo do resultado deve ser um tipo de linha.
 
-  - Cada um dos argumentos é uma expressão que gerencia um resultado com um tipo primitivo. Normalmente, cada argumento é uma expressão escalar, como um PropertyExpression sobre um DbVariableReferenceExpression, uma chamada de função, ou uma computação aritmética de DbPropertyExpression sobre um DbVariableReferenceExpression ou uma chamada de função. No entanto, uma expressão que representa um subconsulta escalar também pode ocorrer na lista de argumentos para um DbNewInstanceExpression. Uma expressão que representa um subconsulta escalar é uma árvore de expressão que representa uma subconsulta que retorna exatamente uma linha e uma coluna de um tipo primitivo com uma raiz do objeto DbElementExpression
+  - Cada um dos argumentos é uma expressão que gerencia um resultado com um tipo primitivo. Normalmente, cada argumento é uma expressão escalar, como um PropertyExpression sobre um DbVariableReferenceExpression, uma chamada de função, ou uma computação aritmética de DbPropertyExpression sobre um DbVariableReferenceExpression ou uma chamada de função. No entanto, uma expressão que representa um subconsulta escalar também pode ocorrer na lista de argumentos para um DbNewInstanceExpression. Uma expressão que representa uma subconsulta escalar é uma árvore de expressão que representa uma subconsulta que retorna exatamente uma linha e uma coluna de um tipo primitivo com uma raiz de objeto DbElementExpression
 
 - Com um tipo de retorno da coleção, nesse caso define uma nova coleção de expressões fornecidas como argumentos.
 
@@ -105,11 +105,11 @@ O limite de propriedade só pode ser um DbConstantExpression ou um DbParameterRe
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-Quando usados em árvores de comando de saída, o DbScanExpression efetivamente representa uma verificação através de uma tabela, um modo de exibição ou uma consulta do repositório, representada por EntitySetBase::Target.
+Quando usado em árvores de comando de saída, o DbScanExpression representa efetivamente uma verificação em uma tabela, uma exibição ou uma consulta de repositório, representada por EntitySetBase:: Target.
 
-Se a propriedade de metadados "Que define a consulta" de destino não for nulo, em seguida, ele representa uma consulta, o texto da consulta para o qual é fornecido na propriedade de metadados na linguagem específica do provedor (ou o dialeto) conforme especificado na definição de esquema de repositório.
+Se a propriedade de metadados "definindo a consulta" do destino for não nula, ela representará uma consulta, o texto de consulta para o qual é fornecido na propriedade de metadados na linguagem específica do provedor (ou dialeto) conforme especificado na definição do esquema de repositório.
 
-Caso contrário, o destino representa uma tabela ou uma exibição. O prefixo de esquema está sendo a propriedade de metadados de "Esquema", se não nulo, caso contrário, é o nome do contêiner de entidade.  O nome de tabela ou exibição é tanto de propriedade de metadados de "Tabela", se não for null, caso contrário, a propriedade Name da entidade define base.
+Caso contrário, o destino representa uma tabela ou uma exibição. Seu prefixo de esquema está na propriedade de metadados "Schema", se não for NULL, caso contrário, é o nome do contêiner da entidade.  O nome da tabela ou exibição é a propriedade de metadados "Table", se não for NULL, caso contrário, a propriedade Name da base do conjunto de entidades.
 
 Todas essas propriedades são originados de definição de EntitySet correspondente no arquivo de definição do esquema de armazenamento (SSDL).
 
@@ -119,4 +119,4 @@ Quando os tipos primitivos são referenciados em árvores de comando de saída, 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [Geração de SQL](sql-generation.md)

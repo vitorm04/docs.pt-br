@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 787ead2c52f874af2ca1a02bf009da40cee875ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935996"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250766"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Como: Chamar funções definidas por modelo como métodos de objeto
-Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Uma *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas pelo modelo em consultas LINQ to Entities [, consulte Como: Chame funções definidas pelo modelo em consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+Este tópico descreve como chamar uma função o definida como um método em um objeto de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada. Uma *função definida pelo modelo* é uma função que é definida no modelo conceitual. O tópico descrevem como chamar essas funções diretamente em vez de chamá-los de consultas LINQ to Entities. Para obter informações sobre como chamar funções definidas pelo modelo em consultas LINQ to Entities [, consulte Como: Chame funções definidas pelo modelo em consultas](how-to-call-model-defined-functions-in-queries.md).  
   
  Se você chamar uma função o definida como um método de <xref:System.Data.Objects.ObjectContext> ou como um método estático em uma classe personalizada, primeiro você deve mapear o método à função definida com o <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. No entanto, quando você define um método na classe de <xref:System.Data.Objects.ObjectContext> , você deve usar a propriedade de <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> para expor o provedor LINQ, enquanto quando você define um método estático em uma classe personalizada, você deve usar a propriedade de <xref:System.Linq.IQueryable.Provider%2A> para expor o provedor LINQ. Para obter mais informações, consulte os exemplos a seguir os procedimentos abaixo.  
   
@@ -108,5 +108,5 @@ Este tópico descreve como chamar uma função o definida como um método em um 
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Chamando funções em consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Consultas no LINQ to Entities](queries-in-linq-to-entities.md)
+- [Chamando funções em consultas LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)

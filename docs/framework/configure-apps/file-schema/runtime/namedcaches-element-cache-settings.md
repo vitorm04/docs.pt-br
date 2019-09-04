@@ -6,20 +6,20 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 9cedd462aa539745ddab844dff158912914cb024
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4587234ad91fa3b1abbb376bd7ae517d5abea6c3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663575"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252458"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<Elemento de > namedCaches (configurações de cache)
 Especifica uma coleção de definições de configuração para as <xref:System.Runtime.Caching.MemoryCache> instâncias nomeadas. A <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> Propriedade faz referência à coleção de definições de configuração de um `namedCaches` ou mais elementos do arquivo de configuração.  
   
- \<configuration>  
-\<sistema. Runtime. Caching >  
-\<memoryCache>  
-\<namedCaches>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<sistema. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> memoryCache**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> namedCaches**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,9 @@ Especifica uma coleção de definições de configuração para as <xref:System.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
+|[\<configuration>](../configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelo Common Language Runtime e .NET Framework aplicativos.|  
 |[\<memoryCache>](memorycache-element-cache-settings.md)|Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>.|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Contém tipos que permitem implementar o cache de saída em aplicativos que são criados no .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
  A seção de configuração de cache de memória do arquivo Web. config `add`pode `remove`conter atributos `clear` , e para `namedCaches` a coleção. Cada `namedCaches` entrada é identificada exclusivamente `name` pelo atributo.  

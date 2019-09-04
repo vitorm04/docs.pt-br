@@ -3,19 +3,20 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 9f5e0c5ded3d750a1102492c7a506e6d5643b2d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fa8c574fd5663606cf081f1000a24884306edfe
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942743"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251989"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
 Especifica as configurações de identidade de nível de serviço.
 
- \<system.identityModel>\
-\<identityConfiguration>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> identityConfiguration**  
 
 ## <a name="syntax"></a>Sintaxe
 

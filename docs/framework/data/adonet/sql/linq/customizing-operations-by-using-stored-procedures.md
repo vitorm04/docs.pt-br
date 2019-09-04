@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63f4cb3cbb90afc37629b336972b5e09d20346b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963287"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247537"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Personalizando operações usando procedimentos armazenados
 Os procedimentos armazenados representam uma abordagem mais comum para substituir o comportamento padrão. Os exemplos neste tópico mostram como você pode usar wrappers gerados do método para procedimentos armazenados, e como você pode chamar procedimentos armazenados diretamente.  
@@ -18,7 +18,7 @@ Os procedimentos armazenados representam uma abordagem mais comum para substitui
  Se você estiver usando o Visual Studio, poderá usar o Object Relational Designer para atribuir procedimentos armazenados para executar inserções, atualizações e exclusões.  
   
 > [!NOTE]
-> Para ler valores base de dados - gerados novamente, use parâmetros de saída em seus procedimentos armazenados. Se você não puder usar parâmetros de saída, escreva uma implementação de método parcial em vez de depender de substituições geradas pelo Object Relational Designer. Os membros mapeados para os valores base de dados - gerados devem ser definidos para apropriado valores depois que `INSERT` ou operações de `UPDATE` terminar com êxito. Para obter mais informações, consulte [responsabilidades do desenvolvedor ao substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+> Para ler valores base de dados - gerados novamente, use parâmetros de saída em seus procedimentos armazenados. Se você não puder usar parâmetros de saída, escreva uma implementação de método parcial em vez de depender de substituições geradas pelo Object Relational Designer. Os membros mapeados para os valores base de dados - gerados devem ser definidos para apropriado valores depois que `INSERT` ou operações de `UPDATE` terminar com êxito. Para obter mais informações, consulte [responsabilidades do desenvolvedor ao substituir o comportamento padrão](responsibilities-of-the-developer-in-overriding-default-behavior.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -49,4 +49,4 @@ Os procedimentos armazenados representam uma abordagem mais comum para substitui
   
 ## <a name="see-also"></a>Consulte também
 
-- [Responsabilidades do desenvolvedor em substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [Responsabilidades do desenvolvedor em substituir o comportamento padrão](responsibilities-of-the-developer-in-overriding-default-behavior.md)

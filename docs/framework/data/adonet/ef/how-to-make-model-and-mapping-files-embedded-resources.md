@@ -2,15 +2,15 @@
 title: 'Como: tornar arquivos de modelo e mapeamento recursos inseridos'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 53817498f6d772c308888c5e994fb25239c4ed61
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c88e0c09742d76c7508d7d782eabbe46035d3501
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949742"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251442"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Como: tornar arquivos de modelo e mapeamento recursos inseridos
-O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite que você implante arquivos de modelo e de mapeamento como recursos incorporados de um aplicativo. O assembly com o modelo inserido e os arquivos de mapeamento devem ser carregados no mesmo domínio de aplicativo que a conexão de entidade. Para saber mais, confira [Cadeias de conexão](../../../../../docs/framework/data/adonet/ef/connection-strings.md). Por padrão, as ferramentas de Modelo de Dados de Entidade inserem o modelo e os arquivos de mapeamento. Ao definir manualmente o modelo e os arquivos de mapeamento, use este procedimento para garantir que os arquivos sejam implantados como recursos incorporados junto com um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicativo.  
+O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite que você implante arquivos de modelo e de mapeamento como recursos incorporados de um aplicativo. O assembly com o modelo inserido e os arquivos de mapeamento devem ser carregados no mesmo domínio de aplicativo que a conexão de entidade. Para saber mais, confira [Cadeias de conexão](connection-strings.md). Por padrão, as ferramentas de Modelo de Dados de Entidade inserem o modelo e os arquivos de mapeamento. Ao definir manualmente o modelo e os arquivos de mapeamento, use este procedimento para garantir que os arquivos sejam implantados como recursos incorporados junto com um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicativo.  
   
 > [!NOTE]
 > Para manter os recursos inseridos, você deverá repetir este procedimento sempre que os arquivos de modelo e mapeamento forem modificados.  
@@ -31,14 +31,14 @@ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite que voc
   
     - `Metadata=res://*;`  
   
-     Para saber mais, confira [Cadeias de conexão](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+     Para saber mais, confira [Cadeias de conexão](connection-strings.md).  
   
 ## <a name="example"></a>Exemplo  
  A cadeia de conexão a seguir faz referência a arquivos de mapeamento e modelo inseridos para o [modelo de vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Esta cadeia de conexão é armazenada no arquivo App.config do projeto.  
 
 ## <a name="see-also"></a>Consulte também
 
-- [Modelagem e mapeamento](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [Como: Definir a cadeia de conexão](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
-- [Como: Criar uma cadeia de conexão de EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [Modelagem e mapeamento](modeling-and-mapping.md)
+- [Como: Definir a cadeia de conexão](how-to-define-the-connection-string.md)
+- [Como: Criar uma cadeia de conexão de EntityConnection](how-to-build-an-entityconnection-connection-string.md)
 - [Ferramentas de Modelo de Dados de Entidade de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032949"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254259"
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
-Os tópicos nesta seção demonstram como usar os recursos de impressão e gerenciamento do sistema de impressão incluídas no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
+Os tópicos nesta seção demonstram como usar os recursos de gerenciamento do sistema de impressão e impressão [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluídos no e no novo caminho de impressão do XPS (XML Paper Specification).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Invocar uma caixa de diálogo Imprimir](how-to-invoke-a-print-dialog.md)  
- Instruções para marcação XAML para declarar um [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] imprimir o objeto de caixa de diálogo e usar código para invocar a caixa de diálogo de dentro de um aplicativo Windows Presentation Foundation (WPF).  
+ Instruções para marcação XAML para declarar um [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] objeto de caixa de diálogo de impressão e usar código para invocar a caixa de diálogo de dentro de um aplicativo Windows Presentation Foundation (WPF).  
   
  [Clonar uma impressora](how-to-clone-a-printer.md)  
  Instruções sobre como instalar uma segunda fila de impressão com exatamente as mesmas propriedades de uma existente.  
@@ -26,7 +26,7 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
  Instruções para usar as propriedades de filas de impressão e trabalhos de impressão para diagnosticar um trabalho de impressão que não está imprimindo.  
   
  [Descobrir se um trabalho de impressão pode ser impresso a esta hora do dia](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
- Instruções sobre como usar as propriedades de filas de impressão e trabalhos de impressão para decidir por meio de programação a que horas do dia de trabalho pode ser impresso.  
+ Instruções para usar as propriedades de filas de impressão e trabalhos de impressão para decidir programaticamente quais horas do dia o trabalho pode ser impresso.  
   
  [Enumerar um subconjunto de filas de impressão](how-to-enumerate-a-subset-of-print-queues.md)  
  Instruções para gerar uma lista de impressoras que contém certas características.  
@@ -35,10 +35,10 @@ Os tópicos nesta seção demonstram como usar os recursos de impressão e geren
  Instruções sobre como descobrir as propriedades do objeto do sistema de impressão no tempo de execução e seus tipos.  
   
  [Imprimir arquivos XPS com programação](how-to-programmatically-print-xps-files.md)  
- Instruções para impressão rápida de arquivos [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] sem a necessidade de um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Instruções para impressão rápida de arquivos XPS (XML Paper Specification) sem a necessidade de um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
  [Pesquisar remotamente o status das impressoras](how-to-remotely-survey-the-status-of-printers.md)  
- Instruções para criar um utilitário que pesquisa impressoras para descobrir os sofrendo uma obstrução de papel ou outro problema.  
+ Instruções para criar um utilitário que pesquisará impressoras para descobrir aqueles que estão enfrentando um emperramento de papel ou outro problema.  
   
  [Validar e mesclar PrintTickets](how-to-validate-and-merge-printtickets.md)  
  Instruções para verificar se um tíquete de impressão é válido e se ele não requer nada que não tem suporte na impressora.  

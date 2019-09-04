@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920673"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252217"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<Elemento de > UseSmallInternalThreadStacks
 Solicita que o Common Language Runtime (CLR) reduza o uso de memória especificando tamanhos de pilha explícitos ao criar determinados threads que ele usa internamente, em vez de usar o tamanho de pilha padrão para esses threads.  
   
- \<Elemento de > de configuração  
-\<Elemento de > de tempo de execução  
-\<Elemento de > UseSmallInternalThreadStacks  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se deve-se solicitar que o CLR use tamanhos de pilha explícitos em vez do tamanho de pilha padrão quando ele cria determinados threads que ele usa internamente. Os tamanhos de pilha explícitos são menores do que o tamanho de pilha padrão de 1 MB.|  
+|enabled|Atributo obrigatório.<br /><br /> Especifica se deve-se solicitar que o CLR use tamanhos de pilha explícitos em vez do tamanho de pilha padrão quando ele cria determinados threads que ele usa internamente. Os tamanhos de pilha explícitos são menores do que o tamanho de pilha padrão de 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663531"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252395"
 ---
 # <a name="probing-element"></a>\<Elemento de > de investigação
 Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesquisar ao carregar assemblies.  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<> de investigação  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,8 @@ Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesq
 |`privatePath`|Atributo obrigatório.<br /><br /> Especifica subdiretórios do diretório base do aplicativo que pode conter assemblies. Delimite cada subdiretório com um ponto e vírgula.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+
+nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

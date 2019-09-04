@@ -9,18 +9,22 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663860"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252738"
 ---
 # <a name="codebase-element"></a>\<Elemento de > codeBase
 
 Especifica onde o Common Language Runtime pode encontrar um assembly.
 
-\<> \<de tempo de \<execução de configuração \<> assemblyBinding > dependentAssembly > \<codebase >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<codeBase>**
 
 ## <a name="syntax"></a>Sintaxe
 

@@ -2,20 +2,20 @@
 title: Funções agregadas canônicas
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489517"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251351"
 ---
 # <a name="aggregate-canonical-functions"></a>Funções agregadas canônicas
 
 Agregados são as expressões em que reduz uma série de valores de entrada, por exemplo, um único valor. Agregados são normalmente usadas em conjunto com o cláusula GROUP BY de expressão SELECT, e há restrições em onde eles podem ser usados.
 
-## <a name="aggregate-entity-sql-canonical-functions"></a>Funções agregadas canônicas do Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Funções de agregação Entity SQL canônicas
 
-A seguir estão as funções canônicas agregadas do Entity SQL.
+Veja a seguir a agregação Entity SQL funções canônicas.
 
 ### <a name="avgexpression"></a>Avg (expressão)
 
@@ -23,11 +23,11 @@ Retorna a média dos valores não anuláveis.
 
 **Argumentos**
 
-Uma `Int32`, `Int64`, `Double`, e `Decimal`.
+Um `Int32`, `Int64`, e`Double`. `Decimal`
 
 **Valor retornado**
 
-O tipo de `expression`, ou `null` se todos os valores de entrada são `null` valores.
+O tipo de `expression`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
@@ -78,7 +78,7 @@ Retorna o máximo dos valores não anuláveis.
 
 **Valor retornado**
 
-O tipo de `expression`, ou `null` se todos os valores de entrada são `null` valores.
+O tipo de `expression`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
@@ -95,7 +95,7 @@ Retorna o mínimo dos valores não anuláveis.
 
 **Valor retornado**
 
-O tipo de `expression`, ou `null` se todos os valores de entrada são `null` valores.
+O tipo de `expression`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
@@ -129,7 +129,7 @@ Retorna o desvio padrão para a população de todos os valores.
 
 **Valor retornado**
 
-Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+Um `Double`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
@@ -146,7 +146,7 @@ Retorna a soma dos valores não anuláveis.
 
 **Valor retornado**
 
-Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+Um `Double`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
@@ -163,7 +163,7 @@ Retorna a variação de todos os valores não anuláveis.
 
 **Valor retornado**
 
-Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+Um `Double`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
@@ -180,18 +180,18 @@ Retorna a variação para a população de todos os valores não anuláveis.
 
 **Valor retornado**
 
-Um `Double`, ou `null` se todos os valores de entrada são `null` valores.
+Um `Double`, ou `null` se todos os valores de `null` entrada forem valores.
 
 **Exemplo**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
 [!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
-Funcionalidade equivalente está disponível no provedor gerenciado cliente do Microsoft SQL. Para obter mais informações, consulte [SqlClient para funções de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
+Funcionalidade equivalente está disponível no provedor gerenciado cliente do Microsoft SQL. Para obter mais informações, consulte [SqlClient para funções de Entity Framework](../sqlclient-for-ef-functions.md).
 
 ## <a name="collection-based-aggregates"></a>Agregações baseadas em coleção
 
-Agregados coleção com base (funções de coleção) operam em coleções e retornam um valor. Por exemplo se os ORDENS são uma coleção de todos os pedidos, você pode calcular a data de remessa mais antiga com a seguinte expressão:
+Agregados coleção com base (funções de coleção) operam em coleções e retornam um valor. Por exemplo, se ORDERs for uma coleção de todos os pedidos, você poderá calcular a data de remessa mais antiga com a seguinte expressão:
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -199,7 +199,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 
 Agregados coleções baseadas dentro de expressões são avaliadas dentro do escopo ambiente atual de resolução.
 
-## <a name="group-based-aggregates"></a>Agregações com base em grupo
+## <a name="group-based-aggregates"></a>Agregações baseadas em grupo
 
 Agregados Grupo- com base são calculadas sobre um grupo como definidas por cláusula GROUP BY. Para cada grupo em resultado, uma agregação separada é calculada usando elementos em cada grupo como entrada ao cálculo agregado. Quando a grupo- pela cláusula é usado em uma expressão selecionar, simplesmente agrupamento nomes de expressão, agregados, ou expressões constantes podem acessar estar presente na projeção ou ordem- pela cláusula.
 
@@ -210,7 +210,7 @@ select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-É possível ter uma agregação grupo-base sem um explícito grupo-pela cláusula SELECT na expressão. Nesse caso, todos os elementos são tratados como um único grupo. Isso é equivalente a especificar um agrupamento com base em uma constante. Tomada, por exemplo, a expressão a seguir:
+É possível ter uma agregação baseada em grupo sem uma cláusula Group by explícita na expressão SELECT. Nesse caso, todos os elementos são tratados como um único grupo. Isso é equivalente a especificar um agrupamento com base em uma constante. Tomada, por exemplo, a expressão a seguir:
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -224,8 +224,8 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 As expressões na agregação grupo- base são avaliadas dentro do escopo de resolução que seria visível para a cláusula WHERE expressão.
 
-Como no Transact-SQL, agregações baseadas em grupo também podem especificar um todos ou modificador DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.
+Como no Transact-SQL, agregações baseadas em grupo também podem especificar um modificador ALL ou DISTINCT. Se o modificador DISTINCT é especificado, as duplicatas são eliminadas de coleção de entrada aggregate, antes que a agregação é calculada apenas. Se TODOS OS modificador é especificado (ou se nenhum modificador é especificado), nenhuma descarte duplicado é executada.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) (Funções canônicas)
+- [Canonical Functions](canonical-functions.md) (Funções canônicas)

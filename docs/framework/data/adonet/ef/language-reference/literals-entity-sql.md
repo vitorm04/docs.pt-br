@@ -2,12 +2,12 @@
 title: Literais (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953296"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250344"
 ---
 # <a name="literals-entity-sql"></a>Literais (Entity SQL)
 Este tópico descreve o suporte de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para literais.  
@@ -15,9 +15,9 @@ Este tópico descreve o suporte de [!INCLUDE[esql](../../../../../../includes/es
 ## <a name="null"></a>Nulo  
  O literal nulo é usado para representar o zero valor de qualquer tipo. Um literal nulo é compatível com qualquer tipo.  
   
- Tipado anula pode ser criado por uma conversão sobre um literal nulo. Para obter mais informações, consulte [Cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Tipado anula pode ser criado por uma conversão sobre um literal nulo. Para obter mais informações, consulte [Cast](cast-entity-sql.md).  
   
- Para regras sobre onde literais nulos flutuantes livres podem ser usados, consulte [literais nulos e inferência de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Para regras sobre onde literais nulos flutuantes livres podem ser usados, consulte [literais nulos e inferência de tipos](null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boolean  
  Literais booleanos são representados pelas palavras-chave `true` e `false`.  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](entity-sql-overview.md)

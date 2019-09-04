@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 55290e8f14f81c50239097905e5407dbcf547c4c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968218"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70244014"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 > [!NOTE]
@@ -36,7 +36,7 @@ Exemplo de um item de lista editável
   
 - <xref:System.Windows.Automation.Provider.IValueProvider>o não oferece suporte à recuperação de informações de formatação ou valores de subcadeias. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>deve ser implementado por controles como o controle de seleção de seletor [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] de cor de (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] exemplo, "amarelo") e uma estrutura interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>deve ser implementado por controles como o controle de seleção de seletor [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] de cor de (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "amarelo") e uma estrutura RGB interna equivalente.  
   
  ![Seletor de cores com amarelo realçado.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemplo de mapeamento de cadeia de caracteres de amostra de cor  

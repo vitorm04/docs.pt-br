@@ -2,12 +2,12 @@
 title: = (Igual a) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ec87ec682e1773c001c225567a35b3cedc9c5aba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333152"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250998"
 ---
 # <a name="-equals-entity-sql"></a>= (Igual a) (Entity SQL)
 Compara a igualdade de duas expressões.  
@@ -33,7 +33,7 @@ expression == expression
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa = operador de comparação para comparar a igualdade de duas expressões. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
@@ -41,4 +41,4 @@ expression == expression
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referência de Entity SQL](entity-sql-reference.md)

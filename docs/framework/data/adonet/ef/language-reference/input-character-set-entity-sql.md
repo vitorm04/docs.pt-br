@@ -2,12 +2,12 @@
 title: Conjunto de caracteres de entrada (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1c6475704ec384800af0b678edd943246bf8044
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780413"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250633"
 ---
 # <a name="input-character-set-entity-sql"></a>Conjunto de caracteres de entrada (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aceita os caracteres de UNICODE codificados em UTF-16.  
@@ -16,7 +16,7 @@ ms.locfileid: "61780413"
   
  Comentários podem conter qualquer caractere UTF-16.  
   
- Os identificadores escapados podem conter qualquer caractere UTF-16 entre colchetes. Por exemplo, エスケープされた識別子 []. A comparação de identificadores escapados UTF-16 não difere maiúsculas de minúsculas. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trata versões de letras que aparecem o mesmo mas é páginas diferentes de código como caracteres diferentes. Por exemplo, [ABC] é equivalente a abc [] se os caracteres correspondentes são da mesma página de código. No entanto, se os mesmos dois identificadores são páginas de código diferentes, eles não são equivalentes.  
+ Os identificadores escapados podem conter qualquer caractere UTF-16 entre colchetes. Por exemplo, エスケープされた識別子 []. A comparação de identificadores escapados UTF-16 não difere maiúsculas de minúsculas. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trata versões de letras que aparecem o mesmo mas é páginas diferentes de código como caracteres diferentes. Por exemplo, [ABC] é equivalente a [abc] se os caracteres correspondentes forem da mesma página de código. No entanto, se os mesmos dois identificadores forem de páginas de código diferentes, eles não serão equivalentes.  
   
  Espaço em branco é qualquer caractere de espaço em branco UTF-16.  
   
@@ -24,10 +24,10 @@ ms.locfileid: "61780413"
   
  Palavras-chave, as expressões, e pontuação podem ser qualquer caractere UTF-16 que normalizar ao latim. Por exemplo, SELECT em uma página de código japonesa é uma palavra-chave válida.  
   
- Palavras-chave, as expressões, e pontuação só podem ser caracteres latinos. `SELECT` em uma página de código japonesa não é uma palavra-chave. +,-, \*, /, =, (,), ', [,] e qualquer outra construção de linguagem não citada aqui só pode ser caracteres latinos.  
+ Palavras-chave, as expressões, e pontuação só podem ser caracteres latinos. `SELECT` em uma página de código japonesa não é uma palavra-chave. +,-, \*,/, =, (,), ', [,] e qualquer outra construção de linguagem não entre aspas aqui só pode ser caracteres latinos.  
   
- Os identificadores simples só podem ser caracteres latinos. Isso evita a ambiguidade durante a comparação, porque os valores originais são comparados. Por exemplo, ABC seria diferente em páginas de código japonesas e latinos.  
+ Os identificadores simples só podem ser caracteres latinos. Isso evita a ambiguidade durante a comparação, porque os valores originais são comparados. Por exemplo, ABC seria diferente nas páginas de código japonês e latino.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Visão geral do Entity SQL](entity-sql-overview.md)

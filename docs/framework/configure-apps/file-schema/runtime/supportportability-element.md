@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1848db96b8f466f617c58f0fdd879ffe3b2022bd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927256"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252299"
 ---
 # <a name="supportportability-element"></a>\<Elemento de > supportPortability
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
   
- \<Elemento de > de configuração  
-\<Elemento de > de tempo de execução  
-\<Elemento de > assemblyBinding  
-\<Elemento de > supportPortability  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> supportPortability**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,7 +29,8 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+
+As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -46,7 +47,8 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 |false|Desabilite o suporte para portabilidade entre implementações do assembly de .NET Framework especificado. Isso permite que o aplicativo tenha referências a várias implementações do assembly especificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+
+nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -57,15 +59,17 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 |`assemblyBinding`|Contém informações sobre o redirecionamento de versão e os locais dos assemblies.|  
   
 ## <a name="remarks"></a>Comentários  
- A partir do .NET Framework 4, o suporte é fornecido automaticamente para aplicativos que podem usar uma das duas implementações do .NET Framework, por exemplo, a implementação do .NET Framework ou o .NET Framework para a implementação do Silverlight. As duas implementações de um determinado assembly de .NET Framework são vistas como equivalentes pelo associador de assembly. Em alguns cenários, esse recurso de portabilidade de aplicativo causa problemas. Nesses cenários, o `<supportPortability>` elemento pode ser usado para desabilitar o recurso.  
+
+A partir do .NET Framework 4, o suporte é fornecido automaticamente para aplicativos que podem usar uma das duas implementações do .NET Framework, por exemplo, a implementação do .NET Framework ou o .NET Framework para a implementação do Silverlight. As duas implementações de um determinado assembly de .NET Framework são vistas como equivalentes pelo associador de assembly. Em alguns cenários, esse recurso de portabilidade de aplicativo causa problemas. Nesses cenários, o `<supportPortability>` elemento pode ser usado para desabilitar o recurso.  
   
- Um cenário desse tipo é um assembly que tem que referenciar a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de um determinado assembly de referência. Por exemplo, um designer XAML escrito em Windows Presentation Foundation (WPF) pode precisar referenciar a implementação da área de trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF que está incluído na implementação do Silverlight. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes. Esse elemento desabilita o comportamento padrão e permite que a compilação tenha sucesso.  
+Um cenário desse tipo é um assembly que tem que referenciar a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de um determinado assembly de referência. Por exemplo, um designer XAML escrito em Windows Presentation Foundation (WPF) pode precisar referenciar a implementação da área de trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF que está incluído na implementação do Silverlight. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes. Esse elemento desabilita o comportamento padrão e permite que a compilação tenha sucesso.  
   
 > [!IMPORTANT]
 > Para que o compilador passe as informações para a lógica de associação de assembly do Common Language Runtime, você deve usar a opção `/appconfig` do compilador para especificar o local do arquivo app. config que contém esse elemento.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir permite que um aplicativo tenha referências para a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de qualquer assembly .NET Framework que exista em ambas as implementações. A `/appconfig` opção do compilador deve ser usada para especificar o local deste arquivo app. config.  
+
+O exemplo a seguir permite que um aplicativo tenha referências para a implementação de .NET Framework e o .NET Framework para a implementação do Silverlight de qualquer assembly .NET Framework que exista em ambas as implementações. A `/appconfig` opção do compilador deve ser usada para especificar o local deste arquivo app. config.  
   
 ```xml  
 <configuration>  

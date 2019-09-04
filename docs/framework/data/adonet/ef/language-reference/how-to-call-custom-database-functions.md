@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 6ddd6ebc6215ec17fa416fb0de8f81cf631365db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7f483d8dc7c6d0160ec211140726c9d732f0268
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936036"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250803"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Como: Chamar funções personalizadas de banco de dados
 Este tópico descreve como chamar funções personalizados que são definidas na base de dados de dentro das consultas LINQ to Entities.  
@@ -63,4 +63,4 @@ Este tópico descreve como chamar funções personalizados que são definidas na
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral do arquivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Consultas no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Consultas no LINQ to Entities](queries-in-linq-to-entities.md)

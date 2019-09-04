@@ -2,12 +2,12 @@
 title: Gerando SQL das árvores de comando - práticas recomendadas
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606661"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251571"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Gerando SQL das árvores de comando - práticas recomendadas
 
@@ -125,7 +125,7 @@ Considere o primeiro exemplo deste tópico. Se fazendo a conversão de naïve e 
 
 ## <a name="join-alias-flattening"></a>Adição a ajuste alias
 
-Ao contrário de alguma outra expressão relacional em uma árvore de comando de saída, a saída de DbJoinExpression um tipo de resultado que é uma linha que consiste em duas colunas, cada um deless corresponde a uma das entradas. Quando um DbPropertyExpression baseia-se para acessar uma propriedade escalar provenientes de uma junção, é sobre outro DbPropertyExpression.
+Ao contrário de alguma outra expressão relacional em uma árvore de comando de saída, a saída de DbJoinExpression um tipo de resultado que é uma linha que consiste em duas colunas, cada um deless corresponde a uma das entradas. Quando um DbPropertyExpression é criado para acessar uma propriedade escalar proveniente de uma junção, ele está sobre outro DbPropertyExpression.
 
 Os exemplos incluem “no exemplo a.b.y” 2 “e” no exemplo b.c.y 3. No entanto nas instruções SQL correspondentes esses são referidos como “b.y”. Esta novamente serrilha é chamada join a ajuste alias.
 
@@ -137,16 +137,16 @@ Além disso, quando ajuste joins, as tabelas de participação (ou os subconsult
 
 ## <a name="avoid-select-"></a>Evite SELECT *
 
-Não use `SELECT *` para selecionar as tabelas de base. O modelo de armazenamento em um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicativo pode incluir apenas um subconjunto das colunas que estão na tabela de banco de dados. Nesse caso, `SELECT *` pode produzir um resultado incorreto. Em vez disso, você deve especificar todas as colunas de participação usando os nomes de coluna tipo do resultado das expressões de participação.
+Não use `SELECT *` para selecionar as tabelas de base. O modelo de armazenamento em [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] um aplicativo pode incluir apenas um subconjunto das colunas que estão na tabela de banco de dados. Nesse caso, `SELECT *` pode produzir um resultado incorreto. Em vez disso, você deve especificar todas as colunas de participação usando os nomes de coluna tipo do resultado das expressões de participação.
 
 ## <a name="reuse-of-expressions"></a>Reutilização de expressões
 
-Expressões podem ser reutilizadas na árvore de comando de consulta passada pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Não presuma que cada expressão aparece apenas uma vez na árvore de comando de consulta.
+As expressões podem ser reutilizadas na árvore de comandos de consulta [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]passada pelo. Não assuma que cada expressão apareça apenas uma vez na árvore de comandos de consulta.
 
 ## <a name="mapping-primitive-types"></a>Tipos primitivos de mapeamento
 
-Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não pode ser usado para várias operações, como BLOB tipos (por exemplo, `ntext` no SQL Server).
+Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não podem ser usados para muitas operações, como tipos de blob `ntext` (por exemplo, em SQL Server).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Geração de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [Geração de SQL](sql-generation.md)

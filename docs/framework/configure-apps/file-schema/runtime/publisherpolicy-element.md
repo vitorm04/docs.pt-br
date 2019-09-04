@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663507"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252374"
 ---
 # <a name="publisherpolicy-element"></a>\<Elemento de > publisherPolicy Apply
 Especifica se o tempo de execução aplica a política do editor.  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> publisherPolicy Apply**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,13 +51,16 @@ Especifica se o tempo de execução aplica a política do editor.
 |`no`|Não aplica a política do Publicador.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+
+nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
+|`assemblyBinding`|Contém informações sobre o redirecionamento de versão e os locais dos assemblies.|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
+|`dependentAssembly`|Encapsula local do assembly e política de associação para cada assembly. Use um `<dependentAssembly>` elemento para cada assembly.|  
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  

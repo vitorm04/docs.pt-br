@@ -3,19 +3,20 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ddbe8a862940272e4192a3f4c0abdc1f9e8b5d48
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252077"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
 Registra um Gerenciador de autorização de declarações para as declarações de entrada.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimsAuthorizationManager>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> claimsAuthorizationManager**  
   
 ## <a name="syntax"></a>Sintaxe  
   

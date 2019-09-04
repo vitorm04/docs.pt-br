@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd09598800b74c4807163bc921806f5b470e0d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927322"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252492"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<Elemento de > legacyImpersonationPolicy
 Especifica que a identidade do Windows não flua entre pontos assíncronos, independentemente das configurações de fluxo para o contexto de execução no thread atual.  
   
- \<configuration>  
-\<runtime>  
-\<legacyImpersonationPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyImpersonationPolicy>**  
   
 ## <a name="syntax"></a>Sintaxe  
   

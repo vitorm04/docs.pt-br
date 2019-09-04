@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920771"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252613"
 ---
 # <a name="etwenable-element"></a>\<Elemento de > etwEnable
 Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) para eventos de Common Language Runtime.  
   
- \<Elemento de > de configuração  
-\<Elemento de > de tempo de execução  
-\<etwEnabled>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> etwEnabled**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ Especifica se deseja-se habilitar o rastreamento de eventos para Windows (ETW) p
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Atributo obrigatório.<br /><br /> Especifica se o ETW deve ser habilitado.|  
+|enabled|Atributo obrigatório.<br /><br /> Especifica se o ETW deve ser habilitado.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

@@ -2,12 +2,12 @@
 title: FUNÇÃO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: efab5f1abbc5e0c22e404c37dc80dd5aafa09ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879600"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250931"
 ---
 # <a name="function-entity-sql"></a>FUNÇÃO (Entity SQL)
 Define uma função no escopo de um comando de consulta Entity SQL.  
@@ -41,17 +41,17 @@ FUNCTION function-name
  `data_type`  
  Nome de um tipo suportado.  
   
- COLLECTION ( <type_definition`>` )  
+ COLEÇÃO (< type_definition`>` )  
  Uma expressão que retorna uma coleção de tipos suportados, de linhas, ou de referências.  
   
- REF **(**`data_type`**)**  
+ REF **(** `data_type` **)**  
  Uma expressão que retorna uma referência a um tipo de objeto.  
   
- ROW **(**`row_expression`**)**  
- Uma expressão que retorna registros anônimos, tipados estrutural de um ou mais valores. Para obter mais informações, consulte [linha](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ ROW **(** `row_expression` **)**  
+ Uma expressão que retorna registros anônimos, tipados estrutural de um ou mais valores. Para obter mais informações, consulte [linha](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Comentários  
- Várias funções com o mesmo nome podem ser declarados embutidos, como as assinaturas de função são diferentes. Para obter mais informações, consulte [resolução de sobrecarga de função](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
+ Várias funções com o mesmo nome podem ser declarados embutidos, como as assinaturas de função são diferentes. Para obter mais informações, consulte [resolução de sobrecarga de função](function-overload-resolution-entity-sql.md).  
   
  Uma função in-line pode ser chamado em um comando de Entity SQL somente após foi definida no comando. No entanto, uma função in-line pode ser chamada dentro de outra função in-line tanto antes ou após a função chamada foi definido. No exemplo a seguir, funciona a função B de chamadas de antes que a função B é definida:  
   
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- Para obter mais informações, confira [Como: Chamar uma função definida pelo usuário](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Para obter mais informações, confira [Como: Chamar uma função](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))definida pelo usuário.  
   
- As funções podem também ser declaradas no próprio modelo. As funções declaradas no modelo são executadas da mesma forma como as funções está embutido no comando. Para obter mais informações, consulte [funções definidas pelo usuário](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
+ As funções podem também ser declaradas no próprio modelo. As funções declaradas no modelo são executadas da mesma forma como as funções está embutido no comando. Para obter mais informações, consulte [funções definidas pelo usuário](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Exemplo  
  O seguinte comando de Entity SQL define uma função `Products` que recebe um valor inteiro para filtrar os produtos retornados.  
@@ -77,5 +77,5 @@ FUNCTION function-name
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL Language](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) (Linguagem SQL de entidade)
+- [Referência de Entity SQL](entity-sql-reference.md)
+- [Entity SQL Language](entity-sql-language.md) (Linguagem SQL de entidade)
