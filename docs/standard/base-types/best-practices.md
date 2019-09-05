@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988818"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254222"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 <a name="top"></a> O mecanismo de expressões regulares no .NET é uma ferramenta poderosa e repleta de recursos que processa o texto com base em correspondências de padrões em vez de em comparar e corresponder o texto literal. Na maioria dos casos, ele realiza a correspondência de padrões de forma rápida e eficiente. No entanto, em alguns casos, o mecanismo de expressões regulares pode parecer ser muito lento. Em casos extremos, pode até mesmo parecer parar de responder enquanto processa uma entrada relativamente pequena em um período de horas ou até mesmo dias.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988818"
 > A forma da chamada de método (estático, interpretada, compilada) afeta o desempenho se a mesma expressão regular é usada repetidamente em chamadas de método ou se um aplicativo faz uso extensivo de objetos de expressão regular.  
   
 ### <a name="static-regular-expressions"></a>Expressões regulares estáticas  
- Os métodos de expressões regulares estáticas são recomendados como uma alternativa a criar repetidamente instâncias de um objeto de expressão regular com a mesma expressão regular. Ao contrário de padrões de expressões regulares usados por objetos de expressões regulares, os códigos de operação ou a linguagem intermediária compilada da Microsoft (MSIL) de padrões usados em chamadas de métodos são armazenados em cache internamente pelo mecanismo de expressões regulares.  
+ Os métodos de expressões regulares estáticas são recomendados como uma alternativa a criar repetidamente instâncias de um objeto de expressão regular com a mesma expressão regular. Ao contrário dos padrões de expressão regulares usados por objetos de expressão regular, os códigos de operação ou a MSIL (Microsoft Intermediate Language) compilada dos padrões usados em chamadas de método estáticos são armazenados em cache internamente pelo mecanismo de expressão regular.  
   
  Por exemplo, um manipulador de eventos chama frequentemente outro método para validar a entrada do usuário. Isso é refletido no código a seguir, no qual o evento <xref:System.Windows.Forms.Button> de um controle <xref:System.Windows.Forms.Control.Click> é usado para chamar um método `IsValidCurrency`, o qu al verifica se o usuário inseriu um símbolo de moeda seguido por pelo menos um dígito decimal.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "69988818"
   
  A expressão regular `\p{Sc}+\s*\d+` que é usada neste exemplo verifica que a cadeia de caracteres de entrada consiste em um símbolo de moeda e pelo menos um dígito decimal. O padrão é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\p{Sc}+`|Corresponde a um ou mais caracteres no símbolo Unicode, categoria de moeda.|  
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
@@ -138,7 +138,7 @@ ms.locfileid: "69988818"
   
  O padrão de expressão regular usado neste exemplo, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|  
@@ -183,7 +183,7 @@ ms.locfileid: "69988818"
   
  Frequentemente, os aplicativos pagam uma penalidade de desempenho por usar o retrocesso, mesmo ele não sendo essencial para uma correspondência. Por exemplo, a expressão regular `\b\p{Lu}\w*\b` corresponde a todas as palavras que começam com um caractere maiúsculo, como mostra a tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-|-|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`\p{Lu}`|Corresponder a um caractere maiúsculo.|  
@@ -206,7 +206,7 @@ ms.locfileid: "69988818"
   
  Nesses casos, você pode otimizar o desempenho da expressão regular ao remover os quantificadores aninhados e substituir a subexpressão externa por uma declaração de lookahead ou lookbehind de largura zero. As asserções lookahead e lookbehind são âncoras; elas não movem o ponteiro na cadeia de caracteres de entrada, mas fazem uma verificação para verificar se uma condição especificada foi atendida. Por exemplo, a expressão regular do número de peça pode ser reescrita como `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Esse padrão de expressão regular é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. O número de peça deve consistir em pelo menos este caractere.|  
@@ -222,7 +222,7 @@ ms.locfileid: "69988818"
   
  A linguagem de expressões regulares no .NET inclui os seguintes elementos de linguagem que você pode usar para eliminar quantificadores aninhados. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-|Elemento de linguagem|DESCRIÇÃO|  
+|Elemento de linguagem|Descrição|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|Lookahead positivo de largura zero. Examine além da posição atual para determinar se `subexpression` coincide com a cadeia de caracteres de entrada.|  
 |`(?!` `subexpression` `)`|Lookahead negativo de largura zero. Examine além da posição atual para determinar se `subexpression` não coincide com a cadeia de caracteres de entrada.|  
@@ -260,7 +260,7 @@ ms.locfileid: "69988818"
   
  Muitas vezes, os construtores de agrupamento são usados somente em uma expressão regular de modo que quantificadores possam ser aplicados a eles e os grupos capturados por essas subexpressão não são usados posteriormente. Por exemplo, a expressão regular `\b(\w+[;,]?\s?)+[.?!]` é criada para capturar uma frase inteira. A tabela a seguir descreve os elementos de linguagem nesse padrão de expressão regular e seu efeito nas coleções <xref:System.Text.RegularExpressions.Match> e <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> do objeto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|  
@@ -294,7 +294,7 @@ ms.locfileid: "69988818"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|DESCRIÇÃO|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Detalhes do comportamento da expressão regular](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina a implementação do mecanismo de expressões regulares no .NET. O tópico concentra-se na flexibilidade de expressões regulares e explica a responsabilidade do desenvolvedor para garantir o funcionamento eficiente e robusto do mecanismo de expressões regulares.|  
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica o que é o retrocesso é como ele afeta o desempenho da expressão regular e examina os elementos de linguagem que fornecem alternativas ao retrocesso.|  
