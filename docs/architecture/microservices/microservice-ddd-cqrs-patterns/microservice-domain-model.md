@@ -4,7 +4,7 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 ms.date: 10/08/2018
 ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68676443"
@@ -61,7 +61,7 @@ Algumas pessoas dizem que o modelo de domínio anêmico é um antipadrão. Isso 
 - **Martin Fowler. O modelo de domínio** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **Martin Fowler. The Anemic Domain Model** \ (O modelo de domínio anêmico)
+- **Martin Fowler. O modelo de domínio anêmico** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>O padrão de objeto de valor

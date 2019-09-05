@@ -4,7 +4,7 @@ description: Microsserviços precisam ser projetados para resistir a falhas de d
 ms.date: 09/20/2018
 ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68675053"
@@ -68,7 +68,7 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 - **Conectar computadores Windows ao serviço do Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Logging What You Mean: Using the Semantic Logging Application Block** \ (Registrando em log aquilo que importa: usando o bloco de aplicativo de registro em log semântico)
+- **Registrando em log aquilo que importa: usando o bloco de aplicativo de registro em log semântico** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Site oficial do **Splunk**. \
