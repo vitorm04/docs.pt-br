@@ -1,0 +1,24 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Diretrizes para Arquitetura de Aplicativos .NET
+metadata:
+  document_id: na
+  title: Diretrizes para Arquitetura de Aplicativos .NET
+  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  ms.topic: landing-page
+  ms.date: 06/12/2019
+abstract:
+  description: Saiba como criar aplicativos .NET prontos para produção com diretrizes para arquitetura de aplicativos gratuitos.
+sections:
+  - title: Livros eletrônicos disponíveis
+    items:
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)</a></p>
+      - html: '<p>Este guia é uma introdução aos processos de ciclo de vida de ponta a ponta recomendados que você usará para desenvolver, validar e implantar aplicativos em contêineres do Docker usando o Visual Studio e o Microsoft Azure.</p></li></ul>'
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizar os aplicativos existentes do .NET com a nuvem do Azure e Contêineres do Windows</a></p>
+      - html: '<p>Este guia é uma introdução às estratégias de que você precisará para migrar os aplicativos Web existentes para a nuvem do Azure e os contêineres do Windows. Você saberá mais sobre estratégias de código, migração de dados, orquestradores e processos CI/CD.</p></li></ul>'
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure</a></p>
+      - html: '<p>Este guia é uma introdução à arquitetura, ao design e aos processos de implantação recomendados que você usará para compilar aplicativos ASP.NET e ASP.NET Core e hospedar esses aplicativos no Azure.</p></li></ul>'
+      - html: <ul><li><p><a href="microservices/index">Arquitetando aplicativos baseados em contêineres e em microsserviços</a></p>
+      - html: <p>Este guia é uma introdução ao desenvolvimento de aplicativos com base em microsserviços e ao gerenciamento deles usando contêineres. Ele discute as abordagens de design de arquitetura e de implementação usando o .NET Core e os contêineres do Docker.</p></li></ul>
+      - html: '<ul><li><p><a href="serverless/index">Aplicativos sem servidor: arquitetura, padrões e implementação no Azure</a></p>'
+      - html: <p>Este é um guia para a criação de aplicativos sem servidor com exemplos usando o Azure. Ele trata de várias abordagens de arquitetura e design e dos benefícios e desafios que acompanham a computação sem servidor e fornece cenários e casos de uso para aplicativos sem servidor.</p></li></ul>
