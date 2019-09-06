@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105451"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373991"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -76,9 +76,9 @@ Depois de instalar o EF Core, criar um tipo filho do DbContext e configurá-lo e
 
 Você pode ver as consultas executadas pelo EF Core configurando um agente e garantindo que seu nível está definido com, pelo menos, Informações, conforme mostrado na Figura 8-1.
 
-![](./media/image8-1.png)
+![Registrando EF Core consultas no console](./media/image8-1.png)
 
-Figura 8-1 Registrando em log consultas do EF Core no console
+**Figura 8-1**. Registrando EF Core consultas no console
 
 ### <a name="fetching-and-storing-data"></a>Buscando e armazenando dados
 

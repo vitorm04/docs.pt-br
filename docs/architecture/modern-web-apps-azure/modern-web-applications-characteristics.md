@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672903"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374084"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
@@ -24,9 +24,9 @@ O ASP.NET Core é otimizado para aplicativos Web modernos e cenários de hospeda
 
 Estas diretrizes incluem um aplicativo de referência, o _eShopOnWeb_, que demonstra alguns dos princípios e das recomendações. O aplicativo é uma loja online simples compatível com navegação em um catálogo de camisetas, canecas e outros itens de marketing. O aplicativo de referência é deliberadamente simples para facilitar o entendimento.
 
-**Figura 2-1.** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**Figura 2-1.** eShopOnWeb
 
 > ### <a name="reference-application"></a>Aplicativo de referência
 >

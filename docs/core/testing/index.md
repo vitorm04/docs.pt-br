@@ -5,16 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614863"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373865"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Teste de unidade no .NET Core e no .NET Standard
 
 O .NET Core torna mais fácil criar testes de unidade. Este artigo apresenta brevemente os testes de unidade e mostra como eles diferem de outros tipos de testes. Os recursos vinculados na parte inferior da página mostram como adicionar um projeto de teste à sua solução. Depois de configurar seu projeto de teste, você poderá executar testes de unidade usando a linha de comando ou o Visual Studio.
+
+Se você estiver testando um projeto **ASP.NET Core** , consulte [testes de integração no ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
 
 O .NET Core 2.0 e posterior dá suporte ao [.NET Standard 2.0](../../standard/net-standard.md). Usamos as bibliotecas dele para demonstrar os testes de unidades.
 

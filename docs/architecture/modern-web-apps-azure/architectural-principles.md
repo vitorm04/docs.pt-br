@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105481"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373760"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -36,13 +36,13 @@ Nas classes, o encapsulamento é obtido por meio da limitação do acesso extern
 
 A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de modo que a dependência em tempo de compilação flua na direção da execução em tempo de execução. Isso produz um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, em tempo de compilação, A dependerá de B que dependerá de C, conforme mostrado na Figura 4-1.
 
-![](./media/image4-1.png)
+![Grafo de dependência direta](./media/image4-1.png)
 
 **Figura 4-1.** Grafo de dependência direta.
 
 A aplicação do princípio da inversão de dependência permite que A chame métodos em uma abstração implementada por B, possibilitando que A chame B em tempo de execução, mas que B dependa de uma interface controlada por A em tempo de compilação (*invertendo*, portanto, a dependência típica em tempo de compilação). Em tempo de execução, o fluxo da execução do programa permanece inalterado, mas a introdução de interfaces significa que diferentes implementações dessas interfaces podem ser conectadas com facilidade.
 
-![](./media/image4-2.png)
+![Grafo de dependência invertido](./media/image4-2.png)
 
 **Figura 4-2.** Grafo de dependência invertida.
 

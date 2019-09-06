@@ -2,12 +2,12 @@
 title: Crie serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Crie serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 ms.date: 04/30/2018
-ms.openlocfilehash: 5d25fb0d15ff7b9f04b9491454d1368e4aa7f593
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578349"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373967"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crie serviços resilientes prontos para a nuvem: adote as falhas transitórias na nuvem
 
@@ -29,7 +29,7 @@ Um aplicativo resiliente como o mostrado na Figura 4-9 deve implementar técnica
 
 ![Falhas parciais tratadas por repetições com retirada exponencial](./media/image9.png)
 
-> **Figura 4-9.** Falhas parciais tratadas por repetições com retirada exponencial
+**Figura 4-9.** Falhas parciais tratadas por repetições com retirada exponencial
 
 Você pode usar essas técnicas tanto em recursos HTTP quanto em recursos de banco de dados. Na Figura 4-9, o aplicativo é baseado em uma arquitetura de três camadas, portanto, você precisa dessas técnicas no nível de serviços (HTTP) e no nível de camada de dados (TCP). Em um aplicativo monolítico que usa uma única camada de aplicativo além do banco de dados (sem serviços ou microserviços adicionais), lidar com falhas transitórias no nível de conexão do banco de dados pode ser suficiente. Nesse cenário, apenas uma configuração específica da conexão de banco de dados é necessária.
 

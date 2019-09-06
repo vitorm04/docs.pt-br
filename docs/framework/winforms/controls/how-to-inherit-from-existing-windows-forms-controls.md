@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015859"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373244"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Como: Herdar de controles do Windows Forms existentes
 
@@ -26,22 +26,22 @@ Se você quiser estender a funcionalidade de um controle existente, poderá cria
 
 1. No Visual Studio, crie um novo projeto de **aplicativo Windows Forms** .
 
-2. No menu **Projeto**, escolha **Adicionar Novo Item**.
+1. No menu **Projeto**, escolha **Adicionar Novo Item**.
 
-     A caixa de diálogo **Adicionar Novo Item** é exibida.
+    A caixa de diálogo **Adicionar Novo Item** é exibida.
 
-3. Na caixa de diálogo **Adicionar Novo Item**, clique duas vezes em **Controle personalizado**.
+1. Na caixa de diálogo **Adicionar Novo Item**, clique duas vezes em **Controle personalizado**.
 
-     Um novo controle personalizado será adicionado ao projeto.
+    Um novo controle personalizado será adicionado ao projeto.
 
-4. Se você estiver usando:
+1. Se você estiver usando:
 
-   - Visual Basic, na parte superior do **Gerenciador de soluções**, clique em **Mostrar todos os arquivos**. Expanda CustomControl1.vb e abra CustomControl1.Designer.vb no Editor de Código.
-   - C#, abra CustomControl1.cs no editor de código.
+    - Visual Basic, na parte superior do **Gerenciador de soluções**, clique em **Mostrar todos os arquivos**. Expanda CustomControl1.vb e abra CustomControl1.Designer.vb no Editor de Código.
+    - C#, abra CustomControl1.cs no editor de código.
 
-6. Localize a declaração de classe que herda de <xref:System.Windows.Forms.Control>.
+1. Localize a declaração de classe que herda de <xref:System.Windows.Forms.Control>.
 
-7. Altere a classe base para o controle do qual você deseja herdar.
+1. Altere a classe base para o controle do qual você deseja herdar.
 
      Por exemplo, se você quiser herdar de <xref:System.Windows.Forms.Button>, altere a declaração de classe para o seguinte:
 
@@ -54,11 +54,11 @@ Se você quiser estender a funcionalidade de um controle existente, poderá cria
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Se você estiver usando Visual Basic, salve e feche CustomControl1.Designer.vb. Abra CustomControl1.vb no Editor de Código.
+1. Se você estiver usando Visual Basic, salve e feche CustomControl1.Designer.vb. Abra CustomControl1.vb no Editor de Código.
 
-9. Implemente os métodos ou propriedades personalizados que o controle incorporará.
+1. Implemente os métodos ou propriedades personalizados que o controle incorporará.
 
-10. Se você quiser modificar a aparência gráfica do seu controle, substitua o <xref:System.Windows.Forms.Control.OnPaint%2A> método.
+1. Se você quiser modificar a aparência gráfica do seu controle, substitua o <xref:System.Windows.Forms.Control.OnPaint%2A> método.
 
     > [!NOTE]
     > A <xref:System.Windows.Forms.Control.OnPaint%2A> substituição não permitirá que você modifique a aparência de todos os controles. Esses controles que têm toda a pintura feita pelo Windows (por exemplo, <xref:System.Windows.Forms.TextBox>) nunca chamam seu <xref:System.Windows.Forms.Control.OnPaint%2A> método e, portanto, nunca usarão o código personalizado. Consulte a documentação da ajuda para o controle específico que você deseja modificar para ver se o <xref:System.Windows.Forms.Control.OnPaint%2A> método está disponível. Para obter uma lista de todos os controles do Windows Forms, consulte [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md). Se um controle não estiver <xref:System.Windows.Forms.Control.OnPaint%2A> listado como um método de membro, você não poderá alterar sua aparência substituindo esse método. Para obter mais informações sobre pintura personalizada, consulte [Pintura e renderização de controle personalizado](custom-control-painting-and-rendering.md).
@@ -83,7 +83,7 @@ Se você quiser estender a funcionalidade de um controle existente, poderá cria
     }
     ```
 
-11. Salve e teste seu controle.
+1. Salve e teste seu controle.
 
 ## <a name="see-also"></a>Consulte também
 

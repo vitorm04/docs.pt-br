@@ -2,12 +2,12 @@
 title: Usando um servidor de banco de dados em execução como contêiner
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Usando um servidor de banco de dados em execução como um contêiner? Apenas para desenvolvimento! Entenda o porquê.
 ms.date: 10/02/2018
-ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 312f986b5aa710fe51c7c3488776395194526e51
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676193"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70296880"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Usando um servidor de banco de dados em execução como contêiner
 
@@ -31,7 +31,7 @@ O contêiner do SQL Server no aplicativo de exemplo é configurado com o seguint
 
 De maneira semelhante, em vez de usar `docker-compose`, o seguinte comando `docker run` pode ser executado naquele contêiner:
 
-```
+```console
   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
@@ -167,7 +167,7 @@ O Redis fornece uma imagem do Docker com Redis. Essa imagem está disponível no
 
 Você pode executar diretamente um contêiner do Docker Redis executando o seguinte comando da CLI do Docker em seu prompt de comando:
 
-```
+```console
   docker run --name some-redis -d redis
 ```
 

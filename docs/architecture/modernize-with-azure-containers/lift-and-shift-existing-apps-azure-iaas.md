@@ -2,12 +2,12 @@
 title: Migrar e deslocar aplicativos .NET existentes para IaaS do Azure (pronto para infraestrutura de nuvem)
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660746"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373978"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrar e deslocar aplicativos .NET existentes para IaaS do Azure (pronto para infraestrutura de nuvem)
 
@@ -21,7 +21,7 @@ A Figura 2-1 posiciona os aplicativos prontos para a infraestrutura de nuvem nos
 
 ![Posicionando aplicativos prontos para a infraestrutura de nuvem](./media/image2-1.png)
 
-> **Figura 2-1.** Posicionando aplicativos prontos para a infraestrutura de nuvem
+**Figura 2-1.** Posicionando aplicativos prontos para a infraestrutura de nuvem
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Por que migrar aplicativos Web .NET existentes para IaaS do Azure
 
@@ -47,7 +47,7 @@ Mas lembre-se de que configurar, proteger e manter corretamente as VMs requer mu
 
 A migração para a nuvem não precisa ser difícil. Mas muitas organizações lutam para começar-a obter uma visibilidade profunda do ambiente e as forte interdependências entre aplicativos, cargas de trabalho e dados. Sem essa visibilidade, pode ser difícil planejar o caminho para a frente. Sem informações detalhadas sobre o que é necessário para uma migração bem-sucedida, você não pode ter as conversas certas em sua organização. Você não sabe o suficiente sobre os benefícios de custo potencial ou se as cargas de trabalho poderiam apenas ser comparadas e trocadas ou exigiriam um retrabalho significativo para migrar com êxito. Não se perguntou que muitas organizações hesitam.
 
-As migrações para [Azure](https://aka.ms/azuremigrate) são um novo serviço que fornece as diretrizes, as informações e os mecanismos necessários para ajudá-lo a migrar para o Azure. As migrações para Azure fornecem:
+As [migrações para Azure](https://aka.ms/azuremigrate) são um novo serviço que fornece as diretrizes, as informações e os mecanismos necessários para ajudá-lo a migrar para o Azure. As migrações para Azure fornecem:
 
 - Descoberta e avaliação para máquinas virtuais locais
 
@@ -65,7 +65,7 @@ A Figura 2-2 mostra o mapeamento de dependência interno para todas as conexões
 
 ![Posicionando aplicativos prontos para a infraestrutura de nuvem](./media/image2-2.png)
 
-> **Figura 2-2**. Posicionando aplicativos prontos para a infraestrutura de nuvem
+**Figura 2-2**. Posicionando aplicativos prontos para a infraestrutura de nuvem
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Usar Azure Site Recovery para migrar suas VMs existentes para VMs do Azure
 
@@ -77,7 +77,7 @@ A Figura 2-3 mostra a execução de várias migrações de VM usando Azure Site 
 
 ![Posicionando aplicativos prontos para a infraestrutura de nuvem](./media/image2-3.png)
 
-> **Figura 2-3.** Posicionando aplicativos prontos para a infraestrutura de nuvem
+**Figura 2-3.** Posicionando aplicativos prontos para a infraestrutura de nuvem
 
 ### <a name="additional-resources"></a>Recursos adicionais
 

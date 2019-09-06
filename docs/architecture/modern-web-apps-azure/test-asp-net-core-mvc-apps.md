@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
-ms.translationtype: HT
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69038117"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374077"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -50,9 +50,9 @@ Como os testes funcionais operam no nível do sistema, eles podem exigir um cert
 
 Martin Fowler escreveu sobre a pirâmide de testes, cujo exemplo é mostrado na Figura 9-1.
 
-![](./media/image9-1.png)
+![Pirâmide de testes](./media/image9-1.png)
 
-Figura 9-1 Pirâmide de testes
+**Figura 9-1**. Pirâmide de testes
 
 As diferentes camadas da pirâmide e seus tamanhos relativos representam tipos diferentes de testes e quantos você deve gravar para seu aplicativo. Como você pode ver, a recomendação é ter uma grande base de testes de unidade, apoiada por uma camada menor de testes de integração, com uma camada ainda menor de testes funcionais. O ideal é que cada camada tenha somente testes que não podem ser realizados de forma adequada em uma camada inferior. Lembre-se da pirâmide de testes quando estiver tentando decidir qual tipo de teste é necessário para um cenário específico.
 
@@ -66,15 +66,15 @@ Os projetos de teste podem ser organizados da maneira mais adequada à sua situa
 
 Uma abordagem comum é organizar os projetos de aplicativo em uma pasta 'src' e os projetos de teste do aplicativo em uma pasta 'tests' paralela. Crie pastas de solução correspondentes no Visual Studio se achar esta organização útil.
 
-![](./media/image9-2.png)
+![Testar a organização em sua solução](./media/image9-2.png)
 
-Figura 9-2 Organização de testes na solução
+**Figura 9-2**. Testar a organização em sua solução
 
 Você pode usar qualquer estrutura de teste que preferir. A estrutura xUnit funciona bem e é nela em que todos os testes do ASP.NET Core e do EF Core são criados. Você pode adicionar um projeto de teste do xUnit no Visual Studio usando o modelo mostrado na Figura 9-3 ou por meio da CLI usando o comando dotnet new xunit.
 
-![](./media/image9-3.png)
+![Adicionar um projeto de teste do xUnit no Visual Studio](./media/image9-3.png)
 
-Figura 9-3 Adicionar um projeto de teste do xUnit no Visual Studio
+**Figura 9-3**. Adicionar um projeto de teste do xUnit no Visual Studio
 
 ### <a name="test-naming"></a>Nomenclatura de testes
 
@@ -98,7 +98,7 @@ Algumas equipes consideram a segunda abordagem de nomenclatura mais clara, embor
 
 Se você segue uma convenção de nomenclatura como a mostrada acima, que produz muitas classes de teste pequenas, é uma boa ideia organizar ainda mais os testes usando pastas e namespaces. A Figura 9-4 mostra uma abordagem para organizar os testes por pasta dentro de vários projetos de teste.
 
-![](./media/image9-4.png)
+![Organizando classes de teste por pasta com base na classe que está sendo testada](./media/image9-4.png)
 
 **Figura 9-4.** Organizando classes de teste por pasta com base na classe que está sendo testada.
 

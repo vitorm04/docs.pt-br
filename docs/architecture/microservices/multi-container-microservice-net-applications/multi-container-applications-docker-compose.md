@@ -2,12 +2,12 @@
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Como especificar a composição de microsserviços para um aplicativo de vários contêineres com o docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6f526a951f50bad673a44cfd6c53664a13211a32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 1b88d2267b12a33e125a7a1d2273654a50fd2d0f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675953"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70296866"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml
 
@@ -406,7 +406,7 @@ As variáveis de ambiente são criadas e inicializadas de diferentes maneiras, d
 
 O exemplo a seguir mostra um arquivo .env parecido com o [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) do aplicativo eShopOnContainers.
 
-```
+```env
 # .env file
 
 ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost

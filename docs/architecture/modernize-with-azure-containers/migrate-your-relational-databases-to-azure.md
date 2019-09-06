@@ -2,12 +2,12 @@
 title: Migrar seus bancos de dados relacionais para o Azure
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | migrar seus bancos de dados relacionais para o Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660725"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374104"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar seus bancos de dados relacionais para o Azure
 
@@ -17,7 +17,7 @@ No Azure, você pode migrar seus servidores de banco de dados diretamente para V
 
 ![Caminhos de migração de banco de dados no Azure](./media/image3-1.png)
 
-> **Figura 3-1.** Caminhos de migração de banco de dados no Azure
+**Figura 3-1.** Caminhos de migração de banco de dados no Azure
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Quando migrar para o Instância Gerenciada do Banco de Dados SQL do Azure
 

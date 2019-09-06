@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015731"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373680"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Passo a passo: Serializar coleções de tipos padrão
 
@@ -37,7 +37,7 @@ A primeira etapa é criar um controle que tem uma coleção serializável como u
 
 1. No Visual Studio, crie um projeto de biblioteca de controle do Windows e nomeie-o **SerializationDemoControlLib**.
 
-2. Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, consulte Renomear [uma refatoração de símbolo de código](/visualstudio/ide/reference/rename).
+2. Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, consulte [renomear uma refatoração de símbolo de código](/visualstudio/ide/reference/rename).
 
 3. Na janela **Propriedades** , defina o valor da <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> Propriedade como **10**.
 
@@ -69,7 +69,7 @@ A primeira etapa é criar um controle que tem uma coleção serializável como u
 
 8. Pressione **F5** para compilar o projeto e executar o controle no **contêiner de teste do UserControl**.
 
-9. Localize a propriedade **Strings** no <xref:System.Windows.Forms.PropertyGrid> do contêiner de **teste UserControl**. Selecione a propriedade cadeias de **caracteres** e, em![seguida, selecione as reticências (o botão de reticências (.](./media/visual-studio-ellipsis-button.png)..) no botão janela Propriedades do Visual Studio) para abrir o **Editor de coleção de cadeia de caracteres**.
+9. Localize a propriedade **Strings** no <xref:System.Windows.Forms.PropertyGrid> do contêiner de **teste UserControl**. Selecione a propriedade **cadeias de caracteres** e, em![seguida, selecione as reticências (o botão de reticências (.](./media/visual-studio-ellipsis-button.png)..) no botão janela Propriedades do Visual Studio) para abrir o **Editor de coleção de cadeia de caracteres**.
 
 10. Insira várias cadeias de caracteres no **Editor de Conjunto de Cadeia de Caracteres**. Separe-os pressionando a tecla **Enter** no final de cada cadeia de caracteres. Clique em **OK** quando terminar de inserir cadeias de caracteres.
 
@@ -90,8 +90,8 @@ Para testar o comportamento de serialização do seu controle, coloque-o em um f
 
 5. Digite várias cadeias de caracteres no **Editor de Conjunto de Cadeia de Caracteres**. Separe-os pressionando **Enter** no final de cada cadeia de caracteres. Clique em **OK** quando terminar de inserir cadeias de caracteres.
 
-> [!NOTE]
-> As cadeias de caracteres digitadas <xref:System.Windows.Forms.TextBox> aparecem no `SerializationDemoControl`do.
+    > [!NOTE]
+    > As cadeias de caracteres digitadas <xref:System.Windows.Forms.TextBox> aparecem no `SerializationDemoControl`do.
 
 6. Em **Gerenciador de Soluções**, clique no botão **Mostrar Todos os Arquivos**.
 

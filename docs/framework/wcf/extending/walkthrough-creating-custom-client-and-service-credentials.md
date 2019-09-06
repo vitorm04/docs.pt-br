@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: eb60bc474ae0dd8cec85ca36f68b12764d46044d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040214"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374467"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Passo a passo: criar credenciais de serviço e cliente personalizados
 
@@ -18,13 +18,11 @@ Este tópico mostra como implementar credenciais de cliente e de serviço person
 
 ## <a name="credentials-extensibility-classes"></a>Classes de extensibilidade de credenciais
 
-As <xref:System.ServiceModel.Description.ClientCredentials> classes <xref:System.ServiceModel.Description.ServiceCredentials> e são os pontos de entrada principais para a extensibilidade de segurança do Windows Communication Foundation (WCF). Essas classes de credenciais fornecem as APIs que permitem que o código do aplicativo defina informações de credenciais e converta tipos de credenciais em tokens de segurança. (Os tokens de*segurança* são o formulário usado para transmitir informações de credenciais dentro de mensagens SOAP.) As responsabilidades dessas classes de credenciais podem ser divididas em duas áreas:
+As <xref:System.ServiceModel.Description.ClientCredentials> classes <xref:System.ServiceModel.Description.ServiceCredentials> e são os pontos de entrada principais para a extensibilidade de segurança do Windows Communication Foundation (WCF). Essas classes de credenciais fornecem as APIs que permitem que o código do aplicativo defina informações de credenciais e converta tipos de credenciais em tokens de segurança. (Os*tokens de segurança* são o formulário usado para transmitir informações de credenciais dentro de mensagens SOAP.) As responsabilidades dessas classes de credenciais podem ser divididas em duas áreas:
 
 - Forneça as APIs para que os aplicativos definam informações de credenciais.
 
 - Execute como um alocador <xref:System.IdentityModel.Selectors.SecurityTokenManager> para implementações.
-
-<xref:System.ServiceModel.Security.SecurityCredentialsManager> <xref:System.IdentityModel.Selectors.SecurityTokenManager>As classes <xref:System.ServiceModel.Description.ClientCredentials> <xref:System.ServiceModel.Description.ServiceCredentials> e são herdadas da classe abstrata que define o contrato para retornar o.
 
 As implementações padrão fornecidas no WCF dão suporte aos tipos de credenciais fornecidos pelo sistema e criam um Gerenciador de token de segurança capaz de lidar com esses tipos de credenciais.
 

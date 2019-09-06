@@ -1,17 +1,17 @@
 ---
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo está atualizado com a versão prévia 5.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105508"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374004"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
-Há vários aprimoramentos da linguagem C# que você já pode experimentar. 
+Há vários aprimoramentos da linguagem C# que você já pode experimentar.
 
 - [Membros somente leitura](#readonly-members)
 - [Membros da interface padrão](#default-interface-members)
@@ -26,6 +26,8 @@ Há vários aprimoramentos da linguagem C# que você já pode experimentar.
 - [Tipos de referência nula](#nullable-reference-types)
 - [Fluxos assíncronos](#asynchronous-streams)
 - [Índices e intervalos](#indices-and-ranges)
+- [Tipos construídos não gerenciados](#unmanaged-constructed-types)
+- [Aprimoramento de cadeias de caracteres idênticas interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Este artigo foi atualizado pela última vez para o C# 8.0 versão prévia 5.
@@ -376,7 +378,8 @@ Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [cri
 
 Intervalos e índices fornecem uma sintaxe sucinta para especificar subintervalos em uma matriz, <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>.
 
-Este suporte à linguagem depende de dois tipos novos e dois operadores novos.
+Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
+
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
 - O operador `^`, que especifica que um índice é relativo ao final da sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
@@ -444,3 +447,34 @@ var text = words[phrase];
 ```
 
 Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
+
+## <a name="unmanaged-constructed-types"></a>Tipos construídos não gerenciados
+
+No C# 7,3 e anterior, um tipo construído (um tipo que inclui pelo menos um argumento de tipo) não pode ser um [tipo não gerenciado](../language-reference/builtin-types/unmanaged-types.md). A partir C# de 8,0, um tipo de valor construído não será gerenciado se ele contiver campos apenas de tipos não gerenciados.
+
+Por exemplo, dada a seguinte definição do tipo genérico `Coords<T>` :
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+o `Coords<int>` tipo é um tipo não gerenciado em C# 8,0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável desse tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias desse tipo:
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+Para obter mais informações, consulte [tipos não gerenciados](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cadeias de caracteres idênticas interpoladas
+
+A `$` ordem dos tokens e `@` nas cadeias de caracteres `$@"..."` idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode `@$"..."` ser any: e são cadeias de caracteres idênticas interpoladas válidas. Em versões C# anteriores, o `$` token deve aparecer antes do `@` token.

@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675373"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373804"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -28,7 +28,7 @@ O menor número possível de projetos para uma arquitetura de aplicativo é um. 
 
 Um novo projeto ASP.NET Core, seja ele criado no Visual Studio ou por meio da linha de comando, começa como um simples monólito "todos-em-um". Ele contém todo o comportamento do aplicativo, incluindo a lógica de apresentação, de negócios e de acesso a dados. A Figura 5-1 mostra a estrutura de arquivos de um aplicativo de projeto único.
 
-![](./media/image5-1.png)
+![Um aplicativo ASP.NET Core de projeto único](./media/image5-1.png)
 
 **Figura 5-1.** Um único projeto de aplicativo ASP.NET Core.
 
@@ -59,7 +59,7 @@ A disposição em camadas lógicas é uma técnica comum para melhorar a organiz
 
 A organização mais comum da lógica do aplicativo em camadas é mostrada na Figura 5-2.
 
-![](./media/image5-2.png)
+![Camadas de aplicativo típicas](./media/image5-2.png)
 
 **Figura 5-2.** Camadas de aplicativo típicas.
 
@@ -69,19 +69,19 @@ Uma desvantagem dessa abordagem tradicional de disposição em camadas é que as
 
 A Figura 5-3 mostra uma solução de exemplo, que divide o aplicativo em três projetos por responsabilidade (ou camada).
 
-![](./media/image5-3.png)
+![Um aplicativo monolítico simples com três projetos](./media/image5-3.png)
 
 **Figura 5-3.** Um aplicativo monolítico simples com três projetos.
 
 Embora esse aplicativo use vários projetos para fins de organização, ele ainda é implantado como uma única unidade e seus clientes interagirão com ele como um único aplicativo Web. Isso possibilita um processo de implantação muito simples. A Figura 5-4 mostra como um aplicativo desse tipo pode ser hospedado usando o Azure.
 
-![](./media/image5-4.png)
+![Implantação simples do Aplicativo Web do Azure](./media/image5-4.png)
 
 **Figura 5-4.** Implantação simples do Aplicativo Web do Azure
 
 Conforme o aplicativo precisar ser aumentado, soluções de implantação mais robustas e complexas poderão ser necessárias. A Figura 5-5 mostra um exemplo de um plano de implantação mais complexo compatível com funcionalidades adicionais.
 
-![](./media/image5-5.png)
+![Implantando um aplicativo Web em um Serviço de Aplicativo do Azure](./media/image5-5.png)
 
 **Figura 5-5.** Implantando um aplicativo Web em um Serviço de Aplicativo do Azure
 
@@ -91,7 +91,7 @@ Essa unidade pode ser escalada verticalmente ou expandida para aproveitar a esca
 
 A abordagem mais simples para dimensionar um aplicativo Web no Azure é configurar o dimensionamento manualmente no Plano do Serviço de Aplicativo do aplicativo. A Figura 5-6 mostra a tela apropriada do painel do Azure para configurar a quantidade de instâncias que atendem um aplicativo.
 
-![](./media/image5-6.png)
+![Dimensionamento do plano do serviço de aplicativo no Azure](./media/image5-6.png)
 
 **Figura 5-6.** Dimensionamento do Plano do Serviço de Aplicativo no Azure.
 
@@ -104,7 +104,7 @@ Os aplicativos que seguem o Princípio da Inversão de Dependência, bem como os
 
 A arquitetura limpa coloca a lógica de negócios e o modelo de aplicativo no centro do aplicativo. Em vez de fazer com que a lógica de negócios dependa do acesso a dados ou de outros interesses da infraestrutura, essa dependência é invertida: os detalhes de implementação e a infraestrutura dependem do Núcleo do Aplicativo. Isso é feito pela definição de abstrações, ou interfaces, no Núcleo do Aplicativo, que, em seguida, são implementadas por tipos definidos na camada de infraestrutura. Uma maneira comum de visualizar essa arquitetura é usar uma série de círculos concêntricos, semelhantes a uma cebola. A Figura 5-7 mostra um exemplo desse estilo de representação de arquitetura.
 
-![](./media/image5-7.png)
+![Arquitetura Limpa; exibição de cebola](./media/image5-7.png)
 
 **Figura 5-7.** Arquitetura Limpa; exibição de cebola
 
@@ -112,7 +112,7 @@ Nesse diagrama, as dependências fluem para o círculo interno. O núcleo do apl
 
 A Figura 5-8 mostra um diagrama de camada horizontal mais tradicional que reflete melhor a dependência entre a interface do usuário e as outras camadas.
 
-![](./media/image5-8.png)
+![Arquitetura Limpa; exibição de camada horizontal](./media/image5-8.png)
 
 **Figura 5-8.** Arquitetura Limpa; exibição de camada horizontal
 
@@ -120,7 +120,7 @@ Observe que as setas sólidas representam as dependências em tempo de compilaç
 
 A Figura 5-9 mostra uma exibição mais detalhada da arquitetura de um aplicativo ASP.NET Core quando criado seguindo essas recomendações.
 
-![Arquitetura do ASP.NET Core](./media/image5-9.png)
+![Diagrama de arquitetura de ASP.NET Core seguindo a arquitetura limpa](./media/image5-9.png)
 
 **Figura 5-9.** Diagrama da arquitetura do ASP.NET Core que segue a Arquitetura Limpa.
 
@@ -262,7 +262,7 @@ networks:
 
 O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `Web`:
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 

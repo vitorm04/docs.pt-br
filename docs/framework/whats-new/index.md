@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987239"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374446"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -174,7 +174,7 @@ O status da integridade do serviço pode ser exibido em HTML com a especificaç�
 
 **Aprimoramentos de alto DPI**
 
-No .NET Framework 4.8, o WPF adiciona suporte para Reconhecimento de DPI V2 por Monitor e ajuste de DPI no Modo Misto. Consulte [Desenvolvimento de aplicativo de área de trabalho com alto DPI no Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) para saber mais sobre o desenvolvimento com alto DPI.
+No .NET Framework 4.8, o WPF adiciona suporte para Reconhecimento de DPI V2 por Monitor e ajuste de DPI no Modo Misto. Consulte [Desenvolvimento de aplicativo de área de trabalho com alto DPI no Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) para saber mais sobre o desenvolvimento com alto DPI.
 
 O .NET Framework 4.8 melhora o suporte para interoperação hospedada de HWNDs e do Windows Forms em aplicativos WPF com alto DPI em plataformas compatíveis com o ajuste do DPI no Modo Misto (começando com a Atualização de abril de 2018 do Windows 10). Quando os controles hospedados de HWNDs ou do Windows Forms são criados como janelas em escala de DPI no Modo Misto chamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), eles podem ser hospedados em um aplicativo WPF V2 por Monitor e são dimensionados adequadamente. Tal conteúdo hospedado não é processado no DPI nativo; em vez disso, o sistema operacional ajusta o conteúdo hospedado para o tamanho apropriado. O suporte para o modo de reconhecimento de DPI V2 por Monitor também permite que os controles WPF sejam hospedados (isto é, tenham pai) em uma janela nativa em um aplicativo com alto DPI.
 
@@ -960,7 +960,7 @@ O .NET Framework 3.5 adicionou suporte para o Contrato de chave Diffie-Hellman d
 
 Para lidar com isso no .NET Framework 4.6.2, os três métodos a seguir foram adicionados à classe base <xref:System.Security.Cryptography.ECDiffieHellman> para representar mais claramente essas rotinas KDF e suas entradas:
 
-|Método ECDiffieHellman|DESCRIÇÃO|
+|Método ECDiffieHellman|Descrição|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva o material da chave usando a fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> em que *x* é o resultado calculado do algoritmo EC Diffie-Hellman.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401552"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374533"
 ---
 # <a name="control-authoring-overview"></a>Visão geral da criação de controle
 
@@ -264,7 +264,7 @@ Recursos específicos de um tema são mantidos em um dicionário de recursos com
 
 Você não precisa definir um recurso para cada tema. Se um recurso não está definido para um tema específico, o controle verifica `Classic.xaml` em busca do recurso. Se o recurso não está definido no arquivo que corresponde ao tema atual nem em `Classic.xaml`, o controle usa o recurso genérico, que está em um arquivo de dicionário de recursos chamado `generic.xaml`.  O arquivo `generic.xaml` está localizado na mesma pasta que os arquivos de dicionário de recursos específicos do tema. Embora `generic.xaml` não corresponda a um tema específico do Windows, ele ainda é um dicionário de nível de tema.
 
-A [Amostra de suporte de controle personalizado NumericUpDown com tema e automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=160025) contém dois dicionários de recursos para o controle `NumericUpDown`: um está em generic.xaml e o outro em Luna.NormalColor.xaml.  Você pode executar o aplicativo e mudar do tema Prata no Windows XP para outro tema para ver a diferença entre os dois modelos de controle. (Se você estiver executando o Windows Vista, você poderá renomear Luna.NormalColor.xaml para Aero.NormalColor.xaml e mudar de um tema para o outro, por exemplo, do Windows Clássico para o tema padrão do Windows Vista ou vice-versa.)
+O [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) exemplo ou [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) controle personalizado NumericUpDown com suporte de automação de interface de usuário e tema contém dois `NumericUpDown` dicionários de recurso para o controle: um está em Generic. XAML e o outro é em Luna. NormalColor. XAML. 
 
 Ao colocar um em <xref:System.Windows.Controls.ControlTemplate> qualquer um dos arquivos de dicionário de recursos específicos do tema, você deve criar um construtor estático para seu controle e chamar <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> o método no <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, conforme mostrado no exemplo a seguir.
 

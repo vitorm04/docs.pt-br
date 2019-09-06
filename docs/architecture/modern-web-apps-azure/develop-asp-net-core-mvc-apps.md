@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105459"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373770"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -176,9 +176,9 @@ Por padrão, os aplicativos ASP.NET Core organizam sua estrutura de pastas para 
 
 O ASP.NET Core MVC é compatível com Áreas para essa finalidade. Usando áreas, você pode criar conjuntos separados de pastas de Controladores e Exibições (bem como os modelos associados) em cada pasta de Área. A Figura 7-1 mostra uma estrutura de pastas de exemplo, usando Áreas.
 
-![](./media/image7-1.png)
+![Organização da área de exemplo](./media/image7-1.png)
 
-Figura 7-1 Organização de área de exemplo
+**Figura 7-1**. Organização da área de exemplo
 
 Ao usar Áreas, você precisa usar atributos para decorar os controladores com o nome da área à qual eles pertencem:
 
@@ -245,7 +245,7 @@ Conforme os aplicativos crescem, fica cada vez mais importante excluir interesse
 
 ![A solicitação é processada por meio de Filtros de autorização, Filtros de recurso, Model binding, Filtros de ação, Execução de ação e Conversão do resultado de ação, Filtros de exceção, Filtros de resultado e Execução de resultado. Na saída, a solicitação é processada somente por Filtros de resultado e Filtros de recurso antes de se tornar uma resposta enviada ao cliente.](./media/image7-2.png)
 
-Figura 7-2 Solicitar a execução por meio de filtros e do pipeline de solicitação.
+**Figura 7-2**. Solicite a execução por meio de filtros e do pipeline de solicitação.
 
 Normalmente, os filtros são implementados como atributos, de modo que você possa aplicá-los aos controladores ou às ações (ou até mesmo globalmente). Quando adicionados dessa maneira, os filtros especificados no nível da ação substituem ou se baseiam nos filtros especificados no nível do controlador, que, por sua vez, substituem os filtros globais. Por exemplo, o atributo \[Route\] pode ser usado para criar rotas entre controladores e ações. Da mesma forma, a autorização pode ser configurada no nível do controlador e, em seguida, substituída por ações individuais, como mostra o seguinte exemplo:
 
@@ -334,9 +334,9 @@ O ASP.NET Core Identity é um sistema de associação que pode ser usado para da
 
 O ASP.NET Core Identity é incluído em novos modelos de projeto se a opção Contas de Usuário Individuais é marcada. Esse modelo inclui suporte para registro, logon, logons externos, senhas esquecidas e funcionalidade adicional.
 
-![](./media/image7-3.png)
+![Selecionar contas de usuário individuais para ter a identidade pré-configurada](./media/image7-3.png)
 
-Figura 7-3 Selecionar Contas de Usuário Individuais para pré-configurar o Identity.
+**Figura 7-3**. Selecione contas de usuário individuais para que a identidade seja pré-configurada.
 
 O suporte para identidade é configurado em Startup, em ConfigureServices e Configure:
 
@@ -563,13 +563,13 @@ Além de um gerenciador de processos, os aplicativos ASP.NET Core hospedados no 
 
 ![Kestrel para a Internet](./media/image7-5.png)
 
-Figura 7-5 ASP.NET hospedado no Kestrel atrás de um servidor proxy reverso
+**Figura 7-5**. ASP.NET hospedado em Kestrel atrás de um servidor proxy reverso
 
 Outro cenário em que um proxy reverso pode ser útil é para proteger vários aplicativos usando SSL/HTTPS. Nesse caso, somente o proxy inverso precisa ter o SSL configurado. A comunicação entre o servidor proxy reverso e o Kestrel pode ocorrer por HTTP, conforme mostrado na Figura 7-6.
 
-![](./media/image7-6.png)
+![ASP.NET hospedado atrás de um servidor proxy reverso protegido por HTTPS](./media/image7-6.png)
 
-Figura 7-6 ASP.NET hospedado atrás de um servidor proxy reverso protegido por HTTPS
+**Figura 7-6**. ASP.NET hospedado atrás de um servidor proxy reverso protegido por HTTPS
 
 Uma abordagem cada vez mais popular é hospedar o aplicativo ASP.NET Core em um contêiner do Docker, que pode ser então hospedado localmente ou implantado no Azure para a hospedagem baseada em nuvem. O contêiner do Docker pode conter o código do aplicativo, em execução no Kestrel, e ser implantado atrás de um servidor proxy reverso, conforme mostrado acima.
 

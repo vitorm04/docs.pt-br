@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675433"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373901"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns do lado do cliente
 
@@ -28,9 +28,9 @@ A linguagem HTML é a linguagem de marcação padrão usada para criar páginas 
 
 O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o layout de elementos HTML. Os estilos CSS podem ser aplicados diretamente a um elemento HTML, definidos separadamente na mesma página ou definidos em um arquivo separado e referenciados pela página. Os estilos são aplicados em cascata de acordo com a forma como são usados para selecionar determinado elemento HTML. Por exemplo, um estilo pode se aplicar a um documento inteiro, mas ser substituído por um estilo aplicado a um elemento específico. Da mesma forma, um estilo específico a um elemento é substituído por um estilo aplicado a uma classe CSS que foi aplicada ao elemento, que, por sua vez, é substituído por um estilo direcionado a uma instância específica desse elemento (por meio de sua ID). Figura 6-1
 
-**Figura 6-1.** Regras de especificidade do CSS, na ordem.
+![Regras de especificidade de CSS](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**Figura 6-1.** Regras de especificidade do CSS, na ordem.
 
 É melhor manter os estilos em seus próprios arquivos de folha de estilos separados e usar a cascata baseada em seleção para implementar estilos consistentes e reutilizáveis dentro do aplicativo. A colocação das regras de estilo em HTML deve ser evitada e a aplicação de estilos a elementos individuais específicos (em vez de classes inteiras de elementos ou elementos que tiveram determinada classe CSS aplicada a eles) deve ser uma exceção, não a regra.
 
