@@ -2,21 +2,22 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: b70236e8bba93a49ca5b53538333fa63283a5f0a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f5be113cf1470a9b7526beb6b45fdd6d8ef2d77
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928532"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397979"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<> de associação  
-\<httpsTransport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> httpsTransport**  
   
 ## <a name="syntax"></a>Sintaxe  
   

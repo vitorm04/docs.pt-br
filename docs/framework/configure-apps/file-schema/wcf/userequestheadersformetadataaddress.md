@@ -2,21 +2,22 @@
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 84310d4ae5e04e76e4484f4fc606c9896239c776
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0b46953924a3825420b719085e1210981da643a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940545"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399198"
 ---
 # <a name="userequestheadersformetadataaddress"></a>\<useRequestHeadersForMetadataAddress>
 Habilita a recuperação de informações de endereço de metadados dos cabeçalhos de mensagem de solicitação.  
   
-\<system.ServiceModel>  
-\<comportamentos >  
-\<> de portais  
-\<> de comportamento  
-\<useRequestHeadersForMetadataAddress>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> useRequestHeadersForMetadataAddress**  
   
 ## <a name="syntax"></a>Sintaxe  
   

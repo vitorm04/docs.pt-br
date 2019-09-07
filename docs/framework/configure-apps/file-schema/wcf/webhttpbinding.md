@@ -2,19 +2,20 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 70c99c29d4febae51b9fed54d37d681ff922f9f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ba4780cb73011fd7841fa41e1fac8d467f9f6a2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940482"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399174"
 ---
 # <a name="webhttpbinding"></a>\<webHttpBinding>
 Define um elemento de associação que é usado para configurar pontos de extremidade para serviços da Web Windows Communication Foundation (WCF) que respondem a solicitações HTTP em vez de mensagens SOAP.  
   
-\<system.ServiceModel>  
-\<bindings>  
-\<webHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> WebHttpBinding**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +87,7 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- O modelo de programação Web do WCF permite que os desenvolvedores exponham os serviços Web WCF por meio de solicitações HTTP que usam mensagens de estilo "de" XML antigo "(POX) em vez de mensagens baseadas em SOAP. Para que os clientes se comuniquem com um serviço usando solicitações HTTP, um ponto de extremidade do serviço deve ser configurado com o [ \<>](webhttpbinding.md) WebHttpBinding que tem o \<WebHttpBehavior > anexado a ele.  
+ O modelo de programação Web do WCF permite que os desenvolvedores exponham os serviços Web WCF por meio de solicitações HTTP que usam mensagens de estilo "de" XML antigo "(POX) em vez de mensagens baseadas em SOAP. Para que os clientes se comuniquem com um serviço usando solicitações HTTP, um ponto de extremidade do serviço deve ser configurado com o [ \<> WebHttpBinding](webhttpbinding.md) que tem o \<WebHttpBehavior > anexado a ele.  
   
  Suporte no WCF para distribuição e ASP. A integração do AJAX é criada com base no modelo de programação da Web. Para obter mais informações sobre o modelo, consulte [modelo de programação do WCF Web http](../../../wcf/feature-details/wcf-web-http-programming-model.md).  
   
