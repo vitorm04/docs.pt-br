@@ -2,25 +2,24 @@
 title: <message> de <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: b163dcb08e9656e3bde9c7fbb71fa1c92c9957ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d9d4a5d1967afaf9a6ed5756c309e78fee0923
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931512"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400250"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<> de mensagem \<de > de NetMsmqBinding
 
 Define as configurações de segurança da mensagem SOAP `netMsmqBinding` nesta associação.
 
-```xml
-<system.ServiceModel>
-  <bindings>
-    <netMsmqBinding>
-      <binding>
-        <security>
-          <message>
-```
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netMsmqBinding**](netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de segurança**](security-of-netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de mensagem**  
 
 ## <a name="syntax"></a>Sintaxe
 

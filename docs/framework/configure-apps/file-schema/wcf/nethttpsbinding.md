@@ -2,19 +2,21 @@
 title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: 7f4bde18876c5e65adf3da100f180b9b18892d98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cca1a0fb3857973634862ac9757e66251eedb891
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933084"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400196"
 ---
 # <a name="nethttpsbinding"></a>\<netHttpsBinding>
 Representa uma associação que um serviço Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que são capazes de se comunicar por HTTPS. Quando usado com um contrato duplex, os Web Sockets serão usados; caso contrário, o HTTPS será usado.  
   
- Elemento raiz  
-Próximo elemento  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> nethttpsbinding**  
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  

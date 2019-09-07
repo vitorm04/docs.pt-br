@@ -2,22 +2,23 @@
 title: Elemento <httpDigest>
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 2ceefdd7fab82025e89ad08d8423d57524c2e4d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: MT
+ms.openlocfilehash: f392ebf4eeb6a008952fd4d5ef4e301e57f6eb31
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925557"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397988"
 ---
 # <a name="httpdigest-element"></a>\<Elemento de > httpDigest
 Especifica uma credencial de tipo Digest usada ao autenticar o cliente para um serviço.  
   
- \<system.ServiceModel>  
-\<comportamentos >  
-\<endpointBehaviors>  
-\<> de comportamento  
-\<clientCredentials>  
-\<httpDigest>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> httpDigest**  
   
 ## <a name="syntax"></a>Sintaxe  
   

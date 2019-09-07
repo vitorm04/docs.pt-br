@@ -2,21 +2,22 @@
 title: <security>elemento de<ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 61b56ca1fae5c328cda0bbebef4026f0784095a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450b2403b8cd4ec43a41fd27bccb3b77202820bb
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399900"
 ---
 # <a name="security-element-of-ws2007federationhttpbinding"></a>\<elemento de > de \<segurança de ws2007FederationHttpBinding >
 Define as configurações de segurança do [ \<elemento > ws2007FederationHttpBinding](ws2007federationhttpbinding.md) .  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<ws2007FederationHttpBinding>  
-\<> de associação  
-\<> de segurança  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> ws2007FederationHttpBinding**](ws2007federationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de segurança**  
   
 ## <a name="syntax"></a>Sintaxe  
   

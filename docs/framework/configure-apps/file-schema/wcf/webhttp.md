@@ -2,21 +2,22 @@
 title: <webHttp>
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 366def5d0f4cc82b0ff0a5127701b0b5a6adb6a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00644d248e6fb85d7cf712620e6ac74405e6b0c3
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940497"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399162"
 ---
 # <a name="webhttp"></a>\<> Webhttp
 Esse elemento Especifica o <xref:System.ServiceModel.Description.WebHttpBehavior> em um ponto de extremidade por meio da configuração. Esse comportamento, quando usado em conjunto com o [ \<WebHttpBinding >](webhttpbinding.md) associação padrão, habilita o modelo de programação da Web para um serviço do Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-\<comportamentos >  
-\<endpointBehaviors>  
-\<> de comportamento  
-\<> Webhttp  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Webhttp**  
   
 ## <a name="syntax"></a>Sintaxe  
   

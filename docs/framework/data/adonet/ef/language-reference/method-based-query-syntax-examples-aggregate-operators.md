@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: d9007e4d650c79a636f908a638bb382457f6b29b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17d3a5e221fc5f917e9e266b3af4fb844c6fd85e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250275"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397494"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>Exemplos de sintaxe de consulta baseada em método: Operadores de agregação
-Os exemplos neste <xref:System.Linq.Enumerable.Aggregate%2A>tópico demonstram como usar os métodos <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Average%2A>,, <xref:System.Linq.Enumerable.LongCount%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A>,, e <xref:System.Linq.Enumerable.Sum%2A> para consultar o modelo de [vendas AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando sintaxe de consulta baseada em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
+Os exemplos neste <xref:System.Linq.Enumerable.Aggregate%2A>tópico demonstram como usar os métodos <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Average%2A>,, <xref:System.Linq.Enumerable.LongCount%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A>,, e <xref:System.Linq.Enumerable.Sum%2A> para consultar o modelo de [vendas AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) usando sintaxe de consulta baseada em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam as seguintes `using` / `Imports` instruções:  
   

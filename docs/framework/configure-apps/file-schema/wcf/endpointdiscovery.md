@@ -2,21 +2,22 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919044"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398013"
 ---
 # <a name="endpointdiscovery"></a>\<> endpointDiscovery
 Especifica as várias configurações de descoberta para um ponto de extremidade, como sua descoberta, escopos e quaisquer extensões personalizadas para seus metadados.  
   
-\<system.ServiceModel>  
-\<comportamentos >  
-\<endpointBehaviors>  
-\<> de comportamento  
-\<> endpointDiscovery  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> endpointDiscovery**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +43,7 @@ Especifica as várias configurações de descoberta para um ponto de extremidade
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|habilitado|Um valor booliano que especifica se a descoberta está habilitada neste ponto de extremidade. O padrão é `false`.|  
+|enabled|Um valor booliano que especifica se a descoberta está habilitada neste ponto de extremidade. O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -62,7 +63,7 @@ Especifica as várias configurações de descoberta para um ponto de extremidade
 ## <a name="remarks"></a>Comentários  
  Quando adicionado à configuração de comportamento do ponto de extremidade e `enabled` com o atributo `true`definido como, esse elemento de configuração permite sua capacidade de descoberta. Além disso, você pode usar os [ \<escopos >](scopes.md)elemento filho para especificar URIs de escopo personalizado que podem ser usados para filtrar pontos de extremidade de serviço durante a consulta, bem como as [ \<extensões >](extensions.md) elemento filho para especificar personalizado metadados que devem ser publicados juntamente com os metadados detectáveis padrão (EPR, ContractTypeName, BindingName, Scope e ListenURI).  
   
- Esse elemento de configuração é dependente do elemento de [ \<>](servicediscovery.md) do Service Discovery que fornece o controle de nível de serviço de descoberta. Isso significa que as configurações desse elemento serão ignoradas [ \<](servicediscovery.md) se o > do indiscovery não estiver presente na configuração.  
+ Esse elemento de configuração é dependente do elemento de [ \<>](servicediscovery.md) do Service Discovery que fornece o controle de nível de serviço de descoberta. Isso significa que as configurações desse elemento serão ignoradas se [ \<o > do indiscovery](servicediscovery.md) não estiver presente na configuração.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de configuração a seguir especifica os escopos de filtragem e os metadados de extensão a serem publicados para um ponto de extremidade.  

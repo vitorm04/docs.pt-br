@@ -2,18 +2,19 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925871"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398049"
 ---
 # <a name="diagnostics"></a>\<> de diagnóstico
 O `diagnostics` elemento define as configurações que podem ser usadas por um administrador para inspeção e controle de tempo de execução.  
   
- \<system.ServiceModel>  
-\<> de diagnóstico  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> de diagnóstico**  
   
 ## <a name="syntax"></a>Sintaxe  
   

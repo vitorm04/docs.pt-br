@@ -2,18 +2,21 @@
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e00bbad452398e7f8f4f50208da572986391fc9e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759155"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399473"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
-Esta seção de configuração representa as definições de configuração para a ferramenta SMSvcHost.exe. Os elementos de configuração podem ser configurados no arquivo de SMSvcHost. Especificamente, ele inclui todas as configurações de todo o computador que devem ser configuradas.  
+Esta seção de configuração representa os parâmetros de configuração para a ferramenta SMSvcHost. exe. Os elementos de configuração podem ser configurados no arquivo SMSvcHost. exe. config. Especificamente, ele inclui todas as configurações de todo o computador que devem ser configuradas.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<sistema. serviceModel. Activation >**  
   
 ## <a name="sample-configuration-file"></a>Arquivo de configuração de exemplo  
- O exemplo a seguir é um arquivo de configuração de exemplo (SMSvcHost), que é usado pelo processo de escuta SMSvcHost.exe.  
+ A seguir está um arquivo de configuração de exemplo (SMSvcHost. exe. config), que é usado pelo processo de escuta SMSvcHost. exe.  
   
 ```xml  
 <configuration>

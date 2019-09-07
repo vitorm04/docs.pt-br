@@ -2,19 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 30d1aa27ce29b6aa4091c3e7be05746ad462102a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931267"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397817"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 Especifica as configurações para uma associação usada para a troca de mensagens WS-MetadataExchange (WS-MEX) por HTTPS.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<mexHttpsBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> mexHttpsBinding**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +53,7 @@ Especifica as configurações para uma associação usada para a troca de mensag
 |[\<bindings>](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa associação é essencialmente uma `WSHttpBinding` associação que dá suporte à segurança em nível de transporte usando certificados. Para obter mais informações sobre como configurar e usar esse ponto de extremidade [de metadados, consulte Como: Configurar uma associação](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)de troca personalizada de WS- [Metadata, como: Recuperar metadados em uma associação](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)não MEX e o ponto de extremidade de [metadados seguro personalizado](../../../wcf/samples/custom-secure-metadata-endpoint.md)de exemplo.  
+ Essa associação é essencialmente uma `WSHttpBinding` associação que dá suporte à segurança em nível de transporte usando certificados. Para obter mais informações sobre como configurar e usar esse ponto de extremidade [de metadados, consulte Como: Configurar uma associação](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)de WS-Metadata Exchange personalizada [, como: Recuperar metadados em uma associação](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)não MEX e o ponto de extremidade de [metadados seguro personalizado](../../../wcf/samples/custom-secure-metadata-endpoint.md)de exemplo.  
   
 ## <a name="see-also"></a>Consulte também
 

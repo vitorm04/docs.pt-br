@@ -2,23 +2,24 @@
 title: <behavior> de <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 8c847368934cc4cd8ccaab017ede00b7b8963897
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a17fac5c519f41588ef90383f024e645b809b49b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926413"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400602"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<comportamento > de \<percomportamentos >
 O `behavior` elemento contém uma coleção de configurações para o comportamento de um serviço. Cada comportamento é indexado pela sua `name`. Os serviços podem vincular a cada comportamento por meio desse nome `behaviorConfiguration` usando o atributo [ \<do elemento Endpoint >](endpoint-element.md) . Isso permite que os pontos de extremidade compartilhem configurações comuns de comportamento sem redefinir as configurações. A partir do, não é necessário que as associações e os comportamentos tenham um nome. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!NOTE]
-> Elementos de comportamento específicos para atividades de fluxo de trabalho do Windows, como o elemento de [ \<> sendMessageChannelCache](../windows-workflow-foundation/sendmessagechannelcache.md) , [ \< \<](../windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) são documentados na página comportamento > de percomportamentos >.  
+> Elementos de comportamento específicos para atividades de fluxo de trabalho do Windows, como o elemento de [ \<> sendMessageChannelCache](../windows-workflow-foundation/sendmessagechannelcache.md) , [ \<são documentados na página comportamento > de \<percomportamentos >](../windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) .  
   
- \<system.ServiceModel>  
-\<comportamentos >  
-\<> de portais  
-\<> de comportamento  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de comportamento**  
   
 ## <a name="syntax"></a>Sintaxe  
   

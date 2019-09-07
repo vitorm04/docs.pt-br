@@ -2,17 +2,18 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 4ec5cd19ccdc5c21a3caf426520d51442dc5ab3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b67f51e634d1294830690dad8c8cffb1fc9a6cd2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938932"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399457"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 Representa o elemento raiz da <xref:System.Runtime.Serialization> seção namespace e contém elementos para definir as opções <xref:System.Runtime.Serialization.DataContractSerializer>do.  
-  
- system.runtime.serialization  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<> System. Runtime. Serialization**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,3 +57,4 @@ Representa o elemento raiz da <xref:System.Runtime.Serialization> seção namesp
 - <xref:System.Runtime.Serialization>
 - [Usando contratos de dados](../../../wcf/feature-details/using-data-contracts.md)
 - [Tipos conhecidos de contrato de dados](../../../wcf/feature-details/data-contract-known-types.md)
+ 

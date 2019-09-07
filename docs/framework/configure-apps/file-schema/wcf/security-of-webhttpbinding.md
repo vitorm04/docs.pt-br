@@ -2,21 +2,22 @@
 title: <security> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 806cf8524ed1a1439ca85a4b918e8e486e5dc94b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f0bc97e10fcd72f2f33cc20730320cbbfc42dd8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936581"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399759"
 ---
 # <a name="security-of-webhttpbinding"></a>\<> de segurança \<de WebHttpBinding >
-Especifica os requisitos de segurança para um ponto de extremidade [ \<](webhttpbinding.md)configurado com um WebHttpBinding >.  
+Especifica os requisitos de segurança para um ponto de extremidade configurado com um [ \<WebHttpBinding >](webhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<webHttpBinding>  
-\<> de associação  
-\<> de segurança  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> WebHttpBinding**](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de segurança**  
   
 ## <a name="syntax"></a>Sintaxe  
   

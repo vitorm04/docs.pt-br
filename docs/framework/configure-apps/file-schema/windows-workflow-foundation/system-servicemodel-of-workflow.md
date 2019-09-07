@@ -3,15 +3,18 @@ title: < o > System. serviceModel do fluxo de trabalho
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947362"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398607"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<> de sistema. serviceModel do fluxo de trabalho
 Esta seção de configuração contém todos os elementos de configuração do fluxo de trabalho.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<sistema. > ServiceModel**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -101,11 +104,11 @@ Esta seção de configuração contém todos os elementos de configuração do f
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamentos >](behaviors-of-workflow.md)|Esta seção define a coleção de percomportamentos.  Cada elemento na coleção define elementos de comportamento consumidos por serviços. Cada elemento de comportamento é identificado por seu atributo de **nome** exclusivo.|  
+|[\<comportamentos >](behaviors-of-workflow.md)|Esta seção define a coleção de **Percomportamentos** .  Cada elemento na coleção define elementos de comportamento consumidos por serviços. Cada elemento de comportamento é identificado por seu atributo de **nome** exclusivo.|  
 |[\<tracking>](tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.<br /><br /> Para obter mais informações sobre o rastreamento do fluxo de trabalho e sua configuração, consulte rastreamento [e rastreamento de fluxo de trabalho](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configuração de rastreamento para um fluxo de trabalho](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\<configuration>|O elemento raiz para todos os elementos de configuração em um arquivo de configuração do .NET.|
+|[\<configuration>](../configuration-element.md)|O elemento raiz para todos os elementos de configuração em um arquivo de configuração do .NET.|

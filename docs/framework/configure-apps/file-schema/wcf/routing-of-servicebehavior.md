@@ -2,21 +2,22 @@
 title: <routing> de <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 73a610056f94efe144705968eaf97c8314c1ae0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0998f4fc61de7099879ba6e122eed1e64588baec
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934194"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397726"
 ---
 # <a name="routing-of-servicebehavior"></a>\<> de roteamento \<de > de serviço
 Fornece acesso de tempo de execução ao serviço de roteamento para permitir a modificação dinâmica da configuração de roteamento.  
   
- \<system.ServiceModel>  
-\<comportamentos >  
-\<> de portais  
-\<> de comportamento  
-\<> de roteamento  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de roteamento**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +40,7 @@ Fornece acesso de tempo de execução ao serviço de roteamento para permitir a 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|filterTable|Uma cadeia de caracteres que especifica o nome da tabela de roteamento que contém filtros a serem avaliados pelo serviço de roteamento. Esse valor deve corresponder ao `name` atributo de um [ \<](filtertable.md) elemento de > de FilterTable na seção de [ \<> filterTables](filtertables.md) .|  
+|filterTable|Uma cadeia de caracteres que especifica o nome da tabela de roteamento que contém filtros a serem avaliados pelo serviço de roteamento. Esse valor deve corresponder ao `name` atributo de um [ \<elemento de > de FilterTable](filtertable.md) na seção de [ \<> filterTables](filtertables.md) .|  
 |routeOnHeaderOnly|Um valor booliano que especifica se o filtro examinará o corpo da mensagem e o cabeçalho, ou apenas o cabeçalho. O padrão é `true`.|  
 |soapProcessingEnabled|Um valor booliano que especifica se o processamento SOAP deve ocorrer.|  
   

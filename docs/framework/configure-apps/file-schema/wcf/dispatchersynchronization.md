@@ -2,21 +2,23 @@
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 7336c9f7d8a117f9a9bfd338e47941eeb648fa51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925852"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398009"
 ---
 # <a name="dispatchersynchronization"></a>\<> dispatcherSynchronization
   
 Especifica um comportamento de ponto de extremidade que permite que um serviço envie respostas de forma assíncrona.  
   
-\<system.serviceModel>  
-\<comportamentos >  
-\<endpointBehaviors>  
-\<> de comportamento  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> dispatcherSynchronization**  
   
 ## <a name="syntax"></a>Sintaxe  
   
