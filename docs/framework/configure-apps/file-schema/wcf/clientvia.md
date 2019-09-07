@@ -2,47 +2,48 @@
 title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: b12a882d942555a24c145b243d2cea764ba106b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1c2ee68fb039e24e1462148cb52daf1bb57f8ed
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919501"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398105"
 ---
-# <a name="clientvia"></a><span data-ttu-id="dd966-101">\<clientVia></span><span class="sxs-lookup"><span data-stu-id="dd966-101">\<clientVia></span></span>
-<span data-ttu-id="dd966-102">Especifica o URI para o qual o canal de transporte deve ser criado.</span><span class="sxs-lookup"><span data-stu-id="dd966-102">Specifies the URI for which the transport channel should be created.</span></span> <span data-ttu-id="dd966-103">Para obter mais informações, consulte <xref:System.ServiceModel.Description.ClientViaBehavior>.</span><span class="sxs-lookup"><span data-stu-id="dd966-103">For more information, see <xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span>  
+# <a name="clientvia"></a><span data-ttu-id="b7f61-101">\<clientVia></span><span class="sxs-lookup"><span data-stu-id="b7f61-101">\<clientVia></span></span>
+<span data-ttu-id="b7f61-102">Especifica o URI para o qual o canal de transporte deve ser criado.</span><span class="sxs-lookup"><span data-stu-id="b7f61-102">Specifies the URI for which the transport channel should be created.</span></span> <span data-ttu-id="b7f61-103">Para obter mais informações, consulte <xref:System.ServiceModel.Description.ClientViaBehavior>.</span><span class="sxs-lookup"><span data-stu-id="b7f61-103">For more information, see <xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span>  
   
- <span data-ttu-id="dd966-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="dd966-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="dd966-105">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="dd966-105">\<behaviors></span></span>  
-<span data-ttu-id="dd966-106">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="dd966-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="dd966-107">\<> de comportamento</span><span class="sxs-lookup"><span data-stu-id="dd966-107">\<behavior></span></span>  
-<span data-ttu-id="dd966-108">\<clientVia></span><span class="sxs-lookup"><span data-stu-id="dd966-108">\<clientVia></span></span>  
+<span data-ttu-id="b7f61-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="b7f61-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="b7f61-105">&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="b7f61-105">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="b7f61-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)</span><span class="sxs-lookup"><span data-stu-id="b7f61-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)</span></span>\
+<span data-ttu-id="b7f61-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="b7f61-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)</span></span>\
+<span data-ttu-id="b7f61-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-endpointbehaviors.md)</span><span class="sxs-lookup"><span data-stu-id="b7f61-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)</span></span>\
+<span data-ttu-id="b7f61-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> clientVia**</span><span class="sxs-lookup"><span data-stu-id="b7f61-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientVia>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd966-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dd966-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7f61-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b7f61-110">Syntax</span></span>  
   
 ```xml  
 <clientVia viaUri="String" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dd966-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="dd966-110">Attributes and Elements</span></span>  
- <span data-ttu-id="dd966-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="dd966-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b7f61-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="b7f61-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="b7f61-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="b7f61-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dd966-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="dd966-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b7f61-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="b7f61-113">Attributes</span></span>  
   
-|<span data-ttu-id="dd966-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="dd966-113">Attribute</span></span>|<span data-ttu-id="dd966-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="dd966-114">Description</span></span>|  
+|<span data-ttu-id="b7f61-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="b7f61-114">Attribute</span></span>|<span data-ttu-id="b7f61-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="b7f61-115">Description</span></span>|  
 |---------------|-----------------|  
-|`viaUri`|<span data-ttu-id="dd966-115">Uma cadeia de caracteres que especifica um URI que indica a rota que deve ser tomada por uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="dd966-115">A string that specifies a URI that indicates the route a message should take.</span></span>|  
+|`viaUri`|<span data-ttu-id="b7f61-116">Uma cadeia de caracteres que especifica um URI que indica a rota que deve ser tomada por uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="b7f61-116">A string that specifies a URI that indicates the route a message should take.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="dd966-116">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="dd966-116">Child Elements</span></span>  
- <span data-ttu-id="dd966-117">Nenhum</span><span class="sxs-lookup"><span data-stu-id="dd966-117">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b7f61-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="b7f61-117">Child Elements</span></span>  
+ <span data-ttu-id="b7f61-118">Nenhum</span><span class="sxs-lookup"><span data-stu-id="b7f61-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="dd966-118">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="dd966-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b7f61-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="b7f61-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="dd966-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="dd966-119">Element</span></span>|<span data-ttu-id="dd966-120">Descrição</span><span class="sxs-lookup"><span data-stu-id="dd966-120">Description</span></span>|  
+|<span data-ttu-id="b7f61-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="b7f61-120">Element</span></span>|<span data-ttu-id="b7f61-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="b7f61-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dd966-121">\<> de comportamento</span><span class="sxs-lookup"><span data-stu-id="dd966-121">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="dd966-122">Especifica um comportamento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="dd966-122">Specifies an endpoint behavior.</span></span>|  
+|[<span data-ttu-id="b7f61-122">\<> de comportamento</span><span class="sxs-lookup"><span data-stu-id="b7f61-122">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="b7f61-123">Especifica um comportamento de ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="b7f61-123">Specifies an endpoint behavior.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="dd966-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd966-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7f61-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b7f61-124">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ClientViaElement>
 - <xref:System.ServiceModel.Description.ClientViaBehavior>

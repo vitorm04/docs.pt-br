@@ -2,20 +2,21 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785483"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400015"
 ---
-# <a name="protocolmapping"></a><span data-ttu-id="157ab-101">\<protocolMapping></span><span class="sxs-lookup"><span data-stu-id="157ab-101">\<protocolMapping></span></span>
-<span data-ttu-id="157ab-102">Representa uma seção de configuração para definir um conjunto padrão de mapeamento de protocolo entre esquemas de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e associações do WCF.</span><span class="sxs-lookup"><span data-stu-id="157ab-102">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="157ab-103">Durante a criação de pontos de extremidade padrão em tempo de execução, o Windows Communication Foundation (WCF) analisa os mapeamentos configurados e decide em qual associação a ser usado para um determinado endereço de base.</span><span class="sxs-lookup"><span data-stu-id="157ab-103">When creating default endpoints at runtime, Windows Communication Foundation (WCF) looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
+# <a name="protocolmapping"></a><span data-ttu-id="4b63c-101">\<> protocolMapping</span><span class="sxs-lookup"><span data-stu-id="4b63c-101">\<protocolMapping></span></span>
+<span data-ttu-id="4b63c-102">Representa uma seção de configuração para definir um conjunto de mapeamentos de protocolo padrão entre esquemas de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e associações do WCF.</span><span class="sxs-lookup"><span data-stu-id="4b63c-102">Represents a configuration section for defining a set of default protocol mapping between transport protocol schemes (e.g., http, net.tcp, net.pipe, etc.) and WCF bindings.</span></span> <span data-ttu-id="4b63c-103">Ao criar pontos de extremidade padrão em tempo de execução, Windows Communication Foundation (WCF) examina os mapeamentos configurados e decide qual associação usar para um endereço baseado em particular.</span><span class="sxs-lookup"><span data-stu-id="4b63c-103">When creating default endpoints at runtime, Windows Communication Foundation (WCF) looks at the configured mappings and decides on which binding to use for a particular based address.</span></span>  
   
-[<span data-ttu-id="157ab-104">**\<system.serviceModel>**</span><span class="sxs-lookup"><span data-stu-id="157ab-104">**\<system.serviceModel>**</span></span>](system-servicemodel.md)  
-<span data-ttu-id="157ab-105">&nbsp;&nbsp;**\<protocolMapping>**</span><span class="sxs-lookup"><span data-stu-id="157ab-105">&nbsp;&nbsp;**\<protocolMapping>**</span></span>  
+<span data-ttu-id="4b63c-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="4b63c-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="4b63c-105">&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="4b63c-105">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="4b63c-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<> protocolMapping**</span><span class="sxs-lookup"><span data-stu-id="4b63c-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<protocolMapping>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="157ab-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="157ab-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b63c-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4b63c-107">Syntax</span></span>  
   
 ```xml  
 <protocolMapping>
@@ -25,26 +26,26 @@ ms.locfileid: "61785483"
 </protocolMapping>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="157ab-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="157ab-107">Attributes and Elements</span></span>  
- <span data-ttu-id="157ab-108">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="157ab-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4b63c-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="4b63c-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="4b63c-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="4b63c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="157ab-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="157ab-109">Attributes</span></span>  
- <span data-ttu-id="157ab-110">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="157ab-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4b63c-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="4b63c-110">Attributes</span></span>  
+ <span data-ttu-id="4b63c-111">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="4b63c-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="157ab-111">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="157ab-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4b63c-112">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="4b63c-112">Child Elements</span></span>  
   
-|<span data-ttu-id="157ab-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="157ab-112">Element</span></span>|<span data-ttu-id="157ab-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="157ab-113">Description</span></span>|  
+|<span data-ttu-id="4b63c-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="4b63c-113">Element</span></span>|<span data-ttu-id="4b63c-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="4b63c-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="157ab-114">\<filters></span><span class="sxs-lookup"><span data-stu-id="157ab-114">\<filters></span></span>](filters-of-routing.md)|<span data-ttu-id="157ab-115">Contém um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e uma associação do WCF.</span><span class="sxs-lookup"><span data-stu-id="157ab-115">Contains a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a WCF binding.</span></span>|  
+|[<span data-ttu-id="4b63c-115">\<filters></span><span class="sxs-lookup"><span data-stu-id="4b63c-115">\<filters></span></span>](filters-of-routing.md)|<span data-ttu-id="4b63c-116">Contém um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, net. TCP, net. pipe, etc.) e uma associação do WCF.</span><span class="sxs-lookup"><span data-stu-id="4b63c-116">Contains a default protocol mapping between a transport protocol scheme (e.g., http, net.tcp, net.pipe, etc.) and a WCF binding.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="157ab-116">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="157ab-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4b63c-117">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="4b63c-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="157ab-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="157ab-117">Element</span></span>|<span data-ttu-id="157ab-118">Descrição</span><span class="sxs-lookup"><span data-stu-id="157ab-118">Description</span></span>|  
+|<span data-ttu-id="4b63c-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="4b63c-118">Element</span></span>|<span data-ttu-id="4b63c-119">Descrição</span><span class="sxs-lookup"><span data-stu-id="4b63c-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="157ab-119">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="157ab-119">\<system.serviceModel></span></span>](system-servicemodel.md)|<span data-ttu-id="157ab-120">O elemento raiz de todos os elementos de configuração do WCF.</span><span class="sxs-lookup"><span data-stu-id="157ab-120">The root element of all WCF configuration elements.</span></span>|  
+|[<span data-ttu-id="4b63c-120">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="4b63c-120">\<system.serviceModel></span></span>](system-servicemodel.md)|<span data-ttu-id="4b63c-121">O elemento raiz de todos os elementos de configuração do WCF.</span><span class="sxs-lookup"><span data-stu-id="4b63c-121">The root element of all WCF configuration elements.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="157ab-121">Exemplo</span><span class="sxs-lookup"><span data-stu-id="157ab-121">Example</span></span>  
- <span data-ttu-id="157ab-122">O exemplo de configuração a seguir mostra o mapeamento de protocolo padrão no arquivo Machine. config.</span><span class="sxs-lookup"><span data-stu-id="157ab-122">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="157ab-123">Você pode substituir esse mapeamento padrão no nível do computador, modificando o arquivo Machine. config.</span><span class="sxs-lookup"><span data-stu-id="157ab-123">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="157ab-124">Ou, se você quiser apenas substituí-la dentro do escopo de um aplicativo, você pode substituir essa seção dentro de seu arquivo de configuração de aplicativo e alterar o mapeamento para esquemas de protocolo individual.</span><span class="sxs-lookup"><span data-stu-id="157ab-124">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
+## <a name="example"></a><span data-ttu-id="4b63c-122">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4b63c-122">Example</span></span>  
+ <span data-ttu-id="4b63c-123">O exemplo de configuração a seguir mostra o mapeamento de protocolo padrão no arquivo Machine. config.</span><span class="sxs-lookup"><span data-stu-id="4b63c-123">The following configuration example shows the default protocol mapping in the machine.config file.</span></span> <span data-ttu-id="4b63c-124">Você pode substituir esse mapeamento padrão no nível do computador modificando o arquivo Machine. config.</span><span class="sxs-lookup"><span data-stu-id="4b63c-124">You can override this default mapping at the machine level by modifying the machine.config file.</span></span> <span data-ttu-id="4b63c-125">Ou, se você quiser apenas substituí-lo no escopo de um aplicativo, poderá substituir esta seção no arquivo de configuração do aplicativo e alterar o mapeamento para esquemas de protocolo individuais.</span><span class="sxs-lookup"><span data-stu-id="4b63c-125">Or if you would only like to override it within the scope of an application, you can override this section within your application configuration file and change the mapping for individual protocol schemes.</span></span>  
   
 ```xml  
 <protocolMapping>
@@ -59,7 +60,7 @@ ms.locfileid: "61785483"
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="157ab-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="157ab-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b63c-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4b63c-126">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>
