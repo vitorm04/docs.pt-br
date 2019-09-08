@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741790"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777360"
 ---
 # <a name="getwin32resblob-method"></a>Método GetWin32ResBlob
-Recupera o blob de recurso do Win32. Chame esse método depois de definir as opções de assembly.  
+Recupera o blob de recursos do Win32. Chame esse método depois de definir as opções de assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,28 +44,28 @@ HRESULT GetWin32ResBlob(
  ID do assembly.  
   
  `FileToken`  
- Token de arquivo usado para recuperar o nome do arquivo a ser usado ao construir o recurso de versão do Win32  
+ O token de arquivo usado para recuperar o nome de o FileName a ser usado ao construir o recurso de versão do Win32  
   
  `fDll`  
- TRUE se o arquivo é uma DLL, false para que um EXE.  
+ TRUE se o arquivo for uma DLL, false para um EXE.  
   
  `pszIconFile`  
- Ícone opcional para inserir no blob de recurso.  
+ Ícone opcional para inserir no blob de recursos.  
   
  `ppResBlob`  
- Recebe o blob de recurso.  
+ Recebe o blob de recursos.  
   
  `pcbResBlob`  
  Recebe o tamanho do blob.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink](ialink-interface.md)
+- [Interface IALink2](ialink2-interface.md)
+- [API do ALink](index.md)

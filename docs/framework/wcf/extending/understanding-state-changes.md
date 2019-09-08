@@ -2,12 +2,12 @@
 title: Noções básicas de alterações de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963080"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796944"
 ---
 # <a name="understanding-state-changes"></a>Noções básicas de alterações de estado
 Este tópico discute os Estados e as transições que os canais têm, os tipos usados para estruturar os Estados de canal e como implementá-los.  
@@ -28,12 +28,12 @@ Este tópico discute os Estados e as transições que os canais têm, os tipos u
   
  Cada <xref:System.ServiceModel.ICommunicationObject> começa no estado criado. Nesse estado, um aplicativo pode configurar o objeto definindo suas propriedades. Quando um objeto está em um estado diferente de criado, ele é considerado imutável.  
   
- ![Transição de estado do canal](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Transição de estado do canal](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figura 1. A máquina de estado ICommunicationObject.  
   
  Windows Communication Foundation (WCF) fornece uma classe base abstrata chamada <xref:System.ServiceModel.Channels.CommunicationObject> que implementa <xref:System.ServiceModel.ICommunicationObject> e a máquina de estado do canal. O gráfico a seguir é um diagrama de estado modificado que é <xref:System.ServiceModel.Channels.CommunicationObject>específico do. Além do computador de <xref:System.ServiceModel.ICommunicationObject> estado, ele mostra o intervalo quando métodos adicionais <xref:System.ServiceModel.Channels.CommunicationObject> são invocados.  
   
- ![Alterações de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Alterações de estado](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Figura 2. A implementação de CommunicationObject do computador de estado ICommunicationObject, incluindo chamadas para eventos e métodos protegidos.  
   
 ### <a name="icommunicationobject-events"></a>Eventos de ICommunicationObject  
@@ -90,7 +90,7 @@ Figura 2. A implementação de CommunicationObject do computador de estado IComm
   
  Em seguida, ele define o estado como abrindo e chama OnOpening () (que gera o evento de abertura), OnOpen () e OnOpened () nessa ordem. OnOpened () define o estado como aberto e gera o evento Open. Se qualquer um desses gera uma exceção, Open () chama Fault () e permite que a exceção seja emergida. O diagrama a seguir mostra o processo aberto mais detalhadamente.  
   
- ![Alterações de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Alterações de estado](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Substitua o método OnOpen para implementar uma lógica aberta personalizada, como abrir um objeto de comunicação interno.  
   
  Método Close  
@@ -101,7 +101,7 @@ Substitua o método OnOpen para implementar uma lógica aberta personalizada, co
   
  O método Close () pode ser chamado em qualquer Estado. Ele tenta fechar o objeto normalmente. Se um erro for encontrado, ele encerrará o objeto. O método não fará nada se o estado atual estiver fechando ou fechado. Caso contrário, ele definirá o estado como fechando. Se o estado original foi criado, aberto ou falho, ele chama Abort () (consulte o diagrama a seguir). Se o estado original foi aberto, ele chama OnClosing () (que gera o evento de fechamento), fechamento () e oncloseed () nessa ordem. Se qualquer um deles lançar uma exceção, fechar () chamará Abort () e permitirá que a exceção seja emergida. Oncloseed () define o estado como Closed e gera o evento Closed. O diagrama a seguir mostra o processo de fechamento mais detalhadamente.  
   
- ![Alterações de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![Alterações de estado](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 Substitua o método fechamento para implementar uma lógica de fechamento personalizada, como fechar um objeto de comunicação interno. Toda a lógica de fechamento normal que pode ser bloqueada por um longo tempo (por exemplo, aguardando que o outro lado responda) deve ser implementada em fechamento () porque ela usa um parâmetro de tempo limite e não é chamada como parte de Abort ().  
   
  Anular  
@@ -111,7 +111,7 @@ Pós-condição: O estado está fechado. Pode gerar uma exceção.
   
  O método Abort () não fará nada se o estado atual for fechado ou se o objeto tiver sido encerrado antes (por exemplo, possivelmente com Abort () em execução em outro thread). Caso contrário, ele define o estado para fechar e chama OnClosing () (que gera o evento de fechamento), OnAbort () e oncloseed () nessa ordem (não chama fechamento porque o objeto está sendo encerrado, não fechado). Oncloseed () define o estado como Closed e gera o evento Closed. Se qualquer uma delas lançar uma exceção, ela será relançada para o chamador da anulação. As implementações de onfechamento (), oncloseed () e OnAbort () não devem bloquear (por exemplo, na entrada/saída). O diagrama a seguir mostra o processo de anulação mais detalhadamente.  
   
- ![Alterações de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![Alterações de estado](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 Substitua o método OnAbort para implementar uma lógica de término personalizada, como encerrar um objeto de comunicação interno.  
   
  Fault  

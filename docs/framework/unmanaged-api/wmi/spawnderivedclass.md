@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783098"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798234"
 ---
 # <a name="spawnderivedclass-function"></a>Função SpawnDerivedClass
 Cria um objeto de classe derivada recentemente por meio de um objeto especificado.    
@@ -41,40 +41,40 @@ HRESULT SpawnDerivedClass (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `ppNewClass`  
-[out] Recebe o ponteiro para o novo objeto de definição de classe. Se ocorrer um erro, um novo objeto não é retornado, e `ppNewClass` é esquerda sem modificações. Seu valor não pode ser `null`.
+fora Recebe o ponteiro para o novo objeto de definição de classe. Se ocorrer um erro, um novo objeto não será retornado e `ppNewClass` permanecerá não modificado. Seu valor não pode `null`ser.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Uma operação inválida, como a geração de uma classe de uma instância, foi solicitada. |
-| `WBEM_E_INCOMPLETE_CLASS` | A classe de origem não completamente foi definida ou está registrada com o gerenciamento do Windows, portanto, uma nova classe derivada não é permitida. |
+| `WBEM_E_INCOMPLETE_CLASS` | A classe de origem não foi totalmente definida ou registrada com o gerenciamento do Windows, portanto, não é permitida uma nova classe derivada. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` é `null`. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) .
 
-`ptr` deve ser uma definição de classe que se torna a classe pai do objeto gerado. O objeto retornado se torna uma subclasse do objeto atual.
+`ptr`deve ser uma definição de classe que se torna a classe pai do objeto gerado. O objeto retornado se torna uma subclasse do objeto atual.
 
-O novo objeto retornado no `ppNewClass` automaticamente se torna uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
+O novo objeto retornado em `ppNewClass` torna-se automaticamente uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

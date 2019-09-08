@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: HT
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038469"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777502"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
@@ -66,7 +66,9 @@ As seções a seguir para mostram como verificar se você não está usando uma 
 
 ### <a name="for-http-networking"></a>Para rede HTTP
 
-O <xref:System.Net.ServicePointManager>, usando o .NET Framework 4.7 e versões posteriores, define como padrão o sistema operacional com o melhor protocolo de segurança e versão. Para obter a melhor opção padrão de sistema operacional, se possível, não defina um valor para a propriedade <xref:System.Net.ServicePointManager.SecurityProtocol>. Do contrário, defina-o como <xref:System.Net.SecurityProtocolType.SystemDefault>.
+<xref:System.Net.ServicePointManager>usando .NET Framework 4,7 e versões posteriores, o usará o protocolo de segurança padrão configurado no sistema operacional. Para obter a opção padrão do sistema operacional, se possível, não defina um valor <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> para a propriedade, que usa <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>como padrão.
+
+Como a <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> configuração faz com <xref:System.Net.ServicePointManager> que o use o protocolo de segurança padrão configurado pelo sistema operacional, seu aplicativo pode ser executado de forma diferente com base no sistema operacional em que é executado. Por exemplo, o Windows 7 SP1 usa o TLS 1,0 enquanto o Windows 8 e o Windows 10 usam o TLS 1,2.
 
 O restante deste artigo não é relevante ao definir o .NET Framework 4.7 ou versões posteriores como destino para uma rede HTTP.
 
@@ -275,7 +277,7 @@ Para habilitar ou reabilitar o TLS 1.2 e/ou o TLS 1.1 em um sistema compatível 
 | Windows 8.0<br>Windows Server 2012 | Com suporte e habilitado por padrão. |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Com suporte, mas não habilitado por padrão. Veja a página da Web [Configurações do Registro do TLS (protocolo TLS)](/windows-server/security/tls/tls-registry-settings) para obter detalhes sobre como habilitar o TLS 1.2. |
 | Windows Server 2008 | O suporte ao protocolo TLS 1.2 e TLS 1.1 requer uma atualização. Confira [Atualizar para adicionar suporte ao protocolo TLS 1.1 e TLS 1.2 no Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
-| Windows Vista | Sem suporte. |
+| Windows Vista | Não compatível. |
 
 Para saber mais sobre quais protocolos TLS/SSL são habilitados por padrão em cada versão do Windows, confira [Protocolos no TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
 

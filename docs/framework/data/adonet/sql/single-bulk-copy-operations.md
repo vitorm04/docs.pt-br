@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 07c705b9daeeb043ef36f1e3272a3bf259a3c23e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05e3cf25352e731d320061001f08a835cd520b15
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043887"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780923"
 ---
 # <a name="single-bulk-copy-operations"></a>Operações únicas de cópia em massa
 
 A abordagem mais simples para executar uma SQL Server operação de cópia em massa é executar uma única operação em um banco de dados. Por padrão, uma operação de cópia em massa é executada como uma operação isolada: a operação de cópia ocorre de forma não-transacionada, sem nenhuma oportunidade de redistribuí-la.
 
 > [!NOTE]
-> Se você precisar reverter toda ou parte da cópia em massa quando ocorrer um erro, poderá usar uma <xref:System.Data.SqlClient.SqlBulkCopy>transação gerenciada ou executar a operação de cópia em massa em uma transação existente. O **SqlBulkCopy** também funcionará <xref:System.Transactions> se a conexão for listada (implícita ou explicitamente) em uma transação **System.** Transactions.
+> Se você precisar reverter toda ou parte da cópia em massa quando ocorrer um erro, poderá usar uma <xref:System.Data.SqlClient.SqlBulkCopy>transação gerenciada ou executar a operação de cópia em massa em uma transação existente. O **SqlBulkCopy** também funcionará <xref:System.Transactions> se a conexão for listada (implícita ou explicitamente) em uma transação **System. Transactions** .
 >
-> Para obter mais informações, consulte [operações de cópia em massa e transação](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).
+> Para obter mais informações, consulte [operações de cópia em massa e transação](transaction-and-bulk-copy-operations.md).
 
 As etapas gerais para executar uma operação de cópia em massa são as seguintes:
 
@@ -45,7 +45,7 @@ As etapas gerais para executar uma operação de cópia em massa são as seguint
 O aplicativo de console a seguir demonstra como carregar dados usando <xref:System.Data.SqlClient.SqlBulkCopy> a classe. Neste exemplo, um <xref:System.Data.SqlClient.SqlDataReader> é usado para copiar dados da tabela de **produção. Product** no banco SQL Server dados **AdventureWorks** para uma tabela semelhante no mesmo banco de dados.
 
 > [!IMPORTANT]
-> Este exemplo não será executado a menos que você tenha criado as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe somente para uso de **SqlBulkCopy** . Se as tabelas de origem e destino estiverem localizadas na mesma instância de SQL Server, será mais fácil e rápido usar uma instrução Transact `INSERT … SELECT` -SQL para copiar os dados.
+> Este exemplo não será executado a menos que você tenha criado as tabelas de trabalho conforme descrito em [configuração de exemplo de cópia em massa](bulk-copy-example-setup.md). Esse código é fornecido para demonstrar a sintaxe somente para uso de **SqlBulkCopy** . Se as tabelas de origem e destino estiverem localizadas na mesma instância de SQL Server, será mais fácil e rápido usar uma instrução Transact `INSERT … SELECT` -SQL para copiar os dados.
 
 [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
 [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]
@@ -84,5 +84,5 @@ command.ExecuteNonQuery();
 
 ## <a name="see-also"></a>Consulte também
 
-- [Operações de cópia em massa no SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Operações de cópia em massa no SQL Server](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

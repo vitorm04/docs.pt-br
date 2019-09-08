@@ -2,24 +2,24 @@
 title: ProtocolRecoveryCompleteFailure
 ms.date: 03/30/2017
 ms.assetid: 369aac88-e66d-48cc-a432-c5f2073b7a1b
-ms.openlocfilehash: 586cf4a795173e6d1ff46c6ac6881e682392218d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f829efd248f763752eda2dc7a2ebf5399d89a9f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999031"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796165"
 ---
 # <a name="protocolrecoverycompletefailure"></a>ProtocolRecoveryCompleteFailure
-Id: 145  
+Sessão 145  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: TransactionBridge  
+ Categorias TransactionBridge  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que o serviço do protocolo WS-AT não conseguiu concluir a inicialização e recuperação. Como resultado, a funcionalidade de transação WS-Atomic está desabilitada. O evento lista o ID de protocolo, nome do protocolo, exceção, nome do processo e ID de processo.  
+ Esse evento indica que o serviço de protocolo de transação WS-Atomic falhou ao concluir a inicialização e a recuperação. Como resultado, a funcionalidade de transação WS-Atomic está desabilitada. O evento lista a ID do protocolo, o nome do protocolo, a exceção, o nome do processo e a ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

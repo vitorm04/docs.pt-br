@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2c5c3bbbcf3cf4b87a5f68006c1625666d13926
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753891"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796609"
 ---
 # <a name="iassemblynamegetname-method"></a>Método IAssemblyName::GetName
-Obtém o nome simple e não criptografado do assembly referenciado por este [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.  
+Obtém o nome simples e não criptografado do assembly referenciado por este objeto [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +38,18 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpcwBuffer`  
- [no, out] O tamanho de `pwzName` em caracteres largos, incluindo o caractere terminador nulo.  
+ [entrada, saída] O tamanho de `pwzName` , em caracteres largos, incluindo o caractere de terminador nulo.  
   
  `pwzName`  
- [out] Um buffer para armazenar o nome do assembly referenciado.  
+ fora Um buffer para conter o nome do assembly referenciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interface IAssemblyName](iassemblyname-interface.md)

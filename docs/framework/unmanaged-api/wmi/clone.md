@@ -1,6 +1,6 @@
 ---
-title: Função clone (referência de API não gerenciada)
-description: A função de Clone retorna um novo objeto que é um clone completo da atual.
+title: Função de clonagem (referência de API não gerenciada)
+description: A função Clone retorna um novo objeto que é um clone completo do atual.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80faf1a5a6297f5b105fdb609366f6774f8692b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5957f591dca7df30178660eb3fb074567c285715
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761656"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798713"
 ---
 # <a name="clone-function"></a>Função Clone
 Retorna um novo objeto que é uma cópia completa do objeto atual.   
@@ -41,33 +41,33 @@ HRESULT Clone (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `ppCopy`  
-[out] Um novo objeto que é uma completa solitário de `ptr`. Esse argumento não pode ser `null` se ela recebe a cópia do objeto atual.
+fora Um novo objeto que é um solitário completo de `ptr`. Esse argumento não poderá `null` ser se receber a cópia do objeto atual.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` foi especificado como um parâmetro, e não é permitido nesse uso. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para clonar o objeto. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`foi especificado como um parâmetro e não é válido neste uso. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente disponível para clonar o objeto. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) .
 
 O objeto clonado é um objeto COM que tem uma contagem de referência de 1.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

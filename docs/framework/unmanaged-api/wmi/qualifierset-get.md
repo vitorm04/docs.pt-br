@@ -1,6 +1,6 @@
 ---
 title: Função QualifierSet_Get (referência de API não gerenciada)
-description: A função QualifierSet_Get obtém um qualificador nomeado.
+description: A função QualifierSet_Get Obtém um qualificador nomeado.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782584"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798305"
 ---
-# <a name="qualifiersetget-function"></a>Função QualifierSet_Get
+# <a name="qualifierset_get-function"></a>Função QualifierSet_Get
 Obtém o qualificador nomeado especificado.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,26 +44,26 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`   
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`   
-[in] Um ponteiro para um [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instância.
+no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`   
-[in] O nome do qualificador cujo valor é solicitado.
+no O nome do qualificador cujo valor é solicitado.
 
 `lFlags`   
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `pVal`   
-[out] Quando obtiver êxito, o tipo correto e o valor do qualificador. Se a função falhar, o `VARIANT` apontado por `pVal` não será modificado. Se esse parâmetro for `null`, o parâmetro é ignorado.
+fora Quando bem-sucedido, o tipo e o valor corretos para o qualificador. Se a função falhar, a `VARIANT` apontada para `pVal` by não será modificada. Se esse parâmetro for `null`, o parâmetro será ignorado.
 
 `plFlavor`   
-[out] Um ponteiro para um longo que recebe os bits de flavor qualificador para o qualificador solicitado. Se as informações de tipo não for desejadas, esse parâmetro pode ser `null`. 
+fora Um ponteiro para um longo que recebe os bits de tipo de qualificador para o qualificador solicitado. Se as informações do tipo não forem desejadas, `null`esse parâmetro poderá ser. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -73,10 +73,10 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) método.
+Essa função encapsula uma chamada para o método [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

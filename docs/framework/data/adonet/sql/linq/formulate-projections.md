@@ -5,60 +5,60 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: adf854429f2b13fd2421252a6281ad96d9d88500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dfd5d951750de2ab918c51dd9f4f2deeb8a6318
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655560"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793822"
 ---
 # <a name="formulate-projections"></a>Formule projeções
-Os exemplos a seguir mostram como o `select` instrução no C# e `Select` instrução no Visual Basic pode ser combinada com outros recursos para formar projeções de consulta.  
+Os exemplos a seguir mostram como `select` a instrução C# in `Select` e a instrução no Visual Basic podem ser combinadas com outros recursos para formar projeções de consulta.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Select` cláusula no Visual Basic (`select` cláusula C#) para retornar uma sequência de nomes de contato para `Customers`.  
+ O exemplo a seguir usa `Select` a cláusula em Visual Basic`select` (cláusula C#in) para retornar uma sequência de nomes de `Customers`contato para.  
   
  [!code-csharp[DLinqQueryExamples#57](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#57)]
  [!code-vb[DLinqQueryExamples#57](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#57)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Select` cláusula no Visual Basic (`select` cláusula C#) e *tipos anônimos* para retornar uma sequência de nomes de contato e números de telefone para `Customers`.  
+ O exemplo a seguir usa `Select` a cláusula em Visual Basic`select` (cláusula C#in) e *tipos anônimos* para retornar uma sequência de nomes de contato e `Customers`números de telefone para o.  
   
  [!code-csharp[DLinqQueryExamples#58](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#58)]
  [!code-vb[DLinqQueryExamples#58](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#58)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Select` cláusula no Visual Basic (`select` cláusula C#) e *tipos anônimos* para retornar uma sequência de nomes e números de telefone para funcionários. O `FirstName` e `LastName` campos são combinados em um único campo (`Name`) e o `HomePhone` campo foi renomeado para `Phone` na sequência resultante.  
+ O exemplo a seguir usa `Select` a cláusula em Visual Basic`select` (cláusula C#in) e *tipos anônimos* para retornar uma sequência de nomes e números de telefone para os funcionários. Os `FirstName` campos `LastName` e são combinados em um único campo (`Name`), e o `HomePhone` campo é renomeado para `Phone` na sequência resultante.  
   
  [!code-csharp[DLinqQueryExamples#59](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#59)]
  [!code-vb[DLinqQueryExamples#59](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#59)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Select` cláusula no Visual Basic (`select` cláusula C#) e *tipos anônimos* para retornar uma sequência de todos os `ProductID`s e um valor calculado chamado `HalfPrice`. Esse valor é definido como `UnitPrice` dividido por 2.  
+ O exemplo a seguir usa `Select` a cláusula em Visual Basic`select` (cláusula C#in) e *tipos anônimos* para retornar uma sequência `ProductID`de todos os s e um `HalfPrice`valor calculado chamado. Esse valor é definido como `UnitPrice` dividido por 2.  
   
  [!code-csharp[DLinqQueryExamples#60](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#60)]
  [!code-vb[DLinqQueryExamples#60](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#60)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Select` cláusula no Visual Basic (`select` cláusula C#) e um *instrução condicional* para retornar uma sequência de nome do produto e a disponibilidade do produto.  
+ O exemplo a seguir usa `Select` a cláusula em Visual Basic`select` (cláusula C#in) e uma *instrução condicional* para retornar uma sequência de nome do produto e disponibilidade do produto.  
   
  [!code-csharp[DLinqQueryExamples#61](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#61)]
  [!code-vb[DLinqQueryExamples#61](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#61)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa um Visual Basic `Select` cláusula (`select` cláusula C#) e um *tipo conhecido* (nome) para retornar uma sequência de nomes de funcionários.  
+ O exemplo a seguir usa uma `Select` cláusula Visual Basic`select` (cláusula C#in) e um *tipo conhecido* (Name) para retornar uma sequência dos nomes dos funcionários.  
   
  [!code-csharp[DLinqQueryExamples#62](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#62)]
  [!code-vb[DLinqQueryExamples#62](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#62)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `Select` e `Where` no Visual Basic (`select` e `where` em C#) para retornar uma *sequência filtrada* de nomes de contato para clientes em Londres.  
+ O exemplo a seguir `Select` usa `Where` e em Visual Basic`select` ( `where` e C#em) para retornar uma *sequência filtrada* de nomes de contato para clientes em Londres.  
   
  [!code-csharp[DLinqQueryExamples#63](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#63)]
  [!code-vb[DLinqQueryExamples#63](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#63)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa uma `Select` cláusula no Visual Basic (`select` cláusula C#) e *tipos anônimos* para retornar uma *um subconjunto moldado* dos dados sobre clientes.  
+ O exemplo a seguir usa `Select` uma cláusula em Visual Basic`select` (cláusula C#in) e *tipos anônimos* para retornar um *subconjunto formatado* dos dados sobre os clientes.  
   
  [!code-csharp[DLinqQueryExamples#64](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#64)]
  [!code-vb[DLinqQueryExamples#64](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#64)]  
@@ -77,4 +77,4 @@ Os exemplos a seguir mostram como o `select` instrução no C# e `Select` instru
   
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Exemplos de consulta](query-examples.md)

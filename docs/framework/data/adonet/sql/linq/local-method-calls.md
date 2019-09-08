@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec288d5ac2f6466860362be82c619c89204e8f31
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033508"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781427"
 ---
 # <a name="local-method-calls"></a>Chamadas de método locais
-Um chamada de método local é uma chamada que é executada dentro do modelo do objeto. Um chamada de método remoto é uma chamada que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte no SQL e passa para o mecanismo de banco de dados para execução. Chamadas de método locais são necessários quando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não é possível converter a chamada no SQL. Caso contrário, um <xref:System.InvalidOperationException> será gerado.  
+Um chamada de método local é uma chamada que é executada dentro do modelo do objeto. Um chamada de método remoto é uma chamada que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte no SQL e passa para o mecanismo de banco de dados para execução. As chamadas de método local são [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] necessárias quando o não pode converter a chamada em SQL. Caso contrário, um <xref:System.InvalidOperationException> será gerado.  
   
 ## <a name="example-1"></a>Exemplo 1  
  No exemplo a seguir, uma classe `Order` é mapeada para a tabela Orders no banco de dados de exemplo Northwind. Um método de instância local foi adicionado à classe.  
   
- Em Query 1, o construtor da classe `Order` é executado localmente. Em Query 2, se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tentasse converter `LocalInstanceMethod()`em SQL, haveria Falha na tentativa e um <xref:System.InvalidOperationException> será lançada. Mas como [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece suporte para chamadas de método locais, Query 2 não gerará uma exceção.  
+ Em Query 1, o construtor da classe `Order` é executado localmente. Na consulta 2, se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] você tentou traduzir `LocalInstanceMethod()`no SQL, a tentativa falharia e uma <xref:System.InvalidOperationException> exceção seria gerada. Mas como [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] o fornece suporte para chamadas de método local, o Query2 não lançará uma exceção.  
   
  [!code-csharp[DlinqLocalMethodCall#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqLocalMethodCall/cs/Program.cs#1)]
  [!code-vb[DlinqLocalMethodCall#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/Module1.vb#1)]  
@@ -28,4 +28,4 @@ Um chamada de método local é uma chamada que é executada dentro do modelo do 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Informações gerais](background-information.md)

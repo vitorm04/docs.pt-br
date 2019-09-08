@@ -1,6 +1,6 @@
 ---
-title: Função GetQualifierSet (referência de API não gerenciada)
-description: A função GetQualifierSet recupera o qualificador definido para uma classe ou instância.
+title: Função getqualifierset (referência de API não gerenciada)
+description: A função getqualificador recupera o qualificador definido para uma classe ou instância.
 ms.date: 11/06/2017
 api_name:
 - GetQualifierSet
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746464"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798468"
 ---
-# <a name="getqualifierset-function"></a>Função GetQualifierSet
+# <a name="getqualifierset-function"></a>Função getqualifierset
 Recupera o qualificador definido para uma instância da classe ou uma definição de classe.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,17 +41,17 @@ HRESULT GetQualifierSet (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `ppQualSet`  
-[out] Recebe o ponteiro de interface que permite o acesso para os qualificadores do objeto da classe. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é deixado inalterado. 
+fora Recebe o ponteiro de interface que permite o acesso aos qualificadores do objeto de classe. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não será retornado e o ponteiro será deixado como não modificado. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -63,12 +63,12 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) método. 
+Essa função encapsula uma chamada para o método [IWbemClassObject:: Getqualifierset](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) . 
 
-O [IWbemQualifierSet ponteiro](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicionar, editar ou excluir esses qualificadores. Esses qualificadores adicionadas, editadas ou excluídas se aplicam a toda a definição de classe ou instância.
+O [ponteiro IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicione, edite ou exclua esses qualificadores. Esses qualificadores adicionados, editados ou excluídos se aplicam a toda a definição de instância ou classe.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

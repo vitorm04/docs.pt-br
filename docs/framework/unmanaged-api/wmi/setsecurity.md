@@ -1,6 +1,6 @@
 ---
-title: Função SetSecurity (referência de API não gerenciada)
-description: A função SetSecurity recupera o token de representação do thread atual.
+title: Função setsecurity (referência de API não gerenciada)
+description: A função setsecurity recupera o token de representação do thread atual.
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783112"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798244"
 ---
-# <a name="setsecurity-function"></a>Função SetSecurity
+# <a name="setsecurity-function"></a>Função setsecurity
 
 Recupera o token de representação associado ao thread atual. 
 
@@ -41,20 +41,20 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parâmetros
 
 `pNeedToReset`\
-[out] Quando a função retorna, contém um ponteiro para um `boolean` que indica se o token deve ser redefinido por meio da chamada a [ResetSecurity](resetsecurity.md) função.
+fora Quando a função retorna, contém um ponteiro para um `boolean` que indica se o token deve ser redefinido chamando a função [ResetSecurity](resetsecurity.md) .
 
 `token`\
-[out] Quando a função retornar, contém um ponteiro para o identificador do token de representação associado ao thread atual. Seu valor pode ser `null` se não houver nenhum token associado ao thread atual. 
+fora Quando a função retorna, contém um ponteiro para o identificador do token de representação associado ao thread atual. Seu valor pode ser `null` se não houver nenhum token associado ao thread atual. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função for bem-sucedida, o valor retornado é `S_OK` (0).
+Se a função for realizada com sucesso, o valor `S_OK` de retorno será (0).
 
-Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter outras informações de erro, chame o [GetErrorInfo](geterrorinfo.md) função.
+Se a função falhar, o valor de retorno será um código de erro diferente de zero. Para obter informações de erro estendidas, chame a função [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
  **Cabeçalho:** WMINet_Utils.idl
 

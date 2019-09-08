@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742064"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777354"
 ---
 # <a name="enumcustomattributes-method"></a>Método EnumCustomAttributes
-Recupera atributos personalizados de nível de assembly.  
+Recupera atributos personalizados no nível do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,22 +47,22 @@ HRESULT EnumCustomAttributes(
  Tipo de atributos a serem enumerados. Use `mdTokenNill` para todos os atributos.  
   
  `rCustomValues`  
- Recebe os tokens de atributos personalizados.  
+ Recebe tokens de atributos personalizados.  
   
  `cMax`  
- Especifica o tamanho de `rCustomValues` matriz.  
+ Especifica o tamanho `rCustomValues` da matriz.  
   
  `pcCustomValues`  
- Opcionalmente, recebe a contagem de valores do token.  
+ Opcionalmente, recebe a contagem de valores de token.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink](ialink-interface.md)
+- [Interface IALink2](ialink2-interface.md)
+- [API do ALink](index.md)

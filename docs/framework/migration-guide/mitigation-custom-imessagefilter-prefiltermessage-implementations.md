@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251142"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779436"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigação: Implementações personalizadas de IMessageFilter.PreFilterMessage
 
@@ -31,7 +31,7 @@ Para aplicativos do Windows Forms direcionados a versões anteriores do .NET Fra
 
 ## <a name="mitigation"></a>Redução
 
-Se essa alteração for indesejável, aplicativos que se destinarem ao .NET Framework 4.6.1 ou a uma versão posterior poderão recusá-la adicionando a seguinte definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:
+Se essa alteração for indesejável, aplicativos que se destinarem ao .NET Framework 4.6.1 ou a uma versão posterior poderão recusá-la adicionando a seguinte definição de configuração à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Se essa alteração for indesejável, aplicativos que se destinarem ao .NET Fram
 </runtime>
 ```
 
-Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas que estão sendo executados no .NET Framework 4.6.1 ou em uma versão posterior, podem aceitar esse comportamento adicionando a seguinte definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:
+Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas que estão sendo executados no .NET Framework 4.6.1 ou em uma versão posterior, podem aceitar esse comportamento adicionando a seguinte definição de configuração à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:
 
 ```xml
 <runtime>
@@ -49,4 +49,4 @@ Além disso, os aplicativos destinados a versões anteriores do .NET Framework, 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-1.md)

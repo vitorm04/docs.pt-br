@@ -1,30 +1,30 @@
 ---
-title: 'Exemplos de sintaxe de consulta baseada em método: Operadores agregados (LINQ to DataSet)'
+title: 'Exemplos de sintaxe de consulta baseada em método: Operadores de agregação (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
-ms.openlocfilehash: 88d9c7299c9dbf024a07f223ef7ec7d03f8066d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 348070663e414f2768b6b57d880c41d4da6c7bb2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772314"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794923"
 ---
-# <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>Exemplos de sintaxe de consulta baseada em método: Operadores agregados (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>Exemplos de sintaxe de consulta baseada em método: Operadores de agregação (LINQ to DataSet)
 Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, e operadores de <xref:System.Linq.Enumerable.Sum%2A> para ver <xref:System.Data.DataSet> e os dados agregados usando a sintaxe da consulta de método.  
   
- O `FillDataSet` método usado nesses exemplos é especificado no [carregamento de dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ O `FillDataSet` método usado nesses exemplos é especificado no [carregamento de dados em um conjunto](loading-data-into-a-dataset.md).  
   
  Os exemplos neste tópico usam as tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
- Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
+ Os exemplos neste tópico usam as seguintes `using` / `Imports` instruções:  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Para obter mais informações, confira [Como: Criar um projeto LINQ to DataSet no Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Para obter mais informações, confira [Como: Crie um projeto LINQ to DataSet no Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="aggregate"></a>Agregado  
   
@@ -149,7 +149,7 @@ Os exemplos neste tópico demonstram como usar <xref:System.Linq.Enumerable.Aggr
   
 ## <a name="see-also"></a>Consulte também
 
-- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Carregar dados para um conjunto de dados](loading-data-into-a-dataset.md)
+- [Exemplos de LINQ to DataSet](linq-to-dataset-examples.md)
 - [Visão geral de operadores de consulta padrão (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

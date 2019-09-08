@@ -2,12 +2,12 @@
 title: Acesso seguro a dados
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963148"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782769"
 ---
 # <a name="secure-data-access"></a>Acesso seguro a dados
 Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos de segurança disponíveis no armazenamento de dados subjacente ou no Database. Você também precisa considerar as implicações de segurança de outros recursos ou componentes que seu aplicativo pode conter.  
@@ -23,10 +23,10 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Descreve as práticas recomendadas de segurança e as técnicas para proteger as informações de conexão, como usar a configuração protegida para criptografar cadeias de conexão.|  
+|[Protegendo informações de conexão](protecting-connection-information.md)|Descreve as práticas recomendadas de segurança e as técnicas para proteger as informações de conexão, como usar a configuração protegida para criptografar cadeias de conexão.|  
 |[Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fornece recomendações para o acesso a dados e a execução de operações de Database.|  
-|[Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)|Descreve como criar cadeias de conexão da entrada do usuário em tempo de execução.|  
-|[Visão geral de segurança do SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Descreve a arquitetura de segurança do SQL Server.|  
+|[Construtores de cadeia de Conexão](connection-string-builders.md)|Descreve como criar cadeias de conexão da entrada do usuário em tempo de execução.|  
+|[Visão geral de segurança do SQL Server](./sql/overview-of-sql-server-security.md)|Descreve a arquitetura de segurança do SQL Server.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Comandos com parâmetros e injeção de SQL  
  O uso de comandos com parâmetros ajuda a proteger contra ataques de injeção de SQL, em que um invasor "injeta" um comando em uma instrução SQL que compromete a segurança no servidor. Os comandos com parâmetros são protegidos contra um ataque de injeção de SQL, garantindo que os valores recebidos de uma fonte externa sejam passados apenas como valores e não façam parte da instrução Transact-SQL. Como resultado, comandos Transact-SQL inseridos em um valor não são executados na fonte de dados. Em vez disso, eles são avaliados exclusivamente como um valor de parâmetro. Além dos benefícios de segurança, os comandos com parâmetros fornecem um método conveniente para organizar valores passados com uma instrução Transact-SQL ou para um procedimento armazenado.  
@@ -35,9 +35,9 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Parâmetros DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Descreve como usar parâmetros com um `DataAdapter`.|  
-|[Modificando dados com procedimentos armazenados](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Descreve como especificar parâmetros e obter um valor de retorno.|  
-|[Gerenciando permissões com procedimentos armazenados no SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Descreve como usar SQL Server procedimentos armazenados para encapsular o acesso a dados.|  
+|[Parâmetros DataAdapter](dataadapter-parameters.md)|Descreve como usar parâmetros com um `DataAdapter`.|  
+|[Modificando dados com procedimentos armazenados](modifying-data-with-stored-procedures.md)|Descreve como especificar parâmetros e obter um valor de retorno.|  
+|[Gerenciando permissões com procedimentos armazenados no SQL Server](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Descreve como usar SQL Server procedimentos armazenados para encapsular o acesso a dados.|  
   
 ## <a name="script-exploits"></a>Scripts maliciosos  
  Uma exploração de script é outra forma de injeção que usa caracteres mal-intencionados inseridos em uma página da Web. O navegador não valida os caracteres inseridos e os processará como parte da página.  
@@ -84,14 +84,14 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)|Contém tópicos que descrevem como expor componentes COM ao .NET Framework e como expor .NET Framework componentes ao COM.|
+|[Interoperação com código não gerenciado](../../interop/index.md)|Contém tópicos que descrevem como expor componentes COM ao .NET Framework e como expor .NET Framework componentes ao COM.|
 |[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contém tópicos avançados, como assemblies de interoperabilidade primária, threading e marshaling personalizado.|
 
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
+- [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)
 - [Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Protegendo informações de conexão](protecting-connection-information.md)
+- [Construtores de cadeia de Conexão](connection-string-builders.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

@@ -2,19 +2,19 @@
 title: 'Como: recuperar metadados através de uma associação não MEX'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795577"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Como: recuperar metadados através de uma associação não MEX
-Este tópico descreve como recuperar metadados de um ponto de extremidade MEX ao longo de uma associação não MEX. O código neste exemplo é baseado na [ponto de extremidade do personalizado proteger metadados](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo.  
+Este tópico descreve como recuperar metadados de um ponto de extremidade MEX em uma associação não MEX. O código neste exemplo é baseado no exemplo de [ponto de extremidade de metadados seguro personalizado](../samples/custom-secure-metadata-endpoint.md) .  
   
-### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadados sobre uma associação não MEX  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadados em uma associação não-MEX  
   
-1. Determine a associação usada pelo ponto de extremidade MEX. Para serviços do Windows Communication Foundation (WCF), você pode determinar a associação MEX acessando o arquivo de configuração do serviço. Nesse caso, a associação MEX é definida na configuração de serviço a seguir.  
+1. Determine a associação usada pelo ponto de extremidade MEX. Para serviços de Windows Communication Foundation (WCF), você pode determinar a associação MEX acessando o arquivo de configuração do serviço. Nesse caso, a associação MEX é definida na configuração de serviço a seguir.  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ Este tópico descreve como recuperar metadados de um ponto de extremidade MEX ao
      </bindings>  
     ```  
   
-2. No arquivo de configuração do cliente, configure a mesma associação personalizada. Aqui o cliente também define um `clientCredentials` comportamento para fornecer um certificado a ser usado para autenticar o serviço ao solicitar metadados do ponto de extremidade MEX. Ao usar Svcutil.exe para solicitar os metadados sobre uma ligação personalizada, você deve adicionar a configuração de ponto de extremidade MEX para o arquivo de configuração para Svcutil.exe (svcutil) e o nome da configuração do ponto de extremidade deve corresponder ao esquema URI do endereço do o ponto de extremidade MEX, conforme mostrado no código a seguir.  
+2. No arquivo de configuração do cliente, configure a mesma associação personalizada. Aqui, o cliente também define `clientCredentials` um comportamento para fornecer um certificado a ser usado para autenticar o serviço ao solicitar metadados do ponto de extremidade MEX. Ao usar svcutil. exe para solicitar metadados em uma associação personalizada, você deve adicionar a configuração do ponto de extremidade MEX ao arquivo de configuração para SvcUtil. exe (svcutil. exe. config) e o nome da configuração do ponto de extremidade deve corresponder ao esquema de URI do endereço de o ponto de extremidade MEX, conforme mostrado no código a seguir.  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ Este tópico descreve como recuperar metadados de um ponto de extremidade MEX ao
     </system.serviceModel>  
     ```  
   
-3. Criar uma `MetadataExchangeClient` e chamar `GetMetadata`. Há duas maneiras de fazer isso: você pode especificar a associação personalizada na configuração, ou você pode especificar a ligação personalizada no código, conforme mostrado no exemplo a seguir.  
+3. Crie uma `MetadataExchangeClient` chamada `GetMetadata`e. Há duas maneiras de fazer isso: você pode especificar a associação personalizada na configuração ou pode especificar a associação personalizada no código, conforme mostrado no exemplo a seguir.  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,15 +114,15 @@ Este tópico descreve como recuperar metadados de um ponto de extremidade MEX ao
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4. Criar uma `WsdlImporter` e chamar `ImportAllEndpoints`, conforme mostrado no código a seguir.  
+4. Crie um `WsdlImporter` e chame `ImportAllEndpoints`, conforme mostrado no código a seguir.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. Neste ponto, você tem uma coleção de pontos de extremidade de serviço. Para obter mais informações sobre como importar metadados, consulte [como: Importar metadados para pontos de extremidade de serviço](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5. Neste ponto, você tem uma coleção de pontos de extremidade de serviço. Para obter mais informações sobre como importar metadados [, consulte Como: Importe metadados em pontos de extremidade](../feature-details/how-to-import-metadata-into-service-endpoints.md)de serviço.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Metadados](../feature-details/metadata.md)

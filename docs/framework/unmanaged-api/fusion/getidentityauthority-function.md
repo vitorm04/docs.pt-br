@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796865"
 ---
 # <a name="getidentityauthority-function"></a>Função GetIdentityAuthority
-Obtém um ponteiro para um [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instância que gerencia as chaves para objetos de código.  
+Obtém um ponteiro para uma instância de [IIdentityAuthority](iidentityauthority-interface.md) que gerencia chaves para objetos de código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +37,16 @@ HRESULT GetIdentityAuthority (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppIIdentityAuthority`  
- [out] Retornado `IIdentityAuthority` ponteiro.  
+ fora O ponteiro `IIdentityAuthority` retornado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Isolation.h  
+ **Cabeçalho:** Isolamento. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
-- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Interface IIdentityAuthority](iidentityauthority-interface.md)
+- [Funções estáticas globais de fusão](fusion-global-static-functions.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80df33e9064d9843873c67272bac7a34dbe734cc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751617"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798919"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>Função StrongNameSignatureVerificationEx
 Obtém um valor que indica se o manifesto do assembly no caminho fornecido contém uma assinatura de nome forte.  
   
- Essa função foi preterida. Use o [iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) método em vez disso.  
+ Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,31 +41,31 @@ BOOLEAN StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
- [in] O caminho para o arquivo executável portátil (.exe ou. dll) para o assembly a ser verificado.  
+ no O caminho para o arquivo executável portátil (. exe ou. dll) para o assembly a ser verificado.  
   
  `fForceVerification`  
- [in] `true` para executar a verificação, mesmo se for necessário substituir as configurações do registro; caso contrário, `false`.  
+ no para executar a verificação, mesmo que seja necessário substituir as configurações do registro; caso `false`contrário,. `true`  
   
  `pfWasVerified`  
- [out] `true` se a assinatura de nome forte foi verificado; caso contrário, `false`. `pfWasVerified` também é definido como `false` se a verificação for bem-sucedida devido a configurações de registro.  
+ fora se a assinatura de nome forte foi verificada; caso contrário, `false`. `true` `pfWasVerified`também será definido como `false` se a verificação tiver sido bem-sucedida devido a configurações do registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Se a verificação for bem-sucedida; Caso contrário, `false`.  
+ `true`se a verificação foi bem-sucedida; caso contrário `false`,.  
   
 ## <a name="remarks"></a>Comentários  
- `StrongNameSignatureVerificationEx` Fornece uma funcionalidade semelhante para o [StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md) função. No entanto, o segundo parâmetro de entrada e o parâmetro de saída para `StrongNameSignatureVerificationEx` são do tipo `BOOLEAN` em vez de `DWORD`.  
+ `StrongNameSignatureVerificationEx`fornece um recurso semelhante à função [StrongNameSignatureVerification](strongnamesignatureverification-function.md) . No entanto, o segundo parâmetro de entrada e o `StrongNameSignatureVerificationEx` parâmetro de saída `BOOLEAN` para são `DWORD`do tipo em vez de.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em mscoree. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Método StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [Método StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [Método StrongNameSignatureVerification](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [Interface ICLRStrongName](../hosting/iclrstrongname-interface.md)

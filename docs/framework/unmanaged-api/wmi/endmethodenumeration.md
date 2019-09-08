@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746837"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799349"
 ---
 # <a name="endmethodenumeration-function"></a>Função EndMethodEnumeration
-Encerra uma sequência de enumeração iniciada com uma chamada para o [função BeginMethodEnumeration](beginmethodenumeration.md).  
+Encerra uma sequência de enumeração iniciada com uma chamada para a [função BeginMethodEnumeration](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,14 +40,14 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -56,12 +56,12 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) .
 
-O chamador começa a sequência de enumeração usando [função BeginMethodEnumeration](beginmethodenumeration.md)e, em seguida, chama o [função NextMethod](nextmethod.md )até que o método retorne `WBEM_S_NO_MORE_DATA`. O chamador, opcionalmente, conclui a sequência chamando `EndMethodEnumeration`. O chamador pode encerrar a enumeração cedo chamando `EndMethodEnumeration` a qualquer momento.
+O chamador começa a sequência de enumeração usando a [função BeginMethodEnumeration](beginmethodenumeration.md)e, em seguida, chama a [função NextMethod](nextmethod.md )até que o método retorne `WBEM_S_NO_MORE_DATA`. O chamador, opcionalmente, conclui a sequência `EndMethodEnumeration`chamando. O chamador pode encerrar a enumeração antecipadamente chamando `EndMethodEnumeration` a qualquer momento.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

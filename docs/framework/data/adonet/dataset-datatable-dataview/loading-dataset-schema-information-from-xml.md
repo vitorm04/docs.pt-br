@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 4eb211ed13b5f2fe066cd7570c97ae324b187b34
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203501"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786215"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Carregando informações do esquema de DataSet do XML
 O esquema de <xref:System.Data.DataSet> (suas tabelas, colunas, relações e restrições) pode ser definido programaticamente, criado pelos métodos **Fill** ou **FillSchema** de um <xref:System.Data.Common.DataAdapter>, ou carregado de um documento XML. Para carregar as informações de esquema de **conjunto** de dados de um documento XML, você pode usar o método **ReadXmlSchema** ou **InferXmlSchema** do **conjunto**. O **ReadXmlSchema** permite carregar ou inferir informações de esquema de **conjunto** de dados do documento que contém o esquema XSD (linguagem de definição de esquema XML) ou um documento XML com esquema XML embutido. O **InferXmlSchema** permite inferir o esquema do documento XML enquanto ignora determinados namespaces XML que você especificar.  
@@ -21,9 +21,9 @@ O esquema de <xref:System.Data.DataSet> (suas tabelas, colunas, relações e res
 ## <a name="readxmlschema"></a>ReadXmlSchema  
  Para carregar o esquema de um **conjunto** de dados de um documento XML sem carregar nenhum dado, você pode usar o método **ReadXmlSchema** do **DataSet**. O **ReadXmlSchema** cria o esquema de **conjunto de conjuntos** definido usando o esquema XSD (XML Schema Definition Language).  
   
- O método **ReadXmlSchema** usa um único argumento de um nome de arquivo, um fluxo ou um **XmlReader** que contém o documento XML a ser carregado. O documento XML pode conter somente o esquema ou pode conter o esquema embutido com elementos XML que contêm dados. Para obter detalhes sobre como gravar o esquema embutido como esquema XML, consulte derivando a [estrutura relacional do conjunto de dados do esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ O método **ReadXmlSchema** usa um único argumento de um nome de arquivo, um fluxo ou um **XmlReader** que contém o documento XML a ser carregado. O documento XML pode conter somente o esquema ou pode conter o esquema embutido com elementos XML que contêm dados. Para obter detalhes sobre como gravar o esquema embutido como esquema XML, consulte [derivando a estrutura relacional do conjunto de dados do esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
- Se o documento XML passado para **ReadXmlSchema** não contiver informações de esquema embutidas, **ReadXmlSchema** inferirá o esquema dos elementos no documento XML. Se o **conjunto** de usuários já contiver um esquema, o esquema atual será estendido adicionando novas tabelas se elas ainda não existirem. As novas colunas não serão adicionadas às tabelas existentes. Se uma coluna que está sendo adicionada já existir no **conjunto** de um, mas tiver um tipo incompatível com a coluna encontrada no XML, uma exceção será lançada. Para obter detalhes sobre como o **ReadXmlSchema** infere um esquema de um documento XML, consulte inferindo a [estrutura relacional do conjunto de dados do XML](inferring-dataset-relational-structure-from-xml.md).  
+ Se o documento XML passado para **ReadXmlSchema** não contiver informações de esquema embutidas, **ReadXmlSchema** inferirá o esquema dos elementos no documento XML. Se o **conjunto** de usuários já contiver um esquema, o esquema atual será estendido adicionando novas tabelas se elas ainda não existirem. As novas colunas não serão adicionadas às tabelas existentes. Se uma coluna que está sendo adicionada já existir no **conjunto** de um, mas tiver um tipo incompatível com a coluna encontrada no XML, uma exceção será lançada. Para obter detalhes sobre como o **ReadXmlSchema** infere um esquema de um documento XML, consulte [inferindo a estrutura relacional do conjunto de dados do XML](inferring-dataset-relational-structure-from-xml.md).  
   
  Embora **ReadXmlSchema** carregue ou infere apenas o esquema de um **conjunto**de dados, o método **ReadXml** do **conjunto** de dados carrega ou infere tanto o esquema quanto o dado contido no documento XML. Para obter mais informações, consulte [carregando um conjunto de dados de XML](loading-a-dataset-from-xml.md).  
   
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- Devido aos atributos especificados para os elementos no documento XML anterior, o método **ReadXmlSchema** e o método **ReadXml** com um **XmlReadMode** de **InferSchema** criarão tabelas para cada elemento da Document **Categorias**, **CategoryID**, **NomeDaCategoria**, **Descrição**, **produtos**, **ProductID**, **ReorderLevel**e descontinuado. (Para obter mais informações, consulte inferindo a [estrutura relacional do conjunto de dados de XML](inferring-dataset-relational-structure-from-xml.md).) No entanto, uma estrutura mais apropriada seria criar apenas as tabelas **Categories** e **Products** e, em seguida, criar colunas **CategoryID**, **CategoryName**e **Description** na tabela **Categories** e  **Colunas ProductID**, **ReorderLevel**e descontinuadas na tabela **Products** . Para garantir que o esquema deduzido ignore os atributos especificados nos elementos XML, use o método **InferXmlSchema** e especifique o namespace XML para **officedata** a ser ignorado, conforme mostrado no exemplo a seguir.  
+ Devido aos atributos especificados para os elementos no documento XML anterior, o método **ReadXmlSchema** e o método **ReadXml** com um **XmlReadMode** de **InferSchema** criarão tabelas para cada elemento da Document **Categorias**, **CategoryID**, **NomeDaCategoria**, **Descrição**, **produtos**, **ProductID**, **ReorderLevel**e **descontinuado**. (Para obter mais informações, consulte [inferindo a estrutura relacional do conjunto de dados de XML](inferring-dataset-relational-structure-from-xml.md).) No entanto, uma estrutura mais apropriada seria criar apenas as tabelas **Categories** e **Products** e, em seguida, criar colunas **CategoryID**, **CategoryName**e **Description** na tabela **Categories** e  **Colunas ProductID**, **ReorderLevel**e **descontinuadas** na tabela **Products** . Para garantir que o esquema deduzido ignore os atributos especificados nos elementos XML, use o método **InferXmlSchema** e especifique o namespace XML para **officedata** a ser ignorado, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [Derivando a estrutura relacional do DataSet do esquema XML](inferring-dataset-relational-structure-from-xml.md)
 - [Carregar um conjunto de dados do XML](loading-a-dataset-from-xml.md)
 - [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

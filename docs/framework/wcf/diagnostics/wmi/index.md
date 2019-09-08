@@ -2,12 +2,12 @@
 title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046011"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795920"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 Windows Communication Foundation (WCF) expõe os dados de inspeção de um serviço em tempo de execução por meio de um provedor de Instrumentação de Gerenciamento do Windows do WCF (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) expõe os dados de inspeção de um servi
   
  Um provedor WMI é um componente que expõe a instrumentação em tempo de execução por meio de uma interface compatível com o WBEM. Ele consiste em um conjunto de objetos WMI que têm pares de atributo/valor. Os pares podem ser de vários tipos simples. As ferramentas de gerenciamento podem se conectar aos serviços por meio da interface em tempo de execução. O WCF expõe atributos de serviços como endereços, associações, comportamentos e ouvintes.  
   
- O provedor WMI interno pode ser ativado no arquivo de configuração do aplicativo. Isso é feito por meio `wmiProviderEnabled` do atributo [ \<do > de diagnóstico](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) na [ \<seção System. ServiceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , conforme mostrado na seguinte configuração de exemplo.  
+ O provedor WMI interno pode ser ativado no arquivo de configuração do aplicativo. Isso é feito por meio `wmiProviderEnabled` do atributo [ \<do > de diagnóstico](../../../configure-apps/file-schema/wcf/diagnostics.md) na [ \<seção System. ServiceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) expõe os dados de inspeção de um servi
 > [!CAUTION]
 > Se você usar os métodos .NET Framework fornecidos para acessar os dados do WMI programaticamente, você deve estar ciente de que esses métodos podem gerar exceções quando a conexão é estabelecida. A conexão não é estabelecida durante a construção da <xref:System.Management.ManagementObject> instância, mas na primeira solicitação que envolve a troca de dados real. Portanto, você deve usar um `try..catch` bloco para capturar as possíveis exceções.  
   
- Você pode alterar o rastreamento e o nível de log de mensagens, bem como as opções de `System.ServiceModel` log de mensagens para a origem do rastreamento no WMI. Isso pode ser feito acessando a instância [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , que expõe essas propriedades booleanas `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, `LogMalformedMessages`, e `TraceLevel`. Portanto, se você configurar um ouvinte de rastreamento para o log de mensagens, mas `false` definir essas opções como em configuração, você poderá `true` alterá-las posteriormente para quando o aplicativo estiver em execução. Isso habilitará efetivamente o registro em log de mensagens em tempo de execução. Da mesma forma, se você habilitar o log de mensagens em seu arquivo de configuração, poderá desabilitá-lo em tempo de execução usando o WMI.  
+ Você pode alterar o rastreamento e o nível de log de mensagens, bem como as opções de `System.ServiceModel` log de mensagens para a origem do rastreamento no WMI. Isso pode ser feito acessando a instância [AppDomainInfo](appdomaininfo.md) , que expõe essas propriedades booleanas `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, `LogMalformedMessages`, e `TraceLevel`. Portanto, se você configurar um ouvinte de rastreamento para o log de mensagens, mas `false` definir essas opções como em configuração, você poderá `true` alterá-las posteriormente para quando o aplicativo estiver em execução. Isso habilitará efetivamente o registro em log de mensagens em tempo de execução. Da mesma forma, se você habilitar o log de mensagens em seu arquivo de configuração, poderá desabilitá-lo em tempo de execução usando o WMI.  
   
- Você deve estar ciente de que, se nenhum ouvinte de rastreamento de log de mensagens do `System.ServiceModel` log de mensagens ou nenhum ouvinte de rastreamento para rastreamento for especificado no arquivo de configuração, nenhuma das alterações será levada em vigor, mesmo que as alterações sejam aceitas pelo WMI. Para obter mais informações sobre como configurar corretamente os respectivos ouvintes, consulte Configurando o [log de mensagens](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) e Configurando o [rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). O nível de rastreamento de todas as outras origens de rastreamento especificadas pela configuração é efetivo quando o aplicativo é iniciado e não pode ser alterado.  
+ Você deve estar ciente de que, se nenhum ouvinte de rastreamento de log de mensagens do `System.ServiceModel` log de mensagens ou nenhum ouvinte de rastreamento para rastreamento for especificado no arquivo de configuração, nenhuma das alterações será levada em vigor, mesmo que as alterações sejam aceitas pelo WMI. Para obter mais informações sobre como configurar corretamente os respectivos ouvintes, consulte [Configurando o log de mensagens](../configuring-message-logging.md) e [Configurando o rastreamento](../tracing/configuring-tracing.md). O nível de rastreamento de todas as outras origens de rastreamento especificadas pela configuração é efetivo quando o aplicativo é iniciado e não pode ser alterado.  
   
  O WCF expõe `GetOperationCounterInstanceName` um método para scripts. Esse método retornará um nome de instância do contador de desempenho se você fornecê-lo com um nome de operação. No entanto, ele não valida sua entrada. Portanto, se você fornecer um nome de operação incorreto, um nome de contador incorreto será retornado.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57d64096ea693be41359aef63c04674ca77769c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73c531378355100fdfca264ea9f96ff4d7c7ceda
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760968"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796679"
 ---
 # <a name="iassemblyenumgetnextassembly-method"></a>Método IAssemblyEnum::GetNextAssembly
-Obtém um ponteiro para a próxima [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) contido nesse [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) objeto.  
+Obtém um ponteiro para o próximo [IAssemblyName](iassemblyname-interface.md) contido neste objeto [IAssemblyEnum](iassemblyenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +39,22 @@ HRESULT GetNextAssembly (
   
 ## <a name="parameters"></a>Parâmetros  
  `pvReserved`  
- [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
   
  `ppName`  
- [out] Retornado `IAssemblyName` ponteiro.  
+ fora O ponteiro `IAssemblyName` retornado.  
   
  `dwFlags`  
- [in] Reservado para extensibilidade futura. `dwFlags` deve ser 0 (zero).  
+ no Reservado para extensibilidade futura. `dwFlags`deve ser 0 (zero).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Interface IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Interface IAssemblyName](iassemblyname-interface.md)
+- [Interface IAssemblyEnum](iassemblyenum-interface.md)

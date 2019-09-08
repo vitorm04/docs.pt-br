@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963178"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794403"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperar dados usando um DataReader
 Para recuperar dados usando um **DataReader**, crie uma instância do objeto **Command** e, em seguida, crie um **DataReader** chamando **Command. ExecuteReader** para recuperar linhas de uma fonte de dados. O **DataReader** fornece um fluxo de dados sem buffer que permite que a lógica de procedimento processe com eficiência os resultados de uma fonte de dados em sequência. O **DataReader** é uma boa opção quando você está recuperando grandes quantidades de dados porque os dados não são armazenados em cache na memória.
@@ -25,7 +25,7 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-Use o método **DataReader. Read** para obter uma linha dos resultados da consulta. Você pode acessar cada coluna da linha retornada passando o nome ou o número ordinal da coluna para o **DataReader**. No entanto, para obter um melhor desempenho, o **DataReader** fornece uma série de métodos que permitem que você acesse valores de coluna em seus tipos de dados nativos (GetDateTime, GetDouble, GetGUID, GetInt32 e assim por diante). Para obter uma lista de métodos acessadores tipados paradatalêdores específicos do <xref:System.Data.OleDb.OleDbDataReader> provedor <xref:System.Data.SqlClient.SqlDataReader>de dados, consulte e. Usar os métodos acessadores tipados quando você sabe que o tipo de dados subjacente reduz a quantidade de conversão de tipo necessária ao recuperar o valor da coluna.  
+Use o método **DataReader. Read** para obter uma linha dos resultados da consulta. Você pode acessar cada coluna da linha retornada passando o nome ou o número ordinal da coluna para o **DataReader**. No entanto, para obter um melhor desempenho, o **DataReader** fornece uma série de métodos que permitem que você acesse valores de coluna em seus tipos de dados nativos (**GetDateTime**, **GetDouble**, **GetGUID**, **GetInt32**e assim por diante). Para obter uma lista de métodos acessadores tipados para **datalêdores**específicos do <xref:System.Data.OleDb.OleDbDataReader> provedor <xref:System.Data.SqlClient.SqlDataReader>de dados, consulte e. Usar os métodos acessadores tipados quando você sabe que o tipo de dados subjacente reduz a quantidade de conversão de tipo necessária ao recuperar o valor da coluna.  
   
  O exemplo a seguir itera por meio de um objeto **DataReader** e retorna duas colunas de cada linha.  
   
@@ -40,7 +40,7 @@ Use o método **DataReader. Read** para obter uma linha dos resultados da consul
  Enquanto um **DataReader** está aberto, a **conexão** é usada exclusivamente por esse **DataReader**. Você não pode executar nenhum comando para a **conexão**, incluindo a criação de outro **DataReader**, até que o **DataReader** original seja fechado.  
   
 > [!NOTE]
-> Não chame **fechar** ou descartar em uma **conexão**, um **DataReader**ou qualquer outro objeto gerenciado no método **Finalize** da sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se sua classe não tiver nenhum recurso não gerenciado, não inclua um método **Finalize** em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).  
+> Não chame **fechar** ou **descartar** em **uma conexão**, um **DataReader**ou qualquer outro objeto gerenciado no método **Finalize** da sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se sua classe não tiver nenhum recurso não gerenciado, não inclua um método **Finalize** em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Recuperando vários conjuntos de resultados usando NextResult  
  Se o **DataReader** retornar vários conjuntos de resultados, chame o método **NextResult** para iterar nos conjuntos de resultados sequencialmente. O exemplo a seguir mostra <xref:System.Data.SqlClient.SqlDataReader> processando os resultados de duas instruções SELECT usando o método <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
@@ -49,7 +49,7 @@ Use o método **DataReader. Read** para obter uma linha dos resultados da consul
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>Obtendo informações de esquema do DataReader  
- Embora um **DataReader** esteja aberto, você pode recuperar informações de esquema sobre o conjunto de resultados atual usando o método GetSchemaTable. GetSchemaTable retorna um <xref:System.Data.DataTable> objeto populado com linhas e colunas que contêm as informações de esquema para o conjunto de resultados atual. A **DataTable** contém uma linha para cada coluna do conjunto de resultados. Cada coluna da tabela de esquema é mapeada para uma propriedade das colunas retornadas nas linhas do conjunto de resultados, em que **ColumnName** é o nome da propriedade e o valor da coluna é o valor da propriedade. O exemplo a seguir grava as informações de esquema para **DataReader**.  
+ Embora um **DataReader** esteja aberto, você pode recuperar informações de esquema sobre o conjunto de resultados atual usando o método **GetSchemaTable** . **GetSchemaTable** retorna um <xref:System.Data.DataTable> objeto populado com linhas e colunas que contêm as informações de esquema para o conjunto de resultados atual. A **DataTable** contém uma linha para cada coluna do conjunto de resultados. Cada coluna da tabela de esquema é mapeada para uma propriedade das colunas retornadas nas linhas do conjunto de resultados, em que **ColumnName** é o nome da propriedade e o valor da coluna é o valor da propriedade. O exemplo a seguir grava as informações de esquema para **DataReader**.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
@@ -57,7 +57,7 @@ Use o método **DataReader. Read** para obter uma linha dos resultados da consul
 ## <a name="working-with-ole-db-chapters"></a>Trabalhando com capítulos de OLE DB  
  Os conjuntos de linhas hierárquicos ou os capítulos (OLE DB tipo **DBTYPE_HCHAPTER**, ADO Type **adChapter**), podem ser <xref:System.Data.OleDb.OleDbDataReader>recuperados usando o. Quando uma consulta que inclui um capítulo é retornada como um **DataReader**, o capítulo é retornado como uma coluna nesse **DataReader** e é exposto como um objeto **DataReader** .  
   
- O **conjunto** de ADO.net também pode ser usado para representar conjuntos de linhas hierárquicos usando relações pai-filho entre tabelas. Para obter mais informações, consulte [conjuntos de dados, tabelas e](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)dados.  
+ O **conjunto** de ADO.net também pode ser usado para representar conjuntos de linhas hierárquicos usando relações pai-filho entre tabelas. Para obter mais informações, consulte [conjuntos de dados, tabelas e](./dataset-datatable-dataview/index.md)dados.  
   
  O exemplo de código a seguir usa o provedor de MSDataShape para gerar uma coluna de capítulo de pedidos para cada cliente em uma lista de clientes.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Para evitar umaestourexception, recomendamos que você também trate qualquer conversão do tipo de número Oracle para um tipo de .NET Framework válido antes de armazenar o valor <xref:System.Data.DataRow>em um. Você pode usar o <xref:System.Data.Common.DataAdapter.FillError> evento para determinar se houve uma estourexception. Para obter mais informações sobre <xref:System.Data.Common.DataAdapter.FillError> o evento, consulte [manipulando eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Para evitar uma **estourexception**, recomendamos que você também trate qualquer conversão do tipo de número Oracle para um tipo de .NET Framework válido antes de armazenar o valor <xref:System.Data.DataRow>em um. Você pode usar o <xref:System.Data.Common.DataAdapter.FillError> evento para determinar se houve uma **estourexception** . Para obter mais informações sobre <xref:System.Data.Common.DataAdapter.FillError> o evento, consulte [manipulando eventos DataAdapter](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [DataAdapters e DataReaders](dataadapters-and-datareaders.md)
+- [Comandos e parâmetros](commands-and-parameters.md)
+- [Recuperando informações de esquema de banco de dados](retrieving-database-schema-information.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778713"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796783"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>Método IAssemblyCache::QueryAssemblyInfo
 Obtém os dados solicitados sobre o assembly especificado.  
@@ -39,25 +39,25 @@ HRESULT QueryAssemblyInfo (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwFlags`  
- [in] Sinalizadores definidos no Fusion.idl. Há suporte para os seguintes valores:  
+ no Sinalizadores definidos em Fusion. idl. Há suporte para os seguintes valores:  
   
 - QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
 - QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in] O nome do assembly para o qual os dados serão recuperados.  
+ no O nome do assembly para o qual os dados serão recuperados.  
   
  `pAsmInfo`  
- [no, out] Uma [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) estrutura que contém dados sobre o assembly.  
+ [entrada, saída] Uma estrutura [ASSEMBLY_INFO](assembly-info-structure.md) que contém dados sobre o assembly.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interface IAssemblyCache](iassemblycache-interface.md)
