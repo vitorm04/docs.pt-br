@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a820d5d742c722b495a5a4b3952450a0434110fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d4cf862ae3676b85a7fc3f09a4f5794e01284737
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741556"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787227"
 ---
-# <a name="precloseassembly-method"></a><span data-ttu-id="db327-102">Método PreCloseAssembly</span><span class="sxs-lookup"><span data-stu-id="db327-102">PreCloseAssembly Method</span></span>
-<span data-ttu-id="db327-103">Fecha o arquivo do assembly.</span><span class="sxs-lookup"><span data-stu-id="db327-103">Closes the assembly file.</span></span> <span data-ttu-id="db327-104">Chame esse método depois de fechar todos os outros arquivos, mas antes de fechar o arquivo do assembly.</span><span class="sxs-lookup"><span data-stu-id="db327-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="db327-105">Não chame este método para módulos não associados.</span><span class="sxs-lookup"><span data-stu-id="db327-105">Do not call this method for unbound modules.</span></span>  
+# <a name="precloseassembly-method"></a><span data-ttu-id="16b0e-102">Método PreCloseAssembly</span><span class="sxs-lookup"><span data-stu-id="16b0e-102">PreCloseAssembly Method</span></span>
+<span data-ttu-id="16b0e-103">Fecha o arquivo do assembly.</span><span class="sxs-lookup"><span data-stu-id="16b0e-103">Closes the assembly file.</span></span> <span data-ttu-id="16b0e-104">Chame esse método depois de fechar todos os outros arquivos, mas antes de fechar o arquivo do assembly.</span><span class="sxs-lookup"><span data-stu-id="16b0e-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="16b0e-105">Não chame esse método para módulos não associados.</span><span class="sxs-lookup"><span data-stu-id="16b0e-105">Do not call this method for unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db327-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="db327-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16b0e-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="16b0e-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT PreCloseAssembly(  
@@ -34,18 +34,18 @@ HRESULT PreCloseAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="db327-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="db327-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16b0e-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="16b0e-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="db327-108">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="db327-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="16b0e-108">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="16b0e-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="db327-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="db327-109">Return Value</span></span>  
- <span data-ttu-id="db327-110">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="db327-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="16b0e-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="16b0e-109">Return Value</span></span>  
+ <span data-ttu-id="16b0e-110">Retornará S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="16b0e-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db327-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="db327-111">Requirements</span></span>  
- <span data-ttu-id="db327-112">Requer alink.h.</span><span class="sxs-lookup"><span data-stu-id="db327-112">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16b0e-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="16b0e-111">Requirements</span></span>  
+ <span data-ttu-id="16b0e-112">Requer ALink. h.</span><span class="sxs-lookup"><span data-stu-id="16b0e-112">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db327-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="db327-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16b0e-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="16b0e-113">See also</span></span>
 
-- [<span data-ttu-id="db327-114">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="db327-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="db327-115">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="db327-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="db327-116">API do ALink</span><span class="sxs-lookup"><span data-stu-id="db327-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="16b0e-114">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="16b0e-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="16b0e-115">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="16b0e-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="16b0e-116">API do ALink</span><span class="sxs-lookup"><span data-stu-id="16b0e-116">ALink API</span></span>](index.md)

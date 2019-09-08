@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f29246bdb929c8eaf1ebce726164d5cd2269b9f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778643"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796865"
 ---
-# <a name="getidentityauthority-function"></a><span data-ttu-id="cf54f-102">Função GetIdentityAuthority</span><span class="sxs-lookup"><span data-stu-id="cf54f-102">GetIdentityAuthority Function</span></span>
-<span data-ttu-id="cf54f-103">Obtém um ponteiro para um [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instância que gerencia as chaves para objetos de código.</span><span class="sxs-lookup"><span data-stu-id="cf54f-103">Gets a pointer to an [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instance that manages keys for code objects.</span></span>  
+# <a name="getidentityauthority-function"></a><span data-ttu-id="71e68-102">Função GetIdentityAuthority</span><span class="sxs-lookup"><span data-stu-id="71e68-102">GetIdentityAuthority Function</span></span>
+<span data-ttu-id="71e68-103">Obtém um ponteiro para uma instância de [IIdentityAuthority](iidentityauthority-interface.md) que gerencia chaves para objetos de código.</span><span class="sxs-lookup"><span data-stu-id="71e68-103">Gets a pointer to an [IIdentityAuthority](iidentityauthority-interface.md) instance that manages keys for code objects.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf54f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="cf54f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71e68-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="71e68-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIdentityAuthority (  
@@ -35,18 +35,18 @@ HRESULT GetIdentityAuthority (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cf54f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="cf54f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71e68-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="71e68-105">Parameters</span></span>  
  `ppIIdentityAuthority`  
- <span data-ttu-id="cf54f-106">[out] Retornado `IIdentityAuthority` ponteiro.</span><span class="sxs-lookup"><span data-stu-id="cf54f-106">[out] The returned `IIdentityAuthority` pointer.</span></span>  
+ <span data-ttu-id="71e68-106">fora O ponteiro `IIdentityAuthority` retornado.</span><span class="sxs-lookup"><span data-stu-id="71e68-106">[out] The returned `IIdentityAuthority` pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf54f-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cf54f-107">Requirements</span></span>  
- <span data-ttu-id="cf54f-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf54f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71e68-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="71e68-107">Requirements</span></span>  
+ <span data-ttu-id="71e68-108">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71e68-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf54f-109">**Cabeçalho:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="cf54f-109">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="71e68-109">**Cabeçalho:** Isolamento. h</span><span class="sxs-lookup"><span data-stu-id="71e68-109">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="cf54f-110">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf54f-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="71e68-110">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71e68-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf54f-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cf54f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71e68-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="71e68-111">See also</span></span>
 
-- [<span data-ttu-id="cf54f-112">Interface IIdentityAuthority</span><span class="sxs-lookup"><span data-stu-id="cf54f-112">IIdentityAuthority Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
-- [<span data-ttu-id="cf54f-113">Funções estáticas globais de fusão</span><span class="sxs-lookup"><span data-stu-id="cf54f-113">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="71e68-112">Interface IIdentityAuthority</span><span class="sxs-lookup"><span data-stu-id="71e68-112">IIdentityAuthority Interface</span></span>](iidentityauthority-interface.md)
+- [<span data-ttu-id="71e68-113">Funções estáticas globais de fusão</span><span class="sxs-lookup"><span data-stu-id="71e68-113">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
