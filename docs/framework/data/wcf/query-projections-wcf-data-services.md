@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931165"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779824"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projeções de consulta (WCF Data Services)
 
@@ -28,7 +28,7 @@ Este tópico descreve como definir uma projeção de consulta, quais são os req
 Você pode adicionar uma cláusula de projeção a uma consulta usando a `$select` opção de consulta em um URI ou usando a cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) em uma consulta LINQ. Os dados de entidade retornados podem ser projetados em tipos de entidade ou tipos que não são de entidade no cliente. Os exemplos neste tópico demonstram como usar a `select` cláusula em uma consulta LINQ.
 
 > [!IMPORTANT]
-> A perda de dados pode ocorrer no serviço de dados quando você salva atualizações que foram feitas em tipos projetados. Para obter mais informações, consulte [considerações](#considerations)de projeção.
+> A perda de dados pode ocorrer no serviço de dados quando você salva atualizações que foram feitas em tipos projetados. Para obter mais informações, consulte [considerações de projeção](#considerations).
 
 ## <a name="requirements-for-entity-and-non-entity-types"></a>Requisitos para tipos de entidade e não de entidade
 
@@ -102,7 +102,7 @@ O seguinte descreve os comportamentos ao projetar resultados em tipos de entidad
 
 As considerações adicionais a seguir se aplicam ao definir uma projeção de consulta.
 
-- Ao definir feeds personalizados para o formato Atom, você deve certificar-se de que todas as propriedades de entidade que têm mapeamentos personalizados definidos sejam incluídas na projeção. Quando uma propriedade de entidade mapeada não é incluída na projeção, pode ocorrer perda de dados. Para obter mais informações, consulte [personalização de feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Ao definir feeds personalizados para o formato Atom, você deve certificar-se de que todas as propriedades de entidade que têm mapeamentos personalizados definidos sejam incluídas na projeção. Quando uma propriedade de entidade mapeada não é incluída na projeção, pode ocorrer perda de dados. Para obter mais informações, consulte [personalização de feed](feed-customization-wcf-data-services.md).
 
 - Quando são feitas inserções em um tipo projetado que não contém todas as propriedades da entidade no modelo de dados do serviço de dados, as propriedades não incluídas na projeção no cliente são definidas com seus valores padrão.
 
@@ -112,10 +112,10 @@ As considerações adicionais a seguir se aplicam ao definir uma projeção de c
 
 - Quando uma projeção inclui uma propriedade de navegação, os objetos relacionados são carregados implicitamente sem a necessidade <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> de chamar o método. Não <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> há suporte para o método para uso em uma consulta projetada.
 
-- As consultas de projeções de consulta no cliente são convertidas para usar a `$select` opção de consulta no URI de solicitação. Quando uma consulta com projeção é executada em uma versão anterior [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do que não oferece suporte `$select` à opção de consulta, um erro é retornado. Isso também pode acontecer quando o <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> do para o serviço de dados é definido com um valor de <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obter mais informações, consulte [controle de versão do serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- As consultas de projeções de consulta no cliente são convertidas para usar a `$select` opção de consulta no URI de solicitação. Quando uma consulta com projeção é executada em uma versão anterior [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do que não oferece suporte `$select` à opção de consulta, um erro é retornado. Isso também pode acontecer quando o <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> do para o serviço de dados é definido com um valor de <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obter mais informações, consulte [controle de versão do serviço de dados](data-service-versioning-wcf-data-services.md).
 
-Para obter mais informações, confira [Como: Resultados da](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)consulta do projeto.
+Para obter mais informações, confira [Como: Resultados da](how-to-project-query-results-wcf-data-services.md)consulta do projeto.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+- [Querying the Data Service](querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)

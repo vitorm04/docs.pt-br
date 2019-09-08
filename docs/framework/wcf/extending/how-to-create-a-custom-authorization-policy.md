@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5268cd2171bdccc3885cd599fdc8c277e61aa4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902324"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795703"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Como: criar uma política de autorização personalizada
-A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) oferece suporte a um modelo de autorização baseada em declarações. Declarações são extraídas de tokens, opcionalmente processadas pela diretiva de autorização personalizada e, em seguida, colocadas em um <xref:System.IdentityModel.Policy.AuthorizationContext> que pode ser examinado para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser isolada dos detalhes sobre as diferentes declarações apresentados pelos diferentes tipos de token que o WCF oferece suporte. Este tópico mostra como implementar uma política de autorização personalizados e como adicionar essa política para a coleção de políticas usado por um serviço.  
+A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) dá suporte a um modelo de autorização baseado em declaração. As declarações são extraídas de tokens, opcionalmente processadas pela política de autorização personalizada e <xref:System.IdentityModel.Policy.AuthorizationContext> , em seguida, colocadas em um que pode ser examinado para tomar decisões de autorização. Uma política personalizada pode ser usada para transformar declarações de tokens de entrada em declarações esperadas pelo aplicativo. Dessa forma, a camada de aplicativo pode ser isolado dos detalhes sobre as diferentes declarações servidas pelos diferentes tipos de token aos quais o WCF dá suporte. Este tópico mostra como implementar uma política de autorização personalizada e como adicionar essa política à coleção de políticas usadas por um serviço.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Para implementar uma política de autorização personalizada  
   
-1. Definir uma nova classe que deriva de <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+1. Defina uma nova classe derivada de <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
   
-2. Implementar o somente leitura <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> propriedade gerando uma cadeia de caracteres exclusiva no construtor da classe e retornando essa cadeia de caracteres sempre que a propriedade é acessada.  
+2. Implemente a propriedade somente <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> leitura gerando uma cadeia de caracteres exclusiva no construtor para a classe e retornando essa cadeia de caracteres sempre que a propriedade for acessada.  
   
-3. Implementar o somente leitura <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> propriedade retornando um <xref:System.IdentityModel.Claims.ClaimSet> que representa o emissor da política. Isso pode ser um `ClaimSet` que representa o aplicativo ou uma conta interna `ClaimSet` (por exemplo, o `ClaimSet` retornado pelo estático <xref:System.IdentityModel.Claims.ClaimSet.System%2A> propriedade.  
+3. Implemente a propriedade somente <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> leitura retornando um <xref:System.IdentityModel.Claims.ClaimSet> que representa o emissor da política. Isso pode ser um `ClaimSet` que representa o aplicativo ou um interno `ClaimSet` (por exemplo, o `ClaimSet` retornado pela propriedade estática <xref:System.IdentityModel.Claims.ClaimSet.System%2A> .  
   
-4. Implementar o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> método conforme descrito no procedimento a seguir.  
+4. Implemente <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> o método conforme descrito no procedimento a seguir.  
   
 ### <a name="to-implement-the-evaluate-method"></a>Para implementar o método Evaluate  
   
 1. Dois parâmetros são passados para este método: uma instância da <xref:System.IdentityModel.Policy.EvaluationContext> classe e uma referência de objeto.  
   
-2. Se a política de autorização personalizado adiciona <xref:System.IdentityModel.Claims.ClaimSet> instâncias sem levar em consideração o conteúdo atual da <xref:System.IdentityModel.Policy.EvaluationContext>, em seguida, adicione cada `ClaimSet` chamando o <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> método e retorne `true` do <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método. Retornando `true` indica à infra-estrutura de autorização que a política de autorização executou seu trabalho e não precisa ser chamado novamente.  
+2. Se a política de autorização personalizada <xref:System.IdentityModel.Claims.ClaimSet> adicionar instâncias sem considerar o conteúdo atual <xref:System.IdentityModel.Policy.EvaluationContext>do, adicione cada `ClaimSet` uma chamando o <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> método e retornar `true` do <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método. O `true` retorno indica à infraestrutura de autorização que a diretiva de autorização realizou seu trabalho e não precisa ser chamada novamente.  
   
-3. Se a política de autorização personalizado adiciona conjuntos de declarações somente se determinadas declarações já estão presentes na `EvaluationContext`, procure essas declarações, examinando o `ClaimSet` instâncias retornadas pelo <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> propriedade. Se as declarações estão presentes, adicione a nova declaração define chamando o <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> método e, se não há mais de declaração conjuntos devem ser adicionados, retorno `true`, indicando que a infra-estrutura de autorização que a política de autorização tiver concluído seu trabalho. Se as declarações não estiverem presentes, retorne `false`, indicando que a política de autorização deve ser chamada novamente se outras diretivas de autorização de adicionam mais conjuntos de declaração de `EvaluationContext`.  
+3. Se a política de autorização personalizada Adicionar conjuntos de declarações somente se determinadas declarações já estiverem presentes `EvaluationContext`no, procure essas declarações examinando as `ClaimSet` instâncias retornadas pela <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> propriedade. Se as declarações estiverem presentes, adicione os novos conjuntos de declarações chamando o <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> método e, se nenhum outro conjunto de declarações for ser adicionado, retorne `true`, indicando à infraestrutura de autorização que a diretiva de autorização concluiu seu trabalho. Se as declarações não estiverem presentes, retorne `false`, indicando que a política de autorização deve ser chamada novamente se outras políticas de autorização adicionarem mais conjuntos de declarações `EvaluationContext`ao.  
   
-4. Em cenários mais complexos de processamento, o segundo parâmetro do <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> método é usado para armazenar uma variável de estado que passará a infra-estrutura de autorização durante cada chamada subsequente para o <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> método para uma avaliação específica.  
+4. Em cenários de processamento mais complexos, o segundo parâmetro do <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> método é usado para armazenar uma variável de estado que a infraestrutura de autorização passará durante cada chamada subsequente para <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> o método de uma avaliação específica.  
   
 ### <a name="to-specify-a-custom-authorization-policy-through-configuration"></a>Para especificar uma política de autorização personalizada por meio da configuração  
   
-1. Especificar o tipo da política de autorização personalizada na `policyType` de atributo na `add` elemento no `authorizationPolicies` elemento no `serviceAuthorization` elemento.  
+1. Especifique o tipo da política de autorização personalizada `policyType` no atributo `add` no `authorizationPolicies` elemento no elemento no `serviceAuthorization` elemento.  
   
     ```xml  
     <configuration>  
@@ -56,21 +56,21 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
   
 ### <a name="to-specify-a-custom-authorization-policy-through-code"></a>Para especificar uma política de autorização personalizada por meio de código  
   
-1. Criar uma <xref:System.Collections.Generic.List%601> de <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+1. Crie um <xref:System.Collections.Generic.List%601> de <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
   
-2. Crie uma instância da política de autorização personalizado.  
+2. Crie uma instância da política de autorização personalizada.  
   
-3. Adicione a instância de política de autorização à lista.  
+3. Adicione a instância da política de autorização à lista.  
   
-4. Repita as etapas 2 e 3 para cada política de autorização personalizado.  
+4. Repita as etapas 2 e 3 para cada política de autorização personalizada.  
   
-5. Atribuir uma versão somente leitura da lista para o <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A> propriedade.  
+5. Atribua uma versão somente leitura da lista à <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A> propriedade.  
   
      [!code-csharp[c_CustomAuthPol#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#8)]
      [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma completa <xref:System.IdentityModel.Policy.IAuthorizationPolicy> implementação.  
+ O exemplo a seguir mostra uma <xref:System.IdentityModel.Policy.IAuthorizationPolicy> implementação completa.  
   
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
@@ -78,6 +78,6 @@ A infraestrutura do modelo de identidade no Windows Communication Foundation (WC
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Como: Comparar declarações](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Como: Criar um Gerenciador de autorização personalizado para um serviço](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Política de autorização](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Como: Comparar declarações](how-to-compare-claims.md)
+- [Como: Criar um Gerenciador de autorização personalizado para um serviço](how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Política de autorização](../samples/authorization-policy.md)

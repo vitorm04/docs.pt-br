@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774007"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796413"
 ---
 # <a name="iinstallreferenceenum-interface"></a>Interface IInstallReferenceEnum
 Representa um enumerador para os assemblies referenciados instalados no cache de assembly global.  
@@ -42,16 +42,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetNextInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Obtém um ponteiro para a próxima `IInstallReferenceItem` contidas neste `IInstallReferenceEnum`.|  
+|[Método GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Obtém um ponteiro para o próximo `IInstallReferenceItem` contido `IInstallReferenceEnum`neste.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Interface IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Interfaces de fusão](fusion-interfaces.md)
+- [Interface IInstallReferenceItem](iinstallreferenceitem-interface.md)

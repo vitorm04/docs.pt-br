@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697973"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796711"
 ---
 # <a name="iassemblycacheitem-interface"></a>Interface IAssemblyCacheItem
 Representa um único assembly no cache de assembly global.  
@@ -30,19 +30,19 @@ Representa um único assembly no cache de assembly global.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método AbortItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Permite que o assembly no cache de assembly global executar operações de limpeza antes do lançamento.|  
-|[Método Commit](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Confirma a referência de assembly em cache na memória.|  
-|[Método CreateStream](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Cria um fluxo com o nome especificado e o formato.|  
+|[Método AbortItem](iassemblycacheitem-abortitem-method.md)|Permite que o assembly no cache de assembly global execute operações de limpeza antes que ele seja liberado.|  
+|[Método Commit](iassemblycacheitem-commit-method.md)|Confirma a referência de assembly armazenada em cache para a memória.|  
+|[Método CreateStream](iassemblycacheitem-createstream-method.md)|Cria um fluxo com o nome e o formato especificados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)
-- [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Interfaces de fusão](fusion-interfaces.md)
+- [Cache de assembly global](../../app-domains/gac.md)
+- [Interface IAssemblyCache](iassemblycache-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938194"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782399"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitando vários conjuntos de resultados ativos
 O Multiple Active Result Sets (MARS) é um recurso que funciona com o SQL Server para permitir a execução de vários lotes em uma única conexão. Quando MARS está ativado para uso com o SQL Server, cada objeto de comando usado adiciona uma sessão à conexão.  
@@ -62,13 +62,13 @@ string connectionString = "Data Source=MSSQL1;" +
  Uma instrução WAITFOR dentro de uma instrução SELECT não produz a transação enquanto aguarda, ou seja, até que a primeira linha seja gerada. Isso significa que nenhum outro lote pode ser executado dentro da mesma conexão enquanto uma instrução WAITFOR estiver aguardando.  
   
 ### <a name="mars-session-cache"></a>Cache de sessão de MARS  
- Quando uma conexão é aberta com o MARS habilitado, uma sessão lógica é criada, o que adiciona uma sobrecarga adicional. Para minimizar a sobrecarga e aprimorar o desempenho, o SqlClient armazena em cache a sessão Mars em uma conexão. O cache contém no máximo 10 sessões de MARS. Este valor não é ajustável pelo usuário. Se o limite de sessão for alcançado, uma nova sessão será criada. Um erro não será gerado. O cache e as sessões contidas nela são por conexão; não são compartilhados entre as conexões. Quando uma sessão é lançada, é retornada para o pool a menos que o limite superior do pool tenha sido alcançado. Se o pool do cache estiver concluído, a sessão será fechada. As sessões do MARS não expiram. Elas somente são limpas quando o objeto de conexão é descartado. O cache de sessão de MARS não é pré-carregado. Ele é carregado quando o aplicativo exige mais sessões.  
+ Quando uma conexão é aberta com o MARS habilitado, uma sessão lógica é criada, o que adiciona uma sobrecarga adicional. Para minimizar a sobrecarga e aprimorar o desempenho, o **SqlClient** armazena em cache a sessão Mars em uma conexão. O cache contém no máximo 10 sessões de MARS. Este valor não é ajustável pelo usuário. Se o limite de sessão for alcançado, uma nova sessão será criada. Um erro não será gerado. O cache e as sessões contidas nela são por conexão; não são compartilhados entre as conexões. Quando uma sessão é lançada, é retornada para o pool a menos que o limite superior do pool tenha sido alcançado. Se o pool do cache estiver concluído, a sessão será fechada. As sessões do MARS não expiram. Elas somente são limpas quando o objeto de conexão é descartado. O cache de sessão de MARS não é pré-carregado. Ele é carregado quando o aplicativo exige mais sessões.  
   
 ### <a name="thread-safety"></a>Segurança de threads  
  As operações de MARS não são thread-safe.  
   
 ### <a name="connection-pooling"></a>Pool de conexões  
- As conexões habilitadas para MARS são agrupadas como qualquer outra conexão. Se um aplicativo abrir duas conexões, uma com MARS habilitado e outra com MARS desabilitado, as duas conexões estarão em pools separados. Para obter mais informações, confira [Pooling de conexão do SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ As conexões habilitadas para MARS são agrupadas como qualquer outra conexão. Se um aplicativo abrir duas conexões, uma com MARS habilitado e outra com MARS desabilitado, as duas conexões estarão em pools separados. Para obter mais informações, confira [Pooling de conexão do SQL Server (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Ambiente de execução em lotes do SQL Server  
  Quando uma conexão é aberta, um ambiente padrão é definido. Esse ambiente é, em seguida, copiado em uma sessão lógica do MARS.  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>Consulte também
 
-- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [MARS (Conjunto de Resultados Ativos Múltiplos)](multiple-active-result-sets-mars.md)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

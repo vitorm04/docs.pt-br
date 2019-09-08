@@ -2,18 +2,18 @@
 title: propriedade
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 59b4ccf18b0e1f9054fd2a253fcd39072ed10e98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97d934ac581e7b1a923bf77dcf46121782fe8eab
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946286"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783177"
 ---
 # <a name="property"></a>propriedade
-*As propriedades* são os blocos de construção fundamentais dos tipos de [entidade](../../../../docs/framework/data/adonet/entity-type.md) e [tipos complexos](../../../../docs/framework/data/adonet/complex-type.md). As propriedades definem a forma e as características de dados que uma instância do tipo de entidade ou a instância do tipo complexo conterão. As propriedades em um modelo conceitual são análogas as propriedades definidas em uma classe. Da mesma forma que as propriedades em uma classe definem a forma da classe e transportam informações sobre objetos, as propriedades em um modelo conceitual definem a forma de um tipo de entidade e transportam informações sobre as instâncias dos tipos de entidade.  
+*As propriedades* são os blocos de construção fundamentais dos tipos de [entidade](entity-type.md) e [tipos complexos](complex-type.md). As propriedades definem a forma e as características de dados que uma instância do tipo de entidade ou a instância do tipo complexo conterão. As propriedades em um modelo conceitual são análogas as propriedades definidas em uma classe. Da mesma forma que as propriedades em uma classe definem a forma da classe e transportam informações sobre objetos, as propriedades em um modelo conceitual definem a forma de um tipo de entidade e transportam informações sobre as instâncias dos tipos de entidade.  
   
 > [!NOTE]
-> As propriedades, como descrito neste tópico, são diferentes de propriedades de navegação. Para obter mais informações, consulte [Propriedades de navegação](../../../../docs/framework/data/adonet/navigation-property.md).  
+> As propriedades, como descrito neste tópico, são diferentes de propriedades de navegação. Para obter mais informações, consulte [Propriedades de navegação](navigation-property.md).  
   
  Uma definição de propriedade contém as informações a seguir:  
   
@@ -21,19 +21,19 @@ ms.locfileid: "69946286"
   
 - Um tipo de propriedade. (Necessário)  
   
-- Um conjunto de [facetas](../../../../docs/framework/data/adonet/facet.md). (Opcional)  
+- Um conjunto de [facetas](facet.md). (Opcional)  
   
- Uma propriedade pode conter dados primitivos (como uma cadeia de caracteres, um número inteiro ou um valor booliano) ou dados estruturados (como um tipo complexo). As propriedades que são do tipo primitivo também são chamadas propriedades escalares. Para obter mais informações, [consulte modelo de dados de entidade: Tipos](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)de dados primitivos.  
+ Uma propriedade pode conter dados primitivos (como uma cadeia de caracteres, um número inteiro ou um valor booliano) ou dados estruturados (como um tipo complexo). As propriedades que são do tipo primitivo também são chamadas propriedades escalares. Para obter mais informações, [consulte modelo de dados de entidade: Tipos](entity-data-model-primitive-data-types.md)de dados primitivos.  
   
 > [!NOTE]
 > Um tipo complexo pode, em si, para ter as propriedades que são tipos complexos.  
   
 ## <a name="example"></a>Exemplo  
- O diagrama a seguir mostra um modelo conceitual com três tipos de entidade: `Book`, `Publisher`, e `Author`. Cada tipo de entidade tem várias propriedades, embora as informações de tipo para cada propriedade não é transmitida no diagrama. As propriedades que são [chaves de entidade](../../../../docs/framework/data/adonet/entity-key.md) são indicadas com (chave).  
+ O diagrama a seguir mostra um modelo conceitual com três tipos de entidade: `Book`, `Publisher`, e `Author`. Cada tipo de entidade tem várias propriedades, embora as informações de tipo para cada propriedade não é transmitida no diagrama. As propriedades que são [chaves de entidade](entity-key.md) são indicadas com (chave).  
   
  ![Modelo de exemplo com três tipos de entidade](./media/property/example-model-three-entity-types.gif)  
   
- O [Entity Framework ADO.net](../../../../docs/framework/data/adonet/ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir define o tipo de entidade de `Book` (conforme mostrado no diagrama anterior) e indica o tipo e o nome de cada propriedade usando atributos XML. Um aspecto opcional, `Nullable`, também é definida usando um atributo XML.  
+ O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](./ef/language-reference/csdl-specification.md)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir define o tipo de entidade de `Book` (conforme mostrado no diagrama anterior) e indica o tipo e o nome de cada propriedade usando atributos XML. Um aspecto opcional, `Nullable`, também é definida usando um atributo XML.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
@@ -43,5 +43,5 @@ ms.locfileid: "69946286"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
+- [Modelo de Dados de Entidade](entity-data-model.md)

@@ -2,12 +2,12 @@
 title: função declarada por modelo
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943921"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794804"
 ---
 # <a name="model-declared-function"></a>função declarada por modelo
 Uma *função declarada por modelo* é uma função que é declarada em um modelo conceitual, mas não é definida nesse modelo conceitual. A função pode ser definida no ambiente de hospedagem ou de armazenamento. Por exemplo, uma função o declarada pode ser mapeada para uma função que está definida em uma base de dados, bem expõe a funcionalidade do lado do modelo conceitual.  
@@ -30,5 +30,5 @@ Uma *função declarada por modelo* é uma função que é declarada em um model
   
 ## <a name="see-also"></a>Consulte também
 
-- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
+- [Modelo de Dados de Entidade](entity-data-model.md)

@@ -2,15 +2,15 @@
 title: 'Como: gerar o modelo de objeto como um arquivo externo'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 7451dfbaf85c1cbd4635ae0cce1219853a2b01a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fd84d878ab07411bba41a13ff3eef91b2425e8a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911933"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793591"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Como: gerar o modelo de objeto como um arquivo externo
-Como uma alternativa para o mapeamento baseado em atributos, você pode gerar seu modelo de objeto como um arquivo externo XML usando a ferramenta de linha de comando SQLMetal. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Usando um arquivo de mapeamento externo XML, você reduz a confusão em seu código. Você também pode alterar o comportamento alterando o arquivo externo sem recompilar os binários do seu aplicativo. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+Como uma alternativa para o mapeamento baseado em atributos, você pode gerar seu modelo de objeto como um arquivo externo XML usando a ferramenta de linha de comando SQLMetal. Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Usando um arquivo de mapeamento externo XML, você reduz a confusão em seu código. Você também pode alterar o comportamento alterando o arquivo externo sem recompilar os binários do seu aplicativo. Para obter mais informações, consulte [mapeamento externo](external-mapping.md).  
   
 > [!NOTE]
 > O Object Relational Designer não oferece suporte à geração de um arquivo de mapeamento externo.  
@@ -50,6 +50,6 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
   
 ## <a name="see-also"></a>Consulte também
 
-- [Criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Como: gerar o modelo de objeto em Visual Basic ou em C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Criando o modelo de objeto](creating-the-object-model.md)
+- [Mapeamento Externo](external-mapping.md)
+- [Como: gerar o modelo de objeto em Visual Basic ou em C#](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

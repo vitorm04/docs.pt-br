@@ -2,12 +2,12 @@
 title: Métodos de System.String
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613752"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792498"
 ---
 # <a name="systemstring-methods"></a>Métodos de System.String
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte aos seguintes métodos de <xref:System.String> .  
@@ -15,7 +15,7 @@ ms.locfileid: "64613752"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Métodos sem suporte de System.String em geral  
  Métodos sem suporte de <xref:System.String> geralmente:  
   
-- Sobrecargas de reconhecimento de cultura (métodos que usam um `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Sobrecargas com reconhecimento de cultura (métodos que usam `CultureInfo`um  /   /  `StringComparison` `IFormatProvider`).  
   
 - Métodos que usam ou gerenciar uma matriz de `char` .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64613752"
   
 - Consultas não esclarecem as ordenações do SQL Server que podem ser aplicadas no servidor, e portanto fornecerão comparações que levam confidenciais, sem diferenciação de maiúsculas e minúsculas por padrão. Esse comportamento difere de opção, semântica maiúsculas de minúsculas do .NET Framework.  
   
-- Quando `LastIndexOf` retorna 0, a cadeia de caracteres é `NULL` ou posição encontrada é 0.  
+- Quando `LastIndexOf` retorna 0, a cadeia de caracteres `NULL` é ou a posição encontrada é 0.  
   
 - Os resultados inesperados podem ser retornados de concatenação ou outras operações em cadeias de caracteres de comprimento fixo (`CHAR`, `NCHAR`), porque esses tipos têm automaticamente o preenchimento aplicado ao base de dados.  
   
@@ -57,4 +57,4 @@ ms.locfileid: "64613752"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Funções e tipos de dados](data-types-and-functions.md)

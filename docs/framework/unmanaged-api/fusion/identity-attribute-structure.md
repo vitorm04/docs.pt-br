@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751539"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796488"
 ---
-# <a name="identityattribute-structure"></a>Estrutura IDENTITY_ATTRIBUTE
-Contém informações de atributo de metadados sobre um [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instância.  
+# <a name="identity_attribute-structure"></a>Estrutura IDENTITY_ATTRIBUTE
+Contém informações de atributo de metadados sobre uma instância de [IDefinitionIdentity](idefinitionidentity-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,24 +40,24 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`pszNamespace`|Um ponteiro para uma cadeia de caracteres terminada em nulo que contém o namespace que o atributo está em.|  
-|`pszName`|Um ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do atributo.|  
-|`pszValue`|Um ponteiro para uma cadeia de caracteres terminada em nulo que contém o valor do atributo.|  
+|`pszNamespace`|Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o namespace no qual o atributo está.|  
+|`pszName`|Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o nome do atributo.|  
+|`pszValue`|Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o valor do atributo.|  
   
 ## <a name="remarks"></a>Comentários  
- O `IDENTITY_ATTRIBUTE` estrutura contém três ponteiros para cadeias de caracteres terminada em nulo. Essas três cadeias de caracteres descrevem um atributo.  
+ A `IDENTITY_ATTRIBUTE` estrutura contém três ponteiros para cadeias de caracteres terminadas em nulo. Essas três cadeias de caracteres descrevem um atributo.  
   
- Uma instância de um `IDENTITY_ATTRIBUTE` estrutura está associada uma instância de um [IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) estrutura. O `IDENTITY_ATTRIBUTE` estrutura contém as cadeias de caracteres reais e correspondente `IDENTITY_ATTRIBUTE_BLOB` estrutura lista os deslocamentos de três cadeias de caracteres listadas no `IDENTITY_ATTRIBUTE` estrutura.  
+ Uma instância de uma `IDENTITY_ATTRIBUTE` estrutura é associada a uma instância de uma estrutura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . A `IDENTITY_ATTRIBUTE` estrutura contém as cadeias de caracteres reais e `IDENTITY_ATTRIBUTE_BLOB` a estrutura correspondente lista os deslocamentos para as `IDENTITY_ATTRIBUTE` três cadeias de caracteres listadas na estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Isolation.h  
+ **Cabeçalho:** Isolamento. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
-- [Estrutura IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
-- [Estruturas de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Interface IDefinitionIdentity](idefinitionidentity-interface.md)
+- [Estrutura IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md)
+- [Estruturas de fusão](fusion-structures.md)

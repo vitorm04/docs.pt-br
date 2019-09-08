@@ -10,15 +10,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 917278ef990842f2ce821474ffd1c6cd619ed289
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3bd44d197a655b67253ff363ef15937d4c021e08
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951786"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797047"
 ---
 # <a name="how-to-create-a-custom-token"></a>Como: criar um token personalizado
-Este tópico mostra como criar um token de segurança personalizado usando a <xref:System.IdentityModel.Tokens.SecurityToken> classe e como integrá-lo a um provedor de token de segurança personalizado e autenticador. Para obter um exemplo de código completo, consulte o exemplo de [token personalizado](../../../../docs/framework/wcf/samples/custom-token.md) .  
+Este tópico mostra como criar um token de segurança personalizado usando a <xref:System.IdentityModel.Tokens.SecurityToken> classe e como integrá-lo a um provedor de token de segurança personalizado e autenticador. Para obter um exemplo de código completo, consulte o exemplo de [token personalizado](../samples/custom-token.md) .  
   
  Um *token de segurança* é essencialmente um elemento XML que é usado pela estrutura de segurança do Windows Communication Foundation (WCF) para representar declarações sobre um remetente dentro da mensagem SOAP. A segurança do WCF fornece vários tokens para modos de autenticação fornecidos pelo sistema. Os exemplos incluem um token de segurança de <xref:System.IdentityModel.Tokens.X509SecurityToken> certificado X. 509 representado pela classe ou um token de segurança de nome de usuário representado <xref:System.IdentityModel.Tokens.UserNameSecurityToken> pela classe.  
   
@@ -26,7 +26,7 @@ Este tópico mostra como criar um token de segurança personalizado usando a <xr
   
  Os procedimentos a seguir mostram como criar um token de segurança personalizado e como integrá-lo à infraestrutura de segurança do WCF. Este tópico cria um token de cartão de crédito que é usado para passar informações sobre o cartão de crédito do cliente para o servidor.  
   
- Para obter mais informações sobre as credenciais personalizadas e o Gerenciador de [token de segurança, consulte Walkthrough: Criando credenciais](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
+ Para obter mais informações sobre as credenciais personalizadas e o Gerenciador de [token de segurança, consulte Walkthrough: Criando credenciais](walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
   
  Consulte o <xref:System.IdentityModel.Tokens> namespace para obter mais classes que representam tokens de segurança.  
   
@@ -102,14 +102,14 @@ Este tópico mostra como criar um token de segurança personalizado usando a <xr
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Para integrar o token de segurança personalizado a um provedor de token de segurança  
   
-1. O provedor de token de segurança cria, modifica (se necessário) e retorna uma instância do token. Para criar um provedor personalizado para o token de segurança personalizado, crie uma classe que herda da <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe. O exemplo a seguir substitui <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> o método para retornar uma instância `CreditCardToken`do. Para obter mais informações sobre provedores de token de segurança [personalizados, consulte Como: Crie um provedor](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)de token de segurança personalizado.  
+1. O provedor de token de segurança cria, modifica (se necessário) e retorna uma instância do token. Para criar um provedor personalizado para o token de segurança personalizado, crie uma classe que herda da <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe. O exemplo a seguir substitui <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> o método para retornar uma instância `CreditCardToken`do. Para obter mais informações sobre provedores de token de segurança [personalizados, consulte Como: Crie um provedor](how-to-create-a-custom-security-token-provider.md)de token de segurança personalizado.  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Para integrar o token de segurança personalizado a um autenticador de token de segurança  
   
-1. O autenticador de token de segurança valida o conteúdo do token de segurança quando ele é extraído da mensagem. Para criar um autenticador personalizado para o token de segurança personalizado, crie uma classe que herda <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> da classe. O exemplo a seguir substitui <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> o método. Para obter mais informações sobre autenticadores de token de segurança [personalizados, consulte Como: Crie um autenticador](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)de token de segurança personalizado.  
+1. O autenticador de token de segurança valida o conteúdo do token de segurança quando ele é extraído da mensagem. Para criar um autenticador personalizado para o token de segurança personalizado, crie uma classe que herda <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> da classe. O exemplo a seguir substitui <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> o método. Para obter mais informações sobre autenticadores de token de segurança [personalizados, consulte Como: Crie um autenticador](how-to-create-a-custom-security-token-authenticator.md)de token de segurança personalizado.  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -119,7 +119,7 @@ Este tópico mostra como criar um token de segurança personalizado usando a <xr
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Para integrar o token de segurança personalizado a um Gerenciador de token de segurança  
   
-1. O Gerenciador de token de segurança cria as instâncias de provedor de token, autenticador de segurança e serializador de token apropriadas. Para criar um Gerenciador de token personalizado, crie uma classe que herda da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe. Os principais métodos da classe usam um <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> para criar o provedor apropriado e as credenciais de cliente ou serviço. Para obter mais informações sobre gerenciadores de tokens [de segurança personalizados, consulte Walkthrough: Criando credenciais](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
+1. O Gerenciador de token de segurança cria as instâncias de provedor de token, autenticador de segurança e serializador de token apropriadas. Para criar um Gerenciador de token personalizado, crie uma classe que herda da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe. Os principais métodos da classe usam um <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> para criar o provedor apropriado e as credenciais de cliente ou serviço. Para obter mais informações sobre gerenciadores de tokens [de segurança personalizados, consulte Walkthrough: Criando credenciais](walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -129,7 +129,7 @@ Este tópico mostra como criar um token de segurança personalizado usando a <xr
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Para integrar o token de segurança personalizado com credenciais de cliente e de serviço personalizadas  
   
-1. As credenciais personalizadas do cliente e do serviço devem ser adicionadas para fornecer uma API para o aplicativo permitir a especificação de informações de token personalizadas que são usadas pela infraestrutura de token de segurança personalizada criada anteriormente para fornecer e autenticar a segurança personalizada conteúdo do token. Os exemplos a seguir mostram como isso pode ser feito. Para obter mais informações sobre credenciais de cliente e de serviço [personalizadas, consulte Passo a passos: Criando credenciais](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
+1. As credenciais personalizadas do cliente e do serviço devem ser adicionadas para fornecer uma API para o aplicativo permitir a especificação de informações de token personalizadas que são usadas pela infraestrutura de token de segurança personalizada criada anteriormente para fornecer e autenticar a segurança personalizada conteúdo do token. Os exemplos a seguir mostram como isso pode ser feito. Para obter mais informações sobre credenciais de cliente e de serviço [personalizadas, consulte Passo a passos: Criando credenciais](walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -146,7 +146,7 @@ Este tópico mostra como criar um token de segurança personalizado usando a <xr
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- Este tópico mostra as várias partes de código necessárias para implementar e usar um token personalizado. Para ver um exemplo completo de como todas essas partes de código se ajustam, consulte [token personalizado](../../../../docs/framework/wcf/samples/custom-token.md).  
+ Este tópico mostra as várias partes de código necessárias para implementar e usar um token personalizado. Para ver um exemplo completo de como todas essas partes de código se ajustam, consulte [token personalizado](../samples/custom-token.md).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -161,6 +161,6 @@ Este tópico mostra como criar um token de segurança personalizado usando a <xr
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Passo a passo: Criando credenciais de cliente e de serviço personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Como: Criar um autenticador de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Como: Criar um provedor de token de segurança personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Passo a passo: Criando credenciais de cliente e de serviço personalizadas](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Como: Criar um autenticador de token de segurança personalizado](how-to-create-a-custom-security-token-authenticator.md)
+- [Como: Criar um provedor de token de segurança personalizado](how-to-create-a-custom-security-token-provider.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: b53da9c1ecfcc5061fe551c4e180774319beaf5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780011"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Como: Resultados da consulta do projeto (WCF Data Services)
-A projeção fornece um mecanismo para reduzir a quantidade de dados retornados por uma consulta, especificando que apenas determinadas propriedades de uma entidade são retornadas na resposta. Você pode [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] executar projeções nos resultados de uma consulta usando a opção de `$select` consulta ou usando a cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) em uma consulta LINQ. Para obter mais informações, consulte [consultando o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+A projeção fornece um mecanismo para reduzir a quantidade de dados retornados por uma consulta, especificando que apenas determinadas propriedades de uma entidade são retornadas na resposta. Você pode [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] executar projeções nos resultados de uma consulta usando a opção de `$select` consulta ou usando a cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) em uma consulta LINQ. Para obter mais informações, consulte [consultando o serviço de dados](querying-the-data-service-wcf-data-services.md).  
   
- O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra uma consulta LINQ que projeta entidades de clientes em um novo tipo CustomerAddress, que contém apenas propriedades específicas de endereço e a propriedade Identity. Essa `CustomerAddress` classe é definida no cliente e é atribuída para que a biblioteca de cliente possa reconhecê-la como um tipo de entidade.  

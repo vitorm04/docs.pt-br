@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934115"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780618"
 ---
 # <a name="updating-data-in-a-data-source"></a>Atualizando dados em uma fonte de dados
-As instruções SQL que modificam dados (como UPDATE, INSERT ou DELETE) não retornam linhas. Da mesma forma, muitos procedimentos armazenados executam uma ação, mas não retornam linhas. Para executar comandos que não retornam linhas, criar uma **comando** objeto com o comando SQL apropriado e uma **Conexão**, incluindo quaisquer **parâmetros**. Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.  
+As instruções SQL que modificam dados (como UPDATE, INSERT ou DELETE) não retornam linhas. Da mesma forma, muitos procedimentos armazenados executam uma ação, mas não retornam linhas. Para executar comandos que não retornam linhas, crie um objeto de **comando** com o comando SQL apropriado e uma **conexão**, incluindo todos os **parâmetros**necessários. Execute o comando com o método **ExecuteNonQuery** do objeto **Command** .  
   
- O **ExecuteNonQuery** método retorna um inteiro que representa o número de linhas afetadas pela instrução ou procedimento armazenado que foi executado. Se várias instruções tiverem sido executadas, o valor retornado é a soma dos registros afetados por todas as instruções executadas.  
+ O método **ExecuteNonQuery** retorna um inteiro que representa o número de linhas afetadas pela instrução ou pelo procedimento armazenado que foi executado. Se várias instruções tiverem sido executadas, o valor retornado é a soma dos registros afetados por todas as instruções executadas.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir executa uma instrução INSERT para inserir um registro em um banco de dados usando **ExecuteNonQuery**.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- O exemplo de código a seguir executa o procedimento armazenado criado pelo código de exemplo na [executando operações de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Nenhuma linha é retornada pelo procedimento armazenado, portanto, o **ExecuteNonQuery** método é usado, mas o procedimento armazenado recebe um parâmetro de entrada e retorna um parâmetro de saída e um valor de retorno.  
+ O exemplo de código a seguir executa o procedimento armazenado criado pelo código de exemplo em [executando operações de catálogo](performing-catalog-operations.md). Nenhuma linha é retornada pelo procedimento armazenado, portanto, o método **ExecuteNonQuery** é usado, mas o procedimento armazenado recebe um parâmetro de entrada e retorna um parâmetro de saída e um valor de retorno.  
   
- Para o <xref:System.Data.OleDb.OleDbCommand> objeto, o **ReturnValue** parâmetro deve ser adicionado para o **parâmetros** coleção primeiro.  
+ Para o <xref:System.Data.OleDb.OleDbCommand> objeto, o parâmetro **ReturnValue** deve ser adicionado primeiro à coleção **Parameters** .  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -93,7 +93,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando os comandos para modificar dados](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
-- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Usando os comandos para modificar dados](using-commands-to-modify-data.md)
+- [Updating Data Sources with DataAdapters](updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [Comandos e parâmetros](commands-and-parameters.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

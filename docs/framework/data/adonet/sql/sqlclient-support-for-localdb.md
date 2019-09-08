@@ -2,41 +2,41 @@
 title: Suporte do SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645837"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780783"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Suporte do SqlClient para LocalDB
-A partir do SQL Server Codinome Denali, uma versão leve do SQL Server, denominada LocalDB, estará disponível. Este tópico discute como se conectar a um banco de dados LocalDB.  
+A partir do SQL Server nome do código Denali, uma versão leve do SQL Server, chamada LocalDB, estará disponível. Este tópico discute como se conectar a um banco de dados LocalDB.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância de LocalDB, consulte os Manuais Online do SQL Server.  
+ Para obter mais informações sobre o LocalDB, incluindo como instalar o LocalDB e configurar sua instância do LocalDB, consulte Manuais Online do SQL Server.  
   
  Para resumir o que você pode fazer com o LocalDB:  
   
-- Crie e inicie as instâncias de LocalDB com sqllocaldb.exe ou seu arquivo App. config.  
+- Crie e inicie instâncias do LocalDB com sqllocaldb. exe ou seu arquivo app. config.  
   
-- Use sqlcmd.exe para adicionar e modificar bancos de dados em uma instância de LocalDB. Por exemplo, `sqlcmd -S (localdb)\myinst`.  
+- Use sqlcmd. exe para adicionar e modificar bancos de dados em uma instância de LocalDB. Por exemplo, `sqlcmd -S (localdb)\myinst`.  
   
-- Use o `AttachDBFilename` palavra-chave de cadeia de caracteres de conexão para adicionar um banco de dados para sua instância do LocalDB. Ao usar `AttachDBFilename`, se você não especificar o nome do banco de dados com o `Database` palavra-chave da cadeia de conexão, o banco de dados será removido da instância do LocalDB quando o aplicativo é fechado.  
+- Use a `AttachDBFilename` palavra-chave da cadeia de conexão para adicionar um banco de dados à instância do LocalDB. Ao usar `AttachDBFilename`, se você não especificar o nome do banco de dados com a `Database` palavra-chave da cadeia de conexão, o banco de dados será removido da instância de LocalDB quando o aplicativo for fechado.  
   
-- Especifica uma instância de LocalDB em sua cadeia de conexão. Por exemplo, o nome da instância é `myInstance`, inclui a cadeia de caracteres de conexão:  
+- Especifique uma instância de LocalDB na cadeia de conexão. Por exemplo, o nome da instância `myInstance`é, a cadeia de conexão inclui:  
   
     ```  
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` não é permitido ao se conectar a um banco de dados LocalDB.  
+ `User Instance=True`Não é permitido ao se conectar a um banco de dados LocalDB.  
   
- Você pode baixar o LocalDB de [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Se você for usar sqlcmd.exe para modificar dados em sua instância de LocalDB, será necessário sqlcmd do SQL Server 2012, você também pode obter do SQL Server 2012 Feature Pack.  
+ Você pode baixar o LocalDB de [Microsoft SQL Server o Feature Pack 2012](https://www.microsoft.com/download/en/details.aspx?id=29065). Se você for usar o sqlcmd. exe para modificar dados em sua instância de LocalDB, precisará do sqlcmd do SQL Server 2012, que também pode ser obtido do SQL Server Feature Pack 2012.  
   
-## <a name="programmatically-create-a-named-instance"></a>Criar uma instância nomeada de forma programática  
+## <a name="programmatically-create-a-named-instance"></a>Criar programaticamente uma instância nomeada  
  Um aplicativo pode criar uma instância nomeada e especificar um banco de dados da seguinte maneira:  
   
-- Especifique as instâncias de LocalDB para criar no arquivo App. config, da seguinte maneira.  O número de versão da instância deve ser igual ao número de versão da instalação do LocalDB.  
+- Especifique as instâncias de LocalDB a serem criadas no arquivo app. config, da seguinte maneira.  O número de versão da instância deve ser igual ao número de versão da sua instalação do LocalDB.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -54,11 +54,11 @@ A partir do SQL Server Codinome Denali, uma versão leve do SQL Server, denomina
     </configuration>  
     ```  
   
-- Especifique o nome da instância usando o `server` palavra-chave de cadeia de caracteres de conexão.  O nome de instância especificado a `server` palavra-chave de cadeia de caracteres de conexão deve corresponder ao nome especificado no arquivo App. config.  
+- Especifique o nome da instância usando a palavra `server` -chave da cadeia de conexão.  O nome da instância especificado na `server` palavra-chave da cadeia de conexão deve corresponder ao nome especificado no arquivo app. config.  
   
-- Use o `AttachDBFilename` palavra-chave de cadeia de caracteres de conexão para especificar o. Arquivo MDF.  
+- Use a `AttachDBFilename` palavra-chave da cadeia de conexão para especificar o. Arquivo MDF.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [SQL Server Features and ADO.NET](sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892084"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776469"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de dados comuns (referência API não gerenciada)
 Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas para o .NET Framework que são definidas por instruções `typedef` do C/C++. Esses tipos de dados são geralmente aliases para tipos de dados primitivos do C/C++. Geralmente, os valores desses tipos de dados são opacos, ou seja, eles são retornados por uma função ou um método específico para que possam ser transmitidos para outras funções ou métodos sem modificação.  
@@ -38,9 +38,9 @@ Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas par
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|O identificador de um processo gerenciado.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|O identificador de uma função com compilação JIT.|  
 |SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym. h|Um ponteiro para um endereço de memória de 64 bits.|
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|O identificador de uma instância de [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .|  
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|O identificador de uma instância de [ICLRTask](./hosting/iclrtask-interface.md) .|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|O identificador de um thread gerenciado.|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de API não gerenciada](../../../docs/framework/unmanaged-api/index.md)
+- [Referência de API não gerenciada](index.md)

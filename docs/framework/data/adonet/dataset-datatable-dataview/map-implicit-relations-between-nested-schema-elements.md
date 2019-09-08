@@ -2,12 +2,12 @@
 title: Mapear relações implícitas entre elementos de esquema aninhados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203485"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784439"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapear relações implícitas entre elementos de esquema aninhados
 Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexos aninhados dentro um do outro. Nesse caso, o processo de mapeamento aplica o mapeamento padrão e cria o seguinte no <xref:System.Data.DataSet>:  
@@ -63,7 +63,7 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Uma restrição UNIQUE na tabela de **pedidos** . Observe que a Propriedade IsPrimaryKey está definida como **true**.  
+- Uma restrição UNIQUE na tabela de **pedidos** . Observe que a propriedade **IsPrimaryKey** está definida como **true**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -84,7 +84,7 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
     RelatedColumns: Order_Id   
     ```  
   
-- Uma relação entre as tabelas **Order** e **OrderDetail** . A Propriedade aninhada para essa relação é definida como **true** porque os elementos **Order** e **OrderDetail** estão aninhados no esquema.  
+- Uma relação entre as tabelas **Order** e **OrderDetail** . A propriedade **aninhada** para essa relação é definida como **true** porque os elementos **Order** e **OrderDetail** estão aninhados no esquema.  
   
     ```  
     ParentTable: Order  
@@ -101,4 +101,4 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
 
 - [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

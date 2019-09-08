@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205019"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785392"
 ---
 # <a name="datatable-edits"></a>Edições de DataTable
 Quando você altera os valores de coluna em uma <xref:System.Data.DataRow>, as alterações são colocadas imediatamente no estado atual da linha. O <xref:System.Data.DataRowState> é então definido como **Modified**, e as alterações são aceitas ou rejeitadas <xref:System.Data.DataRow.AcceptChanges%2A> usando <xref:System.Data.DataRow.RejectChanges%2A> os métodos ou da **DataRow**. A **DataRow** também fornece três métodos que você pode usar para suspender o estado da linha enquanto estiver editando. Esses métodos são <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
@@ -19,11 +19,11 @@ Quando você altera os valores de coluna em uma <xref:System.Data.DataRow>, as a
   
  A versão de linha **proposta** existe durante uma operação de edição que começa chamando **BeginEdit** e que termina usando **EndEdit** ou **CancelEdit,** ou chamando **AcceptChanges** ou **RejectChanges**.  
   
- Durante a operação de edição, você pode aplicar a lógica de validação a colunas individuais avaliando o ProposedValue no evento **ColumnChanged** da **DataTable**. O evento ColumnChanged contém **DataColumnChangeEventArgs** que mantêm uma referência à coluna que está sendo alterada e ao ProposedValue. Depois que você avaliar o valor proposto, poderá modificá-lo ou cancelar a edição. Quando a edição é finalizada, a linha sai do estado **proposto** .  
+ Durante a operação de edição, você pode aplicar a lógica de validação a colunas individuais avaliando o **ProposedValue** no evento **ColumnChanged** da **DataTable**. O evento **ColumnChanged** contém **DataColumnChangeEventArgs** que mantêm uma referência à coluna que está sendo alterada e ao **ProposedValue**. Depois que você avaliar o valor proposto, poderá modificá-lo ou cancelar a edição. Quando a edição é finalizada, a linha sai do estado **proposto** .  
   
  Você pode confirmar as edições chamando **EndEdit**ou pode cancelá-las chamando **CancelEdit**. Observe que, embora **EndEdit** confirme suas edições, o **conjunto de DataSet** não aceita realmente as alterações até que **AcceptChanges** seja chamado. Observe também que, se você chamar **AcceptChanges** antes de terminar a edição com **EndEdit** ou **CancelEdit**, a edição será finalizada e os valores de linha **proposto** serão aceitos para as versões de linha **atuais** e **originais** . Da mesma maneira, chamar **RejectChanges** encerra a edição e descarta as versões de linha **atuais** e **propostas** . Chamar **EndEdit** ou **CancelEdit** depois de chamar **AcceptChanges** ou **RejectChanges** não tem efeito porque a edição já terminou.  
   
- O exemplo a seguir demonstra como usar **BeginEdit** com **EndEdit** e **CancelEdit**. O exemplo também verifica o ProposedValue no evento ColumnChanged e decide se a edição deve ser cancelada.  
+ O exemplo a seguir demonstra como usar **BeginEdit** com **EndEdit** e **CancelEdit**. O exemplo também verifica o **ProposedValue** no evento **ColumnChanged** e decide se a edição deve ser cancelada.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -93,4 +93,4 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRowVersion>
 - [Manipulação de dados em uma DataTable](manipulating-data-in-a-datatable.md)
 - [Manipulação de eventos de DataTable](handling-datatable-events.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

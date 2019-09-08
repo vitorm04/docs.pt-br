@@ -2,12 +2,12 @@
 title: Cadeias de caracteres de conexão no ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363755"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784909"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadeias de caracteres de conexão no ADO.NET
 
@@ -57,23 +57,23 @@ Todas as cadeias de conexão compartilham a mesma sintaxe básica descrita acima
 
 Digitar erros pode causar erros. Por exemplo, `Integrated Security=true` é válido, mas `IntegratedSecurity=true` causa um erro.
 
-Cadeias de conexão construídas manualmente em tempo de execução de entrada de usuário não validada são vulneráveis a ataques de injeção de cadeia de caracteres e ameaçam a segurança na fonte de dados. Para resolver esses problemas, o *ADO.NET* 2,0 introduziu [construtores de cadeia de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md) para cada provedor de dados de *.NET Framework* . Esses construtores de cadeia de conexão expõem parâmetros como propriedades fortemente tipadas e possibilitam validar a cadeia de conexão antes que ela seja enviada para a fonte de dados.
+Cadeias de conexão construídas manualmente em tempo de execução de entrada de usuário não validada são vulneráveis a ataques de injeção de cadeia de caracteres e ameaçam a segurança na fonte de dados. Para resolver esses problemas, o *ADO.NET* 2,0 introduziu [construtores de cadeia de conexão](connection-string-builders.md) para cada provedor de dados de *.NET Framework* . Esses construtores de cadeia de conexão expõem parâmetros como propriedades fortemente tipadas e possibilitam validar a cadeia de conexão antes que ela seja enviada para a fonte de dados.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Construtores de cadeia de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Construtores de cadeia de conexão](connection-string-builders.md)\
 Demonstra como usar as classes `ConnectionStringBuilder` para construir cadeias de conexão válidas em tempo de execução.
 
-[Cadeias de conexão e arquivos de configuração](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Cadeias de conexão e arquivos de configuração](connection-strings-and-configuration-files.md)\
 Demonstra como armazenar e recuperar cadeias de conexão em arquivos de configuração.
 
-[Sintaxe da cadeia de conexão](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Sintaxe da cadeia de conexão](connection-string-syntax.md)\
 Descreve como configurar cadeias de conexão específicas do provedor para `SqlClient`, `OracleClient`, `OleDb` e `Odbc`.
 
-[Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Protegendo informações de conexão](protecting-connection-information.md)\
 Demonstra técnicas para proteger informações usadas para se conectar a uma fonte de dados.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Conectando a uma fonte de dados](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

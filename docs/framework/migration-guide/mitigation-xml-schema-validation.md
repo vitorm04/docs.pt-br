@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36f9475a978ddf7253833e6c3372049d24502f95
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300579"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789673"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Mitigação: Validação do esquema XML
 No .NET Framework 4.6, a validação de esquema XSD detectará uma violação da restrição exclusiva se uma chave composta for usada e uma chave estiver vazia.  
@@ -39,4 +39,4 @@ No .NET Framework 4.6, a validação de esquema XSD detectará uma violação da
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6.md)

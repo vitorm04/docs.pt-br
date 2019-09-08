@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636116"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779486"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores
 
@@ -22,7 +22,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
 - Arquivo de configuração.
 
-     Se o arquivo de configuração do aplicativo incluir as entradas [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) que especificam uma ou mais versões do .NET Framework, e uma dessas versões estiver presente no computador do usuário, o aplicativo será executado naquela versão. O arquivo de configuração lê as entradas [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) na ordem em que são listadas e usa a primeira versão do .NET Framework listada que está presente no computador do usuário. (Use o elemento [requiredRuntime>\<](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) para a versão 1.0.)
+     Se o arquivo de configuração do aplicativo incluir as entradas [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) que especificam uma ou mais versões do .NET Framework, e uma dessas versões estiver presente no computador do usuário, o aplicativo será executado naquela versão. O arquivo de configuração lê as entradas [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) na ordem em que são listadas e usa a primeira versão do .NET Framework listada que está presente no computador do usuário. (Use o elemento [requiredRuntime>\<](../configure-apps/file-schema/startup/requiredruntime-element.md) para a versão 1.0.)
 
 - Versão compilada.
 
@@ -30,7 +30,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
 - Versão mais recente instalada.
 
-     Se a versão do .NET Framework para a qual o aplicativo foi compilado não estiver presente e um arquivo de configuração não especificar uma versão em um elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), o aplicativo será executado na versão mais recente do .NET Framework presente no computador.
+     Se a versão do .NET Framework para a qual o aplicativo foi compilado não estiver presente e um arquivo de configuração não especificar uma versão em um elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), o aplicativo será executado na versão mais recente do .NET Framework presente no computador.
 
      No entanto, os aplicativos do .NET Framework 1.0, 1.1, 2.0, 3.0, e 3.5 não são executados automaticamente no .NET Framework 4 ou posterior e, em alguns casos, o usuário pode receber um erro e a instalação do .NET Framework 3.5 pode ser solicitada. O comportamento de ativação também pode depender do sistema operacional do usuário, porque as versões diferentes do sistema do Windows incluem diferentes versões do .NET Framework. Se seu aplicativo suportar tanto o .NET Framework 3.5 quanto 4 ou posterior, recomendamos indicar isso com várias entradas no arquivo de configuração do aplicativo para evitar erros de inicialização do .NET Framework. Para saber mais, confira [Versões e dependências](versions-and-dependencies.md).
 
@@ -47,7 +47,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
      Para adicionar um arquivo de configuração, na barra de menus do Visual Studio, escolha **Projeto**, **Adicionar Novo Item**. Escolha **Geral** no painel esquerdo e, em seguida, escolha **Arquivo de Configuração**. Nomeie o arquivo de configuração como *appName*.exe.config. Essas opções de menu não estão disponíveis para projetos de aplicativos da Windows Store ou Windows Phone porque não é possível alterar a política de ativação nessas plataformas.
 
-2. Adicione o elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) como a seguir ao arquivo de configuração do aplicativo:
+2. Adicione o elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) como a seguir ao arquivo de configuração do aplicativo:
 
     ```xml
     <configuration>
@@ -67,7 +67,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
     - .NET framework 4 e versões posteriores: "v4.0"
 
-     Você pode adicionar vários elementos [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) listados por ordem de preferência para especificar o suporte a várias versões do .NET Framework.
+     Você pode adicionar vários elementos [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) listados por ordem de preferência para especificar o suporte a várias versões do .NET Framework.
 
  A tabela a seguir demonstra como as configurações do arquivo de configuração do aplicativo e as versões do .NET Framework instaladas em um computador determinam a versão na qual um aplicativo .NET Framework 3.5 é executado. Os exemplos são específicos para um aplicativo .NET Framework 3.5, mas você pode usar uma lógica semelhante para destinar aplicativos criados com versões anteriores do .NET Framework. Observe que o .NET Framework 2.0 (v2.0.50727) é usado para especificar o .NET Framework 3.5 no arquivo de configuração do aplicativo.
 
@@ -79,7 +79,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Executa na versão 3.5|É executado na versão 4 ou posteriores|É executado na versão 4 ou posteriores|
 |`<supportedRuntime version="v4.0"/>`|Exibe uma mensagem de erro que solicita ao usuário instalar a versão correta*|É executado na versão 4 ou posteriores|É executado na versão 4 ou posteriores|
 
- \* Para obter mais informações sobre essa mensagem de erro e como evitá-la, confira [Erros de inicialização do .NET Framework: Gerenciando a experiência do usuário](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).
+ \* Para obter mais informações sobre essa mensagem de erro e como evitá-la, confira [Erros de inicialização do .NET Framework: Gerenciando a experiência do usuário](../deployment/initialization-errors-managing-the-user-experience.md).
 
 ## <a name="see-also"></a>Consulte também
 

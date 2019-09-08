@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 6518e4edeccdd533487f717122ba6832f13436a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b73904e2347c501b21b2c5933d0b43c7abafeb7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947062"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792318"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Modelo de objeto LINQ to SQL
 No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um modelo de objeto expresso na linguagem de programação do desenvolvedor é mapeado para o modelo de dados de um banco de dado relacional. Assim, as operações de dados são conduzidas de acordo com o modelo de objeto.  
@@ -40,7 +40,7 @@ No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um model
   
  Somente as instâncias de classes declaradas como tabelas (ou seja, classes de entidade) podem ser salvas no banco de dados.  
   
- Para obter mais informações, consulte a seção atributo de tabela do [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Para obter mais informações, consulte a seção atributo de tabela do [mapeamento baseado em atributo](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-class-members-and-database-columns"></a>Membros de classe e colunas de banco de dados LINK to SQL  
  Além de associar classes a tabelas, atribua campos ou propriedades para representar colunas de banco de dados. Para essa finalidade, o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] define o atributo <xref:System.Data.Linq.Mapping.ColumnAttribute>, como no exemplo a seguir:  
@@ -51,7 +51,7 @@ No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um model
   
  Somente campos e propriedades mapeados para colunas são persistidos no banco de dados ou recuperados dele. Aqueles não declarados como colunas são considerados partes transitórias da lógica do aplicativo.  
   
- O atributo <xref:System.Data.Linq.Mapping.ColumnAttribute> tem uma variedade de propriedades que é possível usar para personalizar esses membros que representam colunas (por exemplo, designando um membro como representante de uma coluna de chave primária). Para obter mais informações, consulte a seção atributo de coluna do [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ O atributo <xref:System.Data.Linq.Mapping.ColumnAttribute> tem uma variedade de propriedades que é possível usar para personalizar esses membros que representam colunas (por exemplo, designando um membro como representante de uma coluna de chave primária). Para obter mais informações, consulte a seção atributo de coluna do [mapeamento baseado em atributo](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>Associações e relações de chave estrangeira de banco de dados LINK to SQL  
  No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], você representa as associações de banco de dados (como chave estrangeira para relações de chave primária) aplicando o <xref:System.Data.Linq.Mapping.AssociationAttribute> atributo. No seguinte segmento de código, a `Order` classe contém uma `Customer` propriedade que tem um <xref:System.Data.Linq.Mapping.AssociationAttribute> atributo. Essa propriedade e seu atributo fornecem a classe `Order` que tem uma relação com a classe `Customer`.  
@@ -62,7 +62,7 @@ No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um model
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Para obter mais informações, consulte a seção atributo de associação do [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Para obter mais informações, consulte a seção atributo de associação do [mapeamento baseado em atributo](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Métodos e procedimentos armazenados de banco de dados LINQ to SQL  
  O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a procedimentos armazenados e a funções definidas pelo usuário. No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], você mapeia essas abstrações definidas pelo banco de dados para objetos de cliente para que você possa acessá-las de forma fortemente tipada do código do cliente. As assinaturas de método são a mais possível similares às assinaturas dos procedimentos e das funções definidas no banco de dados. É possível usar o IntelliSense para descobrir esses métodos.  
@@ -78,9 +78,9 @@ No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], um model
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Para obter mais informações, consulte as seções atributo de função, atributo de procedimento armazenado e atributo de parâmetro de [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) e [procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ Para obter mais informações, consulte as seções atributo de função, atributo de procedimento armazenado e atributo de parâmetro de [mapeamento baseado em atributo](attribute-based-mapping.md) e [procedimentos armazenados](stored-procedures.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Mapeamento baseado em atributos](attribute-based-mapping.md)
+- [Informações gerais](background-information.md)

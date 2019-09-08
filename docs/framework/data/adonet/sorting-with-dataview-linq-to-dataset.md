@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918188"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782716"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Classificando com DataView (LINQ to DataSet)
 A capacidade de classificar dados com base em critérios específicos e apresentá-los para um cliente através de um controle da interface do usuário é um aspecto importante da vinculação de dados. O objeto <xref:System.Data.DataView> fornece várias maneiras de classificar dados e retornar linhas de dados ordenadas por critérios específicos. Além de seus recursos de classificação baseados em cadeia de <xref:System.Data.DataView> caracteres, o também permite [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] que você use expressões para os critérios de classificação. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]as expressões permitem operações de classificação muito mais complexas e poderosas do que a classificação baseada em cadeia de caracteres. Este tópico descreve as duas abordagens de classificação usando <xref:System.Data.DataView>.  
@@ -20,7 +20,7 @@ A capacidade de classificar dados com base em critérios específicos e apresent
   
  A classificação baseada em expressão oferece uma classificação mais avançada e complexa do que a classificação mais simples baseada em cadeia de caracteres. Observe que a classificação baseada em cadeia de caracteres e a classificação baseada em expressão são mutuamente excludentes. Se a <xref:System.Data.DataView.Sort%2A> baseada em cadeia de caracteres for definida após <xref:System.Data.DataView> ser criado a partir de uma consulta, o filtro baseado em expressão inferido da consulta será limpo e não poderá ser redefinido.  
   
- O índice de um <xref:System.Data.DataView> é compilado quando <xref:System.Data.DataView> é criado e quando qualquer informação de classificação ou de filtragem é modificada. Você Obtém o melhor desempenho fornecendo critérios de classificação na consulta de LINQ to DataSet da qual o <xref:System.Data.DataView> é criado e não modificando as informações de classificação, mais tarde. Para obter mais informações, consulte [DataView performance](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ O índice de um <xref:System.Data.DataView> é compilado quando <xref:System.Data.DataView> é criado e quando qualquer informação de classificação ou de filtragem é modificada. Você Obtém o melhor desempenho fornecendo critérios de classificação na consulta de LINQ to DataSet da qual o <xref:System.Data.DataView> é criado e não modificando as informações de classificação, mais tarde. Para obter mais informações, consulte [DataView performance](dataview-performance.md).  
   
 > [!NOTE]
 > Na maioria dos casos, as expressões usadas para classificação não devem ter efeitos colaterais e devem ser determinísticas. Além disso, as expressões não devem conter lógica que dependa de um número definido de execuções, pois as operações de classificação podem ser executadas qualquer número de vezes.  
@@ -48,7 +48,7 @@ A capacidade de classificar dados com base em critérios específicos e apresent
   
  As funcionalidades de classificação baseada em cadeia de caracteres e de classificação baseada em expressão são mutuamente excludentes. A definição da propriedade <xref:System.Data.DataView.Sort%2A> limpa a classificação baseada em expressão herdada da consulta a partir da qual o objeto <xref:System.Data.DataView> foi criado.  
   
- Para obter mais informações sobre filtragem baseada <xref:System.Data.DataView.Sort%2A> em cadeia de caracteres, consulte [classificando e Filtrando dados](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Para obter mais informações sobre filtragem baseada <xref:System.Data.DataView.Sort%2A> em cadeia de caracteres, consulte [classificando e Filtrando dados](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir cria um <xref:System.Data.DataView> a partir da tabela de contatos e classifica as linhas por sobrenome em ordem decrescente e depois por nome em ordem crescente:  
@@ -83,6 +83,6 @@ A capacidade de classificar dados com base em critérios específicos e apresent
   
 ## <a name="see-also"></a>Consulte também
 
-- [Associação de dados e LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtrando com DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Associação de dados e LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Filtrando com DataView](filtering-with-dataview-linq-to-dataset.md)
 - [Classificando Dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

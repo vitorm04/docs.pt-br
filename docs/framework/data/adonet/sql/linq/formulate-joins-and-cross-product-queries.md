@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002a644ff5d48b25351228dcd74330707491d6c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032598"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782086"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Formular junções e consultas entre produtos
 Os exemplos a seguir mostram como combinar resultados de várias tabelas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira na `From` cláusula no Visual Basic (`from` cláusula C#) para selecionar todos os pedidos de clientes em Londres.  
+ O exemplo a seguir usa a `From` navegação de chave estrangeira na cláusula em Visual Basic ( C#`from` cláusula in) para selecionar todos os pedidos de clientes em Londres.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira na `Where` cláusula no Visual Basic (`where` cláusula C#) para filtrar de indisponibilidade de estoque `Products` cujo `Supplier` está nos Estados Unidos.  
+ O exemplo a seguir usa a navegação de chave `Where` estrangeira na cláusula em`where` Visual Basic ( C#cláusula in) para filtrar por indisponibilidade de `Products` estoque `Supplier` cujo está na Estados Unidos.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira na `From` cláusula no Visual Basic (`from` cláusula C#) para filtrar funcionários em Seattle e listar seus territórios.  
+ O exemplo a seguir usa a `From` navegação de chave estrangeira na cláusula em Visual Basic ( C#`from` cláusula in) para filtrar os funcionários em Seattle e listar seus territórios.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a navegação de chave estrangeira na `Select` cláusula no Visual Basic (`select` cláusula C#) para filtrar pares de funcionários onde um funcionário se reporta ao outro e onde ambos os funcionários são da mesma `City`.  
+ O exemplo a seguir usa a `Select` navegação de chave estrangeira na cláusula em Visual Basic ( C# `City``select` cláusula in) para filtrar pares de funcionários em que um funcionário se reporta ao outro e onde ambos os funcionários são do mesmo.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de Visual Basic a seguir procura todos os clientes e pedidos, torna-se de que os pedidos correspondem aos clientes e garante que, para cada cliente na lista, é fornecido um nome de contato.  
+ O exemplo a seguir Visual Basic procura todos os clientes e pedidos, garante que os pedidos sejam correspondidos aos clientes e garante que, para cada cliente nessa lista, um nome de contato seja fornecido.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -81,4 +81,4 @@ Os exemplos a seguir mostram como combinar resultados de várias tabelas.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Exemplos de consulta](query-examples.md)

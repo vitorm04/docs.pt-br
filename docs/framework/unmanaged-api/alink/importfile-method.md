@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d76e9b4e18b46d0b546d6c66fa572c35cb9fcefe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777066"
 ---
 # <a name="importfile-method"></a>Método ImportFile
-Importa os assemblies e módulos não associados.  
+Importa assemblies e módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,28 +44,28 @@ HRESULT ImportFile(
  Nome totalmente qualificado do arquivo a ser importado.  
   
  `pszTargetName`  
- Nome de arquivo de saída opcional que pode ser usado para renomear o arquivo conforme ele é vinculado no assembly.  
+ Nome de arquivo de saída opcional que pode ser usado para renomear o arquivo, pois ele está vinculado ao assembly.  
   
  `fSmartImport`  
- Se for TRUE, ImportTypes é usado, caso contrário, a importação deve ser executada manualmente.  
+ Se for TRUE, os irporttypes serão usados; caso contrário, a importação deverá ser executada manualmente.  
   
  `pImportToken`  
- Ponteiro para o token onde uma identificação exclusiva do arquivo será armazenada. O arquivo pode ser um assembly ou um arquivo.  
+ Ponteiro para o token em que uma ID de arquivo exclusiva será armazenada. O arquivo pode ser um assembly ou um arquivo.  
   
  `ppAssemblyScope`  
- Recebe um ponteiro para [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). Pode ser NULL se o arquivo não é um assembly.  
+ Recebe o ponteiro para a [interface IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md). Poderá ser NULL se o arquivo não for um assembly.  
   
  `pdwCountOfScopes`  
  Ponteiro para a contagem de arquivos e/ou escopos que foram importados.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink](ialink-interface.md)
+- [Interface IALink2](ialink2-interface.md)
+- [API do ALink](index.md)

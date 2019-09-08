@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363848"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795611"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Como: importar declarações de política personalizadas
 As declarações de política descrevem os recursos e os requisitos de um ponto de extremidade de serviço.  Os aplicativos cliente podem usar declarações de política em metadados de serviço para configurar a associação de cliente ou para personalizar o contrato de serviço para um ponto de extremidade de serviço.  
@@ -25,7 +25,7 @@ As declarações de política descrevem os recursos e os requisitos de um ponto 
   
 3. Usando um arquivo de configuração. Consulte os procedimentos a seguir.  
   
-4. Usando um arquivo de configuração com a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Consulte os procedimentos a seguir.  
+4. Usando um arquivo de configuração com a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Consulte os procedimentos a seguir.  
   
 5. Inserindo programaticamente o importador de política. Consulte os procedimentos a seguir.  
   
@@ -44,7 +44,7 @@ As declarações de política descrevem os recursos e os requisitos de um ponto 
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Para inserir o importador de política personalizada no sistema de metadados usando um arquivo de configuração  
   
-1. Adicione o tipo de importador ao `<extensions>` elemento dentro do elemento de [ \<> policyImporters](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) no arquivo de configuração do cliente.  
+1. Adicione o tipo de importador ao `<extensions>` elemento dentro do elemento de [ \<> policyImporters](../../configure-apps/file-schema/wcf/policyimporters.md) no arquivo de configuração do cliente.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ As declarações de política descrevem os recursos e os requisitos de um ponto 
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Para inserir o importador de política personalizada no sistema de metadados usando svcutil. exe  
   
-1. Adicione o tipo de importador ao `<extensions>` elemento dentro do elemento de [ \<> policyImporters](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) no arquivo de configuração svcutil. exe. config. Você também pode apontar o SvcUtil. exe para carregar os tipos de importador de política registrados em um arquivo de `/svcutilConfig` configuração diferente usando a opção.  
+1. Adicione o tipo de importador ao `<extensions>` elemento dentro do elemento de [ \<> policyImporters](../../configure-apps/file-schema/wcf/policyimporters.md) no arquivo de configuração svcutil. exe. config. Você também pode apontar o SvcUtil. exe para carregar os tipos de importador de política registrados em um arquivo de `/svcutilConfig` configuração diferente usando a opção.  
   
-2. Use a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para importar os metadados e o importador é invocado automaticamente.  
+2. Use a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para importar os metadados e o importador é invocado automaticamente.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Para inserir o importador de política personalizada no sistema de metadados de forma programática  
   
@@ -68,4 +68,4 @@ As declarações de política descrevem os recursos e os requisitos de um ponto 
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [Estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Estendendo o sistema de metadados](extending-the-metadata-system.md)

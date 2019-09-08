@@ -2,43 +2,43 @@
 title: Procedimentos armazenados
 ms.date: 03/30/2017
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-ms.openlocfilehash: b06dc19aa8b767da6a1c6b00bd5b465465db6060
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80ea105eef33ebb2a0e52d91a631258400ea3dff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742840"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792486"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa métodos no seu modelo de objeto para representar procedimentos armazenados no banco de dados. Você designa métodos como procedimentos armazenados aplicando o atributo <xref:System.Data.Linq.Mapping.FunctionAttribute> e, quando for necessário, o atributo <xref:System.Data.Linq.Mapping.ParameterAttribute>. Para obter mais informações, consulte [o LINQ no modelo de objeto do SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]usa métodos em seu modelo de objeto para representar procedimentos armazenados no banco de dados. Você designa métodos como procedimentos armazenados aplicando o atributo <xref:System.Data.Linq.Mapping.FunctionAttribute> e, quando for necessário, o atributo <xref:System.Data.Linq.Mapping.ParameterAttribute>. Para obter mais informações, consulte [o modelo de objeto LINQ to SQL](the-linq-to-sql-object-model.md).  
   
- Os desenvolvedores que usam o Visual Studio normalmente usaria o Object Relational Designer para mapear procedimentos armazenados. Os tópicos nesta seção de apresentação como formar e chamar esses métodos em seu aplicativo se você escreve o código que você mesmo.  
+ Os desenvolvedores que usam o Visual Studio normalmente usariam o Object Relational Designer para mapear procedimentos armazenados. Os tópicos nesta seção de apresentação como formar e chamar esses métodos em seu aplicativo se você escreve o código que você mesmo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Retornar conjuntos de linhas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  
+ [Como: Retornar conjuntos de linhas](how-to-return-rowsets.md)  
  Descreve como retornar linhas de dados e mostra como usar um parâmetro de entrada.  
   
- [Como: Usar procedimentos armazenados que usam parâmetros](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-that-take-parameters.md)  
+ [Como: Usar procedimentos armazenados que usam parâmetros](how-to-use-stored-procedures-that-take-parameters.md)  
  Descreve como usar os parâmetros de entrada e saída.  
   
- [Como: Use os procedimentos armazenados mapeados para várias formas de resultado](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)  
+ [Como: Usar procedimentos armazenados mapeados para várias formas de resultado](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)  
  Descreve como fornecer para retornos de várias formas no mesmo procedimento armazenado.  
   
- [Como: Use os procedimentos armazenados mapeados para formas sequenciais de resultado](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)  
+ [Como: Usar procedimentos armazenados mapeados para formas de resultados sequenciais](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)  
  Descreve como fornecer para várias formas onde a sequência de retorno é conhecida.  
   
- [Personalizando operações usando procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)  
+ [Personalizando operações usando procedimentos armazenados](customizing-operations-by-using-stored-procedures.md)  
  Descreve como usar procedimentos armazenados para implementar operações de inserção, atualização e exclusão.  
   
- [Personalizando operações usando procedimentos armazenados exclusivamente](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures-exclusively.md)  
+ [Personalizando operações usando procedimentos armazenados exclusivamente](customizing-operations-by-using-stored-procedures-exclusively.md)  
  Descreve como usar nada além de procedimentos armazenados para implementar operações de inserção, atualização e exclusão.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Guia de Programação](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Guia de Programação](programming-guide.md)  
  Fornece informações sobre como criar e usar seu modelo de objeto do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Passo a passo: Usando somente procedimentos armazenados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)  
+ [Passo a passo: Usando apenas procedimentos armazenados (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)  
  Inclui os procedimentos que ilustram como usar procedimentos armazenados no Visual Basic.  
   
- [Passo a passo: Usando somente procedimentos armazenados (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
+ [Passo a passo: Usando apenas procedimentos armazenados (C#)](walkthrough-using-only-stored-procedures-csharp.md)  
  Inclui os procedimentos que ilustram como usar procedimentos armazenados no C#.

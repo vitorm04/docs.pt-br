@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b52d3af38bd09ce5864c25d27e148dbd7f4639b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778487"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795450"
 ---
 # <a name="compareassemblyidentity-function"></a>Função CompareAssemblyIdentity
-Compara duas identidades de assembly para determinar se eles são equivalentes.  
+Compara duas identidades de assembly para determinar se elas são equivalentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,49 +42,49 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="parameters"></a>Parâmetros  
  `pwzAssemblyIdentity1`  
- [in] A identidade textual do assembly primeiro na comparação.  
+ no A identidade textual do primeiro assembly na comparação.  
   
  `fUnified1`  
- [in] Um sinalizador booleano que indica a Unificação especificado pelo usuário para `pwzAssemblyIdentity1`.  
+ no Um sinalizador booliano que indica a unificação especificada `pwzAssemblyIdentity1`pelo usuário para.  
   
  `pwzAssemblyIdentity2`  
- [in] A identidade textual do segundo assembly na comparação.  
+ no A identidade textual do segundo assembly na comparação.  
   
  `fUnified2`  
- [in] Um sinalizador booleano que indica a Unificação especificado pelo usuário para `pwzAssemblyIdentity2`.  
+ no Um sinalizador booliano que indica a unificação especificada `pwzAssemblyIdentity2`pelo usuário para.  
   
  `pfEquivalent`  
- [out] Um sinalizador booliano que indica se os dois assemblies são equivalentes.  
+ fora Um sinalizador booliano que indica se os dois assemblies são equivalentes.  
   
  `pResult`  
- [out] Uma [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) enumeração que contém informações detalhadas sobre a comparação.  
+ fora Uma enumeração [AssemblyComparisonResult](assemblycomparisonresult-enumeration.md) que contém informações detalhadas sobre a comparação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `pfEquivalent` Retorna um valor booliano que indica se os dois assemblies são equivalentes. `pResult` Retorna um dos `AssemblyComparisonResult` valores, para fornecer um motivo mais detalhado para o valor de `pfEquivalent`.  
+ `pfEquivalent`Retorna um valor booliano que indica se os dois assemblies são equivalentes. `pResult`Retorna um dos `AssemblyComparisonResult` valores para fornecer um motivo mais detalhado para o valor de `pfEquivalent`.  
   
 ## <a name="remarks"></a>Comentários  
- `CompareAssemblyIdentity` verifica se `pwzAssemblyIdentity1` e `pwzAssemblyIdentity2` são equivalentes. `pfEquivalent` é definido como `true` em uma ou mais das seguintes condições:  
+ `CompareAssemblyIdentity`verifica se `pwzAssemblyIdentity1` e `pwzAssemblyIdentity2` são equivalentes. `pfEquivalent`é definido como `true` sob uma ou mais das seguintes condições:  
   
-- As identidades de duas assembly são equivalentes. Para assemblies fortemente nomeados, equivalência requer o nome do assembly, versão, token de chave pública e cultura sejam idênticos. Para assemblies de nomeados simples, a equivalência requer uma correspondência no nome do assembly e cultura.  
+- As duas identidades de assembly são equivalentes. Para assemblies com nome forte, a equivalência exige que o nome do assembly, a versão, o token de chave pública e a cultura sejam idênticos. Para apenas assemblies nomeados, a equivalência requer uma correspondência no nome do assembly e na cultura.  
   
-- Ambas as identidades de assembly se referem aos assemblies que são executados no .NET Framework. Essa condição retorna `true` mesmo se os números de versão do assembly não coincidem.  
+- Ambas as identidades do assembly se referem a assemblies que são executados no .NET Framework. Essa condição retorna `true` mesmo que os números de versão do assembly não coincidam.  
   
-- Os dois assemblies não são assemblies gerenciados, mas `fUnified1` ou `fUnified2` foi definida como `true`.  
+- Os dois assemblies não são assemblies gerenciados, `fUnified1` mas `fUnified2` ou foram definidos `true`como.  
   
- O `fUnified` sinalizador indica que todos os números de versão até o número de versão do assembly de nome forte são considerados equivalentes para o assembly de nome forte. Por exemplo, se o valor de `pwzAssemblyIndentity1` é "MyAssembly, versão = 3.0.0.0, culture = neutral, publicKeyToken =..." e o valor da `fUnified1` é `true`, isso indica que todas as versões de MyAssembly da versão de 0.0.0.0 à 3.0.0.0 devem ser tratados como equivalentes. Nesse caso, se `pwzAssemblyIndentity2` refere-se ao mesmo assembly que `pwzAssemblyIndentity1`, exceto que ele tem um número de versão menor `pfEquivalent` é definido como `true`. Se `pwzAssemblyIdentity2` refere-se a um número de versão superior `pfEquivalent` é definido como `true` somente se o valor de `fUnified2` é `true`.  
+ O `fUnified` sinalizador indica que todos os números de versão até o número de versão do assembly com nome forte são considerados equivalentes ao assembly com nome forte. Por exemplo, se o valor de `pwzAssemblyIndentity1` for "MyAssembly, Version = 3.0.0.0, Culture = neutral, PublicKeyToken =...." e o valor de `fUnified1` for `true`, isso indica que todas as versões de MyAssembly da versão 0.0.0.0 para 3.0.0.0 devem ser Tratado como equivalente. `pwzAssemblyIndentity2` Nesse caso, se se referir ao mesmo assembly como `pwzAssemblyIndentity1`, exceto que ele tem um número de versão inferior, `pfEquivalent` será definido como `true`. Se `pwzAssemblyIdentity2` se referir a um número de `pfEquivalent` versão superior, `true` será definido como somente se `fUnified2` o `true`valor de for.  
   
- O `pResult` parâmetro inclui informações específicas sobre por que os dois assemblies são considerados equivalentes ou não equivalentes. Para obter mais informações, consulte [enumeração AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
+ O `pResult` parâmetro inclui informações específicas sobre por que os dois assemblies são considerados equivalentes ou não equivalentes. Para obter mais informações, consulte [Enumeração AssemblyComparisonResult](assemblycomparisonresult-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Enumeração AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+- [Funções estáticas globais de fusão](fusion-global-static-functions.md)
+- [Enumeração AssemblyComparisonResult](assemblycomparisonresult-enumeration.md)

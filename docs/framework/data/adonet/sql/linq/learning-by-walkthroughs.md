@@ -2,12 +2,12 @@
 title: Aprendendo com explicações passo a passo
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781320"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprendendo com explicações passo a passo
 A [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação fornece vários passo a passos. Este tópico aborda alguns problemas gerais da explicação passo a passo (incluindo solução de problemas) e fornece links para várias explicações passo a passo para iniciantes aprenderem sobre o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -22,22 +22,22 @@ A [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
   
 |Objetivo|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Criar uma classe de entidade e executar uma consulta simples.|[Passo a passo: Modelo de objeto simples e consulta (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Passo a passo: Modelo de objeto simples e consultaC#()](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|Adicionar uma segunda classe e executar uma consulta mais complexa.<br /><br /> Requer a conclusão do passo a passo anterior.|[Passo a passo: Consultando entre relações (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Passo a passo: Consultando entre relações (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Adicionar, alterar e excluir itens no banco de dados.|[Passo a passo: Manipulando dados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Passo a passo: Manipulando dados (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Usar procedimentos armazenados.|[Passo a passo: Usando apenas procedimentos armazenados (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Passo a passo: Usando apenas procedimentos armazenados (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Criar uma classe de entidade e executar uma consulta simples.|[Passo a passo: Modelo de objeto simples e consulta (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Passo a passo: Modelo de objeto simples e consultaC#()](walkthrough-simple-object-model-and-query-csharp.md)|  
+|Adicionar uma segunda classe e executar uma consulta mais complexa.<br /><br /> Requer a conclusão do passo a passo anterior.|[Passo a passo: Consultando entre relações (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Passo a passo: Consultando entre relações (C#)](walkthrough-querying-across-relationships-csharp.md)|  
+|Adicionar, alterar e excluir itens no banco de dados.|[Passo a passo: Manipulando dados (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[Passo a passo: Manipulando dados (C#)](walkthrough-manipulating-data-csharp.md)|  
+|Usar procedimentos armazenados.|[Passo a passo: Usando apenas procedimentos armazenados (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[Passo a passo: Usando apenas procedimentos armazenados (C#)](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Geral  
  Em geral, as seguintes informações aplicam-se a essas explicações passo a passo:  
   
 - Ambiente Cada [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] instrução usa o Visual Studio como seu IDE (ambiente de desenvolvimento integrado).  
   
-- Mecanismos SQL: Essas instruções são escritas para serem implementadas usando SQL Server Express. Se você não tiver o SQL Server Express, poderá baixá-lo gratuitamente. Para obter mais informações, consulte [baixar bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- Mecanismos SQL: Essas instruções são escritas para serem implementadas usando SQL Server Express. Se você não tiver o SQL Server Express, poderá baixá-lo gratuitamente. Para obter mais informações, consulte [baixar bancos de dados de exemplo](downloading-sample-databases.md).  
   
     > [!NOTE]
-    > As explicações passo a passo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usam um nome de arquivo como uma cadeia de conexão. Simplesmente especificar um nome de arquivo é uma conveniência que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece para usuários do SQL Server Express. Sempre preste atenção aos problemas de segurança. Para obter mais informações, consulte [segurança em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > As explicações passo a passo do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usam um nome de arquivo como uma cadeia de conexão. Simplesmente especificar um nome de arquivo é uma conveniência que o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornece para usuários do SQL Server Express. Sempre preste atenção aos problemas de segurança. Para obter mais informações, consulte [segurança em LINQ to SQL](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]os passo a passos normalmente exigem o banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixar bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]os passo a passos normalmente exigem o banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixar bancos de dados de exemplo](downloading-sample-databases.md).  
   
 - As caixas de diálogo e os comandos de menu que você vê nos passo a passos podem ser diferentes daqueles descritos na ajuda, dependendo de suas configurações ativas ou da edição do Visual Studio. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -66,13 +66,13 @@ A [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
      Se você fizer uma alteração, clique em **reiniciar** para reiniciar o serviço.  
   
 ### <a name="protocols"></a>Protocolos  
- Às vezes, os protocolos podem não ser definidos corretamente para que seu aplicativo acesse o banco de dados. Por exemplo, o protocolo de pipes nomeados, que é necessário para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]orientações no, não está habilitado por padrão.  
+ Às vezes, os protocolos podem não ser definidos corretamente para que seu aplicativo acesse o banco de dados. Por exemplo, o protocolo de **pipes nomeados** , que é necessário para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]orientações no, não está habilitado por padrão.  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Para habilitar o protocolo Pipes Nomeados  
   
 1. No painel esquerdo da **SQL Server Configuration Manager**, expanda **SQL Server configuração de rede 2005**e clique em **protocolos para SQLExpress**.  
   
-2. No painel direito, verifique se o protocolo **pipes nomeados** está habilitado. Se não estiver, clique com o botão direito do mouse em pipes de **nome** e clique em **habilitar**.  
+2. No painel direito, verifique se o protocolo **pipes nomeados** está habilitado. Se não estiver, clique com o botão direito do mouse em **pipes de nome** e clique em **habilitar**.  
   
      Você precisará parar e reiniciar o serviço. Siga as etapas no próximo bloco.  
   
@@ -89,4 +89,4 @@ A [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta�
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Introdução](getting-started.md)

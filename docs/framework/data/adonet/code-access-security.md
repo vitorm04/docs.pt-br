@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948258"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786862"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -23,7 +23,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
  O CLR permite que o código realize apenas as operações que ele tem permissão para executar. O código pode solicitar permissões, e essas solicitações são respeitadas com base na política de segurança definida por um administrador.  
   
 > [!NOTE]
-> O código executado no CLR não pode conceder permissões a ele mesmo. Por exemplo, o código pode solicitar e receber menos permissões do que uma política de segurança permite, mas nunca receberá mais permissões. Ao conceder as permissões, comece com nenhuma permissão e depois adicione as permissões mais restritas para a tarefa específica que está sendo executada. Começar com todas as permissões e depois negar permissões individuais resulta em aplicativos inseguros que podem conter brechas de segurança não intencionais para a concessão de mais permissões do que as necessárias. Para obter mais informações, consulte Configurando [política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) e gerenciamento de [política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
+> O código executado no CLR não pode conceder permissões a ele mesmo. Por exemplo, o código pode solicitar e receber menos permissões do que uma política de segurança permite, mas nunca receberá mais permissões. Ao conceder as permissões, comece com nenhuma permissão e depois adicione as permissões mais restritas para a tarefa específica que está sendo executada. Começar com todas as permissões e depois negar permissões individuais resulta em aplicativos inseguros que podem conter brechas de segurança não intencionais para a concessão de mais permissões do que as necessárias. Para obter mais informações, consulte [Configurando política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) e [Gerenciamento de política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Existem três tipos de permissões de acesso de código:  
   
@@ -47,15 +47,15 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
   
  O CLR usa permissões para implementar seu mecanismo de imposição de restrições em código gerenciado. As permissões de segurança baseada em função fornecem um mecanismo para descobrir se um usuário (ou o agente que atua em nome do usuário) tem uma identidade em particular ou é membro de uma função especificada. Para obter mais informações, consulte [permissões de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- Dependendo do tipo de aplicativo que você está criando, você também deve considerar implementar as permissões baseadas em função no banco de dados. Para obter mais informações sobre a segurança baseada em funções no SQL Server, consulte [segurança do SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Dependendo do tipo de aplicativo que você está criando, você também deve considerar implementar as permissões baseadas em função no banco de dados. Para obter mais informações sobre a segurança baseada em funções no SQL Server, consulte [segurança do SQL Server](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblies  
- Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo .NET Framework. Um assembly fornece uma coleção de tipos e recursos que são criados para trabalhar em conjunto e formar uma unidade lógica de funcionalidade. Para o CLR, um tipo não existe fora do contexto de um assembly. Para obter mais informações sobre como criar e implantar assemblies, consulte [programação com assemblies](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
+ Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo .NET Framework. Um assembly fornece uma coleção de tipos e recursos que são criados para trabalhar em conjunto e formar uma unidade lógica de funcionalidade. Para o CLR, um tipo não existe fora do contexto de um assembly. Para obter mais informações sobre como criar e implantar assemblies, consulte [programação com assemblies](../../app-domains/programming-with-assemblies.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assemblies de nomes fortes  
  Um nome forte, ou assinatura digital, consiste na identidade do assembly, que inclui seu nome de texto simples, número de versão e informações de cultura (se fornecidas), além de uma chave pública e uma assinatura digital. A assinatura digital é gerada a partir de um arquivo de assembly usando a chave privada correspondente. O arquivo do assembly inclui o manifesto do assembly, o qual contém os nomes e os hashes de todos os arquivos que compõem o assembly.  
   
- Um assembly de nome forte oferece a um aplicativo ou componente uma identidade exclusiva que outro software pode usar para se referir a ele explicitamente. O nome forte impede que os assemblies sejam enganados por um assembly que contém código hostil. O nome forte também garante a consistência entre versões diferentes de um componente. Você deve dar nomes fortes aos assemblies que serão implantados no GAC (cache de assembly global). Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Um assembly de nome forte oferece a um aplicativo ou componente uma identidade exclusiva que outro software pode usar para se referir a ele explicitamente. O nome forte impede que os assemblies sejam enganados por um assembly que contém código hostil. O nome forte também garante a consistência entre versões diferentes de um componente. Você deve dar nomes fortes aos assemblies que serão implantados no GAC (cache de assembly global). Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Confiança parcial no ADO.NET 2.0  
  No ADO.NET 2.0, o Provedor de Dados .NET Framework para SQL Server, o Provedor de Dados .NET Framework para OLE DB, o Provedor de Dados .NET Framework para ODBC e o Provedor de Dados .NET Framework para Oracle podem agora ser todos executados em ambientes parcialmente confiáveis. Em versões anteriores do .NET Framework, somente <xref:System.Data.SqlClient> tinha suporte em aplicativos com confiança parcial.  
@@ -78,7 +78,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 |`Unrestricted`|Indica se a permissão irrestrita ao recurso é declarada. Herdada de <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Sintaxe de ConnectionString  
- O exemplo a seguir demonstra como usar o elemento `connectionStrings` de um arquivo de configuração para permitir que somente uma cadeia de conexão específica seja usada. Consulte [cadeias de conexão](../../../../docs/framework/data/adonet/connection-strings.md) para obter mais informações sobre como armazenar e recuperar cadeias de conexão de arquivos de configuração.  
+ O exemplo a seguir demonstra como usar o elemento `connectionStrings` de um arquivo de configuração para permitir que somente uma cadeia de conexão específica seja usada. Consulte [cadeias de conexão](connection-strings.md) para obter mais informações sobre como armazenar e recuperar cadeias de conexão de arquivos de configuração.  
   
 ```xml  
 <connectionStrings>  
@@ -136,10 +136,10 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Habilitando a confiança parcial com um conjunto de permissões personalizado  
- Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões para o código que tem <xref:System.Security.Policy.Zone> um `LocalIntranet`do, um administrador do sistema pode copiar o conjunto `LocalIntranet`de permissões para, renomeá-lo como <xref:System.Data.SqlClient> "CustomLocalIntranet", adicionar as permissões, importar o conjunto de permissões CustomLocalIntranet usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)e defina o `LocalIntranet_Zone` conjunto de permissões de como CustomLocalIntranet.  
+ Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões para o código que tem <xref:System.Security.Policy.Zone> um `LocalIntranet`do, um administrador do sistema pode copiar o conjunto `LocalIntranet`de permissões para, renomeá-lo como <xref:System.Data.SqlClient> "CustomLocalIntranet", adicionar as permissões, importar o conjunto de permissões CustomLocalIntranet usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md)e defina o `LocalIntranet_Zone` conjunto de permissões de como CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permissões de exemplo  
- A seguir está um conjunto de permissões de exemplo para o Provedor de Dados .NET Framework para SQL Server em um cenário parcialmente confiável. Para obter informações sobre como criar conjuntos de permissões personalizados, consulte Configurando [conjuntos de permissões usando Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
+ A seguir está um conjunto de permissões de exemplo para o Provedor de Dados .NET Framework para SQL Server em um cenário parcialmente confiável. Para obter informações sobre como criar conjuntos de permissões personalizados, consulte [Configurando conjuntos de permissões usando Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidade com código não gerenciado  
- O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Windows são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../../docs/framework/interop/index.md).  
+ O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Windows são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../interop/index.md).  
   
- O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte interoperabilidade [com avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade com avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Segurança em código nativo e .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Segurança baseada em Função](../../../standard/security/role-based-security.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

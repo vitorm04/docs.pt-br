@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 05f95a9c4f250100ca97e3ab52e4073d027df1b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db072692eba4044e854f25ff2c7f8c9960714018
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932189"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785117"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Adicionar restrições existentes a um DataSet
-O método **Fill** do **DataAdapter** preenche um <xref:System.Data.DataSet> somente com colunas de tabela e linhas de uma fonte de dados; embora as restrições sejam normalmente definidas pela fonte de dados, o método **Fill** não adiciona essas informações de esquema ao  **DataSet** por padrão. Para popular um **conjunto** de dados com informações de restrição de chave primária existentes de uma fonte, você pode chamar o método **FillSchema** do **DataAdapter**ou definir a propriedade **MissingSchemaAction** do **DataAdapter** para **AddWithKey** antes de chamar **Fill**. Isso garantirá que as restrições de chave primária no **DataSet** reflitam aquelas na fonte de dados. As informações de restrição de chave estrangeira não estão incluídas e devem ser criadas explicitamente, conforme mostrado em [restrições de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+O método **Fill** do **DataAdapter** preenche um <xref:System.Data.DataSet> somente com colunas de tabela e linhas de uma fonte de dados; embora as restrições sejam normalmente definidas pela fonte de dados, o método **Fill** não adiciona essas informações de esquema ao  **DataSet** por padrão. Para popular um **conjunto** de dados com informações de restrição de chave primária existentes de uma fonte, você pode chamar o método **FillSchema** do **DataAdapter**ou definir a propriedade **MissingSchemaAction** do **DataAdapter** para **AddWithKey** antes de chamar **Fill**. Isso garantirá que as restrições de chave primária no **DataSet** reflitam aquelas na fonte de dados. As informações de restrição de chave estrangeira não estão incluídas e devem ser criadas explicitamente, conforme mostrado em [restrições de DataTable](./dataset-datatable-dataview/datatable-constraints.md).  
   
  A adição de informações de esquema a um **conjunto** de dados antes de preenchê-lo com o data <xref:System.Data.DataTable> garante que as restrições de chave primária sejam incluídas com os objetos no **conjunto**. Como resultado, quando são feitas chamadas adicionais para preencher o **conjunto** de dados, as informações da coluna de chave primária são usadas para fazer a correspondência de novas linhas a partir da fonte com as linhas atuais em cada **DataTable**, e os dados atuais nas tabelas são substituídos pelos dados do fonte de dados. Sem as informações de esquema, as novas linhas da fonte de dados são acrescentadas ao **DataSet**, resultando em linhas duplicadas.  
   
 > [!NOTE]
-> Se uma coluna em uma fonte de dados for identificada como incrementação automática, o método **FillSchema** ou o método **Fill** com um **MissingSchemaAction** de **AddWithKey**, criará uma **DataColumn** com uma propriedade AutoIncrement Defina como `true`. No entanto, você precisará definir os valores **AutoIncrementStep** e **AutoIncrementSeed** por conta própria. Para obter mais informações sobre colunas de incrementação automática, consulte [criando colunas](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)de incremento automático.  
+> Se uma coluna em uma fonte de dados for identificada como incrementação automática, o método **FillSchema** ou o método **Fill** com um **MissingSchemaAction** de **AddWithKey**, criará uma **DataColumn** com uma propriedade **AutoIncrement** Defina como `true`. No entanto, você precisará definir os valores **AutoIncrementStep** e **AutoIncrementSeed** por conta própria. Para obter mais informações sobre colunas de incrementação automática, consulte [criando colunas de incremento](./dataset-datatable-dataview/creating-autoincrement-columns.md)automático.  
   
- O uso de **FillSchema** ou a definição de **MissingSchemaAction** como **AddWithKey** requer processamento extra na fonte de dados para determinar as informações da coluna de chave primária. Esse processamento adicional pode impedir o desempenho. Se você souber as informações de chave primária em tempo de design, recomendamos especificar explicitamente a coluna de chave primária ou as colunas para obter o desempenho ideal. Para obter informações sobre como definir explicitamente informações de chave primária para uma tabela, consulte [definindo chaves primárias](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ O uso de **FillSchema** ou a definição de **MissingSchemaAction** como **AddWithKey** requer processamento extra na fonte de dados para determinar as informações da coluna de chave primária. Esse processamento adicional pode impedir o desempenho. Se você souber as informações de chave primária em tempo de design, recomendamos especificar explicitamente a coluna de chave primária ou as colunas para obter o desempenho ideal. Para obter informações sobre como definir explicitamente informações de chave primária para uma tabela, consulte [definindo chaves primárias](./dataset-datatable-dataview/defining-primary-keys.md).  
   
  O exemplo de código a seguir mostra como adicionar informações de esquema a um **conjunto** de dados usando **FillSchema**.  
   
@@ -62,7 +62,7 @@ custAdapter.Fill(custDataSet, "Customers");
   
 ## <a name="see-also"></a>Consulte também
 
-- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [DataAdapters e DataReaders](dataadapters-and-datareaders.md)
+- [DataSets, DataTables, and DataViews](./dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

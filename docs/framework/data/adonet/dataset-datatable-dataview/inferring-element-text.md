@@ -2,15 +2,15 @@
 title: Inferir o texto do elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203533"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784547"
 ---
 # <a name="inferring-element-text"></a>Inferir o texto do elemento
-Se um elemento contiver texto e não tiver nenhum elemento filho a ser inferido como tabelas (como elementos com atributos ou elementos repetidos), uma nova coluna com o nome **TableName_Text** será adicionada à tabela inferida para o elemento. O texto contido no elemento será adicionado a uma linha na tabela e armazenado na nova coluna. A propriedade **ColumnMapping** da nova coluna será definida como MappingType **. simpleContent**.  
+Se um elemento contiver texto e não tiver nenhum elemento filho a ser inferido como tabelas (como elementos com atributos ou elementos repetidos), uma nova coluna com o nome **TableName_Text** será adicionada à tabela inferida para o elemento. O texto contido no elemento será adicionado a uma linha na tabela e armazenado na nova coluna. A propriedade **ColumnMapping** da nova coluna será definida como **MappingType. simpleContent**.  
   
  Por exemplo, considere o XML a seguir.  
   
@@ -20,7 +20,7 @@ Se um elemento contiver texto e não tiver nenhum elemento filho a ser inferido 
 </DocumentElement>  
 ```  
   
- O processo de inferência produzirá uma tabela chamada **Element1** com duas colunas: **attr1** e **Element1_Text**. A propriedade **ColumnMapping** da coluna **attr1** será definida como MappingType **. Attribute**. A propriedade **ColumnMapping** da coluna **Element1_Text** será definida como MappingType **. simpleContent**.  
+ O processo de inferência produzirá uma tabela chamada **Element1** com duas colunas: **attr1** e **Element1_Text**. A propriedade **ColumnMapping** da coluna **attr1** será definida como **MappingType. Attribute**. A propriedade **ColumnMapping** da coluna **Element1_Text** será definida como **MappingType. simpleContent**.  
   
  **DataSet** DocumentElement  
   
@@ -40,7 +40,7 @@ Se um elemento contiver texto e não tiver nenhum elemento filho a ser inferido 
 </Element1>  
 ```  
   
- O processo de inferência produzirá uma tabela chamada **Element1** com uma coluna chamada **ChildElement1**. O texto do elemento **ChildElement1** será incluído em uma linha na tabela. O outro texto será ignorado. A propriedade **ColumnMapping** da coluna **ChildElement1** será definida como MappingType **. Element**.  
+ O processo de inferência produzirá uma tabela chamada **Element1** com uma coluna chamada **ChildElement1**. O texto do elemento **ChildElement1** será incluído em uma linha na tabela. O outro texto será ignorado. A propriedade **ColumnMapping** da coluna **ChildElement1** será definida como **MappingType. Element**.  
   
  **DataSet** DocumentElement  
   
@@ -57,4 +57,4 @@ Se um elemento contiver texto e não tiver nenhum elemento filho a ser inferido 
 - [Carregando informações de esquema de conjunto de dados de XML](loading-dataset-schema-information-from-xml.md)
 - [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usando XML em um DataSet)
 - [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

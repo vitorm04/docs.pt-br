@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915047"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782182"
 ---
 # <a name="group-elements-in-a-sequence"></a>Agrupar os elementos em uma sequência
 O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma sequência. Os exemplos usam o base de dados Northwind.  
   
 > [!NOTE]
-> Valores nulos de coluna em consultas de <xref:System.Linq.Enumerable.GroupBy%2A> podem lançar as vezes <xref:System.InvalidOperationException>. Para obter mais informações, consulte a seção "GroupBy InvalidOperationException" de [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> Valores nulos de coluna em consultas de <xref:System.Linq.Enumerable.GroupBy%2A> podem lançar as vezes <xref:System.InvalidOperationException>. Para obter mais informações, consulte a seção "GroupBy InvalidOperationException" de [solução de problemas](troubleshooting.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir divide `Products` por `CategoryID`.  
@@ -74,5 +74,5 @@ O operador de <xref:System.Linq.Enumerable.GroupBy%2A> agrupa elementos de uma s
   
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Exemplos de consulta](query-examples.md)
+- [Downloading Sample Databases](downloading-sample-databases.md) (Baixando bancos de dados de amostra)

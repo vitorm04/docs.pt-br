@@ -2,12 +2,12 @@
 title: 'Passo a passo: consultar entre relações (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780993"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Passo a passo: consultar entre relações (C#)
 Este tutorial demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associações* para representar relações de chave estrangeira no banco de dados.  
@@ -17,7 +17,7 @@ Este tutorial demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../include
  Esse passo a passo foi escrito usando as configurações de desenvolvimento do Visual C#.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Você deve ter concluído [o passo a passos: Modelo de objeto simples e consultaC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)). Este passo a passo é baseado naquele, incluindo a presença do arquivo northwnd.mdf em c:\linqtest5.  
+ Você deve ter concluído [o passo a passos: Modelo de objeto simples e consultaC#(](walkthrough-simple-object-model-and-query-csharp.md)). Este passo a passo é baseado naquele, incluindo a presença do arquivo northwnd.mdf em c:\linqtest5.  
   
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em três tarefas principais:  
@@ -86,8 +86,8 @@ Este tutorial demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../include
 4. Pressione Enter na janela de Console para parar a depuração.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- O passo a seguir[(Walkthrough: A manipulação de dadosC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))) demonstra como manipular dados. Esse passo a passo não requer que você salve os dois tutoriais passo a passo desta série que você já concluiu.  
+ O passo a seguir[(Walkthrough: A manipulação de dadosC#(](walkthrough-manipulating-data-csharp.md))) demonstra como manipular dados. Esse passo a passo não requer que você salve os dois tutoriais passo a passo desta série que você já concluiu.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Aprendendo com explicações passo a passo](learning-by-walkthroughs.md)

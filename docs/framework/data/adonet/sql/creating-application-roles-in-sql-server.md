@@ -2,12 +2,12 @@
 title: Criando funções de aplicativo no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961175"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794280"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Criando funções de aplicativo no SQL Server
 As funções de aplicativo fornecem uma maneira de atribuir permissões para um aplicativo em vez de uma função ou usuário do banco de dados. Os usuários podem se conectar ao banco de dados, ativar a função de aplicativo e presumir as permissões concedidas ao aplicativo. As permissões concedidas para a função de aplicativo são impostas para a duração da conexão.  
@@ -47,9 +47,9 @@ As funções de aplicativo fornecem uma maneira de atribuir permissões para um 
   
  Você pode querer considerar as seguintes alternativas.  
   
-- Use a troca de contexto com a instrução EXECUTE AS com suas cláusulas NO REVERT e WITH COOKIE. Você pode criar uma conta de usuário em um banco de dados que não seja mapeado para um logon. Em seguida, você atribui permissões para essa conta. Usar EXECUTE AS a um usuário sem logon é mais seguro porque é baseado em permissão, não baseado em senha. Para obter mais informações, consulte [Personalizando permissões com representação em SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Use a troca de contexto com a instrução EXECUTE AS com suas cláusulas NO REVERT e WITH COOKIE. Você pode criar uma conta de usuário em um banco de dados que não seja mapeado para um logon. Em seguida, você atribui permissões para essa conta. Usar EXECUTE AS a um usuário sem logon é mais seguro porque é baseado em permissão, não baseado em senha. Para obter mais informações, consulte [Personalizando permissões com representação em SQL Server](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Assine procedimentos armazenados com certificados, concedendo permissão somente para executar os procedimentos. Para obter mais informações, consulte [assinando procedimentos armazenados em SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Assine procedimentos armazenados com certificados, concedendo permissão somente para executar os procedimentos. Para obter mais informações, consulte [assinando procedimentos armazenados em SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  
@@ -60,7 +60,7 @@ As funções de aplicativo fornecem uma maneira de atribuir permissões para um 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Visão geral de segurança do SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Visão geral de segurança do SQL Server](overview-of-sql-server-security.md)
+- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

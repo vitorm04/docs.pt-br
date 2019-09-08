@@ -2,24 +2,24 @@
 title: ProtocolStopFailure
 ms.date: 03/30/2017
 ms.assetid: 8b246f8f-eb0f-430b-a82b-3d55aad287a1
-ms.openlocfilehash: 1032305600526868fca5d2e1517238e3cabdc92b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9df41480d110ff4ba8066a85a9d1d5debe045900
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999018"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796149"
 ---
 # <a name="protocolstopfailure"></a>ProtocolStopFailure
-Id: 147  
+Sessão 147  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: TransactionBridge  
+ Categorias TransactionBridge  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que o serviço do protocolo WS-AT Falha ao parar. O evento lista o ID de protocolo, nome do protocolo, exceção, nome do processo e ID de processo.  
+ Esse evento indica que o serviço de protocolo WS-Atomic Transaction falhou ao parar. O evento lista a ID do protocolo, o nome do protocolo, a exceção, o nome do processo e a ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742244"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787657"
 ---
 # <a name="addimport-method"></a>Método AddImport
 Adiciona importações ao assembly.  
@@ -40,25 +40,25 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID exclusiva do assembly a ser aumentado.  
+ ID exclusiva do assembly a ser aumentada.  
   
  `ImportToken`  
- ID exclusiva, recuperados do [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), do arquivo a ser importado.  
+ ID exclusiva, recuperada do [Método ImportFile](importfile-method.md), do arquivo a ser importado.  
   
  `dwFlags`  
- Como sinalizadores de COM+ FileDef `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para [método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Sinalizadores de `ffContainsNoMetaData` FileDef com+, como `ffWriteable`e. `dwFlags`é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- Ponteiro para o token que recebe a ID para o arquivo resultante.  
+ Ponteiro para token que recebe a ID do arquivo resultante.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink](ialink-interface.md)
+- [Interface IALink2](ialink2-interface.md)
+- [API do ALink](index.md)

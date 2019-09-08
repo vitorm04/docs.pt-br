@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: dd4bca48c35b9b636a96fe5d4a724272abc4f71d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bde442e344ae8aa710d75c61d0957bff9264bf01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934397"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783538"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtendo um DbProviderFactory
 O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar informações sobre um provedor de dados para a classe <xref:System.Data.Common.DbProviderFactories>. Com base nessas informações, o método <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> cria uma fábrica de provedor fortemente tipada. Por exemplo, para criar <xref:System.Data.SqlClient.SqlClientFactory>, você pode passar para `GetFactory` uma cadeia de caracteres com o nome do provedor especificado como “System.Data.SqlClient”. Outra sobrecarga de `GetFactory` utiliza <xref:System.Data.DataRow>. Uma vez que você criar a fábrica de provedor, poderá usar seus métodos para criar objetos adicionais. Alguns dos métodos de `SqlClientFactory` incluem <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> e <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -34,7 +34,7 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
 </system.data>  
 ```  
   
- O atributo invariável identifica o provedor de dados subjacente. Essa sintaxe de nomenclatura de três partes também é usada na criação de uma nova fábrica e para identificar o provedor em um arquivo de configuração de aplicativo, de forma que o nome do provedor, juntamente com a cadeia de conexão associada, possa ser recuperado em tempo de execução.  
+ O atributo **invariável** identifica o provedor de dados subjacente. Essa sintaxe de nomenclatura de três partes também é usada na criação de uma nova fábrica e para identificar o provedor em um arquivo de configuração de aplicativo, de forma que o nome do provedor, juntamente com a cadeia de conexão associada, possa ser recuperado em tempo de execução.  
   
 ## <a name="retrieving-provider-information"></a>Recuperando informações sobre provedor  
  Você pode recuperar informações sobre todos os provedores de dados instalados no computador local usando o método <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A>. Ele retorna um <xref:System.Data.DataTable> **DbProviderFactories** nomeado que contém as colunas descritas na tabela a seguir.  
@@ -57,7 +57,7 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>Usando arquivos de configuração de aplicativo para armazenar informações da fábrica  
  O padrão de design usado para trabalhar com fábricas envolve o armazenamento de informações de cadeia de conexão e provedor em um arquivo de configuração de aplicativo, como **app. config** para um aplicativo do Windows e **Web. config** para um aplicativo ASP.net.  
   
- O fragmento de arquivo de configuração a seguir demonstra como salvar duas cadeias de conexão nomeadas: “NorthwindSQL” para uma conexão com o banco de dados Northwind no SQL Server e “NorthwindAccess” para uma conexão com o banco de dados Northwind no Access/Jet. O nome invariável é usado para o atributo **ProviderName** .  
+ O fragmento de arquivo de configuração a seguir demonstra como salvar duas cadeias de conexão nomeadas: “NorthwindSQL” para uma conexão com o banco de dados Northwind no SQL Server e “NorthwindAccess” para uma conexão com o banco de dados Northwind no Access/Jet. O nome **invariável** é usado para o atributo **ProviderName** .  
   
 ```xml  
 <configuration>  
@@ -79,7 +79,7 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Recuperando uma cadeia de conexão por nome de provedor  
- Para criar uma fábrica de provedor, você deve fornecer uma cadeia de conexão e o nome do provedor. Este exemplo demonstra como recuperar uma cadeia de conexão de um arquivo de configuração de aplicativo passando o nome do provedor no formato invariável "*System. Data. ProviderName*". O código itera por <xref:System.Configuration.ConnectionStringSettingsCollection>. Ele retorna <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> em caso de êxito; caso contrário, `null` (`Nothing` no Visual Basic). Se houver várias entradas para um provedor, a primeira encontrada será retornada. Para obter mais informações e exemplos de como recuperar cadeias de conexão de arquivos de configuração, consulte cadeias de [conexão e arquivos de configuração](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Para criar uma fábrica de provedor, você deve fornecer uma cadeia de conexão e o nome do provedor. Este exemplo demonstra como recuperar uma cadeia de conexão de um arquivo de configuração de aplicativo passando o nome do provedor no formato invariável "*System. Data. ProviderName*". O código itera por <xref:System.Configuration.ConnectionStringSettingsCollection>. Ele retorna <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> em caso de êxito; caso contrário, `null` (`Nothing` no Visual Basic). Se houver várias entradas para um provedor, a primeira encontrada será retornada. Para obter mais informações e exemplos de como recuperar cadeias de conexão de arquivos de configuração, consulte [cadeias de conexão e arquivos de configuração](connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 > Uma referência a `System.Configuration.dll` é necessária para que o código seja executado.  
@@ -97,7 +97,7 @@ O processo de obter <xref:System.Data.Common.DbProviderFactory> envolve passar i
   
 ## <a name="see-also"></a>Consulte também
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Cadeia de Conexão](connection-strings.md)
 - [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

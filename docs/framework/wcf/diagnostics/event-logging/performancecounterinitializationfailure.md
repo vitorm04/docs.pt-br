@@ -2,24 +2,24 @@
 title: PerformanceCounterInitializationFailure
 ms.date: 03/30/2017
 ms.assetid: 85050ac6-7f7b-4dd3-8e5e-f5116d7c9906
-ms.openlocfilehash: d55e3ee9b6dac6fd22fc6685cfef9c33f513ed4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8a6ef03074be8aee45dc5804329b601ff914b9d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999117"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796220"
 ---
 # <a name="performancecounterinitializationfailure"></a>PerformanceCounterInitializationFailure
-Id: 149  
+Sessão 149  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: TransactionBridge  
+ Categorias TransactionBridge  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que um contador de desempenho falhou ao inicializar. O evento lista o nome do contador, a exceção, o nome do processo e a ID de processo.  
+ Esse evento indica que um contador de desempenho não foi inicializado. O evento lista o nome do contador, a exceção, o nome do processo e a ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

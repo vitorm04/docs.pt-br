@@ -2,26 +2,26 @@
 title: Visão geral do modelo de fábrica
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
-ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d50ddd3b02b66a5b2be41eaba5cf9a497b5f1b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879093"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795081"
 ---
 # <a name="factory-model-overview"></a>Visão geral do modelo de fábrica
-O ADO.NET 2.0 introduziu novas classes de base no <xref:System.Data.Common> namespace. As classes base são abstratas, o que significa que eles não podem ser instanciados diretamente. Eles incluem <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, e <xref:System.Data.Common.DbDataAdapter> e são compartilhadas por provedores de dados do .NET Framework, como <xref:System.Data.SqlClient> e <xref:System.Data.OleDb>. A adição de classes base simplifica a adição da funcionalidade para os provedores de dados .NET Framework sem ter que criar novas interfaces.  
+O <xref:System.Data.Common> ADO.NET 2,0 introduziu novas classes base no namespace. As classes base são abstratas, o que significa que elas não podem ser instanciadas diretamente. Elas incluem <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand> <xref:System.Data.SqlClient> e e são compartilhadas pelos provedores de dados .NET Framework, como e <xref:System.Data.OleDb>. <xref:System.Data.Common.DbDataAdapter> A adição de classes base simplifica a adição de funcionalidade aos provedores de dados de .NET Framework sem a necessidade de criar novas interfaces.  
   
- O ADO.NET 2.0 também introduziu classes base abstratas, que permitem que um desenvolvedor escreva o código de acesso a dados genéricos que não depende de um provedor de dados específico.  
+ O ADO.NET 2,0 também introduziu classes base abstratas, que permitem que um desenvolvedor escreva código de acesso a dados genérico que não depende de um provedor de dados específico.  
   
-## <a name="the-factory-design-pattern"></a>O padrão de Design de fábrica  
- O modelo de programação para escrever código independente de provedor baseia-se no uso do padrão de design "fábrica", que usa uma única API para acessar bancos de dados em vários provedores. Esse padrão foi apropriadamente denominado, pois ele chama o uso de um objeto especializado exclusivamente para criar outros objetos, assim como uma fábrica do mundo real. Para obter uma descrição mais detalhada do padrão de design fábrica, consulte [escrevendo genérico dados acesso código no ASP.NET 2.0 e o ADO.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=55915).
+## <a name="the-factory-design-pattern"></a>O padrão de design de fábrica  
+ O modelo de programação para escrever código independente de provedor é baseado no uso do padrão de design "Factory", que usa uma única API para acessar bancos de dados entre vários provedores. Esse padrão é adequadamente nomeado, pois chama o uso de um objeto especializado exclusivamente para criar outros objetos, muito parecido com uma fábrica do mundo real. Para obter uma descrição mais detalhada do padrão de design de fábrica, consulte [escrevendo código de acesso a dados genérico em ASP.NET 2,0 e ADO.NET 2,0](https://go.microsoft.com/fwlink/?LinkId=55915).
   
- Começando com o ADO.NET 2.0, o <xref:System.Data.Common.DbProviderFactories> classe fornece `static` (ou `Shared` no Visual Basic) métodos para criar um <xref:System.Data.Common.DbProviderFactory> instância. A instância, em seguida, retorna um objeto fortemente tipado correto com base em informações do provedor e a cadeia de conexão fornecida em tempo de execução.  
+ A partir do ADO.NET 2,0, <xref:System.Data.Common.DbProviderFactories> a classe `static` fornece ( `Shared` ou em Visual Basic) métodos para criar <xref:System.Data.Common.DbProviderFactory> uma instância. Em seguida, a instância retorna um objeto com rigidez de tipos correto com base nas informações do provedor e na cadeia de conexão fornecida em tempo de execução.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Obtendo um DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Modificando dados com um DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Obtendo um DbProviderFactory](obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand e DbException](dbconnection-dbcommand-and-dbexception.md)
+- [Modificando dados com um DbDataAdapter](modifying-data-with-a-dbdataadapter.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

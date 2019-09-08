@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636860"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799237"
 ---
 # <a name="gethashfromblob-function"></a>Função GetHashFromBlob
 
 Obtém um hash do assembly no endereço de memória especificado, usando o algoritmo de hash especificado.
 
-Essa função foi preterida. Use o [iclrstrongname:: Gethashfromblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) método em vez disso.
+Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,30 +45,30 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>Parâmetros
 
 `pbBlob`\
-[in] Um ponteiro para o endereço do bloco de memória a ser transformada em hash.
+no Um ponteiro para o endereço do bloco de memória com hash.
 
 `cchBlob`\
-[in] O comprimento, em bytes, do bloco de memória.
+no O comprimento, em bytes, do bloco de memória.
 
 `piHashAlg`\
-[no, out] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.
+[entrada, saída] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.
 
 `pbHash`\
-[out] O buffer de hash retornado.
+fora O buffer de hash retornado.
 
 `cchHash`\
-[in] O tamanho máximo solicitado de `pbHash`.
+no O tamanho máximo solicitado de `pbHash`.
 
 `pchHash`\
-[out] O tamanho, em bytes, do retornado `pbHash`.
+fora O tamanho, em bytes, do retornado `pbHash`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** StrongName.h
 
-**Biblioteca:** Incluído como um recurso em mscoree. dll
+**Biblioteca** Incluído como um recurso em MsCorEE. dll
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

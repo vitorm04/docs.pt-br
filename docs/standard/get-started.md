@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 50667465d25dc034b7f229716cbf327fb5f54977
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644682"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799311"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -33,4 +33,4 @@ Há várias formas para começar a trabalhar com o .NET. Como .NET é uma plataf
 
 ## <a name="get-started-using-net-core-on-docker"></a>Introdução ao uso do .NET Core no Docker
 
-[Introdução ao .NET e o Docker](../core/docker/intro-net-docker.md) mostra como você pode usar o .NET Core em contêineres do Docker do Windows.
+[Introdução ao .NET e o Docker](../core/docker/introduction.md) mostra como você pode usar o .NET Core em contêineres do Docker do Windows.

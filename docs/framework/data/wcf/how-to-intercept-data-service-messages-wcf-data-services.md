@@ -1,5 +1,5 @@
 ---
-title: 'Como: Interceptar mensagens de serviço de dados (WCF Data Services)'
+title: 'Como: Interceptar mensagens do serviço de dados (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: ad0673f72b1a81d6bcfaf0704ccd698eda7bb20c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936507"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780043"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Como: Interceptar mensagens de serviço de dados (WCF Data Services)
-Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode interceptar mensagens de solicitação de modo que você possa adicionar lógica personalizada a uma operação. Para interceptar uma mensagem, você pode usar métodos especialmente atribuídos no serviço de dados. Para obter mais informações, consulte [interceptores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Como: Interceptar mensagens do serviço de dados (WCF Data Services)
+Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode interceptar mensagens de solicitação de modo que você possa adicionar lógica personalizada a uma operação. Para interceptar uma mensagem, use métodos especialmente atribuídos no serviço de dados. Para obter mais informações, consulte [Interceptors](interceptors-wcf-data-services.md).  
   
- O exemplo neste tópico usa o serviço de dados de exemplo Northwind. Esse serviço é criado quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ O exemplo neste tópico usa o serviço de dados de exemplo Northwind. Esse serviço é criado quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md).  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Para definir um interceptor de consulta para o conjunto de entidades Orders  
   
@@ -57,5 +57,5 @@ Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode in
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Definir uma operação de serviço](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Como: Definir uma operação de serviço](how-to-define-a-service-operation-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md) (Definindo o WCF Data Services)

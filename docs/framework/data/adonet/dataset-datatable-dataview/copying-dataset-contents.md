@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205167"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786518"
 ---
 # <a name="copying-dataset-contents"></a>Copiando conteúdo do DataSet
 Você pode criar uma cópia de um <xref:System.Data.DataSet> para que você possa trabalhar com dados sem afetar os dados originais ou trabalhar com um subconjunto dos dados de um **DataSet**. Ao copiar um **conjunto**de um, você pode:  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Para criar uma cópia de um **conjunto** de dados que inclui o esquema e apenaso dado que representa as linhas adicionadas, **modificadas**ou **excluídas** , use o <xref:System.Data.DataSet.GetChanges%2A> método do **DataSet**. Você também pode usar GetChanges para retornar apenas linhas com um estado de linha especificado, passando um valor de **DataRowState** ao chamar GetChanges. O exemplo de código a seguir mostra como passar um **DataRowState** aochamar GetChanges.  
+ Para criar uma cópia de um **conjunto** de dados que inclui o esquema e apenas o dado que representa as linhas **adicionadas**, **modificadas**ou **excluídas** , use o <xref:System.Data.DataSet.GetChanges%2A> método do **DataSet**. Você também pode usar **GetChanges** para retornar apenas linhas com um estado de linha especificado, passando um valor de **DataRowState** ao chamar **GetChanges**. O exemplo de código a seguir mostra como passar um **DataRowState** ao chamar **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -99,4 +99,4 @@ foreach (DataRow copyRow in copyRows)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

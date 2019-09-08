@@ -2,12 +2,12 @@
 title: Protegendo aplicativos ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963115"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795062"
 ---
 # <a name="securing-adonet-applications"></a>Protegendo aplicativos ADO.NET
 Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas comuns de codificação como não validar a entrada do usuário. Um aplicativo que acessa dados tem vários pontos possíveis de falha que um invasor pode explorar para recuperar, manipular ou destruir dados confidenciais. Portanto, é importante compreender todos os aspectos de segurança, do processo de modelagem de ameaças durante a fase de projeto do aplicativo até a sua eventual implantação e manutenção contínua.  
@@ -17,26 +17,26 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  Escrever código seguro não protege contra buracos na segurança autoinfligidos ao trabalhar com recursos não gerenciados como bancos de dados. A maioria dos bancos de dados do servidor, como SQL Server, têm seus próprios sistemas de segurança, que melhoram a segurança quando implementados corretamente. No entanto, até mesmo uma fonte de dados com um sistema de segurança robusto pode ser prejudicada em um ataque se não estiver configurada adequadamente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de segurança](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Visão geral de segurança](security-overview.md)  
  Fornece recomendações para criar aplicativos seguros do ADO.NET.  
   
- [Acesso seguro a dados](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [Acesso seguro a dados](secure-data-access.md)  
  Descreve como trabalhar com dados de uma fonte de dados segura.  
   
- [Aplicativos cliente seguros](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Aplicativos cliente seguros](secure-client-applications.md)  
  Descreve as considerações de segurança para aplicativos cliente.  
   
- [Segurança de acesso do código e o ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Segurança de acesso do código e o ADO.NET](code-access-security.md)  
  Descreve como o CAS pode ajudar a proteger o código do ADO.NET. Também descreve como trabalhar com confiança parcial.  
   
- [Privacidade e segurança de dados](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [Privacidade e segurança de dados](privacy-and-data-security.md)  
  Descreve as opções de criptografia para aplicativos ADO.NET.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  
+ [SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)  
  Descreve os recursos de segurança do SQL Server da perspectiva de um desenvolvedor.  
   
- [Considerações sobre segurança](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Considerações sobre segurança](./ef/security-considerations.md)  
  Descreve a segurança para aplicativos do Entity Framework.  
   
  [Segurança](../../../standard/security/index.md)  
@@ -53,5 +53,5 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
   
 ## <a name="see-also"></a>Consulte também
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET](index.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

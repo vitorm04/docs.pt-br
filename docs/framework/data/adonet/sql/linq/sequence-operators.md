@@ -2,12 +2,12 @@
 title: Operadores de sequência
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: d975949d95c7cd0a4009ef9e988d3625a46defef
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
-ms.translationtype: HT
+ms.openlocfilehash: 4feca030d3c398f4286fe9d126cae884afe7945b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398538"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792675"
 ---
 # <a name="sequence-operators"></a>Operadores de sequência
 Em termos gerais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não suporta os operadores de sequência que têm uma ou mais das seguintes qualidades:  
@@ -47,4 +47,4 @@ Em termos gerais, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Funções e tipos de dados](data-types-and-functions.md)

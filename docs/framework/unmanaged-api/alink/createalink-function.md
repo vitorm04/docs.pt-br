@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742212"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787622"
 ---
 # <a name="createalink-function"></a>Função CreateALink
-Cria uma instância do vinculador de Assembly e define um ponteiro para a interface especificada.  
+Cria uma instância do vinculador de assembly e define um ponteiro para a interface especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,12 +40,12 @@ HRESULT CreateALink (
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|`riid`|O nome físico de uma das interfaces de vinculador de Assembly.|  
-|`ppInterface`|O local que contém um ponteiro para a conclusão bem-sucedida de `riid` interface.|  
+|`riid`|O nome físico de uma das interfaces do vinculador de assembly.|  
+|`ppInterface`|O local em que a conclusão bem-sucedida contém um ponteiro para `riid` a interface.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Biblioteca**: ALink  
+ **Biblioteca**: Alink. dll  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

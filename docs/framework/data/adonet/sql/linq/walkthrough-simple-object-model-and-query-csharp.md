@@ -2,12 +2,12 @@
 title: 'Passo a passo: modelo e consulta de objeto simples (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946918"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792137"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Passo a passo: modelo e consulta de objeto simples (C#)
 
@@ -23,7 +23,7 @@ Esse passo a passo foi escrito usando as configurações de desenvolvimento do V
 
 - Este passo a passo usa uma pasta dedicada ("c:\linqtest5") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.
 
-- Este passo a passo requer o banco de dados de exemplo Northwind. Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixar bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo para a pasta c:\linqtest5.
+- Este passo a passo requer o banco de dados de exemplo Northwind. Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixar bancos de dados de exemplo](downloading-sample-databases.md). Depois de baixar o banco de dados, copie o arquivo para a pasta c:\linqtest5.
 
 ## <a name="overview"></a>Visão geral
 
@@ -140,7 +140,7 @@ Nesta etapa, você realmente executa a consulta. As expressões de consulta que 
 2. Pressione F5 para depurar o aplicativo.
 
     > [!NOTE]
-    > Se seu aplicativo gerar um erro de tempo de execução, consulte a seção de solução de problemas do [Learning by passo a passos](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Se seu aplicativo gerar um erro de tempo de execução, consulte a seção de solução de problemas do [Learning by passo a passos](learning-by-walkthroughs.md).
 
      Os resultados da consulta na janela do console devem aparecer da seguinte maneira:
 
@@ -160,10 +160,10 @@ Nesta etapa, você realmente executa a consulta. As expressões de consulta que 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-O [passo a passo: A consulta no tópicoC#Relationships](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) () continua onde este passo a passos termina. A consulta através de instruções de relações [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] demonstra como o pode consultar em tabelas, semelhantes a *junções* em um banco de dados relacional.
+O [passo a passo: A consulta no tópicoC#Relationships](walkthrough-querying-across-relationships-csharp.md) () continua onde este passo a passos termina. A consulta através de instruções de relações [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] demonstra como o pode consultar em tabelas, semelhantes a *junções* em um banco de dados relacional.
 
 Se você desejar realizar o passo a passo Consulta entre relações, salve a solução do passo a passo que você acabou de concluir, que é um pré-requisito.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Aprendendo com explicações passo a passo](learning-by-walkthroughs.md)

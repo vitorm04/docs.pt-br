@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 2548ad9382b406978dac0a3d366207626278f501
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5e4a36829107480a44980c7210b39c21231c67f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205137"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786448"
 ---
 # <a name="creating-autoincrement-columns"></a>Criar colunas AutoIncrement
-Para garantir valores de coluna exclusivos, você pode definir os valores de coluna para incrementar automaticamente quando novas linhas forem adicionadas à tabela. Para criar um incremento <xref:System.Data.DataColumn>automático, defina a <xref:System.Data.DataColumn.AutoIncrement%2A> propriedade da coluna como **true**. Em seguida, começa com o <xref:System.Data.DataColumn.AutoIncrementSeed%2A> valor definido na propriedade e, com cada linha adicionada, o valor da coluna AutoIncrement <xref:System.Data.DataColumn.AutoIncrementStep%2A> aumenta pelo valor definido na propriedade da coluna. <xref:System.Data.DataColumn>  
+Para garantir valores de coluna exclusivos, você pode definir os valores de coluna para incrementar automaticamente quando novas linhas forem adicionadas à tabela. Para criar um incremento <xref:System.Data.DataColumn>automático, defina a <xref:System.Data.DataColumn.AutoIncrement%2A> propriedade da coluna como **true**. Em seguida, começa com o valor definido <xref:System.Data.DataColumn.AutoIncrementSeed%2A> na propriedade e, com cada linha adicionada, o valor da coluna **AutoIncrement** <xref:System.Data.DataColumn.AutoIncrementStep%2A> aumenta pelo valor definido na propriedade da coluna. <xref:System.Data.DataColumn>  
   
  Para colunas de **incremento automático** , recomendamos <xref:System.Data.DataColumn.ReadOnly%2A> que a propriedade de **DataColumn** seja definida como **true**.  
   
@@ -40,4 +40,4 @@ workColumn.AutoIncrementStep = 3;
 - <xref:System.Data.DataColumn>
 - [Definição de esquema de DataTable](datatable-schema-definition.md)
 - [DataTables](datatables.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

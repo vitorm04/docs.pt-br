@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741475"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787202"
 ---
 # <a name="setmanifestfile-method"></a>Método SetManifestFile
-Permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usa quando cria o assembly.  
+Permite que você especifique ou redefina o arquivo de manifesto que o vinculador usa ao criar o assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parâmetros  
  `pszFile`  
   
- O nome do arquivo de manifesto cujos conteúdos são colocados no blob de recursos do Win32.  
+ O nome do arquivo de manifesto cujo conteúdo é colocado no blob de recursos do Win32.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="remarks"></a>Comentários  
- Chame isso antes de solicitar o Win32ResBlob. O valor da `pszFile` parâmetro é o nome do arquivo de manifesto cujos conteúdos são lidos e put nos recursos do Win32 com ID de RT_MANIFEST. Quando chamado usando um parâmetro de NULL, nenhum manifesto lida anteriormente está desmarcado. Isso permite que um para redefinir o estado do vinculador para que o tempo de inicialização.  
+ Chame isso antes de solicitar o Win32ResBlob. O valor do `pszFile` parâmetro é o nome do arquivo de manifesto cujo conteúdo é lido e colocado nos recursos do Win32 com a ID de RT_MANIFEST. Quando chamado usando um parâmetro de NULL, qualquer manifesto lido anteriormente é limpo. Isso permite que um redefina o estado do vinculador para o tempo de inicialização.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer aLink.h  
+ Requer aLink. h  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Interface IALink3](ialink3-interface.md)
+- [API do ALink](index.md)
+- [Interface IALink](ialink-interface.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

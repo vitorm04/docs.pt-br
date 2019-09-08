@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d96881ce35dca1ee7a196507ef8d81a565eed82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741509"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787221"
 ---
 # <a name="setassemblyfile2-method"></a>Método SetAssemblyFile2
-Define o nome e as opções para um novo assembly. Não chame este método quando você produzir módulos não associados.  
+Define o nome e as opções para um novo assembly. Não chame esse método quando você produzir módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,22 +42,22 @@ HRESULT SetAssemblyFile2(
  Nome do arquivo de manifesto.  
   
  `pEmitter`  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface para esse arquivo.  
+ Interface de [interface IMetaDataEmit2](../metadata/imetadataemit2-interface.md) para este arquivo.  
   
  `afFlags`  
- Opções de representado por [enumeração AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ Opções representadas pela [Enumeração AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Recebe a ID exclusiva para o assembly que está sendo construído.  
+ Recebe uma ID exclusiva para o assembly que está sendo construído.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h.  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink2](ialink2-interface.md)
+- [Interface IALink](ialink-interface.md)
+- [API do ALink](index.md)

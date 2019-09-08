@@ -2,17 +2,17 @@
 title: Mapeamentos de tipo personalizados de SQL-CLR
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8901998533ec14e733ea072dd1a69b465e596328
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945055"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781080"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mapeamentos de tipo personalizados de SQL-CLR
 O mapeamento de classificação entre o SQL Server e o Common Language Runtime (CLR) é especificado automaticamente quando você usa a ferramenta de linha de comando SQLMetal, Object Relational Designer (object relational Designer de Objetos).  
   
- Quando nenhum mapeamento personalizado é executado, essas ferramentas atribuem mapeamentos de tipo padrão, conforme descrito em [mapeamento de tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Se você desejar digitar de maneira diferente mapeamentos dessas opções, você precisa fazer algumas personalização dos mapeamentos de tipo.  
+ Quando nenhum mapeamento personalizado é executado, essas ferramentas atribuem mapeamentos de tipo padrão, conforme descrito em [mapeamento de tipo SQL-CLR](sql-clr-type-mapping.md). Se você desejar digitar de maneira diferente mapeamentos dessas opções, você precisa fazer algumas personalização dos mapeamentos de tipo.  
   
  Para personalizar mapeamentos de tipo, a abordagem recomendada é fazer alterações em um arquivo DBML intermediária. Em seguida, o arquivo DBML personalizado deve ser usado quando você cria o código e arquivos de mapeamento com o SQLMetal ou o object relational Designer de Objetos.  
   
@@ -24,7 +24,7 @@ O mapeamento de classificação entre o SQL Server e o Common Language Runtime (
  Para personalizar mapeamentos de tipo com SQLMetal ou object relational Designer de Objetos, primeiro gerencia um arquivo DBML. Em seguida, antes de gerar o arquivo ou o arquivo de mapeamento de código, modifique o arquivo DBML para identificar os mapeamentos desejados de tipo. Com SQLMetal, você tem que alterar manualmente os atributos de `Type` e de `DbType` no arquivo DBML para fazer suas personalizações de mapeamento de tipo. Com object relational Designer de Objetos, você pode fazer suas alterações no designer. Para obter mais informações sobre o uso do o/R Designer, consulte [ferramentas de LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
-> Alguns mapeamentos de tipo podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Examine atentamente a matriz de comportamento de tempo de execução de mapeamento de tipo no [mapeamento de tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) antes de fazer qualquer personalização.  
+> Alguns mapeamentos de tipo podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Examine atentamente a matriz de comportamento de tempo de execução de mapeamento de tipo no [mapeamento de tipo SQL-CLR](sql-clr-type-mapping.md) antes de fazer qualquer personalização.  
   
  Para que as personalizações de mapeamento de tipo são reconhecidas por SQLMetal ou por object relational Designer de Objetos, você precisará certificar-se de que essas ferramentas são fornecidas com o caminho para o arquivo DBML personalizado quando você gerencia o arquivo de código ou arquivos de mapeamento externo. Embora não seja necessário para personalização de mapeamento de tipo, é recomendável que você sempre separa suas informações de mapeamento de tipo do arquivo de código e gerencia o mapeamento de arquivo externo adicional do tipo. Isso deixar alguma flexibilidade não exigem que o arquivo de código seja recompilado.  
   
@@ -33,5 +33,5 @@ O mapeamento de classificação entre o SQL Server e o Common Language Runtime (
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mapeamento de tipo CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Mapeamento de tipo CLR do SQL](sql-clr-type-mapping.md)
+- [Geração de código em LINQ to SQL](code-generation-in-linq-to-sql.md)
