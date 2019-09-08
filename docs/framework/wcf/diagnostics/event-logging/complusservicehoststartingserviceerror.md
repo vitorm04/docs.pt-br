@@ -2,24 +2,24 @@
 title: ComPlusServiceHostStartingServiceError
 ms.date: 03/30/2017
 ms.assetid: 10994991-3717-4352-ad58-c22c3eff60d5
-ms.openlocfilehash: a0ea251cefb2a99d06fa41effee37648883fb613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62a4c5c0fab8874c7911d10f36a5cd83b77c618f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969657"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798008"
 ---
-# <a name="complusservicehoststartingserviceerror"></a><span data-ttu-id="d8eef-102">ComPlusServiceHostStartingServiceError</span><span class="sxs-lookup"><span data-stu-id="d8eef-102">ComPlusServiceHostStartingServiceError</span></span>
-<span data-ttu-id="d8eef-103">Id: 130</span><span class="sxs-lookup"><span data-stu-id="d8eef-103">Id: 130</span></span>  
+# <a name="complusservicehoststartingserviceerror"></a><span data-ttu-id="24e5e-102">ComPlusServiceHostStartingServiceError</span><span class="sxs-lookup"><span data-stu-id="24e5e-102">ComPlusServiceHostStartingServiceError</span></span>
+<span data-ttu-id="24e5e-103">Sessão 130</span><span class="sxs-lookup"><span data-stu-id="24e5e-103">Id: 130</span></span>  
   
- <span data-ttu-id="d8eef-104">Gravidade: Erro</span><span class="sxs-lookup"><span data-stu-id="d8eef-104">Severity: Error</span></span>  
+ <span data-ttu-id="24e5e-104">Severity Erro</span><span class="sxs-lookup"><span data-stu-id="24e5e-104">Severity: Error</span></span>  
   
- <span data-ttu-id="d8eef-105">Categoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d8eef-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="24e5e-105">Categorias ServiceModel</span><span class="sxs-lookup"><span data-stu-id="24e5e-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d8eef-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="d8eef-106">Description</span></span>  
- <span data-ttu-id="d8eef-107">Esse evento indica que ocorreu um erro ao iniciar o serviço COM+.</span><span class="sxs-lookup"><span data-stu-id="d8eef-107">This event indicates that an error occurred while starting the COM+ service.</span></span> <span data-ttu-id="d8eef-108">O evento lista AppID, ClsID, substitutos, exceção, nome do processo e ID de processo.</span><span class="sxs-lookup"><span data-stu-id="d8eef-108">The event lists the AppID, ClsID, Surrogate, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="24e5e-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="24e5e-106">Description</span></span>  
+ <span data-ttu-id="24e5e-107">Esse evento indica que ocorreu um erro ao iniciar o serviço COM+.</span><span class="sxs-lookup"><span data-stu-id="24e5e-107">This event indicates that an error occurred while starting the COM+ service.</span></span> <span data-ttu-id="24e5e-108">O evento lista o AppID, ClsID, substituto, exceção, nome do processo e ID do processo.</span><span class="sxs-lookup"><span data-stu-id="24e5e-108">The event lists the AppID, ClsID, Surrogate, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8eef-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d8eef-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24e5e-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="24e5e-109">See also</span></span>
 
-- [<span data-ttu-id="d8eef-110">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="d8eef-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="d8eef-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="d8eef-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="24e5e-110">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="24e5e-110">Event Logging</span></span>](index.md)
+- [<span data-ttu-id="24e5e-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="24e5e-111">Events General Reference</span></span>](events-general-reference.md)

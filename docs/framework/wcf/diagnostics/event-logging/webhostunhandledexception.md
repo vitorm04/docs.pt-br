@@ -2,24 +2,24 @@
 title: WebHostUnhandledException
 ms.date: 03/30/2017
 ms.assetid: 9e8564c6-8fd2-4bc9-85b5-68e0b55438ee
-ms.openlocfilehash: 5d34e1c6eab7bbf81e15f0b68cf5a2b19aee3907
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e7e99c1bc44ebf2e4ab00b63aa9264b4393b381
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944255"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797424"
 ---
-# <a name="webhostunhandledexception"></a><span data-ttu-id="0bd78-102">WebHostUnhandledException</span><span class="sxs-lookup"><span data-stu-id="0bd78-102">WebHostUnhandledException</span></span>
-<span data-ttu-id="0bd78-103">Id: 109</span><span class="sxs-lookup"><span data-stu-id="0bd78-103">Id: 109</span></span>  
+# <a name="webhostunhandledexception"></a><span data-ttu-id="6e816-102">WebHostUnhandledException</span><span class="sxs-lookup"><span data-stu-id="6e816-102">WebHostUnhandledException</span></span>
+<span data-ttu-id="6e816-103">Sessão 109</span><span class="sxs-lookup"><span data-stu-id="6e816-103">Id: 109</span></span>  
   
- <span data-ttu-id="0bd78-104">Gravidade: Erro</span><span class="sxs-lookup"><span data-stu-id="0bd78-104">Severity: Error</span></span>  
+ <span data-ttu-id="6e816-104">Severity Erro</span><span class="sxs-lookup"><span data-stu-id="6e816-104">Severity: Error</span></span>  
   
- <span data-ttu-id="0bd78-105">Categoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="0bd78-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="6e816-105">Categorias ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6e816-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0bd78-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="0bd78-106">Description</span></span>  
- <span data-ttu-id="0bd78-107">Esse evento indica que um WebHost de exceção sem tratamento ocorreu.</span><span class="sxs-lookup"><span data-stu-id="0bd78-107">This event indicates that a WebHost unhandled exception occurred.</span></span> <span data-ttu-id="0bd78-108">O evento listas as informações do remetente, a exceção, o nome do processo e o processo de identificação.</span><span class="sxs-lookup"><span data-stu-id="0bd78-108">The event lists the Sender Information, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="6e816-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="6e816-106">Description</span></span>  
+ <span data-ttu-id="6e816-107">Esse evento indica que ocorreu uma exceção não tratada do webhost.</span><span class="sxs-lookup"><span data-stu-id="6e816-107">This event indicates that a WebHost unhandled exception occurred.</span></span> <span data-ttu-id="6e816-108">O evento lista as informações do remetente, exceção, nome do processo e ID do processo.</span><span class="sxs-lookup"><span data-stu-id="6e816-108">The event lists the Sender Information, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bd78-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0bd78-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e816-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6e816-109">See also</span></span>
 
-- [<span data-ttu-id="0bd78-110">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="0bd78-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="0bd78-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="0bd78-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="6e816-110">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="6e816-110">Event Logging</span></span>](index.md)
+- [<span data-ttu-id="6e816-111">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="6e816-111">Events General Reference</span></span>](events-general-reference.md)

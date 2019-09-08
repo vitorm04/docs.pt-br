@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636734"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799024"
 ---
-# <a name="strongnamekeydelete-function"></a><span data-ttu-id="ee947-102">Função StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="ee947-102">StrongNameKeyDelete Function</span></span>
+# <a name="strongnamekeydelete-function"></a><span data-ttu-id="87671-102">Função StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="87671-102">StrongNameKeyDelete Function</span></span>
 
-<span data-ttu-id="ee947-103">Exclui o contêiner de chave especificado.</span><span class="sxs-lookup"><span data-stu-id="ee947-103">Deletes the specified key container.</span></span>
+<span data-ttu-id="87671-103">Exclui o contêiner de chave especificado.</span><span class="sxs-lookup"><span data-stu-id="87671-103">Deletes the specified key container.</span></span>
 
-<span data-ttu-id="ee947-104">Essa função foi preterida.</span><span class="sxs-lookup"><span data-stu-id="ee947-104">This function has been deprecated.</span></span> <span data-ttu-id="ee947-105">Use o [iclrstrongname:: Strongnamekeydelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="ee947-105">Use the [ICLRStrongName::StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) method instead.</span></span>
+<span data-ttu-id="87671-104">Esta função foi preterida.</span><span class="sxs-lookup"><span data-stu-id="87671-104">This function has been deprecated.</span></span> <span data-ttu-id="87671-105">Em vez disso, use o método [ICLRStrongName:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) .</span><span class="sxs-lookup"><span data-stu-id="87671-105">Use the [ICLRStrongName::StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) method instead.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="ee947-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ee947-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="87671-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="87671-106">Syntax</span></span>
 
 ```cpp
 BOOLEAN StrongNameKeyDelete (
@@ -37,33 +37,33 @@ BOOLEAN StrongNameKeyDelete (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="ee947-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ee947-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="87671-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="87671-107">Parameters</span></span>
 
 `wszKeyContainer`\
-<span data-ttu-id="ee947-108">[in] O nome de excluir o contêiner de chaves.</span><span class="sxs-lookup"><span data-stu-id="ee947-108">[in] The name of the key container to delete.</span></span>
+<span data-ttu-id="87671-108">no O nome do contêiner de chave a ser excluído.</span><span class="sxs-lookup"><span data-stu-id="87671-108">[in] The name of the key container to delete.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="ee947-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="ee947-109">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="87671-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="87671-109">Return Value</span></span>
 
-<span data-ttu-id="ee947-110">`true` Após a conclusão bem-sucedida; Caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="ee947-110">`true` on successful completion; otherwise, `false`.</span></span>
+<span data-ttu-id="87671-110">`true`após a conclusão bem-sucedida; caso contrário `false`,.</span><span class="sxs-lookup"><span data-stu-id="87671-110">`true` on successful completion; otherwise, `false`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="ee947-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="ee947-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="87671-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="87671-111">Remarks</span></span>
 
-<span data-ttu-id="ee947-112">Use o [StrongNameKeyInstall](strongnamekeyinstall-function.md) função para importar um par de chaves pública/privada para um contêiner.</span><span class="sxs-lookup"><span data-stu-id="ee947-112">Use the [StrongNameKeyInstall](strongnamekeyinstall-function.md) function to import a public/private key pair into a container.</span></span>
+<span data-ttu-id="87671-112">Use a função [StrongNameKeyInstall](strongnamekeyinstall-function.md) para importar um par de chaves pública/privada para um contêiner.</span><span class="sxs-lookup"><span data-stu-id="87671-112">Use the [StrongNameKeyInstall](strongnamekeyinstall-function.md) function to import a public/private key pair into a container.</span></span>
 
-<span data-ttu-id="ee947-113">Se o `StrongNameKeyDelete` função não for concluída com êxito, chame o [StrongNameErrorInfo](strongnameerrorinfo-function.md) função para recuperar o último erro gerado.</span><span class="sxs-lookup"><span data-stu-id="ee947-113">If the `StrongNameKeyDelete` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>
+<span data-ttu-id="87671-113">Se a `StrongNameKeyDelete` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.</span><span class="sxs-lookup"><span data-stu-id="87671-113">If the `StrongNameKeyDelete` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ee947-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ee947-114">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="87671-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="87671-114">Requirements</span></span>
 
-<span data-ttu-id="ee947-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee947-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="87671-115">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87671-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="ee947-116">**Cabeçalho:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="ee947-116">**Header:** StrongName.h</span></span>
+<span data-ttu-id="87671-116">**Cabeçalho:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="87671-116">**Header:** StrongName.h</span></span>
 
-<span data-ttu-id="ee947-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ee947-117">**Library:** Included as a resource in MsCorEE.dll</span></span>
+<span data-ttu-id="87671-117">**Biblioteca** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="87671-117">**Library:** Included as a resource in MsCorEE.dll</span></span>
 
-<span data-ttu-id="ee947-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ee947-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+<span data-ttu-id="87671-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87671-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ee947-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ee947-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87671-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="87671-119">See also</span></span>
 
-- [<span data-ttu-id="ee947-120">Método StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="ee947-120">StrongNameKeyDelete Method</span></span>](../hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [<span data-ttu-id="ee947-121">Método StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="ee947-121">StrongNameKeyInstall Method</span></span>](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [<span data-ttu-id="ee947-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="ee947-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="87671-120">Método StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="87671-120">StrongNameKeyDelete Method</span></span>](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [<span data-ttu-id="87671-121">Método StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="87671-121">StrongNameKeyInstall Method</span></span>](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [<span data-ttu-id="87671-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="87671-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
