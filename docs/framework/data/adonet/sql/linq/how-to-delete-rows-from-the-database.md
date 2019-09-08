@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 48377aed85aebcf83cb61b4d4dcf9bb732d0cb0e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041175"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782008"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Como: excluir linhas do banco de dados
 
@@ -25,11 +25,11 @@ Você pode excluir linhas em um banco de dados removendo [!INCLUDE[vbtecdlinq](.
  Caso contrário, uma exceção será gerada. Consulte o segundo exemplo de código posteriormente neste tópico.
 
 > [!NOTE]
-> Você pode substituir os métodos padrão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para as operações de banco de dados `Insert`, `Update` e `Delete`. Para obter mais informações, consulte [Personalizando as operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).
+> Você pode substituir os métodos padrão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para as operações de banco de dados `Insert`, `Update` e `Delete`. Para obter mais informações, consulte [Personalizando as operações de inserção, atualização e exclusão](customizing-insert-update-and-delete-operations.md).
 >
 > Os desenvolvedores que usam o Visual Studio podem usar o Object Relational Designer para desenvolver procedimentos armazenados para a mesma finalidade.
 
-As etapas a seguir presumem que um <xref:System.Data.Linq.DataContext> válido conecta você ao banco de dados Northwind. Para obter mais informações, confira [Como: Conecte-se a](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)um banco de dados.
+As etapas a seguir presumem que um <xref:System.Data.Linq.DataContext> válido conecta você ao banco de dados Northwind. Para obter mais informações, confira [Como: Conecte-se a](how-to-connect-to-a-database.md)um banco de dados.
 
 ### <a name="to-delete-a-row-in-the-database"></a>Para excluir uma linha no banco de dados
 
@@ -55,6 +55,6 @@ No segundo exemplo, o objetivo é remover uma pedido (#10250). O código primeir
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Gerenciar conflitos de alterações](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Como: Gerenciar conflitos de alterações](how-to-manage-change-conflicts.md)
 - [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [Realizando e enviando alterações de dados](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Realizando e enviando alterações de dados](making-and-submitting-data-changes.md)

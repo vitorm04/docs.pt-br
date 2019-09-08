@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4432b17e5d9aa875d8346b3329cd618e15222040
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771025"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796821"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Método IAssemblyCache::CreateAssemblyCacheItem
-Obtém uma referência a um novo [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) objeto.  
+Obtém uma referência a um novo objeto [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,29 +40,29 @@ HRESULT CreateAssemblyCacheItem (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwFlags`  
- [in] Sinalizadores definidos no Fusion.idl. Há suporte para os seguintes valores:  
+ no Sinalizadores definidos em Fusion. idl. Há suporte para os seguintes valores:  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
   
  `ppAsmItem`  
- [out] Retornado `IAssemblyCacheItem` ponteiro.  
+ fora O ponteiro `IAssemblyCacheItem` retornado.  
   
  `pszAssemblyName`  
- [in, opcional] Uncanonicalized, separados por vírgula `name=value` pares.  
+ [in, opcional] Pares não canônicos e separados por `name=value` vírgulas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Interface IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [Interface IAssemblyCache](iassemblycache-interface.md)
+- [Interface IAssemblyCacheItem](iassemblycacheitem-interface.md)

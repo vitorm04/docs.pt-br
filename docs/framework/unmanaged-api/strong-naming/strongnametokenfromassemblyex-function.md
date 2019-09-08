@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14af44901e7c65933800e41328e95602ce715282
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c000aad12000a9c76fb6dd805a9b002c021be6ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783177"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798844"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>Função StrongNameTokenFromAssemblyEx
-Cria um token de nome forte a partir do arquivo de assembly especificado e retorna a chave pública que representa o token.  
+Cria um token de nome forte a partir do arquivo de assembly especificado e retorna a chave pública que o token representa.  
   
- Essa função foi preterida. Use o [iclrstrongname:: Strongnametokenfromassemblyex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) método em vez disso.  
+ Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,41 +42,41 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
- [in] O caminho para o arquivo executável portátil (PE) para o assembly.  
+ no O caminho para o arquivo executável portátil (PE) para o assembly.  
   
  `ppbStrongNameToken`  
- [out] O token de nome forte retornado.  
+ fora O token de nome forte retornado.  
   
  `pcbStrongNameToken`  
- [out] O tamanho, em bytes, do token de nome forte.  
+ fora O tamanho, em bytes, do token de nome forte.  
   
  `ppbPublicKeyBlob`  
- [out] A chave pública retornada.  
+ fora A chave pública retornada.  
   
  `pcbPublicKeyBlob`  
- [out] O tamanho, em bytes, da chave pública.  
+ fora O tamanho, em bytes, da chave pública.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Após a conclusão bem-sucedida; Caso contrário, `false`.  
+ `true`após a conclusão bem-sucedida; caso contrário `false`,.  
   
 ## <a name="remarks"></a>Comentários  
- Um token de nome forte é a forma abreviada de uma chave pública. O token é um hash de 64 bits que é criado a partir da chave pública usada para assinar o assembly. O token é uma parte do nome forte para o assembly e os metadados do assembly pode ser lido.  
+ Um token de nome forte é a forma abreviada de uma chave pública. O token é um hash de 64 bits que é criado a partir da chave pública usada para assinar o assembly. O token é uma parte do nome forte para o assembly e pode ser lido nos metadados do assembly.  
   
- Depois que a chave é recuperada e o token é criado, você deve chamar o [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) função para liberar a memória alocada.  
+ Depois que a chave for recuperada e o token for criado, você deverá chamar a função [StrongNameFreeBuffer](strongnamefreebuffer-function.md) para liberar a memória alocada.  
   
- Se o `StrongNameTokenFromAssemblyEx` função não for concluída com êxito, chame o [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) função para recuperar o último erro gerado.  
+ Se a `StrongNameTokenFromAssemblyEx` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em mscoree. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Método StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [Método StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [Método StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [Interface ICLRStrongName](../hosting/iclrstrongname-interface.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205254"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784795"
 ---
 # <a name="annotating-typed-datasets"></a>Anotando DataSets tipados
 As anotações permitem que você modifique os nomes dos elementos em seu <xref:System.Data.DataSet> tipado sem modificar o esquema subjacente. Modificar os nomes dos elementos em seu esquema subjacente faria com que o **conjunto** de dados digitado se refira a objetos que não existem na fonte de dado, além de perder uma referência aos objetos que existem na fonte de dados.  
   
- Usando anotações, você pode personalizar os nomes de objetos no **conjunto** de informações tipado com nomes mais significativos, tornando o código mais legível e o **conjunto** de informações tipado mais fácil para os clientes usarem, deixando o esquema subjacente intacto. Por exemplo, o seguinte elemento de esquema para a tabela Customers do banco de dados **Northwind** resultaria em um nome de objeto **DataRow** de **CustomersRow** e um <xref:System.Data.DataRowCollection> **Customers**.  
+ Usando anotações, você pode personalizar os nomes de objetos no **conjunto** de informações tipado com nomes mais significativos, tornando o código mais legível e o **conjunto** de informações tipado mais fácil para os clientes usarem, deixando o esquema subjacente intacto. Por exemplo, o seguinte elemento de esquema para a tabela **Customers** do banco de dados **Northwind** resultaria em um nome de objeto **DataRow** de **CustomersRow** e um <xref:System.Data.DataRowCollection> **Customers**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -27,7 +27,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 </xs:element>  
 ```  
   
- Um nome de DataRowCollection de **clientes** é significativo no código do cliente, mas um nome de **DataRow** de **CustomersRow** é enganoso porque é um único objeto. Além disso, em cenários comuns, o objeto seria referenciado sem o identificador de **linha** e, em vez disso, seria simplesmente chamado de objeto **Customer** . A solução é anotar o esquema e identificar novos nomes para os objetos **DataRow** e **DataRowCollection** . Veja a seguir a versão anotada do esquema anterior.  
+ Um nome de **DataRowCollection** de **clientes** é significativo no código do cliente, mas um nome de **DataRow** de **CustomersRow** é enganoso porque é um único objeto. Além disso, em cenários comuns, o objeto seria referenciado sem o identificador de **linha** e, em vez disso, seria simplesmente chamado de objeto **Customer** . A solução é anotar o esquema e identificar novos nomes para os objetos **DataRow** e **DataRowCollection** . Veja a seguir a versão anotada do esquema anterior.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,7 +39,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 </xs:element>  
 ```  
   
- Especificar um valor tipado de **Customer** resultará em um nome de objeto **DataRow** de **Customer**. A especificação de um valor **typedPlural** de **clientes** preserva o nome de DataRowCollection dos **clientes**.  
+ Especificar um valor **tipado** de **Customer** resultará em um nome de objeto **DataRow** de **Customer**. A especificação de um valor **typedPlural** de **clientes** preserva o nome de **DataRowCollection** dos **clientes**.  
   
  A tabela a seguir mostra as anotações disponíveis para uso.  
   
@@ -80,7 +80,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Veja a seguir um esquema anotado de exemplo que expõe a tabela Customers do banco de dados **Northwind** com uma relação à tabela **Orders** incluída.  
+ Veja a seguir um esquema anotado de exemplo que expõe a tabela **Customers** do banco de dados **Northwind** com uma relação à tabela **Orders** incluída.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- O exemplo de código a seguir usa um **conjunto** de tipos fortemente tipado criado a partir do esquema de exemplo. Ele usa um <xref:System.Data.SqlClient.SqlDataAdapter> para popular a tabela Customers e <xref:System.Data.SqlClient.SqlDataAdapter> outra para popular a tabela Orders. O **DataSet** com rigidez de tipos define os DataRelations.  
+ O exemplo de código a seguir usa um **conjunto** de tipos fortemente tipado criado a partir do esquema de exemplo. Ele usa um <xref:System.Data.SqlClient.SqlDataAdapter> para popular a tabela **Customers** e <xref:System.Data.SqlClient.SqlDataAdapter> outra para popular a tabela **Orders** . O **DataSet** com rigidez de tipos define os **DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Typed DataSets](typed-datasets.md) (DataSets tipados)
 - [DataSets, DataTables, and DataViews](index.md) (DataSets, DataTables e DataViews)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

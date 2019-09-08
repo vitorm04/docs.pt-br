@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 64ba7a8e6bd6361e14d1f16576e377575b088bbe
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e48359041f92e7b534513aa461a293a822bede19
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205145"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786494"
 ---
 # <a name="creating-a-datatable"></a>Criando uma DataTable
 Uma <xref:System.Data.DataTable>, que representa uma tabela de dados relacionais de memória, pode ser criada e usada independentemente ou pode ser usada por outros objetos do .NET Framework, mais comumente como membro de um <xref:System.Data.DataSet>.  
   
- Você pode criar um objeto **DataTable** usando o construtor **DataTable** apropriado. Você pode adicioná-lo ao **DataSet** usando o método **Add** para adicioná-lo à coleção Tables do objeto **DataTable** .  
+ Você pode criar um objeto **DataTable** usando o construtor **DataTable** apropriado. Você pode adicioná-lo ao **DataSet** usando o método **Add** para adicioná-lo à coleção **Tables** do objeto **DataTable** .  
   
  Você também pode criar **objetos DataTable** dentro de **um DataSet** usando os métodos **Fill** ou **FillSchema** do objeto **DataAdapter** , ou de um esquema XML predefinido ou inferido usando a **ReadXml**, **ReadXmlSchema** , ou métodos **InferXmlSchema** do **DataSet**. Observe que depois de ter adicionado uma **DataTable** como um membro da coleção **Tables** de um **conjunto**de um DataSet, você não pode adicioná-lo à coleção de tabelas de qualquer outro **conjunto**de um.  
   
@@ -57,4 +57,4 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 - [Populating a DataSet from a DataAdapter](../populating-a-dataset-from-a-dataadapter.md) (Preenchendo um DataSet por meio de um DataAdapter)
 - [Carregar um conjunto de dados do XML](loading-a-dataset-from-xml.md)
 - [Carregando informações de esquema de conjunto de dados de XML](loading-dataset-schema-information-from-xml.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

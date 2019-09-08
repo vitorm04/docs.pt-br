@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 399bf44ef5536a9adebf1cad590439741df998f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928707"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793322"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Como: recuperar informações como somente leitura
 Quando você não pretende modificar os dados, você pode aumentar o desempenho de consultas buscando resultados somente leitura.  
@@ -28,6 +28,6 @@ Quando você não pretende modificar os dados, você pode aumentar o desempenho 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Consultando o banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
-- [Carregamento adiado versus imediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+- [Conceitos de consulta](query-concepts.md)
+- [Consultando o banco de dados](querying-the-database.md)
+- [Carregamento adiado versus imediato](deferred-versus-immediate-loading.md)

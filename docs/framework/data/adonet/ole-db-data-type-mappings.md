@@ -2,23 +2,23 @@
 title: Mapeamentos de tipo de dados do OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: a5c4b7264b9f8abb842fff3295d53ed8ab626671
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 969433b2582771a0ed57217180c2795f9359956f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584524"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783488"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mapeamentos de tipo de dados do OLE DB
-A tabela a seguir mostra o tipo inferido do .NET Framework para tipos de dados do .NET Framework Data Provider para ADO e OLE DB (<xref:System.Data.OleDb>). Os métodos de acessador tipado para o <xref:System.Data.OleDb.OleDbDataReader> também são listados.  
+A tabela a seguir mostra o tipo de .NET Framework inferido para tipos de dados do .NET Framework Provedor de Dados para ADO e<xref:System.Data.OleDb>OLE DB (). Os métodos de acessadores <xref:System.Data.OleDb.OleDbDataReader> tipados para o também são listados.  
   
-|Tipo ADO|Tipo de OLE DB|Tipo do .NET Framework|Acessador tipado do .NET framework|  
+|Tipo de ADO|Tipo de OLE DB|Tipo do .NET Framework|Acessador .NET Framework tipado|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|Cadeia de Caracteres|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|Suporte por meio de `DataReader`. Ver [recuperando dados usando um DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|Com suporte por `DataReader`meio do. Consulte [recuperando dados usando um DataReader](retrieving-data-using-a-datareader.md).|GetValue()|  
 |adChar|DBTYPE_STR|Cadeia de Caracteres|GetString()|  
 |adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
@@ -30,11 +30,11 @@ A tabela a seguir mostra o tipo inferido do .NET Framework para tipos de dados d
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
 |adGUID|DBTYPE_GUID|Guid|GetGuid()|  
-|adIDispatch|DBTYPE_IDISPATCH *|Objeto|GetValue()|  
+|adIDispatch|DBTYPE_IDISPATCH *|Object|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
-|adIUnknown|DBTYPE_IUNKNOWN *|Objeto|GetValue()|  
+|adIUnknown|DBTYPE_IUNKNOWN *|Object|GetValue()|  
 |adNumeric|DBTYPE_NUMERIC|Decimal|GetDecimal()|  
-|adPropVariant|DBTYPE_PROPVARIANT|Objeto|GetValue()|  
+|adPropVariant|DBTYPE_PROPVARIANT|Object|GetValue()|  
 |adSingle|DBTYPE_R4|Simples|GetFloat()|  
 |adSmallInt|DBTYPE_I2|Int16|GetInt16()|  
 |adTinyInt|DBTYPE_I1|Byte|GetByte()|  
@@ -42,14 +42,14 @@ A tabela a seguir mostra o tipo inferido do .NET Framework para tipos de dados d
 |adUnsignedInt|DBTYPE_UI4|UInt32|GetValue()|  
 |adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
-|adVariant|DBTYPE_VARIANT|Objeto|GetValue()|  
+|adVariant|DBTYPE_VARIANT|Object|GetValue()|  
 |adWChar|DBTYPE_WSTR|Cadeia de Caracteres|GetString()|  
 |adUserDefined|DBTYPE_UDT|sem suporte||  
 |adVarNumeric|DBTYPE_VARNUMERIC|sem suporte||  
   
- \* Para os tipos de banco de dados OLE `DBTYPE_IUNKNOWN` e `DBTYPE_IDISPATCH`, a referência de objeto é uma representação com marshaling do ponteiro.  
+ \*Para os tipos `DBTYPE_IUNKNOWN` de OLE DB `DBTYPE_IDISPATCH`e, a referência de objeto é uma representação empacotada do ponteiro.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

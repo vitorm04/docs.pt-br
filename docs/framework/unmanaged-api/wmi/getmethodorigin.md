@@ -1,6 +1,6 @@
 ---
 title: Função GetMethodOrigin (referência de API não gerenciada)
-description: A função GetMethodOrigin determina a classe em que um método é declarado.
+description: A função GetMethodOrigin determina a classe na qual um método é declarado.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b21e08d3bf6845b9fc44d5a5edef0ea39b91da5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746530"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798549"
 ---
 # <a name="getmethodorigin-function"></a>Função GetMethodOrigin
 Determina a classe na qual um método é declarado.
@@ -42,20 +42,20 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethodName`  
-[in] O nome do método para o objeto cuja classe proprietária está sendo solicitado. 
+no O nome do método para o objeto cuja classe proprietária está sendo solicitada. 
 
 `pstrClassName`  
-[out] Recebe o nome da classe que possui o método.
+fora Recebe o nome da classe que possui o método.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -65,14 +65,14 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
 
-Porque uma classe pode herdar a métodos de uma ou mais classes base, os desenvolvedores geralmente querem determinar a classe na qual um determinado método está definido.
+Como uma classe pode herdar métodos de uma ou mais classes base, os desenvolvedores geralmente desejam determinar a classe na qual um determinado método é definido.
 
-O `pstrClassName` parâmetro não deve apontar para um válido `BSTR` antes da função é chamada como esta é uma `out` parâmetro; esse ponteiro não é desalocado depois que a função retorna.
+O `pstrClassName` parâmetro não deve apontar para um válido `BSTR` antes que a função seja chamada porque esse é `out` um parâmetro; esse ponteiro não é desalocado depois que a função retorna.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

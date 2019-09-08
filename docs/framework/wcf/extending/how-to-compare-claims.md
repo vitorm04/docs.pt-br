@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970770"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797100"
 ---
 # <a name="how-to-compare-claims"></a>Como: comparar declarações
 
-A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) é usada para executar a verificação de autorização. Dessa forma, uma tarefa comum é comparar as declarações no contexto de autorização com as declarações necessárias para executar a ação solicitada ou acessar o recurso solicitado. Este tópico descreve como comparar declarações, incluindo tipos de declaração internos e personalizados. Para obter mais informações sobre a infraestrutura do modelo de identidade, consulte [Gerenciando declarações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+A infraestrutura do modelo de identidade no Windows Communication Foundation (WCF) é usada para executar a verificação de autorização. Dessa forma, uma tarefa comum é comparar as declarações no contexto de autorização com as declarações necessárias para executar a ação solicitada ou acessar o recurso solicitado. Este tópico descreve como comparar declarações, incluindo tipos de declaração internos e personalizados. Para obter mais informações sobre a infraestrutura do modelo de identidade, consulte [Gerenciando declarações e autorização com o modelo de identidade](../feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
 A comparação de declarações envolve comparar as três partes de uma declaração (tipo, direito e recurso) com as mesmas partes em outra declaração para ver se elas são iguais. Consulte o exemplo a seguir.
 
@@ -74,5 +74,5 @@ O exemplo a seguir mostra uma comparação de declarações personalizadas em qu
 
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Como: Criar uma declaração personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Gerenciando reivindicações e autorização com o modelo de identidade](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Como: Criar uma declaração personalizada](how-to-create-a-custom-claim.md)

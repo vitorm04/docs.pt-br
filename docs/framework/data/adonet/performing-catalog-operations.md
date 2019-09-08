@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878210"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783248"
 ---
 # <a name="performing-catalog-operations"></a>Executar operações de catálogo
-Para executar um comando para modificar um banco de dados ou o catálogo, como a instrução CREATE TABLE ou CREATE PROCEDURE, criar uma **comando** usando as instruções SQL apropriadas do objeto e um **Conexão** objeto. Execute o comando com o **ExecuteNonQuery** método o **comando** objeto.  
+Para executar um comando para modificar um banco de dados ou catálogo, como a instrução CREATE TABLE ou criar procedimento, crie um objeto de **comando** usando as instruções SQL apropriadas e um objeto de **conexão** . Execute o comando com o método **ExecuteNonQuery** do objeto **Command** .  
   
- O exemplo de código a seguir cria um procedimento armazenado em um banco de dados do Microsoft SQL Server.  
+ O exemplo de código a seguir cria um procedimento armazenado em um banco de dados Microsoft SQL Server.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando os comandos para modificar dados](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Usando os comandos para modificar dados](using-commands-to-modify-data.md)
+- [Comandos e parâmetros](commands-and-parameters.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

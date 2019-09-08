@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037949"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798598"
 ---
 # <a name="get-function"></a>Função Get
 
@@ -94,7 +94,7 @@ O argumento recebe o tipo e o valor corretos para o qualificador e a função [V
 
 ## <a name="requirements"></a>Requisitos
 
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
  **Cabeçalho:** WMINet_Utils.idl
 

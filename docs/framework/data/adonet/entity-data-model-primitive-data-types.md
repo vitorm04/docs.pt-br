@@ -2,23 +2,23 @@
 title: 'Modelo de Dados de Entidade: Tipos de dados primitivos'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: c58a3db1eb7ffdb65c7e603d9a76ac7f19f2230f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd688a06a47f4c44c27ddee2120b9de6980672fc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959280"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795161"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Modelo de Dados de Entidade: Tipos de dados primitivos
-O Modelo de Dados de Entidade (EDM) dá suporte a um conjunto de tipos de dados primitivos abstratos (como cadeia de caracteres, booliano, Int32 e assim por diante) que são usados para definir [Propriedades](../../../../docs/framework/data/adonet/property.md) em um modelo conceitual. Esses tipos de dados primitivos são proxies para os tipos de dados primitivos reais que são suportados no armazenamento ou no ambiente de hospedagem, como um base de dados SQL Server ou Common Language Runtime (CLR). EDM não define a semântica das operações ou das conversões sobre tipos de dados primitivos; essa semântica é definida pelo armazenamento ou pelo ambiente de hospedagem. Normalmente, os tipos de dados primitivos em EDM são mapeados para os tipos de dados primitivos no armazenamento ou no ambiente de hospedagem. Para obter informações sobre como o Entity Framework mapeia tipos primitivos no EDM para SQL Server tipos de dados, consulte [SqlClient para Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+O Modelo de Dados de Entidade (EDM) dá suporte a um conjunto de tipos de dados primitivos abstratos (como cadeia de caracteres, booliano, Int32 e assim por diante) que são usados para definir [Propriedades](property.md) em um modelo conceitual. Esses tipos de dados primitivos são proxies para os tipos de dados primitivos reais que são suportados no armazenamento ou no ambiente de hospedagem, como um base de dados SQL Server ou Common Language Runtime (CLR). EDM não define a semântica das operações ou das conversões sobre tipos de dados primitivos; essa semântica é definida pelo armazenamento ou pelo ambiente de hospedagem. Normalmente, os tipos de dados primitivos em EDM são mapeados para os tipos de dados primitivos no armazenamento ou no ambiente de hospedagem. Para obter informações sobre como o Entity Framework mapeia tipos primitivos no EDM para SQL Server tipos de dados, consulte [SqlClient para Entity FrameworkTypes](./ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
 > EDM não suporta coleções de tipos de dados primitivos.  
   
- Para obter informações sobre tipos de dados estruturados no EDM, consulte [tipo de entidade](../../../../docs/framework/data/adonet/entity-type.md) e [tipo complexo](../../../../docs/framework/data/adonet/complex-type.md).  
+ Para obter informações sobre tipos de dados estruturados no EDM, consulte [tipo de entidade](entity-type.md) e [tipo complexo](complex-type.md).  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Tipos de dados primitivos suportados em Modelo de Dados de Entidade  
- A tabela abaixo lista os tipos de dados primitivos suportados por EDM. A tabela também lista as [facetas](../../../../docs/framework/data/adonet/facet.md) que podem ser aplicadas a cada tipo de dados primitivo.  
+ A tabela abaixo lista os tipos de dados primitivos suportados por EDM. A tabela também lista as [facetas](facet.md) que podem ser aplicadas a cada tipo de dados primitivo.  
   
 |Tipo de dados primitivo|Descrição|Facetas aplicáveis|  
 |-------------------------|-----------------|-----------------------|  
@@ -40,5 +40,5 @@ O Modelo de Dados de Entidade (EDM) dá suporte a um conjunto de tipos de dados 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
+- [Modelo de Dados de Entidade](entity-data-model.md)

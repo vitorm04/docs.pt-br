@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903975"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781603"
 ---
 # <a name="how-to-return-rowsets"></a>Como: retornar conjuntos de linhas
 Este exemplo retorna um conjunto de linhas do banco de dados e inclui um parâmetro de entrada para filtrar o resultado.  
   
- Quando você executar um procedimento armazenado que retorna um conjunto de linhas, você usar um *resultado* classe que armazena os valores retornados pelo procedimento armazenado. Para obter mais informações, consulte [Analisando código LINQ to SQL fonte](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
+ Ao executar um procedimento armazenado que retorna um conjunto de linhas, você usa uma classe *Result* que armazena os retornos do procedimento armazenado. Para obter mais informações, consulte [analisando LINQ to SQL código-fonte](analyzing-linq-to-sql-source-code.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir representa um procedimento armazenado que retorna linhas de clientes e usa um parâmetro de entrada para retornar somente as linhas que listam "London" como a cidade do cliente. O exemplo supõe uma classe `CustomersByCityResult` enumerável.  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>Consulte também
 
-- [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Procedimentos armazenados](stored-procedures.md)
+- [Downloading Sample Databases](downloading-sample-databases.md) (Baixando bancos de dados de amostra)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041187"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794321"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -127,11 +127,11 @@ using (SqlConnection connection = new SqlConnection(
  Depois de ativada uma função de aplicativo do SQL Server ao chamar o procedimento armazenado do sistema `sp_setapprole`, o contexto de segurança dessa conexão não pode ser redefinido. Entretanto, se o pool estiver habilitado, a conexão será retornada a ele e ocorrerá um erro quando a conexão agrupada for reutilizada. Para obter mais informações, consulte o artigo da base de dados de conhecimento, "[erros de função de aplicativo SQL com OLE DB pooling de recursos](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Alternativas a funções de aplicativo  
- Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
-- [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Pooling de Conexão](connection-pooling.md)
+- [SQL Server and ADO.NET](./sql/index.md) (SQL Server e ADO.NET)
+- [Contadores de desempenho](performance-counters.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

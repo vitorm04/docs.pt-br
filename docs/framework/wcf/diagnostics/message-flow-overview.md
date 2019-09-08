@@ -2,12 +2,12 @@
 title: Visão geral de fluxo de mensagens
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963052"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795970"
 ---
 # <a name="message-flow-overview"></a>Visão geral de fluxo de mensagens
 Em um sistema distribuído que contém serviços interconectados, é necessário determinar as relações de causal entre os serviços. É importante entender os vários componentes que faziam parte de um fluxo de solicitação para dar suporte a cenários críticos, como monitoramento de integridade, solução de problemas e análise de causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:
@@ -18,7 +18,7 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
 
 - Rastreamento de ETW para WF: Esse recurso usa registros de rastreamento gerados pelos serviços do WF para fornecer visibilidade do estado atual do fluxo de trabalho e do andamento.
 
- Os erros registrados em um registro rastreamento ou rastreamento podem ser usados para encontrar defeitos de código ou mensagens formadas incorretamente. A propriedade ActivityId do nó de correlação no cabeçalho da mensagem do evento pode ser usada para determinar a atividade com falha. Para habilitar o rastreamento de fluxo de mensagens por ID de atividade, consulte Configurando o [rastreamento de fluxo de mensagens](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Este tópico demonstra como habilitar o rastreamento de fluxo de mensagens no projeto criado no tutorial de Introdução.
+ Os erros registrados em um registro rastreamento ou rastreamento podem ser usados para encontrar defeitos de código ou mensagens formadas incorretamente. A propriedade ActivityId do nó de correlação no cabeçalho da mensagem do evento pode ser usada para determinar a atividade com falha. Para habilitar o rastreamento de fluxo de mensagens por ID de atividade, consulte [Configurando o rastreamento de fluxo de mensagens](./etw/configuring-message-flow-tracing.md). Este tópico demonstra como habilitar o rastreamento de fluxo de mensagens no projeto criado no tutorial de Introdução.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Para habilitar o rastreamento de fluxo de mensagens no tutorial de Introdução
 
@@ -26,7 +26,7 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
 
 2. Se você não tiver habilitado o rastreamento analítico, expanda **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**. Selecione **Exibir**, **Mostrar logs analíticos e de depuração**. Clique com o botão direito do mouse em **analítica** e selecione **habilitar log**. Deixe Visualizador de Eventos aberto para que os rastreamentos possam ser exibidos.
 
-3. Abra o exemplo criado no [tutorial de introdução](../../../../docs/framework/wcf/getting-started-tutorial.md) no Visual Studio 2012. Observe que você deve executar o Visual Studio 2012 como administrador para que o serviço possa ser criado. Se você tiver os exemplos do WCF instalados, poderá abrir o [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contém o projeto concluído criado no tutorial.
+3. Abra o exemplo criado no [tutorial de introdução](../getting-started-tutorial.md) no Visual Studio 2012. Observe que você deve executar o Visual Studio 2012 como administrador para que o serviço possa ser criado. Se você tiver os exemplos do WCF instalados, poderá abrir o [introdução](../samples/getting-started-sample.md), que contém o projeto concluído criado no tutorial.
 
 4. Clique com o botão direito do mouse no projeto de **serviço** e selecione **Adicionar**, **novo item**. Selecione o **arquivo de configuração do aplicativo** e clique em **OK**.
 

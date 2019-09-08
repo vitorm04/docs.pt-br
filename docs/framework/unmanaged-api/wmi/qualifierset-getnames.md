@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 402d56b44c2b6f53f901e35c6d7b965811a40344
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636598"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798299"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames function
+# <a name="qualifierset_getnames-function"></a>Função QualifierSet_GetNames
 
-Recupera os nomes de todos os qualificadores ou de certas qualificadores que estão disponíveis no objeto atual ou à propriedade.
+Recupera os nomes de todos os qualificadores ou de determinados qualificadores que estão disponíveis a partir do objeto ou da propriedade atual.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,44 +43,44 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instância.
+no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `lFlags`\
-[in] Um dos seguintes sinalizadores ou valores que especifica quais nomes a serem incluídos na enumeração.
+no Um dos seguintes sinalizadores ou valores que especifica quais nomes incluir na enumeração.
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|  | 0 | Retorne os nomes de todos os qualificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retorne apenas os nomes dos qualificadores específica para a propriedade atual ou o objeto. <br/> Para uma propriedade: Retorne apenas os qualificadores específicos para a propriedade (incluindo substituições) e não os qualificadores propagados da definição da classe. <br/> Para uma instância: Retorne apenas os nomes específicos da instância qualificador. <br/> Para uma classe: Retorne apenas qualificadores específicos à classe que está sendo derivada.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: Retorno propagados apenas os qualificadores a essa propriedade de definição de classe e não os valores da propriedade em si. <br/> Para uma instância: Retorno apenas desses qualificadores propagados da definição da classe. <br/> Para uma classe: Retornar apenas os nomes de qualificador herdados de classes pai. |
+|  | 0 | Retornar os nomes de todos os qualificadores. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retornar somente os nomes de qualificadores específicos para a propriedade ou objeto atual. <br/> Para uma propriedade: Retornar somente os qualificadores específicos para a propriedade (incluindo substituições) e não os qualificadores propagados da definição de classe. <br/> Para uma instância: Retornar apenas nomes de qualificador específicos da instância. <br/> Para uma classe: Retornar somente qualificadores específicos à classe que está sendo derivada.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: Retornar somente os qualificadores propagados para essa propriedade da definição de classe, e não os da própria propriedade. <br/> Para uma instância: Retornar somente os qualificadores propagados da definição de classe. <br/> Para uma classe: Retornar somente os nomes de qualificador herdados das classes pai. |
 
 `pstrNames`\
-[out] Um novo `SAFEARRAY` que contém os nomes solicitados. A matriz pode ter 0 elementos. Se ocorrer um erro, um novo `SAFEARRAY` não será retornado.
+fora Um novo `SAFEARRAY` que contém os nomes solicitados. A matriz pode ter 0 elementos. Se ocorrer um erro, um novo `SAFEARRAY` não será retornado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para iniciar uma nova enumeração. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente disponível para iniciar uma nova enumeração. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) método.
+Essa função encapsula uma chamada para o método [IWbemQualifierSet:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) .
 
-Depois de recuperar os nomes de qualificador, você pode acessar cada qualificador por nome, chamando o [QualifierSet_Get](qualifierset-get.md) função.
+Depois de recuperar os nomes de qualificador, você pode acessar cada qualificador por nome chamando a função [QualifierSet_Get](qualifierset-get.md) .
 
-Não é um erro para um determinado objeto ter qualificadores de zero, portanto, o número de cadeias de caracteres em `pstrNames` após o retorno pode ser 0, mesmo que a função retorna `WBEM_S_NO_ERROR`.
+Não é um erro para um determinado objeto ter zero qualificadores, portanto, o número de cadeias de `pstrNames` caracteres no retorno pode ser 0, mesmo que a função `WBEM_S_NO_ERROR`retorne.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** WMINet_Utils.idl
 

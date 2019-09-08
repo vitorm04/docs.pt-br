@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf67506fca161a64dd5d4ee915031c155c49241
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c71616d261f145574d580b68793ec91bb4ea3f42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754037"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796647"
 ---
 # <a name="iassemblynameclone-method"></a>Método IAssemblyName::Clone
-Cria uma cópia superficial [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.  
+Cria uma cópia superficial deste objeto [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +37,15 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parâmetros  
  `pName`  
- [out] A cópia retornada isso `IAssemblyName` objeto.  
+ fora A cópia `IAssemblyName` retornada deste objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interface IAssemblyName](iassemblyname-interface.md)

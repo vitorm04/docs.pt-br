@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929237"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794686"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco de dados: simultaneidade otimista e simultaneidade pessimista. O objeto <xref:System.Data.DataSet> é criado para incentivar o uso da simultaneidade otimista para atividades de execução longa, como a comunicação remota de dados e a interação com dados.  
@@ -96,12 +96,12 @@ UPDATE Table1 Set Col1 = @NewVal1
  Você também pode optar por aplicar critérios menos restritivos ao usar um modelo de simultaneidade otimista. Por exemplo, o uso apenas das colunas de chave primária na cláusula WHERE faz com que os dados sejam substituídos, independentemente da atualização ou não das outras colunas desde a última consulta. Você também pode aplicar uma cláusula WHERE apenas a colunas específicas, resultando na substituição de dados, a menos que campos específicos tenham sido atualizados desde sua última consulta.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>O evento DataAdapter.RowUpdated  
- O evento de teleupdate do <xref:System.Data.Common.DataAdapter> objeto pode ser usado em conjunto com as técnicas descritas anteriormente, para fornecer notificação ao seu aplicativo de violações de simultaneidade otimistas. O rowgroup ocorre depois de cada tentativa de atualizar uma linha modificada de um **conjunto**de uma. Isso o habilita a adicionar código de manipulação especial, incluindo o processamento quando ocorre uma exceção, a adicionar informações de erro personalizadas, a adicionar a lógica de repetição e assim por diante. O <xref:System.Data.Common.RowUpdatedEventArgs> objeto retorna uma propriedade **RecordsAffected** que contém o número de linhas afetadas por um determinado comando de atualização para uma linha modificada em uma tabela. Ao definir o comando Update para testar a simultaneidade otimista, a propriedade **RecordsAffected** , como resultado, retornará um valor 0 quando uma violação de simultaneidade otimista tiver ocorrido, porque nenhum registro foi atualizado. Se esse for o caso, uma exceção será gerada. O evento de teleupdated permite que você manipule essa ocorrência e evite a exceção definindo um valor apropriado de **RowUpdatedEventArgs. status** , como **updateStatus. SkipCurrentRow**. Para obter mais informações sobre o evento de teleupdated, consulte [lidando com eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ O evento de **teleupdate** do <xref:System.Data.Common.DataAdapter> objeto pode ser usado em conjunto com as técnicas descritas anteriormente, para fornecer notificação ao seu aplicativo de violações de simultaneidade otimistas. O **rowgroup ocorre depois** de cada tentativa de atualizar uma linha **modificada** de um **conjunto**de uma. Isso o habilita a adicionar código de manipulação especial, incluindo o processamento quando ocorre uma exceção, a adicionar informações de erro personalizadas, a adicionar a lógica de repetição e assim por diante. O <xref:System.Data.Common.RowUpdatedEventArgs> objeto retorna uma propriedade **RecordsAffected** que contém o número de linhas afetadas por um determinado comando de atualização para uma linha modificada em uma tabela. Ao definir o comando Update para testar a simultaneidade otimista, a propriedade **RecordsAffected** , como resultado, retornará um valor 0 quando uma violação de simultaneidade otimista tiver ocorrido, porque nenhum registro foi atualizado. Se esse for o caso, uma exceção será gerada. O evento de **Teleupdated** permite que você manipule essa ocorrência e evite a exceção definindo um valor apropriado de **RowUpdatedEventArgs. status** , como **updateStatus. SkipCurrentRow**. Para obter mais informações sobre o evento de **Teleupdated** , consulte [lidando com eventos de DataAdapter](handling-dataadapter-events.md).  
   
- Opcionalmente, você pode definir **DataAdapter. ContinueUpdateOnError** como **true**, antes de chamar **Update**e responder às informações de erro armazenadas na propriedade rowgroup de uma linha específica quando a **atualização** for concluída. Para obter mais informações, consulte [informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Opcionalmente, você pode definir **DataAdapter. ContinueUpdateOnError** como **true**, antes de chamar **Update**e responder às **informações de erro armazenadas na propriedade rowgroup** de uma linha específica quando a **atualização** for concluída. Para obter mais informações, consulte [informações de erro de linha](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Exemplo de simultaneidade otimista  
- Veja a seguir um exemplo simples que define o **UpdateCommand** de um **DataAdapter** para testar a simultaneidade otimista e, em seguida , usa o evento de teleupdated para testar violações de simultaneidade otimistas. Quando uma violação de simultaneidade otimista é encontrada, o aplicativo define o rowgroup da linha para a qual a atualização foi emitida para refletir uma violação de simultaneidade otimista.  
+ Veja a seguir um exemplo simples que define o **UpdateCommand** de um **DataAdapter** para testar a simultaneidade otimista e, em seguida, usa o evento de **teleupdated** para testar violações de simultaneidade otimistas. Quando uma violação de simultaneidade otimista é encontrada, o aplicativo **define o rowgroup** da linha para a qual a atualização foi emitida para refletir uma violação de simultaneidade otimista.  
   
  Observe que os valores de parâmetro passados para a cláusula WHERE do comando UPDATE são mapeados para os valores **originais** de suas respectivas colunas.  
   
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
-- [Informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [Updating Data Sources with DataAdapters](updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [Informações de erro de linha](./dataset-datatable-dataview/row-error-information.md)
+- [Transações e simultaneidade](transactions-and-concurrency.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

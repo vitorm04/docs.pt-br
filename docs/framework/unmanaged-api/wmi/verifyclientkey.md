@@ -1,6 +1,6 @@
 ---
 title: Função VerifyClientKey (referência de API não gerenciada)
-description: A função VerifyClientKey garante que a chave do cliente tem a segurança correta.
+description: A função VerifyClientKey garante que a chave do cliente tenha a segurança correta.
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4b51fe4510f4172227d9afd049eb6815790a165
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b674e959ab93cf76b84e2af41e875a50b7d115f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783081"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798197"
 ---
 # <a name="verifyclientkey-function"></a>Função VerifyClientKey
 Garante que a chave do cliente tenha a segurança correta.  
@@ -36,12 +36,12 @@ LONG VerifyClientKey();
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função for bem-sucedida, o valor retornado é `ERROR_SUCCESS` (0).
+Se a função for realizada com sucesso, o valor `ERROR_SUCCESS` de retorno será (0).
 
-Se a função falhar, o valor retornado é um código de erro diferente de zero definido na *Winerror. H*.
+Se a função falhar, o valor de retorno será um código de erro diferente de zero definido em *Winerror. h*.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.def  
   

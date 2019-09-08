@@ -2,17 +2,17 @@
 title: Inferir a estrutura relacional do DataSet do esquema XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204807"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785325"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Inferir a estrutura relacional do DataSet do esquema XML
 A estrutura relacional, ou esquema, de um <xref:System.Data.DataSet> é composta de tabelas, colunas, restrições e relações. Ao carregar um <xref:System.Data.DataSet> do XML, o esquema pode ser predefinido ou pode ser criado, explicitamente ou por meio de inferência, a partir do XML que está sendo carregado. Para obter mais informações sobre como carregar o esquema e o <xref:System.Data.DataSet> conteúdo de um XML, consulte [carregamento de um conjunto de dados de XML](loading-a-dataset-from-xml.md) e [carregamento de informações de esquema de DataSet de XML](loading-dataset-schema-information-from-xml.md).  
   
- Se o esquema de um <xref:System.Data.DataSet> estiver sendo criado a partir de XML, o método preferencial será especificar explicitamente o esquema usando o XSD (linguagem de definição de esquema XML) (conforme descrito em derivando a [estrutura relacional do conjunto de dados do esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)) ou o XML-dados reduzidos (XDR). Se nenhum esquema XML ou esquema XDR estiver disponível no XML, o esquema do <xref:System.Data.DataSet> poderá ser inferido da estrutura dos elementos e atributos XML.  
+ Se o esquema de um <xref:System.Data.DataSet> estiver sendo criado a partir de XML, o método preferencial será especificar explicitamente o esquema usando o XSD (linguagem de definição de esquema XML) (conforme descrito em [derivando a estrutura relacional do conjunto de dados do esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)) ou o XML-dados reduzidos (XDR). Se nenhum esquema XML ou esquema XDR estiver disponível no XML, o esquema do <xref:System.Data.DataSet> poderá ser inferido da estrutura dos elementos e atributos XML.  
   
  Esta seção descreve as regras para <xref:System.Data.DataSet> a inferência de esquema mostrando elementos XML e atributos e sua estrutura e o esquema deduzido <xref:System.Data.DataSet> resultante.  
   
@@ -49,4 +49,4 @@ A estrutura relacional, ou esquema, de um <xref:System.Data.DataSet> é composta
   
 ## <a name="see-also"></a>Consulte também
 
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

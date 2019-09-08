@@ -2,12 +2,12 @@
 title: Notificações de consulta no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: a68c01c7db782a9904ba36edec9d13332cab39a9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94171c8dac59fc17b0dd699d87fc043651fa5b7a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645657"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791773"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificações de consulta no SQL Server
 Criado utilizando a infraestrutura de Service Broker, as notificações de consulta permitem que os aplicativos sejam notificados quando os dados tiverem sido alterados. Esse recurso é especialmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo Web, e precisam ser notificados quando os dados de origem são alterados.  
@@ -24,7 +24,7 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
   
  Você pode configurar notificações para as instruções SELECT e EXECUTE. Ao usar uma instrução EXECUTE, o SQL Server registra uma notificação para o comando executado em vez da própria instrução EXECUTE. O comando deve atender aos requisitos e limitações para uma instrução SELECT. Quando um comando que registra uma notificação contém mais de uma declaração, o Mecanismo de Banco de Dados cria uma notificação para cada instrução no lote.  
   
- Se você estiver desenvolvendo um aplicativo em que você precisa receber notificações confiáveis quando dados são alterados, examine as seções **Planejando uma estratégia de notificações de consulta eficiente** e **alternativas para consulta Notificações** no [planejando notificações](https://go.microsoft.com/fwlink/?LinkId=211984) tópico nos Manuais Online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, consulte os seguintes links para tópicos nos Manuais Online do SQL Server.  
+ Se você estiver desenvolvendo um aplicativo onde precisa de notificações de subsegundo confiáveis quando os dados forem alterados, examine as seções **planejando uma estratégia de notificações de consulta eficiente** e **alternativas para as notificações de consulta** no [planejamento para ](https://go.microsoft.com/fwlink/?LinkId=211984)Tópico de notificações no manuais online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, consulte os seguintes links para tópicos nos Manuais Online do SQL Server.  
   
  **Documentação do SQL Server**  
   
@@ -34,21 +34,21 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
   
 - [Desenvolvimento (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [InfoCenter do desenvolvedor do Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [InfoCenter do Service Broker Developer](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
 - [Guia do desenvolvedor (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Habilitando notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
+ [Habilitando notificações de consulta](enabling-query-notifications.md)  
  Descreve como usar as notificações de consulta, incluindo os requisitos para habilitá-las e usá-las.  
   
- [SqlDependency em um aplicativo ASP.NET](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
+ [SqlDependency em um aplicativo ASP.NET](sqldependency-in-an-aspnet-app.md)  
  Demonstra como usar as notificações de consulta de um aplicativo ASP.NET.  
   
- [Detectando alterações com SqlDependency](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
+ [Detectando alterações com SqlDependency](detecting-changes-with-sqldependency.md)  
  Demonstra como detectar quando os resultados da consulta serão diferentes dos recebidos originalmente.  
   
- [Execução de SqlCommand com um SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [Execução de SqlCommand com um SqlNotificationRequest](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  Demonstra a configuração de um objeto <xref:System.Data.SqlClient.SqlCommand> para trabalhar com uma notificação de consulta.  
   
 ## <a name="reference"></a>Referência  
@@ -63,5 +63,5 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
   
 ## <a name="see-also"></a>Consulte também
 
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [SQL Server and ADO.NET](index.md) (SQL Server e ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

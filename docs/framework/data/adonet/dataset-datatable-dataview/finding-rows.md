@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad10557a55b498fe004bff6ce89801e975e7138b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203721"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786323"
 ---
 # <a name="finding-rows"></a>Localizar linhas
 Você pode pesquisar linhas de acordo com seus valores de chave de classificação usando <xref:System.Data.DataView.Find%2A> os <xref:System.Data.DataView.FindRows%2A> métodos e do <xref:System.Data.DataView>. A diferenciação de maiúsculas e minúsculas dos valores de pesquisa nos métodos **Find** e **FindRows** é determinada pela <xref:System.Data.DataTable>propriedade **CaseSensitive** do subjacente. Os valores de pesquisa devem corresponder valores de chave de classificação existentes em sua totalidade para retornar um resultado.  
@@ -98,4 +98,4 @@ else
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataViews](dataviews.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

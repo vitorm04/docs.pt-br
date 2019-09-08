@@ -9,28 +9,28 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: d2d03e11c49d3bde042cc46811f21cc2d899b4b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952250"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779878"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerações sobre o LINQ (WCF Data Services)
-Este tópico fornece informações sobre a maneira como as consultas LINQ são compostas e executadas quando você está usando o cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e as limitações de uso do LINQ para consultar um serviço de dados que implementa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Para obter mais informações sobre como compor e executar consultas [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]em um serviço de dados baseado em um, consulte [consultando o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Este tópico fornece informações sobre a maneira como as consultas LINQ são compostas e executadas quando você está usando o cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e as limitações de uso do LINQ para consultar um serviço de dados que implementa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Para obter mais informações sobre como compor e executar consultas [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]em um serviço de dados baseado em um, consulte [consultando o serviço de dados](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Compondo consultas LINQ  
  O LINQ permite compor consultas em uma coleção de objetos que implementam o <xref:System.Collections.Generic.IEnumerable%601>. Tanto a caixa de diálogo **Adicionar referência de serviço** no Visual Studio quanto a ferramenta datasvcutil. exe são usadas para gerar uma representação de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] um serviço como uma classe de contêiner de entidade <xref:System.Data.Services.Client.DataServiceContext>que herda de, bem como objetos que representam as entidades retornadas em feeds. Essas ferramentas também geram propriedades na classe do contêiner de entidade para as coleções expostas como feeds pelo serviço. Cada uma dessas propriedades da classe que encapsula o retorno do serviço de dados retorna um <xref:System.Data.Services.Client.DataServiceQuery%601>. Como a classe <xref:System.Data.Services.Client.DataServiceQuery%601> implementa a interface do <xref:System.Linq.IQueryable%601> definida pelo LINQ, você pode compor uma consulta LINQ com os feeds expostos pelo serviço de dados, que são traduzidos pela biblioteca de cliente em um URI de solicitação de consulta que é enviado para o serviço de dados em execução.  
   
 > [!IMPORTANT]
-> O conjunto de consultas que podem ser expressadas na sintaxe LINQ é mais ampla do que as ativadas na sintaxe URI que é usada pelos serviços de dados do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Uma classe <xref:System.NotSupportedException> é gerada quando a consulta não pode ser mapeada para um URI no serviço de dados de destino. Para obter mais informações, consulte [métodos LINQ sem suporte](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) neste tópico.  
+> O conjunto de consultas que podem ser expressadas na sintaxe LINQ é mais ampla do que as ativadas na sintaxe URI que é usada pelos serviços de dados do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Uma classe <xref:System.NotSupportedException> é gerada quando a consulta não pode ser mapeada para um URI no serviço de dados de destino. Para obter mais informações, consulte [métodos LINQ sem suporte](linq-considerations-wcf-data-services.md#unsupportedMethods) neste tópico.  
   
  O exemplo a seguir é uma consulta LINQ que retorna `Orders` que têm um custo de frete mais que US$ 30 e classifica os resultados por data de envio, começando com a data de envio mais recente:  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Essa consulta LINQ é convertida no seguinte URI de consulta que é executado no serviço de dados de [início rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) baseado na Northwind:  
+ Essa consulta LINQ é convertida no seguinte URI de consulta que é executado no serviço de dados de [início rápido](quickstart-wcf-data-services.md) baseado na Northwind:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  O cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pode converter os dois tipos de consultas compostas em um URI de consulta, e você pode estender uma consulta LINQ acrescentando métodos de consulta a uma expressão de consulta. Quando você compõe consultas LINQ acrescentando a sintaxe de método a uma expressão de consulta ou a um <xref:System.Data.Services.Client.DataServiceQuery%601>, as operações são adicionadas ao URI de consulta na ordem em que os métodos são chamados. Isso é equivalente a chamar o método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para adicionar cada opção de consulta ao URI de consulta.  
   
 ## <a name="executing-linq-queries"></a>Executando consultas LINQ  
- Determinados métodos de consulta LINQ, como <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> ou <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, quando acrescentados à consulta, fazem com que a consulta seja executada. Uma consulta também é executada quando os resultados são enumerados implicitamente, como em um loop `foreach` ou quando a consulta é atribuída a uma coleção `List`. Para obter mais informações, consulte [consultando o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Determinados métodos de consulta LINQ, como <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> ou <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>, quando acrescentados à consulta, fazem com que a consulta seja executada. Uma consulta também é executada quando os resultados são enumerados implicitamente, como em um loop `foreach` ou quando a consulta é atribuída a uma coleção `List`. Para obter mais informações, consulte [consultando o serviço de dados](querying-the-data-service-wcf-data-services.md).  
   
- O cliente executa uma consulta LINQ em duas partes. Sempre que possível, as expressões LINQ em uma consulta são avaliadas primeiro no cliente e, em seguida, uma consulta baseada em URI é gerada e enviada ao serviço de dados para avaliação em relação aos dados no serviço. Para obter mais informações, consulte a seção [cliente versus execução do servidor](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries) ao [consultar o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ O cliente executa uma consulta LINQ em duas partes. Sempre que possível, as expressões LINQ em uma consulta são avaliadas primeiro no cliente e, em seguida, uma consulta baseada em URI é gerada e enviada ao serviço de dados para avaliação em relação aos dados no serviço. Para obter mais informações, consulte a seção [cliente versus execução do servidor](querying-the-data-service-wcf-data-services.md#executingQueries) ao [consultar o serviço de dados](querying-the-data-service-wcf-data-services.md).  
   
- Quando uma consulta LINQ não pode ser convertida em um URI de consulta compatível com o [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], uma exceção é gerada quando a execução é tentada. Para obter mais informações, consulte [consultando o serviço de dados](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Quando uma consulta LINQ não pode ser convertida em um URI de consulta compatível com o [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], uma exceção é gerada quando a execução é tentada. Para obter mais informações, consulte [consultando o serviço de dados](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>Exemplos de consulta LINQ  
  Os exemplos das seções a seguir demonstram os tipos de consulta LINQ que podem ser executadas em um serviço [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
@@ -136,7 +136,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Expandir  
- Quando consulta um serviço de dados [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você pode solicitar que as entidades relacionadas à entidade destinada pela consulta sejam incluídas no feed retornado. O método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> é chamado no <xref:System.Data.Services.Client.DataServiceQuery%601> do conjunto de entidades definido pela consulta LINQ, com o nome do conjunto de entidades relacionadas fornecido como o parâmetro `path`. Para obter mais informações, consulte [carregando conteúdo adiado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+ Quando consulta um serviço de dados [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você pode solicitar que as entidades relacionadas à entidade destinada pela consulta sejam incluídas no feed retornado. O método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> é chamado no <xref:System.Data.Services.Client.DataServiceQuery%601> do conjunto de entidades definido pela consulta LINQ, com o nome do conjunto de entidades relacionadas fornecido como o parâmetro `path`. Para obter mais informações, consulte [carregando conteúdo adiado](loading-deferred-content-wcf-data-services.md).  
   
  Os exemplos a seguir mostram maneiras equivalentes de usar o método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> em uma consulta:  
   
@@ -212,7 +212,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Querying the Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
-- [Projeções de consulta](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Materialização de objetos](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Querying the Data Service](querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
+- [Projeções de consulta](query-projections-wcf-data-services.md)
+- [Materialização de objetos](object-materialization-wcf-data-services.md)
 - [OData Convenções de URI](https://go.microsoft.com/fwlink/?LinkID=185564)

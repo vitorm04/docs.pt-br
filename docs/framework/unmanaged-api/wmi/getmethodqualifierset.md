@@ -1,6 +1,6 @@
 ---
 title: Função GetMethodQualifierSet (referência de API não gerenciada)
-description: A função GetMethodQualifierSet recupera o conjunto de qualificador de um método.
+description: A função GetMethodQualifierSet recupera o conjunto de qualificadores de um método.
 ms.date: 11/06/2017
 api_name:
 - GetMethodQualifierSet
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 329dcf66c5178a16d0f278c258f6f80f5a1b3e8d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 86a7788736c3c12cfcfd405de88dfadfb14c1eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636746"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798534"
 ---
 # <a name="getmethodqualifierset-function"></a>Função GetMethodQualifierSet
 
@@ -43,20 +43,20 @@ HRESULT GetMethodQualifierSet (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethod`\
-[in] O nome do método. `wszMethod` deve apontar para um válido `LPCWSTR`.
+no O nome do método. `wszMethod`deve apontar para um válido `LPCWSTR`.
 
 `ppQualSet`\
-[out] Recebe o ponteiro de interface que permite o acesso para os qualificadores do método. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não é retornado e o ponteiro é definido para apontar para `null`.
+fora Recebe o ponteiro de interface que permite o acesso aos qualificadores do método. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não será retornado e o ponteiro será definido para apontar para `null`.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -66,15 +66,15 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) .
 
-Uma chamada para essa função tem suporte apenas se o objeto atual é uma definição de classe do CIM. Manipulação de método não está disponível para [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponteiros que apontam para instâncias CIM.
+Uma chamada para essa função só terá suporte se o objeto atual for uma definição de classe CIM. A manipulação de método não está disponível para ponteiros [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que apontam para instâncias de CIM.
 
-Porque cada método pode ter seus próprio qualificadores, o [IWbemQualifierSet ponteiro](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicionar, editar ou excluir esses qualificadores.
+Como cada método pode ter seus próprios qualificadores, o [ponteiro IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicione, edite ou exclua esses qualificadores.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** WMINet_Utils.idl
 

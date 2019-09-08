@@ -8,59 +8,59 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 9d7216b3aed89dc88737cc346386d6b03929fe60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8101c0d1214eed2c6ea42a4faab774207aab3a79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997016"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797284"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Como: alterar o provedor de criptografia de uma chave privada de certificado X.509
-Este tópico mostra como alterar o provedor criptográfico usado para fornecer a chave privada de um certificado X.509 e como integrar o provedor a estrutura de segurança do Windows Communication Foundation (WCF). Para obter mais informações sobre como usar certificados, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+Este tópico mostra como alterar o provedor criptográfico usado para fornecer uma chave privada do certificado X. 509 e como integrar o provedor à estrutura de segurança do Windows Communication Foundation (WCF). Para obter mais informações sobre como usar certificados, consulte [trabalhando com certificados](../feature-details/working-with-certificates.md).  
   
- A estrutura de segurança do WCF fornece uma maneira de introduzir novos tipos de token de segurança, conforme descrito em [como: Criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Também é possível usar um token personalizado para substituir tipos de token fornecido pelo sistema existentes.  
+ A estrutura de segurança do WCF fornece uma maneira de introduzir novos tipos de token de [segurança, conforme descrito em como: Crie um token](how-to-create-a-custom-token.md)personalizado. Também é possível usar um token personalizado para substituir os tipos de token existentes fornecidos pelo sistema.  
   
- Neste tópico, o token de segurança X.509 fornecido pelo sistema é substituído por um token X.509 personalizado que fornece uma implementação diferente da chave privada do certificado. Isso é útil em cenários onde a chave privada real é fornecida por um provedor criptográfico diferente que o provedor de criptografia do Windows padrão. Um exemplo de um provedor criptográfico alternativo é um módulo de segurança de hardware que executa todas as privada chave relacionadas operações criptográficas e não armazena as chaves privadas na memória, o que melhora a segurança do sistema.  
+ Neste tópico, o token de segurança X. 509 fornecido pelo sistema é substituído por um token X. 509 personalizado que fornece uma implementação diferente para a chave privada do certificado. Isso é útil em cenários em que a chave privada real é fornecida por um provedor criptográfico diferente do provedor de criptografia padrão do Windows. Um exemplo de um provedor criptográfico alternativo é um módulo de segurança de hardware que executa todas as operações criptográficas relacionadas à chave privada e não armazena as chaves privadas na memória, melhorando assim a segurança do sistema.  
   
- O exemplo a seguir é para fins de demonstração. Ele não substitui o provedor criptográfico do Windows padrão, mas mostra onde esse provedor pode ser integrado.  
+ O exemplo a seguir é apenas para fins de demonstração. Ele não substitui o provedor criptográfico padrão do Windows, mas mostra onde esse provedor poderia ser integrado.  
   
 ## <a name="procedures"></a>Procedimentos  
- Cada token de segurança que tem uma chave de segurança associada ou chaves deve implementar o <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> propriedade, que retorna uma coleção de chaves da instância de token de segurança. Se o token é um token de segurança X.509, a coleção contém uma única instância da <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> classe que representa as chaves públicas e privadas associadas ao certificado. Para substituir o provedor de criptografia padrão usado para fornecer chaves do certificado, crie uma nova implementação dessa classe.  
+ Cada token de segurança que tem uma chave de segurança ou chaves associadas deve <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> implementar a propriedade, que retorna uma coleção de chaves da instância de token de segurança. Se o token for um token de segurança X. 509, a coleção conterá uma única instância <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> da classe que representa as chaves pública e privada associadas ao certificado. Para substituir o provedor criptográfico padrão usado para fornecer as chaves do certificado, crie uma nova implementação dessa classe.  
   
-#### <a name="to-create-a-custom-x509-asymmetric-key"></a>Para criar uma chave assimétrica de x. 509 personalizada  
+#### <a name="to-create-a-custom-x509-asymmetric-key"></a>Para criar uma chave assimétrica X. 509 personalizada  
   
-1. Definir uma nova classe que deriva de <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> classe.  
+1. Defina uma nova classe derivada da <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> classe.  
   
-2. Substituir o <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> propriedade somente leitura. Essa propriedade retorna o tamanho real da chave pública/privada do certificado par de chaves.  
+2. Substitua a <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> propriedade somente leitura. Essa propriedade retorna o tamanho real da chave do par de chaves pública/privada do certificado.  
   
-3. Substituir o método <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Esse método é chamado pela estrutura de segurança do WCF para descriptografar uma chave simétrica com a chave privada do certificado. (A chave foi anteriormente criptografada com a chave pública do certificado.)  
+3. Substituir o método <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Esse método é chamado pela estrutura de segurança do WCF para descriptografar uma chave simétrica com a chave privada do certificado. (A chave foi criptografada anteriormente com a chave pública do certificado.)  
   
-4. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Esse método é chamado pela estrutura de segurança do WCF para obter uma instância da <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe que representa o provedor criptográfico para as chaves do certificado público ou privado, dependendo dos parâmetros passados para o método.  
+4. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Esse método é chamado pela estrutura de segurança do WCF para obter uma instância da <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe que representa o provedor criptográfico para a chave pública ou privada do certificado, dependendo dos parâmetros passados para o método.  
   
-5. Opcional. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Substitua este método se uma implementação diferente de <xref:System.Security.Cryptography.HashAlgorithm> classe é necessária.  
+5. Opcional. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Substitua esse método se uma implementação diferente da <xref:System.Security.Cryptography.HashAlgorithm> classe for necessária.  
   
-6. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A>. Esse método retorna uma instância do <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> classe que está associado com a chave privada do certificado.  
+6. Substituir o método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A>. Esse método retorna uma instância da <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> classe associada à chave privada do certificado.  
   
-7. Substituir o método <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A>. Esse método é usado para indicar se um determinado algoritmo criptográfico é compatível com a implementação de chave de segurança.  
+7. Substituir o método <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A>. Esse método é usado para indicar se há suporte para um algoritmo criptográfico específico pela implementação da chave de segurança.  
   
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- O procedimento a seguir mostra como integrar o a x. 509 assimétrica de segurança chave implementação personalizada criada no procedimento anterior com a estrutura de segurança do WCF para substituir a segurança X.509 fornecido pelo sistema token.  
+ O procedimento a seguir mostra como integrar a implementação personalizada da chave de segurança assimétrica X. 509 criada no procedimento anterior com a estrutura de segurança do WCF para substituir o token de segurança X. 509 fornecido pelo sistema.  
   
-#### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Para substituir o token de segurança X.509 fornecido pelo sistema com um token de chave de segurança assimétricas de x. 509  
+#### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Para substituir o token de segurança X. 509 fornecido pelo sistema por um token de chave de segurança assimétrica X. 509 personalizado  
   
-1. Crie um token de segurança X.509 personalizado que retorna a chave assimétrica de segurança de x. 509 personalizada em vez da chave de segurança fornecida pelo sistema, conforme mostrado no exemplo a seguir. Para obter mais informações sobre tokens de segurança personalizada, consulte [como: Criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+1. Crie um token de segurança X. 509 personalizado que retorna a chave de segurança assimétrica personalizada X. 509 em vez da chave de segurança fornecida pelo sistema, conforme mostrado no exemplo a seguir. Para obter mais informações sobre tokens de segurança [personalizados, consulte Como: Crie um token](how-to-create-a-custom-token.md)personalizado.  
   
      [!code-csharp[c_CustomX509Token#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#2)]
      [!code-vb[c_CustomX509Token#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#2)]  
   
-2. Crie um provedor de token de segurança personalizada que retorna um token de segurança X.509 personalizado, conforme mostrado no exemplo. Para obter mais informações sobre provedores de token de segurança personalizada, consulte [como: Criar um provedor de Token de segurança personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Crie um provedor de token de segurança personalizado que retorne um token de segurança X. 509 personalizado, conforme mostrado no exemplo. Para obter mais informações sobre provedores de token de segurança [personalizados, consulte Como: Crie um provedor](how-to-create-a-custom-security-token-provider.md)de token de segurança personalizado.  
   
      [!code-csharp[c_CustomX509Token#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#3)]
      [!code-vb[c_CustomX509Token#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#3)]  
   
-3. Se a chave de segurança personalizada precisa ser usado no lado do iniciador, crie um cliente personalizado Gerenciador de token de segurança e as classes de credenciais de cliente personalizado, conforme mostrado no exemplo a seguir. Para obter mais informações sobre credenciais personalizadas do cliente e os gerentes de token de segurança de cliente, consulte [passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+3. Se a chave de segurança personalizada precisar ser usada no lado do iniciador, crie um Gerenciador de tokens de segurança do cliente personalizado e classes de credenciais de cliente personalizadas, conforme mostrado no exemplo a seguir. Para obter mais informações sobre credenciais de cliente personalizadas e gerenciadores de tokens de segurança do cliente, consulte [Walkthrough: Criando credenciais](walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
   
      [!code-csharp[c_CustomX509Token#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#4)]
      [!code-vb[c_CustomX509Token#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#4)]  
@@ -68,7 +68,7 @@ Este tópico mostra como alterar o provedor criptográfico usado para fornecer a
      [!code-csharp[c_CustomX509Token#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#6)]
      [!code-vb[c_CustomX509Token#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#6)]  
   
-4. Se a chave de segurança personalizada precisa ser usado no lado do destinatário, crie um Gerenciador de token de segurança do serviço personalizado e credenciais de serviço personalizado, conforme mostrado no exemplo a seguir. Para obter mais informações sobre credenciais de serviço personalizado e gerentes de token de segurança do serviço, consulte [passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+4. Se a chave de segurança personalizada precisar ser usada no lado do destinatário, crie um Gerenciador de token de segurança de serviço personalizado e as credenciais de serviço personalizadas, conforme mostrado no exemplo a seguir. Para obter mais informações sobre credenciais de serviço personalizadas e gerenciadores de token [de segurança de serviço, consulte Passo a passos: Criando credenciais](walkthrough-creating-custom-client-and-service-credentials.md)de cliente e de serviço personalizadas.  
   
      [!code-csharp[c_CustomX509Token#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#5)]
      [!code-vb[c_CustomX509Token#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#5)]  
@@ -84,7 +84,7 @@ Este tópico mostra como alterar o provedor criptográfico usado para fornecer a
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm>
 - <xref:System.Security.Cryptography.HashAlgorithm>
 - <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
-- [Passo a passo: Criação de credenciais de serviço e personalizadas do cliente](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Como: Criar um autenticador de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Como: Criar um provedor de Token de segurança personalizadas](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Como: Criar um Token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Passo a passo: Criando credenciais de cliente e de serviço personalizadas](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Como: Criar um autenticador de token de segurança personalizado](how-to-create-a-custom-security-token-authenticator.md)
+- [Como: Criar um provedor de token de segurança personalizado](how-to-create-a-custom-security-token-provider.md)
+- [Como: Criar um token personalizado](how-to-create-a-custom-token.md)

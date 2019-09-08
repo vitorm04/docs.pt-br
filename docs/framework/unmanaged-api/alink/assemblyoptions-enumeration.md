@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742270"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777488"
 ---
 # <a name="assemblyoptions-enumeration"></a>Enumeração AssemblyOptions
 Enumera as opções de assembly.  
@@ -58,32 +58,32 @@ typedef enum _AssemblyOptions {
   
 |Campo|Descrição|  
 |-----------|-----------------|  
-|optAssemTitle|Cadeia de caracteres - representa o título do assembly.|  
-|optAssemDescription|Cadeia de caracteres - contém a descrição do assembly.|  
-|optAssemConfig|Cadeia de caracteres - contém a configuração do assembly.|  
-|optAssemOS|Cadeia de caracteres, codificada como: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String – representa o título do assembly.|  
+|optAssemDescription|String-contém a descrição do assembly.|  
+|optAssemConfig|String-contém a configuração do assembly.|  
+|optAssemOS|Codificada em cadeia de caracteres como: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|Cadeia de caracteres - contém a localidade do assembly.|  
-|optAssemVersion|Cadeia de caracteres - codificada como: "Major".|  
-|optAssemCompany|Cadeia de caracteres - contém a empresa.|  
-|optAssemProduct|Cadeia de caracteres - contém o nome do produto.|  
-|optAssemProductVersion|Cadeia de caracteres (também conhecido como InformationalVersion).|  
-|optAssemCopyright|Cadeia de caracteres - contém as informações de direitos autorais.|  
-|optAssemTrademark|Cadeia de caracteres - contém as informações de marca.|  
-|optAssemKeyFile|Cadeia de caracteres (nome de arquivo).|  
+|optAssemLocale|Cadeia de caracteres – contém a localidade do assembly.|  
+|optAssemVersion|Codificada em cadeia de caracteres como: "Major. Minor. Build. Revision".|  
+|optAssemCompany|Cadeia de caracteres – contém a empresa.|  
+|optAssemProduct|Cadeia de caracteres-contém o nome do produto.|  
+|optAssemProductVersion|Cadeia de caracteres (também conhecida como InformationalVersion).|  
+|optAssemCopyright|Cadeia de caracteres-contém as informações de direitos autorais.|  
+|optAssemTrademark|Cadeia de caracteres-contém as informações de marca registrada.|  
+|optAssemKeyFile|Cadeia de caracteres (nome do arquivo).|  
 |optAssemKeyName|Cadeia de caracteres (o nome da chave).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool (também conhecido como DelaySign).|  
-|optAssemFileVersion|Cadeia de caracteres - codificada como "Major" – mesmo que ProductVersion.|  
-|optAssemSatelliteVer|Cadeia de caracteres - codificada como "Major".|  
+|optAssemFileVersion|Cadeia de caracteres codificada como "principal. secundária. Build. Revision" – igual a ProductVersion.|  
+|optAssemSatelliteVer|Cadeia de caracteres codificada como "principal. secundária. Build. Revision".|  
 |optLastAssemOption|Um contador do número de elementos.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** alink.h  
+ **Cabeçalho:** ALink. h  
   
- **Biblioteca**: ALink  
+ **Biblioteca**: Alink. dll  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

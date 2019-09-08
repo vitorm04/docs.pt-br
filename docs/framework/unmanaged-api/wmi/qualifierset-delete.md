@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782607"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798328"
 ---
-# <a name="qualifiersetdelete-function"></a>Função QualifierSet_Delete
+# <a name="qualifierset_delete-function"></a>Função QualifierSet_Delete
 Exclui um qualificador especificado por nome.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,34 +41,34 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`   
-[in] Um ponteiro para um [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instância.
+no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`   
-[in] O nome do qualificador para excluir.
+no O nome do qualificador a ser excluído.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | O parâmetro `wszName` não é válido. |
-|`WBEM_E_INVALID_OPERATION` | 0x80041016 | Excluir esse qualificador é ilegal. |
+|`WBEM_E_INVALID_OPERATION` | 0x80041016 | A exclusão deste qualificador é inválida. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | O qualificador especificado não foi encontrado. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | A substituição de local foi excluída e o qualificador original do objeto pai foi retomada escopo. |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | A substituição local foi excluída e o qualificador original do objeto pai retomou o escopo. |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) método.
+Essa função encapsula uma chamada para o método [IWbemQualifierSet::D xcluir](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-Devido a regras de propagação de qualificador, um qualificador particular foi herdado de outro objeto e simplesmente substituído na classe atual ou instância. Nesse caso, o `QualifierSet_Delete` método redefine o qualificador para seu valor original de herdado. Nesse caso, a função retorna o código de status `WBEM_S_RESET_TO_DEFAULT`.
+Devido a regras de propagação de qualificador, um qualificador específico pode ter sido herdado de outro objeto e meramente substituído na classe ou instância atual. Nesse caso, o `QualifierSet_Delete` método redefine o qualificador para seu valor herdado original. A função, nesse caso, retorna o código `WBEM_S_RESET_TO_DEFAULT`de status.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

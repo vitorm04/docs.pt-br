@@ -6,19 +6,19 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 01212b859e10ec1bbbb452486ce1aa6a2cecb583
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb62b9ad214e5e268c3905df486f5914437b36d3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965822"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780522"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operações assíncronas (WCF Data Services)
 Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor do que os aplicativos que são executados dentro das redes internas. Para otimizar o desempenho e a experiência do usuário do seu aplicativo, recomendamos usar os métodos assíncronos das classes <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> ao acessar servidores do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pela Web.  
   
  Embora os servidores do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] processem as solicitações HTTP de forma assíncrona, alguns métodos de bibliotecas de cliente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] são síncronos e aguardam até que a troca inteira de solicitação-resposta esteja concluída antes de continuar a execução. Os métodos assíncronos das bibliotecas de cliente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não aguardam essa troca para concluir e podem permitir que o aplicativo mantenha uma interface de usuário enquanto isso.  
   
- Você pode executar operações assíncronas usando um par de métodos nas <xref:System.Data.Services.Client.DataServiceContext> classes <xref:System.Data.Services.Client.DataServiceQuery%601> e que começam com *begin* e *end* , respectivamente. Os métodos *begin* registram um delegado que o serviço chama quando a operação é concluída. Os métodos *end* devem ser chamados no delegado que está registrado para manipular o retorno de chamada das operações concluídas. Ao chamar o método *end* para concluir uma operação assíncrona, você deve fazer isso na mesma <xref:System.Data.Services.Client.DataServiceQuery%601> instância ou <xref:System.Data.Services.Client.DataServiceContext> que você usou para iniciar a operação. Cada método *begin* usa um `state` parâmetro que pode passar um objeto de estado para o retorno de chamada. Esse objeto de estado é recuperado do <xref:System.IAsyncResult> que é fornecido com o retorno de chamada e é usado para chamar o método *end* correspondente para concluir a operação assíncrona. Por exemplo, quando você fornece a instância <xref:System.Data.Services.Client.DataServiceQuery%601> como o parâmetro `state` quando chama o método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> na instância, a mesma instância <xref:System.Data.Services.Client.DataServiceQuery%601> é retornada pelo <xref:System.IAsyncResult>. Essa instância de <xref:System.Data.Services.Client.DataServiceQuery%601> é em seguida usada para chamar o método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para concluir a operação de consulta. Para obter mais informações, confira [Como: Executar consultas](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)do serviço de dados assíncrono.  
+ Você pode executar operações assíncronas usando um par de métodos nas <xref:System.Data.Services.Client.DataServiceContext> classes <xref:System.Data.Services.Client.DataServiceQuery%601> e que começam com *begin* e *end* , respectivamente. Os métodos *begin* registram um delegado que o serviço chama quando a operação é concluída. Os métodos *end* devem ser chamados no delegado que está registrado para manipular o retorno de chamada das operações concluídas. Ao chamar o método *end* para concluir uma operação assíncrona, você deve fazer isso na mesma <xref:System.Data.Services.Client.DataServiceQuery%601> instância ou <xref:System.Data.Services.Client.DataServiceContext> que você usou para iniciar a operação. Cada método *begin* usa um `state` parâmetro que pode passar um objeto de estado para o retorno de chamada. Esse objeto de estado é recuperado do <xref:System.IAsyncResult> que é fornecido com o retorno de chamada e é usado para chamar o método *end* correspondente para concluir a operação assíncrona. Por exemplo, quando você fornece a instância <xref:System.Data.Services.Client.DataServiceQuery%601> como o parâmetro `state` quando chama o método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> na instância, a mesma instância <xref:System.Data.Services.Client.DataServiceQuery%601> é retornada pelo <xref:System.IAsyncResult>. Essa instância de <xref:System.Data.Services.Client.DataServiceQuery%601> é em seguida usada para chamar o método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para concluir a operação de consulta. Para obter mais informações, confira [Como: Executar consultas](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)do serviço de dados assíncrono.  
   
 > [!NOTE]
 > Somente operações assíncronas têm suporte pelas bibliotecas de cliente que são fornecidas no .NET Framework para Silverlight. Para obter mais informações, consulte [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
@@ -38,4 +38,4 @@ Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor d
   
 ## <a name="see-also"></a>Consulte também
 
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751584"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796496"
 ---
-# <a name="identityattributeblob-structure"></a>Estrutura IDENTITY_ATTRIBUTE_BLOB
-Contém informações sobre um único atributo em um assembly e consiste em três `DWORD`s. Cada `DWORD` é um deslocamento em um buffer de caracteres produzido pela `CurrentIntoBuffer` método o [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface  
+# <a name="identity_attribute_blob-structure"></a>Estrutura IDENTITY_ATTRIBUTE_BLOB
+Contém informações sobre um único atributo em um assembly e consiste em três `DWORD`s. Cada `DWORD` um é um deslocamento em um buffer de caracteres produzido `CurrentIntoBuffer` pelo método da interface [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,20 +42,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`ofsNamespace`|O primeiro deslocamento no buffer de caractere. Esse deslocamento não é seguido por namespace do atributo, mas por uma série de caracteres nulos. Portanto, ele não é usado.|  
-|`ofsName`|O deslocamento segundo para o buffer de caracteres. Esse local marca o início do nome do atributo.|  
-|`ofsValue`|O terceiro deslocamento no buffer de caractere. Esse local marca o início do valor do atributo.|  
+|`ofsNamespace`|O primeiro deslocamento no buffer de caracteres. Esse deslocamento não é seguido pelo namespace do atributo, mas por uma série de caracteres nulos. Portanto, ele não é usado.|  
+|`ofsName`|O segundo deslocamento no buffer de caracteres. Esse local marca o início do nome do atributo.|  
+|`ofsValue`|O terceiro deslocamento no buffer de caracteres. Esse local marca o início do valor do atributo.|  
   
 ## <a name="sample"></a>Amostra  
- O exemplo a seguir ilustra várias etapas básicas, que acaba resultam em um populados `IDENTITY_ATTRIBUTE_BLOB` estrutura:  
+ O exemplo a seguir ilustra várias etapas básicas, que eventualmente resultam em `IDENTITY_ATTRIBUTE_BLOB` uma estrutura populada:  
   
-1. Obter um [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) para o assembly.  
+1. Obtenha um [IReferenceIdentity](ireferenceidentity-interface.md) para o assembly.  
   
-2. Chame o `IReferenceIdentity::EnumAttributes` método e obter uma [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Chame o `IReferenceIdentity::EnumAttributes` método e obtenha um [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Criar um buffer de caracteres e convertê-la como um `IDENTITY_ATTRIBUTE_BLOB` estrutura.  
+3. Crie um buffer de caracteres e converta-o `IDENTITY_ATTRIBUTE_BLOB` como uma estrutura.  
   
-4. Chame o `CurrentIntoBuffer` método da `IEnumIDENTITY_ATTRIBUTE` interface. Esse método copia os atributos `Namespace`, `Name`, e `Value` no buffer de caractere. Os deslocamentos de três para essas cadeias de caracteres serão disponibilizadas no `IDENTITY_ATTRIBUTE_BLOB` estrutura.  
+4. Chame o `CurrentIntoBuffer` método `IEnumIDENTITY_ATTRIBUTE` da interface. Esse método copia os atributos `Namespace`, `Name`e `Value` para o buffer de caracteres. Os três deslocamentos para essas cadeias de caracteres ficarão `IDENTITY_ATTRIBUTE_BLOB` disponíveis na estrutura.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -225,7 +225,7 @@ Exit:
  C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Saída de exemplo  
- Cultura = neutral  
+ Cultura = neutro  
   
  nome = sistema  
   
@@ -236,15 +236,15 @@ Exit:
  Versão = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Isolation.h  
+ **Cabeçalho:** Isolamento. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [Interface IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [Estrutura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Estruturas de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Interface IReferenceIdentity](ireferenceidentity-interface.md)
+- [Interface IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)
+- [Estrutura IDENTITY_ATTRIBUTE](identity-attribute-structure.md)
+- [Estruturas de fusão](fusion-structures.md)

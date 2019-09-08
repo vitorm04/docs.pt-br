@@ -2,12 +2,12 @@
 title: Sintaxe da cadeia de conexão
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784920"
 ---
 # <a name="connection-string-syntax"></a>Sintaxe da cadeia de conexão
 Cada provedor de dados .NET Framework tem um objeto de `Connection` que herda de <xref:System.Data.Common.DbConnection> bem como de uma propriedade <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica do provedor. A sintaxe específica da cadeia de conexão para cada provedor está documentada em sua propriedade `ConnectionString`. A tabela a seguir lista os quatro provedores de dados que estão incluídos no .NET Framework.  
@@ -30,7 +30,7 @@ Cada provedor de dados .NET Framework tem um objeto de `Connection` que herda de
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Os construtores de cadeia de conexão permitem que você construa cadeias de conexão sintaticamente válidas em tempo de execução, para que você não tenha que manualmente concatenar os valores de cadeia de conexão no seu código. Para obter mais informações, confira [Construtores de cadeias de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Os construtores de cadeia de conexão permitem que você construa cadeias de conexão sintaticamente válidas em tempo de execução, para que você não tenha que manualmente concatenar os valores de cadeia de conexão no seu código. Para obter mais informações, confira [Construtores de cadeias de conexão](connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Autenticação do Windows  
  É recomendável usar a autenticação do Windows (às vezes conhecida como *segurança integrada*) para se conectar a fontes de dados que dão suporte a ela. A sintaxe empregada na cadeia de conexão varia de acordo com o provedor. A tabela a seguir mostra a sintaxe de Autenticação do Windows usada com os provedores de dados .NET Framework.  
@@ -90,7 +90,7 @@ Você também pode definir a propriedade <xref:System.Data.SqlClient.SqlConnecti
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Conectando e anexando a instâncias de usuário do SQL Server Express  
  As instâncias de usuário são um recurso no SQL Server Express. Elas permitem que um usuário que esteja executando uma conta local do Windows com menos privilégios anexe e execute um banco de dados do SQL Server sem exigir privilégios administrativos. Uma instância de usuário é executada com as credenciais do Windows do usuário, não como um serviço.  
   
- Para obter mais informações sobre como trabalhar com instâncias de usuário, consulte [SQL Server Express instâncias de usuário](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Para obter mais informações sobre como trabalhar com instâncias de usuário, consulte [SQL Server Express instâncias de usuário](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Usando TrustServerCertificate  
  A `TrustServerCertificate` palavra-chave é válida somente ao se conectar a uma instância do SQL Server com um certificado válido. Quando `TrustServerCertificate` estiver definido como `true`, a camada de transporte usará SSL para criptografar o canal e não precisar passar pela verificação da cadeia do certificado para validar a confiança.  
@@ -138,7 +138,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 ```  
   
 > [!IMPORTANT]
-> É possível fornecer informações de conexão para uma **OleDbConnection** em um arquivo de universal data link (udl); no entanto, você deve evitar fazer isso. Os arquivos UDL não são criptografados e expõem as informações da cadeia de conexão em texto não criptografado. Como um arquivo UDL é um recurso externo com base em arquivo para o seu aplicativo, ele não poderá ser protegido usando o .NET Framework. Não há suporte para arquivos UDLpara SqlClient.  
+> É possível fornecer informações de conexão para uma **OleDbConnection** em um arquivo de universal data link (udl); no entanto, você deve evitar fazer isso. Os arquivos UDL não são criptografados e expõem as informações da cadeia de conexão em texto não criptografado. Como um arquivo UDL é um recurso externo com base em arquivo para o seu aplicativo, ele não poderá ser protegido usando o .NET Framework. Não há suporte para arquivos UDL para **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Usando DataDirectory para conectar-se ao Access/Jet  
  `DataDirectory` não é exclusivo para `SqlClient`. Ele também pode ser usado com os provedores de dados <xref:System.Data.OleDb> e <xref:System.Data.Odbc> do .NET. A cadeia de caracteres de exemplo <xref:System.Data.OleDb.OleDbConnection> a seguir demonstra a sintaxe necessária para se conectar ao Northwind.mdb localizado na pasta app_data do aplicativo. O banco de dados do sistema (System.mdw) também é armazenado nesse local.  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Consulte também
 
-- [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Cadeia de Conexão](connection-strings.md)
+- [Conectando a uma fonte de dados](connecting-to-a-data-source.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

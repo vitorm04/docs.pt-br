@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778664"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796898"
 ---
 # <a name="getcachepath-function"></a>Função GetCachePath
-Obtém o caminho para o assembly em cache, usando os sinalizadores especificados.  
+Obtém o caminho para o assembly armazenado em cache, usando os sinalizadores especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,22 +40,22 @@ HRESULT GetCachePath (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwCacheFlags`  
- [in] Uma [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) valor que indica a origem do assembly em cache.  
+ no Um valor [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) que indica a origem do assembly armazenado em cache.  
   
  `pwzCachePath`  
- [out] O ponteiro retornado para o caminho.  
+ fora O ponteiro retornado para o caminho.  
   
  `pcchPath`  
- [no, out] O comprimento máximo solicitado de `pwzCachePath`e após o retorno, o comprimento real da `pwzCachePath`.  
+ [entrada, saída] O comprimento máximo solicitado de `pwzCachePath`e, após o retorno, o comprimento real `pwzCachePath`de.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Enumeração ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Enumeração ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md)
+- [Funções estáticas globais de fusão](fusion-global-static-functions.md)

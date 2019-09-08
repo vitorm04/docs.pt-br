@@ -2,12 +2,12 @@
 title: Funções de servidor e banco de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961097"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791786"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Funções de servidor e banco de dados no SQL Server
 Todas as versões do SQL Server usam segurança baseada em função, o que permite que você atribua permissões para uma função ou grupo de usuários, em vez de usuários individuais. O servidor fixo e as funções de banco de dados fixas têm um conjunto fixo de permissões atribuídas a eles.  
@@ -42,7 +42,7 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
  O `dbo`, ou o proprietário do banco de dados, é uma conta de usuário que tem permissões implícitas para executar todas as atividades no banco de dados. Os membros da função de servidor fixa `sysadmin` são mapeados automaticamente para `dbo`.  
   
 > [!NOTE]
-> `dbo`também é o nome de um esquema, conforme discutido em [propriedade e separação de esquema de usuário em SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`também é o nome de um esquema, conforme discutido em [propriedade e separação de esquema de usuário em SQL Server](ownership-and-user-schema-separation-in-sql-server.md).  
   
  A conta de usuário `dbo` é confundida frequentemente com a função de banco de dados fixa `db_owner`. O escopo do `db_owner` é um banco de dados; o escopo do `sysadmin` é o servidor inteiro. A associação na função de `db_owner` não confere privilégios do usuário de `dbo`.  
   
@@ -63,9 +63,9 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Autenticação no SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Propriedade e separação do esquema de usuário no SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Autorização e permissões no SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Autenticação no SQL Server](authentication-in-sql-server.md)
+- [Propriedade e separação do esquema de usuário no SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Autorização e permissões no SQL Server](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

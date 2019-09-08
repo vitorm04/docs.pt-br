@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742388"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787692"
 ---
 # <a name="addfile-method"></a>Método AddFile
-Adiciona arquivos ao assembly. Também pode ser usado para criar os módulos não associados.  
+Adiciona arquivos ao assembly. Também pode ser usado para criar módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +41,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID exclusiva do assembly a ser aumentado.  
+ ID exclusiva do assembly a ser aumentada.  
   
  `pszFilename`  
  Nome totalmente qualificado do arquivo a ser adicionado.  
   
  `dwFlags`  
- Como sinalizadores de COM+ FileDef `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para [método DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Sinalizadores de `ffContainsNoMetaData` FileDef com+, como `ffWriteable`e. `dwFlags`é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface a ser usado para emitir metadados, se necessário.  
+ Interface de [interface IMetaDataEmit](../metadata/imetadataemit-interface.md) a ser usada para emitir metadados, se necessário.  
   
  `pFileToken`  
  Ponteiro para onde a ID exclusiva do arquivo adicionado será armazenada.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h.  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink](ialink-interface.md)
+- [Interface IALink2](ialink2-interface.md)
+- [API do ALink](index.md)

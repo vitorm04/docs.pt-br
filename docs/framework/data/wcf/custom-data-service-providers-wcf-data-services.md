@@ -1,31 +1,31 @@
 ---
-title: Provedores de serviços de dados personalizados (WCF Data Services)
+title: Provedores de serviço de dados personalizados (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: f198de20a3fa788fb8d5f2dc4ebf799989814756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a6079db5e969154c4a9bb6451dd7c698c6d2088
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765707"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780376"
 ---
-# <a name="custom-data-service-providers-wcf-data-services"></a>Provedores de serviços de dados personalizados (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui um conjunto de provedores que permite que você defina um modelo de dados com base nos tipos de dados de associação tardia.  
+# <a name="custom-data-service-providers-wcf-data-services"></a>Provedores de serviço de dados personalizados (WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]inclui um conjunto de provedores que permite que você defina um modelo de dados com base em tipos de dados de associação tardia.  
   
 |Provider|Descrição|  
 |--------------|-----------------|  
-|Provedor de metadados|Isso é o provedor de serviços de dados personalizados de núcleo que lhe permite definir um modelo de dados personalizados em tempo de execução Implementando o <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.|  
-|Provedor de consulta|Esse provedor permite que você execute consultas em um modelo de dados personalizado que é definido usando o <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface. O provedor de consulta é criado implementando o <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interface.|  
-|Atualizar provedor|Esse provedor permite a você para fazer atualizações em tipos que são expostos em um provedor de serviços de dados personalizados e para gerenciar a simultaneidade. Um provedor de atualização é criado implementando o <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> interface|  
-|Provedor de paginação|Esse provedor é usado com o provedor de serviços de dados personalizados para habilitar o suporte de paginação orientado para servidor. Um provedor de paginação para um serviço de dados personalizado é criado implementando o <xref:System.Data.Services.Providers.IDataServicePagingProvider> interface.|  
-|Provedor de streaming|Esse provedor permite que você exponha tipos de dados de objeto binário grande como um fluxo. Um provedor de streaming é criado com a implementação da interface <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. O provedor de streaming também pode ser usado com provedores de fonte de dados do Entity Framework e reflexão. Para obter mais informações, consulte [provedor de Streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|Provedor de metadados|Este é o principal provedor de serviços de dados personalizados que permite que você defina um modelo de dados personalizado em tempo <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> de execução implementando a interface.|  
+|Provedor de consultas|Esse provedor permite que você execute consultas em um modelo de dados personalizado que é definido usando a <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface. O provedor de consultas é criado com a <xref:System.Data.Services.Providers.IDataServiceQueryProvider> implementação da interface.|  
+|Atualizar provedor|Esse provedor permite que você faça atualizações em tipos expostos em um provedor de serviços de dados personalizado e gerencie a simultaneidade. Um provedor de atualização é criado com a <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> implementação da interface|  
+|Provedor de paginação|Esse provedor é usado com o provedor de serviços de dados personalizado para habilitar o suporte de paginação controlado por servidor. Um provedor de paginação para um serviço de dados personalizado é <xref:System.Data.Services.Providers.IDataServicePagingProvider> criado com a implementação da interface.|  
+|Provedor de streaming|Esse provedor permite expor tipos de dados de objeto binário grande como um fluxo. Um provedor de streaming é criado com a implementação da interface <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. O provedor de streaming também pode ser usado com provedores de fonte de dados Entity Framework e Reflection. Para obter mais informações, consulte [streaming Provider](streaming-provider-wcf-data-services.md).|  
   
- Para obter mais informações, consulte o artigo [provedores de serviço de dados personalizado](https://go.microsoft.com/fwlink/?LinkID=186850) e o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Kit de ferramentas do provedor no [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
+ Para obter mais informações, consulte o artigo [provedores de serviços de dados personalizados](https://go.microsoft.com/fwlink/?LinkID=186850) e o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kit de ferramentas de provedor no SDK do [OData](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Entity Framework Provider](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md) (Provedor de Entity Framework)
-- [Provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Provedores de Serviços de Dados](data-services-providers-wcf-data-services.md)
+- [Entity Framework Provider](entity-framework-provider-wcf-data-services.md) (Provedor de Entity Framework)
+- [Provedor de reflexão](reflection-provider-wcf-data-services.md)

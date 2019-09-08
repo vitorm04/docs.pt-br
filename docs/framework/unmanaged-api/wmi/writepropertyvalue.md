@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783064"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798173"
 ---
 # <a name="writepropertyvalue-function"></a>Função WritePropertyValue
 Grava um número especificado de bytes em uma propriedade identificada por um identificador de propriedade.
@@ -43,23 +43,23 @@ HRESULT WritePropertyValue (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instância.
+no Um ponteiro para uma instância de [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) .
 
 `lHandle`  
-[in] Um inteiro que contém o identificador que identifica esta propriedade. O identificador pode ser recuperado chamando o [GetPropertyHandle](getpropertyhandle.md) função.   
+no Um inteiro que contém o identificador que identifica essa propriedade. O identificador pode ser recuperado chamando a função [GetPropertyHandle](getpropertyhandle.md) .   
 
 `lNumBytes`  
-[in] O número de bytes que está sendo gravado na propriedade. Consulte a [comentários](#remarks) seção para obter mais informações.
+no O número de bytes que estão sendo gravados na propriedade. Consulte a seção [comentários](#remarks) para obter mais informações.
 
 `pHandle`   
-[out] Um ponteiro para a matriz de bytes que contém os dados.
+fora Um ponteiro para a matriz de bytes que contém os dados.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -69,14 +69,14 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Use essa função para definir a cadeia de caracteres e todos os outros não -`DWORD` ou não-`QWORD` dados.
+Use essa função para definir a cadeia de caracteres e todos`DWORD` os outros`QWORD` dados não ou não.
 
-Para valores de propriedade não cadeia de caracteres, `lNumBytes` deve ser o tamanho dos dados corretos do tipo de propriedade especificado. Para valores de propriedade de cadeia de caracteres, `lNumBytes` deve ser o comprimento da cadeia de caracteres especificada em bytes e a cadeia de caracteres em si deve ser de um mesmo comprimento em bytes e ser seguida por um caractere nulo de terminação.
+Para valores de propriedade que não `lNumBytes` são de cadeia de caracteres, deve ser o tamanho de dados correto do tipo de propriedade especificado. Para valores de propriedade de `lNumBytes` cadeia de caracteres, deve ser o comprimento da cadeia de caracteres especificada em bytes, e a cadeia de caracteres deve ser de um comprimento par em bytes e ser seguida de um caractere de terminação nula.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

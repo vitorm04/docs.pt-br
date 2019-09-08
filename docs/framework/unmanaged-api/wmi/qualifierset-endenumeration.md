@@ -1,6 +1,6 @@
 ---
 title: Função QualifierSet_EndEnumeration (referência de API não gerenciada)
-description: A função de QualifierSet_EndEnumeration encerra uma enumeração.
+description: A função QualifierSet_EndEnumeration encerra uma enumeração.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782588"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798323"
 ---
-# <a name="qualifiersetendenumeration-function"></a>Função QualifierSet_EndEnumeration
-Finaliza a enumeração começada com uma chamada para o [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) função.  
+# <a name="qualifierset_endenumeration-function"></a>Função QualifierSet_EndEnumeration
+Encerra a enumeração iniciada com uma chamada para a função [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,14 +40,14 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`   
-[in] Um ponteiro para um [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instância.
+no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 ## <a name="return-value"></a>Valor retornado
 
-O seguinte valor retornado por essa função é definido na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-la como uma constante em seu código:
+O valor a seguir retornado por essa função é definido no arquivo de cabeçalho *WbemCli. h* ou você pode defini-lo como uma constante no seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -55,13 +55,13 @@ O seguinte valor retornado por essa função é definido na *WbemCli.h* arquivo 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) método.
+Essa função encapsula uma chamada para o método [IWbemQualifierSet:: endenumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) .
 
-Essa chamada é recomendada, mas não é necessário. Ele libera imediatamente os recursos associados com a enumeração.
+Essa chamada é recomendada, mas não obrigatória. Ele libera imediatamente os recursos associados à enumeração.
 
 ## <a name="requirements"></a>Requisitos  
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
 **Cabeçalho:** WMINet_Utils.idl  
   

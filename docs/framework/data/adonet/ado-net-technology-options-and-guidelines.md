@@ -2,18 +2,18 @@
 title: Opções e diretrizes da tecnologia ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0f363d5eb102edf965c9c6068873fce0721d288
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700846"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785779"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opções e diretrizes da tecnologia ADO.NET
 A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para diminuir a quantidade de codificação e de manutenção necessária para habilitar os desenvolvedores para programarem com modelos de dados de entidade conceituais. Essa plataforma inclui o ADO.NET Entity Framework e as tecnologias relacionadas.  
   
 ## <a name="entity-framework"></a>Entity Framework  
- O ADO.NET Entity Framework foi criado para permitir que os desenvolvedores criem aplicativos de acesso a dados programando em um modelo de aplicativo conceitual, em vez de programar diretamente em um esquema de armazenamento relacional. O objetivo é diminuir a quantidade de código e de manutenção necessários a aplicativos orientados a dados. Para obter mais informações, consulte [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
+ O ADO.NET Entity Framework foi criado para permitir que os desenvolvedores criem aplicativos de acesso a dados programando em um modelo de aplicativo conceitual, em vez de programar diretamente em um esquema de armazenamento relacional. O objetivo é diminuir a quantidade de código e de manutenção necessários a aplicativos orientados a dados. Para obter mais informações, consulte [ADO.NET Entity Framework](./ef/index.md).  
   
 ### <a name="entity-data-model-edm"></a>Modelo de Dados de Entidade (EDM)  
  Um EDM (Modelo de Dados de Entidade) é uma especificação de design que define os dados do aplicativo como conjuntos de entidades e relacionamentos. Os dados nesse modelo dão suporte ao mapeamento relacional de objetos e à capacidade de programação de dados entre os limites do aplicativo.  
@@ -22,25 +22,24 @@ A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para dim
  Os Serviços de Objeto permitem que os programadores interajam com o modelo conceitual através de um conjunto de classes CLR (Common Language Runtime). Essas classes podem ser geradas automaticamente no modelo conceitual ou podem ser desenvolvidas independente para refletir a estrutura do modelo conceitual. Os Serviços de Objeto também fornecem suporte à infraestrutura do Entity Framework, incluindo serviços como gerenciamento de estado, controle de alterações, resolução de identidade, relacionamentos de carregamento e navegação, propagação de alterações de objetos para modificações do banco de dados e suporte à criação de consultas para o Entity SQL. Para obter mais informações, consulte [Visão geral dos serviços de objeto (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
- O LINQ to Entities é uma implementação do LINQ (consulta integrada à linguagem) que permite que os desenvolvedores criem consultas fortemente tipadas com o contexto de objeto do Entity Framework usando expressões LINQ e operadores de consulta padrão LINQ. O LINQ to Entities permite que os desenvolvedores trabalhem com um modelo conceitual com um mapeamento relacional de objetos muito flexível por meio do Microsoft SQL Server e bancos de dados de terceiros. Para obter mais informações, consulte [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
+ O LINQ to Entities é uma implementação do LINQ (consulta integrada à linguagem) que permite que os desenvolvedores criem consultas fortemente tipadas com o contexto de objeto do Entity Framework usando expressões LINQ e operadores de consulta padrão LINQ. O LINQ to Entities permite que os desenvolvedores trabalhem com um modelo conceitual com um mapeamento relacional de objetos muito flexível por meio do Microsoft SQL Server e bancos de dados de terceiros. Para obter mais informações, consulte [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
 ### <a name="entity-sql"></a>Entity SQL  
- O Entity SQL é uma linguagem de consulta baseada em texto criada para interagir com um Modelo de Dados de Entidade. O Entity SQL é um dialeto SQL que contém constructos para consulta em termos dos conceitos de modelagem de nível mais alto, como herança, tipos complexos e relações explícitas. Os desenvolvedores também podem usar o Entity SQL diretamente com Serviços de Objeto. Para obter mais informações, consulte [linguagem Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
+ O Entity SQL é uma linguagem de consulta baseada em texto criada para interagir com um Modelo de Dados de Entidade. O Entity SQL é um dialeto SQL que contém constructos para consulta em termos dos conceitos de modelagem de nível mais alto, como herança, tipos complexos e relações explícitas. Os desenvolvedores também podem usar o Entity SQL diretamente com Serviços de Objeto. Para obter mais informações, consulte [Entity SQL Language](./ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- O EntityClient é um novo provedor de dados .NET Framework usado para interagir com um Modelo de Dados de Entidade. O EntityClient segue o padrão do provedor de dados .NET Framework de expor os objetos <xref:System.Data.EntityClient.EntityConnection> e <xref:System.Data.EntityClient.EntityCommand> que retornam um <xref:System.Data.EntityClient.EntityDataReader>. O EntityClient funciona com a linguagem Entity SQL, fornecendo mapeamento flexível para provedores de dados específicos a armazenamento. Para obter mais informações, consulte [provedor EntityClient para Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
+ O EntityClient é um novo provedor de dados .NET Framework usado para interagir com um Modelo de Dados de Entidade. O EntityClient segue o padrão do provedor de dados .NET Framework de expor os objetos <xref:System.Data.EntityClient.EntityConnection> e <xref:System.Data.EntityClient.EntityCommand> que retornam um <xref:System.Data.EntityClient.EntityDataReader>. O EntityClient funciona com a linguagem Entity SQL, fornecendo mapeamento flexível para provedores de dados específicos a armazenamento. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Ferramentas do Modelo de Dados de Entidade  
- O Entity Framework fornece ferramentas de linha de comando, assistentes e designers para facilitar a criação de aplicativos EDM. O controle EntityDataSource dá suporte a cenários de vinculação de dados baseados no EDM. A superfície de programação do controle EntityDataSource é semelhante a outros controles de fonte de dados no Visual Studio. Para obter mais informações, consulte [ferramentas de modelo de dados de entidade ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
+ O Entity Framework fornece ferramentas de linha de comando, assistentes e designers para facilitar a criação de aplicativos EDM. O controle EntityDataSource dá suporte a cenários de vinculação de dados baseados no EDM. A superfície de programação do controle EntityDataSource é semelhante a outros controles de fonte de dados no Visual Studio. Para obter mais informações, consulte [ADO.NET modelo de dados de entidade Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  O LINQ to SQL é uma implementação do OR/M (mapeamento relacional de objeto) que permite que você modele um banco de dados SQL Server usando classes do .NET Framework. O LINQ to SQL permite que você consulte seu banco de dados usando LINQ, bem como atualize, insira e exclua dados dele. O LINQ to SQL dá suporte a transações, exibições e procedimentos armazenados, fornecendo uma maneira fácil de integrar regras de validação de dados e de lógica de negócios no modelo de dados. Você pode usar o O/R Designer (Designer Relacional de Objeto) para modelar as classes e as associações de entidades que são baseadas em objetos em um banco de dados. Para obter mais informações, consulte [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4,5](../wcf/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
-- [What's New in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md) (Novidades no ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [What's New in ADO.NET](whats-new.md) (Novidades no ADO.NET)

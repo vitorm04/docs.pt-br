@@ -1,6 +1,6 @@
 ---
 title: Função InheritsFrom (referência de API não gerenciada)
-description: A função InheritsFrom determina se uma classe ou instância derivada de uma classe pai específico.
+description: A função InheritsFrom determina se uma classe ou instância deriva de uma classe pai específica.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c04a08c9712359453b9c5a9d136e22e1de8648a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746510"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798457"
 ---
 # <a name="inheritsfrom-function"></a>Função InheritsFrom
 Determina se a classe ou instância atual é derivada de uma classe pai especificada.
@@ -41,30 +41,30 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszAncestor`  
-[in] O nome da classe. `wszAncestor` deve apontar para um válido `LPCWSTR`.
+no O nome da classe. `wszAncestor`deve apontar para um válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | O objeto atual herda `wszAncestor`.  |
+| `WBEM_S_NO_ERROR` | 0 | O objeto atual é herdado de `wszAncestor`.  |
 | `WBEM_S_FALSE` | 1 | O objeto atual não herda de `wszAncestor`. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` é `null`. |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

@@ -4,34 +4,34 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: e1e776a42ca63e4b862e307cbcae1bab2847d0ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b5feb0da86e11485fa7ca1c474a69002c8d43ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587290"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797247"
 ---
 # <a name="creating-user-defined-bindings"></a>Criando associações definidas pelo usuário
-Há várias maneiras de criar associações não são fornecidas pelo sistema:  
+Há várias maneiras de criar associações não fornecidas pelo sistema:  
   
-- Criar uma ligação personalizada, com base no <xref:System.ServiceModel.Channels.CustomBinding> classe, que é um contêiner que você preenche com elementos de associação. A associação personalizada é adicionada a um ponto de extremidade de serviço. Você pode criar a associação personalizada de que um arquivo por meio de programação ou em uma configuração de aplicativo. Para usar um elemento de associação de um arquivo de configuração de aplicativo, o elemento de associação deve estender <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Para obter mais informações sobre ligações personalizadas, consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Crie uma associação personalizada, com base na <xref:System.ServiceModel.Channels.CustomBinding> classe, que é um contêiner que você preenche com elementos de associação. Em seguida, a associação personalizada é adicionada a um ponto de extremidade de serviço. Você pode criar a associação personalizada programaticamente ou em um arquivo de configuração de aplicativo. Para usar um elemento Binding de um arquivo de configuração de aplicativo, o elemento Binding <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>deve ser estendido. Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
   
-- Você pode criar uma classe que deriva de uma associação padrão. Por exemplo, você pode derivar uma classe de <xref:System.ServiceModel.WSHttpBinding> e substituir <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> método para obter os elementos de associação e inserir um elemento de associação personalizado ou estabelecer um valor específico para a segurança.  
+- Você pode criar uma classe que deriva de uma associação padrão. Por exemplo, você pode derivar uma classe <xref:System.ServiceModel.WSHttpBinding> de e <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> substituir o método para obter os elementos de associação e inserir um elemento de ligação personalizado ou estabelecer um valor específico para segurança.  
   
-- Você pode criar um novo <xref:System.ServiceModel.Channels.Binding> tipo para controlar completamente a implementação de associação inteira.  
+- Você pode criar um novo <xref:System.ServiceModel.Channels.Binding> tipo para controlar completamente toda a implementação de associação.  
   
 ## <a name="the-order-of-binding-elements"></a>A ordem dos elementos de associação  
- Cada elemento de associação representa uma etapa de processamento ao enviar ou receber mensagens. Em tempo de execução, elementos de associação de criam os canais e ouvintes necessárias para criar pilhas de canais de entrada e saída.  
+ Cada elemento de associação representa uma etapa de processamento ao enviar ou receber mensagens. Em tempo de execução, os elementos de associação criam os canais e ouvintes necessários para criar pilhas de canal de entrada e de saída.  
   
- Há três tipos principais de elementos de associação: Protocolo de associação de elementos, elementos de associação de codificação e elementos de associação de transporte.  
+ Há três tipos principais de elementos de ligação: Elementos de associação de protocolo, elementos de associação de codificação e elementos de associação de transporte.  
   
- Elementos de ligação de protocolo – esses elementos representam etapas de processamento de nível mais altos que atuam em mensagens. Canais e ouvintes criados por esses elementos de associação podem adicionar, remover ou modificar o conteúdo da mensagem. Uma determinada vinculação pode ter um número arbitrário de elementos de ligação de protocolo, cada herdando <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) inclui vários elementos de associação de protocolo, incluindo o <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> e o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementos de associação de protocolo – esses elementos representam etapas de processamento de nível superior que atuam em mensagens. Canais e ouvintes criados por esses elementos de ligação podem adicionar, remover ou modificar o conteúdo da mensagem. Uma determinada associação pode ter um número arbitrário de elementos de ligação de protocolo, cada um <xref:System.ServiceModel.Channels.BindingElement>herdado de. O Windows Communication Foundation (WCF) inclui vários elementos de ligação de protocolo <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> , incluindo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>o e o.  
   
- Elemento de associação – esses representam elementos transformações entre uma mensagem e uma codificação prontos para transmissão de codificação. Associações do WCF típicas incluem exatamente um elemento de associação de codificação. Exemplos de codificação de elementos de associação a <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, o <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>e o <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Se um elemento de associação de codificação não for especificado para uma associação, uma codificação padrão é usada. O padrão é texto quando o transporte é HTTP e binários, caso contrário.  
+ Elemento de associação de codificação – esses elementos representam transformações entre uma mensagem e uma codificação pronta para transmissão na conexão. As associações típicas do WCF incluem exatamente um elemento de associação de codificação. Exemplos de elementos de associação de codificação <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>incluem o <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, o e <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>o. Se um elemento de associação de codificação não for especificado para uma associação, uma codificação padrão será usada. O padrão é Text quando o transporte é HTTP e binary de outra forma.  
   
- Elemento de associação de transporte esses elementos representam a transmissão de uma mensagem de codifica em um protocolo de transporte. Associações do WCF típicas incluem exatamente um elemento de associação de transporte, que herda de <xref:System.ServiceModel.Channels.TransportBindingElement>. Exemplos de elementos de associação de transporte a <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>e o <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Elemento de associação de transporte – esses elementos representam a transmissão de uma mensagem de codificação em um protocolo de transporte. As associações típicas do WCF incluem exatamente um elemento de associação de transporte <xref:System.ServiceModel.Channels.TransportBindingElement>, que é herdado de. Exemplos de elementos de associação de transporte <xref:System.ServiceModel.Channels.TcpTransportBindingElement>incluem o <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, o e <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>o.  
   
- Durante a criação de novas associações, a ordem dos elementos de associação adicionados é importante. Sempre adicione elementos de associação na seguinte ordem:  
+ Ao criar novas associações, a ordem dos elementos de associação adicionados é importante. Sempre adicione elementos de associação na seguinte ordem:  
   
 |Camada|Opções|Necessária|  
 |-----------|-------------|--------------|  
@@ -39,15 +39,15 @@ Há várias maneiras de criar associações não são fornecidas pelo sistema:
 |Confiabilidade|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|Não|  
 |Segurança|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Não|  
 |Duplex composto|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Não|  
-|Codificando|Texto, binário, MTOM, personalizado|Sim*|  
-|Transporte|Nomeado por TCP, Pipes, HTTP, HTTPS, MSMQ, personalizado|Sim|  
+|Codificando|Texto, binário, MTOM, personalizado|Ok\*|  
+|Porta|TCP, pipes nomeados, HTTP, HTTPS, MSMQ, personalizado|Sim|  
   
- * Porque uma codificação é necessária para cada associação, se uma codificação não for especificada, o WCF adicionará uma codificação padrão para você. O padrão é Text/XML binária e para os transportes HTTP e HTTPS, caso contrário.  
+\*Como uma codificação é necessária para cada associação, se uma codificação não for especificada, o WCF adicionará uma codificação padrão para você. O padrão é Text/XML para os transportes HTTP e HTTPS e, caso contrário, binary.  
   
 ## <a name="creating-a-new-binding-element"></a>Criando um novo elemento de associação  
- Além dos tipos derivados <xref:System.ServiceModel.Channels.BindingElement> que são fornecidos pelo WCF, você pode criar seus próprios elementos de associação. Isso permite que você personalize a maneira como a pilha de associações é criada e os componentes que entrar com a criação de seu próprio <xref:System.ServiceModel.Channels.BindingElement> que pode ser composto com os outros tipos fornecidos pelo sistema na pilha.  
+ Além dos tipos derivados de que são <xref:System.ServiceModel.Channels.BindingElement> fornecidos pelo WCF, você pode criar seus próprios elementos de ligação. Isso permite que você personalize a maneira como a pilha de associações é criada e os componentes que o acompanham criando as suas <xref:System.ServiceModel.Channels.BindingElement> próprias que podem ser compostas com os outros tipos fornecidos pelo sistema na pilha.  
   
- Por exemplo, se você implementar um `LoggingBindingElement` que fornece a capacidade de registrar a mensagem para um banco de dados, você deve colocá-lo acima de um canal de transporte na pilha de canais. Nesse caso, o aplicativo cria uma associação personalizada que é composta de `LoggingBindingElement` com `TcpTransportBindingElement`, conforme mostrado no exemplo a seguir.  
+ Por exemplo, se você implementar um `LoggingBindingElement` que forneça a capacidade de registrar a mensagem em um banco de dados, deverá colocá-la acima de um canal de transporte na pilha de canais. Nesse caso, o aplicativo cria uma associação personalizada que criou o `LoggingBindingElement` com `TcpTransportBindingElement`, como no exemplo a seguir.  
   
 ```csharp  
 Binding customBinding = new CustomBinding(  
@@ -56,23 +56,23 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- Como escrever o seu novo elemento de associação depende de sua funcionalidade exata. Um dos exemplos de [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md), fornece uma descrição detalhada de como implementar um tipo de elemento de associação.  
+ A maneira como você escreve seu novo elemento de associação depende de sua funcionalidade exata. Um dos exemplos, [transporte: UDP](../samples/transport-udp.md), fornece uma descrição detalhada de como implementar um tipo de elemento de ligação.  
   
-## <a name="creating-a-new-binding"></a>Criar uma nova associação  
- Um elemento de associação criado pelo usuário pode ser usado de duas maneiras. A seção anterior ilustra a primeira maneira: por meio de uma associação personalizada. Uma associação personalizada permite ao usuário criar sua próprias associação com base em um conjunto arbitrário de elementos, incluindo aqueles criados pelo usuário de associação.  
+## <a name="creating-a-new-binding"></a>Criando uma nova associação  
+ Um elemento de Associação criado pelo usuário pode ser usado de duas maneiras. A seção anterior ilustra a primeira maneira: por meio de uma associação personalizada. Uma associação personalizada permite que o usuário crie sua própria associação com base em um conjunto arbitrário de elementos de ligação, incluindo aqueles criados pelo usuário.  
   
- Se você usar a associação em mais de um aplicativo, criar sua própria associação e estender o <xref:System.ServiceModel.Channels.Binding>. Isso evita a criação manual de uma ligação personalizada sempre que você deseja usá-lo. Uma associação definida pelo usuário permite que você definir o comportamento da associação e incluir elementos de associação definidas pelo usuário. E vale *pré-empacotado*: você não precisa recriar a associação, toda vez que você usá-lo.  
+ Se você usar a associação em mais de um aplicativo, crie sua própria ligação e estenda o <xref:System.ServiceModel.Channels.Binding>. Isso evita a criação manual de uma associação personalizada toda vez que você desejar usá-la. Uma associação definida pelo usuário permite que você defina o comportamento da associação e inclua elementos de associação definidos pelo usuário. E ele é *previamente empacotado*: você não precisa recompilar a associação sempre que usá-la.  
   
- No mínimo, uma associação definida pelo usuário deve implementar o <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método e o <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade.  
+ No mínimo, uma associação definida pelo usuário deve implementar o <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método e a <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade.  
   
- O <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método retorna um novo <xref:System.ServiceModel.Channels.BindingElementCollection> que contém os elementos de associação para a associação. A coleção for ordenada e deve conter os elementos de associação de protocolo primeiro, seguido pelo elemento de associação de codificação, seguido pelo elemento de associação de transporte. Ao usar os elementos de associação fornecida pelo sistema do WCF, você deve seguir o elemento de associação ordenação regras especificadas na [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md). Esta coleção nunca deve fazer referência a objetos referenciados dentro da classe de associação definidas pelo usuário; Consequentemente, os autores de associação devem retornar um `Clone()` do <xref:System.ServiceModel.Channels.BindingElementCollection> em cada chamada para <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ O <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método retorna um novo <xref:System.ServiceModel.Channels.BindingElementCollection> que contém os elementos de associação para a associação. A coleção é ordenada e deve conter os elementos de associação de protocolo primeiro, seguidos pelo elemento de associação de codificação, seguido pelo elemento de associação de transporte. Ao usar os elementos de associação fornecidos pelo sistema do WCF, você deve seguir as regras de ordenação do elemento de associação especificadas em [associações personalizadas](custom-bindings.md). Essa coleção nunca deve fazer referência a objetos referenciados dentro da classe de associação definida pelo usuário; Consequentemente, os autores `Clone()` <xref:System.ServiceModel.Channels.BindingElementCollection> de associação devem retornar um dos em cada <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>chamada para.  
   
- O <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade representa o esquema de URI para o protocolo de transporte em uso na associação. Por exemplo, o *WSHttpBinding* e o *NetTcpBinding* retornar "http" e "NET. TCP" de suas respectivas <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedades.  
+ A <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade representa o esquema de URI para o protocolo de transporte em uso na associação. Por exemplo, *WSHttpBinding* e *NetTcpBinding* retornam "http" e "net. TCP" de suas respectivas <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Propriedades.  
   
- Para obter uma lista completa de métodos opcionais e propriedades para associações definidas pelo usuário, consulte <xref:System.ServiceModel.Channels.Binding>.  
+ Para obter uma lista completa de métodos e propriedades opcionais para associações definidas pelo usuário, <xref:System.ServiceModel.Channels.Binding>consulte.  
   
 ### <a name="example"></a>Exemplo  
- Este exemplo implementa a associação de perfil em `SampleProfileUdpBinding`, que é derivada de <xref:System.ServiceModel.Channels.Binding>. O `SampleProfileUdpBinding` contém até quatro elementos de associação dentro dele: um usuário criado `UdpTransportBindingElement`; e três fornecido pelo sistema: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, e `ReliableSessionBindingElement`.  
+ Este exemplo implementa a associação de `SampleProfileUdpBinding`perfil no, que deriva <xref:System.ServiceModel.Channels.Binding>de. O `SampleProfileUdpBinding` contém até quatro elementos de associação dentro dele: um criado `UdpTransportBindingElement`pelo usuário; e três fornecidos pelo sistema: `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`e `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -89,36 +89,36 @@ public override BindingElementCollection CreateBindingElements()
 }  
 ```  
   
-## <a name="security-restrictions-with-duplex-contracts"></a>Restrições de segurança com contratos Duplex  
- Nem todos os elementos de associação são compatíveis entre si. Em particular, há algumas restrições sobre segurança elementos de associação quando usado com contratos duplex.  
+## <a name="security-restrictions-with-duplex-contracts"></a>Restrições de segurança com contratos duplex  
+ Nem todos os elementos de associação são compatíveis entre si. Em particular, há algumas restrições em elementos de associação de segurança quando usadas com contratos duplex.  
   
-### <a name="one-shot-security"></a>Segurança propagandas  
- Você pode implementar a segurança de "todos", onde todas as credenciais de segurança necessárias são enviadas em uma única mensagem, definindo o `negotiateServiceCredential` atributo o \<mensagem > elemento de configuração para `false`.  
+### <a name="one-shot-security"></a>Segurança One-shot  
+ Você pode implementar a segurança "One-shot", em que todas as credenciais de segurança necessárias são enviadas em uma única mensagem, `negotiateServiceCredential` definindo o atributo \<da mensagem > elemento de `false`configuração como.  
   
- Autenticação propagandas não funciona com contratos duplex.  
+ A autenticação One-Shot não funciona com contratos duplex.  
   
- Para contratos de solicitação-resposta, autenticação propagandas só funcionará se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação <xref:System.ServiceModel.Channels.IRequestChannel> ou <xref:System.ServiceModel.Channels.IRequestSessionChannel> instâncias.  
+ Para contratos de solicitação-resposta, a autenticação única funcionará somente se a pilha de associação abaixo do elemento de associação <xref:System.ServiceModel.Channels.IRequestChannel> de <xref:System.ServiceModel.Channels.IRequestSessionChannel> segurança oferecer suporte à criação ou instâncias.  
   
- Para contratos unidirecionais, propagandas funciona a autenticação se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, <xref:System.ServiceModel.Channels.IOutputChannel> ou <xref:System.ServiceModel.Channels.IOutputSessionChannel> instâncias.  
+ Para contratos unidirecionais, a autenticação única funciona se a pilha de associação abaixo do elemento de associação de segurança <xref:System.ServiceModel.Channels.IRequestChannel>oferecer suporte <xref:System.ServiceModel.Channels.IOutputChannel> à <xref:System.ServiceModel.Channels.IOutputSessionChannel> criação de instâncias, <xref:System.ServiceModel.Channels.IRequestSessionChannel>ou.  
   
-### <a name="cookie-mode-security-context-tokens"></a>Tokens de contexto de segurança do modo de cookie  
- Tokens de contexto de segurança de modo de cookie não podem ser usadas com contratos duplex.  
+### <a name="cookie-mode-security-context-tokens"></a>Tokens de contexto de segurança no modo de cookie  
+ Os tokens de contexto de segurança do modo de cookie não podem ser usados com contratos duplex.  
   
- Para contratos de solicitação-resposta, o contexto de segurança do modo de cookie tokens trabalho somente se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação <xref:System.ServiceModel.Channels.IRequestChannel> ou <xref:System.ServiceModel.Channels.IRequestSessionChannel> instâncias.  
+ Para contratos de solicitação-resposta, os tokens de contexto de segurança no modo de cookie só funcionarão se a pilha de <xref:System.ServiceModel.Channels.IRequestChannel> Associação <xref:System.ServiceModel.Channels.IRequestSessionChannel> abaixo do elemento de associação de segurança oferecer suporte à criação ou instâncias.  
   
- Para contratos unidirecionais, o contexto de segurança do modo de cookie tokens funciona se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação <xref:System.ServiceModel.Channels.IRequestChannel> ou <xref:System.ServiceModel.Channels.IRequestSessionChannel> instâncias.  
+ Para contratos unidirecionais, os tokens de contexto de segurança no modo de cookie funcionarão se a pilha de associação <xref:System.ServiceModel.Channels.IRequestChannel> abaixo <xref:System.ServiceModel.Channels.IRequestSessionChannel> do elemento de associação de segurança der suporte à criação ou instâncias.  
   
-### <a name="session-mode-security-context-tokens"></a>Tokens de contexto de segurança do modo de sessão  
- Modo de sessão SCT funciona para contratos duplex se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação <xref:System.ServiceModel.Channels.IDuplexChannel> ou <xref:System.ServiceModel.Channels.IDuplexSessionChannel> instâncias.  
+### <a name="session-mode-security-context-tokens"></a>Tokens de contexto de segurança no modo de sessão  
+ O modo de sessão SCT funciona para contratos duplex se a pilha de associação abaixo do elemento de <xref:System.ServiceModel.Channels.IDuplexChannel> Associação <xref:System.ServiceModel.Channels.IDuplexSessionChannel> de segurança dá suporte à criação ou instâncias.  
   
- Modo de sessão SCT funciona para se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação de contratos de solicitação-resposta <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> ou <xref:System.ServiceModel.Channels.IRequestSessionChannel>, instâncias.  
+ O modo de sessão SCT funciona para contratos de solicitação-resposta se a pilha de associação abaixo do elemento <xref:System.ServiceModel.Channels.IDuplexChannel>de associação <xref:System.ServiceModel.Channels.IRequestChannel> de <xref:System.ServiceModel.Channels.IRequestSessionChannel>segurança dá suporte à criação de instâncias, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>ou,.  
   
- Modo de sessão SCT funciona para contratos de maneira 1 se a pilha de associação abaixo do elemento de associação de segurança dá suporte à criação <xref:System.ServiceModel.Channels.IDuplexChannel>, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, <xref:System.ServiceModel.Channels.IRequestChannel> ou <xref:System.ServiceModel.Channels.IRequestSessionChannel> instâncias.  
+ O modo de sessão SCT funciona para contratos de 1 forma se a pilha de associação abaixo do elemento de <xref:System.ServiceModel.Channels.IDuplexChannel>Associação de <xref:System.ServiceModel.Channels.IRequestChannel> segurança <xref:System.ServiceModel.Channels.IRequestSessionChannel> dá suporte à criação de instâncias, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>ou.  
   
 ## <a name="deriving-from-a-standard-binding"></a>Derivando de uma associação padrão  
- Em vez de criar uma classe de associação completamente nova, é possível estender uma das associações fornecidas pelo sistema existentes. Muito, como no caso anterior, você deve substituir a <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método e o <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade.  
+ Em vez de criar uma classe de associação totalmente nova, talvez seja possível estender uma das associações existentes fornecidas pelo sistema. Assim como no caso anterior, você deve substituir o <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> método e a <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriedade.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Associações personalizadas](custom-bindings.md)

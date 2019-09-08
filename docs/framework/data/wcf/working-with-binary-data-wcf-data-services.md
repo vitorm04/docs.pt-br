@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043893"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779627"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Trabalhando com dados binários (WCF Data Services)
 
@@ -23,7 +23,7 @@ A [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de clie
 
 - Como um fluxo de recursos binários separado. Esse é o método recomendado para acessar e alterar dados BLOB (objeto binário grande) que podem representar uma fotografia, um vídeo ou qualquer outro tipo de dados codificados binários.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementa o streaming de dados binários usando HTTP, conforme definido no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Nesse mecanismo, os dados binários são tratados como um recurso de mídia separado do, mas relacionados a uma entidade, que é chamada de entrada de link de mídia. Para obter mais informações, consulte [streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementa o streaming de dados binários usando HTTP, conforme definido no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Nesse mecanismo, os dados binários são tratados como um recurso de mídia separado do, mas relacionados a uma entidade, que é chamada de entrada de link de mídia. Para obter mais informações, consulte [streaming Provider](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Para obter um exemplo passo a passo de como criar um aplicativo cliente do Windows Presentation Foundation (WPF) que baixa arquivos de imagem binários de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] um serviço que armazena fotos, consulte a [série do provedor de streaming de serviços de postagem de dados-parte 2: Acessando um fluxo de recursos de](https://go.microsoft.com/fwlink/?LinkId=201637)mídia do cliente. Para baixar o código de exemplo para o serviço de dados de foto de transmissão em destaque na postagem do blog, consulte o [exemplo serviço de streaming de dados de fotos](https://go.microsoft.com/fwlink/?LinkId=198988) na Galeria de códigos do MSDN.
@@ -34,7 +34,7 @@ Uma entidade que tenha um fluxo de recursos de mídia relacionado é indicada no
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Os outros exemplos deste tópico mostram como acessar e alterar o fluxo de recursos de mídia. Para obter um exemplo completo de como consumir um fluxo de recursos de mídia em um aplicativo cliente .NET Framework usando [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] a biblioteca de cliente, consulte a postagem acessando [um fluxo de recursos de mídia do cliente](https://go.microsoft.com/fwlink/?LinkID=201637).
+Os outros exemplos deste tópico mostram como acessar e alterar o fluxo de recursos de mídia. Para obter um exemplo completo de como consumir um fluxo de recursos de mídia em um aplicativo cliente .NET Framework usando [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] a biblioteca de cliente, consulte a postagem [acessando um fluxo de recursos de mídia do cliente](https://go.microsoft.com/fwlink/?LinkID=201637).
 
 ## <a name="accessing-the-binary-resource-stream"></a>Acessando o fluxo de recursos binários
 
@@ -74,5 +74,5 @@ Neste exemplo, o método <xref:System.Data.Services.Client.DataServiceContext.Se
 
 ## <a name="see-also"></a>Consulte também
 
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Associando dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [Associando dados a controles](binding-data-to-controls-wcf-data-services.md)

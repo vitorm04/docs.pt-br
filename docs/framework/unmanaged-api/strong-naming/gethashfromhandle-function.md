@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771909"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799173"
 ---
 # <a name="gethashfromhandle-function"></a>Função GetHashFromHandle
 Gera um hash sobre o conteúdo do arquivo com o identificador de arquivo especificado, usando o algoritmo de hash especificado.  
   
- Essa função foi preterida. Use o [iclrstrongname:: Gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) método em vez disso.  
+ Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>Parâmetros  
  `hFile`  
- [in] O identificador do arquivo a ser transformada em hash.  
+ no O identificador do arquivo a ser transformado em hash.  
   
  `piHashAlg`  
- [no, out] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.  
+ [entrada, saída] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.  
   
  `pbHash`  
- [out] O buffer de hash retornado.  
+ fora O buffer de hash retornado.  
   
  `cchHash`  
- [in] O tamanho máximo solicitado de `pbHash`.  
+ no O tamanho máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] O tamanho, em bytes, do retornado `pbHash`.  
+ fora O tamanho, em bytes, do retornado `pbHash`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Método GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [Interface ICLRStrongName](../hosting/iclrstrongname-interface.md)

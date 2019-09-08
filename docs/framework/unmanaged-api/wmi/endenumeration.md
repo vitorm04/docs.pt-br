@@ -1,6 +1,6 @@
 ---
-title: Função EndEnumeration (referência de API não gerenciada)
-description: A função EndEnumeration encerra uma enumeração.
+title: Função endenumeration (referência de API não gerenciada)
+description: A função endenumeration encerra uma enumeração.
 ms.date: 11/06/2017
 api_name:
 - EndEnumeration
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636779"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798820"
 ---
 # <a name="endenumeration-function"></a>Função EndEnumeration
 
-Encerra uma sequência de enumeração iniciada com uma chamada para o [função BeginEnumeration](beginenumeration.md).
+Encerra uma sequência de enumeração iniciada com uma chamada para a [função BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -41,14 +41,14 @@ HRESULT EndEnumeration (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -57,13 +57,13 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: endenumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Uma chamada para o `EndEnumeration` função não é necessária, mas é recomendável porque ele libera recursos associados com a enumeração. No entanto, os recursos são desalocados automaticamente quando a próxima enumeração for iniciada ou o objeto seja liberado.
+Uma chamada para a `EndEnumeration` função não é necessária, mas é recomendada porque libera recursos associados à enumeração. No entanto, os recursos são desalocados automaticamente quando a próxima enumeração é iniciada ou o objeto é liberado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** WMINet_Utils.idl
 

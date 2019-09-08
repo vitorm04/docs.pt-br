@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778470"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795439"
 ---
 # <a name="createapplicationcontext-function"></a>Função CreateApplicationContext
-Essa função dá suporte à infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
+Essa função dá suporte à infraestrutura de .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,22 +37,22 @@ HRESULT CreateApplicationContext (
   
 ## <a name="parameters"></a>Parâmetros  
  `pName`  
- [in] Um ponteiro para um nome amigável.  
+ no Um ponteiro para um nome amigável.  
   
  `ppCtx`  
- [out] Um ponteiro para um contexto de aplicativo.  
+ fora Um ponteiro para um contexto de aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
- **Biblioteca:** Incluído como um recurso no Fusion  
+ **Biblioteca** Incluído como um recurso em Fusion. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)
+- [Interface IAssemblyCache](iassemblycache-interface.md)
+- [Funções estáticas globais de fusão](fusion-global-static-functions.md)
+- [Cache de assembly global](../../app-domains/gac.md)

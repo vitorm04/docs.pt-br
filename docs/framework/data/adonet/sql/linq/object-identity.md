@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: dff5642b2490cd3935dba3b3d04cd62082249c32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 053c861bae951f044d30d048951aa072b3d85a42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915723"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792945"
 ---
 # <a name="object-identity"></a>Identidade do objeto
 Os objetos em tempo de execução têm identidades exclusivas. Duas variáveis que referem-se ao mesmo objeto realmente referem-se à mesma instância de objeto. Devido ao fato, as alterações feitas por um caminho com uma variável imediatamente são visíveis com o outro.  
@@ -21,7 +21,7 @@ Os objetos em tempo de execução têm identidades exclusivas. Duas variáveis q
   
  Com objetos você espera algo muito diferentes. Você espera que se você solicitar <xref:System.Data.Linq.DataContext> a mesma informações repetidamente, dará de fato a mesma instância de objeto. Você espera esse comportamento como os objetos têm significado especial para seu aplicativo e os você espera se comportem como objetos. Você os criou como hierarquias ou grafos. Você espera recuperá-los como esta'n e não receber multidões de instâncias replicadas exatamente como você solicitou a mesma coisa mais de uma vez.  
   
- Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> gerencia a identidade do objeto. Sempre que você recupera uma nova linha de base de dados, a linha é entrada uma tabela de identidade por sua chave primária, e um novo objeto é criado. Sempre que você mesmo que recupera linhas, a instância original de objeto é entregada de volta para o aplicativo. Assim <xref:System.Data.Linq.DataContext> converte o conceito de identidade como mostrado por base de dados (isto é, chaves primárias) no conceito de identidade consultado pela linguagem (isto é, instâncias). O aplicativo considera apenas o objeto no estado que foi recuperado primeiro. Novos dados, se diferentes, são descartados. Para obter mais informações, consulte [recuperando objetos do cache de identidade](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> gerencia a identidade do objeto. Sempre que você recupera uma nova linha de base de dados, a linha é entrada uma tabela de identidade por sua chave primária, e um novo objeto é criado. Sempre que você mesmo que recupera linhas, a instância original de objeto é entregada de volta para o aplicativo. Assim <xref:System.Data.Linq.DataContext> converte o conceito de identidade como mostrado por base de dados (isto é, chaves primárias) no conceito de identidade consultado pela linguagem (isto é, instâncias). O aplicativo considera apenas o objeto no estado que foi recuperado primeiro. Novos dados, se diferentes, são descartados. Para obter mais informações, consulte [recuperando objetos do cache de identidade](retrieving-objects-from-the-identity-cache.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]o usa essa abordagem para gerenciar a integridade de objetos locais a fim de oferecer suporte a atualizações otimistas. Porque as únicas alterações que ocorrem após o objeto é criado no início essas são feitas pelo aplicativo, a intenção de aplicativo são claras. Se as alterações por uma parte externo ocorreram em ínterim, são identificadas em `SubmitChanges()` é chamado.  
   
@@ -44,4 +44,4 @@ Os objetos em tempo de execução têm identidades exclusivas. Duas variáveis q
   
 ## <a name="see-also"></a>Consulte também
 
-- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Informações gerais](background-information.md)

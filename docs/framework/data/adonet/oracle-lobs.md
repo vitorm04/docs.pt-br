@@ -2,28 +2,28 @@
 title: Oracle LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771937"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783339"
 ---
 # <a name="oracle-lobs"></a>Oracle LOBs
-O provedor de dados do .NET Framework para Oracle inclui a <xref:System.Data.OracleClient.OracleLob> classe, que é usado para trabalhar com a Oracle **LOB** tipos de dados.  
+O provedor de dados .NET Framework para Oracle inclui a <xref:System.Data.OracleClient.OracleLob> classe, que é usada para trabalhar com tipos de dados **LOB** Oracle.  
   
- Uma **OracleLob** pode ser uma das seguintes <xref:System.Data.OracleClient.OracleType> tipos de dados:  
+ Um **OracleLob** pode ser um destes tipos <xref:System.Data.OracleClient.OracleType> de dados:  
   
 |Tipo de dados|Descrição|  
 |---------------|-----------------|  
-|**Blob**|Um Oracle **BLOB** tipo de dados que contém dados binários com um tamanho máximo de 4 gigabytes. Isso é mapeado para um **Array** do tipo **bytes**.|  
-|**Clob**|Um Oracle **CLOB** tipo de dados que contém dados de caractere, com base no caractere padrão definido no servidor, com um tamanho máximo de 4 gigabytes. Isso mapeia para **cadeia de caracteres**.|  
-|**NClob**|Um Oracle **NCLOB** tipo de dados que contém dados de caractere, com base em conjunto no servidor com um tamanho máximo de 4 gigabytes de caracteres nacional. Isso mapeia para **cadeia de caracteres**.|  
+|**Blob**|Um tipo de dados de **blob** Oracle que contém dados binários com um tamanho máximo de 4 gigabytes. Isso é mapeado para uma **matriz** do tipo **byte**.|  
+|**Clob**|Um tipo de dados do Oracle **CLOB** que contém dados de caractere, com base no conjunto de caracteres padrão no servidor, com um tamanho máximo de 4 gigabytes. Isso é mapeado para **cadeia de caracteres**.|  
+|**NClob**|Um tipo de dados Oracle **NClob** que contém dados de caractere, com base no conjunto de caracteres nacionais no servidor com um tamanho máximo de 4 gigabytes. Isso é mapeado para **cadeia de caracteres**.|  
   
- Uma **OracleLob** difere de um <xref:System.Data.OracleClient.OracleBFile> em que os dados são armazenados no servidor, em vez de em um arquivo físico no sistema operacional. Ele também pode ser um objeto de leitura / gravação, ao contrário de um **OracleBFile**, que é sempre somente leitura.  
+ Um **OracleLob** difere de um <xref:System.Data.OracleClient.OracleBFile> em que os dados são armazenados no servidor em vez de em um arquivo físico no sistema operacional. Ele também pode ser um objeto de leitura/gravação, ao contrário de um **OracleBFile**, que é sempre somente leitura.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Criar, recuperar e escrever em um LOB  
- O exemplo c# a seguir demonstra como você pode criar LOBs em uma tabela do Oracle e, em seguida, recuperar e gravar na forma de **OracleLob** objetos. O exemplo demonstra como usar o <xref:System.Data.OracleClient.OracleDataReader> objeto e o **OracleLob** **leitura** e **gravar** métodos. O exemplo usa o Oracle **BLOB**, **CLOB**, e **NCLOB** tipos de dados.  
+ O exemplo C# a seguir demonstra como você pode criar LOBs em uma tabela do Oracle e, em seguida, recuperar e gravar nelas na forma de objetos **OracleLob** . O exemplo demonstra como usar <xref:System.Data.OracleClient.OracleDataReader> o objeto e os métodos de **leitura** e **gravação** de **OracleLob** . O exemplo usa os tipos de dados Oracle **blob**, **CLOB**e **NClob** .  
   
 ```csharp  
 using System;  
@@ -249,5 +249,5 @@ tx.Commit();
   
 ## <a name="see-also"></a>Consulte também
 
-- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Oracle and ADO.NET](oracle-and-adonet.md) (Oracle e ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

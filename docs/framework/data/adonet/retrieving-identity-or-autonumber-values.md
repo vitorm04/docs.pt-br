@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-ms.openlocfilehash: ef4831af0b7bafed7d40bd86d2684c73d84a0f93
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 1387dad1f588770384422bf579ed547271b30c0a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634168"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794556"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Recuperando identidade ou valores de Autonumber
 
@@ -23,7 +23,7 @@ Durante uma chamada para o método `Update` de um `DataAdapter`, o banco de dado
 Alguns mecanismos de banco de dados, como o mecanismo de banco de dados Microsoft Access Jet, não dão suporte a parâmetros de saída e não podem processar várias instruções em um único lote. Ao trabalhar com o mecanismo de banco de dados do Jet, você pode recuperar o novo valor de AutoNumber gerado para uma linha inserida executando um comando S SELECT separado em um manipulador de eventos para o evento `RowUpdated` do `DataAdapter`.
 
 > [!NOTE]
-> Uma alternativa ao uso de um valor incrementado automaticamente é usar o método <xref:System.Guid.NewGuid%2A> de um objeto <xref:System.Guid> para gerar um GUID, ou identificador exclusivo, no computador cliente que pode ser copiado para o servidor à medida que cada nova linha é inserida. O método `NewGuid` gera um valor binário de 16 bytes que é criado usando um algoritmo que fornece uma alta probabilidade de que nenhum valor será duplicado. Em um banco de dados SQL Server, um GUID é armazenado em uma coluna `uniqueidentifier`, que o SQL Server pode gerar automaticamente usando a função Transact-SQL `NEWID()`. Usar um GUID como uma chave primária pode afetar negativamente o desempenho. O SQL Server fornece suporte para o `NEWSEQUENTIALID()` função, que gera um GUID sequencial que não é garantido ser globalmente exclusivo, mas que podem ser indexados com mais eficiência.
+> Uma alternativa ao uso de um valor incrementado automaticamente é usar o método <xref:System.Guid.NewGuid%2A> de um objeto <xref:System.Guid> para gerar um GUID, ou identificador exclusivo, no computador cliente que pode ser copiado para o servidor à medida que cada nova linha é inserida. O método `NewGuid` gera um valor binário de 16 bytes que é criado usando um algoritmo que fornece uma alta probabilidade de que nenhum valor será duplicado. Em um banco de dados SQL Server, um GUID é armazenado em uma coluna `uniqueidentifier`, que o SQL Server pode gerar automaticamente usando a função Transact-SQL `NEWID()`. Usar um GUID como uma chave primária pode afetar negativamente o desempenho. SQL Server fornece suporte para a `NEWSEQUENTIALID()` função, que gera um GUID sequencial que não é garantido para ser globalmente exclusivo, mas que pode ser indexado com mais eficiência.
 
 ## <a name="retrieving-sql-server-identity-column-values"></a>Recuperando valores de colunas de identidade do SQL Server
 
@@ -32,10 +32,10 @@ Ao trabalhar com o Microsoft SQL Server, você pode criar um procedimento armaze
 |Função|Descrição|
 |--------------|-----------------|
 |SCOPE_IDENTITY|Retorna o valor de identidade mais recente no escopo atual de execução. SCOPE_IDENTITY é recomendado para a maioria dos cenários.|
-|@@IDENTITY|Contém o valor de identidade mais recente gerado em qualquer tabela da sessão atual. @@IDENTITY pode ser afetado por disparadores e podem não retornar o valor de identidade que você espera.|
+|@@IDENTITY|Contém o valor de identidade mais recente gerado em qualquer tabela da sessão atual. @@IDENTITY pode ser afetado por gatilhos e pode não retornar o valor de identidade que você espera.|
 |IDENT_CURRENT|Retorna o valor de identidade mais recente gerado para uma tabela específica em qualquer sessão e em qualquer escopo.|
 
- O procedimento armazenado a seguir demonstra como inserir uma linha para o **categorias** de tabela e usar um parâmetro de saída para retornar o novo valor de identidade gerado pela função de Transact-SQL SCOPE_IDENTITY ().
+ O procedimento armazenado a seguir demonstra como inserir uma linha na tabela **Categories** e usar um parâmetro de saída para retornar o novo valor de identidade gerado pela função SCOPE_IDENTITY () do TRANSACT-SQL.
 
 ```sql
 CREATE PROCEDURE dbo.InsertCategory
@@ -46,7 +46,7 @@ INSERT INTO Categories (CategoryName) VALUES(@CategoryName)
 SET @Identity = SCOPE_IDENTITY()
 ```
 
-O procedimento armazenado pode ser especificado como a origem do <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> de um objeto <xref:System.Data.SqlClient.SqlDataAdapter>. A propriedade <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> do <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> deve ser definida como <xref:System.Data.CommandType.StoredProcedure>. A saída de identidade é recuperada criando um <xref:System.Data.SqlClient.SqlParameter> que tenha um <xref:System.Data.ParameterDirection> de <xref:System.Data.ParameterDirection.Output>. Quando o `InsertCommand` é processado, o valor de identidade incrementado automaticamente é retornado e colocado na **CategoryID** coluna da linha atual se você definir a <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> propriedade do comando de inserção de `UpdateRowSource.OutputParameters` ou para `UpdateRowSource.Both`.
+O procedimento armazenado pode ser especificado como a origem do <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> de um objeto <xref:System.Data.SqlClient.SqlDataAdapter>. A propriedade <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> do <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> deve ser definida como <xref:System.Data.CommandType.StoredProcedure>. A saída de identidade é recuperada criando um <xref:System.Data.SqlClient.SqlParameter> que tenha um <xref:System.Data.ParameterDirection> de <xref:System.Data.ParameterDirection.Output>. Quando o `InsertCommand` for processado, o valor de identidade incrementada automaticamente será retornado e colocado na coluna **CategoryID** da linha atual se você definir a <xref:System.Data.SqlClient.SqlCommand.UpdatedRowSource%2A> Propriedade do comando de inserção como `UpdateRowSource.OutputParameters` ou para `UpdateRowSource.Both`.
 
 Se o comando de inserção executar um lote que inclua uma instrução INSERT e uma instrução SELECT, que retorne o novo valor de identidade, você poderá recuperar o novo valor definindo a propriedade `UpdatedRowSource` do comando de inserção como `UpdateRowSource.FirstReturnedRecord`.
 
@@ -55,7 +55,7 @@ Se o comando de inserção executar um lote que inclua uma instrução INSERT e 
 
 ## <a name="merging-new-identity-values"></a>Mesclando novos valores de identidade
 
-Um cenário comum é chamar o método `GetChanges` de um `DataTable` para criar uma cópia que contenha somente linhas alteradas e usar a nova cópia ao chamar o método `Update` de um `DataAdapter`. Isso é especialmente útil quando você precisar realizar marshaling das linhas alteradas para um componente separado que executa a atualização. Após a atualização, a cópia pode conter os novos valores de identidade que devem ser mesclados de volta para o `DataTable` original. Os novos valores de identidade provavelmente serão diferentes dos valores originais no `DataTable`. Para realizar a mesclagem, os valores originais do **AutoIncrement** colunas na cópia devem ser preservadas, para poder localizar e atualizar as linhas existentes no original `DataTable`, em vez de acrescentar novas linhas contendo os novos valores de identidade. No entanto, por padrão, esses valores originais são perdidos depois de uma chamada para o método `Update` de um `DataAdapter`, porque `AcceptChanges` é chamado implicitamente para cada `DataRow` atualizado.
+Um cenário comum é chamar o método `GetChanges` de um `DataTable` para criar uma cópia que contenha somente linhas alteradas e usar a nova cópia ao chamar o método `Update` de um `DataAdapter`. Isso é especialmente útil quando você precisar realizar marshaling das linhas alteradas para um componente separado que executa a atualização. Após a atualização, a cópia pode conter os novos valores de identidade que devem ser mesclados de volta para o `DataTable` original. Os novos valores de identidade provavelmente serão diferentes dos valores originais no `DataTable`. Para realizar a mesclagem, os valores originais das colunas de **incremento automático** na cópia devem ser preservados para que seja possível localizar e atualizar as linhas existentes no original `DataTable`, em vez de acrescentar novas linhas contendo os novos valores de identidade . No entanto, por padrão, esses valores originais são perdidos depois de uma chamada para o método `Update` de um `DataAdapter`, porque `AcceptChanges` é chamado implicitamente para cada `DataRow` atualizado.
 
 Há duas maneiras de preservar os valores originais de um `DataColumn` em um `DataRow` durante uma atualização do `DataAdapter`:
 
@@ -99,16 +99,16 @@ O manipulador de eventos `OnRowUpdated` verifica o <xref:System.Data.Common.RowU
 
 ## <a name="retrieving-microsoft-access-autonumber-values"></a>Recuperando valores de Autonumber do Microsoft Access
 
-Esta seção inclui um exemplo que mostra como recuperar valores de `Autonumber` de um banco de dados Jet 4.0. O mecanismo de banco de dados do Jet não oferece suporte a execução de várias instruções em um lote ou ao uso de parâmetros de saída, portanto, não é possível usar nenhuma dessas técnicas para retornar o novo valor de `Autonumber` atribuído a uma linha inserida. No entanto, você pode adicionar código para o `RowUpdated` manipulador de eventos que executa uma separados selecionar @@IDENTITY instrução para recuperar o novo `Autonumber` valor.
+Esta seção inclui um exemplo que mostra como recuperar valores de `Autonumber` de um banco de dados Jet 4.0. O mecanismo de banco de dados do Jet não oferece suporte a execução de várias instruções em um lote ou ao uso de parâmetros de saída, portanto, não é possível usar nenhuma dessas técnicas para retornar o novo valor de `Autonumber` atribuído a uma linha inserida. No entanto, você pode adicionar código `RowUpdated` ao manipulador de eventos que executa uma instrução Select@IDENTITY @ separada para recuperar o `Autonumber` novo valor.
 
 ### <a name="example"></a>Exemplo
 
-Em vez de adicionar informações de esquema usando `MissingSchemaAction.AddWithKey`, este exemplo configura um `DataTable` com o esquema correto antes de chamar o <xref:System.Data.OleDb.OleDbDataAdapter> para preencher o `DataTable`. Nesse caso, o **CategoryID** coluna é configurada para diminuir o valor atribuído a cada linha inserida a partir do zero, definindo <xref:System.Data.DataColumn.AutoIncrement%2A> à `true`, <xref:System.Data.DataColumn.AutoIncrementSeed%2A> como 0, e <xref:System.Data.DataColumn.AutoIncrementStep%2A> como -1. O código então adiciona duas novas linhas e usa `GetChanges` para adicionar linhas alteradas a um novo `DataTable` que é passado para o método `Update`.
+Em vez de adicionar informações de esquema usando `MissingSchemaAction.AddWithKey`, este exemplo configura um `DataTable` com o esquema correto antes de chamar o <xref:System.Data.OleDb.OleDbDataAdapter> para preencher o `DataTable`. Nesse caso, a coluna **CategoryID** é configurada para decrementar o valor atribuído a cada linha inserida a partir <xref:System.Data.DataColumn.AutoIncrement%2A> de `true`zero <xref:System.Data.DataColumn.AutoIncrementSeed%2A> , definindo como, <xref:System.Data.DataColumn.AutoIncrementStep%2A> como 0 e como-1. O código então adiciona duas novas linhas e usa `GetChanges` para adicionar linhas alteradas a um novo `DataTable` que é passado para o método `Update`.
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
 
-O manipulador de eventos `RowUpdated` usa o mesmo <xref:System.Data.OleDb.OleDbConnection> aberto que a instrução `Update` do `OleDbDataAdapter`. Verifica `StatementType` do <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> para as linhas inseridas. Para cada linha inserida uma nova <xref:System.Data.OleDb.OleDbCommand> é criado para executar SELECT @@IDENTITY instrução na conexão, retornando o novo `Autonumber` valor, que é colocado no **CategoryID** coluna do `DataRow`. A propriedade `Status` é definida como `UpdateStatus.SkipCurrentRow` para suprimir a chamada oculta para `AcceptChanges`. No corpo principal do procedimento, o método `Merge` é chamado para mesclar os dois objetos `DataTable` e, finalmente, `AcceptChanges` é chamado.
+O manipulador de eventos `RowUpdated` usa o mesmo <xref:System.Data.OleDb.OleDbConnection> aberto que a instrução `Update` do `OleDbDataAdapter`. Verifica `StatementType` do <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> para as linhas inseridas. Para cada linha inserida, <xref:System.Data.OleDb.OleDbCommand> um novo é criado para executar a@IDENTITY instrução SELECT @ na conexão, retornando `Autonumber` o novo valor, que `DataRow`é colocado na coluna **CategoryID** do. A propriedade `Status` é definida como `UpdateStatus.SkipCurrentRow` para suprimir a chamada oculta para `AcceptChanges`. No corpo principal do procedimento, o método `Merge` é chamado para mesclar os dois objetos `DataTable` e, finalmente, `AcceptChanges` é chamado.
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
@@ -354,7 +354,7 @@ GO
 A listagem de código a seguir:
 
 > [!TIP]
-> A listagem de código refere-se a um arquivo de banco de dados do Access chamado MySchool.mdb. Você pode baixar o myschool. mdb (como parte do projeto de exemplo em C# ou Visual Basic completo) do [code.msdn.microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).
+> A listagem de código refere-se a um arquivo de banco de dados do Access chamado MySchool.mdb. Você pode baixar myschool. mdb (como parte do projeto de C# exemplo completo ou Visual Basic) em [Code.msdn.Microsoft.com](https://code.msdn.microsoft.com/How-to-Retrieve-the-511acece).
 
 ```csharp
 using System;
@@ -538,10 +538,10 @@ class Program {
 
 ## <a name="see-also"></a>Consulte também
 
-- [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
-- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Estados e versões de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges e RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [Merging DataSet Contents](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) (Mesclando o conteúdo do DataSet)
-- [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
+- [DataAdapters e DataReaders](dataadapters-and-datareaders.md)
+- [Estados e versões de linha](./dataset-datatable-dataview/row-states-and-row-versions.md)
+- [AcceptChanges e RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Merging DataSet Contents](./dataset-datatable-dataview/merging-dataset-contents.md) (Mesclando o conteúdo do DataSet)
+- [Updating Data Sources with DataAdapters](updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

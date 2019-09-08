@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946634"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780962"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Passo a passo: usar somente procedimentos armazenados (Visual Basic)
 Essa explicação passo a passo fornece um cenário de ponta a ponta básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para acessar dados usando somente procedimentos armazenados. Essa abordagem é frequentemente usada por administradores de banco de dados para limitar como o repositório de dados é acessado.  
   
 > [!NOTE]
-> Você também pode usar procedimentos armazenados nos aplicativos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para substituir o comportamento padrão, especialmente para os processos `Create`, `Update` e `Delete`. Para obter mais informações, consulte [Personalizando as operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> Você também pode usar procedimentos armazenados nos aplicativos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para substituir o comportamento padrão, especialmente para os processos `Create`, `Update` e `Delete`. Para obter mais informações, consulte [Personalizando as operações de inserção, atualização e exclusão](customizing-insert-update-and-delete-operations.md).  
   
  Para fins deste passo a passos, você usará dois métodos que foram mapeados para procedimentos armazenados no banco de dados de exemplo Northwind: CustOrdersDetail e CustOrderHist. O mapeamento ocorre quando você executa a ferramenta de linha de comando SqlMetal para gerar um arquivo de Visual Basic. Para obter mais informações, consulte a seção Pré-requisitos posteriormente neste passo a passo.  
   
@@ -32,7 +32,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 - O banco de dados de exemplo Northwind.  
   
-     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixar bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois que você baixou o base de dados, copie o arquivo de northwnd.mdf para a pasta de c:\linqtest3.  
+     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixar bancos de dados de exemplo](downloading-sample-databases.md). Depois que você baixou o base de dados, copie o arquivo de northwnd.mdf para a pasta de c:\linqtest3.  
   
 - Um arquivo de código do Visual Basic gerado do banco de dados Northwind.  
   
@@ -40,7 +40,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
      **sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**  
   
-     Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Para obter mais informações, consulte [SqlMetal.exe (ferramenta de geração de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Visão geral  
  Este passo a passo consiste em seis tarefas principais:  
@@ -123,7 +123,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
      A caixa de ferramentas é aberta.  
   
     > [!NOTE]
-    > Clique na anotação de AutoOcultar para manter a caixa de ferramentas aberta enquanto você executa as etapas restantes nesta seção.  
+    > Clique na anotação de **AutoOcultar** para manter a caixa de ferramentas aberta enquanto você executa as etapas restantes nesta seção.  
   
 3. Arraste dois botões, duas caixas de texto e dois rótulos da caixa de ferramentas para o **Form1**.  
   
@@ -193,5 +193,5 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Aprendendo com explicações passo a passo](learning-by-walkthroughs.md)
+- [Procedimentos armazenados](stored-procedures.md)

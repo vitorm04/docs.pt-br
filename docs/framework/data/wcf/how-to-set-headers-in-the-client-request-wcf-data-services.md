@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 5a72b349526d5cbba229cba627c23b1b1b889678
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 42987b1a855589954d45dae13b70ffc056c35f3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943928"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790472"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Como: Definir cabeçalhos na solicitação do cliente (WCF Data Services)
-Quando você usa a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para acessar um serviço de dados que [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]dá suporte ao, a biblioteca de cliente define automaticamente os cabeçalhos HTTP necessários nas mensagens de solicitação enviadas ao serviço de dados. No entanto, a biblioteca de cliente não sabe definir cabeçalhos de mensagens que são necessários em determinados casos, como quando o serviço de dados requer autenticação baseada em declarações ou cookies. Para obter mais informações, consulte [securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). Nesses casos, você deve definir manualmente os cabeçalhos de mensagem na mensagem de solicitação antes que eles sejam enviados. O exemplo neste tópico mostra como manipular o <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> evento para adicionar um novo cabeçalho à mensagem de solicitação antes que ele seja enviado ao serviço de dados.  
+Quando você usa a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para acessar um serviço de dados que [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]dá suporte ao, a biblioteca de cliente define automaticamente os cabeçalhos HTTP necessários nas mensagens de solicitação enviadas ao serviço de dados. No entanto, a biblioteca de cliente não sabe definir cabeçalhos de mensagens que são necessários em determinados casos, como quando o serviço de dados requer autenticação baseada em declarações ou cookies. Para obter mais informações, consulte [securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). Nesses casos, você deve definir manualmente os cabeçalhos de mensagem na mensagem de solicitação antes que eles sejam enviados. O exemplo neste tópico mostra como manipular o <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> evento para adicionar um novo cabeçalho à mensagem de solicitação antes que ele seja enviado ao serviço de dados.  
   
- O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Você também pode usar o [serviço de dados de exemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) publicado no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] site; esse serviço de dados de exemplo é somente leitura e a tentativa de salvar alterações retorna um erro. Os serviços de dados de exemplo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] no site permitem autenticação anônima.  
+ O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Você também pode usar o [serviço de dados de exemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) publicado no [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] site; esse serviço de dados de exemplo é somente leitura e a tentativa de salvar alterações retorna um erro. Os serviços de dados de exemplo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] no site permitem autenticação anônima.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir registra um manipulador para <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> o evento e, em seguida, executa uma consulta no serviço de dados.  
@@ -36,5 +36,5 @@ Quando você usa a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] b
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [Protegendo o WCF Data Services](securing-wcf-data-services.md)
+- [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

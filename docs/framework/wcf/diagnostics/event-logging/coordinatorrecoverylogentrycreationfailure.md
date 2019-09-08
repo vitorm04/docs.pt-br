@@ -2,24 +2,24 @@
 title: CoordinatorRecoveryLogEntryCreationFailure
 ms.date: 03/30/2017
 ms.assetid: 9f2b1a5c-f5a6-4203-87ff-601635b9ae40
-ms.openlocfilehash: 4d585774bdc2cb4e4cf9ada934bbf00aaa17bdad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 008711e5d83910cf7fe04db3d5a4951c153f48a9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778372"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797975"
 ---
 # <a name="coordinatorrecoverylogentrycreationfailure"></a>CoordinatorRecoveryLogEntryCreationFailure
-Id: 140  
+Sessão 140  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: TransactionBridge  
+ Categorias TransactionBridge  
   
 ## <a name="description"></a>Descrição  
- Uma entrada de log de recuperação não pôde ser gerada para a inscrição do coordenador. A transação será anulada. Listas de eventos a ID da transação, o motivo, exceção, nome do processo e processo de identificação.  
+ Não foi possível gerar uma entrada de log de recuperação para a inscrição de coordenador. A transação será anulada. O evento lista a ID da transação, o motivo, a exceção, o nome do processo e a ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

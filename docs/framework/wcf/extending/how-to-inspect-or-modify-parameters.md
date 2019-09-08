@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651113"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795592"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Como: inspecionar ou modificar parâmetros
-Você pode inspecionar ou modificar as mensagens de entrada ou saídas para uma única operação em um objeto de cliente do Windows Communication Foundation (WCF) ou um serviço WCF, Implementando o <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interface e inseri-lo no tempo de execução do cliente ou serviço. Normalmente um comportamento de operação é usado para adicionar os inspetores de parâmetro para uma única operação; outros comportamentos podem ser usados para fornecer acesso fácil ao tempo de execução em um escopo maior. Para obter mais informações, consulte [estendendo clientes](../../../../docs/framework/wcf/extending/extending-clients.md) e [estendendo Dispatchers](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+Você pode inspecionar ou modificar as mensagens de entrada ou saída para uma única operação em um objeto de cliente Windows Communication Foundation (WCF) ou em um serviço WCF <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> implementando a interface e inserindo-a no tempo de execução do cliente ou do serviço. Normalmente, um comportamento de operação é usado para adicionar inspetores de parâmetro para uma única operação; outros comportamentos podem ser usados para fornecer acesso fácil ao tempo de execução em um escopo maior. Para obter mais informações, consulte Estendendo [clientes](extending-clients.md) e [estendendo expatchers](extending-dispatchers.md).  
   
-### <a name="inspecting-or-modifying-parameters"></a>Inspecionar ou modificar parâmetros  
+### <a name="inspecting-or-modifying-parameters"></a>Inspecionando ou modificando parâmetros  
   
 1. Implementar a interface <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>.  
   
-2. Implementar uma <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> (dependendo do escopo necessário) para adicionar o Inspetor de parâmetro como o <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType> propriedades.  
+2. Implemente <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>um <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> , ou<xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> (dependendo do escopo necessário) para adicionar seu inspetor de parâmetro às propriedades <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType> .  
   
-3. Inserir seu comportamento antes de chamar <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> ou o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método o <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obter detalhes, consulte [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3. Insira seu comportamento antes de chamar <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> ou o <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> método no <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obter detalhes, consulte [Configurando e estendendo o tempo de execução com comportamentos](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Exemplo  
- Os exemplos de código a seguir mostram, na ordem:  
+ Os exemplos de código a seguir mostram, em ordem:  
   
 - Uma implementação de Inspetor de parâmetro.  
   
-- A implementação de comportamento que insere o Inspetor de parâmetro usando um <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>e um <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>.  
+- A implementação de comportamento que insere o Inspetor de parâmetro <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>usando <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>um, e <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>um.  
   
-- Um arquivo de configuração que carrega e executa o comportamento de ponto de extremidade em um aplicativo cliente para inserir o Inspetor de parâmetro no cliente.  
+- Um arquivo de configuração que carrega e executa o comportamento do ponto de extremidade em um aplicativo cliente para inserir o Inspetor de parâmetro no cliente.  
   
  [!code-csharp[Interceptors#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
  [!code-vb[Interceptors#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  
@@ -42,4 +42,4 @@ Você pode inspecionar ou modificar as mensagens de entrada ou saídas para uma 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurando e estendendo o tempo de execução com comportamentos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configurando e estendendo o tempo de execução com comportamentos](configuring-and-extending-the-runtime-with-behaviors.md)

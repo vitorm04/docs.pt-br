@@ -2,12 +2,12 @@
 title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044262"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795936"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais de serem expostos em logs de mensagens, bem como eventos gerados pelo log de mensagens.  
@@ -107,9 +107,9 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
   
 - PII conhecida de log não permitido: Esse evento é emitido quando o log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo `source` do elemento no arquivo app. config ou Web. config é definido como `true`, mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
   
- Esses eventos podem ser exibidos na ferramenta de Visualizador de Eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Esses eventos podem ser exibidos na ferramenta de Visualizador de Eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Questões de segurança e dicas úteis para rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Registro de mensagens em log](message-logging.md)
+- [Questões de segurança e dicas úteis para rastreamento](./tracing/security-concerns-and-useful-tips-for-tracing.md)

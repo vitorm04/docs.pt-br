@@ -2,24 +2,24 @@
 title: NonFatalUnexpectedStateMachineEvent
 ms.date: 03/30/2017
 ms.assetid: bfa37c10-cf1b-4325-b756-6ef200606510
-ms.openlocfilehash: 30a8fc53eb31f9d02a597f6d57c7abee30c41e47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4be0f7719ef20d0ebb0a048d6a2ca9bf75b24d05
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999109"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797667"
 ---
 # <a name="nonfatalunexpectedstatemachineevent"></a>NonFatalUnexpectedStateMachineEvent
-Id: 148  
+Sessão 148  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: TransactionBridge  
+ Categorias TransactionBridge  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que uma máquina de estado tentou processar um evento inesperado. O evento não é considerado fatal. O evento lista o ID da transação, estado máquina, o estado atual, histórico, evento nome, evento detalhes, nome do processo e ID de processo.  
+ Esse evento indica que uma máquina de estado tentou processar um evento inesperado. O evento não é considerado fatal. O evento lista a ID da transação, a máquina de estado, o estado atual, o histórico, o nome do evento, os detalhes do evento, o nome do processo e a ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949458"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785668"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
-Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.  
+Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.  
   
 ## <a name="working-with-application-configuration-files"></a>Trabalhando com arquivos de configuração de aplicativo  
  Os arquivos de configuração do aplicativo contêm as configurações que são específicas para um determinado aplicativo. Por exemplo, um aplicativo ASP.NET pode ter um ou mais arquivos **web.config** e um aplicativo do Windows pode ter um arquivo **app.config** opcional. Os arquivos de configuração compartilham elementos comuns, embora o nome e o local de um arquivo de configuração variem dependendo do host do aplicativo.  
@@ -36,7 +36,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
 ```  
   
 > [!NOTE]
-> Você pode salvar parte de uma cadeia de conexão em um arquivo de configuração e usar a classe <xref:System.Data.Common.DbConnectionStringBuilder> para concluí-la em tempo de execução. Isso é útil em situações onde você não conhece os elementos da cadeia de conexão com antecedência, ou quando não quer salvar informações confidenciais em um arquivo de configuração. Para obter mais informações, confira [Construtores de cadeias de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Você pode salvar parte de uma cadeia de conexão em um arquivo de configuração e usar a classe <xref:System.Data.Common.DbConnectionStringBuilder> para concluí-la em tempo de execução. Isso é útil em situações onde você não conhece os elementos da cadeia de conexão com antecedência, ou quando não quer salvar informações confidenciais em um arquivo de configuração. Para obter mais informações, confira [Construtores de cadeias de conexão](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Utilizando arquivos de configuração externos  
  Os arquivos de configuração externos são arquivos separados que contêm um fragmento de um arquivo de configuração que consiste em uma única seção. O arquivo de configuração externo é, em seguida, referenciado pelo arquivo de configuração principal. O armazenamento da seção **connectionStrings** em um arquivo fisicamente separado é útil em situações em que as cadeias de conexão podem ser editadas após a implantação do aplicativo. Por exemplo, o comportamento padrão do ASP.NET é reiniciar o domínio de um aplicativo quando os arquivos de configuração são modificados, o que resulta em perda de informações de estado. No entanto, modificar um arquivo de configuração externo não causa uma reinicialização do aplicativo. Os arquivos de configuração externos não estão limitados ao ASP.NET; eles também podem ser usados por aplicativos do Windows. Além disso, a segurança de acesso a arquivos e as permissões podem ser usadas para restringir o acesso a arquivos de configuração externos. Trabalhar com arquivos de configuração externos em tempo de execução é transparente e não exige nenhuma codificação especial.  
@@ -171,9 +171,9 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
   
 ## <a name="see-also"></a>Consulte também
 
-- [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Construtores de cadeia de Conexão](connection-string-builders.md)
+- [Protegendo informações de conexão](protecting-connection-information.md)
 - [Usando as classes de configuração](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configurando aplicativos](../../../../docs/framework/configure-apps/index.md)
+- [Configurando aplicativos](../../configure-apps/index.md)
 - [Administração de site ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

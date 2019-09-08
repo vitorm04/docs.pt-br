@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab660769a49cf12b129cb7f44b8378053a231f8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761619"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798702"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>Função CloneEnumWbemClassObject
 Faz uma cópia lógica de um enumerador, mantendo sua posição atual em uma enumeração.
@@ -45,51 +45,51 @@ HRESULT CloneEnumWbemClassObject (
 ## <a name="parameters"></a>Parâmetros
 
 `ppEnum`\
-[out] Recebe um ponteiro para um novo [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
+fora Recebe um ponteiro para um novo [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
 `authLevel`\
-[in] O nível de autorização.
+no O nível de autorização.
 
 `impLevel`\
-[in] O nível de representação.
+no O nível de representação.
 
 `pCurrentEnumWbemClassObject`\
-[out] Um ponteiro para o [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) instância a ser clonado.
+fora Um ponteiro para a instância de [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) a ser clonada.
 
 `strUser`\
-[in] O nome de usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+no O nome de usuário. Consulte a função [ConnectServerWmi](connectserverwmi.md) para obter mais informações.
 
 `strPassword`\
-[in] A senha. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+no A senha. Consulte a função [ConnectServerWmi](connectserverwmi.md) para obter mais informações.
 
-`strAuthority`\ [in] o nome de domínio do usuário. Consulte a [ConnectServerWmi](connectserverwmi.md) função para obter mais informações.
+`strAuthority`\ [in] o nome de domínio do usuário. Consulte a função [ConnectServerWmi](connectserverwmi.md) para obter mais informações.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro é inválido. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível concluir a operação. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente disponível conclua a operação. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada de procedimento remoto) entre o processo atual e o WMI falhou. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) método.
+Essa função encapsula uma chamada para o método [IEnumWbemClassObject:: clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
 
-Esse método faz apenas uma cópia de "melhor esforço". Devido à natureza dinâmica de muitos objetos CIM, é possível que o novo enumerador não enumera o mesmo conjunto de objetos que o enumerador de código-fonte.
+Esse método faz apenas uma cópia "melhor esforço". Devido à natureza dinâmica de muitos objetos CIM, é possível que o novo enumerador não enumere o mesmo conjunto de objetos que o enumerador de origem.
 
-Se a chamada de função falhar, você pode obter informações adicionais sobre erros chamando o [GetErrorInfo](geterrorinfo.md) função.
+Se a chamada de função falhar, você poderá obter informações adicionais sobre o erro chamando a função [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="example"></a>Exemplo
 
-Por exemplo, consulte o [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) método.
+Para obter um exemplo, consulte o método [IEnumWbemClassObject:: clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) .
 
 ## <a name="requirements"></a>Requisitos
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
  **Cabeçalho:** WMINet_Utils.idl
 

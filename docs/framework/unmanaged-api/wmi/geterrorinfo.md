@@ -1,6 +1,6 @@
 ---
 title: Função GetErrorInfo (referência de API não gerenciada)
-description: A função GetErrorInfo recupera informações de erro de chamada de função anterior.
+description: A função GetErrorInfo recupera informações de erro da chamada de função anterior.
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e33a18487da420eb3b317bb70e0ac9e68b4b8ad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746545"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798584"
 ---
 # <a name="geterrorinfo-function"></a>Função GetErrorInfo
 Recupera informações de erro da chamada de função anterior.  
@@ -36,14 +36,14 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) objeto se a chamada de função for bem-sucedida, ou `null` se ele falhar.
+Um ponteiro para um objeto [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) se a chamada de função for bem-sucedida ou `null` se falhar.
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) método.
+Essa função encapsula uma chamada para o método [IComThreadingInfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.def  
   

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 748767596a8f4680a2d7b63cb0579acaed5f53f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746525"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798520"
 ---
 # <a name="getnames-function"></a>Função GetNames
 Recupera um subconjunto ou todos os nomes das propriedades de um objeto. 
@@ -44,67 +44,67 @@ HRESULT GetNames (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszQualifierName`  
-[in] Um ponteiro para um válido `LPCWSTR` que especifica um nome do qualificador que opera como parte de um filtro. Para obter mais informações, consulte o [comentários](#remarks) seção. Esse parâmetro pode ser `null`. 
+no Um ponteiro para um válido `LPCWSTR` que especifica um nome de qualificador que funciona como parte de um filtro. Para obter mais informações, consulte a seção [comentários](#remarks) . Esse parâmetro pode ser `null`. 
 
 `lFlags`  
-[in] Uma combinação de campos de bits. Para obter mais informações, consulte o [comentários](#remarks) seção.
+no Uma combinação de campos de bits. Para obter mais informações, consulte a seção [comentários](#remarks) .
 
 `pQualifierValue`   
-[in] Um ponteiro para um válido `VARIANT` estrutura inicializada com um valor de filtro. Esse parâmetro pode ser `null`. 
+no Um ponteiro para uma estrutura `VARIANT` válida inicializada para um valor de filtro. Esse parâmetro pode ser `null`. 
 
 `pstrNames`  
-[out] Um `SAFEARRAY` estrutura que contém os nomes de propriedade. Na entrada, esse parâmetro sempre deve ser um ponteiro para `null`. Consulte a [comentários](#remarks) seção para obter mais informações. 
+fora Uma `SAFEARRAY` estrutura que contém nomes de propriedade. Na entrada, esse parâmetro sempre deve ser um ponteiro para `null`. Consulte a seção [comentários](#remarks) para obter mais informações. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos, ou uma combinação incorreta de parâmetros e sinalizadores foi especificada. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos ou uma combinação incorreta de sinalizadores e parâmetros foi especificada. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) .
 
-Nomeado retornados é controlado por uma combinação de sinalizadores e parâmetros. Por exemplo, a função pode retornar os nomes de todas as propriedades ou apenas os nomes das propriedades de chave.  O filtro primário é especificado no `lFlags` variam de parâmetro e os outros parâmetros depender dele.
+O nome retornado é controlado por uma combinação de sinalizadores e parâmetros. Por exemplo, a função pode retornar os nomes de todas as propriedades ou apenas os nomes das propriedades de chave.  O filtro primário é especificado no `lFlags` parâmetro e os outros parâmetros variam dependendo dele.
 
-O sinalizador de valores em `lFlags` são campos de bits
+Os valores de sinalizador `lFlags` no são campos de bits
 
-Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são campos de bits que são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de nenhum outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
+Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são campos de bits definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de qualquer outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
 
-| Sinalizadores de grupo 1 |Valor  |Descrição  |
+| Sinalizadores do grupo 1 |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Retorne todos os nomes de propriedade. `strQualifierName` e `pQualifierVal` são utilizados. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Retornar somente as propriedades que têm um qualificador do nome especificado pelo `strQualifierName` parâmetro. Se esse sinalizador é usado, você deve especificar `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Retornar somente as propriedades que não tem um qualificador do nome especificado pelo `strQualifierName` parâmetro. Se esse sinalizador é usado, você deve especificar `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Retorne apenas as propriedades que têm um qualificador do nome especificado pelo `wszQualifierName` parâmetro e também ter um valor idêntico àquele especificado pelo `pQualifierVal` estrutura. Se este sinalizador é usado, você deve especificar uma `wszQualifierName` e um `pQualifierValue`. |
+| `WBEM_FLAG_ALWAYS` | 0 | Retornar todos os nomes de propriedade. `strQualifierName`e `pQualifierVal` não são usados. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Retornar apenas as propriedades que têm um qualificador do nome especificado pelo `strQualifierName` parâmetro. Se esse sinalizador for usado, você deverá especificar `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Retornar apenas propriedades que não têm um qualificador do nome especificado pelo `strQualifierName` parâmetro. Se esse sinalizador for usado, você deverá especificar `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Retornam apenas propriedades que têm um qualificador do nome especificado pelo `wszQualifierName` parâmetro e também têm um valor idêntico ao especificado `pQualifierVal` pela estrutura. Se esse sinalizador for usado, você deverá especificar um `wszQualifierName` e um. `pQualifierValue` |
 
-| Sinalizadores de grupo 2 |Valor  |Descrição  |
+| Sinalizadores do grupo 2 |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Retorne apenas os nomes de propriedades que definem as chaves. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Retorno apenas nomes de propriedade que são referências de objeto. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Retornar somente os nomes das propriedades que definem as chaves. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Retornar apenas nomes de propriedade que são referências de objeto. |
 
-| Grupo 3 sinalizadores |Valor  |Descrição  |
+| Sinalizadores do grupo 3 |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retorne apenas os nomes de propriedade que pertencem à classe mais derivada. Exclua propriedades das classes pai. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Retorne apenas os nomes de propriedades que pertencem às classes pai. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Retorne apenas os nomes de propriedades do sistema. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Retorne apenas os nomes das propriedades não são do sistema. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retornar apenas os nomes de propriedade que pertencem à classe mais derivada. Exclua as propriedades das classes pai. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Retornar apenas os nomes de propriedade que pertencem às classes pai. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Retornar apenas os nomes das propriedades do sistema. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Retornar apenas os nomes das propriedades que não são do sistema. |
 
-A função sempre aloca um novo `SAFEARRAY` se ele retornar `WBEM_S_NO_ERROR`, e `pstrNames` é sempre definido para apontar para ele. A matriz retornada pode ter elementos 0 se nenhuma propriedade corresponde aos filtros especificados. Se a função retorna um valor diferente de `WBM_S_NO_ERROR`, um novo `SAFEARRAY` estrutura não é retornada.
+A função sempre aloca um novo `SAFEARRAY` se ele retornar `WBEM_S_NO_ERROR`e `pstrNames` sempre será definido para apontar para ele. A matriz retornada pode ter 0 elementos se nenhuma propriedade corresponder aos filtros especificados. Se a função retornar um valor diferente de `WBM_S_NO_ERROR`, uma nova `SAFEARRAY` estrutura não será retornada.
  
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

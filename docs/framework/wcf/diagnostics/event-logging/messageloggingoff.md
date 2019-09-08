@@ -2,24 +2,24 @@
 title: MessageLoggingOff
 ms.date: 03/30/2017
 ms.assetid: 98cb139d-cb10-4d8c-9087-3dc3c6f23521
-ms.openlocfilehash: be81e25b907edff4e33b86d95efd8edee6898cfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2d939c3cd505ea9c3f95fd16bdc73958b5bf8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999278"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797736"
 ---
 # <a name="messageloggingoff"></a>MessageLoggingOff
-Id: 117  
+Sessão 117  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: ServiceModel  
+ Categorias ServiceModel  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que o log de mensagens foi desativado. O evento lista o nome de processo e a ID de processo.  
+ Esse evento indica que o log de mensagens foi desativado. O evento lista o nome do processo e a ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

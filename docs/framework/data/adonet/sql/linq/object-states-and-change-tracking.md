@@ -2,12 +2,12 @@
 title: Estados e controle de alterações de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043513"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781283"
 ---
 # <a name="object-states-and-change-tracking"></a>Estados e controle de alterações de objeto
 
@@ -21,7 +21,7 @@ A tabela a seguir lista os estados possíveis para objetos de [!INCLUDE[vbtecdli
 |-----------|-----------------|
 |`Untracked`|Um objeto não controlado por [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os exemplos incluem o seguinte:<br /><br /> -Um objeto não consultado por meio do <xref:System.Data.Linq.DataContext> atual (como um objeto recém-criado).<br />-Um objeto criado por meio de desserialização<br />-Um objeto consultado por um diferente <xref:System.Data.Linq.DataContext>.|
 |`Unchanged`|Um objeto retornado usando <xref:System.Data.Linq.DataContext> atual e não conhecido para ter sido alterado desde que ele foi criado.|
-|`PossiblyModified`|Um objeto que é *anexado* a um <xref:System.Data.Linq.DataContext>. Para obter mais informações, consulte [operações de recuperação de dados e cud em aplicativos de N camadas (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|
+|`PossiblyModified`|Um objeto que é *anexado* a um <xref:System.Data.Linq.DataContext>. Para obter mais informações, consulte [operações de recuperação de dados e cud em aplicativos de N camadas (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).|
 |`ToBeInserted`|Um objeto não recuperado usando <xref:System.Data.Linq.DataContext>atual. Isso faz com que um base de dados `INSERT` durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeUpdated`|Um objeto conhecido para ter sido alterado desde que ele foi recuperado. Isso faz com que um base de dados `UPDATE` durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeDeleted`|Um objeto marcado para exclusão, causando um base de dados `DELETE` durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
@@ -31,7 +31,7 @@ A tabela a seguir lista os estados possíveis para objetos de [!INCLUDE[vbtecdli
 
 Você pode solicitar `Inserts` explicitamente usando <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>. Como alternativa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é possível `Inserts` inferir localizando objetos conectados a um dos objetos conhecidos que devem ser atualizados. Por exemplo, se você adicionar um `Untracked` objeto a um <xref:System.Data.Linq.EntitySet%601> ou definir um <xref:System.Data.Linq.EntityRef%601> para um `Untracked` objeto, tornará o `Untracked` objeto acessível por meio de objetos rastreados no grafo. Durante o <xref:System.Data.Linq.DataContext.SubmitChanges%2A>processamento [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , o percorre os objetos rastreados e descobre quaisquer objetos persistentes acessíveis que não são rastreados. Esses objetos são candidatos para inserção na base de dados.
 
-Para classes em uma hierarquia de herança <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>,`o`() também define o valor do membro designado como discriminador para corresponder ao tipo do objeto. `o` No caso de um tipo que corresponde ao valor padrão de discriminador, esta ação faz com que o valor de discriminador a ser substituído com o valor padrão. Para obter mais informações, consulte [suporte à herança](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).
+Para classes em uma hierarquia de herança <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>,`o`() também define o valor do membro designado como *discriminador* para corresponder ao tipo do objeto `o`. No caso de um tipo que corresponde ao valor padrão de discriminador, esta ação faz com que o valor de discriminador a ser substituído com o valor padrão. Para obter mais informações, consulte [suporte à herança](inheritance-support.md).
 
 > [!IMPORTANT]
 > Um objeto adicionado a `Table` não estiver no cache de identidade. O cache de identidade reflete somente o que é recuperado de base de dados. Após uma chamada a <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, a entidade adicionada não aparece em consultas na base de dados até que <xref:System.Data.Linq.DataContext.SubmitChanges%2A> está concluída com êxito.
@@ -69,5 +69,5 @@ Se você atualizar a referência ambos necessário e a chave estrangeira corresp
 
 ## <a name="see-also"></a>Consulte também
 
-- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Operações de inserção, atualização e exclusão](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Informações gerais](background-information.md)
+- [Operações de inserção, atualização e exclusão](insert-update-and-delete-operations.md)

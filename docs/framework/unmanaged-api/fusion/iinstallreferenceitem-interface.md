@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757892"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796387"
 ---
 # <a name="iinstallreferenceitem-interface"></a>Interface IInstallReferenceItem
 Representa um item instalado no cache de assembly global.  
@@ -30,16 +30,16 @@ Representa um item instalado no cache de assembly global.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetReference](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Obtém um ponteiro para o `FUSION_INSTALL_REFERENCE` estrutura representada por este `IInstallReferenceItem`.|  
+|[Método GetReference](iinstallreferenceitem-getreference-method.md)|Obtém um ponteiro para a `FUSION_INSTALL_REFERENCE` estrutura representada por isso `IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Estrutura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [Interfaces de fusão](fusion-interfaces.md)
+- [Estrutura FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)

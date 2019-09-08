@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965229"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791372"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integração de System.Transactions com o SQL Server
 O .NET Framework versão 2,0 introduziu uma estrutura de transação que pode ser acessada por meio do <xref:System.Transactions> namespace. Essa estrutura expõe transações de uma maneira totalmente integrada no .NET Framework, incluindo ADO.NET.  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>Consulte também
 
-- [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Transações e simultaneidade](transactions-and-concurrency.md)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

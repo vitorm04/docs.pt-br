@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205188"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786577"
 ---
 # <a name="childviews-and-relations"></a>ChildViews e relações
 Se existir uma relação entre as tabelas em <xref:System.Data.DataSet>um, você poderá criar <xref:System.Data.DataView> uma linha contendo a partir da tabela filho relacionada <xref:System.Data.DataRowView> usando <xref:System.Data.DataRowView.CreateChildView%2A> o método do para as linhas na tabela pai. Por exemplo, o código a seguir exibe **categorias** e seus **produtos** relacionados em ordem alfabética classificada por **NomeDaCategoria** e **NomeDoProduto**.  
@@ -79,4 +79,4 @@ foreach (DataRowView catDRV in catView)
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataViews](dataviews.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959386"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794241"
 ---
 # <a name="date-and-time-data"></a>Dados de data e hora
 O SQL Server 2008 apresenta novos tipos de dados para manipular as informações de data e hora. Os novos tipos de dados incluem tipos separados para data e hora, e tipos de dados expandidos com maior intervalo, precisão e reconhecimento de fuso horário. A partir do .NET Framework versão 3.5 Service Pack (SP) 1, o Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) oferece suporte completo para todos os novos recursos do Mecanismo de Banco de Dados do SQL Server 2008. Você deve instalar o .NET Framework 3.5 SP1 (ou posterior) para usar esses novos recursos com o SqlClient.  
@@ -88,7 +88,7 @@ Você pode especificar o tipo de dados de <xref:System.Data.SqlClient.SqlParamet
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtém ou define se um valor é anulável. Quando você envia um valor do parâmetro nulo para o servidor, deve especificar <xref:System.DBNull>, em vez de `null` (`Nothing` no Visual Basic). Para obter mais informações sobre nulos de banco de dados, consulte [lidando com valores nulos](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtém ou define se um valor é anulável. Quando você envia um valor do parâmetro nulo para o servidor, deve especificar <xref:System.DBNull>, em vez de `null` (`Nothing` no Visual Basic). Para obter mais informações sobre nulos de banco de dados, consulte [lidando com valores nulos](handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Obtém ou define o número máximo de dígitos usados para representar o valor. Essa configuração é ignorada para tipos de dados de data e hora.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Obtém ou define o número de casas decimais para o qual a parte de hora do valor é `Time`resolvida `DateTime2`, e `DateTimeOffset`. O valor padrão é 0, o que significa que a escala real é inferida do valor e enviada para o servidor.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ignorado para tipos de dados de data e hora.|  
@@ -101,7 +101,7 @@ Você pode especificar o tipo de dados de <xref:System.Data.SqlClient.SqlParamet
 ### <a name="creating-parameters"></a>Criando parâmetros  
  Você pode criar um objeto <xref:System.Data.SqlClient.SqlParameter> usando o construtor ou adicionando-o a uma coleção de <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> chamando o método `Add` do <xref:System.Data.SqlClient.SqlParameterCollection>. O método `Add` utilizará como entrada argumentos de construtor ou um objeto de parâmetro existente.  
   
- As seções seguintes neste tópico fornecem exemplos de como especificar parâmetros de data e hora. Para obter exemplos adicionais de como trabalhar com parâmetros, consulte Configurando [parâmetros e tipos de dados de parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) e [parâmetros de DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ As seções seguintes neste tópico fornecem exemplos de como especificar parâmetros de data e hora. Para obter exemplos adicionais de como trabalhar com parâmetros, consulte [configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md) e [parâmetros de DataAdapter](../dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Exemplo de data  
  O fragmento de código a seguir demonstra como especificar um parâmetro `date`.  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Configurando parâmetros e tipos de dados de parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server Data Types and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md) (Tipos de dados do SQL Server e o ADO.NET)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Mapeamentos de tipo de dados do SQL Server](../sql-server-data-type-mappings.md)
+- [Configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)
+- [SQL Server Data Types and ADO.NET](sql-server-data-types.md) (Tipos de dados do SQL Server e o ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

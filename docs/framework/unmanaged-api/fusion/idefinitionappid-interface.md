@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929909a7f2c4fa1799c8fed94787b8f853c7eac2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697232"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796512"
 ---
 # <a name="idefinitionappid-interface"></a>Interface IDefinitionAppId
 Representa um identificador exclusivo para o código que define o aplicativo no escopo atual.  
@@ -30,20 +30,20 @@ Representa um identificador exclusivo para o código que define o aplicativo no 
   
 |Método|Descrição|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Obtém uma cadeia de caracteres formatada que representa o código nesta `IDefinitionAppId` objeto.|  
-|`IDefinitionAppId::put_Codebase`|Define o código deste `IDefinitionAppId` formatado de objeto a ser especificado o valor de cadeia de caracteres.|  
-|`IDefinitionAppId::EnumAppPath`|Obtém um ponteiro de interface para um [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) objeto que contém os assemblies no caminho do aplicativo atual.|  
-|`IDefinitionAppId::SetAppPath`|Define o caminho do aplicativo para o assembly no escopo atual com o valor referenciado pelo [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) objeto.|  
-|`IDefinitionAppId::get_SubscriptionId`|Obtém um ponteiro para uma representação de cadeia de caracteres do identificador de token para uma assinatura a este `IDefinitionAppId` objeto.|  
-|`IDefinitionAppId::put_SubscriptionId`|Define o identificador de token para uma assinatura para essa `IDefinitionAppId` objeto para o valor de cadeia de caracteres especificada.|  
+|`IDefinitionAppId::get_Codebase`|Obtém uma cadeia de caracteres formatada que representa o código `IDefinitionAppId` neste objeto.|  
+|`IDefinitionAppId::put_Codebase`|Define o código desse `IDefinitionAppId` objeto como o valor de cadeia de caracteres formatado especificado.|  
+|`IDefinitionAppId::EnumAppPath`|Obtém um ponteiro de interface para um objeto [IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md) que contém os assemblies no caminho do aplicativo atual.|  
+|`IDefinitionAppId::SetAppPath`|Define o caminho do aplicativo para o assembly no escopo atual como o valor referenciado pelo objeto [IDefinitionIdentity](idefinitionidentity-interface.md) especificado.|  
+|`IDefinitionAppId::get_SubscriptionId`|Obtém um ponteiro para uma representação de cadeia de caracteres do identificador de token para uma `IDefinitionAppId` assinatura para este objeto.|  
+|`IDefinitionAppId::put_SubscriptionId`|Define o identificador de token de uma assinatura para `IDefinitionAppId` esse objeto para o valor de cadeia de caracteres especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Isolation.h  
+ **Cabeçalho:** Isolamento. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Interfaces de fusão](fusion-interfaces.md)

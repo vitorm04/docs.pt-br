@@ -2,12 +2,12 @@
 title: Mapear restrições de esquema XML (XSD) chave para restrições de DataSet
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: d6fcdae77c2f2ac07ea5cd16baf07cd5de36d25b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8543f5b34ee2a80ff0154897cf7678b244a8d357
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203469"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786096"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear restrições de esquema XML (XSD) chave para restrições de DataSet
 Em um esquema, você pode especificar uma restrição de chave em um elemento ou atributo usando o elemento de **chave** . O elemento ou atributo no qual uma restrição de chave é especificada deve ter valores exclusivos em qualquer instância de esquema e não pode ter valores nulos.  
@@ -19,9 +19,9 @@ Em um esquema, você pode especificar uma restrição de chave em um elemento ou
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|Se esse atributo for especificado, seu valor será usado como o nome da restrição. Caso contrário, o atributo **Name** fornecerá o valor do nome da restrição.|  
-|**msdata:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, a Propriedade IsPrimaryKey de restrição será definida como **true**, tornando-a uma chave primária. A propriedade de coluna **AllowDBNull** está definida como **false**, pois as chaves primárias não podem ter valores nulos.|  
+|**msdata:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, a propriedade **IsPrimaryKey** de restrição será definida como **true**, tornando-a uma chave primária. A propriedade de coluna **AllowDBNull** está definida como **false**, pois as chaves primárias não podem ter valores nulos.|  
   
- Na conversão do esquema no qual uma restrição de chave é especificada, o processo de mapeamento cria uma restrição UNIQUE na tabela com a propriedade de coluna **AllowDBNull** definida como **false** para cada coluna na restrição. A Propriedade IsPrimaryKey da restrição UNIQUE também é definida como **false** , a menos que você `msdata:PrimaryKey="true"` tenha especificado no elemento **Key** . Isso é idêntico a uma restrição UNIQUE no esquema no qual `PrimaryKey="true"`.  
+ Na conversão do esquema no qual uma restrição de chave é especificada, o processo de mapeamento cria uma restrição UNIQUE na tabela com a propriedade de coluna **AllowDBNull** definida como **false** para cada coluna na restrição. A propriedade **IsPrimaryKey** da restrição UNIQUE também é definida como **false** , a menos que você `msdata:PrimaryKey="true"` tenha especificado no elemento **Key** . Isso é idêntico a uma restrição UNIQUE no esquema no qual `PrimaryKey="true"`.  
   
  No exemplo de esquema a seguir, o elemento **Key** especifica a restrição de chave no elemento **CustomerID** .  
   
@@ -74,7 +74,7 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- No **conjunto** de um que é gerado, a propriedade IsPrimaryKey de **UniqueConstraint** é definida como **true** porque o esquema especifica `msdata:PrimaryKey="true"` no elemento **Key** .  
+ No **conjunto** de um que é gerado, a propriedade **IsPrimaryKey** de **UniqueConstraint** é definida como **true** porque o esquema especifica `msdata:PrimaryKey="true"` no elemento **Key** .  
   
  O valor da propriedade **ConstraintName** do **UniqueConstraint** no **conjunto** de valores é o valor do atributo **MSDATA: ConstraintName** especificado no elemento **Key** no esquema.  
   
@@ -82,4 +82,4 @@ TableName: customers
 
 - [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

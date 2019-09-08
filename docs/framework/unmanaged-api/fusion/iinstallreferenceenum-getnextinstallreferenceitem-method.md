@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dd96b10b5ee2880e0f9ee18048ec8ba2ee0b5ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779051"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796450"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>Método IInstallReferenceEnum::GetNextInstallReferenceItem
-Obtém um ponteiro para a próxima [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) objeto contido nesse [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) objeto.  
+Obtém um ponteiro para o próximo objeto [IInstallReferenceItem](iinstallreferenceitem-interface.md) contido neste objeto [IInstallReferenceEnum](iinstallreferenceenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +39,22 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppRefItem`  
- [out] Retornado `IInstallReferenceItem` ponteiro.  
+ fora O ponteiro `IInstallReferenceItem` retornado.  
   
  `dwFlags`  
- [in] Reservado para extensibilidade futura. `dwFlags` deve ser 0 (zero).  
+ no Reservado para extensibilidade futura. `dwFlags`deve ser 0 (zero).  
   
  `pvReserved`  
- [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [Interface IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [Interface IInstallReferenceItem](iinstallreferenceitem-interface.md)
+- [Interface IInstallReferenceEnum](iinstallreferenceenum-interface.md)

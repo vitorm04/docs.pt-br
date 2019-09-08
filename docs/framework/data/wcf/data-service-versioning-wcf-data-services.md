@@ -1,79 +1,79 @@
 ---
-title: Controle de versão de serviço de dados (WCF Data Services)
+title: Controle de versão do serviço de dados (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 03ac1e0a5fec2d7def91466a9dc31853e2007f57
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959495"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791064"
 ---
-# <a name="data-service-versioning-wcf-data-services"></a>Controle de versão de serviço de dados (WCF Data Services)
-O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite que você crie serviços de dados para que os clientes podem acessar dados como utilizando URIs de recursos com base em um modelo de dados. OData também suporta a definição de operações de serviço. Após a implantação inicial e possivelmente várias vezes durante a vida, esses serviços de dados podem precisar ser alterada para uma variedade de motivos, como mudanças nas necessidades comerciais, requisitos de tecnologia de informações, ou para resolver outros problemas. Quando você faz alterações em um serviço de dados existente, você deve considerar se deseja definir uma nova versão de seus dados de serviço e a melhor maneira de minimizar o impacto em aplicativos cliente existentes. Este tópico fornece diretrizes sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como o WCF Data Services lida com uma troca entre clientes e serviços de dados que dão suporte a diferentes versões do protocolo OData.
+# <a name="data-service-versioning-wcf-data-services"></a>Controle de versão do serviço de dados (WCF Data Services)
+O [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] permite que você crie serviços de dados para que os clientes possam acessar dados como recursos usando URIs baseados em um modelo de dados. O OData também dá suporte à definição de operações de serviço. Após a implantação inicial e, potencialmente, várias vezes durante o tempo de vida, esses serviços de dados talvez precisem ser alterados por vários motivos, como mudanças nas necessidades dos negócios, requisitos de tecnologia da informação ou para resolver outros problemas. Quando você faz alterações em um serviço de dados existente, deve considerar se deseja definir uma nova versão do seu serviço de dados e como é melhor minimizar o impacto em aplicativos cliente existentes. Este tópico fornece orientação sobre quando e como criar uma nova versão de um serviço de dados. Ele também descreve como o WCF Data Services lida com uma troca entre clientes e serviços de dados que dão suporte a versões diferentes do protocolo OData.
 
-## <a name="versioning-a-wcf-data-service"></a>Controle de versão de um WCF Data Service
- Depois que um serviço de dados é implantado e os dados que está sendo consumidos, as alterações ao serviço de dados têm o potencial de causar problemas de compatibilidade com aplicativos cliente existentes. No entanto, como alterações frequentemente precisam cumprir as necessidades de negócios geral do serviço, você deve considerar quando e como criar uma nova versão do seu serviço de dados com menos impacto no cliente de aplicativos.
+## <a name="versioning-a-wcf-data-service"></a>Controle de versão de um serviço de dados WCF
+ Depois que um serviço de dados é implantado e os dados estão sendo consumidos, as alterações no serviço de dados têm o potencial de causar problemas de compatibilidade com os aplicativos cliente existentes. No entanto, como as alterações geralmente são exigidas pelas necessidades de negócios gerais do serviço, você deve considerar quando e como criar uma nova versão do serviço de dados com o impacto mínimo sobre os aplicativos cliente.
 
-### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Alterações do modelo de dados que recomenda uma nova versão do serviço de dados
- Ao considerar se pode publicar uma nova versão de um serviço de dados, é importante entender como os diferentes tipos de alterações podem afetar os aplicativos cliente. Alterações em um serviço de dados que podem exigir que você crie uma nova versão de um serviço de dados podem ser divididas em duas categorias a seguir:
+### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Alterações no modelo de dados que recomendam uma nova versão do serviço de dados
+ Ao considerar se uma nova versão de um serviço de dados deve ser publicada, é importante entender como os diferentes tipos de alterações podem afetar os aplicativos cliente. As alterações em um serviço de dados que podem exigir que você crie uma nova versão de um serviço de dados podem ser divididas nas duas categorias a seguir:
 
-- Altera para o contrato de serviço — que incluem atualizações para operações de serviço, as alterações a acessibilidade de conjuntos de entidades (feeds), as alterações de versão e outras alterações de comportamentos de serviço.
+- Alterações no contrato de serviço — que incluem atualizações para operações de serviço, alterações na acessibilidade de conjuntos de entidades (feeds), alterações de versão e outras alterações nos comportamentos de serviço.
 
-- Altera para o contrato de dados — que incluem as alterações no modelo de dados, formatos de feed ou personalizações de feed.
+- Alterações no contrato de dados — que incluem alterações no modelo de dados, formatos de feed ou personalizações de feed.
 
- A tabela a seguir detalha para quais tipos de alterações, você deve considerar uma nova versão do serviço de dados de publicação:
+ A tabela a seguir fornece detalhes sobre quais tipos de alterações você deve considerar para publicar uma nova versão do serviço de dados:
 
 |Tipo de alteração|Requer uma nova versão|Nova versão não necessária|
 |--------------------|----------------------------|----------------------------|
-|Operações de serviço|-Adicionar o novo parâmetro<br />-Alterar tipo de retorno<br />-Remova a operação de serviço|-Excluir o parâmetro existente<br />-Adicionar nova operação de serviço|
-|Comportamentos de serviço|-Desabilitar solicitações de contagem<br />-Desabilite o suporte de projeção<br />-Aumente a versão do serviço de dados necessários|-Habilitar solicitações de contagem<br />-Habilitar o suporte de projeção<br />-Diminuir a versão do serviço de dados necessários|
-|Permissões do conjunto de entidades|-Restringir permissões de conjunto de entidade<br />-Alterar o código de resposta (novo valor do primeiro dígito) <sup>1</sup>|-Relaxar definir permissões de entidade<br />-Alterar o código de resposta (mesmo valor do primeiro dígito)|
-|Propriedades da entidade|-Remover propriedade existente ou relação<br />-Adicionar a propriedade não anulável<br />-Alterar a propriedade existente|-Adicionar a propriedade nullable<sup>2</sup>|
-|Conjuntos de entidades|-Remova o conjunto de entidades|-Adicionar o tipo derivado<br />-Altere o tipo base<br />-Adicionar conjunto de entidades|
-|Personalização de feed|-Alterar o mapeamento de propriedade de entidade||
+|Operações de serviço|-Adicionar novo parâmetro<br />-Alterar tipo de retorno<br />-Remover operação de serviço|-Excluir parâmetro existente<br />-Adicionar nova operação de serviço|
+|Comportamentos de serviço|-Desabilitar solicitações de contagem<br />-Desabilitar suporte à projeção<br />-Aumentar a versão do serviço de dados necessária|-Habilitar solicitações de contagem<br />-Habilitar suporte à projeção<br />-Diminuir a versão do serviço de dados necessária|
+|Permissões do conjunto de entidades|-Restringir permissões do conjunto de entidades<br />-Alterar código de resposta (novo valor do primeiro dígito) <sup>1</sup>|-Relaxar as permissões do conjunto de entidades<br />-Alterar código de resposta (mesmo valor do primeiro dígito)|
+|Propriedades da entidade|-Remover propriedade ou relação existente<br />-Adicionar Propriedade não anulável<br />-Alterar propriedade existente|-Adicionar Propriedade Anulável<sup>2</sup>|
+|Conjuntos de entidades|-Remover conjunto de entidades|-Adicionar tipo derivado<br />-Alterar tipo de base<br />-Adicionar conjunto de entidades|
+|Personalização do feed|-Alterar mapeamento de propriedade de entidade||
 
- <sup>1</sup> isso depende estritamente como um aplicativo cliente se baseia em um código de erro específico.
+ <sup>1</sup> isso pode depender de quão estritamente um aplicativo cliente depende do recebimento de um código de erro específico.
 
- <sup>2</sup> você pode definir o <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> propriedade `true` para que o cliente a ignorar qualquer nova propriedade enviada pelo serviço de dados que não está definida no cliente. No entanto, quando as inserções são feitas, as propriedades não são incluídas pelo cliente na solicitação POST são definidas para seus valores padrão. Para obter atualizações, todos os dados existentes em uma propriedade desconhecida para o cliente poderão ser substituídos por valores padrão. Nesse caso, você deve enviar a atualização como uma solicitação de mesclagem, que é o padrão. Para obter mais informações, consulte [Gerenciando o contexto do serviço de dados](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
+ <sup>2</sup> você pode definir a <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> Propriedade como `true` para que o cliente ignore todas as novas propriedades enviadas pelo serviço de dados que não estão definidas no cliente. No entanto, quando são feitas inserções, as propriedades não incluídas pelo cliente na solicitação POST são definidas com seus valores padrão. Para atualizações, todos os dados existentes em uma propriedade desconhecida para o cliente podem ser substituídos por valores padrão. Nesse caso, você deve enviar a atualização como uma solicitação de MESCLAgem, que é o padrão. Para obter mais informações, consulte [Gerenciando o contexto do serviço de dados](managing-the-data-service-context-wcf-data-services.md).
 
-### <a name="how-to-version-a-data-service"></a>Como a versão de um serviço de dados
- Quando for necessário, uma nova versão do serviço de dados é definida criando uma nova instância do serviço com um modelo de dados ou contrato de serviço atualizado. Esse novo serviço, em seguida, é exposto por meio de um novo URI ponto de extremidade que diferencie-a da versão anterior. Por exemplo:
+### <a name="how-to-version-a-data-service"></a>Como fazer a versão de um serviço de dados
+ Quando necessário, uma nova versão do serviço de dados é definida pela criação de uma nova instância do serviço com um contrato de serviço ou modelo de dados atualizado. Esse novo serviço é então exposto usando um novo ponto de extremidade de URI, que o diferencia da versão anterior. Por exemplo:
 
-- Versão antiga: `http://services.odata.org/Northwind/v1/Northwind.svc/`
+- Versão antiga:`http://services.odata.org/Northwind/v1/Northwind.svc/`
 
-- Nova versão: `http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Nova versão:`http://services.odata.org/Northwind/v2/Northwind.svc/`
 
- Ao atualizar um serviço de dados, os clientes precisarão também ser atualizados com base nos novos metadados de serviço de dados e usar a nova raiz do URI. Quando possível, você deve manter a versão anterior do serviço de dados para dar suporte a clientes que ainda não foram atualizados para usar a nova versão. Versões mais antigas de um serviço de dados podem ser removidas quando eles não são mais necessários. Você deve considerar a manter o ponto de extremidade de serviço de dados URI no arquivo de configuração externo.
+ Ao atualizar um serviço de dados, os clientes também precisarão ser atualizados com base nos novos metadados do serviço de dados e usar o novo URI de raiz. Quando possível, você deve manter a versão anterior do serviço de dados para dar suporte a clientes que ainda não foram atualizados para usar a nova versão. As versões mais antigas de um serviço de dados podem ser removidas quando não são mais necessárias. Você deve considerar a manutenção do URI do ponto de extremidade do serviço de dados em um arquivo de configuração externo.
 
 ## <a name="odata-protocol-versions"></a>Versões do protocolo OData
- Quando são lançadas novas versões do OData, os aplicativos cliente podem não estar usando a mesma versão do protocolo OData que é compatível com o serviço de dados. Um aplicativo de cliente mais antigo pode acessar um serviço de dados que dá suporte a uma versão mais recente do OData. Um aplicativo cliente também pode usar uma versão mais recente da biblioteca de cliente WCF Data Services, que dá suporte a uma versão mais recente do OData que o serviço de dados que está sendo acessado.
+ À medida que novas versões do OData são lançadas, os aplicativos cliente podem não estar usando a mesma versão do protocolo OData com suporte no serviço de dados. Um aplicativo cliente mais antigo pode acessar um serviço de dados que dá suporte a uma versão mais recente do OData. Um aplicativo cliente também pode estar usando uma versão mais recente da biblioteca de cliente WCF Data Services, que dá suporte a uma versão mais recente do OData do que o serviço de dados que está sendo acessado.
 
- WCF Data Services utiliza o suporte fornecido pelo OData para lidar com esses cenários de controle de versão. Também há suporte para gerar e usar os metadados de modelo de dados para criar classes de serviço de dados de cliente quando o cliente usa uma versão diferente do OData que os dados de serviço usa. Para obter mais informações, consulte [OData: Controle de versão de protocolo](https://go.microsoft.com/fwlink/?LinkId=186071).
+ WCF Data Services aproveita o suporte fornecido pelo OData para lidar com esses cenários de controle de versão. Também há suporte para gerar e usar metadados de modelo de dados para criar classes de serviço de dados do cliente quando o cliente usa uma versão diferente do OData do que o serviço de dados usa. Para obter mais informações, [consulte OData: Controle de versão](https://go.microsoft.com/fwlink/?LinkId=186071)de protocolo.
 
 ### <a name="version-negotiation"></a>Negociação de versão
- O serviço de dados pode ser configurado para definir a versão mais recente do protocolo OData que será usado pelo serviço, independentemente da versão solicitada pelo cliente. Você pode fazer isso especificando um <xref:System.Data.Services.Common.DataServiceProtocolVersion> de valor para o <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> propriedade do <xref:System.Data.Services.DataServiceBehavior> usado pelo serviço de dados. Para obter mais informações, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+ O serviço de dados pode ser configurado para definir a versão mais recente do protocolo OData que será usada pelo serviço, independentemente da versão solicitada pelo cliente. Você pode fazer isso especificando um <xref:System.Data.Services.Common.DataServiceProtocolVersion> valor para a <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> Propriedade do <xref:System.Data.Services.DataServiceBehavior> usado pelo serviço de dados. Para obter mais informações, consulte [Configurando o serviço de dados](configuring-the-data-service-wcf-data-services.md).
 
- Quando um aplicativo usa as bibliotecas de cliente do WCF Data Services para acessar um serviço de dados, as bibliotecas definido automaticamente esses cabeçalhos para os valores corretos, dependendo da versão do OData e dos recursos que são usados em seu aplicativo. Por padrão, o WCF Data Services usa a versão mais antiga do protocolo que dá suporte à operação solicitada.
+ Quando um aplicativo usa as bibliotecas de cliente WCF Data Services para acessar um serviço de dados, as bibliotecas definem automaticamente esses cabeçalhos com os valores corretos, dependendo da versão do OData e dos recursos que são usados em seu aplicativo. Por padrão, WCF Data Services usa a versão de protocolo mais baixa que dá suporte à operação solicitada.
 
- A tabela a seguir detalha as versões do .NET Framework e Silverlight que incluem serviços de dados WCF dão suporte para versões específicas do protocolo OData.
+ A tabela a seguir detalha as versões do .NET Framework e do Silverlight que incluem WCF Data Services suporte a versões específicas do protocolo OData.
 
-|Versão do protocolo OData|Suporte introduzido no...|
+|Versão do protocolo OData|Suporte introduzido em...|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Versão 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-Versão 3 do Silverlight|
-|Versão 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Uma atualização para [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Você pode baixar e instalar a atualização a partir de [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-O - Silverlight versão 4|
-|versão 3|-Você pode baixar e instalar uma versão de pré-lançamento que dá suporte a OData versão 3 das [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
+|Versão 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Service Pack 1 (SP1)<br />-Silverlight versão 3|
+|Versão 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Uma atualização para [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] o SP1. Você pode baixar e instalar a atualização no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight versão 4|
+|Versão 3|-Você pode baixar e instalar uma versão de pré-lançamento que dá suporte à versão 3 do OData no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Versões de metadados
- Por padrão, o WCF Data Services usa a versão 1.1 do CSDL para representar um modelo de dados. Isso é sempre o caso para modelos de dados que são baseados em um provedor de reflexão ou um provedor de serviços de dados personalizados. No entanto, quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], a versão do CSDL retornado é o mesmo que a versão que é usada pelo [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]. A versão do CSDL é determinada pelo namespace do [o elemento de esquema (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl).
+ Por padrão, WCF Data Services usa a versão 1,1 do CSDL para representar um modelo de dados. Esse é sempre o caso para modelos de dados que se baseiam em um provedor de reflexão ou em um provedor de serviços de dados personalizado. No entanto, quando o modelo de dados é definido [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]usando o, a versão de CSDL retornada é igual à versão usada [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]pelo. A versão do CSDL é determinada pelo namespace do [elemento Schema (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl).
 
- O `DataServices` elemento de metadados retornados também contém uma `DataServiceVersion` atributo, que é o mesmo valor como o `DataServiceVersion` cabeçalho na mensagem de resposta. Aplicativos cliente, como o **adicionar referência de serviço** caixa de diálogo no Visual Studio, use essas informações para gerar classes de serviço de dados do cliente que funcionem corretamente com a versão do WCF Data Services que hospedam o serviço de dados. Para obter mais informações, consulte [OData: Controle de versão de protocolo](https://go.microsoft.com/fwlink/?LinkId=186071).
+ O `DataServices` elemento dos metadados retornados também contém um `DataServiceVersion` atributo, que é o mesmo valor que o `DataServiceVersion` cabeçalho na mensagem de resposta. Aplicativos cliente, como a caixa de diálogo **Adicionar referência de serviço** no Visual Studio, usam essas informações para gerar classes de serviço de dados do cliente que funcionam corretamente com a versão do WCF Data Services que hospeda o serviço de dados. Para obter mais informações, [consulte OData: Controle de versão](https://go.microsoft.com/fwlink/?LinkId=186071)de protocolo.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Provedores de Serviços de Dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Provedores de Serviços de Dados](data-services-providers-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md) (Definindo o WCF Data Services)

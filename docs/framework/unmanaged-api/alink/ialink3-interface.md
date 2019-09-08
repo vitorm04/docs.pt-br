@@ -8,26 +8,26 @@ helpviewer_keywords:
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753654"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787289"
 ---
 # <a name="ialink3-interface"></a>Interface IALink3
-Fornece um único método, `SetManifestFile`, que permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usará quando ele cria um assembly.  
+Fornece um único método, `SetManifestFile`, que permite que você especifique ou redefina o arquivo de manifesto que o vinculador usará quando criar um assembly.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Método SetManifestFile](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- Permite que você especificar ou redefinir o arquivo de manifesto que o vinculador usará quando ele cria o assembly.  
+ [Método SetManifestFile](setmanifestfile-method.md)  
+ Permite que você especifique ou redefina o arquivo de manifesto que o vinculador usará ao criar o assembly.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [API do ALink](index.md)  
  Tem suporte para a criação de módulos não associados e assemblies do .NET Framework.  
   
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- Ajuda na construção de assemblies do .NET Framework.  
+ [Interface IALink](ialink-interface.md)  
+ Ajuda na construção de assemblies de .NET Framework.  
   
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- Gera um arquivo que tem um assembly de manifesto de um ou mais arquivos que são módulos ou arquivos de recurso.
+ [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)  
+ Gera um arquivo que tem um manifesto de assembly de um ou mais arquivos que são módulos ou arquivos de recurso.

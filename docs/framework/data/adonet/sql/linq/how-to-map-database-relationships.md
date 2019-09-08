@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 42e7a715c8137574bff617715c1f174314080131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6b1eba063c9ec72ae14c12028dd0950b2ad95f5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943608"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793527"
 ---
 # <a name="how-to-map-database-relationships"></a>Como: mapear relações de banco de dados
 Você pode codificar como referências de propriedade em sua classe de entidade todas as relações de dados que serão sempre as mesmas. No banco de dados de exemplo Northwind, por exemplo, como os clientes geralmente fazem os pedidos, há sempre uma relação no modelo entre os clientes e seus pedidos.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]define um <xref:System.Data.Linq.Mapping.AssociationAttribute> atributo para ajudar a representar essas relações. Esse atributo é usado junto com os <xref:System.Data.Linq.EntitySet%601> tipos <xref:System.Data.Linq.EntityRef%601> e para representar o que seria uma relação de chave estrangeira em um banco de dados. Para obter mais informações, consulte a seção atributo de associação do [mapeamento baseado em atributo](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]define um <xref:System.Data.Linq.Mapping.AssociationAttribute> atributo para ajudar a representar essas relações. Esse atributo é usado junto com os <xref:System.Data.Linq.EntitySet%601> tipos <xref:System.Data.Linq.EntityRef%601> e para representar o que seria uma relação de chave estrangeira em um banco de dados. Para obter mais informações, consulte a seção atributo de associação do [mapeamento baseado em atributo](attribute-based-mapping.md).  
   
 > [!NOTE]
 > Os valores de propriedade de armazenamento AssociationAttribute e ColumnAttribute diferenciam maiúsculas de minúsculas. Por exemplo, verifique se os valores usados no atributo para a propriedade AssociationAttribute.Storage coincidem maiúsculas e minúsculas para os nomes de propriedades correspondentes usados em outro lugar no código. Isso se aplica a todas as linguagens de programação .NET, mesmo aquelas que não costumam diferenciar maiúsculas de minúsculas, incluindo Visual Basic. Para obter mais informações sobre a propriedade Storage, consulte <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
@@ -48,12 +48,12 @@ Você pode codificar como referências de propriedade em sua classe de entidade 
  Você também pode reverter a situação. Em vez de usar a classe `Customer` para descrever a associação entre clientes e pedidos, você pode usar a classe `Order`. A classe `Order` usa o tipo <xref:System.Data.Linq.EntityRef%601> para descrever a relação de volta para o cliente, como no exemplo de código a seguir.  
   
 > [!NOTE]
-> A <xref:System.Data.Linq.EntityRef%601> classe dá suporte ao *carregamento adiado*. Para obter mais informações, *Veja* [carregamento deferido versus imediato](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+> A <xref:System.Data.Linq.EntityRef%601> classe dá suporte ao *carregamento adiado*. Para obter mais informações, *Veja* [carregamento deferido versus imediato](deferred-versus-immediate-loading.md).  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Personalizar classes de entidade usando o editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [O modelo de objeto LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Como: Personalizar classes de entidade usando o editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [O modelo de objeto LINQ to SQL](the-linq-to-sql-object-model.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 908ac7c441dbb7f6c70b9fafc701d403fc153222
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
-ms.translationtype: HT
+ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251081"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70778855"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: Separador de caminho ZipArchiveEntry.FullName
 Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de caminho usado na propriedade <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> foi alterado da barra invertida ("\\") usada nas versões anteriores do .NET Framework para uma barra ("/").   Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
@@ -28,7 +28,7 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
  O impacto dessa alteração em arquivos .ZIP que são descompactados no sistema operacional Windows por APIs no namespace <xref:System.IO> do .NET Framework deve ser mínimo, uma vez que as APIs podem lidar perfeitamente com uma barra ("/") ou uma barra invertida ("\\") como o caractere separador de caminho.  
   
 ## <a name="mitigation"></a>Redução  
- Se esse comportamento for indesejável, você poderá recusar adicionando uma definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do seu arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de recusa.  
+ Se esse comportamento for indesejável, você poderá recusar adicionando uma definição de configuração à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do seu arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de recusa.  
   
 ```xml  
 <runtime>  
@@ -36,7 +36,7 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
 </runtime>  
 ```  
   
- Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6.1 e versões posteriores, podem aceitar esse comportamento adicionando uma definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
+ Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6.1 e versões posteriores, podem aceitar esse comportamento adicionando uma definição de configuração à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
   
 ```xml  
 <runtime>  
@@ -46,5 +46,5 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Compatibilidade de aplicativos na versão 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Compatibilidade de aplicativos na versão 4.6.1](application-compatibility-in-the-net-framework-4-6-1.md)

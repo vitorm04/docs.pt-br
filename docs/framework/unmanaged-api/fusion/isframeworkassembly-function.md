@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773835"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796324"
 ---
 # <a name="isframeworkassembly-function"></a>Função IsFrameworkAssembly
 Obtém um valor que indica se o assembly especificado é gerenciado.  
@@ -39,13 +39,13 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>Parâmetros  
  `pwzAssemblyReference`  
- [in] O nome do assembly a ser verificado.  
+ no O nome do assembly a ser verificado.  
   
  `pbIsFrameworkAssembly`  
- [out] Um valor booliano que indica se o assembly é gerenciado.  
+ fora Um valor booliano que indica se o assembly é gerenciado.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Uma cadeia de caracteres uncanonicalized que contém a identidade exclusiva do assembly.  
+ no Uma cadeia de caracteres não canônica que contém a identidade exclusiva do assembly.  
   
  `pccSize`  
  [in] O tamanho do `pwzFrameworkAssemblyIdentity`.  
@@ -53,13 +53,13 @@ HRESULT IsFrameworkAssembly (
 ## <a name="remarks"></a>Comentários  
  O `pwzAssemblyReference` parâmetro é um ponteiro para uma cadeia de caracteres que contém o nome de um assembly.  
   
- Se esse assembly fizer parte do .NET Framework, o `pbIsFrameworkAssembly` parâmetro conterá um valor booliano de `true`.  
+ Se esse assembly fizer parte do .NET Framework, o `pbIsFrameworkAssembly` parâmetro conterá um valor booliano de. `true`  
   
- Se o assembly nomeado não é parte do .NET Framework, ou se o `pwzAssemblyReference` parâmetro não nomeia um assembly `pbIsFrameworkAssembly` conterá um valor booliano de `false`.  
+ Se o assembly nomeado não fizer parte do .NET Framework, ou se o `pwzAssemblyReference` parâmetro não nomear um assembly, `pbIsFrameworkAssembly` conterá um valor booliano de `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Funções estáticas globais de fusão](fusion-global-static-functions.md)

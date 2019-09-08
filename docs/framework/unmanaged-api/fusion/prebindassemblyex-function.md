@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773853"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796332"
 ---
 # <a name="prebindassemblyex-function"></a>Função PreBindAssemblyEx
 Obtém o nome de exibição de pós-política para um assembly.  
   
- Essa função dá suporte à infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
+ Essa função dá suporte à infraestrutura de .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppCtx`  
- [in] Identifica o contexto do aplicativo.  
+ no Identifica o contexto do aplicativo.  
   
  `pName`  
- [in] Identifica o nome do assembly.  
+ no Identifica o nome do assembly.  
   
  `pAsmParent`  
- [in] Identifica o assembly pai. Este parâmetro é ignorado.  
+ no Identifica o assembly pai. Este parâmetro é ignorado.  
   
  `pwzRuntimeVersion`  
- [in] Identifica a versão de tempo de execução.  
+ no Identifica a versão de tempo de execução.  
   
  `ppNamePostPolicy`  
- [out] Contém o nome de exibição de pós política de.  
+ fora Contém o nome de exibição de pós-política.  
   
  `pvReserved`  
- [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
   
 ## <a name="remarks"></a>Comentários  
- O `ppNamePostPolicy` parâmetro de saída será definido somente se a função retorna FUSION_E_REF_DEF_MISMATCH HRESULT. Caso contrário, será nulo.  
+ O `ppNamePostPolicy` parâmetro de saída será definido somente se a função retornar HRESULT FUSION_E_REF_DEF_MISMATCH. Caso contrário, será nulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Funções estáticas globais de fusão](fusion-global-static-functions.md)

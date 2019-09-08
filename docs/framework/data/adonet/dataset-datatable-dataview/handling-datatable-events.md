@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 146854b592dd83efe87c54e1f5f99f110b81c1a5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203689"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786258"
 ---
 # <a name="handling-datatable-events"></a>Manipulação de eventos de DataTable
 O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem ser processados por um aplicativo. A tabela a seguir `DataTable` descreve os eventos.  
@@ -84,4 +84,4 @@ O <xref:System.Data.DataTable> objeto fornece uma série de eventos que podem se
 - [Manipulação de dados em uma DataTable](manipulating-data-in-a-datatable.md)
 - [Manipulação de eventos DataAdapter](../handling-dataadapter-events.md)
 - [Handling DataSet Events](handling-dataset-events.md) (Manipulando eventos do DataSet)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

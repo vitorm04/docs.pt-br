@@ -2,29 +2,29 @@
 title: Segurança da integração CLR no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4756d13ff52a4c55b48c3ea56d26111029c8a7e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878482"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794565"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Segurança da integração CLR no SQL Server
-Microsoft SQL Server fornece a integração do componente do common language runtime (CLR) do .NET Framework. Integração CLR permite que você grave procedimentos armazenados, disparadores, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e streaming funções com valor de tabela, usando qualquer linguagem do .NET Framework, como o Microsoft Visual Basic .NET ou o Microsoft Visual c#.  
+Microsoft SQL Server fornece a integração do componente Common Language Runtime (CLR) do .NET Framework. A integração CLR permite que você escreva procedimentos armazenados, gatilhos, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e funções com valor de tabela de streaming, usando qualquer linguagem de .NET Framework, como Microsoft Visual Basic .NET ou Microsoft Visual C#.  
   
- O CLR dá suporte a um modelo de segurança denominado segurança de acesso do código (CAS) para código gerenciado. Nesse modelo, as permissões são concedidas a assemblies com base na evidência fornecida pelo código em metadados. SQL Server integra-se o modelo de segurança baseado em usuário do SQL Server com o modelo de segurança baseada em acesso de código do CLR.  
+ O CLR dá suporte a um modelo de segurança chamado CAS (segurança de acesso do código) para código gerenciado. Nesse modelo, as permissões são concedidas a assemblies com base nas evidências fornecidas pelo código nos metadados. SQL Server integra o modelo de segurança baseado no usuário do SQL Server com o modelo de segurança baseado em acesso ao código do CLR.  
   
 ## <a name="external-resources"></a>Recursos externos  
- Para obter mais informações sobre a integração de CLR com o SQL Server, consulte os seguintes recursos.  
+ Para obter mais informações sobre a integração CLR com o SQL Server, consulte os recursos a seguir.  
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Segurança de acesso do código](../../../../../docs/framework/misc/code-access-security.md)|Contém tópicos que descrevem o CAS no .NET Framework.|  
-|[Segurança da integração CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Discute o modelo de segurança para código gerenciado em execução dentro do SQL Server.|  
+|[Segurança de acesso do código](../../../misc/code-access-security.md)|Contém tópicos que descrevem CAS no .NET Framework.|  
+|[Segurança de integração CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Discute o modelo de segurança para execução de código gerenciado dentro de SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Integração do Common Language Runtime ao SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
-- [ADO.NET Overview](../../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)
+- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Integração do Common Language Runtime ao SQL Server](sql-server-common-language-runtime-integration.md)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

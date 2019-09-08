@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 529905bd9286520a8e09479bfc95ef0b614f53e9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783079"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798213"
 ---
 # <a name="spawninstance-function"></a>Função SpawnInstance
 Cria uma nova instância de uma classe.    
@@ -41,38 +41,38 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`  
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lFlags`  
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `ppNewInstance`  
-[out] Recebe o ponteiro para a nova instância da classe. Se ocorrer um erro, um novo objeto não é retornado, e `ppNewInstance` é esquerda sem modificações.
+fora Recebe o ponteiro para a nova instância da classe. Se ocorrer um erro, um novo objeto não será retornado e `ppNewInstance` permanecerá não modificado.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` não é uma definição de classe válido e não é possível gerar novas instâncias. O está incompleto ou não foi registrado com o gerenciamento do Windows, chamando [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`Não é uma definição de classe válida e não pode gerar novas instâncias. Ela está incompleta ou não foi registrada com o gerenciamento do Windows chamando [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` é `null`. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemclassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) .
 
-`ptr` deve ser uma definição de classe obtida de gerenciamento do Windows. (Observe que ao gerar uma instância de uma instância é suportado, mas a instância retornada estiver vazia.) Você, em seguida, usar essa definição de classe para criar novas instâncias. Uma chamada para o [PutInstanceWmi](putinstancewmi.md) função é necessária se você pretende gravar a instância de gerenciamento do Windows.
+`ptr`deve ser uma definição de classe obtida do gerenciamento do Windows. (Observe que a geração de uma instância de uma instância tem suporte, mas a instância retornada está vazia.) Em seguida, você usa essa definição de classe para criar novas instâncias. Uma chamada para a função [PutInstanceWmi](putinstancewmi.md) será necessária se você pretende gravar a instância no gerenciamento do Windows.
 
-O novo objeto retornado no `ppNewClass` automaticamente se torna uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
+O novo objeto retornado em `ppNewClass` torna-se automaticamente uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

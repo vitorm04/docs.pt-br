@@ -2,12 +2,12 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957489"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794285"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 O SQL Server dá suporte a dois modos de autenticação, modo de autenticação do Windows e modo misto.  
@@ -69,7 +69,7 @@ O SQL Server dá suporte a dois modos de autenticação, modo de autenticação 
  SQL Server fornece mecanismos de política de senha do Windows para SQL Server logons quando ele [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] estiver em execução no ou em versões posteriores. As políticas de complexidade de senha foram criadas para intimidar ataques de força bruta aumentando o número de senhas possíveis. SQL Server pode aplicar as mesmas políticas de complexidade e expiração [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] usadas no para as senhas usadas no SQL Server.  
   
 > [!IMPORTANT]
-> Concatenar cadeias de conexão de entrada do usuário pode deixá-lo vulnerável a um ataque de injeção de cadeia de conexão. Use o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar cadeias de conexão válidas sintaticamente em tempo de execução. Para obter mais informações, confira [Construtores de cadeias de conexão](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Concatenar cadeias de conexão de entrada do usuário pode deixá-lo vulnerável a um ataque de injeção de cadeia de conexão. Use o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar cadeias de conexão válidas sintaticamente em tempo de execução. Para obter mais informações, confira [Construtores de cadeias de conexão](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obter mais informações, consulte os seguintes recursos.  
@@ -80,8 +80,8 @@ O SQL Server dá suporte a dois modos de autenticação, modo de autenticação 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Conectando a uma fonte de dados](../connecting-to-a-data-source.md)
+- [Cadeia de Conexão](../connection-strings.md)
+- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

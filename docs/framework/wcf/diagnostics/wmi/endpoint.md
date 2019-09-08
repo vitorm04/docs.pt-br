@@ -2,12 +2,12 @@
 title: Ponto de extremidade
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963599"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795900"
 ---
 # <a name="endpoint"></a>Ponto de extremidade
 Ponto de extremidade  
@@ -33,11 +33,11 @@ class Endpoint
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe de ponto de extremidade define o método a seguir.  
+ A classe Endpoint define o método a seguir.  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Recupera o nome de instância do contador de desempenho de operação|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|Recupera o nome da instância do contador de desempenho da operação|  
   
 ## <a name="properties"></a>Propriedades  
  A classe de ponto de extremidade tem as seguintes propriedades:  
@@ -54,7 +54,7 @@ class Endpoint
   
  Tipo de acesso: Somente leitura  
   
- A coleção de cabeçalhos de endereço anexados a esse ponto de extremidade.  
+ A coleção de cabeçalhos de endereço anexado a este ponto de extremidade.  
   
 ### <a name="addressidentity"></a>AddressIdentity  
  Tipo de dados: cadeia de caracteres  
@@ -68,7 +68,7 @@ class Endpoint
   
  Tipo de acesso: Somente leitura  
   
- A id appdomain do appdomain que hospeda o ponto de extremidade.  
+ A ID de AppDomain do AppDomain que hospeda o ponto de extremidade.  
   
 ### <a name="behaviors"></a>Comportamentos  
  Tipo de dados: Matriz de comportamento  
@@ -89,7 +89,7 @@ class Endpoint
   
  Tipo de acesso: Somente leitura  
   
- Uma cadeia de caracteres que especifica qual contrato este ponto de extremidade está expondo.  
+ Uma cadeia de caracteres que especifica qual contrato esse ponto de extremidade está expondo.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Tipo de dados: cadeia de caracteres  
@@ -103,21 +103,21 @@ class Endpoint
   
  Tipo de acesso: Somente leitura  
   
- O Uri do ponto de extremidade de escuta.  
+ O URI no qual o ponto de extremidade escuta.  
   
 ### <a name="name"></a>Nome  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: Somente leitura  
   
- O nome exclusivo do ponto de extremidade.  
+ O nome exclusivo deste ponto de extremidade.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de dados: sint32  
   
  Tipo de acesso: Somente leitura  
   
- O processo de identificação do processo que hospeda o ponto de extremidade.  
+ A ID do processo do processo que hospeda o ponto de extremidade.  
   
 ### <a name="ref"></a>ref  
  Tipo de dados: Contrato  
@@ -128,6 +128,6 @@ class Endpoint
   
 ## <a name="requirements"></a>Requisitos  
   
-|MOF|Declarado em Servicemodel.mof.|  
+|MOF|Declarado em ServiceModel. mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido no root\ServiceModel|
+|Namespace|Definido em root\ServiceModel|

@@ -2,15 +2,15 @@
 title: Escolhendo um padrão de troca de mensagens
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951857"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797295"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens
-A primeira etapa na gravação de um transporte personalizado é decidir quais *padrões de troca de mensagens* (ou MEPS) são necessários para o canal que você está desenvolvendo. Este tópico descreve as opções disponíveis e discute os vários requisitos. Esta é a primeira tarefa na lista de tarefas de desenvolvimento de canal descrita em [desenvolvimento de canais](../../../../docs/framework/wcf/extending/developing-channels.md).  
+A primeira etapa na gravação de um transporte personalizado é decidir quais *padrões de troca de mensagens* (ou MEPS) são necessários para o canal que você está desenvolvendo. Este tópico descreve as opções disponíveis e discute os vários requisitos. Esta é a primeira tarefa na lista de tarefas de desenvolvimento de canal descrita em [desenvolvimento de canais](developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Seis padrões de troca de mensagens  
  Há três MEPs de escolha:  
@@ -27,7 +27,7 @@ A primeira etapa na gravação de um transporte personalizado é decidir quais *
   
      O MEP duplex permite que um número arbitrário de mensagens seja enviado por um cliente e recebido em qualquer ordem. O duplex MEP é como uma conversa telefônica, onde cada palavra que está sendo falada é uma mensagem. Como ambos os lados podem enviar e receber neste MEP, a interface implementada pelos canais de cliente e de <xref:System.ServiceModel.Channels.IDuplexChannel>serviço é.  
   
- ![Escolhendo um padrão de troca de mensagens](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![Escolhendo um padrão de troca de mensagens](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 Os três padrões básicos de troca de mensagens. De cima para baixo: datagrama, solicitação-resposta e duplex.  
   
  Cada um desses MEPs também pode dar suporte a *sessões*. Uma sessão (e implementação do <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) correlaciona todas as mensagens enviadas e recebidas em um canal. O padrão de solicitação-resposta é uma sessão autônoma de duas mensagens, pois a solicitação e a resposta são correlacionadas. Por outro lado, o padrão de solicitação-resposta que dá suporte a sessões implica que todos os pares de solicitação/resposta nesse canal estão correlacionados entre si. Isso lhe dá um total de seis MEPs para escolher:  
@@ -52,7 +52,7 @@ Os três padrões básicos de troca de mensagens. De cima para baixo: datagrama,
   
  No modelo de objeto do canal, cada sessão lógica é manifestada como uma instância de um canal de sessão. Portanto, todas as novas sessões criadas pelo cliente e aceitas no serviço correspondem a um novo canal de sessão em cada lado. O diagrama a seguir mostra, na parte superior, a estrutura de canais de sessão e, na parte inferior, a estrutura de canais de sessão.  
   
- ![Escolhendo um padrão de troca de mensagens](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Escolhendo um padrão de troca de mensagens](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  Um cliente cria um novo canal de sessão e envia uma mensagem. No lado do serviço, o ouvinte do canal recebe essa mensagem e detecta que ela pertence a uma nova sessão, de modo que cria um novo canal de sessão e a passa para o aplicativo (em resposta ao aplicativo que chama AcceptChannel no ouvinte do canal). O aplicativo recebe essa mensagem e todas as mensagens subsequentes enviadas na mesma sessão por meio do mesmo canal de sessão.  
   
@@ -94,4 +94,4 @@ Os três padrões básicos de troca de mensagens. De cima para baixo: datagrama,
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral do modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [Visão geral do modelo de canal](channel-model-overview.md)

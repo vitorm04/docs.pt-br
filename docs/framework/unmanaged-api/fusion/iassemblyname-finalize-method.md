@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c5ea24594f5c7547dc75e6be9d53dd632513ff8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754002"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796620"
 ---
 # <a name="iassemblynamefinalize-method"></a>Método IAssemblyName::Finalize
-Permite que isso [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto para liberar recursos e executar outras operações de limpeza antes que seu destruidor é chamado.  
+Permite que esse objeto [IAssemblyName](iassemblyname-interface.md) libere recursos e execute outras operações de limpeza antes que seu destruidor seja chamado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,12 +34,12 @@ HRESULT Finalize ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Interface IAssemblyName](iassemblyname-interface.md)

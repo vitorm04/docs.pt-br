@@ -1,6 +1,6 @@
 ---
 title: Função CompareTo (referência de API não gerenciada)
-description: A função CompareTo compara um objeto a outro objeto WMI.
+description: A função CompareTo compara um objeto com outro objeto WMI.
 ms.date: 11/06/2017
 api_name:
 - CompareTo
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3566b9b8a3b4183f936c82c39c38dc5daa3aeae1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636686"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798778"
 ---
 # <a name="compareto-function"></a>Função CompareTo
 
@@ -43,46 +43,46 @@ HRESULT CompareTo (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `flags`\
-[in] Uma combinação bit a bit dos sinalizadores que especificam as características de objeto a serem considerados para a comparação. Consulte a [comentários](#remarks) seção para obter mais informações.
+no Uma combinação de bits de bit que especifica as características do objeto a serem consideradas para a comparação. Consulte a seção [comentários](#remarks) para obter mais informações.
 
 `pCompareTo`\
-[in] O objeto para comparação. `pCompareTo` deve ser um válido [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) exemplo; ele não pode ser `null`.
+no O objeto para comparação. `pCompareTo`deve ser uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) válida; Não pode ser `null`.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Ocorreu um erro não especificado. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro é inválido. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para [ `EndEnumeration` ](endenumeration.md). |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para. [`EndEnumeration`](endenumeration.md) |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Os objetos são diferentes. |
-| `WBEM_S_SAME` | 0 | Os objetos são iguais com base nos sinalizadores de comparação. |
+| `WBEM_S_SAME` | 0 | Os objetos são os mesmos com base nos sinalizadores de comparação. |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) .
 
-Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código. Você pode especificar as características individuais envolvidas na comparação com a especificação de uma combinação bit a bit dos sinalizadores a seguir:
+Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código. Você pode especificar as características individuais envolvidas na comparação, especificando uma combinação bit a bit dos seguintes sinalizadores:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignore o código-fonte (o servidor e o namespace que de onde vieram). |
-| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignorar todos os qualificadores (incluindo **chave** e **dinâmico**) |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignore valores padrão das propriedades. Esse sinalizador só se aplica a comparação de classes. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignore tipos de qualificador. Esse sinalizador ainda considera qualificadores, mas ignora diferenças de tipo como regras de propagação e substituir as restrições. |
-| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignore maiusculas e minúsculas na comparação de valores de cadeia de caracteres. Isso se aplica a cadeias de caracteres e valores de qualificador. A comparação de nomes de propriedade e o qualificador é sempre diferencia maiusculas de minúsculas, independentemente se esse sinalizador estiver definido. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Suponha que os objetos que estão sendo comparados são instâncias da mesma classe. Consequentemente, esse sinalizador compara apenas informações relacionadas à instância. Use este sinalizadores para otimizar o desempenho. Se os objetos não são da mesma classe, os resultados são indefinidos. |
+| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignorar a origem (o servidor e o namespace do qual vieram). |
+| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignorar todos os qualificadores (incluindo **chave** e **dinâmica**) |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignorar valores padrão de propriedades. Esse sinalizador se aplica somente à comparação de classes. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignore os tipos de qualificador. Esse sinalizador ainda usa qualificadores em conta, mas ignora as distinções de flavor, como regras de propagação e restrições de substituição. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignorar maiúsculas na comparação de valores de cadeia de caracteres. Isso se aplica tanto a cadeias de caracteres quanto a valores de qualificador. A comparação dos nomes de propriedade e qualificador sempre diferencia maiúsculas de minúsculas, independentemente de o sinalizador ser definido ou não. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Suponha que os objetos que estão sendo comparados sejam instâncias da mesma classe. Consequentemente, esse sinalizador compara apenas informações relacionadas à instância. Use esses sinalizadores para otimizar o desempenho. Se os objetos não são da mesma classe, os resultados são indefinidos. |
 
-Ou você pode especificar uma única sinalização composta da seguinte maneira:
+Ou você pode especificar um único sinalizador composto da seguinte maneira:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -90,7 +90,7 @@ Ou você pode especificar uma única sinalização composta da seguinte maneira:
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** WMINet_Utils.idl
 

@@ -2,12 +2,12 @@
 title: Privacidade e segurança de dados
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04e405307d3aa42388c396cd69c465ba7ec70d35
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988721"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783232"
 ---
 # <a name="privacy-and-data-security"></a>Privacidade e segurança de dados
 Proteger e gerenciar informações confidenciais em um aplicativo ADO.NET depende dos produtos e tecnologias subjacentes usados para criá-lo. O ADO.NET não fornece diretamente serviços para proteger ou criptografar dados.  
@@ -18,7 +18,7 @@ Proteger e gerenciar informações confidenciais em um aplicativo ADO.NET depend
  Ao contrário da criptografia, que permite que os dados sejam criptografados e, em seguida, descriptografados, os dados de hash são um processo unidirecional. Os dados de hash são úteis quando você deseja impedir a adulteração verificando se os dados não foram alterados: dadas cadeias de caracteres de entrada idênticas, os algoritmos de hash sempre produzem valores de saída curtos idênticos que podem ser facilmente comparados. [Garantir a integridade dos dados com códigos de hash](../../../standard/security/ensuring-data-integrity-with-hash-codes.md) descreve como você pode gerar e verificar valores de hash.  
   
 ## <a name="encrypting-configuration-files"></a>Criptografando arquivos de configuração  
- A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. As cadeias de conexão salvas em arquivos de configuração são armazenadas em arquivos XML padrão para os quais o .NET Framework definiu um conjunto comum de elementos. A configuração protegida permite que você criptografe informações confidenciais em um arquivo de configuração. Embora projetado principalmente para aplicativos ASP.NET, a configuração protegida também pode ser usada para criptografar seções de arquivo de configuração em aplicativos do Windows. Para obter mais informações, consulte [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão apresenta uma vulnerabilidade potencial se não estiver protegida. As cadeias de conexão salvas em arquivos de configuração são armazenadas em arquivos XML padrão para os quais o .NET Framework definiu um conjunto comum de elementos. A configuração protegida permite que você criptografe informações confidenciais em um arquivo de configuração. Embora projetado principalmente para aplicativos ASP.NET, a configuração protegida também pode ser usada para criptografar seções de arquivo de configuração em aplicativos do Windows. Para obter mais informações, consulte [Protegendo informações de conexão](protecting-connection-information.md).  
   
 ## <a name="securing-string-values-in-memory"></a>Protegendo valores de cadeia de caracteres na memória  
  Se um <xref:System.String> objeto contiver informações confidenciais, como uma senha, um número de cartão de crédito ou dados pessoais, haverá um risco de que as informações possam ser reveladas após serem usadas porque o aplicativo não pode excluir os dados da memória do computador.  
@@ -29,6 +29,6 @@ Proteger e gerenciar informações confidenciais em um aplicativo ADO.NET depend
   
 ## <a name="see-also"></a>Consulte também
 
-- [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
-- [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+- [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)
+- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6c6e7d1c1d29a049b50f4ea9d70ef5cd9e89a44
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033807"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793577"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Como: manipular chaves compostas em consultas
 Alguns operadores podem levar apenas um argumento. Se o argumento deve incluir mais de uma coluna de base de dados, você deve criar um tipo anônimo para representar a combinação.  
@@ -29,4 +29,4 @@ Alguns operadores podem levar apenas um argumento. Se o argumento deve incluir m
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Conceitos de consulta](query-concepts.md)

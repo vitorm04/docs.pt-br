@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938708"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793067"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Como: usar procedimentos armazenados que usam parâmetros
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia parâmetros de saída para definições de referência, e para tipos de valor declara o parâmetro como anulável.  
   
- Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de [linhas, consulte Como: Retornar conjuntos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)de linhas.  
+ Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de [linhas, consulte Como: Retornar conjuntos](how-to-return-rowsets.md)de linhas.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir utiliza um único parâmetro de entrada (a identificação do cliente) e retorna um parâmetro de saída (o total de vendas para aquele cliente.)  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>Consulte também
 
-- [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Procedimentos armazenados](stored-procedures.md)
+- [Downloading Sample Databases](downloading-sample-databases.md) (Baixando bancos de dados de amostra)
 - [Usando tipos que permitem valor nulo](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Tipos de Valor Anulável](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e81fb7c99b9fd03a69456a84f2191770f40121d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759366"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795340"
 ---
-# <a name="fusioninstallreference-structure"></a>Estrutura FUSION_INSTALL_REFERENCE
-Representa uma referência que um aplicativo faz a um assembly que o aplicativo instalado no cache de assembly global.  
+# <a name="fusion_install_reference-structure"></a>Estrutura FUSION_INSTALL_REFERENCE
+Representa uma referência que um aplicativo faz para um assembly que o aplicativo instalou no cache de assembly global.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,18 +44,18 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |------------|-----------------|  
 |`cbSize`|O tamanho da estrutura em bytes.|  
 |`dwFlags`|Reservado para extensibilidade futura. Esse valor deve ser 0 (zero).|  
-|`guidScheme`|A entidade que adiciona a referência. Este campo pode ter um dos seguintes valores:<br /><br /> -   FUSION_REFCOUNT_MSI_GUID: O assembly é referenciado por um aplicativo que foi instalado usando o Microsoft Windows Installer. O `szIdentifier` campo é definido como `MSI`e o `szNonCanonicalData` campo é definido como `Windows Installer`. Esse esquema é usado para os assemblies do Windows lado a lado.<br />-   FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: O assembly é referenciado por um aplicativo que aparece na **adicionar ou remover programas** interface. O `szIdentifier` campo fornece o token que registra o aplicativo com o **Adicionar/remover programas** interface.<br />-   FUSION_REFCOUNT_FILEPATH_GUID: O assembly é referenciado por um aplicativo que é representado por um arquivo no sistema de arquivos. O `szIdentifier` campo fornece o caminho para esse arquivo.<br />-   FUSION_REFCOUNT_OPAQUE_STRING_GUID: O assembly é referenciado por um aplicativo que é representado somente por uma cadeia de caracteres opaca. O `szIdentifier` campo fornece essa cadeia de caracteres opaca. O cache de assembly global não verifica a existência de referências opacas quando você remove esse valor.<br />-   FUSION_REFCOUNT_OSINSTALL_GUID: Esse valor é reservado.|  
-|`szIdentifier`|Uma cadeia de caracteres exclusiva que identifica o aplicativo que instalou o assembly no cache de assembly global. Seu valor depende do valor da `guidScheme` campo.|  
-|`szNonCanonicalData`|Uma cadeia de caracteres que é entendida apenas pela entidade que adiciona a referência. O cache de assembly global armazena essa cadeia de caracteres, mas não usá-lo.|  
+|`guidScheme`|A entidade que adiciona a referência. Esse campo pode ter um dos seguintes valores:<br /><br /> -   FUSION_REFCOUNT_MSI_GUID: O assembly é referenciado por um aplicativo que foi instalado usando o Microsoft Windows Installer. O `szIdentifier` campo é definido como `MSI`e o `szNonCanonicalData` campo é definido como `Windows Installer`. Esse esquema é usado para assemblies lado a lado do Windows.<br />-   FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: O assembly é referenciado por um aplicativo que aparece na interface **Adicionar/remover programas** . O `szIdentifier` campo fornece o token que registra o aplicativo com a interface **Adicionar/remover programas** .<br />-   FUSION_REFCOUNT_FILEPATH_GUID: O assembly é referenciado por um aplicativo que é representado por um arquivo no sistema de arquivos. O `szIdentifier` campo fornece o caminho para esse arquivo.<br />-   FUSION_REFCOUNT_OPAQUE_STRING_GUID: O assembly é referenciado por um aplicativo que é representado somente por uma cadeia de caracteres opaca. O `szIdentifier` campo fornece essa cadeia de caracteres opaca. O cache de assembly global não verifica a existência de referências opacas quando você remove esse valor.<br />-   FUSION_REFCOUNT_OSINSTALL_GUID: Esse valor é reservado.|  
+|`szIdentifier`|Uma cadeia de caracteres exclusiva que identifica o aplicativo que instalou o assembly no cache de assembly global. Seu valor depende do valor do `guidScheme` campo.|  
+|`szNonCanonicalData`|Uma cadeia de caracteres que é compreendida somente pela entidade que adiciona a referência. O cache de assembly global armazena essa cadeia de caracteres, mas não a usa.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion.h  
+ **Cabeçalho:** Fusion. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estruturas de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Cache de assembly global](../../../../docs/framework/app-domains/gac.md)
+- [Estruturas de fusão](fusion-structures.md)
+- [Cache de assembly global](../../app-domains/gac.md)

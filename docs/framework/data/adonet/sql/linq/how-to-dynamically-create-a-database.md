@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940081"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793650"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Como: criar um banco de dados dinamicamente
 No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional. O mapeamento é habilitado usando o mapeamento baseado em atributo ou um arquivo de mapeamento externo para descrever a estrutura do banco de dados relacional. Em ambos os cenários, há informações suficientes sobre o banco de dados relacional para que você possa criar uma nova instância do banco de dados usando o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -50,8 +50,8 @@ No LINQ to SQL, um modelo de objeto é mapeado para um banco de dados relacional
   
 ## <a name="see-also"></a>Consulte também
 
-- [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Mapeamento de tipo CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Realizando e enviando alterações de dados](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Mapeamento baseado em atributos](attribute-based-mapping.md)
+- [Mapeamento Externo](external-mapping.md)
+- [Mapeamento de tipo CLR do SQL](sql-clr-type-mapping.md)
+- [Informações gerais](background-information.md)
+- [Realizando e enviando alterações de dados](making-and-submitting-data-changes.md)

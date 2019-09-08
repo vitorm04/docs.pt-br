@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697245"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796437"
 ---
 # <a name="ienumreferenceidentity-interface"></a>Interface IEnumReferenceIdentity
-Serve como um enumerador para uma coleção de `IReferenceIdentity` objetos.  
+Serve como um enumerador para uma coleção `IReferenceIdentity` de objetos.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Obtém um ponteiro de interface para um novo `IEnumReferenceIdentity` que contém os mesmos membros que isso `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Clone`|Obtém um ponteiro de interface para um `IEnumReferenceIdentity` novo que contém os mesmos membros que `IEnumReferenceIdentity`isso.|  
 |`IEnumReferenceIdentity::Next`|Obtém o número especificado de `IReferenceIdentity` objetos, começando na posição atual.|  
-|`IEnumReferenceIdentity::Reset`|Move o ponteiro de instrução para o início deste `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Reset`|Move o ponteiro de instrução para o início dele `IEnumReferenceIdentity`.|  
 |`IEnumReferenceIdentity::Skip`|Move o ponteiro de instrução para frente pelo número especificado de elementos, começando na posição atual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Isolation.h  
+ **Cabeçalho:** Isolamento. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Interface IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Interfaces de fusão](fusion-interfaces.md)
+- [Interface IReferenceIdentity](ireferenceidentity-interface.md)

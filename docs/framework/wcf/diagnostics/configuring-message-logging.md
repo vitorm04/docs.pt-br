@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044290"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798166"
 ---
 # <a name="configuring-message-logging"></a>Configurando registros de mensagens em log
 
@@ -47,7 +47,7 @@ O exemplo a seguir mostra como habilitar o registro em log e especificar opçõe
 </system.serviceModel>
 ```
 
-Para obter mais informações sobre configurações de log de mensagens, consulte [configurações recomendadas para rastreamento e log de mensagens](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).
+Para obter mais informações sobre configurações de log de mensagens, consulte [configurações recomendadas para rastreamento e log de mensagens](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
 Você pode usar `add` para especificar o nome e o tipo do ouvinte que deseja usar. Na configuração de exemplo, o ouvinte é chamado de "mensagens" e adiciona o ouvinte de`System.Diagnostics.XmlWriterTraceListener`rastreamento de .NET Framework padrão () como o tipo a ser usado. Se você usar `System.Diagnostics.XmlWriterTraceListener`o, deverá especificar o local e o nome do arquivo de saída no arquivo de configuração. Isso é feito definindo `initializeData` o nome do arquivo de log. Caso contrário, o sistema gera uma exceção. Você também pode implementar um ouvinte personalizado que emite logs para um arquivo padrão.
 
@@ -62,7 +62,7 @@ O `switchValue` atributo de a `source` é válido somente para rastreamento. Se 
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-Se você quiser desabilitar a origem do rastreamento `logMessagesAtServiceLevel`, use os atributos, `logMalformedMessages` `messageLogging` , e `logMessagesAtTransportLevel` do elemento. Você deve definir todos esses atributos como `false`. Isso pode ser feito usando o arquivo de configuração no exemplo de código anterior, por meio da interface de interface do usuário do editor de configuração ou usando o WMI. Para obter mais informações sobre a ferramenta do editor de configuração, consulte [ferramenta do editor de configuração (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obter mais informações sobre o WMI, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Se você quiser desabilitar a origem do rastreamento `logMessagesAtServiceLevel`, use os atributos, `logMalformedMessages` `messageLogging` , e `logMessagesAtTransportLevel` do elemento. Você deve definir todos esses atributos como `false`. Isso pode ser feito usando o arquivo de configuração no exemplo de código anterior, por meio da interface de interface do usuário do editor de configuração ou usando o WMI. Para obter mais informações sobre a ferramenta do editor de configuração, consulte [ferramenta do editor de configuração (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Para obter mais informações sobre o WMI, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](./wmi/index.md).
 
 ## <a name="logging-levels-and-options"></a>Níveis e opções de log
 
@@ -101,7 +101,7 @@ Além dos níveis de log, o usuário pode especificar as seguintes opções:
 
 Se nenhum ouvinte de rastreamento for definido no arquivo de configuração, nenhuma saída de log será gerada, independentemente do nível de log especificado.
 
-As opções de log de mensagens, como os atributos descritos nesta seção, podem ser alteradas em tempo de execução usando Instrumentação de Gerenciamento do Windows (WMI). Isso pode ser feito acessando a instância [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , que expõe essas propriedades booleanas `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Portanto, se você configurar um ouvinte de rastreamento para o log de mensagens, mas `false` definir essas opções como em configuração, você poderá `true` alterá-las posteriormente para quando o aplicativo estiver em execução. Isso efetivamente habilita o log de mensagens em tempo de execução. Da mesma forma, se você habilitar o log de mensagens em seu arquivo de configuração, poderá desabilitá-lo em tempo de execução usando o WMI. Para obter mais informações, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+As opções de log de mensagens, como os atributos descritos nesta seção, podem ser alteradas em tempo de execução usando Instrumentação de Gerenciamento do Windows (WMI). Isso pode ser feito acessando a instância [AppDomainInfo](./wmi/appdomaininfo.md) , que expõe essas propriedades booleanas `LogMessagesAtServiceLevel`: `LogMessagesAtTransportLevel`, e `LogMalformedMessages`. Portanto, se você configurar um ouvinte de rastreamento para o log de mensagens, mas `false` definir essas opções como em configuração, você poderá `true` alterá-las posteriormente para quando o aplicativo estiver em execução. Isso efetivamente habilita o log de mensagens em tempo de execução. Da mesma forma, se você habilitar o log de mensagens em seu arquivo de configuração, poderá desabilitá-lo em tempo de execução usando o WMI. Para obter mais informações, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](./wmi/index.md).
 
 O `source` campo em um log de mensagens especifica em qual contexto a mensagem é registrada: ao enviar/receber uma mensagem de solicitação, para uma solicitação de solicitação-resposta ou de 1-Way, no modelo de serviço ou na camada de transporte ou no caso de uma mensagem malformada.
 
@@ -174,6 +174,6 @@ Você deve estar ciente de que `type` o atributo deve ser definido como um nome 
 
 ## <a name="see-also"></a>Consulte também
 
-- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Configurações recomendadas para rastreamento e registro de mensagem](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [Registro de mensagens em log](message-logging.md)
+- [Configurações recomendadas para rastreamento e registro de mensagem](./tracing/recommended-settings-for-tracing-and-message-logging.md)

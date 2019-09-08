@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038448"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793839"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Localizar o valor mínimo em uma sequência numérica
 Use o operador de <xref:System.Linq.Enumerable.Min%2A> para retornar o valor mínimo de uma sequência de valores numéricos.  
@@ -73,5 +73,5 @@ Use o operador de <xref:System.Linq.Enumerable.Min%2A> para retornar o valor mí
   
 ## <a name="see-also"></a>Consulte também
 
-- [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)
+- [Consultas agregadas](aggregate-queries.md)
+- [Downloading Sample Databases](downloading-sample-databases.md) (Baixando bancos de dados de amostra)

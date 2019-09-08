@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fddfffed499537f5746998a94a3ef32d035685
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741607"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787262"
 ---
 # <a name="importtypes2-method"></a>Método ImportTypes2
-Inicia a importação de tipos. Chame esse método para começar a importar tipos de cada escopo importado por meio [método ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Inicia a importação de tipos. Chame esse método para começar a importar tipos de cada escopo importado por meio do [Método ImportFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,25 +47,25 @@ HRESULT ImportTypes2(
  ID do arquivo a partir do qual importar.  
   
  `dwScope`  
- Escopo baseado em zero do qual importar.  
+ Escopo de base zero do qual importar.  
   
  `phEnum`  
- Recebe o identificador de enumerador para os tipos no escopo fornecido.  
+ Recebe o identificador do enumerador para os tipos no escopo fornecido.  
   
  `ppImportScope`  
- Opcionalmente, recebe [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface.  
+ Opcionalmente, recebe a interface de [interface IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
   
  `pdwCountOfTypes`  
  Opcionalmente, recebe a contagem de tipos no escopo especificado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará S_OK.  
+ Retornará S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer alink.h  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Interface IALink2](ialink2-interface.md)
+- [Interface IALink](ialink-interface.md)
+- [API do ALink](index.md)

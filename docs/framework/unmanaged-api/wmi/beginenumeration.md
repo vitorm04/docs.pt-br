@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761809"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798787"
 ---
 # <a name="beginenumeration-function"></a>Função BeginEnumeration
-Redefine um enumerador para o início da enumeração.  
+Redefine um enumerador de volta para o início da enumeração.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,64 +41,64 @@ HRESULT BeginEnumeration (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
+no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `lEnumFlags`\
-[in] Uma combinação bit a bit de sinalizadores ou valores descritos na [comentários](#remarks) seção que controla as propriedades incluídas na enumeração.
+no Uma combinação de bits de bit que indica os sinalizadores ou valores descritos na seção [comentários](#remarks) que controla as propriedades incluídas na enumeração.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | A combinação de sinalizadores no `lEnumFlags` é inválido ou inválido argumento foi especificado. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para [ `EndEnumeration` ](endenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente está disponível para iniciar uma nova enumeração. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | A combinação de sinalizadores no `lEnumFlags` é inválida ou um argumento inválido foi especificado. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para. [`EndEnumeration`](endenumeration.md) |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente disponível para iniciar uma nova enumeração. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) método.
+Essa função encapsula uma chamada para o método [IWbemClassObject:: BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de nenhum outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
+Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de qualquer outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
 
 **Grupo 1**
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Incluem propriedades que constituem a chave somente. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Incluem propriedades que são somente referências de objeto. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Inclua propriedades que constituem apenas a chave. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Inclua propriedades que são referências de objeto apenas. |
 
 **Grupo 2**
 
 Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limite a enumeração para apenas as propriedades do sistema. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Inclui propriedades locais e propagadas mas exclui as propriedades do sistema da enumeração. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Limitar a enumeração somente às propriedades do sistema. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Incluir propriedades locais e propagadas, mas excluir propriedades do sistema da enumeração. |
 
 Para classes:
 
 Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limite a enumeração a ser substituído na definição de classe de propriedades. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limite a enumeração para propriedades substituídas na definição de classe atual e novas propriedades definidas na classe. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | A máscara (em vez de um sinalizador) a ser aplicado em relação a um `lEnumFlags` valor para verificar se qualquer um dos `WBEM_FLAG_CLASS_OVERRIDES_ONLY` ou `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` está definido. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite a enumeração para propriedades que são definidas ou modificadas na própria classe. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração para propriedades que são herdadas de classes base. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limite a enumeração às propriedades substituídas na definição de classe. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limitar a enumeração às propriedades substituídas na definição de classe atual e às novas propriedades definidas na classe. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Uma máscara (em vez de um sinalizador) a ser aplicada `lEnumFlags` a um valor para verificar `WBEM_FLAG_CLASS_OVERRIDES_ONLY` se `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` ou está definido. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite a enumeração a propriedades que são definidas ou modificadas na própria classe. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração a propriedades que são herdadas de classes base. |
 
 Para instâncias:
 
 Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite a enumeração para propriedades que são definidas ou modificadas na própria classe. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração para propriedades que são herdadas de classes base. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite a enumeração a propriedades que são definidas ou modificadas na própria classe. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração a propriedades que são herdadas de classes base. |
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

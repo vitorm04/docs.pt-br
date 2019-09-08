@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb66e0d518abc2d337362affbd2aa951303128f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697726"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795297"
 ---
 # <a name="fusion-structures"></a>Estruturas de fusão
-Esta seção descreve as estruturas não gerenciadas que usa a API de fusão.  
+Esta seção descreve as estruturas não gerenciadas que a API do Fusion usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Estrutura ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- Contém informações sobre um assembly que está registrado no cache de assembly global.  
+ [Estrutura ASSEMBLY_INFO](assembly-info-structure.md)  
+ Contém informações sobre um assembly que é registrado no cache de assembly global.  
   
- [Estrutura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- Representa uma referência que um aplicativo faz a um assembly que o aplicativo instalado no cache de assembly global.  
+ [Estrutura FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)  
+ Representa uma referência que um aplicativo faz para um assembly que o aplicativo instalou no cache de assembly global.  
   
- [Estrutura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- Contém informações de atributo de metadados sobre um [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instância.  
+ [Estrutura IDENTITY_ATTRIBUTE](identity-attribute-structure.md)  
+ Contém informações de atributo de metadados sobre uma instância de [IDefinitionIdentity](idefinitionidentity-interface.md) .  
   
- [Estrutura IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- Contém as informações de deslocamento para um associado [IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) estrutura.  
+ [Estrutura IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md)  
+ Contém as informações de deslocamento de uma estrutura [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) associada.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Interfaces de fusão](fusion-interfaces.md)  
   
- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Funções estáticas globais de fusão](fusion-global-static-functions.md)  
   
- [Enumerações de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [Enumerações de fusão](fusion-enumerations.md)

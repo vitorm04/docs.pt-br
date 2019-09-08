@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583611"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790958"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Criando o aplicativo cliente do .NET Framework (Início rápido do WCF Data Services)
 
-Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você irá adicionar um aplicativo de console à solução, adicione uma referência para o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] alimentar a esse novo aplicativo de cliente e acessar o feed OData do aplicativo cliente usando as classes de serviço de dados do cliente gerado e bibliotecas de cliente .
+Esta é a tarefa final do guia de início rápido do WCF Data Services. Nesta tarefa, você adicionará um aplicativo de console à solução, adicionará uma referência ao [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed nesse novo aplicativo cliente e acessará o feed OData do aplicativo cliente usando as classes de serviço de dados do cliente e as bibliotecas de cliente geradas .
 
 > [!NOTE]
-> Um aplicativo cliente baseado no .NET framework não é necessário para acessar um feed de dados. O serviço de dados pode ser acessado por qualquer componente do aplicativo que consome um feed OData. Para obter mais informações, consulte [usando um serviço de dados em um aplicativo cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).
+> Um aplicativo cliente baseado no .NET framework não é necessário para acessar um feed de dados. O serviço de dados pode ser acessado por qualquer componente de aplicativo que consuma um feed OData. Para obter mais informações, consulte [usando um serviço de dados em um aplicativo cliente](using-a-data-service-in-a-client-application-wcf-data-services.md).
 
 ## <a name="to-create-the-client-application-by-using-visual-studio"></a>Para criar o aplicativo cliente usando Visual Studio
 
-1. Na **Gerenciador de soluções**, a solução com o botão direito, clique em **Add**e, em seguida, clique em **novo projeto**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na solução, clique em **Adicionar**e em **novo projeto**.
 
-2. No painel esquerdo, selecione **Installed** > [**Visual C#**  ou **Visual Basic**] > **Desktop Windows**e, em seguida, selecione o  **Aplicativo WPF** modelo.
+2. No painel esquerdo, selecione **instalado** > [**Visual C#**  ou **Visual Basic**] > área de **trabalho do Windows**e, em seguida, selecione o modelo aplicativo do **WPF** .
 
-3. Insira `NorthwindClient` para o nome do projeto e clique **Okey**.
+3. Insira `NorthwindClient` para o nome do projeto e clique em **OK**.
 
 4. Abra o arquivo MainWindow.xaml e substitua o XAML pelo seguinte código:
 
@@ -33,21 +33,21 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>Para adicionar uma referência de serviço de dados ao projeto
 
-1. Na **Gerenciador de soluções**, clique com botão direito no projeto NorthwindClient, clique em **Add** > **referência de serviço**e, em seguida, clique em **Discover** .
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto NorthwindClient, clique em **Adicionar** > **referência de serviço**e clique em **descobrir**.
 
      Isso exibe o serviço de dados Northwind que você criou na primeira tarefa.
 
-2. No **Namespace** caixa de texto, digite `Northwind`e, em seguida, clique em **Okey**.
+2. Na caixa de texto **namespace** , digite `Northwind`e clique em **OK**.
 
      Isso adiciona um novo arquivo de código ao projeto, que contém classes de dados que são usadas para acessar e interagir com os recursos do serviço de dados como objetos. As classes de dados são criadas no namespace `NorthwindClient.Northwind`.
 
 ## <a name="to-access-data-service-data-in-the-wpf-application"></a>Para acessar dados do serviço de dados no aplicativo WPF
 
-1. Na **Gerenciador de soluções** sob **NorthwindClient**, clique com botão direito no projeto e clique em **Add Reference**.
+1. Em **Gerenciador de soluções** em **NorthwindClient**, clique com o botão direito do mouse no projeto e clique em **Adicionar referência**.
 
-2. No **adicionar referência** caixa de diálogo, clique o **.NET** guia, selecione o assembly da dll e, em seguida, clique em **Okey**.
+2. Na caixa de diálogo **Adicionar referência** , clique na guia **.net** , selecione o assembly System. Data. Services. Client. dll e clique em **OK**.
 
-3. Na **Gerenciador de soluções** sob **NorthwindClient**, abra a página de código para o arquivo MainWindow. XAML e adicione o seguinte `using` instrução (`Imports` no Visual Basic).
+3. Em **Gerenciador de soluções** em **NorthwindClient**, abra a página de código do arquivo MainWindow. XAML e adicione a instrução a `using` seguir (`Imports` em Visual Basic).
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
@@ -67,13 +67,13 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
 
 ## <a name="to-build-and-run-the-northwindclient-application"></a>Para compilar e executar o aplicativo NorthwindClient
 
-1. Na **Gerenciador de soluções**, clique com botão direito no projeto NorthwindClient e selecione **definir como projeto de inicialização**.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto NorthwindClient e selecione **definir como projeto de inicialização**.
 
 2. Pressione **F5** para iniciar o aplicativo.
 
      Isso compila a solução e inicia o aplicativo cliente. Os dados são solicitados do serviço e exibidos no console.
 
-3. Editar um valor na **quantidade** coluna da grade de dados e clique **salvar**.
+3. Edite um valor na coluna **quantidade** da grade de dados e, em seguida, clique em **salvar**.
 
      As alterações são salvas no serviço de dados.
 
@@ -82,11 +82,11 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você criou com êxito o aplicativo cliente que acessa o feed Northwind OData de exemplo. Você concluiu o guia de início rápido do WCF Data Services também!
+Você criou com êxito o aplicativo cliente que acessa o feed OData de exemplo Northwind. Você também concluiu o guia de início rápido WCF Data Services!
 
-Para obter mais informações sobre como acessar um OData feed de um aplicativo do .NET Framework, consulte [biblioteca de cliente do WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
+Para obter mais informações sobre como acessar um feed OData de um aplicativo .NET Framework, consulte [WCF Data Services biblioteca de cliente](wcf-data-services-client-library.md).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [Recursos](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+- [Introdução](getting-started-with-wcf-data-services.md)
+- [Recursos](wcf-data-services-resources.md)

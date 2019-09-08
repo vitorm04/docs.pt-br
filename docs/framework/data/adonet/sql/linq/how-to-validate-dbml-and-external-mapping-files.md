@@ -2,12 +2,12 @@
 title: 'Como: validar DBML e arquivos de mapeamento externos'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 212d65dfe998b825dd40e564756083ed685dff6f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041137"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793046"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Como: validar DBML e arquivos de mapeamento externos
 
@@ -31,9 +31,9 @@ Os arquivos de mapeamento externos e os arquivos .dbml que você altera devem se
 
 5. Observe a definição apropriada do esquema para sua finalidade.
 
-    - DbmlSchema.xsd é a definição de esquema para validar um arquivo. dbml. Para obter mais informações, consulte [geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - DbmlSchema.xsd é a definição de esquema para validar um arquivo. dbml. Para obter mais informações, consulte [geração de código em LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - LinqToSqlMapping.xsd é a definição de esquema para validar um arquivo de mapeamento externo XML. Para obter mais informações, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - LinqToSqlMapping.xsd é a definição de esquema para validar um arquivo de mapeamento externo XML. Para obter mais informações, consulte [mapeamento externo](external-mapping.md).
 
 6. Na coluna **usar** da linha de definição de esquema desejada, clique para abrir a caixa suspensa e, em seguida, clique em **usar este esquema**.
 
@@ -53,9 +53,9 @@ Se por algum motivo o arquivo. xsd apropriado não aparecer na caixa de diálogo
 
 1. Localize o tópico da Ajuda que contém a definição de esquema conforme descrito anteriormente neste tópico.
 
-    - Para arquivos. dbml, consulte [geração de código em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - Para arquivos. dbml, consulte [geração de código em LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - Para arquivos de mapeamento externos, consulte [mapeamento externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - Para arquivos de mapeamento externos, consulte [mapeamento externo](external-mapping.md).
 
 2. Clique em **copiar código** para copiar o arquivo de código para a área de transferência.
 
@@ -74,4 +74,4 @@ Se por algum motivo o arquivo. xsd apropriado não aparecer na caixa de diálogo
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Referência](reference.md)

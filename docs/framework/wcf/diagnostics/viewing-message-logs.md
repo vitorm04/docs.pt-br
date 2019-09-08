@@ -2,12 +2,12 @@
 title: Visualizando logs de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: c926833a48331f191b6dcc3323f0dfda329b7014
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0f35d4cca037e663c5c298103c4a8228bb16d52
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968662"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797309"
 ---
 # <a name="viewing-message-logs"></a>Visualizando logs de mensagem
 Este tópico descreve como você pode exibir logs de mensagens.  
@@ -17,7 +17,7 @@ Este tópico descreve como você pode exibir logs de mensagens.
   
  Como a saída do log de mensagens não tem nenhuma relação com o formato de transferência da mensagem, o log de mensagens sempre gera a mensagem decodificada. Se você configurou o log de mensagens corretamente, qualquer mensagem registrada deverá estar em texto sem formatação. Por exemplo, o formato (texto sem formatação) das mensagens registradas não é afetado pelo uso de um codificador de mensagem binária.  
   
- A saída de XmlWriterTraceListener é um arquivo que contém uma sequência de fragmentos XML. Você deve estar ciente de que o arquivo não é um arquivo XML válido. É recomendável que você use a [ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir os arquivos de log de mensagens. Para obter mais informações sobre como usar essa ferramenta, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e solução de problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ A saída de XmlWriterTraceListener é um arquivo que contém uma sequência de fragmentos XML. Você deve estar ciente de que o arquivo não é um arquivo XML válido. É recomendável que você use a [ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) para exibir os arquivos de log de mensagens. Para obter mais informações sobre como usar essa ferramenta, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e solução de problemas](./tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
  No Visualizador de rastreamento de serviço, as mensagens são listadas na guia **mensagem** . As mensagens que ocorreram ou estão relacionadas a um erro de processamento são realçadas em amarelo (nível de aviso) ou vermelho (nível de erro), dependendo da severidade do erro. Clicar duas vezes na mensagem abre o rastreamento de mensagem no contexto da solicitação de processamento.  
   
@@ -25,13 +25,13 @@ Este tópico descreve como você pode exibir logs de mensagens.
 > Se uma mensagem não tiver cabeçalho, nenhuma `<header/>` marca será registrada.  
   
 ## <a name="viewing-messages-logged-by-a-client-a-relay-and-a-service"></a>Exibindo mensagens registradas por um cliente, uma retransmissão e um serviço  
- Seu ambiente pode conter um cliente, que envia uma mensagem para uma retransmissão, que, posteriormente, encaminha a mensagem para o serviço. Quando o log de mensagens é habilitado em todos os três locais e todos os três logs de mensagens são exibidos na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) simultaneamente, as trocas de log de mensagens serão renderizadas incorretamente. Isso ocorre porque o `CorrelationId` e `ActivityId` no cabeçalho da mensagem não são exclusivos para todos os pares de envio-recebimento.  
+ Seu ambiente pode conter um cliente, que envia uma mensagem para uma retransmissão, que, posteriormente, encaminha a mensagem para o serviço. Quando o log de mensagens é habilitado em todos os três locais e todos os três logs de mensagens são exibidos na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) simultaneamente, as trocas de log de mensagens serão renderizadas incorretamente. Isso ocorre porque o `CorrelationId` e `ActivityId` no cabeçalho da mensagem não são exclusivos para todos os pares de envio-recebimento.  
   
  Você pode usar qualquer um dos métodos a seguir para resolver esse problema.  
   
-- Apenas exiba dois dos três logs de mensagem na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) a qualquer momento.  
+- Apenas exiba dois dos três logs de mensagem na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) a qualquer momento.  
   
-- Se você precisar exibir todos os três logs na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ao mesmo tempo, poderá modificar o serviço de retransmissão criando <xref:System.ServiceModel.Channels.Message> uma nova instância. Essa instância deve ser uma cópia do corpo da mensagem de entrada, além de todos os cabeçalhos, exceto os `ActivityId` cabeçalhos `Action` e. O código de exemplo a seguir demonstra como fazer isso.  
+- Se você precisar exibir todos os três logs na [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) ao mesmo tempo, poderá modificar o serviço de retransmissão criando <xref:System.ServiceModel.Channels.Message> uma nova instância. Essa instância deve ser uma cópia do corpo da mensagem de entrada, além de todos os cabeçalhos, exceto os `ActivityId` cabeçalhos `Action` e. O código de exemplo a seguir demonstra como fazer isso.  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -62,6 +62,6 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](./tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Registro de mensagens em log](message-logging.md)

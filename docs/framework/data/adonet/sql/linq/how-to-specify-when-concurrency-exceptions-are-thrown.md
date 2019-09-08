@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: 0be17e7ceb6a5e5230d2619be350266d0282078c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c0f41d23264bbe5c9130cb5a0b03686331bc92b1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910802"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781610"
 ---
 # <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Como: especificar quando exceções de simultaneidade são geradas
-Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], uma exceção é lançada de <xref:System.Data.Linq.ChangeConflictException> quando os objetos não atualizarão devido a conflitos de concorrência otimista. Para obter mais informações, consulte [a simultaneidade otimista: Visão geral do](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], uma exceção é lançada de <xref:System.Data.Linq.ChangeConflictException> quando os objetos não atualizarão devido a conflitos de concorrência otimista. Para obter mais informações, [consulte simultaneidade otimista: Visão](optimistic-concurrency-overview.md)geral.  
   
  Antes de enviar as alterações para base de dados, você pode especificar quando exceções concorrentes devem ser lançadas:  
   
@@ -31,5 +31,5 @@ Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], uma exce
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Realizando e enviando alterações de dados](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Como: Gerenciar conflitos de alterações](how-to-manage-change-conflicts.md)
+- [Realizando e enviando alterações de dados](making-and-submitting-data-changes.md)

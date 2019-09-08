@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df2eb9d454f2037ef5f2a09d1309d52a8365e715
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c22339b7d48e89f99d1500cfdda53f00f1234b80
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782680"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799069"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>Função StrongNameSignatureVerificationFromImage
 Verifica se um assembly, que já foi mapeado para a memória, é válido para a chave pública associada.  
   
- Essa função foi preterida. Use o [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) método em vez disso.  
+ Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: StrongNameVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,47 +41,47 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbBase`  
- [in] O endereço virtual relativo do manifesto do assembly mapeados.  
+ no O endereço virtual relativo do manifesto do assembly mapeado.  
   
  `dwLength`  
- [in] O tamanho, em bytes, da imagem mapeada.  
+ no O tamanho, em bytes, da imagem mapeada.  
   
  `dwInFlags`  
- [in] Sinalizadores que influenciam o comportamento de verificação. Há suporte para os seguintes valores:  
+ no Sinalizadores que influenciam o comportamento da verificação. Há suporte para os seguintes valores:  
   
-- `SN_INFLAG_FORCE_VER` (0x00000001) - força a verificação, mesmo se for necessário substituir as configurações do registro.  
+- `SN_INFLAG_FORCE_VER`(0x00000001) – força a verificação mesmo que seja necessário substituir as configurações do registro.  
   
-- `SN_INFLAG_INSTALL` (0x00000002) - Especifica que esta é a primeira verificação executada nesta imagem.  
+- `SN_INFLAG_INSTALL`(0x00000002) – especifica que esta é a primeira verificação executada nesta imagem.  
   
-- `SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Especifica que o cache permitirá o acesso somente aos usuários que têm privilégios administrativos.  
+- `SN_INFLAG_ADMIN_ACCESS`(0x00000004) – especifica que o cache permitirá acesso somente aos usuários que têm privilégios administrativos.  
   
-- `SN_INFLAG_USER_ACCESS` (0x00000008) - Especifica que o assembly será acessível somente para o usuário atual.  
+- `SN_INFLAG_USER_ACCESS`(0x00000008) – especifica que o assembly será acessível somente para o usuário atual.  
   
-- `SN_INFLAG_ALL_ACCESS` (0x00000010) - Especifica que o cache não será fornecer nenhuma garantia de restrição de acesso.  
+- `SN_INFLAG_ALL_ACCESS`(0x00000010) – especifica que o cache não oferecerá nenhuma garantia de restrição de acesso.  
   
-- `SN_INFLAG_RUNTIME` (0x80000000) - reservado para a depuração.  
+- `SN_INFLAG_RUNTIME`(0x80000000)-reservado para depuração interna.  
   
  `pdwOutFlags`  
- [out] Um sinalizador para obter informações de saída adicionais. Há suporte para o seguinte valor:  
+ fora Um sinalizador para informações de saída adicionais. Há suporte para o seguinte valor:  
   
-- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - esse valor é definido como `false` para especificar que a verificação for bem-sucedida devido a configurações de registro.  
+- `SN_OUTFLAG_WAS_VERIFIED`(0x00000001)-esse valor é definido como `false` para especificar que a verificação foi bem-sucedida devido a configurações do registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `true` Após a conclusão bem-sucedida; Caso contrário, `false`.  
+ `true`após a conclusão bem-sucedida; caso contrário `false`,.  
   
 ## <a name="remarks"></a>Comentários  
- Se o `StrongNameSignatureVerificationFromImage` função não for concluída com êxito, chame o [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) função para recuperar o último erro gerado.  
+ Se a `StrongNameSignatureVerificationFromImage` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em mscoree. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Método StrongNameSignatureVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
-- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [Método StrongNameSignatureVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
+- [Interface ICLRStrongName](../hosting/iclrstrongname-interface.md)

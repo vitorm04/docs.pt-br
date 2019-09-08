@@ -2,24 +2,24 @@
 title: FailedToCreateMessageLoggingTraceSource
 ms.date: 03/30/2017
 ms.assetid: 75e91aad-6d83-4e5e-8c70-fed1625e522f
-ms.openlocfilehash: e50c881bf10e05508408814c28c8570745b672fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44654b22bc83fcf681cee19a728993ba72efdb4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774979"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797960"
 ---
 # <a name="failedtocreatemessageloggingtracesource"></a>FailedToCreateMessageLoggingTraceSource
-Id: 115  
+Sessão 115  
   
- Gravidade: Erro  
+ Severity Erro  
   
- Categoria: ServiceModel  
+ Categorias ServiceModel  
   
 ## <a name="description"></a>Descrição  
- Esse evento indica que o log de mensagens Falha ao criar a origem de rastreamento. O evento de lista de exceção, o nome do processo e a ID de processo.  
+ Esse evento indica que o log de mensagens não pôde criar a origem do rastreamento. O evento lista exceção, nome do processo e ID do processo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Registro de eventos em log](index.md)
+- [Referência geral de eventos](events-general-reference.md)

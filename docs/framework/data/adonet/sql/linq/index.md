@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 86c7e9fae270e75d1ba7e9725ded22ea1961311a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbb2f8cf37bd05864dc93b8ebbd33466a9a2c55e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911997"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793082"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]é um componente do .NET Framework versão 3,5 que fornece uma infraestrutura de tempo de execução para o gerenciamento de dados relacionais como objetos.  
@@ -22,16 +22,16 @@ ms.locfileid: "69911997"
  A documentação incluída nessa versão do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] descreve as técnicas, os processos e os blocos de construção básicos necessários para compilar aplicativos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Você também pode pesquisar Microsoft Docs problemas específicos e pode participar do [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), no qual você pode discutir tópicos mais complexos em detalhes com especialistas. Por fim, a [LINQ to SQL: consulta integrada à linguagem .net para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205) White Paper [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] a tecnologia de detalhes, completa C# com Visual Basic e exemplos de código.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
+ [Introdução](getting-started.md)  
  Fornece uma visão concentrada do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] juntamente com informações sobre como começar a usar o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Guia de Programação](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Guia de Programação](programming-guide.md)  
  Fornece etapas para operações de mapeamento, atualização, depuração e tarefas semelhantes.  
   
- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Referência](reference.md)  
  Especifica informações de referência sobre vários aspectos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Os tópicos incluem o mapeamento de tipos SQL-CLR, conversão padrão de operadores de consulta e muito mais.  
   
- [Amostras](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
+ [Amostras](samples.md)  
  Fornece links para Visual Basic e C# exemplos.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -44,13 +44,13 @@ ms.locfileid: "69911997"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Descreve [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] as tecnologias para Visual Basic usuários.  
   
- [LINQ e ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ [LINQ e ADO.NET](../../linq-and-ado-net.md)  
  Links para o portal do ADO.NET.  
   
  [LINQ to SQL Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90)) (Passo a passo do LINQ to SQL)  
  Lista tutoriais disponíveis para o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md) (Baixando bancos de dados de amostra)  
+ [Downloading Sample Databases](downloading-sample-databases.md) (Baixando bancos de dados de amostra)  
  Descreve como baixar bancos de dados de exemplo usados na documentação.  
   
  [Visão geral do controle de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  

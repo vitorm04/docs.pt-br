@@ -1,6 +1,6 @@
 ---
 title: Função ResetSecurity (referência de API não gerenciada)
-description: A função ResetSecurity atribui um token de representação para o thread atual.
+description: A função ResetSecurity atribui um token de representação ao thread atual.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783123"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798261"
 ---
 # <a name="resetsecurity-function"></a>Função ResetSecurity
 Atribui o token de representação fornecido para o thread atual.   
@@ -39,16 +39,16 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parâmetros
 
 `token`  
-[in] O token de representação a ser associado com o thread atual. Seu valor pode ser `null`. 
+no O token de representação a ser associado ao thread atual. Seu valor pode ser `null`. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função for bem-sucedida, o valor retornado é `S_OK` (0).
+Se a função for realizada com sucesso, o valor `S_OK` de retorno será (0).
 
-Se a função falhar, o valor de retorno é um código de erro diferente de zero. Para obter outras informações de erro, chame o [GetErrorInfo](geterrorinfo.md) função.
+Se a função falhar, o valor de retorno será um código de erro diferente de zero. Para obter informações de erro estendidas, chame a função [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

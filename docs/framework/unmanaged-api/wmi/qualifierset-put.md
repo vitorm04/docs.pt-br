@@ -1,6 +1,6 @@
 ---
 title: Função QualifierSet_Put (referência de API não gerenciada)
-description: A função QualifierSet_Put grava qualificador nomeado e seu valor.
+description: A função QualifierSet_Put grava o qualificador nomeado e seu valor.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Put
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377862"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798263"
 ---
-# <a name="qualifiersetput-function"></a>Função QualifierSet_Put
+# <a name="qualifierset_put-function"></a>Função QualifierSet_Put
 
-Grava o qualificador nomeado e o valor. O novo qualificador substitui o valor anterior do mesmo nome. Se o qualificador não existir, ele é criado.
+Grava o qualificador nomeado e o valor. O novo qualificador substitui o valor anterior do mesmo nome. Se o qualificador não existir, ele será criado.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,47 +44,47 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Parâmetros
 
 `vFunc`\
-[in] Esse parâmetro é usado.
+no Este parâmetro não é usado.
 
 `ptr`\
-[in] Um ponteiro para um [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instância.
+no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`\
-[in] O nome do qualificador de escrever.
+no O nome do qualificador a ser gravado.
 
 `pVal`\
-[in] Um ponteiro para um válido `VARIANT` que contém o qualificador de escrever. O parâmetro não pode ser `null`.
+no Um ponteiro para um válido `VARIANT` que contém o qualificador para gravação. O parâmetro não pode ser `null`.
 
 `lFlavor`\
-[in] Uma das seguintes constantes que define os tipos de qualificador desejado para esse qualificador. O valor padrão é `WBEM_FLAVOR_OVERRIDABLE` (0).
+no Uma das constantes a seguir que define os tipos de qualificador desejado para este qualificador. O valor padrão é `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | 0 | O qualificador pode ser substituído em uma classe derivada ou instância. **Esse é o valor padrão.** |
+| `WBEM_FLAVOR_OVERRIDABLE` | 0 | O qualificador pode ser substituído em uma classe ou instância derivada. **Esse é o valor padrão.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | O qualificador é propagado para instâncias. |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | O qualificador é propagado para classes derivadas. |
 | `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | O qualificador não pode ser substituído em uma instância ou classe derivada. |
-| `WBEM_FLAVOR_AMENDED` | 0x80 | O qualificador é localizado. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | O qualificador está localizado. |
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Houve uma tentativa inválida de especificar o **chave** qualificador em uma propriedade que não pode ser uma chave. As chaves são especificadas na definição de classe para um objeto e não podem ser alteradas por instância. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Houve uma tentativa inválida de especificar o qualificador de **chave** em uma propriedade que não pode ser uma chave. As chaves são especificadas na definição de classe para um objeto e não podem ser alteradas por instância. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | O `pVal` parâmetro não é de um tipo de Qualificador legal. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Não é possível chamar o `QualifierSet_Put` no qualificador porque o objeto proprietário não permite substituições de método. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | O `pVal` parâmetro não é de um tipo de qualificador legal. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Não é possível chamar o `QualifierSet_Put` método no qualificador porque o objeto proprietário não permite substituições. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) método.
+Essa função encapsula uma chamada para o método [IWbemQualifierSet::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
 
 **Cabeçalho:** WMINet_Utils.idl
 

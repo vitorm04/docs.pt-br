@@ -6,34 +6,34 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 037182a3cb105f544e15a05f955c142ba57f62f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768713"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795544"
 ---
 # <a name="extending-wcf"></a>Estendendo o WCF
-Windows Communication Foundation (WCF) permite que você modificar e estender os componentes de tempo de execução para controlar com precisão e estender os aplicativos baseados em serviço. Os tópicos nesta seção Ir em detalhes sobre a arquitetura de extensibilidade. Para obter mais informações sobre a programação básica, consulte [programação WCF básica](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+O Windows Communication Foundation (WCF) permite que você modifique e estenda os componentes de tempo de execução para controlar e estender precisamente os aplicativos baseados em serviço. Os tópicos nesta seção se aprofundam em detalhes sobre a arquitetura de extensibilidade. Para obter mais informações sobre programação básica, consulte [programação básica do WCF](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Estendendo ServiceHost e a camada de modelo de serviço](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
- A camada de modelo de serviço é responsável por efetuar pull de mensagens recebidas fora de canais subjacentes, convertendo-os em invocações de método no código do aplicativo e enviar os resultados para o chamador.  Extensões do modelo de serviço modificarem ou implementam a execução ou o comportamento de comunicação e recursos que envolvem a funcionalidade de dispatcher, comportamentos personalizados, mensagem e interceptação de parâmetro e outras funcionalidades de extensibilidade.  
+ [Estendendo ServiceHost e a camada de modelo de serviço](extending-servicehost-and-the-service-model-layer.md)  
+ A camada do modelo de serviço é responsável por extrair mensagens de entrada dos canais subjacentes, traduzi-las em invocações de método no código do aplicativo e enviar os resultados de volta para o chamador.  As extensões de modelo de serviço modificam ou implementam o comportamento de execução ou de comunicação e recursos que envolvem a funcionalidade do Dispatcher, comportamentos personalizados, interceptação de mensagem e de parâmetro e outras funcionalidades de extensibilidade.  
   
- [Estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- Associações são objetos que descrevem os detalhes de comunicação necessários para se conectar a um ponto de extremidade. As extensões de associação ou associações personalizadas implementam a funcionalidade de comunicação personalizados necessária para dar suporte a recursos do aplicativo.  
+ [Estendendo associações](extending-bindings.md)  
+ Associações são objetos que descrevem os detalhes de comunicação necessários para se conectar a um ponto de extremidade. Extensões de associação ou associações personalizadas implementam a funcionalidade de comunicação personalizada necessária para dar suporte aos recursos do aplicativo.  
   
- [Estendendo a camada do canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
- A camada de canais fica abaixo da camada de modelo de serviço e é responsável para a troca de mensagens entre clientes e serviços. Extensões de canal podem implementar a nova funcionalidade de protocolo, como a segurança. Extensões de canal de transporte também funcionalidades, como implementar um novo transporte de rede para transportar mensagens SOAP.  
+ [Estendendo a camada do canal](extending-the-channel-layer.md)  
+ A camada de canal fica abaixo da camada de modelo de serviço e é responsável pela troca de mensagens entre clientes e serviços. As extensões de canal podem implementar a nova funcionalidade de protocolo, como segurança. As extensões de canal também transportam a funcionalidade, como a implementação de um novo transporte de rede para transportar mensagens SOAP.  
   
- [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
- Segurança no WCF consiste em transferência de segurança (integridade, confidencialidade e autenticação), controle de acesso (autorização) e auditoria. As classes encontradas no `IdentityModel` namespace são usados pelo WCF para controle de acesso. Noções básicas sobre a arquitetura de segurança permite que você crie tipos de declaração personalizada para acomodar sistemas de controle de acesso personalizado.  
+ [Estendendo a segurança](extending-security.md)  
+ A segurança no WCF consiste em segurança de transferência (integridade, confidencialidade e autenticação), controle de acesso (autorização) e auditoria. As classes encontradas no `IdentityModel` namespace são usadas pelo WCF para controle de acesso. Entender a arquitetura de segurança permite que você crie tipos de declaração personalizados para acomodar sistemas de controle de acesso personalizados.  
   
- [Estendendo o sistema de metadados](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- O sistema de metadados WCF é um grupo de interfaces e classes que representam os metadados necessários para implementar aplicativos baseados em serviço. Modificar ou estender as classes ou implementar e configurar as interfaces para exportar e importar metadados personalizados como extensões de descrição linguagem WSDL (Web Services) ou asserções de WS-PolicyAttachments personalizadas.  
+ [Estendendo o sistema de metadados](extending-the-metadata-system.md)  
+ O sistema de metadados do WCF é um grupo de classes e interfaces que representam os metadados necessários para implementar aplicativos baseados em serviço. Modifique ou estenda as classes ou implemente e configure as interfaces para exportar e importar metadados personalizados, como as extensões WSDL (Web Services Description Language) ou as asserções WS-PolicyAttachments personalizadas.  
   
- [Estendendo codificadores e serializadores](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
- Serializadores e codificadores convertem dados de um formulário para outro. Os tópicos desta seção discutem como estender as classes fornecidas para atender aos requisitos especiais.  
+ [Estendendo codificadores e serializadores](extending-encoders-and-serializers.md)  
+ Codificadores e serializadores convertem dados de um formulário para outro. Os tópicos nesta seção discutem como estender as classes fornecidas para atender aos requisitos especiais.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  
@@ -51,8 +51,8 @@ Windows Communication Foundation (WCF) permite que você modificar e estender os
  <xref:System.IdentityModel.Tokens>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Programação básica do WCF](../basic-wcf-programming.md)  
   
- [Detalhes de recursos do WCF](../../../../docs/framework/wcf/feature-details/index.md)  
+ [Detalhes de recursos do WCF](../feature-details/index.md)  
   
- [Diretrizes e práticas recomendadas](../../../../docs/framework/wcf/guidelines-and-best-practices.md)
+ [Diretrizes e práticas recomendadas](../guidelines-and-best-practices.md)
