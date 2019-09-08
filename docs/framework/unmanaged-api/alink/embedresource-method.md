@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742150"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777452"
 ---
-# <a name="embedresource-method"></a><span data-ttu-id="69a42-102">Método EmbedResource</span><span class="sxs-lookup"><span data-stu-id="69a42-102">EmbedResource Method</span></span>
-<span data-ttu-id="69a42-103">Declara um recurso inserido.</span><span class="sxs-lookup"><span data-stu-id="69a42-103">Declares an embedded resource.</span></span> <span data-ttu-id="69a42-104">Esse método insere, na verdade, o recurso.</span><span class="sxs-lookup"><span data-stu-id="69a42-104">This method does not actually embed the resource.</span></span>  
+# <a name="embedresource-method"></a><span data-ttu-id="eb2df-102">Método EmbedResource</span><span class="sxs-lookup"><span data-stu-id="eb2df-102">EmbedResource Method</span></span>
+<span data-ttu-id="eb2df-103">Declara um recurso inserido.</span><span class="sxs-lookup"><span data-stu-id="eb2df-103">Declares an embedded resource.</span></span> <span data-ttu-id="eb2df-104">Esse método não insere o recurso de fato.</span><span class="sxs-lookup"><span data-stu-id="eb2df-104">This method does not actually embed the resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69a42-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="69a42-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb2df-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="eb2df-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmbedResource(  
@@ -39,30 +39,30 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69a42-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="69a42-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eb2df-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="eb2df-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="69a42-107">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="69a42-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="eb2df-107">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="eb2df-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="69a42-108">Assembly ou token de ID de arquivo que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="69a42-108">File token or assembly ID of file that contains the resource.</span></span>  
+ <span data-ttu-id="eb2df-108">Token do arquivo ou ID do assembly do arquivo que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="eb2df-108">File token or assembly ID of file that contains the resource.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="69a42-109">Nome do recurso.</span><span class="sxs-lookup"><span data-stu-id="69a42-109">Name of the resource.</span></span>  
+ <span data-ttu-id="eb2df-109">Nome do recurso.</span><span class="sxs-lookup"><span data-stu-id="eb2df-109">Name of the resource.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="69a42-110">Deslocamento do recurso de RVA.</span><span class="sxs-lookup"><span data-stu-id="69a42-110">Offset of resource from RVA.</span></span>  
+ <span data-ttu-id="eb2df-110">Deslocamento do recurso de RVA.</span><span class="sxs-lookup"><span data-stu-id="eb2df-110">Offset of resource from RVA.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="69a42-111">Acessibilidade, como sinalizadores `mrPublic` e `mrPrivate`.</span><span class="sxs-lookup"><span data-stu-id="69a42-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="69a42-112">Esses sinalizadores podem ser passados para [método DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="69a42-112">These flags may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="eb2df-111">Sinalizadores de acessibilidade, `mrPublic` como `mrPrivate`e.</span><span class="sxs-lookup"><span data-stu-id="eb2df-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="eb2df-112">Esses sinalizadores podem ser passados para o [método DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span><span class="sxs-lookup"><span data-stu-id="eb2df-112">These flags may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="69a42-113">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="69a42-113">Return Value</span></span>  
- <span data-ttu-id="69a42-114">Se o método for bem-sucedido, retornará S_OK.</span><span class="sxs-lookup"><span data-stu-id="69a42-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eb2df-113">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="eb2df-113">Return Value</span></span>  
+ <span data-ttu-id="eb2df-114">Retornará S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="eb2df-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69a42-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="69a42-115">Requirements</span></span>  
- <span data-ttu-id="69a42-116">Requer alink.h.</span><span class="sxs-lookup"><span data-stu-id="69a42-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb2df-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eb2df-115">Requirements</span></span>  
+ <span data-ttu-id="eb2df-116">Requer ALink. h.</span><span class="sxs-lookup"><span data-stu-id="eb2df-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69a42-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="69a42-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb2df-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eb2df-117">See also</span></span>
 
-- [<span data-ttu-id="69a42-118">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="69a42-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="69a42-119">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="69a42-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="69a42-120">API do ALink</span><span class="sxs-lookup"><span data-stu-id="69a42-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="eb2df-118">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="eb2df-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="eb2df-119">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="eb2df-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="eb2df-120">API do ALink</span><span class="sxs-lookup"><span data-stu-id="eb2df-120">ALink API</span></span>](index.md)

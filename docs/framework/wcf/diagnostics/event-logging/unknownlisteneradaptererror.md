@@ -2,24 +2,24 @@
 title: UnknownListenerAdapterError
 ms.date: 03/30/2017
 ms.assetid: f454773d-a208-4ce0-8675-b6dd7ebd5a5a
-ms.openlocfilehash: 7e7f8dfe47cf5be7a6abedefa99c445c7a6c2ea1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49e7e0de21a7e44a62d7efe9b59b618bd37f9168
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944345"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797460"
 ---
-# <a name="unknownlisteneradaptererror"></a><span data-ttu-id="9de87-102">UnknownListenerAdapterError</span><span class="sxs-lookup"><span data-stu-id="9de87-102">UnknownListenerAdapterError</span></span>
-<span data-ttu-id="9de87-103">Id: 161</span><span class="sxs-lookup"><span data-stu-id="9de87-103">Id: 161</span></span>  
+# <a name="unknownlisteneradaptererror"></a><span data-ttu-id="8857f-102">UnknownListenerAdapterError</span><span class="sxs-lookup"><span data-stu-id="8857f-102">UnknownListenerAdapterError</span></span>
+<span data-ttu-id="8857f-103">Sessão 161</span><span class="sxs-lookup"><span data-stu-id="8857f-103">Id: 161</span></span>  
   
- <span data-ttu-id="9de87-104">Gravidade: Erro</span><span class="sxs-lookup"><span data-stu-id="9de87-104">Severity: Error</span></span>  
+ <span data-ttu-id="8857f-104">Severity Erro</span><span class="sxs-lookup"><span data-stu-id="8857f-104">Severity: Error</span></span>  
   
- <span data-ttu-id="9de87-105">Categoria: SMSvcHost</span><span class="sxs-lookup"><span data-stu-id="9de87-105">Category: SMSvcHost</span></span>  
+ <span data-ttu-id="8857f-105">Categorias SMSvcHost</span><span class="sxs-lookup"><span data-stu-id="8857f-105">Category: SMSvcHost</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9de87-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="9de87-106">Description</span></span>  
- <span data-ttu-id="9de87-107">Esse evento indica que ocorreu um erro inesperado no adaptador do ouvinte ao manipular uma notificação de serviço de ativação de processos do Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="9de87-107">This event indicates that an unexpected error occurred in the listener adapter while handling a Windows Process Activation Service (WAS) notification.</span></span> <span data-ttu-id="9de87-108">O processo é encerrado.</span><span class="sxs-lookup"><span data-stu-id="9de87-108">The process is terminated.</span></span> <span data-ttu-id="9de87-109">O evento de lista, o protocolo, a exceção, o nome do processo e a ID de processo.</span><span class="sxs-lookup"><span data-stu-id="9de87-109">The event lists the protocol, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="8857f-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="8857f-106">Description</span></span>  
+ <span data-ttu-id="8857f-107">Esse evento indica que ocorreu um erro inesperado no adaptador do ouvinte ao manipular uma notificação do WAS (serviço de ativação de processos do Windows).</span><span class="sxs-lookup"><span data-stu-id="8857f-107">This event indicates that an unexpected error occurred in the listener adapter while handling a Windows Process Activation Service (WAS) notification.</span></span> <span data-ttu-id="8857f-108">O processo é encerrado.</span><span class="sxs-lookup"><span data-stu-id="8857f-108">The process is terminated.</span></span> <span data-ttu-id="8857f-109">O evento lista o protocolo, exceção, nome do processo e ID do processo.</span><span class="sxs-lookup"><span data-stu-id="8857f-109">The event lists the protocol, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9de87-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9de87-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8857f-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8857f-110">See also</span></span>
 
-- [<span data-ttu-id="9de87-111">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="9de87-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="9de87-112">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="9de87-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="8857f-111">Registro de eventos em log</span><span class="sxs-lookup"><span data-stu-id="8857f-111">Event Logging</span></span>](index.md)
+- [<span data-ttu-id="8857f-112">Referência geral de eventos</span><span class="sxs-lookup"><span data-stu-id="8857f-112">Events General Reference</span></span>](events-general-reference.md)

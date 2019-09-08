@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026115adc01e7dcdac3012255f0378cff6348f89
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f984d44d0a8acb85562a58653dfd2882053a0ce
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780698"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799281"
 ---
-# <a name="gethashfromassemblyfile-function"></a><span data-ttu-id="4dad0-102">Função GetHashFromAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="4dad0-102">GetHashFromAssemblyFile Function</span></span>
-<span data-ttu-id="4dad0-103">Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.</span><span class="sxs-lookup"><span data-stu-id="4dad0-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="gethashfromassemblyfile-function"></a><span data-ttu-id="9c320-102">Função GetHashFromAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="9c320-102">GetHashFromAssemblyFile Function</span></span>
+<span data-ttu-id="9c320-103">Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.</span><span class="sxs-lookup"><span data-stu-id="9c320-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
- <span data-ttu-id="4dad0-104">Essa função foi preterida.</span><span class="sxs-lookup"><span data-stu-id="4dad0-104">This function has been deprecated.</span></span> <span data-ttu-id="4dad0-105">Use o [iclrstrongname:: Gethashfromassemblyfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) método em vez disso.</span><span class="sxs-lookup"><span data-stu-id="4dad0-105">Use the [ICLRStrongName::GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) method instead.</span></span>  
+ <span data-ttu-id="9c320-104">Esta função foi preterida.</span><span class="sxs-lookup"><span data-stu-id="9c320-104">This function has been deprecated.</span></span> <span data-ttu-id="9c320-105">Em vez disso, use o método [ICLRStrongName:: GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md) .</span><span class="sxs-lookup"><span data-stu-id="9c320-105">Use the [ICLRStrongName::GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4dad0-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4dad0-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9c320-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9c320-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHashFromAssemblyFile (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4dad0-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4dad0-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9c320-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9c320-107">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="4dad0-108">[in] O caminho para o arquivo a ser transformada em hash.</span><span class="sxs-lookup"><span data-stu-id="4dad0-108">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="9c320-108">no O caminho para o arquivo a ser transformado em hash.</span><span class="sxs-lookup"><span data-stu-id="9c320-108">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="4dad0-109">[no, out] Uma constante que especifica o algoritmo de hash.</span><span class="sxs-lookup"><span data-stu-id="4dad0-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="4dad0-110">Use zero para o algoritmo de hash padrão.</span><span class="sxs-lookup"><span data-stu-id="4dad0-110">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="9c320-109">[entrada, saída] Uma constante que especifica o algoritmo de hash.</span><span class="sxs-lookup"><span data-stu-id="9c320-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="9c320-110">Use zero para o algoritmo de hash padrão.</span><span class="sxs-lookup"><span data-stu-id="9c320-110">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="4dad0-111">[out] O buffer de hash retornado.</span><span class="sxs-lookup"><span data-stu-id="4dad0-111">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="9c320-111">fora O buffer de hash retornado.</span><span class="sxs-lookup"><span data-stu-id="9c320-111">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="4dad0-112">[in] O tamanho máximo solicitado de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="4dad0-112">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="9c320-112">no O tamanho máximo solicitado de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="9c320-112">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="4dad0-113">[out] O retornado tamanho, em bytes, do `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="4dad0-113">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="9c320-113">fora O tamanho retornado, em bytes, de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="9c320-113">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4dad0-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4dad0-114">Requirements</span></span>  
- <span data-ttu-id="4dad0-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4dad0-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9c320-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9c320-114">Requirements</span></span>  
+ <span data-ttu-id="9c320-115">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c320-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4dad0-116">**Cabeçalho:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="4dad0-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="9c320-116">**Cabeçalho:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="9c320-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="4dad0-117">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4dad0-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9c320-117">**Biblioteca** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9c320-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4dad0-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4dad0-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9c320-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c320-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4dad0-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4dad0-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c320-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9c320-119">See also</span></span>
 
-- [<span data-ttu-id="4dad0-120">Método GetHashFromAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="4dad0-120">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="4dad0-121">Método GetHashFromAssemblyFileW</span><span class="sxs-lookup"><span data-stu-id="4dad0-121">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="4dad0-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="4dad0-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="9c320-120">Método GetHashFromAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="9c320-120">GetHashFromAssemblyFile Method</span></span>](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="9c320-121">Método GetHashFromAssemblyFileW</span><span class="sxs-lookup"><span data-stu-id="9c320-121">GetHashFromAssemblyFileW Method</span></span>](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="9c320-122">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="9c320-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
