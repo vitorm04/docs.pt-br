@@ -2,12 +2,12 @@
 title: Construtor de tipo nomeado (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760448"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250016"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Construtor de tipo nomeado (Entity SQL)
 Usado para criar instâncias de tipos nominais de modelo conceitual como a entidade ou tipos complexos.  
@@ -20,7 +20,7 @@ Usado para criar instâncias de tipos nominais de modelo conceitual como a entid
   
 ## <a name="arguments"></a>Arguments  
  `identifier`  
- Valor que é um identificador simples ou citado. Para obter mais informações, consulte [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ Valor que é um identificador simples ou citado. Para obter mais informações, consulte [identificadores](identifiers-entity-sql.md)  
   
  `expression`  
  Atributos de tipo que são considerados para estar na mesma ordem que aparecem na declaração de tipo.  
@@ -52,7 +52,7 @@ Usado para criar instâncias de tipos nominais de modelo conceitual como a entid
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o construtor chamado de tipo para criar uma instância de um tipo de modelo conceitual. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
@@ -60,5 +60,5 @@ Usado para criar instâncias de tipos nominais de modelo conceitual como a entid
   
 ## <a name="see-also"></a>Consulte também
 
-- [Construindo tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Construindo tipos](constructing-types-entity-sql.md)
+- [Referência de Entity SQL](entity-sql-reference.md)

@@ -14,119 +14,119 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7142ef36d4ed1bbcb715748202eefdd5504f697e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775094"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956650"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 
-Este tópico discute o que você precisa pensar sobre quando as ferramentas de diagnóstico de escrita analisarem gerenciado código em execução dentro de um aplicativo da Windows Store. Ele também fornece diretrizes para modificar suas ferramentas de desenvolvimento existentes, para que eles continuam a funcionar quando você executá-los nos aplicativos da Windows Store. Para entender essas informações, é melhor que se você estiver familiarizado com a Common Language Runtime de criação de perfil API, você já tiver usado essa API em uma ferramenta de diagnóstico que é executado corretamente em relação a aplicativos de desktop do Windows e você agora está interessado em modificando a ferramenta para ser executado corretamente em relação a aplicativos da Windows Store.
+Este tópico discute o que você precisa pensar ao escrever ferramentas de diagnóstico que analisam o código gerenciado em execução dentro de um aplicativo da Windows Store. Ele também fornece diretrizes para modificar suas ferramentas de desenvolvimento existentes para que continuem funcionando quando você executá-las em aplicativos da Windows Store. Para entender essas informações, é melhor se você estiver familiarizado com a API de criação de perfil do Common Language Runtime, já usou essa API em uma ferramenta de diagnóstico que é executada corretamente nos aplicativos da área de trabalho do Windows e agora está interessado em modificar a ferramenta para ser executado corretamente em aplicativos da Windows Store.
 
 ## <a name="introduction"></a>Introdução
 
-Se você o feita após o parágrafo introdutório, em seguida, você está familiarizado com a API de criação de perfil do CLR. Você já escreveu uma ferramenta de diagnóstico que funciona bem em aplicativos da área de trabalho gerenciados. Agora você está curioso o que fazer para que sua ferramenta funciona com um aplicativo gerenciado da Windows Store. Talvez você já tentou fazer esse trabalho e ter descoberto que não é uma tarefa simples. Na verdade, há várias considerações que podem não ser óbvio para todos os desenvolvedores de ferramentas. Por exemplo:
+Se você o fez após o parágrafo introdutório, você está familiarizado com a API de criação de perfil do CLR. Você já escreveu uma ferramenta de diagnóstico que funciona bem em aplicativos de área de trabalho gerenciada. Agora você está curioso o que fazer para que sua ferramenta funcione com um aplicativo gerenciado da Windows Store. Talvez você já tenha tentado fazer isso, e descobriu que não é uma tarefa simples. Na verdade, há várias considerações que podem não ser óbvias para todos os desenvolvedores de ferramentas. Por exemplo:
 
-- Aplicativos da Windows Store executados em um contexto com permissões reduzidas severos.
+- Os aplicativos da Windows Store são executados em um contexto com permissões extremamente reduzidas.
 
-- Arquivos de metadados do Windows têm características exclusivas em comparação com módulos gerenciados tradicionais.
+- Os arquivos de metadados do Windows têm características exclusivas quando comparados aos módulos gerenciados tradicionais.
 
-- Aplicativos da Windows Store têm o hábito de suspender a mesmos quando interatividade fica inativo.
+- Os aplicativos da Windows Store têm o hábito de se suspender quando a interatividade ficar inativa.
 
-- Seus mecanismos de comunicação entre processos podem não funcionar por vários motivos.
+- Os mecanismos de comunicação entre processos podem deixar de funcionar por vários motivos.
 
-Este tópico lista as coisas que você precisa estar atento e como lidar com eles corretamente.
+Este tópico lista as coisas que você precisa saber e como lidar com elas corretamente.
 
-Se você estiver familiarizado com a API de criação de perfil do CLR, vá para os recursos no final deste tópico para localizar o melhor informações introdutórias.
+Se você for novo na API de criação de perfil do CLR, pule até os recursos no final deste tópico para encontrar melhores informações introdutórias.
 
-Fornecendo detalhes sobre APIs específicas do Windows e como eles devem ser usados também está fora do escopo deste tópico. Considere este tópico um ponto de partida e consulte o MSDN para saber mais sobre as APIs do Windows referenciado aqui.
+Fornecer detalhes sobre APIs específicas do Windows e como elas devem ser usadas também está fora do escopo deste tópico. Considere este tópico um ponto de partida e consulte o MSDN para saber mais sobre todas as APIs do Windows referenciadas aqui.
 
 ## <a name="architecture-and-terminology"></a>Arquitetura e terminologia
 
-Normalmente, uma ferramenta de diagnóstico tem uma arquitetura semelhante à mostrada na ilustração a seguir. Ele usa o termo "profiler", mas muitas dessas ferramentas ir muito além do desempenho típico ou criação de perfil de memória em áreas como cobertura de código, estruturas de objeto de simulação, viajar depuração, o aplicativo monitoramento e assim por diante. Para simplificar, este tópico continuará para se referir a todas essas ferramentas, como os criadores de perfil.
+Normalmente, uma ferramenta de diagnóstico tem uma arquitetura como a mostrada na ilustração a seguir. Ele usa o termo "Profiler", mas muitas dessas ferramentas vão muito além do desempenho típico ou da criação de perfil de memória em áreas como cobertura de código, estruturas de objeto fictícios, depuração de viagem de tempo, monitoramento de aplicativos e assim por diante. Para simplificar, este tópico continuará a se referir a todas essas ferramentas como profileres.
 
-A seguinte terminologia é usada ao longo deste tópico:
+A seguinte terminologia é usada em todo este tópico:
 
 **Aplicativo**
 
-Este é o aplicativo que está analisando o criador de perfil. Normalmente, o desenvolvedor desse aplicativo agora está usando o criador de perfil para ajudar a diagnosticar problemas com o aplicativo. Tradicionalmente, esse aplicativo seria um aplicativo de desktop do Windows, mas neste tópico, estamos examinando aplicativos da Windows Store.
+Esse é o aplicativo que o criador de perfil está analisando. Normalmente, o desenvolvedor deste aplicativo agora está usando o criador de perfil para ajudar a diagnosticar problemas com o aplicativo. Tradicionalmente, esse aplicativo seria um aplicativo de área de trabalho do Windows, mas, neste tópico, estamos examinando os aplicativos da Windows Store.
 
-**Profiler DLL**
+**DLL do criador de perfil**
 
-Este é o componente que carrega no espaço de processo do aplicativo que está sendo analisado. Esse componente, também conhecido como o criador de perfil de "agente", implementa a [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback Interface](icorprofilercallback-interface.md)(2,3, etc.) interfaces e consome o [ ICorProfilerInfo](icorprofilerinfo-interface.md)(2,3, etc.) interfaces para coletar dados sobre o aplicativo analisado e potencialmente modificar os aspectos do comportamento do aplicativo.
+Esse é o componente que é carregado no espaço de processo do aplicativo que está sendo analisado. Esse componente, também conhecido como o criador de perfil "Agent", implementa a interface [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback](icorprofilercallback-interface.md)(2, 3 etc.) interfaces e consome as interfaces [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3 etc.) para coletar dados sobre o aplicativo analisado e potencialmente modificar aspectos do comportamento do aplicativo.
 
-**Interface do usuário do Profiler**
+**IU do criador de perfil**
 
-Isso é um aplicativo da área de trabalho que o criador de perfil usuário interage com. Ele é responsável por exibir o status do aplicativo para o usuário e dar ao usuário os meios para controlar o comportamento do aplicativo analisado. Esse componente sempre é executado em seu próprio espaço de processo separado do espaço de processo do aplicativo que está sendo analisado. A interface do usuário do Profiler também pode atuar como o "Anexação" gatilho, que é o processo que chama o [iclrprofiling:: Attachprofiler](iclrprofiling-attachprofiler-method.md) método para fazer com que o aplicativo analisado para carregar a DLL do Profiler nos casos em que a DLL do criador de perfil não especificou carregar na inicialização.
+Esse é um aplicativo de área de trabalho com o qual o usuário do profiler interage. É responsável por exibir o status do aplicativo para o usuário e dar ao usuário o meio de controlar o comportamento do aplicativo analisado. Esse componente sempre é executado em seu próprio espaço de processo, separado do espaço de processo do aplicativo que está sendo criado. A interface do usuário do criador de perfil também pode atuar como "gatilho de anexação", que é o processo que chama o método [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) , para fazer com que o aplicativo analisado carregue a DLL do criador de perfil nesses casos em que a DLL do criador de perfil não foi carregada na inicialização.
 
 > [!IMPORTANT]
-> A interface do usuário do Profiler deve permanecer um aplicativo da área de trabalho do Windows, mesmo quando ele é usado para o controle e o relatório em um aplicativo da Windows Store. Não espere poder empacotar e enviar sua ferramenta de diagnóstico do Windows Store. Sua ferramenta precisa fazer coisas que aplicativos da Windows Store não é possível fazer, e muitas dessas coisas residem dentro de sua interface do usuário do Profiler.
+> Sua interface do usuário do profiler deve permanecer um aplicativo de área de trabalho do Windows, mesmo quando é usada para controlar e relatar um aplicativo da Windows Store. Não espere ser capaz de empacotar e enviar sua ferramenta de diagnóstico na Windows Store. Sua ferramenta precisa fazer coisas que os aplicativos da Windows Store não podem fazer, e muitas dessas coisas residem em sua interface do usuário do profiler.
 
-Ao longo deste documento, o código de exemplo pressupõe que:
+Em todo este documento, o código de exemplo pressupõe que:
 
-- O Profiler DLL é escrito em C++, porque ele deve ser uma DLL nativa, de acordo com os requisitos da API de criação de perfil do CLR.
+- Sua DLL do criador de perfil C++é gravada, pois deve ser uma DLL nativa, de acordo com os requisitos da API de criação de perfil do CLR.
 
-- A interface do usuário do Profiler é escrito em c#. Isso não é necessário, mas porque não há nenhum requisito no idioma para o processo de seu Profiler da interface do usuário, por que não escolher um idioma que seja simples e conciso?
+- Sua interface do usuário do profiler é escrita em C#. Isso não é necessário, mas porque não há requisitos de linguagem para o processo da interface do usuário do criador de perfil, por que não escolher uma linguagem concisa e simples?
 
 ### <a name="windows-rt-devices"></a>Dispositivos Windows RT
 
-Dispositivos Windows RT bastante estão bloqueados. Criadores de perfil de terceiros simplesmente não não possível carregadas esses dispositivos. Este documento se concentra em PCs com Windows 8.
+Os dispositivos Windows RT estão bem bloqueados. Os profileres de terceiros simplesmente não podem ser carregados nesses dispositivos. Este documento se concentra em PCs com o Windows 8.
 
-## <a name="consuming-windows-runtime-apis"></a>Consumo de APIs de tempo de execução do Windows
+## <a name="consuming-windows-runtime-apis"></a>Consumindo APIs de Windows Runtime
 
-Em um número de cenários discutidos nas seções a seguir, seu aplicativo de área de trabalho da interface do usuário do Profiler precisa consumir algumas novas APIs do Windows Runtime. Você deve consultar a documentação para entender quais APIs de tempo de execução do Windows pode ser usado em aplicativos da área de trabalho, e se seu comportamento é diferente quando chamado a partir de aplicativos de desktop e Windows Store apps.
+Em vários cenários discutidos nas seções a seguir, seu aplicativo de área de trabalho do profiler precisa consumir algumas novas APIs de Windows Runtime. Convém consultar a documentação para entender quais Windows Runtime APIs podem ser usadas em aplicativos de desktop e se seu comportamento é diferente quando chamado de aplicativos da área de trabalho e aplicativos da Windows Store.
 
-Se a interface do usuário do Profiler é escrito em código gerenciado, haverá algumas etapas, que você precisará fazer para que o consumo fácil das APIs do tempo de execução do Windows. Consulte a [gerenciado da área de trabalho e tempo de execução do Windows](https://go.microsoft.com/fwlink/?LinkID=271858) artigo para obter mais informações.
+Se sua interface do usuário do Profiler for escrita em código gerenciado, haverá algumas etapas que você precisará fazer para facilitar o consumo dessas APIs de Windows Runtime. Consulte o artigo [aplicativos e Windows Runtime de área de trabalho gerenciada](https://go.microsoft.com/fwlink/?LinkID=271858) para obter mais informações.
 
-## <a name="loading-the-profiler-dll"></a>Ao carregar o DLL do Profiler
+## <a name="loading-the-profiler-dll"></a>Carregando a DLL do criador de perfil
 
-Esta seção descreve como a interface do usuário do Profiler faz com que o aplicativo da Windows Store carregar a DLL do Profiler. O código discutido nesta seção pertence em seu aplicativo de área de trabalho do Profiler da interface do usuário e, portanto, envolve o uso de APIs do Windows que são seguros para aplicativos da área de trabalho, mas não necessariamente é seguro para aplicativos da Windows Store.
+Esta seção descreve como a interface do usuário do profiler faz com que o aplicativo da Windows Store carregue sua DLL do criador de perfil. O código discutido nesta seção pertence ao seu aplicativo de desktop da interface do usuário do Profiler e, portanto, envolve o uso de APIs do Windows que são seguras para aplicativos da área de trabalho, mas não são necessariamente seguros para aplicativos da Windows Store
 
-A interface do usuário do Profiler pode fazer com que o Profiler DLL seja carregada no espaço de processo do aplicativo de duas maneiras:
+Sua interface do usuário do profiler pode fazer com que a DLL do criador de perfil seja carregada no espaço de processo do aplicativo de duas maneiras:
 
 - Na inicialização do aplicativo, conforme controlado pelas variáveis de ambiente.
 
-- Anexando ao aplicativo após a inicialização for concluída, chamando o [iclrprofiling:: Attachprofiler](iclrprofiling-attachprofiler-method.md) método.
+- Anexando-se ao aplicativo após a conclusão da inicialização chamando o método [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) .
 
-Uma das suas dificuldades primeiro obterá iniciar-carregar e anexar-carregar da DLL Profiler funcione corretamente com os aplicativos da Windows Store. As duas formas de carregamento compartilham algumas considerações especiais em comum, então vamos começar com eles.
+Um dos seus primeiros obstáculos será obter carga de inicialização e carregar o carregamento de sua DLL do criador de perfil para funcionar corretamente com os aplicativos da Windows Store. Ambas as formas de carregamento compartilham algumas considerações especiais em comum, portanto, vamos começar com elas.
 
-### <a name="common-considerations-for-startup-and-attach-loads"></a>Considerações comuns para inicialização e anexar cargas
+### <a name="common-considerations-for-startup-and-attach-loads"></a>Considerações comuns para inicialização e carregamentos de anexos
 
-**O Profiler DLL de assinatura**
+**Assinando sua DLL do criador de perfil**
 
-Quando o Windows tenta carregar a DLL do Profiler, ele verifica que o Profiler DLL está assinado corretamente. Caso contrário, o carregamento falhará por padrão. Há duas formas de fazer isso:
+Quando o Windows tenta carregar sua DLL do criador de perfil, ele verifica se a DLL do criador de perfil está corretamente assinada. Caso contrário, a carga falhará por padrão. Há duas formas de fazer isso:
 
-- Certifique-se de que o Profiler DLL está assinado.
+- Verifique se a DLL do criador de perfil está assinada.
 
-- Informe o usuário que eles devem instalar uma licença de desenvolvedor em seu computador Windows 8 antes de usar sua ferramenta. Isso pode ser feito automaticamente pelo Visual Studio ou manualmente em um prompt de comando. Para obter mais informações, consulte [obter uma licença de desenvolvedor](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
+- Informe ao usuário que ele deve instalar uma licença de desenvolvedor em seu computador com Windows 8 antes de usar sua ferramenta. Isso pode ser feito automaticamente do Visual Studio ou manualmente a partir de um prompt de comando. Para obter mais informações, consulte [obter uma licença de desenvolvedor](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Permissões do sistema de arquivos**
 
-O aplicativo da Windows Store deve ter permissão para carregar e executar o Profiler DLL do local no sistema de arquivos no qual ele residesBy padrão, o aplicativo da Windows Store não tem essa permissão na maioria das pastas e qualquer falha ao tentar carregar a DLL do Profiler produzirá uma entrada no log de eventos do aplicativo do Windows que pode ter esta aparência:
+O aplicativo da Windows Store deve ter permissão para carregar e executar a DLL do criador de perfil do local no sistema de arquivos no qual residesBy padrão, o aplicativo da Windows Store não tem essa permissão na maioria dos diretórios e qualquer tentativa com falha de carregar a DLL do criador de perfil produzirá uma entrada no log de eventos de aplicativo do Windows semelhante a esta:
 
 ```Output
 NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateInstance.  Profiler CLSID: '{xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}'.  HRESULT: 0x80070005.  Process ID (decimal): 4688.  Message ID: [0x2504].
 ```
 
-Em geral, os aplicativos da Windows Store só têm permissão para acessar um conjunto limitado de locais no disco. Cada aplicativo da Windows Store pode acessar suas próprias pastas de dados do aplicativo, bem como algumas outras áreas no sistema de arquivos para o qual todos os aplicativos da Windows Store têm acesso. É melhor instalar a DLL do Profiler e suas dependências em algum lugar em arquivos de programas ou arquivos de programa (x86), porque todos os aplicativos da Windows Store têm permissões read e execute lá por padrão.
+Em geral, os aplicativos da Windows Store só têm permissão para acessar um conjunto limitado de locais no disco. Cada aplicativo da Windows Store pode acessar suas próprias pastas de dados de aplicativo, bem como algumas outras áreas no sistema de arquivos para as quais todos os aplicativos da Windows Store têm acesso concedido. É melhor instalar sua DLL do criador de perfil e suas dependências em algum lugar em arquivos de programas ou arquivos de programas (x86), pois todos os aplicativos da Windows Store têm permissões de leitura e execução ali por padrão.
 
 ### <a name="startup-load"></a>Carga de inicialização
 
-Normalmente, em um aplicativo da área de trabalho, sua interface do usuário do Profiler solicita uma carga de inicialização da DLL Profiler inicializando um bloco de ambiente que contém as variáveis de ambiente necessárias do API de criação de perfil do CLR (ou seja, `COR_PROFILER`, `COR_ENABLE_PROFILING`, e `COR_PROFILER_PATH`), e em seguida, criando um novo processo com esse bloco de ambiente. O mesmo se aplica para aplicativos da Windows Store, mas os mecanismos são diferentes.
+Normalmente, em um aplicativo de área de trabalho, sua interface do usuário do profiler solicita uma carga de inicialização de sua DLL do criador de perfil inicializando um bloco de ambiente que contém `COR_PROFILER`as `COR_ENABLE_PROFILING`variáveis de ambiente de API de criação de perfil do CLR necessárias (ou seja,,, e `COR_PROFILER_PATH`) e em seguida, criando um novo processo com esse bloco de ambiente. O mesmo se aplica a aplicativos da Windows Store, mas os mecanismos são diferentes.
 
-**Não são executados com privilégios elevados**
+**Não executar com privilégios elevados**
 
-Se o processo tenta gerar um aplicativo da Windows Store processo B, um processo de deve ser executado em integridade média nível, não no nível de integridade alto (isto é, não elevado). Isso significa que a interface do usuário do Profiler deve estar em execução no nível de integridade média, ou que ele deve gerar outro processo da área de trabalho no nível de integridade médio para cuidar da inicialização do aplicativo da Windows Store.
+Se o processo tentar gerar o processo de aplicativo da Windows Store B, o processo A deverá ser executado no nível de integridade médio, não no nível de integridade alta (ou seja, não elevado). Isso significa que a interface do usuário do criador de perfil deve estar em execução no nível de integridade médio ou deve gerar outro processo de área de trabalho no nível de integridade médio para cuidar da inicialização do aplicativo da Windows Store.
 
-**Escolhendo um aplicativo Windows Store perfil**
+**Escolhendo um aplicativo da Windows Store para o perfil**
 
-Primeiro, você vai querer perguntar qual aplicativo da Windows Store para iniciar de seu usuário do criador de perfil. Para aplicativos da área de trabalho, talvez mostraria uma caixa de diálogo de procura de arquivo e o usuário deve localizar e selecionar um arquivo de .exe. Mas os aplicativos da Windows Store são diferentes e usar uma caixa de diálogo de procura não faz sentido. Em vez disso, é melhor Mostrar ao usuário uma lista de aplicativos da Windows Store instalado para que o usuário selecione.
+Primeiro, você desejará solicitar ao usuário do profiler que o aplicativo da Windows Store seja iniciado. Para aplicativos da área de trabalho, talvez você tenha mostrado uma caixa de diálogo de procura de arquivo e o usuário encontraria e selecionaria um arquivo. exe. Mas os aplicativos da Windows Store são diferentes, e usar uma caixa de diálogo de procura não faz sentido. Em vez disso, é melhor mostrar ao usuário uma lista de aplicativos da Windows Store instalados para que o usuário selecione.
 
-Você pode usar o <xref:Windows.Management.Deployment.PackageManager> classe para gerar essa lista. `PackageManager` é uma classe de tempo de execução do Windows que está disponível para aplicativos da área de trabalho e, na verdade é *apenas* disponível para aplicativos da área de trabalho.
+Você pode usar a <xref:Windows.Management.Deployment.PackageManager> classe para gerar essa lista. `PackageManager`o é uma classe Windows Runtime que está disponível para aplicativos da área de trabalho e, na verdade, *só* está disponível para aplicativos da área de trabalho.
 
-O exemplo a seguir de uma interface de usuário hipotético do Profiler, gravado como um aplicativo da área de trabalho no C# usa o `PackageManager` para gerar uma lista de aplicativos do Windows:
+O exemplo de código a seguir de uma IU hipotética do criador de perfil escrito como C# um aplicativo `PackageManager` de área de trabalho no usa o para gerar uma lista de aplicativos do Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Especificando o bloco de ambiente personalizado**
 
-Uma nova interface COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), permite que você personalize o comportamento de execução de um aplicativo da Windows Store para facilitar a algumas formas de diagnóstico. Um de seus métodos [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), permite que você passe um bloco de ambiente para o aplicativo da Windows Store quando ele é iniciado, juntamente com outros efeitos úteis, incluindo desabilitar suspensão automática de processo. O bloco de ambiente é importante porque é onde você precisa especificar as variáveis de ambiente (`COR_PROFILER`, `COR_ENABLE_PROFILING`, e `COR_PROFILER_PATH)`) usado pelo CLR para carregar a DLL do Profiler.
+Uma nova interface COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), permite que você personalize o comportamento de execução de um aplicativo da Windows Store para facilitar ainda mais as formas de diagnóstico. Um dos seus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), permite que você passe um bloco de ambiente para o aplicativo da Windows Store quando ele é iniciado, juntamente com outros efeitos úteis, como desabilitar a suspensão automática de processos. O bloco de ambiente é importante porque é onde você precisa especificar as variáveis de ambiente (`COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH)`) usadas pelo CLR para carregar a DLL do criador de perfil.
 
 Considere o snippet de código a seguir:
 
@@ -147,19 +147,19 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
-Há alguns itens que você precisará obter à direita:
+Há alguns itens que você precisará obter, certo:
 
-- `packageFullName` pode ser determinado ao iterar sobre os pacotes e buscando `package.Id.FullName`.
+- `packageFullName`pode ser determinado durante a iteração dos pacotes e da `package.Id.FullName`captura.
 
-- `debuggerCommandLine` é um pouco mais interessante. Para passar o bloco de ambiente personalizadas para o aplicativo da Windows Store, você precisa escrever seu próprio, depurador fictício simplista. Cria o Windows, o aplicativo da Windows Store suspenso e, em seguida, anexa o depurador iniciando o depurador com uma linha de comando, como neste exemplo:
+- `debuggerCommandLine`é um pouco mais interessante. Para passar o bloco de ambiente personalizado para o aplicativo da Windows Store, você precisa escrever seu próprio depurador fictício e simplista. O Windows gera o aplicativo da Windows Store suspenso e, em seguida, anexa o depurador iniciando o depurador com uma linha de comando como neste exemplo:
 
     ```Output
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     em que `-p 1336` significa que o aplicativo da Windows Store tem 1336 de ID de processo, e `-tid 1424` significa 1424 de ID de Thread é o thread que está suspenso. Seu depurador fictício seria analisar o ThreadID na linha de comando, retomar o thread em questão e, em seguida, sair.
+     onde `-p 1336` significa que o aplicativo da Windows Store tem a ID de `-tid 1424` processo 1336 e significa que a ID de thread 1424 é o thread suspenso. O depurador fictício analisaria o ThreadID da linha de comando, retomaria esse thread e, em seguida, sairá.
 
-     Eis alguns exemplos de código C++ para fazer isso (certifique-se de adicionar a verificação de erro!):
+     Aqui está um exemplo C++ de código para fazer isso (certifique-se de adicionar verificação de erro!):
 
     ```cpp
     int wmain(int argc, wchar_t* argv[])
@@ -176,13 +176,13 @@ Há alguns itens que você precisará obter à direita:
     }
     ```
 
-     Você precisará implantar este depurador fictício como parte de sua instalação da ferramenta de diagnóstico e, em seguida, especifique o caminho para esse depurador no `debuggerCommandLine` parâmetro.
+     Você precisará implantar esse depurador fictício como parte da instalação da ferramenta de diagnóstico e, em seguida, especificar o caminho para esse depurador `debuggerCommandLine` no parâmetro.
 
-**Iniciar o aplicativo da Windows Store**
+**Iniciando o aplicativo da Windows Store**
 
-Finalmente chegou o momento para iniciar o aplicativo da Windows Store. Se você já tiver tentado fazer isso sozinho, você talvez tenha notado que [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) não como criar um processo de aplicativo da Windows Store. Em vez disso, você precisará usar o [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) método. Para fazer isso, você precisará obter a ID do modelo do usuário de aplicativo do aplicativo Windows Store que você está iniciando. E isso significa que você precisará fazer uma pequena aprofundar-se por meio do manifesto.
+O momento de iniciar o aplicativo da Windows Store chegou finalmente. Se você já tentou fazer isso por conta própria, talvez tenha notado que [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) não é como criar um processo de aplicativo da Windows Store. Em vez disso, você precisará usar o método [IApplicationActivationManager:: ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) . Para fazer isso, você precisará obter a ID do modelo de usuário do aplicativo do aplicativo da Windows Store que você está iniciando. E isso significa que você precisará fazer um pouco se aprofundando no manifesto.
 
-Durante a iteração ao longo de seus pacotes (consulte "Escolhendo a Windows Store App para o perfil" a [carga de inicialização](#startup-load) seção anteriormente), você talvez queira coletar o conjunto de aplicativos contida no manifesto do pacote atual:
+Ao fazer a iteração em seus pacotes (consulte "escolhendo um aplicativo da Windows Store para o perfil" na seção de [carregamento de inicialização](#startup-load) anterior), você desejará obter o conjunto de aplicativos contidos no manifesto do pacote atual:
 
 ```csharp
 string manifestPath = package.InstalledLocation.Path + "\\AppxManifest.xml";
@@ -201,7 +201,7 @@ IAppxManifestReader manifestReader = appxFactory.CreateManifestReader(manifestSt
 IAppxManifestApplicationsEnumerator appsEnum = manifestReader.GetApplications();
 ```
 
-Sim, um pacote pode ter vários aplicativos, e cada aplicativo tem sua própria ID de modelo de usuário do aplicativo. Portanto, você vai querer peça ao seu usuário qual aplicativo ao perfil e, em seguida, pegar a ID de modelo de usuário do aplicativo desse aplicativo específico:
+Sim, um pacote pode ter vários aplicativos, e cada aplicativo tem sua própria ID de modelo de usuário de aplicativo. Portanto, você desejará solicitar ao usuário qual aplicativo criar perfil e obter a ID do modelo de usuário do aplicativo nesse aplicativo específico:
 
 ```csharp
 while (appsEnum.GetHasCurrent() != 0)
@@ -212,7 +212,7 @@ while (appsEnum.GetHasCurrent() != 0)
 }
 ```
 
-Por fim, agora você tem o que você precisa para iniciar o aplicativo da Windows Store:
+Por fim, agora você tem o que precisa para iniciar o aplicativo da Windows Store:
 
 ```csharp
 IApplicationActivationManager appActivationMgr = new ApplicationActivationManager();
@@ -221,17 +221,17 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **Lembre-se de chamar DisableDebugging**
 
-Quando você chamou [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), você fez uma promessa que você limparia após por conta própria por meio da chamada a [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) método, portanto, certifique-se de fazer que quando a sessão de criação de perfil está sobre.
+Quando você chamou [IPackageDebugSettings:: EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), fez uma promessa que seria limpa depois de chamar o método [IPackageDebugSettings::D isabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) , portanto, certifique-se de fazer isso quando a sessão de criação de perfil terminar.
 
-### <a name="attach-load"></a>Anexar a carga
+### <a name="attach-load"></a>Anexar carregamento
 
-Quando sua interface do usuário do Profiler deseja anexar o Profiler DLL a um aplicativo que já foi iniciada em execução, ele usa [iclrprofiling:: Attachprofiler](iclrprofiling-attachprofiler-method.md). O mesmo ocorre com os aplicativos da Windows Store. Mas além das considerações comuns listadas anteriormente, certifique-se de que o aplicativo da Windows Store de destino não está suspenso.
+Quando a interface do usuário do profiler deseja anexar sua DLL do criador de perfil a um aplicativo que já começou a ser executado, ele usa [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md). O mesmo se aplica a aplicativos da Windows Store. Mas, além das considerações comuns listadas anteriormente, verifique se o aplicativo da Windows Store de destino não está suspenso.
 
 **EnableDebugging**
 
-Assim como acontece com carga de inicialização, chame o [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) método. Você não precisa dela para a passagem de um bloco de ambiente, mas você precisa de um dos seus outros recursos: desabilitar suspensão automática de processo. Caso contrário, quando a interface do usuário do Profiler chama [AttachProfiler](iclrprofiling-attachprofiler-method.md), o aplicativo da Windows Store de destino pode ser suspenso. Na verdade, isso provavelmente se o usuário está interagindo com a interface do usuário do Profiler e o aplicativo da Windows Store não está ativo em qualquer uma das telas do usuário. E se o Store do Windows aplicativo está suspenso, ele não será capaz de responder a qualquer sinalizam de que o CLR envia a ele para anexar o Profiler DLL.
+Assim como acontece com o carregamento de inicialização, chame o método [IPackageDebugSettings:: EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) . Você não precisa dele para passar um bloco de ambiente, mas precisa de um de seus outros recursos: desabilitar a suspensão automática de processos. Caso contrário, quando a interface do usuário do profiler chamar [AttachProfiler](iclrprofiling-attachprofiler-method.md), o aplicativo da Windows Store de destino poderá ser suspenso. Na verdade, isso é provável se o usuário agora estiver interagindo com sua interface do usuário do Profiler e o aplicativo da Windows Store não estiver ativo em nenhuma das telas. E se o aplicativo da Windows Store for suspenso, ele não poderá responder a nenhum sinal que o CLR envie a ele para anexar a DLL do criador de perfil.
 
-Portanto, você deve fazer algo parecido com isto:
+Portanto, você vai querer fazer algo assim:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -239,55 +239,55 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
                                                                  IntPtr.Zero /* environment */);
 ```
 
-Isso é a mesma chamada em que você faria no caso de carga de inicialização, exceto que você não especificar uma linha de comando do depurador ou um bloco de ambiente.
+Essa é a mesma chamada que você faria para o caso de carregamento de inicialização, exceto que você não especifica uma linha de comando do depurador ou um bloco de ambiente.
 
 **DisableDebugging**
 
-Como sempre, não se esqueça de chamar [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) quando a sessão de criação de perfil é concluída.
+Como sempre, não se esqueça de chamar [IPackageDebugSettings::D isabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) quando a sessão de criação de perfil for concluída.
 
-## <a name="running-inside-the-windows-store-app"></a>Em execução dentro do aplicativo da Windows Store
+## <a name="running-inside-the-windows-store-app"></a>Executando dentro do aplicativo da Windows Store
 
-Portanto, o aplicativo da Windows Store, por fim, carregou a DLL do Profiler. Agora o Profiler DLL devem ser ensinado como reproduzir pelas regras diferentes exigidas pelos aplicativos da Windows Store, incluindo quais APIs são permitidas e como executar com permissões reduzidas.
+Portanto, o aplicativo da Windows Store, por fim, carregou a DLL do criador de perfil. Agora, a DLL do criador de perfil deve ser ensinada a reproduzir as diferentes regras exigidas pelos aplicativos da Windows Store, incluindo quais APIs são permitidas e como executar com permissões reduzidas.
 
-### <a name="stick-to-the-windows-store-app-apis"></a>Continuar com as APIs de aplicativos da Windows Store
+### <a name="stick-to-the-windows-store-app-apis"></a>Aderir às APIs do aplicativo da Windows Store
 
-Enquanto você navega a API do Windows, você observará que todas as APIs documentada como sendo aplicáveis a aplicativos da área de trabalho, aplicativos da Windows Store ou ambos. Por exemplo, o **requisitos** seção da documentação para o [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) função indica que a função se aplica a apenas os aplicativos da área de trabalho. Em contraste, o [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) função está disponível para aplicativos da área de trabalho e aplicativos da Windows Store.
+Ao navegar pela API do Windows, você observará que cada API está documentada como aplicável a aplicativos de área de trabalho, aplicativos da Windows Store ou ambos. Por exemplo, a seção **requisitos** da documentação para a função [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) indica que a função se aplica somente a aplicativos da área de trabalho. Por outro lado, a função [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) está disponível para aplicativos da área de trabalho e para aplicativos da Windows Store.
 
-Ao desenvolver a sua DLL Profiler, tratá-lo como se fosse um aplicativo da Windows Store e usar apenas APIs que são documentadas como disponível para aplicativos da Windows Store. Analisar as dependências (por exemplo, você pode executar `link /dump /imports` em relação a sua DLL do Profiler para auditar) e, em seguida, pesquise os documentos para ver quais das suas dependências são okey e que não são. Na maioria dos casos, suas violações podem ser corrigidas, simplesmente substituindo-os com um formulário mais recente da API que está documentado como safe (por exemplo, substituindo [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) com [ InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+Ao desenvolver sua DLL do criador de perfil, trate-a como se fosse um aplicativo da Windows Store e use apenas as APIs que estão documentadas como disponíveis para aplicativos da Windows Store. Analise suas dependências (por exemplo, você pode `link /dump /imports` executar em sua DLL do criador de perfil para auditoria) e, em seguida, pesquise os documentos para ver quais das suas dependências estão ok e quais não são. Na maioria dos casos, suas violações podem ser corrigidas simplesmente substituindo-as por uma forma mais recente da API que está documentada como segura (por exemplo, substituindo [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) por [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
 
-Você pode notar que a sua DLL Profiler chama algumas APIs que se aplicam a apenas os aplicativos da área de trabalho, e ainda que eles parecem funcionar até mesmo quando o Profiler DLL é carregado dentro de um aplicativo da Windows Store. Lembre-se de que é arriscado para usar qualquer API não documentada para uso com aplicativos da Windows Store na DLL Profiler quando carregado em um processo de aplicativo da Windows Store:
+Você pode observar que a DLL do criador de perfil chama algumas APIs que se aplicam apenas a aplicativos da área de trabalho e, ainda assim, eles parecem funcionar mesmo quando a DLL do criador de perfil é carregada dentro de um aplicativo da Windows Store. Lembre-se de que é arriscado usar qualquer API não documentada para uso com aplicativos da Windows Store em sua DLL do criador de perfil quando carregada em um processo de aplicativo da Windows Store:
 
-- Essas APIs não são garantidos para trabalhar quando chamado no contexto exclusivo de aplicativos da Windows Store executados em.
+- Não há garantia de que essas APIs funcionem quando chamado no contexto exclusivo em que os aplicativos da Windows Store são executados.
 
-- Essas APIs podem não funcionar consistentemente quando chamado de diferentes processos de aplicativo da Windows Store.
+- Essas APIs podem não funcionar consistentemente quando chamadas de dentro de diferentes processos de aplicativo da Windows Store.
 
-- Essas APIs podem parecer funcionar bem em aplicativos da Windows Store na versão atual do Windows, mas poderá ser interrompido ou desabilitado em versões futuras do Windows.
+- Essas APIs talvez pareçam funcionar bem em aplicativos da Windows Store na versão atual do Windows, mas podem ser interrompidas ou desativadas em versões futuras do Windows.
 
 O melhor conselho é corrigir todas as suas violações e evitar o risco.
 
-Você pode achar que você com certeza não é possível fazer sem uma API em particular e não é possível localizar um substituto adequado para aplicativos da Windows Store. Nesse caso, no mínimo:
+Você pode achar que não é possível fazer sem uma API específica e não encontrar uma substituição adequada para aplicativos da Windows Store. Nesse caso, no mínimo:
 
-- Testar, testar, testar os daylights viver fora de seu uso dessa API.
+- Teste, teste, teste o horário de verão para fora do seu uso dessa API.
 
-- Entender o que a API pode, de repente, interromper ou desaparecer se chamado de dentro do Windows Store apps em versões futuras do Windows. Isso não será considerado um problema de compatibilidade pela Microsoft e dar suporte a seu uso dele não ser uma prioridade.
+- Entenda que a API pode repentinamente interromper ou desaparecer se chamada de dentro de aplicativos da Windows Store em versões futuras do Windows. Isso não será considerado uma preocupação de compatibilidade com a Microsoft e o suporte ao seu uso não será uma prioridade.
 
 ### <a name="reduced-permissions"></a>Permissões reduzidas
 
-Ele está fora do escopo deste tópico para listar todas as maneiras diferentes de permissões de aplicativo da Windows Store dos aplicativos da área de trabalho. Mas certamente o comportamento será diferente sempre que a DLL do Profiler (quando carregado em um aplicativo da Windows Store em comparação com um aplicativo de desktop) tenta acessar todos os recursos. O sistema de arquivos é o exemplo mais comum. Existem, mas alguns coloca no disco que um determinado aplicativo da Windows Store tem permissão para acessar (veja [acesso e permissões de arquivo (aplicativos do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))), e a DLL do Profiler serão nas mesmas restrições. Teste minuciosamente seu código.
+Está fora do escopo deste tópico para listar todas as formas pelas quais as permissões de aplicativo da Windows Store diferem dos aplicativos da área de trabalho. Mas certamente o comportamento será diferente sempre que sua DLL do criador de perfil (quando carregada em um aplicativo da Windows Store em comparação com um aplicativo de desktop) tentar acessar os recursos. O sistema de arquivos é o exemplo mais comum. Há, porém, alguns locais no disco que um determinado aplicativo da Windows Store tem permissão para acessar (consulte [acesso a arquivos e permissões (Windows Runtime aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))) e sua DLL do criador de perfil estará sob as mesmas restrições. Teste seu código completamente.
 
 ### <a name="inter-process-communication"></a>Comunicação entre processos
 
-Conforme mostrado no diagrama no início deste documento, sua DLL Profiler (carregado no espaço de processo do aplicativo Windows Store) provavelmente será necessário para se comunicar com o Profiler da interface do usuário (em execução em um espaço de processo do aplicativo da área de trabalho separado) por meio de seu próprio processo personalizado de inter canal de comunicação entre processos (IPC). A interface do usuário do Profiler envia sinais para a DLL do Profiler para modificar seu comportamento e a DLL do Profiler envia dados do aplicativo da Windows Store analisado para a interface do usuário do Profiler para pós-processamento e exibição para o usuário do criador de perfil.
+Como mostrado no diagrama no início deste documento, a DLL do criador de perfil (carregada no espaço de processo do aplicativo da Windows Store) provavelmente precisará se comunicar com sua interface do usuário do Profiler (em execução em um espaço de processo do aplicativo de área de trabalho separado) por meio de seu próprio inter-processo personalizado canal de comunicação (IPC). A interface do usuário do profiler envia sinais para a DLL do criador de perfil para modificar seu comportamento, e a DLL do criador de perfil envia dados do aplicativo da Windows Store analisado de volta para a interface do usuário do Profiler para pós-processamento e exibição para a do profiler
 
-A maioria dos criadores de perfil precisam funcionar dessa maneira, mas as opções escolhidas para mecanismos IPC são mais limitadas, quando o Profiler DLL é carregado em um aplicativo da Windows Store. Por exemplo, pipes nomeados não são parte do aplicativo da Windows Store SDK, portanto você não pode usá-los.
+A maioria dos profileres precisa trabalhar dessa forma, mas suas escolhas para mecanismos IPC são mais limitadas quando a DLL do criador de perfil é carregada em um aplicativo da Windows Store. Por exemplo, os pipes nomeados não fazem parte do SDK do aplicativo da Windows Store, portanto, você não pode usá-los.
 
-Mas, claro, os arquivos são ainda no, embora de maneira mais limitada. Eventos também estão disponíveis.
+Mas, é claro, os arquivos ainda estão em, embora de maneira mais limitada. Os eventos também estão disponíveis.
 
 **Comunicando-se por meio de arquivos**
 
-A maioria dos seus dados provavelmente passarão entre o Profiler DLL e o Profiler da interface do usuário por meio de arquivos. A chave é escolher um local de arquivo que o Profiler DLL (no contexto de um aplicativo da Windows Store) e a interface do usuário do Profiler leu e acesso de gravação. Por exemplo, o caminho da pasta temporária é um local que podem acessar o Profiler DLL e a interface do usuário do Profiler, mas nenhum outro pacote de aplicativo da Windows Store pode acessar (Protegendo informações de que log de outros pacotes de aplicativo da Windows Store).
+A maioria dos seus dados provavelmente passará entre a DLL do criador de perfil e a interface do usuário do profiler via arquivos. A chave é escolher um local de arquivo que a DLL do criador de perfil (no contexto de um aplicativo da Windows Store) e a interface do usuário do profiler tenham acesso de leitura e gravação ao. Por exemplo, o caminho da pasta temporária é um local que a DLL do criador de perfil e a interface do usuário do profiler podem acessar, mas nenhum outro pacote de aplicativo da Windows Store pode acessar (protegendo assim qualquer informação que você registrar de outros pacotes de aplicativos da Windows Store).
 
-Sua interface do usuário do Profiler e o Profiler DLL podem determinar esse caminho de forma independente. A interface do usuário do Profiler, quando ele itera em todos os pacotes instalados para o usuário atual (consulte o exemplo de código anterior), obtém acesso ao `PackageId` classe, do qual o caminho da pasta temporária pode ser derivado com código semelhante a este trecho de código. (Como sempre, verificação de erros é omitida para fins de brevidade).
+A interface do usuário do Profiler e a DLL do criador de perfil podem determinar esse caminho independentemente. Sua interface do usuário do Profiler, quando itera por meio de todos os pacotes instalados para a usuária atual (consulte o código de exemplo `PackageId` anterior), obtém acesso à classe, da qual o caminho da pasta temporária pode ser derivado com um código semelhante a este trecho. (Como sempre, a verificação de erros é omitida para fins de brevidade.)
 
 ```csharp
 // C# code for the Profiler UI.
@@ -298,13 +298,13 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Enquanto isso, sua DLL Profiler pode fazer basicamente a mesma coisa, se pudesse mais facilmente obtém os <xref:Windows.Storage.ApplicationData> classe usando o [ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A) propriedade.
+Enquanto isso, a DLL do criador de perfil pode fazer basicamente a mesma coisa, embora possa obter <xref:Windows.Storage.ApplicationData> mais facilmente a classe usando a propriedade [applicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) .
 
-**Comunicando-se por meio de eventos**
+**Comunicando-se por eventos**
 
-Se você quiser a semântica de sinalização simple entre o Profiler da interface do usuário e o Profiler DLL, você pode usar eventos dentro de aplicativos da Windows Store, bem como aplicativos da área de trabalho.
+Se você quiser uma semântica de sinalização simples entre sua interface do usuário do Profiler e a DLL do criador de perfil, poderá usar eventos dentro de aplicativos da Windows Store, bem como aplicativos da área de trabalho.
 
-Da sua DLL Profiler, você pode simplesmente chamar o [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) função para criar um evento nomeado com qualquer nome que desejar. Por exemplo:
+Na sua DLL do criador de perfil, você pode simplesmente chamar a função [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) para criar um evento nomeado com qualquer nome que desejar. Por exemplo:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -315,11 +315,11 @@ CreateEventEx(
     EVENT_ALL_ACCESS);
 ```
 
-A interface do usuário do Profiler, em seguida, precisa encontrar o que o evento nomeado no namespace do aplicativo da Windows Store. Por exemplo, a interface do usuário do Profiler poderia chamar [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa), especificando o nome do evento como
+Em seguida, sua interface do usuário do profiler precisa encontrar esse evento nomeado no namespace do aplicativo da Windows Store. Por exemplo, sua interface do usuário do Profiler poderia chamar [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa), especificando o nome do evento como
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>` é o SID do AppContainer do aplicativo da Windows Store. Uma seção anterior deste tópico mostrou como iterar sobre os pacotes instalados para o usuário atual. Esse código de exemplo, você pode obter o packageId. E o packageId, você pode obter o `<acSid>` com um código semelhante ao seguinte:
+`<acSid>`é o SID do AppContainer do aplicativo da Windows Store. Uma seção anterior deste tópico mostrou como iterar sobre os pacotes instalados para o usuário atual. A partir desse código de exemplo, você pode obter o PackageID. E, a partir da PackageID, você pode `<acSid>` obter o código com semelhante ao seguinte:
 
 ```csharp
 IntPtr acPSID;
@@ -332,71 +332,71 @@ string acDir;
 GetAppContainerFolderPath(acSid, out acDir);
 ```
 
-### <a name="no-shutdown-notifications"></a>Não há notificações de desligamento
+### <a name="no-shutdown-notifications"></a>Nenhuma notificação de desligamento
 
-Quando em execução dentro de um aplicativo da Windows Store, sua DLL Profiler não deve confiar nos [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) ou até mesmo [DllMain](/windows/desktop/Dlls/dllmain) (com `DLL_PROCESS_DETACH`) que está sendo chamado para notificar a DLL do Profiler Se o aplicativo da Windows Store está sendo encerrado. Na verdade, você deve esperar que eles nunca serão chamados. Historicamente, muitas DLLs do Profiler têm usado essas notificações como locais práticos para liberar caches para disco, fechar arquivos, enviar notificações de volta para a interface do usuário do Profiler, etc. Mas agora o Profiler DLL precisa ser organizados de forma um pouco diferente.
+Ao ser executado dentro de um aplicativo da Windows Store, sua DLL do criador de perfil não deve depender de [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) ou mesmo [DllMain](/windows/desktop/Dlls/dllmain) (with `DLL_PROCESS_DETACH`) ser chamado para notificar sua DLL do criador de perfil que o aplicativo da Windows Store está sendo encerrado. Na verdade, você deve esperar que nunca será chamado. Historicamente, muitas DLLs do criador de perfil usaram essas notificações como locais convenientes para liberar caches para o disco, fechar arquivos, enviar notificações de volta para a interface do usuário do criador de perfil, etc. Mas agora a DLL do criador de perfil precisa ser organizada de um modo um pouco diferente.
 
-O Profiler DLL deve ser informações de registro em log quando ele passa. Por motivos de desempenho, você talvez queira informações na memória do lote e libere-o no disco à medida que o lote aumenta de tamanho após algum limite. Mas suponha que todas as informações ainda não foram liberadas para disco podem ser perdidas. Isso significa que você vai querer selecionar seu limite com sabedoria e que sua interface do usuário do Profiler deve ser protegida para lidar com informações incompletas gravadas pela DLL Profiler.
+A DLL do criador de perfil deve estar registrando em log as informações conforme ele vai. Por motivos de desempenho, talvez você queira lote de informações na memória e liberá-las para o disco à medida que o lote cresce em um tamanho além do limite. Mas suponha que todas as informações ainda não liberadas para o disco possam ser perdidas. Isso significa que você desejará escolher seu limite de forma inteligente e que sua interface do usuário do profiler precisa ser protegida para lidar com informações incompletas gravadas pela DLL do criador de perfil.
 
-## <a name="windows-runtime-metadata-files"></a>Arquivos de metadados de tempo de execução do Windows
+## <a name="windows-runtime-metadata-files"></a>Windows Runtime arquivos de metadados
 
-Está fora do escopo deste documento para entrar em detalhes sobre quais metadados de tempo de execução do Windows (WinMD) são arquivos. Esta seção é limitada a como a API de criação de perfil do CLR reage quando arquivos WinMD são carregados pelo aplicativo do Windows Store que o Profiler DLL está analisando.
+Ele está fora do escopo deste documento para entrar em detalhes sobre o que são arquivos de Windows Runtime de metadados (WinMD). Esta seção é limitada a como a API de criação de perfil do CLR reage quando os arquivos WinMD são carregados pelo aplicativo da Windows Store que sua DLL do criador de perfil está analisando.
 
 ### <a name="managed-and-non-managed-winmds"></a>WinMDs gerenciados e não gerenciados
 
-Se um desenvolvedor usa o Visual Studio para criar um novo projeto de componente de tempo de execução do Windows, uma compilação desse projeto produz um arquivo WinMD que descreve os metadados (as descrições de tipo de classes, interfaces, etc.) criados pelo desenvolvedor. Se esse projeto é um projeto de linguagem gerenciada escrito em c# ou VB, o mesmo arquivo WinMD também contém a implementação desses tipos (que significa que ele contém o IL compilado do código-fonte do desenvolvedor). Esses arquivos são conhecidos como arquivos de WinMD gerenciados. Eles são interessantes em que eles contêm metadados de tempo de execução do Windows e a implementação subjacente.
+Se um desenvolvedor usar o Visual Studio para criar um novo projeto de componente Windows Runtime, uma compilação desse projeto produzirá um arquivo WinMD que descreve os metadados (as descrições de tipo das classes, interfaces, etc.) criados pelo desenvolvedor. Se esse projeto for um projeto de linguagem gerenciado escrito C# em ou VB, esse mesmo arquivo WinMD também conterá a implementação desses tipos (o que significa que ele contém todo o Il compilado a partir do código-fonte do desenvolvedor). Esses arquivos são conhecidos como arquivos WinMD gerenciados. Eles são interessantes, pois contêm tanto Windows Runtime metadados quanto a implementação subjacente.
 
-Por outro lado, se um desenvolvedor cria um projeto de componente de tempo de execução do Windows para C++, uma compilação desse projeto produz um arquivo WinMD que contém apenas metadados e a implementação é compilada em um DLL nativo separado. Da mesma forma, os arquivos WinMD incluídos no SDK do Windows contêm apenas os metadados, com a implementação compilada em DLLs nativas separadas que são fornecidos como parte do Windows.
+Por outro lado, se um desenvolvedor cria um projeto de componente C++Windows Runtime para, uma compilação desse projeto produz um arquivo WinMD que contém apenas metadados e a implementação é compilada em uma DLL nativa separada. Da mesma forma, os arquivos WinMD que acompanham o SDK do Windows contêm apenas metadados, com a implementação compilada em DLLs nativas separadas que são fornecidas como parte do Windows.
 
-As informações a seguir se aplica a ambos os WinMDs gerenciado, que contêm metadados e implementação, e para WinMDs não gerenciado, que contêm apenas os metadados.
+As informações a seguir se aplicam a WinMDs gerenciados, que contêm metadados e implementação, e a WinMDs não gerenciada, que contêm apenas metadados.
 
-### <a name="winmd-files-look-like-clr-modules"></a>Arquivos WinMD se parecer com módulos CLR
+### <a name="winmd-files-look-like-clr-modules"></a>Arquivos WinMD parecem módulos CLR
 
-No que diz respeito o CLR, todos os arquivos WinMD são módulos. A API de criação de perfil do CLR, portanto, informa à sua DLL Profiler ao carregar arquivos WinMD e quais são suas ModuleIDs, da mesma forma que para outros módulos gerenciados.
+No que diz respeito ao CLR, todos os arquivos WinMD são módulos. A API de criação de perfil do CLR, portanto, informa à DLL do criador de perfil quando os arquivos WinMD são carregados e quais são seus ModuleIDs, da mesma maneira que para outros módulos gerenciados.
 
-A DLL do Profiler pode distinguir arquivos WinMD de outros módulos, chamando o [ICorProfilerInfo3::GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) método e inspecionando a `pdwModuleFlags` parâmetro de saída a [COR_PRF_MODULE_WINDOWS_ Tempo de execução](cor-prf-module-flags-enumeration.md) sinalizador. (Ele é definido somente se o ModuleID representa um WinMD.)
+A DLL do criador de perfil pode distinguir arquivos WinMD de outros módulos chamando o método [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) e inspecionando o `pdwModuleFlags` parâmetro de saída para o sinalizador [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Ela é definida se e somente se ModuleID representar um WinMD.)
 
-### <a name="reading-metadata-from-winmds"></a>Ler metadados do WinMDs
+### <a name="reading-metadata-from-winmds"></a>Lendo metadados do WinMDs
 
-Arquivos WinMD, semelhante aos módulos regulares, contêm metadados que podem ser lidos por meio de [Metadata APIs](../../../../docs/framework/unmanaged-api/metadata/index.md). No entanto, o CLR mapeia tipos de tempo de execução do Windows para tipos do .NET Framework, quando ele lê que arquivos de WinMD para que os desenvolvedores que programar em código gerenciado e consumam o arquivo WinMD podem ter uma experiência de programação mais natural. Para obter alguns exemplos desses mapeamentos, consulte [suporte do .NET Framework para Windows Store Apps e tempo de execução do Windows](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Os arquivos WinMD, como os módulos regulares, contêm metadados que podem ser lidos por meio das [APIs de metadados](../../../../docs/framework/unmanaged-api/metadata/index.md). No entanto, o CLR mapeia tipos de Windows Runtime para .NET Framework tipos quando lê arquivos WinMD para que os desenvolvedores que programam em código gerenciado e consumam o arquivo WinMD possam ter uma experiência de programação mais natural. Para obter alguns exemplos desses mapeamentos, consulte [suporte de .NET Framework para aplicativos da Windows Store e Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
-Então, qual exibição seu gerador de perfil receberá quando ele usa as APIs de metadados: o modo de exibição bruto do tempo de execução do Windows ou o modo de exibição mapeado do .NET Framework?  A resposta: cabe a você.
+Então, qual exibição o criador de perfil obterá quando usar as APIs de metadados: a exibição Windows Runtime bruta ou a exibição .NET Framework mapeada?  A resposta: cabe a você.
 
-Quando você chama o [ICorProfilerInfo:: Getmodulemetadata](icorprofilerinfo-getmodulemetadata-method.md) método em um WinMD para obter uma interface de metadados, como [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), você pode optar por definir [ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)no `dwOpenFlags` parâmetro para desativar esse mapeamento. Caso contrário, por padrão, o mapeamento será habilitado. Normalmente, um criador de perfil manterá o mapeamento habilitado, para que as cadeias de caracteres que o Profiler DLL obtém de metadados do WinMD (por exemplo, nomes de tipos) parecerá familiar e natural para o usuário do criador de perfil.
+Quando você chama o método [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) em um WinMD para obter uma interface de metadados, como [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), você pode optar por definir [ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) no `dwOpenFlags` parâmetro para desativar esse mapeamento. Caso contrário, por padrão, o mapeamento será habilitado. Normalmente, um criador de perfil manterá o mapeamento habilitado, de forma que as cadeias de caracteres que a DLL do criador de perfil obtenha dos metadados de WinMD (por exemplo, nomes de tipos) pareçam familiares e naturais para o usuário do profiler.
 
-### <a name="modifying-metadata-from-winmds"></a>Modificando os metadados do WinMDs
+### <a name="modifying-metadata-from-winmds"></a>Modificando metadados de WinMDs
 
-Não há suporte para a modificação de metadados no WinMDs. Se você chamar o [ICorProfilerInfo:: Getmodulemetadata](icorprofilerinfo-getmodulemetadata-method.md) método para um WinMD de arquivo e especifique [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) no `dwOpenFlags` parâmetro ou pedir uma interface de metadados gravável como [ IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) falhará. Isso é de particular importância para regravação de IL criadores de perfis, que é necessário modificar os metadados para dar suporte a instrumentação (por exemplo, para adicionar AssemblyRefs ou novos métodos). Portanto, você deve verificar se há [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) primeiro (como discutido na seção anterior) e evitando o pedindo para interfaces de metadados gravável nesses módulos.
+Não há suporte para a modificação de metadados em WinMDs. Se você chamar o método [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) para um arquivo WinMD e especificar [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) no `dwOpenFlags` parâmetro ou solicitar uma interface de metadados gravável, como [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) será recuperação. Isso é de particular importância para os profileres de reescrita de IL, que precisam modificar metadados para dar suporte à sua instrumentação (por exemplo, para adicionar Refsdeassembly ou novos métodos). Portanto, você deve verificar o [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) primeiro (conforme discutido na seção anterior) e evitar que o solicite interfaces de metadados graváveis nesses módulos.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Resolvendo referências de assembly com WinMDs
 
-Os criadores de perfil muitas precisam resolver referências de metadados manualmente para auxiliar com a inspeção do tipo ou instrumentação. Esses criadores de perfil precisam estar ciente de como o CLR resolve referências de assembly que apontam para WinMDs, porque essas referências são resolvidas na forma completamente diferente do que as referências de assembly padrão.
+Muitos profileres precisam resolver referências de metadados manualmente para auxiliar na instrumentação ou na inspeção de tipo. Esses profileres precisam estar cientes de como o CLR resolve referências de assembly que apontam para WinMDs, pois essas referências são resolvidas de forma completamente diferente das referências de assembly padrão.
 
-## <a name="memory-profilers"></a>Criadores de perfil de memória
+## <a name="memory-profilers"></a>Profileres de memória
 
-O coletor de lixo e o heap gerenciado não são fundamentalmente diferentes em um aplicativo da Windows Store e um aplicativo da área de trabalho. No entanto, há algumas diferenças sutis que os autores do criador de perfil precisam estar atento.
+O coletor de lixo e o heap gerenciado não são fundamentalmente diferentes em um aplicativo da Windows Store e em um aplicativo de área de trabalho. No entanto, há algumas diferenças sutis que os autores do criador de perfil precisam conhecer.
 
 ### <a name="forcegc-creates-a-managed-thread"></a>ForceGC cria um thread gerenciado
 
-Ao fazer a criação de perfil de memória, a DLL do Profiler normalmente cria um thread separado da qual chamar o [método ForceGC](icorprofilerinfo-forcegc-method.md) método. Isso é algo novo. Mas o que pode ser surpreendente é que o ato de fazer uma coleta de lixo dentro de um aplicativo da Windows Store pode transformar seu thread em um thread gerenciado (por exemplo, um ThreadID de API de criação de perfil será criado para esse thread).
+Ao fazer a criação de perfil de memória, a DLL do criador de perfil normalmente cria um thread separado do qual chamar o método do [método ForceGC](icorprofilerinfo-forcegc-method.md) . Isso não é nada novo. Mas o que pode ser surpreendente é que o ato de fazer uma coleta de lixo dentro de um aplicativo da Windows Store pode transformar seu thread em um thread gerenciado (por exemplo, uma API de criação de perfil ThreadID será criada para esse thread).
 
-Para entender as consequências disso, é importante entender as diferenças entre as chamadas síncronas e assíncronas, conforme definido pela API de criação de perfil do CLR. Observe que isso é muito diferente do conceito de chamadas assíncronas nos aplicativos da Windows Store. Confira a postagem [motivo pelo qual temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) para obter mais informações.
+Para entender as consequências disso, é importante entender as diferenças entre chamadas síncronas e assíncronas, conforme definido pela API de criação de perfil do CLR. Observe que isso é muito diferente do conceito de chamadas assíncronas em aplicativos da Windows Store. Confira a postagem no blog [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) para obter mais informações.
 
-A questão relevante é que as chamadas feitas em threads criados pelo criador de perfil são sempre consideradas síncronas, mesmo que essas chamadas são feitas de fora de uma implementação de um dos sua DLL de Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) métodos. Pelo menos, que costumava ser o caso. Agora que o CLR se transformou o thread de seu gerador de perfil em um thread gerenciado por causa de sua chamada para [método ForceGC](icorprofilerinfo-forcegc-method.md), que thread não é mais considerado o thread de seu gerador de perfil. Como tal, o CLR impõe uma definição mais rigorosas do que qualifica como síncronas para esse thread — ou seja, que deve ter a origem de uma chamada de dentro de um de sua DLL de Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) métodos para se qualificar como síncronas.
+O ponto relevante é que as chamadas feitas em threads criados por seu criador de perfil são sempre consideradas síncronas, mesmo que essas chamadas sejam feitas de fora de uma implementação de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil. Pelo menos, isso costumava ser o caso. Agora que o CLR transformou o thread do criador de perfil em um thread gerenciado devido à sua chamada para o [método ForceGC](icorprofilerinfo-forcegc-method.md), esse thread não é mais considerado o thread do criador de perfil. Assim, o CLR impõe uma definição mais estrita do que é qualificado como síncrono para esse thread – ou seja, uma chamada deve se originar de dentro de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil para se qualificar como síncrona.
 
-O que isso significa na prática? A maioria dos [ICorProfilerInfo](icorprofilerinfo-interface.md) métodos só são seguros ser chamado de forma síncrona e imediatamente falhará caso contrário. Portanto, se a sua DLL Profiler reutiliza sua [método ForceGC](icorprofilerinfo-forcegc-method.md) thread para outras chamadas geralmente são feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você vai ter problemas. Até mesmo uma função assíncrona-safe, como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tem regras especiais quando chamado de threads gerenciados. (Confira a postagem [percorrer a pilha Profiler: Noções básicas e além](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) para obter mais informações.)
+O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas . Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem [do blog movimentação da pilha do criador de perfil: Noções básicas e](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) além de mais informações.)
 
-Portanto, é recomendável que qualquer thread que o Profiler DLL cria para chamar [método ForceGC](icorprofilerinfo-forcegc-method.md) deve ser usado *somente* para fins de disparo GCs e, em seguida, responder aos retornos de chamada GC. Ele não deve chamar a API de criação de perfil para realizar outras tarefas, como a pilha de amostragem ou desanexar.
+Portanto, é recomendável que qualquer thread que sua DLL do criador de perfil crie para chamar o [método ForceGC](icorprofilerinfo-forcegc-method.md) deve ser usado *apenas* com a finalidade de disparar GCS e, em seguida, responder aos retornos de chamada do GC. Ele não deve chamar a API de criação de perfil para executar outras tarefas, como amostragem de pilha ou desanexação.
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-Começando com o .NET Framework 4.5, não há um retorno de chamada do GC novos [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), que dá o criador de perfil concluir mais informações sobre *identificadores dependentes*. Essas alças efetivamente adicionar uma referência de um objeto de origem para um objeto de destino para fins de gerenciamento de tempo de vida de GC. Identificadores dependentes são nada de novo, e os desenvolvedores que programam em código gerenciado tem sido capazes de criar seus próprios identificadores dependentes usando o <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> classe mesmo antes do Windows 8 e o .NET Framework 4.5.
+A partir do .NET Framework 4,5, há um novo retorno de chamada de GC, [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), que fornece ao criador de perfil informações mais completas sobre *identificadores dependentes*. Esses identificadores efetivamente adicionam uma referência de um objeto de origem a um objeto de destino para fins de gerenciamento de vida útil de GC. Os identificadores dependentes não são novos e os desenvolvedores que programam em código gerenciado têm sido capazes de criar seus próprios identificadores dependentes usando a <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> classe mesmo antes do Windows 8 e do .NET Framework 4,5.
 
-No entanto, aplicativos gerenciados do XAML Windows Store agora fazem uso intenso de identificadores dependentes. Em particular, o CLR usa-os para ajudar a gerenciar ciclos de referência entre os objetos gerenciados e os objetos de tempo de execução do Windows não gerenciados. Isso significa que é mais importante do que nunca para criadores de perfil de memória ser informado dessas alças dependentes para que eles podem ser visualizados com o restante das bordas no grafo de heap. A DLL do Profiler deve usar [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md), e [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) juntas para formar uma exibição completa do gráfico de heap .
+No entanto, os aplicativos XAML gerenciados da Windows Store agora fazem uso intensivo de identificadores dependentes. Em particular, o CLR os utiliza para auxiliar no gerenciamento de ciclos de referência entre objetos gerenciados e objetos Windows Runtime não gerenciados. Isso significa que é mais importante do que nunca para os infileres de memória serem informados sobre esses identificadores dependentes, para que possam ser visualizados junto com o restante das bordas no grafo de heap. A DLL do criador de perfil deve usar [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [objectreferenciations](icorprofilercallback-objectreferences-method.md)e [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) juntos para formar uma exibição completa do grafo de heap.
 
 ## <a name="conclusion"></a>Conclusão
 
-É possível usar a API de criação de perfil do CLR para analisar o código gerenciado em execução dentro de aplicativos da Windows Store. Na verdade, você pode levar um criador de perfil existente que você está desenvolvendo e fazer algumas alterações específicas para que ele pode direcionar os aplicativos da Windows Store. A interface do usuário do Profiler deve usar as novas APIs para ativar o aplicativo da Windows Store no modo de depuração. Certifique-se de que sua DLL Profiler consome apenas das APIs aplicáveis para aplicativos da Windows Store. O mecanismo de comunicação entre o Profiler DLL e a interface do usuário do Profiler deve ser escrito com as restrições de API do aplicativo Windows Store em mente e com reconhecimento de permissões restritos em vigor para aplicativos da Windows Store. O Profiler DLL deve estar ciente de como o CLR trata WinMDs, e como o comportamento do coletor de lixo é diferente em relação aos threads gerenciados.
+É possível usar a API de criação de perfil do CLR para analisar o código gerenciado em execução dentro dos aplicativos da Windows Store. Na verdade, você pode usar um criador de perfil existente que está desenvolvendo e fazer algumas alterações específicas para que ele possa direcionar os aplicativos da Windows Store. Sua interface do usuário do profiler deve usar as novas APIs para ativar o aplicativo da Windows Store no modo de depuração. Verifique se a DLL do criador de perfil consome apenas as APIs aplicáveis para aplicativos da Windows Store. O mecanismo de comunicação entre a DLL do criador de perfil e a interface do usuário do profiler deve ser escrito com as restrições da API do aplicativo da Windows Store em mente e com a conscientização das permissões restritas em vigor para aplicativos da Windows Store Sua DLL do criador de perfil deve estar ciente de como o CLR trata WinMDs e como o comportamento do coletor de lixo é diferente em relação a threads gerenciados.
 
 ## <a name="resources"></a>Recursos
 
@@ -406,13 +406,13 @@ No entanto, aplicativos gerenciados do XAML Windows Store agora fazem uso intens
 
 - [Metadados (referência de API não gerenciada)](../metadata/index.md)
 
-**Interação do CLR com o tempo de execução do Windows**
+**A interação do CLR com o Windows Runtime**
 
-- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
 **Aplicativos da Windows Store**
 
-- [Acesso a arquivos e permissões (aplicativos do Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
+- [Acesso a arquivos e permissões (Windows Runtime aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
 - [Obter uma licença de desenvolvedor](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 

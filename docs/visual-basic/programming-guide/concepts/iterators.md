@@ -2,19 +2,19 @@
 title: Iteradores (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 73561cf5bed583e2dbf853b7771b9e949a5c0267
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db84e5d7956f0b160520fa831607e3f7548fc976
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913150"
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 Um *iterador* pode ser usado para percorrer coleções, como listas e matrizes.  
   
- Um método iterador ou um acessador `get` realiza uma iteração personalizada em uma coleção. Um método iterador usa a [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrução para retornar um elemento de cada vez. Quando uma instrução `Yield` for atingida, o local atual no código será lembrado. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.  
+ Um método iterador ou um acessador `get` realiza uma iteração personalizada em uma coleção. Um método iterador usa a instrução [yield](../../../visual-basic/language-reference/statements/yield-statement.md) para retornar cada elemento um de cada vez. Quando uma instrução `Yield` for atingida, o local atual no código será lembrado. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.  
   
- Consumir um iterador no código do cliente usando um [para cada um... Próxima](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrução, ou usando uma consulta LINQ.  
+ Você consome um iterador do código do cliente usando um [para cada... Próxima](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrução ou usando uma consulta LINQ.  
   
  No exemplo a seguir, a primeira iteração do loop `For Each` faz a execução continue no método iterador `SomeNumbers` até que a primeira instrução `Yield` seja alcançada. Essa iteração retorna um valor de 3 e o local atual no método iterador é mantido. Na próxima iteração do loop, a execução no método iterador continuará de onde parou, parando novamente quando alcançar uma instrução `Yield`. Essa iteração retorna um valor de 5 e o local atual no método iterador é mantido novamente. O loop terminará quando o final do método iterador for alcançado.  
   
@@ -36,11 +36,11 @@ End Function
   
  O tipo de retorno de um método iterador ou acessador `get` pode ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Você pode usar um `Exit Function` ou `Return` instrução para finalizar a iteração.  
+ Você pode usar uma `Exit Function` instrução `Return` or para encerrar a iteração.  
   
- Uma função de iterador do Visual Basic ou `get` acessador declaração inclui um [iterador](../../../visual-basic/language-reference/modifiers/iterator.md) modificador.  
+ Uma função de iterador `get` ou declaração de acessador Visual Basic inclui um modificador de [iterador](../../../visual-basic/language-reference/modifiers/iterator.md) .  
   
- Os iteradores foram introduzidos no Visual Basic no Visual Studio 2012.  
+ Os iteradores foram introduzidos em Visual Basic no Visual Studio 2012.  
   
  **Neste tópico**  
   
@@ -61,10 +61,10 @@ End Function
 - [Uso de iteradores](#BKMK_UseOfIterators)  
   
 > [!NOTE]
->  Para todos os exemplos no tópico, exceto o exemplo iterador simples, inclua [importações](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instruções para o `System.Collections` e `System.Collections.Generic` namespaces.  
+> Para todos os exemplos no tópico, exceto o exemplo de iterador simples, inclua instruções `System.Collections` [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para os namespaces e. `System.Collections.Generic`  
   
 ## <a name="BKMK_SimpleIterator"></a> Iterador simples  
- O exemplo a seguir tem um único `Yield` instrução que está dentro de um [para... Próxima](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Em `Main`, cada iteração do corpo da instrução `For Each` cria uma chamada à função iteradora, que avança para a próxima instrução `Yield`.  
+ O exemplo a seguir tem uma `Yield` única instrução que está dentro de um [para... Próximo](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Em `Main`, cada iteração do corpo da instrução `For Each` cria uma chamada à função iteradora, que avança para a próxima instrução `Yield`.  
   
 ```vb  
 Sub Main()  
@@ -91,7 +91,7 @@ End Function
 ## <a name="BKMK_CollectionClass"></a> Criando uma classe de coleção  
  No exemplo a seguir, a classe `DaysOfTheWeek` implementa a interface <xref:System.Collections.IEnumerable>, que requer um método <xref:System.Collections.IEnumerable.GetEnumerator%2A>. O compilador chama implicitamente o método `GetEnumerator`, que retorna um <xref:System.Collections.IEnumerator>.  
   
- O `GetEnumerator` método retorna cada cadeia de caracteres um por vez, usando o `Yield` instrução e um `Iterator` modificador é na declaração da função.  
+ O `GetEnumerator` método retorna cada cadeia de caracteres uma por vez usando a `Yield` instrução, e um `Iterator` modificador está na declaração da função.  
   
 ```vb  
 Sub Main()  
@@ -213,10 +213,10 @@ Public Class Zoo
 End Class  
 ```  
   
-## <a name="BKMK_TryBlocks"></a> Blocos try  
- Visual Basic permite que um `Yield` instrução em de `Try` block de um [tente... Catch... Instrução Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Um `Try` bloco tem um `Yield` instrução pode ter `Catch` bloqueia e pode ter um `Finally` bloco.  
+## <a name="BKMK_TryBlocks"></a>Blocos try  
+ Visual Basic permite que `Yield` uma instrução `Try` no bloco de um [try... Capturar... Instrução Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Um `Try` bloco que tem uma `Yield` instrução pode ter `Catch` blocos e pode ter um `Finally` bloco.  
   
- O exemplo a seguir inclui `Try`, `Catch`, e `Finally` blocos em uma função de iterador. O `Finally` bloco na função de iterador será executado antes do `For Each` iteração termina.  
+ O exemplo a seguir `Try`inclui `Catch`os blocos `Finally` , e em uma função de iterador. O `Finally` bloco na função de iterador é executado antes `For Each` de a iteração ser concluída.  
   
 ```vb  
 Sub Main()  
@@ -249,11 +249,11 @@ Private Iterator Function Test() As IEnumerable(Of Integer)
 End Function  
 ```  
   
- Um `Yield` instrução não pode estar dentro de uma `Catch` bloco ou uma `Finally` bloco.  
+ Uma `Yield` instrução não pode estar dentro `Catch` de um bloco `Finally` ou bloco.  
   
- Se o `For Each` corpo (em vez do método de iterador) lança uma exceção, uma `Catch` bloco na função de iterador não é executado, mas um `Finally` bloco na função de iterador será executado. Um `Catch` bloco dentro de uma função de iterador captura somente exceções que ocorrem dentro da função de iterador.  
+ Se o `For Each` corpo (em vez do método iterador) gerar uma exceção, `Catch` um bloco na função de iterador não será executado, `Finally` mas um bloco na função de iterador será executado. Um `Catch` bloco dentro de uma função de iterador captura apenas as exceções que ocorrem dentro da função de iterador.  
   
-## <a name="BKMK_AnonymousMethods"></a> Métodos anônimos  
+## <a name="BKMK_AnonymousMethods"></a>Métodos anônimos  
  No Visual Basic, uma função anônima pode ser uma função de iterador. O exemplo a seguir ilustra essa situação.  
   
 ```vb  
@@ -270,7 +270,7 @@ Next
 Console.ReadKey()  
 ```  
   
- O exemplo a seguir tem um método de iterador de não valida os argumentos. O método retorna o resultado de um iterador anônimo que descreve os elementos da coleção.  
+ O exemplo a seguir tem um método que não é iterador que valida os argumentos. O método retorna o resultado de um iterador anônimo que descreve os elementos da coleção.  
   
 ```vb  
 Sub Main()  
@@ -301,7 +301,7 @@ As IEnumerable
 End Function  
 ```  
   
- Se a validação for em vez disso, dentro da função de iterador, a validação não pode ser executada antes do início da primeira iteração do `For Each` corpo.  
+ Se a validação estiver dentro da função de iterador, a validação não poderá ser executada até o início da primeira iteração do `For Each` corpo.  
   
 ## <a name="BKMK_GenericList"></a> Usando iteradores com uma lista genérica  
  No exemplo a seguir, a classe `Stack(Of T)` genérica implementa a interface genérica <xref:System.Collections.Generic.IEnumerable%601>. O método `Push` atribui valores a uma matriz do tipo `T`. O método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> retorna os valores da matriz usando a instrução `Yield`.  
@@ -310,7 +310,7 @@ End Function
   
  O exemplo usa iteradores nomeados para dar suporte a várias maneiras de iterar na mesma coleção de dados. Esses iteradores nomeados são as propriedades `TopToBottom` e `BottomToTop` e o método `TopN`.  
   
- O `BottomToTop` declaração de propriedade inclui o `Iterator` palavra-chave.  
+ A `BottomToTop` declaração de propriedade inclui `Iterator` a palavra-chave.  
   
 ```vb  
 Sub Main()  
@@ -418,22 +418,22 @@ End Class
   
  Deve existir uma conversão implícita do tipo de expressão na instrução `Yield`, para o tipo de retorno do iterador.  
   
- No Visual Basic, um método iterador não pode ter nenhum `ByRef` parâmetros.  
+ No Visual Basic, um método iterador não pode `ByRef` ter parâmetros.  
   
- No Visual Basic, "Yield" não é uma palavra reservada e tem um significado especial somente quando ele é usado em uma `Iterator` método ou `get` acessador.  
+ No Visual Basic, "yield" não é uma palavra reservada e tem um significado especial apenas quando é usado em `Iterator` um método `get` ou acessador.  
   
 ## <a name="BKMK_Technical"></a> Implementação técnica  
  Embora você escreva um iterador como um método, o compilador o traduz em uma classe aninhada que é, na verdade, uma máquina de estado. Essa classe mantém o controle da posição do iterador enquanto o loop `For Each...Next` no código cliente continuar.  
   
  Para ver o que o compilador faz, você pode usar a ferramenta Ildasm.exe para exibir o código Microsoft Intermediate Language que é gerado para um método iterador.  
   
- Quando você cria um iterador para uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md), não é necessário implementar toda <xref:System.Collections.IEnumerator> interface. Quando o compilador detecta o iterador, ele gera automaticamente os métodos `Current`, `MoveNext` e `Dispose` da interface <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
+ Quando você cria um iterador para uma [classe](../../../csharp/language-reference/keywords/class.md) ou [estrutura](../../../csharp/language-reference/keywords/struct.md), não é necessário implementar toda <xref:System.Collections.IEnumerator> a interface. Quando o compilador detecta o iterador, ele gera automaticamente os métodos `Current`, `MoveNext` e `Dispose` da interface <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
   
- A cada iteração sucessiva do loop `For Each…Next` (ou a chamada direta ao `IEnumerator.MoveNext`), o próximo corpo de código do iterador continua, depois da instrução `Yield` anterior. Em seguida, ele continuará até a próxima `Yield` instrução até o final do corpo do iterador for atingido, ou até que um `Exit Function` ou `Return` instrução for encontrada.  
+ A cada iteração sucessiva do loop `For Each…Next` (ou a chamada direta ao `IEnumerator.MoveNext`), o próximo corpo de código do iterador continua, depois da instrução `Yield` anterior. Em seguida, ele continua para `Yield` a próxima instrução até que o final do corpo do iterador seja atingido `Exit Function` ou `Return` até que uma instrução ou seja encontrada.  
   
- Iteradores não dão suporte a <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> método. Para iterar novamente desde o início, você deve obter um novo iterador.  
+ Os iteradores não dão suporte <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> ao método. Para iterar novamente desde o início, você deve obter um novo iterador.  
   
- Para obter mais informações, consulte o [especificação da linguagem Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
+ Para obter informações adicionais, consulte a [especificação da linguagem Visual Basic](../../../visual-basic/reference/language-specification/index.md).  
   
 ## <a name="BKMK_UseOfIterators"></a> Uso de iteradores  
  Os iteradores permitem que você mantenha a simplicidade de um loop `For Each` quando for necessário usar um código complexo para preencher uma sequência de lista. Isso pode ser útil quando você quiser fazer o seguinte:  

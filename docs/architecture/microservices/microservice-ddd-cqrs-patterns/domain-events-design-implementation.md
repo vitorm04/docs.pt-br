@@ -4,7 +4,7 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 ms.date: 10/08/2018
 ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674253"
@@ -353,10 +353,10 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
 - **Jimmy Bogard. Um padrão de eventos de domínio melhor** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \ (Design de agregação efetivo – parte 2: fazendo com que agregações trabalhem em conjunto)
+- **Vaughn Vernon. Design de agregação efetivo – parte 2: fazendo com que agregações trabalhem em conjunto** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Reforçando seu domínio: eventos de domínio)
+- **Jimmy Bogard. Reforçando seu domínio: eventos de domínio** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong. Exemplo de padrão de eventos de domínio** \
