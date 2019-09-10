@@ -2,12 +2,12 @@
 title: Instalar o F#
 description: Saiba como instalar F# o com base em seu ambiente.
 ms.date: 09/05/2019
-ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: dffa30eac0bdb59c85a66dca6cafd62b25daa572
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400728"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855795"
 ---
 # <a name="install-f"></a>Instalar o F\#
 
@@ -39,7 +39,7 @@ O [mono](https://www.mono-project.com) é usado [ F# ](../tutorials/fsharp-inter
 brew install mono
 ```
 
-Instale também o [SDK do .NET Core](https://www.microsoft.com/net/download).
+Instale também o [SDK do .NET Core](https://dotnet.microsoft.com/download).
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -50,13 +50,13 @@ sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-Instale também o [SDK do .NET Core](https://www.microsoft.com/net/download).
+Instale também o [SDK do .NET Core](https://dotnet.microsoft.com/download).
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Instale o [Visual Studio F# com suporte](#install-f-with-visual-studio). Isso instala todos os componentes necessários para gravar, compilar e executar F# código.
 
-Instale também o [SDK do .NET Core](https://www.microsoft.com/net/download/).
+Instale também o [SDK do .NET Core](https://dotnet.microsoft.com/download).
 
 ---
 

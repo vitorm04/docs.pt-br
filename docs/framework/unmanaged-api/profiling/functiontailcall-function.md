@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afc0929b8f1b12f4e0b4551d826b8a1d59990154
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 12ec27277fe57bd1a291c2cfe491ea2c6f40c30e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952875"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851153"
 ---
 # <a name="functiontailcall-function"></a>Função FunctionTailcall
 Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função.  
@@ -31,7 +31,7 @@ Notifica o criador de perfil de que a função atualmente em execução está pr
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp
 void __stdcall FunctionTailcall (  
     [in] FunctionID funcID  
 );  

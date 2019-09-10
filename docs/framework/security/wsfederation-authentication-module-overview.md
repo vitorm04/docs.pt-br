@@ -3,12 +3,12 @@ title: Visão geral do módulo de autenticação WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987701"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851507"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Visão geral do módulo de autenticação WSFederation
 O Windows Identity Foundation (WIF) inclui suporte para autenticação federada em aplicativos do ASP.NET por meio do módulo de autenticação WS-Federated (WS-FAM). Este tópico ajudará você a entender como a autenticação federada funciona e como usá-la.  
@@ -67,7 +67,7 @@ O Windows Identity Foundation (WIF) inclui suporte para autenticação federada 
   
 - O evento <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> é acionado quando a infraestrutura ASP.NET invoca o método <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> pela primeira vez em um dos módulos do aplicativo que são derivados de <xref:System.IdentityModel.Services.HttpModuleBase>. Esse método acessa a propriedade <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> estática, que faz com que a configuração seja carregada do arquivo Web.config. Esse evento é gerado apenas na primeira vez em que esta propriedade é acessada. O objeto <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> que é inicializado por meio da configuração pode ser acessado por meio da propriedade <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> em um manipulador de eventos. Você pode usar esse evento para modificar a configuração antes que ela seja aplicada aos módulos. Você pode adicionar um manipulador a este evento no método Application_Start:  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

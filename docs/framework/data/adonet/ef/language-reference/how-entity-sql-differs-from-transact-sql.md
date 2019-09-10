@@ -2,12 +2,12 @@
 title: Como o Entity SQL difere do Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250858"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854477"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Como o Entity SQL difere do Transact-SQL
 Este tópico descreve as diferenças entre [!INCLUDE[esql](../../../../../../includes/esql-md.md)] o e o Transact-SQL.  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (ainda) não oferece suporte para funções analíticas.  
   
  Funções internas, operadores  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]dá suporte a um subconjunto de funções e operadores internos do Transact-SQL. Esses operadores e funções provavelmente têm suporte com os principais provedores de repositório. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]usa funções específicas do repositório declaradas em um manifesto do provedor. Além disso, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] o permite que você declare funções de armazenamento existentes internas e definidas pelo usuário para [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usar o.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]dá suporte a um subconjunto de funções e operadores internos do Transact-SQL. Esses operadores e funções provavelmente têm suporte com os principais provedores de repositório. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]usa funções específicas do repositório declaradas em um manifesto do provedor. Além disso, o Entity Framework permite que você declare funções de armazenamento existentes internas e definidas pelo usuário para [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usar o.  
   
  Dicas  
  O [!INCLUDE[esql](../../../../../../includes/esql-md.md)] não oferece mecanismos para dicas de consulta.  

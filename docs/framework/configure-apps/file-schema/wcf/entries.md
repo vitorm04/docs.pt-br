@@ -2,21 +2,22 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ffe2538fa2c3cb680285cfaa68c975c0f9d4b1bd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925660"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855284"
 ---
 # <a name="entries"></a>\<entradas >
 Uma entrada de roteamento que contém mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para envio de mensagens quando o filtro é correspondente.  
   
- \<system.serviceModel>  
-\<> de roteamento  
-\<routingTables>  
-\<table>  
-\<entradas >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de roteamento**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> filterTables**](filtertables.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de FilterTable**](filtertable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<entradas >**  
   
 ## <a name="syntax"></a>Sintaxe  
   

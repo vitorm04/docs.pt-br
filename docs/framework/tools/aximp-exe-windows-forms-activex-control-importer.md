@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c8c3c293e28788143cd1bed07acc941d448700f2
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915427"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851473"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de Controle ActiveX do Windows Forms)
 O Importador de Controle ActiveX converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
@@ -30,17 +30,17 @@ O Importador de Controle ActiveX converte definições de tipo em uma biblioteca
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
 ## <a name="remarks"></a>Comentários  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*file*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |`/delaysign`|Especifica Aximp.exe para assinar o controle resultante usando-se a assinatura com atraso. Você deve especificar essa opção com a opção `/keycontainer:`, `/keyfile:` ou `/publickey:`. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Exibe sintaxe de comando e opções para a ferramenta.|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Exemplo  
  O comando a seguir gera MediaPlayer.dll e AxMediaPlayer.dll para o controle `msdxm.ocx` do Media Player.  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

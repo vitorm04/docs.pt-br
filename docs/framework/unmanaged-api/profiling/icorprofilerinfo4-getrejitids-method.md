@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 805ceb60d2ac122df2382656b95b7bf5e7509bfc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049473"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855944"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
-Retorna uma matriz de IDs que identificam todos os recompilado por JIT versões da função especificada que ainda são alocadas. Isso inclui versões recompilado por JIT funções que foram revertidas, posteriormente, mas ainda não liberadas (por exemplo, quando o domínio do aplicativo que contém a função revertida ainda está em uso).  
+Retorna uma matriz de IDs que identifica todas as versões recompiladas por JIT da função especificada que ainda estão alocadas. Isso inclui versões recompiladas do JIT de funções que foram revertidas posteriormente, mas ainda não foram liberadas (por exemplo, quando o domínio do aplicativo que contém a função revertida ainda estiver em uso).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp
 HRESULT GetReJITIDs (  
      [in]  FunctionID          functionId,  
      [in]  ULONG               cReJitIds,  
@@ -39,26 +39,26 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] O `FunctionID` da instância de função para o qual será enumerada versões.  
+ no O `FunctionID` da instância de função para a qual enumerar versões.  
   
  `cReJitIds`  
- [in] O número de IDs recompilado por JIT alocados a `reJitIds` matriz.  
+ no O número de IDs recompiladas por JIT alocadas na `reJitIds` matriz.  
   
  `pcReJitIds`  
- [out] O número real de IDs recompilado por JIT.  
+ fora O número real de IDs recompiladas por JIT.  
   
  `reJitIds`  
- [out] Uma matriz alocada pelo chamador que conterá as IDs recompilado por JIT para a função especificada.  
+ fora Uma matriz alocada pelo chamador que conterá as IDs de compilação JIT recompiladas para a função especificada.  
   
 ## <a name="remarks"></a>Comentários  
- `GetReJITIDs` Enumera as IDs de recompilado por JIT Active Directory para uma instância de função determinada. Ele segue o mesmo padrão de uso como outro `ICorProfilerInfo` funções que aceitam buffers alocados pelo chamador.  
+ `GetReJITIDs`enumera as IDs de recompilação JIT ativas para uma determinada instância de função. Ele segue o mesmo padrão de uso que `ICorProfilerInfo` outras funções que aceitam buffers alocados pelo chamador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl, CorProf.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790855"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854190"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalização do feed (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]dá suporte a formatos Atom e JavaScript Object Notation (JSON) para feeds de dados. Quando você usa um Feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] o fornece um método padrão para serializar dados, como entidades e relações, em um formato XML que pode ser incluído no corpo da mensagem http. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e elementos Atom. Para obter mais informações, [consulte OData: Formato](https://go.microsoft.com/fwlink/?LinkID=185794)Atom.  
@@ -31,7 +31,7 @@ ms.locfileid: "70790855"
 > Ao definir feeds personalizados, você deve garantir que todas as propriedades de entidade que têm mapeamentos personalizados definidos sejam incluídas na projeção. Quando uma propriedade de entidade mapeada não é incluída na projeção, pode ocorrer perda de dados. Para obter mais informações, consulte [projeções de consulta](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personalizando feeds com o provedor de Entity Framework  
- O modelo de dados usado com [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] o provedor é representado como XML no arquivo. edmx. Nesse caso, os atributos que definem feeds personalizados são adicionados aos `EntityType` elementos `Property` e que representam tipos de entidade e propriedades no modelo de dados. Esses atributos de personalização do feed não são [definidos no \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)de arquivo de definição de esquema conceitual, que é [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] o formato que o provedor usa para definir o modelo de dados. Portanto, você deve declarar atributos de personalização de feed em um namespace de esquema específico, que `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`é definido como. O fragmento XML a seguir mostra `Property` os atributos `Products` de personalização do feed aplicados aos elementos do tipo de `ProductName`entidade `ReorderLevel`que definem as propriedades, e `UnitsInStock` .  
+ O modelo de dados usado com o provedor de Entity Framework é representado como XML no arquivo. edmx. Nesse caso, os atributos que definem feeds personalizados são adicionados aos `EntityType` elementos `Property` e que representam tipos de entidade e propriedades no modelo de dados. Esses atributos de personalização do feed não são [definidos no \[MC\]-CSDL: Formato](https://go.microsoft.com/fwlink/?LinkId=159072)de arquivo de definição de esquema conceitual, que é o formato que o provedor de Entity Framework usa para definir o modelo de dados. Portanto, você deve declarar atributos de personalização de feed em um namespace de esquema específico, que `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`é definido como. O fragmento XML a seguir mostra `Property` os atributos `Products` de personalização do feed aplicados aos elementos do tipo de `ProductName`entidade `ReorderLevel`que definem as propriedades, e `UnitsInStock` .  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

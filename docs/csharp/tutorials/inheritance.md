@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463807"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850994"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -18,7 +18,7 @@ Este tutorial apresenta a herança em C#. Herança é um recurso das linguagens 
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este tutorial presume que você já instalou o .NET Core. Para obter instruções de instalação, confira [Guia de instalação do .NET Core](https://www.microsoft.com/net/core). Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
+Este tutorial pressupõe que você instalou o SDK do .NET Core. Visite a página de [downloads do .NET Core](https://dotnet.microsoft.com/download) para baixá-lo. Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
 
 ## <a name="running-the-examples"></a>Como executar os exemplos
 

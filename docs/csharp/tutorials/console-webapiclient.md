@@ -3,12 +3,12 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 001a9cbaae1cdb57b6451bc42ce326864f8dcf7b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063877"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850982"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -31,7 +31,7 @@ Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/samples/t
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core). Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) . Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
 Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
 ## <a name="create-the-application"></a>Criar o aplicativo

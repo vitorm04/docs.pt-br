@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80473e01581a372c193c4b816a37166b73d57824
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754265"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854152"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA jitCompilationStart
 O MDA (Assistente de Depuração Gerenciado) de `jitCompilationStart` é ativado para relatar quando o compilador JIT (Just-In-Time) começa a compilar uma função.  
@@ -34,12 +34,12 @@ O MDA (Assistente de Depuração Gerenciado) de `jitCompilationStart` é ativado
 ## <a name="output"></a>Saída  
  O exemplo de código a seguir mostra uma saída de exemplo. Nesse caso, a saída mostra que, no teste de assembly, o método "m" na classe "ns2.CO" foi compilado via JIT.  
   
-```  
+```output
 method name="Test!ns2.C0::m"  
 ```  
   
 ## <a name="configuration"></a>Configuração  
- O arquivo de configuração a seguir mostra uma variedade de filtros que podem ser utilizados para filtrar quais métodos são relatados quando eles são compilados via JIT pela primeira vez. Você pode especificar que todos os métodos sejam relatados, definindo o valor do atributo name para \*.  
+ O arquivo de configuração a seguir mostra uma variedade de filtros que podem ser utilizados para filtrar quais métodos são relatados quando eles são compilados via JIT pela primeira vez. Você pode especificar que todos os métodos sejam relatados definindo o valor do atributo name \*como.  
   
 ```xml  
 <mdaConfig>  

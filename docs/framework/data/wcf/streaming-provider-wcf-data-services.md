@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779789"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854114"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 
@@ -53,7 +53,7 @@ Para indicar que uma entidade é uma entrada de link de mídia, adicione o atrib
 
 Você também deve adicionar o namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à entidade ou à raiz do arquivo .edmx ou .csdl que define o modelo de dados.
 
-Para obter um exemplo de um serviço de dados que [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] usa o provedor e expõe um recurso de mídia, [consulte a série do provedor de streaming do serviços de dados de postagem: Implementando um provedor de streaming (parte](https://go.microsoft.com/fwlink/?LinkID=198989)1).
+Para obter um exemplo de um serviço de dados que usa o provedor de Entity Framework e expõe um recurso de mídia [, consulte a série do provedor de streaming do serviços de dados de postagem: Implementando um provedor de streaming (parte](https://go.microsoft.com/fwlink/?LinkID=198989)1).
 
 **Provedor de reflexão**
 

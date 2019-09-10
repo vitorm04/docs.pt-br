@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad580ecace07d3d6fdf206ff660dc4bac4bceb09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614299"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854036"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA releaseHandleFailed
 O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado é notificar os desenvolvedores quando o método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> retorna `false`.  
@@ -55,7 +55,7 @@ O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado
 ## <a name="output"></a>Saída  
  Uma mensagem indicando que um <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> falhou em liberar o identificador. Por exemplo:  
   
-```  
+```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
 failed to properly release the handle with value 0x0000BEEF. This   
 usually indicates that the handle was released incorrectly via   

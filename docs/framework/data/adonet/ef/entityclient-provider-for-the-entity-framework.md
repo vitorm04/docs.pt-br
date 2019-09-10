@@ -2,25 +2,25 @@
 title: Provedor EntityClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 70cc5a9aaa22cc563c910f9d250ad4565e34a135
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3a87d4a936e5bdf633e1f997f66dd98add2a9cb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251595"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854705"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Provedor EntityClient para Entity Framework
 O provedor EntityClient é um provedor de dados usado por aplicativos Entity Framework para acessar dados descritos em um modelo conceitual. Para obter informações sobre modelos conceituais, consulte [modelagem e mapeamento](modeling-and-mapping.md). O EntityClient usa outros provedores de dados .NET Framework para acessar a fonte de dados. Por exemplo, o EntityClient usa o Provedor de Dados .NET Framework para SQL Server (SqlClient) ao acessar um banco de dados do SQL Server. Para obter informações sobre o provedor SqlClient, consulte [SqlClient para o Entity Framework](sqlclient-for-the-entity-framework.md). O provedor EntityClient é implementado no namespace <xref:System.Data.EntityClient>.  
   
 ## <a name="managing-connections"></a>Gerenciando conexões  
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] se baseia em provedores de dados ADO.net específicos de armazenamento, fornecendo um <xref:System.Data.EntityClient.EntityConnection> para um provedor de dados subjacente e um banco de dado relacional. Para construir um <xref:System.Data.EntityClient.EntityConnection> objeto, você precisa fazer referência a um conjunto de metadados que contém os modelos e o mapeamento necessários, além de um nome de provedor de dados específico de armazenamento e uma cadeia de conexão. Depois que <xref:System.Data.EntityClient.EntityConnection> o estiver em vigor, as entidades poderão ser acessadas por meio das classes geradas do modelo conceitual.  
+ O Entity Framework se baseia em provedores de dados ADO.net específicos de armazenamento, fornecendo um <xref:System.Data.EntityClient.EntityConnection> para um provedor de dados subjacente e um banco de dado relacional. Para construir um <xref:System.Data.EntityClient.EntityConnection> objeto, você precisa fazer referência a um conjunto de metadados que contém os modelos e o mapeamento necessários, além de um nome de provedor de dados específico de armazenamento e uma cadeia de conexão. Depois que <xref:System.Data.EntityClient.EntityConnection> o estiver em vigor, as entidades poderão ser acessadas por meio das classes geradas do modelo conceitual.  
   
  Você pode especificar uma cadeia de conexão no arquivo app.config.  
   
  O <xref:System.Data.EntityClient> também inclui a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe permite aos desenvolvedores criar, programaticamente, cadeias de conexão com sintaxe correta, bem como analisar e reconstruir cadeias de conexão existentes, usando as propriedades e os métodos da classe. Para obter mais informações, confira [Como: Crie uma cadeia](how-to-build-an-entityconnection-connection-string.md)de conexão de EntityConnection.  
   
 ## <a name="creating-queries"></a>Criando consultas  
- O [!INCLUDE[esql](../../../../../includes/esql-md.md)] idioma é um dialeto independente de armazenamento do SQL que funciona diretamente com esquemas de entidade conceitual e dá suporte a conceitos de modelo de dados de entidade como a herança e as relações. A <xref:System.Data.EntityClient.EntityCommand> classe é usada para executar um [!INCLUDE[esql](../../../../../includes/esql-md.md)] comando em um modelo de entidade. Quando você constrói objetos <xref:System.Data.EntityClient.EntityCommand>, é possível especificar um nome de procedimento armazenado ou um texto de consulta. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] funciona com provedores de dados específicos ao armazenamento para converter a linguagem [!INCLUDE[esql](../../../../../includes/esql-md.md)] genérica em consultas específicas ao armazenamento. Para obter mais informações sobre [!INCLUDE[esql](../../../../../includes/esql-md.md)] como escrever consultas, consulte [Entity SQL Language](./language-reference/entity-sql-language.md).  
+ O [!INCLUDE[esql](../../../../../includes/esql-md.md)] idioma é um dialeto independente de armazenamento do SQL que funciona diretamente com esquemas de entidade conceitual e dá suporte a conceitos de modelo de dados de entidade como a herança e as relações. A <xref:System.Data.EntityClient.EntityCommand> classe é usada para executar um [!INCLUDE[esql](../../../../../includes/esql-md.md)] comando em um modelo de entidade. Quando você constrói objetos <xref:System.Data.EntityClient.EntityCommand>, é possível especificar um nome de procedimento armazenado ou um texto de consulta. O Entity Framework funciona com provedores de dados específicos de armazenamento para converter [!INCLUDE[esql](../../../../../includes/esql-md.md)] Generic em consultas específicas de armazenamento. Para obter mais informações sobre [!INCLUDE[esql](../../../../../includes/esql-md.md)] como escrever consultas, consulte [Entity SQL Language](./language-reference/entity-sql-language.md).  
   
  O exemplo a seguir cria <xref:System.Data.EntityClient.EntityCommand> um objeto e atribui um [!INCLUDE[esql](../../../../../includes/esql-md.md)] texto de consulta à sua <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> propriedade. Essa [!INCLUDE[esql](../../../../../includes/esql-md.md)] consulta solicita produtos ordenados pelo preço da lista do modelo conceitual. O código a seguir não tem nenhum conhecimento do modelo de armazenamento.  
   

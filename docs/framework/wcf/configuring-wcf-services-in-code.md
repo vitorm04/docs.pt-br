@@ -2,12 +2,12 @@
 title: Configurando serviços WCF em código
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 699549305ce8ca17480285e33570c01d00c7cb97
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948423"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855650"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurando serviços WCF em código
 Windows Communication Foundation (WCF) permite que os desenvolvedores configurem serviços usando arquivos de configuração ou código.  Os arquivos de configuração são úteis quando um serviço precisa ser configurado depois de ser implantado. Ao usar arquivos de configuração, um profissional de TI apenas precisa atualizar o arquivo de configuração, nenhuma recompilação é necessária. Os arquivos de configuração, porém, podem ser complexos e difíceis de manter. Não há suporte para depurar arquivos de configuração e os elementos de configuração são referenciados por nomes, o que torna os arquivos de configuração de criação sujeitos a erros e difíceis. O WCF também permite que você configure serviços no código. Em versões anteriores do WCF (4,0 e anteriores) a configuração de serviços no código era fácil em cenários de hospedagem interna <xref:System.ServiceModel.ServiceHost> , a classe permitia que você configurasse pontos de extremidade e comportamentos antes de chamar ServiceHost. Open. No entanto, em cenários hospedados na Web, você não tem <xref:System.ServiceModel.ServiceHost> acesso direto à classe. Para configurar um serviço Web hospedado, você precisava criar um `System.ServiceModel.ServiceHostFactory` que criou o <xref:System.ServiceModel.Activation.ServiceHostFactory> e executar qualquer configuração necessária. A partir do .NET 4,5, o WCF fornece uma maneira mais fácil de configurar os serviços hospedados internamente e Web no código.  
@@ -79,7 +79,7 @@ public class Service1 : IService1
   
  As configurações na seção <`protocolMappings`> só serão usadas se nenhum ponto de extremidade do <xref:System.ServiceModel.ServiceConfiguration> aplicativo for adicionado ao programaticamente. Opcionalmente, você pode carregar a configuração de serviço do arquivo de configuração de aplicativo <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> padrão chamando e, em seguida, alterando as configurações. A <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> classe também permite que você carregue a configuração de uma configuração centralizada. O código a seguir ilustra como implementar isso:  
   
-```  
+```csharp
 public class Service1 : IService1   
 {   
     public void DoWork();   

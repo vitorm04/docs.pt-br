@@ -23,7 +23,7 @@ sections:
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Analisar sentimento usando classificação binária</a>
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Categorizar problemas do GitHub usando a classificação multiclasse</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Prever tarifas de táxi de NYC usando regressão</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Prever os preços usando a regressão</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Categorizar flores por características usando clustering</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Criar uma recomendação de filme com fatoração de matriz</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Criar um classificador de imagens personalizadas com o TensorFlow</a>

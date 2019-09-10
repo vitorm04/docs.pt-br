@@ -2,12 +2,12 @@
 title: A forma das árvores de comando
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248216"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854271"
 ---
 # <a name="the-shape-of-the-command-trees"></a>A forma das árvores de comando
 
@@ -17,7 +17,7 @@ O módulo de geração SQL é responsável por gerar uma consulta SQL backend es
 
 Uma árvore de comando de consulta é uma representação do modelo de objeto de uma consulta. Árvores de comando de consulta servem duas finalidades:
 
-- Para expressar uma entrada consulte que é especificada em [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].
+- Para expressar uma consulta de entrada que é especificada no Entity Framework.
 
 - Para expressar uma saída consulte que são fornecidas para um provedor e descrevam uma consulta na parte posterior.
 
@@ -25,7 +25,7 @@ Consulte uma semântica mais rica de suporte das árvores de comando do SQL: con
 
 A propriedade de DBQueryCommandTree.Query é a raiz da árvore de expressão que descreve a lógica de consulta. A propriedade de DBQueryCommandTree.Parameters contém uma lista de parâmetros que são usados na consulta. A árvore de expressão é composta de objetos de DbExpression.
 
-Um objeto de DbExpression representa qualquer computação. Vários tipos de expressões são fornecidos por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] composto expressões de consulta, incluindo constantes, variáveis, funções, construtores, e operadores relacionais padrões como filtro e join. Cada objeto DbExpression tem uma propriedade ResultType que representa o tipo do resultado produzido por essa expressão. Esse tipo é expresso como um TypeUsage.
+Um objeto de DbExpression representa qualquer computação. Vários tipos de expressões são fornecidos pelo Entity Framework para compor expressões de consulta, incluindo constantes, variáveis, funções, construtores e operadores relacionais padrão como filtro e junção. Cada objeto DbExpression tem uma propriedade ResultType que representa o tipo do resultado produzido por essa expressão. Esse tipo é expresso como um TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Formas da árvore de comando de consulta de saída
 
@@ -75,7 +75,7 @@ Os seguintes tipos de função podem ser passados:
 
 - Funções definidas pelo usuário.
 
-Funções canônicas (consulte [funções canônicas](./language-reference/canonical-functions.md) para obter mais informações) são especificadas como [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]parte do e os provedores devem fornecer implementações para funções canônicas com base nessas especificações. Funções de Store são baseados nas especificações no manifesto correspondente do provedor. As funções definidas pelo usuário são baseadas nas especificações em SSDL.
+Funções canônicas (consulte [funções canônicas](./language-reference/canonical-functions.md) para obter mais informações) são especificadas como parte do Entity Framework, e os provedores devem fornecer implementações para funções canônicas com base nessas especificações. Funções de Store são baseados nas especificações no manifesto correspondente do provedor. As funções definidas pelo usuário são baseadas nas especificações em SSDL.
 
 Além disso, as funções que têm o atributo de NiladicFunction não têm nenhum argumento e devem ser traduzidas sem o parêntese no final.  Ou seja, para  *\<FunctionName >* em vez de  *\<FunctionName > ()* .
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105909"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851601"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 
@@ -176,13 +176,13 @@ Você pode, opcionalmente, remover recursos do assembly principal e especificar 
 
 O exemplo de .NET Framework a seguir usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para armazenar recursos de fallback do aplicativo em um assembly satélite para o idioma francês (`fr`). O exemplo possui dois arquivos de recurso com base em texto que definem um recurso de cadeia de caracteres único chamado `Greeting`. O primeiro, resources.fr.txt, contém um recurso de idioma francês.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 O segundo, resources.ru.fr.txt, contém um recurso de idioma russo.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ Como não há recursos incorporados no assembly principal, você não precisa co
 
 Quando você executar o exemplo a partir de um sistema cujo idioma for diferente de russo, ele exibe a seguinte saída:
 
-```
+```output
 Bon jour!
 ```
 

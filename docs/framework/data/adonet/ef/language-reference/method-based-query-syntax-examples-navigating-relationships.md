@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0060f14319bb0dfbed597e59dfe44666c4cfbe84
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250144"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854450"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Exemplos de sintaxe de consulta baseada em método: Relações de navegação
-As propriedades de navegação [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] no são propriedades de atalho usadas para localizar as entidades nas extremidades de uma associação. As propriedades de navegação permitem que um usuário navegue de uma entidade para outra, ou uma entidade a entidades relacionadas por um conjunto de associações. Este tópico fornece exemplos de sintaxe de consulta baseada em método de como navegar em relações por meio de propriedades de navegação em LINQ to Entities consultas.  
+As propriedades de navegação no Entity Framework são propriedades de atalho usadas para localizar as entidades nas extremidades de uma associação. As propriedades de navegação permitem que um usuário navegue de uma entidade para outra, ou uma entidade a entidades relacionadas por um conjunto de associações. Este tópico fornece exemplos de sintaxe de consulta baseada em método de como navegar em relações por meio de propriedades de navegação em LINQ to Entities consultas.  
   
  O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   

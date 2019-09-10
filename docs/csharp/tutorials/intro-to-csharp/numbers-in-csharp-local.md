@@ -3,18 +3,18 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661058"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850686"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
 Este tutorial ensina sobre os tipos numéricos em C# de maneira interativa. Você escreverá pequenas quantidades de código, depois compilará e executará esse código. O tutorial contém uma série de lições que exploram números e operações matemáticas em C#. Estas lições ensinam os princípios básicos da linguagem C#.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local em Mac, PC ou Linux. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
 
 ## <a name="explore-integer-math"></a>Explorar a matemática de inteiros
 

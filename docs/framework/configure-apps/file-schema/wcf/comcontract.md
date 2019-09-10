@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926098"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850033"
 ---
 # <a name="comcontract"></a>\<> de descontrato
 Especifica um contrato de serviço de integração COM+.  
   
- \<system.ServiceModel>  
-\<comContracts>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de com-contratos**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de descontrato**  
   
 ## <a name="syntax"></a>Sintaxe  
   

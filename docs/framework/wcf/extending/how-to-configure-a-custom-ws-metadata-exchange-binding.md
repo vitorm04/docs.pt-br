@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b4a4005a23c8c74edecb00475669e019b50a17af
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795660"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851228"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como: configurar uma associação personalizada do WS-Metadata Exchange
 Este tópico explicará como configurar uma associação de troca personalizada de WS-Metadata. O Windows Communication Foundation (WCF) inclui quatro associações de metadados definidas pelo sistema, mas você pode publicar metadados usando qualquer associação desejada. Este tópico mostrará como publicar metadados usando o `wsHttpBinding`. Essa associação oferece a opção de expor metadados de forma segura. O código neste artigo se baseia na [introdução](../samples/getting-started-sample.md).  
@@ -54,7 +54,7 @@ Este tópico explicará como configurar uma associação de troca personalizada 
   
 5. No método Main () do cliente, crie uma <xref:System.ServiceModel.Description.MetadataExchangeClient> nova instância, defina sua <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> Propriedade como `true`, chame <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> e, em seguida, itere pela coleção de metadados retornada:  
   
-    ```  
+    ```csharp
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
   
     MetadataExchangeClient mexClient = new MetadataExchangeClient("MyMexEndpoint");  
@@ -68,19 +68,19 @@ Este tópico explicará como configurar uma associação de troca personalizada 
   
 1. Criar uma <xref:System.ServiceModel.WSHttpBinding> instância de associação:  
   
-    ```  
+    ```csharp  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
 2. Criar uma <xref:System.ServiceModel.ServiceHost> instância:  
   
-    ```  
+    ```csharp  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
     ```  
   
 3. Adicione um ponto de extremidade de serviço <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e adicione uma instância:  
   
-    ```  
+    ```csharp  
     serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);  
     ServiceMetadataBehavior smb = new ServiceMetadataBehavior();  
     smb.HttpGetEnabled = true;  
@@ -89,7 +89,7 @@ Este tópico explicará como configurar uma associação de troca personalizada 
   
 4. Adicione um ponto de extremidade de troca de <xref:System.ServiceModel.WSHttpBinding> metadados, especificando o criado anteriormente:  
   
-    ```  
+    ```csharp  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
@@ -103,7 +103,7 @@ Este tópico explicará como configurar uma associação de troca personalizada 
   
 6. No método Main () do cliente, crie uma <xref:System.ServiceModel.Description.MetadataExchangeClient> nova instância, defina a <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> Propriedade como `true`, chame <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> e, em seguida, itere pela coleção de metadados retornada:  
   
-    ```  
+    ```csharp  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
   
     MetadataExchangeClient mexClient = new MetadataExchangeClient("MyMexEndpoint");  

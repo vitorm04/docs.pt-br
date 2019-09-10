@@ -3,12 +3,12 @@ title: Convenções do esquema de configuração do WIF
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e13915121884ecb4a0e54344e02d29650f54c6f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909318"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851486"
 ---
 # <a name="wif-configuration-schema-conventions"></a>Convenções do esquema de configuração do WIF
 Este tópico aborda as convenções usadas nos tópicos de configuração do WIF (Windows Identity Foundation) e descreve alguns recursos e atributos comuns usados nas seções [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
@@ -21,9 +21,7 @@ Este tópico aborda as convenções usadas nos tópicos de configuração do WIF
 ## <a name="timespan-values"></a>Valores do intervalo de tempo  
  Quando <xref:System.TimeSpan> é usado como o tipo de um atributo, consulte o método <xref:System.TimeSpan.Parse%28System.String%29> para ver o formato permitido. Esse formato está em conformidade com a especificação a seguir.  
   
-```  
-[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
-```  
+`[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]`  
   
  Por exemplo, “30”, “30.00:00” e “30.00:00:00” significam 30 dias, enquanto “00:05”, “00:05:00” e “0.00:05:00.00” significam 5 minutos.  
   

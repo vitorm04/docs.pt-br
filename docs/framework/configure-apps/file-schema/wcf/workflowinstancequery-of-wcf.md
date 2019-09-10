@@ -2,12 +2,12 @@
 title: <workflowInstanceQuery>do WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 7e15d7654aeafa5fa7b87922283d6520d5493242
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eaf0cd204265aac7c1421e3de0c33963e6bbb7a1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915231"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854735"
 ---
 # <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > do WCF
 
@@ -15,13 +15,14 @@ Representa uma consulta que controla as alterações de ciclo de vida de instân
   
 Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel>  
-\<acompanhamento de >  
-\<perfis >  
-\<trackingProfile>  
-\<workflow>  
-\<workflowInstanceQueries>  
-\<workflowInstanceQuery>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<perfis >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> trackingProfile**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de fluxo de trabalho**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> workflowInstanceQueries**](workflowinstancequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> workflowInstanceQuery**  
   
 ## <a name="syntax"></a>Sintaxe  
   

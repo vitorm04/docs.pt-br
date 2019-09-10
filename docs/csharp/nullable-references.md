@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência que permitem valor nulo, adicionados no C# 8. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
-ms.translationtype: HT
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195915"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851070"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -56,20 +56,18 @@ A nulidade de um tipo em uma declaração de variável é controlada pelo *conte
 
 ## <a name="nullable-contexts"></a>Contextos que permitem valor nulo
 
-Contextos que permitem valor nulo habilitam o controle refinado para a maneira como o compilador interpreta variáveis de tipo de referência. O **contexto de anotação que permite valor nulo** de qualquer linha de origem determinada é `enabled` ou `disabled`. Você pode pensar no compilador pré-C# 8 como compilando todo seu código em um contexto que permite valor nulo `disabled`: Qualquer tipo de referência pode ser nulo. O **contexto de avisos que permite valor nulo** pode ser definido como `enabled`, `disabled` ou `safeonly`. O contexto de avisos que permite valor nulo especifica os avisos gerados pelo compilador usando sua análise de fluxo.
+Contextos que permitem valor nulo habilitam o controle refinado para a maneira como o compilador interpreta variáveis de tipo de referência. O **contexto de anotação que permite valor nulo** de qualquer linha de origem determinada é `enabled` ou `disabled`. Você pode pensar no compilador pré-C# 8 como compilando todo seu código em um contexto que permite valor nulo `disabled`: Qualquer tipo de referência pode ser nulo. O **contexto de avisos anulável** pode ser definido `enabled` como `disabled`ou. O contexto de avisos que permite valor nulo especifica os avisos gerados pelo compilador usando sua análise de fluxo.
 
 O contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo podem ser definidos para um projeto que usa o elemento `Nullable` no seu arquivo `csproj`. Esse elemento configura como o compilador interpreta a nulidade de tipos e quais avisos são gerados. As configurações válidas são:
 
 - `enable`: O contexto de anotação que permite valor nulo está **habilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
   - Variáveis de um tipo de referência, `string` por exemplo, não permitem valor nulo.  Todos os avisos de nulidade estão habilitados.
-- `disable`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
-  - As variáveis de um tipo de referência são alheias, como as versões anteriores do C#. Todos os avisos de nulidade estão desabilitados.
-- `safeonly`: O contexto de anotação que permite valor nulo está **habilitado**. O contexto de aviso que permite valor nulo é **safeonly**.
-  - As variáveis de um tipo de referência são não anuláveis. Todos os avisos de nulidade de segurança estão habilitados.
 - `warnings`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
   - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão habilitados.
-- `safeonlywarnings`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo é **safeonly**.
-  - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade de segurança estão habilitados.
+- `annotations`: O contexto de anotação que permite valor nulo está **habilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
+  - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão habilitados.
+- `disable`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
+  - As variáveis de um tipo de referência são alheias, como as versões anteriores do C#. Todos os avisos de nulidade estão desabilitados.
 
 > [!IMPORTANT]
 > O elemento `Nullable` era chamado `NullableContextOptions`. A renomeação acompanha o Visual Studio 2019, 16.2-p1. O SDK do .NET Core 3.0.100-preview5-011568 não tem essa alteração. Se você estiver usando a CLI do .NET Core, precisará usar `NullableContextOptions` até que a próxima versão prévia esteja disponível.
@@ -78,21 +76,12 @@ Também é possível usar diretivas para definir esses mesmos contextos em qualq
 
 - `#nullable enable`: define o contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo como **habilitado**.
 - `#nullable disable`: define o contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo como **desabilitado**.
-- `#nullable safeonly`: define o contexto de anotação que permite valor nulo como **habilitado** e o contexto de aviso que permite valor nulo como **safeonly**.
 - `#nullable restore`: restaura o contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo para as configurações do projeto.
 - `#pragma warning disable nullable`: definir o contexto de aviso que permite valor nulo como **desabilitado**.
 - `#pragma warning enable nullable`: definir o contexto de aviso que permite valor nulo como **habilitado**.
 - `#pragma warning restore nullable`: restaura o contexto de aviso que permite valor nulo para as configurações do projeto.
-- `#pragma warning safeonly nullable`: define o contexto de aviso que permite valor nulo como **safeonly**.
 
 Os contextos padrão de aviso e de anotação que permitem valor nulo são `disabled`. Essa decisão significa que seu código existente compila sem alterações e sem gerar nenhum aviso novo.
-
-As diferenças entre os contextos de aviso que permitem valor nulo `enabled` e `safeonly` são avisos para atribuir uma referência que permite valor nulo a uma referência que não permite valor nulo. A atribuição a seguir gera um aviso em um contexto de aviso `enabled`, mas não um contexto de aviso `safeonly`. No entanto, a segunda linha, em que `s` é desreferenciado, gera um aviso em um contexto `safeonly`:
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>Contexto de anotação que permite valor nulo
 
@@ -121,7 +110,7 @@ O contexto de aviso que permite valor nulo é diferente do contexto de anotaçã
 1. A variável foi atribuída definitivamente a um valor não nulo.
 1. A variável ou expressão foi marcada novamente como nula antes de desreferenciá-la.
 
-O compilador gera avisos sempre que você desreferencia uma variável ou expressão em um estado **talvez nulo** quando o contexto de aviso que permite valor nulo é `enabled` ou `safeonly`. Além disso, os avisos são gerados quando uma variável ou expressão **talvez nula** é atribuída a um tipo de referência que não permite valor nulo quando o contexto de anotação que permite valor nulo é `enabled`.
+O compilador gera avisos sempre que você desreferenciar uma variável ou expressão em um estado **talvez NULL** quando o contexto de `enabled`aviso anulável for. Além disso, os avisos são gerados quando uma variável ou expressão **talvez nula** é atribuída a um tipo de referência que não permite valor nulo quando o contexto de anotação que permite valor nulo é `enabled`.
 
 ## <a name="learn-more"></a>Saiba mais
 

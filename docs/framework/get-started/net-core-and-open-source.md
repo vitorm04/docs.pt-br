@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c2eecdee3448b59422a8c6c73fc85745b41c52b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626098"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853954"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e software livre
 Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra como você pode encontrar mais informações. Para obter a lista completa de tópicos sobre o .NET Core, visite o [Guia do .NET Core](../../core/index.md).
@@ -18,7 +18,7 @@ Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra 
 ## <a name="what-is-net-core"></a>O que é o .NET Core?  
  .NET Core é uma implementação de software livre, modular, de plataforma cruzada e para fins gerais do .NET Standard. Ele contém muitas das mesmas APIs do .NET Framework (mas o .NET Core é um conjunto menor) e inclui componentes de tempo de execução, estrutura, compilador e ferramentas que oferecem suporte a vários sistemas operacionais e destinos de chip. A implementação do .NET Core foi conduzida principalmente por cargas de trabalho ASP.NET Core, mas também pela necessidade e desejo de ter uma implementação mais moderna. Ele pode ser usado em cenários de dispositivo, nuvem e IoT/incorporado.  
   
- Para começar a usar o .NET Core, visite a [Home page do .NET Core](https://www.microsoft.com/net/core).  
+ Para começar a usar o .NET Core, visite o tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
   
  Estas são as principais características do .NET Core:  
   
@@ -47,6 +47,6 @@ Este tópico fornece uma breve visão geral sobre o que é o .NET Core e mostra 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Home page do .NET Core](https://www.microsoft.com/net/core)
+- [Tutorial .NET – Olá, Mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [Guia do .NET Core](../../core/index.md)
 - [Documentação do ASP.NET Core](/aspnet/core/)

@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: c510aec8411fb0650b8caa4c3926181aa8071a66
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202813"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849614"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -37,7 +37,7 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto. Por padrão, a restauração das dependências e as ferramentas são executadas em paralelo.
 
@@ -177,7 +177,7 @@ Especifica um tempo de execução para a restauração do pacote. Isso é usado 
 
 `-s|--source <SOURCE>`
 
-Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *nuget.config*. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
+Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *NuGet. config* , lendo efetivamente o arquivo *NuGet. config* como se o <packageSource> elemento não estivesse lá. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
 
 `--verbosity <LEVEL>`
 

@@ -2,12 +2,12 @@
 title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b67f06b9a99d7e9001c8415d0e94adef8436a3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795920"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855807"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 Windows Communication Foundation (WCF) expõe os dados de inspeção de um serviço em tempo de execução por meio de um provedor de Instrumentação de Gerenciamento do Windows do WCF (WMI).  
@@ -143,7 +143,7 @@ Windows Communication Foundation (WCF) expõe os dados de inspeção de um servi
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>Concedendo acesso a usuários ou grupos arbitrários  
  O exemplo nesta seção concede privilégios de registro do provedor WMI a todos os usuários locais. Se você quiser conceder acesso a um usuário ou grupo que não esteja interno, deverá obter o SID (identificador de segurança) do usuário ou do grupo. Não há uma maneira simples de obter o SID para um usuário arbitrário. Um método é fazer logon como o usuário desejado e, em seguida, emitir o comando do Shell a seguir.  
   
-```  
+```console
 Whoami /user  
 ```  
   

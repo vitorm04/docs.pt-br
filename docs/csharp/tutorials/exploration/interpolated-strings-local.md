@@ -4,18 +4,18 @@ description: Este tutorial mostra como usar o recurso de interpolação de cadei
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397813"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850933"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usar interpolação de cadeia de caracteres para construir cadeia de caracteres formatadas
 
 Este tutorial ensina como usar a [interpolação de cadeias de caracteres](../../language-reference/tokens/interpolated.md) em C# para inserir valores em uma única cadeia de caracteres de resultado. Escreva o código em C# e veja os resultados da compilação e da execução. O tutorial contém uma série de lições que mostram como inserir valores em uma cadeia de caracteres e formatar esses valores de diferentes maneiras.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Você também pode concluir a [versão interativa](interpolated-strings.yml) deste tutorial em seu navegador.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local em Mac, PC ou Linux. Você também pode concluir a [versão interativa](interpolated-strings.yml) deste tutorial em seu navegador.
 
 ## <a name="create-an-interpolated-string"></a>Criar uma cadeia de caracteres interpolada
 

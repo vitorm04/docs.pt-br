@@ -4,12 +4,12 @@ description: Saiba como os atributos funcionam em C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0037e8b2c5f50d1b8d0a950743f6eeb9145df414
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481225"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851005"
 ---
 # <a name="using-attributes-in-c"></a>Usando atributos em C\#
 
@@ -20,7 +20,7 @@ Considere o atributo `[Obsolete]`. Ele pode ser aplicado a classes, structs, mé
 Neste tutorial, você verá como adicionar atributos a seu código, como criar e usar seus próprios atributos e como usar alguns atributos que são criados no .NET Core.
 
 ## <a name="prerequisites"></a>Pré-requisitos
-Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core).
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) .
 Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
 ## <a name="create-the-application"></a>Criar o aplicativo

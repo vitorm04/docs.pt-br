@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e10b1a77586a09f8f5f7a59e811953fbede8773
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9495624f7eca57a79518036937a5fb63d01d9c4b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586889"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851213"
 ---
 # <a name="functiontailcall2-function"></a>Função FunctionTailcall2
-Notifica o criador de perfil que a função atualmente em execução está prestes a realizar uma chamada tail para outra função e fornece informações sobre o quadro de pilha.  
+Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece informações sobre o registro de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp
 void __stdcall FunctionTailcall2 (  
     [in] FunctionID         funcId,   
     [in] UINT_PTR           clientData,   
@@ -38,39 +38,39 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Parâmetros  
  `funcId`  
- [in] O identificador da função em execução no momento que está prestes a fazer uma cauda de chamada.  
+ no O identificador da função atualmente em execução que está prestes a fazer uma chamada final.  
   
  `clientData`  
- [in] O identificador de função remapeada, que o criador de perfil especificado anteriormente por meio [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), da função em execução no momento que está prestes a fazer uma cauda de chamada.  
+ no O identificador da função remapeada, que o criador de perfil especificou anteriormente via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), da função atualmente em execução que está prestes a fazer uma chamada final.  
   
  `func`  
- [in] Um `COR_PRF_FRAME_INFO` valor aponta para obter informações sobre o quadro de pilhas.  
+ no Um `COR_PRF_FRAME_INFO` valor que aponta para informações sobre o registro de ativação.  
   
- O criador de perfil deve tratar isso como um identificador opaco que pode ser passado para o mecanismo de execução no [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método.  
+ O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
 ## <a name="remarks"></a>Comentários  
- A função de destino da chamada tail usará o quadro de pilhas atual e retornará diretamente para o chamador da função que fez com que a parte final chamada. Isso significa que um [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) retorno de chamada não será emitido para uma função que é o destino de uma chamada tail.  
+ A função de destino da chamada tail usará o quadro de pilhas atual e retornará diretamente para o chamador da função que fez a chamada final. Isso significa que um retorno de chamada [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) não será emitido para uma função que seja o destino de uma chamada tail.  
   
- O valor da `func` parâmetro não é válido depois do `FunctionTailcall2` função retorna porque o valor pode ser alterado ou ser destruído.  
+ O valor do `func` parâmetro não é válido depois que a `FunctionTailcall2` função retorna, pois o valor pode ser alterado ou destruído.  
   
- O `FunctionTailcall2` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec`(`naked`) atributo de classe de armazenamento.  
+ A `FunctionTailcall2` função é um retorno de chamada; você deve implementá-la. A implementação deve usar o `__declspec`atributo`naked`de classe de armazenamento ().  
   
- O mecanismo de execução não salva qualquer registros antes de chamar essa função.  
+ O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
-- Na entrada, você deve salvar todos os registros que você usa, incluindo aqueles na unidade de ponto flutuante (FPU).  
+- Na entrada, você deve salvar todos os registros que usar, incluindo aqueles na FPU (unidade de ponto flutuante).  
   
-- Na saída, você deve restaurar a pilha de popping desativar todos os parâmetros que foram enviados por push ao seu chamador.  
+- Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- A implementação de `FunctionTailcall2` não devem bloquear porque isso atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo, porque a pilha não pode estar em um estado de amigável para coleta de lixo. Se você tentar uma coleta de lixo, o tempo de execução será bloqueado até que `FunctionTailcall2` retorna.  
+ A implementação de `FunctionTailcall2` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se for feita uma tentativa de coleta de lixo, o tempo de `FunctionTailcall2` execução será bloqueado até o retorno.  
   
- Além disso, o `FunctionTailcall2` função não deve chamar código gerenciado ou em qualquer causa de maneira uma alocação de memória gerenciada.  
+ Além disso, `FunctionTailcall2` a função não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313652"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851581"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Criar arquivos de recurso para aplicativos .NET
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  Cadeias de caracteres vazias (ou seja, um recurso cujo valor é <xref:System.String.Empty?displayProperty=nameWithType>) são permitidas em arquivos de texto. Por exemplo:
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  Se você estiver usando o C# e o arquivo de código-fonte se chamar Greeting.cs, o comando a seguir cria um arquivo executável que inclui o arquivo .resources incorporado:
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

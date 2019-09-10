@@ -3,12 +3,12 @@ title: Criar um aplicativo de lista de campeonato com o Infer.NET e a programaç
 description: Descubra como usar a programação probabilística com o Infern.NET para criar um aplicativo de lista de campeonato com base em uma versão simplificada do TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
-ms.translationtype: HT
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211431"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855790"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
 
@@ -22,7 +22,7 @@ A programação probabilística nos permite criar modelos estatísticos de proce
 
 - Ambiente de desenvolvimento local configurado
 
-  Este guia de instruções supõe que você tenha um computador que possa ser usado para desenvolvimento. O tutorial do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux.
+  Este guia de instruções supõe que você tenha um computador que possa ser usado para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no MacOS, Windows ou Linux.
 
 ## <a name="create-your-app"></a>Criar seu aplicativo
 

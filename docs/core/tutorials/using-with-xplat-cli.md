@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: a680a4b58927d915e887eea43a72983a5b349682
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: c42a34bc13ff9fb5d8eb5a85b461360915e2c68f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105055"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849343"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -21,7 +21,7 @@ Se não estiver familiarizado com o conjunto de ferramentas da CLI do .NET Core,
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [SDK do .NET Core 2.1](https://www.microsoft.com/net/download/core).
+- [SDK do .NET Core 2,1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.
 
 ## <a name="hello-console-app"></a>Olá, Aplicativo de Console.

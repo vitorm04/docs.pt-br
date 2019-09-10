@@ -2,20 +2,21 @@
 title: <add> de <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 7e2a2e26099f2d31116e4a89297fc1ac984c480d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b3b4a1584b37601269368ee0e4e973626ddf9cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920075"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850386"
 ---
 # <a name="add-of-namespacetable"></a>\<Adicionar > de \<NamespaceTable >
 Representa um elemento de configuração que contém um namespace para mapeamento de prefixo que pode ser usado em filtros XPath para roteamento.  
   
- \<system.serviceModel>  
-\<> de roteamento  
-\<namespaceTable>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de roteamento**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de NamespaceTable**](namespacetable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
   
 ## <a name="syntax"></a>Sintaxe  
   

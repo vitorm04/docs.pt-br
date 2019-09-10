@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 6e79346a448012255020cc28b6534e734980b1db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39b71d3b5cbcfdc8bde3449560587f033c437d50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968845"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856158"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 A *representação* é uma técnica comum que os serviços usam para restringir o acesso do cliente aos recursos de um domínio de serviço. Os recursos de domínio de serviço podem ser recursos de máquina, como arquivos locais (representação) ou um recurso em outra máquina, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [personificando o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, [consulte Como: Representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -158,7 +158,7 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
   
  O código a seguir mostra como configurar o serviço.  
   
-```  
+```csharp
 // Create a binding that sets a certificate as the client credential type.  
 WSHttpBinding b = new WSHttpBinding();  
 b.Security.Message.ClientCredentialType = MessageCredentialType.Certificate;  
@@ -170,7 +170,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>Delegação  
- Para delegar a um serviço de back-end, um serviço deve executar o Kerberos multi-perna (SSPI sem o fallback de NTLM) ou a autenticação Kerberos direta para o serviço de back-end usando a identidade do Windows do cliente. Para delegar a um serviço de back-end, <xref:System.ServiceModel.ChannelFactory%601> crie um e um canal e, em seguida, comunique-se por meio do canal ao representar o cliente. Com essa forma de delegação, a distância na qual o serviço de back-end pode ser localizado do serviço de front-end depende do nível de representação obtido pelo serviço de front-end. Quando o nível de representação <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>é, os serviços de front-end e back-end devem estar em execução no mesmo computador. Quando o nível de representação <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>é, os serviços de front-end e back-end podem estar em computadores separados ou no mesmo computador. Habilitar a representação em nível de delegação requer que a política de domínio do Windows seja configurada para permitir a delegação. Para obter mais informações sobre como configurar Active Directory para suporte à delegação, consulte Habilitando a [autenticação delegada](https://go.microsoft.com/fwlink/?LinkId=99690).  
+ Para delegar a um serviço de back-end, um serviço deve executar o Kerberos multi-perna (SSPI sem o fallback de NTLM) ou a autenticação Kerberos direta para o serviço de back-end usando a identidade do Windows do cliente. Para delegar a um serviço de back-end, <xref:System.ServiceModel.ChannelFactory%601> crie um e um canal e, em seguida, comunique-se por meio do canal ao representar o cliente. Com essa forma de delegação, a distância na qual o serviço de back-end pode ser localizado do serviço de front-end depende do nível de representação obtido pelo serviço de front-end. Quando o nível de representação <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>é, os serviços de front-end e back-end devem estar em execução no mesmo computador. Quando o nível de representação <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>é, os serviços de front-end e back-end podem estar em computadores separados ou no mesmo computador. Habilitar a representação em nível de delegação requer que a política de domínio do Windows seja configurada para permitir a delegação. Para obter mais informações sobre como configurar Active Directory para suporte à delegação, consulte [habilitando a autenticação delegada](https://go.microsoft.com/fwlink/?LinkId=99690).  
   
 > [!NOTE]
 > Quando um cliente é autenticado no serviço de front-end usando um nome de usuário e senha que correspondem a uma conta do Windows no serviço de back-end, o serviço de front-end pode se autenticar no serviço de back-end reutilizando o nome de usuário e a senha do cliente. Essa é uma forma particularmente poderosa de fluxo de identidade, pois passar o nome de usuário e a senha para o serviço de back-end permite que o serviço de back-end execute a representação, mas não constitui a delegação porque o Kerberos não é usado. Os controles de Active Directory na delegação não se aplicam ao nome de usuário e à autenticação de senha.  

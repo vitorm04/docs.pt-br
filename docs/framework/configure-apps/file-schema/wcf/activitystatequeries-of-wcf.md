@@ -2,12 +2,12 @@
 title: <activityStateQueries>do WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 415cd4a75ecab725f91bcd298f8a7966ea6079d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 249ac3d91f6251a943dd856e4122b8b54f691702
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920294"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850577"
 ---
 # <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > do WCF
 
@@ -15,13 +15,14 @@ Representa uma coleção de consultas que são usados para controlar as alteraç
 
 Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel>  
-\<acompanhamento de >  
-\<perfis >  
-\<trackingProfile>  
-\<workflow>  
-\<activityStateQueries>  
-
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<perfis >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> trackingProfile**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de fluxo de trabalho**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> activityStateQueries**  
+  
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  

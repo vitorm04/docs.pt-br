@@ -2,12 +2,12 @@
 title: Criando um serviço de fluxo de trabalho de execução longa
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040409"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856199"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Criando um serviço de fluxo de trabalho de execução longa
 
@@ -81,7 +81,7 @@ Você deve ter o seguinte software instalado para usar este passo a passos:
 
     3. Selecione a atividade **SendReplyToReceive** e defina a propriedade realçada mostrada na ilustração a seguir.
 
-        ![Definindo as propriedades da atividade SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "") Setresponderproperties
+        ![Definindo as propriedades da atividade SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "Setresponderproperties")
 
     4. Clique no link **definir...** na atividade **SendReplyToStartOrder** e defina as propriedades mostradas na ilustração a seguir. Observe que o botão de opção **parâmetros** está selecionado; um parâmetro chamado `p_orderId` está associado `orderId` à variável. Essa configuração especifica que a atividade SendReplyToStartOrder retornará um valor do tipo cadeia de caracteres para o chamador.
 
@@ -110,7 +110,7 @@ Você deve ter o seguinte software instalado para usar este passo a passos:
         ![Definir as propriedades da atividade Receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Defina as propriedades de atividades de recebimento.")
 
         > [!NOTE]
-        > Não se esqueça de alterar o campo ServiceContractName `../IAddItem`com.
+        > Não se esqueça de alterar o campo **ServiceContractName** com `../IAddItem`.
 
     3. Clique no link **definir...** na atividade **ReceiveAddItem** e adicione os parâmetros mostrados na ilustração a seguir: isso configura a atividade Receive para aceitar dois parâmetros, a ID do pedido e a ID do item que está sendo ordenado.
 
@@ -191,7 +191,7 @@ Você deve ter o seguinte software instalado para usar este passo a passos:
 
 5. Compile a solução e execute o `OrderClient` aplicativo. O cliente exibirá o seguinte texto:
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
@@ -201,7 +201,7 @@ Você deve ter o seguinte software instalado para usar este passo a passos:
 
 7. Pressione Enter para enviar a mensagem de adição de item ao serviço de fluxo de trabalho. O cliente exibirá o seguinte texto:
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade no .NET Core por meio de u
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: c48b2777b451598a0f3ccbb383d702d0069ff6ff
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373815"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849672"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do .NET Core do Visual Basic usando dotnet test e NUnit
 
@@ -19,7 +19,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [SDK do .NET Core 2.1](https://www.microsoft.com/net/download) ou versões posteriores.
+- [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.
 
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem

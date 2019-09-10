@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
-ms.translationtype: HT
+ms.openlocfilehash: 4d47146913ed83ff3dd029558f79f23b4f54ce19
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870605"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849512"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Criar um modelo de item
 
@@ -27,7 +27,7 @@ Nesta parte da série, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [SDK do .NET Core 2.2](https://www.microsoft.com/net/core) ou versões posteriores.
+* [SDK do .NET Core 2.2](https://dotnet.microsoft.com/download) ou versões posteriores.
 * Leia o artigo de referência [Modelos personalizados para dotnet new](../tools/custom-templates.md).
 
   O artigo de referência explica os conceitos básicos sobre modelos e como eles são agrupados. Algumas dessas informações serão reiteradas aqui.

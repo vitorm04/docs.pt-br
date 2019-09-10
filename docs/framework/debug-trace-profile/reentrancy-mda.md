@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1fb8a48cf6dbfc4edd6387fb35297c9c047270
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874179"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854043"
 ---
 # <a name="reentrancy-mda"></a>MDA reentrancy
 O MDA (Assistente de Depuração Gerenciado) de `reentrancy` é ativado quando é feita uma tentativa de transição de código nativo para gerenciado em casos nos quais um comutador anterior do código gerenciado para nativo não foi executado por meio de uma transição ordenada.  
@@ -48,7 +48,7 @@ O MDA (Assistente de Depuração Gerenciado) de `reentrancy` é ativado quando �
 ## <a name="output"></a>Saída  
  O MDA informa que está ocorrendo uma tentativa de reentrada ilegal.  Examine a pilha do thread para determinar por que isso está acontecendo e como corrigir o problema. O demonstrado a seguir é uma saída de exemplo.  
   
-```  
+```output
 Additional Information: Attempting to call into managed code without   
 transitioning out first.  Do not attempt to run managed code inside   
 low-level native extensibility points. Managed Debugging Assistant   

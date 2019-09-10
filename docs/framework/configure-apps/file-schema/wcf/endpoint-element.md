@@ -2,19 +2,21 @@
 title: Elemento <endpoint>
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925821"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855385"
 ---
 # <a name="endpoint-element"></a>\<elemento de > do ponto de extremidade
 Especifica a associação, o contrato e as propriedades de endereço para um ponto de extremidade de serviço, que é usado para expor serviços.  
   
- \<system.ServiceModel>  
-\<> de serviço  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Serviços >** ](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de serviço**](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> do ponto de extremidade**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +52,7 @@ Especifica a associação, o contrato e as propriedades de endereço para um pon
 |contrato|Uma cadeia de caracteres que indica qual contrato este ponto de extremidade está expondo. O assembly deve implementar o tipo de contrato. Se uma implementação de serviço implementar um único tipo de contrato, essa propriedade poderá ser omitida. O padrão é uma cadeia de caracteres vazia.|  
 |endpointConfiguration|Uma cadeia de caracteres que especifica o nome do ponto de extremidade padrão que é `kind` definido pelo atributo, que faz referência às informações de configuração adicionais desse ponto de extremidade padrão. O mesmo nome deve ser definido na `<standardEndpoints>` seção.|  
 |isSystemEndpoint|Um valor booliano que especifica se um ponto de extremidade é um ponto de extremidade de infraestrutura.|  
-|quase|Uma cadeia de caracteres que especifica o tipo de ponto de extremidade padrão aplicado. O tipo deve ser registrado na seção `<extensions>` ou em machine.config. Se nada for especificado, um ponto de extremidade de serviço comum será criado.|  
+|Quase|Uma cadeia de caracteres que especifica o tipo de ponto de extremidade padrão aplicado. O tipo deve ser registrado na seção `<extensions>` ou em machine.config. Se nada for especificado, um ponto de extremidade de serviço comum será criado.|  
 |listenUriMode|Especifica como o transporte trata o `ListenUri` fornecido para o serviço escutar. Os valores válidos são<br /><br /> -Explícito<br />-Exclusivo<br /><br /> O valor padrão é Explicit.|  
 |listenUri|Uma cadeia de caracteres que especifica o URI no qual o ponto de extremidade de serviço escuta. O padrão é uma cadeia de caracteres vazia.|  
 |name|Atributo opcional. Uma cadeia de caracteres que especifica o nome do ponto de extremidade de serviço. O valor padrão é a concatenação do nome da associação e o nome da descrição do contrato. Os serviços podem ter vários pontos de extremidade e, portanto, `name` o atributo do Endpoint é diferente do nome do serviço.|  

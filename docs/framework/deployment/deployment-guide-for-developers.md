@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170654"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854014"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -200,31 +200,23 @@ Os dois métodos permitem usar o instalador da Web ou o instalador offline. Cada
 
 Para encadear silenciosamente o processo de instalação do .NET Framework e fazer com que o instalador do .NET Framework forneça a interface do usuário, adicione o seguinte comando ao seu programa de instalação:
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 Por exemplo, se o programa executável for Contoso.exe e você quiser instalar silenciosamente o pacote redistribuível offline do .NET Framework 4.5, use o comando:
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 Você pode usar opções adicionais de linha de comando para personalizar a instalação. Por exemplo:
 
 - Para os usuários fecharem os aplicativos do .NET Framework em execução para minimizar reinicializações do sistema, defina o modo passivo e use a opção `/showrmui` da seguinte maneira:
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      Esse comando permite que o Gerenciador de Reinicialização exiba uma caixa de mensagem que dá aos usuários a oportunidade de fechar aplicativos do .NET Framework antes da instalação do .NET Framework.
 
 - Se estiver usando o instalador da Web, é possível usar a opção `/LCID` para especificar um pacote de idiomas. Por exemplo, para encadear o instalador da Web do .NET Framework 4.5 com seu programa de instalação do Contoso e instalar o pacote de idioma japonês, adicione o seguinte comando ao processo de instalação do seu aplicativo:
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      Se a opção `/LCID` for omitida, será instalado o pacote de idiomas correspondente à configuração de MUI do usuário.
 
@@ -269,7 +261,7 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|Versão|Valor da liberação de DWORD|
+|Version|Valor da liberação de DWORD|
 |-------------|--------------------------------|
 |.NET Framework 4.8 instalado na Atualização de maio de 2019 para Windows 10|528040|
 |.NET Framework 4.8 instalado em todas as versões do sistema operacional diferentes da Atualização de maio de 2019 para Windows 10|528049|
@@ -294,13 +286,13 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 
 Você pode testar se um pacote de idiomas específico está instalado verificando a pasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* no Registro quanto a um valor DWORD chamado `Release`. (Observe que "Instalação do .NET Framework" não começa com um ponto.) *LCID* especifica um identificador localidade, consulte [idiomas com suporte](#supported-languages) para obter uma lista de idiomas.
 
-Por exemplo, para detectar se o pacote completo de idioma japonês (LCID=1041) está instalado, verifique os seguintes valores no Registro:
+Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041) está instalado, recupere o seguinte valor nomeado do registro:
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Nome | Versão |
+| Tipo | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
 
@@ -337,9 +329,7 @@ A partir do .NET Framework 4.5.1, os nomes de pacote assumem o formato NDP<`vers
 
 Para instalar um pacote de idiomas com o instalador offline do .NET Framework, você deve encadeá-lo com a instalação do seu aplicativo. Por exemplo, para implantar o instalador offline do .NET Framework 4.5.1 com o pacote de idioma japonês, use o seguinte comando:
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 Não é necessário encadear os pacotes de idiomas se você utilizar o instalador da Web; o pacote de idiomas que corresponde à configuração de MUI do usuário será instalado. Se quiser instalar um idioma diferente, use a opção `/LCID` para especificar um pacote de idiomas.
 
@@ -391,7 +381,7 @@ A partir do [!INCLUDE[win8](../../../includes/win8-md.md)], é possível desinst
 
 A tabela a seguir lista opções que podem ser incluídas ao encadear o redistribuível do .NET Framework 4.5 para a instalação do seu aplicativo.
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
 |**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"** . Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|

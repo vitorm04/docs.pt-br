@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d0aba8be60611527d6216227a6c4939479fc38
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: 31f9d045b4d784357896a628135d68365cc29937
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613034"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851235"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Ferramenta do Cache de Assemblies Global)
 
@@ -36,7 +36,7 @@ No prompt de comando, digite o seguinte:
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 ```
 
@@ -81,7 +81,7 @@ Gacutil.exe oferece opções que dão suporte à contagem de referências semelh
 
 Use as opções **/il** ou **/ul** para instalar ou desinstalar uma lista de assemblies armazenadas em um arquivo de texto ANSI. O conteúdo do arquivo de texto deve ser formatado corretamente. Para usar um arquivo de texto para instalar assemblies, especifique o caminho para cada assembly em uma linha separada no arquivo. O exemplo a seguir demonstra o conteúdo de um arquivo que contém assemblies para instalação.
 
-```
+```text
 myAssembly1.dll
 myAssembly2.dll
 myAssembly3.dll
@@ -89,7 +89,7 @@ myAssembly3.dll
 
 Para usar um arquivo de texto para desinstalar assemblies, especifique o nome de assembly totalmente qualificado para cada assembly em uma linha separada no arquivo. O exemplo a seguir demonstra o conteúdo de um arquivo que contém assemblies para desinstalação.
 
-```
+```text
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
@@ -98,7 +98,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > [!NOTE]
 > A tentativa de instalar um assembly com um nome de arquivo co mais de 91 a 79 caracteres (excluindo a extensão de arquivo) pode resultar no seguinte erro:
 >
-> ```
+> ```output
 > Failure adding assembly to the cache:   The file name is too long.
 > ```
 >
@@ -117,13 +117,13 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 
 O comando a seguir instala o assembly `mydll.dll` no cache de assembly global.
 
-```
+```console
 gacutil /i mydll.dll
 ```
 
 O comando a seguir remove o assembly `hello` do cache de assembly global, desde que não haja contagens de referência para o assembly.
 
-```
+```console
 gacutil /u hello
 ```
 
@@ -131,49 +131,49 @@ O comando anterior pode remover mais de um assembly do cache de assembly porque 
 
 Use o exemplo a seguir para evitar a remoção de mais de um assembly. Esse comando remove apenas o assembly `hello` correspondente ao número de versão totalmente especificado, à cultura e à chave pública.
 
-```
+```console
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
 ```
 
 O comando a seguir instala os assemblies especificados no arquivo `assemblyList.txt` no cache de assembly global.
 
-```
+```console
 gacutil /il assemblyList.txt
 ```
 
 O comando a seguir remove os assemblies especificados no arquivo `assemblyList.txt` do cache de assembly global.
 
-```
+```console
 gacutil /ul assemblyList.txt
 ```
 
 O comando a seguir instala `myDll.dll` no cache de assembly global e adiciona uma referência para contá-lo. O assembly `myDll.dll` é usado pelo aplicativo `MyApp`. O parâmetro `UNINSTALL_KEY MyApp` especifica a chave do Registro que adiciona `MyApp` a Adicionar/Remover Programas no Windows. O parâmetro de descrição é especificado como `My Application Description`.
 
-```
+```console
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"
 ```
 
 O comando a seguir instala `myDll.dll` no cache de assembly global e adiciona uma referência para contá-lo. O parâmetro de esquema, `FILEPATH` e o parâmetro de ID, `c:\applications\myApp\myApp.exe`, especificam o caminho para o aplicativo que está instalando `myDll.dll.`. O parâmetro de descrição é especificado como `MyApp`.
 
-```
+```console
 gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 O comando a seguir instala `myDll.dll` no cache de assembly global e adiciona uma referência para contá-lo. O parâmetro de esquema, `OPAQUE`, permite personalizar os parâmetros de ID e descrição.
 
-```
+```console
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"
 ```
 
 O comando a seguir remove a referência para `myDll.dll` pelo aplicativo `myApp`. Se essa for a última referência para o assembly, ela também removerá o assembly do cache de assembly global.
 
-```
+```console
 gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 O comando a seguir lista o conteúdo do cache de assembly global.
 
-```
+```console
 gacutil /l
 ```
 

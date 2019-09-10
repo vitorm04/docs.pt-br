@@ -2,32 +2,32 @@
 title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248582"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854496"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
   
  Os serviços de entidade operam independentemente de um provedor específico de armazenamento de dados ainda permitir que que um provedor de dados defina explicitamente como modelos, os mapeamentos, e as consultas interagem com um armazenamento de dados subjacentes. Sem uma camada de abstração, os serviços de entidade podiam ser direcionados em um armazenamento de dados ou em um provedor de dados específico.  
   
- Tipos que suporta do provedor são suportados direta ou indiretamente por base de dados subjacente. Esses tipos não são necessariamente os tipos exatos de armazenamento, mas os tipos que o provedor usa para oferecer suporte [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Os tipos de provedor/armazenamento são descritos em termos de Modelo de Dados de Entidade (EDM).  
+ Tipos que suporta do provedor são suportados direta ou indiretamente por base de dados subjacente. Esses tipos não são necessariamente os tipos de armazenamento exatos, mas os tipos que o provedor usa para dar suporte à Entity Framework. Os tipos de provedor/armazenamento são descritos em termos de Modelo de Dados de Entidade (EDM).  
   
  O parâmetro e tipos de retorno para as funções suportados pelo armazenamento de dados são especificados em termos de EDM.  
   
 ## <a name="requirements"></a>Requisitos  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] e a necessidade de armazenamento de dados pode passar para frente e para trás dados em tipos conhecidos sem qualquer perda de dados ou truncamento.  
+ O Entity Framework e o armazenamento de dados precisam ser capazes de passar os dados de volta e para trás em tipos conhecidos sem perda ou truncamento de dados.  
   
  O manifesto do provedor deve ser loadable por ferramentas em tempo de design sem ter que abrir uma conexão para o armazenamento de dados.  
   
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] diferencia maiúsculas de minúsculas, mas o armazenamento de dados subjacente pode não ser. Quando os artefatos de EDM (identificadores e nomes de tipo, por exemplo) são definidos e usados no manifesto, devem usar a maiúsculas de minúsculas [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] . Se os elementos do armazenamento de dados que podem ser maiúsculas de minúsculas aparecem no manifesto do provedor, essa caixa precisa ser mantidas no manifesto do provedor.  
+ A Entity Framework diferencia maiúsculas de minúsculas, mas o armazenamento de dados subjacente pode não ser. Quando os artefatos do EDM (identificadores e nomes de tipo, por exemplo) são definidos e usados no manifesto, eles devem usar a diferenciação de maiúsculas e minúsculas de Entity Framework. Se os elementos do armazenamento de dados que podem ser maiúsculas de minúsculas aparecem no manifesto do provedor, essa caixa precisa ser mantidas no manifesto do provedor.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requer um manifesto de provedor para todos os provedores de dados. Se você tentar usar um provedor que não tem um manifesto de provedor com o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], receberá um erro.  
+ O Entity Framework requer um manifesto de provedor para todos os provedores de dados. Se você tentar usar um provedor que não tem um manifesto de provedor com o Entity Framework, receberá um erro.  
   
- A tabela a seguir descreve os tipos de exceções que [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] jogaria quando ocorrerem exceções com a interação de provedor:  
+ A tabela a seguir descreve os tipos de exceções que o Entity Framework geraria quando ocorrerem exceções por meio da interação do provedor:  
   
 |Problema|Exceção|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
  Um provedor deve oferecer suporte aos seguintes situações:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Escrevendo um provedor com mapeamento simétrico de tipo  
- Você pode escrever um provedor para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] local em que cada tipo de loja é mapeado para um único tipo EDM, independentemente da direção do mapeamento. Para um tipo de provedor que tenha o mapeamento muito simples que corresponde com um tipo de EDM, você pode usar uma solução simétrica porque o sistema de tipos é simples ou corresponde tipos de EDM.  
+ Você pode escrever um provedor para o Entity Framework em que cada tipo de loja é mapeado para um único tipo EDM, independentemente da direção do mapeamento. Para um tipo de provedor que tenha o mapeamento muito simples que corresponde com um tipo de EDM, você pode usar uma solução simétrica porque o sistema de tipos é simples ou corresponde tipos de EDM.  
   
  Você pode usar a simplicidade do domínio e gerar um manifesto declarativo estática do provedor.  
   
@@ -50,7 +50,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
 - Uma lista de funções suportadas pelo provedor onde o parâmetro e tipos de retorno são expressos em termos de EDM.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Escrevendo um provedor com mapeamento assimétrico de tipo  
- Ao escrever um provedor de armazenamento de dados para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], o mapeamento de tipo de EDM-à- provedor para qualquer tipo pode ser diferente de mapeamento de tipo de provedor-à- EDM. Por exemplo, EDM ilimitado PrimitiveTypeKind.String pode mapear a nvarchar (4000) no provedor, quando (4000) mapas nvarchar a EDM PrimitiveTypeKind.String (MaxLength=4000).  
+ Ao gravar um provedor de armazenamento de dados para o Entity Framework, o mapeamento de tipo EDM-to-Provider para alguns tipos pode ser diferente do mapeamento de tipo Provider-to-EDM. Por exemplo, EDM ilimitado PrimitiveTypeKind.String pode mapear a nvarchar (4000) no provedor, quando (4000) mapas nvarchar a EDM PrimitiveTypeKind.String (MaxLength=4000).  
   
  Você escreve um arquivo XML que tem duas seções:  
   

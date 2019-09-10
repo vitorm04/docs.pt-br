@@ -3,16 +3,16 @@ title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660586"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849848"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
-O [SDK do .NET Core](https://www.microsoft.com/net/download/core) apresenta muitos modelos já instalados e prontos para uso. O [comando `dotnet new`](dotnet-new.md) não é apenas sobre como usar um modelo, mas também como instalar e desinstalar os modelos. A partir do .NET Core 2.0, é possível criar seus próprios modelos personalizados para qualquer tipo de projeto, como um aplicativo, serviço, ferramenta ou biblioteca de classes. É possível, inclusive, criar um modelo que gere um ou mais arquivos independentes, como um arquivo de configuração.
+O [SDK do .NET Core](https://dotnet.microsoft.com/download) apresenta muitos modelos já instalados e prontos para uso. O [comando `dotnet new`](dotnet-new.md) não é apenas sobre como usar um modelo, mas também como instalar e desinstalar os modelos. A partir do .NET Core 2.0, é possível criar seus próprios modelos personalizados para qualquer tipo de projeto, como um aplicativo, serviço, ferramenta ou biblioteca de classes. É possível, inclusive, criar um modelo que gere um ou mais arquivos independentes, como um arquivo de configuração.
 
 É possível instalar modelos personalizados a partir de um pacote NuGet em qualquer feed do NuGet, bastando para isso fazer referência a um arquivo *.nupkg* do NuGet diretamente ou especificando um diretório de sistema de arquivos que contenha o modelo. O mecanismo de modelo oferece recursos que permitem substituir valores, incluir e excluir arquivos e executar operações de processamento personalizadas quando seu modelo é usado.
 
@@ -22,7 +22,7 @@ Para seguir um passo a passo e criar um modelo, consulte o tutorial [Create a cu
 
 ### <a name="net-default-templates"></a>Modelos padrão do .NET
 
-Quando você instala o [SDK do .NET Core](https://www.microsoft.com/net/download/core), você recebe dezenas de modelos internos para criar projetos e arquivos, incluindo aplicativos de console, bibliotecas de classes, projetos de teste de unidade, aplicativos ASP.NET Core (incluindo projetos [Angulares](https://angular.io/) e de [Reação](https://facebook.github.io/react/)) e arquivos de configuração. Para listar os modelos internos, execute o comando `dotnet new` com a opção `-l|--list`:
+Quando você instala o [SDK do .NET Core](https://dotnet.microsoft.com/download), você recebe dezenas de modelos internos para criar projetos e arquivos, incluindo aplicativos de console, bibliotecas de classes, projetos de teste de unidade, aplicativos ASP.NET Core (incluindo projetos [Angulares](https://angular.io/) e de [Reação](https://facebook.github.io/react/)) e arquivos de configuração. Para listar os modelos internos, execute o comando `dotnet new` com a opção `-l|--list`:
 
 ```console
 dotnet new --list
@@ -52,7 +52,7 @@ Os arquivos gerados pelo modelo podem ser modificados com base na lógica e nas 
 
 O arquivo *template.json* é colocado em uma pasta *.template.config* no diretório raiz do modelo. O arquivo fornece informações de configuração para o mecanismo de modelo. A configuração mínima requer os membros mostrados na tabela a seguir, suficiente para criar um modelo funcional.
 
-| Membro            | Tipo          | DESCRIÇÃO |
+| Membro            | Tipo          | Descrição |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | O esquema JSON do arquivo *template.json*. Os editores que dão suporte a esquemas JSON habilitam recursos de edição de JSON quando o esquema é especificado. Por exemplo, o [Visual Studio Code](https://code.visualstudio.com/) requer que esse membro habilite o IntelliSense. Use um valor de `http://json.schemastore.org/template`. |
 | `author`          | cadeia de caracteres        | O autor do modelo. |

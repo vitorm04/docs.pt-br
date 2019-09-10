@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 4368bd57718f52816d4efad39932bcc0959b67a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951297"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855635"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de desempenho do WCF
 O Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a medir o desempenho do seu aplicativo.  
@@ -39,7 +39,7 @@ O Windows Communication Foundation (WCF) inclui um grande conjunto de contadores
   
  Você também pode habilitar contadores de desempenho em seu código da seguinte maneira:  
   
-```  
+```csharp
 using System.Configuration;  
 using System.ServiceModel.Configuration;  
 using System.ServiceModel.Diagnostics;  
@@ -87,9 +87,7 @@ config.Save();
 ### <a name="service-performance-counters"></a>Contadores de desempenho de serviço  
  Os contadores de desempenho de serviço medem o comportamento do serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no objeto `ServiceModelService 4.0.0.0` de desempenho ao exibir com o monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
   
-```  
-ServiceName@ServiceBaseAddress  
-```  
+`ServiceName@ServiceBaseAddress`
   
  Um contador em um escopo de serviço é agregado do contador em uma coleção de pontos de extremidade.  
   
@@ -98,9 +96,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="endpoint-performance-counters"></a>Contadores de desempenho de ponto de extremidade  
  Os contadores de desempenho do ponto de extremidade permitem que você examine os dados que refletem como um ponto de extremidade está aceitando mensagens. Eles podem ser encontrados no objeto `ServiceModelEndpoint 4.0.0.0` de desempenho ao exibir usando o monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
   
-```  
-(ServiceName).(ContractName)@(endpoint listener address)  
-```  
+`(ServiceName).(ContractName)@(endpoint listener address)`
   
  Os dados são semelhantes ao que é coletado para operações individuais, mas é agregado somente no ponto de extremidade.  
   
@@ -112,9 +108,7 @@ ServiceName@ServiceBaseAddress
 ### <a name="operation-performance-counters"></a>Contadores de desempenho de operação  
  Os contadores de desempenho de operação são `ServiceModelOperation 4.0.0.0` encontrados no objeto de desempenho ao exibir com o monitor de desempenho. Cada operação tem uma instância individual. Ou seja, se um determinado contrato tiver 10 operações, 10 instâncias do contador de operações serão associadas a esse contrato. As instâncias de objeto são nomeadas usando o seguinte padrão:  
   
-```  
-(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
-```  
+`(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  Esse contador permite que você meça como a chamada está sendo usada e o quão bem a operação está sendo executada.  
   

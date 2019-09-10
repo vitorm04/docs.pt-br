@@ -2,18 +2,20 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: aa4cd8f4d7dcfa438ede71c394f1d0b0ac6faa50
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: decaaa1cea5345ff971b16cbb20a85dd803a52d5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926544"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850289"
 ---
 # <a name="announcementendpoint"></a>\<> announcementEndpoint
 Este elemento de configuração define um ponto de extremidade padrão com um contrato de anúncio fixo. Um serviço pode, opcionalmente, anunciar sua disponibilidade enviando uma mensagem de anúncio online e offline quando ela é aberta ou fechada, respectivamente. Um serviço Windows Communication Foundation (WCF) especifica os pontos de extremidade do comunicado no elemento de [ \<>](servicediscovery.md) de serviço e usa o AnnouncementClient para executar os anúncios. Um cliente que deseja escutar o anúncio de outro serviço está realmente agindo como um serviço WCF; Portanto, você precisa configurar os pontos de extremidade do comunicado para esse cliente na [ \<seção Serviços >](services.md) .  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> announcementEndpoint**  
   
 ## <a name="syntax"></a>Sintaxe  
   

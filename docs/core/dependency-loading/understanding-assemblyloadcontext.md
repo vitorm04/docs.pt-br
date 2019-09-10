@@ -4,12 +4,12 @@ description: Conceitos principais para entender a finalidade e o comportamento d
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 293c586163921f9226916b177b3a29cc99c3e695
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70234604"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849225"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Compreendendo System. Runtime. Loader. AssemblyLoadContext
 
@@ -54,7 +54,7 @@ Esta seção aborda os princípios gerais para os eventos e funções relevantes
 
 - **Ser repetível**. Uma consulta para uma dependência específica sempre deve resultar na mesma resposta. A mesma instância de dependência carregada deve ser retornada. Esse requisito é fundamental para a consistência do cache. Para assemblies gerenciados em particular, estamos criando um <xref:System.Reflection.Assembly> cache. A chave de cache é um nome de assembly <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>simples,.
 - **Normalmente não geram**.  Espera-se que essas funções retornem `null` em vez de throw quando não é possível localizar a dependência solicitada. A geração encerrará prematuramente a pesquisa e será propagada uma exceção para o chamador. O lançamento deve ser restrito a erros inesperados, como um assembly corrompido ou uma condição de memória insuficiente.
-- **Evite**a recursão. Lembre-se de que essas funções e manipuladores implementam as regras de carregamento para localizar dependências. Sua implementação não deve chamar APIs que disparam a recursão. Seu código normalmente deve chamar funções de carregamento **AssemblyLoadContext** que exigem um caminho específico ou um argumento de referência de memória.
+- **Evite a recursão**. Lembre-se de que essas funções e manipuladores implementam as regras de carregamento para localizar dependências. Sua implementação não deve chamar APIs que disparam a recursão. Seu código normalmente deve chamar funções de carregamento **AssemblyLoadContext** que exigem um caminho específico ou um argumento de referência de memória.
 - **Carregue no AssemblyLoadContext correto**. A escolha de onde carregar dependências é específica do aplicativo.  A escolha é implementada por esses eventos e funções. Quando seu código chama o **AssemblyLoadContext** , as funções carregadas por caminho as chamam na instância em que você deseja que o código seja carregado. Algum tempo `null` retornando e <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> permitindo que o identificador da carga seja a opção mais simples.
 - **Lembre-se de corridas de thread**. O carregamento pode ser disparado por vários threads. O AssemblyLoadContext lida com corridas de thread por meio da adição atômica de assemblies ao seu cache. A instância do perdedor da corrida é descartada. Na lógica de implementação, não adicione uma lógica extra que não manipule vários threads corretamente.
 
@@ -99,7 +99,7 @@ Dado um par de tipos incompatíveis, é importante também saber:
 
 Considerando-se `a` dois `b`objetos e, a avaliação do seguinte no depurador será útil:
 
-```C#
+```csharp
 // In debugger look at each assembly's instance, Location, and FullName
 a.GetType().Assembly
 b.GetType().Assembly

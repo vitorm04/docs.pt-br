@@ -3,16 +3,16 @@ title: Tutorial Classes e objetos – introdução ao C#
 description: Crie seu primeiro programa em C# e explore os conceitos de orientado a objeto
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 0932ae8a9d3facd4b2a8469664922f163fe4c679
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397821"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850727"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Explorar programação orientada a objeto com classes e objetos
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tópico do .NET [Familiarize-se em 10 minutos](https://www.microsoft.com/net/core) tem instruções para configurar o ambiente de desenvolvimento local no Mac, PC ou Linux. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local em Mac, PC ou Linux. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
 
 ## <a name="create-your-application"></a>Criar seu aplicativo
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780324"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854071"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante WCF Data Services
 
@@ -121,7 +121,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 Você deve considerar o seguinte ao implantar um serviço de dados:
 
-- Quando você implanta um serviço de dados que usa o provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para acessar um banco de dados do SQL Server, você também pode ter que propagar as estruturas de dados, os dados ou ambos com a implantação do serviço de dados. O Visual Studio pode criar scripts automaticamente (arquivos. Sql) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo ASP.NET. Para obter mais informações, confira [Como: Implante um banco de dados com um projeto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))de aplicativo Web. Para um site da Web do ASP.NET, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [publicando um banco de dados SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Quando você implanta um serviço de dados que usa o provedor de Entity Framework para acessar um banco de dados do SQL Server, você também pode precisar propagar estruturas, dados ou ambos com a implantação do serviço de dados. O Visual Studio pode criar scripts automaticamente (arquivos. Sql) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo ASP.NET. Para obter mais informações, confira [Como: Implante um banco de dados com um projeto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))de aplicativo Web. Para um site da Web do ASP.NET, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [publicando um banco de dados SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte o WCF Data Services de rastreamento de postagem [com o Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

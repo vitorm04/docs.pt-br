@@ -2,12 +2,12 @@
 title: Gerando SQL das árvores de comando - práticas recomendadas
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251571"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855007"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Gerando SQL das árvores de comando - práticas recomendadas
 
@@ -137,11 +137,11 @@ Além disso, quando ajuste joins, as tabelas de participação (ou os subconsult
 
 ## <a name="avoid-select-"></a>Evite SELECT *
 
-Não use `SELECT *` para selecionar as tabelas de base. O modelo de armazenamento em [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] um aplicativo pode incluir apenas um subconjunto das colunas que estão na tabela de banco de dados. Nesse caso, `SELECT *` pode produzir um resultado incorreto. Em vez disso, você deve especificar todas as colunas de participação usando os nomes de coluna tipo do resultado das expressões de participação.
+Não use `SELECT *` para selecionar as tabelas de base. O modelo de armazenamento em um aplicativo Entity Framework pode incluir apenas um subconjunto das colunas que estão na tabela de banco de dados. Nesse caso, `SELECT *` pode produzir um resultado incorreto. Em vez disso, você deve especificar todas as colunas de participação usando os nomes de coluna tipo do resultado das expressões de participação.
 
 ## <a name="reuse-of-expressions"></a>Reutilização de expressões
 
-As expressões podem ser reutilizadas na árvore de comandos de consulta [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]passada pelo. Não assuma que cada expressão apareça apenas uma vez na árvore de comandos de consulta.
+As expressões podem ser reutilizadas na árvore de comando de consulta passada pelo Entity Framework. Não assuma que cada expressão apareça apenas uma vez na árvore de comandos de consulta.
 
 ## <a name="mapping-primitive-types"></a>Tipos primitivos de mapeamento
 

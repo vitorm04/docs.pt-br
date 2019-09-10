@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Loops e branches em C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-  ms.translationtype: HT
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661014"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850678"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Você concluiu o tutorial interativo "Números em C#". Clique no link **Branches e loops** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A etapa "Continuar aprendendo" leva você de volta a esses tutoriais.
+    Você concluiu o tutorial interativo "Números em C#". Clique no link **Branches e loops** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A seção "próximas etapas" leva você de volta para esses tutoriais.
 
 
     Saiba mais sobre os números em C# nos tópicos a seguir:

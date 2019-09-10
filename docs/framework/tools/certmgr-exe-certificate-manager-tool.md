@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948580"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851376"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -38,7 +38,7 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -46,12 +46,12 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*sourceStorename*|O repositório de certificados que contém os certificados, as CTLs ou as CRLs existentes que serão adicionados, excluídos, salvos ou exibidos. Ele pode ser um arquivo de repositório ou um repositório de sistemas.|  
 |*destinationStorename*|O repositório ou o arquivo de certificados de saída.|  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/add**|Adiciona certificados, CTLs e CRLs a um repositório de certificados.|  
 |**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções **/add** ou **/del**. A opção **/all** não pode ser usada com **/put**.|  
@@ -97,43 +97,43 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
 ## <a name="examples"></a>Exemplos  
  O comando a seguir exibe um repositório de sistema padrão chamado `my` com saída detalhada.  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  O comando a seguir adiciona todos os certificados em um arquivo chamado `myFile.ext` a um novo arquivo chamado `newFile.ext`.  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  O comando a seguir adiciona o certificado em um arquivo chamado `testcert.cer` no repositório do sistema `my`.  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  O comando a seguir adiciona o certificado em um arquivo chamado `TrustedCert.cer` ao repositório de certificados raiz.  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  O comando a seguir salva um certificado com o nome comum `myCert` no repositório do sistema `my` em um arquivo chamado `newCert.cer`.  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  O comando a seguir exclui todas as CTLs no repositório do sistema `my` e o repositório resultante em um arquivo chamado `newStore.str`.  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  O comando a seguir salva um certificado no repositório do sistema `my` no arquivo `newFile`. Você deverá inserir o número do certificado em `my` a ser colocado em `newFile`.  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

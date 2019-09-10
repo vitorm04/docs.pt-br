@@ -2,12 +2,12 @@
 title: Funções canônicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251270"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854513"
 ---
 # <a name="canonical-functions"></a>Funções canônicas
 Essa seção discute as funções canônicas que têm suporte por todos os provedores de dados e podem ser usadas por todas as tecnologias de consulta. As funções canônicas não podem ser estendidas por um provedor.  
@@ -18,9 +18,9 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
   
  Quando as funções canônicas são usadas em uma consulta do [!INCLUDE[esql](../../../../../../includes/esql-md.md)], a função apropriada será chamada na fonte de dados.  
   
- Todas as funções canônicas têm as condições de erro e o comportamento de entrada nulo especificadas explicitamente. Os provedores de repositório devem estar de acordo com esse comportamento, mas o [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] não impõem esse comportamento.  
+ Todas as funções canônicas têm as condições de erro e o comportamento de entrada nulo especificadas explicitamente. Os provedores de repositório devem estar em conformidade com esse comportamento, mas Entity Framework não impõe esse comportamento.  
   
- Para cenários LINQ, as consultas no [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] envolvem o mapeamento de métodos CLR para métodos na fonte de dados subjacente. Os métodos CLR mapeiam para funções canônicas, de modo que um conjunto específico de métodos mapeará corretamente, independentemente da fonte de dados.  
+ Para cenários LINQ, as consultas no Entity Framework envolvem o mapeamento de métodos CLR para métodos na fonte de dados subjacente. Os métodos CLR mapeiam para funções canônicas, de modo que um conjunto específico de métodos mapeará corretamente, independentemente da fonte de dados.  
   
 ## <a name="canonical-functions-namespace"></a>Namespace de funções canônicas  
  O namespace para a função canônica é <xref:System.Data.Metadata.Edm>. O namespace <xref:System.Data.Metadata.Edm> é incluído automaticamente em todas as consultas. No entanto, se outro namespace for importado e contiver uma função com o mesmo nome de uma função canônica (no namespace <xref:System.Data.Metadata.Edm>), você deverá especificar o namespace.  

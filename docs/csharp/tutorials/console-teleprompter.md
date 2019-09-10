@@ -3,12 +3,12 @@ title: Aplicativo do Console
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
-ms.translationtype: HT
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348824"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851016"
 ---
 # <a name="console-application"></a>Aplicativo do Console
 
@@ -26,7 +26,7 @@ Há vários recursos neste tutorial. Vamos compilá-los individualmente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core). Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) . Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
 Será necessário instalar o editor de código de sua preferência.
 
 ## <a name="create-the-application"></a>Criar o aplicativo

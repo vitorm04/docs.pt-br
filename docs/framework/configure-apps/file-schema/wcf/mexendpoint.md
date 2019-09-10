@@ -2,18 +2,20 @@
 title: <mexEndpoint>
 ms.date: 03/30/2017
 ms.assetid: c9823060-0a5d-4f9d-99d4-4d113b758247
-ms.openlocfilehash: 78788f9dfbf6cdf3439fd6e33eddfe721e49840d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7760ee4d3b118e339944317e8ec8d8217b5d909d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931251"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855115"
 ---
 # <a name="mexendpoint"></a>\<mexEndpoint>
 Este elemento de configuração define um ponto de extremidade padrão com um contrato IMetadataExchange fixo. Como todos os pontos de extremidade de troca de metadados especificam IMetadataExchange como seu contrato, você pode usar esse ponto padrão em vez de definir um para você mesmo.  
   
- \<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> mexEndpoint**  
   
 ## <a name="syntax"></a>Sintaxe  
   

@@ -2,18 +2,20 @@
 title: <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 04f5fb27a0da7e553ff3c0308f7fb2e2df2e0b20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dabf8845126705d082d080b643688ed62883f39
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788252"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854920"
 ---
 # <a name="udpannouncementendpoint"></a>\<udpAnnouncementEndpoint>
-Este elemento de configuração define um ponto de extremidade padrão que é usado pelos serviços para enviar mensagens de comunicado por uma associação de UDP. Ele tem um contrato fixo e oferece suporte a duas versões de descoberta. Além disso, ele tem uma associação de UDP fixa e um valor de endereço padrão, conforme as especificações do WS-Discovery (WS-Discovery de abril de 2005 ou WS-Discovery versão 1.1). Você pode especificar o endereço multicast a ser usado para enviar e receber mensagens de comunicado.  
+Este elemento de configuração define um ponto de extremidade padrão que é usado pelos serviços para enviar mensagens de anúncio por uma associação UDP. Ele tem um contrato fixo e dá suporte a duas versões de descoberta. Além disso, ele tem uma associação de UDP fixa e um valor de endereço padrão, conforme as especificações do WS-Discovery (WS-Discovery de abril de 2005 ou WS-Discovery versão 1.1). Você pode especificar o endereço de multicast a ser usado para enviar e receber as mensagens de anúncio.  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> standardEndpoints**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> udpAnnouncementEndpoint**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,24 +40,24 @@ Este elemento de configuração define um ponto de extremidade padrão que é us
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |discoveryVersion|Uma cadeia de caracteres que especifica uma das duas versões do protocolo WS-Discovery. Os valores válidos são WSDiscovery11 e WSDiscoveryApril2005. Esse valor é do tipo <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.|  
-|maxAnnouncementDelay|Um valor de Timespan que especifica o valor máximo para o atraso que o protocolo de descoberta aguardará antes de enviar uma mensagem de saudação. As mensagens esperará um valor de tempo aleatório entre 0 e o valor desse atributo antes de serem enviados. Este atributo é usado para definir um atraso de pequeno e aleatório para impedir o excesso de rede quando sai de uma rede e todos os serviços voltam a ficar online ao mesmo tempo.|  
-|multicastAddress|Um URI que especifica um endereço de multicast a ser usado para enviar e receber as mensagens de descoberta. O valor padrão é o endereço multicast como em conformidade com a especificação do protocolo.|  
-|name|Uma cadeia de caracteres que especifica o nome da configuração do ponto de extremidade padrão. O nome é usado no `endpointConfiguration` atributo do ponto de extremidade de serviço para vincular a um ponto de extremidade padrão para sua configuração.|  
+|maxAnnouncementDelay|Um valor TimeSpan que especifica o valor máximo para o atraso que o protocolo de descoberta aguardará antes de enviar uma mensagem de saudação. As mensagens aguardarão um valor de tempo aleatório entre 0 e o valor desse atributo antes de serem enviadas. Esse atributo é usado para definir um atraso pequeno e aleatório para evitar Storm de rede quando uma rede sai e todos os serviços voltam a ficar online ao mesmo tempo.|  
+|multicastAddress|Um URI que especifica um endereço de multicast a ser usado para enviar e receber as mensagens de descoberta. O valor padrão é o endereço de multicast como compatível com a especificação de protocolo.|  
+|name|Uma cadeia de caracteres que especifica o nome da configuração do ponto de extremidade padrão. O nome é usado no `endpointConfiguration` atributo do ponto de extremidade de serviço para vincular um ponto de extremidade padrão à sua configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<udpTransportSettings>](udptransportsettings.md)|Uma coleção de configurações que permitem que você configure o transporte UDP para o ponto de extremidade UDP.|  
+|[\<udpTransportSettings>](udptransportsettings.md)|Uma coleção de configurações que permitem configurar o transporte UDP para o ponto de extremidade UDP.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<standardEndpoints>](standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são definidos previamente os pontos de extremidade com um ou mais das suas propriedades (endereço, associação, contrato) fixo.|  
+|[\<standardEndpoints>](standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são pontos de extremidade predefinidos com uma ou mais de suas propriedades (endereço, associação, contrato) fixa.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra um cliente escuta de comunicado por um UDP padrão de transporte de multicast com o endereço de multicast e UDP multicast transporte com o endereço multicast especificado.  
+ O exemplo a seguir demonstra um cliente ouvindo o anúncio em um transporte multicast UDP com o endereço multicast padrão e o transporte multicast UDP com o endereço multicast especificado.  
   
 ```xml  
 <services>

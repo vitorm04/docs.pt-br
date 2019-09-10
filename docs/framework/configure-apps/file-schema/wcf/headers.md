@@ -2,19 +2,21 @@
 title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: a982fa87ab84725e36ee913f00200cd34f0b8f6f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 76b3cbf6b867a983c203141bcd901b2b7b4038d5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925571"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855175"
 ---
 # <a name="headers"></a>\<cabeçalhos >
 Um ponto de extremidade pode ser resolvido por um ou mais cabeçalhos SOAP além de seu URI básico. Um conjunto de cenários em que isso é útil é um conjunto de cenários intermediários de SOAP em que um ponto de extremidade exige que clientes desse ponto de extremidade incluam cabeçalhos SOAP direcionados a intermediários. Este elemento de configuração pode ser usado para definir esses cabeçalhos de endereço personalizados. As entradas na coleção de cabeçalhos do ponto de extremidade são elementos XML definidos pelo usuário. Cada elemento deve ser um XML bem formado.  
   
- \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do cliente**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do ponto de extremidade**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cabeçalhos >**  
   
 ## <a name="syntax"></a>Sintaxe  
   

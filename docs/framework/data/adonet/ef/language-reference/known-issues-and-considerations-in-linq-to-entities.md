@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250493"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854378"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conhecidos e considerações no LINQ to Entities
 Esta seção fornece informações sobre problemas conhecidos com consultas de LINQ to Entities.  
@@ -42,7 +42,7 @@ Esta seção fornece informações sobre problemas conhecidos com consultas de L
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Inteiros sem sinal não suportados  
- Não há suporte para a especificação de um tipo de inteiro sem sinal em uma consulta [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] LINQ to Entities porque o não oferece suporte a inteiros sem sinal. Se você especificar um inteiro sem sinal, uma <xref:System.ArgumentException> exceção será lançada durante a conversão da expressão de consulta, conforme mostrado no exemplo a seguir. Este exemplo consulta um pedido com a ID 48000.  
+ Não há suporte para a especificação de um tipo de inteiro sem sinal em uma consulta LINQ to Entities porque o Entity Framework não oferece suporte a inteiros não assinados. Se você especificar um inteiro sem sinal, uma <xref:System.ArgumentException> exceção será lançada durante a conversão da expressão de consulta, conforme mostrado no exemplo a seguir. Este exemplo consulta um pedido com a ID 48000.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

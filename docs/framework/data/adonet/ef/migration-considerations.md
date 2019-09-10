@@ -2,20 +2,20 @@
 title: Considerações sobre migração (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 3554f530acf0e3ca3e66dddf74f63e7ede03708e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3e4caf79c1e75708e266e625a4271bc0c90747b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248563"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854426"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considerações sobre migração (Entity Framework)
-O Entity Framework ADO.NET fornece vários benefícios para um aplicativo existente. Um dos mais importantes desses benefícios é a capacidade de usar um modelo conceitual para separar as estruturas de dados usadas pelo aplicativo no esquema da fonte de dados. Isso permite que você faça alterações futuras facilmente no modelo de armazenamento ou na própria fonte de dados sem fazer alterações de compensação no aplicativo. Para obter mais informações sobre os benefícios de usar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]o, consulte [Entity Framework visão geral](overview.md) e [modelo de dados de entidade](../entity-data-model.md).  
+O Entity Framework ADO.NET fornece vários benefícios para um aplicativo existente. Um dos mais importantes desses benefícios é a capacidade de usar um modelo conceitual para separar as estruturas de dados usadas pelo aplicativo no esquema da fonte de dados. Isso permite que você faça alterações futuras facilmente no modelo de armazenamento ou na própria fonte de dados sem fazer alterações de compensação no aplicativo. Para obter mais informações sobre os benefícios de usar o Entity Framework, consulte [Entity Framework visão geral](overview.md) e [modelo de dados de entidade](../entity-data-model.md).  
   
- Para aproveitar os benefícios do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], você pode migrar um aplicativo existente para o. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Algumas tarefas são comuns a todos os aplicativos migrados. Essas tarefas comuns incluem atualizar o aplicativo para usar o .NET Framework a partir da versão 3,5 do SP1 (Service Pack 1), definindo modelos e mapeamento e Configurando o Entity Framework. Quando você migra um aplicativo para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], há considerações adicionais que se aplicam. Essas considerações dependem do tipo do aplicativo que está sendo migrado e da funcionalidade específica do aplicativo. Este tópico fornece informações para ajudá-lo a escolher a melhor abordagem a ser utilizada ao atualizar um aplicativo existente.  
+ Para aproveitar os benefícios do Entity Framework, você pode migrar um aplicativo existente para o Entity Framework. Algumas tarefas são comuns a todos os aplicativos migrados. Essas tarefas comuns incluem atualizar o aplicativo para usar o .NET Framework a partir da versão 3,5 do SP1 (Service Pack 1), definindo modelos e mapeamento e Configurando o Entity Framework. Quando você migra um aplicativo para o Entity Framework, há considerações adicionais que se aplicam. Essas considerações dependem do tipo do aplicativo que está sendo migrado e da funcionalidade específica do aplicativo. Este tópico fornece informações para ajudá-lo a escolher a melhor abordagem a ser utilizada ao atualizar um aplicativo existente.  
   
 ## <a name="general-migration-considerations"></a>Considerações gerais sobre migração  
- As seguintes condições se aplicam quando você migra qualquer aplicativo para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
+ As seguintes considerações se aplicam ao migrar qualquer aplicativo para o Entity Framework:  
   
 - Qualquer aplicativo que usa o .NET Framework a partir da versão 3,5 SP1 pode ser migrado para o Entity Framework, desde que o provedor de dados para a fonte de dados usada pelo aplicativo ofereça suporte ao Entity Framework.  
   
@@ -23,10 +23,10 @@ O Entity Framework ADO.NET fornece vários benefícios para um aplicativo existe
   
 - Para um aplicativo grande ou complexo, não é necessário migrar todo o aplicativo para o Entity Framework de uma vez. No entanto, qualquer parte do aplicativo que não use o Entity Framework ainda deve ser alterada quando a fonte de dados for alterada.  
   
-- A conexão do provedor de dados usada pelo Entity Framework pode ser compartilhada com outras partes do seu aplicativo porque [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] o usa provedores de dados ADO.net para acessar a fonte de dados. Por exemplo, o provedor SqlClient é usado pelo Entity Framework para acessar um banco de dados SQL Server. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).  
+- A conexão do provedor de dados usada pelo Entity Framework pode ser compartilhada com outras partes do seu aplicativo porque o Entity Framework usa provedores de dados ADO.NET para acessar a fonte de dados. Por exemplo, o provedor SqlClient é usado pelo Entity Framework para acessar um banco de dados SQL Server. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Tarefas de migração comuns  
- O caminho para migração de um aplicativo existente para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] depende do tipo do aplicativo e da estratégia de acesso dos dados existentes. No entanto, você sempre deve executar as seguintes tarefas ao migrar um aplicativo existente para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ O caminho para migrar um aplicativo existente para a Entity Framework depende do tipo de aplicativo e da estratégia de acesso a dados existente. No entanto, você deve sempre executar as seguintes tarefas ao migrar um aplicativo existente para o Entity Framework.  
   
 > [!NOTE]
 > Todas essas tarefas são executadas automaticamente quando você usa as ferramentas de Modelo de Dados de Entidade a partir do Visual Studio 2008. Para obter mais informações, confira [Como: Use o assistente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))de modelo de dados de entidade.  
@@ -46,34 +46,34 @@ O Entity Framework ADO.NET fornece vários benefícios para um aplicativo existe
   
 3. Definir a cadeia de conexão.  
   
-     O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa uma cadeia de conexão especialmente formatada ao executar consultas em um modelo conceitual. Essa cadeia de conexão encapsula informações sobre o modelo e arquivos de mapeamento e a conexão com a fonte de dados. Para obter mais informações, confira [Como: Defina a cadeia](how-to-define-the-connection-string.md)de conexão.  
+     O Entity Framework usa uma cadeia de conexão especialmente formatada ao executar consultas em um modelo conceitual. Essa cadeia de conexão encapsula informações sobre o modelo e arquivos de mapeamento e a conexão com a fonte de dados. Para obter mais informações, confira [Como: Defina a cadeia](how-to-define-the-connection-string.md)de conexão.  
   
 4. Configure o projeto do Visual Studio.  
   
-     As referências [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] a assemblies e o modelo e os arquivos de mapeamento devem ser adicionados ao projeto do Visual Studio. Você pode adicionar esses arquivos de mapeamento ao projeto para garantir que sejam implantados com o aplicativo no local indicado na cadeia de conexão. Para obter mais informações, confira [Como: Configurar manualmente um projeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))de Entity Framework.  
+     As referências a Entity Framework assemblies e ao modelo e aos arquivos de mapeamento devem ser adicionadas ao projeto do Visual Studio. Você pode adicionar esses arquivos de mapeamento ao projeto para garantir que sejam implantados com o aplicativo no local indicado na cadeia de conexão. Para obter mais informações, confira [Como: Configurar manualmente um projeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))de Entity Framework.  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Considerações para aplicativos com objetos existentes  
- A partir do .NET Framework 4, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] oferece suporte a objetos CLR "Plain Old" (POCO), também chamados de objetos Persistence-que desconhecem. Na maioria dos casos, os objetos existentes podem trabalhar com o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fazendo alterações secundárias. Para obter mais informações, consulte [trabalhando com entidades POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Você também pode migrar um aplicativo para [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] o e usar as classes de dados que são geradas pelas ferramentas de Entity Framework. Para obter mais informações, confira [Como: Use o assistente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))de modelo de dados de entidade.  
+ A partir do .NET Framework 4, o Entity Framework dá suporte a objetos CLR "Plain Old" (POCO), também chamados de objetos Persistence-que desconhecem. Na maioria dos casos, os objetos existentes podem trabalhar com o Entity Framework fazendo pequenas alterações. Para obter mais informações, consulte [trabalhando com entidades POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Você também pode migrar um aplicativo para o Entity Framework e usar as classes de dados que são geradas pelas ferramentas de Entity Framework. Para obter mais informações, confira [Como: Use o assistente](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))de modelo de dados de entidade.  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Considerações para aplicativos que usam provedores ADO.NET  
  Os provedores de ADO.NET, como o SqlClient, permitem consultar uma fonte de dados para retornar dados tabulares. Também podem ser carregados em um conjunto de dados ADO.NET. A lista a seguir descreve as considerações para atualizar um aplicativo que usa um provedor de ADO.NET existente:  
   
 - Exibindo dados tabulares usando um leitor de dados.  
 
-  Você pode considerar a execução [!INCLUDE[esql](../../../../../includes/esql-md.md)] de uma consulta usando o provedor EntityClient e a enumeração por <xref:System.Data.EntityClient.EntityDataReader> meio do objeto retornado. Faça isso somente se seu aplicativo exibir dados tabulares usando um leitor de dados e não exigir os recursos fornecidos pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] para materializar dados em objetos, controlar alterações e fazer atualizações. Você pode continuar a usar o código de acesso a dados existente que faz atualizações na fonte de dados, mas você pode usar a conexão existente <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> acessada da propriedade de <xref:System.Data.EntityClient.EntityConnection>. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).  
+  Você pode considerar a execução [!INCLUDE[esql](../../../../../includes/esql-md.md)] de uma consulta usando o provedor EntityClient e a enumeração por <xref:System.Data.EntityClient.EntityDataReader> meio do objeto retornado. Faça isso somente se seu aplicativo exibir dados tabulares usando um leitor de dados e não exigir os recursos fornecidos pelo Entity Framework para materializar dados em objetos, controlar alterações e fazer atualizações. Você pode continuar a usar o código de acesso a dados existente que faz atualizações na fonte de dados, mas você pode usar a conexão existente <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> acessada da propriedade de <xref:System.Data.EntityClient.EntityConnection>. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 - Trabalhando com DataSets.  
 
-  O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fornece muitas das mesmas funcionalidades fornecidas pelo conjunto de dados, incluindo a persistência na memória, o controle de alterações, a vinculação e a serialização de objetos como dados XML. Para obter mais informações, consulte [trabalhando com objetos](working-with-objects.md).  
+  O Entity Framework fornece muitas das mesmas funcionalidades fornecidas pelo conjunto de dados, incluindo a persistência na memória, controle de alterações, vinculação e serialização de objetos como dados XML. Para obter mais informações, consulte [trabalhando com objetos](working-with-objects.md).  
   
-  Se o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não fornecer a funcionalidade do conjunto de aplicativos necessário para seu aplicativo, você ainda poderá aproveitar os benefícios das consultas LINQ usando LINQ to DataSet. Para obter mais informações, consulte [LINQ to DataSet](../linq-to-dataset.md).  
+  Se o Entity Framework não fornecer a funcionalidade do conjunto de aplicativos necessário para seu aplicativo, você ainda poderá aproveitar os benefícios das consultas LINQ usando LINQ to DataSet. Para obter mais informações, consulte [LINQ to DataSet](../linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Considerações para aplicativos que associam dados a controles  
  O .NET Framework permite que você encapsula dados em uma fonte de dados, como um conjunto de dados ou um controle da fonte do ASP.NET, e, em seguida, associa os elementos da interface do usuário a esses controles de dados. A lista a seguir descreve as considerações para associar controles aos dados do Entity Framework.  
   
 - Associando dados a controles  
 
-  Quando você consulta o modelo conceitual, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] o retorna os dados como objetos que são instâncias de tipos de entidade. Esses objetos podem ser vinculados diretamente a controles e essa associação dá suporte a atualizações. Isso significa que as alterações nos dados em um controle, como uma linha em um <xref:System.Windows.Forms.DataGridView>, são salvas automaticamente no banco de dado <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> quando o método é chamado.  
+  Quando você consulta o modelo conceitual, o Entity Framework retorna os dados como objetos que são instâncias de tipos de entidade. Esses objetos podem ser vinculados diretamente a controles e essa associação dá suporte a atualizações. Isso significa que as alterações nos dados em um controle, como uma linha em um <xref:System.Windows.Forms.DataGridView>, são salvas automaticamente no banco de dado <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> quando o método é chamado.  
   
   Se seu aplicativo enumerar os resultados de uma consulta para exibir dados em um <xref:System.Windows.Forms.DataGridView> ou em outro tipo de controle que dê suporte a vinculação de dados, você poderá alterar seu aplicativo para associar o controle ao resultado de um <xref:System.Data.Objects.ObjectQuery%601>.  
   
@@ -81,20 +81,20 @@ O Entity Framework ADO.NET fornece vários benefícios para um aplicativo existe
   
 - Controles de fonte de dados ASP.NET.  
 
-  O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclui um controle da fonte de dados projetado para simplificar a vinculação de dados em aplicativos Web do ASP.net. Para obter mais informações, consulte [visão geral do controle de servidor Web de EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
+  O Entity Framework inclui um controle da fonte de dados projetado para simplificar a vinculação de dados em aplicativos Web do ASP.NET. Para obter mais informações, consulte [visão geral do controle de servidor Web de EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Outras considerações  
  A seguir estão as considerações que podem se aplicar quando você migra tipos específicos de aplicativos para o Entity Framework.  
   
 - Aplicativos que expõem serviços de dados.  
 
-  Os serviços e aplicativos Web baseados no WCF (Windows Communication Foundation) expõem dados de uma fonte de dados subjacente usando um formato de mensagem XML de solicitação/resposta. O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte à serialização de objetos de entidade usando serialização binária, XML ou de contrato de dados WCF. A serialização binária e do WCF dão suporte à serialização completa de gráficos de objetos. Para obter mais informações, consulte [criando aplicativos de N camadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
+  Os serviços e aplicativos Web baseados no WCF (Windows Communication Foundation) expõem dados de uma fonte de dados subjacente usando um formato de mensagem XML de solicitação/resposta. O Entity Framework dá suporte à serialização de objetos de entidade usando a serialização de contrato de dados Binary, XML ou WCF. A serialização binária e do WCF dão suporte à serialização completa de gráficos de objetos. Para obter mais informações, consulte [criando aplicativos de N camadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
   
 - Aplicativos que usam dados XML.  
 
-  A serialização de objetos permite que você crie serviços de dados do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Esses serviços fornecem dados a aplicativos que consomem dados XML, como aplicativos de Internet baseados em AJAX. Nesses casos, considere usar o [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Esses serviços de dados baseiam-se no Modelo de Dados de Entidade e fornecem acesso dinâmico aos dados de entidade usando ações HTTP REST, como GET, PUT e POST... Para obter mais informações, consulte [WCF Data Services 4,5](../../wcf/index.md).  
+  A serialização de objeto permite que você crie Entity Framework Data Services. Esses serviços fornecem dados a aplicativos que consomem dados XML, como aplicativos de Internet baseados em AJAX. Nesses casos, considere usar o [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Esses serviços de dados baseiam-se no Modelo de Dados de Entidade e fornecem acesso dinâmico aos dados de entidade usando ações HTTP REST, como GET, PUT e POST... Para obter mais informações, consulte [WCF Data Services 4,5](../../wcf/index.md).  
   
-  O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não dá suporte a um tipo de dados XML nativo. Isso significa que quando uma entidade é mapeada para uma tabela com uma coluna XML, a propriedade equivalente da entidade para a coluna XML é uma cadeia de caracteres. Os objetos podem ser desconectados e serializados como XML. Para obter mais informações, consulte [serializando objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
+  O Entity Framework não oferece suporte a um tipo de dados XML nativo. Isso significa que quando uma entidade é mapeada para uma tabela com uma coluna XML, a propriedade equivalente da entidade para a coluna XML é uma cadeia de caracteres. Os objetos podem ser desconectados e serializados como XML. Para obter mais informações, consulte [serializando objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
   Se seu aplicativo exigir a capacidade de consultar dados XML, você ainda poderá tirar proveito dos benefícios de consultas LINQ usando o LINQ to XML. Para obter mais informações, consulte [LINQ to XMLC#()](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ou [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   

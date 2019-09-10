@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 89462d05b9da7fc63bda58955517bfa9f0c50ab9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98c8e50ea4a9efe1c69a0c7b959b228a045dfca1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964198"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855661"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Ferramenta de configuração de modelo de serviço COM+ (ComSvcConfig.exe)
 A ferramenta de linha de comando de configuração do modelo de serviço COM+ (ComSvcConfig. exe) permite que você configure as interfaces COM+ para serem expostas como serviços Web.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | ApplicationName>] [/contract:<ClassID | ProgID | *,InterfaceID | InterfaceName | *>] [/hosting:<complus | was>] [/webSite:<WebsiteName>] [/webDirectory:<WebDirectoryName>] [/mex] [/id] [/nologo] [/verbose] [/help] [/partial]  
 ```  
   
@@ -45,7 +45,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |Opção|Descrição|  
 |------------|-----------------|  
 |`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Especifica o aplicativo COM+ a ser configurado.<br /><br /> Forma `/a`abreviada.|  
-|`/contract:`&#124; &#124; &#124; Progidid&#124; de ClassID, interface de interface \* \<    \*\>|Especifica o componente e a interface COM+ que serão configurados como o contrato para o serviço.<br /><br /> Forma `/c`abreviada.<br /><br /> Embora o caractere curinga (\*) possa ser usado quando você especifica os nomes do componente e da interface, é recomendável não usá-lo, pois você pode expor interfaces que não pretendiam.|  
+|`/contract:`&#124; &#124; &#124; Progidid deClassID,interfacedeinterface\* \<&#124;    \*\>|Especifica o componente e a interface COM+ que serão configurados como o contrato para o serviço.<br /><br /> Forma `/c`abreviada.<br /><br /> Embora o caractere curinga (\*) possa ser usado quando você especifica os nomes do componente e da interface, é recomendável não usá-lo, pois você pode expor interfaces que não pretendiam.|  
 |`/hosting:` \<*complus*  &#124; *was*\>|Especifica se o modo de hospedagem COM+ ou o modo de hospedagem da Web deve ser usado.<br /><br /> Forma `/h`abreviada.<br /><br /> Usar o modo de hospedagem COM+ requer ativação explícita do aplicativo COM+. O uso do modo de hospedagem da Web permite que o aplicativo COM+ seja ativado automaticamente conforme necessário. Se o aplicativo COM+ for um aplicativo de biblioteca, ele será executado no processo de Serviços de Informações da Internet (IIS). Se o aplicativo COM+ for um aplicativo de servidor, ele será executado no processo Dllhost. exe.|  
 |`/webSite:` \<*WebsiteName*\>|Especifica o site para hospedagem quando o modo de hospedagem da Web é usado ( `/hosting` consulte o sinalizador).<br /><br /> Forma `/w`abreviada.<br /><br /> Se nenhum site da Web for especificado, o site padrão será usado.|  
 |`/webDirectory:` \<*WebDirectoryName*\>|Especifica o diretório virtual para hospedagem quando a hospedagem Web é usada (consulte `/hosting` o sinalizador).<br /><br /> Forma `/d`abreviada.|  
@@ -63,7 +63,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ### <a name="code"></a>Código  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
@@ -72,7 +72,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
   
 ### <a name="code"></a>Código  
   
-```  
+```console  
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
@@ -81,7 +81,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
   
 ### <a name="code"></a>Código  
   
-```  
+```console  
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
@@ -90,7 +90,7 @@ ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Finan
   
 ### <a name="code"></a>Código  
   
-```  
+```console  
 ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
 ```  
   

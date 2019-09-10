@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 079c48a9975861646f1d28338d02dab8e4775031
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 49a5ad951c47100199c93d03efb07ffc6fda5080
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101198"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851422"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Ferramenta de Teste de Certificado do Fornecedor do Software)
 A ferramenta Teste de Certificado do Editor de Software cria um SPC (Software Publisher's Certificate) com base em um ou vários certificados X.509. Cert2spc.exe é apenas para fins de teste. É possível obter um SPC válido de uma Autoridade de Certificação como, por exemplo, Verisign ou Thawte. Para obter mais informações sobre a criação de certificados X.509, consulte [Makecert.exe (Ferramenta de Criação de Certificado)](/windows/desktop/SecCrypto/makecert).  
@@ -26,7 +26,7 @@ A ferramenta Teste de Certificado do Editor de Software cria um SPC (Software Pu
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc  
 ```  
   
@@ -45,13 +45,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
 ## <a name="examples"></a>Exemplos  
  O comando a seguir cria um SPC com base em `myCertificate.cer` e o coloca em `mySPCFile.spc`.  
   
-```  
+```console
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
  O comando a seguir cria um SPC com base em `oneCertificate.cer` e `twoCertificate.cer` e o coloca em `mySPCFile.spc`.  
   
-```  
+```console
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   

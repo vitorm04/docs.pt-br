@@ -3,12 +3,12 @@ title: Introdução ao C# – tutoriais interativos
 description: Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015014"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850771"
 ---
 # <a name="introduction-to-c"></a>Introdução ao C\#
 
@@ -45,4 +45,4 @@ Esse tutorial pressupõe a conclusão das lições listadas acima.
 Este tutorial final está disponível apenas para execução no seu computador usando seu próprio ambiente de desenvolvimento local e o .NET Core.
 Você compilará um aplicativo de console e verá os recursos básicos orientados para objeto que fazem parte da linguagem C#.
 
-Este tutorial pressupõe a conclusão dos tutoriais de introdução online e a instalação do [SDK do .NET Core](https://www.microsoft.com/net/download) e do [Visual Studio Code](https://code.visualstudio.com/).
+Este tutorial pressupõe a conclusão dos tutoriais de introdução online e a instalação do [SDK do .NET Core](https://dotnet.microsoft.com/download) e do [Visual Studio Code](https://code.visualstudio.com/).

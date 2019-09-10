@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo do .NET Core compatível com plug-in
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 308fd2f853261e87da71892c42e17e36984d1978
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330983"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849437"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Criar um aplicativo do .NET Core com plug-ins
 
@@ -22,7 +22,7 @@ Este tutorial mostra como:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Instale o [SDK do .NET Core 3.0 Versão Prévia 2](https://www.microsoft.com/net/core) ou uma versão mais recente.
+- Instale o [SDK do .NET Core 3.0 Versão Prévia 2](https://dotnet.microsoft.com/download) ou uma versão mais recente.
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 

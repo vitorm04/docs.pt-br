@@ -2,12 +2,12 @@
 title: Lidando com exceções e falhas
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 676ebe999c72ed678b7432ec154b1ec104b4d6cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795690"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851270"
 ---
 # <a name="handling-exceptions-and-faults"></a>Lidando com exceções e falhas
 As exceções são usadas para comunicar erros localmente no serviço ou na implementação do cliente. As falhas, por outro lado, são usadas para comunicar erros entre limites de serviço, como do servidor para o cliente ou vice-versa. Além das falhas, os canais de transporte geralmente usam mecanismos específicos de transporte para comunicar erros no nível de transporte. Por exemplo, o transporte HTTP usa códigos de status como 404 para comunicar uma URL de ponto de extremidade não existente (não há nenhum ponto de extremidade para enviar de volta uma falha). Este documento consiste em três seções que fornecem orientação aos autores de canal personalizados. A primeira seção fornece orientação sobre quando e como definir e lançar exceções. A segunda seção fornece orientação sobre como gerar e consumir falhas. A terceira seção explica como fornecer informações de rastreamento para ajudar o usuário do seu canal personalizado na solução de problemas de aplicativos em execução.  
@@ -48,7 +48,7 @@ Falha de SOAP 1,2 (esquerda) e falha de SOAP 1,1 (direita). Observe que, em SOAP
   
  O SOAP define uma mensagem de falha como uma mensagem que contém apenas um elemento Fault (um elemento cujo `<env:Fault>`nome é) como um `<env:Body>`filho de. O conteúdo do elemento Fault difere ligeiramente entre SOAP 1,1 e SOAP 1,2, como mostra a Figura 1. No entanto <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> , a classe normaliza essas diferenças em um modelo de objeto:  
   
-```  
+```csharp
 public abstract class MessageFault  
 {  
     protected MessageFault();  
@@ -74,7 +74,7 @@ public abstract class MessageFault
   
  Você deve criar novos subcódigos de falha (ou novos códigos de falha se estiver usando SOAP 1,1) se for interessante distinguir programaticamente uma falha. Isso é análogo à criação de um novo tipo de exceção. Evite usar a notação de ponto com os códigos de falha SOAP 1,1. (O [perfil básico WS-I](https://go.microsoft.com/fwlink/?LinkId=95177) também desencoraja o uso da notação de ponto de código de falha.)  
   
-```  
+```csharp  
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  A `Reason` propriedade corresponde `env:Reason` ao (ou `faultString` em SOAP 1,1) uma descrição legível por humanos da condição de erro análoga à mensagem de uma exceção. A `FaultReason` classe (e SOAP `env:Reason/faultString`) tem suporte interno para ter várias traduções no interesse da globalização.  
   
-```  
+```csharp  
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -118,7 +118,7 @@ public class FaultReason
   
  Ao gerar uma falha, o canal personalizado não deve enviar a falha diretamente, em vez disso, ele deve gerar uma exceção e permitir que a camada acima decida se deseja converter essa exceção em uma falha e como enviá-la. Para auxiliar nessa conversão, o canal deve fornecer uma `FaultConverter` implementação que possa converter a exceção gerada pelo canal personalizado para a falha apropriada. `FaultConverter` é definido como:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -134,7 +134,7 @@ public class FaultConverter
   
  Cada canal que gera falhas personalizadas deve implementá `FaultConverter` -la e retorná-la `GetProperty<FaultConverter>`de uma chamada para. A implementação `OnTryCreateFaultMessage` personalizada deve converter a exceção em uma falha ou delegar para o `FaultConverter`canal interno. Se o canal for um transporte, ele deverá converter a exceção ou o delegado para o codificador `FaultConverter` ou o padrão `FaultConverter` fornecido no WCF. O padrão `FaultConverter` converte erros correspondentes às mensagens de falha especificadas por WS-Addressing e SOAP. Aqui está um exemplo `OnTryCreateFaultMessage` de implementação.  
   
-```  
+```csharp  
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  O modelo de objeto a seguir dá suporte à conversão de mensagens em exceções:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  Uma implementação típica tem esta aparência:  
   
-```  
+```csharp  
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -290,7 +290,7 @@ public override bool OnTryCreateException(
   
  Se o canal de protocolo enviar um cabeçalho personalizado com MustUnderstand = true e receber `mustUnderstand` uma falha, ele deverá descobrir se a falha é devido ao cabeçalho enviado. Há dois membros na `MessageFault` classe que são úteis para isso:  
   
-```  
+```csharp  
 public class MessageFault  
 {  
     ...  
@@ -322,7 +322,7 @@ public class MessageFault
   
  Depois de ter uma origem de rastreamento, você chama <xref:System.Diagnostics.TraceSource.TraceData%2A>seus <xref:System.Diagnostics.TraceSource.TraceEvent%2A>métodos, <xref:System.Diagnostics.TraceSource.TraceInformation%2A> ou para gravar entradas de rastreamento para os ouvintes de rastreamento. Para cada entrada de rastreamento que você escreve, você precisa classificar o tipo de evento como um dos tipos de evento definidos <xref:System.Diagnostics.TraceEventType>em. Essa classificação e a configuração de nível de rastreamento na configuração determinam se a entrada de rastreamento é a saída para o ouvinte. Por exemplo, definir o nível de rastreamento na configuração `Warning` para `Warning` `Error` permitir e `Critical` rastrear entradas a serem gravadas, mas bloqueia informações e entradas detalhadas. Aqui está um exemplo de instanciação de uma origem de rastreamento e gravação de uma entrada no nível de informação:  
   
-```  
+```csharp
 using System.Diagnostics;  
 //...  
 TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41df91ceb9e4b776c2aa1ce864b7e09ec485fd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65eee2e834251817b461f1cd1debf212696d5a5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661947"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855700"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>Método ICorProfilerInfo::SetILInstrumentedCodeMap
 
-Define um mapa de código para a função especificada usando as entradas de mapa especificadas Microsoft intermediate language (MSIL).
+Define um mapa de código para a função especificada usando as entradas de mapa da MSIL (Microsoft Intermediate Language) especificadas.
 
 > [!NOTE]
-> No .NET Framework versão 2.0, chamando `SetILInstrumentedCodeMap` em um `FunctionID` que representa um genérico de função em um domínio de aplicativo específico afetará todas as instâncias dessa função no domínio do aplicativo.
+> No .NET Framework versão 2,0, chamar `SetILInstrumentedCodeMap` em um `FunctionID` que representa uma função genérica em um domínio de aplicativo específico afetará todas as instâncias dessa função no domínio do aplicativo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -44,38 +44,38 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parâmetros
 
 `functionId`\
-[in] A ID da função para o qual definir o mapa de código.
+no A ID da função para a qual definir o mapa de código.
 
 `fStartJit`\
-[in] Um valor booliano que indica se a chamada para o `SetILInstrumentedCodeMap` método é o primeiro para um determinado `FunctionID`. Definir `fStartJit` à `true` na primeira chamada para `SetILInstrumentedCodeMap` para um determinado `FunctionID`e, ao `false` daí em diante.
+no Um valor booliano que indica se a chamada para `SetILInstrumentedCodeMap` o método é a primeira para um `FunctionID`específico. Defina `fStartJit` `SetILInstrumentedCodeMap` como `true` na primeira chamada para para um determinado `FunctionID`e para `false` depois.
 
 `cILMapEntries`\
-[in] O número de elementos no `cILMapEntries` matriz.
+no O número de elementos na `cILMapEntries` matriz.
 
 `rgILMapEntries`\
-[in] Uma matriz de estruturas COR_IL_MAP, cada um deles especifica um deslocamento do MSIL.
+no Uma matriz de estruturas COR_IL_MAP, cada uma delas especifica um deslocamento MSIL.
 
 ## <a name="remarks"></a>Comentários
 
-Um criador de perfil geralmente insere instruções dentro do código-fonte de um método para instrumentar o método (por exemplo, para notificar quando uma linha de origem especificado for atingida). `SetILInstrumentedCodeMap` permite que um criador de perfil mapear as instruções MSIL originais para seus novos locais. Um criador de perfil pode usar o [ICorProfilerInfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método para obter o deslocamento do MSIL original para um determinado deslocamento nativo.
+Um criador de perfil geralmente insere instruções no código-fonte de um método para instrumentar esse método (por exemplo, para notificar quando uma determinada linha de origem for atingida). `SetILInstrumentedCodeMap`permite que um criador de perfil Mapeie as instruções originais do MSIL para seus novos locais. Um criador de perfil pode usar o método [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) para obter o deslocamento de MSIL original para um determinado deslocamento nativo.
 
-O depurador assumirá que cada deslocamento antigo se refere a um deslocamento dentro do código MSIL original, sem modificações de MSIL, e cada novo deslocamento refere-se para o deslocamento do MSIL dentro do código novo, instrumentado. O mapa deve ser classificado em ordem crescente. Para depuração funcione corretamente, siga estas diretrizes:
+O depurador assumirá que cada deslocamento antigo se refere a um deslocamento MSIL dentro do código MSIL original e não modificado, e que cada deslocamento novo se refere ao deslocamento MSIL dentro do novo código instrumentado. O mapa deve ser classificado em ordem crescente. Para que a depuração funcione corretamente, siga estas diretrizes:
 
-- Não reorganize o código instrumentado de MSIL.
+- Não reordene o código MSIL instrumentado.
 
 - Não remova o código MSIL original.
 
-- Inclua entradas para todos os pontos de sequência do arquivo de banco de dados (PDB) de programa no mapa. O mapa não interpola entradas ausentes. Então, como o mapa a seguir:
+- Inclua entradas para todos os pontos de sequência do arquivo de banco de dados do programa (PDB) no mapa. O mapa não interpola as entradas ausentes. Portanto, considerando o seguinte mapa:
 
-  (0 antigo, 0 novos)
+  (0 antigo, 0 novo)
 
-  (5 antigo, 10 novos)
+  (5 antigos, 10 novos)
 
-  (9 antigo, 20 novas)
+  (9 antigos, 20 novos)
 
   - Um deslocamento antigo de 0, 1, 2, 3 ou 4 será mapeado para o novo deslocamento 0.
 
-  - Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento de 10.
+  - Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento 10.
 
   - Um deslocamento antigo de 9 ou superior será mapeado para o novo deslocamento 20.
 
@@ -83,15 +83,17 @@ O depurador assumirá que cada deslocamento antigo se refere a um deslocamento d
 
   - Um novo deslocamento de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 será mapeado para o deslocamento antigo 5.
 
-  - Um novo deslocamento de 20 ou superior será mapeado para o deslocamento antigo 9.
+  - Um novo deslocamento de 20 ou mais será mapeado para o deslocamento antigo 9.
+
+No .NET Framework 3,5 e versões anteriores, você aloca a `rgILMapEntries` matriz chamando o método [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) . Como o tempo de execução se apropria dessa memória, o criador de perfil não deve tentar liberá-la.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** CorProf.idl, CorProf.h
 
-**Biblioteca:** CorGuids.lib
+**Biblioteca** CorGuids.lib
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941463"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851594"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  
@@ -43,19 +43,19 @@ Quando você trabalha com recursos localizados em aplicativos de área de trabal
 ### <a name="retrieving-string-data-an-example"></a>Recuperando dados de cadeia de caracteres: Um Exemplo  
  O exemplo a seguir chama o método <xref:System.Resources.ResourceManager.GetString%28System.String%29> para recuperar os recursos de cadeia de caracteres da cultura da interface do usuário atual. Ele inclui um recurso de cadeia de caracteres neutro para a cultura do inglês (Estados Unidos) e recursos localizados para as culturas de francês (França) e russo (Rússia). O seguinte recurso de inglês (Estados Unidos) está em um arquivo chamado Strings.txt:  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  O recurso de francês (França) está em um arquivo chamado Strings.fr-FR.txt:  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  O recurso de russo (Rússia) está em um arquivo chamado Strings.ru-RU.txt:  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  O seguinte arquivo em lotes (.bat) compila o exemplo e gera assemblies satélites nos diretórios apropriados. Os comandos são fornecidos para a linguagem C# e para o compilador. Para o Visual Basic, altere `csc` para `vbc`, e altere `GetString.cs` para `GetString.vb`.  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Você pode usar o seguinte arquivo em lotes para criar o exemplo de C#. Para o Visual Basic, altere `csc` para `vbc` e altere a extensão do arquivo de código-fonte de `.cs` para `.vb`.  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  Você pode criar o arquivo de recurso necessário e os assemblies e executar o aplicativo, executando o seguinte arquivo em lotes. Você deve usar a opção `/r` para fornecer ao arquivo Resgen.exe uma referência para UIElements.dll para que ele possa acessar informações sobre a estrutura `PersonTable`. Se você estiver usando C#, substitua o nome do compilador `vbc` por `csc` e substitua a extensão `.vb` por `.cs`.  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>Um Exemplo  
  O exemplo a seguir ilustra como o gerenciador de recursos recupera recursos diretamente dos arquivos .resources. O exemplo consiste em três arquivos de recurso baseados em texto para as culturas de inglês (Estados Unidos), francês (França) e russo (Rússia). Inglês (Estados Unidos) é a cultura padrão do exemplo. Seus recursos são armazenados no seguinte arquivo denominado Strings.txt:  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  Recursos para a cultura francês (França) são armazenados no seguinte arquivo, que é chamado Strings.fr-FR.txt:  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  Recursos para a cultura russo (França) são armazenados no seguinte arquivo, que é chamado Strings.ru-RU.txt:  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  Você pode compilar a versão em C# do exemplo, executando o seguinte arquivo em lotes. Se você estiver usando Visual Basic, substitua `csc` por `vbc` e substitua a extensão `.cs` por `.vb`.  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

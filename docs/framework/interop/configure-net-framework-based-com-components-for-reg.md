@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625445"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853845"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
@@ -166,11 +166,9 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
 3. Compile o arquivo de origem do assembly novamente e especifique o arquivo de recurso usando a opção **/win32res**:  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
-     Novamente, `myresource.res` é o nome do arquivo de recurso que contém o recurso inserido.  
+     Novamente, `myresource.res` é o nome do arquivo de recurso que contém recursos incorporados.  
   
 ## <a name="see-also"></a>Consulte também
 

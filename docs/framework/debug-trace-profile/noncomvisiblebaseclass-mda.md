@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb0810a9e0ffce825abecc87eb2698920209d86f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52460bbbf2b5f65f5c15d2cd06be7d3917f68bd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753758"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854061"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>MDA nonComVisibleBaseClass
 O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativado quando uma chamada `QueryInterface` é feita por código não gerenciado ou nativo no CCW (COM Callable Wrapper) de uma classe gerenciada visível em COM derivada de uma classe base que não é visível em COM.  A chamada `QueryInterface` faz com que o MDA seja ativado apenas em casos nos quais a chamada solicita a interface de classe ou o `IDispatch` padrão da classe gerenciada visível em COM.  O MDA não é ativado quando o `QueryInterface` é para uma interface explícita que tem o atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> aplicado e é implementado explicitamente pela classe visível em COM.  
@@ -36,7 +36,7 @@ O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativ
 ## <a name="output"></a>Saída  
  A seguir está um exemplo de mensagem para uma chamada `QueryInterface` em uma classe visível em COM `Derived` que deriva de uma classe não visível em COM `Base`.  
   
-```  
+```output
 A QueryInterface call was made requesting the class interface of COM   
 visible managed class 'Derived'. However since this class derives from   
 non COM visible class 'Base', the QueryInterface call will fail. This   

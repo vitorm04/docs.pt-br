@@ -1,19 +1,19 @@
 ---
-title: Analisar o sentimentos usando a CLI do ML.NET
+title: Analisar sentimentos com a CLI do ML.NET
 description: Gerar automaticamente um modelo de ML e o código C# relacionado de um conjunto de dados de exemplo
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6dbd69c8424227f85d8bf3cdcaf6cf9dbf7e1f4c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254153"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856026"
 ---
-# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar o sentimentos usando a CLI do ML.NET
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar sentimentos com a CLI do ML.NET
 
 Saiba como usar a CLI do ML.NET para gerar automaticamente um modelo do ML.NET e o código C# subjacente. Você fornece o conjunto de dados e a tarefa de aprendizado de máquina que deseja implementar e a CLI usa o mecanismo de AutoML para criar o código-fonte de implantação e geração de modelo, bem como o modelo binário.
 
@@ -26,7 +26,7 @@ Neste tutorial, você realizará as seguintes etapas:
 > - Explorar o código C# gerado que foi usado para treinar o modelo
 
 > [!NOTE]
-> Este tópico refere-se à ferramenta de CLI do ML.NET que está atualmente em versão prévia. O material pode estar sujeito a alterações. Para obter mais informações, visite [a introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Este tópico refere-se à ferramenta de CLI do ML.NET que está atualmente em versão prévia. O material pode estar sujeito a alterações. Para obter mais informações, visite a página [ml.net](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
 
 A CLI do ML.NET faz parte do ML.NET e sua meta principal é "democratizar" o ML.NET, durante seu aprendizado, para desenvolvedores do .NET, de modo que você não precise escrever o código do zero para começar a usar.
 

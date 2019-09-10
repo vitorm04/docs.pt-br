@@ -2,12 +2,12 @@
 title: Especificando um algoritmo de criptografia personalizada
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: cf4b3da82087a6daade9d6b939f3e1aac628cb01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796895"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849111"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificando um algoritmo de criptografia personalizada
 O WCF permite que você especifique um algoritmo de criptografia personalizado a ser usado ao criptografar dados ou computação de assinaturas digitais. Isso é feito pelas seguintes etapas:  
@@ -109,7 +109,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
   
  Para registrar o algoritmo personalizado no código, use <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> o método. Esse método cria os dois mapeamentos. O exemplo a seguir mostra como chamar esse método:  
   
-```  
+```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  

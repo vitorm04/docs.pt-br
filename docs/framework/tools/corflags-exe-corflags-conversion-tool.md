@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: HT
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378656"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851293"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Ferramenta de Conversão de CorFlags)
 A ferramenta Conversão CorFlags permite configurar a seção CorFlags do cabeçalho de uma imagem PE (Portable Executable).  
@@ -24,7 +24,7 @@ A ferramenta Conversão CorFlags permite configurar a seção CorFlags do cabeç
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   

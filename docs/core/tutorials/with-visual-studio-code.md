@@ -4,12 +4,12 @@ description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# 
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105101"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849460"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
@@ -18,7 +18,7 @@ O .NET Core oferece uma plataforma modular e rápida para a criação de aplicat
 ## <a name="prerequisites"></a>Pré-requisitos
 
 1. Instalar o [Visual Studio Code](https://code.visualstudio.com/).
-2. Instalar o [SDK do .NET Core](https://www.microsoft.com/net/download/core).
+2. Instalar o [SDK do .NET Core](https://dotnet.microsoft.com/download).
 3. Instale a [extensão de C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) para o Visual Studio Code. Para saber mais sobre como instalar extensões no Visual Studio Code, confira [Marketplace de extensão de código do VS](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Hello World
@@ -134,7 +134,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
     Hello World! Happy coding!
     ```
 
-## <a name="faq"></a>Perguntas frequentes
+## <a name="faq"></a>Perguntas Frequentes
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Faltam os ativos necessários para compilar e depurar C# no Visual Studio Code. Meu depurador diz: "Nenhuma configuração".
 

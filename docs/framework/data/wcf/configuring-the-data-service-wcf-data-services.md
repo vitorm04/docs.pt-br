@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780437"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854201"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
-Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]o, você pode criar serviços de dados [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] que expõem feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]usa provedores de dados para expor esses dados como [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] um feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](data-services-providers-wcf-data-services.md).  
+Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]o, você pode criar serviços de dados [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] que expõem feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]usa provedores de dados para expor esses dados como [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] um feed. Esses provedores incluem um provedor de Entity Framework, um provedor de reflexão e um conjunto de interfaces de provedor de serviços de dados personalizados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](data-services-providers-wcf-data-services.md).  
   
  No [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], um serviço de dados é uma classe que herda da classe <xref:System.Data.Services.DataService%601>, onde o tipo do serviço de dados é o contêiner de entidade do modelo de dados. Este contêiner de entidade tem uma ou mais propriedades que retornam um <xref:System.Linq.IQueryable%601>, que são usados para acessar conjuntos de entidades no modelo de dados.  
   
@@ -69,7 +69,7 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]o, você pode cri
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Sem suporte|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -e-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Sem suporte|Sem suporte|Sem suporte|Sem suporte|  
   
- <sup>1</sup> neste exemplo, `Address` representa uma propriedade de `Customers` tipo complexo da entidade que tem uma propriedade chamada `StreetAddress`. O modelo usado pelos serviços de dados da Northwind não define explicitamente este tipo complexo. Quando o modelo de dados é definido usando o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor, você pode usar as ferramentas de modelo de dados de entidade para definir um tipo complexo. Para obter mais informações, confira [Como: Criar e modificar tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))complexos.  
+ <sup>1</sup> neste exemplo, `Address` representa uma propriedade de `Customers` tipo complexo da entidade que tem uma propriedade chamada `StreetAddress`. O modelo usado pelos serviços de dados da Northwind não define explicitamente este tipo complexo. Quando o modelo de dados é definido usando o provedor de Entity Framework, você pode usar as ferramentas de Modelo de Dados de Entidade para definir um tipo complexo. Para obter mais informações, confira [Como: Criar e modificar tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))complexos.  
   
  <sup>2</sup> esse URI tem suporte quando uma propriedade que retorna um blob (objeto binário grande) é definida como o recurso de mídia que pertence a uma entidade que é uma entrada de link de mídia, que nesse caso `Customers`é. Para obter mais informações, consulte [streaming Provider](streaming-provider-wcf-data-services.md).  
   

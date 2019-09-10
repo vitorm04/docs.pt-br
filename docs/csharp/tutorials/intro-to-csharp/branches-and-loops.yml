@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: A coleção de lista
-  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
-  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-  ms.translationtype: HT
+  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/06/2019
-  ms.locfileid: "65063855"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850784"
 items:
 - durationInMinutes: 1
   content: >
@@ -218,7 +218,7 @@ items:
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Parabéns!
   content: >-
-    Você concluiu o tutorial interativo "branches e loops". Clique no link **coleções de listas** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A etapa "Continuar aprendendo" leva você de volta a esses tutoriais.
+    Você concluiu o tutorial interativo "branches e loops". Clique no link **coleções de listas** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A seção "próximas etapas" leva você de volta para esses tutoriais.
 
 
     Saiba mais sobre esses conceitos nestes tópicos:

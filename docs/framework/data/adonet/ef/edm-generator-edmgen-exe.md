@@ -2,18 +2,18 @@
 title: Gerador de EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251626"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854726"
 ---
 # <a name="edm-generator-edmgenexe"></a>Gerador de EDM (EdmGen.exe)
 
-A EdmGen.exe é uma ferramenta de linha de comando utilizada ao se trabalhar com o modelo e arquivos de mapeamento do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você pode usar a ferramenta EdmGen.exe para:
+EdmGen. exe é uma ferramenta de linha de comando usada para trabalhar com Entity Framework modelo e arquivos de mapeamento. Você pode usar a ferramenta EdmGen.exe para:
 
-- Conectar-se a uma fonte de dados, usando um provedor de dados do .NET Framework específico da fonte de dados, e gerar o modelo conceitual (.csdl), o modelo de armazenamento (.ssdl) e os arquivos (.msl) de mapeamento que são utilizados pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obter mais informações, confira [Como: Use EdmGen. exe para gerar o modelo e os arquivos](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de mapeamento.
+- Conecte-se a uma fonte de dados usando um provedor de dados .NET Framework específico da fonte de dados e gere o modelo conceitual (. CSDL), o modelo de armazenamento (. SSDL) e os arquivos de mapeamento (. MSL) usados pelo Entity Framework. Para obter mais informações, confira [Como: Use EdmGen. exe para gerar o modelo e os arquivos](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de mapeamento.
 
 - Validar um modelo existente. Para obter mais informações, confira [Como: Use EdmGen. exe para validar arquivos](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)de modelo e de mapeamento.
 

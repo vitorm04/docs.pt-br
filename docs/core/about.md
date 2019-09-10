@@ -3,12 +3,12 @@ title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: ea9253bacf2bcee63430cd45f2a9ed412ce629e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421880"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849131"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -20,7 +20,7 @@ O .NET Core tem as seguintes características:
 - **Implantação flexível:** Pode ser incluído no aplicativo ou instalado lado a lado (instalações de todo o usuário ou de todo o sistema). Pode ser usado com os [contêineres do Docker](docker/index.md).
 - **Compatível:** o .NET Core é compatível com o .NET Framework, o Xamarin e o Mono por meio do [.NET Standard](../standard/net-standard.md).
 - **Software livre:** A plataforma .NET Core é um software livre que usa licenças do MIT e Apache 2. O .NET Core é um projeto do [.NET Foundation](https://dotnetfoundation.org/).
-- **Suporte da Microsoft:** a Microsoft dá suporte ao .NET Core por meio do [Suporte do .NET Core](https://www.microsoft.com/net/core/support/).
+- **Suporte da Microsoft:** a Microsoft dá suporte ao .NET Core por meio do [Suporte do .NET Core](https://dotnet.microsoft.com/platform/support/policy).
 
 ## <a name="languages"></a>Linguagens
 
@@ -57,9 +57,9 @@ O .NET Core é composto pelas seguintes partes:
 
 Esses componentes são distribuídos das seguintes maneiras:
 
-- [Tempo de execução do .NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1) – inclui as bibliotecas de tempo de execução e de estruturas do .NET Core.
-- [Tempo de execução do ASP.NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1) – inclui bibliotecas de tempo de execução e de estruturas do ASP.NET Core e do .NET Core.
-- [SDK do .NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1) – inclui as ferramentas da CLI do .NET, o tempo de execução do ASP.NET Core e o tempo de execução e a estrutura do .NET Core.
+- [Tempo de execução do .NET Core](https://dotnet.microsoft.com/download) – inclui as bibliotecas de tempo de execução e de estruturas do .NET Core.
+- [Tempo de execução do ASP.NET Core](https://dotnet.microsoft.com/download) – inclui bibliotecas de tempo de execução e de estruturas do ASP.NET Core e do .NET Core.
+- [SDK do .NET Core](https://dotnet.microsoft.com/download) – inclui as ferramentas da CLI do .NET, o tempo de execução do ASP.NET Core e o tempo de execução e a estrutura do .NET Core.
 
 ### <a name="open-source"></a>Código Aberto
 

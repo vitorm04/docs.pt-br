@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ffc63146cde0be5359ee03ea53683220f4996b81
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752432"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855493"
 ---
 # <a name="net-guide"></a>Guia do .NET
 
@@ -19,7 +19,7 @@ O guia do .NET fornece uma grande quantidade de informações sobre o .NET.  Dep
 
 ## <a name="new-to-net"></a>Novo no .NET?
 
-Se você desejar uma visão geral de alto nível sobre o .NET, confira [O que é .NET?](https://www.microsoft.com/net/learn/what-is-dotnet).
+Se você desejar uma visão geral de alto nível sobre o .NET, confira [O que é .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).
 
 Se você é novo no .NET, confira o artigo [Introdução](get-started.md).
 

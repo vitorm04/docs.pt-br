@@ -2,15 +2,15 @@
 title: Geração SQL no provedor exemplo
 ms.date: 03/30/2017
 ms.assetid: e70f553d-4622-4627-928e-1aa2ee605d8e
-ms.openlocfilehash: d0e058cdc4dd3f7a1a04ab6eea5acf4d3deabb89
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a59f1fecf85d63208c3388204c962b5838902ba7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248508"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854322"
 ---
 # <a name="sql-generation-in-the-sample-provider"></a>Geração SQL no provedor exemplo
-O [provedor de exemplo Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstra os novos componentes dos provedores de dados do ADO.NET [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]que dão suporte ao.  Trabalha com um base de dados do SQL Server 2005 e é implementado como um wrapper para o provedor de dados do ADO.NET .NET 2.0.  
+O [provedor de exemplo Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstra os novos componentes dos provedores de dados ADO.NET que dão suporte ao Entity Framework.  Trabalha com um base de dados do SQL Server 2005 e é implementado como um wrapper para o provedor de dados do ADO.NET .NET 2.0.  
   
  O módulo de geração SQL do provedor de exemplo (localizado sob a pasta de geração SQL, exceto para o arquivo DmlSqlGenerator.cs) usa uma entrada DbQueryCommandTree e gerencia um único instrução SQL SELECT.  
   

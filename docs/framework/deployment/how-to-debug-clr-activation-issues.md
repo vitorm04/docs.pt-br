@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
-ms.translationtype: HT
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221070"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854009"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Como depurar problemas de ativação do CLR
 
@@ -35,19 +35,19 @@ O registro em log da ativação continua habilitada até que você remova o valo
 
 - Defina a variável de ambiente `COMPLUS_CLRLoadLogDir` para uma cadeia de caracteres que represente o caminho completo de um diretório existente em que você gostaria de armazenar os logs de ativação do CLR.
 
-     Como você define a variável de ambiente determina seu escopo:
+    Como você define a variável de ambiente determina seu escopo:
 
-    - Se você a definir no nível do sistema, o registro em log da ativação estará habilitado para todos os aplicativos do .NET Framework nesse computador até a variável de ambiente ser removida.
+  - Se você a definir no nível do sistema, o registro em log da ativação estará habilitado para todos os aplicativos do .NET Framework nesse computador até a variável de ambiente ser removida.
 
-    - Se você a definir no nível do usuário, o registro em log da ativação estará habilitado apenas para a conta de usuário atual. O registro em log continua até a variável de ambiente ser removida.
+  - Se você a definir no nível do usuário, o registro em log da ativação estará habilitado apenas para a conta de usuário atual. O registro em log continua até a variável de ambiente ser removida.
 
-    - Se você a definir de dentro do processo antes de carregar o CLR, o registro em log da ativação estará habilitado até que o processo seja encerrado.
+  - Se você a definir de dentro do processo antes de carregar o CLR, o registro em log da ativação estará habilitado até que o processo seja encerrado.
 
-    - Se você a definir em um prompt de comando antes de executar um aplicativo, o registro em log da ativação estará habilitado para qualquer aplicativo executado desse prompt de comando.
+  - Se você a definir em um prompt de comando antes de executar um aplicativo, o registro em log da ativação estará habilitado para qualquer aplicativo executado desse prompt de comando.
 
-     Por exemplo, para armazenar logs de ativação no diretório c:\clrloadlogs com escopo do nível de processo, abra uma janela de Prompt de Comando e digite o seguinte antes de executar o aplicativo:
+    Por exemplo, para armazenar logs de ativação no diretório c:\clrloadlogs com escopo do nível de processo, abra uma janela de Prompt de Comando e digite o seguinte antes de executar o aplicativo:
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
@@ -65,56 +65,56 @@ O log reflete a ordem na qual as APIs de hospedagem do CLR foram chamadas. Ele t
 
 No exemplo a seguir de um log de ativação, as informações mais úteis são realçadas e descritas após o log.
 
-```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+```output
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
 - **CLR Loading log** fornece o caminho para o executável que iniciou o processo que carregou o código gerenciado. Observe que isso poderia ser um host nativo.
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
 - **Installed Runtime** é o conjunto das versões do CLR instaladas no computador que são candidatas para a solicitação de ativação.
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
 - **built with version** é a versão do CLR que foi usada para criar o binário que foi fornecido para um método como [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
 - **feature-on-demand installation** refere-se a habilitar o .NET Framework 3.5 no Windows 8. Confira [Erros de inicialização do .NET Framework: gerenciando a experiência do usuário](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) para obter mais informações sobre esse cenário.
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 

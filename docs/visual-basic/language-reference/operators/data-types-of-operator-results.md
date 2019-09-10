@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: b0ebdb723df6bdb4f74e1558537c307ddb917f64
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bc7f29ae0e29a4c2fbfdf2e40d2226e174a06d3a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "69923268"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856051"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipos de dados de resultados do operador (Visual Basic)
 Visual Basic determina o tipo de dados de resultado de uma operação com base nos tipos de dados dos operandos. Em alguns casos, isso pode ser um tipo de dados com um intervalo maior do que o de um dos operandos.  
@@ -98,7 +98,7 @@ Visual Basic determina o tipo de dados de resultado de uma operação com base n
   
  Se o operando esquerdo for `Decimal`, `Single`, `Double` `String`ou,Visual Basic tentar convertê-lo `Long` antesdaoperaçãoeotipodedadosderesultadofor.`Long` O operando à direita (o número de posições de bit a ser deslocado) deve ser `Integer` ou um tipo que amplia para. `Integer`  
   
-### <a name="binary----and-mod-operators"></a>Operadores binários +, –, * e mod  
+### <a name="binary----and-mod-operators"></a>Operadores +, –, \*e mod binários  
  A tabela a seguir mostra os tipos de dados de resultado `+` para `–` o binário e `*` os `Mod` operadores e os operadores e. Observe que essa tabela é simétrica; para uma determinada combinação de tipos de dados de operando, o tipo de dados de resultado é o mesmo, independentemente da ordem dos operandos.  
   
 |||||||||||  
@@ -114,7 +114,7 @@ Visual Basic determina o tipo de dados de resultado de uma operação com base n
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|Decimal|  
 |`ULong`|Decimal|Decimal|ULong|Decimal|ULong|Decimal|ULong|Decimal|ULong|  
   
-### <a name="-operator"></a>Operador \  
+### <a name="-operator"></a>Operador \\  
  A tabela a seguir mostra os tipos de dados de `\` resultado para o operador. Observe que essa tabela é simétrica; para uma determinada combinação de tipos de dados de operando, o tipo de dados de resultado é o mesmo, independentemente da ordem dos operandos.  
   
 |||||||||||  

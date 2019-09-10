@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-  ms.translationtype: HT
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370313"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850791"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Clique no link **Números em C#** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A etapa "Continuar aprendendo" leva você de volta a esses tutoriais.
+    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Clique no link **Números em C#** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A seção "próximas etapas" leva você de volta para esses tutoriais.
 
 
     Para ler mais sobre o tipo `string`:
