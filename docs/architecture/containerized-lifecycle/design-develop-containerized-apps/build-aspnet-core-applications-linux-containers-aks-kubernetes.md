@@ -2,12 +2,12 @@
 title: Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux nos clusters do AKS/Kubernetes
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672573"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848748"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux em um orquestrador do AKS/Kubernetes
 
@@ -17,7 +17,7 @@ Os principais recursos do AKS são:
 
 - Um plano de controle hospedado no Azure
 - Atualizações automatizadas
-- Autorrecuperação
+- Auto-recuperação
 - Escala configurável pelo usuário
 - Uma experiência de usuário mais simples para desenvolvedores e operadores de cluster.
 
@@ -43,7 +43,7 @@ Verifique se você selecionou o ASP.NET Core 2.2 como a estrutura. O .NET Core 2
 
 **Figura 4-37**. Como selecionar o tipo de projeto do ASP.NET CORE 2.2 e de API Web
 
-Se você tiver uma versão anterior do .NET Core, poderá baixar e instalar a versão 2.2 do <https://www.microsoft.com/net/download/core#/sdk>.
+Se você tiver uma versão anterior do .NET Core, poderá baixar e instalar a versão 2.2 do <https://dotnet.microsoft.com/download>.
 
 Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, portanto, você pode converter seu projeto para Docker a qualquer momento. Para adicionar suporte ao Docker após a criação do projeto, clique com o botão direito do mouse no nó do projeto no Gerenciador de Soluções e selecione **Adicionar** > **Suporte ao Docker** no menu de contexto.
 
@@ -89,7 +89,7 @@ Se executar o comando `docker image`, você verá as duas imagens criadas, uma p
 
 ### <a name="create-a-new-tag-for-the-image"></a>Criar uma marca para a imagem
 
-Cada imagem de contêiner precisa ser marcada com o nome do `loginServer` do registro. Essa marca é usada para roteamento ao enviar imagens de contêiner por push a um registro da imagem.
+Cada imagem de contêiner precisa ser marcada com o `loginServer` nome do registro. Essa marca é usada para roteamento ao enviar imagens de contêiner para um registro de imagem.
 
 Você pode exibir o nome `loginServer` do portal do Azure com as informações do Registro de Contêiner do Azure
 
@@ -202,7 +202,7 @@ kubectl create -f mssample-deploy.yml
 
 ![Saída de console do comando acima: implantação "mssamplesbook" criada. serviço "mssample-kub-app" criado.](media/kubectl-create-command.png)
 
-**Figura 4-48**. Implantar para o Kubernetes
+**Figura 4-48**. Implantar no kubernetes
 
 Quando a implantação for concluída, você poderá acessar o console do Kubernetes com um proxy local que pode ser acessado temporariamente com este comando:
 

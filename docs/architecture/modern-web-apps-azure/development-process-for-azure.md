@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374043"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849583"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
 
@@ -36,7 +36,7 @@ Seja qual for sua preferência, um IDE avançado e completo ou um editor leve e 
 
 **Visual Studio Code e CLI do dotnet** (Ferramentas multiplataforma para Mac, Linux e Windows). Se preferir um editor leve e multiplataforma compatível com qualquer linguagem de desenvolvimento, use o Microsoft Visual Studio Code e a CLI do dotnet. Esses produtos fornecem uma experiência simples mas robusta que simplifica o fluxo de trabalho do desenvolvedor. Além disso, o Visual Studio Code é compatível com extensões para o C\# e ao desenvolvimento para a Web, fornecendo o IntelliSense e tarefas de atalho no editor.
 
-[Baixar o SDK do .NET Core](https://www.microsoft.com/net/download/core)
+[Baixar o SDK do .NET Core](https://dotnet.microsoft.com/download)
 
 [Baixar o Visual Studio Code](https://code.visualstudio.com/download)
 

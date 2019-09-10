@@ -2,12 +2,12 @@
 title: Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
 description: Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Microsserviços são serviços implantáveis de maneira modular e independente. Os contêineres do Docker (para Linux e Windows) simplificam a implantação e o teste ao agrupar um serviço e suas dependências em uma única unidade, que será executada em um ambiente isolado.
 ms.date: 01/07/2019
-ms.openlocfilehash: 55520153e0b926a97d0384f0b50b4c929f452f19
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70296837"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848870"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços do .NET: Arquitetura de aplicativos .NET em contêineres
 
@@ -21,7 +21,7 @@ Para facilitar a introdução, o guia concentra-se em um aplicativo de referênc
 
 ## <a name="action-links"></a>Links de ação
 
-- Baixe este livro eletrônico no seu formato de escolha: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) |
+- Baixe este livro eletrônico no seu formato de escolha: | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - Clone/Crie fork do aplicativo de referência [eShopOnContainers no GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
  
@@ -45,7 +45,7 @@ Este guia fornece diretrizes básicas de desenvolvimento e de arquitetura, princ
 
 Depois de estudar este guia, a próxima etapa será saber mais sobre os microsserviços pronto para produção no Microsoft Azure.
 
-## <a name="version"></a>Versão
+## <a name="version"></a>Version
 
 Este guia foi revisado para abordar a versão do **.NET Core 2.2**, além de muitas outras atualizações relacionadas à mesma "onda" de tecnologias (ou seja, as tecnologias do Azure e outras de terceiros) simultâneas ao .NET Core 2.2. É por isso que a versão do guia também foi atualizada para a versão **2.2**. 
 
