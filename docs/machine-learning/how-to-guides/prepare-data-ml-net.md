@@ -3,20 +3,20 @@ title: Preparar dados para criar um modelo
 description: Saiba como usar transformações no ML.NET para manipular e preparar dados para construção de modelo ou processamento adicional.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397715"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929366"
 ---
 # <a name="prepare-data-for-building-a-model"></a>Preparar dados para criar um modelo
 
 Saiba como usar o ML.NET para preparar dados para construção de modelo ou processamento adicional.
 
-Dados geralmente não estão limpos e são esparsos. Além disso, os algoritmos de aprendizado de máquina do ML.NET esperam que a entrada ou os recursos estejam em um único vetor numérico. Portanto, uma das metas da preparação de dados é obter os dados no formato esperado por algoritmos do ML.NET. 
+Dados geralmente não estão limpos e são esparsos. Os algoritmos de aprendizado de máquina ML.NET esperam que a entrada ou os recursos estejam em um único vetor numérico. Da mesma forma, o valor a prever (rótulo), especialmente quando se trata de dados categóricos, deve ser codificado. Portanto, uma das metas da preparação de dados é obter os dados no formato esperado por algoritmos do ML.NET. 
 
 ## <a name="filter-data"></a>Filtrar dados
 
@@ -294,7 +294,7 @@ Usando a primeira entrada como um exemplo, a seguir está uma descrição detalh
 
 **Texto original: Este é um bom produto**
 
-|Transformar | DESCRIÇÃO | Resultado
+|Transformar | Descrição | Resultado
 |--|--|--|
 |1. NormalizeText | Converte todas as letras em minúsculas por padrão | este é um bom produto
 |2. TokenizeWords | Divide a cadeia de caracteres em palavras individuais | ["este", "é", "um","bom","produto"]

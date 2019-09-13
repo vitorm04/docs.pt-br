@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957968"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894836"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
 A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermediate Language) (como gravadores de compiladores, desenvolvedores de mecanismos de script etc.) a determinar se o código MSIL e os metadados associados atendem aos requisitos de segurança de tipo. Alguns compiladores só gerarão código fortemente tipado verificável se você evitar usar determinados constructos de linguagem. Se, como desenvolvedor, estiver usando um compilador assim, você talvez queira verificar se não comprometeu a segurança de tipo do código. Nessa situação, é possível executar a ferramenta PEVerify nos arquivos para verificar MSIL e metadados.  
@@ -28,17 +28,17 @@ A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermedia
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 peverify filename [options]  
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*filename*|O arquivo PE (Portable Executable) para o qual MSIL e metadados devem ser verificados.|  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Anula a verificação depois de erros *maxErrorCount*.<br /><br /> Esse parâmetro não é compatível no .NET Framework versão 2.0 ou posterior.|  
 |**/clock**|Mede e relata os seguintes tempos de verificação em milissegundos:<br /><br /> **MD Val. cycle**<br /> Ciclo de validação dos metadados<br /><br /> **MD Val. pure**<br /> Validação dos metadados pura<br /><br /> **IL Ver. cycle**<br /> Ciclo de verificação MSIL<br /><br /> **IL Ver pure**<br /> Verificação MSIL pura<br /><br /> Os tempos de **MD Val. cycle** e **IL Ver. cycle** incluem o tempo necessário para a realização de procedimentos de inicialização e desligamento necessários. Os tempos de **MD Val. pure** e **IL Ver pure** refletem o tempo necessário para a realização da validação ou apenas da verificação.|  
@@ -68,25 +68,25 @@ peverify filename [options]
 ## <a name="examples"></a>Exemplos  
  O comando a seguir realiza verificações de validação dos metadados e verificações de segurança fortemente tipada MSIL para métodos implementados no assembly `myAssembly.exe`.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il  
 ```  
   
  Mediante a conclusão bem-sucedida da solicitação acima, Peverify.exe exibe a mensagem a seguir.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 ```  
   
  O comando a seguir realiza verificações de validação dos metadados e verificações de segurança fortemente tipada MSIL para métodos implementados no assembly `myAssembly.exe`. A ferramenta exibe o tempo necessário à realização dessas verificações.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
  Mediante a conclusão bem-sucedida da solicitação acima, Peverify.exe exibe a mensagem a seguir.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 Timing: Total run     320 msec  
         MD Val.cycle  40 msec  
@@ -97,25 +97,25 @@ Timing: Total run     320 msec
   
  O comando a seguir realiza verificações de validação dos metadados e verificações de segurança fortemente tipada MSIL para métodos implementados no assembly `myAssembly.exe`. Peverify.exe para, no entanto, quando alcança a contagem de erros máxima de 100. A ferramenta também ignora os códigos de erro especificados.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
  O comando a seguir produz o mesmo resultado que o exemplo anterior acima, mas especifica os códigos de erro que serão ignorados no arquivo de resposta `ignoreErrors.rsp`.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
  O arquivo de resposta pode conter uma lista separada por vírgulas de códigos de erro.  
   
-```  
+```text
 0x12345678, 0xABCD1234  
 ```  
   
  O arquivo de resposta também pode ser formatado com um código de erro por linha.  
   
-```  
+```text
 0x12345678  
 0xABCD1234  
 ```  

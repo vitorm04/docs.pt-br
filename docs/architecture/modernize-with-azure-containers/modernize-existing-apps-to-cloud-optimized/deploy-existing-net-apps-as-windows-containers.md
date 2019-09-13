@@ -2,12 +2,12 @@
 title: Implantar aplicativos .NET existentes como contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Implantar aplicativos .NET existentes como contêineres do Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374016"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926481"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -143,6 +143,7 @@ No entanto, ao pensar no ambiente de implantação de produção ou até mesmo e
 **Figura 4-7.5.** O ecossistema do contêiner no Azure
 
 No ecossistema do contêiner no Azure, os seguintes produtos dão suporte a contêineres que são considerados infraestrutura:
+
 - **ACI (instâncias de contêiner do Azure)**
 - **Máquinas virtuais do Azure** (Com suporte do contêiner)
 - **Conjuntos de dimensionamento de máquinas virtuais do Azure** (Com suporte do contêiner)

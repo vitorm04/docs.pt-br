@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105678"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893170"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -28,7 +28,7 @@ As ferramentas de compilação do C# consideram a versão mais recente da lingua
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
-Ao olhar para o passado, a C# versão 1.0 parecia muito com o Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
+Quando voltar e olhar, C# a versão 1,0, lançada com o Visual Studio.NET 2002, ficou muito parecida com o Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
 
 Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Carecia das funcionalidades assíncronas internas e algumas das funcionalidades relacionadas a genéricos que você nem valoriza. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam alguns anos para sair.
 
@@ -100,7 +100,7 @@ Levou algum tempo para que as pessoas entendessem e integrassem o conceito, mas 
 
 ## <a name="c-version-40"></a>C# versão 4.0
 
-O C# versão 4.0 enfrentou dificuldades para sobreviver ao status inovador da versão 3.0. Com a versão 3.0, o C# tirou verdadeiramente a linguagem da sombra do Java e a colocou em proeminência. A linguagem foi rapidamente se tornando elegante.
+C#a versão 4,0, lançada com o Visual Studio 2010, teria tido um tempo difícil de viver até o status inovador da versão 3,0. Com a versão 3.0, o C# tirou verdadeiramente a linguagem da sombra do Java e a colocou em proeminência. A linguagem foi rapidamente se tornando elegante.
 
 A próxima versão introduziu alguns novos recursos interessantes:
 
@@ -117,12 +117,12 @@ Associação dinâmica tem potencial de erros, mas também grande eficiência na
 
 ## <a name="c-version-50"></a>C# versão 5.0
 
-O C# versão 5.0 era uma versão focada da linguagem. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
+C#a versão 5,0, lançada com o Visual Studio 2012, foi uma versão focada da linguagem. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
 
 - [Membros assíncronos](../async.md)
 - [Atributos de informações do chamador](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>Veja também
+### <a name="see-also"></a>Consulte também
 
 - [Projeto de código: Atributos de informações do chamador no C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
@@ -132,7 +132,7 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 ## <a name="c-version-60"></a>C# versão 6.0
 
-Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Na versão 6.0, ele abre mão de um recurso arrasador dominante liberando, em vez disso, muitos recursos menores que tornam a programação em C# mais produtiva. Aqui estão alguns deles:
+Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Com a versão 6,0, lançada com Visual Studio 2013, ela desapareceria de um recurso de Killer dominante e, em vez disso, liberava muitos recursos menores que tornaram C# a programação mais produtiva. Aqui estão alguns deles:
 
 - [Importações estáticas](./csharp-6.md#using-static)
 - [Filtros de exceção](./csharp-6.md#exception-filters)
@@ -154,7 +154,7 @@ Fizeram ainda outra coisa com esta versão, embora não seja um recurso de lingu
 
 ## <a name="c-version-70"></a>C# versão 7.0
 
-A versão principal mais recente do C# é a versão 7.0. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
+A versão principal mais recente é C# a versão 7,0, lançada com o Visual Studio 2017. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
 
 - [Variáveis Out](./csharp-7.md#out-variables)
 - [Tuplas e desconstrução](./csharp-7.md#tuples)

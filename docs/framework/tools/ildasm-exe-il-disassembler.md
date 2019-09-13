@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912487"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894874"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -28,7 +28,7 @@ No prompt de comando, digite o seguinte:
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 As opções a seguir estão disponíveis para arquivos *.exe*, *.dll*, *.obj*, *.lib* e *.winmd*.
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/out=** `filename`|Cria um arquivo de saída com o `filename` especificado, em vez de exibir os resultados em uma interface gráfica do usuário.|
 |**/rtf**|Produz saída em formato rich text. Inválido com a opção **/text**.|
@@ -46,7 +46,7 @@ As opções a seguir estão disponíveis para arquivos *.exe*, *.dll*, *.obj*, *
 
 As opções adicionais a seguir estão disponíveis para arquivos *.exe*, *.dll* e *.winmd*.
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/bytes**|Mostra bytes reais, em formato hexadecimal, como comentários de instrução.|
 |**/caverbal**|Produz blobs de atributo personalizado em forma verbal. O padrão é a forma binária.|
@@ -63,7 +63,7 @@ As opções adicionais a seguir estão disponíveis para arquivos *.exe*, *.dll*
 
 As opções a seguir são válidas para arquivos *.exe*, *.dll* e *.winmd* apenas para saída de arquivo ou de console.
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/all**|Especifica uma combinação das opções **/header**, **/bytes**, **/stats**, **/classlist** e **/tokens**.|
 |**/classlist**|Inclui uma lista de classes definidas no módulo.|
@@ -78,13 +78,13 @@ As opções a seguir são válidas para arquivos *.exe*, *.dll* e *.winmd* apena
 
 As opções a seguir são válidas para arquivos *.exe*, *.dll*, *.obj*, *.lib* e *.winmd* apenas para saída de arquivo ou de console.
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Mostra metadados, em que `specifier` é:<br /><br /> **MDHEADER** — Mostra as informações de cabeçalho dos metadados e os tamanhos.<br /><br /> **HEX** — Mostra informações em hexadecimal, bem como em palavras.<br /><br /> **CSV** — Mostra as contagens de registros e os tamanhos de heap.<br /><br /> **UNREX** — Mostra externos não resolvidos.<br /><br /> **SCHEMA** — Mostra as informações de cabeçalho dos metadados e de esquema.<br /><br /> **RAW** — Mostra as tabelas de metadados brutos.<br /><br /> **HEAPS** — Mostra os heaps brutos.<br /><br /> **VALIDATE** — Valida a consistência dos metadados.<br /><br /> É possível especificar **/metadata** várias vezes, com valores diferentes para `specifier`.|
 
 As opções a seguir são válidas para arquivos *.lib* apenas para saída de arquivo ou de console.
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Mostre os metadados de um único arquivo de objeto na biblioteca especificada.|
 
@@ -117,14 +117,14 @@ Do .NET Framework 4.5 em diante, o *Ildasm.exe* identifica um BLOB (objeto biná
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 Do .NET Framework 4.5 em diante, o *Ildasm.exe* exibe atributos aplicados a implementações de interface, conforme é mostrado no seguinte trecho da saída de *Ildasm.exe*:
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

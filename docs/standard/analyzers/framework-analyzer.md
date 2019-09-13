@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: da5e72b96fec35404e7e9ae7930f3430143487d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769457"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929302"
 ---
 # <a name="the-net-framework-analyzer"></a>O Analisador do .NET Framework
 
@@ -23,6 +23,7 @@ O analisador é executado interativamente no Visual Studio enquanto você escrev
 Os Analisadores de Segurança do .NET devem ser instalados como um pacote do NuGet em cada projeto em que você deseja executá-los. Somente um desenvolvedor precisa adicioná-los ao projeto. O pacote de analisador é uma dependência de projeto e será executado no computador de cada um dos desenvolvedores assim que ele tiver a solução atualizada.
 
 O Analisador do .NET Framework é fornecido no pacote do NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Esse pacote fornece apenas os analisadores específicos para o .NET Framework, que inclui os analisadores de segurança. Na maioria dos casos, você desejará o pacote do NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). O pacote de agregação FxCopAnalyzers contém todos os analisadores de estrutura incluídos no pacote Framework.Analyzers, bem como os analisadores a seguir:
+
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): Fornece diretrizes gerais e diretrizes para APIs do .NET Standard
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): Fornece analisadores específicos para APIs do .NET Core.
 - [Text.Analyzers](https://www.nuget.org/packages/Text.Analyzers): Fornece diretrizes para texto incluído como código, incluindo comentários.

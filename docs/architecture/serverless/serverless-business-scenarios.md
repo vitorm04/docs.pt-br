@@ -4,12 +4,12 @@ description: Aprenda sem servidor com uma abordagem prática acessando exemplos 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577279"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926476"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Casos de uso e cenários de negócios sem servidor
 
@@ -43,7 +43,7 @@ O exemplo usa Azure Functions e serviços cognitivas da Microsoft Serviço de Vi
 
 Por exemplo, você pode treinar seu modelo com pontos de referência Orlando, como o olho de Orlando. Visão Personalizada reconhecerá uma imagem do olho de Orlando e a função criará um mosaico de fotos composto pelos resultados da pesquisa de imagem do Bing para "olho de Orlando".
 
-Para obter mais informações, consulte [Azure Functions o gerador](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)de mosaico de fotos.
+Para obter mais informações, consulte [Azure Functions o gerador de mosaico de fotos](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Migrar um aplicativo existente para a nuvem
 
@@ -77,7 +77,7 @@ Em seguida, você pode criar um painel de Power BI para coletar informações so
 
 ![Exemplo de Power BI](./media/power-bi-example.png)
 
-O repositório Shortener de link completo com instruções está disponível aqui: [URL sem servidor Shortener](https://github.com/jeremylikness/serverless-url-shortener). Você pode ler sobre uma versão simplificada aqui: [Armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+O repositório Shortener de link completo com instruções está disponível aqui: [URL sem servidor Shortener](https://github.com/jeremylikness/serverless-url-shortener). Você pode ler sobre uma versão simplificada aqui: [Armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Verificar a conectividade do dispositivo usando um ping
 
@@ -89,7 +89,7 @@ Para obter mais informações, consulte [ping do Hub IOT do Azure](https://azure
 
 * [Gerador de mosaico de fotos Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Ping do Hub IoT do Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [Armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [Traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [Laboratório de importação de CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Cola de grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue)

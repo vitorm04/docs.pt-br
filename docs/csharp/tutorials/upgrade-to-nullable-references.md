@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926623"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrar o código existente com tipos de referência anuláveis
 
@@ -17,6 +17,7 @@ O C# 8 introduz **tipos de referência que permitem valor nulo** que complementa
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Habilitar verificações de referência nula enquanto trabalha com o código.
 > - Diagnosticar e corrigir avisos diferentes relacionados a valores nulos.
 > - Gerenciar a interface entre contextos habilitados para anulável e desabilitados para anulável.

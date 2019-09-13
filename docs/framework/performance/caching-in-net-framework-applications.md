@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 779785e9793939cf121fedf99b23a07288173637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967601"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927042"
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -69,7 +69,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
 - Crie uma classe personalizada que é derivada da classe <xref:System.Runtime.Caching.ObjectCache> e, em seguida, forneça uma implementação personalizada de cache na classe derivada.  
   
-- Crie uma classe que é derivada da classe <xref:System.Runtime.Caching.MemoryCache> e personalize ou estenda a classe derivada. Para obter um exemplo de como fazer isso, consulte [Armazenando dados de aplicativo em cache usando vários objetos de cache em um aplicativo ASP.NET](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Crie uma classe que é derivada da classe <xref:System.Runtime.Caching.MemoryCache> e personalize ou estenda a classe derivada. Para obter um exemplo de como fazer isso, consulte [Armazenando dados de aplicativo em cache usando vários objetos de cache em um aplicativo ASP.NET](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
   
 - Crie uma classe que é derivada da classe <xref:System.Web.Caching.OutputCacheProvider> e configure o aplicativo para usar o provedor de cache de saída personalizado.  
   

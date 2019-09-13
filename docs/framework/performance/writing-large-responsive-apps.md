@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915535"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927023"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#. 
@@ -37,7 +37,7 @@ Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do
  Estabeleça metas de desempenho para experiências ou cenários importantes do cliente no aplicativo e gravar testes para avaliar o desempenho. Investigue testes com falha aplicando o método científico: use perfis para orientá-lo, crie hipóteses sobre qual seria o problema e teste as hipóteses com um experimento ou uma alteração feita no código. Estabeleça medidas de desempenho de linha de base com o passar do tempo, usando testes regulares para que seja possível isolar as alterações que causam regressões no desempenho. Abordando o trabalho de desempenho de maneira rigorosa, você evitará a perda de tempo com atualizações desnecessárias de código. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fato 3: Boas ferramentas fazem toda a diferença  
- As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses gargalos. A Microsoft fornece uma variedade de ferramentas de desempenho, como o [Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling) Profiler e o [Perfview](https://www.microsoft.com/download/details.aspx?id=28567). 
+ As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses gargalos. A Microsoft fornece uma variedade de ferramentas de desempenho, como o [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) e o [Perfview](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView é uma ferramenta gratuita e incrivelmente eficiente que ajuda você a se concentrar em problemas intensos, como E/S de disco, eventos de GC e memória. Capture eventos [ETW](../../../docs/framework/wcf/samples/etw-tracing.md) (Rastreamento de Eventos para Windows) relacionados ao desempenho e exiba informações por aplicativo, processo, pilha e thread com facilidade. O PerfView mostra quanto e que tipo de memória o aplicativo aloca, além de quais funções ou pilhas de chamadas contribuem para a quantidade de alocações da memória. Para obter detalhes, consulte os tópicos avançados da ajuda, as demonstrações e os vídeos incluídos com a ferramenta (como os [tutoriais do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) no Channel 9). 
   
@@ -280,7 +280,7 @@ A consulta integrada à linguagem (LINQ), em conjunto com expressões lambda, é
   
  **Exemplo 5: Lambdas, List\<t > e IEnumerable\<T >**  
   
- Esse exemplo usa [o LINQ e um código de estilo funcional](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
+ Esse exemplo usa [o LINQ e um código de estilo funcional](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Na primeira linha, a [expressão](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` Lambda [fecha sobre](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) a variável `name`local. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/keywords/delegate.md) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
+ Na primeira linha, a [expressão](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` Lambda [fecha sobre](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) a variável `name`local. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/keywords/delegate.md) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

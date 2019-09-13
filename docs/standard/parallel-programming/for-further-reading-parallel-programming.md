@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 037891abe18d1e119ea1d84a9840ece58b5b3c3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969655"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929287"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Para leitura adicional (programação paralela)
 
@@ -22,7 +22,7 @@ Os recursos a seguir contêm informações adicionais sobre programação parale
 
 - O livro [Padrões de design para decomposição e coordenação em arquiteturas multicore](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) descreve padrões de programação paralela que usam o suporte de programação paralela introduzido no .NET Framework 4.
 
-- O blog [Programação paralela com .NET](https://blogs.msdn.microsoft.com/pfxteam/) contém muitos artigos detalhados sobre programação paralela no .NET.
+- O blog [Programação paralela com .NET](https://devblogs.microsoft.com/pfxteam/) contém muitos artigos detalhados sobre programação paralela no .NET.
 
 - A página [Exemplos de Programação Paralela com o .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) contém muitos exemplos que demonstram técnicas de programação paralela avançadas e intermediárias.
 

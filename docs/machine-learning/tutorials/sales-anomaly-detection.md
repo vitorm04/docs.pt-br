@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo de detecção de anomalias para dado
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
-ms.translationtype: HT
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929050"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detectar anomalias na venda de produtos com o ML.NET
 
@@ -17,6 +17,7 @@ Saiba como criar um aplicativo de detecção de anomalias para dados de vendas d
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > * Carregar os dados
 > * Criar uma transformação para detecção de anomalias de pico
 > * Detectar anomalias de pico com a transformação
@@ -61,7 +62,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 A tabela a seguir é uma visualização de dados do seu arquivo \*.csv:
 
-|Mês  |ProductSales |
+|Month  |ProductSales |
 |-------|-------------|
 |1-Jan  |    271      |
 |2-Jan  |    150.9    |
@@ -372,6 +373,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
+>
 > * Carregar os dados
 > * Treinar o modelo para detecção de anomalias de pico
 > * Detectar anomalias de pico com o modelo treinado

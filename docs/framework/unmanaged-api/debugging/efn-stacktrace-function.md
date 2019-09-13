@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738976"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895040"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_função StackTrace
-Fornece uma representação de texto de um rastreamento de pilha gerenciada e uma matriz de `CONTEXT` registra, um para cada transição entre não gerenciado e código gerenciado.  
+# <a name="_efn_stacktrace-function"></a>\_Função\_EFN StackTrace
+Fornece uma representação de texto de um rastreamento de pilha gerenciado e uma `CONTEXT` matriz de registros, um para cada transição entre código gerenciado e não gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,60 +42,60 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>Parâmetros  
  `Client`  
- [in] O cliente que está sendo depurado.  
+ no O cliente que está sendo depurado.  
   
  `wszTextOut`  
- [out] A representação de texto de rastreamento de pilha.  
+ fora A representação de texto do rastreamento de pilha.  
   
  `puiTextLength`  
- [out] Um ponteiro para o número de caracteres em `wszTextOut`.  
+ fora Um ponteiro para o número de caracteres em `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] A matriz de contextos de transição.  
+ fora A matriz de contextos de transição.  
   
  `puiTransitionContextCount`  
- [out] Um ponteiro para o número de contextos de transição na matriz.  
+ fora Um ponteiro para o número de contextos de transição na matriz.  
   
  `uiSizeOfContext`  
- [in] O tamanho da estrutura de contexto.  
+ no O tamanho da estrutura de contexto.  
   
  `Flags`  
- [in] Defina como 0 ou SOS_STACKTRACE_SHOWADDRESSES (0x01) para mostrar o registro EBP e o ponteiro de pilha de enter (ESP) na frente de cada `module!functionname` linha.  
+ no Defina como 0 ou SOS_STACKTRACE_SHOWADDRESSES (0x01) para mostrar o registro de EBP e o ponteiro de pilha Enter (ESP) na frente de `module!functionname` cada linha.  
   
 ## <a name="remarks"></a>Comentários  
- O `_EFN_StackTrace` estrutura pode ser chamada de uma interface programática do WinDbg. Parâmetros são usados da seguinte maneira:  
+ A `_EFN_StackTrace` estrutura pode ser chamada de uma interface programática do WinDbg. Os parâmetros são usados da seguinte maneira:  
   
-- Se `wszTextOut` for null e `puiTextLength` for não nulo, a função retorna o comprimento da cadeia de caracteres em `puiTextLength`.  
+- Se `wszTextOut` for NULL e `puiTextLength` não for NULL, a função retornará o comprimento da cadeia `puiTextLength`de caracteres em.  
   
-- Se `wszTextOut` é diferente de null, a função armazena o texto no `wszTextOut` até o local indicado pelo `puiTextLength`. Retorna com êxito se não havia espaço suficiente no buffer ou retorna E_OUTOFMEMORY se o buffer não era longo o suficiente.  
+- Se `wszTextOut` não for NULL, a função armazenará texto `wszTextOut` em até o local indicado por `puiTextLength`. Ele retorna com êxito se havia espaço suficiente no buffer ou retorna E_OUTOFMEMORY se o buffer não era longo o suficiente.  
   
-- A parte da transição da função será ignorada se `pTransitionContexts` e `puiTransitionContextCount` forem ambos nulos. Nesse caso, a função fornece chamadores com saída de texto de somente os nomes de função.  
+- A parte de transição da função será ignorada `pTransitionContexts` se `puiTransitionContextCount` e for nula. Nesse caso, a função fornece chamadores com a saída de texto apenas dos nomes de função.  
   
-- Se `pTransitionContexts` for null e `puiTransitionContextCount` for não nulo, a função retorna o número necessário de entradas de contexto no `puiTransitionContextCount`.  
+- Se `pTransitionContexts` for NULL e `puiTransitionContextCount` não for NULL, a função retornará o número necessário de entradas de contexto `puiTransitionContextCount`no.  
   
-- Se `pTransitionContexts` é diferente de null, a função tratará como uma matriz de estruturas de comprimento `puiTransitionContextCount`. O tamanho da estrutura será determinado pelos `uiSizeOfContext`, e deve ser o tamanho de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` para a arquitetura.  
+- Se `pTransitionContexts` não for NULL, a função a tratará como uma matriz de estruturas de `puiTransitionContextCount`comprimento. O tamanho da estrutura é fornecido `uiSizeOfContext`por e deve ser o tamanho de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` para a arquitetura.  
   
-- `wszTextOut` é escrito no seguinte formato:  
+- `wszTextOut`é escrito no seguinte formato:  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- Se o deslocamento em hexadecimal é 0x0, deslocamento não será gravado.  
+- Se o deslocamento em Hex for 0x0, nenhum deslocamento será gravado.  
   
-- Não se houver nenhum código gerenciado no thread atualmente no contexto, a função retorna SOS_E_NOMANAGEDCODE.  
+- Se não houver nenhum código gerenciado no thread atualmente no contexto, a função retornará SOS_E_NOMANAGEDCODE.  
   
-- O `Flags` parâmetro é 0 ou SOS_STACKTRACE_SHOWADDRESSES ver EBP e ESP na frente de cada `module!functionname` linha. Por padrão, é 0.  
+- O `Flags` parâmetro é 0 ou SOS_STACKTRACE_SHOWADDRESSES para ver EBP e ESP na frente de cada `module!functionname` linha. Por padrão, é 0.  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** SOS_Stacktrace.h  
   

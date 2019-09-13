@@ -3,12 +3,12 @@ title: Introdução ao armazenamento de Tabelas do Azure usando F#
 description: Armazene dados estruturados na nuvem usando o armazenamento de tabelas do Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: c8ab2d61048523ac52f305c7bd035c73ca0d3f60
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630474"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928998"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F\#
 
@@ -194,6 +194,6 @@ Agora que você aprendeu os conceitos básicos do armazenamento de tabelas, siga
 - [Introdução ao Azure Cosmos DB API de Tabela](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Referência da biblioteca de cliente de armazenamento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
 - [Provedor de tipo de armazenamento do Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Blog da equipe de armazenamento do Azure](https://blogs.msdn.com/b/windowsazurestorage/)
+- [Blog da equipe de armazenamento do Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Configurando cadeias de conexão](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Introdução com o armazenamento de tabelas do Azure no .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

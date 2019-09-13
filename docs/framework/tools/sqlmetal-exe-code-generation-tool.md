@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: f435c93f68feb564aaca0f52842e567aa688ac64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938002"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894613"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
 A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] do .NET Framework. Aplicando-se opções exibidas mais à frente neste tópico, é possível instruir SqlMetal para executar diversas ações diferentes, dentre as quais estão:  
@@ -34,7 +34,7 @@ A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o c
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 sqlmetal [options] [<input file>]  
 ```  
   
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **Opções de Conexão**  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/server:** *\<name>*|Especifica o nome do servidor do banco de dados.|  
 |**/database:** *\<name>*|Especifica o catálogo do banco de dados no servidor.|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Opções de extração**  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/views**|Extrai exibições do banco de dados.|  
 |**/functions**|Extrai funções do banco de dados.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opções de saída**  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Envia saídas como .dbml. Não pode ser usada com a opção **/map**.|  
 |**/code** *[:file]*|Envia saídas como código-fonte. Não pode ser usada com a opção **/dbml**.|  
@@ -70,7 +70,7 @@ sqlmetal [options] [<input file>]
   
  **Diversos**  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/language:** *\<language>*|Especifica a linguagem do código-fonte.<br /><br /> Valid *\<language>* : vb, csharp.<br /><br /> Valor padrão: derivado da extensão de nome de arquivo de código.|  
 |**/namespace:** *\<name>*|Especifica o namespace do código gerado. Valor padrão: sem namespace.|  
@@ -81,7 +81,7 @@ sqlmetal [options] [<input file>]
   
  **Arquivo de Entrada**  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**\<input file>**|Especifica um arquivo .mdf do SQL Server Express, um arquivo .sdf do SQL Server Compact 3.5 ou um arquivo intermediário .dbml.|  
   

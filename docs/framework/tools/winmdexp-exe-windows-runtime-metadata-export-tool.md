@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e6f9f553af4899d502584cbde5341f7061f169d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937947"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894782"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
 A Ferramenta de Exportação dos Metadados Windows Runtime (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados do Windows Runtime. Embora os assemblies do .NET Framework e os arquivos de metadados do Windows Runtime usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes do Tempo de Execução do Windows. O processo de transformar um módulo do .NET Framework em um componente do Tempo de Execução do Windows é conhecido como *exportação*. No .NET Framework 4.5 e no .NET Framework 4.5.1, o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
@@ -25,13 +25,13 @@ A Ferramenta de Exportação dos Metadados Windows Runtime (Winmdexp.exe) transf
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 winmdexp [options] winmdmodule  
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento ou opção|DESCRIÇÃO|  
+|Argumento ou opção|Descrição|  
 |------------------------|-----------------|  
 |`winmdmodule`|Especifica o módulo (.winmdobj) a ser exportado. Somente um módulo é permitido. Para criar esse módulo, use a opção do compilador `/target` com o destino `winmdobj`. Consulte [/target:winmdobj (Opções do compilador C#)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) ou [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Especifica o arquivo da documentação XML de saída que Winmdexp.exe produzirá. No .NET Framework 4.5, o arquivo de saída é basicamente igual ao arquivo de documentação XML da entrada.|  

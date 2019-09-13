@@ -4,12 +4,12 @@ description: Como usar o Construtor de Modelo do ML.NET para treinar automaticam
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104811"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929477"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
@@ -29,6 +29,7 @@ Não é necessário ter experiência de aprendizado de máquina para usar o Cons
 Você pode trazer vários cenários diferentes para o Construtor de Modelo para gerar um modelo de machine learning para seu aplicativo.
 
 Um cenário é uma descrição do tipo de previsão que você deseja fazer usando seus dados. Por exemplo:
+
 - prever o volume de vendas futuras do produto com base em dados históricos de vendas
 - classificar sentimentos como positivos ou negativos com base em revisões de cliente
 - detectar se uma transação bancária é fraudulenta
@@ -41,6 +42,7 @@ No Construtor de Modelos, é necessário selecionar um tipo de modelo de machine
 Para cenários que preveem um número, o tipo de modelo de machine learning é chamado `regression`.
 
 Para cenários que preveem uma categoria, o tipo de modelo é `classification`. Há dois tipos de classificação:
+
 - em que há apenas duas categorias: `binary classification`.
 - em que há apenas três ou mais categorias: `multiclass classification`.
 
@@ -89,10 +91,12 @@ Depois de escolher seu tipo de modelo, o Construtor de Modelos solicita que voc�
 ### <a name="choose-the-output-to-predict-label"></a>Escolha a saída para prever (rótulo)
 
 Um conjunto de dados é uma tabela de linhas de exemplos de treinamento e colunas de atributos. Cada linha tem:
+
 - um **rótulo** (o atributo que você deseja prever)
 - **recursos** (atributos que são usados como entradas para prever o rótulo).
 
 Para o cenário de previsão do preço das casas, os recursos podem ser:
+
 - os metros quadrados da casa
 - o número de quartos e banheiros
 - o código postal
@@ -107,13 +111,13 @@ Se você ainda não tiver seus próprios dados, experimente um desses conjuntos 
 
 |Cenário|Tipo de modelo|Dados|Rotular|Recursos|
 |-|-|-|-|-|
-|Previsão de preço|regressão|[dados de tarifas de táxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifa|Tempo da corrida, distância|
-|Detecção de anomalias|classificação binária|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Mês|
-|Análise de sentimento|classificação binária|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
-|Detecção de fraude|classificação binária|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
-|Classificação de texto|classificação multiclasse|[dados de problema do GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, Descrição|
+|Previsão de preço|Regressão|[dados de tarifas de táxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifa|Tempo da corrida, distância|
+|Detecção de anomalias|Classificação binária|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Month|
+|Análise de Sentimento|Classificação binária|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
+|Detecção de fraudes|Classificação binária|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
+|Classificação de texto|Classificação multiclasse|[dados de problema do GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, Descrição|
 
-## <a name="train"></a>Treinar
+## <a name="train"></a>Trem
 
 Depois de selecionar seu cenário, dados e rótulo, o Construtor de Modelo treina o modelo.
 

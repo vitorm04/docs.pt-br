@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937929"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894575"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -28,18 +28,18 @@ O Winres.exe é instalado com o Visual Studio. Para executar a ferramenta, use o
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```console
 winres resourceFile
 winres /?
 ```
 
 ## <a name="arguments"></a>Arguments
 
-|Argumento|DESCRIÇÃO|
+|Argumento|Descrição|
 |--------------|-----------------|
 |`resourceFile`|O arquivo de recurso a ser localizado. Esse arquivo deve ser um arquivo .resx ou .resources de formulário do Windows Forms gerado pelo designer do Visual Studio. Winres.exe não pode abrir arquivos .resx ou .resources genéricos.|
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |------------|-----------------|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
 
@@ -110,19 +110,19 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 
 2. Para abrir os recursos padrão que serão localizados por um formulário, clique no comando **Abrir** do menu **Arquivo** e navegue até o arquivo para abri-lo.
 
-     -ou-
+     - ou -
 
      Especifique o arquivo a ser aberto na linha de comando ao iniciar Winres.exe.
 
      O comando a seguir inicia Winres.exe e carrega o formulário associado a `TestApp.resx` no Designer de Formulários.
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      O comando a seguir inicia Winres.exe e carrega o formulário associado a `TestApp.resources` no Designer de Formulários.
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 

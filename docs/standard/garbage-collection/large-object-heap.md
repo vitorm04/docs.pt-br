@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753959"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929146"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -132,7 +132,7 @@ Antes de coletar dados de desempenho para uma área específica, você deverá j
 
 2. Ter esgotado outras áreas conhecidas sem encontrar algo que poderia explicar o problema de desempenho observado.
 
-Visite o blog [Entender o problema antes de tentar encontrar uma solução](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) para obter mais informações sobre os conceitos básicos sobre memória e CPU.
+Visite o blog [Entender o problema antes de tentar encontrar uma solução](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) para obter mais informações sobre os conceitos básicos sobre memória e CPU.
 
 Use as seguintes ferramentas para coletar dados sobre o desempenho de LOH:
 
@@ -168,13 +168,13 @@ Os contadores de desempenho também podem ser consultados de forma programática
 
 O coletor de lixo fornece um conjunto rico de eventos ETW para ajudá-lo a entender o que o heap está fazendo e por quê. As seguintes postagens no blog mostram como coletar e entender eventos GC com o ETW:
 
-- [Eventos ETW de GC – 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [Eventos ETW de GC – 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [Eventos ETW de GC – 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [Eventos ETW de GC – 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [Eventos ETW de GC – 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [Eventos ETW de GC – 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [Eventos ETW de GC – 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [Eventos ETW de GC – 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 Para identificar GCs excessivos de geração 2 causados por alocações de LOH temporárias, veja a coluna Motivo de Gatilho dos GCs. Para um teste simples que aloca apenas objetos grandes temporários, você pode coletar informações sobre eventos ETW com a seguinte linha de comando do [PerfView](https://www.microsoft.com/download/details.aspx?id=28567):
 

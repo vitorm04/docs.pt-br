@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666873"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895264"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -21,9 +21,12 @@ Este tópico lista os nomes dos principais recursos para cada versão do Visual 
 
 ## <a name="current-version"></a>Versão atual
 
-Visual Basic 15.8 / Visual Studio 2017 Versão 15.8 Para novos recursos, confira [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 16,0/Visual Studio 2019 versão 16,0  
+Para obter novos recursos, consulte [Visual Basic 16,0](#visual-basic-160)
 
 ## <a name="previous-versions"></a>Versões anteriores
+
+Visual Basic 15.8 / Visual Studio 2017 Versão 15.8 Para novos recursos, confira [Visual Basic 15.8](#visual-basic-158)
 
 Visual Basic 15.5 / Visual Studio 2017 Versão 15.5 Para novos recursos, confira [Visual Basic 15.5](#visual-basic-155)
 
@@ -46,6 +49,21 @@ Visual Basic / Visual Studio 2005 O tipo `My` e tipos auxiliares (acesso ao apli
 Visual Basic / Visual Studio .NET 2003 Operadores bit shift, declaração de variável de loop
 
 Visual Basic / Visual Studio .NET 2002 A primeira versão do Visual Basic .NET
+
+## <a name="visual-basic-160"></a>Visual Basic 16,0
+Visual Basic 16,0 concentra-se em fornecer mais recursos do Visual Basic Runtime (Microsoft. VisualBasic. dll) para o .NET Core e é a primeira versão do Visual Basic concentrada no .NET Core. Muitas partes do Visual Basic Runtime dependem de WinForms e elas serão adicionadas em uma versão posterior do Visual Basic. 
+
+**Comentários permitidos em mais lugares dentro de instruções** No Visual Basic 15,8 e versões anteriores, os comentários são permitidos somente em linhas em branco, no final de uma instrução ou em locais específicos dentro de uma instrução em que uma continuação de linha implícita é permitida. A partir do Visual Basic 16,0, os comentários também são permitidos após as continuaçãos de linha explícitas e dentro de uma instrução em uma linha que começa com um espaço seguido por um sublinhado.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

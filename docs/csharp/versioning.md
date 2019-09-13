@@ -3,12 +3,12 @@ title: Controle de versão de C# – Guia de C#
 description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965664"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926589"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -41,9 +41,9 @@ Aqui estão algumas coisas a serem consideradas ao tentar manter a compatibilida
 * Métodos virtuais: Quando você transforma um método virtual em não virtual na nova versão, isso significa que os projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
 * Assinaturas de método: Quando a atualização do comportamento de um método exige a alteração de sua assinatura também, você deve criar uma sobrecarga, de modo que o código que chamar esse método ainda funcione.
 Você sempre pode manipular a assinatura de método antiga para chamar a nova assinatura de método para que a implementação permaneça consistente.
-* [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Use esse atributo no código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras.
-Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
+* [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Use esse atributo no código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
 * Argumentos de método opcionais: Quando você tornar argumentos de método que antes eram opcionais em obrigatórios ou alterar seu valor padrão, todo o código que não fornecer esses argumentos precisará ser atualizado.
+
 > [!NOTE]
 > Tornar argumentos compulsórios em opcionais deve ter muito pouco efeito, especialmente se não alterar o comportamento do método.
 
@@ -111,3 +111,4 @@ Derived Method One: Derived Method One
 O modificador `override` é avaliado em tempo de compilação e o compilador gerará um erro se não encontrar um membro virtual para substituir.
 
 Seu conhecimento sobre as técnicas discutidas, bem como sua compreensão das situações em que usá-las, farão muita diferença para facilitar a transição entre versões de uma biblioteca.
+ 

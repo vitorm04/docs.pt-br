@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912201"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895120"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Como: definir configurações de serviço de COM+
 Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração de serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo hospedado com+, o arquivo Application. config é colocado no diretório raiz do aplicativo (%ProgramFiles%\ComPlus Applications\\{AppID} é o padrão). Em qualquer um dos modos hospedados na Web, o arquivo Web. config é colocado no diretório vroot especificado.  
@@ -20,7 +20,7 @@ Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta
 ## <a name="example"></a>Exemplo  
  Considere um componente que implementa a seguinte interface:  
   
-```  
+```csharp
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
 public interface IFinances  
 {  
@@ -31,7 +31,7 @@ public interface IFinances
   
  Se o componente for exposto como um serviço Web, o contrato de serviço correspondente que é exposto e os clientes precisarem estar em conformidade, será o seguinte:  
   
-```  
+```csharp
 [ServiceContract(Session = true,  
 Namespace = "http://tempuri.org/C551FBA9-E3AA-4272-8C2A-84BD8D290AC7",  
 Name = "IFinances")]  

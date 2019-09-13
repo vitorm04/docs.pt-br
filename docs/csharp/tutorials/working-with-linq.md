@@ -3,12 +3,12 @@ title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785872"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926615"
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -339,6 +339,7 @@ Na prática, alguns algoritmos funcionam bem usando a avaliação detalhada, e o
 ## <a name="conclusion"></a>Conclusão
 
 Neste projeto, abordamos:
+
 - o uso de consultas LINQ para agregar dados em uma sequência significativa
 - a produção de métodos de Extensão para adicionar nossa própria funcionalidade personalizada a consultas LINQ
 - a localização de áreas em nosso código nas quais nossas consultas LINQ podem enfrentar problemas de desempenho, como diminuição da velocidade
@@ -347,6 +348,7 @@ Neste projeto, abordamos:
 Além do LINQ, você aprendeu um pouco sobre uma técnica usada por mágicos para truques de carta. Os mágicos usam o embaralhamento Faro porque podem controlar onde cada carta fica no baralho. Agora que você sabe, não conte para os outros!
 
 Para saber mais sobre o LINQ, consulte:
+
 - [LINQ (Consulta Integrada à Linguagem)](../programming-guide/concepts/linq/index.md)
   - [Introdução ao LINQ](../programming-guide/concepts/linq/index.md)
   - [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

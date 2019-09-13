@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: ff60bb5de403970f432e938cba81ca4e99476e8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660575"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925980"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Consumir uma biblioteca .NET Standard no Visual Studio 2017
 
@@ -28,6 +28,7 @@ Depois de criar uma biblioteca de classes .NET Standard, siga as etapas em [Cria
 Assim como você incluiu os testes de unidade na mesma solução que nossa biblioteca de classes, pode incluir seu aplicativo como parte da solução. Por exemplo, você pode usar a biblioteca de classes em um aplicativo de console que solicita que o usuário insira uma cadeia de caracteres e informe se o primeiro caractere é maiúsculo:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Abra a solução `ClassLibraryProjects` criada no tópico [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Compilando uma biblioteca de classes em C# com o .NET Core no Visual Studio 2017). No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto** no menu de contexto.
 
 1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual C#** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
@@ -57,7 +58,9 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 1. Se necessário, altere a barra de ferramentas para compilar a versão de **Depuração** do projeto `ShowCase`. Compile e execute o programa selecionando a seta verde no botão **ShowCase**.
 
    ![Barra de ferramentas do projeto do Visual Studio mostrando o botão Depurar – C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Abra a solução `ClassLibraryProjects` criada no tópico [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Compilando uma biblioteca de classes com o Visual Basic e com o .NET Core no Visual Studio 2017). No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto** no menu de contexto.
 
 1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
@@ -87,6 +90,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 1. Se necessário, altere a barra de ferramentas para compilar a versão de **Depuração** do projeto `ShowCase`. Compile e execute o programa selecionando a seta verde no botão **ShowCase**.
 
    ![Depuração na barra de ferramentas – Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 É possível depurar e publicar o aplicativo que usa essa biblioteca seguindo as etapas em [Debugging your Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) (Depurar um aplicativo Olá, Mundo com o Visual Studio 2017) e em [Publishing your Hello World Application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicar um aplicativo Olá, Mundo com o Visual Studio 2017).

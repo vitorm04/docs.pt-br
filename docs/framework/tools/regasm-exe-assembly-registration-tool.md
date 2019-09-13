@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: HT
+ms.openlocfilehash: 44ab00322419b99aeac51da0d836c60264da5194
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492433"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894668"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Ferramenta de Registro de Assembly)
 
@@ -26,7 +26,7 @@ No prompt de comando, digite o seguinte:
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```console
 regasm assemblyFile [options]
 ```
 
@@ -42,9 +42,9 @@ regasm assemblyFile [options]
 |**/registered**|Especifica que essa ferramenta só fará referência a bibliotecas de tipos já registradas.|
 |**/asmpath:directory**|Especifica um diretório que contém referências de assembly. Deve ser usado com a opção **/regfile**.|
 |**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|
-|**/regfile** [**:** *regFile*]|Gera o arquivo .reg especificado para o assembly, que contém as entradas do Registro necessárias. A especificação dessa opção não altera o Registro. Não é possível usar essa opção com as opções **/u** ou **/tlb**.|
+|**/regfile** [ **:** *regFile*]|Gera o arquivo .reg especificado para o assembly, que contém as entradas do Registro necessárias. A especificação dessa opção não altera o Registro. Não é possível usar essa opção com as opções **/u** ou **/tlb**.|
 |**/silent** ou **/s**|Suprime a exibição de mensagens de sucesso.|
-|**/tlb** [**:** *typeLibFile*]|Gera uma biblioteca de tipos com base no assembly especificado que contém definições dos tipos acessíveis definidos dentro do assembly.|
+|**/tlb** [ **:** *typeLibFile*]|Gera uma biblioteca de tipos com base no assembly especificado que contém definições dos tipos acessíveis definidos dentro do assembly.|
 |**/unregister** ou **/u**|Cancela o registro das classes criáveis encontradas em *assemblyFile*. A omissão dessa opção faz Regasm.exe registrar as classes criáveis no assembly.|
 |**/verbose**|Especifica o modo detalhado, exibe uma lista de todos os assemblies referenciados para os quais uma biblioteca de tipos precisa ser gerada, quando especificado com a opção **/tlb**.|
 |**/?** ou **/help**|Exibe sintaxe de comando e opções para a ferramenta.|
@@ -68,19 +68,19 @@ Depois de registrar um assembly usando Regasm.exe, você poderá instalá-lo no 
 
 O comando a seguir registra todas as classes públicas contidas em `myTest.dll`.
 
-```
+```console
 regasm myTest.dll
 ```
 
 O comando a seguir gera o arquivo `myTest.reg`, que contém todas as entradas do Registro necessárias. Esse comando não atualiza o Registro.
 
-```
+```console
 regasm myTest.dll /regfile:myTest.reg
 ```
 
 O comando a seguir registra todas as classes públicas contidas em `myTest.dll`, além de gerar e registrar a biblioteca de tipos `myTest.tlb`, que contém definições de todos os tipos públicos definidos em `myTest.dll`.
 
-```
+```console
 regasm myTest.dll /tlb:myTest.tlb
 ```
 

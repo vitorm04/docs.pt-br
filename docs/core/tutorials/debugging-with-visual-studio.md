@@ -3,12 +3,12 @@ title: Depurar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Visual Basic com o Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: f318c163db6cfdd6de5aa99edebfeeb4bb470a02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063083"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926162"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017
 
@@ -27,6 +27,7 @@ Você sempre deve começar testando seu programa em modo de Depuração. O modo 
 Execute o programa no modo de Depuração e teste algumas funcionalidades de depuração:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Um *ponto de interrupção* interrompe temporariamente a execução do aplicativo *antes* de a linha com o ponto de interrupção ser executada. 
 
    Defina um ponto de interrupção na linha que leia `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` clicando na margem esquerda da janela de código naquela linha ou selecionando o item de menu **Depurar** > **Ativar/Desativar Ponto de Interrupção** com a linha selecionada. Como mostra a figura a seguir, o Visual Studio indica a linha na qual o ponto de interrupção é definido, realçando-o e exibindo um círculo vermelho na sua margem esquerda.
@@ -56,7 +57,9 @@ Execute o programa no modo de Depuração e teste algumas funcionalidades de dep
    ![Janela do console mostrando o valor Jack no prompt What is your name? seguido por Hello Gracie](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Pressione qualquer tecla para sair do modo de Depuração do aplicativo e de término.
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Um *ponto de interrupção* interrompe temporariamente a execução do aplicativo *antes* de a linha com o ponto de interrupção ser executada. 
 
    Defina um ponto de interrupção na linha que leia `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` clicando na margem esquerda da janela de código naquela linha ou selecionando o item de menu **Depurar** > **Ativar/Desativar Ponto de Interrupção** com a linha selecionada. Como mostra a figura a seguir, o Visual Studio indica a linha na qual o ponto de interrupção é definido, realçando-o e exibindo um círculo vermelho na sua margem esquerda.
@@ -82,6 +85,7 @@ Execute o programa no modo de Depuração e teste algumas funcionalidades de dep
    ![Janela do console mostrando os valores alterados inseridos na Janela Imediata](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Pressione qualquer tecla para sair do modo de Depuração do aplicativo e de término.
+
 ---
 
 ## <a name="setting-a-conditional-breakpoint"></a>Definindo um ponto de interrupção condicional
@@ -91,6 +95,7 @@ O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá
 Para definir um ponto de interrupção condicional e testar o que acontece quando o usuário não insere uma cadeia de caracteres, faça o seguinte:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção. No menu de contexto, selecione **Condições** para abrir a caixa de diálogo **Configurações de Ponto de Interrupção**. Marque a caixa de **Condições**.
 
    ![Editor mostrando o painel de configurações do ponto de interrupção – C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
@@ -126,7 +131,9 @@ Para definir um ponto de interrupção condicional e testar o que acontece quand
 1. Pressione qualquer tecla para fechar a janela do console e sair do modo de Depuração.
 
 1. Limpe o ponto de interrupção clicando no ponto na margem esquerda da janela de código ou escolhendo o item de menu **Depurar > Ativar/Desativar Ponto de Interrupção** com a linha selecionada.
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção. No menu de contexto, selecione **Condições** para abrir a caixa de diálogo **Configurações de Ponto de Interrupção**. Marque a caixa de **Condições**.
 
    ![Editor mostrando o painel de configurações do ponto de interrupção – Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
@@ -162,12 +169,14 @@ Para definir um ponto de interrupção condicional e testar o que acontece quand
 1. Pressione qualquer tecla para fechar a janela do console e sair do modo de Depuração.
 
 1. Limpe o ponto de interrupção clicando no ponto na margem esquerda da janela de código ou escolhendo o item de menu **Depurar > Ativar/Desativar Ponto de Interrupção** com a linha selecionada.
+
 ---
 ## <a name="stepping-through-a-program"></a>Percorrendo um programa
 
 O Visual Studio também permite percorrer linha por linha de um programa e monitorar sua execução. Normalmente, você define um ponto de interrupção e usa esse recurso para seguir o fluxo do programa por uma pequena parte do código do programa. Como seu programa é pequeno, você pode percorrer todo o programa fazendo o seguinte:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Na barra de menus, escolha **Depurar** > **Intervir** ou pressione a tecla F11. O Visual Studio realça e exibe uma seta ao lado da próxima linha de execução.
 
    ![Método Intervir do Visual Studio – C#](./media/debugging-with-visual-studio/step-into-method.png)
@@ -191,7 +200,9 @@ O Visual Studio também permite percorrer linha por linha de um programa e monit
 1. Selecione **Depurar** > **Sair** ou pressione Shift e a tecla F11. Isso interrompe a execução passo a passo. A janela do console exibe uma mensagem e aguarda até que uma tecla seja pressionada.
 
 1. Pressione qualquer tecla para fechar a janela do console e sair do modo de Depuração.
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Na barra de menus, escolha **Depurar** > **Intervir** ou pressione a tecla F11. O Visual Studio realça e exibe uma seta ao lado da próxima linha de execução.
 
    ![Método Intervir do Visual Studio – Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
@@ -215,6 +226,7 @@ O Visual Studio também permite percorrer linha por linha de um programa e monit
 1. Selecione **Depurar** > **Sair** ou pressione Shift e a tecla F11. Isso interrompe a execução passo a passo. A janela do console exibe uma mensagem e aguarda até que uma tecla seja pressionada.
 
 1. Pressione qualquer tecla para fechar a janela do console e sair do modo de Depuração.
+
 ---
 
 ## <a name="building-a-release-version"></a>Compilando uma versão de lançamento

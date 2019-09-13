@@ -2,12 +2,12 @@
 title: LINQ (Consulta Integrada à Linguagem) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b91d52912c1625c036b3e08e47fbc985b193ebc2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592154"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926729"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Consulta Integrada à Linguagem)
 
@@ -46,6 +46,7 @@ O exemplo a seguir mostra a operação de consulta completa. A operação comple
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais detalhes sobre o LINQ, comece se familiarizando com alguns conceitos básicos em [Noções básicas sobre expressões de consulta](../../../linq/query-expression-basics.md), e, em seguida, leia a documentação para a tecnologia LINQ na qual você está interessado:   
+
 - Documentos XML: [LINQ to XML](linq-to-xml.md)  
   
 - ADO.NET Entity Framework: [LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -59,3 +60,4 @@ Para começar a trabalhar com o LINQ em C#, consulte o tutorial [Trabalhando com
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ (consulta integrada à linguagem) (C#)](./index.md)
+ 

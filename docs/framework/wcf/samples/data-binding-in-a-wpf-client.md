@@ -2,12 +2,12 @@
 title: Associação de dados em um cliente do Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045110"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928628"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associação de dados em um cliente do Windows Presentation Foundation
 Este exemplo demonstra o uso de associação de dados em um cliente Windows Presentation Foundation (WPF). O exemplo usa um serviço de Windows Communication Foundation (WCF) que gera aleatoriamente uma matriz de álbuns para retornar ao cliente. Cada álbum tem um nome, um preço e uma lista de faixas de álbuns. As faixas do álbum têm um nome e uma duração. As informações retornadas pelo serviço são associadas automaticamente à interface do usuário (IU) fornecida pelo cliente do Windows Presentation Foundation (WPF).  
@@ -17,7 +17,7 @@ Este exemplo demonstra o uso de associação de dados em um cliente Windows Pres
   
  A vinculação de dados permite que uma fonte de dados seja associada automaticamente a uma interface do usuário. Isso simplifica o modelo de programação porque não requer que você atualize programaticamente cada elemento de interface do usuário com os dados de um objeto de dados ou de uma matriz de objetos de dados. Você pode associar um objeto a um único elemento de interface do usuário ou a uma matriz a um controle que usa várias entradas `ListBox`, como um. O código a seguir mostra como associar dados ao `DataContext` de um elemento de interface do usuário.  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

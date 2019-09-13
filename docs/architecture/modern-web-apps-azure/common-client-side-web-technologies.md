@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373901"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926494"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns do lado do cliente
 
@@ -141,6 +141,7 @@ Ao considerar qual estrutura de JavaScript funcionará melhor para dar suporte a
 As estruturas de JavaScript continuam evoluindo em uma velocidade vertiginosa. Use as considerações listadas acima para ajudar a atenuar o risco de escolher uma estrutura da qual mais tarde você se arrependerá de ter uma dependência. Caso você seja particularmente avesso a riscos, considere uma estrutura que oferece suporte comercial e/ou que está sendo desenvolvida por uma empresa grande.
 
 > ### <a name="references--client-web-technologies"></a>Referências – Tecnologias da Web do cliente
+>
 > - **HTML e CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass vs. LESS**  

@@ -1,75 +1,76 @@
 ---
-title: 'Tutorial: Criar um cliente do Windows Communication Foundation'
+title: 'Tutorial: Criar um cliente Windows Communication Foundation'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 39f63b22257fb67d9caa5f84c886ead161508a33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ddb5167c7f71a263377fb465ec44ee21057fbf4a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625831"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928899"
 ---
-# <a name="tutorial-create-a-windows-communication-foundation-client"></a>Tutorial: Criar um cliente do Windows Communication Foundation
+# <a name="tutorial-create-a-windows-communication-foundation-client"></a>Tutorial: Criar um cliente Windows Communication Foundation
 
-Este tutorial descreve o quarto de cinco tarefas necessárias para criar um aplicativo básico do Windows Communication Foundation (WCF). Para obter uma visão geral dos tutoriais, consulte [Tutorial: Introdução a aplicativos do Windows Communication Foundation](getting-started-tutorial.md).
+Este tutorial descreve a quarta de cinco tarefas necessárias para criar um aplicativo de Windows Communication Foundation básico (WCF). Para obter uma visão geral dos tutoriais, [consulte o tutorial: Introdução aos aplicativos](getting-started-tutorial.md)Windows Communication Foundation.
 
-A próxima tarefa para a criação de um aplicativo WCF é criar um cliente recuperando metadados de um serviço WCF. Usar o Visual Studio para adicionar uma referência de serviço, que obtém os metadados do ponto de extremidade MEX do serviço. Em seguida, o Visual Studio gera um arquivo de código fonte gerenciado para um proxy de cliente na linguagem escolhida. Ele também cria um arquivo de configuração do cliente (*App. config*). Esse arquivo permite que o aplicativo cliente conectar-se para o serviço em um ponto de extremidade. 
-
-> [!NOTE]
-> Se você chamar um serviço WCF de um projeto de biblioteca de classes no Visual Studio, use o **adicionar referência de serviço** recurso para gerar automaticamente um proxy e um arquivo de configuração associado. No entanto, como projetos de biblioteca de classe não usam esse arquivo de configuração, você precisará adicionar as configurações no arquivo de configuração gerado para o *App. config* arquivo para o executável que chama a biblioteca de classes.
+A próxima tarefa para criar um aplicativo WCF é criar um cliente Recuperando metadados de um serviço WCF. Você usa o Visual Studio para adicionar uma referência de serviço, que obtém os metadados do ponto de extremidade MEX do serviço. Em seguida, o Visual Studio gera um arquivo de código-fonte gerenciado para um proxy de cliente no idioma escolhido. Ele também cria um arquivo de configuração de cliente (*app. config*). Esse arquivo permite que o aplicativo cliente se conecte ao serviço em um ponto de extremidade. 
 
 > [!NOTE]
-> Como alternativa, use o [ferramenta de utilitário de metadados ServiceModel](#servicemodel-metadata-utility-tool) em vez do Visual Studio para gerar o arquivo de classe e a configuração de proxy.
+> Se você chamar um serviço WCF de um projeto de biblioteca de classes no Visual Studio, use o recurso **Adicionar referência de serviço** para gerar automaticamente um proxy e um arquivo de configuração associado. No entanto, como os projetos de biblioteca de classes não usam esse arquivo de configuração, você precisa adicionar as configurações no arquivo de configuração gerado ao arquivo *app. config* para o executável que chama a biblioteca de classes.
 
-O aplicativo cliente usa a classe proxy gerada para se comunicar com o serviço. Esse procedimento é descrito na [Tutorial: Usar um cliente](how-to-use-a-wcf-client.md).
+> [!NOTE]
+> Como alternativa, use a [ferramenta de utilitário de metadados ServiceModel](#servicemodel-metadata-utility-tool) em vez do Visual Studio para gerar a classe proxy e o arquivo de configuração.
+
+O aplicativo cliente usa a classe proxy gerada para se comunicar com o serviço. Este procedimento é descrito em [tutorial: Usar um cliente](how-to-use-a-wcf-client.md).
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
-> - Criar e configurar um projeto de aplicativo de console para o cliente do WCF.
-> - Adicione uma referência de serviço para o serviço do WCF para gerar os arquivos de classe e a configuração de proxy.
+>
+> - Criar e configurar um projeto de aplicativo de console para o cliente WCF.
+> - Adicione uma referência de serviço ao serviço WCF para gerar a classe proxy e os arquivos de configuração.
 
-## <a name="create-a-windows-communication-foundation-client"></a>Criar um cliente do Windows Communication Foundation
+## <a name="create-a-windows-communication-foundation-client"></a>Criar um cliente Windows Communication Foundation
 
-1. Crie um projeto de aplicativo de console no Visual Studio: 
+1. Criar um projeto de aplicativo de console no Visual Studio: 
 
-    1. Dos **arquivo** menu, selecione **abra** > **projeto/solução** e navegue até o **GettingStarted** solução você criado anteriormente (*GettingStarted.sln*). Selecione **Abrir**.
+    1. No menu **arquivo** , selecione **abrir** > **projeto/solução** e navegue até a solução **gettingstarted** que você criou anteriormente (*gettingstarted. sln*). Selecione **Abrir**.
 
-    2. Dos **modo de exibição** menu, selecione **Gerenciador de soluções**.
+    2. No menu **Exibir** , selecione **Gerenciador de soluções**.
 
-    3. No **Gerenciador de soluções** janela, selecione a **GettingStarted** solução (nó superior) e, em seguida, selecione **Add** > **denovoprojeto** no menu de atalho. 
+    3. Na janela **Gerenciador de soluções** , selecione a solução **gettingstarted** (nó superior) e, em seguida, selecione **Adicionar** > **novo projeto** no menu de atalho. 
     
-    4. No **adicionar novo projeto** janela, no lado esquerdo, selecione o **área de trabalho do Windows** categoria sob **Visual C#**  ou **Visual Basic**. 
+    4. Na janela **Adicionar novo projeto** , no lado esquerdo, selecione a categoria **área de trabalho do Windows** em  **C# Visual** ou **Visual Basic**. 
 
-    5. Selecione o **aplicativo de Console (.NET Framework)** modelo e insira *GettingStartedClient* para o **nome**. Selecione **OK**.
+    5. Selecione o modelo **aplicativo de console (.NET Framework)** e digite *GettingStartedClient* para o **nome**. Selecione **OK**.
 
-2. Adicionar uma referência na **GettingStartedClient** do projeto para o <xref:System.ServiceModel> assembly: 
+2. Adicione uma referência no projeto **GettingStartedClient** ao <xref:System.ServiceModel> assembly: 
 
-    1. No **Gerenciador de soluções** janela, selecione a **referências** pasta sob o **GettingStartedClient** do projeto e, em seguida, selecione **Add Reference** no menu de atalho. 
+    1. Na janela **Gerenciador de soluções** , selecione a pasta **referências** no projeto **GettingStartedClient** e, em seguida, selecione **Adicionar referência** no menu de atalho. 
 
-    2. No **adicionar referência** janela, em **Assemblies** no lado esquerdo da janela, selecione **Framework**.
+    2. Na janela **Adicionar referência** , em **assemblies** no lado esquerdo da janela, selecione **estrutura**.
     
-    3. Localize e selecione **System. ServiceModel**e, em seguida, escolha **Okey**. 
+    3. Localize e selecione **System. ServiceModel**e, em seguida, escolha **OK**. 
 
-    4. Salve a solução selecionando **arquivo** > **Salvar tudo**.
+    4. Salve a solução selecionando **arquivo** > **salvar tudo**.
 
-3. Adicione uma referência de serviço para o serviço da Calculadora:
+3. Adicione uma referência de serviço ao serviço de calculadora:
 
-   1. No **Gerenciador de soluções** janela, selecione a **referências** pasta sob o **GettingStartedClient** do projeto e, em seguida, selecione **adicionar referência de serviço**  no menu de atalho.
+   1. Na janela **Gerenciador de soluções** , selecione a pasta **referências** no projeto **GettingStartedClient** e, em seguida, selecione **Adicionar referência de serviço** no menu de atalho.
 
-   2. No **adicionar referência de serviço** janela, selecione **Discover**.
+   2. Na janela **Adicionar referência de serviço** , selecione **descobrir**.
 
-      O CalculatorService serviço é iniciado e o Visual Studio exibe-o na **Services** caixa.
+      O serviço CalculatorService é iniciado e o Visual Studio o exibe na caixa **Serviços** .
 
-   3. Selecione **CalculatorService** para expandi-lo e exibir os contratos de serviço implementados pelo serviço. Deixe o padrão **Namespace** e escolha **Okey**.
+   3. Selecione **CalculatorService** para expandi-lo e exibir os contratos de serviço implementados pelo serviço. Deixe o **namespace** padrão e escolha **OK**.
 
-      O Visual Studio adiciona um novo item sob o **serviços conectados** pasta o **GettingStartedClient** projeto. 
+      O Visual Studio adiciona um novo item na pasta **Serviços conectados** no projeto **GettingStartedClient** . 
 
-### <a name="servicemodel-metadata-utility-tool"></a>Ferramenta Utilitário de metadados de ServiceModel
+### <a name="servicemodel-metadata-utility-tool"></a>Ferramenta de utilitário de metadados ServiceModel
 
-Os exemplos a seguir mostram como usar opcionalmente a [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o arquivo de classe de proxy. Essa ferramenta gera o arquivo de classe de proxy e o *App. config* arquivo. Os exemplos a seguir mostram como gerar o proxy no C# e Visual Basic, respectivamente:
+Os exemplos a seguir mostram como opcionalmente usar a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o arquivo de classe de proxy. Essa ferramenta gera o arquivo de classe de proxy e o arquivo *app. config* . Os exemplos a seguir mostram como gerar o proxy no C# e Visual Basic, respectivamente:
 
 ```shell
 svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
@@ -81,7 +82,7 @@ svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localh
 
 ### <a name="client-configuration-file"></a>Arquivo de configuração do cliente
 
-Depois de criar o cliente, o Visual Studio cria o **App. config** arquivo de configuração do **GettingStartedClient** projeto, que deve ser semelhante ao exemplo a seguir:
+Depois de criar o cliente, o Visual Studio cria o arquivo de configuração **app. config** no projeto **GettingStartedClient** , que deve ser semelhante ao exemplo a seguir:
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -111,17 +112,19 @@ Depois de criar o cliente, o Visual Studio cria o **App. config** arquivo de con
     </configuration>
 ```
 
-Sob o [ \<System. ServiceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) seção, observe o [ \<ponto de extremidade >](../configure-apps/file-schema/wcf/endpoint-element.md) elemento. O **&lt;ponto de extremidade&gt;** elemento define o ponto de extremidade que o cliente usa para acessar o serviço da seguinte maneira:
+Na seção [ \<](../configure-apps/file-schema/wcf/endpoint-element.md) System. [ServiceModel >, observe o elemento Endpoint >. \<](../configure-apps/file-schema/wcf/system-servicemodel.md) O elemento de **&lt;ponto de extremidade&gt;** define o ponto de extremidade que o cliente usa para acessar o serviço da seguinte maneira:
+
 - Endereço: `http://localhost:8000/GettingStarted/CalculatorService`. O endereço do ponto de extremidade.
-- Contrato de serviço: `ServiceReference1.ICalculator`. O contrato de serviço gerencia a comunicação entre o cliente do WCF e o serviço. Visual Studio gerado esse contrato quando você usou seu **adicionar referência de serviço** função. Ele é essencialmente uma cópia do contrato que você definiu no projeto GettingStartedLib. 
-- Associação: <xref:System.ServiceModel.WSHttpBinding>. A associação especifica HTTP como o transporte, segurança interoperável e outros detalhes de configuração.
+- Contrato de serviço `ServiceReference1.ICalculator`:. O contrato de serviço lida com a comunicação entre o cliente WCF e o serviço. O Visual Studio gerou esse contrato quando você usou sua função **Adicionar referência de serviço** . Basicamente, é uma cópia do contrato que você definiu no projeto GettingStartedLib. 
+- Associação: <xref:System.ServiceModel.WSHttpBinding>. A associação especifica HTTP como transporte, segurança interoperável e outros detalhes de configuração.
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
-> - Criar e configurar um projeto de aplicativo de console para o cliente do WCF.
-> - Adicione uma referência de serviço para o serviço do WCF para gerar os arquivos de classe e a configuração de proxy para o aplicativo cliente.
+>
+> - Criar e configurar um projeto de aplicativo de console para o cliente WCF.
+> - Adicione uma referência de serviço ao serviço WCF para gerar a classe proxy e os arquivos de configuração para o aplicativo cliente.
 
 Avance para o próximo tutorial para aprender a usar o cliente gerado.
 

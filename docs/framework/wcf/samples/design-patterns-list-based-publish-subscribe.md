@@ -2,12 +2,12 @@
 title: 'Padrões de design: publicação-assinatura baseada em lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045570"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928833"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: publicação-assinatura baseada em lista
 Este exemplo ilustra o padrão de publicação-assinatura baseado em lista implementado como um programa Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ Este exemplo ilustra o padrão de publicação-assinatura baseado em lista imple
   
  O serviço usa a comunicação duplex. O `ISampleContract` contrato de serviço é emparelhado com um `ISampleClientCallback` contrato de retorno de chamada. O serviço implementa as operações de inscrição e cancelamento de assinatura do serviço, que os clientes usam para ingressar ou sair da lista de assinantes. O serviço também implementa a `PublishPriceChange` operação de serviço, que o programa de fonte de dados chama para fornecer o serviço com novas informações. O programa cliente implementa a `PriceChange` operação de serviço, que o serviço chama para notificar todos os assinantes de uma alteração de preço.  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  O serviço usa um evento de .NET Framework como o mecanismo para informar todos os assinantes sobre novas informações. Quando um cliente ingressa no serviço chamando Subscribe, ele fornece um manipulador de eventos. Quando um cliente sai, ele cancela a assinatura de seu manipulador de eventos do evento. Quando uma fonte de dados chama o serviço para relatar uma alteração de preço, o serviço gera o evento. Isso chama cada instância do serviço, uma para cada cliente que assinou e faz com que seus manipuladores de eventos sejam executados. Cada manipulador de eventos passa as informações para seu cliente por meio de sua função de retorno de chamada.  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  

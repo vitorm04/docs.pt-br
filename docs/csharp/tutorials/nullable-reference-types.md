@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e046ca88eecfe97cfc8553a2c661be930cc73465
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105851"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926665"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
@@ -17,6 +17,7 @@ O C# 8 introduz **tipos de referência que permitem valor nulo** que complementa
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Incorporar tipos de referência que permitem valores nulos e tipos de referência que não permitem valores nulos aos designs
 > - Habilitar verificações de tipo de referência que permitem valor nulo em todo o código.
 > - Gravar código em locais onde o compilador imponha essas decisões de design.

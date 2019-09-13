@@ -1,13 +1,13 @@
 ---
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo está atualizado com a versão prévia 5.
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926519"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -26,6 +26,7 @@ Há vários aprimoramentos da linguagem C# que você já pode experimentar.
 - [Tipos de referência nula](#nullable-reference-types)
 - [Fluxos assíncronos](#asynchronous-streams)
 - [Índices e intervalos](#indices-and-ranges)
+- [Atribuição de União nula](#null-coalescing-assignment)
 - [Tipos construídos não gerenciados](#unmanaged-constructed-types)
 - [Aprimoramento de cadeias de caracteres idênticas interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
+
+## <a name="null-coalescing-assignment"></a>Atribuição de União nula
+
+C#8,0 apresenta o operador `??=`de atribuição de União nula. Você pode usar o `??=` operador para atribuir o valor do seu operando à direita para seu operando à esquerda somente se o operando esquerdo for avaliado como. `null`
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+Para obter mais informações, consulte [?? e?? =](../language-reference/operators/null-coalescing-operator.md) artigo de operadores.
 
 ## <a name="unmanaged-constructed-types"></a>Tipos construídos não gerenciados
 

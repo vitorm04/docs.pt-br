@@ -2,12 +2,12 @@
 title: Ponto de extremidade de metadados seguros personalizados
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 072d2551acaae87904bb12c5e8edafa788674322
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32e6e0238637f9c2ef6814ace35ccb0b78110b60
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045130"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928675"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Ponto de extremidade de metadados seguros personalizados
 Este exemplo demonstra como implementar um serviço com um ponto de extremidade de metadados seguro que usa uma das associações de troca de não-metadados e como configurar a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou clientes para buscar os metadados de tal um ponto de extremidade de metadados. Há duas associações fornecidas pelo sistema disponíveis para expor pontos de extremidade de metadados: mexHttpBinding e mexHttpsBinding. mexHttpBinding é usado para expor um ponto de extremidade de metadados por HTTP de maneira não segura. mexHttpsBinding é usado para expor um ponto de extremidade de metadados por HTTPS de maneira segura. Este exemplo ilustra como expor um ponto de extremidade de metadados seguro <xref:System.ServiceModel.WSHttpBinding>usando o. Você desejaria fazer isso quando quiser alterar as configurações de segurança na associação, mas não quiser usar HTTPS. Se você usar o mexHttpsBinding, seu ponto de extremidade de metadados será seguro, mas não há como modificar as configurações de associação.  
@@ -59,7 +59,7 @@ Este exemplo demonstra como implementar um serviço com um ponto de extremidade 
 ## <a name="svcutil-client"></a>Cliente svcutil  
  Ao usar a associação padrão para hospedar seu `IMetadataExchange` ponto de extremidade, você pode executar svcutil. exe com o endereço desse ponto de extremidade:  
   
-```  
+```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -77,7 +77,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  O nome do ponto de extremidade deve ser o nome do esquema do endereço onde os metadados estão hospedados e o contrato do `IMetadataExchange`ponto de extremidade deve ser. Assim, quando svcutil. exe é executado com uma linha de comando, como a seguinte:  
   
-```  
+```console  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -85,7 +85,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  Para que svcutil. exe Pegue a configuração em svcutil. exe. config, svcutil. exe deve estar no mesmo diretório que o arquivo de configuração. Como resultado, você deve copiar svcutil. exe de seu local de instalação para o diretório que contém o arquivo svcutil. exe. config. Em seguida, a partir desse diretório, execute o seguinte comando:  
   
-```  
+```console  
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
@@ -96,7 +96,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
   
  As mesmas informações de associação e certificado que apareciam em svcutil. exe. config podem ser especificadas de forma `MetadataExchangeClient`imperativa no:  
   
-```  
+```csharp  
 // Specify the Metadata Exchange binding and its security mode  
 WSHttpBinding mexBinding = new WSHttpBinding(SecurityMode.Message);  
 mexBinding.Security.Message.ClientCredentialType = MessageCredentialType.Certificate;  
@@ -105,27 +105,27 @@ mexBinding.Security.Message.ClientCredentialType = MessageCredentialType.Certifi
 MetadataExchangeClient mexClient = new MetadataExchangeClient(mexBinding);  
 mexClient.SoapCredentials.ClientCertificate.SetCertificate(    StoreLocation.CurrentUser, StoreName.My,  
     X509FindType.FindBySubjectName, "client.com");  
-mexClient.SoapCredentials.ServiceCertificate.Authentication.    CertificateValidationMode =    X509CertificateValidationMode.PeerOrChainTrust;  
+mexClient.SoapCredentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.PeerOrChainTrust;  
 mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLocation.CurrentUser, StoreName.TrustedPeople,  
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
  Com o `mexClient` configurado, podemos enumerar os contratos nos quais estamos interessados e usar `MetadataResolver` para buscar uma lista de pontos de extremidade com esses contratos:  
   
-```  
+```csharp  
 // The contract we want to fetch metadata for  
-Collection<ContractDescription> contracts =    new Collection<ContractDescription>();  
-ContractDescription contract =    ContractDescription.GetContract(typeof(ICalculator));  
+Collection<ContractDescription> contracts = new Collection<ContractDescription>();  
+ContractDescription contract = ContractDescription.GetContract(typeof(ICalculator));  
 contracts.Add(contract);  
 // Find endpoints for that contract  
-EndpointAddress mexAddress = new    EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
-ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
+EndpointAddress mexAddress = new EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
+ServiceEndpointCollection endpoints = MetadataResolver.Resolve(contracts, mexAddress, mexClient);  
 ```  
   
  Por fim, podemos usar as informações desses pontos de extremidade para inicializar a ligação e o endereço de `ChannelFactory` um usado para criar canais para se comunicar com os pontos de extremidade do aplicativo.  
   
-```  
-ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
+```csharp  
+ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
  O ponto principal deste cliente de exemplo é demonstrar que, se você estiver usando `MetadataResolver`o, e precisar especificar associações ou comportamentos personalizados para a comunicação de troca de metadados, poderá usar um `MetadataExchangeClient` para especificar essas configurações personalizadas.  

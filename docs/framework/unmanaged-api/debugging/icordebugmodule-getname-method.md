@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988007"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894994"
 ---
 # <a name="icordebugmodulegetname-method"></a>Método ICorDebugModule::GetName
 Obtém o nome do arquivo do módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -39,23 +39,23 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parâmetros  
  `cchname`  
- [in] O tamanho do `szName` matriz.  
+ no O tamanho da `szName` matriz.  
   
  `pcchName`  
- [in] Um ponteiro para o comprimento do nome retornado.  
+ no Um ponteiro para o comprimento do nome retornado.  
   
  `szName`  
- [out] Uma matriz que armazena o nome retornado.  
+ fora Uma matriz que armazena o nome retornado.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetName` método retornará um S_OK HRESULT, se o nome de arquivo do módulo corresponde ao nome no disco. `GetName` Retorna um HRESULT S_FALSE se o nome for fabricadas, por exemplo, para um módulo dinâmico ou na memória.  
+ O `GetName` método retorna um S_OK HRESULT se o nome do arquivo do módulo corresponder ao nome no disco. `GetName`Retorna um "S_FALSE HRESULT" se o nome for criei, por exemplo, para um módulo dinâmico ou na memória.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,12 +2,12 @@
 title: Ativação com base em configuração no ISS e WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909776"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928767"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Ativação com base em configuração no ISS e WAS
 
@@ -31,6 +31,7 @@ A ativação baseada em configuração usa os metadados que costumava ser coloca
  Com isso no arquivo Web. config, você pode posicionar o código-fonte do serviço no diretório App_Code do aplicativo ou um assembly em conformidade no diretório bin do aplicativo.
 
 > [!NOTE]
+>
 > - Ao usar a ativação baseada em configuração, não há suporte para código embutido em arquivos. svc.
 > - O `relativeAddress` atributo deve ser definido como um endereço relativo, como "\<subdiretório >/Service.svc" ou "~/\<sub-Directory/Service. svc".
 > - Uma exceção de configuração será gerada se você registrar um endereço relativo que não tenha uma extensão conhecida associada ao WCF.

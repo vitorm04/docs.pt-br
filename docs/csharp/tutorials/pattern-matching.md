@@ -3,12 +3,12 @@ title: Usar o recurso de correspondência de padrões para estender padrões de 
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105561"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926648"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
 
@@ -17,6 +17,7 @@ O C#7 introduziu recursos básicos de correspondência de padrões. Esses recurs
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
+>
 > - Reconhecer situações em que a correspondência de padrões deverá ser usada.
 > - Usar expressões de correspondência de padrões para implementar o comportamento com base em tipos e valores de propriedade.
 > - Combinar a correspondência de padrões com outras técnicas para criar algoritmos completos.
@@ -293,7 +294,7 @@ Você usará a correspondência de padrões para esse recurso, mas poderá integ
 
 A tabela a seguir mostra as combinações de valores de entrada e multiplicador de preços para os horários de pico:
 
-| Dia        | Hora         | Direção | Premium |
+| Day        | Time         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Dia útil    | horário de pico da manhã | entrada   | x 2,00  |
 | Dia útil    | horário de pico da manhã | saída  | x 1,00  |

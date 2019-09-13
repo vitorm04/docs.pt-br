@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e8d9f7acfcd8dfc4d0653916138ecb05665eb420
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937972"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894581"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -28,17 +28,17 @@ O Importador da Biblioteca de Tipos converte as definições de tipo encontradas
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 tlbimp tlbFile [options]  
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*tlbFile*|O nome de qualquer arquivo que contenha uma biblioteca de tipos COM.|  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Especifica o número de versão do assembly a ser produzido. Especifique *versionnumber* no formato *principal.secundária.build.revisão*.|  
 |**/company:** `companyinformation`|Adiciona informações da empresa ao assembly de saída.|  
@@ -87,31 +87,31 @@ tlbimp tlbFile [options]
 ## <a name="examples"></a>Exemplos  
  O comando a seguir gera um assembly com o mesmo nome da biblioteca de tipos encontrada em `myTest.tlb` e com a extensão .dll.  
   
-```  
+```console  
 tlbimp myTest.tlb   
 ```  
   
  O comando a seguir gera um assembly com o nome `myTest.dll`.  
   
-```  
+```console  
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
  O comando a seguir gera um assembly com o mesmo nome da biblioteca de tipos especificada por `MyModule.dll\1` e com a extensão .dll. `MyModule.dll\1` deve estar no diretório atual.  
   
-```  
+```console  
 tlbimp MyModule.dll\1  
 ```  
   
  O comando a seguir gera um assembly com o nome `myTestLib.dll` para a biblioteca de tipos `TestLib.dll`. A opção **/transform:dispret** transforma todos os parâmetros [out, retval] de métodos em dispinterfaces na biblioteca de tipos em valores retornados na biblioteca gerenciada.  
   
-```  
+```console  
 tlbimp TestLib.dll /transform:dispret /out:myTestLib.dll  
 ```  
   
  A biblioteca de tipos `TestLib.dll`, no exemplo anterior, inclui um método dispinterface chamado `SomeMethod` que retorna nulo e tem um parâmetro [out, retval]. O código a seguir é a assinatura do método de biblioteca de tipos de entrada para `SomeMethod` em `TestLib.dll`.  
   
-```  
+```cpp  
 void SomeMethod([out, retval] VARIANT_BOOL*);  
 ```  
   

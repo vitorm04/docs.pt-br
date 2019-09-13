@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939484"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895053"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>Método ISymUnmanagedNamespace::GetVariables
-Retorna todas as variáveis definidas no escopo global dentro desse namespace.  
+Retorna todas as variáveis definidas no escopo global dentro deste namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,16 +39,16 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parâmetros  
  `cVars`  
- [in] Um `ULONG32` que indica o tamanho do `pVars` matriz.  
+ no Um `ULONG32` que indica o tamanho `pVars` da matriz.  
   
  `pcVars`  
- [out] Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os namespaces.  
+ fora Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os namespaces.  
   
  `pVars`  
- [out] Um ponteiro para um buffer que contém os namespaces.  
+ fora Um ponteiro para um buffer que contém os namespaces.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

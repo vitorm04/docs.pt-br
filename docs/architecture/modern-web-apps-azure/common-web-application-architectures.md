@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373804"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926677"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -292,16 +292,17 @@ Observe que a execução de contêineres do Docker pode ser associada a portas, 
 Para adicionar o suporte ao Docker ao aplicativo usando o Visual Studio, verifique se o Docker Desktop está em execução. Quando você iniciar o assistente, ele não será executado corretamente se o Docker Desktop não estiver em execução. Além disso, o assistente examinará sua escolha de contêiner atual para adicionar o suporte ao Docker correto. Se você desejar adicionar o suporte para os Contêineres do Windows, será necessário executar o assistente enquanto o Docker Desktop estiver em execução, com os Contêineres do Windows configurados. Se você desejar adicionar suporte para contêineres do Linux, será necessário executar o assistente enquanto o Docker estiver em execução com contêineres do Linux configurados.
 
 ### <a name="references--common-web-architectures"></a>Referências – arquiteturas comuns da Web
-> - **A Arquitetura Limpa**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **A Arquitetura Cebola**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **O Padrão de Repositório**  
->   <https://deviq.com/repository-pattern/>
-> - **Amostra de solução de Arquitetura Limpa**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **Livro eletrônico Architecting Microservices** (Arquitetando microsserviços)  
->   <https://aka.ms/MicroservicesEbook>
+
+- **A Arquitetura Limpa**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **A Arquitetura Cebola**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **O Padrão de Repositório**  
+  <https://deviq.com/repository-pattern/>
+- **Amostra de solução de Arquitetura Limpa**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **Livro eletrônico Architecting Microservices** (Arquitetando microsserviços)  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[Anterior](architectural-principles.md)

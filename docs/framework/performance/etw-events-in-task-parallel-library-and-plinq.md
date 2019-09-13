@@ -6,24 +6,22 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d554337d11c3f79d8f70048246e978e185645e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955762"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894925"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventos ETW na biblioteca de tarefas paralelas e em PLINQ
 
-A Biblioteca de Paralelismo de Tarefas e o PLINQ geram eventos ETW (Rastreamento de Eventos para Windows) que podem ser usados para criar o perfil e solucionar problemas de aplicativos usando ferramentas como o Windows Performance Analyzer. No entanto, na maioria dos cenários, a melhor maneira de criar o perfil de código de aplicativo paralelo é usar o [Visualizador](/visualstudio/profiling/concurrency-visualizer) de simultaneidade no Visual Studio.
+A Biblioteca de Paralelismo de Tarefas e o PLINQ geram eventos ETW (Rastreamento de Eventos para Windows) que podem ser usados para criar o perfil e solucionar problemas de aplicativos usando ferramentas como o Windows Performance Analyzer. No entanto, na maioria dos cenários, a melhor maneira de criar o perfil de código de aplicativo paralelo é usar o [Visualizador de simultaneidade](/visualstudio/profiling/concurrency-visualizer) no Visual Studio.
 
 ## <a name="task-parallel-library-etw-events"></a>Eventos ETW da Biblioteca de Paralelismo de Tarefas
 
 Na estrutura de EVENT_HEADER, o GUID de ProviderId para os eventos gerados por <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> é:
 
-```
-0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5
-```
+`0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5`
 
 ### <a name="parallel-loop-begin"></a>Início do loop paralelo
 
@@ -88,9 +86,7 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="plinq-etw-events"></a>Eventos ETW do PLINQ
  O GUID de EVENT_HEADER.ProviderId do PLINQ é:
 
-```
-0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87
-```
+`0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>Início da consulta paralela
  EVENT_DESCRIPTOR.Task = 1

@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bf52a53e8f282f55a0071deb266dabb798fa3348
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8cde4f173fb1de5ebf271f4f080d21d587d3229e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254059"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928534"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Implantar um aplicativo .NET para Apache Spark no Amazon EMR Spark
 
@@ -18,6 +18,7 @@ Este tutorial ensina a implantar um aplicativo do .NET para Apache Spark no Amaz
 Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
+>
 > * Preparar o Microsoft.Spark.Worker
 > * Publicar seu aplicativo Spark .NET
 > * Implantar seu aplicativo no Amazon EMR Spark

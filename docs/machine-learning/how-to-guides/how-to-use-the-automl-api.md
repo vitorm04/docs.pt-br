@@ -3,12 +3,12 @@ title: Como usar a API de ML automatizado do ML.NET
 description: A API de ML automatizado do ML.NET automatiza o processo de criação de modelo e gera um modelo pronto para implantação. Saiba as opções que você pode usar para configurar tarefas de aprendizado de máquina automatizada.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960419"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929385"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Como usar a API de aprendizado de máquina automatizado do ML.NET
 
@@ -26,13 +26,14 @@ Exemplo:
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
 ## <a name="select-the-machine-learning-task-type"></a>Selecione o tipo de tarefa de aprendizado de máquina
 Antes de criar um experimento, determine o tipo de problema de aprendizado de máquina que você deseja resolver. Aprendizado de máquina automatizado é compatível com as seguintes tarefas de ML:
+
 * Classificação Binária
 * Classificação Multiclasse
 * Regressão
@@ -104,6 +105,7 @@ Eis alguns exemplos:
     ```
 
 A lista de treinadores com suporte por tarefa de ML pode ser encontrada no link correspondente abaixo:
+
 * [Algoritmos de Classificação Binária com Suporte](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Algoritmos de Classificação Multiclasse com Suporte](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Algoritmos de Regressão com Suporte](xref:Microsoft.ML.AutoML.RegressionTrainer)
@@ -210,6 +212,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 ```
 
 Estas são todas as métricas disponíveis por tarefa de ML:
+
 * [Métricas de classificação binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Métricas de classificação multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
 * [Métricas de regressão](xref:Microsoft.ML.AutoML.RegressionMetric)

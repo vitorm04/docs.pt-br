@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636521"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895183"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Como: criar um serviço Web HTTP WCF básico
 
@@ -49,13 +49,13 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
     > [!NOTE]
     > Se você não adicionar um ponto de extremidade, <xref:System.ServiceModel.Web.WebServiceHost> criará automaticamente um ponto de extremidade padrão. <xref:System.ServiceModel.Web.WebServiceHost> também adiciona <xref:System.ServiceModel.Description.WebHttpBehavior> e desabilita a página da ajuda HTTP e a funcionalidade GET da linguagem WSDL para que o ponto de extremidade de metadados não interfira no ponto de extremidade HTTP padrão.
     >
-    >  A adição de um ponto de extremidade não SOAP com uma URL de "" gera um comportamento inesperado quando há uma tentativa de chamar uma operação no ponto de extremidade. A razão para isso é o URI do ponto de extremidade é o mesmo que o URI para a página de Ajuda (a página é exibida quando você navega para o endereço básico de um serviço WCF) de escuta.
+    >  A adição de um ponto de extremidade não SOAP com uma URL de "" gera um comportamento inesperado quando há uma tentativa de chamar uma operação no ponto de extremidade. O motivo disso é que o URI de escuta do ponto de extremidade é o mesmo que o URI da página de ajuda (a página que é exibida quando você navega até o endereço base de um serviço WCF).
 
      Você pode executar uma das seguintes ações para evitar que isso ocorra:
 
     - Especifique sempre um URI que não esteja em branco para um ponto de extremidade não SOAP.
 
-    - Desative a página de ajuda. Isso pode ser feito com o código a seguir:
+    - Desative a página de ajuda. Isso pode ser feito com o seguinte código:
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
 
      Este exemplo demonstra como hospedar um serviço estilo Web com um aplicativo de console. Também é possível hospedar esse tipo de serviço no IIS. Para fazer isso, especifique a classe <xref:System.ServiceModel.Activation.WebServiceHostFactory> em um arquivo .svc como demonstra o código a seguir.
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para chamar operações de serviço mapeadas para GET no Internet Explorer
 
-1. Abra o Internet Explorer e digite "`http://localhost:8000/EchoWithGet?s=Hello, world!`" e pressione ENTER. A URL contém o endereço base do serviço (`http://localhost:8000/`), o endereço relativo do ponto de extremidade (""), a operação de serviço chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados separados por um e comercial (&).
+1. Abra o Internet Explorer e digite`http://localhost:8000/EchoWithGet?s=Hello, world!`"" e pressione Enter. A URL contém o endereço base do serviço (`http://localhost:8000/`), o endereço relativo do ponto de extremidade (""), a operação de serviço a ser chamada ("EchoWithGet") e um ponto de interrogação seguido por uma lista de parâmetros nomeados separados por um e comercial (&).
 
 ## <a name="to-call-service-operations-in-code"></a>Para chamar operações de serviço no código
 

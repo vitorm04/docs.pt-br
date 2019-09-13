@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 6dbd69c8424227f85d8bf3cdcaf6cf9dbf7e1f4c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f3688b4492d3eb629f86a9d463b9127429260033
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856026"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929115"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar sentimentos com a CLI do ML.NET
 
@@ -19,6 +19,7 @@ Saiba como usar a CLI do ML.NET para gerar automaticamente um modelo do ML.NET e
 
 Neste tutorial, você realizará as seguintes etapas:
 > [!div class="checklist"]
+>
 > - Preparar os dados para a tarefa de aprendizado de máquina selecionada
 > - Executar o comando 'mlnet auto-train' da CLI
 > - Examinar os resultados de métrica de qualidade
@@ -259,6 +260,7 @@ Mais importante, para esse cenário específico (modelo de análise de sentiment
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
+>
 > - Prepare seus dados para a tarefa de ML selecionada (problema a ser resolvido)
 > - Execute o comando 'mlnet auto-train' na ferramenta de CLI
 > - Examinar os resultados de métrica de qualidade

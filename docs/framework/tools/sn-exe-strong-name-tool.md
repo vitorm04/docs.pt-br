@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938013"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894631"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -36,13 +36,13 @@ A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|Gera dados <xref:System.Reflection.AssemblySignatureKeyAttribute> para migrar a chave de identidade para a chave de assinatura de um arquivo.|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|Gera dados <xref:System.Reflection.AssemblySignatureKeyAttribute> para migrar a chave de identidade para a chave de assinatura de um contêiner de chave.|  
@@ -90,37 +90,37 @@ A ferramenta Nome Forte pressupõe que os pares de chaves pública/privada são 
 ## <a name="examples"></a>Exemplos  
  O comando a seguir cria um novo par de chaves aleatório e o armazena em `keyPair.snk`.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  O comando a seguir armazena a chave em `keyPair.snk` no contêiner `MyContainer` no CSP de nome forte.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  O comando a seguir extrai a chave pública de `keyPair.snk` e a armazena em `publicKey.snk`.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  O comando a seguir exibe a chave pública e o token da chave pública contidos em `publicKey.snk`.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  O comando a seguir verifica o assembly `MyAsm.dll`.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  O comando a seguir exclui `MyContainer` do CSP padrão.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   

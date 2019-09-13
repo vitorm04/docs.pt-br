@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106708"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929125"
 ---
 # <a name="working-with-calendars"></a>Trabalhar com calendários
 
@@ -139,6 +139,7 @@ Os calendários normalmente dividem as datas em eras. No entanto <xref:System.Gl
 
 > [!IMPORTANT]
 > A era Reiwa, uma nova era no <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar>, começa em 1º de maio de 2019. Essa alteração afeta todos os aplicativos que usam esses calendários. Consulte os seguintes artigos para obter mais informações:
+>
 > - [Tratar de uma nova era no calendário do japonês no .net](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), que documenta os recursos adicionados ao .net para dar suporte a calendários com vários apagar e discute as práticas recomendadas a serem usadas na manipulação de calendários de várias seleções.
 > - [Prepare seu aplicativo para a alteração de era japonesa](/windows/uwp/design/globalizing/japanese-era-change), que fornece informações sobre como testar seus aplicativos no Windows para garantir a prontidão da alteração de era.
 > - [Resumo de novas atualizações de era japonesas para .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), que lista .NET Framework atualizações para versões individuais do Windows relacionadas à nova era do calendário japonês, observa novos recursos de .NET Framework para suporte de várias versões e inclui coisas para Procure em testando seus aplicativos.
@@ -168,7 +169,7 @@ O nome que corresponde a um número de era específico não pode ser recuperado 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
-Além disso, a cadeia de caracteres de formato de data e hora personalizado "g" inclui o nome da era na representação de cadeia de caracteres de uma data e hora. Para obter mais informações, consulte cadeias de [caracteres de formato personalizado de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
+Além disso, a cadeia de caracteres de formato de data e hora personalizado "g" inclui o nome da era na representação de cadeia de caracteres de uma data e hora. Para obter mais informações, consulte [cadeias de caracteres de formato personalizado de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
 ### <a name="instantiating-a-date-with-an-era"></a>Criando uma instância de uma data com uma era
 
@@ -184,7 +185,7 @@ No entanto, se a era for alterada, a intenção desse código se tornará ambíg
   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
-- Chame um método de data e hora que especifica explicitamente uma era. Isso inclui os seguintes métodos:
+- Chame um método de data e hora que especifica explicitamente uma era. Entre elas estão os seguintes métodos:
 
   - O <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> método <xref:System.Globalization.JapaneseLunisolarCalendar> da classe ou. <xref:System.Globalization.JapaneseCalendar>
 

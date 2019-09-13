@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 3080514d06119a2f1b621cff16056ac7577c30b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adc4d519e8d29fef5595ab7ddc3168462525c4e2
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966812"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895237"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Como: chamar operações assíncronas usando uma fábrica de canais
 Este tópico aborda como um cliente pode acessar uma operação de serviço de forma assíncrona ao usar um aplicativo cliente baseado em um <xref:System.ServiceModel.ChannelFactory%601>. (Ao usar um <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> objeto para invocar um serviço, você pode usar o modelo de chamada assíncrona orientado por evento. Para obter mais informações, confira [Como: Chamar operações de serviço](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)de forma assíncrona. Para obter mais informações sobre o modelo de chamada assíncrona baseado em evento, consulte [padrão assíncrono baseado em evento (EAP)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -23,7 +23,7 @@ Este tópico aborda como um cliente pode acessar uma operação de serviço de f
   
 1. Execute a ferramenta [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com a `/async` opção conforme mostrado no comando a seguir.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   

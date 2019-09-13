@@ -4,12 +4,12 @@ description: Uma introdução ao rastreamento e registro em log do .NET Core.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 06781c6a5c1d771b1fa772539705cd1e2b3ad2d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70234620"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926359"
 ---
 # <a name="net-core-logging-and-tracing"></a>Log e rastreamento do .NET Core
 
@@ -32,6 +32,7 @@ Essa técnica simples é surpreendentemente poderosa. Ele pode ser usado em situ
 As <xref:System.Console?displayProperty=nameWithType>classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, e<xref:System.Diagnostics.Debug?displayProperty=nameWithType> fornecem, cada uma, APIs semelhantes de estilo de impressão conveniente para o registro em log.
 
 A escolha da API de estilo de impressão a ser usada cabe a você. As principais diferenças são:
+
 - <xref:System.Console?displayProperty=nameWithType>
   - Sempre habilitado e sempre grava no console.
   - Útil para informações que seu cliente talvez precise ver na versão.
@@ -54,7 +55,7 @@ As APIs a seguir são mais orientadas a eventos. Em vez de registrar cadeias de 
   - EventSource é a principal API de rastreamento do .NET Core raiz.
   - Disponível em todas as versões de .NET Standard.
   - Permite apenas rastrear objetos serializáveis.
-  - Grava nos ouvintes de [eventos](xref:System.Diagnostics.Tracing.EventListener)anexados.
+  - Grava nos [ouvintes de eventos](xref:System.Diagnostics.Tracing.EventListener)anexados.
   - O .NET Core fornece ouvintes para:
     - EventPipe do .NET Core em todas as plataformas
     - [ETW (rastreamento de eventos para Windows)](/windows/win32/etw/event-tracing-portal)
@@ -80,6 +81,7 @@ As APIs de nível baixo podem não ser a escolha certa para suas necessidades de
 A <xref:Microsoft.Extensions.Logging.ILogger> interface foi usada para criar uma interface de log comum em que os agentes podem ser inseridos por meio da injeção de dependência.
 
 Por exemplo, para permitir que você faça a melhor escolha para seu aplicativo `ASP.NET` oferece suporte para uma seleção de estruturas internas e de terceiros:
+
 - [Provedores de log internos do ASP.NET](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [Provedores de log de terceiros do ASP.NET](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
@@ -91,7 +93,7 @@ Por exemplo, para permitir que você faça a melhor escolha para seu aplicativo 
 
 - O [log do ASP.net](/aspnet/core/fundamentals/logging) fornece uma visão geral das técnicas de log que ele suporta.
 
-- A interpolação de cadeias de caracteres pode simplificar a gravação do código [ C# ](../../csharp/language-reference/tokens/interpolated.md)
+- [A interpolação de cadeias de caracteres pode simplificar a gravação do código C# ](../../csharp/language-reference/tokens/interpolated.md)
 
 - A <xref:System.Exception.Message?displayProperty=nameWithType> propriedade é útil para registrar exceções.
 
@@ -102,6 +104,7 @@ Por exemplo, para permitir que você faça a melhor escolha para seu aplicativo 
 A formatação da cadeia de caracteres pode levar tempo de processamento de CPU perceptível.
 
 Em aplicativos de desempenho crítico, é recomendável que você:
+
 - Evite muitos registros em log quando ninguém estiver ouvindo. Evite construir mensagens de registro em log dispendiosas verificando se o log está habilitado primeiro.
 - Registre apenas o que é útil.
 - Adie a formatação sofisticada para o estágio de análise.

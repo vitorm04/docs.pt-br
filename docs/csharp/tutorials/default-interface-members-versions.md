@@ -3,12 +3,12 @@ title: Atualizar interfaces com segurança usando membros de interface padrão e
 description: Este tutorial avançado explora como adicionar novos recursos com segurança às definições de interface existentes sem interromper todas as classes e structs que implementam essa interface.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252912"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926710"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Atualizar interfaces com membros da interface padrão no C# 8.0
 
@@ -17,6 +17,7 @@ Desde o C# 8.0 no .NET Core 3.0, é possível definir uma implementação em que
 Neste tutorial, você aprenderá a:
 
 > [!div class="checklist"]
+>
 > * Estender interfaces com segurança, adicionando métodos com implementações.
 > * Criar implementações parametrizadas para oferecer maior flexibilidade.
 > * Permitir que os implementadores forneçam uma implementação mais específica na forma de uma substituição.

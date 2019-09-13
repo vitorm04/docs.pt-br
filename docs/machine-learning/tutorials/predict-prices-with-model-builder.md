@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107138"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929437"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Prever os preços usando regressão com o Construtor de Modelo
 
@@ -21,6 +21,7 @@ O modelo de previsão de preço do Construtor de Modelo pode ser usado em qualqu
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > - Preparar e compreender os dados
 > - Escolha um cenário
 > - Carregar os dados
@@ -190,6 +191,7 @@ Se precisar fazer referência aos projetos gerados em um momento posterior dentr
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
+>
 > - Preparar e compreender os dados
 > - Escolha um cenário
 > - Carregar os dados

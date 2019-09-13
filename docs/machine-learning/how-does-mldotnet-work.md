@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104891"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929406"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
@@ -82,6 +82,7 @@ O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Est
 ## <a name="code-workflow"></a>Fluxo de trabalho de código
 
 O diagrama a seguir representa a estrutura de código do aplicativo, bem como o processo iterativo de desenvolvimento do modelo:
+
 - Coletar e carregar dados de treinamento em um objeto **IDataView**
 - Especifique um pipeline de operações para extrair recursos e aplicar um algoritmo de aprendizado de máquina
 - Treinar um modelo chamando **Fit()** no pipeline

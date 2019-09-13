@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937993"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894756"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
@@ -26,17 +26,17 @@ O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*assemblyName*|O assembly para o qual uma biblioteca de tipos deve ser exportada.|  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/asmpath:** *directory*|Especifica o local de pesquisa dos assemblies. Se usar essa opção, você deverá especificar explicitamente os locais de pesquisa dos assemblies referenciados, incluindo o diretório atual.<br /><br /> Quando você usa a opção **asmpath**, o Exportador da Biblioteca de Tipos não procurará um assembly no GAC (cache de assembly global).|  
 |**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  Se você usar o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para especificar um valor <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> de `VT_UNKOWN` ou `VT_DISPATCH`, Tlbexp.exe ignorará qualquer uso subsequente do campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>. Por exemplo, dadas as seguintes assinaturas:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  a seguinte biblioteca de tipos é gerada:  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Exemplos  
  O comando a seguir gera uma biblioteca de tipos com o mesmo nome do assembly encontrado em `myTest.dll`.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  O comando a seguir gera uma biblioteca de tipos com o nome `clipper.tlb`.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Primeiro use Tlbimp.exe para importar a biblioteca de tipos `myLib.tlb` e salve-a como `myLib.dll`.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  O comando a seguir usa o compilador do C# para compilar o `Sample.dll,` que faz referência a `myLib.dll` criado no exemplo anterior.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  O comando a seguir gera uma biblioteca de tipos para `Sample.dll` que faz referência a `myLib.dll`.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

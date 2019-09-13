@@ -4,12 +4,12 @@ description: Saiba como treinar novamente um modelo do TensorFlow para classific
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804751"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929235"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Treinar novamente um classificador de imagens TensorFlow com aprendizado por transferência e o ML.NET
 
@@ -19,6 +19,7 @@ Treinar um modelo de [Classificação de Imagens](https://en.wikipedia.org/wiki/
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > * Compreender o problema
 > * Reutilizar e ajustar o modelo pré-treinado
 > * Classificar imagens
@@ -480,6 +481,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
+>
 > * Compreender o problema
 > * Reutilizar e ajustar o modelo pré-treinado
 > * Classificar imagens com um modelo carregado

@@ -3,12 +3,12 @@ title: Tipos de Framework com suporte a árvores de expressão
 description: Saiba mais sobre tipos de estrutura com suporte a árvores de expressão, criando árvores de expressão e técnicas para trabalhar com APIs de árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925963"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de Framework com suporte a árvores de expressão
 
@@ -58,6 +58,7 @@ Você pode ver neste exemplo simples que há muitos tipos envolvidos na criaçã
 
 ## <a name="navigating-the-apis"></a>Navegando nas APIs
 Há tipos de Nó de expressão que mapeiam para quase todos os elementos de sintaxe da linguagem C#. Cada tipo tem métodos específicos para esse tipo de elemento de linguagem. É muita coisa para guardar na memória ao mesmo tempo. Em vez de tentar memorizar tudo, aqui estão as técnicas que eu uso para trabalhar com Árvores de expressão:
+
 1. Observar os membros da enumeração `ExpressionType` para determinar possíveis nós que devem ser examinados. Isso é realmente útil se você deseja percorrer e entender uma árvore de expressão.
 2. Observar os membros estáticos da classe `Expression` para compilar uma expressão. Esses métodos podem compilar qualquer tipo de expressão em um conjunto de seu nós filho.
 3. Examinar a classe `ExpressionVisitor` para compilar uma árvore de expressão modificada.

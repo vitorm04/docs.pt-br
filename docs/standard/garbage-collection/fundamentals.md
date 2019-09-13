@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796850"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895277"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
@@ -270,7 +270,7 @@ A ilustração a seguir mostra a coleta de lixo simultânea executada em um thre
 
 ## <a name="background-workstation-garbage-collection"></a>Coleta de lixo de estação de trabalho em segundo plano
 
-Na coleta de lixo em segundo plano, as gerações efêmeras (0 e 1) são coletadas conforme o necessário, enquanto a coleta da geração 2 estiver em andamento. Não há configuração para a coleta de lixo em segundo plano; ela é habilitada automaticamente com a coleta de lixo simultânea. A coleta de lixo em segundo plano substitui a coleta de lixo simultânea. Assim como ocorre com a coleta de lixo simultânea, a coleta de lixo em segundo plano é executada em um thread dedicado, e é aplicável somente a coletas de geração 2.
+A coleta de lixo em segundo plano substitui a coleta de lixo da estação de trabalho simultânea começando com o .NET Framework 4 e substitui a coleta de lixo do servidor simultâneo, começando com o .NET Framework 4,5.  Na coleta de lixo em segundo plano, as gerações efêmeras (0 e 1) são coletadas conforme o necessário, enquanto a coleta da geração 2 estiver em andamento. Ele é executado em um thread dedicado e é aplicável somente a coleções de geração 2. A coleta de lixo em segundo plano é habilitada automaticamente por padrão e pode ser habilitada ou desabilitada com a definição de [ \<configuração gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) em aplicativos .NET Framework. 
 
 > [!NOTE]
 > A coleta de lixo em segundo plano está disponível apenas no .NET Framework 4 e em versões posteriores. No .NET Framework 4, ela é compatível somente para a coleta de lixo de estação de trabalho. A partir do .NET Framework 4.5, a coleta de lixo em segundo plano está disponível para a coleta de lixo de estação de trabalho e de servidor.

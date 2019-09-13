@@ -1,18 +1,18 @@
 ---
 title: Operador = – Referência de C#
 ms.custom: seodec18
-ms.date: 06/21/2019
+ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: f30b48fc6bd1e896658a7234a58409ea9a0f5e6f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a450a55524f33f4f06ed077aba864e8f641a458d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601950"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924652"
 ---
 # <a name="-operator-c-reference"></a>Operador = (Referência de C#)
 
@@ -61,6 +61,10 @@ x = x op y
 exceto que `x` é avaliado apenas uma vez.
 
 A atribuição composta é tem suporte dos operadores [aritmético](arithmetic-operators.md#compound-assignment), [lógico booliano](boolean-logical-operators.md#compound-assignment) e [bit a bit lógico e shift](bitwise-and-shift-operators.md#compound-assignment).
+
+## <a name="null-coalescing-assignment"></a>Atribuição de União nula
+
+A partir C# do 8,0, você pode usar o operador `??=` de atribuição de União nula para atribuir o valor de seu operando à direita para seu operando à esquerda somente se o operando à esquerda for avaliado como. `null` Para obter mais informações, consulte [?? e?? =](null-coalescing-operator.md) artigo de operadores.
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 

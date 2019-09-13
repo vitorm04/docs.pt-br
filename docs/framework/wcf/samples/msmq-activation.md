@@ -2,12 +2,12 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039295"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895246"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 
@@ -92,15 +92,11 @@ Um arquivo. svc com o nome da classe é usado para hospedar o código do serviç
 
 O próprio arquivo Service. svc contém uma diretiva para criar o `OrderProcessorService`.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 O arquivo Service. svc também contém uma diretiva de assembly para garantir que System. Transactions. dll seja carregado.
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 O cliente cria um escopo de transação. A comunicação com o serviço ocorre dentro do escopo da transação, fazendo com que ele seja tratado como uma unidade atômica onde todas as mensagens são bem sucedidas ou falham. A transação é confirmada `Complete` chamando o escopo da transação.
 
@@ -238,7 +234,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. No menu **Iniciar** , clique em **executar**, digite `Compmgmt.msc` e pressione Enter.
 
-    2. Em **serviços e aplicativos**, expanda enfileiramento de **mensagens**.
+    2. Em **serviços e aplicativos**, expanda **enfileiramento de mensagens**.
 
     3. Clique em **filas particulares**.
 

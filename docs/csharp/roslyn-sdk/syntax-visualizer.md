@@ -3,12 +3,12 @@ title: Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 description: O visualizador de sintaxe fornece uma ferramenta visual para explorar os modelos que o SDK do .NET Compiler Platform gera para o código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
-ms.translationtype: HT
+ms.openlocfilehash: 55a1aa555a82d286a0e8e4359e814dfe2cc301c8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307195"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926780"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 
@@ -44,6 +44,7 @@ As árvores de sintaxe incluem três tipos de itens: *nós*, *tokens* e *trívia
 Cada item da árvore também exibe sua própria **extensão**. A **extensão** é composta pelos índices (a posição inicial e final) do nó no arquivo de texto.  No exemplo de C# anterior, o token “UsingKeyword [0..5)” selecionado tem uma **abrangência** de cinco caracteres de largura, [0..5). A notação "[..)" significa que o índice inicial faz parte da extensão, mas o índice final não.
 
 Há duas maneiras de navegar na árvore:
+
 * Expandir ou clicar em itens na árvore. O visualizador seleciona automaticamente o texto correspondente à extensão do item no editor de código.
 * Clicar ou selecionar texto no editor de código. No exemplo anterior do VB, se você seleciona a linha que contém "Module Module1" no editor de código, o visualizador navega automaticamente até o nó ModuleStatement correspondente na árvore. 
 
@@ -82,7 +83,7 @@ Outra opção é colocar a janela de gráfico de sintaxe em um segundo monitor, 
 
 ## <a name="inspecting-semantics"></a>Inspecionando semântica
 
-O Visualizador de sintaxe possibilita uma inspeção rudimentar de símbolos e informações semânticas. Digite `double x = 1 + 1;` dentro de Main() no exemplo de C#. Em seguida, selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** no visualizador. Clique com o botão direito do mouse nesse **AddExpression** e clique em **Exibir Symbol (se houver)**. Observe que a maioria dos itens de menu tem o qualificador "se houver". O Visualizador de sintaxe inspeciona as propriedades de um Nó, incluindo propriedades que podem não estar presentes em todos os nós. 
+O Visualizador de sintaxe possibilita uma inspeção rudimentar de símbolos e informações semânticas. Digite `double x = 1 + 1;` dentro de Main() no exemplo de C#. Em seguida, selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** no visualizador. Clique com o botão direito do mouse nesse **AddExpression** e clique em **Exibir Symbol (se houver)** . Observe que a maioria dos itens de menu tem o qualificador "se houver". O Visualizador de sintaxe inspeciona as propriedades de um Nó, incluindo propriedades que podem não estar presentes em todos os nós. 
 
 A grade de propriedades nas atualizações do visualizador, como mostra a figura a seguir: O símbolo da expressão é um **SynthesizedIntrinsicOperatorSymbol** com **Kind = Method**.
 
@@ -114,7 +115,7 @@ Module Program
 End Module
 ```
 
-Esse código introduz um alias chamado `C` que mapeia para o tipo `System.Console` na parte superior do arquivo e usa esse alias em `Main()`. Selecione o uso desse alias, o `C` em `C.WriteLine()`, dentro do método `Main()`. O visualizador seleciona o nó **IdentifierName** correspondente no visualizador. Clique com botão direito do mouse nesse nó e clique em **Exibir Symbol (se houver)**. A grade de propriedade mostra que esse identificador é associado com o tipo `System.Console`, conforme mostrado na figura a seguir:
+Esse código introduz um alias chamado `C` que mapeia para o tipo `System.Console` na parte superior do arquivo e usa esse alias em `Main()`. Selecione o uso desse alias, o `C` em `C.WriteLine()`, dentro do método `Main()`. O visualizador seleciona o nó **IdentifierName** correspondente no visualizador. Clique com botão direito do mouse nesse nó e clique em **Exibir Symbol (se houver)** . A grade de propriedade mostra que esse identificador é associado com o tipo `System.Console`, conforme mostrado na figura a seguir:
 
 ![Propriedades Symbol](media/syntax-visualizer/symbol-visual-basic.png)
 
@@ -122,7 +123,7 @@ Experimente **Exibir AliasSymbol (se houver)** para o mesmo nó **IdentifierName
 
 ![Propriedades AliasSymbol](media/syntax-visualizer/alias-symbol.png)
 
-Inspecione o símbolo correspondente a qualquer tipo, método e propriedade declarados. Selecione o nó correspondente no visualizador e clique em **Exibir Symbol (se houver)**. Selecione o método `Sub Main()`, incluindo o corpo do método. Clique em **Exibir Symbol (se houver)** para o nó **SubBlock** correspondente no visualizador. A grade de propriedade mostra que o **MethodSymbol** deste **SubBlock** tem nome `Main` com o tipo de retorno `Void`.
+Inspecione o símbolo correspondente a qualquer tipo, método e propriedade declarados. Selecione o nó correspondente no visualizador e clique em **Exibir Symbol (se houver)** . Selecione o método `Sub Main()`, incluindo o corpo do método. Clique em **Exibir Symbol (se houver)** para o nó **SubBlock** correspondente no visualizador. A grade de propriedade mostra que o **MethodSymbol** deste **SubBlock** tem nome `Main` com o tipo de retorno `Void`.
 
 ![Exibindo o símbolo de uma declaração de método](media/syntax-visualizer/method-symbol.png)
 

@@ -4,12 +4,12 @@ description: Saiba como hospedar o tempo de execução do .NET Core a partir do 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1f04ccfa56c399a4dba003ec0de8a87f888ef848
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849321"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925928"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o tempo de execução do .NET a partir de seu código nativo
 
@@ -44,6 +44,7 @@ As etapas a seguir detalham como usar as bibliotecas `nethost` e `hostfxr` para 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>Etapa 1 – Carregar HostFxr e obter funções de hospedagem exportadas
 
 A biblioteca `nethost` fornece a função `get_hostfxr_path` para localizar a biblioteca `hostfxr`. A biblioteca `hostfxr` expõe funções para hospedar o tempo de execução do .NET Core. A lista completa de funções pode ser encontrada em [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) e no [documento de design de hospedagem nativo](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). A amostra e este tutorial usam o seguinte:
+
 * `hostfxr_initialize_for_runtime_config`: inicializa um contexto de host e o prepara para a inicialização do tempo de execução do .NET Core usando a configuração de tempo de execução especificada.
 * `hostfxr_get_runtime_delegate`: obtém um representante para a funcionalidade de tempo de execução.
 * `hostfxr_close`: fecha um contexto de host.

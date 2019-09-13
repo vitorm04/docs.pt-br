@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
-ms.translationtype: HT
+ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690161"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894624"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (extensão de depuração SOS)
 
@@ -21,7 +21,7 @@ A Extensão de Depuração SOS (SOS.dll) ajuda a depurar programas gerenciados n
 
 ## <a name="syntax"></a>Sintaxe
 
-```shell
+```console
 ![command] [options]
 ```
 
@@ -104,7 +104,7 @@ Também é possível usar a Extensão de Depuração SOS carregando-a no [depura
 
 Para carregar a Extensão de Depuração SOS no depurador WinDbg.exe, execute o seguinte comando na ferramenta:
 
-```
+```console
 .loadby sos clr
 ```
 
@@ -114,7 +114,7 @@ Para usar um arquivo de despejo criado em outro computador, verifique se o arqui
 
 Para carregar uma versão específica de SOS.dll, digite o seguinte comando no Depurador do Windows:
 
-```
+```console
 .load <full path to sos.dll>
 ```
 
@@ -122,85 +122,85 @@ Para carregar uma versão específica de SOS.dll, digite o seguinte comando no D
 
 O comando a seguir exibe o conteúdo de uma matriz no endereço `00ad28d0`.  A exibição começa pelo segundo elemento e continua por mais cinco elementos.
 
-```
+```console
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
 O comando a seguir exibe o conteúdo de um assembly no endereço `1ca248`.
 
-```
+```console
 !dumpassembly 1ca248
 ```
 
 O comando a seguir exibe informações sobre o heap do coletor de lixo.
 
-```
+```console
 !dumpheap
 ```
 
 O comando a seguir grava o conteúdo do log de estresse na memória em um arquivo (padrão) chamado StressLog.txt no diretório atual.
 
-```
+```console
 !DumpLog
 ```
 
 O comando a seguir exibe a estrutura `MethodDesc` no endereço `902f40`.
 
-```
+```console
 !dumpmd 902f40
 ```
 
 O comando a seguir exibe informações sobre um módulo no endereço `1caa50`.
 
-```
+```console
 !dumpmodule 1caa50
 ```
 
 O comando a seguir exibe informações sobre um objeto no endereço `a79d40`.
 
-```
+```console
 !DumpObj a79d40
 ```
 
 O comando a seguir exibe os campos de uma classe de valor no endereço `00a79d9c` usando a tabela de método no endereço `0090320c`.
 
-```
+```console
 !DumpVC 0090320c 00a79d9c
 ```
 
 O comando a seguir exibe a memória do processo usada pelo coletor de lixo.
 
-```
+```console
 !eeheap -gc
 ```
 
 O comando a seguir exibe todos os objetos programados para a finalização.
 
-```
+```console
 !finalizequeue
 ```
 
 O comando a seguir determina o domínio do aplicativo de um objeto no endereço `00a79d98`.
 
-```
+```console
 !findappdomain 00a79d98
 ```
 
 O comando a seguir exibe todos os identificadores do coletor de lixo no processo atual.
 
-```
+```console
 !gcinfo 5b68dbb8
 ```
 
 O comando a seguir exibe as estruturas `MethodTable` e `EEClass` do método `Main` na classe `MainClass` do módulo `unittest.exe`.
 
-```
+```console
 !name2ee unittest.exe MainClass.Main
 ```
 
 O comando a seguir exibe informações sobre o token de metadados no endereço `02000003` do módulo `unittest.exe`.
 
-```
+```console
 !token2ee unittest.exe 02000003
 ```
 

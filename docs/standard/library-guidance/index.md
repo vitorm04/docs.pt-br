@@ -4,12 +4,12 @@ description: Práticas recomendadas para que os desenvolvedores criem biblioteca
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: 85d76c8b2bd0f030e3fbc1987e6ff51d6da44e76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644380"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928960"
 ---
 # <a name="open-source-library-guidance"></a>Diretrizes da biblioteca de software livre
 
@@ -18,6 +18,7 @@ Estas diretrizes fornecem recomendações para que os desenvolvedores criem bibl
 Aspectos das bibliotecas .NET de software livre de alta qualidade:
 
 > [!div class="checklist"]
+>
 > * **Inclusivas** – as bibliotecas .NET de qualidade se esforçam para dar suporte a várias plataformas, linguagens de programação e aplicativos.
 > * **Estáveis** – as bibliotecas .NET de qualidade coexistem no ecossistema do .NET, em execução em aplicativos criados com várias bibliotecas.
 > * **Projetadas para evoluir** – as bibliotecas .NET devem melhorar e evoluir ao longo do tempo, continuando a dar suporte aos usuários existentes.

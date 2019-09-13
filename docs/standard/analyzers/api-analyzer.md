@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107382"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929361"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -30,6 +30,7 @@ O Analisador de API é fornecido como um pacote NuGet [Microsoft.DotNet.Analyzer
 ### <a name="what-are-deprecated-apis"></a>Quais são as APIs preteridas?
 
 A família .NET é um conjunto de produtos grandes que são atualizados constantemente para atender melhor às necessidades dos clientes. É natural substituir algumas APIs e substituí-las por novas. Uma API é considerada preterida quando existe uma alternativa melhor. Uma maneira de informar que uma API foi preterida e não deve ser usada é marcá-la com o atributo <xref:System.ObsoleteAttribute>. A desvantagem dessa abordagem é que há apenas uma ID de diagnóstico para todas as APIs preteridas (para C#, [CS0612](../../csharp/misc/cs0612.md)). Isso significa que:
+
 - É impossível ter documentos dedicados para cada caso.
 - É impossível suprimir determinada categoria de avisos. Você pode suprimir todos ou nenhum deles.
 - Para informar os usuários de uma nova preterição, um assembly referenciado ou um pacote de direcionamento deve ser atualizado.

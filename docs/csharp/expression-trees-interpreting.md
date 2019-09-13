@@ -3,12 +3,12 @@ title: Interpretando Expressões
 description: Aprenda como escrever código para examinar a estrutura de um árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202977"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925680"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -357,6 +357,7 @@ Este código representa uma possível implementação da função *fatorial* mat
 Eu poderia se ela já fosse um delegado, mas não posso chamá-la em sua forma de árvore de expressão. Na seção [criando árvores de expressão](expression-trees-building.md), você aprenderá técnicas para superar essas limitações.
 
 Nesta expressão, você encontrará todos esses tipos de nós:
+
 1. Igual (expressão binária)
 2. Multiplicar (expressão binária)
 3. Condicional (a expressão ? :)

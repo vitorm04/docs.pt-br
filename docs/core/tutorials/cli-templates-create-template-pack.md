@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: df8c33856195ba7feacd32203e4a885997b50ad2
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
-ms.translationtype: HT
+ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870625"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926074"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Criar um pacote de modelos
 
@@ -19,7 +19,8 @@ Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquiv
 Nesta parte da série, você aprenderá a:
 
 > [!div class="checklist"]
-> * Criar um projeto _.csproj * para criar um pacote de modelos
+>
+> * Criar um \*projeto. csproj para criar um pacote de modelos
 > * Configurar o arquivo de projeto para empacotamento
 > * Instalar o modelo de um arquivo do pacote NuGet
 > * Desinstalar um modelo pela ID do pacote

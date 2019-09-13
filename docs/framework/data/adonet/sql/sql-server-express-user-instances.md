@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780836"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894410"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recurso de instância de usuário, que somente está disponível quando é usado o Provedor de Dados .NET Framework para SQL Server (`SqlClient`). Uma instância de usuário é uma instância separada do Mecanismo de Banco de Dados SQL Server Express que é gerado por uma instância pai. As instâncias de usuário permitem que usuários que não são administradores em seus computadores locais anexem e conectem-se aos bancos de dados SQL Server Express. Cada instância é executada no contexto de segurança do usuário individual, uma instância por usuário.  
@@ -26,9 +26,9 @@ O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recur
 ## <a name="enabling-user-instances"></a>Habilitando instâncias de usuário  
  Para gerar instâncias de usuário, uma instância pai do SQL Server Express deve estar em execução. As instâncias de usuário são habilitadas por padrão quando SQL Server Express é instalado e podem ser explicitamente habilitadas ou desabilitadas por um administrador do sistema executando o procedimento armazenado do sistema **sp_configure** na instância pai.  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - A cadeia de caracteres de substituição `|DataDirectory|` incluída nos símbolos pipe refere-se ao diretório de dados do aplicativo que abre a conexão e fornece um caminho relativo que indica o local do banco de dados .mdf e .ldf e dos arquivos de log. Se você deseja localizar esses arquivos em outro lugar, deverá fornecer o caminho completo para os arquivos.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  A localização física para a qual o `DataDirectory` aponta depende do tipo de aplicativo. Nesse exemplo, o arquivo Northwind.mdf a ser anexado está localizado na pasta \app_data do aplicativo.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

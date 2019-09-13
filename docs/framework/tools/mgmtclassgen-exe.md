@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364026"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894652"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
 A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gerar rapidamente uma classe gerenciada Early Bound para uma classe WMI (Instrumentação de Gerenciamento do Windows) especificada. A classe gerada simplifica o código que você deve gravar para acessar uma instância da classe WMI.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*WMIClass*|A classe WMI para a qual uma classe gerenciada Early Bound deve ser gerada.|  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**/l**  *language*|Especifica a linguagem na qual gerar a classe gerenciada Early Bound. É possível especificar **CS** (C#, padrão), **VB** (Visual Basic), **MC** (C++) ou **JS** (JScript) como o argumento da linguagem.|  
 |**/m**  *machine*|Especifica o computador ao qual se conectar, em que a classe WMI reside. O padrão é o computador local.|  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>Exemplos  
  O comando a seguir gera uma classe gerenciada no código do C# para a classe WMI **Win32_LogicalDisk** no namespace **Root\cimv2**. A ferramenta grava a classe gerenciada no arquivo de origem em c:\disk.cs no namespace **ROOT.CIMV2.Win32**.  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

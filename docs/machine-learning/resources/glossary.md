@@ -4,12 +4,12 @@ description: Um glossário de termos essenciais sobre o aprendizado de máquina,
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
-ms.translationtype: HT
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710534"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929262"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -48,6 +48,7 @@ Na [regressão](#regression), uma métrica de avaliação que indica como os dad
 ## <a name="data"></a>Dados
 
 Os dados são essenciais para qualquer aplicativo de aprendizado de máquina. No ML.NET, os dados são representados por objetos <xref:Microsoft.ML.IDataView>. Objetos de exibição de dados:
+
 - são compostos por colunas e linhas
 - são avaliados lentamente, ou seja, apenas carregam dados quando uma operação exige
 - contém um esquema que define o tipo, o formato e o tamanho de cada coluna
@@ -153,7 +154,7 @@ Na [regressão](#regression), uma métrica de avaliação que é a soma de todos
 
 Na [regressão](#regression), uma métrica de avaliação que é a raiz quadrada da média dos quadrados dos erros.
 
-## <a name="scoring"></a>Pontuação
+## <a name="scoring"></a>Classificação
 
 A pontuação é o processo de aplicar novos dados a um modelo de machine learning treinado e gerar previsões. A pontuação também é conhecida como inferência. Dependendo do tipo de modelo, a pontuação pode ser um valor bruto, uma probabilidade ou uma categoria.
 

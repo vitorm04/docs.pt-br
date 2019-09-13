@@ -2,12 +2,12 @@
 title: 'Codificador de mensagem personalizado: Codificador de compactação'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 84afb060e98a5936b24c5446ff543fd627864102
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4fc6cd4b28d35971e5e2da2559d258055adf9252
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971995"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928744"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensagem personalizado: Codificador de compactação
 
@@ -312,7 +312,7 @@ Para usar esse manipulador de configuração, ele deve ser registrado no [ \<ele
 
 Quando você executa o servidor, as solicitações de operação e as respostas são exibidas na janela do console. Pressione ENTER na janela para desligar o servidor.
 
-```
+```console
 Press Enter key to Exit.
 
         Server Echo(string input) called:
@@ -324,7 +324,7 @@ Press Enter key to Exit.
 
 Quando você executa o cliente, as solicitações de operação e as respostas são exibidas na janela do console. Pressione ENTER na janela do cliente para desligar o cliente.
 
-```
+```console
 Calling Echo(string):
 Server responds: Simple hello Simple hello
 
@@ -338,7 +338,7 @@ Press <ENTER> to terminate client.
 
 1. Instale o ASP.NET 4,0 usando o seguinte comando:
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um modelo de regressão usando do M
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666618"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929444"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Prever os preços usando regressão com ML.NET
 
@@ -17,6 +17,7 @@ Este tutorial mostra como criar um [modelo de regressão](../resources/glossary.
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > * Preparar e compreender os dados
 > * Carregar e transformar os dados
 > * Escolher um algoritmo de aprendizado
@@ -269,6 +270,7 @@ Parabéns! Agora você criou com sucesso um modelo de aprendizado de máquina pa
 Neste tutorial, você aprendeu como:
 
 > [!div class="checklist"]
+>
 > * Preparar e compreender os dados
 > * Criar um pipeline de aprendizado
 > * Carregar e transformar os dados

@@ -4,12 +4,12 @@ description: Saiba mais sobre as práticas recomendadas para fazer interface com
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063087"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923765"
 ---
 # <a name="native-interoperability-best-practices"></a>Práticas recomendadas de interoperabilidade nativa
 
@@ -67,6 +67,7 @@ Para obter mais informações sobre o marshaling de cadeia de caracteres, veja [
 > Para cadeias de caracteres `[Out]`, a CLR usará `CoTaskMemFree` por padrão para liberar cadeias de caracteres, ou `SysStringFree` para cadeias de caracteres que são marcadas como `UnmanagedType.BSTR`.  
 **Para a maioria das APIs com um buffer de cadeia de caracteres de saída:**  
 > A contagem de caracteres transmitidos deve incluir o nulo. Se o valor retornado for menor que a contagem de caracteres transmitidos, a chamada foi bem-sucedida e o valor consiste no número de caracteres *sem* o nulo à direita. Caso contrário, a contagem consiste no tamanho necessário do buffer *incluindo* o caractere nulo.  
+>
 > - Passe cinco, obtenha quatro: A cadeia de caracteres tem quatro caracteres e um nulo à direita.
 > - Passe cinco, obtenha seis: A cadeia de caracteres tem cinco caracteres, precisa de um buffer de seis caracteres para manter o valor nulo.  
 > [Tipos de dados do Windows para cadeias de caracteres](/windows/desktop/Intl/windows-data-types-for-strings)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 68fe50d24ce547e1cad092e3d871c2d0990fd5af
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967871"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894969"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Exceções em tempo de execução em aplicativos do .NET Native
 É importante testar os builds de versão do seu aplicativo da Plataforma Universal do Windows nas respectivas plataformas de destino, porque as configurações de depuração e de lançamento são completamente diferentes. Por padrão, a configuração de depuração usa o tempo de execução do .Net Core para compilar seu aplicativo, mas a configuração de lançamento usa .NET Native para compilar seu aplicativo em código nativo.  
@@ -37,7 +37,7 @@ ms.locfileid: "69967871"
 ## <a name="runtime-exception-messages"></a>Mensagens de exceção de tempo de execução  
  Para minimizar o tamanho do executável do aplicativo, o .NET Native não inclui o texto completo das mensagens de exceção. Como resultado, exceções de tempo de execução geradas em builds de versão podem não exibir o texto completo das mensagens de exceção. Em vez disso, o texto pode conter uma subcadeia de caracteres junto com um link para mais informações. Por exemplo, as informações de exceção podem aparecer como:  
   
-```  
+```output
 Exception thrown: '$16_System.AggregateException' in Unknown Module.  
   
 Additional information: AggregateException_ctor_DefaultMessage  
@@ -47,7 +47,7 @@ If there is a handler for this exception, the program may be safely continued.
   
  Se você precisar que a mensagem de exceção completa, execute o build de depuração em vez disso. Por exemplo, as informações de exceção anteriores do build de versão podem aparecer da seguinte maneira no build de depuração:  
   
-```  
+```output
 Exception thrown: 'System.AggregateException' in NativeApp.exe.  
   
 Additional information: Value does not fall within the expected range.  

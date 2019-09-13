@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d99d4bd646f0cfee31486a030f97801e9adfa8b8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849882"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925716"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -99,6 +99,7 @@ A partir do .NET Core 2.0, se a versão do .NET Core com a qual um aplicativo fo
 > Esse comportamento de roll-forward não se aplica a versões prévias. Por padrão, ele também não se aplica a versões principais, mas isso pode ser alterado com as configurações abaixo.
 
 Modifique esse comportamento alterando a configuração de roll forward em nenhuma estrutura compartilhada candidata. As configurações disponíveis são:
+
 - `0` – desabilitar o comportamento de roll forward da versão secundária. Com essa configuração, um aplicativo criado para o .NET Core 2.0.0 efetuará roll forward para o .NET Core 2.0.1, mas não para o .NET Core 2.2.0 ou o .NET Core 3.0.0.
 - `1` – habilitar o comportamento de roll forward da versão secundária. Esse é o valor padrão para a configuração. Com essa configuração, um aplicativo criado para o .NET Core 2.0.0 efetuará roll forward para o .NET Core 2.0.1 ou o .NET Core 2.2.0, dependendo de qual estiver instalado, mas não efetuará roll forward para o .NET Core 3.0.0.
 - `2` – habilitar o comportamento de roll forward das versões secundária e principal. Se essa opção estiver definida, até mesmo versões principais diferentes serão consideradas e, portanto, um aplicativo criado para o .NET Core 2.0.0 efetuará roll forward para o .NET Core 3.0.0.

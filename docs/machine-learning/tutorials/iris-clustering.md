@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929109"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Categorizar as flores íris usando um cluster k-means com ML.NET
 
@@ -18,6 +18,7 @@ Este tutorial ilustra como usar o ML.NET para criar um [modelo de clustering](..
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > - Compreender o problema
 > - Selecionar a tarefa de aprendizado de máquina apropriada
 > - Preparar os dados
@@ -185,6 +186,7 @@ Parabéns! Você agora construiu um modelo de aprendizado de máquina para clust
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
+>
 > - Compreender o problema
 > - Selecionar a tarefa de aprendizado de máquina apropriada
 > - Preparar os dados

@@ -2,12 +2,12 @@
 title: Requisitos do sistema para o provedor de dados do .NET Framework para Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780581"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894372"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Requisitos do sistema para o provedor de dados do .NET Framework para Oracle
 O .NET Framework Provedor de Dados para Oracle requer o MDAC (Microsoft Data Access Components) versão 2,6 ou posterior. O MDAC 2,8 SP1 é recomendado.  
@@ -22,9 +22,7 @@ O .NET Framework Provedor de Dados para Oracle requer o MDAC (Microsoft Data Acc
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Definindo o valor Unicode em um atributo de cadeia de conexão  
  Ao trabalhar com a Oracle, você pode usar o atributo de cadeia de conexão  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  para inicializar as bibliotecas de cliente Oracle no modo UTF-16. Isso faz com que as bibliotecas de cliente Oracle aceitem UTF-16 (que é muito semelhante ao UCS-2) em vez de cadeias de caracteres de byte múltiplo. Isso permite que o Provedor de Dados para Oracle trabalhe sempre com qualquer página de código Oracle sem trabalho de tradução adicional. Essa configuração só funcionará se você estiver usando clientes do Oracle 9i para se comunicar com um banco de dados Oracle 9i com o conjunto de caracteres alternativo de AL16UTF16. Quando um cliente Oracle 9i se comunica com um servidor Oracle 9i, recursos adicionais são necessários para converter os valores de **CommandText** de Unicode no conjunto de caracteres de vários bytes apropriado que o servidor Oracle9i usa. Isso pode ser evitado quando você sabe que tem a configuração segura adicionando `Unicode=True` à sua cadeia de conexão.  
   

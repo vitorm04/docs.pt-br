@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 2d075bfebf7b5cbd2b2ce031a1c3855a925405a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0a6f1477ceec5471c22fa3e46d85f5856b298e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964029"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895072"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Como: Chamar operações do serviço WCF de forma assíncrona
 Este tópico aborda como um cliente pode acessar uma operação de serviço de forma assíncrona. O serviço neste tópico implementa a `ICalculator` interface. O cliente pode chamar as operações nessa interface de forma assíncrona usando o modelo de chamada assíncrona controlado por evento. (Para obter mais informações sobre o modelo de chamada assíncrona baseado em evento, consulte [programação multi-threaded com o padrão assíncrono baseado em evento](https://go.microsoft.com/fwlink/?LinkId=248184)). Para obter um exemplo que mostra como implementar uma operação de forma assíncrona em um [serviço, consulte Como: Implemente uma operação](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)de serviço assíncrona. Para obter mais informações sobre operações síncronas e assíncronas, consulte operações síncronas [e](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)assíncronas.  
@@ -24,7 +24,7 @@ Este tópico aborda como um cliente pode acessar uma operação de serviço de f
   
 1. Execute a ferramenta [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) com `/async` as opções `/tcv:Version35` de comando e, conforme mostrado no comando a seguir.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   

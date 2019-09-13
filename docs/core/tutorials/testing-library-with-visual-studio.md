@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: e8a0d28919d4d26e69fb5a5f926b0e96270a2407
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402204"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925884"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca .NET Standard com o .NET Core no Visual Studio 2017
 
@@ -24,6 +24,7 @@ Em [Compilar uma biblioteca .NET Standard com C# e o .NET Core no Visual Studio 
 Para criar o projeto de teste de unidade, faça o seguinte:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. No **Gerenciador de Soluções**, abra o menu de contexto do nó da solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto**.
 
 1. Na caixa de diálogo **Adicionar novo projeto**, selecione o nó **Visual C#** . Em seguida, selecione o nó **.NET Core** seguido pelo modelo de projeto **Projeto de Teste do MSTest (.NET Core)** . Na caixa de texto **Nome**, digite "StringLibraryTest" como o nome do projeto. Selecione **OK** para criar o projeto de teste de unidade.
@@ -52,7 +53,9 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 1. Na caixa de diálogo **Gerenciador de Referências**, expanda o nó **Projetos** e marque a caixa ao lado de **StringLibrary**. A adição de uma referência ao assembly `StringLibrary` permite que o compilador localize os métodos **StringLibrary**. Selecione o botão **OK**. Isso adiciona uma referência ao seu projeto de biblioteca de classes, `StringLibrary`.
 
    ![Caixa de diálogo Adicionar referência de projeto do Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. No **Gerenciador de Soluções**, abra o menu de contexto do nó da solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto**.
 
 1. Na caixa de diálogo **Adicionar novo projeto**, selecione o nó **Visual Basic**. Em seguida, selecione o nó **.NET Core** seguido pelo modelo de projeto **Projeto de Teste do MSTest (.NET Core)** . Na caixa de texto **Nome**, digite "StringLibraryTest" como o nome do projeto. Selecione **OK** para criar o projeto de teste de unidade.
@@ -81,6 +84,7 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 1. Na caixa de diálogo **Gerenciador de Referências**, expanda o nó **Projetos** e marque a caixa ao lado de **StringLibrary**. A adição de uma referência ao assembly `StringLibrary` permite que o compilador localize os métodos **StringLibrary**. Selecione o botão **OK**. Isso adiciona uma referência ao seu projeto de biblioteca de classes, `StringLibrary`.
 
    ![Caixa de diálogo Adicionar referência de projeto do Visual Studio – Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Adicionar e executar métodos de teste de unidade
@@ -106,7 +110,8 @@ Você definirá três métodos, cada um deles chamará seu método <xref:Microso
 
 Para criar os métodos de teste:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Na janela de código *UnitTest1.cs*, substitua o código pelo seguinte código:
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
@@ -116,7 +121,9 @@ Para criar os métodos de teste:
 1. Na barra de menus, selecione **Arquivo** > **Salvar UnitTest1.cs Como**. Na caixa de diálogo **Salvar Arquivo Como**, selecione a seta ao lado do botão **Salvar** e selecione **Salvar com Codificação**.
 
    ![Caixa de diálogo Salvar Arquivo como do Visual Studio – C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Na janela de código *UnitTest1.vb*, substitua o código pelo seguinte código:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
@@ -126,6 +133,7 @@ Para criar os métodos de teste:
 1. Na barra de menus, selecione **Arquivo** > **Salvar UnitTest1.vb Como**. Na caixa de diálogo **Salvar Arquivo Como**, selecione a seta ao lado do botão **Salvar** e selecione **Salvar com Codificação**.
 
    ![Caixa de diálogo Salvar Arquivo como do Visual Studio – Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
 1. Na caixa de diálogo **Confirmar Salvar Como**, selecione o botão **Sim** para salvar o arquivo.

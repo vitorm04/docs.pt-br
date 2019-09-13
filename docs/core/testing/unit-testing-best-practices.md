@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: HT
+ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410372"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926382"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -43,6 +43,7 @@ Pode ser difícil para o teste de unidade quando o código está bem acoplado. S
 Escrever testes para seu código o desacoplará naturalmente, porque seria mais difícil testar, caso contrário.
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Características de um bom teste de unidade
+
 - **Rápido**. Não é incomum para projetos maduros ter milhares de testes de unidade. Os testes de unidade devem levar muito pouco tempo para serem executados. Milissegundos.
 - **Isolado**. Testes de unidade são autônomos, podem ser executados em isolamento e não têm dependências em nenhum fator externo, como um sistema de arquivos ou o banco de dados.
 - **Repetível**. A execução de um teste de unidade deve ser consistente com seus resultados, ou seja, ele sempre retornará o mesmo resultado se você não alterar nada entre execuções.
@@ -106,11 +107,13 @@ O ponto principal a lembrar sobre simulações versus stub é que simulações s
 
 ### <a name="naming-your-tests"></a>Nomeando seus testes
 O nome do seu teste deve ser composto por três partes:
+
 - O nome do método que está sendo testado.
 - O cenário em que ele está sendo testado.
 - O comportamento esperado quando o cenário é invocado.
 
 #### <a name="why"></a>Por quê?
+
 - Padrões de nomenclatura são importantes, porque eles expressam explicitamente a intenção do teste.
 
 Testes são mais do que apenas verificar se seu código funciona; eles também fornecem documentação. Apenas examinando o conjunto de testes de unidade, você deve poder inferir o comportamento do seu código sem mesmo examinar o código em si. Além disso, quando os testes falharem, será possível ver exatamente quais cenários não atendem às suas expectativas.
@@ -123,11 +126,13 @@ Testes são mais do que apenas verificar se seu código funciona; eles também f
 
 ### <a name="arranging-your-tests"></a>Organizando seus testes
 **Organizar, Agir, Declarar** é um padrão comum ao testar unidades. Como o nome implica, ele é composto por três ações principais:
+
 - *Organizar* seus objetos, criando e configurando-os conforme necessário.
 - *Agir* sobre um objeto.
 - *Declarar* que algo está conforme o esperado.
 
 #### <a name="why"></a>Por quê?
+
 - Isso separa claramente o que está sendo testado das etapas *organizar* e *declarar*.
 - Menos oportunidade de combinar declarações com o código "Agir".
 
@@ -143,6 +148,7 @@ A legibilidade é um dos aspectos mais importante ao escrever um teste. A separa
 A entrada a ser usada em um teste de unidade deve ser a mais simples possível a fim de verificar o comportamento que você está testando no momento.
 
 #### <a name="why"></a>Por quê?
+
 - Os testes se tornam mais resilientes a alterações futuras na base de código.
 - Mais próximo do comportamento do teste ao longo da implementação.
 
@@ -158,6 +164,7 @@ Testes que incluem mais informações do que as necessárias para serem aprovado
 Nomear variáveis em testes de unidade é tão importante, se não mais importante, do que nomear variáveis no código de produção. Os testes de unidade não devem conter cadeias de caracteres mágicas.
 
 #### <a name="why"></a>Por quê?
+
 - Evita a necessidade de o leitor do teste inspecionar o código de produção a fim de descobrir o que torna o valor especial.
 - Mostra explicitamente o que você está tentando *provar*, em vez de o que você está tentando *realizar*.
 
@@ -176,6 +183,7 @@ Cadeias de caracteres mágicas podem gerar confusão no leitor dos seus testes. 
 Ao escrever seus testes de unidade, evite a concatenação manual de cadeia de caracteres e condições lógicas como `if`, `while`, `for`, `switch`, etc.
 
 #### <a name="why"></a>Por quê?
+
 - Menor chance de introduzir um bug dentro dos seus testes.
 - Concentre-se no resultado final, em vez de nos detalhes da implementação.
 
@@ -194,6 +202,7 @@ Quando você introduz a lógica em seu conjunto de testes, a possibilidade de in
 Se você precisar de um objeto ou estado semelhante para seus testes, prefira um método auxiliar do que usar atributos Setup e Teardown, se existirem.
 
 #### <a name="why"></a>Por quê?
+
 - Menos confusão ao ler os testes, uma vez que todo o código está visível de dentro de cada teste.
 - Menos chance de configurar demais ou de menos para o teste específico.
 - Menos chance de compartilhar estado entre testes, o que cria dependências indesejadas entre eles.
@@ -223,10 +232,12 @@ Nas estruturas de teste de unidade, `Setup` é chamado antes de cada teste de un
 
 ### <a name="avoid-multiple-asserts"></a>Evitar várias declarações
 Ao escrever seus testes, tente incluir apenas uma declaração por teste. Abordagens comuns para usar apenas uma declaração incluem:
+
 - Criar um teste separado para cada declaração.
 - Usar testes parametrizados.
 
 #### <a name="why"></a>Por quê?
+
 - Se uma declaração falhar, as subsequentes não serão avaliadas.
 - Garante que você não está declarando vários casos em seus testes.
 - Oferece a você todo o panorama do porquê seus testes estão falhando. 

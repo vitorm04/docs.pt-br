@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780783"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894406"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Suporte do SqlClient para LocalDB
 A partir do SQL Server nome do código Denali, uma versão leve do SQL Server, chamada LocalDB, estará disponível. Este tópico discute como se conectar a um banco de dados LocalDB.  
@@ -19,15 +19,13 @@ A partir do SQL Server nome do código Denali, uma versão leve do SQL Server, c
   
 - Crie e inicie instâncias do LocalDB com sqllocaldb. exe ou seu arquivo app. config.  
   
-- Use sqlcmd. exe para adicionar e modificar bancos de dados em uma instância de LocalDB. Por exemplo, `sqlcmd -S (localdb)\myinst`.  
+- Use sqlcmd. exe para adicionar e modificar bancos de dados em uma instância de LocalDB. Por exemplo: `sqlcmd -S (localdb)\myinst`.  
   
 - Use a `AttachDBFilename` palavra-chave da cadeia de conexão para adicionar um banco de dados à instância do LocalDB. Ao usar `AttachDBFilename`, se você não especificar o nome do banco de dados com a `Database` palavra-chave da cadeia de conexão, o banco de dados será removido da instância de LocalDB quando o aplicativo for fechado.  
   
 - Especifique uma instância de LocalDB na cadeia de conexão. Por exemplo, o nome da instância `myInstance`é, a cadeia de conexão inclui:  
   
-    ```  
-    server=(localdb)\\myInstance  
-    ```  
+    `server=(localdb)\\myInstance`  
   
  `User Instance=True`Não é permitido ao se conectar a um banco de dados LocalDB.  
   

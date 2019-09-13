@@ -4,12 +4,12 @@ description: Uma visão geral da ferramenta Microsoft WCF dotnet-svcutil que adi
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 723855401f3a81edbd34c77481e4ff12db7dcdaf
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063299"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926444"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Ferramenta dotnet-svcutil do WCF para .NET Core
 
@@ -25,10 +25,12 @@ A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de servi�
 ## <a name="prerequisites"></a>Pré-requisitos
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 * [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores
 * Seu editor de código favorito
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 * [SDK do .NET Core 1.0.4](https://dotnet.microsoft.com/download) ou versões posteriores
 * Seu editor de código favorito
 

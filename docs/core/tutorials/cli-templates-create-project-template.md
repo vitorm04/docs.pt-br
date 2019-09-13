@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 31a6189c0126d6dff000bb84978c1527dbe4e2ae
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
-ms.translationtype: HT
+ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870615"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926142"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Criar um modelo de projeto
 
@@ -19,6 +19,7 @@ Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquiv
 Nesta parte da série, você aprenderá a:
 
 > [!div class="checklist"]
+>
 > * Criar os recursos de um modelo de projeto
 > * Criar a pasta e o arquivo de configuração do modelo
 > * Instalar um modelo a partir de um caminho de arquivos

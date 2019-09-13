@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106917"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929073"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -85,6 +85,7 @@ O termo "Ecossistema do .NET" difere de termos semelhantes, como "Pilha do .NET"
 Em geral, uma coleção abrangente de APIs que facilita o desenvolvimento e a implantação de aplicativos que são baseados em uma tecnologia específica. Nesse sentido geral, o ASP.NET Core e o Windows Forms são exemplos de estruturas de aplicativo. Consulte também [biblioteca](#library).
 
 A palavra "estrutura" tem um significado técnico mais específico nos seguintes termos:
+
 - [.NET Framework](#net-framework)
 - [estrutura de destino](#target-framework)
 - [TFM (Moniker de Estrutura de Destino)](#tfm)

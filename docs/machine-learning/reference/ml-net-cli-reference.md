@@ -3,12 +3,12 @@ title: O comando auto-train na ferramenta de CLI do ML.NET
 description: Visão geral, exemplos e referência para o comando de treinamento automático na ferramenta de CLI do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 73bae0165af76226152de322d2951086646a1a1d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 8363a16ab5e793e715131ac37283106517850439
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397669"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929194"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>O comando 'auto-train' no ML.NET
 
@@ -217,6 +217,7 @@ Exemplo:
 
 Especifique se os arquivos de conjunto de dados têm uma linha de cabeçalho.
 Os possíveis valores são:
+
 - `true`
 - `false`
 

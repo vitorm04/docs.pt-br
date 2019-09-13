@@ -4,12 +4,12 @@ description: Recomendações de melhor prática para o empacotamento com o NuGet
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198173"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895205"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -118,7 +118,7 @@ A desvantagem de inserir arquivos de símbolo é que eles aumentam o tamanho do 
 
 > Os pacotes de símbolos (`*.snupkg`) oferecem aos desenvolvedores uma boa experiência de depuração sob demanda, sem sobrecarregar o tamanho do pacote principal nem afetar o desempenho de restauração para aqueles que não pretendem depurar o pacote NuGet.
 >
-> A limitação é que eles precisarão encontrar e configurar o servidor de símbolos do NuGet no IDE (como uma configuração única) para obter arquivos de símbolo. O Visual Studio 2019 pretende fornecer o servidor de símbolos de NuGet.org como uma das opções prontas para uso. 
+> A limitação é que os usuários podem precisar localizar e configurar o servidor de símbolos NuGet em seu IDE (como uma configuração única) para obter arquivos de símbolo. O Visual Studio 2019 versão 16,1 adicionou o servidor de símbolos do NuGet. org à lista de servidores de símbolos padrão.
 
 >[!div class="step-by-step"]
 >[Anterior](strong-naming.md)

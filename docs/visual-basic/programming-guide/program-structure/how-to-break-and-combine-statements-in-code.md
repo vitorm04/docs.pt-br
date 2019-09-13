@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f17f815ea0f1f91284d3223ff233a87dc7ff71eb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946206"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892689"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Como: Instruções Break e combine no código (Visual Basic)
 Ao escrever seu código, você pode ocasionalmente criar instruções demoradas que exigem a rolagem horizontal no editor de códigos. Embora isso não afete a maneira como seu código é executado, ele dificulta a leitura do código conforme ele aparece no monitor. Nesses casos, você deve considerar dividir a única instrução longa em várias linhas.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir uma única instrução em várias linhas  
   
-- Use o caractere de continuação de linha, que é um sublinhado (`_`), no ponto em que você deseja que a linha seja quebrada. O sublinhado deve ser imediatamente precedido por um espaço e imediatamente seguido por um terminador de linha (retorno de carro).  
+-   Use o caractere de continuação de linha, que é um sublinhado (`_`), no ponto em que você deseja que a linha seja quebrada. O sublinhado deve ser imediatamente precedido por um espaço e imediatamente seguido por um terminador de linha (retorno de carro) ou (começando com a versão 16,0) um comentário seguido por um retorno de carro. 
   
     > [!NOTE]
     > Em alguns casos, se você omitir o caractere de continuação de linha, o compilador de Visual Basic irá continuar implicitamente a instrução na próxima linha de código. Para obter uma lista de elementos de sintaxe para os quais você pode omitir o caractere de continuação de linha, consulte "continuação de linha implícita" em [instruções](../../../visual-basic/programming-guide/language-features/statements.md).  

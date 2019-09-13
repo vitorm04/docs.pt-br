@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 753312005cd60b5be6bf5504fa9b7f14bd6367fe
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298962"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894670"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
 O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  
@@ -32,9 +32,9 @@ O Compilador de Licença lê arquivos de texto que contêm informações de lice
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console
       lc /target:  
-      targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [/outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
@@ -52,34 +52,34 @@ O Compilador de Licença lê arquivos de texto que contêm informações de lice
   
 ## <a name="example"></a>Exemplo  
   
-1. Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe`*,* você poderá criar `HostAppLic.txt` que contém o seguinte.  
+1. Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe` *,* você poderá criar `HostAppLic.txt` que contém o seguinte.  
   
-    ```  
+    ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
 2. Crie o arquivo .licenses chamado `HostApp.exe.licenses` usando o comando a seguir.  
   
-    ```  
+    ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
 3. Compile `HostApp.exe` incluindo o arquivo .licenses como um recurso. Se estivesse compilando um aplicativo do C#, você usaria o comando a seguir para compilar o aplicativo.  
   
-    ```  
+    ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
  O comando a seguir compila `myApp.licenses` com base nas listas de componentes licenciados especificados por `hostapplic.txt`, `hostapplic2.txt` e `hostapplic3.txt`. O argumento `modulesList` especifica os módulos que contêm os componentes licenciados.  
   
-```  
+```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
 ## <a name="response-file-example"></a>Exemplo de arquivo de resposta  
  A listagem a seguir mostra um exemplo de um arquivo de resposta, `response.rsp`. Para saber mais sobre arquivos de resposta, confira [Arquivos de resposta](/visualstudio/msbuild/msbuild-response-files).  
   
-```  
+```text  
 /target:hostapp.exe  
 /complist:hostapplic.txt   
 /i:WFCPrj.dll   
@@ -88,7 +88,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
  A linha de comando a seguir usa o arquivo `response.rsp`.  
   
-```  
+```console  
 lc @response.rsp  
 ```  
   

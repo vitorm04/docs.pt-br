@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 69cca28606c64479d500e731ba95fe404bea38df
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70234610"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926395"
 ---
 # <a name="dependency-loading-in-net-core"></a>Carregamento de dependência no .NET Core
 
@@ -22,11 +22,12 @@ Em alguns aplicativos, as dependências são determinadas dinamicamente no tempo
 
 ## <a name="understanding-assemblyloadcontext"></a>Entendendo o AssemblyLoadContext
 
-A <xref:System.Runtime.Loader.AssemblyLoadContext> API é fundamental para o design de carregamento do .NET Core. O artigo Understanding [AssemblyLoadContext](understanding-assemblyloadcontext.md) fornece uma visão geral conceitual do design.
+A <xref:System.Runtime.Loader.AssemblyLoadContext> API é fundamental para o design de carregamento do .NET Core. O artigo [Understanding AssemblyLoadContext](understanding-assemblyloadcontext.md) fornece uma visão geral conceitual do design.
 
 ## <a name="loading-details"></a>Carregando detalhes
 
 Os detalhes do algoritmo de carregamento são abordados brevemente em vários artigos:
+
 - [Algoritmo de carregamento de assembly gerenciado](loading-managed.md)
 - [Algoritmo de carregamento de assembly satélite](loading-resources.md)
 - [Algoritmo de carregamento de biblioteca não gerenciada (nativa)](loading-unmanaged.md)

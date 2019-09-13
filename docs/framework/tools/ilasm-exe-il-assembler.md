@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933661"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894694"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Assembler)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parâmetros
 
-| Argumento | DESCRIÇÃO |
+| Argumento | Descrição |
 | -------- | ----------- |
 |`filename`|O nome do arquivo de origem .il. Esse arquivo consiste em diretivas de declaração de metadados e instruções de IL simbólicas. Vários argumentos do arquivo de origem podem ser fornecidos para produzir um único arquivo PE com *Ilasm.exe*. **Observação:** Verifique se a última linha do código no arquivo de origem .il tem espaço em branco à direita ou um caractere de final de linha.|
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/32bitpreferred**|Cria uma imagem preferida de 32 bits (PE32).|
 |**/alignment:** `integer`|Define FileAlignment como o valor especificado por `integer` no cabeçalho Opcional do NT. Se a diretiva IL .alignment for especificada no arquivo, essa opção a substituirá.|
@@ -110,7 +110,7 @@ Saiba mais sobre a gramática de IL no arquivo asmparse.grammar no SDK do Window
 
 Do .NET Framework 4.5 em diante, é possível anexar um atributo personalizado a uma implementação da interface usando-se código semelhante ao seguinte:
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ Do .NET Framework 4.5 em diante, é possível anexar um atributo personalizado a
 
 Do .NET Framework 4.5 em diante, é possível especificar um BLOB (objeto binário grande) marshaling arbitrário usando-se sua representação binária bruta, conforme mostrado no seguinte código:
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 O exemplo de código IL a seguir corresponde ao exemplo de código do C# anterior. É possível compilar esse código em um assembly usando a ferramenta IL Assembler. Os exemplos de código IL e do C# exibem "Hello World!" no console.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

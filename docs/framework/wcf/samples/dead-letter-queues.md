@@ -2,15 +2,15 @@
 title: Filas de mensagens de inatividade
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928672"
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
-Este exemplo demonstra como tratar e processar mensagens que falharam na entrega. Ele se baseia no exemplo de [associação MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) transacionado. Este exemplo usa a `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
+Este exemplo demonstra como tratar e processar mensagens que falharam na entrega. Ele se baseia no exemplo de [associação MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este exemplo usa a `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- O código de serviço no exemplo é o da [associação MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)transacionada.
+ O código de serviço no exemplo é o da [associação MSMQ transacionada](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
  A comunicação com o serviço ocorre dentro do escopo de uma transação. O serviço lê as mensagens da fila, executa a operação e, em seguida, exibe os resultados da operação. O aplicativo também cria uma fila de mensagens mortas para mensagem de inatividade.
 
@@ -272,7 +272,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 
  Ao executar o cliente, o cliente exibe a mensagem:
 
-```
+```console
 Press <ENTER> to terminate client.
 ```
 
@@ -280,7 +280,7 @@ Press <ENTER> to terminate client.
 
  Em seguida, você executa o serviço de mensagens mortas, que lê a mensagem e exibe o código de erro e reenvia a mensagem de volta para o serviço.
 
-```
+```console
 The dead letter service is ready.
 Press <ENTER> to terminate service.
 
@@ -295,7 +295,7 @@ Purchase order resent
 
  O serviço é iniciado e, em seguida, lê a mensagem reenviada e a processa.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -320,7 +320,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** **fila privada**.
 
-    4. Marque a caixa transacional.
+    4. Marque a caixa **transacional** .
 
     5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
 

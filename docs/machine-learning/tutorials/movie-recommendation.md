@@ -5,12 +5,12 @@ author: briacht
 ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 4f80ebad0a280040e9f3329dc7b647bd53a48fa0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929492"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Criar uma recomendação de filme usando a fatoração de matriz com ML.NET
 
@@ -18,6 +18,7 @@ Este tutorial mostra como criar uma recomendação de filme do ML.NET em um apli
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > * Selecionar um algoritmo de aprendizado de máquina
 > * Preparar e carregar os dados
 > * Criar e treinar um modelo
@@ -47,7 +48,7 @@ Há várias maneiras de abordar problemas de recomendação, como recomendar uma
 
 ### <a name="create-a-project"></a>Criar um projeto
 
-1. Abra o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "MovieRecommender" e, em seguida, selecione o botão **OK**.
+1. Abra o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "MovieRecommender" e, em seguida, selecione o botão **OK**.
 
 2. Crie um diretório chamado *Data* no projeto para armazenar o conjunto de dados:
 
@@ -467,6 +468,7 @@ Os dados usados neste tutorial foram obtidos do [Conjunto de dados MovieLens](ht
 Neste tutorial, você aprendeu como:
 
 > [!div class="checklist"]
+>
 > * Selecionar um algoritmo de aprendizado de máquina
 > * Preparar e carregar os dados
 > * Criar e treinar um modelo

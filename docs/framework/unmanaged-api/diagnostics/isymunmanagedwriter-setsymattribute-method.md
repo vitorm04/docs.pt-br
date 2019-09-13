@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650760"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894472"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>Método ISymUnmanagedWriter::SetSymAttribute
-Define um atributo personalizado com base em seu nome. Esses atributos são mantidos no repositório de símbolos, ao contrário de atributos personalizados de metadados.  
+Define um atributo personalizado com base no seu nome. Esses atributos são mantidos no repositório de símbolos, ao contrário dos atributos personalizados de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,19 +39,19 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parâmetros  
  `parent`  
- [in] O token de metadados para o qual o atributo está sendo definido.  
+ no O token de metadados para o qual o atributo está sendo definido.  
   
  `name`  
- [in] Um ponteiro para um `WCHAR` que contém o nome do atributo.  
+ no Um ponteiro para um `WCHAR` que contém o nome do atributo.  
   
  `cData`  
- [in] Um `ULONG32` que indica o tamanho do `data` matriz.  
+ no Um `ULONG32` que indica o tamanho `data` da matriz.  
   
  `data`  
- [in] O valor do atributo.  
+ no O valor do atributo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  

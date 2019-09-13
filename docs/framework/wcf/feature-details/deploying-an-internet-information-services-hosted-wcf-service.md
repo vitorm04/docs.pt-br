@@ -2,12 +2,12 @@
 title: Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856129"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895100"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 
@@ -49,9 +49,7 @@ Observe que o IIS 6,0 e versões posteriores reiniciam periodicamente um aplicat
 
 Os serviços WCF hospedados no IIS são representados como arquivos de conteúdo especiais (arquivos. svc) dentro do aplicativo IIS. Esse modelo é semelhante à maneira como as páginas ASMX são representadas dentro de um aplicativo do IIS como arquivos .asmx. Um arquivo. svc contém uma diretiva de processamento específica do WCF ([\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)) que permite que a infraestrutura de hospedagem do WCF ative serviços hospedados em resposta a mensagens de entrada. A sintaxe mais comum para um arquivo .svc está na instrução a seguir.
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 Ele consiste na [ \@diretiva ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) e em um único atributo, `Service`. O valor do atributo `Service` é o nome do tipo CLR (Common Language Runtime) da implementação do serviço. Usar essa diretiva é basicamente equivalente a criar um host de serviço usando o código a seguir.
 
