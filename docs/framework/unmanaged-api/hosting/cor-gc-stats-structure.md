@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965050"
 ---
-# <a name="corgcstats-structure"></a>Estrutura COR_GC_STATS
-Fornece estatísticas sobre o mecanismo de coleta de lixo do common language runtime (CLR).  
+# <a name="cor_gc_stats-structure"></a>Estrutura COR_GC_STATS
+Fornece estatísticas sobre o mecanismo de coleta de lixo do Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,28 +48,28 @@ typedef struct _COR_GC_STATS {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`Flags`|Indica quais valores do campo devem ser calculados e retornados.|  
-|`ExplicitGCCount`|Indica o número de coletas de lixo que foram forçados por solicitação externa.|  
+|`Flags`|Indica quais valores de campo devem ser calculados e retornados.|  
+|`ExplicitGCCount`|Indica o número de coletas de lixo que foram forçadas por solicitação externa.|  
 |`GenCollectionsTaken`|Indica o número de coletas de lixo executadas para cada geração.|  
-|`CommittedKBytes`|O número total de quilobytes confirmada em todos os heaps.|  
-|`ReservedKBytes`|O número total de quilobytes reservado em todos os heaps.|  
-|`Gen0HeapSizeKBytes`|O tamanho, em quilobytes, do heap de geração de zero.|  
-|`Gen1HeapSizeKBytes`|O tamanho, em quilobytes, da geração de um heap.|  
-|`Gen2HeapSizeKBytes`|O tamanho, em quilobytes, do heap de geração 2.|  
+|`CommittedKBytes`|O número total de quilobytes confirmados em todos os heaps.|  
+|`ReservedKBytes`|O número total de kilobytes reservados em todos os heaps.|  
+|`Gen0HeapSizeKBytes`|O tamanho, em quilobytes, do heap de geração-zero.|  
+|`Gen1HeapSizeKBytes`|O tamanho, em quilobytes, do heap de geração-um.|  
+|`Gen2HeapSizeKBytes`|O tamanho, em quilobytes, do heap de geração-dois.|  
 |`LargeObjectHeapSizeKBytes`|O tamanho, em quilobytes, do heap de objeto grande.|  
-|`KBytesPromotedFromGen0`|O tamanho, em quilobytes, dos objetos promovidos da geração de zero para geração de um.|  
-|`KBytesPromotedFromGen1`|O tamanho, em quilobytes, dos objetos promovidos da geração de um para geração de dois.|  
+|`KBytesPromotedFromGen0`|O tamanho, em quilobytes, dos objetos promovidos da geração zero para a geração um.|  
+|`KBytesPromotedFromGen1`|O tamanho, em quilobytes, dos objetos promovidos da geração um para a geração dois.|  
   
 ## <a name="remarks"></a>Comentários  
- O [iclrgcmanager:: getStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método requer que o `Flags` campo dos `COR_GC_STATS` estrutura a ser definido para um ou mais valores da [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeração para especificar quais as estatísticas devem ser definidas.  
+ O método [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) exige `Flags` que o campo `COR_GC_STATS` da estrutura seja definido como um ou mais valores da enumeração [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar quais estatísticas devem ser definidas.  
   
- A tabela a seguir mapeia as estatísticas fornecidas por essa estrutura para os dois [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) valores de enumeração `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE`.  
+ A tabela a seguir mapeia as estatísticas fornecidas por essa estrutura para os dois valores de enumeração [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md), `COR_GC_COUNTS` e `COR_GC_MEMORYUSAGE`.  
   
-|Especificado pelo COR_GC_COUNTS|Especificado pelo COR_GC_MEMORYUSAGE|  
+|Especificado por COR_GC_COUNTS|Especificado por COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- Um exemplo do uso é da seguinte maneira:  
+ Um exemplo de uso é o seguinte:  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -78,16 +78,16 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost.idl  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Gerenciamento Automático de Memória](../../../../docs/standard/automatic-memory-management.md)
-- [Coleta de lixo](../../../../docs/standard/garbage-collection/index.md)
+- [Gerenciamento Automático de Memória](../../../standard/automatic-memory-management.md)
+- [Coleta de lixo](../../../standard/garbage-collection/index.md)

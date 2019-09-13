@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929392"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Faz com que o compilador disponibilize as informações de tipo COM nos assemblies especificados para o projeto sendo compilado no momento.  
@@ -43,7 +43,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
  A opção `-link` incorpora apenas interfaces, estruturas e delegados. Não há suporte para a inserção de classes COM.  
   
 > [!NOTE]
->  Quando você cria uma instância de um tipo COM inserido no seu código, você deve criar a instância usando a interface apropriada. Tentar criar uma instância de um tipo COM inserido usando o CoClass causa um erro.  
+> Quando você cria uma instância de um tipo COM inserido no seu código, você deve criar a instância usando a interface apropriada. Tentar criar uma instância de um tipo COM inserido usando o CoClass causa um erro.  
   
  Para definir a opção `-link` em Visual Studio, adicione uma referência de assembly e defina a propriedade `Embed Interop Types` como **true**. O valor padrão da propriedade `Embed Interop Types` é **false**.  
   
@@ -53,9 +53,9 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
   
 - Um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B é invocado.  
   
- Use [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar o diretório em que uma ou mais das suas referências do assembly estão localizado.  
+ Use [-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar o diretório no qual uma ou mais das suas referências de assembly estão localizadas.  
   
- Como o [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) opção de compilador, o `-link` opção de compilador usa o arquivo de resposta Vbc que referencia assemblies .NET Framework usados com frequência. Use o [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) opção de compilador se você não quiser que o compilador a usar o arquivo Vbc. rsp.  
+ Assim como a opção de compilador [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md), a opção de compilador `-link` usa o arquivo de resposta Vbc. rsp, que faz referência a assemblies de .NET Framework usados com frequência. Use a opção [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) do compilador se você não quiser que o compilador use o arquivo Vbc. rsp.  
   
  A forma abreviada de `-link` é `-l`.  
   
@@ -79,7 +79,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Exemplo  
- A linha de comando a seguir compila o arquivo de origem `OfficeApp.vb` e fazer referência a assemblies `COMData1.dll` e `COMData2.dll` para produzir `OfficeApp.exe`.  
+ A linha de comando a seguir compila o arquivo `OfficeApp.vb` de origem e os `COMData1.dll` assemblies de referência `OfficeApp.exe`de e `COMData2.dll` para produzir.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
