@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7f83c67354e96e1da3a30ab2e30fffe026c4646b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946373"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971357"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -37,7 +37,7 @@ al sources options
 
 É possível especificar um ou mais dos seguintes `sources`.
 
-| Origem | DESCRIÇÃO |
+| Origem | Descrição |
 | ------ | ----------- |
 |`file`[,`target`]|Copia o conteúdo de `file` (um módulo) para o nome de arquivo especificado por `target`. Depois de copiar, o *Al.exe* compila `target` em um assembly.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Insere o recurso especificado por `file` na imagem que contém o manifesto do assembly; *Al.exe* copia o conteúdo de `file` na imagem PE.<br /><br /> O parâmetro `name` é um identificador interno do recurso. Por padrão, os recursos são públicos no assembly (visível para outros assemblies). A especificação de `private` deixa o recurso não visível para outros assemblies.<br /><br /> Se `file` for um arquivo de recurso do .NET Framework criado, por exemplo, pelo [Gerador de Arquivos de Recurso (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros nos <xref:System.Resources>. Para obter mais informações, consulte <xref:System.Resources.ResourceManager>. Para todos os outros recursos, use os métodos `GetManifestResource`* no <xref:System.Reflection.Assembly> para acessar o recurso no tempo de execução.<br /><br /> Se apenas os arquivos de recurso forem passados para *Al.exe*, o arquivo de saída será um assembly de recurso satélite.|
@@ -45,7 +45,7 @@ al sources options
 
 É possível especificar `options` a seguir; você deve especificar **/out**.
 
-| Opção | DESCRIÇÃO |
+| Opção | Descrição |
 | ------ | ----------- |
 |**/algid:** `id`|Especifica um algoritmo hash para todos os arquivos em um assembly multiarquivo, exceto o arquivo que contém o manifesto de assembly. O algoritmo padrão é CALG_SHA1. Consulte ALG_ID na documentação do SDK da Plataforma para ver outros algoritmos. Para a primeira versão do .NET Framework, somente CALG_SHA1 e CALG_MD5 são válidos.<br /><br /> Os valores hash são armazenados na tabela de arquivos do manifesto de assembly. No momento da instalação e da carga, os arquivos do assembly são verificados em relação a seus hashes.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) no código-fonte de qualquer módulo.|
 |**/base[address]:** `addr`|Especifica o endereço no qual uma DLL será carregada no computador do usuário no tempo de execução. Os aplicativos serão carregados mais rapidamente se você especificar o endereço de base das DLLs, em vez de deixar o sistema operacional realocar as DLL no espaço de processo.|
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|Especifica uma cadeia de caracteres para o campo Configuração no assembly. Coloque a cadeia de caracteres entre aspas duplas (" "), se `text` contiver um espaço. Essa cadeia de caracteres é um atributo personalizado no assembly e está disponível para exibição com reflexão.<br /><br /> Se o texto for uma cadeia de caracteres vazia, o recurso Configuration Win32 será exibido como um espaço único.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyConfigurationAttribute>) no código-fonte de qualquer módulo MSIL.|
 |**/copy[right]:** `text`|Especifica uma cadeia de caracteres para o campo Direitos Autorais no assembly. Coloque a cadeia de caracteres entre aspas duplas (" "), se `text` contiver um espaço. Essa cadeia de caracteres é um atributo personalizado no assembly e está disponível para exibição com reflexão.<br /><br /> Se você não especificar **/win32res**, **/copyright** aparecerá no Gerenciador de Arquivos como o recurso Copyright do Win32res.<br /><br /> Se o texto for uma cadeia de caracteres vazia, o recurso Copyright Win32 será exibido como um espaço único.<br /><br /> Se você especificar **/win32res**, **/copyright** não afetará as informações dos recursos do Win32.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyCopyrightAttribute>) no código-fonte de qualquer módulo MSIL.|
 |**/c[ulture]:** `text`|Especifica a cadeia de caracteres de cultura a ser associada ao assembly. Valores válidos para culturas são aqueles definidos no documento RFC (Requests For Comments) de Internet 1766 intitulado "Tags for the Identification of Languages".<br /><br /> Coloque a cadeia de caracteres entre aspas duplas (" "), se `text` contiver um espaço. Não há cadeias de caracteres de cultura padrão. Essa cadeia de caracteres está disponível para exibição com reflexão.<br /><br /> Para obter informações sobre cadeias de caracteres `text`, consulte o <xref:System.Globalization.CultureInfo>.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyCultureAttribute>) no código-fonte de qualquer módulo MSIL.|
-|**/delay[sign][+&#124;-]**|Especifica se o assembly será assinado total ou parcialmente. Use **/delaysign-** se você quiser um assembly totalmente assinado. Use **/delaysign+** se você apenas deseja incluir a chave pública no assembly.<br /><br /> Quando você solicita um assembly totalmente assinado, *Al.exe* usa o hash no arquivo que contém o manifesto (metadados do assembly) e assina esse hash com a chave privada. A assinatura digital resultante é armazenada no arquivo que contém o manifesto. Quando um assembly é assinado com atraso, o *Al.exe* não computa e não armazena a assinatura, mas apenas reserva o espaço no arquivo para que a assinatura possa ser adicionada depois.<br /><br /> O padrão é **/delaysign-** .<br /><br /> A opção **/delaysign** não tem nenhum efeito, a menos que seja usada com **/keyfile** ou **/keyname**.<br /><br /> Por exemplo, usar **/delaysign+** permite que um testador coloque o assembly no cache global. Após o teste, é possível assinar completamente o assembly incluindo-se a chave privada no assembly.<br /><br /> Observação: antes de usar o [*Gacutil.exe* (Ferramenta de Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para colocar um assembly assinado com atraso no cache global, use a [*Sn.exe* (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para registrar o assembly para ignorar a verificação. Por exemplo, `Sn.exe –Vr delaySignedAssembly`. Use essa opção apenas no desenvolvimento.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyDelaySignAttribute>) no código-fonte de qualquer módulo MSIL.|
+|**/delay[sign][+&#124;-]**|Especifica se o assembly será assinado total ou parcialmente. Use **/delaysign-** se você quiser um assembly totalmente assinado. Use **/delaysign+** se você apenas deseja incluir a chave pública no assembly.<br /><br /> Quando você solicita um assembly totalmente assinado, *Al.exe* usa o hash no arquivo que contém o manifesto (metadados do assembly) e assina esse hash com a chave privada. A assinatura digital resultante é armazenada no arquivo que contém o manifesto. Quando um assembly é assinado com atraso, o *Al.exe* não computa e não armazena a assinatura, mas apenas reserva o espaço no arquivo para que a assinatura possa ser adicionada depois.<br /><br /> O padrão é **/delaysign-** .<br /><br /> A opção **/delaysign** não tem nenhum efeito, a menos que seja usada com **/keyfile** ou **/keyname**.<br /><br /> Por exemplo, usar **/delaysign+** permite que um testador coloque o assembly no cache global. Após o teste, é possível assinar completamente o assembly incluindo-se a chave privada no assembly.<br /><br /> Observação: antes de usar o [*Gacutil.exe* (Ferramenta de Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para colocar um assembly assinado com atraso no cache global, use a [*Sn.exe* (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para registrar o assembly para ignorar a verificação. Por exemplo: `Sn.exe –Vr delaySignedAssembly`. Use essa opção apenas no desenvolvimento.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyDelaySignAttribute>) no código-fonte de qualquer módulo MSIL.|
 |**/descr[iption]:** `text`|Especifica uma cadeia de caracteres para o campo <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> no assembly. Coloque a cadeia de caracteres entre aspas duplas (" "), se `text` contiver um espaço. Essa cadeia de caracteres é um atributo personalizado no assembly e está disponível para exibição com reflexão.<br /><br /> Se você não especificar **/win32res**, **/description** aparecerá no Gerenciador de Arquivos como o recurso **Comments** do Win32.<br /><br /> Se o texto for uma cadeia de caracteres vazia, o recurso **Comments** do Win32 aparecerá como um espaço único.<br /><br /> Se você especificar **/win32res**, **/description** não afetará as informações dos recursos do Win32.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>) no código-fonte de qualquer módulo MSIL.|
 |**/e[vidence]:** `file`|Insere `file` no assembly com o nome do recurso de Security.Evidence.<br /><br /> Não é possível usar Security.Evidence para recursos comuns.|
 |**/fileversion:** `version`|Especifica uma cadeia de caracteres para o campo **File Version** no assembly. Essa cadeia de caracteres é um atributo personalizado no assembly e está disponível para exibição com reflexão.<br /><br /> Se você não especificar **/win32res**, **/fileversion** será usado como o recurso **File Version** do Win32. Se você não especificar **/fileversion**, o recurso **File Version** do Win32 será preenchido pelo recurso **Assembly Version** do Win32.<br /><br /> Se **/win32res** for especificado, **/fileversion** não afetará o recurso do Win32.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (AssemblyFileVersionAttribute) no código-fonte de qualquer módulo MSIL.|
@@ -89,7 +89,7 @@ Para instalar os assemblies no cache, remova-os do cache ou, para listar o conte
 
 A tabela a seguir lista os erros gerados por *Al.exe*.
 
-| Erro | DESCRIÇÃO |
+| Erro | Descrição |
 | ----- | ----------- |
 |al1001|Erro interno do compilador<br /><br /> Tente determinar se *Al.exe* está falhando devido à sua incapacidade de analisar uma sintaxe inesperada. Então, entre em contato com o Suporte a Produtos da Microsoft.|
 |al1002|Memória insuficiente<br /><br /> *Al.exe* ficou sem memória e foi interrompido. Aumente a quantidade de memória disponível.|
@@ -178,5 +178,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [Ferramentas](../../../docs/framework/tools/index.md)
 - [*Sn.exe* (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (Ferramenta do Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programação com assemblies](../../standard/assembly/program.md)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

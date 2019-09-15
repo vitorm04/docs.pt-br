@@ -4,12 +4,12 @@ description: Encontre recursos para aprender a criar aplicativos .NET Core no Wi
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 5c45364cfe725d47cbb6108cd9d6ec9f981cef25
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849126"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969891"
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -39,6 +39,8 @@ Parabéns! Você criou um aplicativo simples do .NET Core. Também é possível 
 ## <a name="tutorials"></a>Tutoriais
 
 Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo.
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

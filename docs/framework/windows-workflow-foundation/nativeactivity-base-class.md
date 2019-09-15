@@ -2,12 +2,12 @@
 title: Classe base de NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637507"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989561"
 ---
 # <a name="nativeactivity-base-class"></a>Classe base de NativeActivity
 
@@ -34,13 +34,13 @@ ms.locfileid: "65637507"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Para criar uma atividade personalizado que herda de NativeActivity
 
-1. Abra o Visual Studio 2010.
+1. OpenVisual Studio 2010.
 
-2. Selecione **arquivo**, **novos**e então **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **biblioteca de atividades** na **modelos** janela. Nomeie o novo projeto HelloActivity.
+2. Selecione **arquivo**, **novo**e **projeto**. Selecione **fluxo de trabalho 4,0** em  **C# Visual** na janela **tipos de projeto** e selecione o nó **v2010** . Selecione **biblioteca de atividades** na janela **modelos** . Nomeie o novo projeto HelloActivity.
 
-3. Botão direito do mouse Activity1.xaml no projeto de HelloActivity e selecione **excluir**.
+3. Clique com o botão direito do mouse em Atividade1. XAML no projeto HelloActivity e selecione **excluir**.
 
-4. Clique com botão direito no projeto de HelloActivity e selecione **Add**e então **classe**. Nomeie a nova classe HelloActivity.cs.
+4. Clique com o botão direito do mouse no projeto HelloActivity e selecione **Adicionar**e, em seguida, **classe**. Nomeie a nova classe HelloActivity.cs.
 
 5. No arquivo de HelloActivity.cs, adicione as seguintes diretivas de `using` .
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637507"
 
 9. Use o objeto de <xref:System.Activities.NativeActivityContext> para agendar um indexador. Consulte <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> para obter detalhes sobre como criar, agendar, e retomar um indexador.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

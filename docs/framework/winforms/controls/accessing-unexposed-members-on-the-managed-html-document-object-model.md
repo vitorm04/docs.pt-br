@@ -8,30 +8,30 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 525ef52ecbbc61fba787fa8286c56c638d837faf
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959619"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988397"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Acessando membros não expostos no Document Object Model HTML gerenciado
-O gerenciado HTML documento Object Model (DOM) contém uma classe chamada <xref:System.Windows.Forms.HtmlElement> que expõe as propriedades, métodos e eventos que todos os elementos HTML têm em comum. Às vezes, no entanto, será necessário acessar membros que a interface gerenciada não expõe diretamente. Este tópico analisa duas maneiras de acessar membros não expostos, incluindo funções JScript e VBScript definidas dentro de uma página da Web.  
+O modelo de objeto do documento HTML gerenciado (dom) contém uma classe chamada <xref:System.Windows.Forms.HtmlElement> que expõe as propriedades, os métodos e os eventos que todos os elementos HTML têm em comum. Às vezes, no entanto, será necessário acessar membros que a interface gerenciada não expõe diretamente. Este tópico examina duas maneiras de acessar membros não expostos, incluindo as funções JScript e VBScript definidas dentro de uma página da Web.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Acessando Membros Não Expostos por meio de Interfaces Gerenciadas  
- <xref:System.Windows.Forms.HtmlDocument> e <xref:System.Windows.Forms.HtmlElement> fornecem quatro métodos que permitem o acesso a membros não expostos. A tabela a seguir mostra os tipos e seus métodos correspondentes.  
+ <xref:System.Windows.Forms.HtmlDocument>e <xref:System.Windows.Forms.HtmlElement> fornecem quatro métodos que habilitam o acesso a membros não expostos. A tabela a seguir mostra os tipos e seus métodos correspondentes.  
   
 |Tipo do membro|Método(s)|  
 |-----------------|-----------------|  
 |Propriedades (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
 |Métodos|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
-|Events (<xref:System.Windows.Forms.HtmlDocument>)|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
-|Events (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
-|Events (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
+|Eventos (<xref:System.Windows.Forms.HtmlDocument>)|<xref:System.Windows.Forms.HtmlDocument.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlDocument.DetachEventHandler%2A>|  
+|Eventos (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
+|Eventos (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
  Ao usar esses métodos, presume-se que se tem um elemento do tipo subjacente correto. Suponha que você queira escutar o evento `Submit` de um elemento `FORM` em uma página HTML, para que seja possível executar o pré-processamento nos valores de `FORM` antes de o usuário enviá-los para o servidor. Teoricamente, se tiver controle sobre a HTML, você definirá que o `FORM` terá um atributo `ID` único.  
   
-```  
+```html  
 <HTML>  
   
     <HEAD>  
@@ -47,7 +47,7 @@ O gerenciado HTML documento Object Model (DOM) contém uma classe chamada <xref:
 </HTML>  
 ```  
   
- Depois que você carregar esta página para o <xref:System.Windows.Forms.WebBrowser> controle, você pode usar o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> método para recuperar o `FORM` em tempo de execução usando `form1` como o argumento.  
+ Depois de <xref:System.Windows.Forms.WebBrowser> carregar essa página no controle, você pode usar o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> método para recuperar o `FORM` em tempo de execução usando `form1` como o argumento.  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
@@ -67,9 +67,9 @@ O gerenciado HTML documento Object Model (DOM) contém uma classe chamada <xref:
  A maneira mais fácil de usar as interfaces COM é adicionar uma referência à biblioteca de HTML DOM não gerenciada (MSHTML.dll) por meio do aplicativo, embora não haja suporte para isso. Para obter mais informações, consulte o [Artigo 934368 da base de dados de conhecimento](https://support.microsoft.com/kb/934368).  
   
 ## <a name="accessing-script-functions"></a>Acessando Funções de Script  
- Uma página HTML pode definir uma ou mais funções usando uma linguagem de script como VBScript ou JScript. Essas funções são colocadas dentro de uma página `SCRIPT` na página e podem ser executadas sob demanda ou em resposta a um evento no DOM.  
+ Uma página HTML pode definir uma ou mais funções usando uma linguagem de script, como JScript ou VBScript. Essas funções são colocadas dentro de uma página `SCRIPT` na página e podem ser executadas sob demanda ou em resposta a um evento no DOM.  
   
- Você pode chamar quaisquer funções de script que você define em uma página HTML usando o <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> método. Se o método de script retorna um elemento HTML, você pode usar uma conversão para converter o resultado retornado para um <xref:System.Windows.Forms.HtmlElement>. Para obter detalhes e o código de exemplo, consulte <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ Você pode chamar qualquer função de script que definir em uma página HTML usando <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> o método. Se o método de script retornar um elemento HTML, você poderá usar uma conversão para converter esse resultado de retorno <xref:System.Windows.Forms.HtmlElement>em um. Para obter detalhes e código de exemplo <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>, consulte.  
   
 ## <a name="see-also"></a>Consulte também
 

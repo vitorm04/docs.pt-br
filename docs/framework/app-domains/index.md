@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675345"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971919"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programação com domínios do aplicativo e assemblies
 Os hosts como Microsoft Internet Explorer, ASP.NET e o shell do Windows carregam o Common Language Runtime em um processo, criam um [domínio do aplicativo](../../../docs/framework/app-domains/application-domains.md) nesse processo e, em seguida, carregam e executam código de usuário nesse domínio do aplicativo ao executar um aplicativo .NET Framework. Na maioria dos casos, você não precisa se preocupar em criar domínios do aplicativo nem em carregar assemblies neles, pois o host de tempo de execução executa essas tarefas.  
@@ -28,14 +28,14 @@ Os hosts como Microsoft Internet Explorer, ASP.NET e o shell do Windows carregam
  [Usando domínios do aplicativo](../../../docs/framework/app-domains/use.md)  
  Fornece exemplos de como criar, configurar e usar domínios do aplicativo.  
   
- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programação com assemblies](../../standard/assembly/program.md)  
  Descreve como criar, assinar e definir atributos em assemblies.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Emissão de métodos e assemblies dinâmicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Descreve como criar assemblies dinâmicos.  
   
- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Assemblies no .NET](../../standard/assembly/index.md)  
  Fornece uma visão geral conceitual de assemblies.  
   
  [Domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md)  

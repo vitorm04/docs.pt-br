@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d9f7acfcd8dfc4d0653916138ecb05665eb420
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 048c2cd3d6b90dda951128a29a212928ee67c5a5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894581"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971749"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -43,7 +43,7 @@ tlbimp tlbFile [options]
 |**/asmversion:** *versionnumber*|Especifica o número de versão do assembly a ser produzido. Especifique *versionnumber* no formato *principal.secundária.build.revisão*.|  
 |**/company:** `companyinformation`|Adiciona informações da empresa ao assembly de saída.|  
 |**/copyright:** `copyrightinformation`|Adiciona informações de direito autoral ao assembly de saída. Essas informações podem ser exibidas na caixa de diálogo **Propriedades de arquivo** do assembly.|  
-|**/delaysign**|Especifica Tlbimp.exe para assinar o assembly resultante com um nome forte usando a assinatura com atraso. Você deve especificar essa opção com a opção **/keycontainer:** , **/keyfile:** ou **/publickey:** . Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Especifica Tlbimp.exe para assinar o assembly resultante com um nome forte usando a assinatura com atraso. Você deve especificar essa opção com a opção **/keycontainer:** , **/keyfile:** ou **/publickey:** . Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../../standard/assembly/delay-sign.md).|  
 |**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/keycontainer:** *containername*|Assina o assembly resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containername*.|  
 |**/keyfile:** *filename*|Assina o assembly resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Impede que Tlbimp.exe adicione membros a classes. Isso evita um <xref:System.TypeLoadException>em potencial.|  
 |**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|  
 |**/out:** *filename*|Especifica o nome do arquivo de saída, o assembly e o namespace no qual gravar as definições de metadados. A opção **/out** não afetará o namespace do assembly se a biblioteca de tipos especificar o atributo personalizado de linguagem IDL que controla explicitamente o namespace do assembly. Se você não especificar essa opção, Tlbimp.exe gravará os metadados em um arquivo com o mesmo nome da biblioteca de tipos real definido no arquivo de entrada e o atribuirá a uma extensão .dll. Se o arquivo de saída tiver o mesmo nome do arquivo de entrada, a ferramenta gerará um erro para evitar a substituição da biblioteca de tipos.|  
-|**/primary**|Produz um assembly de interoperabilidade primário para a biblioteca de tipos especificada. As informações são adicionadas ao assembly, o que indica que o editor da biblioteca de tipos produziu o assembly. Especificando um assembly de interoperabilidade primária, você diferencia o assembly de um editor de todos os outros assemblies criados na biblioteca de tipos usando Tlbimp.exe. Use a opção **/primary** somente se você for o editor da biblioteca de tipos que está sendo importado com Tlbimp.exe. Você deve assinar um assembly de interoperabilidade primário com um [nome forte](../app-domains/strong-named-assemblies.md). Para obter mais informações, consulte [Assemblies de Interoperabilidade Primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
+|**/primary**|Produz um assembly de interoperabilidade primário para a biblioteca de tipos especificada. As informações são adicionadas ao assembly, o que indica que o editor da biblioteca de tipos produziu o assembly. Especificando um assembly de interoperabilidade primária, você diferencia o assembly de um editor de todos os outros assemblies criados na biblioteca de tipos usando Tlbimp.exe. Use a opção **/primary** somente se você for o editor da biblioteca de tipos que está sendo importado com Tlbimp.exe. Você deve assinar um assembly de interoperabilidade primário com um [nome forte](../../standard/assembly/strong-named.md). Para obter mais informações, consulte [Assemblies de Interoperabilidade Primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
 |**/product:** `productinformation`|Adiciona informações do produto ao assembly de saída. Essas informações podem ser exibidas na caixa de diálogo **Propriedades de arquivo** do assembly.|  
 |**/productversion:** `productversioninformation`|Adiciona informações da versão ao assembly de saída. Não há restrições de formato. Essas informações podem ser exibidas na caixa de diálogo **Propriedades de arquivo** do assembly.|  
 |**/publickey:** *filename*|Especifica o arquivo que contém a chave pública a ser usada na assinatura do assembly resultante. Se você especificar a opção **/keyfile:** ou **/keycontainer:** em vez de **/publickey:** , Tlbimp.exe gerará a chave pública do par de chaves pública/privada fornecido com **/keyfile:** ou **/keycontainer:** . A opção **/publickey:** dá suporte aos cenários de chave de teste e de assinatura com atraso. O arquivo está no formato gerado por Sn.exe. Para obter mais informações, consulte a opção **-p** de Sn.exe em [Ferramenta Nome Forte (Sn.exe)](sn-exe-strong-name-tool.md).|  
@@ -76,7 +76,7 @@ tlbimp tlbFile [options]
 ## <a name="remarks"></a>Comentários  
  Tlbimp.exe realiza conversões em uma biblioteca de tipos ao mesmo tempo. Não é possível usar a ferramenta para gerar informações de tipo para um subconjunto dos tipos definidos dentro de uma única biblioteca de tipos.  
   
- Costuma ser útil ou necessário atribuir [nomes fortes](../app-domains/strong-named-assemblies.md) a assemblies. Por isso, Tlbimp.exe inclui opções para fornecer as informações necessárias à geração dos assemblies fortemente nomeados. As opções **/keyfile:** e **/keycontainer:** assinam assemblies com nomes fortes. Por isso, é lógico fornecer apenas uma dessas opções por vez.  
+ Costuma ser útil ou necessário atribuir [nomes fortes](../../standard/assembly/strong-named.md) a assemblies. Por isso, Tlbimp.exe inclui opções para fornecer as informações necessárias à geração dos assemblies fortemente nomeados. As opções **/keyfile:** e **/keycontainer:** assinam assemblies com nomes fortes. Por isso, é lógico fornecer apenas uma dessas opções por vez.  
   
  É possível especificar vários assemblies de referência usando a opção **/reference** várias vezes.
  
@@ -135,6 +135,6 @@ void SomeMethod(out bool x);
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (Ferramenta Nome Forte)](sn-exe-strong-name-tool.md)
-- [Assemblies de nomes fortes](../app-domains/strong-named-assemblies.md)
+- [Assemblies de nomes fortes](../../standard/assembly/strong-named.md)
 - [Atributos para importar bibliotecas de tipos para assemblies de interoperabilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Prompts de Comando](developer-command-prompt-for-vs.md)

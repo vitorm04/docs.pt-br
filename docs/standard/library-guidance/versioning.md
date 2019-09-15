@@ -4,12 +4,12 @@ description: Recomendações de melhores práticas para controle de versão de b
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
-ms.translationtype: HT
+ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204737"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969014"
 ---
 # <a name="versioning"></a>Controle de versão
 
@@ -53,7 +53,7 @@ A versão do assembly é o que o CLR usa no tempo de execução para selecionar 
 
 O Windows .NET Framework CLR exige uma correspondência exata para carregar um assembly de nome forte. Por exemplo, `Libary1, Version=1.0.0.0` foi compilado com uma referência ao `Newtonsoft.Json, Version=11.0.0.0`. O .NET Framework só carregará a versão exata `11.0.0.0`. Para carregar uma versão diferente no tempo de execução, um redirecionamento de associação deve ser adicionado ao arquivo de configuração do aplicativo .NET.
 
-Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../../framework/app-domains/assembly-versioning.md). Embora dar um nome forte a uma biblioteca tenha uma série de benefícios, isso tenderá a resultar em exceções de tempo de execução de que um assembly não pode ser encontrado e [exigirá que redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) em `app.config`/`web.config` sejam corrigidos. O carregamento do assembly do .NET Core foi relaxado e o .NET Core CLR carregará automaticamente os assemblies no tempo de execução com uma versão posterior.
+Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../assembly/versioning.md). Embora dar um nome forte a uma biblioteca tenha uma série de benefícios, isso tenderá a resultar em exceções de tempo de execução de que um assembly não pode ser encontrado e [exigirá que redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) em `app.config`/`web.config` sejam corrigidos. O carregamento do assembly do .NET Core foi relaxado e o .NET Core CLR carregará automaticamente os assemblies no tempo de execução com uma versão posterior.
 
 **✔️ CONSIDERE** incluir apenas uma versão principal em AssemblyVersion.
 

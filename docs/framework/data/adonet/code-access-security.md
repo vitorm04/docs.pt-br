@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786862"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971815"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -50,12 +50,12 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
  Dependendo do tipo de aplicativo que você está criando, você também deve considerar implementar as permissões baseadas em função no banco de dados. Para obter mais informações sobre a segurança baseada em funções no SQL Server, consulte [segurança do SQL Server](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblies  
- Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo .NET Framework. Um assembly fornece uma coleção de tipos e recursos que são criados para trabalhar em conjunto e formar uma unidade lógica de funcionalidade. Para o CLR, um tipo não existe fora do contexto de um assembly. Para obter mais informações sobre como criar e implantar assemblies, consulte [programação com assemblies](../../app-domains/programming-with-assemblies.md).  
+ Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo .NET Framework. Um assembly fornece uma coleção de tipos e recursos que são criados para trabalhar em conjunto e formar uma unidade lógica de funcionalidade. Para o CLR, um tipo não existe fora do contexto de um assembly. Para obter mais informações sobre como criar e implantar assemblies, consulte [programação com assemblies](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assemblies de nomes fortes  
  Um nome forte, ou assinatura digital, consiste na identidade do assembly, que inclui seu nome de texto simples, número de versão e informações de cultura (se fornecidas), além de uma chave pública e uma assinatura digital. A assinatura digital é gerada a partir de um arquivo de assembly usando a chave privada correspondente. O arquivo do assembly inclui o manifesto do assembly, o qual contém os nomes e os hashes de todos os arquivos que compõem o assembly.  
   
- Um assembly de nome forte oferece a um aplicativo ou componente uma identidade exclusiva que outro software pode usar para se referir a ele explicitamente. O nome forte impede que os assemblies sejam enganados por um assembly que contém código hostil. O nome forte também garante a consistência entre versões diferentes de um componente. Você deve dar nomes fortes aos assemblies que serão implantados no GAC (cache de assembly global). Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../app-domains/create-and-use-strong-named-assemblies.md).  
+ Um assembly de nome forte oferece a um aplicativo ou componente uma identidade exclusiva que outro software pode usar para se referir a ele explicitamente. O nome forte impede que os assemblies sejam enganados por um assembly que contém código hostil. O nome forte também garante a consistência entre versões diferentes de um componente. Você deve dar nomes fortes aos assemblies que serão implantados no GAC (cache de assembly global). Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Confiança parcial no ADO.NET 2.0  
  No ADO.NET 2.0, o Provedor de Dados .NET Framework para SQL Server, o Provedor de Dados .NET Framework para OLE DB, o Provedor de Dados .NET Framework para ODBC e o Provedor de Dados .NET Framework para Oracle podem agora ser todos executados em ambientes parcialmente confiáveis. Em versões anteriores do .NET Framework, somente <xref:System.Data.SqlClient> tinha suporte em aplicativos com confiança parcial.  

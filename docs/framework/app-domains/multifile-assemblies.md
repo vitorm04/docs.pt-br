@@ -1,6 +1,6 @@
 ---
-title: Assemblies de vários arquivos
-ms.date: 03/30/2017
+title: Assemblies de multiarquivo
+ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634170"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971873"
 ---
-# <a name="multifile-assemblies"></a>Assemblies de vários arquivos
+# <a name="multifile-assemblies"></a>Assemblies de multiarquivo
 
-Você pode criar assemblies de vários arquivos usando os compiladores de linha de comando ou o Visual Studio com o Visual C++. Um arquivo no assembly deve conter o manifesto do assembly. Um assembly que inicia um aplicativo também deve conter um ponto de entrada, como um método Main ou WinMain.
+Você pode criar assemblies de multiarquivos destinados ao .NET Framework usando compiladores de linha de comando ou Visual Studio C++com Visual. Um arquivo no assembly deve conter o manifesto do assembly. Um assembly que inicia um aplicativo também deve conter um ponto de entrada, como um `Main` método `WinMain` ou.
 
-Por exemplo, suponha que você tenha um aplicativo que contém dois módulos de código, Client.cs e Stringer.cs. Stringer.cs cria o namespace `myStringer` que é referenciado pelo código em Client.cs. Client.cs contém o método `Main`, que é o ponto de entrada do aplicativo. Neste exemplo, você compila os dois módulos de código e cria um terceiro arquivo que contém o manifesto do assembly, que inicia o aplicativo. O manifesto do assembly faz referência aos módulos `Client` e `Stringer`.
+Por exemplo, suponha que você tenha um aplicativo que contenha dois módulos de código, *Client.cs* e *Stringer.cs*. *Stringer.cs* cria o `myStringer` namespace que é referenciado pelo código em *Client.cs*. *Client.cs* contém o `Main` método, que é o ponto de entrada do aplicativo. Neste exemplo, você compila os dois módulos de código e cria um terceiro arquivo que contém o manifesto do assembly, que inicia o aplicativo. O manifesto do assembly faz referência aos módulos *cliente* e *Stringer* .
 
 > [!NOTE]
 > Os assemblies de vários arquivos podem ter apenas um ponto de entrada, mesmo que o assembly tenha vários módulos de código.
@@ -39,9 +39,9 @@ Existem vários motivos que levam você a querer criar um assembly de vários ar
 
 - Para combinar módulos de código escritos por vários desenvolvedores. Embora cada desenvolvedor possa compilar cada módulo de código em um assembly, isso pode forçar alguns tipos a serem expostos publicamente, que não o seriam se todos os módulos fossem colocados em um assembly de vários arquivos.
 
-Depois de criar o assembly, você pode assinar o arquivo que contém o manifesto do assembly (e, portanto, o assembly) ou pode dar um nome forte ao arquivo (e ao assembly) e colocá-lo no cache de assembly global.
+Depois de criar o assembly, você pode assinar o arquivo que contém o manifesto do assembly e, portanto, o assembly, ou pode dar ao arquivo e ao assembly um nome forte e colocá-lo no cache de assembly global.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Criar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Como: Compilar um assembly de multiarquivos](build-multifile-assembly.md)
+- [Programa com assemblies](../../standard/assembly/program.md)

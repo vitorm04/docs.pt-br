@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05634cb319ac69bd76e16e592ba59490b30c9c9d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252395"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971622"
 ---
 # <a name="probing-element"></a>\<Elemento de > de investigação
 Especifica subdiretórios base do aplicativo para a Common Language Runtime Pesquisar ao carregar assemblies.  
@@ -68,7 +68,7 @@ nenhuma.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações de tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Especificando o local de um assembly](../../specify-assembly-location.md)
+- [Especificar o local de um assembly](../../../../standard/assembly/location.md)
 - [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

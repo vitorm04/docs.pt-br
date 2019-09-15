@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593456"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969023"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
@@ -116,5 +116,5 @@ ms.locfileid: "65593456"
 - [Segurança](../../docs/standard/security/index.md)
 - [Interoperação com código não gerenciado](../../docs/framework/interop/index.md)
 - [Implantação](../../docs/framework/deployment/net-framework-applications.md)
-- [Assemblies no Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies no .NET](assembly/index.md)
 - [Domínios do aplicativo](../../docs/framework/app-domains/application-domains.md)

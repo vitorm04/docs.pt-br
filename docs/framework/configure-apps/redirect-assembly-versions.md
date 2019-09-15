@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948022"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971554"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 
@@ -21,7 +21,7 @@ Você pode redirecionar referências de associação de tempo de compilação pa
 
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>
 ## <a name="assembly-unification-and-default-binding"></a>Unificação de assembly e associação padrão
- Associações a .NET Framework assemblies são, às vezes, redirecionadas por meio de um processo chamado Unificação de *assembly*. O .NET Framework consiste em uma versão do Common Language Runtime e cerca de duas dúzias de .NET Framework assemblies que compõem a biblioteca de tipos. Esses .NET Framework assemblies são tratados pelo tempo de execução como uma única unidade. Por padrão, quando um aplicativo é iniciado, todas as referências a tipos no código são executadas pelo tempo de execução são direcionadas para .NET Framework assemblies que têm o mesmo número de versão que o tempo de execução que é carregado em um processo. Os redirecionamentos que ocorrem com esse modelo são o comportamento padrão para o tempo de execução.
+ Associações a .NET Framework assemblies são, às vezes, redirecionadas por meio de um processo chamado *Unificação de assembly*. O .NET Framework consiste em uma versão do Common Language Runtime e cerca de duas dúzias de .NET Framework assemblies que compõem a biblioteca de tipos. Esses .NET Framework assemblies são tratados pelo tempo de execução como uma única unidade. Por padrão, quando um aplicativo é iniciado, todas as referências a tipos no código são executadas pelo tempo de execução são direcionadas para .NET Framework assemblies que têm o mesmo número de versão que o tempo de execução que é carregado em um processo. Os redirecionamentos que ocorrem com esse modelo são o comportamento padrão para o tempo de execução.
 
  Por exemplo, se seu aplicativo referencia tipos no namespace System. XML e foi criado usando o .NET Framework 4,5, ele contém referências estáticas ao assembly System. XML que é fornecido com a versão 4,5 do tempo de execução. Se você quiser redirecionar a referência de associação para apontar para o assembly System. XML que acompanha o .NET Framework 4, você pode colocar as informações de redirecionamento no arquivo de configuração do aplicativo. Um redirecionamento de associação em um arquivo de configuração para um assembly de .NET Framework unificado cancela a unificação desse assembly.
 
@@ -119,7 +119,7 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Limitando associações de assembly a uma versão específica
- Você pode usar o atributo **AppliesTo** no [ \<](./file-schema/runtime/assemblybinding-element-for-runtime.md) elemento de > assemblyBinding em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica do .NET Framework. Esse atributo opcional usa um número de versão .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) se aplica a todas as versões do .NET Framework.
+ Você pode usar o atributo **AppliesTo** no [ \<elemento de > assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica do .NET Framework. Esse atributo opcional usa um número de versão .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) se aplica a todas as versões do .NET Framework.
 
  Por exemplo, para redirecionar a associação de assembly para um assembly .NET Framework 3,5, você incluiria o seguinte código XML em seu arquivo de configuração de aplicativo.
 
@@ -157,8 +157,8 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 - [Como: Habilitar e desabilitar o redirecionamento automático de associações](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<Elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
 - [Permissão de segurança para redirecionamento de associações de assemblies](assembly-binding-redirection-security-permission.md)
-- [Assemblies no Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programação com assemblies](../app-domains/programming-with-assemblies.md)
+- [Assemblies no .NET](../../standard/assembly/index.md)
+- [Programação com assemblies](../../standard/assembly/program.md)
 - [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurando aplicativos](index.md)
 - [Esquema de configurações do tempo de execução](./file-schema/runtime/index.md)

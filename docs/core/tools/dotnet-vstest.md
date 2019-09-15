@@ -3,12 +3,12 @@ title: Comando dotnet vstest
 description: O comando dotnet vstest compila um projeto e todas as suas dependências.
 author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 4630982ba21ab37b051895faf3dc0fcd8784cb18
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: da18fda6419cb9eaa1f488a3576161c3054b4426
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202785"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969812"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -19,6 +19,8 @@ ms.locfileid: "70202785"
 `dotnet-vstest` - Executa testes a partir de arquivos especificados.
 
 ## <a name="synopsis"></a>Sinopse
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -47,7 +49,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ---
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade.
 

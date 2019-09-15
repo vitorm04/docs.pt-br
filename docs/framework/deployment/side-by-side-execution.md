@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911004"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969099"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  
@@ -35,7 +35,7 @@ A execução lado a lado é a capacidade de executar várias versões de um apli
   
 - Assemblies com nomes fortes.  
   
-     A execução lado a lado usa assemblies com nome forte para associar informações de tipo a uma versão específica de um assembly. Isso impede que um aplicativo ou componente associe-se a uma versão inválida de um assembly. Assemblies com nomes fortes também permitem que várias versões de um arquivo existam no mesmo computador e sejam usadas por aplicativos. Para obter mais informações, consulte [Assemblies com nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md).  
+     A execução lado a lado usa assemblies com nome forte para associar informações de tipo a uma versão específica de um assembly. Isso impede que um aplicativo ou componente associe-se a uma versão inválida de um assembly. Assemblies com nomes fortes também permitem que várias versões de um arquivo existam no mesmo computador e sejam usadas por aplicativos. Para obter mais informações, consulte [Assemblies com nome forte](../../standard/assembly/strong-named.md).  
   
 - Armazenamento de código ciente de versão.  
   
@@ -111,12 +111,12 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|DESCRIÇÃO|  
+|Título|Descrição|  
 |-----------|-----------------|  
 |[Como: Habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
 |[Configurando o redirecionamento de associação de assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
 |[Execução lado a lado em processo](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de tempo de execução lado a lado em processo para executar várias versões do CLR em um único processo.|  
-|[Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Fornece uma visão geral conceitual de assemblies.|  
+|[Assemblies no .NET](../../standard/assembly/index.md)|Fornece uma visão geral conceitual de assemblies.|  
 |[Domínios do aplicativo](../../../docs/framework/app-domains/application-domains.md)|Fornece uma visão geral conceitual de domínios de aplicativos.|  
   
 ## <a name="reference"></a>Referência  

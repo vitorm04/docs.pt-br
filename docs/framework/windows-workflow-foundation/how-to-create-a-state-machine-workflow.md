@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044394"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989820"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Como: criar um fluxo de trabalho da máquina de estado
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.StateMachine> atividade, e as atividades personalizadas da seção [como: Criar um tópico](how-to-create-an-activity.md) de atividade. O fluxo de trabalho modela um jogo de palpite de número.  
@@ -108,11 +108,11 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 11. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
-12. Arraste uma atividade FinalState da seção **máquina de estado** da **caixa de ferramentas**, passe o mouse sobre o estado de **adivinhação Enter** e solte-o no triângulo que aparece à direita do estado **Enter estimar** para que uma transição seja criado entre **Enter estimativa** e **FinalState**.  
+12. Arraste uma atividade **FinalState** da seção **máquina de estado** da **caixa de ferramentas**, passe o mouse sobre o estado de **adivinhação Enter** e solte-o no triângulo que aparece à direita do estado **Enter estimar** para que uma transição seja criado entre **Enter estimativa** e **FinalState**.  
   
-13. O nome padrão da transição é **T2**. Clique na transição no designer de fluxo de trabalho para selecioná-la e defina seu **DisplayName** como **palpite correto**. Em seguida, clique eselecione o FinalState e arraste-o para a direita para que haja espaço para que o nome de transição completo seja exibido sem sobreposição de qualquer um dos dois Estados. Isso facilitará a conclusão das etapas restantes no tutorial.  
+13. O nome padrão da transição é **T2**. Clique na transição no designer de fluxo de trabalho para selecioná-la e defina seu **DisplayName** como **palpite correto**. Em seguida, clique e selecione o **FinalState**e arraste-o para a direita para que haja espaço para que o nome de transição completo seja exibido sem sobreposição de qualquer um dos dois Estados. Isso facilitará a conclusão das etapas restantes no tutorial.  
   
-14. Clique duas vezes na transição **correta** de adivinhação renomeada no designer de fluxo de trabalho para expandi-la.  
+14. Clique duas vezes na transição **correta de adivinhação** renomeada no designer de fluxo de trabalho para expandi-la.  
   
 15. Arraste uma atividade **ReadInt** da seção **NumberGuessWorkflowActivities** da caixa de **ferramentas** e solte-a na seção **gatilho** da transição.  
   
@@ -131,9 +131,9 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 18. Retorne à exibição de máquina de estado geral no designer de fluxo de trabalho clicando em **StateMachine** na exibição de navegação estrutural na parte superior do designer de fluxo de trabalho.  
   
     > [!NOTE]
-    > Uma transição ocorre quando o evento de gatilho é recebido e o <xref:System.Activities.Statements.Transition.Condition%2A>, se houver, é avaliado como `True`. Para essa transição, se o usuário corresponder `Guess` ao gerado `Target`aleatoriamente, o controle passará para o FinalState e o fluxo de trabalho será concluído.  
+    > Uma transição ocorre quando o evento de gatilho é recebido e o <xref:System.Activities.Statements.Transition.Condition%2A>, se houver, é avaliado como `True`. Para essa transição, se o usuário corresponder `Guess` ao gerado `Target`aleatoriamente, o controle passará para o **FinalState** e o fluxo de trabalho será concluído.  
   
-19. Dependendo se a estimativa está correta, o fluxo de trabalho deve fazer a transição para o FinalState ou de volta para o estado de **adivinhação Enter** para outra tentativa. Ambas as transições compartilham o mesmo gatilho de aguardando que a adivinhação do usuário seja recebida por meio da atividade **ReadInt** . Isso é chamado de uma transição compartilhada. Para criar uma transição compartilhada, clique no círculo que indica o início da transição de **adivinhação correta** e arraste-a para o estado desejado. Nesse caso, a transição é uma transição automática, portanto, arraste o ponto inicial da transição de **adivinhação correta** e solte-a de volta na parte inferior do estado de **adivinhação Enter** . Depois de criar a transição, selecione-a no designer de fluxo de trabalho e defina sua propriedade **DisplayName** como **adivinhar incorreta**.  
+19. Dependendo se a estimativa está correta, o fluxo de trabalho deve fazer a transição para o **FinalState** ou de volta para o estado de **adivinhação Enter** para outra tentativa. Ambas as transições compartilham o mesmo gatilho de aguardando que a adivinhação do usuário seja recebida por meio da atividade **ReadInt** . Isso é chamado de uma transição compartilhada. Para criar uma transição compartilhada, clique no círculo que indica o início da transição de **adivinhação correta** e arraste-a para o estado desejado. Nesse caso, a transição é uma transição automática, portanto, arraste o ponto inicial da transição de **adivinhação correta** e solte-a de volta na parte inferior do estado de **adivinhação Enter** . Depois de criar a transição, selecione-a no designer de fluxo de trabalho e defina sua propriedade **DisplayName** como **adivinhar incorreta**.  
   
     > [!NOTE]
     > As transições compartilhadas também podem ser criadas de dentro do designer de transição clicando em **Adicionar transição de gatilho compartilhado** na parte inferior do designer de transição e, em seguida, selecionando o estado de destino desejado nos **Estados disponíveis para se conectar** menu suspenso.  
@@ -141,7 +141,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     > [!NOTE]
     > Observe que se <xref:System.Activities.Statements.Transition.Condition%2A> de uma transição for avaliada como `false` (ou todas as condições de uma transição do gatilho compartilhada for avaliada como `false`), a transição não ocorrerá e todos os gatilhos para todas as transições de estado serão reprogramados. Neste tutorial, essa situação não pode ocorrer devido à maneira como as condições são configuradas (temos ações específicas para se o palpite está correto ou incorreto).  
   
-20. Clique duas vezes em **adivinhar** transição incorreta no designer de fluxo de trabalho para expandi-la. Observe que o **gatilho** já está definido como a mesma atividade **ReadInt** que foi usada pela transição de **adivinhação correta** .  
+20. Clique duas vezes em **adivinhar transição incorreta** no designer de fluxo de trabalho para expandi-la. Observe que o **gatilho** já está definido como a mesma atividade **ReadInt** que foi usada pela transição de **adivinhação correta** .  
   
 21. Digite a expressão a seguir na caixa valor da propriedade de **condição** .  
   
@@ -157,21 +157,21 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 23. Digite a expressão a seguir na caixa de valor da propriedade **condição** **If** da atividade.  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. Arraste duas atividades **WriteLine** da seção **primitivas** da caixa de **ferramentas** e solte-as para que uma esteja na seção **em seguida** da atividade **se** e outra esteja na seção **else** .  
   
 25. Clique na atividade **WriteLine** na seção **em seguida** para selecioná-la e digite a expressão a seguir na caixa valor da propriedade de **texto** .  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. Clique na atividade **WriteLine** na seção **else** para selecioná-la e digite a expressão a seguir na caixa valor da propriedade de **texto** .  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

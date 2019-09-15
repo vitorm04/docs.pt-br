@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851594"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971164"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  
@@ -142,7 +142,7 @@ GetObject.exe
   
  Para habilitar o suporte de controle de versão completo do assembly, é recomendável você implantar assemblies de nome forte no [cache de assembly global](../../../docs/framework/app-domains/gac.md) e implantar assemblies que não tenham nomes fortes no diretório do aplicativo. Se você desejar implantar assemblies de nome forte no diretório do aplicativo, você não poderá incrementar o número da versão de um assembly satélite quando você atualiza o assembly. Em vez disso, você deve executar uma atualização no local onde você substitui o código existente pelo código atualizado e mantém o mesmo número de versão. Por exemplo, se você deseja atualizar a versão 1.0.0.0 de um assembly satélite com o nome de assembly totalmente especificado "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a", substitua-o pelo myApp.resources.dll atualizado que foi compilado com o mesmo nome de assembly totalmente especificado "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a". Observe que usar atualizações locais nos arquivos de assembly satélite torna difícil para um aplicativo determinar com precisão a versão de um assembly satélite.  
   
- Para obter mais informações sobre controle de versão do assembly, consulte [Controle de versão do Assembly](../../../docs/framework/app-domains/assembly-versioning.md) e [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Para obter mais informações sobre controle de versão do assembly, consulte [Controle de versão do Assembly](../../standard/assembly/versioning.md) e [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Para recuperar recursos dos arquivos .resources  

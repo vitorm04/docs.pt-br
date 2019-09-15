@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910967"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971595"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 
@@ -118,7 +118,7 @@ O .NET Framework fornece vários recursos básicos que facilitam a implantação
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Empacotando e distribuindo aplicativos .NET Framework
 
-Algumas das informações de empacotamento e implantação para o .NET Framework são descritas em outras seções da documentação. Essas seções fornecem informações sobre a autodescrição das unidades chamadas [assemblies](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), que não exigem entradas de Registro, os [assemblies com nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md), que garantem a exclusividade do nome e impedem sua falsificação, e o [controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md), que soluciona muitos dos problemas associados ao conflitos de DLL. As seções a seguir fornecem informações sobre empacotamento e distribuição de aplicativos .NET Framework.
+Algumas das informações de empacotamento e implantação para o .NET Framework são descritas em outras seções da documentação. Essas seções fornecem informações sobre a autodescrição das unidades chamadas [assemblies](../../standard/assembly/index.md), que não exigem entradas de Registro, os [assemblies com nome forte](../../standard/assembly/strong-named.md), que garantem a exclusividade do nome e impedem sua falsificação, e o [controle de versão do assembly](../../standard/assembly/versioning.md), que soluciona muitos dos problemas associados ao conflitos de DLL. As seções a seguir fornecem informações sobre empacotamento e distribuição de aplicativos .NET Framework.
 
 ### <a name="packaging"></a>Packaging
 
@@ -160,7 +160,7 @@ As considerações de segurança também podem afetar como você implanta o apli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|DESCRIÇÃO|
+|Título|Descrição|
 |-----------|-----------------|
 |[Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Descreve como o Common Language Runtime determina qual assembly usar para atender a uma solicitação de associação.|
 |[Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.|

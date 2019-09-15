@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c531a08e4555a8a076d81835bcceffa53e3ad7d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: dccf1b841d048ae460b89fd97da833aadb988422
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894819"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971810"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Ferramenta de Instalação de Serviços .NET)
 A ferramenta Instalação de Serviços .NET realiza as seguintes ações:  
@@ -43,7 +43,7 @@ A ferramenta Instalação de Serviços .NET realiza as seguintes ações:
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|O arquivo do assembly de origem. O assembly deve ser assinado com um nome forte. Para obter mais informações, consulte [Assinando um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|*assemblyFile.dll*|O arquivo do assembly de origem. O assembly deve ser assinado com um nome forte. Para obter mais informações, consulte [Assinando um assembly com um nome forte](../../standard/assembly/sign-strong-name.md).|  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -65,7 +65,7 @@ A ferramenta Instalação de Serviços .NET realiza as seguintes ações:
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
- O Regsvcs.exe exige um arquivo do assembly de origem especificado por *assemblyFile.dll*. Esse assembly deve ser assinado com um nome forte. Para obter mais informações sobre a assinatura de nome forte, consulte [Assinando um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Os nomes do aplicativo de destino e do arquivo da biblioteca de tipos são opcionais. O argumento *applicationName* pode ser gerado com base no arquivo do assembly de origem e será criado por Regsvcs.exe, se ainda não existir. O argumento *typelibraryfile* pode especificar um nome da biblioteca de tipos. Se você não especificar um nome da biblioteca de tipos, Regsvcs.exe usará o nome do assembly como o padrão.  
+ O Regsvcs.exe exige um arquivo do assembly de origem especificado por *assemblyFile.dll*. Esse assembly deve ser assinado com um nome forte. Para obter mais informações sobre a assinatura de nome forte, consulte [Assinando um assembly com um nome forte](../../standard/assembly/sign-strong-name.md). Os nomes do aplicativo de destino e do arquivo da biblioteca de tipos são opcionais. O argumento *applicationName* pode ser gerado com base no arquivo do assembly de origem e será criado por Regsvcs.exe, se ainda não existir. O argumento *typelibraryfile* pode especificar um nome da biblioteca de tipos. Se você não especificar um nome da biblioteca de tipos, Regsvcs.exe usará o nome do assembly como o padrão.  
   
  Quando Regsvcs.exe registra os métodos de um componente, ele está sujeito a [demandas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100)) e [demandas de link](../../../docs/framework/misc/link-demands.md) nesses métodos. Como a ferramenta é executada em um ambiente totalmente confiável, a maioria das demandas de uma permissão é bem-sucedida. No entanto, Regsvcs.exe não pode registrar componentes com métodos protegidos por uma demanda ou uma exigência de vínculo para <xref:System.Security.Permissions.StrongNameIdentityPermission> ou <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
@@ -89,5 +89,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ## <a name="see-also"></a>Consulte também
 
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Como: assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Como: assinar um assembly com um nome forte](../../standard/assembly/sign-strong-name.md)
 - [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

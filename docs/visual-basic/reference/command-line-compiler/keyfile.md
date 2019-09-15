@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: b2084a1c0ee30478cdc9193cdfcb19476499ee93
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30b890cf3d523d1e33b433a1ff6109759bd9a5e3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924877"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972324"
 ---
 # <a name="-keyfile"></a>-keyfile
 Especifica um arquivo que contém uma chave ou um par de chaves para fornecer um nome forte ao assembly.  
@@ -39,7 +39,7 @@ Especifica um arquivo que contém uma chave ou um par de chaves para fornecer um
   
  Observe que um arquivo de chave pode conter somente a chave pública.  
   
- Consulte [criando e usando assemblies de nome forte](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obter mais informações sobre como assinar um assembly.  
+ Consulte [criando e usando assemblies de nome forte](../../../standard/assembly/create-use-strong-named.md) para obter mais informações sobre como assinar um assembly.  
   
 > [!NOTE]
 > A `-keyfile` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  

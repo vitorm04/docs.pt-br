@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 05/29/2018
-ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: HT
+ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410361"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988536"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -18,6 +18,8 @@ ms.locfileid: "67410361"
 `dotnet test` - driver de teste do .NET usado para executar testes de unidade.
 
 ## <a name="synopsis"></a>Sinopse
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -48,7 +50,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
@@ -264,7 +266,7 @@ Execute os testes no projeto `test1`:
 
 Execute os testes no projeto no diretório atual e gere um arquivo de resultados de teste no formato trx:
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>Filtrar detalhes da opção
 
@@ -276,12 +278,12 @@ Execute os testes no projeto no diretório atual e gere um arquivo de resultados
 
 | Estrutura de teste | Propriedades com suporte                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Características</li></ul>                                   |
 
 O `<operator>` descreve a relação entre a propriedade o valor:
 
-| Operador | Função        |
+| Operator | Função        |
 | :------: | --------------- |
 | `=`      | Correspondência exata     |
 | `!=`     | Sem correspondência exata |
@@ -293,7 +295,7 @@ Uma expressão sem um `<operator>` é automaticamente considerada como um `conta
 
 As expressões podem ser associadas a operadores condicionais:
 
-| Operador            | Função |
+| Operator            | Função |
 | ------------------- | -------- |
 | <code>&#124;</code> | OU       |
 | `&`                 | AND      |

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252738"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971882"
 ---
 # <a name="codebase-element"></a>\<Elemento de > codeBase
 
@@ -94,7 +94,7 @@ O exemplo a seguir mostra como especificar onde o tempo de execução pode encon
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações de tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Especificando o local de um assembly](../../specify-assembly-location.md)
+- [Especificar o local de um assembly](../../../../standard/assembly/location.md)
 - [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)

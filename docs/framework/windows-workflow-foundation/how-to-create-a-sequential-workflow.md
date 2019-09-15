@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044415"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989698"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Como: criar um fluxo de trabalho sequencial
 
@@ -78,9 +78,9 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     > [!TIP]
     > Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .
 
-2. Arraste uma atividade DoWhile da seção **fluxo de controle** da **caixa de ferramentas** e solte-a no fluxo de trabalho para que ela esteja abaixo da atividade **atribuir** .
+2. Arraste uma atividade **DoWhile** da seção **fluxo de controle** da **caixa de ferramentas** e solte-a no fluxo de trabalho para que ela esteja abaixo da atividade **atribuir** .
 
-3. Digite a expressão a seguir na caixa de valor da propriedade de **condição** DoWhile da atividade.
+3. Digite a expressão a seguir na caixa de valor da propriedade de **condição** **DoWhile** da atividade.
 
     ```vb
     Guess <> Target
@@ -92,7 +92,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 
      Uma atividade <xref:System.Activities.Statements.DoWhile> executa suas atividades filho e avalia seu <xref:System.Activities.Statements.DoWhile.Condition%2A>. Se o <xref:System.Activities.Statements.DoWhile.Condition%2A> é avaliado como `True`, as atividades no <xref:System.Activities.Statements.DoWhile> são executadas novamente. Neste exemplo, o palpite do usuário será avaliado e o <xref:System.Activities.Statements.DoWhile> continuará até que a previsão esteja correta.
 
-4. Arraste uma atividade de **prompt** da seção **NumberGuessWorkflowActivities** da **caixa de ferramentas** e solte-a na atividade DoWhile da etapa anterior.
+4. Arraste uma atividade de **prompt** da seção **NumberGuessWorkflowActivities** da **caixa de ferramentas** e solte-a na atividade **DoWhile** da etapa anterior.
 
 5. Na **janela Propriedades**, digite `"EnterGuess"` incluindo as aspas na caixa valor da propriedade **BookmarkName** da atividade de **prompt** . Digite `Guess` na caixa valor da propriedade de **resultado** e digite a expressão a seguir na caixa de propriedade **texto** .
 
@@ -107,7 +107,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     > [!TIP]
     > Se a **janela Propriedades** não for exibida, selecione **janela Propriedades** no menu **Exibir** .
 
-6. Arraste uma atividade **atribuir** da seção **primitivos** da caixa de **ferramentas** e solte-a na atividade DoWhile para que ela siga a atividade de **prompt** .
+6. Arraste uma atividade **atribuir** da seção **primitivos** da caixa de **ferramentas** e solte-a na atividade **DoWhile** para que ela siga a atividade de **prompt** .
 
     > [!NOTE]
     > Quando você remove a atividade **atribuir** , observe como o designer de fluxo de trabalho adiciona automaticamente uma atividade de **sequência** para conter a atividade de **prompt** e a atividade **assign** recém-adicionada.
@@ -128,9 +128,9 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 
 10. Arraste outra atividade **If** da seção **fluxo de controle** da caixa de **ferramentas** e solte-a na seção **em seguida** da primeira atividade **If** .
 
-11. Digite a expressão a seguir na caixa de valor da propriedade **condição** da atividade do recém-adicionado.
+11. Digite a expressão a seguir na caixa de valor da propriedade **condição** **da atividade do recém-adicionado.**
 
-    ```
+    ```text
     Guess < Target
     ```
 

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: f3688b4492d3eb629f86a9d463b9127429260033
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929115"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972005"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar sentimentos com a CLI do ML.NET
 
@@ -95,7 +95,8 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
 
     Você verá a saída da CLI, semelhante a:
 
-    <!-- markdownlint-disable MD023 -->
+    <!-- markdownlint-disable MD023 MD025 -->
+
     # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
     ![Treinamento automático da CLI do ML.NET no PowerShell](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)

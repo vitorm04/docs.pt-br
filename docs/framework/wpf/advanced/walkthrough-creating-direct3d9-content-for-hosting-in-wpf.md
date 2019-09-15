@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: e1cb5832ec6e383d1ee183b6bc9a86745ecc207c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605848"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991407"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Passo a passo: criar conteúdo Direct3D9 para hospedar no WPF
 Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado para hospedagem em um aplicativo do Windows Presentation Foundation (WPF). Para obter mais informações sobre hospedagem de conteúdo Direct3D9 em aplicativos WPF, consulte [Interoperação Direct3D9 e WPF](wpf-and-direct3d9-interoperation.md).
@@ -45,7 +45,7 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 
      A tela de Configurações do Aplicativo será exibida.
 
-3. Na seção **tipo de Aplicativo:**, selecione a opção **DLL**.
+3. Na seção **tipo de Aplicativo:** , selecione a opção **DLL**.
 
 4. Clique em **Finalizar**.
 
@@ -55,7 +55,7 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 
      A caixa de diálogo **Páginas de Propriedades do D3DContent** se abrirá.
 
-6. Selecione o nó **C/C++**.
+6. Selecione o nó **C/C++** .
 
 7. No campo **Diretórios de Inclusão Adicionais**, especifique o local da pasta de inclusão DirectX. O local padrão dessa pasta é %ProgramFiles%\Microsoft DirectX SDK (*version*)\Include.
 
@@ -118,7 +118,7 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 
 11. Substitua o código gerado automaticamente pelo código a seguir.
 
-    ```
+    ```cpp
     LIBRARY "D3DContent"
 
     EXPORTS
@@ -137,10 +137,10 @@ Esta instrução passo a passo mostra como criar conteúdo Direct3D9 adequado pa
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Hospede o conteúdo Direct3D9 em um aplicativo WPF. Para obter mais informações, confira [Passo a passo: Hospedando conteúdo Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
+- Hospede o conteúdo Direct3D9 em um aplicativo WPF. Para obter mais informações, confira [Passo a passo: Hospedando conteúdo de Direct3D9](walkthrough-hosting-direct3d9-content-in-wpf.md)no WPF.
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Considerações sobre Desempenho para Interoperabilidade entre Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Passo a passo: Hospedando conteúdo Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Passo a passo: Hospedando conteúdo de Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

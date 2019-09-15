@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
-ms.date: 04/24/2019
-ms.openlocfilehash: 6e577defb9f5c7795ee40efa18da30daee1b52c0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.date: 08/08/2019
+ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168070"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988531"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -25,12 +25,12 @@ ms.locfileid: "70168070"
 
 ```console
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--nologo] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet build` compila o projeto e suas dependências em um conjunto de binários. Os binários incluem o código do projeto em IL (Linguagem Intermediária) com uma extensão *.dll* e arquivos de símbolo usados para depuração com uma extensão *.pdb*. Um arquivo JSON de dependências ( *.deps.json*) é produzido listando as dependências do aplicativo. Um arquivo *.runtimeconfig.json* é produzido e especifica o tempo de execução compartilhado e sua versão do aplicativo.
 
@@ -94,13 +94,13 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
   Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
 
-* **`--no-logo`**
-
-  Não exibe a faixa de inicialização nem a mensagem de direitos autorais. Disponível desde o SDK do .NET Core 3.0.
-
 * **`--no-restore`**
 
   Não executa uma restauração implícita durante o build. Disponível desde o SDK do .NET Core 2.0.
+
+* **`--nologo`**
+
+  Não exibe a faixa de inicialização nem a mensagem de direitos autorais. Disponível desde o SDK do .NET Core 3.0.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
