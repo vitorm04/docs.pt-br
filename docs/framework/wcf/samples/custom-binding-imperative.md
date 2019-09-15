@@ -2,20 +2,20 @@
 title: Associação personalizada obrigatória
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045659"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990033"
 ---
-# <a name="custom-binding-imperative"></a><span data-ttu-id="8e812-102">Associação personalizada obrigatória</span><span class="sxs-lookup"><span data-stu-id="8e812-102">Custom Binding Imperative</span></span>
-<span data-ttu-id="8e812-103">O exemplo demonstra como escrever código imperativo para definir e usar associações personalizadas sem usar um arquivo de configuração ou um cliente do Windows Communication Foundation (WCF) gerado.</span><span class="sxs-lookup"><span data-stu-id="8e812-103">The sample demonstrates how to write imperative code to define and use custom bindings without using a configuration file or a Windows Communication Foundation (WCF) generated client.</span></span> <span data-ttu-id="8e812-104">Este exemplo combina os recursos fornecidos pelo transporte HTTP e o canal de sessão confiável para criar uma associação baseada em HTTP confiável.</span><span class="sxs-lookup"><span data-stu-id="8e812-104">This sample combines the features provided by the HTTP transport and the reliable session channel to create a reliable HTTP-based binding.</span></span> <span data-ttu-id="8e812-105">Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.</span><span class="sxs-lookup"><span data-stu-id="8e812-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="custom-binding-imperative"></a><span data-ttu-id="dbc60-102">Associação personalizada obrigatória</span><span class="sxs-lookup"><span data-stu-id="dbc60-102">Custom Binding Imperative</span></span>
+<span data-ttu-id="dbc60-103">O exemplo demonstra como escrever código imperativo para definir e usar associações personalizadas sem usar um arquivo de configuração ou um cliente do Windows Communication Foundation (WCF) gerado.</span><span class="sxs-lookup"><span data-stu-id="dbc60-103">The sample demonstrates how to write imperative code to define and use custom bindings without using a configuration file or a Windows Communication Foundation (WCF) generated client.</span></span> <span data-ttu-id="dbc60-104">Este exemplo combina os recursos fornecidos pelo transporte HTTP e o canal de sessão confiável para criar uma associação baseada em HTTP confiável.</span><span class="sxs-lookup"><span data-stu-id="dbc60-104">This sample combines the features provided by the HTTP transport and the reliable session channel to create a reliable HTTP-based binding.</span></span> <span data-ttu-id="dbc60-105">Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.</span><span class="sxs-lookup"><span data-stu-id="dbc60-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="8e812-106">O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="8e812-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="dbc60-106">O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="dbc60-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="8e812-107">No cliente e no serviço, é criada uma associação personalizada que contém dois elementos de ligação (sessão confiável e HTTP):</span><span class="sxs-lookup"><span data-stu-id="8e812-107">On both the client and the service, a custom binding is created that contains two binding elements (Reliable Session and HTTP):</span></span>  
+ <span data-ttu-id="dbc60-107">No cliente e no serviço, é criada uma associação personalizada que contém dois elementos de ligação (sessão confiável e HTTP):</span><span class="sxs-lookup"><span data-stu-id="dbc60-107">On both the client and the service, a custom binding is created that contains two binding elements (Reliable Session and HTTP):</span></span>  
 
 ```csharp
 ReliableSessionBindingElement reliableSession = new ReliableSessionBindingElement();  
@@ -28,13 +28,13 @@ httpTransport.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;
 CustomBinding binding = new CustomBinding(reliableSession, httpTransport);  
 ```
   
- <span data-ttu-id="8e812-108">No serviço, a associação é usada adicionando um ponto de extremidade ao ServiceHost:</span><span class="sxs-lookup"><span data-stu-id="8e812-108">On the service, the binding is used by adding an endpoint to the ServiceHost:</span></span>  
+ <span data-ttu-id="dbc60-108">No serviço, a associação é usada adicionando um ponto de extremidade ao ServiceHost:</span><span class="sxs-lookup"><span data-stu-id="dbc60-108">On the service, the binding is used by adding an endpoint to the ServiceHost:</span></span>  
 
 ```csharp
 serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "");  
 ```
 
- <span data-ttu-id="8e812-109">No cliente, a associação é usada por um <xref:System.ServiceModel.ChannelFactory> para criar um canal para o serviço:</span><span class="sxs-lookup"><span data-stu-id="8e812-109">On the client, the binding is used by a <xref:System.ServiceModel.ChannelFactory> to create a channel to the service:</span></span>  
+ <span data-ttu-id="dbc60-109">No cliente, a associação é usada por um <xref:System.ServiceModel.ChannelFactory> para criar um canal para o serviço:</span><span class="sxs-lookup"><span data-stu-id="dbc60-109">On the client, the binding is used by a <xref:System.ServiceModel.ChannelFactory> to create a channel to the service:</span></span>  
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
@@ -42,7 +42,7 @@ ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(bin
 ICalculator channel = channelFactory.CreateChannel();  
 ```
 
- <span data-ttu-id="8e812-110">Esse canal é usado para interagir com o serviço:</span><span class="sxs-lookup"><span data-stu-id="8e812-110">This channel is then used to interact with the service:</span></span>  
+ <span data-ttu-id="dbc60-110">Esse canal é usado para interagir com o serviço:</span><span class="sxs-lookup"><span data-stu-id="dbc60-110">This channel is then used to interact with the service:</span></span>  
 
 ```csharp
 // Call the Add service operation.  
@@ -52,9 +52,9 @@ double result = channel.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```
 
- <span data-ttu-id="8e812-111">Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente.</span><span class="sxs-lookup"><span data-stu-id="8e812-111">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="8e812-112">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="8e812-112">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="dbc60-111">Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente.</span><span class="sxs-lookup"><span data-stu-id="dbc60-111">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="dbc60-112">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="dbc60-112">Press ENTER in the client window to shut down the client.</span></span>  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -63,23 +63,23 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="8e812-113">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="8e812-113">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="dbc60-113">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="dbc60-113">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="8e812-114">Certifique-se de ter executado o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8e812-114">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="dbc60-114">Certifique-se de ter executado o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="dbc60-114">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="8e812-115">Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8e812-115">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2. <span data-ttu-id="dbc60-115">Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="dbc60-115">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="8e812-116">Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8e812-116">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="dbc60-116">Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="dbc60-116">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="8e812-117">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="8e812-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8e812-118">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="8e812-118">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="dbc60-117">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="dbc60-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="dbc60-118">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="dbc60-118">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="8e812-119">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos.</span><span class="sxs-lookup"><span data-stu-id="8e812-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8e812-120">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="8e812-120">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="dbc60-119">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos.</span><span class="sxs-lookup"><span data-stu-id="dbc60-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="dbc60-120">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="dbc60-120">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   
-## <a name="see-also"></a><span data-ttu-id="8e812-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8e812-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbc60-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dbc60-121">See also</span></span>
 
-- [<span data-ttu-id="8e812-122">Exemplos de associação personalizada</span><span class="sxs-lookup"><span data-stu-id="8e812-122">Custom Binding Samples</span></span>](custom-binding.md)
+- [<span data-ttu-id="dbc60-122">Exemplos de associação personalizada</span><span class="sxs-lookup"><span data-stu-id="dbc60-122">Custom Binding Samples</span></span>](custom-binding.md)

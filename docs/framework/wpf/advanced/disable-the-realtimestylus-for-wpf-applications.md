@@ -2,22 +2,22 @@
 title: Desabilitar o RealTimeStylus para aplicativos WPF
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acae177e1c49a6a1161bcf48f8e2e8ac1bfe13b8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962484"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991841"
 ---
-# <a name="disable-the-realtimestylus-for-wpf-applications"></a><span data-ttu-id="d33eb-102">Desabilitar o RealTimeStylus para aplicativos WPF</span><span class="sxs-lookup"><span data-stu-id="d33eb-102">Disable the RealTimeStylus for WPF Applications</span></span>
-<span data-ttu-id="d33eb-103">Windows Presentation Foundation (WPF) tem suporte interno para processar a entrada de toque do Windows 7. O suporte é fornecido por meio da entrada de caneta em tempo real da plataforma do tablet como <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, e <xref:System.Windows.UIElement.OnStylusMove%2A> eventos.</span><span class="sxs-lookup"><span data-stu-id="d33eb-103">Windows Presentation Foundation (WPF) has built in support for processing Windows 7 touch input.The support comes through the tablet platform’s real-time stylus input as <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, and <xref:System.Windows.UIElement.OnStylusMove%2A> events.</span></span> <span data-ttu-id="d33eb-104">O Windows 7 também fornece entrada multitoque como mensagens de janela Win32 WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="d33eb-104">Windows 7 also provides multi-touch input as Win32 WM_TOUCH window messages.</span></span> <span data-ttu-id="d33eb-105">Essas duas APIs são mutuamente exclusivas no mesmo HWND.</span><span class="sxs-lookup"><span data-stu-id="d33eb-105">These two APIs are mutually exclusive on the same HWND.</span></span> <span data-ttu-id="d33eb-106">A habilitação da entrada por toque por meio da plataforma do tablet (o padrão para aplicativos do WPF) desabilita mensagens WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="d33eb-106">Enabling touch input via the tablet platform (the default for WPF applications) disables WM_TOUCH messages.</span></span> <span data-ttu-id="d33eb-107">Como resultado, para usar WM_TOUCH para receber mensagens de toque de uma janela do WPF, desabilite o suporte a canetas internas no WPF.</span><span class="sxs-lookup"><span data-stu-id="d33eb-107">As a result, to use WM_TOUCH to receive touch messages from a WPF window, you must disable the built-in stylus support in WPF.</span></span> <span data-ttu-id="d33eb-108">Isso é aplicável em um cenário como uma janela do WPF hospedando um componente que usa WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="d33eb-108">This is applicable in a scenario such as a WPF window hosting a component that uses WM_TOUCH.</span></span>  
+# <a name="disable-the-realtimestylus-for-wpf-applications"></a><span data-ttu-id="924a2-102">Desabilitar o RealTimeStylus para aplicativos WPF</span><span class="sxs-lookup"><span data-stu-id="924a2-102">Disable the RealTimeStylus for WPF Applications</span></span>
+<span data-ttu-id="924a2-103">O Windows Presentation Foundation (WPF) tem suporte interno para processar a entrada do Windows 7 Touch.</span><span class="sxs-lookup"><span data-stu-id="924a2-103">Windows Presentation Foundation (WPF) has built in support for processing Windows 7 touch input.</span></span> <span data-ttu-id="924a2-104">O suporte é fornecido pela entrada de caneta em tempo real da plataforma do Tablet <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>como eventos <xref:System.Windows.UIElement.OnStylusMove%2A> , e.</span><span class="sxs-lookup"><span data-stu-id="924a2-104">The support comes through the tablet platform’s real-time stylus input as <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, and <xref:System.Windows.UIElement.OnStylusMove%2A> events.</span></span> <span data-ttu-id="924a2-105">O Windows 7 também fornece entrada multitoque como mensagens de janela Win32 WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="924a2-105">Windows 7 also provides multi-touch input as Win32 WM_TOUCH window messages.</span></span> <span data-ttu-id="924a2-106">Essas duas APIs são mutuamente exclusivas no mesmo HWND.</span><span class="sxs-lookup"><span data-stu-id="924a2-106">These two APIs are mutually exclusive on the same HWND.</span></span> <span data-ttu-id="924a2-107">A habilitação da entrada por toque por meio da plataforma do tablet (o padrão para aplicativos do WPF) desabilita mensagens WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="924a2-107">Enabling touch input via the tablet platform (the default for WPF applications) disables WM_TOUCH messages.</span></span> <span data-ttu-id="924a2-108">Como resultado, para usar WM_TOUCH para receber mensagens de toque de uma janela do WPF, desabilite o suporte a canetas internas no WPF.</span><span class="sxs-lookup"><span data-stu-id="924a2-108">As a result, to use WM_TOUCH to receive touch messages from a WPF window, you must disable the built-in stylus support in WPF.</span></span> <span data-ttu-id="924a2-109">Isso é aplicável em um cenário como uma janela do WPF hospedando um componente que usa WM_TOUCH.</span><span class="sxs-lookup"><span data-stu-id="924a2-109">This is applicable in a scenario such as a WPF window hosting a component that uses WM_TOUCH.</span></span>  
   
- <span data-ttu-id="d33eb-109">Para desabilitar a escuta do WPF à entrada por caneta, remova o suporte a tablet adicionado pela janela do WPF.</span><span class="sxs-lookup"><span data-stu-id="d33eb-109">To disable WPF listening to stylus input, remove any tablet support added by the WPF window.</span></span>  
+ <span data-ttu-id="924a2-110">Para desabilitar a escuta do WPF à entrada por caneta, remova o suporte a tablet adicionado pela janela do WPF.</span><span class="sxs-lookup"><span data-stu-id="924a2-110">To disable WPF listening to stylus input, remove any tablet support added by the WPF window.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d33eb-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d33eb-110">Example</span></span>  
- <span data-ttu-id="d33eb-111">O código de exemplo a seguir mostra como remover o suporte da plataforma do tablet padrão usando reflexão.</span><span class="sxs-lookup"><span data-stu-id="d33eb-111">The following sample code shows how to remove the default tablet platform support by using reflection.</span></span>  
+## <a name="example"></a><span data-ttu-id="924a2-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="924a2-111">Example</span></span>  
+ <span data-ttu-id="924a2-112">O código de exemplo a seguir mostra como remover o suporte da plataforma do tablet padrão usando reflexão.</span><span class="sxs-lookup"><span data-stu-id="924a2-112">The following sample code shows how to remove the default tablet platform support by using reflection.</span></span>  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
     // Get a collection of the tablet devices for this window.    
@@ -52,6 +52,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d33eb-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d33eb-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="924a2-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="924a2-113">See also</span></span>
 
-- [<span data-ttu-id="d33eb-113">Interceptando entrada na caneta</span><span class="sxs-lookup"><span data-stu-id="d33eb-113">Intercepting Input from the Stylus</span></span>](intercepting-input-from-the-stylus.md)
+- [<span data-ttu-id="924a2-114">Interceptando entrada na caneta</span><span class="sxs-lookup"><span data-stu-id="924a2-114">Intercepting Input from the Stylus</span></span>](intercepting-input-from-the-stylus.md)
