@@ -1,24 +1,6 @@
 - name: Conceitos de programação
   href: index.md
   items:
-    - name: Assemblies
-      items:
-        - name: Assemblies amigáveis
-          items:
-            - name: 'Como: criar assemblies amigáveis sem sinal'
-              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-            - name: 'Como: criar assemblies amigáveis com sinal'
-              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
-        - name: 'Como: criar e usar assemblies usando a linha de comando'
-          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-        - name: 'Como: determinar se um arquivo é um assembly'
-          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-        - name: 'Como: carregar e descarregar assemblies'
-          href: assemblies-gac/how-to-load-and-unload-assemblies.md
-        - name: 'Como: compartilhar um assembly com outros aplicativos'
-          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-        - name: 'Passo a passo: inserir tipos de assemblies gerenciados no Visual Studio'
-          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Programação assíncrona com async e await
       href: async/
     - name: Atributos
