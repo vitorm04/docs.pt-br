@@ -2,12 +2,12 @@
 title: Propriedades de execução de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913606"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988593"
 ---
 # <a name="workflow-execution-properties"></a>Propriedades de execução de fluxo de trabalho
 Com o armazenamento local (TLS) de segmento, CLR mantém um contexto de execução para cada segmento. Este contexto de execução determina propriedades de segmento conhecidos como a identidade da thread, a transação ambiente, e o conjunto de permissões atual além de propriedades definidos pelo usuário do segmento como slots nomeados.  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  Quando o fluxo de trabalho é chamado, a saída a seguir são gravadas para a janela do console.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

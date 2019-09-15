@@ -2,12 +2,12 @@
 title: Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 description: Descubra as opções para orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade e as possibilidades de Azure Dev Spaces durante o desenvolvimento do ciclo de vida de aplicativos Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9540ea3941e90b0f9ebfb79dff6f84bb368d0fb0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675023"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991156"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -15,7 +15,7 @@ O uso de orquestradores em aplicativos prontos para produção é essencial se o
 
 A Figura 4-23 ilustra a implantação de um aplicativo composto por vários microsserviços (contêineres) em um cluster.
 
-![Aplicativos do Docker compostos em um cluster: você pode usar um contêiner para cada instância de serviço. Contêineres do Docker são "unidades de implantação" e um contêiner é uma instância de um host do Docker. Um host lida com vários contêineres](./media/image23.png)
+![Aplicativos do Docker compostos em um cluster: você pode usar um contêiner para cada instância de serviço. Os contêineres do Docker são "unidades de implantação" e um contêiner é uma instância de um Docker. Um host lida com muitos contêineres](./media/image23.png)
 
 **Figura 4-23**. Um cluster de contêineres
 

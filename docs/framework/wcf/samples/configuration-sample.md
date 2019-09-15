@@ -2,12 +2,12 @@
 title: Exemplo de configuração
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040098"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990075"
 ---
 # <a name="configuration-sample"></a>Exemplo de configuração
 Este exemplo demonstra o uso de um arquivo de configuração para tornar um serviço detectável.  
@@ -67,9 +67,7 @@ Este exemplo demonstra o uso de um arquivo de configuração para tornar um serv
   
  Esse arquivo de configuração vai além dessas etapas simples, modificando comportamentos adicionais. É possível controlar as informações relacionadas à descoberta usando pontos de extremidade específicos. Ou seja, um usuário pode controlar se um ponto de extremidade pode ser descoberto e o usuário também pode marcar esse <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> ponto de extremidade com e os metadados XML personalizados. Para fazer isso, o usuário deve adicionar uma `behaviorConfiguration` Propriedade ao ponto de extremidade do aplicativo. Nesse caso, a propriedade a seguir é adicionada ao ponto de extremidade do aplicativo.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  Agora, por meio do elemento de configuração de comportamento, você pode controlar os atributos relacionados à descoberta. Nesse caso, dois escopos são adicionados ao ponto de extremidade do aplicativo.  
   
@@ -261,7 +259,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1. Este exemplo usa pontos de extremidade HTTP e para executar esse exemplo, as ACLs de URL adequadas devem ser adicionadas consulte Configurando [http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes. A execução do comando a seguir em um privilégio elevado deve adicionar as ACLs apropriadas. Talvez você queira substituir seu domínio e nome de usuário pelos argumentos a seguir se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Este exemplo usa pontos de extremidade HTTP e para executar esse exemplo, as ACLs de URL adequadas devem ser adicionadas consulte [Configurando http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes. A execução do comando a seguir em um privilégio elevado deve adicionar as ACLs apropriadas. Talvez você queira substituir seu domínio e nome de usuário pelos argumentos a seguir se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Compile a solução.  
   

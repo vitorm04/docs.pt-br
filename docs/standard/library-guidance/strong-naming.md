@@ -4,16 +4,16 @@ description: Recomendações de melhores práticas para dar um nome forte a bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640789"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968978"
 ---
 # <a name="strong-naming"></a>Nomenclatura forte
 
-Nomenclatura forte refere-se a assinar um assembly com uma chave, produzindo um [assembly de nome forte](../../framework/app-domains/strong-named-assemblies.md). Quando um assembly tem um nome forte, ele cria uma identidade exclusiva com base no número de versão de nome e assembly e pode ajudar a evitar conflitos de assembly.
+Nomenclatura forte refere-se a assinar um assembly com uma chave, produzindo um [assembly de nome forte](../assembly/strong-named.md). Quando um assembly tem um nome forte, ele cria uma identidade exclusiva com base no número de versão de nome e assembly e pode ajudar a evitar conflitos de assembly.
 
 A desvantagem de dar um nome forte é que o .NET Framework no Windows habilita carregamento estrito de assemblies depois que um assembly recebe um nome forte. Uma referência de assembly de nome forte deve corresponder exatamente à versão referenciada por um assembly, forçando os desenvolvedores a [configurar redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) ao usar o assembly:
 

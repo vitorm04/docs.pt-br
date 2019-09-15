@@ -2,12 +2,12 @@
 title: Interoperabilidade com serviços Web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: d4b59347a7ae8561637be436fa0c56096ecac3f0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039571"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989807"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilidade com serviços Web ASMX
 Este exemplo demonstra como integrar um aplicativo cliente do Windows Communication Foundation (WCF) com um serviço Web ASMX existente.  
@@ -50,7 +50,7 @@ public class CalculatorService : System.Web.Services.WebService
   
  A comunicação é feita por meio de um cliente gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). O cliente está contido no arquivo generatedClient.cs. O serviço ASMX deve estar disponível para gerar o código de proxy, pois ele é usado para recuperar os metadados atualizados. Execute o comando a seguir em um prompt de comando no diretório do cliente para gerar o proxy de tipo.  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
@@ -105,7 +105,7 @@ Console.ReadLine();
   
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

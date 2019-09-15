@@ -2,12 +2,12 @@
 title: Segurança de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045609"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990011"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 
@@ -62,7 +62,7 @@ Além disso, a associação personalizada usa segurança de mensagem com o tipo 
 
 Quando você executa o exemplo, as solicitações e respostas da operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
-```
+```console
 Press <ENTER> to terminate client.
 Result(100)
 Result(50)
@@ -97,7 +97,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
   As linhas a seguir no arquivo setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
-  ```
+  ```console
   certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
   ```
 
@@ -152,7 +152,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
     3. Exporte o certificado do serviço abrindo um prompt de comando do desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` pelo nome totalmente qualificado do computador em que o serviço está em execução):
 
-        ```
+        ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
@@ -160,7 +160,7 @@ Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lot
 
     5. Importe o certificado do serviço abrindo um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua% SERVER_NAME% pelo nome totalmente qualificado do computador em que o serviço em execução):
 
-        ```
+        ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 

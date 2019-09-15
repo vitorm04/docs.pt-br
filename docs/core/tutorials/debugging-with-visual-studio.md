@@ -3,12 +3,12 @@ title: Depurar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Visual Basic com o Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f318c163db6cfdd6de5aa99edebfeeb4bb470a02
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7239ca52c0b90c4cfacd68581f569b9ac7d70eae
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926162"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969385"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017
 
@@ -25,6 +25,8 @@ Você sempre deve começar testando seu programa em modo de Depuração. O modo 
 ## <a name="setting-a-breakpoint"></a>Configurando um ponto de interrupção
 
 Execute o programa no modo de Depuração e teste algumas funcionalidades de depuração:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

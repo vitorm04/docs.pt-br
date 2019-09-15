@@ -6,27 +6,27 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621335"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991168"
 ---
 # <a name="one-way-services"></a>Serviços unidirecionais
-O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo se a operação de serviço é representada no código como um `void` método. Com uma operação unidirecional, apenas uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem faz o remetente espera um.  
+O comportamento padrão de uma operação de serviço é o padrão de solicitação-resposta. Em um padrão de solicitação-resposta, o cliente aguarda a mensagem de resposta, mesmo que a operação de serviço seja representada no código como `void` um método. Com uma operação unidirecional, apenas uma mensagem é transmitida. O receptor não envia uma mensagem de resposta, nem o remetente espera uma.  
   
  Use o padrão de design unidirecional:  
   
-- Quando o cliente deve chamar as operações e não é afetado pelo resultado da operação no nível da operação.  
+- Quando o cliente deve chamar operações e não é afetado pelo resultado da operação no nível da operação.  
   
-- Ao usar o <xref:System.ServiceModel.NetMsmqBinding> ou o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe. (Para obter mais informações sobre esse cenário, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Ao usar a <xref:System.ServiceModel.NetMsmqBinding> <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe ou. (Para obter mais informações sobre esse cenário, consulte [filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
- Quando uma operação é unidirecional, não há nenhuma mensagem de resposta para transmitir informações de erro para o cliente. Você pode detectar condições de erro usando os recursos da associação subjacente, como sessões confiáveis, ou criando um contrato de serviço duplex que usa duas operações unidirecionais — um contrato unidirecional do cliente para o serviço para chamar a operação de serviço e outro unidirecional de contrato entre o serviço e o cliente para que o serviço possa enviar falhas back para o cliente usando um retorno de chamada que implementa o cliente.  
+ Quando uma operação é unidirecional, não há uma mensagem de resposta para transportar informações de erro ao cliente. Você pode detectar condições de erro usando recursos da Associação subjacente, como sessões confiáveis, ou criando um contrato de serviço duplex que usa operações de 2 1-Way – um contrato unidirecional do cliente para o serviço para chamar a operação de serviço e outra contrato unidirecional entre o serviço e o cliente para que o serviço possa enviar falhas de volta ao cliente usando um retorno de chamada que o cliente implementa.  
   
- Para criar um contrato de serviço unidirecional, definir seu contrato de serviço, se aplicam a <xref:System.ServiceModel.OperationContractAttribute> de classe para cada operação e defina o <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propriedade `true`, conforme mostrado no código de exemplo a seguir.  
+ Para criar um contrato de serviço unidirecional, defina seu contrato de serviço, <xref:System.ServiceModel.OperationContractAttribute> aplique a classe a cada operação e defina <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> a propriedade `true`como, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -41,18 +41,18 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Para obter um exemplo completo, consulte o [unidirecional](../../../../docs/framework/wcf/samples/one-way.md) exemplo.  
+ Para obter um exemplo completo, consulte o exemplo [unidirecional](../../../../docs/framework/wcf/samples/one-way.md) .  
   
-## <a name="clients-blocking-with-one-way-operations"></a>Clientes de bloqueio com operações unidirecionais  
- É importante perceber que enquanto alguns aplicativos unidirecionais retornam assim que os dados de saída são gravados para a conexão de rede, em vários cenários de implementação de uma associação ou de um serviço pode fazer com que um cliente WCF para bloquear usando operações unidirecionais. Em aplicativos de cliente do WCF, o objeto de cliente do WCF não retorna até que os dados de saída tem sido gravados para a conexão de rede. Isso é verdadeiro para todos os padrões de troca de mensagem, incluindo operações unidirecionais; Isso significa que qualquer problema ao gravar que os dados para o transporte impede que o cliente retornando. Dependendo do problema, o resultado poderia ser uma exceção ou um atraso no envio de mensagens para o serviço.  
+## <a name="clients-blocking-with-one-way-operations"></a>Clientes bloqueando com operações unidirecionais  
+ É importante perceber que, enquanto alguns aplicativos unidirecionais retornam assim que os dados de saída são gravados na conexão de rede, em vários cenários a implementação de uma associação ou de um serviço pode fazer com que um cliente WCF bloqueie usando operações unidirecionais. Em aplicativos cliente WCF, o objeto cliente WCF não retorna até que os dados de saída tenham sido gravados na conexão de rede. Isso é verdadeiro para todos os padrões de troca de mensagens, incluindo operações unidirecionais; Isso significa que qualquer problema ao gravar os dados no transporte impede que o cliente retorne. Dependendo do problema, o resultado pode ser uma exceção ou um atraso no envio de mensagens para o serviço.  
   
- Por exemplo, se o transporte não é possível localizar o ponto de extremidade, um <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> exceção é lançada sem atraso. No entanto, também é possível que o serviço não é possível ler os dados de transmissão, por algum motivo, o que impede que o transporte de cliente a operação de envio de retornar. Nesses casos, se o <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> período em que o transporte de cliente associação for excedida, uma <xref:System.TimeoutException?displayProperty=nameWithType> é lançada — mas não até que o período de tempo limite foi excedido. Também é possível acionar muitas mensagens em um serviço que o serviço não pode processá-las após um determinado ponto. Nesse caso, também, os blocos de cliente unidirecional até que o serviço pode processar as mensagens ou até que uma exceção é lançada.  
+ Por exemplo, se o transporte não puder localizar o ponto de <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> extremidade, uma exceção será lançada sem muito atraso. No entanto, também é possível que o serviço não possa ler os dados fora do fio por algum motivo, o que impede que a operação de envio de transporte do cliente seja retornada. Nesses casos, se o <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> período na associação de transporte do cliente for excedido, um <xref:System.TimeoutException?displayProperty=nameWithType> será lançado — mas não até que o período de tempo limite seja excedido. Também é possível acionar tantas mensagens em um serviço que o serviço não pode processá-las após um determinado ponto. Nesse caso também, o cliente unidirecional é bloqueado até que o serviço possa processar as mensagens ou até que uma exceção seja gerada.  
   
- Outra variação é a situação na qual o serviço <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> estiver definida como <xref:System.ServiceModel.ConcurrencyMode.Single> e a associação usa sessões. Nesse caso, o dispatcher impõe ordenação de mensagens de entrada (um requisito de sessões), que impede que as mensagens subsequentes sejam lidas fora da rede até que o serviço processou a mensagem anterior para a sessão. Novamente, os blocos de cliente, mas se uma exceção ocorre depende se o serviço é capaz de processar os dados de espera antes das configurações de tempo limite no cliente.  
+ Outra variação é a situação na qual a propriedade <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> de serviço é <xref:System.ServiceModel.ConcurrencyMode.Single> definida e a associação usa sessões. Nesse caso, o Dispatcher impõe a ordenação das mensagens de entrada (um requisito de sessões), o que impede que as mensagens subsequentes sejam lidas da rede até que o serviço tenha processado a mensagem anterior para essa sessão. Novamente, o cliente bloqueia, mas se ocorre uma exceção depende se o serviço é capaz de processar os dados em espera antes das configurações de tempo limite no cliente.  
   
- Você pode atenuar alguns desse problema com a inserção de um buffer entre o objeto de cliente e a operação de envio de transporte de cliente. Por exemplo, usando chamadas assíncronas ou usando uma fila de mensagens na memória pode habilitar o objeto de cliente retornar rapidamente. As duas abordagens podem aumentar a funcionalidade, mas o tamanho do pool de threads e a fila de mensagens ainda impor limites.  
+ Você pode atenuar um pouco desse problema inserindo um buffer entre o objeto de cliente e a operação de envio do transporte de cliente. Por exemplo, o uso de chamadas assíncronas ou o uso de uma fila de mensagens na memória pode permitir que o objeto de cliente seja retornado rapidamente. Ambas as abordagens podem aumentar a funcionalidade, mas o tamanho do pool de threads e a fila de mensagens ainda impõem limites.  
   
- É recomendável, em vez disso, que você examine os vários controles no serviço, bem como no cliente e, em seguida, testar seus cenários de aplicativo para determinar a melhor configuração em ambos os lados. Por exemplo, se o uso de sessões está bloqueando o processamento de mensagens em seu serviço, você pode definir as <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> propriedade para <xref:System.ServiceModel.InstanceContextMode.PerCall> para que cada mensagem pode ser processada por uma instância de serviço diferente e definir o <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> para <xref:System.ServiceModel.ConcurrencyMode.Multiple> para permitir que mais de um thread enviar mensagens por vez. Outra abordagem é aumentar as cotas de leitura das associações de serviço e cliente.  
+ Em vez disso, é recomendável que você examine os vários controles no serviço, bem como no cliente, e teste seus cenários de aplicativo para determinar a melhor configuração em ambos os lados. Por exemplo, se o uso de sessões estiver bloqueando o processamento de mensagens em seu serviço, você poderá definir <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> a propriedade <xref:System.ServiceModel.InstanceContextMode.PerCall> como para que cada mensagem possa ser processada por uma instância de serviço diferente e <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> definir <xref:System.ServiceModel.ConcurrencyMode.Multiple> o como para permitir que mais de um thread envie mensagens por vez. Outra abordagem é aumentar as cotas de leitura das associações de serviço e de cliente.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -5,13 +5,17 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614751"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991708"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Fornecendo informações de acessibilidade para controles em um Windows Form
 Os recursos de acessibilidade são programas e dispositivos especializados que ajudam as pessoas com deficiência a usarem computadores de forma mais eficaz. Alguns exemplos incluem leitores de tela para pessoas cegas e utilitários de entrada de voz para as pessoas que fornecem comandos verbais em vez de usar o mouse ou teclado. Esses recursos de acessibilidade interagem com as propriedades de acessibilidade expostas pelos controles dos Windows Forms. Essas propriedades são:  
@@ -27,21 +31,22 @@ Os recursos de acessibilidade são programas e dispositivos especializados que a
 - **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>Propriedade AccessibilityObject  
- Esta propriedade somente leitura contém um <xref:System.Windows.Forms.AccessibleObject> instância. O **AccessibleObject** implementa o <xref:Accessibility.IAccessible> interface, que fornece informações sobre o controle de descrição, local da tela, recursos de navegação e valor. O designer define esse valor quando o controle é adicionado ao formulário.  
+ Essa propriedade somente leitura contém uma <xref:System.Windows.Forms.AccessibleObject> instância. O **AccessibleObject** implementa a <xref:Accessibility.IAccessible> interface, que fornece informações sobre a descrição do controle, o local da tela, as capacidades de navegação e o valor. O designer define esse valor quando o controle é adicionado ao formulário.  
   
 ## <a name="accessibledefaultactiondescription-property"></a>Propriedade AccessibleDefaultActionDescription  
  Essa cadeia de caracteres descreve as ações do controle. Ela não aparece na janela Propriedades e só pode ser definido no código. O exemplo a seguir define essa propriedade para um controle de botão:  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-  
-// C#  
+``` 
+
+```csharp  
 Button1.AccessibleDefaultActionDescription =   
    "Closes the application.";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDefaultActionDescription =  
    "Closes the application.";  
 ```  
@@ -49,42 +54,45 @@ button1->AccessibleDefaultActionDescription =
 ## <a name="accessibledescription-property"></a>Propriedade AccessibleDescription  
  Essa cadeia de caracteres descreve o controle. Ele pode ser definido na janela Propriedades ou no código da seguinte maneira:  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDescription = "A button with text 'Exit'."  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleDescription = "A button with text 'Exit'";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
 ## <a name="accessiblename-property"></a>Propriedade AccessibleName  
  Esse é o nome de um controle relatado para os recursos de acessibilidade. Ele pode ser definido na janela Propriedades ou no código da seguinte maneira:  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleName = "Order"  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleName = "Order";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleName = "Order";  
 ```  
   
 ## <a name="accessiblerole-property"></a>Propriedade AccessibleRole  
- Essa propriedade, que contém um <xref:System.Windows.Forms.AccessibleRole> enumeração, descreve a função de interface do usuário do controle. Um novo controle tem o valor definido como `Default`. Isso significa que, por padrão, um controle **Botão** atua como um **Botão**. Pode ser útil redefinir essa propriedade se um controle tiver outra função. Por exemplo, você pode estar usando um controle **PictureBox** como um **Gráfico** e pode desejar que os recursos de acessibilidade relatem a função como um **Gráfico**, não como **PictureBox**. Também pode ser útil especificar essa propriedade para controles personalizados desenvolvidos por você. Essa propriedade pode ser definida na janela Propriedades ou no código da seguinte maneira:  
+ Essa propriedade, que contém uma <xref:System.Windows.Forms.AccessibleRole> enumeração, descreve a função de interface do usuário do controle. Um novo controle tem o valor definido como `Default`. Isso significa que, por padrão, um controle **Botão** atua como um **Botão**. Pode ser útil redefinir essa propriedade se um controle tiver outra função. Por exemplo, você pode estar usando um controle **PictureBox** como um **Gráfico** e pode desejar que os recursos de acessibilidade relatem a função como um **Gráfico**, não como **PictureBox**. Também pode ser útil especificar essa propriedade para controles personalizados desenvolvidos por você. Essa propriedade pode ser definida na janela Propriedades ou no código da seguinte maneira:  
   
-```  
-' Visual Basic  
+```vb 
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
-  
-// C#  
+```
+
+```csharp  
 PictureBox1.AccessibleRole = AccessibleRole.Chart;  
-  
-// C++  
+```
+
+```cpp  
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   

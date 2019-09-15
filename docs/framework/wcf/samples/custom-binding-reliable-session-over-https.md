@@ -2,12 +2,12 @@
 title: Sessão confiável de associação personalizada através de HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: 54e6f33801788c6c992ca3cefee1390e28291a44
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045637"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990023"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sessão confiável de associação personalizada através de HTTPS
 Este exemplo demonstra o uso de segurança de transporte SSL com sessões confiáveis. As sessões confiáveis implementam o protocolo de mensagens WS-Reliable. Você pode ter uma sessão confiável segura, compondo o WS-Security em sessões confiáveis. Mas, às vezes, você pode optar por usar a segurança de transporte HTTP com SSL.  
@@ -111,7 +111,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
 
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -124,7 +124,7 @@ Press <ENTER> to terminate client.
   
 1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

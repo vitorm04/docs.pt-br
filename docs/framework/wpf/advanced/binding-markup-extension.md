@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 616e405e191cb264a002e903bed60cf04559a675
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6776c89db474668b3aed0e38a3e18359bf93399d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964896"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991475"
 ---
 # <a name="binding-markup-extension"></a>Extensão de marcação de associação
 Adia um valor da propriedade para ser um valor de associação de dados, criando um objeto de expressão intermediário e interpretando o contexto de dados que se aplica ao elemento e à sua associação em tempo de execução.  
   
 ## <a name="binding-expression-usage"></a>Uso de expressões de associação  
   
-```  
+```xaml  
 <object property="{Binding}" .../>  
 -or-  
 <object property="{Binding  bindProp1=value1[, bindPropN=valueN]*}" ...  
@@ -33,14 +33,14 @@ Adia um valor da propriedade para ser um valor de associação de dados, criando
 ## <a name="syntax-notes"></a>Observações sobre a sintaxe  
  Nessas sintaxes, o `[]` e `*` não são literais. Eles fazem parte de uma notação para indicar que zero ou mais pares *bindProp*`=`*value* podem ser usados, com um separador `,` entre eles, precedendo pares *bindProp*`=`*value*.  
   
- Qualquer uma das propriedades listadas na seção "Propriedades de associação que podem ser definidas com a extensão de associação" poderia ser definida usando atributos de <xref:System.Windows.Data.Binding> um elemento Object. No entanto, isso não é verdadeiramente o uso da <xref:System.Windows.Data.Binding>extensão de marcação de, é apenas o processamento geral XAML dos atributos que definem <xref:System.Windows.Data.Binding> as propriedades da classe CLR. Em outras palavras, `<Binding` *bindProp1*`="`*value1* `"[` <xref:System.Windows.Data.Binding> *bindPropN* valuenéumasintaxeequivalenteparaatributosdeusodeelementode`"]*/>`objeto `="` em vez de `Binding` um uso de expressão. Para saber mais sobre o uso do atributo XAML de propriedades <xref:System.Windows.Data.Binding>específicas do, consulte a seção "uso do atributo XAML" da propriedade <xref:System.Windows.Data.Binding> relevante do na biblioteca de classes do .NET Framework.  
+ Qualquer uma das propriedades listadas na seção "Propriedades de associação que podem ser definidas com a extensão de associação" poderia ser definida usando atributos de <xref:System.Windows.Data.Binding> um elemento Object. No entanto, isso não é verdadeiramente o uso da <xref:System.Windows.Data.Binding>extensão de marcação de, é apenas o processamento geral XAML dos atributos que definem <xref:System.Windows.Data.Binding> as propriedades da classe CLR. Em outras palavras, `<Binding` *bindProp1*`="`*value1* `"[` <xref:System.Windows.Data.Binding> *bindPropN* *valuen* é uma sintaxe equivalente para atributos de uso de elemento de objeto`"]*/>` `="` em vez de `Binding` um uso de expressão. Para saber mais sobre o uso do atributo XAML de propriedades <xref:System.Windows.Data.Binding>específicas do, consulte a seção "uso do atributo XAML" da propriedade <xref:System.Windows.Data.Binding> relevante do na biblioteca de classes do .NET Framework.  
   
 ## <a name="xaml-values"></a>Valores XAML  
   
 |||  
 |-|-|  
 |`bindProp1, bindPropN`|O nome da <xref:System.Windows.Data.Binding> propriedade ou <xref:System.Windows.Data.BindingBase> a ser definida. Nem todas <xref:System.Windows.Data.Binding> as propriedades podem ser definidas com `Binding` a extensão e algumas propriedades são configuráveis dentro de `Binding` uma expressão somente usando extensões de marcação aninhadas adicionais. Consulte a seção "Associando propriedades que podem ser definidas com a extensão de associação".|  
-|`value1, valueN`|O valor para o qual definir a propriedade. A manipulação do valor do atributo é, por fim, específica ao tipo e à lógica <xref:System.Windows.Data.Binding> da propriedade específica que está sendo definida.|  
+|`value1, valueN`|O valor a se definir a propriedade. A manipulação do valor do atributo é, por fim, específica ao tipo e à lógica <xref:System.Windows.Data.Binding> da propriedade específica que está sendo definida.|  
 |`path`|A cadeia de caracteres de caminho que <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> define a propriedade implícita. Consulte também [Sintaxe XAML de PropertyPath](propertypath-xaml-syntax.md).|  
   
 ## <a name="unqualified-binding"></a>{Binding} não qualificada  
@@ -70,7 +70,7 @@ Adia um valor da propriedade para ser um valor de associação de dados, criando
   
 - <xref:System.Windows.Data.Binding.IsAsync%2A>: Booliano, pode ser `true` ou `false`. O padrão é `false`.  
   
-- <xref:System.Windows.Data.Binding.Mode%2A>: *Value* é um nome constante da <xref:System.Windows.Data.BindingMode> enumeração. Por exemplo, `{Binding Mode=OneWay}`.  
+- <xref:System.Windows.Data.Binding.Mode%2A>: *Value* é um nome constante da <xref:System.Windows.Data.BindingMode> enumeração. Por exemplo: `{Binding Mode=OneWay}`.  
   
 - <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Booliano, pode ser `true` ou `false`. O padrão é `false`.  
   
@@ -88,7 +88,7 @@ Adia um valor da propriedade para ser um valor de associação de dados, criando
   
 - <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: pode ser definido como uma `bindProp` = `value` cadeia de caracteres na expressão, mas isso depende do tipo do parâmetro que está sendo passado. Se estiver passando um tipo de referência para o valor, exigirá uma referência de objeto, como uma [Extensão de marcação StaticResource](staticresource-markup-extension.md) aninhada.  
   
-- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *Value* é um nome constante da <xref:System.Windows.Data.UpdateSourceTrigger> enumeração. Por exemplo, `{Binding UpdateSourceTrigger=LostFocus}`. Controles específicos têm, potencialmente, valores padrão diferentes para essa propriedade de associação. Consulte <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *Value* é um nome constante da <xref:System.Windows.Data.UpdateSourceTrigger> enumeração. Por exemplo: `{Binding UpdateSourceTrigger=LostFocus}`. Controles específicos têm, potencialmente, valores padrão diferentes para essa propriedade de associação. Consulte <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
 - <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Booliano, pode ser `true` ou `false`. O padrão é `false`. Consulte Observações.  
   

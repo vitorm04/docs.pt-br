@@ -2,12 +2,12 @@
 title: Dados grandes e streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911862"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991513"
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 O Windows Communication Foundation (WCF) é uma infraestrutura de comunicação baseada em XML. Como os dados XML são comumente codificados no formato de texto padrão definido na [especificação XML 1,0](https://go.microsoft.com/fwlink/?LinkId=94838), os desenvolvedores e arquitetos de sistemas conectados geralmente se preocupam com a superfície de conexão (ou o tamanho) das mensagens enviadas pela rede e o a codificação baseada em texto de XML representa desafios especiais para a transferência eficiente de dados binários.  
@@ -56,7 +56,7 @@ O Windows Communication Foundation (WCF) é uma infraestrutura de comunicação 
   
  Para dados que não têm essas restrições, normalmente é melhor enviar sequências de mensagens no escopo de uma sessão do que uma grande mensagem. Para obter mais informações, consulte a seção "dados de streaming" mais adiante neste tópico.  
   
- Ao enviar grandes quantidades de dados, você precisará definir a `maxAllowedContentLength` configuração do IIS (para obter mais informações, consulte Configurando limites `maxReceivedMessageSize` de solicitação do [IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) e a configuração de associação (por exemplo, [ System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). A `maxAllowedContentLength` propriedade assume o padrão de 28,6 M e `maxReceivedMessageSize` a propriedade assume o padrão de 64 KB.  
+ Ao enviar grandes quantidades de dados, você precisará definir a `maxAllowedContentLength` configuração do IIS (para obter mais informações, consulte [Configurando limites de solicitação do IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) e a configuração de `maxReceivedMessageSize` associação (por exemplo, [ System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). A `maxAllowedContentLength` propriedade assume o padrão de 28,6 M e `maxReceivedMessageSize` a propriedade assume o padrão de 64 KB.  
   
 ## <a name="encodings"></a>Codificações  
  Uma *codificação* define um conjunto de regras sobre como apresentar mensagens na conexão. Um *codificador* implementa tal codificação e é responsável, no lado do remetente, para transformar uma memória <xref:System.ServiceModel.Channels.Message> em um fluxo de bytes ou um buffer de bytes que pode ser enviado pela rede. No lado do destinatário, o codificador transforma uma sequência de bytes em uma mensagem na memória.  
@@ -99,7 +99,7 @@ O Windows Communication Foundation (WCF) é uma infraestrutura de comunicação 
 ### <a name="programming-model"></a>Modelo de Programação  
  Independentemente de quais dos três codificadores internos você usar em seu aplicativo, a experiência de programação é idêntica no que diz respeito à transferência de dados binários. A diferença está em como o WCF lida com os dados com base em seus tipos de dados.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>Modelo de programação para transferências por streaming  
  O modelo de programação de streaming é simples. Para receber dados por streaming, especifique um contrato de operação que tenha um único parâmetro de entrada tipada <xref:System.IO.Stream>. Para retornar dados por streaming, retorne uma referência a <xref:System.IO.Stream>.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  Essa regra se aplica da mesma forma a contratos de mensagens. Conforme mostrado no contrato de mensagem a seguir, você pode ter apenas um único membro de corpo em seu contrato de mensagem que seja um fluxo. Se você desejar comunicar informações adicionais com o fluxo, essas informações deverão ser transportadas em cabeçalhos de mensagem. O corpo da mensagem é exclusivamente reservado para o conteúdo do fluxo.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  

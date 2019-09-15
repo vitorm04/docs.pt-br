@@ -2,12 +2,12 @@
 title: Controle estendido através de relatórios e tratamento de erro
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039675"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989928"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Controle estendido através de relatórios e tratamento de erro
 Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um serviço Windows Communication Foundation ( <xref:System.ServiceModel.Dispatcher.IErrorHandler> WCF) usando a interface. O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) com algum código adicional adicionado ao serviço para lidar com erros. O cliente força várias condições de erro. O serviço intercepta os erros e os registra em um arquivo.  
@@ -21,7 +21,7 @@ Este exemplo demonstra como estender o controle sobre o tratamento de erros e o 
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>, o `CalculatorErrorHandler` grava um log do erro em um arquivo de texto Error. txt em c:\Logs. Observe que o exemplo registra em log a falha e não a suprimi, permitindo que ela seja relatada de volta ao cliente.  
   
-```  
+```csharp  
 public class CalculatorErrorHandler : IErrorHandler  
 {  
         // Provide a fault. The Message fault parameter can be replaced, or set to  
@@ -51,7 +51,7 @@ public class CalculatorErrorHandler : IErrorHandler
   
  O `ErrorBehaviorAttribute` existe como um mecanismo para registrar um manipulador de erro com um serviço. Esse atributo usa um único parâmetro de tipo. Esse tipo deve implementar a <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface e deve ter um construtor público e vazio. Em seguida, o atributo cria uma instância desse tipo de manipulador de erros e o instala no serviço. Ele faz isso implementando a <xref:System.ServiceModel.Description.IServiceBehavior> interface e, em seguida <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> , usando o método para adicionar instâncias do manipulador de erros ao serviço.  
   
-```  
+```csharp  
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,7 +98,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  O exemplo implementa um serviço de calculadora. O cliente deliberadamente faz com que dois erros ocorram no serviço fornecendo parâmetros com valores ilegais. O `CalculatorErrorHandler` usa a <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface para registrar os erros em um arquivo local e, em seguida, permite que eles sejam relatados de volta ao cliente. O cliente força uma divisão por zero e uma condição fora do intervalo de argumento.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("Forcing an error in Divide");  
@@ -132,9 +132,9 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- O arquivo c:\logs\errors.txt contém as informações registradas sobre os erros pelo serviço. Observe que, para o serviço gravar no diretório, você deve certificar-se de que o processo no qual o serviço está sendo executado (normalmente ASP.NET ou Network Service) tenha a permissão para gravar no diretório.  
+ O arquivo c:\logs\errors.txt contém as informações registradas sobre os erros pelo serviço. Observe que, para o serviço gravar no diretório, você deve certificar-se de que o processo no qual o serviço está sendo executado (normalmente ASP.NET ou Network Service) tenha permissão para gravar no diretório.  
   
-```  
+```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  

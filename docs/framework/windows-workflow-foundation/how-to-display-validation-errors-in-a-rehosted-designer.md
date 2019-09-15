@@ -2,12 +2,12 @@
 title: 'Como: exibir erros de validação em um designer com hospedagem alterada'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608868882f4bec23c03f0ec78f65673e76056030
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761463"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989659"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Como: exibir erros de validação em um designer com hospedagem alterada
 Este tópico descreve como recuperar e publicar erros de validação em [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]rehosted. Isso fornece-nos com um procedimento para confirmar que um fluxo de trabalho em um designer rehosted é válido.  
@@ -18,7 +18,7 @@ Este tópico descreve como recuperar e publicar erros de validação em [!INCLUD
   
 1. Aqui está um exemplo de código para uma implementação simples que grava para fora os erros de validação para o log de depuração.  
   
-    ```  
+    ```csharp  
     using System.Activities.Presentation.Validation;  
     using System.Collections.Generic;  
     using System.Diagnostics;  
@@ -40,6 +40,6 @@ Este tópico descreve como recuperar e publicar erros de validação em [!INCLUD
   
 1. Aqui está o código que irá publicar esse ao contexto de edição.  
   
-    ```  
+    ```csharp  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  
     ```

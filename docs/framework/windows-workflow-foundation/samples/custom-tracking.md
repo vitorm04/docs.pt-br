@@ -2,12 +2,12 @@
 title: Rastreamento personalizada
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044298"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989407"
 ---
 # <a name="custom-tracking"></a>Rastreamento personalizada
 Este exemplo demonstra como criar um participante personalizado de rastreamento e gravar o conteúdo dos dados de acompanhamento no console. Além disso, o exemplo demonstra como emitir os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> preenchido com dados definidos pelo usuário. O participante controlando console- base filtra os objetos de <xref:System.Activities.Tracking.TrackingRecord> emissores pelo fluxo de trabalho usando um objeto de perfil de rastreamento criado em código.
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- O participante completo de rastreamento é implementado no arquivo de ConsoleTrackingParticipant.cs. O exemplo de código é o método de <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> para o participante personalizado de rastreamento.
+ O participante de acompanhamento completo é implementado no arquivo ConsoleTrackingParticipant.cs. O exemplo de código a seguir <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> é o método para o participante de acompanhamento personalizado.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)

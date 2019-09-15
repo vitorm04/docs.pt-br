@@ -2,12 +2,12 @@
 title: 'Como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: f25e71aec03f9808b3263f0353328f92888ccc69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d7fa8c9faa84efc84243387cd27aa264f6155eb
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962310"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989619"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente
 .NET Framework 4,5 oferece uma integração melhor entre os serviços Web e os fluxos de trabalho na forma de desenvolvimento de fluxo de trabalho de primeiro contrato. A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que você crie o contrato no código primeiro. A ferramenta em seguida gera automaticamente um modelo de atividade na caixa de ferramentas para as operações no contrato.  
@@ -27,13 +27,13 @@ ms.locfileid: "69962310"
   
 2. Na parte superior da janela de código que aparece, adicione uma instrução Using a `System.Servicemodel`.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
     ```  
   
 3. Altere a definição de classe de exemplo à seguinte definição da interface.  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IBookService  
         {  

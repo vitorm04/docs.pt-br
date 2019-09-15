@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 9dabb5e1410427940db911299e66f82ec009cce9
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988680"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991581"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Como: usar a ferramenta de configuração do modelo de serviço COM+
 Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferramenta de linha de comando Configuração de Modelo de Serviço COM+ (ComSvcConfig.exe) para configurar as interfaces de aplicativo que serão expostas como serviços Web.  
@@ -31,37 +31,37 @@ Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferra
 > [!WARNING]
 > Ao usar ComSvcConfig. exe/install em uma máquina com o Windows 8, uma caixa de diálogo é exibida informando que "um aplicativo em seu computador precisa do seguinte recurso do Windows: .NET Framework 3,5 (inclui o .NET 2,0 e o .NET 3,0" se o .NET Framework 3,5 não estiver instalado. Essa caixa de diálogo pode ser ignorada. Como alternativa, você pode definir a chave do Registro OnlyUseLatestCLR para um valor DWORD de 0x00000001  
   
-### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Para adicionar uma interface para o conjunto de interfaces que devem ser expostos como serviços Web, usando o modo de hospedagem COM+  
+## <a name="to-add-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-com-hosting-mode"></a>Para adicionar uma interface ao conjunto de interfaces expostas como serviços Web, usando o modo de hospedagem COM+  
   
 - Execute ComSvcConfig usando as opções `/install` e `/hosting:complus`, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
     ```  
   
      O comando adiciona a interface `IFinances` do componente `ItemOrders.IFinancial` (do aplicativo OnlineStore COM+) ao conjunto de interfaces que serão expostas como serviços Web. O serviço usa o modo de hospedagem COM+ e, portanto, exige a ativação explícita do aplicativo.  
   
-     Embora o caractere de asterisco curinga (*) possa ser usado para o componente e a interface, evite usá-lo porque você pode querer expor apenas a funcionalidade selecionada como um serviço Web. Se for executado com uma versão futura desse componente, usar o curinga pode sem querer expor interfaces que podem não terem estado presentes quando a sintaxe de configuração foi determinada.  
+     Embora o caractere curinga asterisco\*() possa ser usado para o componente e a interface, evite usá-lo, pois talvez você queira expor apenas a funcionalidade selecionada como um serviço Web. Se for executado com uma versão futura desse componente, usar o curinga pode sem querer expor interfaces que podem não terem estado presentes quando a sintaxe de configuração foi determinada.  
   
      A opção /verbose instrui a ferramenta para exibir avisos além dos erros.  
   
      O contrato para o serviço exposto conterá todos os métodos da interface `IFinances`.  
   
-### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Para adicionar somente métodos específicos de uma interface para o conjunto de interfaces que devem ser expostos como serviços Web, usando o modo de hospedagem COM+  
+## <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-com-hosting-mode"></a>Para adicionar apenas métodos específicos de uma interface ao conjunto de interfaces expostas como serviços Web, usando o modo de hospedagem COM+  
   
 - Execute ComSvcConfig usando as opções `/install` e `/hosting:complus` com nomeação explícita dos métodos necessários, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
     ```  
   
      O comando só pode adicionar os métodos `Credit` e `Debit` da interface `IFinances` como operações para o contrato de serviço exposto. Todos os outros métodos na interface serão omitidos do contrato e não estarão acessíveis para os clientes de serviço Web.  
   
-### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Para adicionar uma interface para o conjunto de interfaces que devem ser expostos como serviços Web, usando o modo de hospedagem Web  
+## <a name="to-add-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-web-hosting-mode"></a>Para adicionar uma interface ao conjunto de interfaces expostas como serviços Web, usando o modo de hospedagem na Web  
   
 - Execute ComSvcConfig usando as opções `/install` e `/hosting:was`, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
     ```  
   
@@ -71,41 +71,41 @@ Depois que você tiver selecionado um modo de hospedagem apropriado, use a ferra
   
      A opção `/mex` adiciona um ponto de extremidade de serviço adicional do Metadata Exchange (MEX) que use o mesmo transporte que o ponto de extremidade do serviço do aplicativo para dar suporte aos clientes que querem recuperar uma definição de contrato do serviço.  
   
-### <a name="to-remove-a-web-service-for-a-specified-interface"></a>Para remover um serviço Web para uma interface especificada  
+## <a name="to-remove-a-web-service-for-a-specified-interface"></a>Para remover um serviço Web para uma interface especificada  
   
 - Execute ComSvcConfig usando a opção `/uninstall`, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
     ```  
   
      O comando remove a interface `IFinances` no componente `ItemOrders.Financial` (do aplicativo OnlineStore COM+).  
   
-### <a name="to-list-currently-exposed-interfaces"></a>Para listar as interfaces expostas no momento  
+## <a name="to-list-currently-exposed-interfaces"></a>Para listar as interfaces expostas no momento  
   
 - Execute ComSvcConfig usando a opção `/list`, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /list  
     ```  
   
      O comando lista as interfaces expostas no momento, junto com o endereço de correspondência e os detalhes da associação, no escopo do computador local.  
   
-### <a name="to-list-specific-currently-exposed-interfaces"></a>Para listar as interfaces específicas expostas no momento  
+## <a name="to-list-specific-currently-exposed-interfaces"></a>Para listar as interfaces específicas expostas no momento  
   
 - Execute ComSvcConfig usando a opção `/list`, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
     ```  
   
      O comando lista as interfaces hospedadas no host COM+ expostas no momento, junto com o endereço de correspondência e os detalhes da associação, para o aplicativo OnlineStore COM+ no computador local.  
   
-### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>Para exibir ajuda sobre as opções que podem ser usadas com o utilitário  
+## <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>Para exibir ajuda sobre as opções que podem ser usadas com o utilitário  
   
 - Executar ComSvcConfig usando a opção /?, conforme mostrado no exemplo a seguir.  
   
-    ```  
+    ```console  
     ComSvcConfig.exe /?  
     ```  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a4bd64d4c8232f9b6448baf98ee73ee497ccd5ca
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965268"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972105"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Passo a passo: Criar ouvintes de log personalizados (Visual Basic)
 Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.  
@@ -33,7 +33,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
  Para garantir que o `My.Application.Log` use o ouvinte de log, você deve nomear fortemente o assembly que contém o ouvinte de log.  
   
- O procedimento seguinte fornece algumas etapas simples para criar um assembly de ouvinte de log de nome forte. Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ O procedimento seguinte fornece algumas etapas simples para criar um assembly de ouvinte de log de nome forte. Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](../../../../standard/assembly/create-use-strong-named.md).  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Para nomear fortemente o assembly de ouvinte de log  
   
@@ -76,7 +76,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.  
   
-     -ou-  
+     - ou -  
   
      Se houver um arquivo app.config:  
   
@@ -84,7 +84,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
     2. Na caixa de diálogo **Adicionar novo item**, escolha **Arquivo de configuração de aplicativo**.  
   
-    3. Clique em **Adicionar**.  
+    3. Clique em **Adicionar** .  
   
 2. Localize a seção `<listeners>`, na seção `<source>` com o `name` atributo "DefaultSource", localizado na seção `<sources>`. A seção `<sources>` está localizada na seção `<system.diagnostics>`, na seção `<configuration>` superior.  
   

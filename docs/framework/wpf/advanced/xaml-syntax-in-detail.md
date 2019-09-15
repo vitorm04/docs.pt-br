@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168999"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991410"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
@@ -112,7 +112,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  Para enumerações flagwise, o comportamento é baseado no <xref:System.Enum.Parse%2A?displayProperty=nameWithType> método. Você pode especificar vários valores para uma enumeração sinalizadora, separando cada valor com uma vírgula. No entanto, não é possível combinar valores de enumeração que não reconhecem sinalizadores. Por exemplo, você não pode usar a sintaxe de vírgula para tentar criar <xref:System.Windows.Trigger> um que atue em várias condições de uma enumeração não sinalizada:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>Valores de propriedade de conteúdo XAML devem ser contíguos  
  O valor de uma propriedade de conteúdo XAML deve ser fornecido inteiramente antes ou inteiramente depois de todos os outros elementos de propriedade nesse elemento de objeto. Isso é verdadeiro se o valor de uma propriedade de conteúdo XAML é especificado como uma cadeia de caracteres ou como um ou mais objetos. Por exemplo, a marcação a seguir não analisa:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  Isso é ilegal essencialmente porque se essa sintaxe tivesse sido tornada explícita usando sintaxe de elemento de propriedade para a propriedade de conteúdo, a propriedade de conteúdo seria definida duas vezes:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  Um exemplo similarmente ilegal é no caso de a propriedade de conteúdo ser uma coleção e elementos filho serem intercalados com elementos de propriedade:  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  

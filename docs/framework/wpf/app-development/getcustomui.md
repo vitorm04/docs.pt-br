@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947960"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991372"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Chamado por PresentationHost.exe para obter mensagens de erro e andamento personalizadas do host, se implementado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- [out] O nome da classe que é a interface de usuário de andamento fornecida pelo host, preferencialmente um [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] de arquivos com <xref:System.Windows.Controls.Page> é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzProgressAssemblyName`.  
+ fora O nome da classe que é a interface do usuário de progresso fornecida pelo host, preferivelmente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] um <xref:System.Windows.Controls.Page> arquivo com é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- [out] O nome da classe que é o usuário de erro fornecida pelo host interface, de preferência um arquivo XAML com <xref:System.Windows.Controls.Page> é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzErrorAssemblyName`.  
+ fora O nome da classe que é a interface do usuário de erro fornecida pelo host, preferivelmente um arquivo <xref:System.Windows.Controls.Page> XAML com o é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  HRESULT: Ignorado.  

@@ -2,12 +2,12 @@
 title: Migrando de .NET Remoting para o WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045862"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990176"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa a comunicação remota do .NET para usar o Windows Communication Foundation (WCF). Ele compara conceitos semelhantes entre esses produtos e descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -207,7 +207,7 @@ public class WCFCustomer
   
  O atributo [DataContract] identifica esse tipo como um que pode ser serializado e desserializado entre o cliente e o servidor. O atributo [DataMember] identifica as propriedades individuais ou os campos a serem serializados.  
   
- Quando o WCF envia um objeto entre as camadas, ele serializa apenas os valores e cria uma nova instância do objeto na outra camada. Todas as interações com os valores do objeto ocorrem somente localmente – elas não se comunicam com a outra camada da forma como os objetos de referência de comunicação remota do .NET fazem. Para obter mais informações, consulte [serialização e](./feature-details/serialization-and-deserialization.md)desserialização.  
+ Quando o WCF envia um objeto entre as camadas, ele serializa apenas os valores e cria uma nova instância do objeto na outra camada. Todas as interações com os valores do objeto ocorrem somente localmente – elas não se comunicam com a outra camada da forma como os objetos de referência de comunicação remota do .NET fazem. Para obter mais informações, consulte [serialização e desserialização](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Recursos de manipulação de exceção  
   
@@ -417,7 +417,7 @@ public class RemotingServer : MarshalByRefObject
        customerServiceHost.Open();  
    ```  
   
-     Quando esse ServiceHost é iniciado, ele usa o arquivo Web. config para estabelecer o contrato, a associação e o ponto de extremidade apropriados. Para obter mais informações sobre arquivos de configuração, consulte Configurando [serviços usando arquivos de configuração](./configuring-services-using-configuration-files.md). Esse estilo de inicialização do servidor é conhecido como hospedagem interna. Para saber mais sobre outras opções de Hospedagem de serviços WCF, consulte [serviços de hospedagem](./hosting-services.md).  
+     Quando esse ServiceHost é iniciado, ele usa o arquivo Web. config para estabelecer o contrato, a associação e o ponto de extremidade apropriados. Para obter mais informações sobre arquivos de configuração, consulte [Configurando serviços usando arquivos de configuração](./configuring-services-using-configuration-files.md). Esse estilo de inicialização do servidor é conhecido como hospedagem interna. Para saber mais sobre outras opções de Hospedagem de serviços WCF, consulte [serviços de hospedagem](./hosting-services.md).  
   
 6. O app. config do projeto do cliente deve declarar informações de associação correspondentes para o ponto de extremidade do serviço. A maneira mais fácil de fazer isso no Visual Studio é usar **Adicionar referência de serviço**, que atualizará automaticamente o arquivo app. config. Como alternativa, essas mesmas alterações podem ser adicionadas manualmente.  
   

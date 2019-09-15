@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921581"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972031"
 ---
 # <a name="global-assembly-cache"></a>Cache de assemblies global
 Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador chamado Cache de Assembly Global. O Cache de Assembly Global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador.  
@@ -44,6 +44,6 @@ Cada computador em que o Common Language Runtime está instalado tem um cache de
   
 ## <a name="see-also"></a>Consulte também
 
-- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblies no .NET](../../standard/assembly/index.md)
 - [Como trabalhar com assemblies e o cache de assembly global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Assemblies de nomes fortes](../../standard/assembly/strong-named.md)

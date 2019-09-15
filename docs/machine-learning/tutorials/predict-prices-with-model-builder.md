@@ -3,15 +3,15 @@ title: Prever os preços usando regressão com o Construtor de Modelo
 description: Este tutorial mostra como criar um modelo de regressão usando o Construtor de Modelo do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929437"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991344"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Prever os preços usando regressão com o Construtor de Modelo
 
@@ -89,17 +89,9 @@ O Construtor de Modelo aceita dados de duas fontes: um banco de dados do SQL Ser
 
 A tarefa de aprendizado de máquina usada para treinar o modelo de previsão de preço neste tutorial é a regressão. Durante o processo de treinamento de modelo, o Construtor de Modelo treina modelos separados usando algoritmos de regressão diferentes e configurações para localizar o modelo com melhor desempenho para seu conjunto de dados.
 
-O tempo necessário para treinar o modelo é proporcional à quantidade de dados. Use este gráfico como orientação para selecionar um valor adequado para o campo `Time to train (seconds)`:
+O tempo necessário para treinar o modelo é proporcional à quantidade de dados. O construtor de modelos seleciona automaticamente um valor padrão para o **tempo de treinamento (segundos)** com base no tamanho da fonte de dados.
 
-*Tamanho do conjunto de dados  | Tipo de conjunto de dados       | Média Hora de treinar*
-------------- | ------------------ | --------------
-0 a 10 Mb     | Numérico e texto   | 10 s
-10 a 100 Mb   | Numérico e texto   | 10 min
-100 a 500 Mb  | Numérico e texto   | 30 min
-500 a 1 Gb    | Numérico e texto   | 60 min
-Mais de 1 Gb         | Numérico e texto   | Mais de 3 horas
-
-1. Como o arquivo de dados de treinamento é mais de 10MB, use 600 segundos (10 minutos) como o valor para *Tempo de treinamento (segundos)* .
+1. Deixe o valor padrão como está para o *tempo de treinamento (segundos)* , a menos que você prefira treinar por um tempo maior.
 2. Selecione *Iniciar Treinamento*.
 
 Durante o processo de treinamento, os dados de progresso são exibidos na seção `Progress` da etapa de treinamento.

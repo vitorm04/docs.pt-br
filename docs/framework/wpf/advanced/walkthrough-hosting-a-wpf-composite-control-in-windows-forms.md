@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400629"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991457"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Passo a passo: hospedar um controle composto do WPF nos Windows Forms
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] substancial em código, pode ser mais eficaz estender seu aplicativo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] existente com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em vez de regravá-lo do zero. Um cenário comum é quando você deseja inserir um ou mais controles implementados com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o em seu aplicativo Windows Forms. Para obter mais informações sobre como personalizar controles WPF, consulte [personalização de controle](../controls/control-customization.md).  
@@ -116,7 +116,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>A estrutura básica do arquivo code-behind  
  O arquivo code-behind consiste em um único namespace, `MyControls`, que conterá duas classes, `MyControl1` e `MyControlEventArgs`.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  

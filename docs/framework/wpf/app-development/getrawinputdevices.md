@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc7a5021f9f8d9e6badcd3e13266fb8f4bfe7a4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947908"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991754"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 Permite ao PresentationHost.exe descobrir e registrar os dispositivos de dados brutos (dispositivos de interface humana) no qual o aplicativo host está interessado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
  `ppEnum`  
   
- [out] Um ponteiro para um [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) para enumerar os dispositivos de entrada brutos.  
+ fora Um ponteiro para um [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) para enumerar os dispositivos de entrada brutos.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  HRESULT:  
   
- S_OK – [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) só será usado pelo PresentationHost.exe se S_OK será retornado.  
+ S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) será usado somente pelo PresentationHost. exe se S_OK for retornado.  
   
  E_NOTIMPL  
   
 ## <a name="remarks"></a>Comentários  
- Dispositivos de dados brutos são o conjunto de dispositivos de entrada que inclui os teclados, mouses e dispositivos menos tradicionais como controles remotos.  
+ Os dispositivos de entrada brutos são o conjunto de dispositivos de entrada que inclui teclados, mouses e dispositivos menos tradicionais, como controles remotos.  
   
- Depois que a lista de dispositivos brutos de entrada tiver sido recuperada, PresentationHost.exe registra nos dispositivos para receber mensagens de notificação de WM_INPUT.  
+ Depois que a lista de dispositivos de entrada brutos for recuperada, o PresentationHost. exe será registrado com os dispositivos para receber mensagens de notificação WM_INPUT.  
   
 ## <a name="see-also"></a>Consulte também
 

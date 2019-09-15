@@ -2,84 +2,84 @@
 title: Compilando os exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 021f17778bc019828d00fbd8e93cbc319de3047a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944060"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990148"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilando os exemplos do Windows Communication Foundation
 
-Os exemplos do Windows Communication Foundation (WCF) podem ser criados usando o IDE do Visual Studio ou usando o **msbuild** comando da linha de comando. Ambos os procedimentos são descritos neste tópico.
+Os exemplos de Windows Communication Foundation (WCF) podem ser criados usando o IDE do Visual Studio ou usando o comando **MSBuild** da linha de comando. Os dois procedimentos são descritos neste tópico.
 
 > [!NOTE]
-> Antes de criar ou executar qualquer um dos exemplos do WCF, verifique se você executou o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+> Antes de criar ou executar qualquer um dos exemplos do WCF, verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>Para criar o exemplo usando um prompt de comando
 
-1. Abra o Prompt de comando do desenvolvedor para Visual Studio e navegue até o subdiretório específico do idioma em que o local do diretório onde você instalou o exemplo.
+1. Abra Prompt de Comando do Desenvolvedor para o Visual Studio e navegue até o subdiretório específico do idioma sob o local do diretório onde você instalou o exemplo.
 
-2. Tipo `msbuild` na linha de comando. Os arquivos de programa do cliente são incorporados *client\bin* e os arquivos de programa de serviço são criados para *service\bin*. Se o serviço é hospedado pelo Internet Information Services (IIS), os arquivos de programa de serviço também são copiados para o *servicemodelsamples* diretório e seu *\bin* subdiretório.
+2. Digite `msbuild` na linha de comando. Os arquivos de programa do cliente são criados para o *client\bin* e os arquivos de programa do serviço são criados para o *create\bin*. Se o serviço for hospedado pelo Serviços de Informações da Internet (IIS), os arquivos de programa do serviço também serão copiados para o diretório *servicemodelsamples* e seu subdiretório *\Bin* .
 
 > [!NOTE]
-> Você deve definir as ACLs no *%systemdrive%\inetpub\wwwroot* para conceder permissões de modificação para a conta sob a qual você está executando. Caso contrário, alguns lançar falha de eventos de build. Como alternativa, você pode deixar as ACLs que são e executar o prompt de comando do SDK como administrador.
+> Você deve definir as ACLs em *%systemdrive%\inetpub\wwwroot* para conceder permissões de modificação para a conta sob a qual você está executando. Caso contrário, ocorrerá falha em alguns eventos de Build. Como alternativa, você pode deixar as ACLs como estão e executar o prompt de comando do SDK como administrador.
 
 ## <a name="to-build-the-sample-using-visual-studio"></a>Para criar o exemplo usando Visual Studio
 
-1. Dos **arquivo** menu no Visual Studio, selecione **abra** > **projeto/solução**. Navegue até o subdiretório específico do idioma sob o diretório no qual você instalou o exemplo e clique duas vezes no ícone do arquivo. sln para abrir a solução no Visual Studio.
+1. No menu **arquivo** do Visual Studio, selecione **abrir** > **projeto/solução**. Navegue até o subdiretório específico do idioma no diretório no qual você instalou o exemplo e clique duas vezes no ícone do arquivo. sln para abrir a solução no Visual Studio.
 
-1. Dos **construir** menu, selecione **recompilar solução**.
+1. No menu **Compilar** , selecione **Recompilar solução**.
 
-   Os arquivos de programa do cliente são criados para client\bin e os arquivos de programa de serviço são criados para service\bin. Se o serviço está hospedado no IIS, os arquivos de programa de serviço também são copiados para o *servicemodelsamples* diretório e seu *\bin* subdiretório.
+   Os arquivos de programas do cliente são criados no client\bin e os arquivos de programa do serviço são criados para o service\bin. Se o serviço estiver hospedado no IIS, os arquivos de programa do serviço também serão copiados para o diretório *servicemodelsamples* e seu subdiretório *\Bin* .
 
 > [!NOTE]
-> Você deve definir as ACLs no %systemdrive%\inetpub\wwwroot para conceder permissões de modificação para a conta sob a qual você está executando. Caso contrário, alguns lançar falha de eventos de build. Como alternativa, você pode deixar as ACLs que são e executar o prompt de comando do SDK ou o Visual Studio como administrador. Algumas ações do Visual Studio (como anexar um depurador ao processo de trabalho ASP.Net) também exigem privilégios administrativos.
+> Você deve definir as ACLs em%systemdrive%\inetpub\wwwroot para conceder permissões de modificação para a conta sob a qual você está executando. Caso contrário, ocorrerá falha em alguns eventos de Build. Como alternativa, você pode deixar as ACLs como estão e executar o prompt de comando do SDK ou o Visual Studio como administrador. Algumas ações do Visual Studio (como anexar um depurador ao processo de trabalho do ASP.Net) também exigem privilégios administrativos.
 
-## <a name="setup-batch-files-and-scripts"></a>Arquivos em lotes e Scripts de instalação
- Scripts e arquivos de lote Setup.exe e Cleanup.exe devem ser executados no Prompt de comando do desenvolvedor para Visual Studio. Vários conjunto de backup e limpeza dos arquivos de executar tarefas que exigem privilégios administrativos e devem ser iniciadas com privilégios de administrador.
+## <a name="setup-batch-files-and-scripts"></a>Arquivos e scripts em lotes de instalação
+ Os scripts e arquivos em lotes setup. exe e Cleanup. exe devem ser executados de Prompt de Comando do Desenvolvedor para o Visual Studio. Vários arquivos de configuração e limpeza executam tarefas que exigem privilégios administrativos e devem ser iniciados com privilégios de administrador.
 
-## <a name="important-security-information-about-metadata-endpoints"></a>Informações de segurança importantes sobre pontos de extremidade de metadados
- Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para serviços Windows Communication Foundation (WCF) desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importar ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Para fazer experiências com os exemplos mais fácil, quase todos os exemplos de expõem um ponto de extremidade de publicação de metadados não segura. Esses pontos de extremidade estão potencialmente disponíveis para os consumidores não autenticados anônimos e tome cuidado antes de implantar esses pontos de extremidade para garantir que publicamente divulga metadados de um serviço são apropriado. Para obter mais informações sobre como publicar metadados de serviço, consulte o [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemplo. Consulte a [ponto de extremidade do personalizado proteger metadados](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemplo para obter um exemplo de proteger um ponto de extremidade de metadados.
+## <a name="important-security-information-about-metadata-endpoints"></a>Informações de segurança importantes sobre os pontos de extremidade de metadados
+ Para evitar a divulgação não intencional de metadados de serviço potencialmente confidenciais, a configuração padrão para Windows Communication Foundation (WCF) Services desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar uma ferramenta de importação de metadados (como SvcUtil. exe) para gerar o código do cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço esteja explicitamente habilitado na configuração. Para facilitar a experiência com os exemplos, quase todos os exemplos expõem um ponto de extremidade de publicação de metadados não seguro. Esses pontos de extremidade estão potencialmente disponíveis para consumidores anônimos não autenticados e devem ser levados em vida antes da implantação desses pontos de extremidade para garantir que os metadados de um serviço sejam desmarcados publicamente. Para obter mais informações sobre como publicar metadados de serviço, consulte o exemplo de [comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) . Consulte o exemplo de [ponto de extremidade de metadados seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) para obter um exemplo de proteção de um ponto de extremidade de metadados.
 
 ## <a name="exception-handling"></a>Tratamento de Exceção
- Em termos gerais esses exemplos não incluem o tratamento de exceções para manter o código com foco no assunto da amostra. Para obter mais informações sobre o tratamento de exceção, consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo.
+ Em geral, falar com esses exemplos não inclui tratamento de exceções para manter o código focado no assunto do exemplo. Para obter mais informações sobre manipulação de exceção, consulte o exemplo de [exceções esperadas](../../../../docs/framework/wcf/samples/expected-exceptions.md) .
 
-## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Regenerando os clientes e a configuração com Svcutil
- Você pode usar o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar novamente o código de cliente e a configuração para a maioria dos exemplos. Alguns exemplos exigem configuração editada manualmente. Por exemplo, se você usar Svcutil.exe para gerar novamente a configuração para obter um exemplo que usa as credenciais de certificado do cliente, você deve especificar manualmente as credenciais configuradas anteriormente. Alguns exemplos de usam opções específicas de Svcutil.exe para afetar o código gerado, essas opções são especificadas nos tópicos de exemplo específicos.
+## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Regenerando clientes e configuração com svcutil
+ Você pode usar a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para regenerar o código do cliente e a configuração para a maioria dos exemplos. Alguns exemplos exigem configuração editada manualmente. Por exemplo, se você usar svcutil. exe para regenerar a configuração de um exemplo que usa credenciais de certificado de cliente, será necessário especificar manualmente as credenciais configuradas anteriormente. Alguns exemplos usam opções svcutil. exe específicas para afetar o código gerado, essas opções são especificadas nos tópicos de exemplo específicos.
 
-### <a name="to-regenerate-the-client-and-configuration-files"></a>Para gerar novamente os arquivos de configuração e de cliente
+### <a name="to-regenerate-the-client-and-configuration-files"></a>Para regenerar os arquivos de configuração e de cliente
 
-1. Abra um prompt de comando do SDK e navegue até o subdiretório específico do idioma em que o local do diretório onde você instalou o exemplo.
+1. Abra um prompt de comando do SDK e navegue até o subdiretório específico do idioma no local do diretório onde você instalou o exemplo.
 
-2. Se o serviço for um tipo hospedados na Web, use o comando a seguir.
+2. Se o serviço for um tipo hospedado na Web, use o comando a seguir.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
     ```
 
-     Se o serviço é um tipo auto-hospedado o comando a seguir.
+     Se o serviço for um tipo auto-hospedado, digite o comando a seguir.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs
     ```
 
-     Substitua `http://localhost:8000/ServiceModelSamples/service.svc/mex` com o endereço do ponto de extremidade de mex do serviço auto-hospedado.
+     Substitua `http://localhost:8000/ServiceModelSamples/service.svc/mex` pelo endereço do ponto de extremidade MEX do serviço de hospedagem própria.
 
      Para gerar o cliente em um tipo de Visual Basic, use o comando a seguir.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb
     ```
 
      Se o serviço for um tipo auto-hospedado, use o comando a seguir.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb
     ```
 
     > [!NOTE]
-    > Para ignorar a geração de configuração do cliente, adicione a **/noConfig** opção.
+    > Para ignorar a geração de configuração de cliente, adicione a opção **/noconfig** .
 
 ## <a name="see-also"></a>Consulte também
 

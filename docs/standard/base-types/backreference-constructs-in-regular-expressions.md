@@ -15,12 +15,12 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678352"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991654"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construtores de referência inversa em expressões regulares
 
@@ -35,7 +35,7 @@ O .NET define elementos de linguagem separados para se referir a grupos de captu
 
 Uma referência inversa numerada usa a seguinte sintaxe:
 
-`\` *number*
+`\` *número*
 
 em que *number* é a posição ordinal do grupo de captura na expressão regular. Por exemplo, `\4` corresponde ao conteúdo do quarto grupo de captura. Se *number* não for definido no padrão da expressão regular, ocorrerá um erro de análise e o mecanismo de expressões regulares gerará um <xref:System.ArgumentException>. Por exemplo, a expressão regular `\b(\w+)\s\1` é válida porque `(\w+)` é o primeiro e único grupo de captura na expressão. Por outro lado, `\b(\w+)\s\2` é inválida e gera uma exceção de argumento porque não há nenhum grupo de captura com o número `\2`. Além disso, quando *number* identifica um grupo de captura em uma determinada posição ordinal, mas um nome numérico diferente da posição ordinal desse grupo de captura é atribuído a ele, o analisador de expressões regulares também gera um <xref:System.ArgumentException>.
 
@@ -65,11 +65,11 @@ O exemplo a seguir localiza caracteres de palavra duplicados em uma cadeia de ca
 
 Uma referência inversa nomeada é definida usando a sintaxe a seguir:
 
-`\k<` *name* `>`
+`\k<` *nome* `>`
 
 ou:
 
-`\k'` *name* `'`
+`\k'` *nome* `'`
 
 em que *name* é o nome de um grupo de captura definido no padrão da expressão regular. Se *name* não for definido no padrão da expressão regular, ocorrerá um erro de análise e o mecanismo de expressões regulares gerará um <xref:System.ArgumentException>.
 
@@ -95,7 +95,7 @@ Se *name* é a representação de cadeia de caracteres de um número e nenhum gr
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-No entanto, se *name* é a representação de cadeia de caracteres de um número e um nome numérico foi explicitamente atribuído a um grupo de captura nessa posição, o analisador de expressão regular não pode identificar o grupo de captura por sua posição ordinal. Em vez disso, ele gera um <xref:System.ArgumentException>. O único grupo de captura no exemplo a seguir é denominado "2". Já que o constructo `\k` é usado para definir uma referência inversa denominada "1", o analisador de expressão regular não pode identificar o primeiro grupo de captura e gera uma exceção.
+No entanto, se *name* é a representação de cadeia de caracteres de um número e um nome numérico foi explicitamente atribuído a um grupo de captura nessa posição, o analisador de expressão regular não pode identificar o grupo de captura por sua posição ordinal. Em vez disso, ele <xref:System.ArgumentException>gera um. O único grupo de captura no exemplo a seguir é denominado "2". Já que o constructo `\k` é usado para definir uma referência inversa denominada "1", o analisador de expressão regular não pode identificar o primeiro grupo de captura e gera uma exceção.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]

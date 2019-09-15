@@ -2,12 +2,12 @@
 title: Inicialização de instancialização
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 4d6fdfedad9d522230a35014c0ee164e8b24fcfb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ca135aca8f84ddf79ec7447e7fa7814f61984419
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039606"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989837"
 ---
 # <a name="instancing-initialization"></a>Inicialização de instancialização
 Este exemplo estende o exemplo de [pooling](../../../../docs/framework/wcf/samples/pooling.md) definindo uma interface, `IObjectControl`, que personaliza a inicialização de um objeto ativando-o e desativando-o. O cliente invoca métodos que retornam o objeto ao pool e que não retornam o objeto para o pool.  
@@ -30,7 +30,7 @@ Este exemplo estende o exemplo de [pooling](../../../../docs/framework/wcf/sampl
 ## <a name="the-object-pool"></a>O pool de objetos  
  A `ObjectPoolInstanceProvider` classe contém a implementação para o pool de objetos. Essa classe implementa a <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interface para interagir com a camada de modelo de serviço. Quando o EndpointDispatcher chama o <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> método, em vez de criar uma nova instância, a implementação personalizada procura um objeto existente em um pool na memória. Se houver um disponível, ele será retornado. Caso contrário `ObjectPoolInstanceProvider` , o verifica `ActiveObjectsCount` se a propriedade (número de objetos retornados do pool) atingiu o tamanho máximo do pool. Caso contrário, uma nova instância será criada e retornada ao chamador e `ActiveObjectsCount` será subsequentemente incrementada. Caso contrário, uma solicitação de criação de objeto será enfileirada por um período de tempo configurado. A implementação do `GetObjectFromThePool` é mostrada no código de exemplo a seguir.  
   
-```  
+```csharp  
 private object GetObjectFromThePool()  
 {  
     bool didNotTimeout =   
@@ -74,7 +74,7 @@ ResourceHelper.GetString("ExObjectCreationTimeout"));
   
  A implementação `ReleaseInstance` personalizada adiciona a instância liberada de volta ao pool e decrementa o `ActiveObjectsCount` valor. O EndpointDispatcher pode chamar esses métodos de threads diferentes e, portanto, o acesso sincronizado aos membros de `ObjectPoolInstanceProvider` nível de classe na classe é necessário.  
   
-```  
+```csharp  
 public void ReleaseInstance(InstanceContext instanceContext, object instance)  
 {  
     lock (poolLock)  
@@ -127,7 +127,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
   
  O `ReleaseInstance` método fornece um recurso de *inicialização de limpeza* . Normalmente, o pool mantém um número mínimo de objetos durante o tempo de vida do pool. No entanto, pode haver períodos de uso excessivo que exigem a criação de objetos adicionais no pool para alcançar o limite máximo especificado na configuração. Eventualmente, quando o pool se torna menos ativo, os objetos excedentes podem se tornar uma sobrecarga extra. Portanto, quando `activeObjectsCount` o chega a zero, um temporizador ocioso é iniciado e executa um ciclo de limpeza.  
   
-```  
+```csharp  
 if (activeObjectsCount == 0)  
 {  
     idleTimer.Start();   
@@ -162,7 +162,7 @@ if (activeObjectsCount == 0)
   
  Na implementação personalizada <xref:System.ServiceModel.Description.IServiceBehavior> , uma nova instância do `ObjectPoolInstanceProvider` é instanciada e atribuída à <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> <xref:System.ServiceModel.ServiceHostBase>Propriedade em cada <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> uma que está anexada ao.  
   
-```  
+```csharp  
 public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBase serviceHostBase)  
 {  
     if (enabled)  
@@ -192,7 +192,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  O comportamento do pool de objetos agora pode ser adicionado a um serviço do WCF anotando a implementação do serviço com o atributo `ObjectPooling` personalizado recém-criado.  
   
-```  
+```csharp  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
 public class PoolService : IPoolService  
 {  
@@ -207,7 +207,7 @@ public class PoolService : IPoolService
   
  Para imitar essa funcionalidade, o exemplo declara uma interface pública (`IObjectControl`) que tem os membros mencionados anteriormente. Essa interface é então implementada por classes de serviço destinadas a fornecer inicialização específica de contexto. A <xref:System.ServiceModel.Dispatcher.IInstanceProvider> implementação deve ser modificada para atender a esses requisitos. Agora, sempre que você receber um objeto chamando o `GetInstance` método, deverá verificar se o objeto implementa `IObjectControl.` se ele faz isso, você deve chamar o `Activate` método adequadamente.  
   
-```  
+```csharp  
 if (obj is IObjectControl)  
 {  
     ((IObjectControl)obj).Activate();  
@@ -216,7 +216,7 @@ if (obj is IObjectControl)
   
  Ao retornar um objeto para o pool, uma verificação é necessária para a `CanBePooled` propriedade antes de adicionar o objeto de volta ao pool.  
   
-```  
+```csharp  
 if (instance is IObjectControl)  
 {  
     IObjectControl objectControl = (IObjectControl)instance;  
@@ -230,7 +230,7 @@ if (instance is IObjectControl)
   
  Como o desenvolvedor do serviço pode decidir se um objeto pode ser agrupado, a contagem de objetos no pool em um determinado momento pode ficar abaixo do tamanho mínimo. Portanto, você deve verificar se a contagem de objetos esteve abaixo do nível mínimo e executar a inicialização necessária no procedimento de limpeza.  
   
-```  
+```csharp  
 // Remove the surplus objects.  
 if (pool.Count > minPoolSize)  
 {  

@@ -2,12 +2,12 @@
 title: Exceções esperadas
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039693"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989972"
 ---
 # <a name="expected-exceptions"></a>Exceções esperadas
 Este exemplo demonstra como capturar exceções esperadas ao usar um cliente digitado. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
@@ -54,7 +54,7 @@ catch (CommunicationException exception)
   
  O processo do cliente executa dois cenários, cada um dos quais tenta `Add` chamar seguido `Divide`por. O primeiro cenário simula um problema de rede anulando o cliente antes de fazer a chamada para `Divide`. O segundo cenário causa uma condição de tempo limite definindo o tempo limite muito curto para que o método seja concluído. A saída esperada do processo do cliente é:  
   
-```  
+```output
 Add(100,15.99) = 115.99  
 Simulated network problem occurs...  
 Got System.ServiceModel.CommunicationObjectAbortedException  

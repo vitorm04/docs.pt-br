@@ -2,12 +2,12 @@
 title: Exemplo de extensões tipadas vagamente
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 21690aebca250880a8eb51aee0821220a00bc0c0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6cfdef1d083a25999f62c23667c9c6ea00326dca
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039476"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989786"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Exemplo de extensões tipadas vagamente
 O modelo de objeto de distribuição fornece suporte avançado para trabalhar com dados de extensão — informações que estão presentes na representação XML de um feed de agregação, mas não <xref:System.ServiceModel.Syndication.SyndicationFeed> são <xref:System.ServiceModel.Syndication.SyndicationItem>explicitamente expostos por classes como e. Este exemplo ilustra as técnicas básicas para trabalhar com dados de extensão.  
@@ -67,7 +67,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 ## <a name="writing-extension-data"></a>Gravando dados de extensão  
  As extensões de atributo são criadas adicionando entradas à <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> coleção, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp  
 //Attribute extensions are stored in a dictionary indexed by   
 // XmlQualifiedName  
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
@@ -77,7 +77,7 @@ feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue
   
  O código de exemplo a seguir cria um elemento `simpleString`de extensão chamado.  
   
-```  
+```csharp  
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
@@ -85,7 +85,7 @@ feed.ElementExtensions.Add("simpleString", "", "hello, world!");
   
  Uma maneira de criar extensões de elemento complexas que consistem em muitos elementos aninhados é usar as APIs de .NET Framework para serialização <xref:System.Runtime.Serialization.DataContractSerializer> (tanto <xref:System.Xml.Serialization.XmlSerializer> quanto as têm suporte), conforme mostrado nos exemplos a seguir.  
   
-```  
+```csharp  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
@@ -94,7 +94,7 @@ feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 },
   
  A <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> classe também pode ser usada para criar extensões de elemento de <xref:System.Xml.XmlReader> uma instância do. Isso permite uma fácil integração com APIs de processamento XML, <xref:System.Xml.Linq.XElement> como mostrado no código de exemplo a seguir.  
   
-```  
+```csharp  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
         new XElement("Key", new XAttribute("attr1", "someValue"), "Z"),  
         new XElement("Value", new XAttribute("attr1", "someValue"),   
@@ -104,13 +104,13 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ## <a name="reading-extension-data"></a>Lendo dados de extensão  
  Os valores para extensões de atributo podem ser obtidos pesquisando o atributo na <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> coleção por seu <xref:System.Xml.XmlQualifiedName> , conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
 ```  
   
  As extensões de elemento são acessadas usando o `ReadElementExtensions<T>` método.  
   
-```  
+```csharp  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
 {  
     Console.WriteLine(s);  
@@ -130,7 +130,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
   
  Também é possível obter um `XmlReader` em extensões de elemento individuais usando o <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> método.  
   
-```  
+```csharp  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
 {  
     XNode xelement = XElement.ReadFrom(extension.GetReader());  

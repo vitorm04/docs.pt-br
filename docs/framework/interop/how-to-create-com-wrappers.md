@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946471"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971829"
 ---
 # <a name="how-to-create-com-wrappers"></a>Como: Criar wrappers COM
 
@@ -55,7 +55,7 @@ Agora você pode escrever o código para acessar o objeto COM. Comece declarando
   
 1. Crie um projeto de Biblioteca de Classes para a classe gerenciada que você deseja executar no código nativo. A classe deve ter um construtor sem parâmetros.  
   
-     Verifique se você tem um número de versão de quatro partes completo para o assembly no arquivo AssemblyInfo. Esse número é necessário para manter o controle de versão no Registro do Windows. Para obter mais informações sobre os números de versão, consulte [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Verifique se você tem um número de versão de quatro partes completo para o assembly no arquivo AssemblyInfo. Esse número é necessário para manter o controle de versão no Registro do Windows. Para obter mais informações sobre os números de versão, consulte [Controle de versão do assembly](../../standard/assembly/versioning.md).  
   
 2. No menu **Projeto**, clique em **Propriedades**.  
   

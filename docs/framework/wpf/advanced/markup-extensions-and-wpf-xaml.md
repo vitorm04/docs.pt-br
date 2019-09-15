@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965274"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991827"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -104,7 +104,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Aninhamento de extensões de marcação no uso do XAML  
  Há suporte para o aninhamento de várias extensões de marcação; cada extensão de marcação será avaliada detalhadamente em primeiro lugar. Considere, por exemplo, o uso a seguir:  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  

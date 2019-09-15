@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044408"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989682"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Como: criar um fluxo de trabalho de fluxograma
 Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.Flowchart> atividade, e as atividades personalizadas da seção [como: Criar um tópico](how-to-create-an-activity.md) de atividade. O fluxo de trabalho modela um jogo de palpite de número.  
@@ -118,15 +118,15 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 9. Clique na segunda atividade **FlowDecision** para selecioná-la. Na **janela Propriedades**, digite a expressão a seguir na caixa valor da propriedade de **condição** .  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 10. Arraste duas atividades **WriteLine** da seção **primitivas** da caixa de **ferramentas** e solte-as para que elas fiquem lado a lado abaixo das duas atividades **FlowDecision** . Conecte a ação **verdadeira** da atividade **FlowDecision** inferior à atividade **WriteLine** mais à esquerda e a ação **false** para a atividade **WriteLine** mais à direita.  
   
 11. Clique na atividade **WriteLine** mais à esquerda para selecioná-la e digite a expressão a seguir na caixa valor da propriedade de **texto** na **janela Propriedades**.  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 13. Clique na atividade **WriteLine** mais à direita para selecioná-la e digite a expressão a seguir na caixa valor da propriedade de **texto** na **janela Propriedades**.  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

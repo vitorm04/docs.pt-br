@@ -2,38 +2,38 @@
 title: 'Como: escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade AJAX ASP.NET'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 33763a77d1ab1c82af9b9e1fb9c42d72392f8798
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6de32c798e7d0db5ad2d8f6666d6c5d1714250d5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047224"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991574"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Como: escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade AJAX ASP.NET
 
-Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitados para AJAX ASP.NET que pode ser chamado do JavaScript em um site do cliente. Os procedimentos básicos para a criação de tais serviços é discutida em [como: Usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) e [como: Adicionar um ponto de extremidade do ASP.NET AJAX sem utilizar a configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitado para AJAX ASP.NET que pode ser chamado do JavaScript em um site de cliente. Os procedimentos básicos para a criação desses serviços são discutidos em [como: Use a configuração para adicionar um ponto de](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) extremidade [do ASP.NET AJAX e como: Adicione um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)sem usar a configuração.  
   
- ASP.NET AJAX oferece suporte a operações que usam os verbos HTTP POST e HTTP GET, POST HTTP sendo o padrão. Durante a criação de uma operação que não tem efeitos colaterais e retorna dados que raramente ou nunca muda, use HTTP GET. Resultados de operações GET podem ser armazenados em cache, o que significa que várias chamadas para a mesma operação podem resultar em apenas uma solicitação ao seu serviço. O armazenamento em cache não é feito pelo WCF, mas pode ocorrer em qualquer nível (em um navegador do usuário, em um servidor proxy e outros níveis.) Armazenamento em cache é vantajoso se você quiser aumentar o desempenho do serviço, mas pode não ser aceitável se dados forem alterados com frequência ou se a operação executa alguma ação.  
+ O ASP.NET AJAX dá suporte a operações que usam os verbos HTTP POST e HTTP GET, com HTTP POST sendo o padrão. Ao criar uma operação que não tem efeitos colaterais e retorna dados que raramente ou nunca são alterados, use HTTP GET em vez disso. Os resultados de operações GET podem ser armazenados em cache, o que significa que várias chamadas para a mesma operação podem resultar em apenas uma solicitação para seu serviço. O cache não é feito pelo WCF, mas pode ocorrer em qualquer nível (no navegador de um usuário, em um servidor proxy e em outros níveis). O cache é vantajoso se você deseja aumentar o desempenho do serviço, mas pode não ser aceitável se os dados forem alterados com frequência ou se a operação executar alguma ação.  
   
- Por exemplo, se você estiver criando um serviço para gerenciar a biblioteca de música do usuário, uma operação que procura o artista, com base em título beneficiada de um álbum usando GET, mas uma operação que adiciona um álbum à coleção de pessoal do usuário deve usar POST.  
+ Por exemplo, se você estiver criando um serviço para gerenciar a biblioteca de músicas de um usuário, uma operação que pesquisa o artista com base no título de um álbum se beneficia do uso de GET, mas uma operação que adiciona um álbum à coleção pessoal do usuário deve usar POST.  
   
- Para controlar o tempo de vida do cache, use o <xref:System.ServiceModel.Web.OutgoingWebResponseContext> tipo. Por exemplo, durante a criação de um serviço que retorna previsões do tempo atualizado a cada hora, você usaria obter mas limitar a duração do cache para uma hora ou menos para impedir que os usuários do serviço de acesso a dados obsoletos.  
+ Para controlar o tempo de vida do cache, use <xref:System.ServiceModel.Web.OutgoingWebResponseContext> o tipo. Por exemplo, ao criar um serviço que retorna previsões do tempo atualizadas por hora, você usaria GET, mas limita a duração do cache a uma hora ou menos para impedir que os usuários do serviço acessem dados obsoletos.  
   
- Ao usar os serviços de uma página ASP.NET AJAX que usam o controle do Gerenciador de Script, ele não faz diferença se usa a operação GET ou POST - o mecanismo do Gerenciador de script garante que o tipo de solicitação correta seja emitido.  
+ Ao usar serviços de uma página ASP.NET AJAX que usa o controle Gerenciador de script, não faz diferença se a operação usa GET ou POST-o mecanismo do Gerenciador de scripts garante que o tipo de solicitação correto seja emitido.  
   
- Operações HTTP GET usam parâmetros de entrada com suporte pelas operações POST, incluindo tipos de contrato de dados complexos. No entanto, na maioria dos casos é recomendável para evitar o excesso de parâmetros ou parâmetros que são muito complexos em operações GET, pois ele reduz a eficiência de cache.  
+ As operações HTTP GET usam quaisquer parâmetros de entrada com suporte pelas operações POST, incluindo tipos de contrato de dados complexos. No entanto, na maioria dos casos, é recomendável evitar muitos parâmetros ou parâmetros que são muito complexos em operações GET, pois reduz a eficiência do cache.  
   
- Este tópico demonstra como selecionar entre GET e POST, adicionando a <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute> atributos para as operações relevantes no contrato de serviço. As outras etapas (para implementar, configurar e hospedar o serviço) que são necessárias para obter o serviço em execução são semelhantes àquelas usadas por qualquer serviço ASP.NET AJAX no WCF.  
+ Este tópico demonstra como selecionar entre Get e post adicionando os <xref:System.ServiceModel.Web.WebGetAttribute> atributos ou <xref:System.ServiceModel.Web.WebInvokeAttribute> às operações relevantes no contrato de serviço. As outras etapas (para implementar, configurar e hospedar o serviço) que são necessárias para obter o serviço em execução são semelhantes àquelas usadas por qualquer serviço AJAX ASP.NET no WCF.  
   
- Uma operação marcada com o <xref:System.ServiceModel.Web.WebGetAttribute> sempre usa uma solicitação GET. Uma operação marcada com o <xref:System.ServiceModel.Web.WebInvokeAttribute>, ou não marcados com qualquer um dos dois atributos, que usa uma solicitação POST. O <xref:System.ServiceModel.Web.WebInvokeAttribute> permite o uso de outros verbos HTTP, a não ser GET e POST (por exemplo, PUT e DELETE) por meio de <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> propriedade. No entanto, esses verbos não são suportados pelo ASP.NET AJAX. Se você pretende usar o serviço de páginas ASP.NET usando o controle Script Manager, não use o <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> propriedade.  
+ Uma operação marcada com o <xref:System.ServiceModel.Web.WebGetAttribute> sempre usa uma solicitação get. Uma operação marcada com o <xref:System.ServiceModel.Web.WebInvokeAttribute>, ou não marcada com nenhum dos dois atributos, usa uma solicitação post. O <xref:System.ServiceModel.Web.WebInvokeAttribute> permite o uso de outros verbos HTTP, além de Get e post (como Put e Delete) por meio da <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> propriedade. No entanto, esses verbos não são suportados pelo ASP.NET AJAX. Se você pretende usar o serviço de páginas ASP.NET usando o controle Gerenciador de script, não use a <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> propriedade.  
   
- Para obter um exemplo de funcionamento de alternar para GET, consulte o [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo.  
+ Para obter um exemplo funcional de como alternar para GET, consulte o exemplo de [serviço básico Ajax](../../../../docs/framework/wcf/samples/basic-ajax-service.md) .  
   
- Para obter um exemplo que usa o POST, consulte o [serviço de AJAX usando o HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) exemplo.  
+ Para obter um exemplo que usa POST, consulte o [serviço AJAX usando o exemplo http post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) .  
   
-## <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>Para criar um serviço WCF que responde a HTTP GET ou HTTP POST solicitações
+## <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>Para criar um serviço WCF que responde a solicitações HTTP GET ou HTTP POST
   
-1. Definir um contrato de serviço WCF básico com uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute> atributo. Marcar cada operação com o <xref:System.ServiceModel.OperationContractAttribute>. Adicionar o <xref:System.ServiceModel.Web.WebGetAttribute> atributo para estipular que uma operação deve responder a solicitações HTTP GET. Você também pode adicionar o <xref:System.ServiceModel.Web.WebInvokeAttribute> de atributo para especificar explicitamente HTTP POST ou não especificar um atributo, cujo padrão é HTTP POST.
+1. Defina um contrato de serviço WCF básico com uma interface marcada com <xref:System.ServiceModel.ServiceContractAttribute> o atributo. Marque cada operação com o <xref:System.ServiceModel.OperationContractAttribute>. Adicione o <xref:System.ServiceModel.Web.WebGetAttribute> atributo para estipular que uma operação deve responder às solicitações HTTP Get. Você também pode adicionar o <xref:System.ServiceModel.Web.WebInvokeAttribute> atributo para especificar explicitamente http post, ou não especificar um atributo, que assume como padrão http post.
   
     ```csharp
     [ServiceContract]  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
     }  
     ```  
   
-2. Implemente a `IMusicService` contrato de serviço com um `MusicService`.
+2. Implemente `IMusicService` o contrato de serviço `MusicService`com um.
   
     ```csharp
     public class MusicService : IMusicService  
@@ -73,9 +73,9 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
     }  
     ```  
   
-3. Crie um novo arquivo chamado de serviço com uma extensão. svc no aplicativo. Edite esse arquivo adicionando apropriado [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) informações de diretiva para o serviço. Especificar que o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> deve ser usada em de [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) diretiva para configurar automaticamente um ponto de extremidade do ASP.NET AJAX.  
+3. Crie um novo arquivo chamado Service com uma extensão. svc no aplicativo. Edite esse arquivo adicionando as informações de diretiva [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) apropriadas para o serviço. Especifique que o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> deve ser usado [ \@](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) na diretiva ServiceHost para configurar automaticamente um ponto de extremidade do ASP.NET AJAX.  
   
-    ```  
+    ```
     <%@ServiceHost   
         language=c#   
         Debug="true"   
@@ -86,11 +86,11 @@ Windows Communication Foundation (WCF) permite que você crie um serviço que ex
   
 ## <a name="to-call-the-service"></a>Para chamar o serviço  
   
-1. Você pode testar as operações de GET do seu serviço sem nenhum código de cliente, usando o navegador. Por exemplo, se seu serviço é configurado na `http://example.com/service.svc` endereço, em seguida, digitando `http://example.com/service.svc/LookUpArtist?album=SomeAlbum` no navegador a barra de endereços invoca o serviço e faz com que a resposta para ser baixado ou exibido.
+1. Você pode testar as operações GET de seu serviço sem qualquer código de cliente, usando o navegador. Por exemplo, se o serviço estiver configurado no `http://example.com/service.svc` endereço, a digitação `http://example.com/service.svc/LookUpArtist?album=SomeAlbum` na barra de endereços do navegador invocará o serviço e fará com que a resposta seja baixada ou exibida.
   
-2. Você pode usar os serviços com operações GET da mesma maneira que qualquer outro serviço ASP.NET AJAX - inserindo o serviço de controle de URL para a coleção de Scripts do Gerenciador de Script ASP.NET AJAX. Por exemplo, consulte o [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
+2. Você pode usar os serviços com operações GET da mesma maneira que qualquer outro serviço do ASP.NET AJAX, inserindo a URL do serviço na coleção scripts do controle Gerenciador de script do ASP.NET AJAX. Para obter um exemplo, consulte o [serviço básico do AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
   
 ## <a name="see-also"></a>Consulte também
 
 - [Criando serviços WCF para o ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Como: Migrar serviços Web do ASP.NET habilitado para AJAX para o WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Como: Migrar serviços Web do ASP.NET habilitados para AJAX para o WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364238"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991817"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Padrões de construtor seguro para DependencyObjects
 De modo geral, os construtores de classe não devem chamar retornos de chamada como métodos virtuais ou representantes, porque construtores podem ser chamados como inicialização de base dos construtores para uma classe derivada. O fornecimento do virtual pode ser feito em um estado de inicialização incompleta de um determinado objeto. No entanto, o sistema de propriedades chama e expõe os retornos de chamada internamente, como parte do sistema de propriedades de dependência. Como uma operação simples, a definição de um valor de <xref:System.Windows.DependencyObject.SetValue%2A> propriedade de dependência com chamada pode incluir um retorno de chamada em algum lugar na determinação. Por esse motivo, você deve ter cuidado ao definir valores de propriedade de dependência dentro do corpo de um construtor, o que poderá se tornar problemático se o tipo for usado como uma classe base. Há um padrão específico para implementar <xref:System.Windows.DependencyObject> construtores que evitam problemas específicos com Estados de propriedade de dependência e os retornos de chamada inerentes, documentados aqui.  
@@ -35,7 +35,7 @@ De modo geral, os construtores de classe não devem chamar retornos de chamada c
   
  O seguinte exemplo de código (e os exemplos depois dele) é um exemplo de "pseudo" C# que viola essa regra e explica o problema:  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>Construtores sem parâmetros chamando inicialização básica  
  Implemente esses construtores chamando o padrão de base:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Construtores não padrão (de conveniência) que não correspondem a nenhuma assinatura de base  
  Se esses construtores usarem os parâmetros para definir propriedades de dependência na inicialização, primeiro chame seu próprio construtor sem parâmetros de classe para inicialização e, em seguida, use os parâmetros para definir propriedades de dependência. Esses poderiam ser propriedades de dependência definidas por sua classe ou propriedades de dependência herdadas das classes base, mas em ambos os casos, use o seguinte padrão:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

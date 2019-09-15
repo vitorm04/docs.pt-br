@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 43cd1d0edbb607f69f27661aae3372e93564b3b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f13b19dcd0aceac969d9639e6230ad33c6cd8d84
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932331"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971545"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificando o local de um assembly
 Há duas maneiras de especificar o local de um assembly:  
@@ -67,7 +67,7 @@ Há duas maneiras de especificar o local de um assembly:
   
 ## <a name="see-also"></a>Consulte também
 
-- [Assemblies no Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programação com assemblies](../app-domains/programming-with-assemblies.md)
+- [Assemblies no .NET](../../standard/assembly/index.md)
+- [Programação com assemblies](../../standard/assembly/program.md)
 - [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurando aplicativos usando arquivos de configuração](index.md)

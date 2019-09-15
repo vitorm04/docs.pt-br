@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364255"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991804"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Passo a passo: habilitar arrastar e soltar em um controle de usuário
 
@@ -80,7 +80,7 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 
 2. Adicione o XAML a seguir à marca <xref:System.Windows.Window> de abertura para criar uma referência de namespace XML para o aplicativo atual.
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 

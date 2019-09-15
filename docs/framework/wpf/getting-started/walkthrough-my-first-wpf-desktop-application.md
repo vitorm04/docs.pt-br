@@ -12,12 +12,12 @@ ms.topic: tutorial
 ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2c8e36c1b8185f28a7ec20402e385f3a1ddf5ce
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799335"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991769"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Criar seu primeiro aplicativo do WPF no Visual Studio 2019
 
@@ -25,6 +25,7 @@ Este artigo mostra como desenvolver um aplicativo de área de trabalho Windows P
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > - Crie um projeto do WPF.
 > - Use o XAML para criar a aparência da interface do usuário do aplicativo.
 > - Escreva o código para criar o comportamento do aplicativo.

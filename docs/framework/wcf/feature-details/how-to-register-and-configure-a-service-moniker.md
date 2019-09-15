@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934313"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972139"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Como: registrar e configurar um moniker de serviço
 Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um aplicativo com com um contrato tipado, você deve registrar os tipos atribuídos necessários com com e configurar o aplicativo COM e o moniker com a associação necessária configuração.  
@@ -21,7 +21,7 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
   
 2. Verifique se os tipos no assembly estão marcados como `ComVisible`. Para fazer isso, adicione o seguinte atributo ao arquivo AssemblyInfo.cs em seu projeto do Visual Studio.  
   
-    ```  
+    ```csharp
     [assembly: ComVisible(true)]  
     ```  
   
@@ -40,10 +40,8 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
   
      O tipo a seguir é registrado.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
-  
-    ...  
   
     [ServiceContract]   
     public interface IMathService   
@@ -57,19 +55,19 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
   
      O aplicativo é exposto usando uma `wsHttpBinding` associação. Para o tipo e a configuração de aplicativo fornecidos, as seguintes cadeias de caracteres de moniker de exemplo são usadas.  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
     ```  
   
      `or`  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
      Você pode usar qualquer uma dessas cadeias de caracteres de moniker de dentro de um aplicativo Visual Basic 6,0, depois de adicionar uma referência `IMathService` ao assembly que contém os tipos, conforme mostrado no código de exemplo a seguir.  
   
-    ```  
+    ```vb  
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -91,7 +89,7 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
   
      Embora este tópico se concentre no uso do moniker de serviço do código VB 6,0, você pode usar um moniker de serviço de outros idiomas. Ao usar um moniker do C++ código, o assembly gerado svcutil. exe deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
   
-    ```  
+    ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   

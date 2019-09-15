@@ -2,12 +2,12 @@
 title: Associação personalizada obrigatória
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: c0f72c8216492b48de8c863dc35880d3c0034ef2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5f6587567eaf7f719028a7d92f3db8f8259b6e1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045659"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990033"
 ---
 # <a name="custom-binding-imperative"></a>Associação personalizada obrigatória
 O exemplo demonstra como escrever código imperativo para definir e usar associações personalizadas sem usar um arquivo de configuração ou um cliente do Windows Communication Foundation (WCF) gerado. Este exemplo combina os recursos fornecidos pelo transporte HTTP e o canal de sessão confiável para criar uma associação baseada em HTTP confiável. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
@@ -54,7 +54,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

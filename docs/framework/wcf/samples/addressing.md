@@ -2,12 +2,12 @@
 title: Endereçando
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 249060896b97de1694dec121cb25219baccdd88b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045829"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990200"
 ---
 # <a name="addressing"></a>Endereçando
 O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é auto-hospedado. O serviço e o cliente são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidades relativos e absolutos.  
@@ -83,7 +83,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
   
  Quando você executa o exemplo, o serviço enumera o endereço, o nome da associação e o nome do contrato para cada um de seus pontos de extremidade. O ponto de extremidade de intercâmbio de metadados (MEX) é apenas outro ponto de extremidade da perspectiva do ServiceHost, então ele aparece na lista.  
   
-```  
+```console  
 Service endpoints:  
 Endpoint - address:  http://localhost:8000/ServiceModelSamples/service  
            binding:  WSHttpBinding  
@@ -107,7 +107,7 @@ Press <ENTER> to terminate service.
   
  Quando você executa o cliente do, as solicitações de operação e as respostas são exibidas nas janelas do console do cliente e do serviço. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

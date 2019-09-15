@@ -5,19 +5,19 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: bd696752a287a78533d55c0fd3ad9986a32bd180
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1453946766e33843ae9e56f7a7f4dbf1678b81b5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052203"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991393"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 Chamado pelo PresentationHost.exe sempre que uma mensagem é recebida, a menos que E_NOTIMPL seja retornado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```cpp  
 HRESULT FilterInputMessage( [in] MSG* pMsg ) ;  
 ```  
   

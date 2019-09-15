@@ -5,12 +5,12 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.custom: seodec18
-ms.openlocfilehash: 4e336abf62299e0dee2e4757bb83f967ed4aed59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: 6d1012b8ddc5fd4a5ee8227902886727dbb10739
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966015"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970305"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Como remover o SDK e o Tempo de Execução do .NET Core
 
@@ -25,6 +25,8 @@ Em geral, você precisa apenas do SDK mais recente e da versão de patch mais re
 ## <a name="determine-what-is-installed"></a>Determinar o que está instalado
 
 Começando com o .NET Core 2.1, a CLI do .NET tem as opções que você pode usar para listar as versões do SDK e do tempo de execução que estão instaladas em seu computador.  Use [`dotnet --list-sdks`](../tools/dotnet.md#options) para ver a lista dos SDKs instalados em seu computador. Use [`dotnet --list-runtimes`](../tools/dotnet.md#options) para ver a lista dos tempos de execução instalados em seu computador. O texto a seguir mostra a saída típica para Windows, macOS ou Linux:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 

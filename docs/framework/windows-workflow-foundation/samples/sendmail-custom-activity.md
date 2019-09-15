@@ -2,12 +2,12 @@
 title: Atividade personalizado de SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038107"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988989"
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
 Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizada usa os recursos do <xref:System.Net.Mail.SmtpClient> para enviar email de forma assíncrona e enviar emails com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
@@ -47,7 +47,7 @@ Este exemplo demonstra como criar uma atividade personalizada que derive de <xre
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Enviando um email usando os tokens especificados no corpo  
  Este snippet de código demonstra como você pode enviar email com tokens no corpo. Observe como os tokens são fornecidos na propriedade body. Os valores para estes tokens são fornecidos para a propriedade tokens.  
   
-```html  
+```csharp  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
 tokens.Add("@name", "John Doe");  
 tokens.Add("@date", DateTime.Now.ToString());  
@@ -69,7 +69,7 @@ new SendMail
 ### <a name="sending-an-email-using-a-template"></a>Enviando um email usando um modelo  
  Este snippet mostra como enviar um email usando tokens de um modelo no corpo. Observe que ao definir a propriedade de `BodyTemplateFilePath` não precisamos de fornecer o valor para a propriedade body (o conteúdo do arquivo de modelo serão copiados para o corpo).  
   
-```  
+```csharp  
 new SendMail  
 {    
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
@@ -86,7 +86,7 @@ new SendMail
 ### <a name="sending-mails-in-testing-mode"></a>Enviar email no modo de teste  
  Este trecho de código mostra como definir as duas propriedades de teste: ao `TestMailTo` definir como todas as mensagens serão `john.doe@contoso.con` enviadas (sem considerar os valores de para, CC, Cco). Definindo TestDropPath todos os email de saída também serão gravados no caminho fornecido. Essas propriedades podem ser definidas independentes (não são relacionadas).  
   
-```  
+```csharp  
 new SendMail  
 {    
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
