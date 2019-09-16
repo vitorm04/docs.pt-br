@@ -236,7 +236,7 @@
           href: keywords/set.md
         - name: when (condição de filtro)
           href: keywords/when.md
-        - name: 'Valor '
+        - name: Valor
           href: keywords/value.md
         - name: yield
           href: keywords/yield.md
@@ -315,9 +315,9 @@
     - name: 'Operador ?:'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
-    - name: '?? operator'
+    - name: '?? e operadores ??='
       href: operators/null-coalescing-operator.md
-      displayName: null-coalescing
+      displayName: 'null-coalescing, assignment'
     - name: Operador =>
       href: operators/lambda-operator.md
       displayName: lambda
@@ -555,7 +555,7 @@
       href: ../../../_csharplang/spec/unsafe-code.md
     - name: Comentários de documentação
       href: ../../../_csharplang/spec/documentation-comments.md
-- name: 'Propostas da linguagem C# 7.0'
+- name: 'Propostas de especificação do C# 7.0'
   items:
     - name: Correspondência de padrões
       href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -569,7 +569,7 @@
       href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
     - name: Separadores de dígito
       href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-- name: 'Propostas da linguagem C# 7.1'
+- name: 'Propostas de especificação do C# 7.1'
   items:
     - name: Método assíncrono principal
       href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -579,7 +579,7 @@
       href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
     - name: Correspondência de padrões com genéricos
       href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-- name: 'Propostas da linguagem C# 7.2'
+- name: 'Propostas de especificação do C# 7.2'
   items:
     - name: Referências somente leitura
       href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -593,7 +593,7 @@
       href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
     - name: Separador de dígito à esquerda
       href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-- name: 'Propostas da linguagem C# 7.3'
+- name: 'Propostas de especificação do C# 7.3'
   items:
     - name: Restrições de tipo genérico não gerenciado
       href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -613,14 +613,16 @@
       href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
     - name: Candidatos de sobrecarga aprimorados
       href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-- name: 'Propostas da linguagem C# 8.0'
+- name: 'Proposta de especificação do C# 8.0'
   items:
-    - name: Tipos de referência nula – proposta
+    - name: Tipos de referência que permitem valor nulo – proposta
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
     - name: Tipos de referência que permitem valor nulo – especificação
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: Correspondência de padrões recursiva
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+    - name: Membros da interface padrão
+      href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: Fluxos assíncronos
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
     - name: Intervalos
@@ -629,3 +631,5 @@
       href: ../../../_csharplang/proposals/csharp-8.0/using.md
     - name: Atribuição de coalescência nula
       href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+    - name: Membros da instância ReadOnly
+      href: ../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
