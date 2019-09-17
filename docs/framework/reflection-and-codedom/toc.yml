@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: 'Como: Carregar assemblies no contexto somente de reflexão'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: 'Como: obter informações sobre tipo e membro usando reflexo'
+          href: get-type-member-information.md
         - name: Acessando atributos personalizados
           href: accessing-custom-attributes.md
         - name: Especificando nomes de tipo totalmente qualificados
