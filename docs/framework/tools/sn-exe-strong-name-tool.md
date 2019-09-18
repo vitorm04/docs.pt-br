@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971841"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044160"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../standard/assembly/strong-named.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -27,7 +27,7 @@ A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](.
 
  Para obter mais informações sobre nomes fortes e assemblies de nome forte, confira [Assemblies de nome forte](../../standard/assembly/strong-named.md) e [Como assinar um assembly com um nome forte](../../standard/assembly/sign-strong-name.md).  
   
- A ferramenta Nome Forte é instalada automaticamente com o Visual Studio. Para iniciar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ A ferramenta Nome Forte é instalada automaticamente com o Visual Studio. Para iniciar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
 > Em computadores 64 bits, execute a versão de 32 bits do Sn.exe usando o Prompt de Comando do Desenvolvedor para Visual Studio e a versão de 64 bits usando o Prompt de Comando Win64 x64 do Visual Studio. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*keysize*] *outfile*|Gera uma nova chave <xref:System.Security.Cryptography.RSACryptoServiceProvider> com o tamanho especificado e a grava no arquivo especificado.  As chaves pública e privada são gravadas no arquivo.<br /><br /> Se não especificar um tamanho de chave, uma chave 1.024 bits será gerada por padrão se você tiver o provedor criptográfico aprimorado da Microsoft instalado; do contrário, uma chave de 512 bits será gerada.<br /><br /> O parâmetro *keysize* dá suporte a tamanhos de chave de 384 a 16.384 bits em incrementos de 8 bits se você tiver o provedor criptográfico aprimorado da Microsoft instalado.  Ele dá suporte a tamanhos de chave de 384 a 512 bits em incrementos de 8 bits se você tiver o provedor criptográfico de base da Microsoft instalado.|  
 |**-m** [**y** *&#124;* **n**]|Especifica se os contêineres de chave são específicos do computador ou do usuário. Se você definir *y*, os contêineres de chave serão específicos do computador. Se você especificar *n*, os contêineres de chave serão específicos ao usuário.<br /><br /> Se nem y nem n for especificado, essa opção exibirá a configuração atual.|  
 |**-o**  *infile* [*outfile*]|Extrai a chave pública do *infile* e a armazena em um arquivo .csv. Uma vírgula separa cada byte da chave pública. Esse formato é útil para referências codificadas para chaves como matrizes inicializadas no código-fonte. Se você não especificar um *outfile*, essa opção colocará a saída na Área de Transferência. **Observação:**  Essa opção não verifica se a entrada é somente uma chave pública. Se o `infile` contiver um par de chaves com uma chave privada, a chave privada também será extraída.|  
-|**-p** *infile outfile* [*hashalg*]|Extrai a chave pública do par de chaves em *infile* e a armazena em *outfile*. Outra opção é usar o algoritmo RSA especificado por *hashalg*. Essa chave pública pode ser usada para assinar com atraso um assembly usando as opções **/delaysign+** e **/keyfile** do [Vinculador de Assembly (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Quando um assembly é assinado com atraso, somente a chave pública é definida no tempo de compilação e o espaço é reservado no arquivo para a assinatura a ser adicionada posteriormente, quando o chave privada será conhecida.|  
+|**-p** *infile outfile* [*hashalg*]|Extrai a chave pública do par de chaves em *infile* e a armazena em *outfile*. Outra opção é usar o algoritmo RSA especificado por *hashalg*. Essa chave pública pode ser usada para assinar com atraso um assembly usando as opções **/delaysign+** e **/keyfile** do [Vinculador de Assembly (Al.exe)](al-exe-assembly-linker.md). Quando um assembly é assinado com atraso, somente a chave pública é definida no tempo de compilação e o espaço é reservado no arquivo para a assinatura a ser adicionada posteriormente, quando o chave privada será conhecida.|  
 |**-pc**  *container* *outfile* [*hashalg*]|Extrai a chave pública do par de chaves no *contêiner* e a armazena em *outfile*. Se você usar a opção *hashalg*, o algoritmo RSA será usado para extrair a chave pública.|  
 |**-Pb** [**y** *&#124;* **n**]|Especifica se a política de bypass de nome forte é imposta. Se você especificar *y*, os nomes fortes de assemblies de confiança total não serão validados em um <xref:System.AppDomain> de confiança total. Se você especificar *n*, a correção dos nomes fortes será validada, mas não para um nome forte específico. O <xref:System.Security.Permissions.StrongNameIdentityPermission> não tem efeito sobre assemblies de confiança total. Você deve realizar sua própria verificação de uma correspondência de nome forte.<br /><br /> Se nem `y` nem `n` for especificado, essa opção exibirá a configuração atual. O padrão é `y`. **Observação:**  Em computadores 64 bits, você deve definir esse parâmetro nas instâncias de 32 e 64 bits de Sn.exe.|  
 |**-q**[**uiet**]|Especifica o modo silencioso; suprime a exibição de mensagens com êxito.|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Ferramentas](index.md)
+- [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
 - [Assemblies de nomes fortes](../../standard/assembly/strong-named.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

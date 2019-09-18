@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935121"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042529"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Clientes de automação de interface do usuário para tópicos de instrução do código gerenciado
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935121"
  Esta seção fornece informações detalhadas sobre como implementar recursos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] do em um aplicativo cliente.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navegar em elementos de automação de interface do usuário com o TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Localizar um elemento de automação de interface do usuário para um Item de lista](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [Obter propriedades de elemento de automação de interface do usuário](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Assinar eventos de automação de interface do usuário](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [Registrar um assembly do provedor do lado do cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [Usar a propriedade AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Navegar em elementos de automação de interface do usuário com o TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Localizar um elemento de automação de interface do usuário para um Item de lista](find-a-ui-automation-element-for-a-list-item.md)  
+ [Obter propriedades de elemento de automação de interface do usuário](get-ui-automation-element-properties.md)  
+ [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)  
+ [Assinar eventos de automação de interface do usuário](subscribe-to-ui-automation-events.md)  
+ [Registrar um assembly do provedor do lado do cliente](register-a-client-side-provider-assembly.md)  
+ [Usar a propriedade AutomationID](use-the-automationid-property.md)

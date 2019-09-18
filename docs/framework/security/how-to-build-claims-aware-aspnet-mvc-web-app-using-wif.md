@@ -3,12 +3,12 @@ title: 'Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usand
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d245288b04d8ed3d997bc5572b40c7f8a9334e5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626126"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045442"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Como: criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -70,7 +70,7 @@ ms.locfileid: "64626126"
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Para configurar um aplicativo ASP.NET MVC para autenticação baseada em declarações  
   
-1. Adicione as definições de seção de configuração a seguir ao arquivo de configuração *Web.config*. Elas definem as seções de configuração exigidas pelo Windows Identity Foundation. Adicione as definições imediatamente após o elemento de abertura **\<configuration>**:  
+1. Adicione as definições de seção de configuração a seguir ao arquivo de configuração *Web.config*. Elas definem as seções de configuração exigidas pelo Windows Identity Foundation. Adicione as definições imediatamente após o elemento de abertura **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -100,7 +100,7 @@ ms.locfileid: "64626126"
     <authentication mode="None" />  
     ```  
   
-4. Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>**, no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>**. Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
+4. Adicione as entradas de configuração relacionadas ao Windows Identity Foundation a seguir e garanta que a URL e o número da porta do aplicativo ASP.NET correspondam aos valores na entrada **\<audienceUris>** , no atributo **realm** do elemento **\<wsFederation>** e no atributo **reply** do elemento **\<wsFederation>** . Também garanta que o valor **issuer** se ajuste à URL do STS (Serviço de Token de Segurança).  
   
     ```xml  
     <system.identityModel>  
@@ -218,4 +218,4 @@ ms.locfileid: "64626126"
   
 ## <a name="related-items"></a>Itens relacionados  
   
-- [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Como: Criar aplicativo de Web Forms ASP.NET com reconhecimento de declarações usando o WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

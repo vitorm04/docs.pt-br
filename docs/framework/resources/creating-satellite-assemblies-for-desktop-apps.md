@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970987"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045694"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 
@@ -54,7 +54,7 @@ Esse modelo hub e spoke requer que você coloque recursos em locais específicos
 
 - Informações sobre a cultura do assembly satélite devem ser incluídas nos metadados do assembly. Para armazenar o nome da cultura nos metadados do assembly satélite, você deve especificar a opção `/culture` quando usar o [Assembly Linker](../tools/al-exe-assembly-linker.md) para incorporar recursos no assembly satélite.
 
-A ilustração a seguir mostra a estrutura e os requisitos de localização de um diretório de exemplo para os aplicativos que você não está instalando no [cache de assembly global](../../framework/app-domains/gac.md). Os itens com as extensões .txt e .resources não serão fornecidos com o aplicativo final. Esses são os arquivos de recurso intermediários usados para criar os assemblies satélite finais de recursos. Neste exemplo, você poderia substituir arquivos .resx por arquivos .txt. Para obter mais informações, consulte [Empacotamento e implantação de recursos](packaging-and-deploying-resources-in-desktop-apps.md).
+A ilustração a seguir mostra a estrutura e os requisitos de localização de um diretório de exemplo para os aplicativos que você não está instalando no [cache de assembly global](../app-domains/gac.md). Os itens com as extensões .txt e .resources não serão fornecidos com o aplicativo final. Esses são os arquivos de recurso intermediários usados para criar os assemblies satélite finais de recursos. Neste exemplo, você poderia substituir arquivos .resx por arquivos .txt. Para obter mais informações, consulte [Empacotamento e implantação de recursos](packaging-and-deploying-resources-in-desktop-apps.md).
 
 A imagem a seguir mostra o diretório do assembly satélite:
 
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. Para indicar que inglês (en) é a cultura padrão do aplicativo, adicione o seguinte atributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> ao arquivo AssemblyInfo do aplicativo ou ao arquivo de código-fonte principal que será compilado no assembly principal do aplicativo.
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. Adicione suporte a culturas adicionais (en-US, fr-FR e ru-RU) ao aplicativo da seguinte maneira:  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  Você pode executar o exemplo. Isso tornará aleatoriamente uma das culturas com suporte a cultura atual e exibirá uma saudação localizada.
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Instalação de assemblies satélite no Cache de Assembly Global (GAC)  
- Em vez de instalar assemblies em um subdiretório do aplicativo local, você pode instalá-los no cache de assembly global. Isso é particularmente útil se você tiver bibliotecas de classes e assemblies de recursos de biblioteca de classe usados por vários aplicativos.
+Em vez de instalar assemblies em um subdiretório do aplicativo local, você pode instalá-los no cache de assembly global. Isso é particularmente útil se você tiver bibliotecas de classes e assemblies de recursos de biblioteca de classe usados por vários aplicativos.
   
- A instalação de assemblies no cache de assembly global exige que eles tenham nomes fortes. Assemblies com nomes fortes são assinados com um par de chaves públicas/privadas válido. Elas contêm informações de versão que o tempo de execução usa para determinar qual assembly usar para atender a uma solicitação de associação. Para obter mais informações sobre nomes fortes e controle de versão, consulte [Controle de versão do assembly](../../standard/assembly/versioning.md). Para obter mais informações sobre nomes fortes, consulte [Assemblies com nome forte](../../standard/assembly/strong-named.md).
+A instalação de assemblies no cache de assembly global exige que eles tenham nomes fortes. Assemblies com nomes fortes são assinados com um par de chaves públicas/privadas válido. Elas contêm informações de versão que o tempo de execução usa para determinar qual assembly usar para atender a uma solicitação de associação. Para obter mais informações sobre nomes fortes e controle de versão, consulte [Controle de versão do assembly](../../standard/assembly/versioning.md). Para obter mais informações sobre nomes fortes, consulte [Assemblies com nome forte](../../standard/assembly/strong-named.md).
   
- Quando você estiver desenvolvendo um aplicativo, é improvável que tenha acesso ao par de chaves públicas/privadas final. Para instalar um assembly satélite no cache de assembly global e garantir que ele funcione conforme o esperado, você pode usar uma técnica chamada assinatura atrasada. Quando você atrasar a assinatura de um assembly, no momento da compilação, reserve espaço no arquivo para a assinatura de nome forte. A assinatura real é atrasada até mais tarde, quando o par de chaves públicas/privadas final ficar disponível. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com atraso de um assembly](../../standard/assembly/delay-sign.md).
+Quando você estiver desenvolvendo um aplicativo, é improvável que tenha acesso ao par de chaves públicas/privadas final. Para instalar um assembly satélite no cache de assembly global e garantir que ele funcione conforme o esperado, você pode usar uma técnica chamada assinatura atrasada. Quando você atrasar a assinatura de um assembly, no momento da compilação, reserve espaço no arquivo para a assinatura de nome forte. A assinatura real é atrasada até mais tarde, quando o par de chaves públicas/privadas final ficar disponível. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com atraso de um assembly](../../standard/assembly/delay-sign.md).
   
 ### <a name="obtaining-the-public-key"></a>Obtenção da chave pública  
- Para atrasar a assinatura de um assembly, você deve ter acesso à chave pública. Você pode obter a chave pública real da organização para sua empresa que fará a eventual assinatura, ou criar uma chave pública usando a [Ferramenta de Nome Forte (Sn.exe)](../tools/sn-exe-strong-name-tool.md).
+
+Para atrasar a assinatura de um assembly, você deve ter acesso à chave pública. Você pode obter a chave pública real da organização para sua empresa que fará a eventual assinatura, ou criar uma chave pública usando a [Ferramenta de Nome Forte (Sn.exe)](../tools/sn-exe-strong-name-tool.md).
   
- O comando a seguir Sn.exe cria um par de chaves públicas/privadas de teste. A opção **– k** especifica que Sn.exe deve criar um novo par de chaves e salvá-lo em um arquivo chamado TestKeyPair.snk.
+O comando a seguir Sn.exe cria um par de chaves públicas/privadas de teste. A opção **– k** especifica que Sn.exe deve criar um novo par de chaves e salvá-lo em um arquivo chamado TestKeyPair.snk.
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Instalação de assemblies satélite no Cache de Assembly Global (GAC)
 
-Quando o tempo de execução procura recursos no processo de fallback de recursos, ele examina o [cache de assembly global](../../framework/app-domains/gac.md) primeiro. (Para obter mais informações, consulte a seção "Processo de fallback de recurso" do tópico [Empacotamento e implantação de recursos](packaging-and-deploying-resources-in-desktop-apps.md).) Assim que um assembly satélite é assinado com um nome forte, ele pode ser instalado no cache de assembly global usando a [ferramenta Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
+Quando o tempo de execução procura recursos no processo de fallback de recursos, ele examina o [cache de assembly global](../app-domains/gac.md) primeiro. (Para obter mais informações, consulte a seção "Processo de fallback de recurso" do tópico [Empacotamento e implantação de recursos](packaging-and-deploying-resources-in-desktop-apps.md).) Assim que um assembly satélite é assinado com um nome forte, ele pode ser instalado no cache de assembly global usando a [ferramenta Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
 
 O comando a seguir Gacutil.exe instala o StringLibrary.resources.dll no cache de assembly global:
 

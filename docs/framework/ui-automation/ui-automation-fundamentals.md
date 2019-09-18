@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: da333fcd5f76359400e44511820ad9aa34e83bd7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 371d52a09445f735efb41b02780c65579207724f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911480"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042122"
 ---
 # <a name="ui-automation-fundamentals"></a>Fundamentos de automação da interface do usuário
 > [!NOTE]
@@ -20,14 +20,14 @@ ms.locfileid: "69911480"
  Esta seção contém visões gerais de alto nível da [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [Automação de interface do usuário e Acessibilidade Ativa da Microsoft](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Visão geral de propriedades de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [Visão geral sobre eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [Visão geral de segurança de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [Usando automação de interface do usuário para testes automatizados](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [Visão geral de Automação da Interface do Usuário](ui-automation-overview.md)  
+ [Automação de interface do usuário e Acessibilidade Ativa da Microsoft](ui-automation-and-microsoft-active-accessibility.md)  
+ [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)  
+ [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)  
+ [Visão geral de propriedades de automação de interface do usuário](ui-automation-properties-overview.md)  
+ [Visão geral sobre eventos de automação de interface do usuário](ui-automation-events-overview.md)  
+ [Visão geral de segurança de automação de interface do usuário](ui-automation-security-overview.md)  
+ [Usando automação de interface do usuário para testes automatizados](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Automation>  

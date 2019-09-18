@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61792997"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045825"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nomes de tipo totalmente qualificado
 
@@ -143,13 +143,13 @@ Se o namespace fosse `Ozzy.Out+Back`, o sinal de adição deve ser precedido por
 
 A informação mínima necessária em uma especificação de nome do assembly é o nome textual (IDENTIFIER) do assembly. Você pode seguir o IDENTIFIER de uma lista separada por vírgulas de pares propriedade/valor, conforme descrito na tabela a seguir. A nomenclatura do IDENTIFIER deve seguir as regras de nomenclatura de arquivo. O IDENTIFIER não diferencia maiúsculas de minúsculas.
 
-|Property name|DESCRIÇÃO|Valores permitidos|
+|Property name|Descrição|Valores permitidos|
 |-------------------|-----------------|----------------------|
 |**Versão**|Número de versão do assembly|*Major.Minor.Build.Revision*, em que *Major*, *Minor*, *Build* e *Revision* são inteiro entre 0 e 65535, inclusive.|
 |**PublicKey**|Chave pública completa|O valor da cadeia de caracteres da chave pública completa em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|
 |**PublicKeyToken**|Token de chave pública (hash de 8 bytes da chave pública completa)|Valor da cadeia de caracteres do token de chave pública em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|
 |**Cultura**|Cultura do assembly|A cultura do assembly no formato RFC-1766 ou “neutra” para assemblies independente de linguagem (não satélite).|
-|**Personalizado**|BLOB (objeto binário grande) personalizado. No momento, isso é usado apenas em assemblies gerados pelo [Ngen (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|A cadeia de caracteres personalizada usada pela ferramenta do Gerador de Imagens Nativas para notificar o cache de assembly que o assembly que está sendo instalado é uma imagem nativa e, portanto, deve ser instalada no cache de imagens nativas. Também chamado de cadeia de caracteres zap.|
+|**Personalizado**|BLOB (objeto binário grande) personalizado. No momento, isso é usado apenas em assemblies gerados pelo [Ngen (Gerador de Imagens Nativas)](../tools/ngen-exe-native-image-generator.md).|A cadeia de caracteres personalizada usada pela ferramenta do Gerador de Imagens Nativas para notificar o cache de assembly que o assembly que está sendo instalado é uma imagem nativa e, portanto, deve ser instalada no cache de imagens nativas. Também chamado de cadeia de caracteres zap.|
 
 A exemplo a seguir mostra um **AssemblyName** para um assembly de nome simples com cultura padrão.
 
@@ -224,4 +224,4 @@ Para **ModuleBuilder.GetType**, `MyArray[0..5]` indica uma matriz de dimensão �
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Exibindo informações de tipo](viewing-type-information.md)

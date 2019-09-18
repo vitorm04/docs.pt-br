@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: aef1d31499f65834fa1268147e45f82294fe560a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8b1492bbc9f761c08b178bf42bdf5287bc5ebfb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935685"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043204"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementando o padrão de controle SelectionItem de interface de usuário
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69935685"
   
  Este tópico apresenta as diretrizes e convenções para <xref:System.Windows.Automation.Provider.ISelectionItemProvider>implementar o, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listados no final da visão geral.  
   
- O <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle é usado para dar suporte a controles que atuam como itens filho selecionáveis individuais de <xref:System.Windows.Automation.Provider.ISelectionProvider>controles de contêiner que implementam. Para obter exemplos de controles que implementam o padrão de controle SelectionItem, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ O <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle é usado para dar suporte a controles que atuam como itens filho selecionáveis individuais de <xref:System.Windows.Automation.Provider.ISelectionProvider>controles de contêiner que implementam. Para obter exemplos de controles que implementam o padrão de controle SelectionItem, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md)  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
@@ -50,10 +50,10 @@ ms.locfileid: "69935685"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementando o padrão de controle Selection de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)
+- [Suporte a padrões de controle em um provedor de automação de interface do usuário](support-control-patterns-in-a-ui-automation-provider.md)
+- [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
+- [Implementando o padrão de controle Selection de automação de interface do usuário](implementing-the-ui-automation-selection-control-pattern.md)
+- [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
+- [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)
 - [Exemplo de provedor de fragmento](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894756"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044002"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  Todo o assembly é convertido de uma só vez. Não é possível usar Tlbexp.exe para gerar informações de tipo para um subconjunto dos tipos definidos em um assembly.  
   
- Não é possível usar Tlbexp.exe para produzir uma biblioteca de tipos com base em um assembly importado usando o [Importador da Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Em vez disso, você deve consultar a biblioteca de tipos original importada com Tlbimp.exe. É possível exportar uma biblioteca de tipos de um assembly que faz referência a assemblies que foram importados usando-se Tlbimp.exe. Consulte a seção de exemplos abaixo.  
+ Não é possível usar Tlbexp.exe para produzir uma biblioteca de tipos com base em um assembly importado usando o [Importador da Biblioteca de Tipos (Tlbimp.exe)](tlbimp-exe-type-library-importer.md). Em vez disso, você deve consultar a biblioteca de tipos original importada com Tlbimp.exe. É possível exportar uma biblioteca de tipos de um assembly que faz referência a assemblies que foram importados usando-se Tlbimp.exe. Consulte a seção de exemplos abaixo.  
   
  Tlbexp.exe coloca bibliotecas de tipos geradas no diretório de trabalho atual ou no diretório especificado para o arquivo de saída. Um único assembly pode fazer várias bibliotecas de tipos serem geradas.  
   
- Tlbexp.exe gera uma biblioteca de tipos, mas não a registra. Isso difere da [Ferramenta de Registro do Assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), que gera e registra uma biblioteca de tipos. Para gerar e registrar uma biblioteca de tipos com COM, use Regasm.exe.  
+ Tlbexp.exe gera uma biblioteca de tipos, mas não a registra. Isso difere da [Ferramenta de Registro do Assembly (Regasm.exe)](regasm-exe-assembly-registration-tool.md), que gera e registra uma biblioteca de tipos. Para gerar e registrar uma biblioteca de tipos com COM, use Regasm.exe.  
   
  Se você não especificar `/win32` ou a opção `/win64`, Tlbexp.exe gerará uma biblioteca de tipos 32 ou 64 bits que corresponde ao tipo do computador no qual você está executando a compilação (computador 32 bits ou 64 bits). Para fins de compilação cruzada, é possível usar a opção `/win64` em um computador 32 bits para gerar uma biblioteca de tipos 64 bits e usar a opção `/win32` em um computador 64 bits para gerar uma biblioteca de tipos 32 bits. Em bibliotecas de tipos 32 bits, o valor <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> é definido como <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>. Em bibliotecas de tipos 64 bits, o valor <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> é definido como <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>. Todas as transformações de tipo de dados (por exemplo, tipos de dados do tamanho de ponteiro como, por exemplo, `IntPtr` e `UIntPtr`) são convertidas adequadamente.  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Regasm.exe (Ferramenta de Registro de Assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Ferramentas](index.md)
+- [Regasm.exe (Ferramenta de Registro de Assembly)](regasm-exe-assembly-registration-tool.md)
 - [Resumo da conversão de assemblies em bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (Importador de Biblioteca de Tipos)](tlbimp-exe-type-library-importer.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

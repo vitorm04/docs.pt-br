@@ -2,12 +2,12 @@
 title: Tabela de decisões. Estruturas .NET a serem usadas para o Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Tabela de decisões, estruturas .NET a serem usadas para o Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 96b2750e52d64b06444b7f87dea624879f37d3d7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675813"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039672"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Tabela de decisões: estruturas .NET a serem usadas para o Docker
 
@@ -16,74 +16,18 @@ A tabela de decisão a seguir resume se deve-se usar o .NET Framework ou o .NET 
 > [!IMPORTANT]
 > Os computadores de desenvolvimento executarão um host Docker, seja Linux ou Windows. Microsserviços relacionados que você deseja executar e testar em conjunto em uma solução precisarão ser executados na mesma plataforma de contêiner.
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>Arquitetura/tipo de aplicativo</strong></th>
-<th><strong>Contêineres do Linux</strong></th>
-<th><strong>Contêineres do Windows</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Microsserviços em contêineres</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>Aplicativo monolítico</td>
-<td>.NET Core</td>
-<td><p>.NET Framework</p>
-<p>.NET Core</p></td>
-</tr>
-<tr class="odd">
-<td>Melhores desempenho e escalabilidade da categoria</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>Migração do aplicativo herdado do Windows Server ("campo-marrom") para contêineres</td>
-<td>--</td>
-<td>.NET Framework</td>
-</tr>
-<tr class="odd">
-<td>Novo desenvolvimento baseado em contêiner ("campo-verde")</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>ASP.NET Core</td>
-<td>.NET Core</td>
-<td><p>.NET Core (recomendado)</p>
-<p>.NET Framework</p></td>
-</tr>
-<tr class="odd">
-<td>ASP.NET 4 (MVC 5, API Web 2 e Web Forms)</td>
-<td>--</td>
-<td>.NET Framework</td>
-</tr>
-<tr class="even">
-<td>Serviços SignalR</td>
-<td>.NET Core 2.1 ou versão posterior</td>
-<td><p>.NET Framework</p>
-<p>.NET Core 2.1 ou versão posterior</p></td>
-</tr>
-<tr class="odd">
-<td>WCF, WF e outras estruturas herdadas</td>
-<td>WCF no .NET Core (somente a biblioteca de clientes WCF)</td>
-<td><p>.NET Framework</p>
-<p>WCF no .NET Core (somente a biblioteca de clientes WCF)</p></td>
-</tr>
-<tr class="even">
-<td>Consumo de serviços do Azure</td>
-<td><p>.NET Core</p>
-<p>(eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core)</p></td>
-<td><p>.NET Framework</p>
-<p>.NET Core</p>
-<p>(eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core)</p></td>
-</tr>
-</tbody>
-</table>
+| Arquitetura/tipo de aplicativo | Contêineres do Linux | Contêineres do Windows |
+|-------------------------|------------------|--------------------|
+| Microsserviços em contêineres | .NET Core | .NET Core |
+| Aplicativo monolítico | .NET Core | .NET Framework <br/> .NET Core |
+| Melhores desempenho e escalabilidade da categoria | .NET Core | .NET Core |
+| Migração do aplicativo herdado do Windows Server ("campo-marrom") para contêineres | -- | .NET Framework |
+| Novo desenvolvimento baseado em contêiner ("campo-verde") | .NET Core | .NET Core |
+| ASP.NET Core | .NET Core | .NET Core (recomendado) <br/> .NET Framework |
+| ASP.NET 4 (MVC 5, API Web 2 e Web Forms) | -- | .NET Framework |
+| Serviços SignalR | .NET Core 2.1 ou versão posterior | .NET Framework <br/> .NET Core 2.1 ou versão posterior |
+| WCF, WF e outras estruturas herdadas | WCF no .NET Core (somente biblioteca de cliente) | .NET Framework <br/> WCF no .NET Core (somente biblioteca de cliente) |
+| Consumo de serviços do Azure | .NET Core <br/> (eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core) | .NET Framework <br/> .NET Core <br/> (eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core) |
 
 >[!div class="step-by-step"]
 >[Anterior](net-framework-container-scenarios.md)

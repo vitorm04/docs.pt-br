@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674813"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040285"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -204,28 +204,37 @@ O Dockerfile inicial pode ser como este:
 
 E estes são os detalhes, linha por linha:
 
-<!-- markdownlint-disable MD029-->
-1. Inicie um estágio com uma imagem base "pequena" somente em tempo de execução, chamando-a de **base** para referência.
-2. Crie o diretório **/app** na imagem.
-3. Exponha a porta **80**.
-<!-- skip -->
-5. Inicie um novo estágio com imagem "grande" para build/publicação, chamando-a de **build** para referência.
-6. Crie o diretório **/src** na imagem.
-7. Até a linha 16, copie os arquivos de projetos **.csproj** referenciados, para poder restaurar os pacotes mais tarde.
-<!-- skip -->
-17. Restaure os pacotes do projeto **Catalog.API** e os projetos referenciados.
-18. Copie **toda a árvores de diretórios da solução** (exceto os arquivos/diretórios incluídos no arquivo **.dockerignore**) para o diretório **/src** na imagem.
-19. Altere a pasta atual para o projeto **Catalog.API**.
-20. Compile o projeto (e outras dependências do projeto) e emita a saída no diretório **/app** na imagem.
-<!-- skip -->
-22. Comece um novo estágio continuando do build, chamando-o de **publicar** para referência.
-23. Publique o projeto (e as dependências) e emita a saída para o diretório **/app** na imagem.
-<!-- skip -->
-25. Comece um novo estágio continuando da **base** e chame-o de **final**
-26. Altere o diretório atual para **/app**
-27. Copie o diretório **/app** do estágio **publicar** no diretório atual
-28. Defina o comando a ser executado quando o contêiner for iniciado.
-<!-- markdownlint-enable MD029-->
+- **#1 de linha:** Inicie um estágio com uma imagem base "pequena" somente em tempo de execução, chamando-a de **base** para referência.
+
+- **#2 de linha:** Crie o diretório **/app** na imagem.
+
+- **#3 de linha:** Exponha a porta **80**.
+
+- **#5 de linha:** Comece um novo estágio com a imagem "grande" para criação/publicação. Chame-o **Build** para referência.
+
+- **#6 de linha:** Crie o diretório **/src** na imagem.
+
+- **#7 de linha:** Até a linha 16, copie os arquivos de projeto **. csproj** referenciados para poder restaurar pacotes posteriormente.
+
+- **#17 de linha:** Restaure os pacotes do projeto **Catalog.API** e os projetos referenciados.
+
+- **#18 de linha:** Copie **toda a árvore de diretórios da solução** (exceto os arquivos/diretórios incluídos no arquivo **. dockerignore** ) para o diretório **/src** na imagem.
+
+- **#19 de linha:** Altere a pasta atual para o projeto **Catalog. API** .
+
+- **#20 de linha:** Compile o projeto (e outras dependências do projeto) e a saída para o diretório **/app** na imagem.
+
+- **#22 de linha:** Iniciar um novo estágio continuando a partir da compilação. Chame-o de **publicar** para referência.
+
+- **#23 de linha:** Publique o projeto (e as dependências) e a saída para o diretório **/app** na imagem.
+
+- **#25 de linha:** Inicie um novo estágio continuando da **base** e chame-o **final**.
+
+- **#26 de linha:** Altere o diretório atual para **/app**.
+
+- **#27 de linha:** Copie o diretório **/app** do estágio **Publish** para o diretório atual.
+
+- **#28 de linha:** Defina o comando a ser executado quando o contêiner for iniciado.
 
 Agora vamos explorar algumas otimizações para melhorar o desempenho de todo o processo que, no caso do eShopOnContainers, significa cerca de 22 minutos ou mais para criar a solução completa em contêineres do Linux.
 
@@ -239,9 +248,9 @@ COPY . .
 
 Ele seria igual para cada serviço, ele poderia copiar toda a solução e criar uma camada maior, mas:
 
-1) o processo de cópia seria executado somente na primeira vez (e durante a recriação, se algum arquivo fosse alterado) e usaria o cache para todos os outros serviços e
+1. o processo de cópia seria executado somente na primeira vez (e durante a recriação, se algum arquivo fosse alterado) e usaria o cache para todos os outros serviços e
 
-2) como a imagem maior ocorre em um estágio intermediário, ela não afeta o tamanho da imagem final.
+2. como a imagem maior ocorre em um estágio intermediário, ela não afeta o tamanho da imagem final.
 
 A próxima otimização significativa envolve o comando `restore` executado na linha 17, que também é diferente para cada serviço do eShopOnContainers. Se você alterar essa linha para apenas:
 

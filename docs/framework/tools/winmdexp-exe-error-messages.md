@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9844505516550b9d817b52c72cea15a2468f7b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
-ms.translationtype: HT
+ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025958"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043983"
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensagens de erro do winmdexp.exe
-O processo de compilação chama [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quando você usa o modelo **Componente do Tempo de Execução do Windows** no Visual Studio 2012, portanto, as mensagens de erro de Winmdexp.exe aparecem na **Lista de Erros**. O Winmdexp.exe opera em um módulo compilado com a opção `/target:winmdobj`. Como ele requer um módulo compilado como entrada, suas mensagens de erro não aparecerão se a compilação for bem-sucedida.  
+O processo de compilação chama [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime)](winmdexp-exe-windows-runtime-metadata-export-tool.md) quando você usa o modelo **Componente do Tempo de Execução do Windows** no Visual Studio 2012, portanto, as mensagens de erro de Winmdexp.exe aparecem na **Lista de Erros**. O Winmdexp.exe opera em um módulo compilado com a opção `/target:winmdobj`. Como ele requer um módulo compilado como entrada, suas mensagens de erro não aparecerão se a compilação for bem-sucedida.  
   
  As mensagens de erro foram projetadas para conter todas as informações necessárias para resolver as condições de erro relatadas. No entanto, alguns problemas exigem mais informações do que a mensagem pode conter. Encontre informações adicionais em [Diagnosticando condições de erro do componente do Tempo de Execução do Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127) no Centro de Desenvolvimento do Windows.  
   
@@ -175,5 +175,5 @@ O processo de compilação chama [Winmdexp.exe (Ferramenta de Exportação de Me
   
 ## <a name="see-also"></a>Consulte também
 
-- [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Winmdexp.exe (Ferramenta de Exportação de Metadados do Tempo de Execução do Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnosticando condições de erro do componente do Tempo de Execução do Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127)

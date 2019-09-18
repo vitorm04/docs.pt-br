@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
-ms.translationtype: HT
+ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422352"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044516"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
 
 A Manifest Generation and Editing Tool (*Mage.exe*) é uma ferramenta de linha de comando compatível com a criação e a edição dos manifestos de aplicativo e implantação. Como uma ferramenta de linha de comando, *Mage.exe* pode ser executado com base tanto em scripts de lote quanto em aplicativos com base no Windows, inclusive aplicativos do ASP.NET.
 
-Também é possível usar *MageUI.exe*, um aplicativo gráfico, em vez de *Mage.exe*. Para obter mais informações, consulte [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+Também é possível usar *MageUI.exe*, um aplicativo gráfico, em vez de *Mage.exe*. Para obter mais informações, consulte [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio. Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio. Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
 Duas versões do *Mage.exe* e *MageUI.exe* são incluídas no Visual Studio. Para ver informações da versão, execute *MageUI.exe*, selecione **Ajuda** e então selecione **Sobre**. Esta documentação descreve a versão 4.0.x.x do *Mage.exe* e do *MageUI.exe*.
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 A tabela a seguir mostra os comandos compatíveis com *Mage.exe*. Para obter mais informações sobre as opções compatíveis com esses comandos, confira [Opções de comando novas e atualizadas](#new-and-update-command-options) e [Opções do comando de entrada](#sign-command-options).
 
-|Comando|DESCRIÇÃO|
+|Comando|Descrição|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Limpa o cache do aplicativo baixado somente de todos os aplicativos online.|
 |**-n, -New** *fileType [newOptions]*|Cria um novo arquivo do tipo indicado. Os tipos válidos são:<br /><br /> -   `Deployment`: Cria um novo manifesto de implantação.<br />-   `Application`: Cria um novo manifesto de aplicativo.<br /><br /> Se você não especificar parâmetros adicionais com esse comando, ele criará um arquivo do tipo apropriado, com as marcas padrão adequadas e os valores de atributo.<br /><br /> Use a opção **-ToFile** (consulte na tabela a seguir) para especificar o nome e o caminho do arquivo novo.<br /><br /> Use a opção **-FromDirectory** (consulte na tabela a seguir) para criar um manifesto do aplicativo com todos os assemblies de um aplicativo adicionado à seção \<dependency> do manifesto.|
@@ -45,7 +45,7 @@ A tabela a seguir mostra os comandos compatíveis com *Mage.exe*. Para obter mai
 
 A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Update`:
 
-|Opções|Valor padrão|Aplica-se a|DESCRIÇÃO|
+|Opções|Valor padrão|Aplica-se a|Descrição|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|Especifica o algoritmo com o qual gerar resumos de dependência. O valor deve ser "sha256RSA" ou "sha1RSA.<br /><br /> Use com a opção "-Update". Essa opção é ignorada durante o uso da opção "-Sign"|
 |**-appc, -AppCodeBase** `manifestReference`||Manifestos de implantação.|Insere uma referência de URL ou de caminho do arquivo no arquivo de manifesto do aplicativo. Esse valor deve ser o caminho completo do manifesto de aplicativo.|
@@ -76,7 +76,7 @@ A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Upd
 
 A tabela a seguir mostra as opções compatíveis com o comando `-Sign`, que se aplicam a todos os tipos de arquivos.
 
-|Opções|DESCRIÇÃO|
+|Opções|Descrição|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Especifica o local de um certificado digital para assinar um manifesto. Essa opção poderá ser usada com a opção **-Password** se o certificado exigir uma senha para arquivos PFX (Personal Information Exchange). A partir do .NET Framework 4.7, se o arquivo não contiver uma chave privada, será necessário usar uma combinação das opções **-CryptoProvider** e **-KeyContainer**.<br/><br/>A partir do .NET Framework 4.6.2, *Mage.exe* assina os manifestos com CNG, bem como os certificados CAPI.|
 |**-ch, -CertHash** `hashSignature`|O hash de um certificado digital armazenado no repositório de certificados pessoais do computador cliente. Isso corresponde à propriedade Impressão Digital de um certificado digital exibido no Windows Certificates Console.<br /><br /> `hashSignature` pode ter maiúsculas ou minúsculas e ser fornecido como uma única cadeia de caracteres ou com cada octeto da Impressão Digital separado por espaços e toda a Impressão Digital entre aspas.|
@@ -107,7 +107,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  A opção **-TrustLevel** para manifestos do aplicativo descreve o conjunto de permissões que um aplicativo precisa para ser executado no computador cliente. Por padrão, os aplicativos recebem um nível de confiança com base na *zona* em que a URL reside. Os aplicativos implantados em uma rede corporativa costumam ser colocados na zona Intranet, enquanto os implantados na Internet são colocados na zona Internet. Ambas as zonas de segurança impõem restrições sobre o acesso do aplicativo a recursos locais, com a zona Intranet um pouco mais permissiva do que a zona Internet. A zona FullTrust dá aos aplicativos acesso completo para recursos locais de um computador. Se você usar a opção **-TrustLevel** para colocar um aplicativo nessa zona, o componente Gerenciador de Confiança do CLR solicitará ao usuário decidir se deseja conceder ou não esse nível de confiança mais alto. Se estiver implantando o aplicativo em uma rede corporativa, você poderá usar a Implantação do Aplicativo de Confiança para aumentar o nível de confiança do aplicativo sem perguntar ao usuário.
 
- Os manifestos de aplicativo também dão suporte a seções de confiança personalizadas. Isso ajuda o aplicativo a obedecer o princípio de segurança de solicitar permissão mínima, porque é possível configurar o manifesto para exigir apenas essas permissões específicas que o aplicativo exige para execução. *Mage.exe* não dá suporte direto à adição de uma seção de confiança personalizada. É possível adicionar uma usando um editor de texto, um analisador XML ou a ferramenta gráfica *MageUI.exe*. Para obter mais informações sobre como usar *MageUI.exe* para adicionar seções de confiança personalizadas, veja [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+ Os manifestos de aplicativo também dão suporte a seções de confiança personalizadas. Isso ajuda o aplicativo a obedecer o princípio de segurança de solicitar permissão mínima, porque é possível configurar o manifesto para exigir apenas essas permissões específicas que o aplicativo exige para execução. *Mage.exe* não dá suporte direto à adição de uma seção de confiança personalizada. É possível adicionar uma usando um editor de texto, um analisador XML ou a ferramenta gráfica *MageUI.exe*. Para obter mais informações sobre como usar *MageUI.exe* para adicionar seções de confiança personalizadas, veja [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
 O Visual Studio 2017 inclui a versão 4.6.1 de *Mage.exe*. Os manifestos criados com essa versão de *Mage.exe* definem o .NET Framework 4 como destino. Para definir versões mais antigas do .NET Framework como destino, use uma versão anterior de *Mage.exe*.
 
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Passo a passo: Como implantar manualmente aplicativos ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [MageUI.exe (Manifest Generation and Editing Tool, cliente gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

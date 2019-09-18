@@ -8,12 +8,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: ef3d03bee412b97ed88ec76e81ad2fd19a9595eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a60253e62f814e9e3ea7ed4c5720e98e470d7f79
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968953"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043598"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>Implementar provedores de automação de interface do usuário em um aplicativo cliente
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "69968953"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral dos provedores de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Registrar um assembly do provedor do lado do cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
-- [Criar um provedor de automação de interface do usuário do lado do cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Implementação de provedor de automação de interface do usuário do lado do cliente](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)
+- [Visão geral dos provedores de automação de interface do usuário](ui-automation-providers-overview.md)
+- [Registrar um assembly do provedor do lado do cliente](register-a-client-side-provider-assembly.md)
+- [Criar um provedor de automação de interface do usuário do lado do cliente](create-a-client-side-ui-automation-provider.md)
+- [Implementação de provedor de automação de interface do usuário do lado do cliente](client-side-ui-automation-provider-implementation.md)

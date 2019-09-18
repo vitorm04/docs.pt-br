@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868589"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049753"
 ---
-# <a name="genericparameter-element-net-native"></a>\<GenericParameter > (.NET nativo)
+# <a name="genericparameter-element-net-native"></a>\<Elemento de > GenericParameter (.NET Native)
 Aplica a política ao tipo de parâmetro de um tipo ou método genérico.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -59,7 +59,7 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -68,11 +68,11 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de tempo reflexão de execução a um tipo específico, como uma classe ou estrutura.|  
+|[\<Method>](method-element-net-native.md)|Aplica a política de reflexão de tempo de execução a um construtor ou método.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de tempo reflexão de execução a um tipo específico, como uma classe ou estrutura.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `<GenericParameter>` é filho do elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) ou [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e é usado para aplicar a política a um parâmetro de tipo genérico específico, que é especificado pelo seu nome no tipo genérico ou na assinatura do método.  
+ O elemento `<GenericParameter>` é filho do elemento [\<Method>](method-element-net-native.md) ou [\<Type>](type-element-net-native.md) e é usado para aplicar a política a um parâmetro de tipo genérico específico, que é especificado pelo seu nome no tipo genérico ou na assinatura do método.  
   
  O elemento `<GenericParameter>` é mais útil quando usado com serializadores. O exemplo a seguir usa o elemento `<GenericParameter>` para aplicar a política ao tipo `T` em chamadas a sobrecargas do método [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) do serializador JSON da NewtonSoft.  
   
@@ -88,8 +88,8 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
-- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Elemento \<Method>](method-element-net-native.md)
+- [\<Elemento de > de tipo](type-element-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)

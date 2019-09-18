@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044150"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042774"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementação do provedor de automação de interface do usuário no lado do servidor
 
@@ -34,7 +34,7 @@ Em particular, não use campos de classes em UIAutomationClient. dll, como as do
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Implementação de provedor por elementos de Windows Presentation Foundation
 
-Para obter mais informações sobre este tópico, consulte [automação da interface do usuário de um controle personalizado do WPF](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Para obter mais informações sobre este tópico, consulte [automação da interface do usuário de um controle personalizado do WPF](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ Os provedores de controles baseados em HWND normalmente não precisam fornecer a
 >
 > O <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> geralmente é fornecido pelo provedor de host. Por exemplo, se um controle personalizado for derivado de <xref:System.Windows.Forms.Control>, o nome será derivado `Text` da Propriedade do controle.
 
-Para obter um exemplo de código, consulte [Propriedades de retorno de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).
+Para obter um exemplo de código, consulte [Propriedades de retorno de um provedor de automação de interface do usuário](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ Para fazer isso, o provedor raiz do fragmento do rebar expõe um conjunto de fil
 
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral dos provedores de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Expor um provedor de automação de interface do usuário do lado do servidor](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Retornar as propriedades de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Disparar eventos de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Habilitar navegação de um provedor de fragmento de automação de interface do usuário](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Visão geral dos provedores de automação de interface do usuário](ui-automation-providers-overview.md)
+- [Expor um provedor de automação de interface do usuário do lado do servidor](expose-a-server-side-ui-automation-provider.md)
+- [Retornar as propriedades de um provedor de automação de interface do usuário](return-properties-from-a-ui-automation-provider.md)
+- [Disparar eventos de um provedor de automação de interface do usuário](raise-events-from-a-ui-automation-provider.md)
+- [Habilitar navegação de um provedor de fragmento de automação de interface do usuário](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Suporte a padrões de controle em um provedor de automação de interface do usuário](support-control-patterns-in-a-ui-automation-provider.md)

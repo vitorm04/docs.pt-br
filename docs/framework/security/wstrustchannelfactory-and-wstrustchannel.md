@@ -3,12 +3,12 @@ title: WSTrustChannelFactory e WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633179"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044909"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se você já estiver familiarizado com o WCF (Windows Communication Foundation), saberá que um cliente WCF já é baseado em federação. Configurando um cliente WCF com uma <xref:System.ServiceModel.WSFederationHttpBinding> ou uma associação personalizada semelhante, você pode habilitar a autenticação federada em um serviço.
@@ -25,7 +25,7 @@ Se você já estiver familiarizado com o WCF (Windows Communication Foundation),
 
 - Uso do WIF sozinho para obter um token do STS e, em seguida, permissão para que um cliente WCF se autentique com esse token. Para obter mais informações, consulte a amostra [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- O primeiro cenário é autoexplicativo: Os clientes WCF existentes continuarão a trabalhar com partes confiáveis do WIF e STSs. Este tópico aborda os dois cenários restantes.
+ O primeiro cenário é auto-explicativo: Os clientes WCF existentes continuarão a funcionar com as partes confiantes do WIF e o STSs. Este tópico aborda os dois cenários restantes.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Melhorando um cliente WCF existente com ActAs/OnBehalfOf
 Em um cenário típico de delegação de identidade, um cliente chama um serviço de camada intermediária, que, em seguida, chama um serviço back-end. O serviço de camada intermediária atua como ou em nome do cliente.
@@ -33,7 +33,7 @@ Em um cenário típico de delegação de identidade, um cliente chama um serviç
 > [!TIP]
 > Qual é a diferença entre ActAs e OnBehalfOf?
 >
-> Do ponto de vista de protocolo WS-Trust:
+> Do ponto de vista do protocolo WS-Trust:
 >
 > 1. Um elemento RST ActAs indica que o solicitante deseja obter um token que contém declarações sobre duas entidades distintas: o solicitante e uma entidade externa representada pelo token no elemento ActAs.
 > 2. Um elemento RST OnBehalfOf indica que o solicitante deseja obter um token que contém declarações somente sobre uma entidade: a entidade externa representada pelo token no elemento OnBehalfOf.
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 Observe que o parâmetro `out` no método <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> permite o acesso ao RSTR para a inspeção do lado do cliente.
 
-Até agora, você apenas viu como obter um token. O token retornado do objeto <xref:System.ServiceModel.Security.WSTrustChannel> é um `GenericXmlSecurityToken` que contém todas as informações necessárias para a autenticação em uma terceira parte confiável. O exemplo de código a seguir mostra como usar esse token.
+Até agora, você viu apenas como obter um token. O token retornado do objeto <xref:System.ServiceModel.Security.WSTrustChannel> é um `GenericXmlSecurityToken` que contém todas as informações necessárias para a autenticação em uma terceira parte confiável. O exemplo de código a seguir mostra como usar esse token.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ O método de extensão <xref:System.ServiceModel.ChannelFactory%601.CreateChanne
 
 ## <a name="see-also"></a>Consulte também
 
-- [Recursos do WIF](../../../docs/framework/security/wif-features.md)
+- [Recursos do WIF](wif-features.md)

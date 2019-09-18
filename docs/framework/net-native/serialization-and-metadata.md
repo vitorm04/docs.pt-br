@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913797"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049182"
 ---
 # <a name="serialization-and-metadata"></a>Serialização e metadados
 
@@ -22,7 +22,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializadores de terceiros
 
- Serializadores de terceiros, incluindo o Newtonsoft.JSON, normalmente são baseadas em reflexão. Dado um BLOB (objeto binário grande) de dados serializados, os campos nos dados são atribuídos a um tipo concreto examinando os campos do tipo de destino por nome. No mínimo, usar essas bibliotecas causa exceções [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) para cada objeto <xref:System.Type> que você tentar serializar ou desserializar em uma coleção `List<Type>`.  
+ Serializadores de terceiros, incluindo o Newtonsoft.JSON, normalmente são baseadas em reflexão. Dado um BLOB (objeto binário grande) de dados serializados, os campos nos dados são atribuídos a um tipo concreto examinando os campos do tipo de destino por nome. No mínimo, usar essas bibliotecas causa exceções [MissingMetadataException](missingmetadataexception-class-net-native.md) para cada objeto <xref:System.Type> que você tentar serializar ou desserializar em uma coleção `List<Type>`.  
   
  A maneira mais fácil para solucionar problemas causados pela falta de metadados para esses serializadores é coletar tipos que serão usados na serialização de um único namespace (como `App.Models`) e aplicar uma diretiva de metadados `Serialize` a ele:  
   
@@ -30,7 +30,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Para obter informações sobre a sintaxe usada no exemplo, consulte [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md).  
+ Para obter informações sobre a sintaxe usada no exemplo, consulte [Elemento \<Namespace>](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Serializadores da Microsoft
@@ -67,11 +67,11 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Para obter informações sobre a sintaxe usada no exemplo, consulte [Elemento \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
+ Para obter informações sobre a sintaxe usada no exemplo, consulte [Elemento \<Type>](type-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<Elemento de > de tipo](../../../docs/framework/net-native/type-element-net-native.md)
-- [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [\<Elemento de > de tipo](type-element-net-native.md)
+- [Elemento \<Namespace>](namespace-element-net-native.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072335"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047397"
 ---
 # <a name="programming-pluggable-protocols"></a>Programando protocolos conectáveis
 As classes abstratas <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> fornecem a base para protocolos conectáveis. Derivando classes específicas de protocolo de <xref:System.Net.WebRequest> e de <xref:System.Net.WebResponse>, um aplicativo pode solicitar dados de um recurso de Internet e ler a resposta sem especificar o protocolo que está sendo usado.  
@@ -33,7 +33,7 @@ As classes abstratas <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse
   
 ## <a name="see-also"></a>Consulte também
 
-- [Derivando de WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
-- [Derivando de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Como: Fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+- [Derivando de WebRequest](deriving-from-webrequest.md)
+- [Derivando de WebResponse](deriving-from-webresponse.md)
+- [Programação de rede no .NET Framework](index.md)
+- [Como: Fazer a conversão de tipo de uma WebRequest para acessar propriedades específicas de protocolo](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

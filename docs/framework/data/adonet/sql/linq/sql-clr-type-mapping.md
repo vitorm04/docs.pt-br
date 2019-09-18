@@ -2,12 +2,12 @@
 title: Mapeamento de tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792529"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053035"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
@@ -44,7 +44,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matriz de comportamento em tempo de execução de mapeamento de tipo  
  O diagrama a seguir mostra o comportamento em tempo de execução esperado de mapeamentos de tipo específico quando os dados são recuperados de ou salvos no banco de dados. Com exceção da serialização, o LINQ to SQL não oferece suporte a mapeamento entre qualquer tipo de dados CLR ou SQL Server que não for especificado nesta matriz. Para obter mais informações sobre o suporte de serialização, consulte [serialização binária](#BinarySerialization).  
  
-![SQL Server à tabela de mapeamento de tipo de dados SQL CLR](media/sql-clr-type-mapping.png)
+![SQL Server à tabela de mapeamento de tipo de dados SQL CLR](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > Alguns mapeamentos de tipo podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados.  

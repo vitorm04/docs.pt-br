@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: b7b94b01f737d10b035d85ee938829e14f3af43b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e577b9d221760544e95b1d6098d0becbf5d776b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987622"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042672"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -26,10 +26,10 @@ ms.locfileid: "69987622"
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Objetos incorporados e a árvore de automação da interface do usuário  
  Os objetos inseridos são tratados como elementos individuais dentro da exibição de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] controle da árvore. Eles são expostos como filhos do contêiner de texto para que possam ser acessados por meio do mesmo modelo que outros [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]controles no.  
   
- ![Tabela inserida com imagem em um contêiner de texto](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
+ ![Tabela inserida com imagem em um contêiner de texto](./media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
 Exemplo de um contêiner de texto com objetos de tabela, imagem e hiperlink inseridos  
   
- ![Exibição de conteúdo para o exemplo anterior](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
+ ![Exibição de conteúdo para o exemplo anterior](./media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
 Exemplo da exibição de conteúdo para uma parte do contêiner de texto anterior  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>   
@@ -38,7 +38,7 @@ Exemplo da exibição de conteúdo para uma parte do contêiner de texto anterio
   
  O conteúdo textual (ou texto interno) de um contêiner de texto e um objeto incorporado, como um hiperlink ou célula de tabela, é exposto como um fluxo de texto único e contínuo na exibição de controle e na exibição de conteúdo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] da árvore; os limites de objeto são ignorados. Se um cliente de automação de interface do usuário estiver recuperando o texto com a finalidade de citar, interpretar ou analisar de alguma maneira, o intervalo de texto deverá ser verificado em casos especiais, como uma tabela com conteúdo textual ou outros objetos incorporados. Isso pode ser feito chamando <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> para obter um <xref:System.Windows.Automation.AutomationElement> para cada objeto inserido e, em seguida <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , chamar para obter um intervalo de texto para cada elemento. Isso é feito recursivamente até que todo o conteúdo textual seja recuperado.  
   
- ![Intervalos de texto abrangidos por objetos inseridos.](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+ ![Intervalos de texto abrangidos por objetos inseridos.](./media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
 Exemplo de um fluxo de texto com objetos incorporados e seus intervalos de intervalo  
   
  Quando for necessário percorrer o conteúdo de um intervalo de texto, uma série de etapas será envolvida nos bastidores para que o <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método seja executado com êxito.  
@@ -51,7 +51,7 @@ Exemplo de um fluxo de texto com objetos incorporados e seus intervalos de inter
   
 4. O intervalo é então expandido de um estado de intervalo degenerado movendo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> o ponto de extremidade <xref:System.Windows.Automation.Text.TextUnit> por um limite solicitado.  
   
- ![Ajustes de intervalo por movimento & ExpandToEnclosingUnit](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
+ ![Ajustes de intervalo por movimento & ExpandToEnclosingUnit](./media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclosingUnit ()  
   
 <a name="Common_Scenarios"></a>   
@@ -101,18 +101,18 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 ### <a name="image"></a>Image  
  **Exemplo 1 – um intervalo de texto que contém uma imagem inserida**  
   
- {O ![exemplo de imagem inserida]de imagem(../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") é inserido em texto}.  
+ {O ![exemplo de imagem inserida]de imagem(./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") é inserido em texto}.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "o é inserido em texto". Qualquer texto alternativo associado à imagem não pode ser incluído no fluxo de texto.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais <xref:System.Windows.Automation.AutomationElement> interno que inclui o intervalo de texto; nesse caso, o <xref:System.Windows.Automation.AutomationElement> que representa o próprio provedor de texto.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retorna um <xref:System.Windows.Automation.AutomationElement> representando o controle de imagem.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>em <xref:System.Windows.Automation.AutomationElement> que é o objeto retornado pelo método <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> anterior.|Retorna o intervalo de degeneração que representa "![exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>em <xref:System.Windows.Automation.AutomationElement> que é o objeto retornado pelo método <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> anterior.|Retorna o intervalo de degeneração que representa "![exemplo de imagem inserida](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
   
  **Exemplo 2 – um intervalo de texto que abrange parcialmente o conteúdo de um contêiner de texto. O contêiner de texto tem uma imagem inserida que não faz parte do intervalo de texto.**  
   
- {A imagem} ![Exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") é inserido em texto.  
+ {A imagem} ![Exemplo de imagem inserida](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") é inserido em texto.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
@@ -127,16 +127,16 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
   
 |Célula com imagem|Célula com texto|  
 |---------------------|--------------------|  
-|![Exemplo de imagem inserida](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Exemplo de imagem inserida 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|S|  
-|![Exemplo de imagem inserida 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Imagem para Z|Z|  
+|![Exemplo de imagem inserida](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
+|![Exemplo de imagem inserida 2](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|S|  
+|![Exemplo de imagem inserida 3](./media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Imagem para Z|Z|  
   
  **Exemplo 1-obter o contêiner de texto do conteúdo de uma célula.**  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A>com parâmetros (0, 0)|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o conteúdo da célula da tabela; nesse caso, o elemento é um controle de texto.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>em <xref:System.Windows.Automation.AutomationElement> que é o objeto retornado pelo método `GetItem` anterior.|Retorna o intervalo que abrange o exemplo de ![imagem inserida]de imagem(../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>em <xref:System.Windows.Automation.AutomationElement> que é o objeto retornado pelo método `GetItem` anterior.|Retorna o intervalo que abrange o exemplo de ![imagem inserida]de imagem(./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>para o objeto retornado pelo método anterior `RangeFromChild` .|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa a célula da tabela; nesse caso, o elemento é um controle de texto que dá suporte a TableItemPattern.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>para o objeto retornado pelo método anterior `GetEnclosingElement` .|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa a tabela.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>para o objeto retornado pelo método anterior `GetEnclosingElement` .|Retorna o <xref:System.Windows.Automation.AutomationElement> que representa o próprio provedor de texto.|  
@@ -154,7 +154,7 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>
 - <xref:System.Windows.Automation.Provider.ITextRangeProvider>
-- [Acessar objetos inseridos usando automação de interface do usuário](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
-- [Expor o conteúdo de uma tabela usando automação de interface do usuário](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
-- [Percorrer texto usando automação de interface do usuário](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [Acessar objetos inseridos usando automação de interface do usuário](access-embedded-objects-using-ui-automation.md)
+- [Expor o conteúdo de uma tabela usando automação de interface do usuário](expose-the-content-of-a-table-using-ui-automation.md)
+- [Percorrer texto usando automação de interface do usuário](traverse-text-using-ui-automation.md)
 - [Exemplo de pesquisa e seleção de TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

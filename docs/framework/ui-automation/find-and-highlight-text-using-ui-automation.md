@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: 1e8b69167f470afd5e3049a717978a41078db575
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 084a9cdeaf17d7456116c56e9a12115b478f7384
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969001"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043635"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Encontre e destaque texto usando automação de interface de usuário
 > [!NOTE]
@@ -37,4 +37,4 @@ ms.locfileid: "69969001"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Localizar e destacar texto usando automação de interface do usuário](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [Localizar e destacar texto usando automação de interface do usuário](find-and-highlight-text-using-ui-automation.md)

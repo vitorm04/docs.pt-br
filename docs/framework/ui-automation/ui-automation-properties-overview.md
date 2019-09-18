@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: d7069769d381a1806f28d538319a49e0cc9cce60
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914506"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042140"
 ---
 # <a name="ui-automation-properties-overview"></a>Visão geral das propriedades de automação da interface do usuário
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "69914506"
   
  Esta seção fornece uma ampla visão geral [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] das propriedades. Informações mais específicas são fornecidas nos seguintes tópicos:  
   
-- [Propriedades de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [Propriedades de automação de interface do usuário para clientes](ui-automation-properties-for-clients.md)  
   
-- [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Identificadores de propriedade  
@@ -55,7 +55,7 @@ ms.locfileid: "69914506"
 ## <a name="properties-by-category"></a>Propriedades por categoria  
  As tabelas a seguir categorizam as propriedades cujas IDs são encontradas <xref:System.Windows.Automation.AutomationElement> em <xref:System.Windows.Automation.AutomationElementIdentifiers>e. Essas propriedades são comuns a todos os controles. Todos os poucos deles provavelmente serão estáticos durante o tempo de vida do aplicativo do provedor; a maioria das propriedades dinâmicas está associada aos padrões de controle.  
   
- A coluna **acesso à propriedade** lista quaisquer outros acessadores para cada propriedade, além <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> de <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>e. Para obter mais informações sobre como obter propriedades em um aplicativo cliente, consulte [Propriedades de automação da interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ A coluna **acesso à propriedade** lista quaisquer outros acessadores para cada propriedade, além <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> de <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>e. Para obter mais informações sobre como obter propriedades em um aplicativo cliente, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
 > Para obter informações específicas sobre cada propriedade, siga o link na coluna **acesso à propriedade** .  
@@ -161,9 +161,9 @@ ms.locfileid: "69914506"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Armazenamento em cache em clientes de automação de interface do usuário](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Propriedades de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Retornar as propriedades de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Disparar eventos de um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Armazenamento em cache em clientes de automação de interface do usuário](caching-in-ui-automation-clients.md)
+- [Propriedades de automação de interface do usuário para clientes](ui-automation-properties-for-clients.md)
+- [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](server-side-ui-automation-provider-implementation.md)
+- [Localizar um elemento de automação de interface do usuário com base em uma condição de propriedade](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Retornar as propriedades de um provedor de automação de interface do usuário](return-properties-from-a-ui-automation-provider.md)
+- [Disparar eventos de um provedor de automação de interface do usuário](raise-events-from-a-ui-automation-provider.md)

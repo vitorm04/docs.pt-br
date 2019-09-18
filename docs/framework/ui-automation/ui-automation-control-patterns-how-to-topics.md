@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5d75eddd5314067a364bc8e76108ee7794bcfda
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953094"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042363"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Tópicos de Instrução sobre Padrões de Controle de Automação de Interface do usuário
 > [!NOTE]
@@ -21,8 +21,8 @@ ms.locfileid: "69953094"
  Esta seção contém informações detalhadas sobre a implementação de padrões de controle.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Expor o conteúdo de uma tabela usando automação de interface do usuário](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Obter padrões de controle de automação de interface do usuário com suporte](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [Obter o estado de Alternância de uma caixa de seleção usando automação de interface do usuário](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Invocando um controle utilizando automação de interface do usuário](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Mover um elemento de automação de interface do usuário](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Expor o conteúdo de uma tabela usando automação de interface do usuário](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Obter padrões de controle de automação de interface do usuário com suporte](get-supported-ui-automation-control-patterns.md)  
+ [Obter o estado de Alternância de uma caixa de seleção usando automação de interface do usuário](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Invocando um controle utilizando automação de interface do usuário](invoke-a-control-using-ui-automation.md)  
+ [Mover um elemento de automação de interface do usuário](move-a-ui-automation-element.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133795"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042270"
 ---
 # <a name="ui-automation-overview"></a>Visão geral de automação da interface do usuário
 > [!NOTE]
@@ -45,12 +45,12 @@ A automação da interface do usuário fornece funcionalidade completa em sistem
   
 |Seção|Assunto|Público-alvo|  
 |-------------|--------------------|--------------|  
-|[Conceitos básicos de automação da interface do usuário](../../../docs/framework/ui-automation/index.md) (esta seção)|Visões gerais amplas dos conceitos.|Os.|  
-|[UI Automation Providers for Managed Code](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md) (Provedores da Automação da Interface do Usuário para código gerenciado)|Visões gerais e tópicos de instruções para ajudá-lo a usar a API do provedor.|Desenvolvedores de controle.|  
-|[UI Automation Clients for Managed Code](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md) (Clientes da Automação da Interface do Usuário para código gerenciado)|Visões gerais e tópicos de instruções para ajudá-lo a usar a API do cliente.|Desenvolvedores de aplicativos cliente.|  
-|[UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)|Informações sobre como os padrões de controle devem ser implementados pelos provedores e qual funcionalidade está disponível para os clientes.|Os.|  
-|[UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md) (Padrão de texto da Automação da Interface do Usuário)|Informações sobre como o padrão de controle de texto deve ser implementado por provedores e qual funcionalidade está disponível para os clientes.|Os.|  
-|[UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)|Informações sobre as propriedades e padrões de controle com suporte de diferentes tipos de controle.|Os.|  
+|[Conceitos básicos de automação da interface do usuário](index.md) (esta seção)|Visões gerais amplas dos conceitos.|Os.|  
+|[UI Automation Providers for Managed Code](ui-automation-providers-for-managed-code.md) (Provedores da Automação da Interface do Usuário para código gerenciado)|Visões gerais e tópicos de instruções para ajudá-lo a usar a API do provedor.|Desenvolvedores de controle.|  
+|[UI Automation Clients for Managed Code](ui-automation-clients-for-managed-code.md) (Clientes da Automação da Interface do Usuário para código gerenciado)|Visões gerais e tópicos de instruções para ajudá-lo a usar a API do cliente.|Desenvolvedores de aplicativos cliente.|  
+|[UI Automation Control Patterns](ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)|Informações sobre como os padrões de controle devem ser implementados pelos provedores e qual funcionalidade está disponível para os clientes.|Os.|  
+|[UI Automation Text Pattern](ui-automation-text-pattern.md) (Padrão de texto da Automação da Interface do Usuário)|Informações sobre como o padrão de controle de texto deve ser implementado por provedores e qual funcionalidade está disponível para os clientes.|Os.|  
+|[UI Automation Control Types](ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)|Informações sobre as propriedades e padrões de controle com suporte de diferentes tipos de controle.|Os.|  
   
  A tabela a seguir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] lista os namespaces, as DLLs que os contêm e o público-alvo que os utiliza.  
   
@@ -70,14 +70,14 @@ A automação da interface do usuário fornece funcionalidade completa em sistem
  Além disso, os elementos expõem padrões de controle que fornecem propriedades específicas para seus tipos de controle. Os padrões de controle também expõem métodos que permitem que os clientes obtenham mais informações sobre o elemento e forneçam entrada.  
   
 > [!NOTE]
-> Não há uma correspondência um-para-um entre tipos de controle e padrões de controle. Um padrão de controle pode ser suportado por vários tipos de controle, e um controle pode dar suporte a vários padrões de controle, cada um dos quais expõe diferentes aspectos de seu comportamento. Por exemplo, uma caixa de combinação tem pelo menos dois padrões de controle: um que representa sua capacidade de expandir e recolher e outro que representa o mecanismo de seleção. Para obter informações específicas, consulte [tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types.md).  
+> Não há uma correspondência um-para-um entre tipos de controle e padrões de controle. Um padrão de controle pode ser suportado por vários tipos de controle, e um controle pode dar suporte a vários padrões de controle, cada um dos quais expõe diferentes aspectos de seu comportamento. Por exemplo, uma caixa de combinação tem pelo menos dois padrões de controle: um que representa sua capacidade de expandir e recolher e outro que representa o mecanismo de seleção. Para obter informações específicas, consulte [tipos de controle de automação da interface do usuário](ui-automation-control-types.md).  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]também fornece informações para aplicativos cliente por meio de eventos. Ao [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]contrário [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de, os eventos não são baseados em um mecanismo de difusão. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Os clientes se registram para notificações de eventos específicas e [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] podem solicitar que propriedades específicas e informações de padrão de controle sejam passadas para seus manipuladores de eventos. Além disso, um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento contém uma referência ao elemento que o gerou. Os provedores podem melhorar o desempenho gerando eventos de forma seletiva, dependendo se algum cliente está ouvindo.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Visão geral de propriedades de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
-- [Visão geral sobre eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [Visão geral de segurança de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+- [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)
+- [Visão geral de propriedades de automação de interface do usuário](ui-automation-properties-overview.md)
+- [Visão geral sobre eventos de automação de interface do usuário](ui-automation-events-overview.md)
+- [Visão geral de segurança de automação de interface do usuário](ui-automation-security-overview.md)

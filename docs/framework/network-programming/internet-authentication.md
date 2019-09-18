@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295452"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047916"
 ---
 # <a name="internet-authentication"></a>Autenticação da Internet
 As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de autenticação de cliente, incluindo os métodos de autenticação padrão de Internet básico, digest, negotiate, NTLM e a autenticação Kerberos, bem como métodos personalizados criados por você.  
@@ -41,6 +41,6 @@ As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de auten
   
 ## <a name="see-also"></a>Consulte também
 
-- [Autenticação Básica e Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [Autenticação Kerberos e NTLM](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [Autenticação Básica e Digest](basic-and-digest-authentication.md)
+- [Autenticação Kerberos e NTLM](ntlm-and-kerberos-authentication.md)
+- [Segurança na programação de rede](security-in-network-programming.md)

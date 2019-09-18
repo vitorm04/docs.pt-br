@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f4ce2d996d5a1a6ecd149118b7499650882a732f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044099"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042288"
 ---
 # <a name="ui-automation-events-for-clients"></a>Automação de Eventos de Interface de Usuário para Clientes.
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70044099"
 > [!NOTE]
 > Não presuma que todos os eventos possíveis sejam gerados por um [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] provedor. Por exemplo, nem todas as alterações de propriedade fazem com que eventos sejam gerados pelos provedores de [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] proxy [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] padrão para e controles.  
   
- Para obter uma visão mais ampla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dos eventos, consulte [visão geral dos eventos de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+ Para obter uma visão mais ampla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dos eventos, consulte [visão geral dos eventos de automação da interface do usuário](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Assinando eventos  
@@ -44,7 +44,7 @@ ms.locfileid: "70044099"
 > Para processar eventos fechados por janela, converta o tipo de argumento que é passado para o manipulador <xref:System.Windows.Automation.WindowClosedEventArgs>de eventos como. Como o [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elemento da janela não é mais válido, você não pode usar o `sender` parâmetro para recuperar informações; use <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> em seu lugar.  
   
 > [!CAUTION]
-> Se seu aplicativo puder receber eventos por conta própria [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], não use o thread do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] aplicativo para assinar eventos ou cancelar a assinatura. Isso pode levar a um comportamento imprevisível. Para obter mais informações, consulte [problemas de threading de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Se seu aplicativo puder receber eventos por conta própria [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], não use o thread do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] aplicativo para assinar eventos ou cancelar a assinatura. Isso pode levar a um comportamento imprevisível. Para obter mais informações, consulte [problemas de threading de automação da interface do usuário](ui-automation-threading-issues.md).  
   
  No desligamento ou [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] quando os eventos não são mais interessantes para o aplicativo, os clientes de automação da interface do usuário devem chamar um dos métodos a seguir.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "70044099"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Cancela o registro de um manipulador de eventos que foi registrado <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>usando o.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Cancela o registro de todos os manipuladores de eventos registrados.|  
   
- Para obter um exemplo de código, consulte [assinar eventos de automação da interface do usuário](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
+ Para obter um exemplo de código, consulte [assinar eventos de automação da interface do usuário](subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Assinar eventos de automação de interface do usuário](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
-- [Visão geral sobre eventos de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [Visão geral de propriedades de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [Assinar eventos de automação de interface do usuário](subscribe-to-ui-automation-events.md)
+- [Visão geral sobre eventos de automação de interface do usuário](ui-automation-events-overview.md)
+- [Visão geral de propriedades de automação de interface do usuário](ui-automation-properties-overview.md)
 - [Exemplo de TrackFocus](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

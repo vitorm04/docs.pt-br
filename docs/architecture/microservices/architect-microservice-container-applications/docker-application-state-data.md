@@ -2,12 +2,12 @@
 title: Estado e dados em aplicativos do Docker
 description: Gerenciamento de dados e de estado em aplicativos do Docker. Instâncias de Microsserviços são descartáveis, mas os DADOS NÃO O SÃO, como lidar com isso com microsserviços.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673123"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039589"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
@@ -47,7 +47,7 @@ Volumes podem ser nomeados ou anônimos (o padrão). Volumes nomeados são a evo
 
 Conforme mostrado na Figura 4-5, os volumes Docker regulares podem ser armazenados fora dos contêineres de si, mas dentro dos limites físicos do servidor host ou VM. No entanto, contêineres do Docker não podem acessar um volume de um servidor host ou VM para outro. Em outras palavras, com esses volumes, não é possível gerenciar os dados compartilhados entre contêineres executados em hosts diferentes do Docker, embora esses dados possam ser obtidos com um driver de volume que dá suporte a hosts remotos.
 
-![Volumes podem ser compartilhados entre contêineres, mas apenas no mesmo host, a menos que você use um driver remoto que dá suporte a hosts remotos. ](./media/image5.png)
+![Volumes podem ser compartilhados entre contêineres, mas apenas no mesmo host, a menos que você use um driver remoto que dá suporte a hosts remotos.](./media/image5.png)
 
 **Figura 4-5**. Volumes e fontes de dados externas para aplicativos baseados em contêiner
 

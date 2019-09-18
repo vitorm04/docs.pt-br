@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928415"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051601"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como: Determinar quais versões do .NET Framework estão instaladas
 
@@ -72,7 +72,7 @@ Para obter informações sobre como detectar as atualizações instaladas para c
 
 3. Verifique se há uma entrada DWORD chamada **Release**. Se ela existir, você terá o .NET Framework 4.5 ou posterior instalado. Seu valor é uma chave de versão que corresponde a uma versão específica do .NET Framework. Na figura a seguir, por exemplo, o valor da entrada **Release** é *378389*, que é a chave de versão do .NET Framework 4.5.
 
-     ![Entrada do Registro para o .NET Framework 4.5](media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
+     ![Entrada do Registro para o .NET Framework 4.5](./media/clr-installdir.png "Registry entry for the .NET Framework 4.5")
 
 A tabela a seguir lista o valor de **Release** DWORD em cada sistema operacional individual para o .NET Framework 4.5 e versões posteriores.
 
@@ -163,7 +163,7 @@ Para verificar se há uma versão mínima necessária do .NET Framework, substit
 
     A figura a seguir mostra a subchave e sua entrada **Version** para o .NET Framework 3.5.
 
-    ![A entrada do Registro para o .NET Framework 3.5.](media/net-4-and-earlier.png ".NET Framework 3.5 e versões anteriores")
+    ![A entrada do Registro para o .NET Framework 3.5.](./media/net-4-and-earlier.png ".NET Framework 3.5 e versões anteriores")
 
 <a name="net_c"></a>
 

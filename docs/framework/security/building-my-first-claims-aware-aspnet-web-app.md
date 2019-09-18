@@ -3,12 +3,12 @@ title: Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422388"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045586"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Criando meu primeiro aplicativo Web ASP.NET baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -19,7 +19,7 @@ ms.locfileid: "67422388"
   
  Este tópico descreve o cenário da criação de aplicativos Web ASP.NET com reconhecimento de declarações usando o WIF. Geralmente há três participantes em um cenário de aplicativo com reconhecimento de declarações: o aplicativo em si, o usuário final e o STS (Serviço de Token de Segurança). A figura a seguir descreve esse cenário:  
   
- ![Diagrama mostrando componentes de um aplicativo Web básico de WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![Diagrama mostrando componentes do aplicativo Web básico do WIF.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. O aplicativo com reconhecimento de declarações usa o WIF para identificar solicitações não autenticadas e redirecioná-las ao STS.  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422388"
   
  STS é um serviço que emite tokens após a autenticação bem-sucedida. A Microsoft oferece dois STSs padrão do setor:  
   
-- [Serviços de Federação do Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Serviços de Federação do Active Directory (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Serviço de controle de acesso (ACS) do Windows Azure](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O ACS é um serviço de nuvem oferecido como parte da Plataforma Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento Local que faz parte do [ferramenta de identidade e acesso para o Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponível online gratuitamente.  
+ O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O ACS é um serviço de nuvem oferecido como parte da Plataforma Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento local que faz parte da [ferramenta de identidade e acesso para o Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , que está disponível gratuitamente online.  
   
  Para criar seu primeiro aplicativo ASP.NET com reconhecimento de declarações usando o WIF, siga as instruções em uma destas referências:  
   
-- [Como: Criar aplicativo de Web do ASP.NET MVC com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [Como: Compilar aplicativo Web MVC ASP.NET com reconhecimento de declarações usando o WIF](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [Como: Criar aplicativo de formulários da Web do ASP.NET com reconhecimento de declarações usando WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [Como: Criar aplicativo de Web Forms ASP.NET com reconhecimento de declarações usando o WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [Como: Criar um aplicativo de ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [Como: Criar aplicativo ASP.NET com reconhecimento de declarações usando a autenticação baseada em formulários](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução ao WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Introdução ao WIF](getting-started-with-wif.md)

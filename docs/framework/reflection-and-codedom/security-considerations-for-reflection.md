@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956703"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045884"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 
@@ -61,7 +61,7 @@ Essas regras são as mesmas se um membro crítico para segurança for acessado d
 
 Código de aplicativo que é executado da linha de comando é executado com confiança total. Desde que não esteja marcado como transparente, ele pode usar reflexão para acessar membros críticos para segurança. Quando o mesmo código é executado com confiança parcial (por exemplo, em um domínio do aplicativo em área restrita), o nível de confiança do assembly determina se ele pode acessar o código crítico para segurança: Se o assembly tem um nome forte e está instalado no cache de assembly global, ele é um assembly confiável e pode chamar membros críticos para segurança. Se não for confiável, ele se tornará transparente mesmo se não for marcado como transparente e não poderá acessar membros críticos para segurança.
 
-Para obter mais informações sobre o modelo de segurança no .NET Framework 4, consulte [Alterações de Segurança](../../../docs/framework/security/security-changes.md).
+Para obter mais informações sobre o modelo de segurança no .NET Framework 4, consulte [Alterações de Segurança](../security/security-changes.md).
 
 ## <a name="reflection-and-transparency"></a>Reflexão e transparência
 
@@ -69,7 +69,7 @@ Do .NET Framework 4 em diante, o Common Language Runtime determina o nível de t
 
 |Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Crítico|`true`|`false`|`false`|
+|Crítica|`true`|`false`|`false`|
 |Crítico para segurança|`true`|`true`|`false`|
 |Transparente|`false`|`false`|`true`|
 
@@ -117,9 +117,9 @@ Evite escrever membros públicos que utilizam parâmetros <xref:System.Reflectio
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Alterações de segurança](../../../docs/framework/security/security-changes.md)
-- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)
-- [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Alterações de segurança](../security/security-changes.md)
+- [Segurança de acesso do código](../misc/code-access-security.md)
+- [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)
+- [Exibindo informações de tipo](viewing-type-information.md)
 - [Aplicando atributos](../../standard/attributes/applying-attributes.md)
-- [Acessando atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [Acessando atributos personalizados](accessing-custom-attributes.md)

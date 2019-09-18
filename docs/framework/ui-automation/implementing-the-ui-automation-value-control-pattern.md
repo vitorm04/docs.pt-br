@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70244014"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043156"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70244014"
   
  Este tópico apresenta diretrizes e convenções para implementação <xref:System.Windows.Automation.Provider.IValueProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.  
   
- O <xref:System.Windows.Automation.ValuePattern> padrão de controle é usado para dar suporte a controles que têm um valor intrínseco que não abrange um intervalo e que pode ser representado como uma cadeia de caracteres. Essa cadeia de caracteres pode ser editável, dependendo do controle e de suas configurações. Para obter exemplos de controles que implementam esse padrão, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.ValuePattern> padrão de controle é usado para dar suporte a controles que têm um valor intrínseco que não abrange um intervalo e que pode ser representado como uma cadeia de caracteres. Essa cadeia de caracteres pode ser editável, dependendo do controle e de suas configurações. Para obter exemplos de controles que implementam esse padrão, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
@@ -27,7 +27,7 @@ ms.locfileid: "70244014"
   
 - Controles como <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> devem oferecer suporte <xref:System.Windows.Automation.ValuePattern> se o valor de qualquer um dos itens for editável, independentemente do modo de edição atual do controle. O controle pai também deve oferecer <xref:System.Windows.Automation.ValuePattern> suporte se os itens filho forem editáveis.  
   
- ![Item de lista editável.](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
+ ![Item de lista editável.](./media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Exemplo de um item de lista editável  
   
 - Os controles de edição de linha única dão suporte ao acesso programático <xref:System.Windows.Automation.Provider.IValueProvider>a seu conteúdo implementando. No entanto, os controles de edição de várias <xref:System.Windows.Automation.Provider.IValueProvider>linhas não são implementados; em vez disso, <xref:System.Windows.Automation.Provider.ITextProvider>eles fornecem acesso ao seu conteúdo implementando.  
@@ -36,9 +36,9 @@ Exemplo de um item de lista editável
   
 - <xref:System.Windows.Automation.Provider.IValueProvider>o não oferece suporte à recuperação de informações de formatação ou valores de subcadeias. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>deve ser implementado por controles como o controle de seleção de seletor [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] de cor de (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "amarelo") e uma estrutura RGB interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>deve ser implementado por controles como o controle de seleção de **seletor de cor** de (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] caracteres entre um valor de cor (por exemplo, "amarelo") e uma estrutura RGB interna equivalente.  
   
- ![Seletor de cores com amarelo realçado.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Seletor de cores com amarelo realçado.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemplo de mapeamento de cadeia de caracteres de amostra de cor  
   
 - Um controle deve ter seu <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> definido como `true` e seu <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> definido como `false` antes de permitir uma chamada <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>para.  
@@ -65,9 +65,9 @@ Exemplo de mapeamento de cadeia de caracteres de amostra de cor
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)
+- [Suporte a padrões de controle em um provedor de automação de interface do usuário](support-control-patterns-in-a-ui-automation-provider.md)
+- [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
 - [Exemplo de inserção de texto do ValuePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
+- [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)

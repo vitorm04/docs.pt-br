@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf874f9422db0038a421d5f61ce18d8af8ec401e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616305"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046401"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de carregador
 <a name="top"></a> Esses eventos coletam informações relacionadas ao carregamento e descarregamento de domínios do aplicativo, assemblies e módulos.  
   
- Todos os eventos de carregador são gerados sob a palavra-chave `LoaderKeyword` (0x8). Os eventos `DCStart` e `DCEnd` são gerados sob `LoaderRundownKeyword` (0x8) com `StartRundown`/`EndRundown` habilitado. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Todos os eventos de carregador são gerados sob a palavra-chave `LoaderKeyword` (0x8). Os eventos `DCStart` e `DCEnd` são gerados sob `LoaderRundownKeyword` (0x8) com `StartRundown`/`EndRundown` habilitado. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)  
   
  Eventos de carregador são subdivididos no seguintes:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "64616305"
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|O identificador exclusivo de um domínio do aplicativo.|  
-|AppDomainFlags|win:UInt32|0x1: Domínio padrão.<br /><br /> 0x2: Executável.<br /><br /> 0x4: Domínio de aplicativo, 28-31 bits: Compartilhamento de política desse domínio.<br /><br /> 0: Um domínio compartilhado.|  
+|AppDomainFlags|win:UInt32|0x1 Domínio padrão.<br /><br /> 0x2 Executá.<br /><br /> 0x4 Domínio do aplicativo, bit 28-31: Política de compartilhamento deste domínio.<br /><br /> 0: Um domínio compartilhado.|  
 |AppDomainName|win:UnicodeString|Nome amigável de domínio do aplicativo. Pode ser alterado durante o tempo de vida do processo.|  
 |AppDomainIndex|Win:UInt32|O índice desse domínio do aplicativo.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
@@ -88,7 +88,7 @@ ms.locfileid: "64616305"
 |AssemblyID|win:UInt64|ID exclusiva para o assembly.|  
 |AppDomainID|win:UInt64|ID do domínio desse assembly.|  
 |BindingID|win:UInt64|ID que identifica exclusivamente a associação do assembly.|  
-|AssemblyFlags|win:UInt32|0x1: Assembly de domínio neutro.<br /><br /> 0x2: Assembly dinâmico.<br /><br /> 0x4: Assembly tem uma imagem nativa.<br /><br /> 0x8: Assembly de coleção.|  
+|AssemblyFlags|win:UInt32|0x1 Assembly de domínio neutro.<br /><br /> 0x2 Assembly dinâmico.<br /><br /> 0x4 O assembly tem uma imagem nativa.<br /><br /> 0x8 Assembly de coleção.|  
 |AssemblyName|win:UnicodeString|O nome totalmente qualificado do assembly.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "64616305"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|ID exclusiva para o módulo.|  
 |AssemblyID|win:UInt64|ID do assembly em que esse módulo reside.|  
-|ModuleFlags|win:UInt32|0x1: Módulo de domínio neutro.<br /><br /> 0x2: Módulo tem uma imagem nativa.<br /><br /> 0x4: Módulo dinâmico.<br /><br /> 0x8: Módulo de manifesto.|  
+|ModuleFlags|win:UInt32|0x1 Módulo neutro de domínio.<br /><br /> 0x2 O módulo tem uma imagem nativa.<br /><br /> 0x4 Módulo dinâmico.<br /><br /> 0x8 Módulo de manifesto.|  
 |Reserved1|win:UInt32|Campo reservado.|  
 |ModuleILPath|win:UnicodeString|O caminho da imagem MSIL (Microsoft Intermediate Language) para o módulo ou o nome de módulo dinâmico se ele é um assembly dinâmico (terminado em nulo).|  
 |ModuleNativePath|win:UnicodeString|Caminho da imagem nativa do módulo, se presente (terminado em nulo).|  
@@ -167,7 +167,7 @@ ms.locfileid: "64616305"
 |ModuleID|win:UInt64|Identifica o assembly ao qual este módulo pertence.|  
 |AssemblyID|win:UInt64|ID do assembly em que esse módulo reside.|  
 |AppDomainID|win:UInt64|ID do domínio do aplicativo no qual esse módulo é usado.|  
-|ModuleFlags|win:UInt32|0x1: Módulo de domínio neutro.<br /><br /> 0x2: Módulo tem uma imagem nativa.<br /><br /> 0x4: Módulo dinâmico.<br /><br /> 0x8: Módulo de manifesto.|  
+|ModuleFlags|win:UInt32|0x1 Módulo neutro de domínio.<br /><br /> 0x2 O módulo tem uma imagem nativa.<br /><br /> 0x4 Módulo dinâmico.<br /><br /> 0x8 Módulo de manifesto.|  
 |Reserved1|win:UInt32|Campo reservado.|  
 |ModuleILPath|win:UnicodeString|O caminho da imagem MSIL para o módulo ou o nome de módulo dinâmico se ele é um assembly dinâmico (terminado em nulo).|  
 |ModuleNativePath|win:UnicodeString|Caminho da imagem nativa do módulo, se presente (terminado em nulo).|  
@@ -214,4 +214,4 @@ ms.locfileid: "64616305"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos de CLR ETW](clr-etw-events.md)

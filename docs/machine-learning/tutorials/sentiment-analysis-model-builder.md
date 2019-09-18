@@ -1,0 +1,274 @@
+---
+title: 'Tutorial: Analisar sentimentos – classificação binária'
+description: Este tutorial mostra como criar um aplicativo Razor Pages que classifica as opiniões dos comentários do site e executa a ação apropriada. O classificador de sentimentos binários usa o construtor de modelos no Visual Studio.
+ms.date: 09/13/2019
+author: luisquintanilla
+ms.author: luquinta
+ms.topic: tutorial
+ms.custom: mvc
+ms.openlocfilehash: c6184e097daf4604173db9e2a34606e68eb0fdc8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054317"
+---
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analisar sentimentos de comentários do site em um aplicativo Web usando o ML.NET Model Builder
+
+Saiba como analisar as opiniões de comentários em tempo real dentro de um aplicativo Web.
+
+Este tutorial mostra como criar um aplicativo ASP.NET Core Razor Pages que classifica as opiniões dos comentários do site em tempo real.
+
+Neste tutorial, você aprenderá como:
+
+> [!div class="checklist"]
+> * Criar um aplicativo de Razor Pages de ASP.NET Core
+> * Preparar e compreender os dados
+> * Escolha um cenário
+> * Carregar os dados
+> * Treinar o modelo
+> * Avaliar o modelo
+> * Usar o modelo para previsões
+
+> [!NOTE]
+> O Construtor de Modelo está atualmente na Versão Prévia.
+
+Você pode encontrar o código-fonte deste tutorial no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples) .
+
+## <a name="pre-requisites"></a>Pré-requisitos
+
+Para obter uma lista de pré-requisitos e instruções de instalação, visite o [guia de instalação do Construtor de Modelo](../how-to-guides/install-model-builder.md).
+
+## <a name="create-a-razor-pages-application"></a>Criar um aplicativo Razor Pages
+
+1. Crie um **aplicativo de Razor pages de ASP.NET Core**.
+
+    1. Abra o Visual Studio e selecione **arquivo > novo projeto de >** na barra de menus. 
+    1. Na caixa de diálogo Novo projeto, selecione o nó **Visual C#** seguido pelo nó **Web**. 
+    1. Em seguida, selecione o modelo de projeto **Aplicativo ASP.NET Core Web**. 
+    1. Na caixa de texto **nome** , digite "SentimentRazor".
+    1. A caixa de seleção **criar um diretório para solução** deve ser marcada por padrão. Se esse não for o caso, verifique-o. 
+    1. Selecione o botão **OK**.
+    1. Escolha **aplicativo Web** na janela que exibe os diferentes tipos de projetos de ASP.NET Core e, em seguida, selecione o botão **OK** .
+
+## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
+
+Baixe o [conjunto de Detox Wikipédia](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv). Quando a página da Web for aberta, clique com o botão direito do mouse na página, selecione **salvar como** e salve o arquivo em qualquer lugar no computador. 
+
+Cada linha no conjunto de *Detox da Wikipédia--line-data-250 o DataSet. tsv* representa uma revisão diferente deixada por um usuário na Wikipédia. A primeira coluna representa a folga do texto (0 é não tóxicos, 1 é tóxicos) e a segunda coluna representa o comentário deixado pelo usuário. As colunas são separadas por tabulações. Os dados são parecidos com os seguintes:
+
+| Sentimento | SentimentText |
+| :---: | :---: |
+1 | = = RUDE = = cara, você é um carregamento rude que Carl imagem de volta ou outra coisa.
+1 | = = OK! = = IM INDO PARA VANDALIZE DE CURINGAS E, EM SEGUIDA,!!!
+0 | Espero que isso ajude.
+
+## <a name="choose-a-scenario"></a>Escolha um cenário
+
+![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+
+Para treinar seu modelo, você precisa selecionar na lista de cenários disponíveis de aprendizado de máquina fornecidos pelo Construtor de Modelo. 
+
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto *SentimentRazor* e selecione **Adicionar** > **Machine Learning**.
+1. Para este exemplo, o cenário é análise de sentimentos. Na etapa *cenário* da ferramenta Construtor de modelos, selecione o cenário de **análise de sentimento** .
+
+## <a name="load-the-data"></a>Carregar os dados
+
+O construtor de modelos aceita dados de duas fontes, de um SQL Server um ou de `csv` um `tsv` arquivo local no formato ou.
+
+1. Na etapa de dados da ferramenta do Construtor de Modelo, selecione **Arquivo** na lista suspensa da fonte de dados.
+1. Selecione o botão ao lado da caixa de texto **selecionar um arquivo** e use o explorador de arquivos para procurar e selecionar o arquivo *Wikipédia-Detox-250-line-Data. tsv* .
+1. Escolha **sentimentos** no **rótulo ou coluna para prever** DropDown
+1. Selecione o link **treinar** para mover para a próxima etapa na ferramenta do construtor de modelos.
+
+## <a name="train-the-model"></a>Treinar o modelo
+
+A tarefa de aprendizado de máquina usada para treinar o modelo de previsão de preço neste tutorial é a classificação binária. Durante o processo de treinamento do modelo, o construtor de modelos treina modelos separados usando diferentes algoritmos de classificação binária e configurações para encontrar o modelo de melhor desempenho para seu conjunto de seus conjuntos de seus.
+
+O tempo necessário para treinar o modelo é proporcional à quantidade de dados. O construtor de modelos seleciona automaticamente um valor padrão para o **tempo de treinamento (segundos)** com base no tamanho da fonte de dados. 
+
+1. Embora o construtor de modelos defina o valor de **tempo para treinar (segundos)** como 10 segundos, aumente-o para 30 segundos. O treinamento para um período de tempo maior permite que o construtor de modelos Explore um número maior de algoritmos e uma combinação de parâmetros na pesquisa do melhor modelo.
+1. Selecione **Iniciar Treinamento**.
+
+    Durante o processo de treinamento, os dados de progresso são exibidos na seção `Progress` da etapa de treinamento.
+
+    - O status exibe o status de conclusão do processo de treinamento.
+    - A melhor precisão exibe a precisão do modelo de melhor desempenho encontrado pelo Construtor do Modelo até o momento. Maior precisão significa que o modelo é previsto mais corretamente nos dados de teste.
+    - O melhor algoritmo exibe o nome do algoritmo de melhor desempenho executado encontrado pelo Construtor de Modelo até o momento.
+    - O último algoritmo exibe o nome do algoritmo usado mais recentemente pelo Construtor de Modelo para treinar o modelo.
+
+1. Quando o treinamento estiver concluído, selecione o link **avaliar** para passar para a próxima etapa.
+
+## <a name="evaluate-the-model"></a>Avaliar o modelo
+
+O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada **Melhor Modelo**, juntamente com as métricas na **Qualidade do Melhor Modelo (RSquared)** . Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
+
+Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Caso contrário, selecione o link de **código** para mover para a etapa final na ferramenta do construtor de modelos.
+
+## <a name="add-the-code-to-make-predictions"></a>Adicionar o código para fazer previsões
+
+Dois projetos serão criados como resultado do processo de treinamento.
+
+### <a name="reference-the-trained-model"></a>Referenciar o modelo treinado
+
+1. Na etapa de *código* da ferramenta Construtor de modelos, selecione **adicionar projetos** para adicionar os projetos gerados automaticamente à solução.
+
+    Os projetos a seguir devem aparecer no **Gerenciador de soluções**:
+
+    - *SentimentRazorML. ConsoleApp*: Um aplicativo de console .NET Core que contém o treinamento do modelo e o código de previsão.
+    - *SentimentRazorML. Model*: Uma biblioteca de classes .NET Standard que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, bem como a versão persistente do modelo com melhor desempenho durante o treinamento.
+
+    Para este tutorial, somente o projeto *SentimentRazorML. Model* é usado porque as previsões serão feitas no aplicativo Web *SentimentRazor* , e não no console. Embora o *SentimentRazorML. ConsoleApp* não seja usado para pontuação, ele pode ser usado para treinar novamente o modelo usando novos dados em um momento posterior. No entanto, o novo treinamento está fora do escopo deste tutorial.
+
+1. Para usar o modelo treinado dentro de seu aplicativo Razor Pages, adicione uma referência ao projeto *SentimentRazorML. Model* .
+
+    1. Clique com o botão direito do mouse em projeto **SentimentRazor** . 
+    1. Selecione **Adicionar referência de >** . 
+    1. Escolha o nó **projetos > solução** e, na lista, verifique o projeto **SentimentRazorML. Model** .
+    1. Selecione **OK**.
+
+### <a name="configure-the-predictionengine-pool"></a>Configurar o pool PredictionEngine
+
+Para fazer uma única previsão, você pode usar o [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Para usar [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) o em seu aplicativo, você deve criá-lo quando necessário. Nesse caso, a prática recomendada é considerar sua injeção de dependência.
+
+> [!WARNING]
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Para melhorar o desempenho e o acesso thread-safe, use o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos `PredictionEngine` para uso do aplicativo. Leia a postagem no blog para saber mais sobre [criar e usar pools de objeto `PredictionEngine` no ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/). 
+
+1. Instale o pacote NuGet do *Microsoft.Extensions.ml* :
+
+    1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Gerenciar Pacotes NuGet**. 
+    1. Escolha "nuget.org" como a origem do pacote. 
+    1. Selecione a guia **procurar** e procure **Microsoft.Extensions.ml**. 
+    1. Selecione o pacote na lista e selecione o botão **instalar** . 
+    1. Selecione o botão **OK** na caixa de diálogo **Visualizar alterações**
+    1. Selecione o botão **aceito** na caixa de diálogo de **aceitação da licença** se você concordar com os termos de licença dos pacotes listados. 
+
+1. Abra o arquivo *Startup.cs* no projeto *SentimentRazor* .
+1. Adicione as seguintes instruções using para fazer referência ao pacote NuGet do *Microsoft.Extensions.ml* e ao projeto *SentimentRazorML. Model* :
+
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]        
+
+1. Crie uma variável global para armazenar o local do arquivo de modelo treinado.
+
+    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+
+1. O arquivo de modelo é armazenado no diretório de compilação junto com os arquivos de assembly do seu aplicativo. Para facilitar o acesso, crie um método auxiliar chamado `GetAbsolutePath` após o método `Configure`
+
+    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+
+1. Use o `GetAbsolutePath` método `Startup` no construtor de classe para definir o `_modelPath`.
+
+    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+
+1. Configure o `PredictionEnginePool` para seu aplicativo `ConfigureServices` no método:
+
+    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+
+### <a name="create-sentiment-analysis-handler"></a>Criar manipulador de análise de sentimentos
+
+As previsões serão feitas dentro da página principal do aplicativo. Portanto, um método que leva a entrada do usuário e usa `PredictionEnginePool` o para retornar uma previsão precisa ser adicionado.
+
+1. Abra o arquivo *index.cshtml.cs* localizado no diretório *pages* e adicione as seguintes instruções using:
+
+    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+
+    Para usar o `PredictionEnginePool` configurado `Startup` na classe, é necessário inseri-lo no construtor do modelo em que você deseja usá-lo. 
+
+1. Adicione uma variável para referenciar `PredictionEnginePool` o dentro `IndexModel` da classe.
+
+    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+
+1. Crie um construtor na `IndexModel` classe e insira o `PredictionEnginePool` serviço nele.
+
+    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+
+1. Crie um manipulador de método que usa `PredictionEnginePool` o para fazer previsões da entrada do usuário recebida da página da Web.
+
+    1. Abaixo do `OnGet` método, crie um novo método chamado`OnGetAnalyzeSentiment`
+
+        ```csharp
+        public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
+        {
+
+        }
+        ```
+
+    1. Dentro do `OnGetAnalyzeSentiment` método, retorne um sentimentos *neutro* se a entrada do usuário estiver em branco ou for nula.
+
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)] 
+    
+    1. Dada uma entrada válida, crie uma nova instância do `ModelInput`. 
+
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)] 
+
+    1. Use o `PredictionEnginePool` para prever sentimentos.
+
+        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)] 
+
+    1. Converta o `bool` valor previsto em tóxicos ou não tóxicos com o código a seguir.
+
+        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+
+    1. Por fim, retorne a resposta para a página da Web.
+
+        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+
+### <a name="configure-the-web-page"></a>Configurar a página da Web
+
+Os resultados retornados pelo `OnGetAnalyzeSentiment` serão exibidos dinamicamente `Index` na página da Web.
+
+1. Abra o arquivo *index. cshtml* no diretório *pages* e substitua seu conteúdo pelo código a seguir: 
+
+    [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
+
+1. Em seguida, adicione o código de estilo CSS ao final da página *site. css* no diretório *wwwroot\css* :
+
+    [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
+
+1. Depois disso, adicione o código para enviar entradas da página da Web para `OnGetAnalyzeSentiment` o manipulador.
+
+    1. No arquivo *site. js* localizado no diretório *wwwroot\js* , crie uma função chamada `getSentiment` para fazer uma solicitação HTTP Get com a entrada do usuário para o `OnGetAnalyzeSentiment` manipulador.
+
+        [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
+
+    1. Abaixo disso, adicione outra função chamada `updateMarker` para atualizar dinamicamente a posição do marcador na página da Web como uma opinião é prevista.
+
+        [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
+
+    1. Crie uma função de manipulador de `updateSentiment` eventos chamada para obter a entrada do usuário, enviá-la `OnGetAnalyzeSentiment` para a função `getSentiment` usando a função e atualizar o marcador `updateMarker` com a função.
+
+        [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
+
+    1. Por fim, registre o manipulador de eventos e vincule- `textarea` o ao elemento `id=Message` com o atributo.
+
+        [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
+
+## <a name="run-the-application"></a>Executar o aplicativo
+
+Agora que seu aplicativo está configurado, execute o aplicativo que deve ser iniciado no navegador.
+
+Quando o aplicativo for iniciado, insira o *Construtor de modelos é legal!* na área de texto. As opiniões previstas exibidas *não*devem ser tóxicos.
+
+![](./media/sentiment-analysis-model-builder/web-app.png)
+
+Se você precisar fazer referência aos projetos gerados pelo construtor de modelos em um momento posterior dentro de outra solução, você poderá encontrá- `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` los dentro do diretório.
+
+## <a name="next-steps"></a>Próximas etapas
+
+Neste tutorial, você aprendeu como:
+> [!div class="checklist"]
+> * Criar um aplicativo de Razor Pages de ASP.NET Core
+> * Preparar e compreender os dados
+> * Escolha um cenário
+> * Carregar os dados
+> * Treinar o modelo
+> * Avaliar o modelo
+> * Usar o modelo para previsões
+
+### <a name="additional-resources"></a>Recursos adicionais
+
+Para saber mais sobre os tópicos mencionados neste tutorial, visite os seguintes recursos:
+
+- [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios)
+- [Classificação Binária](../resources/glossary.md#binary-classification)
+- [Métricas do modelo de classificação binária](../resources/metrics.md#metrics-for-binary-classification)

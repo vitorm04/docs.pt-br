@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205810"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051812"
 ---
 # <a name="exposing-net-components-to-com"></a>Como expor componentes .NET ao COM
 
@@ -27,7 +27,7 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
      Atributos personalizados no código gerenciado podem melhorar a interoperabilidade de um componente.
 
-- [Empacotando um assembly para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Empacotando um assembly para o COM](packaging-an-assembly-for-com.md).
 
      Os desenvolvedores do COM podem precisar que você resuma as etapas envolvidas na referência e implantação dos assemblies.
 
@@ -35,11 +35,11 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
 ## <a name="to-consume-a-managed-type-from-com"></a>Para consumir um tipo gerenciado por meio do COM
 
-1. [Registrar assemblies com o COM](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [Registrar assemblies com o COM](registering-assemblies-with-com.md).
 
      Os tipos em um assembly (e as bibliotecas de tipos) devem ser registrados em tempo de design. Se um instalador não registrar o assembly, instrua os desenvolvedores do COM a usar Regasm.exe.
 
-2. [Referenciar tipos .NET por meio do COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Referenciar tipos .NET por meio do COM](how-to-reference-net-types-from-com.md).
 
      Os desenvolvedores do COM podem referenciar tipos em um assembly usando as mesmas ferramentas e técnicas que usam hoje.
 
@@ -53,5 +53,5 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
 ## <a name="see-also"></a>Consulte também
 
-- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)
-- [Amostra de interoperabilidade COM: Cliente COM e servidor .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Interoperação com código não gerenciado](index.md)
+- [Amostra de interoperabilidade COM: Cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)

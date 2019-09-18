@@ -1,46 +1,47 @@
 ---
-title: 'Como: Carregar XML de um arquivo, cadeia de caracteres ou Stream (Visual Basic)'
+title: 'Como: Carregar XML de um arquivo, Cadeia de caracteres ou fluxo (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 097c766fc9efbc810859ab693d3b26f5c1db57ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba88ae19abc216a318d6c2069ab0846d5db8a346
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598329"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054172"
 ---
-# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Como: Carregar XML de um arquivo, cadeia de caracteres ou Stream (Visual Basic)
-Você pode criar [literais XML](../../../../visual-basic/language-reference/xml-literals/index.md) e preenchê-los com o conteúdo de uma fonte externa, como um arquivo, uma cadeia de caracteres ou um fluxo usando vários métodos. Esses métodos são mostrados nos exemplos a seguir.  
-  
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
-  
-### <a name="to-load-xml-from-a-file"></a>Para carregar XML de um arquivo  
-  
-- Para popular um literal XML como um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objeto a partir de um arquivo, use o `Load` método. Esse método pode usar um caminho de arquivo, fluxo de texto ou fluxo XML como entrada.  
-  
-     O exemplo de código a seguir mostra o uso do <xref:System.Xml.Linq.XDocument.Load%28System.String%29> método para preencher um <xref:System.Xml.Linq.XDocument> objeto com XML de um arquivo de texto.  
-  
-     [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]  
-  
-### <a name="to-load-xml-from-a-string"></a>Para carregar XML de uma cadeia de caracteres  
-  
-- Para popular um literal XML como um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objeto de cadeia de caracteres, você pode usar o `Parse` método.  
-  
-     O exemplo de código a seguir mostra o uso do <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> método para preencher um <xref:System.Xml.Linq.XDocument> objeto com XML de uma cadeia de caracteres.  
-  
-     [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]  
-  
-### <a name="to-load-xml-from-a-stream"></a>Para carregar XML de um fluxo  
-  
-- Para popular um literal XML como um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objeto de um fluxo, você pode usar o `Load` método ou o <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> método.  
-  
- O exemplo de código a seguir mostra o uso do <xref:System.Xml.Linq.XNode.ReadFrom%2A> método para preencher um <xref:System.Xml.Linq.XDocument> objeto com XML de um fluxo XML.  
-  
- [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]  
-  
+# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Como: Carregar XML de um arquivo, Cadeia de caracteres ou fluxo (Visual Basic)
+
+Você pode criar [literais XML](../../../../visual-basic/language-reference/xml-literals/index.md) e preenchê-los com o conteúdo de uma fonte externa, como um arquivo, uma cadeia de caracteres ou um fluxo usando vários métodos. Esses métodos são mostrados nos exemplos a seguir.
+
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
+
+## <a name="to-load-xml-from-a-file"></a>Para carregar XML de um arquivo
+
+Para popular um literal XML como um <xref:System.Xml.Linq.XElement> objeto ou <xref:System.Xml.Linq.XDocument> de um arquivo, use o `Load` método. Esse método pode pegar um caminho de arquivo, um fluxo de texto ou um fluxo XML como entrada.
+
+O exemplo de código a seguir mostra o uso <xref:System.Xml.Linq.XDocument.Load%28System.String%29> do método para popular <xref:System.Xml.Linq.XDocument> um objeto com XML de um arquivo de texto.
+
+[!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]
+
+## <a name="to-load-xml-from-a-string"></a>Para carregar XML de uma cadeia de caracteres
+
+Para popular um literal XML como um <xref:System.Xml.Linq.XElement> objeto ou <xref:System.Xml.Linq.XDocument> de uma cadeia de caracteres, você pode usar o `Parse` método.
+
+O exemplo de código a seguir mostra o uso <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> do método para popular <xref:System.Xml.Linq.XDocument> um objeto com XML a partir de uma cadeia de caracteres.
+
+[!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]
+
+## <a name="to-load-xml-from-a-stream"></a>Para carregar XML de um fluxo
+
+Para preencher um literal <xref:System.Xml.Linq.XElement> XML como um objeto ou <xref:System.Xml.Linq.XDocument> de um fluxo, você pode usar o `Load` método ou o <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType> método.
+
+O exemplo de código a seguir mostra o uso <xref:System.Xml.Linq.XNode.ReadFrom%2A> do método para popular <xref:System.Xml.Linq.XDocument> um objeto com XML de um fluxo XML.
+
+[!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041459"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045750"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
 
@@ -35,13 +35,13 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 - [Configurando uma área restrita simples para testar código parcialmente confiável](#Setting_up).
 
   > [!IMPORTANT]
-  > Essa é uma maneira simples de experimentar o código em confiança parcial. Para executar o código que, na verdade, é proveniente de locais não confiáveis, confira [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+  > Essa é uma maneira simples de experimentar o código em confiança parcial. Para executar o código que, na verdade, é proveniente de locais não confiáveis, confira [Como: Executar o código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 - [Executando código em domínios de aplicativo parcialmente confiável](#Running_code).
 
 - [Usando métodos dinâmicos hospedados anonimamente para emitir e executar código em confiança parcial](#Using_methods).
 
-Para obter mais informações sobre como emitir código em cenários de confiança parcial, consulte [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).
+Para obter mais informações sobre como emitir código em cenários de confiança parcial, consulte [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md).
 
 Para obter uma lista completa do código mostrado nesses procedimentos, consulte a [Seção de exemplos](#Example) no final deste passo a passo.
 
@@ -71,7 +71,7 @@ O procedimento a seguir cria um domínio do aplicativo em área restrita que exe
 2. Crie um objeto <xref:System.AppDomainSetup> para inicializar o domínio do aplicativo com um caminho de aplicativo.
 
     > [!IMPORTANT]
-    > Para simplificar, este exemplo de código usa a pasta atual. Para executar o código que, na verdade, é proveniente da Internet, use uma pasta separada para o código não confiável, conforme descrito em [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+    > Para simplificar, este exemplo de código usa a pasta atual. Para executar o código que, na verdade, é proveniente da Internet, use uma pasta separada para o código não confiável, conforme descrito em [Como: Executar o código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -194,7 +194,7 @@ Para evitar a elevação de privilégio, as informações de pilha para o assemb
 
 ## <a name="example"></a>Exemplo
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 O exemplo de código a seguir demonstra o uso do sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para permitir que métodos dinâmicos hospedados anonimamente ignorem as verificações de visibilidade JIT, mas somente quando o membro de destino tiver um nível de confiança igual ou inferior ao assembly que emite o código.
 
@@ -225,5 +225,5 @@ Essa comparação mostra como <xref:System.Security.Permissions.ReflectionPermis
 
 ## <a name="see-also"></a>Consulte também
 
-- [Problemas de segurança na emissão de reflexão](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Como: Executar o código parcialmente confiável em uma área restrita](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)
+- [Como: Executar o código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

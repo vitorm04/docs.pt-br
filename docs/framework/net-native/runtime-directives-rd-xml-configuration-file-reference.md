@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988288"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049132"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 
@@ -37,35 +37,35 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
 
 O arquivo de diretivas de tempo de execução usa o namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.
 
-O elemento raiz é o elemento [Directives](../../../docs/framework/net-native/directives-element-net-native.md). Ele pode conter zero ou mais elementos [Library](../../../docs/framework/net-native/library-element-net-native.md) e zero ou um elemento [Application](../../../docs/framework/net-native/application-element-net-native.md), conforme mostrado na estrutura a seguir. Os atributos do elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) podem definir a política de reflexão do tempo de execução de todo o aplicativo ou podem servir como um contêiner para elementos filhos. O elemento [Library](../../../docs/framework/net-native/library-element-net-native.md), por outro lado, é simplesmente um contêiner. Os filhos dos elementos [Application](../../../docs/framework/net-native/application-element-net-native.md) e [Library](../../../docs/framework/net-native/library-element-net-native.md) definem os tipos, métodos, campos, propriedades e eventos que estão disponíveis para reflexão.
+O elemento raiz é o elemento [Directives](directives-element-net-native.md). Ele pode conter zero ou mais elementos [Library](library-element-net-native.md) e zero ou um elemento [Application](application-element-net-native.md), conforme mostrado na estrutura a seguir. Os atributos do elemento [Application](application-element-net-native.md) podem definir a política de reflexão do tempo de execução de todo o aplicativo ou podem servir como um contêiner para elementos filhos. O elemento [Library](library-element-net-native.md), por outro lado, é simplesmente um contêiner. Os filhos dos elementos [Application](application-element-net-native.md) e [Library](library-element-net-native.md) definem os tipos, métodos, campos, propriedades e eventos que estão disponíveis para reflexão.
 
-Para obter informações de referência, escolha os elementos na estrutura de seguir ou consulte [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md). Na seguinte hierarquia, as reticências marcam uma estrutura recursiva. As informações entre colchetes indicam se o elemento é necessário ou opcional e, se usado, quantas instâncias (uma ou várias) são permitidas.
+Para obter informações de referência, escolha os elementos na estrutura de seguir ou consulte [Elementos da diretiva de tempo de execução](runtime-directive-elements.md). Na seguinte hierarquia, as reticências marcam uma estrutura recursiva. As informações entre colchetes indicam se o elemento é necessário ou opcional e, se usado, quantas instâncias (uma ou várias) são permitidas.
 
-[Diretivas](../../../docs/framework/net-native/directives-element-net-native.md) do [1:1] [aplicativo](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) do [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) do [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M] [Subtipos](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1] [Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Método](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parâmetro](../../../docs/framework/net-native/parameter-element-net-native.md) do [0: M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) de [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M] [Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Método](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parâmetro](../../../docs/framework/net-native/parameter-element-net-native.md) do [0: M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) de [0: M] [Biblioteca](../../../docs/framework/net-native/library-element-net-native.md) do [0: M] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) do [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) do [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) do [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) do [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M] [Subtipos](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1] [Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Método](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) de [0: M] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M] [Tipo](../../../docs/framework/net-native/type-element-net-native.md) de [0: M]. . .
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Método](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Campo](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Evento](../../../docs/framework/net-native/event-element-net-native.md) de [0: M]
+[Diretivas](directives-element-net-native.md) do [1:1] [aplicativo](application-element-net-native.md) [0:1] [assembly](assembly-element-net-native.md) [0: m] [namespace](namespace-element-net-native.md) [0: M]. . .
+[Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[Namespace](namespace-element-net-native.md) do [0: M] [Namespace](namespace-element-net-native.md) do [0: M]. . .
+[Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[Tipo](type-element-net-native.md) de [0: M] [Subtipos](subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1] [Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: M] [Método](method-element-net-native.md) [0: M] [Parâmetro](parameter-element-net-native.md) do [0: M] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](property-element-net-native.md) [0: M] [Campo](field-element-net-native.md) [0: M] [Evento](event-element-net-native.md) de [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M] [Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[Método](method-element-net-native.md) [0: M] [Parâmetro](parameter-element-net-native.md) do [0: M] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](property-element-net-native.md) [0: M] [Campo](field-element-net-native.md) [0: M] [Evento](event-element-net-native.md) de [0: M] [Biblioteca](library-element-net-native.md) do [0: M] [Assembly](assembly-element-net-native.md) do [0: M] [Namespace](namespace-element-net-native.md) do [0: M]. . .
+[Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[Namespace](namespace-element-net-native.md) do [0: M] [Namespace](namespace-element-net-native.md) do [0: M]. . .
+[Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[Tipo](type-element-net-native.md) de [0: M] [Subtipos](subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1] [Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[AttributeImplies](attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: M] [Método](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](property-element-net-native.md) [0: M] [Campo](field-element-net-native.md) [0: M] [Evento](event-element-net-native.md) de [0: M] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M] [Tipo](type-element-net-native.md) de [0: M]. . .
+[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+[Método](method-element-net-native.md) [0: M] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: M] [Propriedade](property-element-net-native.md) [0: M] [Campo](field-element-net-native.md) [0: M] [Evento](event-element-net-native.md) de [0: M]
 
-O elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) pode não ter nenhum atributo ou pode ter os atributos de política discutidos na [seção de Política e diretiva de tempo de execução](#Directives).
+O elemento [Application](application-element-net-native.md) pode não ter nenhum atributo ou pode ter os atributos de política discutidos na [seção de Política e diretiva de tempo de execução](#Directives).
 
-Um elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) tem um único atributo, `Name`, que especifica o nome de uma biblioteca ou um assembly, sem a extensão do arquivo. Por exemplo, o elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) a seguir aplica-se a um assembly denominado Extensions.dll.
+Um elemento [Library](library-element-net-native.md) tem um único atributo, `Name`, que especifica o nome de uma biblioteca ou um assembly, sem a extensão do arquivo. Por exemplo, o elemento [Library](library-element-net-native.md) a seguir aplica-se a um assembly denominado Extensions.dll.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -82,15 +82,15 @@ Um elemento [Library](../../../docs/framework/net-native/library-element-net-nat
 
 ## <a name="runtime-directives-and-policy"></a>Política e diretivas de tempo de execução
 
-O próprio elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) e os elementos filhos dos elementos [Library](../../../docs/framework/net-native/library-element-net-native.md) e [Application](../../../docs/framework/net-native/application-element-net-native.md) expressam a política, ou seja, definem a maneira pela qual o aplicativo pode aplicar reflexão a um elemento do programa. O tipo de política é definido por um atributo do elemento (por exemplo, `Serialize`). O valor de política é definido pelo valor do atributo (por exemplo, `Serialize="Required"`).
+O próprio elemento [Application](application-element-net-native.md) e os elementos filhos dos elementos [Library](library-element-net-native.md) e [Application](application-element-net-native.md) expressam a política, ou seja, definem a maneira pela qual o aplicativo pode aplicar reflexão a um elemento do programa. O tipo de política é definido por um atributo do elemento (por exemplo, `Serialize`). O valor de política é definido pelo valor do atributo (por exemplo, `Serialize="Required"`).
 
-Qualquer política especificada por um atributo de um elemento aplica-se a todos os elementos filhos que não especifique um valor para essa política. Por exemplo, se uma política é especificada por um elemento [Type](../../../docs/framework/net-native/type-element-net-native.md), a política aplica-se a todos os tipos e membros contidos para os quais uma política não foi especificada explicitamente.
+Qualquer política especificada por um atributo de um elemento aplica-se a todos os elementos filhos que não especifique um valor para essa política. Por exemplo, se uma política é especificada por um elemento [Type](type-element-net-native.md), a política aplica-se a todos os tipos e membros contidos para os quais uma política não foi especificada explicitamente.
 
-A política que pode ser expressa pelos elementos [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) diferem daquela que pode ser expressa para membros individuais (pelos elementos [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) e [Event](../../../docs/framework/net-native/event-element-net-native.md)).
+A política que pode ser expressa pelos elementos [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) diferem daquela que pode ser expressa para membros individuais (pelos elementos [Method](method-element-net-native.md), [Property](property-element-net-native.md), [Field](field-element-net-native.md) e [Event](event-element-net-native.md)).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Especificando a política para assemblies, namespaces e tipos
 
-Os elementos [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) dão suporte aos seguintes tipos de política:
+Os elementos [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) dão suporte aos seguintes tipos de política:
 
 - `Activate`. Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.
 
@@ -147,7 +147,7 @@ Por exemplo, o seguinte arquivo de diretivas de tempo de execução define a pol
 
 ### <a name="specifying-policy-for-members"></a>Especificando a política para membros
 
-Os elementos [Property](../../../docs/framework/net-native/property-element-net-native.md) e [Field](../../../docs/framework/net-native/field-element-net-native.md) dão suporte aos seguintes tipos de política:
+Os elementos [Property](property-element-net-native.md) e [Field](field-element-net-native.md) dão suporte aos seguintes tipos de política:
 
 - `Browse` - Controla as consultas para obter informações este membro, mas não permite qualquer acesso do tempo de execução.
 
@@ -155,7 +155,7 @@ Os elementos [Property](../../../docs/framework/net-native/property-element-net-
 
 - `Serialize` - Controla o acesso de tempo de execução ao membro para habilitar as instâncias do tipo a serem serializadas e desserializadas por bibliotecas como o serializador Newtonsoft JSON. Esta política pode ser aplicada a construtores, campos e propriedades.
 
-Os elementos [Method](../../../docs/framework/net-native/method-element-net-native.md) e [Event](../../../docs/framework/net-native/event-element-net-native.md) dão suporte aos seguintes tipos de política:
+Os elementos [Method](method-element-net-native.md) e [Event](event-element-net-native.md) dão suporte aos seguintes tipos de política:
 
 - `Browse` - Controla as consultas para obter informações este membro, mas não permite qualquer acesso do tempo de execução.
 
@@ -173,9 +173,9 @@ Os elementos [Method](../../../docs/framework/net-native/method-element-net-nati
 
 ## <a name="runtime-directives-file-semantics"></a>Semântica do arquivo de diretivas de tempo de execução
 
-A política pode ser definida simultaneamente para elementos de nível superior e de nível inferior. Por exemplo, a política pode ser definida para um assembly e para alguns dos tipos contidos neste assembly. Se um determinado elemento de nível inferior não for representado, ele herdará a política do pai. Por exemplo, se um elemento `Assembly` estiver presente, mas elementos `Type` não estiverem, a política especificada no elemento `Assembly` se aplica a cada tipo no assembly. Vários elementos também podem aplicar a política ao mesmo elemento de programa. Por exemplo, diferentes elementos [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) podem definir o mesmo elemento de política para o mesmo assembly diferentemente. As seções a seguir explicam como a política para um determinado tipo é resolvida nesses casos.
+A política pode ser definida simultaneamente para elementos de nível superior e de nível inferior. Por exemplo, a política pode ser definida para um assembly e para alguns dos tipos contidos neste assembly. Se um determinado elemento de nível inferior não for representado, ele herdará a política do pai. Por exemplo, se um elemento `Assembly` estiver presente, mas elementos `Type` não estiverem, a política especificada no elemento `Assembly` se aplica a cada tipo no assembly. Vários elementos também podem aplicar a política ao mesmo elemento de programa. Por exemplo, diferentes elementos [Assembly](assembly-element-net-native.md) podem definir o mesmo elemento de política para o mesmo assembly diferentemente. As seções a seguir explicam como a política para um determinado tipo é resolvida nesses casos.
 
-Um elemento [Type](../../../docs/framework/net-native/type-element-net-native.md) ou [Method](../../../docs/framework/net-native/method-element-net-native.md) de um tipo ou método genérico aplica sua política a todas as instanciações que não têm sua própria política. Por exemplo, um elemento `Type` que especifica a política para <xref:System.Collections.Generic.List%601> aplica-se a todas as instâncias construídas desse tipo genérico, a menos que seja substituído por um determinado tipo genérico construído (como um `List<Int32>`) por um elemento `TypeInstantiation`. Caso contrário, os elementos definem a política para o elemento de programa denominado.
+Um elemento [Type](type-element-net-native.md) ou [Method](method-element-net-native.md) de um tipo ou método genérico aplica sua política a todas as instanciações que não têm sua própria política. Por exemplo, um elemento `Type` que especifica a política para <xref:System.Collections.Generic.List%601> aplica-se a todas as instâncias construídas desse tipo genérico, a menos que seja substituído por um determinado tipo genérico construído (como um `List<Int32>`) por um elemento `TypeInstantiation`. Caso contrário, os elementos definem a política para o elemento de programa denominado.
 
 Quando um elemento é ambíguo, o mecanismo procura correspondências e, se encontrar uma correspondência exata, ele a usará. Se ele encontrar várias correspondências, haverá um erro ou aviso.
 
@@ -411,9 +411,9 @@ Aplicar de uma dessas políticas a um tipo permite que o tipo seja serializado c
 
 Essas políticas não têm efeito nos campos ou métodos.
 
-Para obter mais informações, consulte a seção "Diferenças em serializadores" em [Migrar seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+Para obter mais informações, consulte a seção "Diferenças em serializadores" em [Migrar seu aplicativo da Windows Store para .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [Reflexão e .NET Native](reflection-and-net-native.md)

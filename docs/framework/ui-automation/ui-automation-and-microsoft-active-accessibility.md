@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946475"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042590"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automação de Interface do usuário e Microsoft Active Accessibility
 > [!NOTE]
@@ -110,7 +110,7 @@ ms.locfileid: "69946475"
 |ROLE_SYSTEM_OUTLINEITEM|Item de árvore|  
 |ROLE_SYSTEM_WINDOW|Janela|  
   
- Para obter mais informações sobre os diferentes tipos de controle, consulte [tipos de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-types.md).  
+ Para obter mais informações sobre os diferentes tipos de controle, consulte [tipos de controle de automação da interface do usuário](ui-automation-control-types.md).  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>Estados e propriedades  
@@ -176,7 +176,7 @@ ms.locfileid: "69946475"
 |STATE_SYSTEM_HOTTRACKED|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- Para obter uma lista completa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de identificadores de propriedade, consulte [visão geral das propriedades de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Para obter uma lista completa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de identificadores de propriedade, consulte [visão geral das propriedades de automação da interface do usuário](ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>Events  
@@ -251,4 +251,4 @@ ms.locfileid: "69946475"
   
 ## <a name="see-also"></a>Consulte também
 
-- [UI Automation Fundamentals](../../../docs/framework/ui-automation/index.md) (Fundamentos da Automação da Interface do Usuário)
+- [UI Automation Fundamentals](index.md) (Fundamentos da Automação da Interface do Usuário)

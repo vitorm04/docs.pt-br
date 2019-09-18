@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949113"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051952"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 
@@ -28,7 +28,7 @@ Este artigo fornece links para instalar todas as versões do .NET Framework do .
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Para obter mais informações sobre versões do .NET Framework e sobre como determinar quais versões estão instaladas em um computador, confira [Versões e dependências](../migration-guide/versions-and-dependencies.md) e [Como: Determinar quais versões do .NET Framework estão instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Para obter mais informações sobre versões do .NET Framework e sobre como determinar quais versões estão instaladas em um computador, confira [Versões e dependências](../migration-guide/versions-and-dependencies.md) e [Como: Determinar quais versões do .NET Framework estão instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!NOTE]
 > Para saber mais sobre o .NET Framework 3.5, veja [Instalar o .NET Framework 3.5 no Windows 10, Windows 8.1 e Windows 8](dotnet-35-windows-10.md).
@@ -227,7 +227,7 @@ A tabela a seguir lista os idiomas compatíveis.
 
 - Se você estiver começando no .NET Framework, veja a [visão geral](../get-started/overview.md) para obter uma introdução dos conceitos-chave e dos componentes.
 
-- Para obter novos recursos e aprimoramentos no .NET Framework 4.5 e em todas as versões posteriores, confira as [Novidades](../../../docs/framework/whats-new/index.md).
+- Para obter novos recursos e aprimoramentos no .NET Framework 4.5 e em todas as versões posteriores, confira as [Novidades](../whats-new/index.md).
 
 - Para saber mais detalhadas sobre a implantação do .NET Framework com seu aplicativo, veja o [Guia de implantação para desenvolvedores](../deployment/deployment-guide-for-developers.md).
 

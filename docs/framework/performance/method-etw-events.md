@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949247"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046380"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
@@ -36,7 +36,7 @@ Eventos de método do CLR são mais subdivididos no seguinte:
 
 ## <a name="clr-method-events"></a>Eventos de método do CLR
 
-A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)
+A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
@@ -63,7 +63,7 @@ A tabela a seguir mostra os dados do evento.
 |MethodStartAddress|win:UInt64|Endereço inicial do método.|
 |MethodSize|win:UInt32|Tamanho do método.|
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|
-|MethodFlags|win:UInt32|0x1: Método dinâmico.<br /><br /> 0x2: Método genérico.<br /><br /> 0x4: Método de código com compilação JIT (caso contrário, código de imagem nativa NGEN).<br /><br /> 0x8: Método auxiliar.|
+|MethodFlags|win:UInt32|0x1 Método dinâmico.<br /><br /> 0x2 Método genérico.<br /><br /> 0x4 Método de código compilado por JIT (caso contrário, código de imagem nativa do NGEN).<br /><br /> 0x8 Método auxiliar.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
 [Voltar ao início](#top)
@@ -130,7 +130,7 @@ A tabela a seguir mostra os dados do evento.
 |MethodStartAddress|win:UInt64|O endereço inicial.|
 |MethodSize|win:UInt32|O comprimento do método.|
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|
-|MethodFlags|win:UInt32|0x1: Método dinâmico.<br /><br /> 0x2: Método genérico.<br /><br /> 0x4: Método compilado por JIT (caso contrário, gerado pelo NGen.exe)<br /><br /> 0x8: Método auxiliar.|
+|MethodFlags|win:UInt32|0x1 Método dinâmico.<br /><br /> 0x2 Método genérico.<br /><br /> 0x4 Método compilado por JIT (caso contrário, gerado pelo NGen. exe)<br /><br /> 0x8 Método auxiliar.|
 |MethodNameSpace|win:UnicodeString|O nome completo do namespace associado ao método.|
 |MethodName|win:UnicodeString|O nome de classe completo associado ao método.|
 |MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|
@@ -172,4 +172,4 @@ A tabela a seguir mostra os dados do evento.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos de CLR ETW](clr-etw-events.md)

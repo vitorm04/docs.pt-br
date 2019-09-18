@@ -3,12 +3,12 @@ title: Criando meu primeiro serviço WCF baseado em declarações
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: f242de43f1917dd6b01e15914359049ee754aa92
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 330d785721cb434f74ec746310a71bfd39fefd0b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690182"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045551"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Criando meu primeiro serviço WCF baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -20,7 +20,7 @@ ms.locfileid: "66690182"
 ## <a name="overview"></a>Visão geral  
  Este tópico descreve o cenário da criação de serviços WCF com reconhecimento de declarações usando o WIF. Geralmente há três participantes em um cenário de serviço Web com reconhecimento de declarações: o serviço Web em si, o usuário final e o STS (Serviço de Token de Segurança). A figura a seguir descreve esse cenário:  
   
- ![Diagrama mostrando componentes do WIF declarações com suporte a serviço WCF básico.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
+ ![Diagrama mostrando componentes do serviço WCF com reconhecimento de declarações básicas do WIF.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1. O cliente do serviço WCF (às vezes chamado de agente) usa o WIF para enviar credenciais ao STS e, após a autenticação bem-sucedida, o agente receberá um token do STS.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66690182"
   
  STS é um serviço que emite tokens após a autenticação bem-sucedida. A Microsoft oferece dois STSs padrão do setor:  
   
-- [Serviços de Federação do Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Serviços de Federação do Active Directory (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
+- [Serviço de controle de acesso (ACS) do Windows Azure](https://docs.microsoft.com/previous-versions/azure/azure-services/hh147631(v=azure.100))
   
- O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O Controle de Acesso do Azure Active Directory (também conhecido como Serviço de Controle de Acesso ou ACS) é um serviço de nuvem, oferecido como parte do Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento Local que faz parte do [ferramenta de identidade e acesso para o Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponível online gratuitamente.  
+ O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O Controle de Acesso do Azure Active Directory (também conhecido como Serviço de Controle de Acesso ou ACS) é um serviço de nuvem, oferecido como parte do Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento local que faz parte da [ferramenta de identidade e acesso para o Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) , que está disponível gratuitamente online.  
   
- Para criar seu primeiro serviço WCF com reconhecimento de declarações usando o WIF, consulte [How To: Habilitar o WIF para um aplicativo de serviço Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Para criar seu primeiro serviço WCF com reconhecimento de declaração usando o WIF [, consulte Como: Habilite o WIF para um aplicativo](how-to-enable-wif-for-a-wcf-web-service-application.md)de serviço Web WCF.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução ao WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Introdução ao WIF](getting-started-with-wif.md)

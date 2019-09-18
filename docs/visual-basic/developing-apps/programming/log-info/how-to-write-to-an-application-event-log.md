@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366498"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054139"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Como: Gravar em um Log de Eventos do Aplicativo (Visual Basic)
 
@@ -22,7 +22,7 @@ Não é possível gravar no log de segurança. Para gravar no log do sistema, é
 
 Para exibir um log de eventos, é possível usar o **Gerenciador de Servidores** ou o **Visualizador de Eventos do Windows**. Para obter mais informações, consulte [Eventos ETW no .NET Framework](../../../../framework/performance/etw-events.md).
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>Para adicionar e configurar o ouvinte de log de eventos
+## <a name="to-add-and-configure-the-event-log-listener"></a>Para adicionar e configurar o ouvinte de log de eventos
 
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.
 
@@ -61,11 +61,11 @@ Para exibir um log de eventos, é possível usar o **Gerenciador de Servidores**
     > [!NOTE]
     > Normalmente, um aplicativo grava somente erros no log de eventos. Para obter informações sobre como filtrar a saída de log, confira [Passo a passo: Filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-### <a name="to-write-event-information-to-the-event-log"></a>Para gravar informações de evento em um log de eventos
+## <a name="to-write-event-information-to-the-event-log"></a>Para gravar informações de evento em um log de eventos
 
-- Use o método `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` para gravar informações no log de eventos. Para obter mais informações, confira [Como: Gravar mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Como: Registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Use o método `My.Application.Log.WriteEntry` ou `My.Application.Log.WriteException` para gravar informações no log de eventos. Para obter mais informações, confira [Como: Gravar mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) e [Como: Registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-    Depois de configurar o ouvinte de log de eventos para um assembly, ele receberá todas as mensagens que `My.Application.Log` grava desse assembly.
+Depois de configurar o ouvinte de log de eventos para um assembly, ele receberá todas as mensagens que `My.Application.Log` grava desse assembly.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: Noções básicas sobre problemas e exceções de WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: c5712467cdebb854d09cb55c29878cb8b553f271
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215008"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047095"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Noções básicas sobre problemas e exceções de WebRequest
 <xref:System.Net.WebRequest> e suas classes derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> e <xref:System.Net.FileWebRequest>) geram exceções para sinalizar uma condição anormal. Às vezes, a resolução desses problemas não é óbvia.  
@@ -26,7 +26,7 @@ ms.locfileid: "59215008"
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|O aplicativo tentou gravar em um soquete que já foi fechado.|O cliente ou o servidor está sobrecarregado. Reduza a carga.<br /><br /> Aumente a configuração do <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Confira <https://support.microsoft.com/?id=821268> para modificar as configurações de desempenho do serviço Web.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|O limite definido (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>) no tamanho da mensagem foi excedido.|Aumente o valor da propriedade <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|O Serviço de Nomes de Domínio não pôde resolver o nome do host do proxy.|Configure o proxy corretamente. Consulte <https://support.microsoft.com/?id=318140>.<br /><br /> Force <xref:System.Net.HttpWebRequest> a não usar nenhum proxy definindo a propriedade <xref:System.Net.HttpWebRequest.Proxy%2A> como `null`.|  
-|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|A resposta do servidor não é uma resposta HTTP válida. Esse problema ocorre quando o .NET Framework detecta que a resposta do servidor não é compatível com o HTTP 1.1 RFC. Esse problema pode ocorrer quando a resposta contém cabeçalhos incorretos ou delimitadores de cabeçalho incorretos. O RFC 2616 define o HTTP 1.1 e o formato válido para a resposta do servidor. Para saber mais, confira [RFC 2616 - Hypertext Transfer Protocol – HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/).|Obtenha um rastreamento de rede da transação e examine os cabeçalhos na resposta.<br /><br /> Se o aplicativo exigir a resposta do servidor sem a análise (isso pode ser um problema de segurança), defina `useUnsafeHeaderParsing` como `true` no arquivo de configuração. Consulte Elemento [\<httpWebRequest> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|A resposta do servidor não é uma resposta HTTP válida. Esse problema ocorre quando o .NET Framework detecta que a resposta do servidor não é compatível com o HTTP 1.1 RFC. Esse problema pode ocorrer quando a resposta contém cabeçalhos incorretos ou delimitadores de cabeçalho incorretos. O RFC 2616 define o HTTP 1.1 e o formato válido para a resposta do servidor. Para saber mais, confira [RFC 2616 - Hypertext Transfer Protocol – HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/).|Obtenha um rastreamento de rede da transação e examine os cabeçalhos na resposta.<br /><br /> Se o aplicativo exigir a resposta do servidor sem a análise (isso pode ser um problema de segurança), defina `useUnsafeHeaderParsing` como `true` no arquivo de configuração. Consulte Elemento [\<httpWebRequest> (configurações de rede)](../configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Consulte também
 
