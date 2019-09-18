@@ -2,12 +2,12 @@
 title: Habilitando e desabilitando o IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083680"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048571"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitando e desabilitando o IPv6
 Para usar o protocolo IPv6, verifique se você está executando uma versão do sistema operacional que dá suporte ao IPv6 e se o sistema operacional e as classes de rede estão configuradas corretamente.  
@@ -24,7 +24,7 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
   
  Lembre-se de que, para habilitar o suporte ao IPv6 em todas as classes no namespace System.Net, é necessário modificar o arquivo de configuração do computador ou o arquivo de configuração do aplicativo. O arquivo de configuração de um aplicativo tem precedência sobre o arquivo de configuração do computador.  
   
- Para obter um exemplo de como modificar o arquivo de configuração do computador, *machine.config*, para habilitar o suporte ao IPv6, confira [Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Além disso, verifique se o suporte ao IPv6 está habilitado no sistema operacional.  
+ Para obter um exemplo de como modificar o arquivo de configuração do computador, *machine.config*, para habilitar o suporte ao IPv6, confira [Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Além disso, verifique se o suporte ao IPv6 está habilitado no sistema operacional.  
   
  O .NET Framework tem uma opção de configuração definida em um arquivo de configuração da seguinte maneira  
   
@@ -46,7 +46,7 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
   
 ## <a name="see-also"></a>Consulte também
 
-- [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Soquetes](../../../docs/framework/network-programming/sockets.md)
-- [Esquema de configurações de rede](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<Elemento ipv6> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
+- [Soquetes](sockets.md)
+- [Esquema de configurações de rede](../configure-apps/file-schema/network/index.md)
+- [\<Elemento ipv6> (configurações de rede)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

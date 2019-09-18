@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948018"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052735"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Como: adicionar instruções de rastreamento ao código de um aplicativo
-Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**e **Fail**. Esses métodos podem ser divididos em duas categorias: **Grave**, **WriteLine**e reprovam toda a saída de emissão incondicionalmente, enquanto **WriteIf**, **WriteLineIf**e **Assert** testam uma condição booliana e gravam ou não gravam com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  
+Os métodos usados com mais frequência para rastreamento são os métodos para gravar a saída em ouvintes: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**e **Fail**. Esses métodos podem ser divididos em duas categorias: **Grave**, **WriteLine**e **reprovam** toda a saída de emissão incondicionalmente, enquanto **WriteIf**, **WriteLineIf**e **Assert** testam uma condição booliana e gravam ou não gravam com base no valor da condição. **WriteIf** e **WriteLineIf** emitirão a saída se a condição for `true` e **Assert** emitirá a saída se a condição for `false`.  
   
  Ao criar sua estratégia de rastreamento e depuração, pense em como você deseja que a saída se assemelhe. Várias instruções **Write** preenchidas com informações não relacionadas criarão um log que é difícil de ser lido. Por outro lado, o uso de **WriteLine** para colocar instruções relacionadas em linhas separadas pode tornar difícil distinguir quais informações pertencem juntas. Em geral, use várias instruções **Write** quando desejar combinar informações de várias fontes para criar uma única mensagem informativa e use a instrução **WriteLine** quando desejar criar uma única mensagem completa.  
   
@@ -90,7 +90,7 @@ Os métodos usados com mais frequência para rastreamento são os métodos para 
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
+- [Como: Criar, inicializar e configurar opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
+- [Opções de rastreamento](trace-switches.md)
+- [Ouvintes de rastreamento](trace-listeners.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6489e451f3790e38ea821104fd2aca5a8c091ba6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791058"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052995"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Como: Criar um serviço de dados usando uma fonte de dados de LINQ to SQL (WCF Data Services)
 
@@ -52,7 +52,7 @@ O WCF Data Services expõe os dados da entidade como um serviço de dados. O pro
 
 2. Na caixa de diálogo **Adicionar novo item** , selecione o modelo do **WCF Data Service** na categoria **Web** .
 
-   ![Modelo de item do WCF Data Service no Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Modelo de item do WCF Data Service no Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > O modelo do **WCF Data Service** está disponível no visual Studio 2015, mas não no visual Studio 2017.

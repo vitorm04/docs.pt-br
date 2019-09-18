@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394273"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047867"
 ---
 # <a name="introducing-pluggable-protocols"></a>Apresentando protocolos conectáveis
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Classes de acesso à Internet nos namespaces <xref:System.Net> e <xref:System.Net.Sockets> podem ser usadas para implementar tanto aplicativos baseados na Web quanto baseados na Internet.  
@@ -68,6 +68,6 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programando protocolos conectáveis](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Programando protocolos conectáveis](programming-pluggable-protocols.md)
+- [Programação de rede no .NET Framework](index.md)
+- [Amostras de programação de rede](network-programming-samples.md)

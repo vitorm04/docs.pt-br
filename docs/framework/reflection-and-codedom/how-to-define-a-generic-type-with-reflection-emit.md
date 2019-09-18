@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912527"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045993"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como: Definir um tipo genérico com a emissão de reflexão
 Este tópico mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.  
   
 > [!IMPORTANT]
-> Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. A maioria dos métodos em tipos genéricos não é genérica, como neste exemplo. Para obter um exemplo de emissão de um método genérico, confira [Como: Definir um método genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+> Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. A maioria dos métodos em tipos genéricos não é genérica, como neste exemplo. Para obter um exemplo de emissão de um método genérico, confira [Como: Definir um método genérico com a emissão de reflexão](how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Para definir um tipo genérico  
   
@@ -121,7 +121,7 @@ Este tópico mostra como criar um tipo genérico simples com dois parâmetros de
   
  O programa inclui um método que lista informações sobre um tipo genérico e um método que lista as restrições especiais em um parâmetro de tipo. Esses métodos são usados para exibir informações sobre a classe `Sample` finalizada.  
   
- O programa salva o módulo finalizado no disco como `GenericEmitExample1.dll`, portanto, você pode abri-lo com o [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) e examinar o MSIL para a classe `Sample`.  
+ O programa salva o módulo finalizado no disco como `GenericEmitExample1.dll`, portanto, você pode abri-lo com o [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) e examinar o MSIL para a classe `Sample`.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868508"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049909"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > (.NET nativo)
+# <a name="attributeimplies-element-net-native"></a>\<Elemento de > AttributeImplies (.NET Native)
 Define a política para os elementos de código ao qual o atributo recipiente é aplicado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -51,7 +51,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -60,7 +60,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<AttributeImplies>` é usado se o seu tipo recipiente for um atributo (isto é, uma classe derivada de <xref:System.Attribute?displayProperty=nameWithType>). Se o atributo for aplicado a um elemento de programa específico, a política definida pelo elemento `<AttributeImplies>` aplica-se a esse elemento de programa.  
@@ -69,7 +69,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Elemento de > de tipo](type-element-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)

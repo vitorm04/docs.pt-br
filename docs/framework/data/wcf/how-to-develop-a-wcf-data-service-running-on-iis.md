@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: d03a0ae3bc84106d72803b22050a7c75a037be12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780105"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052970"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Como: Desenvolver um serviço de dados WCF em execução no IIS
 
@@ -148,7 +148,7 @@ Após criar o serviço, você deve fornecer explicitamente acesso aos recursos d
 
 2. Na caixa de diálogo **Adicionar novo item** , selecione **WCF Data Service**.
 
-   ![Modelo de item do WCF Data Service no Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Modelo de item do WCF Data Service no Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > O modelo do **WCF Data Service** está disponível no visual Studio 2015, mas não no visual Studio 2017.

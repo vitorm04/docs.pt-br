@@ -1,5 +1,5 @@
 ---
-title: 'Como: Filtrar os resultados da consulta usando LINQ (Visual Basic)'
+title: 'Como: Filtrar os resultados da consulta usando o LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,72 +11,73 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: fc4d43ef9181f1a290d37c137b4fc6f7f16588b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1250f2fe0ccd7661b9bc1986000143ec4a15a9f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001020"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053284"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Como: Filtrar os resultados da consulta usando LINQ (Visual Basic)
-Consulta integrada à linguagem (LINQ) facilita o acesso às informações de banco de dados e executar consultas.  
-  
- O exemplo a seguir mostra como criar um novo aplicativo que executa consultas em um banco de dados do SQL Server e filtra os resultados por um valor específico usando o `Where` cláusula. Para obter mais informações, consulte [cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md).  
-  
- Os exemplos neste tópico usam o banco de dados de exemplo Northwind. Se você não tiver esse banco de dados no computador de desenvolvimento, você pode baixá-lo do Microsoft Download Center. Para obter instruções, consulte [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
-  
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
-  
-### <a name="to-create-a-connection-to-a-database"></a>Para criar uma conexão para um banco de dados  
-  
-1. No Visual Studio, abra **Gerenciador de servidores**/**Database Explorer** clicando **Server Explorer**/**banco de dados Explorer** sobre o **exibição** menu.  
-  
-2. Clique com botão direito **conexões de dados** na **Gerenciador de servidores**/**Database Explorer** e, em seguida, clique em **Adicionar Conexão**.  
-  
-3. Especifique uma conexão válida para o banco de dados de exemplo Northwind.  
-  
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Para adicionar um projeto que contém um arquivo LINQ to SQL  
-  
-1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. Selecione Visual Basic **aplicativo do Windows Forms** como o tipo de projeto.  
-  
-2. No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o **Classes LINQ to SQL** modelo de item.  
-  
-3. Dê o nome `northwind.dbml` para o arquivo. Clique em **Adicionar**. O Object Relational Designer (O/R Designer) é aberto para o arquivo dbml.  
-  
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>Para adicionar tabelas de consulta para o O/R Designer  
-  
-1. Na **Gerenciador de servidores**/**Gerenciador de banco de dados**, expanda a conexão ao banco de dados Northwind. Expanda o **tabelas** pasta.  
-  
-     Se você tiver fechado o O/R Designer, você poderá reabri-lo clicando duas vezes no arquivo dbml que você adicionou anteriormente.  
-  
-2. Clique na tabela clientes e arraste-o no painel esquerdo do designer. Clique na tabela Orders e arraste-o no painel esquerdo do designer.  
-  
-     O designer cria novos `Customer` e `Order` objetos para o seu projeto. Observe que o designer automaticamente detecta as relações entre as tabelas e cria propriedades filhas para objetos relacionados. Por exemplo, o IntelliSense mostrará que o `Customer` objeto tem um `Orders` propriedade para todos os pedidos relacionados a esse cliente.  
-  
-3. Salve suas alterações e feche o designer.  
-  
-4. Salve seu projeto.  
-  
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Para adicionar código para consultar o banco de dados e exibir os resultados  
-  
-1. Dos **caixa de ferramentas**, arraste um <xref:System.Windows.Forms.DataGridView> controle para o formulário do Windows padrão para seu projeto, Form1.  
-  
-2. Clique duas vezes em Form1 para adicionar código para o `Load` evento do formulário.  
-  
-3. Quando você adicionar tabelas ao Designer relacional de objetos, o designer adicionará um <xref:System.Data.Linq.DataContext> objeto para o seu projeto. Este objeto contém o código que você deve ter para acessar essas tabelas, além de objetos individuais e coleções para cada tabela. O <xref:System.Data.Linq.DataContext> objeto para seu projeto é nomeado com base no nome do seu arquivo. dbml. Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.  
-  
-     Você pode criar uma instância da <xref:System.Data.Linq.DataContext> no seu código e consultar as tabelas especificadas pelo Designer relacional de objetos.  
-  
-     Adicione o seguinte código para o `Load` eventos para consultar as tabelas que são expostas como propriedades de seu contexto de dados. A consulta filtra os resultados e retorna somente os clientes que estão localizados em `London`.  
-  
-     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
-  
-4. Pressione F5 para executar seu projeto e exibir os resultados.  
-  
-5. A seguir estão alguns outros filtros que você pode tentar.  
-  
-     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
-  
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Como: Filtrar os resultados da consulta usando o LINQ (Visual Basic)
+
+A consulta integrada à linguagem (LINQ) facilita o acesso a informações do banco de dados e a execução de consultas.
+
+O exemplo a seguir mostra como criar um novo aplicativo que executa consultas em um banco de dados SQL Server e filtra os resultados por um valor específico usando `Where` a cláusula. Para obter mais informações, consulte a [cláusula WHERE](../../../../visual-basic/language-reference/queries/where-clause.md).
+
+Os exemplos neste tópico usam o banco de dados de exemplo Northwind. Se você não tiver esse banco de dados no computador de desenvolvimento, poderá baixá-lo no centro de download da Microsoft. Para obter instruções, consulte [baixar bancos de dados de exemplo](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
+
+## <a name="to-create-a-connection-to-a-database"></a>Para criar uma conexão com um banco de dados
+
+1. No Visual Studio, abra **Gerenciador de servidores**/**Gerenciador de banco de dados** clicando em **Gerenciador de servidores**/**Gerenciador de banco de dados** no menu **Exibir** .
+
+2. Clique com o botão direito do mouse em **conexões de dados** em **Gerenciador de servidores**/**Gerenciador de banco de dados** e clique em **Adicionar conexão**.
+
+3. Especifique uma conexão válida para o banco de dados de exemplo Northwind.
+
+## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Para adicionar um projeto que contém um arquivo de LINQ to SQL
+
+1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**. Selecione Visual Basic **aplicativo Windows Forms** como o tipo de projeto.
+
+2. No menu **Projeto**, clique em **Adicionar Novo Item**. Selecione o modelo de item **classes de LINQ to SQL** .
+
+3. Dê o nome `northwind.dbml` para o arquivo. Clique em **Adicionar** . O Object Relational Designer (O/R Designer) é aberto para o arquivo Northwind. dbml.
+
+## <a name="to-add-tables-to-query-to-the-or-designer"></a>Para adicionar tabelas para consulta ao o/R Designer
+
+1. Em **Gerenciador de servidores**/**Gerenciador de banco de dados**, expanda a conexão com o banco de dados Northwind. Expanda a pasta **tabelas** .
+
+     Se você fechou o o/R Designer, você pode reabri-lo clicando duas vezes no arquivo Northwind. dbml que você adicionou anteriormente.
+
+2. Clique na tabela clientes e arraste-a para o painel esquerdo do designer. Clique na tabela Orders e arraste-a para o painel esquerdo do designer.
+
+     O designer cria novos `Customer` objetos `Order` e para o seu projeto. Observe que o designer detecta automaticamente as relações entre as tabelas e cria propriedades filhas para objetos relacionados. Por exemplo, o IntelliSense mostrará que `Customer` o objeto tem `Orders` uma propriedade para todos os pedidos relacionados a esse cliente.
+
+3. Salve as alterações e feche o designer.
+
+4. Salve seu projeto.
+
+## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Para adicionar código para consultar o banco de dados e exibir os resultados
+
+1. Na **caixa de ferramentas**, arraste <xref:System.Windows.Forms.DataGridView> um controle para o formulário padrão do Windows para seu projeto, Form1.
+
+2. Clique duas vezes em Form1 para adicionar código ao `Load` evento do formulário.
+
+3. Quando você adicionou tabelas ao o/R Designer, o designer adicionou um <xref:System.Data.Linq.DataContext> objeto ao seu projeto. Esse objeto contém o código que você deve ter para acessar essas tabelas, além de objetos individuais e coleções para cada tabela. O <xref:System.Data.Linq.DataContext> objeto para seu projeto é nomeado com base no nome do seu arquivo. dbml. Para este projeto, o <xref:System.Data.Linq.DataContext> objeto é nomeado `northwindDataContext`.
+
+    Você pode criar uma instância do <xref:System.Data.Linq.DataContext> no seu código e consultar as tabelas especificadas pelo o/R Designer.
+
+    Adicione o seguinte código ao `Load` evento para consultar as tabelas que são expostas como propriedades do seu contexto de dados. A consulta filtra os resultados e retorna somente os clientes que estão localizados `London`no.
+
+    [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]
+
+4. Pressione F5 para executar o projeto e exibir os resultados.
+
+5. A seguir estão alguns outros filtros que você pode tentar.
+
+    [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]
+
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

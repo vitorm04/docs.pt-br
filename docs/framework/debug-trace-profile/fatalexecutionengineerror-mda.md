@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f5d529451f30a6785547410f5121dbb6f91fe01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3fd58ae8f73fd932df641ea96a44ff618dd139e2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660389"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052802"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA fatalExecutionEngineError
 O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é ativado quando um erro fatal no CLR (Common Language Runtime) é detectado. O processo será terminado.  
@@ -33,29 +33,29 @@ O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é at
 ## <a name="resolution"></a>Resolução  
  A habilitação de MDAs adicionais pode ajudar a identificar o problema. Os seguintes MDAs podem ser especialmente úteis para diagnosticar o problema:  
   
-- [invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
+- [invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)  
   
-- [overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)  
+- [overlappedFreeError](overlappedfreeerror-mda.md)  
   
-- [pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)  
+- [pInvokeStackImbalance](pinvokestackimbalance-mda.md)  
   
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)  
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)  
   
-- [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)  
+- [gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)  
   
-- [callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)  
+- [callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)  
   
-- [reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)  
+- [reportAvOnComRelease](reportavoncomrelease-mda.md)  
   
-- [invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)  
+- [invalidVariant](invalidvariant-mda.md)  
   
-- [invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)  
+- [invalidIUnknown](invalidiunknown-mda.md)  
   
-- [raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)  
+- [raceOnRCWCleanup](raceonrcwcleanup-mda.md)  
   
-- [invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)  
+- [invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)  
   
-- [invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
+- [invalidGCHandleCookie](invalidgchandlecookie-mda.md)  
   
 ## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
  Esse MDA não tem nenhum efeito sobre o comportamento do tempo de execução.  
@@ -77,4 +77,4 @@ O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é at
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

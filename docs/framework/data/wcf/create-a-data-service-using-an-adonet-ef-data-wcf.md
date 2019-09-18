@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8c597738d656b32e7b4c75246027b726f425c6ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854129"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053014"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Como: Criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework (WCF Data Services)
 
@@ -57,7 +57,7 @@ O Entity Framework também fornece uma ferramenta de linha de comando que pode g
 
 4. Na caixa de diálogo **Adicionar novo item** , selecione o modelo do **WCF Data Service** na categoria **Web** .
 
-   ![Modelo de item do WCF Data Service no Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![Modelo de item do WCF Data Service no Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > O modelo do **WCF Data Service** está disponível no visual Studio 2015, mas não no visual Studio 2017.

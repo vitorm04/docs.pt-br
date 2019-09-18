@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754369"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052723"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Como: criar e inicializar ouvintes de rastreamento
 
 As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> enviam mensagens para objetos chamados ouvintes, que recebem e processam essas mensagens. Um ouvinte desse tipo, o <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, é criado e inicializado automaticamente quando a depuração ou o rastreamento é habilitado. Se você desejar que a saída <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> seja direcionada para outras fontes, crie e inicialize ouvintes de rastreamento adicionais.
 
-Os ouvintes criados devem refletir as necessidades do aplicativo. Por exemplo, se desejar obter um registro de texto de toda a saída de rastreamento, crie um ouvinte <xref:System.Diagnostics.TextWriterTraceListener>, que grava toda a saída para um novo arquivo de texto quando ele é habilitado. Por outro lado, se desejar exibir a saída somente durante a execução do aplicativo, crie um ouvinte <xref:System.Diagnostics.ConsoleTraceListener>, que direciona toda a saída para uma janela do console. O <xref:System.Diagnostics.EventLogTraceListener> pode direcionar a saída de rastreamento para um log de eventos. Para obter mais informações, consulte [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md).
+Os ouvintes criados devem refletir as necessidades do aplicativo. Por exemplo, se desejar obter um registro de texto de toda a saída de rastreamento, crie um ouvinte <xref:System.Diagnostics.TextWriterTraceListener>, que grava toda a saída para um novo arquivo de texto quando ele é habilitado. Por outro lado, se desejar exibir a saída somente durante a execução do aplicativo, crie um ouvinte <xref:System.Diagnostics.ConsoleTraceListener>, que direciona toda a saída para uma janela do console. O <xref:System.Diagnostics.EventLogTraceListener> pode direcionar a saída de rastreamento para um log de eventos. Para obter mais informações, consulte [Ouvintes de rastreamento](trace-listeners.md).
 
-Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](../../../docs/framework/configure-apps/index.md) ou no código. Recomendamos o uso de arquivos de configuração de aplicativo, porque eles permitem adicionar, modificar ou remover ouvintes de rastreamento sem a necessidade de alterar o código.
+Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](../configure-apps/index.md) ou no código. Recomendamos o uso de arquivos de configuração de aplicativo, porque eles permitem adicionar, modificar ou remover ouvintes de rastreamento sem a necessidade de alterar o código.
 
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Para criar e usar um ouvinte de rastreamento usando um arquivo de configuração
 
@@ -97,7 +97,7 @@ Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](..
 
 ## <a name="see-also"></a>Consulte também
 
-- [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Ouvintes de rastreamento](trace-listeners.md)
+- [Opções de rastreamento](trace-switches.md)
+- [Como: Adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)

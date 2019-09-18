@@ -2,12 +2,12 @@
 title: Registros
 description: Saiba como F# os registros representam agregações simples de valores nomeados, opcionalmente com membros.
 ms.date: 06/09/2019
-ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627289"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053934"
 ---
 # <a name="records"></a>Registros
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Comentários
 
-Na sintaxe anterior, *TypeName* é o nome do tipo de registro, *Label1* e *Label2* são nomes de valores, chamados de Labelse *type1* e *type2* são os tipos desses valores. *lista* de membros é a lista opcional de membros para o tipo.  Você pode usar o `[<Struct>]` atributo para criar um registro de struct em vez de um registro que é um tipo de referência.
+Na sintaxe anterior, *TypeName* é o nome do tipo de registro, *Label1* e *Label2* são nomes de valores, chamados de *Labels*e *type1* e *type2* são os tipos desses valores. *lista* de membros é a lista opcional de membros para o tipo.  Você pode usar o `[<Struct>]` atributo para criar um registro de struct em vez de um registro que é um tipo de referência.
 
 Veja a seguir alguns exemplos.
 
@@ -108,7 +108,8 @@ type Person =
 and Address =
   { Line1: string
     Line2: string
-    PostCode: string }
+    PostCode: string
+    Occupant: Person }
 ```
 
 Se você definiu o exemplo anterior sem a `and` palavra-chave, ele não será compilado. A `and` palavra-chave é necessária para definições mutuamente recursivas.

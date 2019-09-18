@@ -2,12 +2,12 @@
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Como especificar a composição de microsserviços para um aplicativo de vários contêineres com o docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1b88d2267b12a33e125a7a1d2273654a50fd2d0f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70296866"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039741"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml
 
@@ -463,11 +463,11 @@ Para uma inicialização mais rápida, as imagens de tempo de execução também
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Criando imagens otimizadas do Docker com o ASP.NET Core** \
-    <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+- **Criando imagens otimizadas do Docker com o ASP.NET Core**  
+  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
-- **Criando imagens do Docker para aplicativos do .NET Core** \
-    [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+- **Criando Imagens do Docker para .NET Core Applications**  
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 > [!div class="step-by-step"]
 > [Anterior](data-driven-crud-microservice.md)

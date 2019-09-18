@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627040"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053341"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Passo a passo: Implementando a herança com objetos COM (Visual Basic)
 
@@ -22,7 +22,7 @@ O procedimento a seguir mostra como usar Visual Basic 6,0 para criar um objeto C
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Para compilar o objeto COM que é usado neste tutorial
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Para compilar o objeto COM que é usado neste tutorial
 
 1. No Visual Basic 6,0, abra um novo projeto de DLL do ActiveX. Um projeto chamado `Project1` é criado. Ele tem uma classe chamada `Class1`.
 
@@ -70,13 +70,13 @@ O procedimento a seguir mostra como usar Visual Basic 6,0 para criar um objeto C
 10. Crie e registre o objeto COM clicando em **Make ComObject1. dll** no menu **arquivo** .
 
     > [!NOTE]
-    > Embora você também possa expor uma classe criada com Visual Basic como um objeto COM, ela não é um objeto COM verdadeiro e não pode ser usada neste passo-a-passos. Para obter detalhes, consulte interoperabilidade [com em aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).
+    > Embora você também possa expor uma classe criada com Visual Basic como um objeto COM, ela não é um objeto COM verdadeiro e não pode ser usada neste passo-a-passos. Para obter detalhes, consulte [interoperabilidade com em aplicativos .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).
 
 ## <a name="interop-assemblies"></a>Assemblies de interoperabilidade
 
-No procedimento a seguir, você criará um assembly de interoperabilidade, que atua como uma ponte entre código não gerenciado (como um objeto COM) e o código gerenciado que o Visual Studio usa. O assembly de interoperabilidade que o Visual Basic cria lida com muitos dos detalhes do trabalho com objetoscom, como o marshaling de interoperabilidade, o processo de empacotamento de parâmetros e valores de retorno em tipos de dados equivalentes à medida que eles se movem para e de objetos com. A referência no aplicativo Visual Basic aponta para o assembly de interoperabilidade, não o objeto COM real.
+No procedimento a seguir, você criará um assembly de interoperabilidade, que atua como uma ponte entre código não gerenciado (como um objeto COM) e o código gerenciado que o Visual Studio usa. O assembly de interoperabilidade que o Visual Basic cria lida com muitos dos detalhes do trabalho com objetos COM, como o *marshaling de interoperabilidade*, o processo de empacotamento de parâmetros e valores de retorno em tipos de dados equivalentes à medida que eles se movem para e de objetos com. A referência no aplicativo Visual Basic aponta para o assembly de interoperabilidade, não o objeto COM real.
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Para usar um objeto com com Visual Basic 2005 e versões posteriores
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Para usar um objeto com com Visual Basic 2005 e versões posteriores
 
 1. Abra um novo projeto de aplicativo do Windows Visual Basic.
 
@@ -108,7 +108,7 @@ No procedimento a seguir, você criará um assembly de interoperabilidade, que a
 
 A nova classe herda as propriedades da classe base no objeto COM, sobrecarrega um método e define um novo método para estender a classe.
 
-#### <a name="to-test-the-inherited-class"></a>Para testar a classe herdada
+### <a name="to-test-the-inherited-class"></a>Para testar a classe herdada
 
 1. Adicione um botão ao formulário de inicialização e clique duas vezes nele para exibir seu código.
 

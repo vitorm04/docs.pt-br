@@ -2,12 +2,12 @@
 title: Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895100"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053308"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 
@@ -29,7 +29,7 @@ Para obter uma explicação detalhada da criação de um serviço WCF hospedado 
 
 O WCF, o IIS e o ASP.NET devem ser instalados para que os serviços WCF hospedados pelo IIS funcionem corretamente. Os procedimentos para instalar o WCF (como parte do .NET Framework), ASP.NET e IIS variam de acordo com o seu sistema operacional. Para obter mais informações sobre como instalar o WCF e o .NET Framework, consulte [instalar o .NET Framework para desenvolvedores](../../install/guide-for-developers.md). Para instalar o IIS no Windows 10, abra **programas e recursos** no **painel de controle** e selecione **Ativar ou desativar recursos do Windows**. Em **recursos do Windows**, selecione **serviços de informações da Internet** e, em seguida, escolha **OK**.
 
-![Recursos do Windows com IIS realçado](media/windows-features-iis.png)
+![Recursos do Windows com IIS realçado](./media/windows-features-iis.png)
 
 As instruções para instalar o IIS em outros sistemas operacionais podem ser encontradas em [instalar o IIS no Windows Vista e no Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) e [instalar o IIS 8,5 no Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 

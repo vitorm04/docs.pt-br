@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851250"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044674"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 
@@ -25,7 +25,7 @@ O Visualizador de Log de Associação do Assembly exibe detalhes das associaçõ
 > [!IMPORTANT]
 > Você deve executar fuslogvw.exe com privilégios de administrador.
 
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7) com credenciais de administrador. Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7) com credenciais de administrador. Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
 No prompt de comando, digite o seguinte:
 
@@ -60,7 +60,7 @@ O visualizador exibe uma entrada para cada associação do assembly com falha. P
 
     - Uma descrição de qualquer política da versão Aplicativo, Editor ou Administrador aplicada.
 
-    - Se o assembly estava ou não no [cache de assembly global](../../../docs/framework/app-domains/gac.md).
+    - Se o assembly estava ou não no [cache de assembly global](../app-domains/gac.md).
 
     - Uma lista de todas as URLs de sondagem.
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>Associando Logs para Imagens Nativas
 
-Por padrão, Fuslogvw.exe registra em log solicitações de associação normais. Também é possível registrar em log associações de assembly para imagens nativas criadas usando o [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).
+Por padrão, Fuslogvw.exe registra em log solicitações de associação normais. Também é possível registrar em log associações de assembly para imagens nativas criadas usando o [Ngen.exe (Gerador de Imagens Nativas)](ngen-exe-native-image-generator.md).
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>Para registrar em log associações de assembly para imagens nativas
 
@@ -218,7 +218,7 @@ Discarding native image.
 2. Digite o caminho na caixa de texto **Caminho de log personalizado**.
 
 > [!NOTE]
-> O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários na caixa de diálogo Opções da Internet do IE.
+> O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários na caixa de diálogo Opções da Internet do IE.
 >
 > Se o aplicativo não gerenciado hospedar o Common Language Runtime implementando as interfaces `IHostAssemblyManager` e `IHostAssemblyStore`, as entradas de log não poderão ser armazenadas no cache de wininet.  Para exibir entradas de log para hosts personalizadas que implementam essas interfaces, você deve especificar um caminho de log alternativo.
 
@@ -234,7 +234,7 @@ Discarding native image.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.TypeLoadException>
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
-- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ferramentas](index.md)
+- [Cache de assembly global](../app-domains/gac.md)
+- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

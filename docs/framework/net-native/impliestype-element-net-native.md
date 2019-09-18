@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616683"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049672"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType > (.NET nativo)
+# <a name="impliestype-element-net-native"></a>\<Elemento de > implicatype (.NET Native)
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -59,7 +59,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -68,9 +68,9 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão a um método.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
+|[\<Method>](method-element-net-native.md)|Aplica a política de reflexão a um método.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<ImpliesType>` destina-se principalmente para uso por bibliotecas. Ele aborda o cenário a seguir:  
@@ -99,7 +99,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
- O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método genérico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` que uma determinada biblioteca acessará dinamicamente juntamente com o associado <xref:System.Collections.Generic.List%601> e <xref:System.Array> tipos. Isso pode ser expressado como:  
+ O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` genérico que uma determinada biblioteca acessará dinamicamente junto com os tipos e <xref:System.Array> associados <xref:System.Collections.Generic.List%601> . Isso pode ser expressado como:  
   
 ```xml  
 <Type Name="MyType">  
@@ -112,6 +112,6 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)

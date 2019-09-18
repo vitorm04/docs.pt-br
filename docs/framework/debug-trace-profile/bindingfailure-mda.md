@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875076"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052950"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 
@@ -46,7 +46,7 @@ A primeira etapa é determinar por que o CLR não pôde ser associado ao assembl
 
 - Determine a causa usando os dados fornecidos pelo MDA `bindingFailure`:
 
-  - Execute o [Fuslogvw.exe (Visualizador de Log de Associação do Assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ler os logs de erro produzidos pelo associador do assembly.
+  - Execute o [Fuslogvw.exe (Visualizador de Log de Associação do Assembly)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ler os logs de erro produzidos pelo associador do assembly.
 
   - Determine se o assembly está no local solicitado. No caso dos métodos <xref:System.Reflection.Assembly.LoadFrom%2A> e <xref:System.Reflection.Assembly.LoadFile%2A>, o local solicitado pode ser determinado com facilidade. No caso do método <xref:System.Reflection.Assembly.Load%2A>, que é associado usando a identidade do assembly, você deve procurar assemblies que correspondem à identidade no caminho de investigação da propriedade <xref:System.AppDomain.BaseDirectory%2A> do domínio do aplicativo e no cache de assembly global.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Consulte também
 
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

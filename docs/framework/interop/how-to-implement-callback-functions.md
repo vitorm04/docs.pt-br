@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894191"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051762"
 ---
 # <a name="how-to-implement-callback-functions"></a>Como: Implementar funções de retorno de chamada
 O procedimento e o exemplo a seguir demonstram como um aplicativo gerenciado, usando invocação de plataforma, pode imprimir o valor do identificador para cada janela no computador local. Especificamente, o procedimento e o exemplo usam a função **EnumWindows** para percorrer a lista de janelas e uma função de retorno de chamada gerenciada (chamada CallBack) para imprimir o valor do identificador da janela.  
@@ -38,7 +38,7 @@ O procedimento e o exemplo a seguir demonstram como um aplicativo gerenciado, us
   
 4. Verifique se o coletor de lixo não recupera o delegado antes da função de retorno de chamada terminar seu trabalho. Quando você passa um delegado como um parâmetro ou passa um delegado contido como um campo em uma estrutura, ele permanece não coletado pela a duração da chamada. Portanto, como é o caso no exemplo de enumeração a seguir, a função de retorno de chamada termina o trabalho antes da chamada retornar e não requer nenhuma ação adicional pelo chamador gerenciado.  
   
-     Se, no entanto, a função de retorno de chamada puder ser chamada depois que a chamada retornar, o chamador gerenciado deverá tomar medidas para garantir que o delegado permaneça não coletado até que a função de retorno de chamada seja concluída. Para obter informações detalhadas sobre como evitar a coleta de lixo, consulte [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md) com invocação de plataforma.  
+     Se, no entanto, a função de retorno de chamada puder ser chamada depois que a chamada retornar, o chamador gerenciado deverá tomar medidas para garantir que o delegado permaneça não coletado até que a função de retorno de chamada seja concluída. Para obter informações detalhadas sobre como evitar a coleta de lixo, consulte [Marshaling de interoperabilidade](interop-marshaling.md) com invocação de plataforma.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>Consulte também
 
-- [Funções de retorno de chamada](../../../docs/framework/interop/callback-functions.md)
-- [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Funções de retorno de chamada](callback-functions.md)
+- [Chamando uma função de DLL](calling-a-dll-function.md)

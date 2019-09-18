@@ -1,19 +1,21 @@
 ---
 title: O .NET Portability Analyzer – .NET
 description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar a portabilidade do seu código entre as várias implementações de .NET, incluindo .NET Core, .NET Standard, UWP e Xamarin.
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107511"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053998"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
-Deseja fazer suas bibliotecas serem compatíveis com multiplataforma? Deseja ver a quantidade de trabalho necessário para tornar o aplicativo compatível com outras implementações do .NET e perfis, incluindo .NET Core, .NET Standard, UWP e Xamarin para iOS, Android e Mac? O [.NET Portability Analyzer](https://github.com/microsoft/dotnet-apiport) é uma ferramenta que fornece um relatório detalhado sobre a flexibilidade do seu programa nas implementações do .NET mediante a análise de assemblies. O Analisador de Portabilidade é oferecido como uma [Extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), que analisa assemblies por projeto, e como um [aplicativo de console ApiPort](https://aka.ms/apiportdownload), que analisa assemblies por arquivos ou diretório especificados.
+Deseja fazer suas bibliotecas serem compatíveis com multiplataforma? Quer saber quanto trabalho é necessário para fazer com que seu aplicativo .NET Framework seja executado no .NET Core?  O [.net Portability Analyzer](https://github.com/microsoft/dotnet-apiport) é uma ferramenta que fornece um relatório detalhado sobre as APIs do .net ausentes para que seus aplicativos ou bibliotecas sejam portáteis em suas plataformas .net de destino especificadas, analisando os assemblies. O Analisador de Portabilidade é oferecido como uma [Extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), que analisa assemblies por projeto, e como um [aplicativo de console ApiPort](https://aka.ms/apiportdownload), que analisa assemblies por arquivos ou diretório especificados.
+
+Depois de converter seu projeto para direcionar sua plataforma de destino, como o .NET Core, você pode usar o Roslyn com base na[https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer](api-analyzer.md) [ferramenta de análise de API] (para identificar as APIs que geram PlatformNotSupportedException e outros problemas de compatibilidade.
 
 ## <a name="common-targets"></a>Destinos comuns
 
@@ -58,7 +60,7 @@ A seção Resumo de Portabilidade do relatório mostra o percentual de portabili
 
 ![Detalhes da Portabilidade](./media/portability-analyzer/portabilitydetails.png)
 
-A seção Detalhes do relatório lista as APIs ausentes de uma das Plataformas de Destino. 
+A seção de **detalhes** do relatório lista as APIs ausentes em qualquer uma das **plataformas de destino**selecionadas. 
 
 - Tipo de destino: o tipo tem uma API ausente de uma Plataforma de Destino 
 - Membro de destino: o método está ausente de uma Plataforma de Destino 

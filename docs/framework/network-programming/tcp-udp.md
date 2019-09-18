@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172543"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047109"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Os aplicativos podem usar os serviços dos protocolos TCP e UDP com as classes <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient>. Essas classes de protocolo são criadas com base na classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> e cuidam dos detalhes da transferência de dados.  
@@ -34,9 +34,9 @@ Os aplicativos podem usar os serviços dos protocolos TCP e UDP com as classes <
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando serviços de TCP](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Usando serviços de UDP](../../../docs/framework/network-programming/using-udp-services.md)
-- [Usando fluxos na rede](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Usando um soquete de servidor assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Usando um soquete de cliente assíncrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Usando serviços de TCP](using-tcp-services.md)
+- [Usando serviços de UDP](using-udp-services.md)
+- [Usando fluxos na rede](using-streams-on-the-network.md)
+- [Usando um soquete de servidor assíncrono](using-an-asynchronous-server-socket.md)
+- [Usando um soquete de cliente assíncrono](using-an-asynchronous-client-socket.md)
+- [Usando protocolos de aplicativo](using-application-protocols.md)

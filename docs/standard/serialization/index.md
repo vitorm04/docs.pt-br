@@ -1,47 +1,40 @@
 ---
-title: Serialização no .NET
-ms.date: 03/30/2017
+title: Serialização-.NET
+ms.date: 09/02/2019
 helpviewer_keywords:
+- JSON serialization
 - XML serialization, defined
 - binary serialization
 - serializing objects
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 1f90a128ef6b29acbd315beae7aaaf1d1b78a62b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e6db24326c79ab6509b253c45c27f87a2aacd73c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638856"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053356"
 ---
 # <a name="serialization-in-net"></a>Serialização no .NET
-A serialização é o processo de conversão do estado de um objeto em um formulário que possa ser persistido ou transportado. O complemento de serialização é desserialização, que converte um fluxo em um objeto. Juntos, esses processos permitem que os dados sejam facilmente armazenados e transferidos.  
-  
-O .NET conta com duas tecnologias de serialização:  
-  
-- A serialização binária preserva a fidelidade do tipo, que é útil para preservar o estado de um objeto entre diferentes chamadas de um aplicativo. Por exemplo, você pode compartilhar um objeto entre diferentes aplicativos serializando-o para a área de transferência. Você pode serializar um objeto para um fluxo, um disco, a memória, pela rede, e assim por diante. O acesso remoto usa a serialização para passar objetos “por valor” de um computador ou domínio de aplicativo para outro.  
-  
-- A serialização XML serializa somente as propriedades públicas e os campos e não preserva a fidelidade de tipo. Isso é útil quando você deseja fornecer ou consumir dados sem restringir o aplicativo que usa os dados. Como o XML é um padrão aberto, é uma opção atrativa para compartilhar dados pela Web. SOAP é, da mesma forma, um padrão aberto, uma opção atrativa.  
-  
-## <a name="in-this-section"></a>Nesta seção  
-[Tópicos com instruções de serialização](../../../docs/standard/serialization/serialization-how-to-topics.md)  
-As listas vinculam tópicos de Como fazer contidas nesta seção.
-  
-[Serialização binária](../../../docs/standard/serialization/binary-serialization.md)  
-Descreve o mecanismo de serialização binária que está incluído com o Common Language Runtime.
 
-[Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-Descreve o mecanismo de serialização de XML e SOAP que está incluído com o Common Language Runtime.
-
-[Ferramentas de serialização](../../../docs/standard/serialization/serialization-tools.md)  
-Essas ferramentas ajudam a desenvolver código de serialização.
-
-[Exemplos de serialização](../../../docs/standard/serialization/serialization-samples.md)  
-Os exemplos demonstram como fazer a serialização.
+A serialização é o processo de conversão do estado de um objeto em um formulário que possa ser persistido ou transportado. O complemento de serialização é desserialização, que converte um fluxo em um objeto. Juntos, esses processos permitem que os dados sejam armazenados e transferidos.  
+  
+O .NET apresenta as seguintes tecnologias de serialização:  
+  
+- A [serialização binária](binary-serialization.md) preserva a fidelidade do tipo, que é útil para preservar o estado de um objeto entre diferentes invocações de um aplicativo. Por exemplo, você pode compartilhar um objeto entre diferentes aplicativos serializando-o para a área de transferência. Você pode serializar um objeto para um fluxo, um disco, a memória, pela rede, e assim por diante. O acesso remoto usa a serialização para passar objetos “por valor” de um computador ou domínio de aplicativo para outro.  
+  
+- A [serialização de XML e SOAP](xml-and-soap-serialization.md) serializa apenas campos e propriedades públicas e não preserva a fidelidade do tipo. Isso é útil quando você deseja fornecer ou consumir dados sem restringir o aplicativo que usa os dados. Como o XML é um padrão aberto, é uma opção atrativa para compartilhar dados pela Web. SOAP é, da mesma forma, um padrão aberto, uma opção atrativa.  
+  
+- A [serialização JSON](system-text-json-overview.md) serializa apenas as propriedades públicas e não preserva a fidelidade do tipo. JSON é um padrão aberto que é uma opção atraente para compartilhar dados na Web.
 
 ## <a name="reference"></a>Referência
-O <xref:System.Runtime.Serialization> contém classes que podem ser usadas para serialização e desserialização de objetos.
+
+<xref:System.Runtime.Serialization>  
+Contém classes que podem ser usadas para serialização e desserialização de objetos.
   
 <xref:System.Xml.Serialization>  
 Contém classes que podem ser usadas para serializar objetos em documentos ou fluxos de formato XML.
+
+<xref:System.Text.Json>  
+Contém classes que podem ser usadas para serializar objetos em fluxos ou documentos de formato JSON.

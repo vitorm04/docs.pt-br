@@ -2,12 +2,12 @@
 title: 'Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: af6eb8a334108c988967a555024b524e27d40f58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 362e7af36d214df9f0454479e25a80af9d440b2b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959072"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048285"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6
 O exemplo de código a seguir mostra como modificar o arquivo de configuração do computador, *machine.config* para habilitar o suporte a IPv6. O arquivo *machine.config* é armazenado na pasta *%Windir%\Microsoft.NET\Framework* no diretório em que o Windows foi instalado. Há um outro arquivo *machine.config* nas pastas em *%Windir%\Microsoft.NET\Framework* para cada versão do .NET Framework instalada no computador (por exemplo, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
@@ -37,6 +37,6 @@ O exemplo de código a seguir mostra como modificar o arquivo de configuração 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Endereçamento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)
-- [Esquema de configurações de rede](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<Elemento ipv6> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [Endereçamento IPv6](ipv6-addressing.md)
+- [Esquema de configurações de rede](../configure-apps/file-schema/network/index.md)
+- [\<Elemento ipv6> (configurações de rede)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: 8d4071a7f8dbb1cca1440fa69ae40df17330b060
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 2ec958cc035ac62086cdd3e2844811accc181d47
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624650"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048813"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interação da política de cache – idade máxima e atualização mínima
 Para ajudar a garantir que o conteúdo mais atualizado é retornado para o aplicativo cliente, a interação dos requisitos de revalidação do servidor e da política de cache de cliente sempre resulta na política de cache mais conservadora. Todos os exemplos deste tópico ilustram a política de cache para um recurso que é armazenado em cache em 1º de janeiro e expira em 4 de janeiro.  
@@ -30,9 +30,9 @@ Para ajudar a garantir que o conteúdo mais atualizado é retornado para o aplic
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
-- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [Interação da política de cache – idade máxima e desatualização máxima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
+- [Gerenciamento de cache para aplicativos de rede](cache-management-for-network-applications.md)
+- [Política de cache](cache-policy.md)
+- [Políticas de cache baseadas na localização](location-based-cache-policies.md)
+- [Políticas de cache baseadas em tempo](time-based-cache-policies.md)
+- [Configurando o cache em aplicativos de rede](configuring-caching-in-network-applications.md)
+- [Interação da política de cache – idade máxima e desatualização máxima](cache-policy-interaction-maximum-age-and-maximum-staleness.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853967"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052093"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como: Acompanhar o progresso do Instalador do .NET Framework 4.5
 
@@ -50,7 +50,7 @@ O .NET Framework 4.5 é um tempo de execução redistribuível. Se você desenvo
 
 ## <a name="chainer-sample"></a>Exemplo de encadeador
 
-O exemplo de encadeador inicializa e controla silenciosamente a instalação do .NET Framework 4.5 enquanto mostra o progresso. Este exemplo é semelhante ao exemplo de encadeador fornecido para o .NET Framework 4. No entanto, além disso, ele pode evitar reinicializações do sistema processando a caixa de mensagem para fechar os aplicativos do .NET Framework 4. Para obter informações sobre essa caixa de mensagens, consulte [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md). Você pode usar este exemplo com o instalador do .NET Framework 4. Nesse cenário, a mensagem simplesmente não é enviada.
+O exemplo de encadeador inicializa e controla silenciosamente a instalação do .NET Framework 4.5 enquanto mostra o progresso. Este exemplo é semelhante ao exemplo de encadeador fornecido para o .NET Framework 4. No entanto, além disso, ele pode evitar reinicializações do sistema processando a caixa de mensagem para fechar os aplicativos do .NET Framework 4. Para obter informações sobre essa caixa de mensagens, consulte [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](reducing-system-restarts.md). Você pode usar este exemplo com o instalador do .NET Framework 4. Nesse cenário, a mensagem simplesmente não é enviada.
 
 > [!WARNING]
 > Você deve executar o exemplo como um administrador.
@@ -311,5 +311,5 @@ Um servidor típico cria um nome de arquivo MMIO aleatório, cria o arquivo (con
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Implantação](../../../docs/framework/deployment/index.md)
+- [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)
+- [Implantação](index.md)

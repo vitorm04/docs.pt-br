@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971829"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051799"
 ---
 # <a name="how-to-create-com-wrappers"></a>Como: Criar wrappers COM
 
@@ -45,7 +45,7 @@ Agora você pode escrever o código para acessar o objeto COM. Comece declarando
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Para criar um RCW (Runtime Callable Wrapper) usando ferramentas do .NET Framework  
   
-- Execute a ferramenta [Tlbimp.exe (Importador da Biblioteca de Tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+- Execute a ferramenta [Tlbimp.exe (Importador da Biblioteca de Tipos)](../tools/tlbimp-exe-type-library-importer.md).  
   
  Essa ferramenta cria um assembly que contém metadados em tempo de execução para os tipos definidos na biblioteca de tipos original.  
   
@@ -67,11 +67,11 @@ Agora você pode escrever o código para acessar o objeto COM. Comece declarando
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Para criar um COM Callable Wrapper usando ferramentas do .NET Framework  
   
-Execute a ferramenta [Regasm.exe (Ferramenta de Registro de Assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+Execute a ferramenta [Regasm.exe (Ferramenta de Registro de Assembly)](../tools/regasm-exe-assembly-registration-tool.md).  
   
 Essa ferramenta lê os metadados do assembly e adiciona as entradas necessárias ao Registro. Como resultado, os clientes COM podem criar classes do .NET Framework de forma transparente. Use o assembly como se ele fosse uma classe COM nativa.  
   
-Execute o Regasm.exe em um assembly localizado em qualquer diretório e, em seguida, execute o [Gacutil.exe (Ferramenta do Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para movê-lo para o cache de assembly global. A movimentação do assembly não invalida as entradas do Registro de local, porque o cache de assembly global sempre será examinado se o assembly não for encontrado em outro lugar.  
+Execute o Regasm.exe em um assembly localizado em qualquer diretório e, em seguida, execute o [Gacutil.exe (Ferramenta do Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para movê-lo para o cache de assembly global. A movimentação do assembly não invalida as entradas do Registro de local, porque o cache de assembly global sempre será examinado se o assembly não for encontrado em outro lugar.  
   
 ## <a name="see-also"></a>Consulte também
 

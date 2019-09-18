@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5dce6895ed9962cf20808417c50569db48de6d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963305"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042352"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 > [!NOTE]
@@ -74,8 +74,8 @@ ms.locfileid: "69963305"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [Propriedades de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Eventos de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
+- [Mapeamento de padrão de controle para clientes de automação de interface do usuário](control-pattern-mapping-for-ui-automation-clients.md)
+- [Visão geral de Automação da Interface do Usuário](ui-automation-overview.md)
+- [Propriedades de automação de interface do usuário para clientes](ui-automation-properties-for-clients.md)
+- [Eventos de automação de interface do usuário para clientes](ui-automation-events-for-clients.md)

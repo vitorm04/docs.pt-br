@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614332"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052256"
 ---
 # <a name="trace-switches"></a>Opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento. Elas são objetos que existem no código e podem ser configuradas externamente por meio do arquivo .config. Há três tipos de opções de rastreamento fornecidas no .NET Framework: a classe <xref:System.Diagnostics.BooleanSwitch>, a classe <xref:System.Diagnostics.TraceSwitch> e a classe <xref:System.Diagnostics.SourceSwitch>. A classe <xref:System.Diagnostics.BooleanSwitch> atua como uma opção de alternância, habilitando ou desabilitando uma variedade de instruções de rastreamento. As classes <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> permitem habilitar uma opção de rastreamento para um nível de rastreamento específico, de modo que as mensagens <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.TraceSource> especificadas para o nível e todos os níveis inferiores a ele sejam exibidas. Se você desabilitar a opção, as mensagens de rastreamento não serão exibidas. Todas essas classes são derivadas da classe **Switch** abstrata (**MustInherit**), assim como todas as opções desenvolvidas pelo usuário.  
   
- As opções de rastreamento podem ser úteis para a filtragem de informações. Por exemplo, talvez você deseje ver todas as mensagens de rastreamento em um módulo de acesso a dados, mas somente as mensagens de erro no restante do aplicativo. Nesse caso, você usará uma opção de rastreamento para o módulo de acesso a dados e uma opção para o restante do aplicativo. Usando o arquivo .config para definir as opções com as configurações apropriadas, você pode controlar quais tipos de mensagem de rastreamento foram recebidas. Para obter mais informações, confira [Como: Criar, inicializar e configurar opções de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ As opções de rastreamento podem ser úteis para a filtragem de informações. Por exemplo, talvez você deseje ver todas as mensagens de rastreamento em um módulo de acesso a dados, mas somente as mensagens de erro no restante do aplicativo. Nesse caso, você usará uma opção de rastreamento para o módulo de acesso a dados e uma opção para o restante do aplicativo. Usando o arquivo .config para definir as opções com as configurações apropriadas, você pode controlar quais tipos de mensagem de rastreamento foram recebidas. Para obter mais informações, confira [Como: Criar, inicializar e configurar opções](how-to-create-initialize-and-configure-trace-switches.md)de rastreamento.  
   
  Normalmente, um aplicativo implantado é executado com suas opções desabilitadas, de modo que os usuários não precisem observar muitas mensagens de rastreamento irrelevantes exibidas em uma tela ou enchendo um arquivo de log conforme o aplicativo é executado. Se surgir um problema durante a execução do aplicativo, pare o aplicativo, habilite as opções e reinicie o aplicativo. Em seguida, as mensagens de rastreamento serão exibidas.  
   
@@ -85,6 +85,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Ouvintes de rastreamento](trace-listeners.md)
+- [Como: Adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)

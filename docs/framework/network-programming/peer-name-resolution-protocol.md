@@ -2,12 +2,12 @@
 title: Protocolo PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623011"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047512"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
@@ -50,5 +50,5 @@ O protocolo PNRP demonstra as seguintes propriedades:
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
-- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Amostras de programação de rede](network-programming-samples.md)
 - [Amostra de tecnologia PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

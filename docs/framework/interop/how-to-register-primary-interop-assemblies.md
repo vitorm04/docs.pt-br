@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946670"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051738"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Como: Registrar assemblies de interoperabilidade primários
 
@@ -24,7 +24,7 @@ As classes podem ter o marshaling realizado somente pela interoperabilidade COM 
 
  Mesmo se você não planeja expor os tipos COM terceiros, usar o assembly de interoperabilidade primário pode facilitar a tarefa de interoperar com componentes COM. No entanto, essa estratégia não fornece nenhum isolamento de alterações que um fornecedor possa fazer a tipos definidos em um assembly de interoperabilidade primário. Quando seu aplicativo requer um isolamento desse tipo, gere seu próprio assembly de interoperabilidade em vez de usar o assembly de interoperabilidade primário.
 
- Você deve registrar todos os assemblies de interoperabilidade primários adquiridos no computador de desenvolvimento para que você referenciá-los com o Visual Studio. O Visual Studio procura e usa um assembly de interoperabilidade primário na primeira vez que você referenciar um tipo de uma biblioteca de tipos COM. Se o Visual Studio não puder localizar o assembly de interoperabilidade primário associado à biblioteca de tipos, ele solicitará que você o adquira ou oferecerá a possibilidade de criar um assembly de interoperabilidade em vez disso. Da mesma forma, o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) também usa o Registro para localizar assemblies de interoperabilidade primários.
+ Você deve registrar todos os assemblies de interoperabilidade primários adquiridos no computador de desenvolvimento para que você referenciá-los com o Visual Studio. O Visual Studio procura e usa um assembly de interoperabilidade primário na primeira vez que você referenciar um tipo de uma biblioteca de tipos COM. Se o Visual Studio não puder localizar o assembly de interoperabilidade primário associado à biblioteca de tipos, ele solicitará que você o adquira ou oferecerá a possibilidade de criar um assembly de interoperabilidade em vez disso. Da mesma forma, o [Importador de Biblioteca de Tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) também usa o Registro para localizar assemblies de interoperabilidade primários.
 
  Embora não seja necessário registrar assemblies de interoperabilidade primários a menos que você planeje usar o Visual Studio, o registro fornece duas vantagens:
 
@@ -32,7 +32,7 @@ As classes podem ter o marshaling realizado somente pela interoperabilidade COM 
 
 - Você pode evitar gerar acidentalmente e usar um novo assembly de interoperabilidade se, em algum momento no futuro, você usar o Visual Studio para fazer referência a um tipo para o qual você tem um assembly de interoperabilidade primário não registrado.
 
-Use a [Ferramenta de Registro do Assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) para registrar um assembly de interoperabilidade primário.
+Use a [Ferramenta de Registro do Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar um assembly de interoperabilidade primário.
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Para registrar um assembly de interoperabilidade primário
 

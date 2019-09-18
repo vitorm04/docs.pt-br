@@ -4,70 +4,70 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052405"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049265"
 ---
 # <a name="runtime-directive-elements"></a>Elementos da diretiva de tempo de execução
-O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução. Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.  
+O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução. Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.  
   
- [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)  
- Aplica a política de reflexão de tempo de execução a todos os tipos usados pelo aplicativo e serve como um contêiner para tipos amplos de aplicativos e membros de tipo cujos metadados estão disponíveis para reflexão no tempo de execução. Este é um filho do elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md).  
+ [\<Application>](application-element-net-native.md)  
+ Aplica a política de reflexão de tempo de execução a todos os tipos usados pelo aplicativo e serve como um contêiner para tipos amplos de aplicativos e membros de tipo cujos metadados estão disponíveis para reflexão no tempo de execução. Este é um filho do elemento [\<Directives>](directives-element-net-native.md).  
   
- [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)  
- Aplica a política de tempo de execução a todos os tipos em um assembly. Esse é um filho dos elementos [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Assembly>](assembly-element-net-native.md)  
+ Aplica a política de tempo de execução a todos os tipos em um assembly. Esse é um filho dos elementos [\<Application>](application-element-net-native.md) e [\<Library>](library-element-net-native.md).  
   
- [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
- Se sua diretiva recipiente [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) for um atributo, ela se aplicará à política de tempo de execução para elementos de código aos quais esse atributo é aplicado.  
+ [\<AttributeImplies>](attributeimplies-element-net-native.md)  
+ Se sua diretiva recipiente [\<Type>](type-element-net-native.md) for um atributo, ela se aplicará à política de tempo de execução para elementos de código aos quais esse atributo é aplicado.  
   
- [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
- O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET nativo. Seus elementos filhos são [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Directives>](directives-element-net-native.md)  
+ O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET Native. Seus elementos filhos são [\<Application>](application-element-net-native.md) e [\<Library>](library-element-net-native.md).  
   
- [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
- Aplica a política de tempo de execução a um evento. Esse é um filho dos elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
+ [\<Event>](event-element-net-native.md)  
+ Aplica a política de tempo de execução a um evento. Esse é um filho dos elementos [\<Type>](type-element-net-native.md) e [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
   
- [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
- Aplica a política de tempo de execução a um campo. Esse é um filho dos elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
+ [\<Field>](field-element-net-native.md)  
+ Aplica a política de tempo de execução a um campo. Esse é um filho dos elementos [\<Type>](type-element-net-native.md) e [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
   
- [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
+ [\<GenericParameter>](genericparameter-element-net-native.md)  
  Aplica a política de tempo de execução ao tipo de parâmetro de um tipo ou método genérico.  
   
- [\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)  
+ [\<ImpliesType>](impliestype-element-net-native.md)  
  Aplica a política de tempo de execução a um tipo, se ela tiver sido aplicada ao tipo ou método recipiente.  
   
- [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
- Aplica a política de tempo de execução a todos os tipos em um assembly. Esse é um filho dos elementos [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Library>](library-element-net-native.md)  
+ Aplica a política de tempo de execução a todos os tipos em um assembly. Esse é um filho dos elementos [\<Application>](application-element-net-native.md) e [\<Library>](library-element-net-native.md).  
   
- [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
- Aplica a política de tempo de execução a um método. Esse é um filho dos elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
+ [\<Method>](method-element-net-native.md)  
+ Aplica a política de tempo de execução a um método. Esse é um filho dos elementos [\<Type>](type-element-net-native.md) e [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
   
- [\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
- Aplica a diretiva de tempo de execução para um método genérico construído. Esse é um filho dos elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
+ [\<MethodInstantiation>](methodinstantiation-element-net-native.md)  
+ Aplica a diretiva de tempo de execução para um método genérico construído. Esse é um filho dos elementos [\<Type>](type-element-net-native.md) e [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
   
- [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)  
+ [\<Namespace>](namespace-element-net-native.md)  
  Aplica a política de tempo de execução a todos os tipos em um namespace.  
   
- [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
+ [\<Parameter>](parameter-element-net-native.md)  
  Aplica a política de tempo de execução ao tipo do argumento passado para um método.  
   
- [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
- Aplica a política de tempo de execução a uma propriedade. Esse é um filho dos elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
+ [\<Property>](property-element-net-native.md)  
+ Aplica a política de tempo de execução a uma propriedade. Esse é um filho dos elementos [\<Type>](type-element-net-native.md) e [\<TypeInstantiation>](typeinstantiation-element-net-native.md).  
   
- [\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)  
+ [\<Subtypes>](subtypes-element-net-native.md)  
  Aplica a política de tempo de execução a todas as classes herdadas do tipo recipiente.  
   
- [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)  
+ [\<Type>](type-element-net-native.md)  
  Aplica a política de tempo de execução a um tipo.  
   
- [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
+ [\<TypeInstantiation>](typeinstantiation-element-net-native.md)  
  Aplica a política de tempo de execução a um tipo genérico construído.  
   
- [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
+ [\<TypeParameter>](typeparameter-element-net-native.md)  
  Aplica a política de tempo de execução ao tipo representado por um argumento <xref:System.Type> passado para um método.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração rd.xml](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração rd.xml](runtime-directives-rd-xml-configuration-file-reference.md)

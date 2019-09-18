@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7787121afcfae4978141d36d25ddfa0a4f54df56
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660429"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039610"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Criar um aplicativo Olá, Mundo em Visual Basic com o SDK do .NET Core no Visual Studio 2017
 
@@ -20,7 +20,7 @@ Este tópico fornece uma introdução passo a passo para compilação, depuraç�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. É possível desenvolver seu aplicativo com o .NET Core 2.0.
+O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. Você pode desenvolver seu aplicativo com o .NET Core 2,1 ou versões posteriores.
 
 Para obter mais informações, consulte [Pré-requisitos para .NET Core no Windows](../windows-prerequisites.md).
 

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868856"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049913"
 ---
-# <a name="assembly-element-net-native"></a>\<Assembly > (.NET nativo)
+# <a name="assembly-element-net-native"></a>\<Elemento de > de assembly (.NET Native)
 Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -59,27 +59,27 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um as
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para todos os tipos no assembly. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para todos os tipos no assembly. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace filho.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
+|[\<Namespace>](namespace-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace filho.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
+|[\<Application>](application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](application-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
+|[\<Library>](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](library-element-net-native.md) pode ter zero, um ou mais elementos `<Assembly>`.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `<Assembly>` define a política de tempo de execução para todos os tipos em um assembly. Ele é diferente do elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md), que especifica uma biblioteca, mas depende de seus elementos filho para definir a política de reflexão em tempo de execução. O elemento `<Assembly>` aplica-se a todos os tipos em um assembly, a menos que eles sejam substituídos por um elemento filho.  
+ O elemento `<Assembly>` define a política de tempo de execução para todos os tipos em um assembly. Ele é diferente do elemento [\<Library>](library-element-net-native.md), que especifica uma biblioteca, mas depende de seus elementos filho para definir a política de reflexão em tempo de execução. O elemento `<Assembly>` aplica-se a todos os tipos em um assembly, a menos que eles sejam substituídos por um elemento filho.  
   
- O exemplo a seguir mostra como é possível aplicar a política em tempo de execução a todos os tipos em assemblies no pacote do aplicativo atribuindo o atributo `Name` a um valor de “*Application\*”. O elemento `<Assembly>` deve ser filho do elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md).  
+ O exemplo a seguir mostra como é possível aplicar a política em tempo de execução a todos os tipos em assemblies no pacote do aplicativo atribuindo o atributo `Name` a um valor de “*Application\*”. O elemento `<Assembly>` deve ser filho do elemento [\<Application>](application-element-net-native.md).  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">   
@@ -93,6 +93,6 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um as
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)

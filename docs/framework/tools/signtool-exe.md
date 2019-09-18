@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894797"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044203"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |Comando|Descrição|  
 |-------------|-----------------|  
-|`catdb`|Adiciona ou remove um arquivo de catálogo de um banco de dados do catálogo. Os bancos de dados do catálogo são usados na pesquisa automática de arquivos de catálogo e são identificados por uma GUID. Para obter uma lista de opções com suporte pelo comando `catdb`, consulte [Opções do Comando catdb](../../../docs/framework/tools/signtool-exe.md#catdb).|  
-|`sign`|Assina arquivos digitalmente. As assinaturas digitais protegem os arquivos contra violação e permitem aos usuários verificar o signatário com base em um certificado de assinatura. Para obter uma lista de opções com suporte pelo comando `sign`, consulte [Opções do Comando sign](../../../docs/framework/tools/signtool-exe.md#sign).|  
-|`Timestamp`|Arquivos de carimbo de data/hora. Para obter uma lista das opções com suporte pelo comando `TimeStamp`, consulte [Opções de Comando TimeStamp](../../../docs/framework/tools/signtool-exe.md#TimeStamp).|  
-|`Verify`|Verifica a assinatura digital dos arquivos determinando se o certificado de assinatura foi emitido por uma autoridade confiável, se o certificado de assinatura foi revogado e, como opção, se o certificado de assinatura é válido para uma política específica. Para obter uma lista das opções com suporte pelo comando `Verify`, consulte [Opções do Comando Verify](../../../docs/framework/tools/signtool-exe.md#Verify).|  
+|`catdb`|Adiciona ou remove um arquivo de catálogo de um banco de dados do catálogo. Os bancos de dados do catálogo são usados na pesquisa automática de arquivos de catálogo e são identificados por uma GUID. Para obter uma lista de opções com suporte pelo comando `catdb`, consulte [Opções do Comando catdb](signtool-exe.md#catdb).|  
+|`sign`|Assina arquivos digitalmente. As assinaturas digitais protegem os arquivos contra violação e permitem aos usuários verificar o signatário com base em um certificado de assinatura. Para obter uma lista de opções com suporte pelo comando `sign`, consulte [Opções do Comando sign](signtool-exe.md#sign).|  
+|`Timestamp`|Arquivos de carimbo de data/hora. Para obter uma lista das opções com suporte pelo comando `TimeStamp`, consulte [Opções de Comando TimeStamp](signtool-exe.md#TimeStamp).|  
+|`Verify`|Verifica a assinatura digital dos arquivos determinando se o certificado de assinatura foi emitido por uma autoridade confiável, se o certificado de assinatura foi revogado e, como opção, se o certificado de assinatura é válido para uma política específica. Para obter uma lista das opções com suporte pelo comando `Verify`, consulte [Opções do Comando Verify](signtool-exe.md#Verify).|  
   
  As seguintes opções aplicam-se a todos os comandos da Ferramenta de Assinatura.  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ferramentas](index.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

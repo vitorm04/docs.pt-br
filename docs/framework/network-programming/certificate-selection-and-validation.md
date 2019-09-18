@@ -2,12 +2,12 @@
 title: Seleção e validação de certificado
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318345"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048742"
 ---
 # <a name="certificate-selection-and-validation"></a>Seleção e validação de certificado
 As classes <xref:System.Net> dão suporte a várias maneiras de selecionar e validar <xref:System.Security.Cryptography.X509Certificates> para conexões SSL. Um cliente pode selecionar um ou mais certificados para se autenticar em um servidor. Um servidor pode exigir que um certificado do cliente tenha um ou mais atributos específicos para autenticação.  
@@ -54,5 +54,5 @@ A ferramenta *HttpCfg.exe* pode ser usada para configurar certificados do servid
   
 ## <a name="see-also"></a>Consulte também
 
-- [Segurança na programação de rede](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Segurança na programação de rede](security-in-network-programming.md)
+- [Programação de rede no .NET Framework](index.md)

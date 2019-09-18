@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894702"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046731"
 ---
 # <a name="clr-etw-providers"></a>Provedores ETW no CLR
 O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de execução e o provedor de encerramento.  
   
  O provedor de tempo de execução aciona eventos, dependendo de quais palavras-chave (categorias de eventos) são habilitadas. Por exemplo, é possível coletar eventos de carregador habilitando a palavra-chave `LoaderKeyword`.  
   
- Os eventos do ETW (rastreamento de eventos para Windows) são registrados em um arquivo que tem uma extensão. ETL, que posteriormente pode ser processada novamente em arquivos de valores separados por vírgulas (. csv), conforme necessário. Para obter informações sobre como converter o arquivo .etl em um arquivo .csv, consulte [Controlando o log do .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Os eventos do ETW (rastreamento de eventos para Windows) são registrados em um arquivo que tem uma extensão. ETL, que posteriormente pode ser processada novamente em arquivos de valores separados por vírgulas (. csv), conforme necessário. Para obter informações sobre como converter o arquivo .etl em um arquivo .csv, consulte [Controlando o log do .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>O provedor de tempo de execução  
  O provedor de tempo de execução é o principal provedor CLR ETW.  
   
  O GUID do provedor de tempo de execução CLR é e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
- Para obter exemplos de como registrar e exibir eventos CLR ETW usando as ferramentas geralmente disponíveis, consulte [Controlando o log do .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Para obter exemplos de como registrar e exibir eventos CLR ETW usando as ferramentas geralmente disponíveis, consulte [Controlando o log do .NET Framework](controlling-logging.md).  
   
- Além de usar palavras-chave como `LoaderKeyword`, talvez você precise habilitar palavras-chave para registrar eventos que podem ser acionados com muita frequência. As palavras-chave `StartEnumerationKeyword` e `EndEnumerationKeyword` habilitam esses eventos e são resumidas em [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  
+ Além de usar palavras-chave como `LoaderKeyword`, talvez você precise habilitar palavras-chave para registrar eventos que podem ser acionados com muita frequência. As palavras-chave `StartEnumerationKeyword` e `EndEnumerationKeyword` habilitam esses eventos e são resumidas em [Palavras-chave e níveis CLR ETW](clr-etw-keywords-and-levels.md).  
   
 ## <a name="the-rundown-provider"></a>O provedor de encerramento  
  O provedor de encerramento deve ser ativado para determinados usos de finalidade especial. No entanto, para a maioria dos usuários, o provedor de tempo de execução deve ser suficiente.  
@@ -93,4 +93,4 @@ O CLR (Common Language Runtime) tem dois provedores: o provedor de tempo de exec
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md)

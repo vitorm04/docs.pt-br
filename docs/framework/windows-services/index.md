@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008701"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053549"
 ---
 # <a name="develop-windows-service-apps"></a>Desenvolver aplicativos de serviço Windows
 
@@ -27,19 +27,19 @@ Usando o Visual Studio ou o SDK do .NET Framework, você pode criar serviços fa
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Introdução aos Aplicativos de Serviço Windows](introduction-to-windows-service-applications.md)
 
 Fornece uma visão geral de aplicativos de serviço Windows, o tempo de vida de um serviço e como aplicativos de serviço diferem de outros tipos de projeto comum.
 
-[Passo a passo: Criando um aplicativo de serviço Windows no Designer de Componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Passo a passo: Criando um aplicativo de serviço Windows no Designer de Componentes](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Fornece um exemplo de como criar um serviço no Visual Basic e Visual C#.
 
-[Arquitetura de programação de aplicativo de serviço](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[Arquitetura de programação de aplicativo de serviço](service-application-programming-architecture.md)
 
 Explica os elementos de linguagem usados na programação de serviço.
 
-[Como: criar serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[Como: criar serviços do Windows](how-to-create-windows-services.md)
 
 Descreve o processo de criação e configuração de serviços Windows usando o modelo de projeto de serviço Windows.
 

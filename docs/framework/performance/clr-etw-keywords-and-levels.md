@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 519429da275c852ea193e95fe651cc73efc0736a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: dce8c58f94c66bcf2336d3708ebc64699148d556
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378680"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046713"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palavras-chave e níveis ETW no CLR
 <a name="top"></a> Os eventos ETW (rastreamento de eventos para Windows) pode ser filtrado por categoria e nível. As [palavras-chave CLR ETW](#keywords) do evento permitem a filtragem de eventos por categoria; elas são usadas em combinações para os provedores de tempo de execução e de encerramento. Os [níveis de evento](#levels) são identificados por sinalizadores.  
@@ -39,22 +39,22 @@ ms.locfileid: "66378680"
   
 |Nome da palavra-chave de tempo de execução|Valor|Finalidade|  
 |--------------------------|-----------|-------------|  
-|`GCKeyword`|0x00000001|Habilita a coleta de [eventos de coleta de lixo](../../../docs/framework/performance/garbage-collection-etw-events.md).|  
-|`LoaderKeyword`|0x00000008|Habilita a coleta de [eventos de carregador](../../../docs/framework/performance/loader-etw-events.md).|  
-|`JITKeyword`|0x00000010|Habilita a coleta de [eventos JIT (Just-In-Time)](../../../docs/framework/performance/jit-tracing-etw-events.md).|  
+|`GCKeyword`|0x00000001|Habilita a coleta de [eventos de coleta de lixo](garbage-collection-etw-events.md).|  
+|`LoaderKeyword`|0x00000008|Habilita a coleta de [eventos de carregador](loader-etw-events.md).|  
+|`JITKeyword`|0x00000010|Habilita a coleta de [eventos JIT (Just-In-Time)](jit-tracing-etw-events.md).|  
 |`NGenKeyword`|0x00000020|Habilita a coleta de eventos de métodos de imagem nativa (métodos processados pelo Gerador de Imagem Nativa, Ngen.exe); usado com `StartEnumerationKeyword` e `EndEnumerationKeyword`. Essa palavra-chave tem uma alta sobrecarga. Ela gera eventos para cada método dentro de cada módulo do NGen carregado. Sempre que possível, em vez de usar essa palavra-chave, recomendamos o uso dos PDBs (bancos de dados do programa) gerados pelas ferramentas de criação de perfil para recuperar informações sobre os métodos dos módulos do NGen. Consulte também `OverrideAndSuppressNGenEventsKeyword` mais adiante nesta tabela.|  
 |`StartEnumerationKeyword`|0x00000040|Habilita a enumeração de todos os métodos no tempo de execução; usado em conjunto com `NGenKeyword`.|  
 |`EndEnumerationKeyword`|0x00000080|Habilita a enumeração de todos os métodos destruídos no tempo de execução; usado em conjunto com `JITKeyword` e `NGenKeyword`.|  
-|`SecurityKeyword`|0x00000400|Habilita a coleta de [eventos de segurança](../../../docs/framework/performance/security-etw-events.md).|  
+|`SecurityKeyword`|0x00000400|Habilita a coleta de [eventos de segurança](security-etw-events.md).|  
 |`AppDomainResourceManagementKeyword`|0x00000800|Habilita a coleção de eventos de monitoramento de recursos no nível de um domínio do aplicativo.|  
-|`JITTracingKeyword`|0x00001000|Habilita a coleta de [eventos de rastreamento JIT](../../../docs/framework/performance/jit-tracing-etw-events.md).|  
-|`InteropKeyword`|0x00002000|Habilita a coleta de [eventos de interoperabilidade](../../../docs/framework/performance/interop-etw-events.md).|  
-|`ContentionKeyword`|0x00004000|Habilita a coleta de [eventos de contenção](../../../docs/framework/performance/contention-etw-events.md).|  
-|`ExceptionKeyword`|0x00008000|Habilita a coleta de [eventos de exceção](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).|  
-|`ThreadingKeyword`|0x00010000|Habilita a coleta de [eventos de pool de threads](../../../docs/framework/performance/thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Disponível no .NET Framework 4.5 e posterior). Suprime a palavra-chave `NGenKeyword` de alta sobrecarga e impede a geração de eventos para os métodos que estão dentro dos módulos do NGen. Começando com o .NET Framework 4.5, as ferramentas de criação de perfil deve usar `OverrideAndSuppressNGenEventsKeyword` e `NGenKeyword` em conjunto para suprimir a geração de eventos para os métodos nos módulos do NGen. Isso permite que a ferramenta de criação de perfil use os PDBs mais eficientes do NGen para obter informações sobre os métodos nos módulos do NGen. O CLR no .NET Framework 4 e versões anteriores não dá suporte à criação de PDBs do NGen. Nessas versões anteriores, o CLR não reconhecerá `OverrideAndSuppressNGenEventsKeyword` e processará `NGenKeyword` para gerar eventos para os métodos nos módulos do NGen.|  
+|`JITTracingKeyword`|0x00001000|Habilita a coleta de [eventos de rastreamento JIT](jit-tracing-etw-events.md).|  
+|`InteropKeyword`|0x00002000|Habilita a coleta de [eventos de interoperabilidade](interop-etw-events.md).|  
+|`ContentionKeyword`|0x00004000|Habilita a coleta de [eventos de contenção](contention-etw-events.md).|  
+|`ExceptionKeyword`|0x00008000|Habilita a coleta de [eventos de exceção](exception-thrown-v1-etw-event.md).|  
+|`ThreadingKeyword`|0x00010000|Habilita a coleta de [eventos de pool de threads](thread-pool-etw-events.md).|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Disponível no .NET Framework 4,5 e posterior.) Suprime a palavra-chave `NGenKeyword` de alta sobrecarga e impede a geração de eventos para os métodos que estão dentro dos módulos do NGen. A partir do .NET Framework 4,5, as ferramentas de criação de `OverrideAndSuppressNGenEventsKeyword` perfil `NGenKeyword` devem usar e em conjunto para suprimir a geração de eventos para métodos em módulos NGen. Isso permite que a ferramenta de criação de perfil use os PDBs mais eficientes do NGen para obter informações sobre os métodos nos módulos do NGen. O CLR no .NET Framework 4 e versões anteriores não dá suporte à criação de PDBs do NGen. Nessas versões anteriores, o CLR não reconhecerá `OverrideAndSuppressNGenEventsKeyword` e processará `NGenKeyword` para gerar eventos para os métodos nos módulos do NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Habilita a coleta dos eventos `ModuleLoad` e `ModuleRange`.|  
-|`StackKeyword`|0x40000000|Habilita a coleta de [eventos de rastreamento de pilha](../../../docs/framework/performance/stack-etw-event.md) do CLR.|  
+|`StackKeyword`|0x40000000|Habilita a coleta de [eventos de rastreamento de pilha](stack-etw-event.md) do CLR.|  
   
  [Voltar ao início](#top)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66378680"
 |`EndRundownKeyword`|0x00000100|Habilita a enumeração de estado do sistema durante um encerramento final.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Habilita a coleta de eventos de monitoramento de recursos no nível de um <xref:System.AppDomain> quando usado com `StartRundownKeyword` ou `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Habilita a coleta de eventos de pool de threads.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Disponível no .NET Framework 4.5 e posterior). Suprime a palavra-chave `NGenRundownKeyword` de alta sobrecarga e impede a geração de eventos para os métodos que estão dentro dos módulos do NGen. Começando com o .NET Framework 4.5, as ferramentas de criação de perfil deve usar `OverrideAndSuppressNGenEventsRundownKeyword` e `NGenRundownKeyword` em conjunto para suprimir a geração de eventos para os métodos nos módulos do NGen. Isso permite que a ferramenta de criação de perfil use os PDBs mais eficientes do NGen para obter informações sobre os métodos nos módulos do NGen. O CLR no .NET Framework 4 e versões anteriores não dá suporte à criação de PDBs do NGen. Nessas versões anteriores, o CLR não reconhecerá `OverrideAndSuppressNGenEventsRundownKeyword` e processará `NGenRundownKeyword` para gerar eventos para os métodos nos módulos do NGen.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Disponível no .NET Framework 4,5 e posterior.) Suprime a palavra-chave `NGenRundownKeyword` de alta sobrecarga e impede a geração de eventos para os métodos que estão dentro dos módulos do NGen. A partir do .NET Framework 4,5, as ferramentas de criação de `OverrideAndSuppressNGenEventsRundownKeyword` perfil `NGenRundownKeyword` devem usar e em conjunto para suprimir a geração de eventos para métodos em módulos NGen. Isso permite que a ferramenta de criação de perfil use os PDBs mais eficientes do NGen para obter informações sobre os métodos nos módulos do NGen. O CLR no .NET Framework 4 e versões anteriores não dá suporte à criação de PDBs do NGen. Nessas versões anteriores, o CLR não reconhecerá `OverrideAndSuppressNGenEventsRundownKeyword` e processará `NGenRundownKeyword` para gerar eventos para os métodos nos módulos do NGen.|  
 |`PerfTrackKeyWord`|0x2000000|Habilita a coleta dos eventos `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart` e `ModuleRangeDCEnd`.|  
   
  [Voltar ao início](#top)  
@@ -124,6 +124,6 @@ ms.locfileid: "66378680"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
-- [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Provedores CLR ETW](clr-etw-providers.md)
+- [Eventos de CLR ETW](clr-etw-events.md)
+- [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md)

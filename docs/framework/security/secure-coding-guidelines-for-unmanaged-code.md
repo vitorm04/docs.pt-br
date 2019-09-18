@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966116"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045360"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Diretrizes de codificação segura para código não gerenciado
 Um código de biblioteca precisa chamar o código não gerenciado (por exemplo, APIs de código nativo, assim como Win32). Visto que isso significa que sair do perímetro de segurança para código gerenciado, o devido cuidado é necessário. Se seu código é neutro em termos de segurança, seu código e qualquer outro código que o chama devem ter permissão de código não gerenciado (<xref:System.Security.Permissions.SecurityPermission> com o sinalizador <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificado).  
   
- No entanto, geralmente não é razoável para o chamador ter permissões tão elevadas. Nesses casos, seu código confiável pode ser intermediário, semelhante ao wrapper gerenciado ou código da biblioteca descrito em [Protegendo código de Wrapper](../../../docs/framework/misc/securing-wrapper-code.md). Se a funcionalidade de código não gerenciado subjacente for totalmente segura, ele poderá ser exposto diretamente; caso contrário, uma verificação de permissão adequada (demanda) será necessária primeiro.  
+ No entanto, geralmente não é razoável para o chamador ter permissões tão elevadas. Nesses casos, seu código confiável pode ser intermediário, semelhante ao wrapper gerenciado ou código da biblioteca descrito em [Protegendo código de Wrapper](../misc/securing-wrapper-code.md). Se a funcionalidade de código não gerenciado subjacente for totalmente segura, ele poderá ser exposto diretamente; caso contrário, uma verificação de permissão adequada (demanda) será necessária primeiro.  
   
  Quando seu código chama código não gerenciado, mas você não deseja exigir que os chamadores tenham permissão para acessar código não gerenciado, você deve declarar esse direito. Uma declaração bloqueia a movimentação da pilha em seu quadro. Você deve ter cuidado para não criar uma falha de segurança nesse processo. Geralmente, isso significa que você deve exigir uma permissão adequada dos chamadores e usar código não gerenciado para executar apenas o que ela permite e nada mais. Em alguns casos (por exemplo, em uma função de obtenção de hora do dia), o código não gerenciado pode ser diretamente exposto a chamadores sem nenhuma verificação de segurança. Em qualquer caso, qualquer código que fizer uma declaração deverá assumir a responsabilidade pela segurança.  
   

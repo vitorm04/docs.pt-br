@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac396e1a5b83f33068266553024c37ef436c150d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e4002ae248022a9e4380c79174109494b5e4ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616630"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046778"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de monitoramento de recursos de domínio de aplicativo (ARM)
 <a name="top"></a> Esses eventos fornecem informações de diagnóstico detalhadas sobre o estado de um domínio do aplicativo. Use esses eventos ou o recurso ARM (monitoramento de recursos do domínio do aplicativo) para obter as mesmas informações.  
@@ -33,7 +33,7 @@ ms.locfileid: "64616630"
 ## <a name="threadcreated-event"></a>Evento ThreadCreated  
  Esse evento também é acionado no provedor de encerramento como `ThreadDC` (com a palavra-chave `AppDomainResourceManagementRundownKeyword`). Esse é o único evento acionado no provedor de encerramento nessa categoria.  
   
- A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)  
   
 |Palavra-chave para acionar o evento|Nível|  
 |-----------------------------------|-----------|  
@@ -158,4 +158,4 @@ ms.locfileid: "64616630"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos de CLR ETW](clr-etw-events.md)

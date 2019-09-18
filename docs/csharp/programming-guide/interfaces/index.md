@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589186"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053274"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -27,7 +27,7 @@ O nome da struct deve ser um [nome do identificador](../inside-a-program/identif
 
 Qualquer classe ou struct que implemente a interface <xref:System.IEquatable%601> deve conter uma definição para um método <xref:System.IEquatable%601.Equals%2A> que corresponda à assinatura que a interface especifica. Como resultado, você pode contar com uma classe que implementa `IEquatable<T>` para conter um método `Equals` com o qual uma instância da classe pode determinar se é igual a outra instância da mesma classe.  
   
-A definição de `IEquatable<T>` não fornece uma implementação para `Equals`. A interface define somente a assinatura. Dessa forma, uma interface em C# é semelhante a uma classe abstrata, na qual todos os métodos são abstratos. No entanto, uma classe ou struct pode implementar várias interfaces, mas uma classe pode herdar apenas uma única classe, abstrata ou não.
+A definição de `IEquatable<T>` não fornece uma implementação para `Equals`. Uma classe ou estrutura pode implementar várias interfaces, mas uma classe só pode herdar de uma única classe.
   
 Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   

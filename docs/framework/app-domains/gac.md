@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972031"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053178"
 ---
 # <a name="global-assembly-cache"></a>Cache de assemblies global
 Cada computador em que o Common Language Runtime está instalado tem um cache de código em todo o computador chamado Cache de Assembly Global. O Cache de Assembly Global armazena assemblies projetados especificamente para serem compartilhados por vários aplicativos no computador.  
@@ -31,7 +31,7 @@ Cada computador em que o Common Language Runtime está instalado tem um cache de
   
 - Usar um instalador projetado para funcionar com o Cache de Assembly Global. Essa é a opção preferencial para instalar assemblies no Cache de Assembly Global.  
   
-- Use uma ferramenta de desenvolvedor chamada [Cache de Assembly Global (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), fornecida pelo SDK do Windows.  
+- Use uma ferramenta de desenvolvedor chamada [Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md), fornecida pelo SDK do Windows.  
   
     > [!NOTE]
     > Em cenários de implantação, use o Windows Installer para instalar assemblies no Cache de Assembly Global. Só use a ferramenta Global Assembly Cache em cenários de desenvolvimento, porque ela não fornece contagem de referência de assembly e outros recursos fornecidos durante o uso do Windows Installer.  
@@ -45,5 +45,5 @@ Cada computador em que o Common Language Runtime está instalado tem um cache de
 ## <a name="see-also"></a>Consulte também
 
 - [Assemblies no .NET](../../standard/assembly/index.md)
-- [Como trabalhar com assemblies e o cache de assembly global](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Como trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
 - [Assemblies de nomes fortes](../../standard/assembly/strong-named.md)

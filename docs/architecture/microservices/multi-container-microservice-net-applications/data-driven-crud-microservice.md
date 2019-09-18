@@ -2,12 +2,12 @@
 title: Criando um microsserviço de CRUD simples controlado por dados
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda a criação de um microsserviço CRUD simples (controlado por dados) dentro do contexto de um aplicativo de microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676223"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039910"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -41,7 +41,7 @@ Para implementar um microsserviço CRUD simples usando o .NET Core e o Visual St
 
 **Figura 6-6**. Criando um projeto de API Web ASP.NET Core no Visual Studio
 
-Depois de criar o projeto, você poderá implementar os controladores de MVC como faria em qualquer outro projeto de API Web, usando a API do Entity Framework ou uma outra API. Em um novo projeto de API Web, você verá que a única dependência existente nesse microsserviço é em relação ao próprio ASP.NET Core. Internamente, na dependência *Microsoft.AspNetCore.All*, ela se refere ao Entity Framework e a muitos outros pacotes NuGet do .NET Core, como é mostrado na Figura 6-7.
+Depois de criar o projeto, você poderá implementar os controladores de MVC como faria em qualquer outro projeto de API Web, usando a API do Entity Framework ou uma outra API. Em um novo projeto de API Web, você verá que a única dependência existente nesse microsserviço é em relação ao próprio ASP.NET Core. Internamente, dentro da dependência *Microsoft. AspNetCore. All* , ele faz referência a Entity Framework e a muitos outros pacotes NuGet do .NET Core, como mostra a Figura 6-7.
 
 ![O projeto de API inclui referências ao pacote NuGet Microsoft.AspNetCore.App, que inclui referências a todos os pacotes essenciais. Ele pode incluir alguns outros pacotes também.](./media/image8.png)
 
@@ -87,14 +87,12 @@ Você também precisará de um DbContext que represente uma sessão com o banco 
 public class CatalogContext : DbContext
 {
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
-    {
-    }
+    { }
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
 
     // Additional code ...
-
 }
 ```
 
@@ -114,15 +112,17 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-                             IOptionsSnapshot<CatalogSettings> settings,
-                             ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(
+        CatalogContext context,
+        IOptionsSnapshot<CatalogSettings> settings,
+        ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService 
+            ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
-        ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+        context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
@@ -182,12 +182,8 @@ public void ConfigureServices(IServiceCollection services)
         options.UseSqlServer(Configuration["ConnectionString"],
         sqlServerOptionsAction: sqlOptions =>
         {
-           sqlOptions.
-               MigrationsAssembly(
-                   typeof(Startup).
-                    GetTypeInfo().
-                     Assembly.
-                      GetName().Name);
+            sqlOptions.MigrationsAssembly(
+                typeof(Startup).GetTypeInfo().Assembly.GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -204,7 +200,6 @@ public void ConfigureServices(IServiceCollection services)
    });
 
   //...
-
 }
 ```
 

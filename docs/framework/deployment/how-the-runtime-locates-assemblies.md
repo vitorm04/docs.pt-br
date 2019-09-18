@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052123"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
 
@@ -144,7 +144,9 @@ O modo de segurança pode ser definido para todo o aplicativo ou para os assembl
 Em terceiro lugar, o tempo de execução examina o arquivo de configuração do computador. Esse arquivo, chamado Machine.config, reside no computador local no subdiretório Config do diretório raiz em que o tempo de execução está instalado. Esse arquivo pode ser usado por administradores para especificar restrições de associação de assembly que são locais no computador. As configurações no arquivo de configuração do computador têm precedência sobre todas as outras definições de configuração. No entanto, isso não significa que todas as definições de configuração devem ser colocadas nesse arquivo. A versão de determinada pelo arquivo de política de administrador é final e não pode ser substituída. As substituições especificadas no arquivo Machine.config afetam todos os aplicativos. Para obter mais informações sobre os arquivos de configuração, consulte [Configuring Apps by Using Configuration Files](../configure-apps/index.md) (Configurando aplicativos usando arquivos de configuração).
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Etapa 2: Verificando assemblies referenciados anteriormente
+
 Se o assembly solicitado também foi solicitado em chamadas anteriores, o Common Language Runtime usa o assembly que já está carregado. Isso pode ter ramificações ao nomear os assemblies que compõem um aplicativo. Para obter mais informações sobre a nomeação de assemblies, consulte [Assembly Names](../../standard/assembly/names.md) (Nomes de assembly).
 
 Se uma solicitação anterior para o assembly falhou, as solicitações subsequentes para o assembly falharão imediatamente sem tentar carregar o assembly. Desde o .NET Framework versão 2.0, as falhas de associação de assembly são armazenadas em cache e as informações em cache são usadas para determinar se deve-se tentar carregar o assembly.

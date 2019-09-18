@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: b05cd88fcb492ab27e1d311045b72208167508f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ca9e1b9bf6235fdaeea25b8975155af429848ae3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963929"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047521"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticação NTLM e Kerberos
 A autenticação padrão NTLM e a autenticação Kerberos usam as credenciais de usuário do Microsoft Windows NT associadas com o aplicativo de chamada para tentar a autenticação com o servidor. Ao usar a autenticação NTLM não padrão, o aplicativo define o tipo de autenticação para NTLM e usa um objeto <xref:System.Net.NetworkCredential> para passar o nome de usuário, senha e domínio para o host, conforme mostrado no exemplo a seguir.  
@@ -64,5 +64,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
   
 ## <a name="see-also"></a>Consulte também
 
-- [Autenticação Básica e Digest](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [Autenticação da Internet](../../../docs/framework/network-programming/internet-authentication.md)
+- [Autenticação Básica e Digest](basic-and-digest-authentication.md)
+- [Autenticação da Internet](internet-authentication.md)

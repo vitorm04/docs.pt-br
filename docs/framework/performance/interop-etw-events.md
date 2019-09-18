@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422418"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046431"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidade
 <a name="top"></a> Eventos de interoperabilidade capturam informações sobre a geração e o cache de stub da MSIL (Microsoft Intermediate Language).  
@@ -25,7 +25,7 @@ ms.locfileid: "67422418"
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated  
- A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)  
   
 |Palavra-chave para acionar o evento|Nível|  
 |-----------------------------------|-----------|  
@@ -85,4 +85,4 @@ ms.locfileid: "67422418"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos de CLR ETW](clr-etw-events.md)

@@ -2,12 +2,12 @@
 title: Nomes de par e IDs de PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047498"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nomes de par e IDs de PNRP
 Um nome de par representa um ponto de extremidade para comunicação, que pode ser um computador, um usuário, um grupo, um serviço ou qualquer elemento associado a um par que pode ser resolvido para um endereço IPv6. O protocolo PNRP usa o nome do par estatisticamente exclusivo para a criação de uma ID de PNRP, que é usado para identificar membros de nuvem.  
@@ -20,7 +20,7 @@ Um nome de par representa um ponto de extremidade para comunicação, que pode s
  Nomes de par seguros só são registrados pelo seu proprietário e são protegidos com criptografia de chave pública. Um nome de par seguro é considerado pertencente à entidade de par com a chave privada correspondente. A propriedade pode ser comprovada através do endereço de par certificado (CPA), que é assinado usando a chave privada. Um usuário mal-intencionado não pode forjar uma propriedade de um nome de par sem a chave privada correspondente.  
   
 ## <a name="pnrp-ids"></a>IDs de PNRP  
- ![ID de PNRP](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![ID de PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  IDs de PNRP são compostas do seguinte:  
   

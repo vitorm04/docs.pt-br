@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967197"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045927"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexão e tipos genéricos
 <a name="top"></a> Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo comum é que um tipo genérico tem associado a ele um conjunto de parâmetros de tipo (se for uma definição de tipo genérico) ou argumentos de tipo (se for um tipo construído). Um método genérico é diferente de um método comum da mesma maneira.  
@@ -38,7 +38,7 @@ ms.locfileid: "69967197"
   
  A reflexão fornece métodos de <xref:System.Type> e <xref:System.Reflection.MethodInfo> que permitem a você acessar a matriz de parâmetros de tipo e determinar se uma instância de <xref:System.Type> representa um parâmetro de tipo ou um tipo real.  
   
- Para um exemplo de código que demonstra os métodos discutidos aqui, veja [: Examinar tipos genéricos e criar instâncias deles com a reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+ Para um exemplo de código que demonstra os métodos discutidos aqui, veja [: Examinar tipos genéricos e criar instâncias deles com a reflexão](how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  A discussão a seguir pressupõe familiaridade com a terminologia de genéricos, como a diferença entre os parâmetros e argumentos de tipo e tipos construídos abertos ou fechados. Para obter mais informações, consulte [Genéricos](../../standard/generics/index.md).  
   
@@ -147,9 +147,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|DESCRIÇÃO|  
+|Título|Descrição|  
 |-----------|-----------------|  
-|[Como: Examinar tipos genéricos e criar instâncias deles com a reflexão](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra como usar as propriedades e os métodos de <xref:System.Type> e <xref:System.Reflection.MethodInfo> para examinar tipos genéricos.|  
+|[Como: Examinar tipos genéricos e criar instâncias deles com a reflexão](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra como usar as propriedades e os métodos de <xref:System.Type> e <xref:System.Reflection.MethodInfo> para examinar tipos genéricos.|  
 |[Genéricos](../../standard/generics/index.md)|Descreve o recurso de genéricos e como ele tem suporte no .NET Framework.|  
-|[Como: Definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Mostra como usar a emissão de reflexão para gerar tipos genéricos nos assemblies dinâmicos.|  
-|[Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|
+|[Como: Definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)|Mostra como usar a emissão de reflexão para gerar tipos genéricos nos assemblies dinâmicos.|  
+|[Exibindo informações de tipo](viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614305"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052388"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
-Este tópico fornece uma lista de contadores de desempenho, você pode encontrar na [Monitor de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
+Este tópico fornece uma lista de contadores de desempenho que você pode encontrar no [Monitor de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
 - [Contadores de desempenho de exceções](#exception)  
   
@@ -217,7 +217,7 @@ Este tópico fornece uma lista de contadores de desempenho, você pode encontrar
   
  Contadores de desempenho de rede podem ser acessados e gerenciados usando a <xref:System.Diagnostics.PerformanceCounter> e classes relacionadas no namespace <xref:System.Diagnostics>. Contadores de desempenho de rede também podem ser exibidos com o console do Monitor de Desempenho do Windows.  
   
- Contadores de desempenho de rede precisam ser habilitados no arquivo de configuração a ser usado. Todos os contadores de desempenho de rede são habilitados ou desabilitados com uma única configuração no arquivo de configuração. Contadores de desempenho de rede individuais não podem ser habilitados nem desabilitados. Para obter mais informações, consulte [Elemento \<performanceCounter> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Contadores de desempenho de rede precisam ser habilitados no arquivo de configuração a ser usado. Todos os contadores de desempenho de rede são habilitados ou desabilitados com uma única configuração no arquivo de configuração. Contadores de desempenho de rede individuais não podem ser habilitados nem desabilitados. Para obter mais informações, consulte [Elemento \<performanceCounter> (configurações de rede)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  Se os contadores de rede estiverem habilitados, isso criará e atualizará contadores de desempenho globais e por AppDomain. Se desabilitados, o aplicativo não fornecerá nenhum dado de contador de desempenho de rede.  
   
@@ -237,7 +237,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - "Rede do .NET CLR 4.0.0.0" – todos os contadores de soquete acima mais os novos contadores de desempenho com suporte no .NET Framework Versão 4 e posteriores. Esses novos contadores fornecem informações de desempenho sobre objetos <xref:System.Net.HttpWebRequest>.  
   
- Para obter mais informações sobre como acessar e gerenciar os contadores de desempenho em um aplicativo, consulte [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+ Para obter mais informações sobre como acessar e gerenciar os contadores de desempenho em um aplicativo, consulte [Contadores de desempenho](performance-counters.md).  
   
 <a name="security"></a>   
 ## <a name="security-performance-counters"></a>Contadores de desempenho de segurança  
@@ -253,5 +253,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)
-- [Criação de perfil do tempo de execução](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Contadores de desempenho](performance-counters.md)
+- [Criação de perfil do tempo de execução](runtime-profiling.md)

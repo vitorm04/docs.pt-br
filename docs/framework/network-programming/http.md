@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170593"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048005"
 ---
 # <a name="http"></a>HTTP
 O .NET Framework fornece suporte abrangente ao protocolo HTTP, que compõe a maioria de todo o tráfego da Internet, com as classes <xref:System.Net.HttpWebRequest> e <xref:System.Net.HttpWebResponse>. Essas classes, derivadas de <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>, são retornadas por padrão sempre que o método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> encontra um URI começando com "http" ou "https". Na maioria dos casos, as classes **WebRequest** e **WebResponse** fornecem tudo o que é necessário para fazer a solicitação, mas se você precisar acessar os recursos específicos ao HTTP expostos como propriedades, poderá fazer a conversão de tipo dessas classes em **HttpWebRequest** ou **HttpWebResponse**.  
@@ -33,6 +33,6 @@ O .NET Framework fornece suporte abrangente ao protocolo HTTP, que compõe a mai
   
 ## <a name="see-also"></a>Consulte também
 
-- [Acessando a Internet por meio de um proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Como: Acessar propriedades específicas de HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)
+- [Usando protocolos de aplicativo](using-application-protocols.md)
+- [Como: Acessar propriedades específicas de HTTP](how-to-access-http-specific-properties.md)

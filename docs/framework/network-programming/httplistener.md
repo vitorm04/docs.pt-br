@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d5b07617617ac28e4f7f72bc23a96b45a85dff75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075412"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047985"
 ---
 # <a name="httplistener"></a>HttpListener
 A classe <xref:System.Net.HttpListener> fornece um ouvinte de protocolo HTTP controlado programaticamente. O ouvinte fica ativo durante o tempo de vida do objeto <xref:System.Net.HttpListener> e é executado dentro de seu aplicativo.  
@@ -26,4 +26,4 @@ A classe <xref:System.Net.HttpListener> fornece um ouvinte de protocolo HTTP con
 - [Melhorias de segurança em informações da Internet](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [Amostra de aplicativo host ASPX HttpListener](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [Amostra de tecnologia HttpListener](https://go.microsoft.com/fwlink/?LinkID=179558)
-- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Amostras de programação de rede](network-programming-samples.md)

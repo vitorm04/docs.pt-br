@@ -10,19 +10,19 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: c3c08f61b49a6367663cf02099dda86d1a692284
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 5daff0567c1b1415fe994f6e39b4079cb2ab7346
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484755"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053812"
 ---
 # <a name="xclassmodifier-directive"></a>Diretiva x:ClassModifier
 Modifica o comportamento de compilação XAML `x:Class` quando também é fornecido. Especificamente, em vez de criar um `class` parcial que tenha `Public` um nível de acesso (o padrão), `x:Class` o fornecido é criado `NotPublic` com um nível de acesso. Esse comportamento afeta o nível de acesso para a classe nos assemblies gerados.  
   
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
   
-```  
+```xaml  
 <object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
    ...  
 </object>  

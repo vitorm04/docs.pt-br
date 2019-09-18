@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 57d0c3640c65d425ded63f53e32416053c3eb926
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624672"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048887"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Melhores práticas para classes System.Net
 As seguintes recomendações ajudarão você a usar as classes contidas em <xref:System.Net> para seu melhor proveito:  
@@ -34,4 +34,4 @@ As seguintes recomendações ajudarão você a usar as classes contidas em <xref
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Programação de rede no .NET Framework](index.md)

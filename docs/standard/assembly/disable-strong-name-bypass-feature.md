@@ -1,5 +1,5 @@
 ---
-title: 'Como: Desabilitar o recurso de bypass de nome forte'
+title: 'Como: desabilitar o recurso de bypass de nome forte'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cdc700ecc8195da1b5e0975f00a4dc6785d330
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 35bf61ffd2a85221cdf33a0304765d94770c1eab
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973288"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053983"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Como: Desabilitar o recurso de bypass de nome forte
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Como: desabilitar o recurso de bypass de nome forte
 Desde o .NET Framework versão 3.5 Service Pack 1 (SP1), as assinaturas de nome forte não são validadas quando um assembly é carregado em um objeto <xref:System.AppDomain> de confiança total, como o <xref:System.AppDomain> padrão para a zona `MyComputer`. Isso é conhecido como o recurso de desvio de nome forte. Em um ambiente de confiança total, as exigências de <xref:System.Security.Permissions.StrongNameIdentityPermission> sempre têm êxito para assemblies assinados de confiança total, independentemente de sua assinatura. A única restrição é que o assembly deve ser totalmente confiável porque sua zona é totalmente confiável. Como o nome forte não é um fator determinante sob essas condições, não há nenhum motivo para ser validado. Ignorar a validação de assinaturas de nome forte fornece melhorias significativas de desempenho.  
   
  O recurso de desvio se aplica a qualquer assembly de confiança total que não é assinado com atraso e que é carregado em qualquer <xref:System.AppDomain> de confiança total no diretório especificado por sua propriedade <xref:System.AppDomainSetup.ApplicationBase%2A>.  
@@ -36,7 +36,7 @@ Desde o .NET Framework versão 3.5 Service Pack 1 (SP1), as assinaturas de nome 
   
 1. Abra ou crie o arquivo de configuração de aplicativo.  
   
-     Para obter mais informações sobre esse arquivo, consulte a seção arquivos de configuração de aplicativo em [configurar aplicativos](../../framework/configure-apps/index.md).  
+    Para obter mais informações sobre esse arquivo, consulte a seção arquivos de configuração de aplicativo em [configurar aplicativos](../../framework/configure-apps/index.md).  
   
 2. Adicione a seguinte entrada:  
   

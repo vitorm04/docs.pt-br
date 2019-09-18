@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048098"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Como: Definir uma política de cache baseada em tempo padrão para um aplicativo
 A política de cache baseada em tempo padrão permite que um aplicativo tenha seu comportamento de cache definido pelos cabeçalhos enviados com o recurso em cache e o comportamento de cache definido nas seções 13 e 14 do RFC 2616, disponível no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/). Esse é o comportamento de cache apropriado para a maioria dos aplicativos.  
@@ -64,8 +64,8 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gerenciamento de cache para aplicativos de rede](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)
-- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+- [Gerenciamento de cache para aplicativos de rede](cache-management-for-network-applications.md)
+- [Política de cache](cache-policy.md)
+- [Políticas de cache baseadas na localização](location-based-cache-policies.md)
+- [Políticas de cache baseadas em tempo](time-based-cache-policies.md)
+- [\<requestCaching> Element (Network Settings)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]

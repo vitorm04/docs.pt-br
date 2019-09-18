@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: HT
+ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496673"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044533"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Ferramenta de Instalação)
 
 A ferramenta Instalador é um utilitário de linha de comando que permite instalar e desinstalar recursos de servidor executando-se os componentes do instalador em assemblies especificados. Essa ferramenta funciona com classes no namespace <xref:System.Configuration.Install>.
 
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
 No prompt de comando, digite o seguinte:
 
@@ -170,5 +170,5 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Configuration.Install>
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ferramentas](index.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

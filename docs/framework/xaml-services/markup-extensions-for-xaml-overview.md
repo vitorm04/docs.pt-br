@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adcd224e30d541f27b1583389ca63b6f8a32fc38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939703"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053852"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Visão geral das extensões de marcação para XAML
 As extensões de marcação são uma técnica XAML para obter um valor que não seja um tipo de XAML primitivo nem um específico. Para o uso do atributo, as extensões de marcação usam a sequência de caracteres conhecida `{` de uma chave de abertura para inserir o escopo da extensão de `}` marcação e uma chave de fechamento a ser encerrada. Ao usar .NET Framework serviços XAML, você pode usar algumas das extensões de marcação de linguagem XAML predefinidas do assembly System. XAML. Você também pode subclasse da <xref:System.Windows.Markup.MarkupExtension> classe, definida em System. XAML, e definir suas próprias extensões de marcação. Ou você pode usar extensões de marcação definidas por uma estrutura específica se já estiver fazendo referência a essa estrutura.  
@@ -73,7 +73,7 @@ As extensões de marcação são uma técnica XAML para obter um valor que não 
   
  Por exemplo, suponha que `Collate` a extensão de marcação destina-se a dar suporte apenas a um modo em que haja um argumento posicional que represente `CollationMode` seu modo, especificado como uma constante de enumeração. Nesse caso, deve haver um construtor com o seguinte formato:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode) {...}  
 ```  
   
@@ -91,7 +91,7 @@ public Collate(CollationMode collationMode) {...}
   
  Os argumentos são chamados de argumentos posicionais porque a ordem na qual os tokens no uso é encontrado corresponde à ordem posicional do parâmetro de construtor ao qual eles são atribuídos. Por exemplo, considere a seguinte assinatura de construtor:  
   
-```  
+```csharp  
 public Collate(CollationMode collationMode, object collateThis) {...}  
 ```  
   

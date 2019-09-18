@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: b57465d4cf89bb38dd5cda70f090f444e52ea819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195847"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047302"
 ---
 # <a name="security-in-network-programming"></a>Segurança na programação de rede
 
@@ -28,16 +28,16 @@ As classes de namespace <xref:System.Net> do .NET Framework dão suporte interno
 [Práticas recomendadas do protocolo TLS com o .NET Framework](tls.md)  
 Descreve as melhores práticas de TLS com o .NET Framework.
  
-[Usando o protocolo SSL](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+[Usando o protocolo SSL](using-secure-sockets-layer.md)  
 Descreve como usar conexões de protocolo SSL.  
   
-[Autenticação da Internet](../../../docs/framework/network-programming/internet-authentication.md)  
+[Autenticação da Internet](internet-authentication.md)  
 Descreve como usar os métodos de autenticação HTTP para estabelecer conexões autenticadas com servidores HTTP.  
   
-[Permissões da Web e de soquete](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+[Permissões da Web e de soquete](web-and-socket-permissions.md)  
 Descreve como definir a segurança de acesso de código para aplicativos que usam conexões de Internet.  
   
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)  
+[Programação de rede no .NET Framework](index.md)  
 Apresenta as classes nos namespaces <xref:System.Net> e <xref:System.Net.Sockets>.

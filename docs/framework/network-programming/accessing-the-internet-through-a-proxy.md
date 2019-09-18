@@ -12,27 +12,27 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649543"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049041"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acessando a Internet por meio de um proxy
 Se o site usar um proxy para fornecer acesso à Internet, você deverá configurar uma instância do proxy para permitir que o aplicativo se comunique com o proxy Web.  
   
  Esta seção inclui os seguintes tópicos:  
   
-- [Configuração de proxy](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [Configuração de proxy](proxy-configuration.md)  
   
-- [Detecção automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [Detecção automática de proxy](automatic-proxy-detection.md)  
   
-- [Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Como: Substituir uma seleção de proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [Como: Substituir uma seleção de proxy global](how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Usando protocolos de aplicativo](using-application-protocols.md)
+- [Programação de rede no .NET Framework](index.md)

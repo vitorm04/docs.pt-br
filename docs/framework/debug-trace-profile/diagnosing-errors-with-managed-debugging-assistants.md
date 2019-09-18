@@ -31,59 +31,59 @@ helpviewer_keywords:
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874609"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052897"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Diagnosticar erros com assistentes de depuração gerenciados
 
 Os MDAs (Assistentes para depuração gerenciada) são recursos de depuração que trabalham com o CLR (Common Language Runtime) para fornecer informações sobre o estado do tempo de execução. Os assistentes geram mensagens informativas sobre eventos de tempo de execução que não podem ser interceptados de outro modo. É possível usar MDAs para isolar bugs de aplicativos difíceis de encontrar que ocorrem durante a transição entre código gerenciado e não gerenciado.
 
-Você pode [habilitar ou desabilitar](#enable-and-disable-mdas) todos os MDAs adicionando uma chave no registro do Windows ou definindo uma variável de ambiente. Você pode habilitar MDAs específicos usando definições de configuração do aplicativo. É possível definir configurações adicionais para alguns MDAs individuais no arquivo de configuração do aplicativo. Como esses arquivos de configuração são analisados quando o tempo de execução é carregado, você deve habilitar o MDA antes da inicialização do aplicativo gerenciado. Não será possível habilitá-lo para aplicativos já iniciados.
+Você pode [habilitar ou desabilitar](#enable-and-disable-mdas) todos os MDAs adicionando uma chave ao registro do Windows ou configurando uma variável de ambiente. Você pode habilitar MDAs específicos usando definições de configuração do aplicativo. É possível definir configurações adicionais para alguns MDAs individuais no arquivo de configuração do aplicativo. Como esses arquivos de configuração são analisados quando o tempo de execução é carregado, você deve habilitar o MDA antes da inicialização do aplicativo gerenciado. Não será possível habilitá-lo para aplicativos já iniciados.
 
 A tabela a seguir lista os MDAs que acompanham o .NET Framework:
 
 |||
 |-|-|
-|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|
-|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|
-|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|
-|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|
-|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|
-|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|
-|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|
-|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|
-|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|
-|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|
-|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|
-|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|
-|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|
-|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|
-|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|
-|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|
-|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|
-|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|
-|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|
-|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|
+|[asynchronousThreadAbort](asynchronousthreadabort-mda.md)|[bindingFailure](bindingfailure-mda.md)|
+|[callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](contextswitchdeadlock-mda.md)|
+|[dangerousThreadingAPI](dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](datetimeinvalidlocalformat-mda.md)|
+|[dirtyCastAndCallOnInterface](dirtycastandcalloninterface-mda.md)|[disconnectedContext](disconnectedcontext-mda.md)|
+|[dllMainReturnsFalse](dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](exceptionswallowedoncallfromcom-mda.md)|
+|[failedQI](failedqi-mda.md)|[fatalExecutionEngineError](fatalexecutionengineerror-mda.md)|
+|[gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)|
+|[illegalPrepareConstrainedRegion](illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](invalidapartmentstatechange-mda.md)|
+|[invalidCERCall](invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)|
+|[invalidGCHandleCookie](invalidgchandlecookie-mda.md)|[invalidIUnknown](invalidiunknown-mda.md)|
+|[invalidMemberDeclaration](invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)|
+|[invalidVariant](invalidvariant-mda.md)|[jitCompilationStart](jitcompilationstart-mda.md)|
+|[loaderLock](loaderlock-mda.md)|[loadFromContext](loadfromcontext-mda.md)|
+|[marshalCleanupError](marshalcleanuperror-mda.md)|[marshaling](marshaling-mda.md)|
+|[memberInfoCacheCreation](memberinfocachecreation-mda.md)|[moduloObjectHashcode](moduloobjecthashcode-mda.md)|
+|[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
+|[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
+|[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
+|[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-Por padrão, o .NET Framework ativa um subconjunto de MDAs para todos os depuradores gerenciados. Você pode exibir o conjunto padrão no Visual Studio escolhendo **Windows** > **configurações de exceção** sobre a **depurar** menus e expandindo o **Assistentes para depuração gerenciada** lista.
+Por padrão, o .NET Framework ativa um subconjunto de MDAs para todos os depuradores gerenciados. Você pode exibir o conjunto padrão no Visual Studio escolhendo**configurações de exceção** do **Windows** > no menu **depurar** e, em seguida, expandindo a lista de **assistentes de depuração gerenciada** .
 
-![Janela de configurações de exceção no Visual Studio](media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
+![Janela de configurações de exceção no Visual Studio](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
 ## <a name="enable-and-disable-mdas"></a>Habilitar e desabilitar MDAs
 
 É possível habilitar e desabilitar MDAs usando uma chave do Registro, uma variável de ambiente e as definições de configuração do aplicativo. Você deve habilitar a chave do Registro ou a variável de ambiente para usar as definições de configuração do aplicativo.
 
 > [!TIP]
-> Em vez de desabilitar MDAs, você pode impedir que o Visual Studio exibindo a caixa de diálogo MDA sempre que uma notificação é recebida. Para fazer isso, escolha **Windows** > **configurações de exceção** sobre a **depurar** menu, expanda o **Managed Debugging Assistants**e, em seguida, selecione ou desmarque as **interromper quando lançada** caixa de seleção do MDA individual.
+> Em vez de desabilitar o MDAs, você pode impedir que o Visual Studio exiba a caixa de diálogo MDA sempre que uma notificação do MDA é recebida. Para fazer isso, escolha**configurações de exceção** do **Windows** > no menu **depurar** , expanda a lista **assistentes de depuração gerenciada** e marque ou desmarque a caixa de seleção **interromper quando for gerada** para o MDA individual.
 
 ### <a name="registry-key"></a>Chave do Registro
 
-Para habilitar MDAs, adicione a **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\MDA** subchave (digite REG_SZ, valor 1) no registro do Windows. Copie o exemplo a seguir em um arquivo de texto denominado *Mdaenable*. Abra o Editor do registro do Windows (RegEdit.exe) e para o **arquivo** menu escolher **importação**. Selecione o *Mdaenable* arquivo para habilitar MDAs nesse computador. Definição da subchave como valor de cadeia de caracteres de **1** (não o valor de DWORD **1**) permite a leitura das configurações do MDA do *Suffix*. arquivo MDA. Por exemplo, o arquivo de configuração do MDA para o bloco de notas seria nomeado Notepad.
+Para habilitar o MDAs, adicione **o\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.** Subchave NETFramework\MDA (tipo REG_SZ, valor 1) no registro do Windows. Copie o exemplo a seguir em um arquivo de texto chamado *MDAEnable. reg*. Abra o editor do registro do Windows (RegEdit. exe) e, no menu **arquivo** , escolha **importar**. Selecione o arquivo *MDAEnable. reg* para habilitar o MDAs nesse computador. A definição da subchave para o valor de cadeia de caracteres **1** (não o valor DWORD de **1**) permite a leitura das configurações de MDA do arquivo *ApplicationName. Suffix*. MDA. config. Por exemplo, o arquivo de configuração do MDA para o bloco de notas seria chamado de Notepad. exe. MDA. config.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -101,11 +101,11 @@ Windows Registry Editor Version 5.00
 "MDA"="1"
 ```
 
-Ver [definições de configuração específicas do aplicativo](#application-specific-configuration-settings) para obter mais informações. A configuração do Registro pode ser substituída pela variável de ambiente COMPLUS_MDA. Ver [variável de ambiente](#environment-variable) para obter mais informações.
+Consulte [definições de configuração específicas do aplicativo](#application-specific-configuration-settings) para obter mais informações. A configuração do Registro pode ser substituída pela variável de ambiente COMPLUS_MDA. Consulte [variável de ambiente](#environment-variable) para obter mais informações.
 
-Para desabilitar MDAs, defina a subchave do MDA para **0** (zero) usando o Editor de registro do Windows.
+Para desabilitar o MDAs, defina a subchave MDA como **0** (zero) usando o editor do registro do Windows.
 
-Por padrão, alguns MDAs são habilitados quando você executa um aplicativo anexado a um depurador, mesmo sem adicionar a chave do Registro. Você pode desabilitar esses assistentes executando o *Mdadisable* conforme descrito anteriormente nesta seção do arquivo.
+Por padrão, alguns MDAs são habilitados quando você executa um aplicativo anexado a um depurador, mesmo sem adicionar a chave do Registro. Você pode desabilitar esses assistentes executando o arquivo *MDADisable. reg* , conforme descrito anteriormente nesta seção.
 
 ### <a name="environment-variable"></a>Variável de ambiente
 
@@ -131,7 +131,7 @@ Se houver configurações conflitantes, as mais recentes substituirão as anteri
 
 É possível habilitar, desabilitar e configurar alguns assistentes individualmente no arquivo de configuração do MDA para o aplicativo. Para habilitar o uso de um arquivo de configuração de aplicativo para configurar MDAs, a chave do Registro do MDA ou a variável de ambiente COMPLUS_MDA deve estar definida. O arquivo de configuração de aplicativo costuma ficar localizado no mesmo diretório do arquivo executável do aplicativo (.exe). O nome de arquivo usa o formato *ApplicationName*.mda.config; por exemplo, notepad.exe.mda.config. Os assistentes habilitados no arquivo de configuração de aplicativo podem ter atributos ou elementos projetados especificamente para controlar esse comportamento do assistente.
 
-O exemplo a seguir mostra como habilitar e configurar o [marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md):
+O exemplo a seguir mostra como habilitar e configurar o [marshaling](marshaling-mda.md):
 
 ```xml
 <mdaConfig>
@@ -148,7 +148,7 @@ O exemplo a seguir mostra como habilitar e configurar o [marshaling](../../../do
 </mdaConfig>
 ```
 
-O MDA `Marshaling` emite informações sobre o tipo gerenciado em que o marshaling está sendo realizado para um tipo não gerenciado para a transição gerenciado/não gerenciado no aplicativo. O `Marshaling` MDA também pode filtrar os nomes do método e campos da estrutura fornecidos nos **methodFilter** e **fieldFilter** elementos filho, respectivamente.
+O MDA `Marshaling` emite informações sobre o tipo gerenciado em que o marshaling está sendo realizado para um tipo não gerenciado para a transição gerenciado/não gerenciado no aplicativo. O `Marshaling` MDA também pode filtrar os nomes dos campos de método e estrutura fornecidos nos elementos filho **methodFilter** e **fieldFilter** , respectivamente.
 
 O exemplo a seguir mostra como habilitar vários MDAs usando suas configurações padrão:
 
@@ -166,18 +166,18 @@ O exemplo a seguir mostra como habilitar vários MDAs usando suas configuraçõe
 > [!IMPORTANT]
 > Ao especificar mais de um assistente em um arquivo de configuração, você deve listá-los em ordem alfabética. Por exemplo, se quiser habilitar os MDAs `virtualCERCall` e `invalidCERCall`, você deverá adicionar a entrada `<invalidCERCall />` antes da entrada `<virtualCERCall />`. Se as entradas não estiverem em ordem alfabética, será exibida uma mensagem de exceção do arquivo de configuração inválido sem tratamento.
 
-## <a name="mda-exceptions"></a>Exceções de MDA
+## <a name="mda-exceptions"></a>Exceções do MDA
 
-Quando um MDA está habilitado, ele está ativo, mesmo quando seu código não está em execução em um depurador. Se um evento de MDA for acionado quando um depurador não estiver presente, a mensagem do evento será apresentada em uma caixa de diálogo de exceção sem tratamento, ainda que não seja uma exceção sem tratamento. Para evitar a caixa de diálogo, remova as configurações de habilitação de MDA quando o código não estiver em execução em um ambiente de depuração.
+Quando um MDA é habilitado, ele fica ativo mesmo quando seu código não está em execução em um depurador. Se um evento de MDA for acionado quando um depurador não estiver presente, a mensagem do evento será apresentada em uma caixa de diálogo de exceção sem tratamento, ainda que não seja uma exceção sem tratamento. Para evitar a caixa de diálogo, remova as configurações de habilitação de MDA quando o código não estiver em execução em um ambiente de depuração.
 
-Quando o código é executado no ambiente de desenvolvimento integrado (IDE) do Visual Studio, você pode evitar a caixa de diálogo de exceção que é exibida para os eventos MDA específicos. Para fazer isso, nos **Debug** menu, escolha **Windows** > **configurações de exceção**. No **configurações de exceção** janela, expanda o **assistentes para depuração gerenciada** lista e, em seguida, desmarque as **interromper quando lançada** caixa de seleção do MDA individual. Você também pode usar essa caixa de diálogo para *habilitar* a exibição de caixas de diálogo de exceção do MDA.
+Quando seu código é executado no IDE (ambiente de desenvolvimento integrado) do Visual Studio, você pode evitar a caixa de diálogo de exceção que aparece para eventos específicos do MDA. Para fazer isso, no menu **depurar** , escolha**configurações de exceção**do **Windows** > . Na janela **configurações de exceção** , expanda a lista **assistentes de depuração gerenciada** e desmarque a caixa de seleção **interromper quando lançado** para o MDA individual. Você também pode usar essa caixa de diálogo para *habilitar* a exibição das caixas de diálogo de exceção do MDA.
 
 ## <a name="mda-output"></a>Saída do MDA
 
-Saída do MDA é semelhante ao exemplo a seguir, que mostra a saída do `PInvokeStackImbalance` MDA:
+A saída do MDA é semelhante ao exemplo a seguir, que mostra a saída `PInvokeStackImbalance` do MDA:
 
-**Uma chamada para a função PInvoke ' MDATest! MDATest.Program::StdCall' tem tenha desequilibrado a pilha. Isso provavelmente ocorre porque a assinatura gerenciada de PInvoke não coincide com a assinatura de destino não gerenciado. Verifique se a convenção de chamada e os parâmetros da assinatura PInvoke correspondem a assinatura não gerenciada de destino.**
+**Uma chamada para a função PInvoke ' MDATest! ' MDATest. Program:: StdCall ' desbalanceou a pilha. Isso é provável porque a assinatura do PInvoke gerenciada não corresponde à assinatura de destino não gerenciada. Verifique se a Convenção de chamada e os parâmetros da assinatura PInvoke correspondem à assinatura não gerenciada de destino.**
 
 ## <a name="see-also"></a>Consulte também
 
-- [Depuração, rastreamento e criação de perfil](../../../docs/framework/debug-trace-profile/index.md)
+- [Depuração, rastreamento e criação de perfil](index.md)

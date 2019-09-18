@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: 99bbff5a3350f55f04fdbd6ce7147b6597773322
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: d569603fe22e5d8c8f59d21c2777c7c1bfcd531d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624593"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048290"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet
 Este exemplo cria uma instância de proxy global que permitirá que qualquer <xref:System.Net.WebRequest> use um proxy para se comunicar com a Internet. O exemplo supõe que o servidor proxy se chama `webproxy` e que ele se comunica na porta 80, a porta HTTP padrão.  
@@ -34,5 +34,5 @@ GlobalProxySelection.Select = proxyObject
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Acessando a Internet por meio de um proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Usando protocolos de aplicativo](using-application-protocols.md)
+- [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)

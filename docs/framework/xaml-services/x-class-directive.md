@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 563802be655e0cb66c9a2735a64da9d7723c2a43
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e04085db0fa5a4c4170846dc4ac10d0131032a7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401515"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053808"
 ---
 # <a name="xclass-directive"></a>Diretiva x:Class
 Configura a compilação de marcação XAML para unir classes parciais entre marcação e code-behind. A classe parcial code é definida em um arquivo de código separado em uma linguagem Common Language Specification (CLS), enquanto a classe parcial de marcação normalmente é criada pela geração de código durante a compilação XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
   
-```  
+```xaml  
 <object x:Class="namespace.classname"...>  
   ...  
 </object>  

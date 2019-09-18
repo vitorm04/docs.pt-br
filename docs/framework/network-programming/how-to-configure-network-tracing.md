@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: dc9b6b5399063026c0bbe5735964ed42a21168fa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613708"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048375"
 ---
 # <a name="how-to-configure-network-tracing"></a>Como: Configurar o rastreamento de rede
-O aplicativo ou o arquivo de configuração do computador mantém as configurações que determinam o formato e o conteúdo dos rastreamentos de rede. Antes de executar este procedimento, certifique-se de que o rastreamento está habilitado. Para obter informações sobre como habilitar o rastreamento, consulte [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md).  
+O aplicativo ou o arquivo de configuração do computador mantém as configurações que determinam o formato e o conteúdo dos rastreamentos de rede. Antes de executar este procedimento, certifique-se de que o rastreamento está habilitado. Para obter informações sobre como habilitar o rastreamento, consulte [Habilitando o rastreamento de rede](enabling-network-tracing.md).  
   
  O arquivo de configuração do computador, machine.config, é armazenado na pasta %Windir%\Microsoft.NET\Framework no diretório em que o Windows foi instalado. Há um arquivo machine.config separado nas pastas em %Windir%\Microsoft.NET\Framework para cada versão do .NET Framework instalada no computador (por exemplo, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config ou C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
   
@@ -99,7 +99,7 @@ O aplicativo ou o arquivo de configuração do computador mantém as configuraç
   
 ## <a name="see-also"></a>Consulte também
 
-- [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-- [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Interpretando o rastreamento de rede](interpreting-network-tracing.md)
+- [Rastreamento de rede no .NET Framework](network-tracing.md)
+- [Habilitando o rastreamento de rede](enabling-network-tracing.md)
+- [Rastreando e instrumentando aplicativos](../debug-trace-profile/tracing-and-instrumenting-applications.md)

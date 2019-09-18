@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa882762479995448a99d9cb63fbdea941a253d4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941636"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049484"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>Classe MissingRuntimeArtifactException (.NET Nativo)
 **.NET para aplicativos do Windows para Windows 10, somente .NET Native**  
@@ -19,7 +19,7 @@ ms.locfileid: "69941636"
  **Namespace:** System.Reflection  
   
 > [!IMPORTANT]
-> A `MissingRuntimeArtifactException` classe é destinada exclusivamente ao uso interno da cadeia de ferramentas .net Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.  
+> A `MissingRuntimeArtifactException` classe é destinada exclusivamente ao uso interno da cadeia de ferramentas .net Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.  
   
 ## <a name="syntax"></a>Sintaxe  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -35,7 +35,7 @@ ms.locfileid: "69941636"
 |`public MissingRuntimeArtifactException()`|Inicializa uma nova instância da classe `MissingRuntimeArtifactException` usando uma mensagem fornecida pelo sistema que descreve o erro.<br /><br /> Este construtor é para uso interno somente pela cadeia de ferramentas .NET Native.|  
 |`public MissingRuntimeArtifactException(String message)`|Inicializa uma nova instância da classe `MissingRuntimeArtifactException` com uma mensagem de erro especificada.<br /><br /> Este construtor é para uso interno somente pela cadeia de ferramentas .NET Native.|  
   
-## <a name="properties"></a>Propriedades  
+## <a name="properties"></a>Properties  
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "69941636"
 ## <a name="usage-details"></a>Detalhes de uso  
  A exceção `MissingRuntimeArtifactException` é gerada quando ocorre uma tentativa de instanciar um tipo ou invocar um membro de tipo e, embora o tipo ou metadados do membro estejam presentes, sua implementação foi removida.  
   
- Se os metadados e o código de implementação para executar dinamicamente um método estão disponíveis para um aplicativo em tempo de execução é definido pelo arquivo de diretivas de tempo de \*execução (configuração XML),. Rd. xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar o \*.rd.xml para garantir que os metadados necessários para um tipo ou membro de tipo estejam presentes no tempo de execução. Para obter informações sobre o formato do arquivo \*.rd.xml, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Se os metadados e o código de implementação para executar dinamicamente um método estão disponíveis para um aplicativo em tempo de execução é definido pelo arquivo de diretivas de tempo de \*execução (configuração XML),. Rd. xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar o \*.rd.xml para garantir que os metadados necessários para um tipo ou membro de tipo estejam presentes no tempo de execução. Para obter informações sobre o formato do arquivo \*.rd.xml, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Como essa exceção indica que o código de implementação exigido pelo seu aplicativo não está disponível no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la usando um arquivo de diretivas de tempo de execução. Normalmente, você elimina essa exceção especificando a `Activate` `Dynamic` política apropriada para um elemento de programa no arquivo de diretivas de tempo de\*execução (arquivo. Rd. xml). Para obter a entrada que você pode adicionar ao seu arquivo de diretivas de tempo de execução e que elimina a exceção, você pode usar uma das duas soluções de problemas:  
@@ -82,5 +82,5 @@ ms.locfileid: "69941636"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)

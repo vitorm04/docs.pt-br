@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 5be803e2f4face60318a4c9ed12f1b58edaeace6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044435"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053566"
 ---
 # <a name="how-to-start-services"></a>Como: Iniciar serviços
 
@@ -28,7 +28,7 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
 
 ### <a name="to-specify-how-a-service-should-start"></a>Para especificar como um serviço deve ser iniciado
 
-1. Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+1. Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md).
 
 2. No designer, clique no instalador do serviço com o qual você está trabalhando.
 
@@ -80,6 +80,6 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
 
 ## <a name="see-also"></a>Consulte também
 
-- [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Como: criar serviços do Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Como: adicionar instaladores ao aplicativo de serviço](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Introdução aos Aplicativos de Serviço Windows](introduction-to-windows-service-applications.md)
+- [Como: criar serviços do Windows](how-to-create-windows-services.md)
+- [Como: adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)

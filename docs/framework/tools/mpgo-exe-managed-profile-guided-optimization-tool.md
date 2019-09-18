@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894847"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044404"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Ferramenta de Otimização Guiada por Perfil Gerenciado)
 
-A Ferramenta de Otimização Guiada por Perfil Gerenciado (Mpgo.exe) é uma ferramenta de linha de comando que usa cenários de usuário final comuns para otimizar os assemblies de imagem nativa criados pelo [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Essa ferramenta permite executar cenários de treinamento que geram dados de perfil. O [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa esses dados para otimizar seus assemblies de aplicativo de imagem nativa gerados. Um cenário de treinamento é uma execução de avaliação de um uso esperado do aplicativo. Mpgo.exe está disponível no Visual Studio Ultimate 2012 e em versões posteriores. Começando com o Visual Studio 2013, você também pode usar Mpgo.exe para otimizar aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+A Ferramenta de Otimização Guiada por Perfil Gerenciado (Mpgo.exe) é uma ferramenta de linha de comando que usa cenários de usuário final comuns para otimizar os assemblies de imagem nativa criados pelo [Gerador de Imagem Nativa (Ngen.exe)](ngen-exe-native-image-generator.md). Essa ferramenta permite executar cenários de treinamento que geram dados de perfil. O [Gerador de Imagem Nativa (Ngen.exe)](ngen-exe-native-image-generator.md) usa esses dados para otimizar seus assemblies de aplicativo de imagem nativa gerados. Um cenário de treinamento é uma execução de avaliação de um uso esperado do aplicativo. Mpgo.exe está disponível no Visual Studio Ultimate 2012 e em versões posteriores. Começando com o Visual Studio 2013, você também pode usar Mpgo.exe para otimizar aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 A otimização guiada por perfil melhora o tempo de inicialização do aplicativo, a utilização da memória (tamanho do conjunto de trabalho) e a taxa de transferência coletando-se dados de cenários de treinamento e usando-os para otimizar o layout de imagens nativas.  
   
 Quando você encontrar problemas de desempenho em relação ao tempo de inicialização e ao tamanho do conjunto de trabalho para assemblies IL (Intermediate Language), será recomendável usar primeiro Ngen.exe para eliminar os custos de compilação JIT (just-in-time) e facilitar o compartilhamento de código. Se precisar de melhorias adicionais, você poderá usar Mpgo.exe para otimizar ainda mais o aplicativo. É possível usar os dados de desempenho com base nos assemblies de imagem nativa não otimizados como uma linha de base para avaliar os ganhos de desempenho. O uso de Mpgo.exe pode resultar em tempos de inicialização a frio mais rápidos e um tamanho do conjunto de trabalho menor. Mpgo.exe adiciona informações a assemblies IL usados por Ngen.exe para criar assemblies de imagem nativa otimizados. Para obter mais informações, consulte a entrada [Improving Launch Performance for your Desktop Applications](https://go.microsoft.com/fwlink/p/?LinkId=248943) (Melhorando o Desempenho de Inicialização dos Aplicativos de Área de Trabalho) no blog do .NET.  
   
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7) com credenciais de administrador e digite o seguinte no prompt de comando. Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7) com credenciais de administrador e digite o seguinte no prompt de comando. Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
   
 Para aplicativos de área de trabalho:  
   
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>Consulte também
 
-- [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ngen.exe (Gerador de Imagens Nativas)](ngen-exe-native-image-generator.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)
 - [Melhorando o desempenho de inicialização dos aplicativos da área de trabalho](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [Uma visão geral dos aprimoramentos de desempenho no .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)

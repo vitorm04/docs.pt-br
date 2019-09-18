@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664029"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054065"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
@@ -249,7 +249,7 @@ O procedimento a seguir descreve como definir um ponto de interrupção para que
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Para definir um ponto de interrupção no final da coleta de lixo
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>Para definir um ponto de interrupção no final da coleta de lixo
 
 - No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando:
 
@@ -301,7 +301,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Para determinar se o problema é causado pela coleta de lixo
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Para determinar se o problema é causado pela coleta de lixo
 
 - Examine os dois contadores de desempenho de memória a seguir:
 
@@ -313,7 +313,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar se a exceção de falta de memória é gerenciada
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar se a exceção de falta de memória é gerenciada
 
 1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando de exceção de impressão (**pe**):
 
@@ -347,7 +347,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Para determinar a quantidade de memória virtual que pode ser reservada
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>Para determinar a quantidade de memória virtual que pode ser reservada
 
 - No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando para obter a maior região livre:
 
@@ -361,7 +361,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Neste exemplo, o tamanho da maior região livre é aproximadamente 24.000 KB (3A980 em hexadecimal). Essa região é menor do que o tamanho requerido pelo coletor de lixo para um segmento.
 
-  -ou-
+  - ou -
 
 - Use o comando **vmstat**:
 
@@ -381,7 +381,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar se há memória física suficiente
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Para determinar se há memória física suficiente
 
 1. Inicie o Gerenciador de tarefas do Windows.
 
@@ -391,7 +391,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Para determinar a quantidade de memória que o heap gerenciado está confirmando
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>Para determinar a quantidade de memória que o heap gerenciado está confirmando
 
 - Use o contador de desempenho de memória de `# Total committed bytes` para obter o número de bytes que o heap gerenciado está confirmando. O coletor de lixo confirma partes em um segmento conforme necessário, nem todas ao mesmo tempo.
 
@@ -400,7 +400,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Para determinar a quantidade de memória que o heap gerenciado reserva
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>Para determinar a quantidade de memória que o heap gerenciado reserva
 
 - Use o contador de desempenho de memória de `# Total reserved bytes`.
 
@@ -449,7 +449,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>Para determinar objetos grandes na geração 2
+### <a name="to-determine-large-objects-in-generation-2"></a>Para determinar objetos grandes na geração 2
 
 - No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:
 
@@ -489,7 +489,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>Para determinar referências a objetos
+### <a name="to-determine-references-to-objects"></a>Para determinar referências a objetos
 
 - No WinDbg, com a extensão de depurador SOS carregada, digite o seguinte comando para listar as referências a objetos:
 
@@ -523,7 +523,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Para determinar se um finalizador foi executado
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>Para determinar se um finalizador foi executado
 
 - Execute um programa de teste que contenha o código a seguir:
 
@@ -537,7 +537,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar se há objetos aguardando a finalização
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Para determinar se há objetos aguardando a finalização
 
 1. No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:
 
@@ -562,7 +562,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Para determinar a quantidade de espaço livre no heap gerenciado
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>Para determinar a quantidade de espaço livre no heap gerenciado
 
 - No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:
 
@@ -639,7 +639,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>Para determinar o número de objetos fixados
+### <a name="to-determine-the-number-of-pinned-objects"></a>Para determinar o número de objetos fixados
 
 - No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir:
 
@@ -655,7 +655,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Para determinar a duração de uma coleta de lixo
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>Para determinar a duração de uma coleta de lixo
 
 - Examine o contador de desempenho de memória de `% Time in GC`.
 
@@ -743,7 +743,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>Para determinar o que disparou uma coleta de lixo
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>Para determinar o que disparou uma coleta de lixo
 
 - No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir para mostrar todos os threads com suas pilhas de chamadas:
 
@@ -822,7 +822,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Para determinar se o alto uso da CPU é causado pela coleta de lixo
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>Para determinar se o alto uso da CPU é causado pela coleta de lixo
 
 - Correlacionar o valor do contador de desempenho de memória de `% Time in GC` com o tempo de processamento.
 

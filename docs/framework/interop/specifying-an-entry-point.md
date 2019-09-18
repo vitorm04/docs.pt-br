@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064087"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051605"
 ---
 # <a name="specifying-an-entry-point"></a>Especificando um ponto de entrada
 Um ponto de entrada identifica o local de uma função em uma DLL. Em um projeto gerenciado, o nome original ou o ponto de entrada ordinal de uma função de destino identifica essa função no limite de interoperação. Além disso, é possível mapear o ponto de entrada para um nome diferente, renomeando a função efetivamente.  
@@ -43,7 +43,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- É possível substituir o ponto de entrada **MessageBox** por **MsgBox** incluindo a palavra-chave **Alias** na definição, conforme mostrado no exemplo a seguir. Nos dois exemplos, a palavra-chave **Auto** elimina a necessidade de especificar a versão do conjunto de caracteres do ponto de entrada. Para obter mais informações sobre como selecionar um conjunto de caracteres, consulte [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md).  
+ É possível substituir o ponto de entrada **MessageBox** por **MsgBox** incluindo a palavra-chave **Alias** na definição, conforme mostrado no exemplo a seguir. Nos dois exemplos, a palavra-chave **Auto** elimina a necessidade de especificar a versão do conjunto de caracteres do ponto de entrada. Para obter mais informações sobre como selecionar um conjunto de caracteres, consulte [Especificando um conjunto de caracteres](specifying-a-character-set.md).  
   
 ```vb
 Friend Class NativeMethods
@@ -93,6 +93,6 @@ extern "C" int MsgBox(
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
+- [Exemplos de invocação de plataforma](platform-invoke-examples.md)
+- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)

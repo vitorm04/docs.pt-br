@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8594d29aab7f07dce150671493bbf70f9832fb44
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17b567fe0f476e689a9775c5c73ebf068424e840
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935165"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049283"
 ---
 # <a name="reflection-and-net-native"></a>Reflexão e .NET Nativo
 No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprogramação por meio da API de reflexão. A reflexão permite inspecionar objetos em um aplicativo, chamar métodos em objetos descobertos por meio de inspeção, gerar novos tipos no tempo de execução e oferece suporte a muitos outros cenários de código dinâmico. Ele também oferece suporte à serialização e desserialização, o que permite que os valores do campo do objeto sejam mantidos e restaurados posteriormente. Todos esses cenários exigem o compilador do .NET Framework JIT (just-in-time) para gerar código nativo com base em metadados disponíveis.  
   
- O tempo de execução de .NET Native não inclui um compilador JIT. Como resultado, todo o código nativo necessário deve ser gerado com antecedência. Um conjunto de heurística é usado para determinar qual código deve ser gerado, mas esses heurística não pode abranger todos os cenários de metaprogramação possíveis.  Portanto, você deve fornecer dicas para esses cenários metaprogramação usando [diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Se o código de implementação ou de metadados necessário não está disponível em tempo de execução, seu aplicativo gerará uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) ou [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md). Estão disponíveis duas soluções de problemas que gerarão a entrada apropriada para seu arquivo de diretivas de tempo de execução, a qual elimina a exceção:  
+ O tempo de execução de .NET Native não inclui um compilador JIT. Como resultado, todo o código nativo necessário deve ser gerado com antecedência. Um conjunto de heurística é usado para determinar qual código deve ser gerado, mas esses heurística não pode abranger todos os cenários de metaprogramação possíveis.  Portanto, você deve fornecer dicas para esses cenários metaprogramação usando [diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md). Se o código de implementação ou de metadados necessário não está disponível em tempo de execução, seu aplicativo gerará uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) ou [MissingInteropDataException](missinginteropdataexception-class-net-native.md). Estão disponíveis duas soluções de problemas que gerarão a entrada apropriada para seu arquivo de diretivas de tempo de execução, a qual elimina a exceção:  
   
 - A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
   
 - A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
   
 > [!NOTE]
-> Para obter uma visão geral do processo de compilação do .NET Native que fornece informações de contexto sobre a necessidade de ter um arquivo das diretivas de tempo de execução, consulte [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md).  
+> Para obter uma visão geral do processo de compilação do .NET Native que fornece informações de contexto sobre a necessidade de ter um arquivo das diretivas de tempo de execução, consulte [.NET Native e compilação](net-native-and-compilation.md).  
   
  Além disso, .NET Native não permite que você reflita sobre membros privados da biblioteca de classes .NET Framework. Por exemplo, uma chamada para a propriedade <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> para recuperar os campos de um tipo de biblioteca de classes do .NET Framework retorna somente campos públicos ou protegidos.  
   
  Os tópicos a seguir fornecem a documentação conceitual e de referência necessária para oferecer suporte à reflexão e serialização nos seus aplicativos:  
   
-- [APIs que dependem de reflexão](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+- [APIs que dependem de reflexão](apis-that-rely-on-reflection.md)  
   
-- [Referência da API de reflexão](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+- [Referência da API de reflexão](net-native-reflection-api-reference.md)  
   
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Compilação de aplicativos com o .NET Native](../../../docs/framework/net-native/index.md)
-- [.NET Native e compilação](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Compilação de aplicativos com o .NET Native](index.md)
+- [.NET Native e compilação](net-native-and-compilation.md)

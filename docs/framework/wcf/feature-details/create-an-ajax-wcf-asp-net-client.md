@@ -1,43 +1,43 @@
 ---
-title: Criar um serviço WCF habilitado para AJAX e um cliente do ASP.NET no Visual Studio
+title: Criar um serviço WCF habilitado para AJAX e um cliente ASP.NET no Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754610"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053688"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Como: Criar um serviço WCF habilitado para AJAX e um cliente do ASP.NET que acessa o serviço
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Como: Criar um serviço WCF habilitado para AJAX e um cliente ASP.NET que acessa o serviço
 
-Este tópico mostra como usar o Visual Studio para criar um serviço habilitado para AJAX Windows Communication Foundation (WCF) e um cliente do ASP.NET que acessa o serviço.
+Este tópico mostra como usar o Visual Studio para criar um serviço de Windows Communication Foundation habilitado para AJAX (WCF) e um cliente ASP.NET que acessa o serviço.
 
 ## <a name="create-an-aspnet-web-app"></a>Criar um aplicativo Web ASP.NET
 
 1. Abra o Visual Studio.
 
-1. Dos **arquivo** menu, selecione **New** > **projeto**
+1. No menu **arquivo** , selecione **novo** > **projeto**
 
-1. No **novo projeto** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione **aplicativo Web ASP.NET (.NET Framework)**.
+1. Na caixa de diálogo **novo projeto** , expanda a categoria  > **Visual C#**  **Web** **instalada** > e selecione **ASP.NET aplicativo Web (.NET Framework)** .
 
-1. Nomeie o projeto **SandwichServices** e clique em **Okey**.
+1. Nomeie o projeto como **sanduícheservices** e clique em **OK**.
 
-1. No **novo aplicativo Web ASP.NET** caixa de diálogo, selecione **vazia** e, em seguida, selecione **Okey**.
+1. Na caixa de diálogo **novo aplicativo Web ASP.net** , selecione **vazio** e, em seguida, selecione **OK**.
 
-   ![Diálogo do tipo de aplicativo do ASP.NET web no Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Caixa de diálogo tipo de aplicativo Web ASP.NET no Visual Studio](./media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
-## <a name="add-a-web-form"></a>Adicionar um formulário da web
+## <a name="add-a-web-form"></a>Adicionar um formulário da Web
 
-1. Clique com botão direito no projeto SandwichServices no **Gerenciador de soluções** e selecione **Add** > **Novo Item**.
+1. Clique com o botão direito do mouse no projeto sanduícheservices em **Gerenciador de soluções** e selecione **Adicionar** > **novo item**.
 
-1. No **Adicionar Novo Item** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione o **Web Form** modelo.
+1. Na caixa de diálogo **Adicionar novo item** , expanda a  > categoria**Visual C#**  **Web** **instalada** > e selecione o modelo de **formulário da Web** .
 
-1. Aceite o nome padrão (**WebForm1**) e, em seguida, selecione **Add**.
+1. Aceite o nome padrão (**WebForm1**) e, em seguida, selecione **Adicionar**.
 
-   *WebForm1.aspx* é aberto no **origem** modo de exibição.
+   O *WebForm1. aspx* é aberto na exibição de **origem** .
 
-1. Adicione a seguinte marcação dentro de  **\<corpo >** marcas:
+1. Adicione a seguinte marcação dentro das marcas de  **\<> do corpo** :
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -45,17 +45,17 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
    <span id="additionResult"></span>
    ```
 
-## <a name="create-an-ajax-enabled-wcf-service"></a>Criar um serviço WCF habilitado pelo AJAX
+## <a name="create-an-ajax-enabled-wcf-service"></a>Criar um serviço WCF habilitado para AJAX
 
-1. Clique com botão direito no projeto SandwichServices no **Gerenciador de soluções** e selecione **Add** > **Novo Item**.
+1. Clique com o botão direito do mouse no projeto sanduícheservices em **Gerenciador de soluções** e selecione **Adicionar** > **novo item**.
 
-1. No **Adicionar Novo Item** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione o **serviço do WCF (habilitado para AJAX)** modelo.
+1. Na caixa de diálogo **Adicionar novo item** ,  > expanda a categoria**Visual C#**  **Web** **instalada** > e selecione o modelo **serviço WCF (habilitado para Ajax)** .
 
-   ![Modelo de item (habilitado para AJAX) do serviço WCF no Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![Modelo de item do serviço WCF (habilitado para AJAX) no Visual Studio](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. Nomeie o serviço **CostService** e, em seguida, selecione **Add**.
+1. Nomeie o serviço **CostService** e, em seguida, selecione **Adicionar**.
 
-   *CostService.svc.cs* abre no editor.
+   *CostService.svc.cs* é aberto no editor.
 
 1. Implemente a operação no serviço. Adicione o seguinte método à classe CostService para calcular o custo de uma quantidade de pizzas:
 
@@ -69,13 +69,13 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
 
 ## <a name="configure-the-client-to-access-the-service"></a>Configurar o cliente para acessar o serviço
 
-1. Abra o *WebForm1.aspx* do arquivo e selecione o **Design** modo de exibição.
+1. Abra o arquivo *WebForm1. aspx* e selecione o modo de exibição **design** .
 
-2. Dos **modo de exibição** menu, selecione **caixa de ferramentas**.
+2. No menu **Exibir** , selecione **caixa de ferramentas**.
 
-3. Expanda o **extensões AJAX** nó e arraste e solte um **ScriptManager** para o formulário.
+3. Expanda o nó **extensões Ajax** e arraste e solte um **ScriptManager** no formulário.
 
-4. Volta a **fonte** exiba, adicione o seguinte código entre o  **\<ScriptManager >** marcas para especificar o caminho para o serviço WCF:
+4. De volta à exibição da **fonte** , adicione o seguinte código entre as marcas de  **\<> do ScriptManager** para especificar o caminho para o serviço WCF:
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
     </Services>
     ```
 
-5. Adicione o código para a função Javascript `Calculate()`. Coloque o seguinte código na **head** seção do formulário da web:
+5. Adicione o código para a função `Calculate()`JavaScript. Coloque o seguinte código na seção de **cabeçalho** do formulário da Web:
 
     ```html
     <script type="text/javascript">
@@ -100,15 +100,15 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
     </script>
     ```
 
-   Esse código chama o método de CostService para calcular o preço para três pizzas e, em seguida, exibe o resultado no período chamado **additionResult**.
+   Esse código chama o método de CostService para calcular o preço de três pizzas e, em seguida, exibe o resultado na extensão chamada **additionResult**.
 
 ## <a name="run-the-program"></a>Execute o programa
 
-Certifique-se de que *WebForm1.aspx* tem o foco e pressione **iniciar** botão para iniciar o cliente web. O botão tem um triângulo verde e diz algo como **IIS Express (Microsoft Edge)**. Ou, você pode pressionar **F5**. Clique o **preço de 3 pizzas** botão para gerar a saída esperada do "3,75".
+Verifique se o *WebForm1. aspx* tem foco e pressione o botão **Iniciar** para iniciar o cliente Web. O botão tem um triângulo verde e diz algo como **IIS Express (Microsoft Edge)** . Ou, você pode pressionar **F5**. Clique no botão **preço de 3 pizzas** para gerar a saída esperada de "3,75".
 
 ## <a name="example-code"></a>Código de exemplo
 
-A seguir está o código completo na *CostService.svc.cs* arquivo:
+A seguir está o código completo no arquivo *CostService.svc.cs* :
 
 ```csharp
 using System.ServiceModel;
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-A seguir está o conteúdo completo do *WebForm1.aspx* página:
+Veja a seguir o conteúdo completo da página *WebForm1. aspx* :
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>

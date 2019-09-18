@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: f12ab6cc776daa4d6cca65d682cd299a0733a3a5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ce37b71846f227c753e8d217e96482f623d3bd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935763"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043232"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementando o padrão de controle Selection de automação de interface do usuário
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69935763"
   
  Este tópico apresenta diretrizes e convenções para implementação <xref:System.Windows.Automation.Provider.ISelectionProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.  
   
- O <xref:System.Windows.Automation.SelectionPattern> padrão de controle é usado para dar suporte a controles que atuam como contêineres para uma coleção de itens filho selecionáveis. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.SelectionPattern> padrão de controle é usado para dar suporte a controles que atuam como contêineres para uma coleção de itens filho selecionáveis. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
@@ -29,9 +29,9 @@ ms.locfileid: "69935763"
   
 - Controles que têm um intervalo mínimo, máximo e contínuo, como o controle deslizante de **volume** , devem implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider> em vez <xref:System.Windows.Automation.Provider.ISelectionProvider>de.  
   
-- Controles de seleção única que gerenciam controles filho que <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>implementam, como o controle deslizante de **resolução de tela** na caixa de diálogo **Propriedades de exibição** ou o controle seleção de seletor de **cores** de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] ( ilustrado abaixo), deve <xref:System.Windows.Automation.Provider.ISelectionProvider>implementar; seus filhos devem <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> implementar e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Controles de seleção única que gerenciam controles filho que <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>implementam, como o controle deslizante de **resolução de tela** na caixa de diálogo **Propriedades de exibição** ou o controle seleção de **seletor de cores** de ( [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] ilustrado abaixo), deve <xref:System.Windows.Automation.Provider.ISelectionProvider>implementar; seus filhos devem <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> implementar e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
- ![Seletor de cores com amarelo realçado.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+ ![Seletor de cores com amarelo realçado.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemplo de mapeamento de cadeia de caracteres de amostra de cor  
   
 - Os menus não dão <xref:System.Windows.Automation.SelectionPattern>suporte ao. Se você estiver trabalhando com itens de menu que incluem elementos gráficos e texto (como os itens do **painel de visualização** no menu **Exibir** no Microsoft Outlook) e precisar transmitir o estado, você deverá <xref:System.Windows.Automation.Provider.IToggleProvider>implementar o.  
@@ -60,9 +60,9 @@ Exemplo de mapeamento de cadeia de caracteres de amostra de cor
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementando o padrão de controle SelectionItem de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)
+- [Suporte a padrões de controle em um provedor de automação de interface do usuário](support-control-patterns-in-a-ui-automation-provider.md)
+- [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
+- [Implementando o padrão de controle SelectionItem de automação de interface do usuário](implementing-the-ui-automation-selectionitem-control-pattern.md)
+- [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
+- [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)

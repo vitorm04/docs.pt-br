@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: 9bc4f80569dc2bab68e3f65c9e99df72df372171
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968914"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043468"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementando o padrão de controle de encaixe da automação de interface do usuário
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "69968914"
   
  Este tópico apresenta diretrizes e convenções para implementação <xref:System.Windows.Automation.Provider.IDockProvider>, incluindo informações sobre propriedades. Links para referências adicionais são listados no final do tópico.  
   
- O <xref:System.Windows.Automation.DockPattern> padrão de controle é usado para expor as propriedades de encaixe de um controle dentro de um contêiner de encaixe. Um contêiner de encaixe é um controle que permite que você organize elementos filho horizontal e verticalmente, em relação um ao outro. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.DockPattern> padrão de controle é usado para expor as propriedades de encaixe de um controle dentro de um contêiner de encaixe. Um contêiner de encaixe é um controle que permite que você organize elementos filho horizontal e verticalmente, em relação um ao outro. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Contêiner de encaixe com dois filhos encaixados.](../../../docs/framework/ui-automation/media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+ ![Contêiner de encaixe com dois filhos encaixados.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
 Exemplo de encaixe do Visual Studio onde a janela "Modo de Exibição de Classe" é DockPosition. direita e a janela "Lista de Erros" é DockPosition. Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
@@ -57,8 +57,8 @@ Exemplo de encaixe do Visual Studio onde a janela "Modo de Exibição de Classe"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)
+- [Suporte a padrões de controle em um provedor de automação de interface do usuário](support-control-patterns-in-a-ui-automation-provider.md)
+- [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
+- [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
+- [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)

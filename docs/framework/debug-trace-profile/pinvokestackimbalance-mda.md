@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874205"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052363"
 ---
 # <a name="pinvokestackimbalance-mda"></a>MDA PInvokeStackImbalance
 
-O `PInvokeStackImbalance` Assistente para depuração gerenciada (MDA) é ativado quando o CLR detecta que a profundidade da pilha após uma invocação de plataforma chamada não coincide com a profundidade da pilha esperada, dada a convenção de chamada especificada no <xref:System.Runtime.InteropServices.DllImportAttribute> atributo e o declaração dos parâmetros na assinatura gerenciada.
+O `PInvokeStackImbalance` MDA (Assistente de depuração gerenciada) é ativado quando o CLR detecta que a profundidade da pilha após uma chamada de invocação de plataforma não corresponde à profundidade de pilha esperada, <xref:System.Runtime.InteropServices.DllImportAttribute> Considerando a Convenção de chamada especificada no atributo e o Declaração dos parâmetros na assinatura gerenciada.
 
 O MDA `PInvokeStackImbalance` é implementado somente para plataformas x86 de 32 bits.
 
 > [!NOTE]
-> O `PInvokeStackImbalance` MDA é desabilitado por padrão. No Visual Studio 2017, o `PInvokeStackImbalance` MDA aparece no **assistentes para depuração gerenciada** lista o **configurações de exceção** caixa de diálogo (que é exibido quando você seleciona **depurar**  >  **Windows** > **configurações de exceção**). No entanto, marcando ou desmarcando as **quebrar quando lançada** caixa de seleção não habilite ou desabilite o MDA; apenas controla se o Visual Studio gera uma exceção quando o MDA é ativado.
+> O `PInvokeStackImbalance` MDA é desabilitado por padrão. No Visual Studio 2017, o `PInvokeStackImbalance` MDA aparece na lista **de assistentes de depuração gerenciada** na caixa de diálogo **configurações de exceção** (que é exibida quando você seleciona**janelas**  >   >  **de depuração Configurações de exceção**). No entanto, marcar ou desmarcar a caixa de seleção **interromper quando lançados** não habilitará ou desabilitará o MDA; Ele apenas controla se o Visual Studio lança uma exceção quando o MDA é ativado.
 
 ## <a name="symptoms"></a>Sintomas
 
@@ -48,7 +48,7 @@ Força todas as chamadas de invocação de plataforma a usar o caminho não otim
 
 A mensagem MDA fornece o nome da chamada de método de invocação de plataforma que está causando o desequilíbrio na pilha. Uma mensagem de exemplo de uma chamada de invocação de plataforma no método `SampleMethod` é:
 
-**Uma chamada para a função PInvoke 'SampleMethod' tem tenha desequilibrado a pilha. Isso provavelmente ocorre porque a assinatura gerenciada de PInvoke não coincide com a assinatura de destino não gerenciado. Verifique se a convenção de chamada e os parâmetros da assinatura PInvoke correspondem a assinatura não gerenciada de destino.**
+**Uma chamada para a função PInvoke ' SampleMethod ' desbalanceou a pilha. Isso é provável porque a assinatura do PInvoke gerenciada não corresponde à assinatura de destino não gerenciada. Verifique se a Convenção de chamada e os parâmetros da assinatura PInvoke correspondem à assinatura não gerenciada de destino.**
 
 ## <a name="configuration"></a>Configuração
 
@@ -63,5 +63,5 @@ A mensagem MDA fornece o nome da chamada de método de invocação de plataforma
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
