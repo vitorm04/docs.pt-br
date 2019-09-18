@@ -1,8 +1,12 @@
 - name: Serialização
   href: index.md
   items:
-    - name: Tópicos com instruções de serialização
-      href: serialization-how-to-topics.md
+    - name: Serialização JSON
+      items:
+        - name: Visão geral
+          href: system-text-json-overview.md
+        - name: Como serializar e desserializar JSON
+          href: system-text-json-how-to.md
     - name: Serialização binária
       href: binary-serialization.md
       items:
@@ -27,6 +31,8 @@
     - name: Serialização XML e SOAP
       href: xml-and-soap-serialization.md
       items:
+        - name: Tópicos com instruções de serialização
+          href: serialization-how-to-topics.md
         - name: 'Como: controlar a serialização de classes derivadas'
           href: how-to-control-serialization-of-derived-classes.md
         - name: Apresentando a serialização XML
@@ -67,23 +73,23 @@
           href: add-element-for-schemaimporterextensions.md
         - name: Elemento <xmlSerializer>
           href: xmlserializer-element.md
-    - name: Ferramentas de serialização
-      href: serialization-tools.md
-      items:
-        - name: Ferramenta geradora de serializador de XML (Sgen.exe)
-          href: xml-serializer-generator-tool-sgen-exe.md
-        - name: Ferramenta de Definição de Esquema XML (Xsd.exe)
-          href: xml-schema-definition-tool-xsd-exe.md
-    - name: Exemplos de serialização
-      href: serialization-samples.md
-      items:
-        - name: Exemplo de tecnologia de serialização básica
-          href: basic-serialization-technology-sample.md
-        - name: Ordem de serialização personalizada com o XmlSerializer
-          href: custom-serialization-order-with-xmlserializer.md
-        - name: Exemplo de tecnologia de SchemaImporterExtension
-          href: schemaimporterextension-technology-sample.md
-        - name: Exemplo de tecnologia de serialização básica tolerante a versões
-          href: version-tolerant-serialization-technology-sample.md
-        - name: Exemplo de tecnologia de serialização genérica de serviços Web
-          href: web-services-generics-serialization-technology-sample.md
+        - name: Ferramentas de serialização
+          href: serialization-tools.md
+          items:
+            - name: Ferramenta geradora de serializador de XML (Sgen.exe)
+              href: xml-serializer-generator-tool-sgen-exe.md
+            - name: Ferramenta de Definição de Esquema XML (Xsd.exe)
+              href: xml-schema-definition-tool-xsd-exe.md
+        - name: Exemplos de serialização
+          href: serialization-samples.md
+          items:
+            - name: Exemplo de tecnologia de serialização básica
+              href: basic-serialization-technology-sample.md
+            - name: Ordem de serialização personalizada com o XmlSerializer
+              href: custom-serialization-order-with-xmlserializer.md
+            - name: Exemplo de tecnologia de SchemaImporterExtension
+              href: schemaimporterextension-technology-sample.md
+            - name: Exemplo de tecnologia de serialização básica tolerante a versões
+              href: version-tolerant-serialization-technology-sample.md
+            - name: Exemplo de tecnologia de serialização genérica de serviços Web
+              href: web-services-generics-serialization-technology-sample.md
