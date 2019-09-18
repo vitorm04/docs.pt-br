@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37a864083fa7cfbea16614a94454571f31deed3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 89c2043570b9e2798ef41984b889791ddfe1d526
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136702"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051656"
 ---
-# <a name="platform-invoke-examples"></a><span data-ttu-id="cfd7e-102">Exemplos de invocação de plataforma</span><span class="sxs-lookup"><span data-stu-id="cfd7e-102">Platform Invoke Examples</span></span>
-<span data-ttu-id="cfd7e-103">Os exemplos a seguir demonstram como definir e chamar a função **MessageBox** na User32.dll, passando uma cadeia de caracteres simples como um argumento.</span><span class="sxs-lookup"><span data-stu-id="cfd7e-103">The following examples demonstrate how to define and call the **MessageBox** function in User32.dll, passing a simple string as an argument.</span></span> <span data-ttu-id="cfd7e-104">Nos exemplos, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> é definido como **Auto** para permitir que a plataforma de destino determine a largura de caractere e o marshaling da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cfd7e-104">In the examples, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field is set to **Auto** to let the target platform determine the character width and string marshaling.</span></span>  
+# <a name="platform-invoke-examples"></a><span data-ttu-id="ff44d-102">Exemplos de invocação de plataforma</span><span class="sxs-lookup"><span data-stu-id="ff44d-102">Platform Invoke Examples</span></span>
+<span data-ttu-id="ff44d-103">Os exemplos a seguir demonstram como definir e chamar a função **MessageBox** na User32.dll, passando uma cadeia de caracteres simples como um argumento.</span><span class="sxs-lookup"><span data-stu-id="ff44d-103">The following examples demonstrate how to define and call the **MessageBox** function in User32.dll, passing a simple string as an argument.</span></span> <span data-ttu-id="ff44d-104">Nos exemplos, o campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> é definido como **Auto** para permitir que a plataforma de destino determine a largura de caractere e o marshaling da cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="ff44d-104">In the examples, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field is set to **Auto** to let the target platform determine the character width and string marshaling.</span></span>  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] 
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- <span data-ttu-id="cfd7e-105">Para obter exemplos adicionais, consulte [Marshaling de dados com invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="cfd7e-105">For additional examples, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
+ <span data-ttu-id="ff44d-105">Para obter exemplos adicionais, consulte [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="ff44d-105">For additional examples, see [Marshaling Data with Platform Invoke](marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cfd7e-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cfd7e-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff44d-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ff44d-106">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="cfd7e-107">Criando protótipos em código gerenciado</span><span class="sxs-lookup"><span data-stu-id="cfd7e-107">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="cfd7e-108">Especificando um conjunto de caracteres</span><span class="sxs-lookup"><span data-stu-id="cfd7e-108">Specifying a Character Set</span></span>](../../../docs/framework/interop/specifying-a-character-set.md)
+- [<span data-ttu-id="ff44d-107">Criando protótipos em código gerenciado</span><span class="sxs-lookup"><span data-stu-id="ff44d-107">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="ff44d-108">Especificando um conjunto de caracteres</span><span class="sxs-lookup"><span data-stu-id="ff44d-108">Specifying a Character Set</span></span>](specifying-a-character-set.md)
