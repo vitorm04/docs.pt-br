@@ -1,16 +1,16 @@
 ---
 title: Fazer previsões com um modelo treinado
 description: Aprenda a fazer previsões usando um modelo treinado
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: HT
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307394"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118009"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Fazer previsões com um modelo treinado
 
@@ -43,14 +43,12 @@ Como os nomes de coluna de entrada `Features` e `Label`, do ML.NET tem nomes pad
 Como o algoritmo usado neste exemplo é um algoritmo de regressão linear, o nome padrão da coluna de saída é `Score`, que é definido pelo atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) na propriedade `PredictedPrice`.
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-O modelo de dados `HousingPrediction` herda de `HousingData` para facilitar a visualização dos dados de entrada originais junto com a saída gerada pelo modelo.  
 
 ## <a name="set-up-a-prediction-pipeline"></a>Configurar um pipeline de previsão
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 Se você acessar a propriedade `Score` do objeto `prediction`, deverá obter um valor semelhante ao `150079`.
 
-## <a name="batch-prediction"></a>Previsão em lote
+## <a name="multiple-predictions"></a>Várias previsões
 
 Considerando os seguintes dados, carregue-os em um [`IDataView`](xref:Microsoft.ML.IDataView). Nesse caso, o nome do [`IDataView`](xref:Microsoft.ML.IDataView) é `inputData`. Uma vez que `CurrentPrice` é o destino ou o rótulo que você está tentando prever usando novos dados, supõe-se que não há valor para ele no momento.
 

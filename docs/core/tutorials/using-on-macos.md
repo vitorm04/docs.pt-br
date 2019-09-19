@@ -3,12 +3,12 @@ title: 'Tutorial: Criar uma solução .NET Core no macOS usando Visual Studio Co
 description: Este documento fornece as etapas e o fluxo de trabalho para criar uma Solução do .NET Core usando o Visual Studio Code.
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082805"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117364"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: Criar uma solução .NET Core no macOS usando Visual Studio Code
 
@@ -33,19 +33,19 @@ Inicie o Visual Studio Code. Pressione <kbd>Ctrl</kbd>+<kbd>\`</kbd> (o caracter
 
 Comece criando um arquivo de solução, que serve como um contêiner para um ou mais projetos do .NET Core. No terminal, execute o [`dotnet new`](../tools/dotnet-new.md) comando para criar uma nova solução *Golden. sln* dentro de uma nova pasta chamada *Golden*:
 
-```console
+```dotnetcli
 dotnet new sln -o golden
 ```
 
 Navegue até a nova pasta *Golden* e execute o comando a seguir para criar um projeto de biblioteca, que produz dois arquivos,*library. csproj* e *Class1.cs*, na pasta *biblioteca* :
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 Execute o comando [`dotnet sln`](../tools/dotnet-sln.md) para adicionar o projeto *library.csproj* recém-criado à solução:
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -63,7 +63,7 @@ O arquivo *library.csproj* contém as seguintes informações:
 
 Nossos métodos da biblioteca serializam e desserializam os objetos no formato JSON. Para dar suporte à serialização e desserialização JSON, adicione uma referência ao pacote NuGet `Newtonsoft.Json`. O comando `dotnet add` adiciona novos itens a um projeto. Para adicionar uma referência a um pacote NuGet, use o comando [`dotnet add package`](../tools/dotnet-add-package.md) e especifique o nome do pacote:
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -77,7 +77,7 @@ Isso adiciona `Newtonsoft.Json` e suas dependências ao projeto de biblioteca. C
 
 Execute [`dotnet restore`](../tools/dotnet-restore.md), ([veja observação](#dotnet-restore-note)), que restaura as dependências e cria uma pasta *obj* dentro de *library* com três arquivos, incluindo um arquivo *project.assets.json*:
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -100,7 +100,7 @@ A classe `Thing` contém um método público, `Get`, que retorna a soma de dois 
 
 Crie a biblioteca com o comando [`dotnet build`](../tools/dotnet-build.md). Isso produz um arquivo *library.dll* em *golden/library/bin/Debug/netstandard1.4*:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -108,19 +108,19 @@ dotnet build
 
 Crie um projeto de teste para a biblioteca. Na pasta *golden*, crie um novo projeto de teste:
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 Adicione o projeto de teste à solução:
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 Adicione uma referência do projeto à biblioteca que você criou na seção anterior para que o compilador possa localizar e usar o projeto de biblioteca. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -154,7 +154,7 @@ Observe que você declara que o valor 42 não é igual a 19+23 (ou 42) quando vo
 
 Na pasta *golden*, execute os seguintes comandos:
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -163,7 +163,7 @@ Esses comandos localizarão recursivamente todos os projetos para restaurar depe
 
 Edite o arquivo *UnitTest1.cs* e altere a asserção de `Assert.NotEqual` para `Assert.Equal`. Execute o seguinte comando da pasta *golden* para executar o teste novamente, que é aprovado dessa vez:
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -173,19 +173,19 @@ O aplicativo de console criado ao longo das etapas a seguir usa uma dependência
 
 Crie um novo aplicativo de console da pasta *golden*:
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 Adicione o projeto de aplicativo de console à solução:
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 Crie a dependência na biblioteca executando o comando `dotnet add reference`:
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -204,7 +204,7 @@ using Library;
 
 Execute o seguinte comando `dotnet run` para executar o executável, em que a opção `-p` para `dotnet run` especifica o projeto para o aplicativo principal. O aplicativo produz a cadeia de caracteres "A resposta é 42".
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

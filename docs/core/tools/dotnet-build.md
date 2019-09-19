@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
 ms.date: 08/08/2019
-ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988531"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117752"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,7 +23,7 @@ ms.locfileid: "70988531"
 
 ## <a name="synopsis"></a>Sinopse
 
-```console
+```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
@@ -122,30 +122,30 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 * Compile um projeto e suas dependências:
 
-  ```console
+  ```dotnetcli
   dotnet build
   ```
 
 * Compile um projeto e suas dependências usando a configuração da Versão:
 
-  ```console
+  ```dotnetcli
   dotnet build --configuration Release
   ```
 
 * Compile um projeto e suas dependências para um tempo de execução específico (no exemplo, Ubuntu 18.04):
 
-  ```console
+  ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Compile o projeto e use a fonte do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
 
-  ```console
+  ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
 * Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação usando a `-p` [opção MSBuild](#msbuild):
 
-  ```console
+  ```dotnetcli
   dotnet build -p:Version=1.2.3.4
   ```

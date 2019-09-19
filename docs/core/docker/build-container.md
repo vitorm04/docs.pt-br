@@ -4,12 +4,12 @@ description: Neste tutorial, você aprenderá como colocar em contêiner um apli
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926311"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116566"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Colocar em contêiner um aplicativo .NET Core
 
@@ -55,7 +55,7 @@ Salve esse arquivo. A presença do arquivo forçará o .NET Core a usar a versã
 
 Você precisa de um aplicativo .NET Core que o contêiner do Docker irá executar. Abra seu terminal, crie uma pasta de trabalho se você ainda não fez isso e entre nela. Na pasta de trabalho, execute o seguinte comando para criar um projeto em um subdiretório denominado app:
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Antes de adicionar seu aplicativo .NET Core à imagem do Docker, publique-o. Voc
 
 Da pasta de trabalho, entre na pasta **app** com o código-fonte de exemplo e execute o seguinte comando:
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

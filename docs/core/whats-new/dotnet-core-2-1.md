@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925716"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116223"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -39,7 +39,7 @@ Um dos principais focos do .NET Core 2.1 é melhorar o desempenho de tempo de bu
 
 - Uso de servidores de build do SDK de longa execução, que são processos que se estendem por chamadas individuais de `dotnet build`. Eles eliminam a necessidade de compilação JIT de grandes blocos de código toda vez que `dotnet build` é executado. Os processos do servidor de build podem ser finalizados automaticamente com o seguinte comando:
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ Várias ferramentas que estavam disponíveis apenas por projeto usando [`DotnetC
 
 - `dotnet watch` fornece um observador do sistema de arquivos que aguarda que um arquivo seja alterado antes de executar um conjunto designado de comandos. Por exemplo, o comando a seguir recria automaticamente o projeto atual e gera uma saída detalhada sempre que um arquivo é alterado nele:
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ O .NET Core 2.1 oferece suporte a *Ferramentas Globais*, ou seja, ferramentas pe
 
 Para instalar uma Ferramenta Global, use o comando [dotnet tool install](../tools/dotnet-tool-install.md). Por exemplo:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ Modifique essa configuração de uma das três maneiras:
 
 - Ao usar as [ferramentas da CLI do .NET Core](../tools/index.md), adicione a seguinte opção com o valor desejado a um comando do .NET Core como `run`:
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 

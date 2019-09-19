@@ -3,12 +3,12 @@ title: Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.N
 description: Visão geral e instalação da ferramenta da CLI (Interface de Linha de Comando) do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106893"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118008"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
 
@@ -33,7 +33,7 @@ A CLI do ML.NET é instalada como qualquer outra Ferramenta Global do dotnet. Vo
 
 O exemplo a seguir mostra como instalar a CLI do ML.NET no local de feed do NuGet padrão:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ Você deve ver a ajuda para os comandos disponíveis para a ferramenta mlnet com
 
 Se estiver tentando instalar uma versão de pré-lançamento ou uma versão específica da ferramenta, especifique a [estrutura](../../standard/frameworks.md) usando o seguinte formato:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Você também poderá verificar se o pacote está instalado corretamente digitando o seguinte comando:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 Digite o seguinte comando para desinstalar o pacote do seu computador local:
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 Digite o seguinte comando para atualizar o pacote do seu computador local:
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ No computador em que você deseja habilitar o preenchimento, você precisará fa
 
 1. Instalar a ferramenta global `dotnet-suggest` executando o seguinte comando:
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 

@@ -3,16 +3,16 @@ title: Explore os intervalos de dados usando intervalos e índices
 description: Este tutorial avançado ensina você a explorar dados usando intervalos e índices para examinar fatias de um conjunto de dados sequencial.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926646"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117828"
 ---
 # <a name="indices-and-ranges"></a>Índices e intervalos
 
-Intervalos e índices fornecem uma sintaxe sucinta para acessar elementos únicos ou intervalos em <xref:System.Array>, <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>. Esses recursos permitem uma sintaxe mais concisa e clara para acessar elementos únicos ou intervalos de elementos em uma sequência.
+Intervalos e índices fornecem uma sintaxe sucinta para acessar elementos únicos ou intervalos em um <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>ou <xref:System.ReadOnlySpan%601>. Esses recursos permitem uma sintaxe mais concisa e clara para acessar elementos únicos ou intervalos de elementos em uma sequência.
 
 Neste tutorial, você aprenderá a:
 
@@ -24,12 +24,12 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Suporte a idioma para intervalos e índices
 
-Este suporte à linguagem depende de dois tipos novos e dois operadores novos.
+Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
-- O operador `^`, que especifica que um índice é relativo ao final de uma sequência.
+- O índice do operador `^`end, que especifica que um índice é relativo ao final de uma sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador Range (`..`), que especifica o início e o final de um intervalo como seus operandos.
+- O operador `..`Range, que especifica o início e o término de um intervalo como seus operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence[sequence.Length - n]`.
 

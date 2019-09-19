@@ -2,12 +2,12 @@
 title: Comando dotnet tool list
 description: O comando dotnet tool list lista a Ferramenta Global do .NET Core especificada no computador.
 ms.date: 05/29/2018
-ms.openlocfilehash: d3ff7fc90faf6ede3f7de0d5af5112c77ca140db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 6d35b1dce0c6d57edb0c6dd5f9711f093bc804aa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712901"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117558"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -19,7 +19,7 @@ ms.locfileid: "54712901"
 
 ## <a name="synopsis"></a>Sinopse
 
-```console
+```dotnetcli
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>

@@ -3,12 +3,12 @@ title: Comando dotnet nuget delete
 description: O comando dotnet-nuget-delete exclui ou retira da lista um pacote do servidor.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 70316a0baa2cf9923738a53af561b5c77014c3ff
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 79634baa9d6d7ff1f388f6a794ffd816687be105
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202575"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117637"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -24,13 +24,13 @@ ms.locfileid: "70202575"
 
 ## <a name="synopsis"></a>Sinopse
 
-```console
+```dotnetcli
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet nuget delete` exclui ou retira da lista um pacote do servidor. Para [nuget.org](https://www.nuget.org/), a ação é remover o pacote da lista.
 
@@ -78,12 +78,12 @@ O comando `dotnet nuget delete` exclui ou retira da lista um pacote do servidor.
 
 * Exclui a versão 1.0 do pacote `Microsoft.AspNetCore.Mvc`:
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
 * Exclui a versão 1.0 do pacote `Microsoft.AspNetCore.Mvc`, não solicita ao usuário credenciais ou outra entrada:
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
   ```

@@ -2,12 +2,12 @@
 title: Comando dotnet-add reference
 description: O comando dotnet add reference fornece uma opção conveniente para adicionar referências projeto a projeto.
 ms.date: 06/26/2019
-ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784051"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117783"
 ---
 # <a name="dotnet-add-reference"></a>Referência dotnet-add
 
@@ -65,18 +65,18 @@ O comando `dotnet add reference` fornece uma opção conveniente para adicionar 
 
 * Adicionar referência de projeto:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
 * Adicionar várias referências de projeto ao projeto no diretório atual:
 
-  ```console
+  ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
 * Adicionar várias referências de projeto usando um padrão de recurso de curinga no Linux/Unix:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
   ```

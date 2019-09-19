@@ -4,12 +4,12 @@ description: Descreve como criar uma Ferramenta Global. A Ferramenta Global é u
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202771"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117441"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Criar uma Ferramenta Global do .NET Core usando a CLI do .NET Core
 
@@ -23,7 +23,7 @@ Este artigo usa a CLI do .NET Core para criar e gerenciar um projeto.
 
 Nossa ferramenta de exemplo será um aplicativo de console que gera um bot ASCII e imprime uma mensagem. Primeiro, crie um novo Aplicativo de Console do .NET Core.
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 Execute o projeto e veja a saída. Experimente estas variações de linha de comando para ver resultados diferentes:
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ Embora `<PackageOutputPath>` seja opcional, use-o neste exemplo. Verifique se vo
 
 Em seguida, crie um pacote NuGet para seu aplicativo.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ O arquivo `botsay.1.0.0.nupkg` é criado na pasta identificada pelo valor XML `<
 
 Agora que você tem um pacote, instale a ferramenta desse pacote:
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Agora você deve ser capaz de digitar `botsay` e obter uma resposta da ferrament
 
 Quando terminar suas experiências com a ferramenta, você poderá removê-la com o comando a seguir:
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

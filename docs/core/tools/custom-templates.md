@@ -3,12 +3,12 @@ title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: be49e28d3aa09c9b3a3cb169ca39ff817a062b8f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849848"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117803"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -24,7 +24,7 @@ Para seguir um passo a passo e criar um modelo, consulte o tutorial [Create a cu
 
 Quando você instala o [SDK do .NET Core](https://dotnet.microsoft.com/download), você recebe dezenas de modelos internos para criar projetos e arquivos, incluindo aplicativos de console, bibliotecas de classes, projetos de teste de unidade, aplicativos ASP.NET Core (incluindo projetos [Angulares](https://angular.io/) e de [Reação](https://facebook.github.io/react/)) e arquivos de configuração. Para listar os modelos internos, execute o comando `dotnet new` com a opção `-l|--list`:
 
-```console
+```dotnetcli
 dotnet new --list
 ```
 
@@ -170,7 +170,7 @@ Use o comando [dotnet new -i|--install](dotnet-new.md) para instalar um pacote.
 
 Use o identificador do pacote NuGet para instalar um pacote de modelo.
 
-```console
+```dotnetcli
 dotnet new -i <NUGET_PACKAGE_ID>
 ```
 
@@ -178,7 +178,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 Forneça o caminho para um arquivo de pacote NuGet *.nupkg*.
 
-```console
+```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
 ```
 
@@ -186,7 +186,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 Os modelos podem ser instalados de uma pasta de modelo, como a pasta *mytemplate1* do exemplo acima. Especifique o caminho da pasta *.template.config*. O caminho para o diretório de modelo não precisa ser absoluto. No entanto, um caminho absoluto é necessário para desinstalar um modelo que foi instalado de uma pasta.
 
-```console
+```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -194,7 +194,7 @@ dotnet new -i <FILE_SYSTEM_DIRECTORY>
 
 O comando de desinstalação, sem quaisquer outros parâmetros, listará todos os modelos.
 
-```console
+```dotnetcli
 dotnet new -u
 ```
 
@@ -230,13 +230,13 @@ Use o comando [dotnet new -u|--uninstall](dotnet-new.md) para desinstalar um pac
 
 Se o pacote foi instalado por um feed do NuGet ou por um arquivo *.nupkg* diretamente, forneça o identificador.
 
-```console
+```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
 Se o pacote foi instalado com a especificação de um caminho para a pasta *.template.config*, use esse caminho **absoluto** para desinstalar o pacote. Você pode ver o caminho absoluto do modelo na saída fornecida pelo comando `dotnet new -u`. Para saber mais, confira a seção [Obter uma lista de modelos instalados](#get-a-list-of-installed-templates) acima.
 
-```console
+```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 ```
 
@@ -244,7 +244,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 Depois que um modelo é instalado, use o modelo executando o comando `dotnet new <TEMPLATE>` como você faria com qualquer outro modelo pré-instalado. Também é possível especificar [opções](dotnet-new.md#options) para o comando `dotnet new`, incluindo opções específicas do modelo definidas nas configurações de modelo. Forneça o nome curto do modelo diretamente no comando:
 
-```console
+```dotnetcli
 dotnet new <TEMPLATE>
 ```
 

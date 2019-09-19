@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104782"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117331"
 ---
 # <a name="get-started-with-c"></a>Introdução ao C\#
 
@@ -27,7 +27,7 @@ Os seguintes tópicos estão disponíveis:
 
 - [Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 2017, a versão mais recente do Visual Studio, permite codificar, compilar, executar, depurar, analisar e publicar seus aplicativos em um ambiente de desenvolvimento integrado para o Windows.
+   O Visual Studio 2019 permite codificar, compilar, executar, depurar, criar um perfil e publicar seus aplicativos de um ambiente de desenvolvimento integrado para Windows ou Mac.
 
    O tópico permite criar e executar um aplicativo Olá, Mundo simples e, em seguida, modificá-lo para executar um aplicativo Olá, Mundo ligeiramente mais interativo. Quando terminar de compilar e executar seu aplicativo, você também poderá aprender como [depurá-lo](../../core/tutorials/debugging-with-visual-studio.md) e como [publicá-lo](../../core/tutorials/publishing-with-visual-studio.md) para que ele possa ser executado em qualquer plataforma com suporte do .NET Core.
 
