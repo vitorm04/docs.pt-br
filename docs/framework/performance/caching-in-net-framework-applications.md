@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927042"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046786"
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -41,7 +41,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 > [!NOTE]
 > A classe <xref:System.Runtime.Caching.MemoryCache> é modelada no objeto de cache do ASP.NET definido no namespace <xref:System.Web.Caching>. Portanto, a lógica de cache interna é semelhante à lógica fornecida em versões anteriores do ASP.NET.  
   
- Para obter um exemplo de como usar o para armazenar em cache em um aplicativo [WPF, consulte Passo a passos: Armazenando em cache os dados do](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)aplicativo em um aplicativo do WPF.  
+ Para obter um exemplo de como usar o para armazenar em cache em um aplicativo [WPF, consulte Passo a passos: Armazenando em cache os dados do](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)aplicativo em um aplicativo do WPF.  
   
 ## <a name="caching-in-aspnet-applications"></a>Armazenando em cache nos aplicativos ASP.NET  
  As classes de cache do namespace <xref:System.Runtime.Caching> fornecem funcionalidade de armazenamento de dados em cache no ASP.NET.  
@@ -79,5 +79,5 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Passo a passo: Armazenando em cache dados de aplicativo em um aplicativo WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Passo a passo: Armazenando em cache dados de aplicativo em um aplicativo WPF](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Passo a passo: Caching de dados de aplicativo em ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

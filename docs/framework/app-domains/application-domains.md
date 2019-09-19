@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040743"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053215"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
@@ -64,7 +64,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
 - Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo no qual ele for carregado. No entanto, o assembly pode ser descarregado do processo descarregando-se todos os domínios de aplicativo em que ele está carregado.  
   
- O host de tempo de execução decidirá se é necessário carregar os assemblies como neutros com relação ao domínio quando ele carregar o tempo de execução em um processo. Para aplicativos gerenciados, aplique o atributo <xref:System.LoaderOptimizationAttribute> ao método de ponto de entrada do processo e especifique um valor da enumeração <xref:System.LoaderOptimization> associada. Para aplicativos não gerenciados que hospedam o Common Language Runtime, especifique o sinalizador apropriado ao chamar o método [CorBindToRuntimeEx Function](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
+ O host de tempo de execução decidirá se é necessário carregar os assemblies como neutros com relação ao domínio quando ele carregar o tempo de execução em um processo. Para aplicativos gerenciados, aplique o atributo <xref:System.LoaderOptimizationAttribute> ao método de ponto de entrada do processo e especifique um valor da enumeração <xref:System.LoaderOptimization> associada. Para aplicativos não gerenciados que hospedam o Common Language Runtime, especifique o sinalizador apropriado ao chamar o método [CorBindToRuntimeEx Function](../unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
  Existem três opções para carregar assemblies de domínio neutro:  
   
@@ -76,7 +76,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  Códigos compilados por JIT não podem ser compartilhados por assemblies carregados no contexto de carga, usando o método <xref:System.Reflection.Assembly.LoadFrom%2A> da classe <xref:System.Reflection.Assembly>, ou carregados com base em imagens usando sobrecargas do método <xref:System.Reflection.Assembly.Load%2A> que especificam matrizes de bytes.  
   
- Os assemblies que foram compilados para código nativo usando o [Ngen.exe (Gerador de Imagem Nativa)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) poderão ser compartilhados entre domínios de aplicativo, se eles tiverem sido carregados como neutros em relação ao domínio na primeira vez em que eles forem carregados em um processo.  
+ Os assemblies que foram compilados para código nativo usando o [Ngen.exe (Gerador de Imagem Nativa)](../tools/ngen-exe-native-image-generator.md) poderão ser compartilhados entre domínios de aplicativo, se eles tiverem sido carregados como neutros em relação ao domínio na primeira vez em que eles forem carregados em um processo.  
   
  Códigos compilados por JIT para o assembly que contém o ponto de entrada do aplicativo só serão compartilhados se todas as suas dependências puderem ser compartilhadas.  
   
@@ -110,7 +110,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  O <xref:System.AppDomain> é a interface programática para domínios de aplicativo. Essa classe inclui métodos para criar e descarregar domínios, para criar instâncias de tipos em domínios e registrar várias notificações como o descarregamento de domínio do aplicativo. A tabela a seguir lista os métodos <xref:System.AppDomain> mais usados.  
   
-|Método AppDomain|DESCRIÇÃO|  
+|Método AppDomain|Descrição|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Cria um novo domínio de aplicativo. É recomendável usar uma sobrecarga desse método que especifique um objeto <xref:System.AppDomainSetup>. Essa é a maneira preferencial para definir as propriedades de um novo domínio, como a base do aplicativo ou o diretório raiz do aplicativo; o local do arquivo de configuração do domínio e o caminho de pesquisa que o Common Language Runtime deve usar para carregar assemblies dentro do domínio.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> e <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Executa um assembly no domínio do aplicativo. Como esse é um método de instância, ele pode ser usado para executar código em outro domínio de aplicativo para o qual você tenha uma referência.|  

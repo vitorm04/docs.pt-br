@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952818"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053732"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -24,7 +24,7 @@ O .NET Framework pretende tornar os aplicativos mais acessíveis para os usuári
 
 Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for direcionado ao .NET Framework 4.7 ou a uma versão anterior, mas estiver em execução no .NET Framework 4.7.1 ou posterior. Além disso, configure seu aplicativo para usar recursos herdados (e não aproveitar os recursos de acessibilidade) se ele for direcionado ao .NET Framework 4.7.1 ou posterior. Cada versão do .NET Framework que inclui recursos de acessibilidade tem uma opção de acessibilidade específica à versão, que você adiciona ao elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](../configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo. Estas são as opções compatíveis:
 
-|Versão|Alternar|
+|Version|Alternar|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -169,7 +169,7 @@ Em aplicativos destinados ao .NET Framework 4.7.2 e versões anteriores, uma [di
 
 A figura a seguir mostrará a dica de ferramenta quando o usuário selecionar um botão com o teclado.
 
-![A dica de ferramenta quando o usuário navegar até um botão com o teclado](media/tooltip.png)
+![A dica de ferramenta quando o usuário navegar até um botão com o teclado](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ O .NET framework 4.8 adiciona uma nova propriedade, `SelectionTextBrush`, que pe
 
 Para usar essa propriedade, basta adicioná-la ao seu código XAML e usar a associação ou o pincel adequado. A seleção de texto resultante tem esta aparência:
 
-![A dica de ferramenta quando o usuário navegar até um botão com o teclado](media/selectiontextbrush-property.png)
+![A dica de ferramenta quando o usuário navegar até um botão com o teclado](./media/selectiontextbrush-property.png)
 
 Você pode combinar o uso das propriedades `SelectionBrush` e `SelectionTextBrush` para gerar qualquer combinação de plano de fundo e cor de primeiro plano que julgar adequada.
 
@@ -482,11 +482,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Controle expansor com foco antes das melhorias de acessibilidade](media/expander-before.png)
+  ![Controle expansor com foco antes das melhorias de acessibilidade](./media/expander-before.png)
 
   Depois: 
 
-  ![Controle expansor com foco após as melhorias de acessibilidade](media/expander-after.png)
+  ![Controle expansor com foco após as melhorias de acessibilidade](./media/expander-after.png)
 
 - Controles <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
@@ -494,11 +494,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Botão de opção de alto contraste com foco antes das melhorias de acessibilidade](media/radio-button-before.png)
+  ![Botão de opção de alto contraste com foco antes das melhorias de acessibilidade](./media/radio-button-before.png)
 
   Depois: 
 
-  ![Botão de opção de alto contraste com foco após as melhorias de acessibilidade](media/radio-button-after.png)
+  ![Botão de opção de alto contraste com foco após as melhorias de acessibilidade](./media/radio-button-after.png)
 
 - Controle <xref:System.Windows.Controls.ComboBox>
 
@@ -506,31 +506,31 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Borda e texto desabilitados da ComboBox antes das melhorias de acessibilidade](media/combo-disabled-before.png)
+  ![Borda e texto desabilitados da ComboBox antes das melhorias de acessibilidade](./media/combo-disabled-before.png)
 
   Depois:   
 
-  ![Borda e texto desabilitados da ComboBox após as melhorias de acessibilidade](media/combo-disabled-after.png)
+  ![Borda e texto desabilitados da ComboBox após as melhorias de acessibilidade](./media/combo-disabled-after.png)
 
   Além disso, os botões desabilitados e com foco usam a cor de tema correta.
 
   Antes:
 
-  ![Cores de tema do botão antes das melhorias de acessibilidade](media/button-themes-before.png) 
+  ![Cores de tema do botão antes das melhorias de acessibilidade](./media/button-themes-before.png) 
 
   Depois: 
 
-  ![Cores de tema do botão após as melhorias de acessibilidade](media/button-themes-after.png) 
+  ![Cores de tema do botão após as melhorias de acessibilidade](./media/button-themes-after.png) 
 
   Por fim, no .NET Framework 4.7 e em versões anteriores, a configuração do estilo de um controle <xref:System.Windows.Controls.ComboBox> como `Toolbar.ComboBoxStyleKey` fazia com que a seta suspensa ficasse invisível. Esse problema é corrigido a partir do .NET Framework 4.7.1. Por exemplo:
 
   Antes: 
 
-  ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](media/comboboxstylekey-before.png) 
+  ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](./media/comboboxstylekey-before.png) 
 
   Depois: 
 
-  ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](media/comboboxstylekey-after.png) 
+  ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](./media/comboboxstylekey-after.png) 
 
 - Controle <xref:System.Windows.Controls.DataGrid>
 
@@ -538,21 +538,21 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Seta do indicador de classificação antes das melhorias de acessibilidade](media/sort-indicator-before.png) 
+  ![Seta do indicador de classificação antes das melhorias de acessibilidade](./media/sort-indicator-before.png) 
 
   Depois:   
 
-  ![Seta do indicador de classificação após as melhorias de acessibilidade](media/sort-indicator-after.png) 
+  ![Seta do indicador de classificação após as melhorias de acessibilidade](./media/sort-indicator-after.png) 
 
   Além disso, no .NET Framework 4.7 e em versões anteriores, o estilo de link padrão era alterado para uma cor incorreta ao passar o mouse nos modos de alto contraste. Isso é resolvido a partir do .NET Framework 4.7.1. Da mesma forma, as colunas da caixa de seleção <xref:System.Windows.Controls.DataGrid> usam as cores esperadas para os comentários do foco de teclado a partir do .NET Framework 4.7.1.
 
   Antes: 
 
-  ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](media/default-link-style-before.png) 
+  ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](./media/default-link-style-before.png) 
 
   Depois:    
 
-  ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](media/default-link-style-after.png) 
+  ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](./media/default-link-style-after.png) 
 
 Para obter mais informações sobre as melhorias de acessibilidade do WPF no .NET Framework 4.7.1, consulte [Melhorias de acessibilidade no WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -583,11 +583,11 @@ Alguns exemplos de alterações de alto contraste incluem:
 
   Antes:
 
-  ![Texto desabilitado antes das melhorias de acessibilidade](media/wf-disabled-before.png) 
+  ![Texto desabilitado antes das melhorias de acessibilidade](./media/wf-disabled-before.png) 
 
   Depois:
 
-  ![Texto desabilitado após as melhorias de acessibilidade](media/wf-disabled-after.png) 
+  ![Texto desabilitado após as melhorias de acessibilidade](./media/wf-disabled-after.png) 
 
 - Melhorias de alto contraste na caixa de diálogo Exceção de Thread.
 

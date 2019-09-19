@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866906"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049423"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace > (.NET nativo)
+# <a name="namespace-element-net-native"></a>\<Elemento de > de namespace (.NET Native)
 Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -53,38 +53,38 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um na
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*namespace_name*|O nome do namespace. Se o elemento \<Namespace> for filho de um elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) ou [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), o *namespace_name* deverá ser um nome de namespace totalmente qualificado. Se o elemento \<Namespace> for filho de outro elemento \<Namespace>, o *namespace_name* deverá ser um nome de namespace relacionado.|  
+|*namespace_name*|O nome do namespace. Se o elemento \<Namespace> for filho de um elemento [\<Application>](application-element-net-native.md), [\<Library>](library-element-net-native.md) ou [\<Assembly>](assembly-element-net-native.md), o *namespace_name* deverá ser um nome de namespace totalmente qualificado. Se o elemento \<Namespace> for filho de outro elemento \<Namespace>, o *namespace_name* deverá ser um nome de namespace relacionado.|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para todos os tipos no namespace. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para todos os tipos no namespace. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
+|[\<Application>](application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](application-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](assembly-element-net-native.md).|  
+|[\<Assembly>](assembly-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.|  
+|[\<Library>](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](library-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](assembly-element-net-native.md).|  
 |`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
   
 ## <a name="remarks"></a>Comentários  
  Os atributos `Activate`, `Browse`, `Dynamic` e `Serialize` são todos opcionais. Se nenhum estiver presente, o elemento `<Namespace>` serve somente como um contêiner para elementos filho. Se eles estiverem presentes, o elemento `<Namespace>` aplica a política de reflexão de tempo de execução a todos os tipos no namespace especificado.  
   
- Quando ele é um filho do elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), o elemento `<Namespace>` substitui a política de reflexão de tempo de execução definida pelo elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
+ Quando ele é um filho do elemento [\<Assembly>](assembly-element-net-native.md), o elemento `<Namespace>` substitui a política de reflexão de tempo de execução definida pelo elemento [\<Assembly>](assembly-element-net-native.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)

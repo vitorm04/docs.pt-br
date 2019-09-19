@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914451"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042127"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Automação de Propriedades de Interface de Usuário para Clientes.
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69914451"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]as propriedades são somente leitura. Para definir as propriedades de um controle, você deve usar os métodos do padrão de controle apropriado. Por exemplo, use <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> para alterar os valores de posição de uma janela de rolagem.  
   
- Para melhorar o desempenho, os valores de propriedade de controles e padrões de controle podem <xref:System.Windows.Automation.AutomationElement> ser armazenados em cache quando objetos são recuperados. Para obter mais informações, consulte [Caching em clientes de automação da interface do usuário](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
+ Para melhorar o desempenho, os valores de propriedade de controles e padrões de controle podem <xref:System.Windows.Automation.AutomationElement> ser armazenados em cache quando objetos são recuperados. Para obter mais informações, consulte [Caching em clientes de automação da interface do usuário](caching-in-ui-automation-clients.md).  
   
 ## <a name="property-ids"></a>IDs de propriedade  
  Identificadores de propriedade (IDs) são valores exclusivos e constantes encapsulados em <xref:System.Windows.Automation.AutomationProperty> objetos. Os aplicativos cliente de automação da interface do usuário <xref:System.Windows.Automation.AutomationElement> obtêm essas IDs da classe ou da classe de padrão <xref:System.Windows.Automation.ScrollPattern>de controle apropriada, como. Os provedores de automação de interface <xref:System.Windows.Automation.AutomationElementIdentifiers> do usuário os obtêm de ou para uma das classes de identificadores de padrão de controle, <xref:System.Windows.Automation.ScrollPatternIdentifiers>como.  
@@ -99,6 +99,6 @@ ms.locfileid: "69914451"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Armazenamento em cache em clientes de automação de interface do usuário](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Assinar eventos de automação de interface do usuário](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [Armazenamento em cache em clientes de automação de interface do usuário](caching-in-ui-automation-clients.md)
+- [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](server-side-ui-automation-provider-implementation.md)
+- [Assinar eventos de automação de interface do usuário](subscribe-to-ui-automation-events.md)

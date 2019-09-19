@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722979"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046472"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Como: executar a inicialização lenta de objetos
-A classe <xref:System.Lazy%601?displayProperty=nameWithType> simplifica o trabalho de inicialização lenta e instanciação de objetos. Inicializando objetos de maneira lenta, você poderá evitar a necessidade de criá-los se eles nunca forem necessários ou você poderá adiar sua inicialização até que eles sejam acessados pela primeira vez. Para obter mais informações, veja [Inicialização lenta](../../../docs/framework/performance/lazy-initialization.md).  
+A classe <xref:System.Lazy%601?displayProperty=nameWithType> simplifica o trabalho de inicialização lenta e instanciação de objetos. Inicializando objetos de maneira lenta, você poderá evitar a necessidade de criá-los se eles nunca forem necessários ou você poderá adiar sua inicialização até que eles sejam acessados pela primeira vez. Para obter mais informações, veja [Inicialização lenta](lazy-initialization.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como inicializar um valor com <xref:System.Lazy%601>. Suponha que a variável lenta talvez não seja necessária, dependendo de algum outro código que define a variável `someCondition` como true ou false.  
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Inicialização lenta](../../../docs/framework/performance/lazy-initialization.md)
+- [Inicialização lenta](lazy-initialization.md)

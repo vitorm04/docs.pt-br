@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir conteúdo do assembly'
+title: 'Como: exibir o conteúdo do assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973022"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053954"
 ---
-# <a name="how-to-view-assembly-contents"></a>Como: Exibir conteúdo do assembly
+# <a name="how-to-view-assembly-contents"></a>Como: exibir o conteúdo do assembly
+
 Você pode usar o [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) para exibir informações MSIL (Microsoft Intermediate Language) em um arquivo. Se o arquivo que estiver sendo examinado for um assembly, essas informações poderão incluir os atributos do assembly, bem como as referências a outros módulos e assemblies. Essas informações podem ser úteis para determinar se um arquivo é um assembly ou parte de um assembly e se o arquivo possui referências a outros módulos ou assemblies.  
   
 Para exibir o conteúdo de um assembly usando *ILDASM. exe*, digite o *nome do assembly* **ILDASM** \<> em um prompt de comando. Por exemplo, o comando a seguir desmonta o assembly *Hello. exe* .  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 Para exibir informações de manifesto do assembly, clique duas vezes no ícone de **manifesto** na janela do desmontador MSIL.  
   
 ## <a name="example"></a>Exemplo  
+
 O exemplo a seguir começa com um programa "Olá, Mundo" básico. Depois de compilar o programa, use *ILDASM. exe* para desmontar o assembly *Hello. exe* e exibir o manifesto do assembly.  
 
 ```cpp

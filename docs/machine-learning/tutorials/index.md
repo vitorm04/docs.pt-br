@@ -3,12 +3,12 @@ title: Tutoriais do ML.NET
 description: Explore os tutoriais do ML.NET para aprender como criar soluções de IA personalizadas e integrá-las aos seus aplicativos .NET.
 ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: dfc4779a94ae74e35095f654571c6e7c43f295a0
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
-ms.translationtype: HT
+ms.openlocfilehash: 6d5b622194cbaa20ed4e7283e6f1ea66f16a7b47
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671891"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054008"
 ---
 # <a name="mlnet-tutorials"></a>Tutoriais do ML.NET 
 
@@ -22,6 +22,7 @@ Com os tutoriais a seguir, você aprenderá como usar o [ML.NET](../index.yml) p
 - [Classificação de imagem](image-classification.md): demonstra como readaptar um modelo existente do TensorFlow para criar um classificador de imagens personalizado usando o ML.NET.
 - [Detecção de anomalias](sales-anomaly-detection.md): demonstra como criar um aplicativo de detecção de anomalias para a análise de dados de vendas do produto.
 - [Detectar objetos em imagens](object-detection-onnx.md): demonstra como detectar objetos em imagens usando um modelo ONNX pré-treinado.
+- [Classificar sentimentos de revisões de filmes](text-classification-tf.md): Aprenda a carregar um modelo de TensorFlow pré-treinado para classificar as opiniões das revisões de filmes.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -2,12 +2,12 @@
 title: 'Exceções: A expressão try...finally'
 description: Saiba como o F# ' Try... Finally ' permite que você execute código de limpeza mesmo que um bloco de código gere uma exceção.
 ms.date: 05/16/2016
-ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0ddb64ac13b307404864ec5b54f26fd8a7a3d7d8
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630278"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083003"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Exceções: A expressão try...finally
 
@@ -34,7 +34,7 @@ O código a seguir demonstra o uso da `try...finally` expressão.
 
 A saída para o console é a seguinte:
 
-```
+```console
 Closing stream
 Exception handled.
 ```

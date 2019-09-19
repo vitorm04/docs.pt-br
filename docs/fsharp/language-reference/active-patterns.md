@@ -2,12 +2,12 @@
 title: Padrões ativos
 description: Saiba como usar padrões ativos para definir partições nomeadas que subdividem dados de F# entrada na linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629952"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083080"
 ---
 # <a name="active-patterns"></a>Padrões ativos
 
@@ -30,7 +30,7 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>Comentários
 
-Na sintaxe anterior, os identificadores são nomes de partições dos dados de entrada que são representados por *argumentos*ou, em outras palavras, nomes para subconjuntos do conjunto de todos os valores dos argumentos. Pode haver até sete partições em uma definição de padrão ativo. A *expressão* descreve o formulário no qual os dados são decompostos. Você pode usar uma definição de padrão ativo para definir as regras para determinar a quais das partições nomeadas os valores fornecidos como argumentos pertencem. Os símbolos (| e |) são chamados de *clipes banana* e a função criada por esse tipo de associação de Let é chamada de reconhecedor *ativo*.
+Na sintaxe anterior, os identificadores são nomes de partições dos dados de entrada que são representados por *argumentos*ou, em outras palavras, nomes para subconjuntos do conjunto de todos os valores dos argumentos. Pode haver até sete partições em uma definição de padrão ativo. A *expressão* descreve o formulário no qual os dados são decompostos. Você pode usar uma definição de padrão ativo para definir as regras para determinar a quais das partições nomeadas os valores fornecidos como argumentos pertencem. Os símbolos (| e |) são chamados de *clipes banana* e a função criada por esse tipo de associação de Let é chamada de *reconhecedor ativo*.
 
 Como exemplo, considere o seguinte padrão ativo com um argumento.
 
@@ -42,7 +42,7 @@ Você pode usar o padrão ativo em uma expressão de correspondência de padrõe
 
 A saída desse programa é a seguinte:
 
-```
+```console
 7 is odd
 11 is odd
 32 is even
@@ -54,7 +54,7 @@ Outro uso de padrões ativos é decompor tipos de dados de várias maneiras, com
 
 A saída do programa acima é a seguinte:
 
-```
+```console
 Red
  Red: 255 Green: 0 Blue: 0
  Hue: 360.000000 Saturation: 1.000000 Brightness: 0.500000
@@ -84,7 +84,7 @@ As expressões de correspondência de padrões resultantes permitem que os dados
 
 A saída do exemplo anterior é a seguinte:
 
-```
+```console
 1.100000 : Floating point
 0 : Integer
 0.000000 : Floating point
@@ -98,7 +98,7 @@ Ao usar padrões ativos parciais, às vezes, as escolhas individuais podem ser s
 
 A saída é a seguinte:
 
-```
+```console
 1 is a cube and a square
 8 is a cube
 27 is a cube
@@ -119,7 +119,7 @@ Os padrões ativos sempre recebem pelo menos um argumento para o item que está 
 
 A saída do código anterior é a seguinte:
 
-```
+```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
@@ -129,7 +129,7 @@ Os padrões ativos não são restritos apenas às expressões de correspondênci
 
 A saída do código anterior é a seguinte:
 
-```
+```console
 Hello, random citizen!
 Hello, George!
 ```

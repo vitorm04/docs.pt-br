@@ -2,12 +2,12 @@
 title: Uniões discriminadas
 description: Saiba como usar F# uniões discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3ed05fdb144d7266adc1718cdf015ab64680f3d8
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 79da6c6ff9d3699818014d86f6c95edc3e43b4c1
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206163"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083035"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -142,7 +142,7 @@ Em vez de um método virtual para computar uma área ou um perímetro, como voc�
 
 A saída é a seguinte:
 
-```
+```console
 Area of circle that has radius 15.000000: 706.858347
 Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000

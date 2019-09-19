@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228504"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047324"
 ---
 # <a name="requesting-data"></a>Solicitando dados
 Desenvolver aplicativos que são executados no ambiente operacional distribuído da Internet de hoje requer um método eficiente e fácil de usar para recuperar dados de recursos de todos os tipos. Protocolos conectáveis permitem desenvolver aplicativos que usam uma única interface para recuperar dados de vários protocolos de Internet.  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação de rede no .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Como: Solicitar uma página da Web e recuperar os resultados como um fluxo](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Programação de rede no .NET Framework](index.md)
+- [Como: Solicitar uma página da Web e recuperar os resultados como um fluxo](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

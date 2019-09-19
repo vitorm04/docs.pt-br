@@ -2,12 +2,12 @@
 title: Matrizes
 description: Saiba como criar e usar matrizes na linguagem F# de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 142d2c8d9aa7247e1490867a7bb905e2e7fec41e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ae8f3cfc84fbba4cac496d4221d140dadec25e10
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630045"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082961"
 ---
 # <a name="arrays"></a>Matrizes
 
@@ -69,7 +69,7 @@ O módulo [`Microsoft.FSharp.Collections.Array`](https://msdn.microsoft.com/libr
 
 A saída é a seguinte.
 
-```
+```console
 0 1 2 3 4 5 6 7 8 9
 ```
 
@@ -81,7 +81,7 @@ Várias funções criam matrizes sem a necessidade de uma matriz existente. [`Ar
 
 A saída é a seguinte.
 
-```
+```console
 Length of empty array: 0
 Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
@@ -93,7 +93,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 A saída do código anterior é a seguinte:
 
-```
+```console
 [|Test1; Test2; |]
 [|; Test2; |]
 ```
@@ -106,7 +106,7 @@ A cadeia `Test1` de caracteres aparece apenas na primeira matriz porque a opera�
 
 A saída mostra que a submatriz começa no elemento 5 e contém 10 elementos.
 
-```
+```console
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
@@ -118,7 +118,7 @@ O código a seguir demonstra o **array. Append**.
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 [|1; 2; 3; 4; 5; 6|]
 ```
 
@@ -128,7 +128,7 @@ A saída do código anterior é a seguinte.
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
@@ -138,7 +138,7 @@ A saída do código anterior é a seguinte.
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
@@ -148,7 +148,7 @@ A saída do código anterior é a seguinte.
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 [|(1, 1, 1); (1, 2, 2); (1, 3, 3); (2, 1, 2); (2, 2, 4); (2, 3, 6); (3, 1, 3);
 (3, 2, 6); (3, 3, 9)|]
 ```
@@ -159,7 +159,7 @@ A saída do código anterior é a seguinte.
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 [|2; 4; 6; 8; 10|]
 ```
 
@@ -169,7 +169,7 @@ A saída do código anterior é a seguinte.
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 "Hello world!"
 ```
 
@@ -179,7 +179,7 @@ Você pode combinar facilmente funções no módulo de matriz que transformam ma
 
 A saída é
 
-```
+```console
 [|100; 36; 16; 4|]
 ```
 
@@ -308,7 +308,7 @@ O código a seguir demonstra o uso `Array.exists` de `Array.exists2`e. Nesses ex
 
 A saída do código anterior é a seguinte.
 
-```
+```console
 true
 false
 false
@@ -321,7 +321,7 @@ Da mesma forma, [`Array.forall`](https://msdn.microsoft.com/library/d88f2cd0-fa7
 
 A saída desses exemplos é a seguinte.
 
-```
+```console
 false
 true
 true
@@ -338,7 +338,7 @@ O código a seguir `Array.find` usa `Array.findIndex` e para localizar um númer
 
 A saída é a seguinte.
 
-```
+```console
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
@@ -350,7 +350,7 @@ O código a seguir demonstra o uso de `Array.tryFind`. Esse código depende do c
 
 A saída é a seguinte.
 
-```
+```console
 Found an element: 1
 Found an element: 729
 ```
@@ -363,7 +363,7 @@ O código a seguir demonstra o uso de `Array.tryPick`. Nesse caso, em vez de uma
 
 A saída é a seguinte.
 
-```
+```console
 Found an element 1 with square root 1 and cube root 1.
 Found an element 64 with square root 8 and cube root 4.
 Found an element 729 with square root 27 and cube root 9.
@@ -394,7 +394,7 @@ Essas funções para executar computações correspondem às funções de mesmo 
 
 A saída é a seguinte.
 
-```
+```console
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 

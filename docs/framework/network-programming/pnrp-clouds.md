@@ -2,12 +2,12 @@
 title: Nuvens PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623026"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047368"
 ---
 # <a name="pnrp-clouds"></a>Nuvens PNRP
 A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si através da rede. O termo "nuvem" é sinônimo de "malha ponto a ponto" e "grafo ponto a ponto".  
@@ -34,4 +34,4 @@ A "nuvem" PNRP representa um conjunto de nós que podem se comunicar entre si at
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Net.PeerToPeer.Cloud>
-- [Protocolo PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [Protocolo PNRP](peer-name-resolution-protocol.md)

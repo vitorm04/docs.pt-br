@@ -1,5 +1,5 @@
 ---
-title: '{} Extensão de marcação de - sequência de escape'
+title: '{}Sequência de escape-extensão de marcação'
 ms.date: 03/30/2017
 f1_keywords:
 - '{}'
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0646c62a1342eb160d1967e86ac286429013f3c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855594"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053868"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Sequência de escape /extensão de marcação
-Fornece a sequência de escape do XAML para valores de atributo. A sequência de escape permite que os valores subsequentes no atributo deve ser interpretado como um literal.  
+Fornece a sequência de escape XAML para valores de atributo. A sequência de escape permite que os valores subsequentes no atributo sejam interpretados como um literal.  
   
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
   
-```xml  
+```xaml  
 <object property="{} literalValue" .../>  
 ```  
   
 ## <a name="xaml-property-element-usage"></a>Uso do elemento propriedade XAML  
   
-```  
+```xaml  
 <object>  
   <object.property>  
     {} literalValue  
@@ -44,17 +44,17 @@ Fornece a sequência de escape do XAML para valores de atributo. A sequência de
 |*literalValue*|A cadeia de caracteres literal que segue a sequência de escape. Normalmente, essa cadeia de caracteres contém uma chave de abertura ou fechamento ({ou}).|  
   
 ## <a name="remarks"></a>Comentários  
- A sequência de escape ({}) é usado para que uma chave de abertura ({}) pode ser usada como um caractere literal em XAML.  
+ A sequência de escape{}() é usada para que uma chave de abertura ({) possa ser usada como um caractere literal em XAML.  
   
- Leitores XAML normalmente usam a chave de abertura ({}) para indicar o ponto de entrada de uma extensão de marcação; no entanto, eles primeiro verificam o próximo caractere para determinar se ele é uma chave de fechamento (}). Somente quando as duas chaves ({}) são adjacente, serão consideradas uma sequência de escape.  
+ Os leitores XAML normalmente usam a chave de abertura ({) para denotar o ponto de entrada de uma extensão de marcação; no entanto, eles primeiro verificam o próximo caractere para determinar se ele é uma chave de fechamento (}). Somente quando as duas chaves ({}) são adjacentes, elas são consideradas uma sequência de escape.  
   
- Se a sequência de escape for encontrada, o leitor XAML deve processar o restante da cadeia de caracteres como uma cadeia de caracteres. No entanto, se a sequência de escape for aplicada a um membro que tem um conversor de tipo, a cadeia de caracteres pode passar por conversão de tipo quando ele é interpretado por um gravador XAML.  
+ Se a sequência de escape for encontrada, o leitor XAML deverá processar o restante da cadeia de caracteres como uma cadeia de caracteres. No entanto, se a sequência de escape for aplicada a um membro que tenha um conversor de tipo, a cadeia de caracteres poderá sofrer conversão de tipo quando for interpretada por um gravador XAML.  
   
- A sequência de escape não é uma extensão de marcação e não é apoiada por uma classe. No entanto, é uma convenção que os leitores XAML (incluindo os leitores XAML personalizados) devem respeitar.  
+ A sequência de escape não é uma extensão de marcação e não é apoiada por uma classe. No entanto, é uma Convenção de que os leitores XAML (incluindo leitores XAML personalizados) devem respeitar.  
   
- Uma marca de aspas (") não pode ser usada como uma sequência de escape dessa maneira. Se você precisar definir uma marca de aspas simples como um valor de propriedade para uma propriedade não-conteúdo, usar a sintaxe de elemento de propriedade e colocar a marca de aspas como uma cadeia de caracteres dentro do elemento de propriedade ou usar uma entidade de caractere XML. Para uma propriedade de conteúdo, as aspas podem ser todo o conteúdo.  
+ Uma aspa (") não pode ser usada como uma sequência de escape dessa maneira. Se você precisar definir uma aspa como um valor de propriedade para uma propriedade que não seja de conteúdo, use a sintaxe do elemento de propriedade e coloque as aspas como uma cadeia de caracteres dentro do elemento de propriedade ou use uma entidade de caractere XML. Para uma propriedade de conteúdo, a aspa pode ser todo o conteúdo.  
   
- A sequência de escape ({}) é frequentemente necessário ao especificar um tipo XML que deve incluir um qualificador de namespace em um local em que uma extensão de marcação XAML pode aparecer. Isso inclui o início de um valor de atributo XAML e, em uma extensão de marcação, imediatamente após o sinal de igual (=). O exemplo a seguir mostra as sequências de escape para um namespace XML que aparece no início de um valor de atributo XAML.  
+ A sequência de escape{}() é frequentemente necessária ao especificar um tipo XML que deve incluir um qualificador de namespace em um local onde uma extensão de marcação XAML pode aparecer. Isso inclui o início de um valor de atributo XAML e, em uma extensão de marcação, imediatamente após um sinal de igual (=). O exemplo a seguir mostra as sequências de escape para um namespace XML que aparece no início de um valor de atributo XAML.  
   
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   

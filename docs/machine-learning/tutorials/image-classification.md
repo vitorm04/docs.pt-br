@@ -4,12 +4,12 @@ description: Saiba como treinar novamente um modelo do TensorFlow para classific
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929235"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054073"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Treinar novamente um classificador de imagens TensorFlow com aprendizado por transferência e o ML.NET
 
@@ -355,7 +355,7 @@ Converta seus dados de imagem e previsão `DataViews` em `IEnumerables` fortemen
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-Chame o método `DisplayResults()` para exibir seus dados e previsões como a próxima linha no método `ReuseAndTuneInceptionModel()`:
+Adicione o seguinte código para exibir seus dados e previsões como as linhas seguintes no `ReuseAndTuneInceptionModel()` método:
 
 [!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 

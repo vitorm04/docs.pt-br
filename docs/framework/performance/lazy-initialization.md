@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943813"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046407"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
 *Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
@@ -62,7 +62,7 @@ ms.locfileid: "69943813"
  Por padrão, objetos <xref:System.Lazy%601> são thread-safe. Ou seja, se o construtor não especificar o tipo de acesso thread-safe, os objetos <xref:System.Lazy%601> que ele criar serão thread-safe. Em cenários com vários threads, o primeiro thread para acessar a propriedade <xref:System.Lazy%601.Value%2A> de um objeto <xref:System.Lazy%601> thread-safe inicializa-o para todos os acessos subsequentes em todos os threads e todos os threads compartilham os mesmos dados. Portanto, não importa qual thread inicializa o objeto e as condições de corrida são benignas.  
   
 > [!NOTE]
-> Você pode estender essa consistência às condições de erro usando o cache de exceções. Para obter mais informações, consulte a próxima seção, [Exceções em objetos lentos](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Você pode estender essa consistência às condições de erro usando o cache de exceções. Para obter mais informações, consulte a próxima seção, [Exceções em objetos lentos](lazy-initialization.md#ExceptionsInLazyObjects).  
   
  O exemplo a seguir mostra que a mesma instância `Lazy<int>` tem o mesmo valor para três threads separados.  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943813"
 - [Noções básicas de threading gerenciado](../../standard/threading/managed-threading-basics.md)
 - [Threads e threading](../../standard/threading/threads-and-threading.md)
 - [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Como: Executar inicialização lenta de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Como: Executar inicialização lenta de objetos](how-to-perform-lazy-initialization-of-objects.md)

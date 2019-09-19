@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044127"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049433"
 ---
 # <a name="net-native-and-compilation"></a>Compilação e .NET nativo
 
@@ -82,7 +82,7 @@ Já que a cadeia de ferramentas do .NET Native vinculará o código de implement
 
 - Interoperabilidade COM.
 
-Se o código de implementação ou de metadados necessário está ausente em tempo de execução, o tempo de execução do .NET Native gera uma exceção. Você pode evitar essas exceções e verificar se a cadeia de ferramentas do .NET Native inclui o código de implementação e os metadados necessários, usando um [arquivo de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md), um arquivo XML que designa os elementos do programa cujos metadados ou código de implementação devem estar disponíveis em tempo de execução e atribui uma política de tempo de execução a elas. Este é o arquivo de diretivas de tempo de execução padrão que é adicionado a um projeto da Windows Store que é compilado pela cadeia de ferramentas do .NET Native:
+Se o código de implementação ou de metadados necessário está ausente em tempo de execução, o tempo de execução do .NET Native gera uma exceção. Você pode evitar essas exceções e verificar se a cadeia de ferramentas do .NET Native inclui o código de implementação e os metadados necessários, usando um [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md), um arquivo XML que designa os elementos do programa cujos metadados ou código de implementação devem estar disponíveis em tempo de execução e atribui uma política de tempo de execução a elas. Este é o arquivo de diretivas de tempo de execução padrão que é adicionado a um projeto da Windows Store que é compilado pela cadeia de ferramentas do .NET Native:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ Isso habilita todos os tipos, bem como todos os respectivos membros em todos os 
 
 ## <a name="net-native-and-ngen"></a>.NET Native e NGEN
 
-O NGEN [(gerador de imagem nativa)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) compila os assemblies para código nativo e os instala no cache de imagem nativa no computador local. No entanto, embora NGEN, assim como o .NET Native, produza código nativo, ele é diferente do .NET Native de algumas maneiras significativas:
+O NGEN [(gerador de imagem nativa)](../tools/ngen-exe-native-image-generator.md) compila os assemblies para código nativo e os instala no cache de imagem nativa no computador local. No entanto, embora NGEN, assim como o .NET Native, produza código nativo, ele é diferente do .NET Native de algumas maneiras significativas:
 
 - Se nenhuma imagem nativa estiver disponível para um método específico, o NGEN reverterá para compilação de código via JIT. Isso significa que imagens nativas devem continuar a incluir IL e metadados caso o NGEN precise reverter para a compilação JIT. Por outro lado, o .NET Native produz apenas imagens nativas e não será revertido para a compilação JIT. Como resultado, apenas os metadados necessários para alguns cenários de interoperabilidade, serialização e reflexão devem ser preservados.
 
@@ -108,5 +108,5 @@ O NGEN [(gerador de imagem nativa)](../../../docs/framework/tools/ngen-exe-nativ
 
 - [Metadados e componentes autodescritivos](../../standard/metadata-and-self-describing-components.md)
 - [Dentro de .NET Native (vídeo do Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [Solução de problemas gerais do .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Reflexão e .NET Native](reflection-and-net-native.md)
+- [Solução de problemas gerais do .NET Native](net-native-general-troubleshooting.md)

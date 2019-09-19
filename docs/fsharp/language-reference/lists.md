@@ -2,12 +2,12 @@
 title: Listas
 description: Saiba mais F# sobre listas, uma série ordenada e imutável de elementos do mesmo tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630733"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082906"
 ---
 # <a name="lists"></a>Listas
 
@@ -58,7 +58,7 @@ Como as listas em F# são imutáveis, quaisquer operações de modificação ger
 
 As listas F# no são implementadas como listas vinculadas individualmente, o que significa que as operações que acessam apenas o cabeçalho da lista são o (1), e o acesso ao elemento é o (*n*).
 
-## <a name="properties"></a>Propriedades
+## <a name="properties"></a>Properties
 
 O tipo de lista oferece suporte às seguintes propriedades:
 
@@ -99,7 +99,7 @@ A função `RemoveAllMultiples` é uma função recursiva que usa duas listas. A
 
 A saída é a seguinte:
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
@@ -120,7 +120,7 @@ O código a seguir demonstra o uso de `List.exists`.
 
 A saída é a seguinte:
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,7 +130,7 @@ O exemplo a seguir demonstra o uso de `List.exists2`.
 
 A saída é a seguinte:
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
@@ -140,7 +140,7 @@ Você pode usar [list. ForAll](https://msdn.microsoft.com/library/e11a5233-d612-
 
 A saída é a seguinte:
 
-```
+```console
 true
 false
 ```
@@ -151,7 +151,7 @@ Da mesma forma, [list. forall2](https://msdn.microsoft.com/library/bb611f02-8277
 
 A saída é a seguinte:
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ O exemplo a seguir demonstra o uso de `List.sort`.
 
 A saída é a seguinte:
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ O exemplo a seguir demonstra o uso de `List.sortBy`.
 
 A saída é a seguinte:
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ O exemplo a seguir demonstra o uso de `List.sortWith`. Neste exemplo, a função
 
 A saída é a seguinte:
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -213,7 +213,7 @@ Se os elementos devem ser transformados primeiro, chame [list. escolha](https://
 
 A saída é a seguinte:
 
-```
+```console
 "b"
 ```
 
@@ -223,7 +223,7 @@ Outro grupo de operações de pesquisa, [list. tryFind](https://msdn.microsoft.c
 
 A saída é a seguinte:
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
@@ -252,7 +252,7 @@ As listas que contêm tuplas podem ser manipuladas pelas funções de compactaç
 
 A saída é a seguinte:
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,7 +262,7 @@ O exemplo de código a seguir demonstra o uso de `List.zip3`.
 
 A saída é a seguinte:
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
@@ -274,7 +274,7 @@ O exemplo de código a seguir demonstra o uso de [list. Unzip](https://msdn.micr
 
 A saída é a seguinte:
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,7 +285,7 @@ O exemplo de código a seguir demonstra o uso de [list. unzip3](https://msdn.mic
 
 A saída é a seguinte:
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
@@ -297,7 +297,7 @@ F# oferece suporte a uma variedade de operações em elementos de lista. A mais 
 
 A saída é a seguinte:
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -318,7 +318,7 @@ Outra função usada com frequência que transforma os elementos da lista é [li
 
 A saída é a seguinte:
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ O exemplo a seguir demonstra o uso de `List.map2`.
 
 A saída é a seguinte:
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ O exemplo a seguir demonstra o uso de `List.map3`.
 
 A saída é a seguinte:
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ O exemplo a seguir demonstra o uso de `List.mapi`.
 
 A saída é a seguinte:
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,7 +358,7 @@ O exemplo a seguir demonstra o uso de `List.mapi2`.
 
 A saída é a seguinte:
 
-```
+```console
 [0; 7; 18]
 ```
 
@@ -368,7 +368,7 @@ A saída é a seguinte:
 
 A saída é a seguinte:
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
@@ -386,7 +386,7 @@ O código a seguir demonstra o uso de `List.choose` para selecionar palavras em 
 
 A saída é a seguinte:
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 
@@ -398,7 +398,7 @@ As listas podem ser reunidas. Para unir duas listas em uma, use [list. Append](h
 
 ### <a name="fold-and-scan-operations"></a>Operações de dobra e digitalização
 
-Algumas operações de lista envolvem interdependências entre todos os elementos da lista. As operações de dobra e verificação são `List.iter` como `List.map` e, em que você invoca uma função em cada elemento, mas essas operações fornecem um parâmetro adicional chamado de acumulador que transporta informações por meio da computação.
+Algumas operações de lista envolvem interdependências entre todos os elementos da lista. As operações de dobra e verificação são `List.iter` como `List.map` e, em que você invoca uma função em cada elemento, mas essas operações fornecem um parâmetro adicional chamado de *acumulador* que transporta informações por meio da computação.
 
 Use `List.fold` para executar um cálculo em uma lista.
 

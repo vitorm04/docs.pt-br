@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851601"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045573"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 
@@ -58,7 +58,7 @@ Há várias vantagens para este modelo:
 Ao empacotar os recursos de seu aplicativo, você deve nomeá-los usando as convenções de nomenclatura esperadas pelo Common Language Runtime. O tempo de execução identifica um recurso pelo seu nome de cultura. Cada cultura tem um nome exclusivo, que normalmente é uma combinação de um nome de cultura de duas letras minúsculas associado a um idioma e, se necessário, um nome de subcultura de duas letras maiúsculas associado a um país ou região. O nome de subcultura vem depois do nome da cultura, separado por um traço (-). Exemplos incluem ja-JP para japonês falado no Japão, en-US para inglês falado nos Estados Unidos, de-DE para alemão falado na Alemanha, ou de-AT para alemão falado na Áustria. Confira a coluna **Marca de idioma** na [lista de nomes de idioma/região com suporte do Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Os nomes de cultura seguem o padrão definido pelo [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Para obter informações sobre como criar arquivos de recursos, consulte [Criando arquivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) e [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Para obter informações sobre como criar arquivos de recursos, consulte [Criando arquivos de recursos](creating-resource-files-for-desktop-apps.md) e [Criando assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ Para melhorar o desempenho da pesquisa, aplique o atributo <xref:System.Resource
 O processo de fallback de recurso do .NET Framework envolve as seguintes etapas:
 
 > [!TIP]
-> Você poderá usar o elemento de configuração [\<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) para otimizar o processo de fallback de recurso e o processo pelo qual o tempo de execução testa assemblies de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Você poderá usar o elemento de configuração [\<relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para otimizar o processo de fallback de recurso e o processo pelo qual o tempo de execução testa assemblies de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
-1. O tempo de execução primeiro verifica o [cache de assembly global](../../../docs/framework/app-domains/gac.md) para um assembly que coincide com a cultura solicitada para seu aplicativo.
+1. O tempo de execução primeiro verifica o [cache de assembly global](../app-domains/gac.md) para um assembly que coincide com a cultura solicitada para seu aplicativo.
 
      O cache de assembly global pode armazenar assemblies de recursos que são compartilhados por vários aplicativos. Isso faz com que você não precise incluir conjuntos de recursos específicos na estrutura de diretórios de cada aplicativo que você criar. Se o tempo de execução encontra uma referência ao assembly, ele pesquisa o assembly para o recurso solicitado. Se ele encontrar a entrada no assembly, ele usa o recurso solicitado. Se não encontrar a entrada, ele continua a pesquisa.
 
@@ -112,13 +112,13 @@ Por exemplo, suponha que o aplicativo solicite um recurso localizado para espanh
 
 Sob as seguintes condições, você pode otimizar o processo pelo qual o tempo de execução procura recursos em assemblies satélites
 
-- Assemblies satélite são implantados no mesmo local que o assembly de código. Se o assembly de código estiver instalado no [Cache de Assembly Global](../../../docs/framework/app-domains/gac.md), os assemblies satélites também são instalados no cache de assembly global. Se o assembly de código é instalado em um diretório, os assemblies satélite são instalados em pastas específicas de cultura do diretório.
+- Assemblies satélite são implantados no mesmo local que o assembly de código. Se o assembly de código estiver instalado no [Cache de Assembly Global](../app-domains/gac.md), os assemblies satélites também são instalados no cache de assembly global. Se o assembly de código é instalado em um diretório, os assemblies satélite são instalados em pastas específicas de cultura do diretório.
 
 - Assemblies satélite não são instalados sob demanda.
 
 - O código do aplicativo não processa o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Otimiza a investigação de assemblies satélite, incluindo o elemento [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) e a configuração do seu atributo `enabled` para `true` no arquivo de configuração do aplicativo, conforme mostrado no exemplo a seguir.
+Otimiza a investigação de assemblies satélite, incluindo o elemento [ \<relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e a configuração do seu atributo `enabled` para `true` no arquivo de configuração do aplicativo, conforme mostrado no exemplo a seguir.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ Otimiza a investigação de assemblies satélite, incluindo o elemento [ \<relat
 </configuration>
 ```
 
-A investigação otimizada por assemblies satélite é um recurso opcional. Ou seja, o tempo de execução segue as etapas documentadas em [O Processo de fallback do recurso](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que o elemento [\<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) esteja presente no arquivo de configuração do aplicativo e seu atributo `enabled` esteja definido como `true`. Neste caso, o processo de investigação de um assembly satélite é modificado conforme a seguir:
+A investigação otimizada por assemblies satélite é um recurso opcional. Ou seja, o tempo de execução segue as etapas documentadas em [O Processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1), a menos que o elemento [\<relativeBindForResources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) esteja presente no arquivo de configuração do aplicativo e seu atributo `enabled` esteja definido como `true`. Neste caso, o processo de investigação de um assembly satélite é modificado conforme a seguir:
 
 - O tempo de execução usa o local do assembly de código pai para investigar o assembly satélite. Se o assembly pai estiver instalado no cache de assembly global, o tempo de execução investiga o cache, mas não o diretório do aplicativo. Se o assembly pai estiver instalado em um diretório de aplicativo, o tempo de execução investiga o diretório do aplicativo, mas não no cache de assembly global.
 
@@ -186,7 +186,7 @@ O segundo, resources.ru.fr.txt, contém um recurso de idioma russo.
 Greeting=Добрый день
 ```
 
-Esses dois arquivos são compilados em arquivos .resources através da execução do [gerador de arquivo de recurso (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) a partir da linha de comando. Para o recurso de idioma francês, o comando é:
+Esses dois arquivos são compilados em arquivos .resources através da execução do [gerador de arquivo de recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) a partir da linha de comando. Para o recurso de idioma francês, o comando é:
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Para o recurso de idioma russo, o comando é:
 
 **resgen.exe resources.ru.txt**
 
-Os arquivos .resources são incorporados em bibliotecas de vínculo dinâmico através da execução do [vinculador de assembly (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) a partir do comando de linha para o recurso de idioma francês da seguinte maneira:
+Os arquivos .resources são incorporados em bibliotecas de vínculo dinâmico através da execução do [vinculador de assembly (Al.exe)](../tools/al-exe-assembly-linker.md) a partir do comando de linha para o recurso de idioma francês da seguinte maneira:
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Restrições de tempo ou orçamento podem impedir a criação de um conjunto de 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
-- [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Recursos em aplicativos de área de trabalho](index.md)
+- [Cache de assembly global](../app-domains/gac.md)
+- [Criando arquivos de recurso](creating-resource-files-for-desktop-apps.md)
+- [Criando assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md)

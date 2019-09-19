@@ -2,12 +2,12 @@
 title: Introdução ao F# no Visual Studio para Mac
 description: Saiba como usar F# o com Visual Studio para Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629758"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082972"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introdução ao F# no Visual Studio para Mac
 
@@ -33,9 +33,9 @@ Vamos começar escrevendo um pouco de código primeiro.  Verifique se o `Program
 
 [!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-No exemplo de código anterior, foi definida `square` uma função que recebe uma entrada chamada `x` e a multiplica por si só.  Como o F# usa a [inferência de tipos](../language-reference/type-inference.md), o tipo de `x` não precisa ser especificado.  O F# compilador compreende os tipos em que a multiplicação é válida e atribuirá um tipo `x` a com base `square` em como é chamado.  Se você passar o `square`mouse, verá o seguinte:
+No exemplo de código anterior, foi definida `square` uma função que recebe uma entrada chamada `x` e a multiplica por si só.  Como o F# usa a [inferência de tipos](../language-reference/type-inference.md), o tipo de  `x` não precisa ser especificado.  O F# compilador compreende os tipos em que a multiplicação é válida e atribuirá um tipo `x` a com base `square` em como é chamado.  Se você passar o `square`mouse, verá o seguinte:
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -51,7 +51,7 @@ Você pode executar o código e ver os resultados clicando em **executar** no me
 
 Agora você deve ver o seguinte impresso na janela do console que Visual Studio para Mac exibida:
 
-```
+```console
 12 squared is 144!
 ```
 
@@ -63,7 +63,7 @@ Um dos melhores recursos das ferramentas visuais F# no Visual Studio para Mac é
 
 Para começar a usá-lo, `square` realce a função definida em seu código.  Em seguida, clique em **Editar** no menu de nível superior.  Em seguida, selecione **Enviar F# seleção para interativo**.  Isso executa o código na janela F# interativa.  Como alternativa, você pode clicar com o botão direito do mouse na seleção e escolher **Enviar seleção para F# interativo**.  Você deve ver a F# janela interativa aparecer com o seguinte:
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 Isso mostra a mesma assinatura de função para `square` a função, que você viu anteriormente ao passar o mouse sobre a função.  Como `square` agora está definido no processo F# interativo, você pode chamá-lo com valores diferentes:
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 Isso executa a função, associa o resultado a um novo nome `it`e exibe o tipo e o valor de. `it`  Observe que você deve encerrar cada linha com `;;`.  É assim F# que se sabe quando sua chamada de função está pronta.  Você também pode definir novas funções em F# interativo:
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 O acima define uma nova função, `isOdd`, que usa um `int` e verifica se ele é estranho!  Você pode chamar essa função para ver o que ela retorna com entradas diferentes.  Você pode chamar funções em chamadas de função:
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
-Você também pode usar o [operador](../language-reference/symbol-and-operator-reference/index.md) de encaminhamento de pipe para canalizar o valor nas duas funções:
+Você também pode usar o [operador de encaminhamento de pipe](../language-reference/symbol-and-operator-reference/index.md) para canalizar o valor nas duas funções:
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```

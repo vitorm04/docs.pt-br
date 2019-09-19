@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545314"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053478"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Criar um aplicativo de serviço Windows
 
@@ -28,7 +28,7 @@ Para começar, crie o projeto e defina os valores necessários para o serviço f
 
 2. Navegue para o modelo de projeto **Serviço Windows (.NET Framework)** e selecione-o. Para encontrá-lo, expanda **Instalados** e **Visual C#** ou **Visual Basic** e, em seguida, selecione **Windows Desktop**. Se preferir, insira *Serviço Windows* na caixa de pesquisa no canto superior direito e pressione **Enter**.
 
-   ![Modelo de Serviço Windows na caixa de diálogo Novo Projeto no Visual Studio](media/new-project-dialog.png)
+   ![Modelo de Serviço Windows na caixa de diálogo Novo Projeto no Visual Studio](./media/new-project-dialog.png)
 
    > [!NOTE]
    > Se o modelo **Serviço Windows** não for exibido, talvez seja necessário instalar a carga de trabalho **Desenvolvimento para desktop com .NET**:
@@ -51,11 +51,11 @@ Renomeie o serviço de **Service1** para **MyNewService**.
 
 2. Na janela pop-up, selecione **Sim**.
 
-    ![Prompt Renomear](media/windows-service-rename.png "Prompt Renomear o serviço Windows")
+    ![Prompt Renomear](./media/windows-service-rename.png "Prompt Renomear o serviço Windows")
 
 3. Na guia **Design**, selecione **Propriedades** no menu de atalho. Na janela **Propriedades**, altere o valor **ServiceName** para *MyNewService*.
 
-    ![Propriedades do serviço](media/windows-service-properties.png "Propriedades do serviço Windows")
+    ![Propriedades do serviço](./media/windows-service-properties.png "Propriedades do serviço Windows")
 
 4. Selecione **Salvar Tudo** no menu **Arquivo**.
 
@@ -340,7 +340,7 @@ Antes de executar um serviço Windows, é necessário instalá-lo, o que o regis
 
      Esse texto é exibido na coluna **Descrição** da janela **Serviços** e descreve o serviço para o usuário.
 
-    ![Descrição do serviço na janela Serviços.](media/windows-service-description.png "Descrição do serviço")
+    ![Descrição do serviço na janela Serviços.](./media/windows-service-description.png "Descrição do serviço")
 
 6. Adicione o texto à propriedade <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>. Por exemplo, *Nome de Exibição do MyNewService*.
 
@@ -350,7 +350,7 @@ Antes de executar um serviço Windows, é necessário instalá-lo, o que o regis
 
 8. Quando terminar, as janelas **Propriedades** deverão ser semelhantes à seguinte figura:
 
-     ![Propriedades do instalador para um serviço Windows](media/windows-service-installer-properties.png "Windows service installer properties")
+     ![Propriedades do instalador para um serviço Windows](./media/windows-service-installer-properties.png "Windows service installer properties")
 
 9. Na exibição **Design** de **ProjectInstaller**, escolha **serviceProcessInstaller1** para um projeto do Visual C# ou **ServiceProcessInstaller1** para um projeto do Visual Basic e, em seguida, escolha **Propriedades** no menu de atalho. Defina a propriedade <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> como <xref:System.ServiceProcess.ServiceAccount.LocalSystem> na lista suspensa.
 
@@ -497,7 +497,7 @@ Para obter mais informações, confira [Como: Instalar e desinstalar serviços](
 
      Você deve ver o serviço listado em **Serviços**, exibido em ordem alfabética pelo nome de exibição definido para ele.
 
-     ![MyNewService na janela Serviços.](media/windowsservices-serviceswindow.PNG)
+     ![MyNewService na janela Serviços.](./media/windowsservices-serviceswindow.PNG)
 
 2. Para iniciar o serviço, escolha **Iniciar** no menu de atalho do serviço.
 
@@ -516,7 +516,7 @@ Para obter mais informações, confira [Como: Instalar e desinstalar serviços](
 
 3. Localize a listagem de **MyNewLog** (ou **MyLogFile1**, se você seguiu o procedimento para adicionar argumentos de linha de comando) e expanda-a. Você deverá ver as entradas para as duas ações (iniciar e parar) executadas pelo serviço.
 
-     ![Use o Visualizador de Eventos para ver as entradas do log de eventos](media/windows-service-event-viewer.png)
+     ![Use o Visualizador de Eventos para ver as entradas do log de eventos](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 

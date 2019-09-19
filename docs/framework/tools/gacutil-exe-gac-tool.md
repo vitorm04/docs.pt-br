@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926869"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044661"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Ferramenta do Cache de Assemblies Global)
 
 A ferramenta de Cache de Assembly Global permite exibir e manipular o conteúdo do cache de assembly global e do cache de download.
 
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
 No prompt de comando, digite o seguinte:
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u**  *assemblyName*|Desinstala um assembly do cache de assembly global.|
 |**/uf**  *assemblyName*|Força um assembly especificado para desinstalar removendo-se todas as referências para o assembly.<br /><br /> Especificar essa opção equivale a definir as opções **/u** e **/f** juntas. **Observação:**  Não é possível usar essa opção para remover um assembly que foi instalado usando-se o Microsoft Windows Installer. Se você tentar essa operação, a ferramenta exibirá uma mensagem de erro.|
 |**/ul** *assemblyListFile*|Desinstala um ou mais assemblies especificados em *assemblyListFile* do cache de assembly global.|
-|**/u**[**ngen**] *assemblyName*|Desinstala um assembly especificado do cache de assembly global. Se o assembly especificado tiver contagens de referência existentes, a ferramenta exibirá as contagens de referência e não removerá o assembly do cache de assembly global. **Observação:**  No .NET Framework versão 2.0, `/ungen` não é compatível. Em vez disso, use o comando `uninstall` do [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> No .NET Framework versões 1.0 e 1.1, especificar **/ungen** faz Gacutil.exe remover o assembly do cache de imagens nativas. Esse cache armazena as imagens nativas para assemblies que foram criados usando o [Ngen.exe (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|
+|**/u**[**ngen**] *assemblyName*|Desinstala um assembly especificado do cache de assembly global. Se o assembly especificado tiver contagens de referência existentes, a ferramenta exibirá as contagens de referência e não removerá o assembly do cache de assembly global. **Observação:**  No .NET Framework versão 2.0, `/ungen` não é compatível. Em vez disso, use o comando `uninstall` do [Ngen.exe (Gerador de Imagens Nativas)](ngen-exe-native-image-generator.md). <br /><br /> No .NET Framework versões 1.0 e 1.1, especificar **/ungen** faz Gacutil.exe remover o assembly do cache de imagens nativas. Esse cache armazena as imagens nativas para assemblies que foram criados usando o [Ngen.exe (Gerador de Imagens Nativas)](ngen-exe-native-image-generator.md).|
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Desinstala uma referência de um assembly especificado do cache de assembly global. Para remover uma referência a um assembly, você deve especificar os mesmos parâmetros *scheme*, *id* e *description* que foram especificados com as opções **/i** e **/r** (ou **/ir)** quando o assembly foi instalado. Para obter uma descrição dos valores válidos que podem ser especificados nesses parâmetros, consulte a opção **/r**.<br /><br /> Especificar essa opção equivale a definir as opções **/u** e **/r** juntas.|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas](../../../docs/framework/tools/index.md)
-- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (Ferramenta de Registro de Assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ferramentas](index.md)
+- [Cache de assembly global](../app-domains/gac.md)
+- [Regasm.exe (Ferramenta de Registro de Assembly)](regasm-exe-assembly-registration-tool.md)
+- [Prompts de Comando](developer-command-prompt-for-vs.md)

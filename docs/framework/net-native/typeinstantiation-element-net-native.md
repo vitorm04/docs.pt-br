@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ea167ae15e4d0035785d228f08779406e05e873
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052374"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049107"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > (.NET nativo)
+# <a name="typeinstantiation-element-net-native"></a>\<Elemento de > TypeInstantiation (.NET Native)
 Aplica a política de reflexão de tempo de execução a um tipo genérico construído.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +55,7 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*type_name*|O nome do tipo. Se este elemento `<TypeInstantiation>` for o filho de um elemento [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), de um elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) ou de outro elemento `<TypeInstantiation>`, o *type_name* poderá incluir o nome do tipo sem seu namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado. O nome do tipo não decorado. Por exemplo, para um objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, o elemento `<TypeInstantiation>` poderá aparecer da seguinte maneira:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|O nome do tipo. Se este elemento `<TypeInstantiation>` for o filho de um elemento [\<Namespace>](namespace-element-net-native.md), de um elemento [\<Type>](type-element-net-native.md) ou de outro elemento `<TypeInstantiation>`, o *type_name* poderá incluir o nome do tipo sem seu namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado. O nome do tipo não decorado. Por exemplo, para um objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, o elemento `<TypeInstantiation>` poderá aparecer da seguinte maneira:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Atributo de argumentos  
   
@@ -67,43 +67,43 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para o tipo genérico construído. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para o tipo genérico construído. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Aplica a política de reflexão a um evento pertencente a esse tipo.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Aplica a política de reflexão a um campo pertencente a esse tipo.|  
-|[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Aplica a política a um tipo, se esta política tiver sido aplicada ao tipo representado pelo elemento `<TypeInstantiation>` recipiente.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Aplica a política de reflexão a um método pertencente a esse tipo.|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Aplica a política de reflexão a um método construído genérico pertencente a esse tipo.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Aplica a política de reflexão a uma propriedade pertencente a esse tipo.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo aninhado.|  
+|[\<Event>](event-element-net-native.md)|Aplica a política de reflexão a um evento pertencente a esse tipo.|  
+|[\<Field>](field-element-net-native.md)|Aplica a política de reflexão a um campo pertencente a esse tipo.|  
+|[\<ImpliesType>](impliestype-element-net-native.md)|Aplica a política a um tipo, se esta política tiver sido aplicada ao tipo representado pelo elemento `<TypeInstantiation>` recipiente.|  
+|[\<Method>](method-element-net-native.md)|Aplica a política de reflexão a um método pertencente a esse tipo.|  
+|[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Aplica a política de reflexão a um método construído genérico pertencente a esse tipo.|  
+|[\<Property>](property-element-net-native.md)|Aplica a política de reflexão a uma propriedade pertencente a esse tipo.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo aninhado.|  
 |`<TypeInstantiation>`|Aplica a política de reflexão a um tipo genérico construído aninhado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Aplica a política de reflexão para todos os tipos em um assembly especificado.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Aplica a política de reflexão a todos os tipos em um namespace.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<Application>](application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução.|  
+|[\<Assembly>](assembly-element-net-native.md)|Aplica a política de reflexão para todos os tipos em um assembly especificado.|  
+|[\<Library>](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução.|  
+|[\<Namespace>](namespace-element-net-native.md)|Aplica a política de reflexão a todos os tipos em um namespace.|  
+|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
 |`<TypeInstantiation>`|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  Os atributos de reflexão, serialização e interoperabilidade são todos opcionais. No entanto, pelo menos um deve estar presente.  
   
- Se um elemento `<TypeInstantiation>` for o filho de um elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) ou [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), ele substituirá as configurações de política definidas pelo elemento pai. Se um elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) definir uma definição de tipo genérico correspondente, o elemento `<TypeInstantiation>` substituirá a política de reflexão em tempo de execução somente para instanciações do tipo genérico construído especificado.  
+ Se um elemento `<TypeInstantiation>` for o filho de um elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md) ou [\<Type>](type-element-net-native.md), ele substituirá as configurações de política definidas pelo elemento pai. Se um elemento [\<Type>](type-element-net-native.md) definir uma definição de tipo genérico correspondente, o elemento `<TypeInstantiation>` substituirá a política de reflexão em tempo de execução somente para instanciações do tipo genérico construído especificado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa uma reflexão para recuperar a definição de tipo genérico de um objeto <xref:System.Collections.Generic.Dictionary%602> construído. Ele também usa reflexão para exibir informações sobre objetos <xref:System.Type> que representam tipos genéricos construídos e definições de tipo genérico. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Após a compilação com a cadeia de ferramentas .NET nativo, o exemplo gera uma [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exceção na linha que chama o <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> método. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<TypeInstantiation>` ao arquivo de diretivas de tempo de execução:  
+ Após a compilação com a cadeia de ferramentas .net Native, o exemplo gera uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md) na linha que chama <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> o método. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<TypeInstantiation>` ao arquivo de diretivas de tempo de execução:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -118,6 +118,6 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)

@@ -2,12 +2,12 @@
 title: Expressões de computação
 description: Saiba como criar uma sintaxe conveniente para escrever cálculos no F# que pode ser sequenciada e combinada usando construções e associações de fluxo de controle.
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106577"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083050"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -32,7 +32,7 @@ Cada expressão de computação é apoiada por um tipo de *Construtor* . O tipo 
 
 Todas as expressões de computação têm o seguinte formato:
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 
@@ -194,7 +194,7 @@ Ao chamar uma expressão de computação `match!`com o, ele perceberá o resulta
 
 ## <a name="built-in-computation-expressions"></a>Expressões de computação internas
 
-A F# biblioteca principal define três expressões de computação internas: [Expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md)e expressões de [consulta](query-expressions.md).
+A F# biblioteca principal define três expressões de computação internas: [Expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md)e [expressões de consulta](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Criando um novo tipo de expressão de computação
 

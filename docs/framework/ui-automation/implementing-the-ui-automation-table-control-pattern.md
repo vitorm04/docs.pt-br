@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 0852e904414ac4af6777b9476b4b6ad504a09ef3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98fe2ffbaa5519809dd1872c2e7486ab2c9bd499
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935701"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043201"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementando o padrão de controle de tabela de automação de interface de usuário
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69935701"
   
  Este tópico apresenta as diretrizes e convenções para <xref:System.Windows.Automation.Provider.ITableProvider>implementar o, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listados no final da visão geral.  
   
- O <xref:System.Windows.Automation.TablePattern> padrão de controle é usado para dar suporte a controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.ITableItemProvider> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser atravessado por linha e coluna. Esse padrão de controle é análogo <xref:System.Windows.Automation.Provider.IGridProvider>a, com a diferença de que qualquer <xref:System.Windows.Automation.Provider.ITableProvider> controle que implementa também deve expor uma relação de cabeçalho de coluna e/ou linha para cada elemento filho. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.TablePattern> padrão de controle é usado para dar suporte a controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.ITableItemProvider> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser atravessado por linha e coluna. Esse padrão de controle é análogo <xref:System.Windows.Automation.Provider.IGridProvider>a, com a diferença de que qualquer <xref:System.Windows.Automation.Provider.ITableProvider> controle que implementa também deve expor uma relação de cabeçalho de coluna e/ou linha para cada elemento filho. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
@@ -34,12 +34,12 @@ ms.locfileid: "69935701"
 > [!NOTE]
 > Esse conceito se torna evidente em [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] uma planilha em que um usuário definiu uma coluna "First Name". Esta coluna agora tem dois cabeçalhos — o cabeçalho "First Name" definido pelo usuário e a designação alfanumérica para aquela coluna atribuída pelo aplicativo.  
   
-- Consulte [implementando o padrão de controle de grade de automação da interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) para funcionalidade de grade relacionada.  
+- Consulte [implementando o padrão de controle de grade de automação da interface do usuário](implementing-the-ui-automation-grid-control-pattern.md) para funcionalidade de grade relacionada.  
   
- ![Tabela com itens de cabeçalho complexos.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![Tabela com itens de cabeçalho complexos.](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Exemplo de uma tabela com cabeçalhos de coluna complexos  
   
- ![Tabela com Propriedade RowOrColumnMajor ambígua.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Tabela com Propriedade RowOrColumnMajor ambígua.](./media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Exemplo de uma tabela com a propriedade RowOrColumnMajor ambígua  
   
 <a name="Required_Members_for_ITableProvider"></a>   
@@ -60,10 +60,10 @@ Exemplo de uma tabela com a propriedade RowOrColumnMajor ambígua
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de padrões de controle de automação da interface do usuário](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Suporte a padrões de controle em um provedor de automação de interface do usuário](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Padrões de controle de automação de interface do usuário para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Implementando o padrão de controle TableItem de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)
-- [Implementando o padrão de controle Grid de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
-- [Visão geral de árvore de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Usar o cache em automação de interface do usuário](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)
+- [Suporte a padrões de controle em um provedor de automação de interface do usuário](support-control-patterns-in-a-ui-automation-provider.md)
+- [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
+- [Implementando o padrão de controle TableItem de automação de interface do usuário](implementing-the-ui-automation-tableitem-control-pattern.md)
+- [Implementando o padrão de controle Grid de automação de interface do usuário](implementing-the-ui-automation-grid-control-pattern.md)
+- [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
+- [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)

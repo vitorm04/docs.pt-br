@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877051"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044737"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt de Comando do Desenvolvedor para o Visual Studio
 
@@ -88,9 +88,9 @@ Para facilitar o acesso, você pode adicionar o Prompt de Comando do Desenvolved
 
    O novo item de menu foi adicionado e você pode acessar o prompt de comando no menu **Ferramentas**.
 
-   ![Item de menu do prompt de comando no Visual Studio](media/command-prompt-vs-menu.png)
+   ![Item de menu do prompt de comando no Visual Studio](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Consulte também
 
-- [Ferramentas](../../../docs/framework/tools/index.md)
+- [Ferramentas](index.md)
 - [Gerenciando ferramentas externas](/visualstudio/ide/managing-external-tools)

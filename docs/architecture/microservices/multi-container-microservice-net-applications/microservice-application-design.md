@@ -2,12 +2,12 @@
 title: Projetando um aplicativo orientado a microsserviços
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os benefícios e as desvantagens de um aplicativo orientado a microsserviços, para que você possa tomar uma decisão informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926535"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039821"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projetando um aplicativo orientado a microsserviços
 
@@ -89,8 +89,8 @@ Portanto, as unidades de implantação para os microsserviços (e até mesmo par
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **repositório GitHub do eShopOnContainers. Código-fonte do aplicativo de referência**\
-    <https://aka.ms/eShopOnContainers/>
+- **repositório GitHub do eShopOnContainers. Código-fonte do aplicativo de referência** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviços
 
@@ -118,7 +118,7 @@ Uma solução de baseada em microsserviços tem muitos benefícios:
 
 Uma solução com base em microsserviços como essa também apresenta algumas desvantagens:
 
-**Aplicativo distribuído**. A distribuição do aplicativo cria complexidades para os desenvolvedores ao projetar e criar os serviços. Por exemplo, os desenvolvedores devem implementar comunicação entre serviços usando protocolos como HTTP ou AMPQ, o que adiciona complexidade para os testes e o tratamento de exceções. Isso também adiciona latência ao sistema.
+**Aplicativo distribuído**. A distribuição do aplicativo cria complexidades para os desenvolvedores ao projetar e criar os serviços. Por exemplo, os desenvolvedores devem implementar a comunicação entre serviços usando protocolos como HTTP ou AMPQ, que adiciona complexidade para teste e manipulação de exceção. Isso também adiciona latência ao sistema.
 
 **Complexidade de implantação**. Um aplicativo com vários tipos de microsserviços e que necessite de alta escalabilidade (ele precisa ser capaz de criar várias instâncias por serviço e equilibrar os serviços em vários hosts) gera um alto grau de complexidade de implantação para o gerenciamento e as operações de TI. Se você não estiver usando uma infraestrutura orientada a microsserviços (como um agendador e orquestrador), essa complexidade adicional poderá exigir esforços de desenvolvimento muito maiores que o próprio aplicativo de negócios.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199585"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048883"
 ---
 # <a name="cache-management-for-network-applications"></a>Gerenciamento de cache para aplicativos de rede
 Este tópico e seus subtópicos relacionados descrevem o cache para recursos obtidos usando as classes <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> e <xref:System.Net.FtpWebRequest>.  
@@ -23,16 +23,16 @@ Este tópico e seus subtópicos relacionados descrevem o cache para recursos obt
  Devido a preocupações de segurança, o cache **não** é recomendado para cenários de camada intermediária.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Política de cache](../../../docs/framework/network-programming/cache-policy.md)  
+ [Política de cache](cache-policy.md)  
  Explica o que é uma política de cache e como definir uma.  
   
- [Políticas de cache baseadas na localização](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Políticas de cache baseadas na localização](location-based-cache-policies.md)  
  Define cada tipo de política de cache baseada na localização disponível para os recursos do protocolo HTTP (http e https).  
   
- [Políticas de cache baseadas em tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Políticas de cache baseadas em tempo](time-based-cache-policies.md)  
  Descreve os critérios que podem ser usados para personalizar uma política de cache baseada em tempo.  
   
- [Configurando o cache em aplicativos de rede](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Configurando o cache em aplicativos de rede](configuring-caching-in-network-applications.md)  
  Descreve como criar políticas de cache e solicitações que usam o cache de forma programática.  
   
 ## <a name="reference"></a>Referência  

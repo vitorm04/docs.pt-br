@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 3c7dc456b9378f1eab09a2300e379d9156722485
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 667f0ded506305f3d7eb1ac5c43d3f65aab2cca9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926969"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043045"
 ---
 # <a name="accessibility"></a>Acessibilidade
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "70926969"
  Esta documentação descreve a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API para código gerenciado. Para obter informações sobre programação para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] em C++, consulte [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Automação da Interface do Usuário para aplicativos Win32).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Accessibility Best Practices](../../../docs/framework/ui-automation/accessibility-best-practices.md) (Práticas recomendadas de acessibilidade)  
- [UI Automation Fundamentals](../../../docs/framework/ui-automation/index.md) (Fundamentos da Automação da Interface do Usuário)  
- [UI Automation Providers for Managed Code](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md) (Provedores da Automação da Interface do Usuário para código gerenciado)  
- [UI Automation Clients for Managed Code](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md) (Clientes da Automação da Interface do Usuário para código gerenciado)  
- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)  
- [UI Automation Text Pattern](../../../docs/framework/ui-automation/ui-automation-text-pattern.md) (Padrão de texto da Automação da Interface do Usuário)  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)  
- [UI Automation Specification and Community Promise](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md) (Especificação e promessa da comunidade da Automação da Interface do Usuário)  
+ [Accessibility Best Practices](accessibility-best-practices.md) (Práticas recomendadas de acessibilidade)  
+ [UI Automation Fundamentals](index.md) (Fundamentos da Automação da Interface do Usuário)  
+ [UI Automation Providers for Managed Code](ui-automation-providers-for-managed-code.md) (Provedores da Automação da Interface do Usuário para código gerenciado)  
+ [UI Automation Clients for Managed Code](ui-automation-clients-for-managed-code.md) (Clientes da Automação da Interface do Usuário para código gerenciado)  
+ [UI Automation Control Patterns](ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)  
+ [UI Automation Text Pattern](ui-automation-text-pattern.md) (Padrão de texto da Automação da Interface do Usuário)  
+ [UI Automation Control Types](ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)  
+ [UI Automation Specification and Community Promise](ui-automation-specification-and-community-promise.md) (Especificação e promessa da comunidade da Automação da Interface do Usuário)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 

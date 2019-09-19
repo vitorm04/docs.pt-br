@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f732eb7b6ee77cb6b16130fc41655922127c3b
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
-ms.translationtype: HT
+ms.openlocfilehash: 9ee68d0da3b7f23d4de0192da076ef6f71d6d222
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469685"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051630"
 ---
 # <a name="specifying-a-character-set"></a>Especificando um conjunto de caracteres
 O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla o marshaling de cadeia de caracteres e determina como a invocação de plataforma localiza os nomes de função em uma DLL. Este tópico descreve os dois comportamentos.  
@@ -149,6 +149,6 @@ extern "C" int MessageBox(
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Criando protótipos em código gerenciado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
+- [Exemplos de invocação de plataforma](platform-invoke-examples.md)
+- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)
