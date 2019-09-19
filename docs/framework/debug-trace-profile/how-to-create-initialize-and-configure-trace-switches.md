@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948004"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052707"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: criar, inicializar e configurar opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento.  
@@ -127,7 +127,7 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 ## <a name="see-also"></a>Consulte também
 
-- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Esquema de configurações de rastreamento e depuração](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
+- [Como: Adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Opções de rastreamento](trace-switches.md)
+- [Esquema de configurações de rastreamento e depuração](../configure-apps/file-schema/trace-debug/index.md)

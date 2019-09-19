@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623053"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047353"
 ---
 # <a name="proxy-configuration"></a>Configuração de proxy
 Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy pode retornar um recurso solicitado do seu cache ou encaminhar a solicitação para o servidor na qual o recurso reside. Proxies podem melhorar o desempenho da rede, reduzindo o número de solicitações enviadas a servidores remotos. Proxies também podem ser usados para restringir o acesso aos recursos.  
@@ -24,7 +24,7 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
 ## <a name="adaptive-proxies"></a>Proxies adaptáveis  
  No .NET Framework, os proxies existem em duas variedades: adaptáveis e estáticos. Proxies adaptáveis ajustam suas configurações quando as configurações de rede são alteradas. Por exemplo, se um usuário de laptop inicia uma conexão de rede dial-up, um proxy adaptável reconheceria essa alteração, descobrir e executaria seu novo script de configuração e ajustaria suas configurações adequadamente.  
   
- Proxies adaptáveis são configurados por um script de configuração (consulte [Detecção automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)). O script gera um conjunto de protocolos de aplicativo e um proxy para cada protocolo.  
+ Proxies adaptáveis são configurados por um script de configuração (consulte [Detecção automática de proxy](automatic-proxy-detection.md)). O script gera um conjunto de protocolos de aplicativo e um proxy para cada protocolo.  
   
  Alterações no ambiente de rede podem exigir que o sistema use um novo conjunto de proxies. Se uma conexão de rede ficar inoperante ou uma nova conexão de rede for inicializada, o sistema deve descobrir a origem correta do script de configuração no novo ambiente e executar o novo script.  
   
@@ -79,4 +79,4 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [Detecção automática de proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [Detecção automática de proxy](automatic-proxy-detection.md)
