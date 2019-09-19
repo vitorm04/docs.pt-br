@@ -152,7 +152,7 @@
               href: keywords/try-finally.md
             - name: try-catch-finally
               href: keywords/try-catch-finally.md
-        - name: Checked e unchecked
+        - name: Contexto verificado e não verificado
           items:
             - name: Visão geral
               href: keywords/checked-and-unchecked.md
@@ -184,13 +184,13 @@
           items:
             - name: Contextos de uso
               href: keywords/using.md
-            - name: Diretiva using
+            - name: Diretiva de uso
               href: keywords/using-directive.md
             - name: Diretiva using static
               href: keywords/using-static.md
             - name: Instrução using
               href: keywords/using-statement.md
-        - name: Alias extern
+        - name: extern alias
           href: keywords/extern-alias.md
     - name: Palavras-chave de teste de tipo
       items:
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Operadores de acesso a membro
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: Operadores cast e teste de tipo
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'

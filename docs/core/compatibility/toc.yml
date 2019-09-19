@@ -1,8 +1,8 @@
-- name: Compatibilidade do aplicativo
+- name: Compatibilidade de aplicativos
   items:
     - name: Avaliar alterações significativas
       href: index.md
-    - name: Alterações da falha
-      href: breaking-changes.md
     - name: Categorias de alteração significativa
       href: categories.md
+    - name: Alterações da falha
+      href: breaking-changes.md
