@@ -3,117 +3,117 @@ title: Ferramentas da CLI (Interface de Linha de Comando) do .NET Core
 description: Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando) do .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969888"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117396"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a><span data-ttu-id="b9c13-103">Ferramentas da CLI (Interface de linha de comando) do .NET Core</span><span class="sxs-lookup"><span data-stu-id="b9c13-103">.NET Core command-line interface (CLI) tools</span></span>
+# <a name="net-core-command-line-interface-cli-tools"></a><span data-ttu-id="c3d7d-103">Ferramentas da CLI (Interface de linha de comando) do .NET Core</span><span class="sxs-lookup"><span data-stu-id="c3d7d-103">.NET Core command-line interface (CLI) tools</span></span>
 
-<span data-ttu-id="b9c13-104">A CLI (Interface de linha de comando) do .NET Core é uma nova cadeia de ferramentas de plataforma cruzada para desenvolvimento de aplicativos em .NET Core.</span><span class="sxs-lookup"><span data-stu-id="b9c13-104">The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications.</span></span> <span data-ttu-id="b9c13-105">A CLI é a base na qual outras ferramentas de nível superior, como IDEs (Ambientes de Desenvolvimento Integrado), editores e orquestradores de build, se baseiam.</span><span class="sxs-lookup"><span data-stu-id="b9c13-105">The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest.</span></span>
+<span data-ttu-id="c3d7d-104">A CLI (Interface de linha de comando) do .NET Core é uma nova cadeia de ferramentas de plataforma cruzada para desenvolvimento de aplicativos em .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-104">The .NET Core command-line interface (CLI) is a new cross-platform toolchain for developing .NET applications.</span></span> <span data-ttu-id="c3d7d-105">A CLI é a base na qual outras ferramentas de nível superior, como IDEs (Ambientes de Desenvolvimento Integrado), editores e orquestradores de build, se baseiam.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-105">The CLI is a foundation upon which higher-level tools, such as Integrated Development Environments (IDEs), editors, and build orchestrators, can rest.</span></span>
 
-## <a name="installation"></a><span data-ttu-id="b9c13-106">Instalação</span><span class="sxs-lookup"><span data-stu-id="b9c13-106">Installation</span></span>
+## <a name="installation"></a><span data-ttu-id="c3d7d-106">Instalação</span><span class="sxs-lookup"><span data-stu-id="c3d7d-106">Installation</span></span>
 
-<span data-ttu-id="b9c13-107">Use os instaladores nativos ou os scripts do shell de instalação:</span><span class="sxs-lookup"><span data-stu-id="b9c13-107">Either use the native installers or use the installation shell scripts:</span></span>
+<span data-ttu-id="c3d7d-107">Use os instaladores nativos ou os scripts do shell de instalação:</span><span class="sxs-lookup"><span data-stu-id="c3d7d-107">Either use the native installers or use the installation shell scripts:</span></span>
 
-- <span data-ttu-id="b9c13-108">Os instaladores nativos são usados principalmente nas máquinas de desenvolvedores e usam o mecanismo de instalação nativo de cada plataforma com suporte, por exemplo, pacotes DEB no Ubuntu ou MSI no Windows.</span><span class="sxs-lookup"><span data-stu-id="b9c13-108">The native installers are primarily used on developer's machines and use each supported platform's native install mechanism, for instance, DEB packages on Ubuntu or MSI bundles on Windows.</span></span> <span data-ttu-id="b9c13-109">Esses instaladores instalam e configuram o ambiente para uso imediato do desenvolvedor, mas exigem privilégios administrativos no computador.</span><span class="sxs-lookup"><span data-stu-id="b9c13-109">These installers install and configure the environment for immediate use by the developer but require administrative privileges on the machine.</span></span> <span data-ttu-id="b9c13-110">Veja as instruções de instalação no [Guia de instalação do .NET Core](https://aka.ms/dotnetcoregs).</span><span class="sxs-lookup"><span data-stu-id="b9c13-110">You can view the installation instructions in the [.NET Core installation guide](https://aka.ms/dotnetcoregs).</span></span>
-- <span data-ttu-id="b9c13-111">Os scripts de shell são usados principalmente para configurar servidores de build ou para quando você quiser instalar as ferramentas sem privilégios administrativos.</span><span class="sxs-lookup"><span data-stu-id="b9c13-111">Shell scripts are primarily used for setting up build servers or when you wish to install the tools without administrative privileges.</span></span> <span data-ttu-id="b9c13-112">A instalação de scripts não instala os pré-requisitos na máquina, que devem ser instalados manualmente.</span><span class="sxs-lookup"><span data-stu-id="b9c13-112">Install scripts don't install prerequisites on the machine, which must be installed manually.</span></span> <span data-ttu-id="b9c13-113">Para saber mais, veja o [tópico de referência do script de instalação](dotnet-install-script.md).</span><span class="sxs-lookup"><span data-stu-id="b9c13-113">For more information, see the [install script reference topic](dotnet-install-script.md).</span></span> <span data-ttu-id="b9c13-114">Para saber mais sobre como configurar a CLI no servidor de compilação de CI (integração contínua), confira [Usar o SDK e ferramentas do .NET Core na CI (Integração Contínua)](using-ci-with-cli.md).</span><span class="sxs-lookup"><span data-stu-id="b9c13-114">For information on how to set up CLI on your continuous integration (CI) build server, see [Using .NET Core SDK and tools in Continuous Integration (CI)](using-ci-with-cli.md).</span></span>
+- <span data-ttu-id="c3d7d-108">Os instaladores nativos são usados principalmente nas máquinas de desenvolvedores e usam o mecanismo de instalação nativo de cada plataforma com suporte, por exemplo, pacotes DEB no Ubuntu ou MSI no Windows.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-108">The native installers are primarily used on developer's machines and use each supported platform's native install mechanism, for instance, DEB packages on Ubuntu or MSI bundles on Windows.</span></span> <span data-ttu-id="c3d7d-109">Esses instaladores instalam e configuram o ambiente para uso imediato do desenvolvedor, mas exigem privilégios administrativos no computador.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-109">These installers install and configure the environment for immediate use by the developer but require administrative privileges on the machine.</span></span> <span data-ttu-id="c3d7d-110">Veja as instruções de instalação no [Guia de instalação do .NET Core](https://aka.ms/dotnetcoregs).</span><span class="sxs-lookup"><span data-stu-id="c3d7d-110">You can view the installation instructions in the [.NET Core installation guide](https://aka.ms/dotnetcoregs).</span></span>
+- <span data-ttu-id="c3d7d-111">Os scripts de shell são usados principalmente para configurar servidores de build ou para quando você quiser instalar as ferramentas sem privilégios administrativos.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-111">Shell scripts are primarily used for setting up build servers or when you wish to install the tools without administrative privileges.</span></span> <span data-ttu-id="c3d7d-112">A instalação de scripts não instala os pré-requisitos na máquina, que devem ser instalados manualmente.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-112">Install scripts don't install prerequisites on the machine, which must be installed manually.</span></span> <span data-ttu-id="c3d7d-113">Para saber mais, veja o [tópico de referência do script de instalação](dotnet-install-script.md).</span><span class="sxs-lookup"><span data-stu-id="c3d7d-113">For more information, see the [install script reference topic](dotnet-install-script.md).</span></span> <span data-ttu-id="c3d7d-114">Para saber mais sobre como configurar a CLI no servidor de compilação de CI (integração contínua), confira [Usar o SDK e ferramentas do .NET Core na CI (Integração Contínua)](using-ci-with-cli.md).</span><span class="sxs-lookup"><span data-stu-id="c3d7d-114">For information on how to set up CLI on your continuous integration (CI) build server, see [Using .NET Core SDK and tools in Continuous Integration (CI)](using-ci-with-cli.md).</span></span>
 
-<span data-ttu-id="b9c13-115">Por padrão, a CLI instala lado a lado (SxS), para que várias versões das ferramentas da CLI possam coexistir em um único computador.</span><span class="sxs-lookup"><span data-stu-id="b9c13-115">By default, the CLI installs in a side-by-side (SxS) manner, so multiple versions of the CLI tools can coexist on a single machine.</span></span> <span data-ttu-id="b9c13-116">Veja com mais detalhes como determinar qual versão é usada em um computador no qual várias versões estão instaladas na seção [Driver](#driver).</span><span class="sxs-lookup"><span data-stu-id="b9c13-116">Determining which version is used on a machine where multiple versions are installed is explained in more detail in the [Driver](#driver) section.</span></span>
+<span data-ttu-id="c3d7d-115">Por padrão, a CLI instala lado a lado (SxS), para que várias versões das ferramentas da CLI possam coexistir em um único computador.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-115">By default, the CLI installs in a side-by-side (SxS) manner, so multiple versions of the CLI tools can coexist on a single machine.</span></span> <span data-ttu-id="c3d7d-116">Veja com mais detalhes como determinar qual versão é usada em um computador no qual várias versões estão instaladas na seção [Driver](#driver).</span><span class="sxs-lookup"><span data-stu-id="c3d7d-116">Determining which version is used on a machine where multiple versions are installed is explained in more detail in the [Driver](#driver) section.</span></span>
 
-## <a name="cli-commands"></a><span data-ttu-id="b9c13-117">Comandos da CLI</span><span class="sxs-lookup"><span data-stu-id="b9c13-117">CLI commands</span></span>
+## <a name="cli-commands"></a><span data-ttu-id="c3d7d-117">Comandos da CLI</span><span class="sxs-lookup"><span data-stu-id="c3d7d-117">CLI commands</span></span>
 
-<span data-ttu-id="b9c13-118">Os comandos a seguir são instalados por padrão:</span><span class="sxs-lookup"><span data-stu-id="b9c13-118">The following commands are installed by default:</span></span>
+<span data-ttu-id="c3d7d-118">Os comandos a seguir são instalados por padrão:</span><span class="sxs-lookup"><span data-stu-id="c3d7d-118">The following commands are installed by default:</span></span>
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="b9c13-119">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="b9c13-119">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="c3d7d-119">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="c3d7d-119">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="b9c13-120">**Comandos básicos**</span><span class="sxs-lookup"><span data-stu-id="b9c13-120">**Basic commands**</span></span>
+<span data-ttu-id="c3d7d-120">**Comandos básicos**</span><span class="sxs-lookup"><span data-stu-id="c3d7d-120">**Basic commands**</span></span>
 
-- [<span data-ttu-id="b9c13-121">new</span><span class="sxs-lookup"><span data-stu-id="b9c13-121">new</span></span>](dotnet-new.md)
-- [<span data-ttu-id="b9c13-122">restore</span><span class="sxs-lookup"><span data-stu-id="b9c13-122">restore</span></span>](dotnet-restore.md)
-- [<span data-ttu-id="b9c13-123">build</span><span class="sxs-lookup"><span data-stu-id="b9c13-123">build</span></span>](dotnet-build.md)
-- [<span data-ttu-id="b9c13-124">publish</span><span class="sxs-lookup"><span data-stu-id="b9c13-124">publish</span></span>](dotnet-publish.md)
-- [<span data-ttu-id="b9c13-125">run</span><span class="sxs-lookup"><span data-stu-id="b9c13-125">run</span></span>](dotnet-run.md)
-- [<span data-ttu-id="b9c13-126">test</span><span class="sxs-lookup"><span data-stu-id="b9c13-126">test</span></span>](dotnet-test.md)
-- [<span data-ttu-id="b9c13-127">vstest</span><span class="sxs-lookup"><span data-stu-id="b9c13-127">vstest</span></span>](dotnet-vstest.md)
-- [<span data-ttu-id="b9c13-128">pack</span><span class="sxs-lookup"><span data-stu-id="b9c13-128">pack</span></span>](dotnet-pack.md)
-- [<span data-ttu-id="b9c13-129">migrate</span><span class="sxs-lookup"><span data-stu-id="b9c13-129">migrate</span></span>](dotnet-migrate.md)
-- [<span data-ttu-id="b9c13-130">clean</span><span class="sxs-lookup"><span data-stu-id="b9c13-130">clean</span></span>](dotnet-clean.md)
-- [<span data-ttu-id="b9c13-131">sln</span><span class="sxs-lookup"><span data-stu-id="b9c13-131">sln</span></span>](dotnet-sln.md)
-- [<span data-ttu-id="b9c13-132">ajuda</span><span class="sxs-lookup"><span data-stu-id="b9c13-132">help</span></span>](dotnet-help.md)
-- [<span data-ttu-id="b9c13-133">repositório</span><span class="sxs-lookup"><span data-stu-id="b9c13-133">store</span></span>](dotnet-store.md)
+- [<span data-ttu-id="c3d7d-121">new</span><span class="sxs-lookup"><span data-stu-id="c3d7d-121">new</span></span>](dotnet-new.md)
+- [<span data-ttu-id="c3d7d-122">restore</span><span class="sxs-lookup"><span data-stu-id="c3d7d-122">restore</span></span>](dotnet-restore.md)
+- [<span data-ttu-id="c3d7d-123">build</span><span class="sxs-lookup"><span data-stu-id="c3d7d-123">build</span></span>](dotnet-build.md)
+- [<span data-ttu-id="c3d7d-124">publish</span><span class="sxs-lookup"><span data-stu-id="c3d7d-124">publish</span></span>](dotnet-publish.md)
+- [<span data-ttu-id="c3d7d-125">run</span><span class="sxs-lookup"><span data-stu-id="c3d7d-125">run</span></span>](dotnet-run.md)
+- [<span data-ttu-id="c3d7d-126">test</span><span class="sxs-lookup"><span data-stu-id="c3d7d-126">test</span></span>](dotnet-test.md)
+- [<span data-ttu-id="c3d7d-127">vstest</span><span class="sxs-lookup"><span data-stu-id="c3d7d-127">vstest</span></span>](dotnet-vstest.md)
+- [<span data-ttu-id="c3d7d-128">pack</span><span class="sxs-lookup"><span data-stu-id="c3d7d-128">pack</span></span>](dotnet-pack.md)
+- [<span data-ttu-id="c3d7d-129">migrate</span><span class="sxs-lookup"><span data-stu-id="c3d7d-129">migrate</span></span>](dotnet-migrate.md)
+- [<span data-ttu-id="c3d7d-130">clean</span><span class="sxs-lookup"><span data-stu-id="c3d7d-130">clean</span></span>](dotnet-clean.md)
+- [<span data-ttu-id="c3d7d-131">sln</span><span class="sxs-lookup"><span data-stu-id="c3d7d-131">sln</span></span>](dotnet-sln.md)
+- [<span data-ttu-id="c3d7d-132">ajuda</span><span class="sxs-lookup"><span data-stu-id="c3d7d-132">help</span></span>](dotnet-help.md)
+- [<span data-ttu-id="c3d7d-133">repositório</span><span class="sxs-lookup"><span data-stu-id="c3d7d-133">store</span></span>](dotnet-store.md)
 
-<span data-ttu-id="b9c13-134">**Comandos de modificação de projeto**</span><span class="sxs-lookup"><span data-stu-id="b9c13-134">**Project modification commands**</span></span>
+<span data-ttu-id="c3d7d-134">**Comandos de modificação de projeto**</span><span class="sxs-lookup"><span data-stu-id="c3d7d-134">**Project modification commands**</span></span>
 
-- [<span data-ttu-id="b9c13-135">add package</span><span class="sxs-lookup"><span data-stu-id="b9c13-135">add package</span></span>](dotnet-add-package.md)
-- [<span data-ttu-id="b9c13-136">add reference</span><span class="sxs-lookup"><span data-stu-id="b9c13-136">add reference</span></span>](dotnet-add-reference.md)
-- [<span data-ttu-id="b9c13-137">remove package</span><span class="sxs-lookup"><span data-stu-id="b9c13-137">remove package</span></span>](dotnet-remove-package.md)
-- [<span data-ttu-id="b9c13-138">remove reference</span><span class="sxs-lookup"><span data-stu-id="b9c13-138">remove reference</span></span>](dotnet-remove-reference.md)
-- [<span data-ttu-id="b9c13-139">list reference</span><span class="sxs-lookup"><span data-stu-id="b9c13-139">list reference</span></span>](dotnet-list-reference.md)
+- [<span data-ttu-id="c3d7d-135">add package</span><span class="sxs-lookup"><span data-stu-id="c3d7d-135">add package</span></span>](dotnet-add-package.md)
+- [<span data-ttu-id="c3d7d-136">add reference</span><span class="sxs-lookup"><span data-stu-id="c3d7d-136">add reference</span></span>](dotnet-add-reference.md)
+- [<span data-ttu-id="c3d7d-137">remove package</span><span class="sxs-lookup"><span data-stu-id="c3d7d-137">remove package</span></span>](dotnet-remove-package.md)
+- [<span data-ttu-id="c3d7d-138">remove reference</span><span class="sxs-lookup"><span data-stu-id="c3d7d-138">remove reference</span></span>](dotnet-remove-reference.md)
+- [<span data-ttu-id="c3d7d-139">list reference</span><span class="sxs-lookup"><span data-stu-id="c3d7d-139">list reference</span></span>](dotnet-list-reference.md)
 
-<span data-ttu-id="b9c13-140">**Comandos avançados**</span><span class="sxs-lookup"><span data-stu-id="b9c13-140">**Advanced commands**</span></span>
+<span data-ttu-id="c3d7d-140">**Comandos avançados**</span><span class="sxs-lookup"><span data-stu-id="c3d7d-140">**Advanced commands**</span></span>
 
-- [<span data-ttu-id="b9c13-141">nuget delete</span><span class="sxs-lookup"><span data-stu-id="b9c13-141">nuget delete</span></span>](dotnet-nuget-delete.md)
-- [<span data-ttu-id="b9c13-142">nuget locals</span><span class="sxs-lookup"><span data-stu-id="b9c13-142">nuget locals</span></span>](dotnet-nuget-locals.md)
-- [<span data-ttu-id="b9c13-143">nuget push</span><span class="sxs-lookup"><span data-stu-id="b9c13-143">nuget push</span></span>](dotnet-nuget-push.md)
-- [<span data-ttu-id="b9c13-144">msbuild</span><span class="sxs-lookup"><span data-stu-id="b9c13-144">msbuild</span></span>](dotnet-msbuild.md)
-- [<span data-ttu-id="b9c13-145">dotnet install script</span><span class="sxs-lookup"><span data-stu-id="b9c13-145">dotnet install script</span></span>](dotnet-install-script.md)
+- [<span data-ttu-id="c3d7d-141">nuget delete</span><span class="sxs-lookup"><span data-stu-id="c3d7d-141">nuget delete</span></span>](dotnet-nuget-delete.md)
+- [<span data-ttu-id="c3d7d-142">nuget locals</span><span class="sxs-lookup"><span data-stu-id="c3d7d-142">nuget locals</span></span>](dotnet-nuget-locals.md)
+- [<span data-ttu-id="c3d7d-143">nuget push</span><span class="sxs-lookup"><span data-stu-id="c3d7d-143">nuget push</span></span>](dotnet-nuget-push.md)
+- [<span data-ttu-id="c3d7d-144">msbuild</span><span class="sxs-lookup"><span data-stu-id="c3d7d-144">msbuild</span></span>](dotnet-msbuild.md)
+- [<span data-ttu-id="c3d7d-145">dotnet install script</span><span class="sxs-lookup"><span data-stu-id="c3d7d-145">dotnet install script</span></span>](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="b9c13-146">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="b9c13-146">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="c3d7d-146">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="c3d7d-146">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-<span data-ttu-id="b9c13-147">**Comandos básicos**</span><span class="sxs-lookup"><span data-stu-id="b9c13-147">**Basic commands**</span></span>
+<span data-ttu-id="c3d7d-147">**Comandos básicos**</span><span class="sxs-lookup"><span data-stu-id="c3d7d-147">**Basic commands**</span></span>
 
-- [<span data-ttu-id="b9c13-148">new</span><span class="sxs-lookup"><span data-stu-id="b9c13-148">new</span></span>](dotnet-new.md)
-- [<span data-ttu-id="b9c13-149">restore</span><span class="sxs-lookup"><span data-stu-id="b9c13-149">restore</span></span>](dotnet-restore.md)
-- [<span data-ttu-id="b9c13-150">build</span><span class="sxs-lookup"><span data-stu-id="b9c13-150">build</span></span>](dotnet-build.md)
-- [<span data-ttu-id="b9c13-151">publish</span><span class="sxs-lookup"><span data-stu-id="b9c13-151">publish</span></span>](dotnet-publish.md)
-- [<span data-ttu-id="b9c13-152">run</span><span class="sxs-lookup"><span data-stu-id="b9c13-152">run</span></span>](dotnet-run.md)
-- [<span data-ttu-id="b9c13-153">test</span><span class="sxs-lookup"><span data-stu-id="b9c13-153">test</span></span>](dotnet-test.md)
-- [<span data-ttu-id="b9c13-154">vstest</span><span class="sxs-lookup"><span data-stu-id="b9c13-154">vstest</span></span>](dotnet-vstest.md)
-- [<span data-ttu-id="b9c13-155">pack</span><span class="sxs-lookup"><span data-stu-id="b9c13-155">pack</span></span>](dotnet-pack.md)
-- [<span data-ttu-id="b9c13-156">migrate</span><span class="sxs-lookup"><span data-stu-id="b9c13-156">migrate</span></span>](dotnet-migrate.md)
-- [<span data-ttu-id="b9c13-157">clean</span><span class="sxs-lookup"><span data-stu-id="b9c13-157">clean</span></span>](dotnet-clean.md)
-- [<span data-ttu-id="b9c13-158">sln</span><span class="sxs-lookup"><span data-stu-id="b9c13-158">sln</span></span>](dotnet-sln.md)
+- [<span data-ttu-id="c3d7d-148">new</span><span class="sxs-lookup"><span data-stu-id="c3d7d-148">new</span></span>](dotnet-new.md)
+- [<span data-ttu-id="c3d7d-149">restore</span><span class="sxs-lookup"><span data-stu-id="c3d7d-149">restore</span></span>](dotnet-restore.md)
+- [<span data-ttu-id="c3d7d-150">build</span><span class="sxs-lookup"><span data-stu-id="c3d7d-150">build</span></span>](dotnet-build.md)
+- [<span data-ttu-id="c3d7d-151">publish</span><span class="sxs-lookup"><span data-stu-id="c3d7d-151">publish</span></span>](dotnet-publish.md)
+- [<span data-ttu-id="c3d7d-152">run</span><span class="sxs-lookup"><span data-stu-id="c3d7d-152">run</span></span>](dotnet-run.md)
+- [<span data-ttu-id="c3d7d-153">test</span><span class="sxs-lookup"><span data-stu-id="c3d7d-153">test</span></span>](dotnet-test.md)
+- [<span data-ttu-id="c3d7d-154">vstest</span><span class="sxs-lookup"><span data-stu-id="c3d7d-154">vstest</span></span>](dotnet-vstest.md)
+- [<span data-ttu-id="c3d7d-155">pack</span><span class="sxs-lookup"><span data-stu-id="c3d7d-155">pack</span></span>](dotnet-pack.md)
+- [<span data-ttu-id="c3d7d-156">migrate</span><span class="sxs-lookup"><span data-stu-id="c3d7d-156">migrate</span></span>](dotnet-migrate.md)
+- [<span data-ttu-id="c3d7d-157">clean</span><span class="sxs-lookup"><span data-stu-id="c3d7d-157">clean</span></span>](dotnet-clean.md)
+- [<span data-ttu-id="c3d7d-158">sln</span><span class="sxs-lookup"><span data-stu-id="c3d7d-158">sln</span></span>](dotnet-sln.md)
 
-<span data-ttu-id="b9c13-159">**Comandos de modificação de projeto**</span><span class="sxs-lookup"><span data-stu-id="b9c13-159">**Project modification commands**</span></span>
+<span data-ttu-id="c3d7d-159">**Comandos de modificação de projeto**</span><span class="sxs-lookup"><span data-stu-id="c3d7d-159">**Project modification commands**</span></span>
 
-- [<span data-ttu-id="b9c13-160">add package</span><span class="sxs-lookup"><span data-stu-id="b9c13-160">add package</span></span>](dotnet-add-package.md)
-- [<span data-ttu-id="b9c13-161">add reference</span><span class="sxs-lookup"><span data-stu-id="b9c13-161">add reference</span></span>](dotnet-add-reference.md)
-- [<span data-ttu-id="b9c13-162">remove package</span><span class="sxs-lookup"><span data-stu-id="b9c13-162">remove package</span></span>](dotnet-remove-package.md)
-- [<span data-ttu-id="b9c13-163">remove reference</span><span class="sxs-lookup"><span data-stu-id="b9c13-163">remove reference</span></span>](dotnet-remove-reference.md)
-- [<span data-ttu-id="b9c13-164">list reference</span><span class="sxs-lookup"><span data-stu-id="b9c13-164">list reference</span></span>](dotnet-list-reference.md)
+- [<span data-ttu-id="c3d7d-160">add package</span><span class="sxs-lookup"><span data-stu-id="c3d7d-160">add package</span></span>](dotnet-add-package.md)
+- [<span data-ttu-id="c3d7d-161">add reference</span><span class="sxs-lookup"><span data-stu-id="c3d7d-161">add reference</span></span>](dotnet-add-reference.md)
+- [<span data-ttu-id="c3d7d-162">remove package</span><span class="sxs-lookup"><span data-stu-id="c3d7d-162">remove package</span></span>](dotnet-remove-package.md)
+- [<span data-ttu-id="c3d7d-163">remove reference</span><span class="sxs-lookup"><span data-stu-id="c3d7d-163">remove reference</span></span>](dotnet-remove-reference.md)
+- [<span data-ttu-id="c3d7d-164">list reference</span><span class="sxs-lookup"><span data-stu-id="c3d7d-164">list reference</span></span>](dotnet-list-reference.md)
 
-<span data-ttu-id="b9c13-165">**Comandos avançados**</span><span class="sxs-lookup"><span data-stu-id="b9c13-165">**Advanced commands**</span></span>
+<span data-ttu-id="c3d7d-165">**Comandos avançados**</span><span class="sxs-lookup"><span data-stu-id="c3d7d-165">**Advanced commands**</span></span>
 
-- [<span data-ttu-id="b9c13-166">nuget delete</span><span class="sxs-lookup"><span data-stu-id="b9c13-166">nuget delete</span></span>](dotnet-nuget-delete.md)
-- [<span data-ttu-id="b9c13-167">nuget locals</span><span class="sxs-lookup"><span data-stu-id="b9c13-167">nuget locals</span></span>](dotnet-nuget-locals.md)
-- [<span data-ttu-id="b9c13-168">nuget push</span><span class="sxs-lookup"><span data-stu-id="b9c13-168">nuget push</span></span>](dotnet-nuget-push.md)
-- [<span data-ttu-id="b9c13-169">msbuild</span><span class="sxs-lookup"><span data-stu-id="b9c13-169">msbuild</span></span>](dotnet-msbuild.md)
-- [<span data-ttu-id="b9c13-170">dotnet install script</span><span class="sxs-lookup"><span data-stu-id="b9c13-170">dotnet install script</span></span>](dotnet-install-script.md)
+- [<span data-ttu-id="c3d7d-166">nuget delete</span><span class="sxs-lookup"><span data-stu-id="c3d7d-166">nuget delete</span></span>](dotnet-nuget-delete.md)
+- [<span data-ttu-id="c3d7d-167">nuget locals</span><span class="sxs-lookup"><span data-stu-id="c3d7d-167">nuget locals</span></span>](dotnet-nuget-locals.md)
+- [<span data-ttu-id="c3d7d-168">nuget push</span><span class="sxs-lookup"><span data-stu-id="c3d7d-168">nuget push</span></span>](dotnet-nuget-push.md)
+- [<span data-ttu-id="c3d7d-169">msbuild</span><span class="sxs-lookup"><span data-stu-id="c3d7d-169">msbuild</span></span>](dotnet-msbuild.md)
+- [<span data-ttu-id="c3d7d-170">dotnet install script</span><span class="sxs-lookup"><span data-stu-id="c3d7d-170">dotnet install script</span></span>](dotnet-install-script.md)
 
 ---
 
-<span data-ttu-id="b9c13-171">A CLI adota um modelo de extensibilidade que permite especificar ferramentas adicionais para seus projetos.</span><span class="sxs-lookup"><span data-stu-id="b9c13-171">The CLI adopts an extensibility model that allows you to specify additional tools for your projects.</span></span> <span data-ttu-id="b9c13-172">Para saber mais, confira o tópico [Modelo de extensibilidade da CLI do .NET Core](extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="b9c13-172">For more information, see the [.NET Core CLI extensibility model](extensibility.md) topic.</span></span>
+<span data-ttu-id="c3d7d-171">A CLI adota um modelo de extensibilidade que permite especificar ferramentas adicionais para seus projetos.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-171">The CLI adopts an extensibility model that allows you to specify additional tools for your projects.</span></span> <span data-ttu-id="c3d7d-172">Para saber mais, confira o tópico [Modelo de extensibilidade da CLI do .NET Core](extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="c3d7d-172">For more information, see the [.NET Core CLI extensibility model](extensibility.md) topic.</span></span>
 
-## <a name="command-structure"></a><span data-ttu-id="b9c13-173">Estrutura de comando</span><span class="sxs-lookup"><span data-stu-id="b9c13-173">Command structure</span></span>
+## <a name="command-structure"></a><span data-ttu-id="c3d7d-173">Estrutura de comando</span><span class="sxs-lookup"><span data-stu-id="c3d7d-173">Command structure</span></span>
 
-<span data-ttu-id="b9c13-174">A estrutura de comando CLI consiste no [driver ("dotnet")](#driver), [do comando](#command) e possivelmente de [opções](#options) e [argumentos](#arguments) de comando.</span><span class="sxs-lookup"><span data-stu-id="b9c13-174">CLI command structure consists of [the driver ("dotnet")](#driver), [the command](#command), and possibly command [arguments](#arguments) and [options](#options).</span></span> <span data-ttu-id="b9c13-175">É possível ver esse padrão na maioria das operações de CLI, como ao criar um novo aplicativo de console e executá-lo a partir da linha de comando, como mostram os comandos a seguir quando executados a partir de um diretório chamado *my_app*:</span><span class="sxs-lookup"><span data-stu-id="b9c13-175">You see this pattern in most CLI operations, such as creating a new console app and running it from the command line as the following commands show when executed from a directory named *my_app*:</span></span>
+<span data-ttu-id="c3d7d-174">A estrutura de comando CLI consiste no [driver ("dotnet")](#driver), [do comando](#command) e possivelmente de [opções](#options) e [argumentos](#arguments) de comando.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-174">CLI command structure consists of [the driver ("dotnet")](#driver), [the command](#command), and possibly command [arguments](#arguments) and [options](#options).</span></span> <span data-ttu-id="c3d7d-175">É possível ver esse padrão na maioria das operações de CLI, como ao criar um novo aplicativo de console e executá-lo a partir da linha de comando, como mostram os comandos a seguir quando executados a partir de um diretório chamado *my_app*:</span><span class="sxs-lookup"><span data-stu-id="c3d7d-175">You see this pattern in most CLI operations, such as creating a new console app and running it from the command line as the following commands show when executed from a directory named *my_app*:</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="b9c13-176">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="b9c13-176">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="c3d7d-176">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="c3d7d-176">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="b9c13-177">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="b9c13-177">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="c3d7d-177">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="c3d7d-177">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet restore
 dotnet build --output /build_output
@@ -122,37 +122,37 @@ dotnet /build_output/my_app.dll
 
 ---
 
-### <a name="driver"></a><span data-ttu-id="b9c13-178">Driver</span><span class="sxs-lookup"><span data-stu-id="b9c13-178">Driver</span></span>
+### <a name="driver"></a><span data-ttu-id="c3d7d-178">Driver</span><span class="sxs-lookup"><span data-stu-id="c3d7d-178">Driver</span></span>
 
-<span data-ttu-id="b9c13-179">O driver é chamado [dotnet](dotnet.md) e tem duas responsabilidades, executar um [aplicativo dependente da estrutura](../deploying/index.md) ou executar um comando.</span><span class="sxs-lookup"><span data-stu-id="b9c13-179">The driver is named [dotnet](dotnet.md) and has two responsibilities, either running a [framework-dependent app](../deploying/index.md) or executing a command.</span></span> 
+<span data-ttu-id="c3d7d-179">O driver é chamado [dotnet](dotnet.md) e tem duas responsabilidades, executar um [aplicativo dependente da estrutura](../deploying/index.md) ou executar um comando.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-179">The driver is named [dotnet](dotnet.md) and has two responsibilities, either running a [framework-dependent app](../deploying/index.md) or executing a command.</span></span> 
 
-<span data-ttu-id="b9c13-180">Para executar um aplicativo dependente da estrutura, especifique o aplicativo após o driver, por exemplo, `dotnet /path/to/my_app.dll`.</span><span class="sxs-lookup"><span data-stu-id="b9c13-180">To run a framework-dependent app, specify the app after the driver, for example, `dotnet /path/to/my_app.dll`.</span></span> <span data-ttu-id="b9c13-181">Ao executar o comando na pasta onde está a DLL do aplicativo, basta executar `dotnet my_app.dll`.</span><span class="sxs-lookup"><span data-stu-id="b9c13-181">When executing the command from the folder where the app's DLL resides, simply execute `dotnet my_app.dll`.</span></span> <span data-ttu-id="b9c13-182">Se você quiser usar uma versão específica do .NET Core Runtime, use a opção `--fx-version <VERSION>` (consulte a referência [do comando dotnet](dotnet.md)).</span><span class="sxs-lookup"><span data-stu-id="b9c13-182">If you want to use a specific version of the .NET Core Runtime, use the `--fx-version <VERSION>` option (see the [dotnet command](dotnet.md) reference).</span></span>
+<span data-ttu-id="c3d7d-180">Para executar um aplicativo dependente da estrutura, especifique o aplicativo após o driver, por exemplo, `dotnet /path/to/my_app.dll`.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-180">To run a framework-dependent app, specify the app after the driver, for example, `dotnet /path/to/my_app.dll`.</span></span> <span data-ttu-id="c3d7d-181">Ao executar o comando na pasta onde está a DLL do aplicativo, basta executar `dotnet my_app.dll`.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-181">When executing the command from the folder where the app's DLL resides, simply execute `dotnet my_app.dll`.</span></span> <span data-ttu-id="c3d7d-182">Se você quiser usar uma versão específica do .NET Core Runtime, use a opção `--fx-version <VERSION>` (consulte a referência [do comando dotnet](dotnet.md)).</span><span class="sxs-lookup"><span data-stu-id="c3d7d-182">If you want to use a specific version of the .NET Core Runtime, use the `--fx-version <VERSION>` option (see the [dotnet command](dotnet.md) reference).</span></span>
 
-<span data-ttu-id="b9c13-183">Quando você fornece um comando para o driver, `dotnet.exe` inicia o processo de execução do comando da CLI.</span><span class="sxs-lookup"><span data-stu-id="b9c13-183">When you supply a command to the driver, `dotnet.exe` starts the CLI command execution process.</span></span> <span data-ttu-id="b9c13-184">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="b9c13-184">For example:</span></span>
+<span data-ttu-id="c3d7d-183">Quando você fornece um comando para o driver, `dotnet.exe` inicia o processo de execução do comando da CLI.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-183">When you supply a command to the driver, `dotnet.exe` starts the CLI command execution process.</span></span> <span data-ttu-id="c3d7d-184">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="c3d7d-184">For example:</span></span>
 
-```bash
-> dotnet build
+```dotnetcli
+dotnet build
 ```
 
-<span data-ttu-id="b9c13-185">Primeiro, o driver determina a versão do SDK a ser usada.</span><span class="sxs-lookup"><span data-stu-id="b9c13-185">First, the driver determines the version of the SDK to use.</span></span> <span data-ttu-id="b9c13-186">Se não houver uma ['global.json'](global-json.md), a versão mais recente do SDK disponível será usada.</span><span class="sxs-lookup"><span data-stu-id="b9c13-186">If there is no ['global.json'](global-json.md), the latest version of the SDK available is used.</span></span> <span data-ttu-id="b9c13-187">Isso pode ser uma versão prévia ou estável, dependendo do que há de mais recente no computador.</span><span class="sxs-lookup"><span data-stu-id="b9c13-187">This might be either a preview or stable version, depending on what is latest on the machine.</span></span>  <span data-ttu-id="b9c13-188">Depois que a versão do SDK é determinada, ela executa o comando.</span><span class="sxs-lookup"><span data-stu-id="b9c13-188">Once the SDK version is determined, it executes the command.</span></span>
+<span data-ttu-id="c3d7d-185">Primeiro, o driver determina a versão do SDK a ser usada.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-185">First, the driver determines the version of the SDK to use.</span></span> <span data-ttu-id="c3d7d-186">Se não houver uma ['global.json'](global-json.md), a versão mais recente do SDK disponível será usada.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-186">If there is no ['global.json'](global-json.md), the latest version of the SDK available is used.</span></span> <span data-ttu-id="c3d7d-187">Isso pode ser uma versão prévia ou estável, dependendo do que há de mais recente no computador.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-187">This might be either a preview or stable version, depending on what is latest on the machine.</span></span>  <span data-ttu-id="c3d7d-188">Depois que a versão do SDK é determinada, ela executa o comando.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-188">Once the SDK version is determined, it executes the command.</span></span>
 
-### <a name="command"></a><span data-ttu-id="b9c13-189">Comando</span><span class="sxs-lookup"><span data-stu-id="b9c13-189">Command</span></span>
+### <a name="command"></a><span data-ttu-id="c3d7d-189">Comando</span><span class="sxs-lookup"><span data-stu-id="c3d7d-189">Command</span></span>
 
-<span data-ttu-id="b9c13-190">O comando executa uma ação.</span><span class="sxs-lookup"><span data-stu-id="b9c13-190">The command performs an action.</span></span> <span data-ttu-id="b9c13-191">Por exemplo, `dotnet build` compila código.</span><span class="sxs-lookup"><span data-stu-id="b9c13-191">For example, `dotnet build` builds code.</span></span> <span data-ttu-id="b9c13-192">`dotnet publish` publica o código.</span><span class="sxs-lookup"><span data-stu-id="b9c13-192">`dotnet publish` publishes code.</span></span> <span data-ttu-id="b9c13-193">Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {command}`.</span><span class="sxs-lookup"><span data-stu-id="b9c13-193">The commands are implemented as a console application using a `dotnet {command}` convention.</span></span>
+<span data-ttu-id="c3d7d-190">O comando executa uma ação.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-190">The command performs an action.</span></span> <span data-ttu-id="c3d7d-191">Por exemplo, `dotnet build` compila código.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-191">For example, `dotnet build` builds code.</span></span> <span data-ttu-id="c3d7d-192">`dotnet publish` publica o código.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-192">`dotnet publish` publishes code.</span></span> <span data-ttu-id="c3d7d-193">Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {command}`.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-193">The commands are implemented as a console application using a `dotnet {command}` convention.</span></span>
 
-### <a name="arguments"></a><span data-ttu-id="b9c13-194">Arguments</span><span class="sxs-lookup"><span data-stu-id="b9c13-194">Arguments</span></span>
+### <a name="arguments"></a><span data-ttu-id="c3d7d-194">Arguments</span><span class="sxs-lookup"><span data-stu-id="c3d7d-194">Arguments</span></span>
 
-<span data-ttu-id="b9c13-195">Os argumentos que você passa na linha de comando são aqueles do comando invocado.</span><span class="sxs-lookup"><span data-stu-id="b9c13-195">The arguments you pass on the command line are the arguments to the command invoked.</span></span> <span data-ttu-id="b9c13-196">Por exemplo, quando você executa `dotnet publish my_app.csproj`, o argumento `my_app.csproj` indica o projeto a ser publicado e é passado para o comando `publish`.</span><span class="sxs-lookup"><span data-stu-id="b9c13-196">For example when you execute `dotnet publish my_app.csproj`, the `my_app.csproj` argument indicates the project to publish and is passed to the `publish` command.</span></span>
+<span data-ttu-id="c3d7d-195">Os argumentos que você passa na linha de comando são aqueles do comando invocado.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-195">The arguments you pass on the command line are the arguments to the command invoked.</span></span> <span data-ttu-id="c3d7d-196">Por exemplo, quando você executa `dotnet publish my_app.csproj`, o argumento `my_app.csproj` indica o projeto a ser publicado e é passado para o comando `publish`.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-196">For example when you execute `dotnet publish my_app.csproj`, the `my_app.csproj` argument indicates the project to publish and is passed to the `publish` command.</span></span>
 
-### <a name="options"></a><span data-ttu-id="b9c13-197">Opções</span><span class="sxs-lookup"><span data-stu-id="b9c13-197">Options</span></span>
+### <a name="options"></a><span data-ttu-id="c3d7d-197">Opções</span><span class="sxs-lookup"><span data-stu-id="c3d7d-197">Options</span></span>
 
-<span data-ttu-id="b9c13-198">As opções que você passa na linha de comando são aquelas do comando invocado.</span><span class="sxs-lookup"><span data-stu-id="b9c13-198">The options you pass on the command line are the options to the command invoked.</span></span> <span data-ttu-id="b9c13-199">Por exemplo, quando você executa `dotnet publish --output /build_output`, a opção `--output` e seu valor são passados para o comando `publish`.</span><span class="sxs-lookup"><span data-stu-id="b9c13-199">For example when you execute `dotnet publish --output /build_output`, the `--output` option and its value are passed to the `publish` command.</span></span>
+<span data-ttu-id="c3d7d-198">As opções que você passa na linha de comando são aquelas do comando invocado.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-198">The options you pass on the command line are the options to the command invoked.</span></span> <span data-ttu-id="c3d7d-199">Por exemplo, quando você executa `dotnet publish --output /build_output`, a opção `--output` e seu valor são passados para o comando `publish`.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-199">For example when you execute `dotnet publish --output /build_output`, the `--output` option and its value are passed to the `publish` command.</span></span>
 
-## <a name="migration-from-projectjson"></a><span data-ttu-id="b9c13-200">Migração do project.json</span><span class="sxs-lookup"><span data-stu-id="b9c13-200">Migration from project.json</span></span>
+## <a name="migration-from-projectjson"></a><span data-ttu-id="c3d7d-200">Migração do project.json</span><span class="sxs-lookup"><span data-stu-id="c3d7d-200">Migration from project.json</span></span>
 
-<span data-ttu-id="b9c13-201">Se você tiver usado as ferramentas da Visualização 2 para produzir projetos baseados em *project.json*, veja o tópico [dotnet migrate](dotnet-migrate.md) para saber mais sobre como migrar seu projeto para MSBuild/ *.csproj* para uso com as ferramentas de versão.</span><span class="sxs-lookup"><span data-stu-id="b9c13-201">If you used Preview 2 tooling to produce *project.json*-based projects, consult the [dotnet migrate](dotnet-migrate.md) topic for information on migrating your project to MSBuild/*.csproj* for use with release tooling.</span></span> <span data-ttu-id="b9c13-202">Para projetos do .NET Core criados antes do lançamento das ferramentas da Versão prévia 2, siga as orientações descritas em [Migrando do DNX para a CLI do .NET Core (project.json)](../migration/from-dnx.md) para atualizar o projeto manualmente e, depois, use `dotnet migrate` ou atualize os projetos diretamente.</span><span class="sxs-lookup"><span data-stu-id="b9c13-202">For .NET Core projects created prior to the release of Preview 2 tooling, either manually update the project following the guidance in [Migrating from DNX to .NET Core CLI (project.json)](../migration/from-dnx.md) and then use `dotnet migrate` or directly upgrade your projects.</span></span>
+<span data-ttu-id="c3d7d-201">Se você tiver usado as ferramentas da Visualização 2 para produzir projetos baseados em *project.json*, veja o tópico [dotnet migrate](dotnet-migrate.md) para saber mais sobre como migrar seu projeto para MSBuild/ *.csproj* para uso com as ferramentas de versão.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-201">If you used Preview 2 tooling to produce *project.json*-based projects, consult the [dotnet migrate](dotnet-migrate.md) topic for information on migrating your project to MSBuild/*.csproj* for use with release tooling.</span></span> <span data-ttu-id="c3d7d-202">Para projetos do .NET Core criados antes do lançamento das ferramentas da Versão prévia 2, siga as orientações descritas em [Migrando do DNX para a CLI do .NET Core (project.json)](../migration/from-dnx.md) para atualizar o projeto manualmente e, depois, use `dotnet migrate` ou atualize os projetos diretamente.</span><span class="sxs-lookup"><span data-stu-id="c3d7d-202">For .NET Core projects created prior to the release of Preview 2 tooling, either manually update the project following the guidance in [Migrating from DNX to .NET Core CLI (project.json)](../migration/from-dnx.md) and then use `dotnet migrate` or directly upgrade your projects.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b9c13-203">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b9c13-203">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3d7d-203">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c3d7d-203">See also</span></span>
 
-- [<span data-ttu-id="b9c13-204">Repositório do GitHub dotnet/CLI</span><span class="sxs-lookup"><span data-stu-id="b9c13-204">dotnet/CLI GitHub Repository</span></span>](https://github.com/dotnet/cli/)
-- [<span data-ttu-id="b9c13-205">Guia de instalação do .NET Core</span><span class="sxs-lookup"><span data-stu-id="b9c13-205">.NET Core installation guide</span></span>](https://aka.ms/dotnetcoregs)
+- [<span data-ttu-id="c3d7d-204">Repositório do GitHub dotnet/CLI</span><span class="sxs-lookup"><span data-stu-id="c3d7d-204">dotnet/CLI GitHub Repository</span></span>](https://github.com/dotnet/cli/)
+- [<span data-ttu-id="c3d7d-205">Guia de instalação do .NET Core</span><span class="sxs-lookup"><span data-stu-id="c3d7d-205">.NET Core installation guide</span></span>](https://aka.ms/dotnetcoregs)
