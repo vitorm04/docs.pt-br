@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254170"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151842"
 ---
 # <a name="cleartype-registry-settings"></a>Configurações do Registro de ClearType
 Este tópico fornece uma visão geral das configurações do registro do Microsoft ClearType que são usadas por aplicativos do WPF.  
@@ -63,7 +63,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Nível de Gama  
- O nível de fama se refere à relação não linear entre o valor de um pixel e a luminância. A configuração do nível de gama deve corresponder às características físicas do dispositivo de vídeo. Caso contrário, podem ocorrer distorções na saída renderizada. Por exemplo, o teste pode aparecer muito largo ou muito estreito ou extremidades coloridas podem aparecer nas bordas dos troncos verticais dos glifos.  
+ O nível de fama se refere à relação não linear entre o valor de um pixel e a luminância. A configuração do nível de gama deve corresponder às características físicas do dispositivo de vídeo. Caso contrário, podem ocorrer distorções na saída renderizada. Por exemplo, o texto pode parecer muito largo ou muito estreito, ou as margens de cor podem aparecer nas bordas de hastes verticais de glifos.  
   
  O nível de gama é um valor inteiro que varia de 1000 a 2200. O nível padrão é 1900.  
   

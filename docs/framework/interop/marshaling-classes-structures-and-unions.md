@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894187"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151757"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
 Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos, propriedades e eventos. Elas também podem ter métodos estáticos e não estáticos. Uma diferença importante é que estruturas são tipos de valor e classes são tipos de referência.  
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  Para todas as estruturas nesta amostra, o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> é aplicado para garantir que os membros sejam organizados na memória em sequência, na ordem em que aparecem.  
   
- A classe `LibWrap` contém protótipos gerenciados para os métodos `TestStructInStruct`, `TestStructInStruct3` e `TestArrayInStruct` chamados pela classe `App`. Cada protótipo declara um único parâmetro, da seguinte maneira:  
+ A classe `NativeMethods` contém protótipos gerenciados para os métodos `TestStructInStruct`, `TestStructInStruct3` e `TestArrayInStruct` chamados pela classe `App`. Cada protótipo declara um único parâmetro, da seguinte maneira:  
   
 - `TestStructInStruct` declara uma referência ao tipo `MyPerson2` como seu parâmetro.  
   
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  Neste exemplo, a classe `FindData` contém um membro de dados correspondente para cada elemento da estrutura original e da estrutura inserida. Em vez de dois buffers de caracteres originais, a classe substitui cadeias de caracteres. **MarshalAsAttribute** define a enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para **ByValTStr**, que é usado para identificar as matrizes de caracteres embutidas e de comprimento fixo que aparecem dentro de estruturas não gerenciadas.  
   
- A classe `LibWrap` contém um protótipo gerenciado do método `FindFirstFile`, que passa a classe `FindData` como um parâmetro. O parâmetro deve ser declarado com os atributos <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> porque as classes, que são tipos de referência, são passadas como parâmetros In por padrão.  
+ A classe `NativeMethods` contém um protótipo gerenciado do método `FindFirstFile`, que passa a classe `FindData` como um parâmetro. O parâmetro deve ser declarado com os atributos <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> porque as classes, que são tipos de referência, são passadas como parâmetros In por padrão.  
   
 ### <a name="declaring-prototypes"></a>Declarando Protótipos  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1` e `MyUnion2_2` contêm um tipo de valor (integer) e uma cadeia de caracteres, respectivamente. No código gerenciado, não é permitido que os tipos de valor e os tipos de referência se sobreponham. Esta amostra usa a sobrecarga de método para permitir que o chamador use ambos os tipos ao chamar a mesma função não gerenciada. O layout de `MyUnion2_1` é explícito e tem um valor de deslocamento preciso. Por outro lado, `MyUnion2_2` tem um layout sequencial, pois layouts explícitos não são permitidos com tipos de referência. O atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> define a enumeração <xref:System.Runtime.InteropServices.UnmanagedType> para **ByValTStr**, que é usado para identificar as matrizes de caracteres embutidas e de comprimento fixo que aparecem dentro da representação não gerenciada da união.  
   
- A classe `LibWrap` contém os protótipos para os métodos `TestUnion` e `TestUnion2`. `TestUnion2` está sobrecarregado para declarar `MyUnion2_1` ou `MyUnion2_2` como parâmetros.  
+ A classe `NativeMethods` contém os protótipos para os métodos `TestUnion` e `TestUnion2`. `TestUnion2` está sobrecarregado para declarar `MyUnion2_1` ou `MyUnion2_2` como parâmetros.  
   
 ### <a name="declaring-prototypes"></a>Declarando Protótipos  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  Neste exemplo, a classe `SystemTime` contém os elementos da estrutura original representados como membros de classe. O atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> é definido para garantir que os membros sejam organizados na memória em sequência, na ordem em que aparecem.  
   
- A classe `LibWrap` contém um protótipo gerenciado do método `GetSystemTime`, que passa a classe `SystemTime` como um parâmetro In/Out por padrão. O parâmetro deve ser declarado com os atributos <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> porque as classes, que são tipos de referência, são passadas como parâmetros In por padrão. Para o chamador receber os resultados, esses [atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) devem ser aplicados explicitamente. A classe `App` cria uma nova instância da classe `SystemTime` e acessa seus campos de dados.  
+ A classe `NativeMethods` contém um protótipo gerenciado do método `GetSystemTime`, que passa a classe `SystemTime` como um parâmetro In/Out por padrão. O parâmetro deve ser declarado com os atributos <xref:System.Runtime.InteropServices.InAttribute> e <xref:System.Runtime.InteropServices.OutAttribute> porque as classes, que são tipos de referência, são passadas como parâmetros In por padrão. Para o chamador receber os resultados, esses [atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) devem ser aplicados explicitamente. A classe `App` cria uma nova instância da classe `SystemTime` e acessa seus campos de dados.  
   
 ### <a name="code-samples"></a>Exemplos de código  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  A classe `MyStruct` contém um objeto de cadeia de caracteres ANSI. O campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica o formato ANSI. `MyUnsafeStruct` é uma estrutura que contém um tipo <xref:System.IntPtr> em vez de uma cadeia de caracteres.  
   
- A classe `LibWrap` contém o método de protótipo `TestOutArrayOfStructs` sobrecarregado. Se um método declara um ponteiro como um parâmetro, a classe deve ser marcada com a palavra-chave `unsafe`. Já que Visual Basic não é capaz de usar código não gerenciado, o método sobrecarregado, o modificador não seguro e a estrutura `MyUnsafeStruct` são desnecessários.  
+ A classe `NativeMethods` contém o método de protótipo `TestOutArrayOfStructs` sobrecarregado. Se um método declara um ponteiro como um parâmetro, a classe deve ser marcada com a palavra-chave `unsafe`. Já que Visual Basic não é capaz de usar código não gerenciado, o método sobrecarregado, o modificador não seguro e a estrutura `MyUnsafeStruct` são desnecessários.  
   
  A classe `App` implementa o método `UsingMarshaling`, que executa todas as tarefas necessárias para passar a matriz. A matriz é marcada com a palavra-chave `out` (`ByRef` no Visual Basic) para indicar que os dados passam do receptor para o chamador. A implementação usa os seguintes métodos de classe <xref:System.Runtime.InteropServices.Marshal>:  
   

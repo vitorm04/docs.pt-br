@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894174"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151752"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de diversos tipos de matrizes
 Uma matriz é um tipo de referência em código gerenciado que contém um ou mais elementos do mesmo tipo. Embora as matrizes sejam tipos de referência, elas são passadas como parâmetros para funções não gerenciadas. Esse comportamento é inconsistente com a maneira que matrizes gerenciadas são passadas para objetos gerenciados, que é na forma de parâmetros de In/Out. Para obter detalhes adicionais, consulte [Copiando e fixando](copying-and-pinning.md).  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  Neste exemplo, as estruturas `MyPoint` e `MyPerson` contêm tipos inseridos. O atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> é definido para garantir que os membros sejam organizados na memória em sequência, na ordem em que aparecem.  
   
- A classe `LibWrap` contém um conjunto de métodos chamados pela classe `App`. Para obter detalhes específicos sobre passagem de matrizes, consulte os comentários na amostra a seguir. Uma matriz, que é um tipo de referência, é passada por padrão como um parâmetro In. Para o chamador receber os resultados, **InAttribute** e **OutAttribute** devem ser aplicados explicitamente ao argumento que contém a matriz.  
+ A classe `NativeMethods` contém um conjunto de métodos chamados pela classe `App`. Para obter detalhes específicos sobre passagem de matrizes, consulte os comentários na amostra a seguir. Uma matriz, que é um tipo de referência, é passada por padrão como um parâmetro In. Para o chamador receber os resultados, **InAttribute** e **OutAttribute** devem ser aplicados explicitamente ao argumento que contém a matriz.  
   
 ### <a name="declaring-prototypes"></a>Declarando Protótipos  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
