@@ -1,13 +1,13 @@
 ---
 title: Novidades no C# 8.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo está atualizado com a versão prévia 5.
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/20/2019
+ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117815"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182403"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -28,6 +28,7 @@ Há vários aprimoramentos da linguagem C# que você já pode experimentar.
 - [Índices e intervalos](#indices-and-ranges)
 - [Atribuição de União nula](#null-coalescing-assignment)
 - [Tipos construídos não gerenciados](#unmanaged-constructed-types)
+- [stackalloc em expressões aninhadas](#stackalloc-in-nested-expressions)
 - [Aprimoramento de cadeias de caracteres idênticas interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -493,6 +494,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 Para obter mais informações, consulte [tipos não gerenciados](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="stackalloc-in-nested-expressions"></a>stackalloc em expressões aninhadas
+
+A partir C# de 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) <xref:System.Span%601?displayProperty=nameWithType> for do tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> ou, você poderá usar a `stackalloc` expressão em outras expressões:
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cadeias de caracteres idênticas interpoladas
 

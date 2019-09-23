@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052217"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182473"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Práticas recomendadas para carregamento de assemblies
 Este artigo descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros. O artigo aborda as seguintes recomendações:  
@@ -154,7 +154,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
  Se não for possível colocar todos os assemblies no caminho de investigação, considere alternativas como usar o modelo de suplemento do .NET Framework, colocar os assemblies no cache de assembly global ou criar domínios de aplicativo.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Considere usar o modelo de suplemento do Framework .NET  
- Se você estiver usando o contexto de carregamento para implementar suplementos, que normalmente não são instalados na base de aplicativo, use o modelo de suplemento do .NET Framework. Esse modelo fornece isolamento no nível de domínio ou processo do aplicativo, sem a necessidade de gerenciar domínios do aplicativo por conta própria. Para obter informações sobre o modelo de suplemento, consulte [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
+ Se você estiver usando o contexto de carregamento para implementar suplementos, que normalmente não são instalados na base de aplicativo, use o modelo de suplemento do .NET Framework. Esse modelo fornece isolamento no nível de domínio ou processo do aplicativo, sem a necessidade de gerenciar domínios do aplicativo por conta própria. Para obter informações sobre o modelo de suplemento, consulte [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Considere usar o cache de assembly global  
  Coloque os assemblies no cache de assembly global para obter o benefício de um caminho de assembly compartilhado que está fora da base de aplicativo, sem perder as vantagens do contexto de carregamento padrão ou assumir as desvantagens dos outros contextos.  

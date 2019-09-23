@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306060"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181515"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicar aplicativos .NET Core com a CLI
 
@@ -59,7 +59,7 @@ Mais informações sobre binários específicos da plataforma são abordadas nas
 
 ## <a name="sample-app"></a>Aplicativo de exemplo
 
-Use o aplicativo a seguir para explorar os comandos de publicação. O aplicativo é criado pela execução dos seguintes comandos no terminal:
+Você pode usar o aplicativo a seguir para explorar os comandos de publicação. O aplicativo é criado pela execução dos seguintes comandos no terminal:
 
 ```dotnetcli
 mkdir apptest1
@@ -118,7 +118,7 @@ A publicação de uma FDD cria um aplicativo que efetua roll forward automaticam
 
 ## <a name="framework-dependent-executable"></a>Executável dependente de estrutura
 
-Para a CLI do SDK do .NET Core 3.x, o FDE (executável dependente de estrutura) é o modo padrão para o comando `dotnet publish` básico. Você não precisa especificar outros parâmetros, desde que queira definir o sistema operacional atual como destino.
+Para a CLI do SDK do .NET Core 3. x, o executável dependente da estrutura (FDE) é o modo padrão para `dotnet publish` o comando básico. Você não precisa especificar outros parâmetros, desde que queira definir o sistema operacional atual como destino.
 
 Nesse modo, um host do executável específico da plataforma é criado para hospedar o aplicativo multiplataforma. Esse modo é semelhante ao FDD, pois o FDD exige um host na forma do comando `dotnet`. O nome de arquivo executável do host varia de acordo com a plataforma e recebe um nome semelhante a `<PROJECT-FILE>.exe`. Execute esse executável diretamente em vez de chamar `dotnet <PROJECT-FILE>.dll`, o que ainda é uma forma aceitável de executar o aplicativo.
 
@@ -128,8 +128,7 @@ A publicação de um FDE cria um aplicativo que efetua roll forward automaticame
 
 Você precisará (exceto para o .NET Core 3.x quando você definir a plataforma atual como destino) usar as seguintes opções com o comando `dotnet publish` para publicar um FDE:
 
-- `-r <RID>`
-  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+- `-r <RID>` Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
 - `--self-contained false` Essa opção instrui o SDK do .NET Core a criar um executável como um FDE.
 
@@ -142,14 +141,13 @@ Se você usar o [aplicativo de exemplo](#sample-app), execute `dotnet publish -f
 
 ## <a name="self-contained-deployment"></a>Implantação autocontida
 
-Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. A publicação de uma SCD inclui todos os arquivos do .NET Core necessários para executar o aplicativo, mas não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo.
+Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. A publicação de uma SCD inclui todos os arquivos do .NET Core necessários para executar seu aplicativo, mas não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo.
 
 A publicação de uma SCD cria um aplicativo que não efetua roll forward para o último patch de segurança disponível do .NET Core. Para obter mais informações sobre a associação de versão no tempo de compilação, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 É necessário usar as seguintes opções com o comando `dotnet publish` para publicar uma SCD:
 
-- `-r <RID>`
-  Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
+- `-r <RID>` Essa opção usa um RID (identificador) para especificar a plataforma de destino. Para obter uma lista de identificadores de tempo de execução, confira o [Catálogo do RID (Identificador de Tempo de Execução)](../rid-catalog.md).
 
 - `--self-contained true` Essa opção instrui o SDK do .NET Core a criar um executável como uma SCD.
 
@@ -159,4 +157,4 @@ A publicação de uma SCD cria um aplicativo que não efetua roll forward para o
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral da implantação de aplicativos .NET Core](index.md)
-- [Catálogo do RID (Identificador de Tempo de Execução) do .NET Core](../rid-catalog.md)
+- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)

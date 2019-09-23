@@ -1,17 +1,17 @@
 ---
 title: Operador stackalloc – referência do C#
 ms.custom: seodec18
-ms.date: 06/10/2019
+ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: 9ef5f98f2b4973c5873417ecc9a71c187e7299b9
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433835"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182425"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Operador stackalloc (referência do C#)
 
@@ -31,6 +31,10 @@ Você pode atribuir o resultado do operador `stackalloc` a uma variável de um d
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
+  A partir C# do 8,0, você pode usar `stackalloc` uma expressão dentro de outras expressões <xref:System.Span%601> sempre <xref:System.ReadOnlySpan%601> que uma variável ou é permitida, como mostra o exemplo a seguir:
+
+  [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
+
   > [!NOTE]
   > É recomendável usar os tipos <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601> sempre que possível para trabalhar com memória alocada na pilha.
 
@@ -39,6 +43,8 @@ Você pode atribuir o resultado do operador `stackalloc` a uma variável de um d
   [!code-csharp[stackalloc pointer](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToPointer)]
 
   Como mostra o exemplo anterior, você precisa usar um contexto `unsafe` ao trabalhar com tipos de ponteiro.
+
+  No caso de tipos de ponteiro, você pode usar uma `stackalloc` expressão somente em uma declaração de variável local para inicializar a variável.
 
 O conteúdo da memória recém-alocada é indefinido. A partir do C# 7.3, você pode usar a sintaxe do inicializador de matriz para definir o conteúdo da memória recém-alocada. O seguinte exemplo demonstra várias maneiras de fazer isso:
 
