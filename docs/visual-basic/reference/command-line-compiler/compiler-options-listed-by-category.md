@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331547"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182560"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic opções de compilador listadas por categoria
 O compilador de linha de comando Visual Basic é fornecido como uma alternativa à compilação de programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio. Veja a seguir uma lista de Visual Basic opções do compilador de linha de comando classificadas por categoria funcional.  
@@ -129,4 +129,4 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 ## <a name="see-also"></a>Consulte também
 
 - [Opções do compilador do Visual Basic listadas em ordem alfabética](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Gerenciar propriedades do projeto e da solução](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Gerenciar propriedades do projeto e da solução](/visualstudio/ide/managing-project-and-solution-properties)

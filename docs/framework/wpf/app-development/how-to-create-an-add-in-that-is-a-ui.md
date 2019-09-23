@@ -12,12 +12,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949127"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182646"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Como: Criar um suplemento que seja uma interface do usuário
 Este exemplo mostra como criar um suplemento que é um Windows Presentation Foundation (WPF) que é hospedado por um aplicativo autônomo do WPF.  
@@ -28,7 +28,7 @@ Este exemplo mostra como criar um suplemento que é um Windows Presentation Foun
   
  Este exemplo realça as extensões do WPF para o modelo de suplemento .NET Framework que habilita esse cenário e pressupõe o seguinte:  
   
-- Conhecimento do modelo de suplemento .NET Framework, incluindo pipeline, suplemento e desenvolvimento de host. Se você não estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstre a implementação de um pipeline, um suplemento do e um aplicativo host, consulte [Walkthrough: Criando um aplicativo](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))extensível.  
+- Conhecimento do modelo de suplemento .NET Framework, incluindo pipeline, suplemento e desenvolvimento de host. Se você não estiver familiarizado com esses conceitos, consulte [suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Para obter um tutorial que demonstre a implementação de um pipeline, um suplemento do e um aplicativo host, consulte [Walkthrough: Criando um aplicativo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))extensível.  
   
 - Conhecimento das extensões do WPF para o modelo de suplemento .NET Framework. Consulte [visão geral dos suplementos do WPF](wpf-add-ins-overview.md).  
   
@@ -120,5 +120,5 @@ O aplicativo host usa o código de modelo de suplemento típico .NET Framework p
   
 ## <a name="see-also"></a>Consulte também
 
-- [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Visão geral dos suplementos do WPF](wpf-add-ins-overview.md)

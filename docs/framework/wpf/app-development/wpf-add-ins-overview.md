@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401702"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182538"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401702"
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-É necessário ter familiaridade com o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+É necessário ter familiaridade com o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -66,7 +66,7 @@ Para que suplementos possam ser usados, é necessário que eles sejam localizado
 Por fim, desenvolver um modelo de suplemento robusto é uma tarefa não trivial. Por esse motivo, o .NET Framework fornece uma infraestrutura para a criação de modelos de suplementos.
 
 > [!NOTE]
-> Para obter informações mais detalhadas sobre suplementos, consulte [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Para obter informações mais detalhadas sobre suplementos, consulte [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ Como <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipe
 
 Para que um suplemento retorne uma interface do usuário para um aplicativo host, são necessários os seguintes:
 
-1. O aplicativo host, o suplemento e o pipeline devem ser criados, conforme descrito pelos [suplementos .NET Framework e](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação de extensibilidade.
+1. O aplicativo host, o suplemento e o pipeline devem ser criados, conforme descrito pelos [suplementos .NET Framework e](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação de extensibilidade.
 
 2. O contrato deve implementar <xref:System.AddIn.Contract.IContract> e, para retornar uma interface do usuário, o contrato deve declarar um método com um valor de <xref:System.AddIn.Contract.INativeHandleContract>retorno do tipo.
 
@@ -147,7 +147,7 @@ Para obter um exemplo que demonstra como implementar um suplemento que retorna u
 
 Quando um suplemento é uma interface do usuário, são necessários os seguintes:
 
-1. O aplicativo host, o suplemento e o pipeline devem ser criados, conforme descrito pelos [suplementos .NET Framework e](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação de extensibilidade.
+1. O aplicativo host, o suplemento e o pipeline devem ser criados, conforme descrito pelos [suplementos .NET Framework e](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação de extensibilidade.
 
 2. A interface do contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -311,7 +311,7 @@ Por padrão, quando vários domínios de aplicativo são usados, os vários asse
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domínios do aplicativo](../../app-domains/application-domains.md)
 - [Visão geral de .NET Framework comunicação remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Tornando objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

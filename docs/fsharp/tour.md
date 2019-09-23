@@ -2,12 +2,12 @@
 title: Tour do F#
 description: Examine alguns dos principais recursos da linguagem em que este tour com exemplos de código de programação F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 35b811b580cd7c3b4a620f45b602150a92479052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eba136da3cd829dcb2b0726dd4f1c24434aeba5b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630062"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182619"
 ---
 # <a name="tour-of-f"></a>Tour de F\#
 
@@ -17,17 +17,17 @@ Há dois conceitos principais em F#: tipos e funções.  Este tour enfatiza os r
 
 ## <a name="executing-the-code-online"></a>Executando o código online
 
-Se você não tiver F# instalado em seu computador, poderá executar todos os exemplos em seu navegador com [ F# try no Webassembly](https://tryfsharp.fsbolero.io/). Fable é um dialeto do F# que é executado diretamente no seu navegador. Para exibir os exemplos que seguem no repl, confira os **exemplos > saiba > Tour do F#**  na barra de menus à esquerda do Fable repl.
+Se você não tiver F# instalado em seu computador, poderá executar todos os exemplos em seu navegador com [try F# no Webassembly](https://tryfsharp.fsbolero.io/). Fable é um dialeto do F# que é executado diretamente no seu navegador. Para exibir os exemplos que seguem no repl, confira os **exemplos > saiba > Tour do F#**  na barra de menus à esquerda do Fable repl.
 
 ## <a name="functions-and-modules"></a>Funções e módulos
 
 São as partes mais fundamentais de qualquer programa em F# ***funções*** organizados em ***módulos***.  [Funções](./language-reference/functions/index.md) realizar o trabalho em entradas para produzir saídas, e eles estão organizados sob [módulos](./language-reference/modules.md), que são a principal maneira de agrupar as coisas em F#.  Eles são definidos usando a [ `let` Associação](./language-reference/functions/let-bindings.md), que atribui um nome à função e define seus argumentos.
 
-[!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
+[!code-fsharp[BasicFunctions](~/samples/snippets/fsharp/tour.fs#L101-L133)]
 
 `let`as associações também são como você associa um valor a um nome, semelhante a uma variável em outros idiomas.  `let`as associações são ***imutáveis*** por padrão, o que significa que, uma vez que um valor ou uma função esteja associado a um nome, ela não poderá ser alterada no local.  Isso está em contraste com variáveis em outras linguagens, que são ***mutáveis***, o que significa que seus valores podem ser alterados em qualquer ponto no tempo.  Se você precisar de uma associação mutável, poderá usar `let mutable ...` a sintaxe.
 
-[!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
+[!code-fsharp[Immutability](~/samples/snippets/fsharp/tour.fs#L75-L94)]
 
 ## <a name="numbers-booleans-and-strings"></a>Números, Boolianos e cadeias de caracteres
 
@@ -35,25 +35,25 @@ Como uma linguagem .NET, F# oferece suporte à mesma subjacente [tipos primitivo
 
 Aqui está como vários tipos numéricos são representados em F#:
 
-[!code-fsharp[Numbers](../../samples/snippets/fsharp/tour.fs#L49-L68)]
+[!code-fsharp[Numbers](~/samples/snippets/fsharp/tour.fs#L49-L68)]
 
 Veja quais valores Boolianos e a lógica condicional básica se assemelham a:
 
-[!code-fsharp[Bools](../../samples/snippets/fsharp/tour.fs#L142-L152)]
+[!code-fsharp[Bools](~/samples/snippets/fsharp/tour.fs#L142-L152)]
 
 E aqui está a aparência da manipulação de [cadeia de caracteres](./language-reference/strings.md) básica:
 
-[!code-fsharp[Strings](../../samples/snippets/fsharp/tour.fs#L158-L180)]
+[!code-fsharp[Strings](~/samples/snippets/fsharp/tour.fs#L158-L180)]
 
 ## <a name="tuples"></a>Tuplas
 
 [As tuplas](./language-reference/tuples.md) são muito importante em F#.  Eles são um agrupamento de valores não nomeados, mas ordenados, que podem ser tratados como próprios valores.  Considere-os como valores que são agregados de outros valores.  Eles têm muitos usos, como, convenientemente, retornar vários valores de uma função ou agrupar valores para uma conveniência ad hoc.
 
-[!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
+[!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L186-L203)]
 
 A partir do F# 4.1, você também pode criar `struct` tuplas.  Eles também interoperam totalmente com o c# 7/Visual Basic 15 tuplas, que `struct` também são tuplas:
 
-[!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
+[!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L205-L218)]
 
 É importante observar que, como `struct` as tuplas são tipos de valor, elas não podem ser convertidas implicitamente em tuplas de referência ou vice-versa.  Você deve converter explicitamente entre uma tupla de referência e struct.
 
@@ -61,7 +61,7 @@ A partir do F# 4.1, você também pode criar `struct` tuplas.  Eles também inte
 
 Redirecionar operadores como `|>` são usadas amplamente durante o processamento de dados em F#. Esses operadores são funções que permitem que você estabeleça "pipelines" de funções de maneira flexível. O exemplo a seguir percorre como você pode aproveitar esses operadores para criar um pipeline funcional simples:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
+[!code-fsharp[Pipelines](~/samples/snippets/fsharp/tour.fs#L227-L282)]
 
 O exemplo anterior feito uso de muitos recursos do F#, incluindo funções de processamento de lista, funções de primeira classe, e [aplicação parcial](./language-reference/functions/index.md#partial-application-of-arguments). Embora uma compreensão profunda de cada um desses conceitos possa se tornar um pouco avançada, é claro que a facilidade das funções pode ser usada para processar dados ao criar pipelines.
 
@@ -71,15 +71,15 @@ Listas, matrizes e sequências são três tipos de coleção principal na biblio
 
 [Listas](./language-reference/lists.md) são coleções ordenadas e imutáveis de elementos do mesmo tipo.  Elas são listas vinculadas individualmente, o que significa que elas são destinadas à enumeração, mas uma opção ruim para acesso aleatório e concatenação se forem grandes.  Isso em contraste com listas em outras linguagens populares, que normalmente não usam uma lista vinculada individualmente para representar listas.
 
-[!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
+[!code-fsharp[Lists](~/samples/snippets/fsharp/tour.fs#L309-L359)]
 
 As [matrizes](./language-reference/arrays.md) são de tamanho fixo e de coleções *mutáveis* de elementos do mesmo tipo.  Eles oferecem suporte ao acesso aleatório rápido de elementos e são mais rápidos do que listas do F# porque eles são contíguos apenas blocos de memória.
 
-[!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
+[!code-fsharp[Arrays](~/samples/snippets/fsharp/tour.fs#L368-L407)]
 
 As [sequências](./language-reference/sequences.md) são uma série lógica de elementos, todos do mesmo tipo.  Esses são um tipo mais geral do que listas e matrizes, capazes de ser sua "exibição" em qualquer série lógica de elementos.  Elas também se destacam porque podem ser ***lentas***, o que significa que os elementos podem ser computados somente quando forem necessários.
 
-[!code-fsharp[Sequences](../../samples/snippets/fsharp/tour.fs#L418-L452)]
+[!code-fsharp[Sequences](~/samples/snippets/fsharp/tour.fs#L418-L452)]
 
 ## <a name="recursive-functions"></a>Funções Recursivas
 
@@ -88,7 +88,7 @@ Processamento de coleções ou sequências de elementos normalmente é feito com
 > [!NOTE]
 > O exemplo a seguir usa a correspondência de padrões por meio `match` da expressão.  Esse constructo fundamental é abordado posteriormente neste artigo.
 
-[!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
+[!code-fsharp[RecursiveFunctions](~/samples/snippets/fsharp/tour.fs#L461-L500)]
 
 F# também tem suporte completo para a otimização de chamada Tail, que é uma maneira de otimizar chamadas recursivas, para que eles são simplesmente tão rápidos quanto um constructo de loop.
 
@@ -98,31 +98,31 @@ Registro e tipos de união são dois tipos de dados fundamental usados no códig
 
 Os [registros](./language-reference/records.md) são uma agregação de valores nomeados, com membros opcionais (como métodos).  Se você estiver familiarizado com C# o ou o Java, eles devem se sentir semelhantes a pocos ou POJOs, apenas com igualdade estrutural e menos cerimônias.
 
-[!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
+[!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L507-L559)]
 
 A partir do F# 4.1, você também pode representar os registros como `struct`s.  Isso é feito com o `[<Struct>]` atributo:
 
-[!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
+[!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L561-L568)]
 
 [Uniões discriminadas (UDS)](./language-reference/discriminated-unions.md) são valores que podem ser um número de formulários ou casos nomeados.  Os dados armazenados no tipo podem ser um dos vários valores distintos.
 
-[!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L575-L631)]
+[!code-fsharp[Unions](~/samples/snippets/fsharp/tour.fs#L575-L631)]
 
 Você também pode usar UDS como *uniões discriminadas por um único caso*, para ajudar com a modelagem de domínio em tipos primitivos.  Muitas vezes, cadeias de caracteres e outros tipos primitivos são usados para representar algo e, portanto, recebem um significado específico.  No entanto, usar apenas a representação primitiva dos dados pode resultar na atribuição incorreta de um valor incorreto!  Representar cada tipo de informação como uma União de caso único distinta pode impor a exatidão nesse cenário.
 
-[!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L633-L654)]
+[!code-fsharp[Unions](~/samples/snippets/fsharp/tour.fs#L633-L654)]
 
 Como demonstra o exemplo acima, para obter o valor subjacente em uma união discriminada de um único caso, você deve desencapsulá-lo explicitamente.
 
 Além disso, o UDS também oferece suporte a definições recursivas, permitindo que você represente árvores e dados recursivos inerentemente.  Por exemplo, veja como você pode representar uma árvore de pesquisa binária com `exists` o `insert` e o functions.
 
-[!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L656-L683)]
+[!code-fsharp[Unions](~/samples/snippets/fsharp/tour.fs#L656-L683)]
 
 Como UDS permite que você represente a estrutura recursiva da árvore no tipo de dados, operar nessa estrutura recursiva é simples e garante a exatidão.  Também há suporte para a correspondência de padrões, conforme mostrado abaixo.
 
 Além disso, você pode representar UDS `struct`como s com `[<Struct>]` o atributo:
 
-[!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L685-L696)]
+[!code-fsharp[Unions](~/samples/snippets/fsharp/tour.fs#L685-L696)]
 
 No entanto, há duas coisas importantes para ter em mente ao fazer isso:
 
@@ -135,13 +135,13 @@ A falha em seguir os itens acima resultará em um erro de compilação.
 
 [Correspondência de padrão](./language-reference/pattern-matching.md) é o recurso da linguagem F# que permite que a correção para operar em tipos de F#.  Nos exemplos acima, você provavelmente observou um pouco de `match x with ...` sintaxe.  Esse constructo permite ao compilador, que pode entender a "forma" de tipos de dados, para forçá-lo a considerar todos os casos possíveis ao usar um tipo de dados por meio do que é conhecido como correspondência de padrão exaustiva.  Isso é incrivelmente eficiente para a exatidão e pode ser usado de forma inteligente para "levantar" o que normalmente seria uma preocupação com o tempo de execução na hora da compilação.
 
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
+[!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L705-L742)]
 
 Algo que você talvez tenha notado é o uso do `_` padrão.  Isso é conhecido como o [padrão curinga](./language-reference/pattern-matching.md#wildcard-pattern), que é uma maneira de dizer "não me importo com o que algo é".  Embora seja conveniente, você pode ignorar acidentalmente a correspondência de padrões exaustivos e não se beneficiará mais de imposição de tempo de compilação `_`se não tiver cuidado ao usar o.  Ela é melhor usada quando você não se importa com determinadas partes de um tipo decomposto quando a correspondência de padrões, ou a cláusula final, quando você tiver enumerado todos os casos significativos em uma expressão de correspondência de padrões.
 
 [Padrões ativos](./language-reference/active-patterns.md) são outra construção avançada a ser usada com correspondência de padrões.  Eles permitem que você particione dados de entrada em formulários personalizados, decompondo-os no local de chamada de correspondência de padrões.  Eles também podem ser parametrizados, permitindo, portanto, definir a partição como uma função.  Expandir o exemplo anterior para dar suporte a padrões ativos tem uma aparência semelhante a esta:
 
-[!code-fsharp[ActivePatterns](../../samples/snippets/fsharp/tour.fs#L764-L786)]
+[!code-fsharp[ActivePatterns](~/samples/snippets/fsharp/tour.fs#L764-L786)]
 
 ## <a name="optional-types"></a>Tipos opcionais
 
@@ -149,7 +149,7 @@ Um caso especial de tipos de união discriminada é o tipo de opção, que é t�
 
 [O tipo de opção](./language-reference/options.md) é um tipo que representa um dos dois casos: um valor ou nada.  Ele é usado em qualquer cenário em que um valor pode ou não ser resultado de uma operação específica.  Isso força você a considerar os dois casos, tornando-o uma preocupação em tempo de compilação em vez de uma preocupação em tempo de execução.  Em vez disso, eles são usados `null` em APIs em que o é usado para representar "nada", eliminando assim `NullReferenceException` a necessidade de se preocupar em muitas circunstâncias.
 
-[!code-fsharp[Options](../../samples/snippets/fsharp/tour.fs#L789-L814)]
+[!code-fsharp[Options](~/samples/snippets/fsharp/tour.fs#L789-L814)]
 
 ## <a name="units-of-measure"></a>Unidades de medida
 
@@ -157,7 +157,7 @@ Um recurso exclusivo do sistema de tipos do F# é a capacidade de fornecer conte
 
 As [unidades de medida](./language-reference/units-of-measure.md) permitem associar um tipo numérico a uma unidade, como medidores, e fazer com que as funções executem trabalho em unidades em vez de literais numéricos.  Isso permite que o compilador Verifique se os tipos de literais numéricos passados fazem sentido em um determinado contexto, eliminando assim os erros de tempo de execução associados a esse tipo de trabalho.
 
-[!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L817-L842)]
+[!code-fsharp[UnitsOfMeasure](~/samples/snippets/fsharp/tour.fs#L817-L842)]
 
 A biblioteca de F# Core define muitos tipos de unidade de SI e conversões de unidade.  Para saber mais, confira o [Namespace Microsoft.FSharp.Data.UnitSystems.si](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
 
@@ -167,15 +167,15 @@ F# também tem suporte completo para classes do .NET [Interfaces](./language-ref
 
 [Classes](./language-reference/classes.md) são tipos que representam objetos .net, que podem ter propriedades, métodos e eventos como seus [Membros](./language-reference/members/index.md).
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L845-L880)]
+[!code-fsharp[Classes](~/samples/snippets/fsharp/tour.fs#L845-L880)]
 
 Definir classes genéricas também é muito simples.
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L883-L908)]
+[!code-fsharp[Classes](~/samples/snippets/fsharp/tour.fs#L883-L908)]
 
 Para implementar uma interface, você pode usar `interface ... with` a sintaxe ou uma [expressão de objeto](./language-reference/object-expressions.md).
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L911-L934)]
+[!code-fsharp[Classes](~/samples/snippets/fsharp/tour.fs#L911-L934)]
 
 ## <a name="which-types-to-use"></a>Quais tipos usar
 

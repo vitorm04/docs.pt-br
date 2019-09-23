@@ -3,12 +3,12 @@ title: Introdução ao armazenamento de Tabelas do Azure usando F#
 description: Armazene dados estruturados na nuvem usando o armazenamento de tabelas do Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928998"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182604"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F\#
 
@@ -192,7 +192,7 @@ Você pode excluir uma tabela de uma conta de armazenamento. Uma tabela que foi 
 Agora que você aprendeu os conceitos básicos do armazenamento de tabelas, siga estes links para saber mais sobre tarefas de armazenamento mais complexas e o Azure Cosmos DB API de Tabela.
 
 - [Introdução ao Azure Cosmos DB API de Tabela](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Referência da biblioteca de cliente de armazenamento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Referência da biblioteca de cliente de armazenamento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Provedor de tipo de armazenamento do Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog da equipe de armazenamento do Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Configurando cadeias de conexão](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

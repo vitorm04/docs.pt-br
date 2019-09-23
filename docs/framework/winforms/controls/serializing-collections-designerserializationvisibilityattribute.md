@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Serializando coleções de tipos padrão com a DesignerSerializationVisibilityAttribute'
+title: 'Passo a passo: Serializar coleções de tipos padrão com a DesignerSerializationVisibilityAttribute'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373680"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182632"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Passo a passo: Serializar coleções de tipos padrão
 
 Seus controles personalizados às vezes exporão uma coleção como uma propriedade. Este tutorial demonstra como usar a <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> classe para controlar como uma coleção é serializada em tempo de design. Aplicar o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor à sua propriedade de coleção garante que a propriedade será serializada.
 
-Para copiar o código deste tópico como uma única listagem, confira [Como: Serialize coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Para copiar o código deste tópico como uma única listagem, confira [Como: Serialize coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -129,11 +129,11 @@ Para testar o comportamento de serialização do seu controle, coloque-o em um f
 
 Se você souber como serializar uma coleção de tipos padrão, considere integrar seus controles personalizados mais profundamente no ambiente de tempo de design. Os tópicos a seguir descrevem como aprimorar a integração do tempo de design de seus controles personalizados:
 
-- [Arquitetura de tempo de design](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Arquitetura de tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Atributos em controles dos Windows Forms](attributes-in-windows-forms-controls.md)
 
-- [Visão geral da serialização do designer](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Visão geral da serialização do designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [Passo a passo: Criando um controle de Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
 
