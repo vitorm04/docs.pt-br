@@ -1,0 +1,93 @@
+- name: Como projetar aplicativos .NET nativos de nuvem para o Azure
+  href: index.md
+  items:
+    - name: Introdução aos aplicativos nativos de nuvem
+      href: introduction.md
+      items:
+        - name: Como definir o que é nativo de nuvem
+          href: definition.md
+        - name: Aplicativos candidatos a ser nativos de nuvem
+          href: candidate-apps.md
+    - name: Introdução ao aplicativo de referência eShopOnContainers
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: Como mapear o eShopOnContainers para os Serviços do Azure
+          href: map-eshoponcontainers-azure-services.md
+        - name: Como implantar o eShopOnContainers no Azure
+          href: deploy-eshoponcontainers-azure.md
+        - name: Configuração centralizada
+          href: centralized-configuration.md
+    - name: Escala de aplicativos .NET nativos de nuvem
+      href: scale-applications.md
+      items:
+        - name: Como aproveitar contêineres e orquestradores
+          href: leverage-containers-orchestrators.md
+        - name: Como aproveitar funções sem servidor
+          href: leverage-serverless-functions.md
+        - name: Como combinar contêineres e abordagens sem servidor
+          href: combine-containers-serverless-approaches.md
+        - name: Como implantar contêineres no Azure
+          href: deploy-containers-azure.md
+        - name: Escala de contêineres e aplicativos sem servidor
+          href: scale-containers-serverless.md
+        - name: Outras opções de implantação
+          href: other-deployment-options.md
+    - name: Padrões de comunicação nativos de nuvem
+      href: communication-patterns.md
+      items:
+        - name: Comunicação front-end de cliente
+          href: front-end-communication.md
+        - name: Comunicação serviço a serviço
+          href: service-to-service-communication.md
+        - name: REST e gRPC
+          href: rest-grpc.md
+        - name: Infraestrutura de comunicação de malha de serviço
+          href: service-mesh-communication-infrastructure.md
+    - name: Dados distribuídos
+      href: distributed-data.md
+      items:
+        - name: Padrões de dados nativos de nuvem
+          href: data-patterns.md
+        - name: Armazenamento de dados no Azure
+          href: azure-data-storage.md
+    - name: Resiliência nativa de nuvem
+      href: resiliency.md
+      items:
+        - name: Padrões de resiliência de aplicativo
+          href: application-resiliency-patterns.md
+        - name: Resiliência de infraestrutura de nuvem com o Azure
+          href: infrastructure-resiliency-azure.md
+        - name: Comunicação resiliente
+          href: resilient-communications.md
+    - name: Monitoramento e integridade
+      href: monitoring-health.md
+      items:
+        - name: Padrões de observabilidade
+          href: observability-patterns.md
+        - name: Como registrar em log com a pilha elástica
+          href: logging-with-elastic-stack.md
+        - name: Como monitorar nos Serviços de Kubernetes do Azure
+          href: monitoring-azure-kubernetes.md
+        - name: Azure Monitor
+          href: azure-monitor.md
+    - name: Identidade
+      href: identity.md
+      items:
+        - name: Autenticação e autorização nos aplicativos nativos de nuvem
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: Servidor de identidade
+          href: identity-server.md
+    - name: Segurança
+      href: security.md
+      items:
+        - name: Segurança do Azure para aplicativos nativos de nuvem
+          href: azure-security.md
+    - name: DevOps nativo de nuvem
+      href: devops.md
+      items:
+        - name: Infraestrutura como código
+          href: infrastructure-as-code.md
+        - name: Pacotes de aplicativos nativos de nuvem
+          href: application-bundles.md
