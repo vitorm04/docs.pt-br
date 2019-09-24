@@ -2,12 +2,12 @@
 title: IdentityServer para aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 69084ad19a353b2152b67957ee944f6ce36ce370
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6217f6093d8dc9df6ab058ebdbf99197752aee0c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183073"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214025"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer para aplicativos nativos de nuvem
 
@@ -47,7 +47,7 @@ O IdentityServer4 é de código-fonte aberto e gratuito para uso. Você pode adi
 
 ## <a name="configuration"></a>Configuração
 
-O IdentityServer dá suporte a diferentes tipos de protocolos e provedores de autenticação social que podem ser configurados como parte de cada instalação personalizada. Isso normalmente é feito na classe do `Startup` aplicativo ASP.NET Core `ConfigureServices` no método. A configuração envolve especificar os protocolos com suporte e os caminhos para os servidores e pontos de extremidade que serão usados. A Figura 8-X mostra uma configuração de exemplo obtida do projeto de interface do usuário do IdentityServer4 QuickStart:
+O IdentityServer dá suporte a diferentes tipos de protocolos e provedores de autenticação social que podem ser configurados como parte de cada instalação personalizada. Isso normalmente é feito na classe do `Startup` aplicativo ASP.NET Core `ConfigureServices` no método. A configuração envolve especificar os protocolos com suporte e os caminhos para os servidores e pontos de extremidade que serão usados. A Figura 8-2 mostra uma configuração de exemplo obtida do projeto de interface do usuário do IdentityServer4 QuickStart:
 
 ```csharp
 public class Startup
@@ -90,7 +90,7 @@ public class Startup
 }
 ```
 
-**Figura 8-X**. Configurando o IdentityServer.
+**Figura 8-2**. Configurando o IdentityServer.
 
 O IdentityServer também hospeda um site de demonstração pública que pode ser usado para testar vários protocolos e configurações. Ele está localizado em [https://demo.identityserver.io/](https://demo.identityserver.io/) e inclui informações sobre como configurar seu comportamento com base `client_id` no fornecido a ele.
 
@@ -106,4 +106,4 @@ Muitos aplicativos nativos de nuvem aproveitam as APIs do lado do servidor e os 
 
 >[!div class="step-by-step"]
 >[Anterior](azure-active-directory.md)
->[Próximo](security.md) <!-- Next Chapter -->
+>[Próximo](security.md)

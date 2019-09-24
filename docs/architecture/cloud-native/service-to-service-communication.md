@@ -3,12 +3,12 @@ title: Comunicação entre serviços
 description: Saiba como os microserviços nativos de nuvem de back-end se comunicam com outros microserviços de back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 7a69678fd38a69c3c2d7e91d4aea019c39141cb6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184669"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214392"
 ---
 # <a name="service-to-service-communication"></a>Comunicação entre serviços
 
@@ -60,7 +60,7 @@ Uma opção popular para remover o acoplamento de microatendimento é o [padrão
 
 ### <a name="service-aggregator-pattern"></a>Padrão de agregador de serviço
 
-Outra opção para eliminar o acoplamento de microserviço para micrservice é um [microserviço agregador](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), mostrado em roxo na Figura 4-10. 
+Outra opção para eliminar o acoplamento de microserviço para microserviço é um [microserviço agregador](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), mostrado em roxo na Figura 4-10. 
 
 ![Serviço de agregador](./media/aggregator-service.png)
 
@@ -232,4 +232,4 @@ Para aplicativos nativos de nuvem que devem transmitir um grande número de even
 
 >[!div class="step-by-step"]
 >[Anterior](front-end-communication.md)
->[Próximo](rest-grpc.md) <!-- Next Chapter -->
+>[Próximo](rest-grpc.md)

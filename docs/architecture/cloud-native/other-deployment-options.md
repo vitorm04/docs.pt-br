@@ -2,12 +2,12 @@
 title: Outras opções de implantação de contêiner
 description: Outras opções de implantação de contêiner usando o Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 892514417cb8650c28b7491315f767758278ad6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1fcb57eedec8c9f5574fffcf409b316332032062
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184879"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214451"
 ---
 # <a name="other-container-deployment-options"></a>Outras opções de implantação de contêiner
 
@@ -48,4 +48,4 @@ As instâncias de contêiner do Azure oferecem a maneira mais rápida e simples 
 
 >[!div class="step-by-step"]
 >[Anterior](scale-containers-serverless.md)
->[Próximo](communication-patterns.md) <!-- Next Chapter -->
+>[Próximo](communication-patterns.md)

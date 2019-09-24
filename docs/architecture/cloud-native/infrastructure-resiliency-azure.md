@@ -2,12 +2,12 @@
 title: Resiliência da plataforma Azure
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Resiliência de infraestrutura de nuvem com o Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 5d8ddc65ccdf4bb305be62e5caca30eab49f87e2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182975"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214203"
 ---
 # <a name="azure-platform-resiliency"></a>Resiliência da plataforma Azure
 
@@ -68,7 +68,7 @@ A nuvem prospera no dimensionamento. A capacidade de aumentar/diminuir os recurs
 
 - *Aproveite os recursos de dimensionamento automático da plataforma.* Use recursos internos de dimensionamento automático sempre que possível, em vez de mecanismos personalizados ou de terceiros. Sempre que possível, use regras de dimensionamento agendadas para garantir que os recursos estejam disponíveis sem um atraso de inicialização, mas adicione o dimensionamento automático reativo às regras conforme apropriado, para lidar com alterações inesperadas na demanda. Para obter mais informações, consulte [diretrizes de dimensionamento](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)automático.
 
- - *Escalar verticalmente de forma agressiva.* Uma prática final seria escalar verticalmente de forma agressiva para que você possa atender rapidamente a picos imediatos de tráfego sem perder negócios. E, em seguida, reduzir verticalmente (ou seja, remover recursos desnecessários) de forma conservadora para manter o sistema estável. Uma maneira simples de implementar isso é definir o período de resfriamento, que é o tempo de espera entre as operações de dimensionamento, cinco minutos para adicionar recursos e até 15 minutos para remover instâncias.
+- *Escalar verticalmente de forma agressiva.* Uma prática final seria escalar verticalmente de forma agressiva para que você possa atender rapidamente a picos imediatos de tráfego sem perder negócios. E, em seguida, reduzir verticalmente (ou seja, remover recursos desnecessários) de forma conservadora para manter o sistema estável. Uma maneira simples de implementar isso é definir o período de resfriamento, que é o tempo de espera entre as operações de dimensionamento, cinco minutos para adicionar recursos e até 15 minutos para remover instâncias.
 
 ## <a name="built-in-retry-in-services"></a>Repetição interna em serviços
 

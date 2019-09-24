@@ -2,12 +2,12 @@
 title: Armazenamento de dados no Azure
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Armazenamento de dados no Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: ef9a83745b723dce90bc3e48eecbc9690fd386ab
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5e1182af61401990112135c2f7a3dd37508c9e72
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183626"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214106"
 ---
 # <a name="data-storage-in-azure"></a>Armazenamento de dados no Azure
 
@@ -213,4 +213,4 @@ O cache do Azure para Redis também pode ser usado como um cache de dados na mem
 
 >[!div class="step-by-step"]
 >[Anterior](data-patterns.md)
->[Próximo](resiliency.md) <!-- Next Chapter -->
+>[Próximo](resiliency.md)

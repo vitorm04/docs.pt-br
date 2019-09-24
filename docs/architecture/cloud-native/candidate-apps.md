@@ -3,12 +3,12 @@ title: Aplicativos candidatos para nuvem nativa
 description: Saiba quais tipos de aplicativos se beneficiam de uma abordagem nativa de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 3ee13d4c636d08a58a7dcab6883725a55a08ae65
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a06ecdd9bfb3bd50757c484115eb123862a1bb9e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183521"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214011"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplicativos candidatos para nuvem nativa
 
@@ -93,4 +93,4 @@ Com a introdução por trás, agora nos aprofundamos em uma visão muito mais de
 
 >[!div class="step-by-step"]
 >[Anterior](definition.md)
->[Próximo](introduce-eshoponcontainers-reference-app.md) <!-- Next Chapter -->
+>[Próximo](introduce-eshoponcontainers-reference-app.md)

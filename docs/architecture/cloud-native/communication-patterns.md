@@ -1,16 +1,16 @@
 ---
-title: Padrões de comunicação nativa de nuvem
+title: Padrões de comunicação nativos de nuvem
 description: Saiba mais sobre as principais preocupações de comunicação do serviço em aplicativos nativos de nuvem
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 0123d2e3da1bf8df29efcf2595a38c377dd1d1a1
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183374"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214013"
 ---
-# <a name="cloud-native-communication-patterns"></a>Padrões de comunicação nativa de nuvem
+# <a name="cloud-native-communication-patterns"></a>Padrões de comunicação nativos de nuvem
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -20,7 +20,7 @@ Ao construir um sistema nativo de nuvem, a comunicação se torna uma decisão d
 
 Em um aplicativo monolítico, a comunicação é simples. Os módulos de código são executados juntos no mesmo espaço executável (processo) em um servidor. Essa abordagem pode ter vantagens de desempenho à medida que tudo é executado juntos na memória compartilhada, mas resulta em um código rigidamente acoplado que se torna difícil de manter, evoluir e dimensionar.
 
-Os sistemas nativos de nuvem implementam uma arquitetura baseada em microserviço com muitos microserviços pequenos e independentes. Cada microserviço é executado em um processo separado e normalmente é executado dentro de um contêiner implantado em um *cluster*. 
+Os sistemas nativos de nuvem implementam uma arquitetura baseada em microserviço com muitos microserviços pequenos e independentes. Cada microserviço é executado em um processo separado e normalmente é executado dentro de um contêiner implantado em um *cluster*.
 
 Um cluster agrupa um pool de máquinas virtuais para formar um ambiente altamente disponível. Eles são gerenciados com uma ferramenta de orquestração, que é responsável por implantar e gerenciar os microserviços em contêineres. A Figura 4-1 mostra um cluster [kubernetes](https://kubernetes.io) implantado na nuvem do Azure com os [serviços de kubernetes do Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)totalmente gerenciados.
 
@@ -46,8 +46,7 @@ Embora eles forneçam muitos benefícios, os microserviços não são um almoço
 
 Os microserviços do Book [.net: A arquitetura para aplicativos](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).net em contêineres, disponível gratuitamente da Microsoft, fornece uma cobertura detalhada dos padrões de comunicação para aplicativos de microatendimento. Neste capítulo, fornecemos uma visão geral de alto nível desses padrões, juntamente com as opções de implementação disponíveis na nuvem do Azure.
 
-Neste capítulo, primeiro abordaremos a comunicação entre os aplicativos de front-end e os microserviços de back-end. Em seguida, veremos que os microserviços de back-end se comunicam entre si. Exploraremos a tecnologia de comunicação para cima e gRPC. Por fim, examinaremos os novos padrões de comunicação inovadores usando a tecnologia de malha de serviço. Também veremos como a nuvem do Azure fornece diferentes tipos de *serviços de backup* para dar suporte à comunicação nativa de nuvem.  
-
+Neste capítulo, primeiro abordaremos a comunicação entre os aplicativos de front-end e os microserviços de back-end. Em seguida, veremos que os microserviços de back-end se comunicam entre si. Exploraremos a tecnologia de comunicação para cima e gRPC. Por fim, examinaremos os novos padrões de comunicação inovadores usando a tecnologia de malha de serviço. Também veremos como a nuvem do Azure fornece diferentes tipos de *serviços de backup* para dar suporte à comunicação nativa de nuvem.
 
 >[!div class="step-by-step"]
 >[Anterior](other-deployment-options.md)

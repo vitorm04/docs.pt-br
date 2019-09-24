@@ -3,12 +3,12 @@ title: REST e gRPC
 description: Saiba mais sobre o gRPC, sua função em aplicativos nativos de nuvem e como ele difere do HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 020b29fc13c72d7e42e5b555fe81e2836c907d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184816"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214541"
 ---
 # <a name="rest-and-grpc"></a>REST e gRPC
 
@@ -74,4 +74,3 @@ Olhando para a frente, gRPC poderia desempenhar uma função importante no dethr
 >[!div class="step-by-step"]
 >[Anterior](service-to-service-communication.md)
 >[Próximo](service-mesh-communication-infrastructure.md)
-
