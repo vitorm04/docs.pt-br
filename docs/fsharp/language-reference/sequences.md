@@ -2,12 +2,12 @@
 title: Sequências
 description: Saiba como usar F# sequências, quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos.
 ms.date: 02/19/2019
-ms.openlocfilehash: a57142c5d07455cff02b0b691ebccb9cb9f347fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627173"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216765"
 ---
 # <a name="sequences"></a>Sequências
 
@@ -82,7 +82,7 @@ Você pode usar [Seq. init](https://msdn.microsoft.com/library/059de69d-812c-4f8
 
 A saída é
 
-```
+```console
 0 10 20 30 40
 ```
 
@@ -104,7 +104,7 @@ Você pode definir sequências infinitas usando a função [Seq. initInfinite](h
 
 A saída é a seguinte:
 
-```
+```console
 The sequence seq1 contains numbers from 0 to 20.
 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
@@ -134,7 +134,7 @@ O código a seguir mostra o comportamento e as diferenças `Seq.truncate` entre 
 
 A saída, antes da ocorrência do erro, é a seguinte.
 
-```
+```console
 1 4 9 16 25 
 1 4 9 16 25 36 49 64 81 100 
 1 4 9 16 25 
@@ -149,7 +149,7 @@ O exemplo de código a seguir ilustra o comportamento e as `Seq.takeWhile`difere
 
 A saída é a seguinte.
 
-```
+```console
 1 4 9 
 36 49 64 81 100 
 16 25 36 49 64 81 100
@@ -171,7 +171,7 @@ A saída é a seguinte.
 
 Sequência inicial:
 
-```
+```console
 1.0 1.5 2.0 1.5 1.0 1.5 
 
 Windows of length 3: 
@@ -203,7 +203,7 @@ No código anterior, apenas o primeiro elemento é computado e examinado, e o re
 
 A saída é a seguinte.
 
-```
+```console
 (1, 34) (2, 33) (0, 33)
 ```
 
@@ -217,7 +217,7 @@ O exemplo de código a seguir mostra o `Seq.groupBy` uso de para particionar a s
 
 A saída é a seguinte.
 
-```
+```console
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 

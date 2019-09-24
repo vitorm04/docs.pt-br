@@ -2,12 +2,12 @@
 title: Propriedades
 description: Saiba mais F# sobre as propriedades, que são membros que representam valores associados a um objeto.
 ms.date: 05/16/2016
-ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c71d61e033501c2d535b5582c82d36ed8cb2241b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627419"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216426"
 ---
 # <a name="properties"></a>Propriedades
 
@@ -59,7 +59,7 @@ with set parameter =
 
 As propriedades representam a relação "tem um" na programação orientada a objeto, representando os dados associados a instâncias de objeto ou, para propriedades estáticas, com o tipo.
 
-Você pode declarar Propriedades de duas maneiras, dependendo se você deseja especificar explicitamente o valor subjacente (também chamado de armazenamento de backup) para a propriedade ou se deseja permitir que o compilador gere automaticamente o repositório de backup para você. Em geral, você deve usar a maneira mais explícita se a propriedade tiver uma implementação não trivial e a maneira automática quando a propriedade for apenas um wrapper simples para um valor ou variável. Para declarar uma propriedade explicitamente, use a `member` palavra-chave. Essa sintaxe declarativa é seguida pela sintaxe que especifica os `get` métodos e `set` , também acessadores nomeados. As várias formas da sintaxe explícita mostradas na seção sintaxe são usadas para propriedades de leitura/gravação, somente leitura e somente gravação. Para propriedades somente leitura, você define apenas um `get` método; para propriedades somente gravação, defina apenas um `set` método. Observe que, quando uma propriedade tem `get` ambos `set` e acessadores, a sintaxe alternativa permite que você especifique atributos e modificadores de acessibilidade que são diferentes para cada acessador, como é mostrado no código a seguir.
+Você pode declarar Propriedades de duas maneiras, dependendo se você deseja especificar explicitamente o valor subjacente (também chamado de armazenamento de backup) para a propriedade ou se deseja permitir que o compilador gere automaticamente o repositório de backup para você. Em geral, você deve usar a maneira mais explícita se a propriedade tiver uma implementação não trivial e a maneira automática quando a propriedade for apenas um wrapper simples para um valor ou variável. Para declarar uma propriedade explicitamente, use a `member` palavra-chave. Essa sintaxe declarativa é seguida pela sintaxe que especifica os `get` métodos e `set` , também *acessadores*nomeados. As várias formas da sintaxe explícita mostradas na seção sintaxe são usadas para propriedades de leitura/gravação, somente leitura e somente gravação. Para propriedades somente leitura, você define apenas um `get` método; para propriedades somente gravação, defina apenas um `set` método. Observe que, quando uma propriedade tem `get` ambos `set` e acessadores, a sintaxe alternativa permite que você especifique atributos e modificadores de acessibilidade que são diferentes para cada acessador, como é mostrado no código a seguir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
@@ -67,7 +67,7 @@ Para propriedades de leitura/gravação, que têm um `get` método `set` and, a 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Os valores privados que contêm os dados para propriedades são chamados de armazenamentos de *backup*. Para que o compilador crie o armazenamento de backup automaticamente, use as palavras-chave `member val`, omita o autoidentificador e, em seguida, forneça uma expressão para inicializar a propriedade. Se a propriedade for mutável, inclua `with get, set`. Por exemplo, o tipo de classe a seguir inclui duas propriedades implementadas automaticamente. `Property1`é somente leitura e é inicializado para o argumento fornecido para o construtor primário e `Property2` é uma propriedade configurável inicializada para uma cadeia de caracteres vazia:
+Os valores privados que contêm os dados para propriedades são chamados de *armazenamentos de backup*. Para que o compilador crie o armazenamento de backup automaticamente, use as palavras-chave `member val`, omita o autoidentificador e, em seguida, forneça uma expressão para inicializar a propriedade. Se a propriedade for mutável, inclua `with get, set`. Por exemplo, o tipo de classe a seguir inclui duas propriedades implementadas automaticamente. `Property1`é somente leitura e é inicializado para o argumento fornecido para o construtor primário e `Property2` é uma propriedade configurável inicializada para uma cadeia de caracteres vazia:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -93,7 +93,7 @@ printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 
 **Saída**
 
-```
+```console
 class1.AutoProperty = 1853799794
 class1.AutoProperty = 1853799794
 class1.ExplicitProperty = 978922705

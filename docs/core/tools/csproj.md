@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969842"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216209"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -125,13 +125,13 @@ Quando o projeto tem várias estruturas de destino, os resultados do comando dev
 
 ### <a name="sdk-attribute"></a>Atributo do SDK
 
-O elemento `<Project>` raiz do arquivo *.csproj* tem um novo atributo chamado `Sdk`. `Sdk` especifica qual SDK será usado pelo projeto. O SDK, como o [documento de camadas](cli-msbuild-architecture.md) descreve, é um conjunto de [tarefas](/visualstudio/msbuild/msbuild-tasks) e [destinos](/visualstudio/msbuild/msbuild-targets) do MSBuild que podem compilar o código do .NET Core. Fornecemos três SDKs principais com as ferramentas do .NET Core e dois SDKs adicionais ao usar a Versão Prévia do .NET Core 3.0:
+O elemento `<Project>` raiz do arquivo *.csproj* tem um novo atributo chamado `Sdk`. `Sdk` especifica qual SDK será usado pelo projeto. O SDK, como o [documento de camadas](cli-msbuild-architecture.md) descreve, é um conjunto de [tarefas](/visualstudio/msbuild/msbuild-tasks) e [destinos](/visualstudio/msbuild/msbuild-targets) do MSBuild que podem compilar o código do .NET Core. Os seguintes SDKs estão disponíveis para o .NET Core:
 
 1. O SDK do .NET Core com a ID `Microsoft.NET.Sdk`
 2. O SDK da Web do .NET Core com a ID `Microsoft.NET.Sdk.Web`
 3. O SDK da Biblioteca de Classes Razor do .NET Core com a ID `Microsoft.NET.Sdk.Razor`
-4. O Serviço de Trabalho do .NET Core com a ID de `Microsoft.NET.Sdk.Worker` (Versão Prévia do .NET Core 3.0)
-5. O .NET Core WinForms e o WPF com a ID de `Microsoft.NET.Sdk.WindowsDesktop` (Versão Prévia do .NET Core 3.0)
+4. O serviço de `Microsoft.NET.Sdk.Worker` trabalho do .NET Core com a ID (desde o .NET Core 3,0)
+5. O .NET Core WinForms e o WPF com a ID `Microsoft.NET.Sdk.WindowsDesktop` (desde o .NET Core 3,0)
 
 É necessário ter o atributo `Sdk` definido com uma dessas IDs no elemento `<Project>` para usar as ferramentas do .NET Core e compilar o código.
 
@@ -143,7 +143,7 @@ Um elemento de item `<PackageReference>` especifica uma [dependência do NuGet n
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>Versão
 
 O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
 
@@ -179,7 +179,7 @@ Um elemento de item `<DotNetCliToolReference>` especifica a ferramenta da CLI qu
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>Versão
 
 `Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
 
@@ -264,7 +264,7 @@ Um valor booliano que especifica se o cliente deve solicitar que o consumidor ac
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo: `Apache-2.0`.
+Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo, `Apache-2.0`.
 
 Aqui está a lista completa dos [identificadores de licença SPDX](https://spdx.org/licenses/). O NuGet.org aceita apenas licenças aprovadas por OSI ou FSF ao usar expressão de tipo de licença.
 

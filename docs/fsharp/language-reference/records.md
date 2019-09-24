@@ -2,12 +2,12 @@
 title: Registros
 description: Saiba como F# os registros representam agregações simples de valores nomeados, opcionalmente com membros.
 ms.date: 06/09/2019
-ms.openlocfilehash: 1ba002407b1ccbcbceed32df8636fb860e89e3b6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053934"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216791"
 ---
 # <a name="records"></a>Registros
 
@@ -122,7 +122,7 @@ Os registros podem ser usados com correspondência de padrões. Você pode espec
 
 A saída desse código é a seguinte:
 
-```
+```console
 Point is at the origin.
 Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
@@ -138,7 +138,7 @@ Como tipos de União e estrutura, os registros têm semântica de igualdade estr
 
 A saída desse código é a seguinte:
 
-```
+```console
 The records are equal.
 ```
 

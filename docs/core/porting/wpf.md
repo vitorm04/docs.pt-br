@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4ff3ca9610e7fa9355931ca2013def1157fab8b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117066"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216192"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Como: Compatibilizar um aplicativo da área de trabalho do WPF para o .NET Core
 
@@ -52,7 +52,7 @@ Ao compatibilizar um aplicativo do WPF do .NET Framework, há alguns pontos a se
 
 01. Você está usando uma versão diferente do WPF.
 
-    Quando o .NET Core 3.0 Versão Prévia 1 foi lançado, o WPF passou a ser um software livre no GitHub. O código do WPF do .NET Core é um fork da base de código do WPF do .NET Framework. É possível que haja algumas diferenças e seu aplicativo não seja portado.
+    Quando o .NET Core 3,0 Preview 1 foi lançado, o WPF tornou-se uma fonte aberta no GitHub. O código para o WPF do .NET Core é uma bifurcação da base de código .NET Framework WPF. É possível que haja algumas diferenças e seu aplicativo não seja portado.
 
 01. O [Pacote de Compatibilidade do Windows][compat-pack] pode ajudar você na migração.
 

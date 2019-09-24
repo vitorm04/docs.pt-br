@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054303"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216886"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Analise as opiniões das revisões de filmes usando um modelo de TensorFlow pré-treinado no ML.NET
 
@@ -21,6 +21,7 @@ O modelo TensorFlow usado neste tutorial foi treinado usando revisões de filme 
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
+>
 > * Carregar um modelo de TensorFlow pré-treinado
 > * Transformar o texto de comentário do site em recursos adequados para o modelo
 > * Usar o modelo para fazer uma previsão
@@ -120,7 +121,7 @@ Em seguida, a matriz de recursos de comprimento variável é redimensionada para
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction` é a classe de previsão usada após o treinamento do modelo. `MovieReviewSentimentPrediction`tem uma única `float` matriz (`Prediction`) e um `VectorType` atributo.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Criar o MLContext, o dicionário de pesquisa e a ação para redimensionar recursos
 
 A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para todas as operações do ML.NET. Inicializar `mlContext` cria um novo ambiente do ML.NET que pode ser compartilhado entre os objetos do fluxo de trabalho de criação de modelo. Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.
@@ -191,7 +192,7 @@ A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para to
 
 1. Adicione o código para criar o modelo a partir do pipeline:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     Um modelo ml.net é criado a partir da cadeia de estimadores no pipeline chamando o `Fit` método. Nesse caso, não estamos ajustando nenhum dado para criar o modelo, pois o modelo TensorFlow já foi treinado anteriormente. Fornecemos um objeto de exibição de dados vazio para atender aos requisitos `Fit` do método.
 
@@ -200,10 +201,10 @@ A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para to
 1. Adicione o `PredictSentiment` método abaixo do `Main` método:
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. Adicione o seguinte código para criar o `PredictionEngine` como a primeira linha `PredictSentiment()` no método:
@@ -241,8 +242,8 @@ Compile e execute seu aplicativo.
 Seus resultados devem ser semelhantes aos seguintes. Durante o processamento, as mensagens são exibidas. Você pode ver avisos ou mensagens de processamento. Essas mensagens foram removidas dos resultados a seguir para ficar mais claro.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 Parabéns! Agora você criou com êxito um modelo de aprendizado de máquina para classificar e prever os sentimentos de mensagens reutilizando um modelo pretreinado `TensorFlow` no ml.net.
@@ -251,6 +252,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
+>
 > * Carregar um modelo de TensorFlow pré-treinado
 > * Transformar o texto de comentário do site em recursos adequados para o modelo
 > * Usar o modelo para fazer uma previsão

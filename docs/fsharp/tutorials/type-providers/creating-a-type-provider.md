@@ -2,12 +2,12 @@
 title: 'Tutorial: Criar um provedor de tipos'
 description: Saiba como criar seus próprios F# provedores de tipo no F# 3,0 examinando vários provedores de tipo simples para ilustrar os conceitos básicos.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991874"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214277"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Criar um provedor de tipos
 
@@ -152,13 +152,13 @@ Antes de recompilar o provedor, verifique se você fechou todas as instâncias d
 
 Para depurar esse provedor usando instruções PRINT, crie um script que expõe um problema com o provedor e, em seguida, use o seguinte código:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Para depurar esse provedor usando o Visual Studio, abra o Prompt de Comando do Desenvolvedor para Visual Studio com credenciais administrativas e execute o seguinte comando:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Aqui está uma imagem do código resultante descompilado usando ildasm. exe:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ Observe as seguintes convenções ao criar provedores de tipos.
 
 **Provedores para protocolos de conectividade** Em geral, os nomes da maioria das DLLs de provedor para dados e protocolos de conectividade de serviço, como conexões OData ou SQL `TypeProvider` , `TypeProviders`devem terminar no ou no. Por exemplo, use um nome de DLL que se assemelha à seguinte cadeia de caracteres:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Verifique se os tipos fornecidos são membros do namespace correspondente e indique o protocolo de conectividade que você implementou:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ Você pode invocar provedores de tipo usando as seguintes ferramentas:
 
 Geralmente, é possível depurar provedores de tipos com mais facilidade usando o FSC. exe em um arquivo de script de teste (por exemplo, script. fsx). Você pode iniciar um depurador a partir de um prompt de comando.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   Você pode usar o log de impressão para stdout.

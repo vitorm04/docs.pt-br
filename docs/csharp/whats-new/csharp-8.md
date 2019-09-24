@@ -1,17 +1,17 @@
 ---
-title: Novidades no C# 8.0 – Guia do C#
-description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0. Este artigo está atualizado com a versão prévia 5.
+title: O que há de C# novo no C# guia de 8,0
+description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182403"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216486"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
-Há vários aprimoramentos da linguagem C# que você já pode experimentar.
+C#8,0 adiciona os seguintes recursos e aprimoramentos ao C# Idioma:
 
 - [Membros somente leitura](#readonly-members)
 - [Membros da interface padrão](#default-interface-members)
@@ -30,9 +30,6 @@ Há vários aprimoramentos da linguagem C# que você já pode experimentar.
 - [Tipos construídos não gerenciados](#unmanaged-constructed-types)
 - [stackalloc em expressões aninhadas](#stackalloc-in-nested-expressions)
 - [Aprimoramento de cadeias de caracteres idênticas interpoladas](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Este artigo foi atualizado pela última vez para o C# 8.0 versão prévia 5.
 
 O restante deste artigo descreve rapidamente esses recursos. Quando houver artigos detalhados disponíveis, forneceremos links para esses tutoriais e visões gerais. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
 

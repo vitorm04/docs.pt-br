@@ -3,12 +3,12 @@ title: Usar o recurso de correspondência de padrões para estender padrões de 
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9266bb1e998fba77c27e17e498b72f4a5925dd7a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926648"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216542"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar o computador para executar o .NET Core, incluindo o compilador da versão prévia do C# 8.0. O compilador da versão prévia do C# 8 está disponível no último [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou na última [versão prévia do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -294,7 +294,7 @@ Você usará a correspondência de padrões para esse recurso, mas poderá integ
 
 A tabela a seguir mostra as combinações de valores de entrada e multiplicador de preços para os horários de pico:
 
-| Day        | Time         | Direction | Premium |
+| Dia        | Hora         | Direção | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Dia útil    | horário de pico da manhã | entrada   | x 2,00  |
 | Dia útil    | horário de pico da manhã | saída  | x 1,00  |

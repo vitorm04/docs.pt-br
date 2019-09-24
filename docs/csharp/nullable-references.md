@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência que permitem valor nulo, adicionados no C# 8. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851070"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214403"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -83,7 +83,7 @@ Também é possível usar diretivas para definir esses mesmos contextos em qualq
 
 Os contextos padrão de aviso e de anotação que permitem valor nulo são `disabled`. Essa decisão significa que seu código existente compila sem alterações e sem gerar nenhum aviso novo.
 
-### <a name="nullable-annotation-context"></a>Contexto de anotação que permite valor nulo
+## <a name="nullable-annotation-context"></a>Contexto de anotação que permite valor nulo
 
 O compilador usa as seguintes regras em um contexto de anotação que permite valor nulo desabilitado:
 

@@ -2,12 +2,12 @@
 title: Células de referência
 description: Saiba como F# as células de referência são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627243"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216775"
 ---
 # <a name="reference-cells"></a>Células de referência
 
@@ -54,7 +54,7 @@ A tabela a seguir mostra os recursos disponíveis na célula de referência.
 |--------------------------|-----------|----|----------|
 |`!` (operador de desreferência)|Retorna o valor subjacente.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (operador de atribuição)|Altera o valor subjacente.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`operador|Encapsula um valor em uma nova célula de referência.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`ref` (operador)|Encapsula um valor em uma nova célula de referência.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value`Propriedade|Obtém ou define o valor subjacente.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (campo de registro)|Obtém ou define o valor subjacente.|`'a`|`let ref x = { contents = x }`|
 
@@ -66,7 +66,7 @@ A propriedade `Value` e o campo `contents` são valores atribuíveis. Portanto, 
 
 A saída é a seguinte.
 
-```
+```console
 10
 10
 11

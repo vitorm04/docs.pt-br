@@ -1,5 +1,5 @@
 ---
-title: Expor componentes do .NET Core ao COM
+title: Expondo componentes do .NET Core ao COM
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849032"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216229"
 ---
-# <a name="exposing-net-core-components-to-com"></a>Expor componentes do .NET Core ao COM
+# <a name="exposing-net-core-components-to-com"></a>Expondo componentes do .NET Core ao COM
 
 No .NET Core, o processo de expor seus objetos .NET ao COM foi significativamente simplificado em comparação com o .NET Framework. O processo a seguir explicará como expor uma classe ao COM. Este tutorial mostra como:
 
@@ -25,16 +25,24 @@ No .NET Core, o processo de expor seus objetos .NET ao COM foi significativament
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Instale o [SDK do .NET Core 3.0 Versão Prévia 7](https://dotnet.microsoft.com/download) ou uma versão mais recente.
+- Instale o [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download) ou uma versão mais recente.
 
 ## <a name="create-the-library"></a>Criar a biblioteca
 
 A primeira etapa é criar a biblioteca.
 
-1. Crie uma pasta e execute `dotnet new classlib` nela.
+1. Crie uma nova pasta e, nessa pasta, execute o seguinte comando:
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. Abra `Class1.cs`.
 3. Adicione `using System.Runtime.InteropServices;` ao topo do arquivo.
-4. Crie uma interface chamada `IServer`. Por exemplo: [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+4. Crie uma interface chamada `IServer`. Por exemplo:
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
 5. Adicione o atributo `[Guid("<IID>")]` à interface, com o GUID da interface COM que você está implementando. Por exemplo, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Observe que esse GUID precisa ser exclusivo, pois é o único identificador dessa interface para COM. No Visual Studio, você pode gerar um GUID acessando Ferramentas > Criar GUID para abrir a ferramenta Criar GUID.
 6. Adicione o atributo `[InterfaceType]` à interface e especifique quais interfaces COM base sua interface deve implementar.
 7. Crie uma classe chamada `Server` que implementa `IServer`.

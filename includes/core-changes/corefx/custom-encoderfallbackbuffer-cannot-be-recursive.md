@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: b4b49b55cda26ac9d9760f93e9758aab940ad135
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4075eadf7cfb39c913b7657d43335bae5497deff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117257"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217048"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Instâncias EncoderFallbackBuffer personalizadas não podem retornar recursivamente
 
-As <xref:System.Text.EncoderFallbackBuffer> instâncias personalizadas não podem fazer fallback recursivamente. A implementação de <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> deve resultar em uma sequência de caracteres que é conversível para a codificação de destino. Caso contrário, ocorrerá uma exceção. 
+As <xref:System.Text.EncoderFallbackBuffer> instâncias personalizadas não podem fazer fallback recursivamente. A implementação de <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> deve resultar em uma sequência de caracteres que é conversível para a codificação de destino. Caso contrário, ocorrerá uma exceção.
 
 #### <a name="details"></a>Detalhes
 
 Durante uma operação de transcodificação de caractere para byte, o tempo de execução detecta sequências UTF-16 mal formadas ou não conversíveis e fornece <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> esses caracteres para o método. O `Fallback` método determina quais caracteres devem ser substituídos pelos dados originais não conversíveis e esses caracteres são drenados chamando <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> em um loop.
 
-Em seguida, o tempo de execução tenta transcodificar esses caracteres de substituição para a codificação de destino. Se essa operação for realizada com sucesso, o tempo de execução continuará transcodificando de onde parou na cadeia de caracteres de entrada original. 
+Em seguida, o tempo de execução tenta transcodificar esses caracteres de substituição para a codificação de destino. Se essa operação for realizada com sucesso, o tempo de execução continuará transcodificando de onde parou na cadeia de caracteres de entrada original.
 
 No .NET Core Preview 7 e versões anteriores, implementações personalizadas <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> do podem retornar sequências de caracteres que não são conversíveis para a codificação de destino. Se os caracteres substituídos não puderem ser transcodificados para a codificação de destino, o tempo <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> de execução invocará o método novamente com os caracteres <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> de substituição, esperando que o método retorne uma nova sequência de substituição. Esse processo continua até que o tempo de execução eventualmente Veja uma substituição bem formada, conversível ou até que uma contagem de recursão máxima seja atingida.
 
-A partir do .NET Core 3,0, implementações <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> personalizadas do devem retornar sequências de caracteres que são conversíveis para a codificação de destino. Se os caracteres substituídos não puderem ser transcodificados para a codificação de <xref:System.ArgumentException> destino, um será lançado. O tempo de execução não fará mais chamadas recursivas <xref:System.Text.EncoderFallbackBuffer> na instância. 
+A partir do .NET Core 3,0, implementações <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> personalizadas do devem retornar sequências de caracteres que são conversíveis para a codificação de destino. Se os caracteres substituídos não puderem ser transcodificados para a codificação de <xref:System.ArgumentException> destino, um será lançado. O tempo de execução não fará mais chamadas recursivas <xref:System.Text.EncoderFallbackBuffer> na instância.
 
 Esse comportamento se aplica somente quando todas as três condições a seguir são atendidas:
 

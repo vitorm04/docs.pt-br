@@ -2,12 +2,12 @@
 title: Sobrecarga de operador
 description: Saiba como sobrecarregar operadores aritméticos em um tipo de classe ou de registro e no nível F#global no.
 ms.date: 05/16/2016
-ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d902a06193481ed87131b3336cd8a2ff54b811b4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627395"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216841"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operador
 
@@ -123,7 +123,7 @@ Outras combinações de caracteres de operador que não estão listadas aqui pod
 
 ## <a name="prefix-and-infix-operators"></a>Operadores de prefixo e infixo
 
-Espera-se que os operadores de *prefixo* sejam colocados na frente de um operando ou operandos, de forma muito semelhante a uma função. Espera-se que os operadores de infixos sejam colocados entre os dois operandos.
+Espera-se que os operadores de *prefixo* sejam colocados na frente de um operando ou operandos, de forma muito semelhante a uma função. Espera-se que os operadores de *infixos* sejam colocados entre os dois operandos.
 
 Somente determinados operadores podem ser usados como operadores de prefixo. Alguns operadores são sempre operadores de prefixo, outros podem ser infixos ou prefixo e o restante são sempre operadores de infixos. Os operadores que começam `!`com, `!=`exceto e o operador `~`, ou sequências repetidas de, são sempre operadores de`~`prefixo. `-` Osoperadores`&&`,, ,,`+.`,, e`%%` podem ser operadores de prefixo ou operadores de infixos. `-.` `+` `&` `%` Você distingue a versão de prefixo desses operadores da versão de infixo adicionando um `~` no início de um operador de prefixo quando ele é definido. O `~` não é usado quando você usa o operador, somente quando ele é definido.
 
@@ -135,7 +135,7 @@ O código a seguir ilustra o uso de sobrecarga de operador para implementar um t
 
 **Saída:**
 
-```
+```console
 3/4 + 1/2 = 5/4
 3/4 - 1/2 = 1/4
 3/4 * 1/2 = 3/8

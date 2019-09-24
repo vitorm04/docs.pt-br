@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ba543414d4f84362c9b9b876395815e837efbd3f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d61e4da187b3ede5e49fa80903d6e4c3b40578b9
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181748"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216291"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Tipos no namespace Microsoft. VisualBasic. MyServices não estão disponíveis
 
@@ -16,7 +16,7 @@ Os tipos no <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> nam
 
 #### <a name="details"></a>Detalhes
 
-Os tipos no <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace estavam disponíveis em algumas versões de visualização do .NET Core 3,0,. Eles não estão mais disponíveis a partir do .NET Core 3,0 Preview 9.
+Os tipos no <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace estavam disponíveis em algumas versões de visualização do .NET Core 3,0. Eles não estão mais disponíveis a partir do .NET Core 3,0 Preview 9.
 
 Os tipos foram removidos para evitar dependências de assembly desnecessárias ou alterações significativas nas versões subsequentes.
  
