@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 02dbf5ccca97f5e7d2e1fada39bdf601cf37906f
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 843007ac6467584fbe6350b6ea19ef67609d73e2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119355"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217027"
 ---
-### <a name="controldefaultfont-changed-to-segoe-ui-9pt"></a><span data-ttu-id="37bab-101">`Control.DefaultFont`alterado para`Segoe UI 9pt`</span><span class="sxs-lookup"><span data-stu-id="37bab-101">`Control.DefaultFont` changed to `Segoe UI 9pt`</span></span> 
+### <a name="controldefaultfont-changed-to-segoe-ui-9pt"></a><span data-ttu-id="77260-101">`Control.DefaultFont`alterado para`Segoe UI 9pt`</span><span class="sxs-lookup"><span data-stu-id="77260-101">`Control.DefaultFont` changed to `Segoe UI 9pt`</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="37bab-102">Alterar descrição</span><span class="sxs-lookup"><span data-stu-id="37bab-102">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="77260-102">Alterar descrição</span><span class="sxs-lookup"><span data-stu-id="77260-102">Change description</span></span>
 
-<span data-ttu-id="37bab-103">Na .NET Framework, a <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> Propriedade foi definida como. `Microsoft Sans Serif 8pt`</span><span class="sxs-lookup"><span data-stu-id="37bab-103">In the .NET Framework, the <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> property was set to `Microsoft Sans Serif 8pt`.</span></span> <span data-ttu-id="37bab-104">A figura a seguir mostra uma janela que usa a fonte padrão.</span><span class="sxs-lookup"><span data-stu-id="37bab-104">The following figure shows a window that uses the default font.</span></span>
+<span data-ttu-id="77260-103">Na .NET Framework, a <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> Propriedade foi definida como. `Microsoft Sans Serif 8pt`</span><span class="sxs-lookup"><span data-stu-id="77260-103">In the .NET Framework, the <xref:System.Windows.Forms.Control.DefaultFont?displayProperty=nameWithType> property was set to `Microsoft Sans Serif 8pt`.</span></span> <span data-ttu-id="77260-104">A figura a seguir mostra uma janela que usa a fonte padrão.</span><span class="sxs-lookup"><span data-stu-id="77260-104">The following figure shows a window that uses the default font.</span></span>
 
 ![fonte de controle padrão no .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-<span data-ttu-id="37bab-106">No .NET Core a partir do .NET Core 3,0, ele é definido `Segoe UI 9pt` como (a mesma fonte <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>que).</span><span class="sxs-lookup"><span data-stu-id="37bab-106">In .NET Core starting with .NET Core 3.0, it is set to `Segoe UI 9pt` (the same font as <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>).</span></span> <span data-ttu-id="37bab-107">Como resultado dessa alteração, formulários e controles serão dimensionados cerca de 27% a mais para considerar o tamanho maior da nova fonte padrão.</span><span class="sxs-lookup"><span data-stu-id="37bab-107">As a result of this change, forms and controls will be sized about 27% larger to account for the larger size of the new default font.</span></span> <span data-ttu-id="37bab-108">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="37bab-108">For example:</span></span>
+<span data-ttu-id="77260-106">No .NET Core a partir do .NET Core 3,0, ele é definido `Segoe UI 9pt` como (a mesma fonte <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>que).</span><span class="sxs-lookup"><span data-stu-id="77260-106">In .NET Core starting with .NET Core 3.0, it is set to `Segoe UI 9pt` (the same font as <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>).</span></span> <span data-ttu-id="77260-107">Como resultado dessa alteração, formulários e controles serão dimensionados cerca de 27% a mais para considerar o tamanho maior da nova fonte padrão.</span><span class="sxs-lookup"><span data-stu-id="77260-107">As a result of this change, forms and controls will be sized about 27% larger to account for the larger size of the new default font.</span></span> <span data-ttu-id="77260-108">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="77260-108">For example:</span></span>
 
 ![fonte de controle padrão-no .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
-<span data-ttu-id="37bab-110">Essa alteração foi feita para se alinhar com as [diretrizes de UX do Windows](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).</span><span class="sxs-lookup"><span data-stu-id="37bab-110">This change was made to align with [Windows UX guidelines](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).</span></span>
+<span data-ttu-id="77260-110">Essa alteração foi feita para se alinhar com as [diretrizes de UX do Windows](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).</span><span class="sxs-lookup"><span data-stu-id="77260-110">This change was made to align with [Windows UX guidelines](https://docs.microsoft.com/windows/win32/uxguide/vis-fonts#fonts-and-colors).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="37bab-111">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="37bab-111">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="77260-111">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="77260-111">Version introduced</span></span>
 
-<span data-ttu-id="37bab-112">3.0</span><span class="sxs-lookup"><span data-stu-id="37bab-112">3.0</span></span>
+<span data-ttu-id="77260-112">3.0</span><span class="sxs-lookup"><span data-stu-id="77260-112">3.0</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="37bab-113">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="37bab-113">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="77260-113">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="77260-113">Recommended action</span></span>
 
-<span data-ttu-id="37bab-114">Devido à alteração no tamanho de formulários e controles, certifique-se de que seu aplicativo seja renderizado corretamente.</span><span class="sxs-lookup"><span data-stu-id="37bab-114">Because of the change in the size of forms and controls, ensure that your application renders correctly.</span></span>
+<span data-ttu-id="77260-114">Devido à alteração no tamanho de formulários e controles, certifique-se de que seu aplicativo seja renderizado corretamente.</span><span class="sxs-lookup"><span data-stu-id="77260-114">Because of the change in the size of forms and controls, ensure that your application renders correctly.</span></span>
 
-<span data-ttu-id="37bab-115">Para manter a fonte original, defina a fonte padrão do formulário como `Microsoft Sans Serif 8pt`.</span><span class="sxs-lookup"><span data-stu-id="37bab-115">To retain the original font, set your form's default font to `Microsoft Sans Serif 8pt`.</span></span> <span data-ttu-id="37bab-116">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="37bab-116">For example:</span></span>
+<span data-ttu-id="77260-115">Para manter a fonte original, defina a fonte padrão do formulário como `Microsoft Sans Serif 8pt`.</span><span class="sxs-lookup"><span data-stu-id="77260-115">To retain the original font, set your form's default font to `Microsoft Sans Serif 8pt`.</span></span> <span data-ttu-id="77260-116">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="77260-116">For example:</span></span>
 
 ```csharp
 public MyForm()
@@ -38,13 +38,13 @@ public MyForm()
 }
 ```
 
-#### <a name="category"></a><span data-ttu-id="37bab-117">Categoria</span><span class="sxs-lookup"><span data-stu-id="37bab-117">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="77260-117">Categoria</span><span class="sxs-lookup"><span data-stu-id="77260-117">Category</span></span>
 
-- <span data-ttu-id="37bab-118">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="37bab-118">Windows Forms</span></span>
+- <span data-ttu-id="77260-118">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="77260-118">Windows Forms</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="37bab-119">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="37bab-119">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="77260-119">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="77260-119">Affected APIs</span></span>
 
-<span data-ttu-id="37bab-120">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="37bab-120">None.</span></span>
+<span data-ttu-id="77260-120">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="77260-120">None.</span></span>
 
 <!--
 
