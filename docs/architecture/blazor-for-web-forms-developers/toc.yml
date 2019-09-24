@@ -1,0 +1,31 @@
+- name: Livro eletrônico Blazor para desenvolvedores do ASP.NET Web Forms
+  href: index.md
+  items:
+    - name: Introdução
+      href: introduction.md
+    - name: Comparação de arquiteturas
+      href: architecture-comparison.md
+    - name: Modelos de hospedagem
+      href: hosting-models.md
+    - name: Estrutura do projeto
+      href: project-structure.md
+    - name: Inicialização
+      href: app-startup.md
+    - name: Componentes
+      href: components.md
+    - name: 'Páginas, roteamento e layouts'
+      href: pages-routing-layouts.md
+    - name: Gerenciamento de estado
+      href: state-management.md
+    - name: Formulários e validação
+      href: forms-validation.md
+    - name: Como lidar com os dados
+      href: data.md
+    - name: Middleware
+      href: middleware.md
+    - name: Configuração
+      href: config.md
+    - name: Segurança
+      href: security-authentication-authorization.md
+    - name: Migração
+      href: migration.md

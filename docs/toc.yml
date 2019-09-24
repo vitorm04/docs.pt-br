@@ -39,7 +39,7 @@
       items:
         - name: Visão geral da biblioteca de classes
           href: standard/class-library-overview.md
-        - name: Tipos base
+        - name: Tipos de Base
           href: standard/base-types/
     - name: Bibliotecas de classes do .NET
       href: standard/class-libraries.md
@@ -144,7 +144,7 @@
       href: standard/security/
     - name: Serialização
       href: standard/serialization/
-    - name: Desenvolvimento para várias plataformas
+    - name: Desenvolvendo para várias plataformas
       href: standard/cross-platform/
 - name: Guia do .NET Core
   href: core/index.md
@@ -188,7 +188,7 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: Novidades do .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
-    - name: Compatibilidade do aplicativo
+    - name: Compatibilidade de aplicativos
       href: core/compatibility/
     - name: Tutoriais
       href: core/tutorials/index.md
@@ -215,7 +215,7 @@
           href: core/tutorials/libraries.md
         - name: Criar um aplicativo do .NET Core com plug-ins
           href: core/tutorials/creating-app-with-plugin-support.md
-        - name: Como desenvolver aplicativos ASP.NET Core
+        - name: Desenvolvendo aplicativos ASP.NET Core
           href: core/tutorials/aspnet-core.md
         - name: Como hospedar o .NET Core com base no código nativo
           href: core/tutorials/netcore-hosting.md
@@ -326,7 +326,7 @@
               href: core/tools/global-tools-how-to-create.md
         - name: Acesso elevado
           href: core/tools/elevated-access.md
-        - name: Modelo de extensibilidade
+        - name: Modelo de Extensibilidade
           href: core/tools/extensibility.md
         - name: Modelos personalizados
           href: core/tools/custom-templates.md
@@ -476,7 +476,7 @@
       href: framework/install/
     - name: Guia de Migração
       href: framework/migration-guide/
-    - name: Guia de desenvolvimento
+    - name: Guia de Desenvolvimento
       href: framework/development-guide.md
       items:
         - name: Domínios do aplicativo e assemblies
@@ -494,11 +494,11 @@
               href: framework/wpf/
             - name: Windows Forms
               href: framework/winforms/
-        - name: Aplicativos orientados a serviços com WCF
+        - name: Aplicativos orientados a serviço com WCF
           href: framework/wcf/
         - name: Windows Workflow Foundation
           href: framework/windows-workflow-foundation/
-        - name: Aplicativos do serviço Windows
+        - name: Aplicativos de Serviço Windows
           href: framework/windows-services/
         - name: Aplicativos de 64 bits
           href: framework/64-bit-apps.md
@@ -506,7 +506,7 @@
           href: framework/develop-web-apps-with-aspnet.md
         - name: Programação de rede no .NET Framework
           href: framework/network-programming/
-        - name: Configuração de aplicativos
+        - name: Configurando aplicativos
           href: framework/configure-apps/
         - name: Compilando aplicativos com o .NET Nativo
           href: framework/net-native/
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'Novidades no C#'
       items:
-        - name: 'C# 8.0 – versão prévia 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -727,7 +727,7 @@
       href: csharp/programming-guide/
     - name: Referência de linguagem
       href: csharp/language-reference/
-    - name: Instruções passo a passo
+    - name: Passo a passo
       href: csharp/walkthroughs.md
 - name: 'Guia de F#'
   href: fsharp/index.md
@@ -1020,9 +1020,9 @@
         - name: Programando no Visual Basic
           href: visual-basic/developing-apps/programming/index.md
           items:
-            - name: Acessar recursos de computador
+            - name: Acessando recursos de computador
               href: visual-basic/developing-apps/programming/computer-resources/index.md
-            - name: Registrar informações em log no aplicativo
+            - name: Registrando informações em log a partir do aplicativo
               href: visual-basic/developing-apps/programming/log-info/index.md
             - name: Como acessar dados do usuário
               href: visual-basic/developing-apps/programming/accessing-user-data.md
@@ -1033,9 +1033,9 @@
               items:
                 - name: 'Como: Chamar um serviço Web de forma assíncrona'
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
-            - name: Acessar configurações de aplicativo
+            - name: Acessando configurações de aplicativo
               href: visual-basic/developing-apps/programming/app-settings/index.md
-            - name: 'Processar unidades, diretórios e arquivos'
+            - name: 'Processando unidades, diretórios e arquivos'
               href: visual-basic/developing-apps/programming/drives-directories-files/processing.md
         - name: Desenvolvimento com My
           href: visual-basic/developing-apps/development-with-my/index.md
@@ -1130,7 +1130,7 @@
       items:
         - name: Matrizes
           href: visual-basic/programming-guide/language-features/arrays/index.md
-        - name: Inicializadores de coleção
+        - name: Inicializadores de Coleção
           href: visual-basic/programming-guide/language-features/collection-initializers/index.md
         - name: Constantes e enumerações
           href: visual-basic/programming-guide/language-features/constants-enums/index.md
@@ -1202,7 +1202,7 @@
           href: visual-basic/programming-guide/language-features/declared-elements/index.md
         - name: Delegados
           href: visual-basic/programming-guide/language-features/delegates/index.md
-        - name: Associação inicial e tardia
+        - name: Associação antecipada e tardia
           href: visual-basic/programming-guide/language-features/early-late-binding/index.md
         - name: Tipos de erro
           href: visual-basic/programming-guide/language-features/error-types.md
@@ -2420,7 +2420,7 @@
           href: visual-basic/reference/language-specification/
     - name: Aplicativos de Exemplo
       href: visual-basic/sample-applications.md
-    - name: Instruções passo a passo
+    - name: Passo a passo
       href: visual-basic/walkthroughs.md
 - name: Guia do ML.NET
   href: machine-learning/index.yml
