@@ -5,13 +5,13 @@ hide_bc: true
 title: Documentação .NET
 description: Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais.
 ms.custom: updateeachrelease
-ms.date: 09/04/2019
-ms.openlocfilehash: ec8b780100a41109f31084de0f37bec8c0fc680c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928951"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216691"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70928951"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "70928951"
         <h1>Documentação .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Documentação</a>
+                <a data-default="true" href="#docs">Documentos</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">Guias do .NET</a>
@@ -496,7 +496,7 @@ ms.locfileid: "70928951"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Móvel</a>
+                        <a href="#mobile">Dispositivo móvel</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios/">
@@ -558,7 +558,7 @@ ms.locfileid: "70928951"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Desktop</a>
+                        <a href="#desktop">Área de trabalho</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp/">
