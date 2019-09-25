@@ -4,5 +4,33 @@
       href: index.md
     - name: Categorias de alteração significativa
       href: categories.md
-    - name: Alterações da falha
+    - name: Seletor de alterações significativas
       href: breaking-changes.md
+    - name: Por versão
+      items:
+        - name: .NET Framework – .NET Core
+          href: framework-core.md
+        - name: 2.2 – 3.0
+          href: 2.2-3.0.md
+        - name: 3.0 Versão prévia 6 – 3.0 Versão prévia 7
+          href: 3.0.6-3.0.7.md
+        - name: 3.0 Versão prévia 7 – 3.0 Versão prévia 8
+          href: 3.0.7-3.0.8.md
+        - name: 3.0 Versão prévia 8 – 3.0 Versão prévia 9
+          href: 3.0.8-3.0.9.md
+    - name: Por categoria
+      items:
+        - name: CoreFx
+          href: corefx.md
+        - name: Criptografia
+          href: cryptography.md
+        - name: Globalização
+          href: globalization.md
+        - name: Visual Basic
+          href: visualbasic.md
+        - name: ASP.NET Core (no GitHub)
+          href: 'https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0'
+        - name: Entity Framework Core
+          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+        - name: Windows Forms
+          href: winforms.md
