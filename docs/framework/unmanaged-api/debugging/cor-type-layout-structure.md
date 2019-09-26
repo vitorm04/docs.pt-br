@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740514"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274159"
 ---
-# <a name="cortypelayout-structure"></a><span data-ttu-id="704e1-102">Estrutura COR_TYPE_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="704e1-102">COR_TYPE_LAYOUT Structure</span></span>
-<span data-ttu-id="704e1-103">Fornece informações sobre o layout de um objeto na memória.</span><span class="sxs-lookup"><span data-stu-id="704e1-103">Provides information about the layout of an object in memory.</span></span>  
+# <a name="cor_type_layout-structure"></a><span data-ttu-id="b58cf-102">Estrutura COR_TYPE_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="b58cf-102">COR_TYPE_LAYOUT Structure</span></span>
+<span data-ttu-id="b58cf-103">Fornece informações sobre o layout de um objeto na memória.</span><span class="sxs-lookup"><span data-stu-id="b58cf-103">Provides information about the layout of an object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="704e1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="704e1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b58cf-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b58cf-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_TYPE_LAYOUT {  
@@ -38,29 +38,29 @@ typedef struct COR_TYPE_LAYOUT {
 } COR_TYPE_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="704e1-105">Membros</span><span class="sxs-lookup"><span data-stu-id="704e1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b58cf-105">Membros</span><span class="sxs-lookup"><span data-stu-id="b58cf-105">Members</span></span>  
   
-|<span data-ttu-id="704e1-106">Membro</span><span class="sxs-lookup"><span data-stu-id="704e1-106">Member</span></span>|<span data-ttu-id="704e1-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="704e1-107">Description</span></span>|  
+|<span data-ttu-id="b58cf-106">Membro</span><span class="sxs-lookup"><span data-stu-id="b58cf-106">Member</span></span>|<span data-ttu-id="b58cf-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="b58cf-107">Description</span></span>|  
 |------------|-----------------|  
-|`parentID`|<span data-ttu-id="704e1-108">O identificador do tipo pai para esse tipo.</span><span class="sxs-lookup"><span data-stu-id="704e1-108">The identifier of the parent type to this type.</span></span> <span data-ttu-id="704e1-109">Esta será a id de tipo nulo (token1 = 0, token2 = 0) se a id de tipo corresponde ao <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="704e1-109">This will be the NULL type id (token1= 0, token2 = 0) if the type id corresponds to <xref:System.Object?displayProperty=nameWithType>.</span></span>|  
-|`objectSize`|<span data-ttu-id="704e1-110">O tamanho da base de um objeto desse tipo.</span><span class="sxs-lookup"><span data-stu-id="704e1-110">The base size of an object of this type.</span></span> <span data-ttu-id="704e1-111">Esse é o tamanho total de objetos de tamanho não variável.</span><span class="sxs-lookup"><span data-stu-id="704e1-111">This is the total size for non-variable sized objects.</span></span>|  
-|`numFields`|<span data-ttu-id="704e1-112">O número de campos incluídos em objetos desse tipo.</span><span class="sxs-lookup"><span data-stu-id="704e1-112">The number of fields included in objects of this type.</span></span>|  
-|`boxOffset`|<span data-ttu-id="704e1-113">Se esse tipo é demarcado, o início de deslocamento de campos de um objeto.</span><span class="sxs-lookup"><span data-stu-id="704e1-113">If this type is boxed, the beginning offset of an object's fields.</span></span> <span data-ttu-id="704e1-114">Este campo é válido somente para tipos de valor, como primitivos e estruturas.</span><span class="sxs-lookup"><span data-stu-id="704e1-114">This field is valid only for value types such as primitives and structures.</span></span>|  
-|`type`|<span data-ttu-id="704e1-115">O CorElementType ao qual pertence esse tipo.</span><span class="sxs-lookup"><span data-stu-id="704e1-115">The CorElementType to which this type belongs.</span></span>|  
+|`parentID`|<span data-ttu-id="b58cf-108">O identificador do tipo pai para esse tipo.</span><span class="sxs-lookup"><span data-stu-id="b58cf-108">The identifier of the parent type to this type.</span></span> <span data-ttu-id="b58cf-109">Essa será a ID de tipo nulo (token1 = 0, token2 = 0) se a ID de tipo corresponder <xref:System.Object?displayProperty=nameWithType>a.</span><span class="sxs-lookup"><span data-stu-id="b58cf-109">This will be the NULL type id (token1= 0, token2 = 0) if the type id corresponds to <xref:System.Object?displayProperty=nameWithType>.</span></span>|  
+|`objectSize`|<span data-ttu-id="b58cf-110">O tamanho de base de um objeto deste tipo.</span><span class="sxs-lookup"><span data-stu-id="b58cf-110">The base size of an object of this type.</span></span> <span data-ttu-id="b58cf-111">Este é o tamanho total para objetos que não são de tamanho variável.</span><span class="sxs-lookup"><span data-stu-id="b58cf-111">This is the total size for non-variable sized objects.</span></span>|  
+|`numFields`|<span data-ttu-id="b58cf-112">O número de campos incluídos em objetos deste tipo.</span><span class="sxs-lookup"><span data-stu-id="b58cf-112">The number of fields included in objects of this type.</span></span>|  
+|`boxOffset`|<span data-ttu-id="b58cf-113">Se esse tipo for in box, o deslocamento inicial dos campos de um objeto.</span><span class="sxs-lookup"><span data-stu-id="b58cf-113">If this type is boxed, the beginning offset of an object's fields.</span></span> <span data-ttu-id="b58cf-114">Esse campo é válido somente para tipos de valor como primitivos e estruturas.</span><span class="sxs-lookup"><span data-stu-id="b58cf-114">This field is valid only for value types such as primitives and structures.</span></span>|  
+|`type`|<span data-ttu-id="b58cf-115">O CorElementType ao qual esse tipo pertence.</span><span class="sxs-lookup"><span data-stu-id="b58cf-115">The CorElementType to which this type belongs.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="704e1-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="704e1-116">Remarks</span></span>  
- <span data-ttu-id="704e1-117">Se `numFields` é maior que zero, você pode chamar o [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) método para obter informações sobre os campos nesse tipo.</span><span class="sxs-lookup"><span data-stu-id="704e1-117">If `numFields` is greater than zero, you can call the [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) method to obtain information about the fields in this type.</span></span> <span data-ttu-id="704e1-118">Se `type` está `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, ou `ELEMENT_TYPE_SZARRAY`, o tamanho dos objetos desse tipo é variável, e você pode passar o [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) estrutura para o [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="704e1-118">If `type` is `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, or `ELEMENT_TYPE_SZARRAY`, the size of objects of this type is variable, and you can pass the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) structure to the [ICorDebugProcess5::GetArrayLayout](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b58cf-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="b58cf-116">Remarks</span></span>  
+ <span data-ttu-id="b58cf-117">Se `numFields` for maior que zero, você poderá chamar o método [ICorDebugProcess5:: GetTypeFields](icordebugprocess5-gettypefields-method.md) para obter informações sobre os campos nesse tipo.</span><span class="sxs-lookup"><span data-stu-id="b58cf-117">If `numFields` is greater than zero, you can call the [ICorDebugProcess5::GetTypeFields](icordebugprocess5-gettypefields-method.md) method to obtain information about the fields in this type.</span></span> <span data-ttu-id="b58cf-118">Se `type` for `ELEMENT_TYPE_STRING` ,`ELEMENT_TYPE_ARRAY`, ou`ELEMENT_TYPE_SZARRAY`, o tamanho dos objetos desse tipo é variável e você pode passar a estrutura [COR_TYPEID](cor-typeid-structure.md) para o método [ICorDebugProcess5:: GetArrayLayout](icordebugprocess5-getarraylayout-method.md) .</span><span class="sxs-lookup"><span data-stu-id="b58cf-118">If `type` is `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, or `ELEMENT_TYPE_SZARRAY`, the size of objects of this type is variable, and you can pass the [COR_TYPEID](cor-typeid-structure.md) structure to the [ICorDebugProcess5::GetArrayLayout](icordebugprocess5-getarraylayout-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="704e1-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="704e1-119">Requirements</span></span>  
- <span data-ttu-id="704e1-120">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="704e1-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b58cf-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b58cf-119">Requirements</span></span>  
+ <span data-ttu-id="b58cf-120">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b58cf-120">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="704e1-121">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="704e1-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b58cf-121">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b58cf-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="704e1-122">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="704e1-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b58cf-122">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b58cf-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="704e1-123">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="704e1-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b58cf-123">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b58cf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="704e1-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="704e1-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b58cf-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b58cf-124">See also</span></span>
 
-- [<span data-ttu-id="704e1-125">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="704e1-125">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="704e1-126">Depuração</span><span class="sxs-lookup"><span data-stu-id="704e1-126">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="b58cf-125">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="b58cf-125">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="b58cf-126">Depuração</span><span class="sxs-lookup"><span data-stu-id="b58cf-126">Debugging</span></span>](index.md)

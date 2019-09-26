@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71a1538e42061c6cb949b22bb63fe6b17a0dfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4528ccd77fed2ea2a9b2d08243ffa1535bfad1ae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741114"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274083"
 ---
-# <a name="clrdebuggingversion-structure"></a><span data-ttu-id="58985-102">Estrutura CLR_DEBUGGING_VERSION</span><span class="sxs-lookup"><span data-stu-id="58985-102">CLR_DEBUGGING_VERSION Structure</span></span>
-<span data-ttu-id="58985-103">Define a versão do produto do CLR (Common Language Runtime) para fins de depuração.</span><span class="sxs-lookup"><span data-stu-id="58985-103">Defines the product version of the common language runtime (CLR) for debugging purposes.</span></span>  
+# <a name="clr_debugging_version-structure"></a><span data-ttu-id="8a271-102">Estrutura CLR_DEBUGGING_VERSION</span><span class="sxs-lookup"><span data-stu-id="8a271-102">CLR_DEBUGGING_VERSION Structure</span></span>
+<span data-ttu-id="8a271-103">Define a versão do produto do CLR (Common Language Runtime) para fins de depuração.</span><span class="sxs-lookup"><span data-stu-id="8a271-103">Defines the product version of the common language runtime (CLR) for debugging purposes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="58985-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="58985-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a271-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8a271-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _CLR_DEBUGGING_VERSION  
@@ -39,29 +39,29 @@ typedef struct _CLR_DEBUGGING_VERSION
 } CLR_DEBUGGING_VERSION;
 ```  
   
-## <a name="members"></a><span data-ttu-id="58985-105">Membros</span><span class="sxs-lookup"><span data-stu-id="58985-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8a271-105">Membros</span><span class="sxs-lookup"><span data-stu-id="8a271-105">Members</span></span>  
   
-|<span data-ttu-id="58985-106">Membro</span><span class="sxs-lookup"><span data-stu-id="58985-106">Member</span></span>|<span data-ttu-id="58985-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="58985-107">Description</span></span>|  
+|<span data-ttu-id="8a271-106">Membro</span><span class="sxs-lookup"><span data-stu-id="8a271-106">Member</span></span>|<span data-ttu-id="8a271-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="8a271-107">Description</span></span>|  
 |------------|-----------------|  
-|`wStructVersion`|<span data-ttu-id="58985-108">O número de versão de estrutura</span><span class="sxs-lookup"><span data-stu-id="58985-108">The structure version number</span></span>|  
-|`wMajor`|<span data-ttu-id="58985-109">O número da versão principal.</span><span class="sxs-lookup"><span data-stu-id="58985-109">The major version number.</span></span>|  
-|`wMinor`|<span data-ttu-id="58985-110">O número da versão secundária.</span><span class="sxs-lookup"><span data-stu-id="58985-110">The minor version number.</span></span>|  
-|`wBuild`|<span data-ttu-id="58985-111">O número de build.</span><span class="sxs-lookup"><span data-stu-id="58985-111">The build number.</span></span>|  
-|`wRevision`|<span data-ttu-id="58985-112">O número de revisão.</span><span class="sxs-lookup"><span data-stu-id="58985-112">The revision number.</span></span>|  
+|`wStructVersion`|<span data-ttu-id="8a271-108">O número de versão da estrutura</span><span class="sxs-lookup"><span data-stu-id="8a271-108">The structure version number</span></span>|  
+|`wMajor`|<span data-ttu-id="8a271-109">O número da versão principal.</span><span class="sxs-lookup"><span data-stu-id="8a271-109">The major version number.</span></span>|  
+|`wMinor`|<span data-ttu-id="8a271-110">O número da versão secundária.</span><span class="sxs-lookup"><span data-stu-id="8a271-110">The minor version number.</span></span>|  
+|`wBuild`|<span data-ttu-id="8a271-111">O número de build.</span><span class="sxs-lookup"><span data-stu-id="8a271-111">The build number.</span></span>|  
+|`wRevision`|<span data-ttu-id="8a271-112">O número de revisão.</span><span class="sxs-lookup"><span data-stu-id="8a271-112">The revision number.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="58985-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="58985-113">Remarks</span></span>  
- <span data-ttu-id="58985-114">O `CLR_DEBUGGING_VERSION` estrutura é o mesmo que a estrutura COR_VERSION, no entanto, o `CLR_DEBUGGING_VERSION` estrutura fornece um campo de versão de estrutura adicional (`wStructVersion`).</span><span class="sxs-lookup"><span data-stu-id="58985-114">The `CLR_DEBUGGING_VERSION` structure is the same as the COR_VERSION structure, however, the `CLR_DEBUGGING_VERSION` structure provides an additional structure version field (`wStructVersion`).</span></span> <span data-ttu-id="58985-115">Atualmente, esse campo deve ser definido como zero.</span><span class="sxs-lookup"><span data-stu-id="58985-115">Currently, this field must be set to zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a271-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="8a271-113">Remarks</span></span>  
+ <span data-ttu-id="8a271-114">A `CLR_DEBUGGING_VERSION` estrutura é igual à estrutura COR_VERSION, no entanto, a `CLR_DEBUGGING_VERSION` estrutura fornece um campo de versão de estrutura`wStructVersion`adicional ().</span><span class="sxs-lookup"><span data-stu-id="8a271-114">The `CLR_DEBUGGING_VERSION` structure is the same as the COR_VERSION structure, however, the `CLR_DEBUGGING_VERSION` structure provides an additional structure version field (`wStructVersion`).</span></span> <span data-ttu-id="8a271-115">No momento, esse campo deve ser definido como zero.</span><span class="sxs-lookup"><span data-stu-id="8a271-115">Currently, this field must be set to zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="58985-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="58985-116">Requirements</span></span>  
- <span data-ttu-id="58985-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58985-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a271-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8a271-116">Requirements</span></span>  
+ <span data-ttu-id="8a271-117">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a271-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="58985-118">**Cabeçalho:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="58985-118">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="8a271-118">**Cabeçalho:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="8a271-118">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="58985-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58985-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8a271-119">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a271-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="58985-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58985-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="8a271-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a271-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58985-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="58985-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a271-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8a271-121">See also</span></span>
 
-- [<span data-ttu-id="58985-122">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="58985-122">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="58985-123">Depuração</span><span class="sxs-lookup"><span data-stu-id="58985-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="8a271-122">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="8a271-122">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="8a271-123">Depuração</span><span class="sxs-lookup"><span data-stu-id="8a271-123">Debugging</span></span>](index.md)
