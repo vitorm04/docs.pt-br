@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741039"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274288"
 ---
-# <a name="clrdatailaddressmap-structure"></a>Estrutura CLRDATA_IL_ADDRESS_MAP
+# <a name="clrdata_il_address_map-structure"></a>Estrutura CLRDATA_IL_ADDRESS_MAP
 
-Define um IL para o mapeamento de endereço.
+Define um IL para o mapeamento de endereços.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,24 +44,24 @@ typedef struct
 
 | Membro         | Descrição                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | Deslocamento de IL para o intervalo de endereços independente              |
+| `ilOffset`     | Deslocamento de IL para o intervalo de endereços contidos              |
 | `startAddress` | O endereço inicial do intervalo.                        |
 | `endAddress`   | O endereço final do intervalo.                          |
-| `type`         | O tipo de dados. Esse valor não é usado atualmente |
+| `type`         | O tipo de dados. Este valor não está sendo usado no momento |
 
 ## <a name="remarks"></a>Comentários
 
-Essa estrutura reside dentro do tempo de execução e não é exposta por meio de todos os cabeçalhos ou arquivos de biblioteca. Para usá-lo, definir a estrutura conforme especificado acima, onde `CLRDATA_ADDRESS` é um inteiro sem sinal de 64 bits.
+Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima, `CLRDATA_ADDRESS` em que é um inteiro sem sinal de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum   
+**Biblioteca** Nenhum   
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Consulte também
 
-- [Enumeração CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Enumeração CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Depuração](index.md)
+- [Estruturas de depuração](debugging-structures.md)

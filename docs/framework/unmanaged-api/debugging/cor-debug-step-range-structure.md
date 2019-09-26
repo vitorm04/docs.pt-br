@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740776"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274198"
 ---
-# <a name="cordebugsteprange-structure"></a>Estrutura COR_DEBUG_STEP_RANGE
+# <a name="cor_debug_step_range-structure"></a>Estrutura COR_DEBUG_STEP_RANGE
 Contém as informações de deslocamento para um intervalo de código.  
   
- Essa estrutura é usada o [ICorDebugStepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) método.  
+ Essa estrutura é usada pelo método [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,16 +45,16 @@ typedef struct {
 |`endOffset`|O deslocamento do final do intervalo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Método StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Método StepRange](icordebugstepper-steprange-method.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

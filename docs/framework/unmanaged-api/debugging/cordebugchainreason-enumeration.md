@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740352"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273985"
 ---
 # <a name="cordebugchainreason-enumeration"></a>Enumeração CorDebugChainReason
 Indica o motivo ou os motivos para o início de uma cadeia de chamadas.  
@@ -50,32 +50,32 @@ typedef enum CorDebugChainReason {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`CHAIN_NONE`|Nenhuma cadeia de chamada foi iniciada.|  
+|`CHAIN_NONE`|Nenhuma cadeia de chamadas foi iniciada.|  
 |`CHAIN_CLASS_INIT`|A cadeia foi iniciada por um construtor.|  
 |`CHAIN_EXCEPTION_FILTER`|A cadeia foi iniciada por um filtro de exceção.|  
 |`CHAIN_SECURITY`|A cadeia foi iniciada pelo código que impõe a segurança.|  
 |`CHAIN_CONTEXT_POLICY`|A cadeia foi iniciada por uma política de contexto.|  
 |`CHAIN_INTERCEPTION`|Não usado.|  
 |`CHAIN_PROCESS_START`|Não usado.|  
-|`CHAIN_THREAD_START`|A cadeia foi iniciada no início de uma execução de thread.|  
-|`CHAIN_ENTER_MANAGED`|A cadeia foi iniciada por entrada no código gerenciado.|  
-|`CHAIN_ENTER_UNMANAGED`|A cadeia foi iniciada por entrada de código não gerenciado.|  
+|`CHAIN_THREAD_START`|A cadeia foi iniciada pelo início de uma execução de thread.|  
+|`CHAIN_ENTER_MANAGED`|A cadeia foi iniciada por entrada em código gerenciado.|  
+|`CHAIN_ENTER_UNMANAGED`|A cadeia foi iniciada por entrada em código não gerenciado.|  
 |`CHAIN_DEBUGGER_EVAL`|Não usado.|  
 |`CHAIN_CONTEXT_SWITCH`|Não usado.|  
 |`CHAIN_FUNC_EVAL`|A cadeia foi iniciada por uma avaliação de função.|  
   
 ## <a name="remarks"></a>Comentários  
- Use o [icordebugchain:: Getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) método para determinar as razões para o início de uma cadeia de chamada.  
+ Use o método [ICorDebugChain:: GetReason](icordebugchain-getreason-method.md) para determinar os motivos para a inicialização de uma cadeia de chamadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Declarando enumerações](debugging-enumerations.md)

@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740514"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274159"
 ---
-# <a name="cortypelayout-structure"></a>Estrutura COR_TYPE_LAYOUT
+# <a name="cor_type_layout-structure"></a>Estrutura COR_TYPE_LAYOUT
 Fornece informações sobre o layout de um objeto na memória.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -42,25 +42,25 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`parentID`|O identificador do tipo pai para esse tipo. Esta será a id de tipo nulo (token1 = 0, token2 = 0) se a id de tipo corresponde ao <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|O tamanho da base de um objeto desse tipo. Esse é o tamanho total de objetos de tamanho não variável.|  
-|`numFields`|O número de campos incluídos em objetos desse tipo.|  
-|`boxOffset`|Se esse tipo é demarcado, o início de deslocamento de campos de um objeto. Este campo é válido somente para tipos de valor, como primitivos e estruturas.|  
-|`type`|O CorElementType ao qual pertence esse tipo.|  
+|`parentID`|O identificador do tipo pai para esse tipo. Essa será a ID de tipo nulo (token1 = 0, token2 = 0) se a ID de tipo corresponder <xref:System.Object?displayProperty=nameWithType>a.|  
+|`objectSize`|O tamanho de base de um objeto deste tipo. Este é o tamanho total para objetos que não são de tamanho variável.|  
+|`numFields`|O número de campos incluídos em objetos deste tipo.|  
+|`boxOffset`|Se esse tipo for in box, o deslocamento inicial dos campos de um objeto. Esse campo é válido somente para tipos de valor como primitivos e estruturas.|  
+|`type`|O CorElementType ao qual esse tipo pertence.|  
   
 ## <a name="remarks"></a>Comentários  
- Se `numFields` é maior que zero, você pode chamar o [ICorDebugProcess5::GetTypeFields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) método para obter informações sobre os campos nesse tipo. Se `type` está `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, ou `ELEMENT_TYPE_SZARRAY`, o tamanho dos objetos desse tipo é variável, e você pode passar o [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) estrutura para o [ICorDebugProcess5::GetArrayLayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) método.  
+ Se `numFields` for maior que zero, você poderá chamar o método [ICorDebugProcess5:: GetTypeFields](icordebugprocess5-gettypefields-method.md) para obter informações sobre os campos nesse tipo. Se `type` for `ELEMENT_TYPE_STRING` ,`ELEMENT_TYPE_ARRAY`, ou`ELEMENT_TYPE_SZARRAY`, o tamanho dos objetos desse tipo é variável e você pode passar a estrutura [COR_TYPEID](cor-typeid-structure.md) para o método [ICorDebugProcess5:: GetArrayLayout](icordebugprocess5-getarraylayout-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

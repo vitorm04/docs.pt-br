@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740877"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274250"
 ---
 # <a name="codechunkinfo-structure"></a>Estrutura CodeChunkInfo
 
@@ -44,19 +44,19 @@ typedef struct _CodeChunkInfo {
 |`length`|O tamanho, em bytes, da parte.|  
   
 ## <a name="remarks"></a>Comentários  
- A única parte do código é uma região de código nativo que é parte de um objeto de código, como uma função.  
+ A única parte do código é uma região de código nativo que faz parte de um objeto de código, como uma função.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Método GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Método GetCodeChunks](icordebugcode2-getcodechunks-method.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

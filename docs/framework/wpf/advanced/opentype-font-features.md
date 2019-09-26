@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70016136"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
@@ -110,7 +110,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 ### <a name="capital-spacing"></a>Espaçamento de letras maiúsculas  
  O espaçamento de letras maiúsculas é um recurso que permite oferecer um espaçamento maior ao usar somente letras maiúsculas no texto. Letras maiúsculas normalmente são projetadas para misturar com letras minúsculas. O espaçamento que parece atraente entre o e uma letra maiúscula e uma letra minúscula pode parecer muito apertado quando todas as letras maiúsculas são usadas. O texto a seguir exibe o espaçamento normal e de maiúsculas para a fonte Pescadero.  
   
- ![Texto usando] o espaçamento de maiúsculas OpenType (./media/opentype-font-features/opentype-capital-spacing.gif "Texto usando") o espaçamento de maiúsculas OpenType  
+ ![Texto usando o espaçamento de maiúsculas OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "Texto usando o espaçamento de maiúsculas OpenType")  
  
  O exemplo de marcação a seguir mostra como definir o espaçamento de maiúsculas para a fonte Pescadero <xref:System.Windows.Documents.Typography> , usando as propriedades do objeto.  
   

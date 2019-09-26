@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740538"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274047"
 ---
-# <a name="corilmap-structure"></a>Estrutura COR_IL_MAP
+# <a name="cor_il_map-structure"></a>Estrutura COR_IL_MAP
 Especifica mudanças no deslocamento relativo de uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,38 +40,38 @@ typedef struct _COR_IL_MAP {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`oldOffset`|O antigo deslocamento Microsoft intermediate language (MSIL) em relação ao início da função.|  
+|`oldOffset`|O antigo deslocamento da MSIL (Microsoft Intermediate Language) relativo ao início da função.|  
 |`newOffset`|O novo deslocamento MSIL relativo ao início da função.|  
-|`fAccurate`|`true` Se o mapeamento é conhecido por ser preciso; Caso contrário, `false`.|  
+|`fAccurate`|`true`Se o mapeamento é conhecido como preciso; caso contrário `false`,.|  
   
 ## <a name="remarks"></a>Comentários  
- O formato do mapa é da seguinte maneira: O depurador pressupor que `oldOffset` refere-se a um deslocamento MSIL dentro do código MSIL original, sem modificações. O `newOffset` parâmetro refere-se para o deslocamento do MSIL correspondente dentro do código novo, instrumentado.  
+ O formato do mapa é o seguinte: O depurador presumirá `oldOffset` que se refere a um deslocamento MSIL dentro do código MSIL original não modificado. O `newOffset` parâmetro refere-se ao deslocamento MSIL correspondente dentro do novo código instrumentado.  
   
- Para depuração funcione corretamente, os seguintes requisitos devem ser atendidos:  
+ Para que a depuração funcione corretamente, os requisitos a seguir devem ser atendidos:  
   
 - O mapa deve ser classificado em ordem crescente.  
   
-- Código MSIL instrumentado não deve ser reordenado.  
+- O código MSIL instrumentado não deve ser reordenado.  
   
-- Código MSIL original não deve ser removido.  
+- O código MSIL original não deve ser removido.  
   
-- O mapa deve incluir as entradas para mapear todos os pontos de sequência do arquivo de banco de dados (PDB) do programa.  
+- O mapa deve incluir entradas para mapear todos os pontos de sequência do arquivo de banco de dados do programa (PDB).  
   
- O mapa não interpola entradas ausentes. O exemplo a seguir mostra um mapa e seus resultados.  
+ O mapa não interpola as entradas ausentes. O exemplo a seguir mostra um mapa e seus resultados.  
   
- Mapear:  
+ Mapeada  
   
-- deslocamento antigo 0, o novo deslocamento 0  
+- 0 deslocamento antigo, 0 deslocamento novo  
   
-- deslocamento antigo 5, 10 novo deslocamento  
+- 5 deslocamento antigo, 10 novos deslocamentos  
   
-- deslocamento antigo 9, 20 novo deslocamento  
+- 9 deslocamento antigo, 20 deslocamento novo  
   
- Resultados:  
+ Da  
   
 - Um deslocamento antigo de 0, 1, 2, 3 ou 4 será mapeado para um novo deslocamento de 0.  
   
-- Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento de 10.  
+- Um deslocamento antigo de 5, 6, 7 ou 8 será mapeado para o novo deslocamento 10.  
   
 - Um deslocamento antigo de 9 ou superior será mapeado para o novo deslocamento 20.  
   
@@ -79,18 +79,18 @@ typedef struct _COR_IL_MAP {
   
 - Um novo deslocamento de 10, 11, 12, 13, 14, 15, 16, 17, 18 ou 19 será mapeado para o deslocamento antigo 5.  
   
-- Um novo deslocamento de 20 ou superior será mapeado para o deslocamento antigo 9.  
+- Um novo deslocamento de 20 ou mais será mapeado para o deslocamento antigo 9.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorProf.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

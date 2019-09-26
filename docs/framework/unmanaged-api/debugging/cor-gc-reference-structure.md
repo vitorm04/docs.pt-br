@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740699"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274234"
 ---
-# <a name="corgcreference-structure"></a>Estrutura COR_GC_REFERENCE
+# <a name="cor_gc_reference-structure"></a>Estrutura COR_GC_REFERENCE
 Contém informações sobre um objeto que será coletado como lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -41,38 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`domain`|Um ponteiro para o domínio do aplicativo ao qual pertence o identificador ou um objeto. Seu valor pode ser `null`.|  
-|`location`|Um ICorDebugValue ou uma interface ICorDebugReferenceValue que corresponde ao objeto seja coletado como lixo.|  
-|`type`|Um [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valor de enumeração que indica de onde veio a raiz. Para obter mais informações, consulte a seção Comentários.|  
-|`extraData`|Dados adicionais sobre o objeto a ser coletado como lixo. Essas informações dependem da origem do objeto, conforme indicado pelo `type` campo. Para obter mais informações, consulte a seção Comentários.|  
+|`domain`|Um ponteiro para o domínio do aplicativo ao qual o identificador ou objeto pertence. Seu valor pode ser `null`.|  
+|`location`|Uma interface ICorDebugValue ou ICorDebugReferenceValue que corresponde ao objeto a ser coletado como lixo.|  
+|`type`|Um valor de enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) que indica de onde veio a raiz. Para obter mais informações, consulte a seção Comentários.|  
+|`extraData`|Dados adicionais sobre o objeto a ser coletado pelo lixo. Essas informações dependem da origem do objeto, conforme indicado pelo `type` campo. Para obter mais informações, consulte a seção Comentários.|  
   
 ## <a name="remarks"></a>Comentários  
- O `type` campo é um [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valor de enumeração que indica de onde veio a referência. Um determinado `COR_GC_REFERENCE` valor pode refletir qualquer um dos seguintes tipos de objetos gerenciados:  
+ O `type` campo é um valor de enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) que indica de onde veio a referência. Um valor `COR_GC_REFERENCE` específico pode refletir qualquer um dos seguintes tipos de objetos gerenciados:  
   
-- Objetos de todas as pilhas gerenciadas (`CorGCReferenceType.CorReferenceStack`). Isso inclui referências ao vivo em código gerenciado, bem como objetos criados pelo common language runtime.  
+- Objetos de todas as pilhas gerenciadas`CorGCReferenceType.CorReferenceStack`(). Isso inclui referências dinâmicas em código gerenciado, bem como objetos criados pelo Common Language Runtime.  
   
-- Objetos da tabela de identificador (`CorGCReferenceType.CorHandle*`). Isso inclui referências fortes (`HNDTYPE_STRONG` e `HNDTYPE_REFCOUNT`) e as variáveis estáticas em um módulo.  
+- Objetos da tabela de identificadores`CorGCReferenceType.CorHandle*`(). Isso inclui referências fortes (`HNDTYPE_STRONG` e `HNDTYPE_REFCOUNT`) e variáveis estáticas em um módulo.  
   
-- Objetos da fila do finalizador (`CorGCReferenceType.CorReferenceFinalizer`). A fila de finalizadores raízes objetos até que o finalizador foi executado.  
+- Objetos da fila do finalizador (`CorGCReferenceType.CorReferenceFinalizer`). O finalizador enfileira objetos de raízes até que o finalizador tenha sido executado.  
   
- O `extraData` campo contém dados extras, dependendo do código-fonte (ou tipo) da referência. Os possíveis valores são:  
+ O `extraData` campo contém dados extras dependendo da origem (ou tipo) da referência. Os possíveis valores são:  
   
-- `DependentSource`. Se o `type` está `CorGCREferenceType.CorHandleStrongDependent`, esse campo é o objeto que, se estiver ativo, raízes no objeto a ser coletado como lixo no `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. `type` Se for `CorGCREferenceType.CorHandleStrongDependent`, esse campo será o objeto que, se estiver ativo, faz a raiz do objeto a `COR_GC_REFERENCE.Location`ser coletado como lixo.  
   
-- `RefCount`. Se o `type` é `CorGCREferenceType.CorHandleStrongRefCount`, esse campo é a contagem de referência do identificador.  
+- `RefCount`. `type` Se for `CorGCREferenceType.CorHandleStrongRefCount`, esse campo será a contagem de referência do identificador.  
   
-- `Size`. Se o `type` é `CorGCREferenceType.CorHandleStrongSizedByref`, esse campo é o último tamanho da árvore de objetos para o qual o coletor de lixo calculada as raízes de objeto. Observe que esse cálculo não é necessariamente atualizado.  
+- `Size`. `type` Se for `CorGCREferenceType.CorHandleStrongSizedByref`, esse campo será o último tamanho da árvore de objetos para a qual o coletor de lixo calculou as raízes de objeto. Observe que esse cálculo não está necessariamente atualizado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

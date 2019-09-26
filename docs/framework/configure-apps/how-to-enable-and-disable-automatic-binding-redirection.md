@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69913041"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como: Habilitar e desabilitar o redirecionamento automático de associação
@@ -26,7 +26,7 @@ Se você tiver o Visual Studio 2017 versão 15,7 ou posterior, poderá desabilit
 
 1. Clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Propriedades**.
 
-2. Na página do **aplicativo** , desmarque a opção gerar redirecionamentos de **Associação automaticamente** .
+2. Na página do **aplicativo** , desmarque a opção **gerar redirecionamentos de associação automaticamente** .
 
 3. Pressione **Ctrl**+**S** para salvar a alteração.
 
@@ -97,7 +97,7 @@ Para adicionar redirecionamentos de associação a um arquivo **Web. config** :
 
    Uma caixa de diálogo que permite adicionar automaticamente os redirecionamentos de associação necessários ao arquivo **Web. config** de origem é exibida.
 
-   ![Diálogo de permissão] de redirecionamento de associação (./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Diálogo de permissão de redirecionamento de associação](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Consulte também
 
