@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957188"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306334"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: criar um aplicativo baseado no Windows acessível
 
@@ -73,13 +76,13 @@ Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes 
    |Form1|AccessibleDescription|Formulário de pedido|
    ||AccessibleName|Formulário de pedido|
    ||Tamanho da fonte|10|
-   ||Texto|Formulário de pedido de pizza|
+   ||Text|Formulário de pedido de pizza|
    |PictureBox|Nome|logotipo|
    ||AccessibleDescription|Uma fatia de pizza|
    ||AccessibleName|Logotipo da empresa|
    ||Image|Qualquer ícone ou bitmap|
    |Rotular|Nome|companyLabel|
-   ||Texto|Pizza boa|
+   ||Text|Pizza boa|
    ||TabIndex|1|
    ||AccessibleDescription|Nome da empresa|
    ||AccessibleName|Nome da empresa|
@@ -87,58 +90,58 @@ Ao adicionar controles a um formulário, tenha em mente as seguintes diretrizes 
    ||Forecolor|Amarelo|
    ||Tamanho da fonte|18|
    |Rotular|Nome|customerLabel|
-   ||Texto|&Nome|
+   ||Text|&Nome|
    ||TabIndex|2|
    ||AccessibleDescription|Rótulo de nome do cliente|
    ||AccessibleName|Rótulo de nome do cliente|
-   ||UseMnemonic|verdadeiro|
+   ||UseMnemonic|True|
    |TextBox|Nome|customerName|
-   ||Texto|(nenhum)|
+   ||Text|(nenhum)|
    ||TabIndex|3|
    ||AccessibleDescription|Nome do cliente|
    ||AccessibleName|Nome do cliente|
    |GroupBox|Nome|sizeOptions|
    ||AccessibleDescription|Opções de tamanho de pizza|
    ||AccessibleName|Opções de tamanho de pizza|
-   ||Texto|Tamanho de pizza|
+   ||Text|Tamanho de pizza|
    ||TabIndex|4|
    |RadioButton|Nome|smallPizza|
-   ||Texto|&Pequena $6.00|
-   ||Selecionado|verdadeiro|
+   ||Text|&Pequena $6.00|
+   ||Selecionado|True|
    ||TabIndex|0|
    ||AccessibleDescription|Pizza pequena|
    ||AccessibleName|Pizza pequena|
    |RadioButton|Nome|largePizza|
-   ||Texto|&Grande $10.00|
+   ||Text|&Grande $10.00|
    ||TabIndex|1|
    ||AccessibleDescription|Pizza grande|
    ||AccessibleName|Pizza grande|
    |Rotular|Nome|toppingsLabel|
-   ||Texto|&Ingredientes ($0.75 cada)|
+   ||Text|&Ingredientes ($0.75 cada)|
    ||TabIndex|5|
    ||AccessibleDescription|Rótulo de ingredientes|
    ||AccessibleName|Rótulo de ingredientes|
-   ||UseMnemonic|verdadeiro|
+   ||UseMnemonic|True|
    |CheckedListBox|Nome|ingredientes|
    ||TabIndex|6|
    ||AccessibleDescription|Ingredientes disponíveis|
    ||AccessibleName|Ingredientes disponíveis|
    ||Itens|Pepperoni, Linguiça, Cogumelos|
    |Botão|Nome|ordem|
-   ||Texto|&Ordem|
+   ||Text|&Ordem|
    ||TabIndex|7|
    ||AccessibleDescription|Total do pedido|
    ||AccessibleName|Pedido total|
    |Botão|Nome|cancelar|
-   ||Texto|&Cancelar|
+   ||Text|&Cancelar|
    ||TabIndex|8|
    ||AccessibleDescription|Cancelar o pedido|
    ||AccessibleName|Cancelar pedido|
    |MainMenu|Nome|theMainMenu|
    |MenuItem|Nome|fileCommands|
-   ||Texto|&Arquivo|
+   ||Text|&Arquivo|
    |MenuItem|Nome|exitApp|
-   ||Texto|Sa&ir|
+   ||Text|Sa&ir|
 
    Seu formulário será semelhante à imagem a seguir:
 
@@ -165,96 +168,88 @@ Em nosso aplicativo, o único elemento que não está usando as configurações 
 1. Crie um método para definir as cores do rótulo para as cores do sistema.
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. Chame o procedimento `SetColorScheme` no construtor do formulário (`Public Sub New()` no Visual Basic e `public class Form1` no Visual C#). Para acessar o construtor no Visual Basic, você precisará expandir a região rotulada como **Código gerado pelo Windows Form Designer**.
+2. Chame o procedimento `SetColorScheme` no construtor do formulário (`Public Sub New()` no Visual Basic e `public Form1()` no Visual C#). Para acessar o construtor no Visual Basic, você precisará expandir a região rotulada como **Código gerado pelo Windows Form Designer**.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. Crie um procedimento de evento, com a assinatura apropriada, para responder ao <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> evento.
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. Adicione código ao construtor de formulário, após a chamada ao `InitializeComponents`, para associar o procedimento de evento ao evento do sistema. Esse método chama o procedimento `SetColorScheme`.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ Em nosso aplicativo, o único elemento que não está usando as configurações 
     > O código de evento do sistema executa um thread separado do aplicativo principal. Se você não liberar o evento, o código que você associou com o evento será executado mesmo depois que o programa for fechado.
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 
