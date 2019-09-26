@@ -374,6 +374,19 @@
             - name: Serviços XAML
               tocHref: /dotnet/framework/xaml-services/
               topicHref: /dotnet/framework/xaml-services/index
+        - name: Guia de área de trabalho – WPF (Windows Presentation Foundation)
+          tocHref: /dotnet/desktop-wpf/
+          topicHref: /dotnet/desktop-wpf/index
+          items:
+            - name: Introdução
+              tocHref: /visualstudio/get-started/csharp/tutorial-wpf
+              topicHref: /dotnet/desktop-wpf/getting-started/index
+            - name: Migração
+              tocHref: /dotnet/desktop-wpf/migration
+              topicHref: /dotnet/desktop-wpf/migration/index
+            - name: Associação de dados
+              tocHref: /dotnet/desktop-wpf/data
+              topicHref: /dotnet/desktop-wpf/data/index
         - name: 'Guia de C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index

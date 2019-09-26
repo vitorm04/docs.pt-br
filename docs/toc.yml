@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: APIs e Bibliotecas de Classes Adicionais
       href: framework/additional-apis/
+- name: Guia de área de trabalho do .NET – WPF (Windows Presentation Foundation)
+  href: desktop-wpf/
 - name: 'Guia de C#'
   href: csharp/index.md
   items:
