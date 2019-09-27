@@ -2,12 +2,12 @@
 title: Implementar repetições de chamadas HTTP com retirada exponencial com a Polly
 description: Saiba como tratar falhas de HTTP com a Polly e o HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674563"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331973"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementar repetições de chamadas HTTP com retirada exponencial com o HttpClientFactory e políticas da Polly
 
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 Com a Polly, você pode definir uma política de repetição com o número de repetições, a configuração de retirada exponencial e as ações a serem executadas quando houver uma exceção de HTTP, como registrar o erro em log. Nesse caso, a política é configurada para tentar seis vezes com uma repetição exponencial, começando em dois segundos. 
-
-Portanto, ela tentará seis vezes e os segundos entre cada repetição serão exponenciais, começando em dois segundos.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Adicionar uma estratégia de tremulação à política de repetição
 

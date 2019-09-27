@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926677"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332004"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -186,7 +186,7 @@ Você pode criar um Aplicativo ou Serviço Web baseado em uma implantação úni
 
 Para gerenciar esse modelo, implante um contêiner único para representar o aplicativo. Para dimensionar, basta adicionar mais cópias com um balanceador de carga na frente. A simplicidade está em gerenciar um a implantação única em um contêiner ou VM único.
 
-![](./media/image5-13.png)
+![Figura 5-13](./media/image5-13.png)
 
 É possível incluir vários componentes/bibliotecas ou camadas internas em cada contêiner, conforme ilustrado na Figura 5-13. Mas, seguindo o princípio de contêiner de _"um contêiner executa uma ação e faz isso em um processo_", o padrão monolítico pode gerar um conflito.
 
@@ -198,7 +198,7 @@ Além do problema de “ter que dimensionar tudo”, a alteração de um único 
 
 A abordagem monolítica é comum e muitas organizações estão desenvolvendo aplicativos com essa abordagem de arquitetura. Muitas estão tendo resultados bons o suficiente, enquanto outras estão atingindo os limites. Muitas criaram seus aplicativos nesse modelo porque as ferramentas e a infraestrutura eram muito difíceis para criar SOAs (arquiteturas orientadas a serviços) e elas não viam a necessidade até que o aplicativo crescesse. Se você achar que está chegando ao limite da abordagem monolítica, a divisão do aplicativo para permitir que ele aproveite melhor os contêineres e os microsserviços poderá ser a próxima etapa lógica.
 
-![](./media/image5-14.png)
+![Figura 5-14](./media/image5-14.png)
 
 A implantação de aplicativos monolíticos no Microsoft Azure pode ser feita por meio de VMs dedicadas para cada instância. Usando [Conjuntos de Dimensionamento de Máquinas Virtuais do Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), você pode dimensionar VMs facilmente. Os [Serviços de Aplicativos do Azure](https://azure.microsoft.com/services/app-service/) podem executar aplicativos monolíticos e dimensionar instâncias com facilidade, sem a necessidade de gerenciar as VMs. Os Serviços de Aplicativos do Azure também podem executar instâncias únicas de contêineres do Docker, simplificando a implantação. Usando o Docker, você pode implantar uma única VM como um host do Docker e executar várias instâncias. Usando o balanceador do Azure, conforme mostrado na Figura 5-14, você pode gerenciar o dimensionamento.
 

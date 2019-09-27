@@ -23,7 +23,7 @@ Este exemplo demonstra como criar a pilha de canais de forma personalizada imple
  O Dispatcher abre primeiro o ouvinte do canal e, em seguida, aceita o canal de resposta singleton. Com o canal, ele começa a enviar mensagens (solicitações) em um loop infinito. Para cada solicitação, ele cria uma mensagem de resposta e a envia de volta para o cliente.  
   
 ## <a name="creating-a-response-message"></a>Criando uma mensagem de resposta  
- O processamento da mensagem é implementado no tipo `MyServiceManager`. No método, o `Action` cabeçalho da mensagem é verificado primeiro para ver se há suporte para a solicitação. `HandleRequest` Uma ação SOAP predefinida http://tempuri.org/HelloWorld/Hello"" é definida para fornecer filtragem de mensagens. Isso é semelhante ao conceito de contrato de serviço na implementação do WCF <xref:System.ServiceModel.ServiceHost>do.  
+ O processamento da mensagem é implementado no tipo `MyServiceManager`. No método, o `Action` cabeçalho da mensagem é verificado primeiro para ver se há suporte para a solicitação. `HandleRequest` Uma ação SOAP predefinida"http://tempuri.org/HelloWorld/Hello" é definida para fornecer filtragem de mensagens. Isso é semelhante ao conceito de contrato de serviço na implementação do WCF <xref:System.ServiceModel.ServiceHost>do.  
   
  Para o caso de ação SOAP correto, o exemplo recupera os dados de mensagem solicitados e gera uma resposta correspondente para a solicitação semelhante ao que é <xref:System.ServiceModel.ServiceHost> visto no caso.  
   
