@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência que permitem valor nulo, adicionados no C# 8. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272789"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332368"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -74,9 +74,12 @@ Também é possível usar diretivas para definir esses mesmos contextos em qualq
 - `#nullable enable`: define o contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo como **habilitado**.
 - `#nullable disable`: define o contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo como **desabilitado**.
 - `#nullable restore`: restaura o contexto de anotação que permite valor nulo e o contexto de aviso que permite valor nulo para as configurações do projeto.
-- `#pragma warning disable nullable`: definir o contexto de aviso que permite valor nulo como **desabilitado**.
-- `#pragma warning enable nullable`: definir o contexto de aviso que permite valor nulo como **habilitado**.
-- `#pragma warning restore nullable`: restaura o contexto de aviso que permite valor nulo para as configurações do projeto.
+- `#nullable disable warnings`: definir o contexto de aviso que permite valor nulo como **desabilitado**.
+- `#nullable enable warnings`: definir o contexto de aviso que permite valor nulo como **habilitado**.
+- `#nullable restore warnings`: restaura o contexto de aviso que permite valor nulo para as configurações do projeto.
+- `#nullable disable annotations`: Defina o contexto de anotação anulável como **desabilitado**.
+- `#nullable enable annotations`: Defina o contexto de anotação anulável como **habilitado**.
+- `#nullable restore annotations`: Restaura o contexto de aviso de anotação para as configurações do projeto.
 
 Os contextos padrão de aviso e de anotação que permitem valor nulo são `disabled`. Essa decisão significa que seu código existente compila sem alterações e sem gerar nenhum aviso novo.
 

@@ -2,14 +2,14 @@
 title: O que é o F#
 description: Saiba mais sobre o que o F# é linguagem de programação e o que é a programação em F# como. Saiba mais sobre tipos de dados avançados, funções e como eles se encaixam juntos.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630455"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332726"
 ---
-# <a name="what-is-f"></a>O que é F\#
+# <a name="what-is-f"></a>O que é F @ no__t-0
 
 F# é uma linguagem de programação funcional que torna mais fácil escrever código correto e sustentável.
 
@@ -100,7 +100,7 @@ Funções de F# também são de primeira classe, que significa que eles podem se
 F# tem suporte completo para objetos que são tipos de dados úteis quando você precisa combinar dados e funcionalidade. Funções de F# são usadas para manipular objetos.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 

@@ -3,12 +3,12 @@ title: Usar o recurso de correspondência de padrões para estender padrões de 
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 9266bb1e998fba77c27e17e498b72f4a5925dd7a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216542"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332360"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
@@ -294,7 +297,7 @@ Você usará a correspondência de padrões para esse recurso, mas poderá integ
 
 A tabela a seguir mostra as combinações de valores de entrada e multiplicador de preços para os horários de pico:
 
-| Dia        | Hora         | Direção | Premium |
+| Day        | Time         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Dia útil    | horário de pico da manhã | entrada   | x 2,00  |
 | Dia útil    | horário de pico da manhã | saída  | x 1,00  |

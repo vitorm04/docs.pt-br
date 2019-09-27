@@ -1,16 +1,16 @@
 ---
 title: Implantar um modelo em uma API Web do ASP.NET Core
 description: Usar um modelo de Machine Learning para Análise de Sentimento com ML.NET pela internet usando o ASP.NET Web API
-ms.date: 08/20/2019
+ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182556"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332699"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Implantar um modelo em uma API Web do ASP.NET Core
 
@@ -103,9 +103,9 @@ Você precisa criar algumas classes para os dados e previsões de entrada. Adici
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Registrar PredictionEnginePool para uso no aplicativo
 
-Para fazer uma única previsão, você pode usar o [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Para usar [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) em seu aplicativo, você deve criá-lo quando ele for necessário. Nesse caso, a prática recomendada é considerar sua injeção de dependência.
+Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Além disso, você precisa criar uma instância dela em qualquer lugar em que seja necessário dentro de seu aplicativo. À medida que seu aplicativo cresce, esse processo pode se tornar não gerenciável. Para melhorar o desempenho e a segurança do thread, use uma combinação de injeção de dependência e o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo.
 
-O link a seguir fornece mais informações sobre a [injeção de dependência no ASP.NET Core](/aspnet/core/fundamentals/dependency-injection).
+O link a seguir fornece mais informações se você quiser saber mais sobre [injeção de dependência em ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
 1. Abra a classe *Startup.cs* e adicione a seguinte instrução using à parte superior do arquivo:
 
@@ -126,14 +126,19 @@ O link a seguir fornece mais informações sobre a [injeção de dependência no
     {
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile("MLModels/sentiment_model.zip");
+            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     }
     ```
 
-Em um alto nível, esse código inicializa os objetos e serviços automaticamente quando solicitado pelo aplicativo em vez de precisar fazê-lo manualmente.
+Em um alto nível, esse código inicializa os objetos e os serviços automaticamente para uso posterior quando solicitado pelo aplicativo em vez de ter que fazê-lo manualmente. 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Para melhorar o desempenho e o acesso thread-safe, use o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos `PredictionEngine` para uso do aplicativo. Leia a postagem no blog para saber mais sobre [criar e usar pools de objeto `PredictionEngine` no ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).  
+Os modelos de aprendizado de máquina não são estáticos. À medida que novos dados de treinamento ficam disponíveis, o modelo é retreinado e reimplantado. Uma maneira de obter a versão mais recente do modelo em seu aplicativo é reimplantar o aplicativo inteiro. No entanto, isso introduz o tempo de inatividade do aplicativo. O serviço `PredictionEnginePool` fornece um mecanismo para recarregar um modelo atualizado sem levar seu aplicativo para baixo. 
+
+Defina o parâmetro `watchForChanges` como `true`, e o `PredictionEnginePool` inicia um [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) que escuta as notificações de alteração do sistema de arquivos e gera eventos quando há uma alteração no arquivo. Isso solicita que o `PredictionEnginePool` recarregue o modelo automaticamente.
+
+O modelo é identificado pelo parâmetro `modelName` para que mais de um modelo por aplicativo possa ser recarregado após a alteração. 
+
+Como alternativa, você pode usar o método `FromUri` ao trabalhar com modelos armazenados remotamente. Em vez de observar os eventos de alteração de arquivo, `FromUri` pesquisa o local remoto em busca de alterações. O padrão do intervalo de sondagem é de 5 minutos. Você pode aumentar ou diminuir o intervalo de sondagem com base nos requisitos do seu aplicativo.
 
 ## <a name="create-predict-controller"></a>Criar o Controlador de Previsão
 
@@ -170,7 +175,7 @@ Para processar as solicitações HTTP de entrada, crie um controlador.
                 return BadRequest();
             }
 
-            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
+            SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: input);
 
             string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
@@ -179,7 +184,7 @@ Para processar as solicitações HTTP de entrada, crie um controlador.
     }
     ```
 
-Esse código atribui o `PredictionEnginePool` passando-o para o construtor do controlador que você obtém por meio da injeção de dependência. Em seguida, o controlador `Predict`, com o método `Post`, usará o `PredictionEnginePool` para fazer previsões e retornará os resultados para o usuário se for bem-sucedido.
+Esse código atribui o `PredictionEnginePool` passando-o para o construtor do controlador que você obtém por meio da injeção de dependência. Em seguida, o método `Post` do controlador `Predict` usa o `PredictionEnginePool` para fazer previsões usando o `SentimentAnalysisModel` registrado na classe `Startup` e retorna os resultados de volta para o usuário, se for bem-sucedido.
 
 ## <a name="test-web-api-locally"></a>Testar a API Web localmente
 

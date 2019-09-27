@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: ea8059061dccc85060b4f6244ff0d7be9b7708b8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6b127cce66f2f9ced3cee29336b39e2976e03619
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214418"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332337"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
@@ -43,12 +43,6 @@ Crie um novo aplicativo de console no Visual Studio ou na linha de comando usand
 <LangVersion>8.0</LangVersion>
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> O elemento `Nullable` era chamado `NullableContextOptions`. A renomeação acompanha o Visual Studio 2019, 16.2-p1. O SDK do .NET Core 3.0.100-preview5-011568 não tem essa alteração. Se você estiver usando a CLI do .NET Core, precisará usar `NullableContextOptions` até que a próxima versão prévia esteja disponível.
-
-> [!NOTE]
-> Quando C# 8 for lançado (não no modo de versão prévia), o elemento `Nullable` será adicionado por novos modelos de projeto. Até lá, será necessário adicioná-lo manualmente.
 
 ### <a name="design-the-types-for-the-application"></a>Criar os tipos para o aplicativo
 

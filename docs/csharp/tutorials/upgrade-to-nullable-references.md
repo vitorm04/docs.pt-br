@@ -3,12 +3,12 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 616c9fdbe62d8147fb74fefc878f9277c2a1156b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214287"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332326"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrar o código existente com tipos de referência anuláveis
 
@@ -52,9 +52,6 @@ Em seguida, ative o contexto de anotação anulável e veja quantos avisos são 
 ```xml
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> O elemento `Nullable` era chamado `NullableContextOptions`. A renomeação acompanha o Visual Studio 2019, 16.2-p1. O SDK do .NET Core 3.0.100-preview5-011568 não tem essa alteração. Se você estiver usando a CLI do .NET Core, precisará usar `NullableContextOptions` até que a próxima versão prévia esteja disponível.
 
 Faça uma compilação de teste e observe a lista de avisos. Neste aplicativo pequeno, o compilador gera cinco avisos. Provavelmente, você deixaria o contexto de anotação anulável habilitado e iniciaria a correção de avisos de todo o projeto.
 

@@ -4,12 +4,12 @@ description: Uma visão geral do que são as Ferramentas Globais do .NET Core e 
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117451"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332014"
 ---
 # <a name="net-core-global-tools-overview"></a>Visão geral das Ferramentas Globais do .NET Core
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 As Ferramentas Globais podem ser instaladas no diretório padrão ou em um local específico. Os diretórios padrão são:
 
-| Sistema operacional          | Caminho                          |
+| OS          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -107,31 +107,6 @@ Procure também instruções de uso no site da ferramenta ou digitando um dos se
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>O que pode dar errado
-
-As Ferramentas Globais são [aplicativos dependentes de estrutura](../deploying/index.md#framework-dependent-deployments-fdd), o que significa que elas dependem de um tempo de execução do .NET Core instalado no computador. Se o tempo de execução esperado não for encontrado, elas seguirão as regras normais de roll forward do tempo de execução do .NET Core, como:
-
-* Um aplicativo efetua roll forward até a versão de patch mais recente da versão principal e secundária especificadas.
-* Se não houver nenhum tempo de execução correspondente com números da versão principal e secundária correspondentes, a próxima versão secundária mais recente será usada.
-* O roll forward não ocorre entre versões prévias do tempo de execução ou entre versões prévias e versões de lançamento. Portanto, as Ferramentas Globais criadas com versões anteriores precisam ser recompiladas e publicadas novamente pelo autor e reinstaladas.
-* Outros problemas podem ocorrer com as Ferramentas Globais criadas no .NET Core 2.1 Preview 1. Para obter mais informações, confira [Problemas conhecidos do .NET Core 2.1 Preview 2](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md).
-
-Se um aplicativo não pode encontrar um tempo de execução apropriado, ele não é executado e relata um erro.
-
-Outro problema pode ocorrer é que uma Ferramenta Global criada durante uma versão prévia anterior pode não ser executada com os tempos de execução do .NET Core atualmente instalados. Veja quais tempos de execução estão instalados no computador usando o seguinte comando:
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Contate o autor da Ferramenta Global e veja se ele pode recompilar e publicar novamente o pacote de ferramentas no NuGet com um número de versão atualizado. Depois que ele atualizar o pacote NuGet, atualize sua cópia.
-
-A CLI do .NET Core tenta adicionar as localizações padrão à variável de ambiente PATH em seu primeiro uso. No entanto, existem alguns cenários em que o local pode não ser adicionado a PATH automaticamente, como:
-
-* Se você definiu a variável de ambiente `DOTNET_SKIP_FIRST_TIME_EXPERIENCE`.
-* No macOS, se você instalou o SDK do .NET Core usando arquivos *.tar.gz* e não *.pkg*.
-* No Linux, você precisa editar o arquivo do ambiente do shell para configurar o PATH.
-
 ## <a name="other-cli-commands"></a>Outros comandos da CLI
 
 O SDK do .NET Core contém outros comandos que dão suporte às Ferramentas Globais do .NET Core. Use um dos comandos `dotnet tool` com uma das seguintes opções:
@@ -162,3 +137,7 @@ Para exibir todas as Ferramentas Globais atualmente instaladas no computador, ju
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>Consulte também
+
+* [Solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md)

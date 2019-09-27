@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Analisar sentimentos – classificação binária'
 description: Este tutorial mostra como criar um aplicativo Razor Pages que classifica as opiniões dos comentários do site e executa a ação apropriada. O classificador de sentimentos binários usa o construtor de modelos no Visual Studio.
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 375440d98fd728cc89c1ac620614067edbd3adf8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216885"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332573"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analisar sentimentos de comentários do site em um aplicativo Web usando o ML.NET Model Builder
 
@@ -66,7 +66,7 @@ Cada linha no conjunto de *Detox da Wikipédia--line-data-250 o DataSet. tsv* re
 
 ## <a name="choose-a-scenario"></a>Escolha um cenário
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Assistente do construtor de modelos no Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
 Para treinar seu modelo, você precisa selecionar na lista de cenários disponíveis de aprendizado de máquina fornecidos pelo Construtor de Modelo.
 
@@ -79,7 +79,8 @@ O construtor de modelos aceita dados de duas fontes, de um SQL Server um ou de `
 
 1. Na etapa de dados da ferramenta do Construtor de Modelo, selecione **Arquivo** na lista suspensa da fonte de dados.
 1. Selecione o botão ao lado da caixa de texto **selecionar um arquivo** e use o explorador de arquivos para procurar e selecionar o arquivo *Wikipédia-Detox-250-line-Data. tsv* .
-1. Escolha **sentimentos** no **rótulo ou coluna para prever** DropDown
+1. Escolha **sentimentos** na **coluna para prever (rótulo)** DropDown.
+1. Deixe os valores padrão para a lista suspensa **colunas de entrada (recursos)** .
 1. Selecione o link **treinar** para mover para a próxima etapa na ferramenta do construtor de modelos.
 
 ## <a name="train-the-model"></a>Treinar o modelo
@@ -117,23 +118,13 @@ Dois projetos serão criados como resultado do processo de treinamento.
     Os projetos a seguir devem aparecer no **Gerenciador de soluções**:
 
     - *SentimentRazorML. ConsoleApp*: Um aplicativo de console .NET Core que contém o treinamento do modelo e o código de previsão.
-    - *SentimentRazorML. Model*: Uma biblioteca de classes .NET Standard que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, bem como a versão persistente do modelo com melhor desempenho durante o treinamento.
+    - *SentimentRazorML. Model*: Uma .NET Standard biblioteca de classes que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, bem como a versão salva do modelo de melhor desempenho durante o treinamento.
 
     Para este tutorial, somente o projeto *SentimentRazorML. Model* é usado porque as previsões serão feitas no aplicativo Web *SentimentRazor* , e não no console. Embora o *SentimentRazorML. ConsoleApp* não seja usado para pontuação, ele pode ser usado para treinar novamente o modelo usando novos dados em um momento posterior. No entanto, o novo treinamento está fora do escopo deste tutorial.
 
-1. Para usar o modelo treinado dentro de seu aplicativo Razor Pages, adicione uma referência ao projeto *SentimentRazorML. Model* .
-
-    1. Clique com o botão direito do mouse em projeto **SentimentRazor** .
-    1. Selecione **Adicionar referência de >** .
-    1. Escolha o nó **projetos > solução** e, na lista, verifique o projeto **SentimentRazorML. Model** .
-    1. Selecione **OK**.
-
 ### <a name="configure-the-predictionengine-pool"></a>Configurar o pool PredictionEngine
 
-Para fazer uma única previsão, você pode usar o [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Para usar [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) o em seu aplicativo, você deve criá-lo quando necessário. Nesse caso, a prática recomendada é considerar sua injeção de dependência.
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Para melhorar o desempenho e o acesso thread-safe, use o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos `PredictionEngine` para uso do aplicativo. Leia a postagem no blog para saber mais sobre [criar e usar pools de objeto `PredictionEngine` no ASP.NET Core](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/).
+Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Além disso, você precisa criar uma instância dela em qualquer lugar em que seja necessário dentro de seu aplicativo. À medida que seu aplicativo cresce, esse processo pode se tornar não gerenciável. Para melhorar o desempenho e a segurança do thread, use uma combinação de injeção de dependência e o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo.
 
 1. Instale o pacote NuGet do *Microsoft.Extensions.ml* :
 
@@ -250,7 +241,7 @@ Agora que seu aplicativo está configurado, execute o aplicativo que deve ser in
 
 Quando o aplicativo for iniciado, insira o *Construtor de modelos é legal!* na área de texto. As opiniões previstas exibidas *não*devem ser tóxicos.
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![Executando a janela com a janela de opiniões prevista](./media/sentiment-analysis-model-builder/web-app.png)
 
 Se você precisar fazer referência aos projetos gerados pelo construtor de modelos em um momento posterior dentro de outra solução, você poderá encontrá- `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` los dentro do diretório.
 

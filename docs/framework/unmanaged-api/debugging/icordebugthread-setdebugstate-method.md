@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332807"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>Método ICorDebugThread::SetDebugState
-Define os sinalizadores que descrevem o estado de depuração deste ICorDebugThread.  
+Define sinalizadores que descrevem o estado de depuração deste ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +37,16 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>Parâmetros  
  `state`  
- [in] Uma combinação bit a bit dos valores de enumeração CorDebugThreadState que especificam o estado de depuração desse thread.  
+ no Uma combinação de bits e valores de enumeração de CorDebugThreadState que especificam o estado de depuração desse thread.  
   
 ## <a name="remarks"></a>Comentários  
- `SetDebugState` Define o estado de depuração atual do thread. (O "estado atual de depuração" representa o estado de depuração se o processo de ser continuada, não o estado atual propriamente dito.) O valor normal é THREAD_RUNNING. Somente o depurador pode afetar o estado de depuração de um thread. Estados de depuração pela última vez em continuar, portanto, se você quiser manter um thread continua THREAD_SUSPENDed ao longo de vários, você pode defini-lo uma vez e depois disso não precisa se preocupar sobre ele. Suspendendo threads e reiniciando o processo podem causar deadlocks, embora seja improvável normalmente. Essa é uma qualidade intrínseco de threads e processos e é por design. Um depurador assincronamente pode interromper e retomar os threads para quebrar o deadlock. Se o estado do usuário do thread inclui USER_UNSAFE_POINT, o thread pode bloquear uma coleta de lixo (GC). Isso significa que o thread suspenso tem uma chance maior de causar um deadlock. Isso pode não afetar a depuração de eventos já na fila. Assim, um depurador deve drenar a fila de evento completa (chamando [icordebugcontroller:: Hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender ou retomar os threads. Caso contrário ele poderá receber eventos em um thread que ele acredita que ele suspendeu.  
+ `SetDebugState` define o estado de depuração atual do thread. (O "estado de depuração atual" representa o estado de depuração se o processo deveria ser continuado, não o estado atual real.) O valor normal para isso é THREAD_RUN. Somente o depurador pode afetar o estado de depuração de um thread. Os Estados de depuração fazem por último em continuar, portanto, se você quiser manter um thread THREAD_SUSPENDed sobre vários continuar, poderá defini-lo uma vez e depois não precisará se preocupar com ele. Suspender threads e retomar o processo pode causar deadlocks, embora normalmente seja improvável. Essa é uma qualidade intrínseca de threads e processos e é por design. Um depurador pode interromper e retomar de forma assíncrona os threads para interromper o deadlock. Se o estado do usuário do thread incluir USER_UNSAFE_POINT, o thread poderá bloquear uma coleta de lixo (GC). Isso significa que o thread suspenso tem uma chance muito maior de causar um deadlock. Isso pode não afetar os eventos de depuração já enfileirados. Portanto, um depurador deve drenar toda a fila de eventos (chamando [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender ou retomar os threads. Caso contrário, ele pode receber eventos em um thread que ele acredita que já foi suspenso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
