@@ -2,12 +2,12 @@
 title: 'Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 7b56185b98d89572e6a8e3b9bc8ed54ad6ef7b37
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d521e56f9ae311eea53028ba189416db289839cd
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631047"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352890"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Como: Combinar e comparar coleções de cadeias de caracteres (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em segu
 
 1. Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:
 
-    ```
+    ```text
     Bankov, Peter
     Holm, Michael
     Garcia, Hugo
@@ -32,7 +32,7 @@ Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em segu
 
 2. Copie esses nomes em um arquivo de texto chamado names2.txt e salve-o na sua pasta do projeto. Observe que os dois arquivos tem alguns nomes em comum.
 
-    ```
+    ```text
     Liu, Jinghao
     Bankov, Peter
     Holm, Michael
@@ -165,7 +165,7 @@ End Class
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Crie um projeto de aplicativo de console do VB.NET `Imports` , com uma instrução para o namespace System. Linq.
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
 
 ## <a name="see-also"></a>Consulte também
 

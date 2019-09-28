@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054065"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354033"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
@@ -321,7 +321,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
     Se a exceção for gerenciada, <xref:System.OutOfMemoryException> será exibido como o tipo de exceção, conforme mostrado no exemplo a seguir.
 
-    ```
+    ```console
     Exception object: 39594518
     Exception type: System.OutOfMemoryException
     Message: <none>
@@ -335,7 +335,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
     O thread com a pilha que tem chamadas de exceção é indicado pelo argumento `RaiseTheException`. Esse é o objeto de exceção gerenciada.
 
-    ```
+    ```console
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0
     ```
 
@@ -355,7 +355,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   A maior região livre é exibida conforme mostrado na saída a seguir.
 
-  ```
+  ```console
   Largest free region: Base 54000000 - Size 0003A980
   ```
 
@@ -369,7 +369,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   A maior região livre é o maior valor encontrado na coluna MAXIMUM, conforme mostrado na saída a seguir.
 
-  ```
+  ```console
   TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL
   ~~~~        ~~~~~~~   ~~~~~~~     ~~~~~~~   ~~~~~~~~~~  ~~~~
   Free:
@@ -415,7 +415,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   O resultado é demonstrado a seguir.
 
-  ```
+  ```console
   Number of GC Heaps: 2
   ------------------------------
   Heap 0 (002db550)
@@ -459,7 +459,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo:
 
-  ```
+  ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
   00155f80      533     15216804      Free
   7a747c78   791070     15821400 System.Collections.Specialized.ListDictionary+DictionaryNode
@@ -479,7 +479,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Um exemplo dos resultados é conforme demonstrado a seguir.
 
-  ```
+  ```console
   Address  MT           Size  Gen
   1875d2c0 790fa3e0      152    2 System.String HighlightNullStyle_Blotter_PendingOrder-11_Blotter_PendingOrder-11
   …
@@ -503,7 +503,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Raízes encontradas em pilhas podem ser falsos positivos. Para obter mais informações, use o comando `!help gcroot`.
 
-  ```
+  ```console
   ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->
   19010b78(DemoApp.FormDemoApp)->
   19011158(System.Windows.Forms.PropertyStore)->
@@ -551,7 +551,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
     Esse comando fornece uma saída como a mostrada a seguir.
 
-    ```
+    ```console
        OSID     Special thread type
     2    cd0    DbgHelper
     3    c18    Finalizer
@@ -570,7 +570,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Esse comando exibe o tamanho total de todos os objetos livres no heap gerenciado, conforme mostrado no exemplo a seguir.
 
-  ```
+  ```console
   total 230 objects
   Statistics:
         MT    Count    TotalSize Class Name
@@ -584,7 +584,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Esse comando exibe uma saída semelhante à seguinte. A última linha mostra o segmento efêmero.
 
-  ```
+  ```console
   Heap 0 (0015ad08)
   generation 0 starts at 0x49521f8c
   generation 1 starts at 0x494d7f64
@@ -604,7 +604,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   O resultado é demonstrado a seguir. A geração 0 usa aproximadamente 9 MB.
 
-  ```
+  ```console
   Evaluate expression: 9321848 = 008e3d78
   ```
 
@@ -614,7 +614,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   O resultado é demonstrado a seguir.
 
-  ```
+  ```console
   ------------------------------
   Heap 0
   total 409 objects
@@ -647,7 +647,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   As estatísticas exibidas incluem o número de identificadores fixados, tal como mostra o exemplo a seguir.
 
-  ```
+  ```console
   GC Handle Statistics:
   Strong Handles:      29
   Pinned Handles:      10
@@ -665,7 +665,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Os dados a seguir mostram quatro intervalos de amostragem de dois segundos, para um estudo de oito segundos. As colunas `Gen0`, `Gen1` e `Gen2` mostram o número de coletas de lixo ocorridas durante esse intervalo para essa geração.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2    % Time in GC
           1       9       3       1              10
           2      10       3       1               1
@@ -677,7 +677,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Neste exemplo, há cinco períodos.
 
-  ```
+  ```console
   Interval    Gen0    Gen1    Gen2     % Time in GC
           1       9       3       1                3
           2      10       3       1                1
@@ -692,7 +692,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Por exemplo, os dados a seguir mostram uma sequência de eventos que ocorreram durante uma coleta de lixo não simultânea.
 
-  ```
+  ```console
   Timestamp    Event name
   513052        GCSuspendEEBegin_V1
   513078        GCSuspendEEEnd
@@ -711,7 +711,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   A saída a seguir fornece um exemplo para coleta de lixo em segundo plano e inclui o processo, thread e campos de evento. (Nem todos os dados são mostrados.)
 
-  ```
+  ```console
   timestamp(us)    event name            process    thread    event field
   42504385        GCSuspendEEBegin_V1    Test.exe    4372             1
   42504648        GCSuspendEEEnd         Test.exe    4372
@@ -751,7 +751,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Esse comando exibe uma saída semelhante à seguinte.
 
-  ```
+  ```console
   0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect
   0012f454 30002894 mscorwks!GCInterface::CollectGeneration+0xa4
   0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48
@@ -761,7 +761,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se a coleta de lixo tiver sido causada pela alocação de memória, a pilha será exibida da seguinte maneira:
 
-  ```
+  ```console
   0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration
   0012f2b8 7a07cba8 mscorwks!WKS::gc_heap::try_allocate_more_space+0x1a1
   0012f2d4 7a07cefb mscorwks!WKS::gc_heap::allocate_more_space+0x18
@@ -781,7 +781,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Saída de exemplo (abreviada para mostrar os objetos que usam mais espaço):
 
-  ```
+  ```console
   79124228    31857      9862328 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   00155f80    21248     12256296      Free
@@ -803,7 +803,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Saída de exemplo (abreviada para mostrar os objetos que usam mais espaço):
 
-  ```
+  ```console
   79124228    26648      9314256 System.Object[]
   035f0384    25668     11601936 Toolkit.TlkPosition
   79103b6c   296770     13057880 System.Threading.ReaderWriterLock

@@ -2,12 +2,12 @@
 title: Configurando o rastreamento para um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690572"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353060"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurando o rastreamento para um fluxo de trabalho
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Configurando acompanhar de Serviço de Fluxo de Trabalho
 
-Um fluxo de trabalho pode ser exposto como um serviço WCF quando hospedados no <xref:System.ServiceModel.Activities.WorkflowServiceHost> host de serviço. <xref:System.ServiceModel.Activities.WorkflowServiceHost> é uma implementação específica do .NET ServiceHost para um serviço fluxo de trabalho- base. Esta seção explica como configurar o controle para uma execução de serviço do fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] em <xref:System.ServiceModel.Activities.WorkflowServiceHost>. É configurada por um arquivo web.config (para um serviço web hospedado) ou um arquivo App.config (para um serviço hospedado em um aplicativo autônomo, como um aplicativo de console) especificando um comportamento do serviço ou com o código adicionando um comportamento acompanhamento- específico à coleção de <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> para o host serviço.
+Um fluxo de trabalho pode ser exposto como um serviço WCF quando hospedado no host de serviço <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> é uma implementação específica do .NET ServiceHost para um serviço fluxo de trabalho- base. Esta seção explica como configurar o controle para uma execução de serviço do fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] em <xref:System.ServiceModel.Activities.WorkflowServiceHost>. É configurada por um arquivo web.config (para um serviço web hospedado) ou um arquivo App.config (para um serviço hospedado em um aplicativo autônomo, como um aplicativo de console) especificando um comportamento do serviço ou com o código adicionando um comportamento acompanhamento- específico à coleção de <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> para o host serviço.
 
-Para um serviço de fluxo de trabalho hospedados no <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar a <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o <`behavior`> elemento em um arquivo de configuração, conforme mostrado no exemplo a seguir.
+Para um serviço de fluxo de trabalho hospedado no <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o elemento < `behavior` > em um arquivo de configuração, conforme mostrado no exemplo a seguir.
 
 ```xml
 <behaviors>
@@ -67,7 +67,7 @@ Para um serviço de fluxo de trabalho hospedados no <xref:System.ServiceModel.Wo
 Como alternativa, para um serviço de fluxo de trabalho hospedado em <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar a extensão do comportamento de <xref:System.Activities.Tracking.EtwTrackingParticipant> com o código. Para adicionar um participante personalizado de rastreamento, criar uma nova extensão do comportamento e adicioná-lo a <xref:System.ServiceModel.ServiceHost> conforme mostrado no código de exemplo a seguir.
 
 > [!NOTE]
-> Se você deseja exibir o código de exemplo que mostra como criar um elemento de comportamento personalizado que adiciona um participante personalizado, consulte a [acompanhamento](./samples/tracking.md) exemplos.
+> Se você quiser exibir o código de exemplo que mostra como criar um elemento de comportamento personalizado que adiciona um participante de acompanhamento personalizado, consulte os exemplos de [acompanhamento](./samples/tracking.md) .
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -95,10 +95,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
                 return null;
             }
 
-            if (profileName == null)
-            {
-                profileName = "";
-            }
+            profileName ??= "";
 
             //Find the profile with the specified profile name in the list of profile found in config
             var match = from p in new List<TrackingProfile>(trackingSection.TrackingProfiles)
@@ -137,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Para obter mais informações sobre perfis de rastreamento, consulte [perfis de acompanhamento](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](https://go.microsoft.com/fwlink/?LinkId=201310).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurando o rastreamento usando WorkflowInvoker
 
-Para configurar o rastreamento para um fluxo de trabalho foi executado usando <xref:System.Activities.WorkflowInvoker>, adicione o provedor de rastreamento como uma extensão para uma instância de <xref:System.Activities.WorkflowInvoker> . O exemplo de código a seguir é do [acompanhamento personalizado](./samples/custom-tracking.md) exemplo.
+Para configurar o rastreamento para um fluxo de trabalho foi executado usando <xref:System.Activities.WorkflowInvoker>, adicione o provedor de rastreamento como uma extensão para uma instância de <xref:System.Activities.WorkflowInvoker> . O exemplo de código a seguir é do exemplo de [rastreamento personalizado](./samples/custom-tracking.md) .
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -151,41 +148,41 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Registros de exibição de rastreamento no visualizador de eventos
 
-Há dois logs do visualizador de eventos de interesse específico exibir quando controlando a execução de WF - o log analítico e depuração de log. Ambos residem em Microsoft&#124;Windows&#124;nó de aplicativos de servidor. Os logs dentro desta seção contêm eventos de um único aplicativo em vez de eventos que têm um impacto no sistema inteiro.
+Há dois logs do visualizador de eventos de interesse específico exibir quando controlando a execução de WF - o log analítico e depuração de log. Ambos residem no nó servidor&#124;de&#124;aplicativos do Microsoft Windows – aplicativos. Os logs dentro desta seção contêm eventos de um único aplicativo em vez de eventos que têm um impacto no sistema inteiro.
 
 Os eventos de rastreamento de depuração são gravados no log de depuração. Para coletar eventos de rastreamento de depuração de WF no visualizador de eventos, ative o log de depuração.
 
-1. Para abrir o Visualizador de eventos, clique em **inicie**e, em seguida, clique em **executar.** Na caixa de diálogo Executar, digite `eventvwr`.
+1. Para abrir Visualizador de Eventos, clique em **Iniciar**e em **executar.** Na caixa de diálogo Executar, digite `eventvwr`.
 
-2. Na caixa de diálogo Visualizador de eventos, expanda o **Applications and Services Logs** nó.
+2. Na caixa de diálogo Visualizador de Eventos, expanda o nó **logs de aplicativos e serviços** .
 
-3. Expanda o **Microsoft**, **Windows**, e **aplicativos de servidor** nós.
+3. Expanda os nós **Microsoft**, **Windows**e **Application Server – Applications** .
 
-4. Clique com botão direito a **Debug** nó sob o **aplicativos de servidor** nó e selecione **Habilitar Log**.
+4. Clique com o botão direito do mouse no nó de **depuração** no nó **servidor de aplicativos – aplicativos** e selecione **habilitar log**.
 
 5. Execute o aplicativo rastreamento ativado gerar eventos de rastreamento.
 
-6. Clique com botão direito do **Debug** nó e selecione **atualizar.** Os eventos de rastreamento devem ser no centro painel visível.
+6. Clique com o botão direito do mouse no nó de **depuração** e selecione **Atualizar.** Os eventos de rastreamento devem ser no centro painel visível.
 
 WF 4 fornece um participante de rastreamento que grava registros de rastreamento a uma sessão de rastreamento (ETW de evento para o Windows). O participante de rastreamento de ETW é configurado com um perfil de rastreamento para assinar a acompanhar registros. Quando você estiver ativado, os erros que acompanham registros são emitidas a ETW. Eventos de controle de (ETW entre o intervalo de 100-113) que correspondem aos eventos de rastreamento emissores por participante de rastreamento de ETW são gravados no log analítico.
 
 Para exibir registros de rastreamento, siga estas etapas.
 
-1. Para abrir o Visualizador de eventos, clique em **inicie**e, em seguida, clique em **executar.** Na caixa de diálogo Executar, digite `eventvwr`.
+1. Para abrir Visualizador de Eventos, clique em **Iniciar**e em **executar.** Na caixa de diálogo Executar, digite `eventvwr`.
 
-2. Na caixa de diálogo Visualizador de eventos, expanda o **Applications and Services Logs** nó.
+2. Na caixa de diálogo Visualizador de Eventos, expanda o nó **logs de aplicativos e serviços** .
 
-3. Expanda o **Microsoft**, **Windows**, e **aplicativos de servidor** nós.
+3. Expanda os nós **Microsoft**, **Windows**e **Application Server – Applications** .
 
-4. Com o botão direito do **analítico** nó sob o **aplicativos de servidor** nó e selecione **Habilitar Log**.
+4. Clique com o botão direito do mouse no nó **analítico** no nó **servidor de aplicativos – aplicativos** e selecione **habilitar log**.
 
 5. Executar o aplicativo acompanhamento- ativado gerar registros de rastreamento.
 
-6. Clique com botão direito do **analítico** nó e selecione **atualizar.** Controlar registros deve ser no centro painel visível.
+6. Clique com o botão direito do mouse no nó **analítico** e selecione **Atualizar.** Controlar registros deve ser no centro painel visível.
 
-A imagem a seguir mostra os eventos de rastreamento no Visualizador de eventos:
+A imagem a seguir mostra eventos de rastreamento no Visualizador de eventos:
 
-![Captura de tela mostrando o Visualizador de eventos que registros de acompanhamento.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![Captura de tela da Visualizador de Eventos mostrando registros de rastreamento.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrando um ID específico do aplicativo provedor
 
@@ -199,7 +196,7 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
     </system.serviceModel>
     ```
 
-2. Copiar o arquivo de manifesto de %windir%\Microsoft.NET\Framework\\\<versão mais recente do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man para um local temporário e renomeie-o como Microsoft.Windows.ApplicationServer.Applications_Provider1.man
+2. Copie o arquivo de manifesto da versão%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man para um local temporário e renomeie-o para Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Altere o GUID no arquivo de manifesto a nova GUID.
 
@@ -225,7 +222,7 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
 
 6. Gerencia o DLL de recurso seguindo estas etapas.
 
-    1. Instalar o Windows SDK. O SDK do Windows inclui o compilador de mensagens ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) e o compilador de recurso ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Instalar o Windows SDK. A SDK do Windows inclui o compilador de mensagem ([MC. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) e o compilador de recurso ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
 
     2. Em um prompt de comando do Windows SDK, execução mc.exe no novo arquivo de manifesto.
 
@@ -247,7 +244,7 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. Altere o nome da dll de recurso e a mensagem no arquivo de manifesto de `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` para o novo nome de dll.
+    6. Altere o recurso e o nome da DLL de mensagem no arquivo de manifesto de `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` para o novo nome de dll.
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
@@ -261,5 +258,5 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
 
 ## <a name="see-also"></a>Consulte também
 
-- [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoramento do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitorando aplicativos com o app Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

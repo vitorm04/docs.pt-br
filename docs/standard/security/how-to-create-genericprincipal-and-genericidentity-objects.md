@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795155"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353178"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como: criar objetos GenericPrincipal e GenericIdentity
 
-Você pode usar o <xref:System.Security.Principal.GenericIdentity> classe junto com o <xref:System.Security.Principal.GenericPrincipal> classe para criar um esquema de autorização que existe independentemente de um domínio do Windows.
+Você pode usar a classe <xref:System.Security.Principal.GenericIdentity> em conjunto com a classe <xref:System.Security.Principal.GenericPrincipal> para criar um esquema de autorização que existe independentemente de um domínio do Windows.
 
 ### <a name="to-create-a-genericprincipal-object"></a>Para criar um objeto GenericPrincipal
 
-1. Criar uma nova instância da classe de identidade e inicializá-lo com o nome que você deseja que ela contenha. O código a seguir cria um novo **GenericIdentity** do objeto e o inicializa com o nome `MyUser`.
+1. Crie uma nova instância da classe Identity e inicialize-a com o nome que você deseja que ela mantenha. O código a seguir cria um novo objeto **GenericIdentity** e o inicializa com o nome `MyUser`.
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ Você pode usar o <xref:System.Security.Principal.GenericIdentity> classe junto 
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. Criar uma nova instância dos **GenericPrincipal** de classe e inicializá-lo com criado anteriormente **GenericIdentity** objeto e uma matriz de cadeias de caracteres que representam as funções que você deseja associadas Essa entidade de segurança. O exemplo de código a seguir especifica uma matriz de cadeias de caracteres que representam uma função de administrador e uma função de usuário. O **GenericPrincipal** , em seguida, é inicializada com o anterior **GenericIdentity** e a matriz de cadeia de caracteres.
+2. Crie uma nova instância da classe **GenericPrincipal** e inicialize-a com o objeto **GenericIdentity** criado anteriormente e uma matriz de cadeias de caracteres que representem as funções que você deseja associar a essa entidade de segurança. O exemplo de código a seguir especifica uma matriz de cadeias de caracteres que representam uma função de administrador e uma função de usuário. Em seguida, o **GenericPrincipal** é inicializado com o **GenericIdentity** anterior e a matriz de cadeia de caracteres.
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ Você pode usar o <xref:System.Security.Principal.GenericIdentity> classe junto 
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Use o código a seguir para anexar a entidade de segurança ao thread atual. Isso é útil em situações em que a entidade de segurança deve ser validada várias vezes, ele deve ser validado por outro código em execução em seu aplicativo ou ele deve ser validado por um <xref:System.Security.Permissions.PrincipalPermission> objeto. Você ainda poderá realizar validação baseada em função no objeto de entidade sem anexá-lo para o thread. Para obter mais informações, consulte [substituindo um objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Use o código a seguir para anexar a entidade de segurança ao thread atual. Isso é valioso em situações em que a entidade de segurança deve ser validada várias vezes, deve ser validada por outro código em execução em seu aplicativo ou deve ser validada por um objeto <xref:System.Security.Permissions.PrincipalPermission>. Você ainda pode executar a validação baseada em função no objeto principal sem anexá-lo ao thread. Para obter mais informações, consulte [substituindo um objeto principal](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -60,7 +60,7 @@ Você pode usar o <xref:System.Security.Principal.GenericIdentity> classe junto 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir demonstra como criar uma instância de um **GenericPrincipal** e uma **GenericIdentity**. Esse código exibe os valores desses objetos no console.
+O exemplo de código a seguir demonstra como criar uma instância de um **GenericPrincipal** e um **GenericIdentity**. Esse código exibe os valores desses objetos para o console.
 
 ```vb
 Imports System
@@ -134,9 +134,9 @@ public class Class1
 }
 ```
 
-Quando executado, o aplicativo exibe a saída semelhante à seguinte.
+Quando executado, o aplicativo exibe uma saída semelhante à seguinte.
 
-```
+```console
 The Name is: MyIdentity
 The IsAuthenticated is: True
 Is this a Manager? True

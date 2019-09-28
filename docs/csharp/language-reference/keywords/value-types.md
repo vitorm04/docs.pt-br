@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2bbbac098096b46c659c4efde2d1c998c8e2d9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608382"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353755"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -32,7 +32,7 @@ Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?
 
 Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor. No entanto, assim como com tipos de referência, os structs podem implementar interfaces.
 
-Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos que permitem valor nulo](../../programming-guide/nullable-types/index.md) correspondentes podem ser `null`.
+Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos de valores anuláveis](../../programming-guide/nullable-types/index.md) correspondentes podem ser `null`.
 
 Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
 
@@ -109,4 +109,4 @@ Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Ta
 - [Palavras-chave do C#](index.md)
 - [Tipos](types.md)
 - [Tipos de referência](reference-types.md)
-- [Tipos que permitem valor nulo](../../programming-guide/nullable-types/index.md)
+- [Tipos de valor anuláveis](../../programming-guide/nullable-types/index.md)

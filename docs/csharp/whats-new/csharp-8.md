@@ -2,12 +2,12 @@
 title: O que há de C# novo no C# guia de 8,0
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216486"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396030"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -375,18 +375,18 @@ Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [cri
 
 ## <a name="indices-and-ranges"></a>Índices e intervalos
 
-Intervalos e índices fornecem uma sintaxe sucinta para especificar subintervalos em uma matriz, [cadeia](../language-reference/builtin-types/reference-types.md#the-string-type)de <xref:System.Span%601>caracteres, <xref:System.ReadOnlySpan%601>ou.
+Índices e intervalos fornecem uma sintaxe sucinta para acessar elementos únicos ou intervalos em uma sequência.
 
 Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
-- O operador `^`, que especifica que um índice é relativo ao final da sequência.
+- O índice do operador end `^`, que especifica que um índice é relativo ao final da sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador Range (`..`), que especifica o início e o final de um intervalo como seus operandos.
+- O operador `..`Range, que especifica o início e o término de um intervalo como seus operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence.Length - n`.
 
-Um intervalo especifica o *início* e o *final* de um intervalo. O início do intervalo é inclusivo, mas o final do intervalo é exclusivo, o que significa que o *início* está incluído no intervalo, mas o *final* não está incluído no intervalo. O intervalo `[0..^0]` representa todo o intervalo, assim como `[0..sequence.Length]` representa todo o intervalo. 
+Um intervalo especifica o *início* e o *final* de um intervalo. O início do intervalo é inclusivo, mas o final do intervalo é exclusivo, o que significa que o *início* está incluído no intervalo, mas o *final* não está incluído no intervalo. O intervalo `[0..^0]` representa todo o intervalo, assim como `[0..sequence.Length]` representa todo o intervalo.
 
 Vamos analisar alguns exemplos. Considere a matriz a seguir, anotada com seu índice do início e do final:
 
@@ -444,6 +444,8 @@ Em seguida, o intervalo pode ser usado dentro dos caracteres `[` e `]`:
 ```csharp
 var text = words[phrase];
 ```
+
+Não apenas as matrizes dão suporte a índices e intervalos. Você também pode usar índices e intervalos com [cadeia de caracteres](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>. Para obter mais informações, consulte [suporte de tipo para índices e intervalos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
 

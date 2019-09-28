@@ -2,12 +2,12 @@
 title: Localizando texto em documentos do Word (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: f05df74f09373af140766f601cfae26404ada1b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9eb5eaa8326167501792745da047f904cf001c29
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630915"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352917"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Localizando texto em documentos do Word (Visual Basic)
 
@@ -155,7 +155,7 @@ End Module
 
 Este exemplo gera a seguinte saída:
 
-```
+```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
@@ -296,7 +296,7 @@ End Module
 
 Este exemplo gera a seguinte saída:
 
-```
+```console
 StyleName:Code ><
 ```
 
@@ -312,6 +312,6 @@ A próxima seção fornece informações sobre documentos de WordprocessingML:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Manipulando o conteúdo em um documento do WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulando o conteúdo em um documento do WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [Execução retardada e avaliação lenta no LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

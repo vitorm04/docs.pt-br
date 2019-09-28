@@ -12,18 +12,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588405"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392161"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
 ## <a name="types-variables-and-values"></a>Tipos, variáveis e valores
 
-C# é uma linguagem fortemente tipada. Todas as variáveis e constantes têm um tipo, assim como cada expressão que é avaliada como um valor. Cada assinatura de método especifica um tipo para cada parâmetro de entrada e para o valor retornado. A biblioteca de classes do .NET define um conjunto de tipos numéricos internos, bem como tipos mais complexos que representam uma ampla variedade de constructos lógicos, como o sistema de arquivos, as conexões de rede, as coleções e as matrizes de objetos e as datas. Um programa em C# típico usa tipos da biblioteca de classes, bem como tipos definidos pelo usuário que modelam os conceitos que são específicos para o domínio do problema do programa.
+O C# é uma linguagem fortemente tipada. Todas as variáveis e constantes têm um tipo, assim como cada expressão que é avaliada como um valor. Cada assinatura de método especifica um tipo para cada parâmetro de entrada e para o valor retornado. A biblioteca de classes do .NET define um conjunto de tipos numéricos internos, bem como tipos mais complexos que representam uma ampla variedade de constructos lógicos, como o sistema de arquivos, as conexões de rede, as coleções e as matrizes de objetos e as datas. Um programa em C# típico usa tipos da biblioteca de classes, bem como tipos definidos pelo usuário que modelam os conceitos que são específicos para o domínio do problema do programa.
 
 As informações armazenadas em um tipo podem incluir o seguinte:
 
@@ -46,11 +46,11 @@ O compilador usa as informações de tipo para garantir que todas as operações
 > [!NOTE]
 > Desenvolvedores de C e C++, observem que, em C#, [bool](../../language-reference/keywords/bool.md) não é conversível em [int](../../language-reference/builtin-types/integral-numeric-types.md).
 
-O compilador insere as informações de tipo no arquivo executável como metadados. O CLR (Common Language Runtime) usa metadados em tempo de execução para garantir mais segurança de tipos quando aloca e recupera a memória.
+O compilador insere as informações de tipo no arquivo executável como metadados. O CLR (Common Language Runtime) usa esses metadados em tempo de execução para assegurar mais segurança de tipos ao alocar e recuperar a memória.
 
 ### <a name="specifying-types-in-variable-declarations"></a>Especificando tipos em declarações de variável
 
-Quando declara uma variável ou constante em um programa, você deve especificar seu tipo ou usar a palavra-chave [var](../../language-reference/keywords/var.md) para permitir que o compilador infira o tipo. O exemplo a seguir mostra algumas declarações de variáveis que usam tipos numéricos internos e tipos complexos definidos pelo usuário:
+Quando declara uma variável ou constante em um programa, você deve especificar o tipo da variável ou usar a palavra-chave [var](../../language-reference/keywords/var.md) para permitir que o compilador infira o tipo. O exemplo a seguir mostra algumas declarações de variáveis que usam tipos numéricos internos e tipos complexos definidos pelo usuário:
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
@@ -70,7 +70,7 @@ O C# fornece um conjunto padrão de tipos numéricos internos para representar n
 
 Você usa os constructos [struct](../../language-reference/keywords/struct.md), [classe](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) e [enum](../../language-reference/keywords/enum.md) para criar seus próprios tipos personalizados. A biblioteca de classes do .NET em si é uma coleção de tipos personalizados fornecida pela Microsoft, que você pode usar em seus próprios aplicativos. Por padrão, os tipos usados com mais frequência na biblioteca de classes estão disponíveis em qualquer programa em C#. Outros ficam disponíveis somente quando você adiciona explicitamente uma referência de projeto ao assembly no qual eles estão definidos. Após o compilador ter uma referência ao assembly, você pode declarar variáveis (e constantes) dos tipos declarados no assembly no código-fonte. Para saber mais, confira [Biblioteca de classes do .NET](../../../standard/class-library-overview.md).
 
-## <a name="the-common-type-system"></a>O CTS (Common Type System)
+## <a name="the-common-type-system"></a>O Common Type System
 
 É importante entender os dois pontos fundamentais sobre o sistema de tipos do .NET:
 
@@ -157,7 +157,7 @@ Como os literais são tipados e todos os tipos derivam basicamente de <xref:Syst
 
 ## <a name="generic-types"></a>Tipos genéricos
 
-Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como um espaço reservado para o tipo real (o *tipo concreto*) que o código do cliente fornecerá ao criar uma instância do tipo. Esses tipos são chamados de *tipos genéricos*. Por exemplo, o tipo do .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> tem um parâmetro de tipo que, por convenção, recebe o nome *T*. Ao criar uma instância do tipo, você pode especificar o tipo dos objetos que a lista conterá, por exemplo, a cadeia de caracteres:
+Um tipo pode ser declarado com um ou mais *parâmetros de tipo* que servem como um espaço reservado para o tipo real (o *tipo concreto*) que o código cliente fornecerá ao criar uma instância do tipo. Esses tipos são chamados de *tipos genéricos*. Por exemplo, o tipo do .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> tem um parâmetro de tipo que, por convenção, recebe o nome *T*. Ao criar uma instância do tipo, você pode especificar o tipo dos objetos que a lista conterá, por exemplo, a cadeia de caracteres:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -168,13 +168,13 @@ stringList.Add(4);
 
 O uso do parâmetro de tipo possibilita a reutilização da mesma classe para conter qualquer tipo de elemento sem precisar converter cada elemento em [objeto](../../language-reference/keywords/object.md). As classes de coleção genéricas são chamadas de *coleções fortemente tipadas* porque o compilador sabe o tipo específico dos elementos da coleção e pode gerar um erro em tempo de compilação se, por exemplo, você tentar adicionar um inteiro ao objeto `stringList` no exemplo anterior. Para obter mais informações, consulte [Genéricos](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Tipos implícitos, tipos anônimos e tipos que permitem valor nulo
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Tipos implícitos, tipos anônimos e tipos de valor anulável
 
 Conforme mencionado anteriormente, você pode digitar implicitamente uma variável local (mas não os membros de classe) usando a palavra-chave [var](../../language-reference/keywords/var.md). A variável ainda recebe um tipo em tempo de compilação, mas o tipo é fornecido pelo compilador. Para obter mais informações, consulte [Variáveis locais de tipo implícito](../classes-and-structs/implicitly-typed-local-variables.md).
 
 Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples de valores relacionados que você não pretende armazenar ou transmitir fora dos limites de método. Você pode criar *tipos anônimos* para essa finalidade. Para obter mais informações, consulte [Tipos anônimos](../classes-and-structs/anonymous-types.md).
 
-Os tipos comuns de valor não podem ter um valor [nulo](../../language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](../../language-reference/keywords/null.md). No CTS, os tipos anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Os tipos que permitem valor nulo são especialmente úteis quando você está passando dados entre bancos de dados nos quais os valores numéricos podem ser nulos. Para obter mais informações, consulte [Tipos que permitem valor nulo](../nullable-types/index.md).
+Os tipos comuns de valor não podem ter um valor [nulo](../../language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](../../language-reference/keywords/null.md). Os tipos de valor anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos. Para obter mais informações, consulte [tipos de valor anulável](../nullable-types/index.md).
 
 ## <a name="related-sections"></a>Seções relacionadas
 
@@ -196,7 +196,7 @@ Para mais informações, consulte os seguintes tópicos:
 
 - [Genéricos](../generics/index.md)
 
-## <a name="c-language-specification"></a>Especificação da Linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

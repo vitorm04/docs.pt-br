@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: HT
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442471"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393127"
 ---
 # <a name="globalization"></a>Globalização
 
@@ -183,7 +183,7 @@ O exemplo a seguir ilustra esse problema. Ele salva um único valor de data/hora
 
 Quando os dados são restaurados em um sistema no mesmo fuso horário do sistema no qual eles foram serializados, os valores de data/hora desserializados refletem com precisão o valor original, como se pode ver na saída:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -193,7 +193,7 @@ Quando os dados são restaurados em um sistema no mesmo fuso horário do sistema
 
 No entanto, se você restaurar os dados em um sistema em um fuso horário diferente, apenas o valor de data/hora que tiver sido formatado com a cadeia de caracteres de formato padrão "o" (ida e volta) preservará informações de fuso horário e, por isso, representará o mesmo instante no tempo. Aqui está a saída quando os dados de data e hora são restaurados em um sistema no fuso horário padrão românico:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -218,7 +218,7 @@ O exemplo a seguir ilustra cada uma das técnicas.
 
 Quando os dados são serializados em um sistema no fuso horário padrão do Pacífico e desserializados em um sistema no fuso horário padrão românico, o exemplo exibe a seguinte saída:
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local

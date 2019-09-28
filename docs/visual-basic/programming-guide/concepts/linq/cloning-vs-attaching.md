@@ -2,12 +2,12 @@
 title: Clonagem contra. Anexando (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2849c648d8d280200d742663cbc7188b344d8306
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789097"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352972"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Clonagem contra. Anexando (Visual Basic)
 Ao adicionar <xref:System.Xml.Linq.XNode> (incluindo <xref:System.Xml.Linq.XElement>) ou objetos de <xref:System.Xml.Linq.XAttribute> para uma nova árvore, se o novo conteúdo não tem nenhum pai, os objetos estão conectados somente à árvore XML. Se o novo conteúdo já parented, e é parte de outra árvore XML, o novo conteúdo são clonados. O conteúdo recentemente clonado é anexado a árvore XML.  
@@ -45,7 +45,7 @@ Console.WriteLine("Child2 was {0}", _
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  

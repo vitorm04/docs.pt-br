@@ -2,15 +2,15 @@
 title: Tipos de retorno assíncrono (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 387b75db3078afb92e6fc3ad7607b293abb0c851
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988832"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351953"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de retorno assíncrono (Visual Basic)
-Os métodos Async têm três tipos de retorno <xref:System.Threading.Tasks.Task%601>possíveis <xref:System.Threading.Tasks.Task>:, e void. No Visual Basic, o tipo de retorno void é gravado como um procedimento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+Os métodos Async têm três tipos de retorno possíveis: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> e void. No Visual Basic, o tipo de retorno void é gravado como um procedimento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obter mais informações sobre métodos assíncronos, consulte [programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Cada tipo de retorno é examinado em uma das seções a seguir e você pode encontrar um exemplo completo que usa todos os três tipos no final do tópico.  
   
@@ -18,7 +18,7 @@ Os métodos Async têm três tipos de retorno <xref:System.Threading.Tasks.Task%
 > Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
   
 ## <a name="BKMK_TaskTReturnType"></a> Tipo de retorno Task(T)  
- O <xref:System.Threading.Tasks.Task%601> tipo de retorno é usado para um método assíncrono que contém uma instrução [Return](../../../../visual-basic/language-reference/statements/return-statement.md) na qual o operando tem `TResult`o tipo.  
+ O tipo de retorno <xref:System.Threading.Tasks.Task%601> é usado para um método assíncrono que contém uma instrução de [retorno](../../../../visual-basic/language-reference/statements/return-statement.md) na qual o operando tem o tipo `TResult`.  
   
  No exemplo a seguir, o método assíncrono `TaskOfT_MethodAsync` contém uma instrução return que retorna um número inteiro. Portanto, a declaração do método deve especificar um tipo de retorno de `Task(Of Integer)`.  
   
@@ -80,7 +80,7 @@ textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, inte
 ```  
   
 ## <a name="BKMK_TaskReturnType"></a> Tipo de retorno Task  
- Os métodos assíncronos que não contêm uma instrução Return ou que contêm uma instrução Return que não retorna um operando geralmente têm um tipo <xref:System.Threading.Tasks.Task>de retorno de. Esses métodos seriam procedimentos [sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) se fossem escritos para serem executados de forma síncrona. Se você usar um tipo de retorno `Task` para um método assíncrono, um método de chamada poderá usar um operador `Await` para suspender a conclusão do chamador até que o método assíncrono chamado seja concluído.  
+ Os métodos assíncronos que não contêm uma instrução Return ou que contêm uma instrução Return que não retorna um operando geralmente têm um tipo de retorno de <xref:System.Threading.Tasks.Task>. Esses métodos seriam procedimentos [sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) se fossem escritos para serem executados de forma síncrona. Se você usar um tipo de retorno `Task` para um método assíncrono, um método de chamada poderá usar um operador `Await` para suspender a conclusão do chamador até que o método assíncrono chamado seja concluído.  
   
  No exemplo a seguir, o método assíncrono `Task_MethodAsync` não contém uma instrução return. Portanto, você especifica um tipo de retorno de `Task` para o método, que permite que `Task_MethodAsync` seja aguardado. A definição do tipo `Task` não inclui uma propriedade `Result` para armazenar um valor retornado.  
   
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`é chamado e esperado usando uma instrução Await em vez de uma expressão Await, semelhante à instrução de chamada para um método síncrono `Sub` ou de retorno nulo. O aplicativo de um `Await` operador, nesse caso, não produz um valor.  
+ `Task_MethodAsync` é chamado e aguardado usando uma instrução Await em vez de uma expressão Await, semelhante à instrução de chamada para um método síncrono de retorno de `Sub` ou void. O aplicativo de um operador `Await` nesse caso não produz um valor.  
   
  O código a seguir chama e aguarda o método `Task_MethodAsync`.  
   
@@ -107,7 +107,7 @@ End Function
 Await Task_MethodAsync()  
 ```  
   
- Como no exemplo anterior <xref:System.Threading.Tasks.Task%601> , você pode separar a chamada para `Task_MethodAsync` do aplicativo de um `Await` operador, como mostra o código a seguir. No entanto, lembre-se que uma `Task` não tem uma propriedade `Result` e que nenhum valor será produzido quando um operador await for aplicado a uma `Task`.  
+ Como no exemplo anterior <xref:System.Threading.Tasks.Task%601>, você pode separar a chamada para `Task_MethodAsync` do aplicativo de um operador `Await`, como mostra o código a seguir. No entanto, lembre-se que uma `Task` não tem uma propriedade `Result` e que nenhum valor será produzido quando um operador await for aplicado a uma `Task`.  
   
  O código a seguir separa a chamada ao `Task_MethodAsync` da espera pela tarefa que `Task_MethodAsync` retorna.  
   
@@ -122,7 +122,7 @@ Await simpleTask
 ```  
   
 ## <a name="BKMK_VoidReturnType"></a> Tipo de retorno void  
- O uso principal de `Sub` procedimentos é em manipuladores de eventos, em que não há nenhum tipo de retorno (chamado de tipo de retorno void em outras linguagens). Um retorno void também pode ser usado para substituir métodos de retorno void ou para métodos que realizam atividades que podem ser categorizadas como "disparar e esquecer". No entanto, você deve retornar uma `Task` sempre que possível, porque um método assíncrono de retorno void não pode ser aguardado. Qualquer chamador desse método deve ser capaz de continuar até a conclusão, sem aguardar a conclusão do método assíncrono chamado e o chamador deve ser independente de todos os valores ou exceções gerados pelo método assíncrono.  
+ O uso principal dos procedimentos `Sub` é em manipuladores de eventos, em que não há nenhum tipo de retorno (chamado de tipo de retorno void em outras linguagens). Um retorno void também pode ser usado para substituir métodos de retorno void ou para métodos que realizam atividades que podem ser categorizadas como "disparar e esquecer". No entanto, você deve retornar uma `Task` sempre que possível, porque um método assíncrono de retorno void não pode ser aguardado. Qualquer chamador desse método deve ser capaz de continuar até a conclusão, sem aguardar a conclusão do método assíncrono chamado e o chamador deve ser independente de todos os valores ou exceções gerados pelo método assíncrono.  
   
  O chamador de um método assíncrono de retorno void não pode capturar exceções que são lançadas pelo método e essas exceções sem tratamento provavelmente causarão falha do seu aplicativo. Se ocorrer uma exceção em um método assíncrono que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>, a exceção é armazenada na tarefa retornada e relançada quando a tarefa é esperada. Portanto, verifique se qualquer método assíncrono que pode produzir uma exceção tem um tipo de retorno de <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> e que as chamadas ao método são aguardadas.  
   
@@ -274,9 +274,9 @@ End Sub
   
 9. Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.  
   
-     A saída a seguir deverá aparecer.  
+     A saída a seguir deve aparecer:  
   
-    ```  
+    ```console  
     Application can continue working while the Task<T> runs. . . .   
   
     Value of result1 variable:   5  
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Passo a passo: Acessando a Web usando Async e Await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Fluxo de controle em programas assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Operador Await](../../../../visual-basic/language-reference/operators/await-operator.md)

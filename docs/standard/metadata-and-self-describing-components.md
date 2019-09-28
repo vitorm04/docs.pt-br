@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754950"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353899"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadados e componentes autodescritivos
 
@@ -84,9 +84,7 @@ Cada linha de cada tabela de metadados é identificada com exclusividade na part
 
 Um token de metadados é um número de quatro bytes. O byte superior denota a tabela de metadados a que um token específico se refere (método, tipo etc.). Os três bytes restantes especificam a linha na tabela de metadados que corresponde ao elemento de programação descrito. Se você definir um método em C# e compilá-lo em um arquivo PE, o seguinte token de metadados poderá existir na parte MSIL do arquivo PE:
 
-```
-0x06000004
-```
+`0x06000004`
 
 O byte superior (`0x06`) indica que esse é um token **MethodDef**. Os três bytes inferiores (`000004`) pedem para o Common Language Runtime examinar na quarta linha da tabela **MethodDef** em busca das informações que descrevem essa definição de método.
 
@@ -140,7 +138,7 @@ Quando o código é executado, o tempo de execução carrega o módulo na memór
 
 O exemplo a seguir mostra parte do MSIL produzido a partir da função `Main` do código anterior. Você pode exibir o MSIL e os metadados de qualquer aplicativo .NET Framework usando o [MSIL Disassembler (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
 
-```
+```console
 .entrypoint
 .maxstack  3
 .locals ([0] int32 ValueOne,

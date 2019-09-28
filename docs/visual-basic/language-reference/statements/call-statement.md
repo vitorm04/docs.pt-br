@@ -8,44 +8,48 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0b62d6cfacbcf94f527e049e07e51bf496a6cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945061"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392753"
 ---
 # <a name="call-statement-visual-basic"></a>Instrução Call (Visual Basic)
-Transfere o controle para um `Function`, `Sub`, ou um procedimento de biblioteca de vínculo dinâmico (DLL).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-[ Call ] procedureName [ (argumentList) ]  
-```  
-  
-## <a name="parts"></a>Partes  
+
+Transfere o controle para um procedimento `Function`, `Sub` ou DLL (biblioteca de vínculo dinâmico).
+
+## <a name="syntax"></a>Sintaxe
+
+```vb
+[ Call ] procedureName [ (argumentList) ]
+```
+
+## <a name="parts"></a>Partes
+
 |||
 |---|---|
-|`procedureName`|Necessário. Nome do procedimento de chamada.|
-|`argumentList`|Opcional. Lista de variáveis ou expressões que representam os argumentos são passados para o procedimento quando ele é chamado. Vários argumentos são separados por vírgulas. Se você incluir `argumentList`, você deve colocá-la entre parênteses.|
+|`procedureName`|Necessário. Nome do procedimento a ser chamado.|
+|`argumentList`|Opcional. Lista de variáveis ou expressões que representam argumentos que são passados para o procedimento quando ele é chamado. Vários argumentos são separados por vírgulas. Se você incluir `argumentList`, deverá colocá-lo entre parênteses.|
 |||
   
-## <a name="remarks"></a>Comentários  
- Você pode usar o `Call` palavra-chave quando você chama um procedimento. Para a maioria das chamadas de procedimento, não é necessário usar essa palavra-chave.  
-  
- Normalmente, você usa o `Call` palavra-chave quando a expressão de chamada não começa com um identificador. Usar o `Call` palavra-chave para outros usos não é recomendado.  
-  
- Se o procedimento retorna um valor, o `Call` instrução descarta-lo.  
-  
-## <a name="example"></a>Exemplo  
- O código a seguir mostra dois exemplos em que o `Call` palavra-chave é necessária para chamar um procedimento. Nos dois exemplos, a expressão de chamada não começa com um identificador.  
-  
+## <a name="remarks"></a>Comentários
+
+ Você pode usar a palavra-chave `Call` ao chamar um procedimento. Para a maioria das chamadas de procedimento, você não precisa usar essa palavra-chave.
+
+ Normalmente, você usa a palavra-chave `Call` quando a expressão chamada não começa com um identificador. O uso da palavra-chave `Call` para outros usos não é recomendado.
+
+ Se o procedimento retornar um valor, a instrução `Call` o descartará.
+
+## <a name="example"></a>Exemplo
+
+ O código a seguir mostra dois exemplos em que a palavra-chave `Call` é necessária para chamar um procedimento. Em ambos os exemplos, a expressão chamada não começa com um identificador.
+
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Instrução Function](function-statement.md)
+- [Instrução Sub](sub-statement.md)
+- [Instrução Declare](declare-statement.md)
+- [Expressões Lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)

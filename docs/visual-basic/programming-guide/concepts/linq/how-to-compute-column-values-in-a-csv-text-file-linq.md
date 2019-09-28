@@ -1,22 +1,22 @@
 ---
-title: 'Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)'
+title: 'Como: Calcular valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592993"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351749"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: Calcular valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)
 Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.  
   
 ### <a name="to-create-the-source-file"></a>Para criar o arquivo de origem  
   
 1. Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -143,7 +143,7 @@ End Class
  A consulta funciona usando o método <xref:System.String.Split%2A> para converter cada linha de texto em uma matriz. Cada elemento da matriz representa uma coluna. Por fim, o texto em cada coluna é convertido em sua representação numérica. Se o arquivo for um arquivo separado por tabulações, é só atualizar o argumento no método `Split` para `\t`.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
-Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

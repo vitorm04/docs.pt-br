@@ -1,15 +1,15 @@
 ---
-title: 'Como: Capturar erros (Visual Basic) de análise'
+title: 'Como: Erros de análise de captura (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0c0749e8bc6d3fb1a71595778bfc5effaaf8533
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855628"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352935"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Como: Capturar erros (Visual Basic) de análise
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Como: Erros de análise de captura (Visual Basic)
 Este tópico mostra como detectar XML mal formado ou inválido.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é implementado usando <xref:System.Xml.XmlReader>. Se malformado ou XML válido é passado para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a classe subjacente de <xref:System.Xml.XmlReader> irá acionar uma exceção. Os vários métodos que analisam XML, tais como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, não capturam a exceção; a exceção pode ser capturada por seu aplicativo.  
@@ -35,7 +35,7 @@ End Try
   
  Quando você executa esse código, gerencie a seguinte exceção:  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   

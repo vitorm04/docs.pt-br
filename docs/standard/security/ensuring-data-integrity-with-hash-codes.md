@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0383dc3024352b9fac879532ab2789a60488c96
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331640"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353173"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Assegurando a integridade dos dados com códigos hash
 Um valor de hash é um valor numérico de um comprimento fixo que identifica dados exclusivamente. Os valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que sejam usados com assinaturas digitais. Você pode assinar um valor de hash com mais eficiência do que assinar o valor maior. Os valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguros. O valor de hash dos dados recebidos pode ser comparado ao valor de hash dos dados conforme eles foram enviados para determinar se os dados foram alterados.  
@@ -50,13 +50,13 @@ Um valor de hash é um valor numérico de um comprimento fixo que identifica dad
   
  Se os dois valores de hash corresponderem, esse código exibirá o seguinte no console:  
   
-```  
+```console  
 The hash codes match.  
 ```  
   
  Se eles não corresponderem, o código exibirá o seguinte:  
   
-```  
+```console  
 The hash codes do not match.  
 ```  
   

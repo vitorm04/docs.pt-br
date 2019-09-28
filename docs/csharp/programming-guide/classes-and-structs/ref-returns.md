@@ -4,12 +4,12 @@ description: Saiba como definir e usar os valores ref return e ref local
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081821"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353889"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -27,12 +27,12 @@ Há algumas restrições quanto à expressão que um método pode retornar como 
 
 - O valor retornado não pode ser um `null` literal. Retornar `null` gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
-   Um método com um retorno de referência pode retornar um alias para uma variável cujo valor é atualmente o valor nulo (não instanciado) ou um [tipo anulável](../nullable-types/index.md) para um tipo de valor.
- 
+   Um método com um retorno de referência pode retornar um alias para uma variável cujo valor é atualmente o valor nulo (sem instanciação) ou um [tipo de valor anulável](../nullable-types/index.md) para um tipo de valor.
+
 - O valor retornado não pode ser uma constante, um membro de enumeração, o valor retornado por valor de uma propriedade ou um método `class` ou `struct`. Violar essa regra gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
 Além disso, valores retornados de referência não são permitidos em métodos assíncronos. Um método assíncrono pode retornar antes de concluir a execução, enquanto o valor retornado ainda é desconhecido.
- 
+
 ## <a name="defining-a-ref-return-value"></a>Definindo um valor retornado ref
 
 Um método que retorna um *valor retornado de referência* deve satisfazer as duas condições a seguir:

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017976"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392854"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como: usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
 A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML. Os seguintes procedimentos mostram como executar essas operações.  
@@ -23,11 +23,11 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
   
 2. Passe o esquema XML como um argumento para a ferramenta de definição de esquema XML, que cria um conjunto de classes que correspondem precisamente ao Esquema XML, por exemplo:  
   
-    ```  
+    ```console  
     xsd mySchema.xsd  
     ```  
   
-     A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001. Em outras palavras, o namespace do esquema XML deve ser "http://www.w3.org/2001/XMLSchema" conforme mostrado no exemplo a seguir.  
+     A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001. Em outras palavras, o namespace do esquema XML deve ser "http://www.w3.org/2001/XMLSchema", como mostrado no exemplo a seguir.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -46,7 +46,7 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
   
 3. Passe a DLL como argumento para Xsd.exe, por exemplo:  
   
-    ```  
+    ```console  
     xsd MyFile.dll  
     ```  
   
@@ -59,5 +59,5 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Ferramenta de Definição de Esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como: Serializar um objeto @ no__t-0
+- [Como: Desserializar um objeto @ no__t-0

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946450"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353161"
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
 Este exemplo contém dados de exemplo no formato .csv e os métodos que os transformam em coleções na memória de Customers, Products, Orders e Order Details. Para fazer novas experiências com PLINQ, cole os exemplos de código de outros tópicos no código deste tópico e invoque o método `Main`. Você também pode usar esses dados com suas próprias consultas PLINQ.  
@@ -35,7 +35,7 @@ Este exemplo contém dados de exemplo no formato .csv e os métodos que os trans
   
 4. Pressione F5 para verificar se o projeto compila e executa corretamente. A saída a seguir deve ser exibida na janela do console.  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -48,7 +48,7 @@ Este exemplo contém dados de exemplo no formato .csv e os métodos que os trans
   
 ## <a name="data"></a>Dados  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

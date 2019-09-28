@@ -2,12 +2,12 @@
 title: 'Como: Calcular valores intermediários (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: d3af616fc3de4baa4bb42d9f9c04d654b7438ab0
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 63067c42da37d71ad0fc5488c68d296ac7589aec
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710470"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352912"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>Como: Calcular valores intermediários (Visual Basic)
 Este exemplo mostra como calcular valores intermediários que podem ser usados na classificação, filtragem, e em selecionar.  
@@ -32,7 +32,7 @@ Next
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 55.92  
 73.50  
 89.99  
@@ -66,7 +66,7 @@ End Module
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 55.92  
 73.50  
 89.99  

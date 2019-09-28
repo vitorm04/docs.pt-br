@@ -2,12 +2,12 @@
 title: Fluxo de controle em programas assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 265efde93cec87594a0407309b58b6bdf11817af
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74942ec3d293485ea6aae3940d1715af8de67c90
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630601"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352119"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Fluxo de controle em programas assíncronos (Visual Basic)
 
@@ -62,9 +62,9 @@ Class MainWindow
 End Class
 ```
 
-Cada um dos locais rotulados, "UM"a "SEIS," exibe informações sobre o estado atual do programa. A saída a seguir será produzida.
+Cada um dos locais rotulados, "UM"a "SEIS," exibe informações sobre o estado atual do programa. A saída a seguir será produzida:
 
-```
+```console
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -220,9 +220,9 @@ Para executar o projeto, realize as seguintes etapas:
 
 10. Escolha a tecla F5 para executar o programa e, em seguida, escolha o botão **Iniciar**.
 
-    A saída a seguir deverá aparecer.
+    A saída a seguir deve aparecer:
 
-    ```
+    ```console
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -274,7 +274,7 @@ Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.micro
 
 Você pode imaginar a tarefa como uma promessa de `client.GetStringAsync` para eventualmente produzir uma cadeia de caracteres real. Enquanto isso, se `AccessTheWebAsync` tiver trabalho a fazer, que não dependa da cadeia de caracteres prometida de `client.GetStringAsync`, o trabalho poderá continuar enquanto `client.GetStringAsync` aguarda. No exemplo, as linhas de saída seguintes, que são rotuladas como "TRÊS", representam a oportunidade para fazer o trabalho independente
 
-```
+```console
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -286,7 +286,7 @@ THREE: Back in AccessTheWebAsync.
 Dim urlContents As String = Await getStringTask
 ```
 
-A imagem a seguir mostra o fluxo de controle `client.GetStringAsync` de para a `getStringTask` atribuição de e para a criação `getStringTask` de para o aplicativo de um operador Await.
+A imagem a seguir mostra o fluxo de controle de `client.GetStringAsync` para a atribuição para `getStringTask` e a partir da criação de `getStringTask` para o aplicativo de um operador Await.
 
 ![Etapa TRÊS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
 
@@ -307,9 +307,9 @@ A instrução a seguir atribui essa tarefa à variável `getLengthTask`.
 Dim getLengthTask As Task(Of Integer) = AccessTheWebAsync()
 ```
 
-Como em `AccessTheWebAsync`, `startButton_Click` pode continuar com o trabalho que não dependa dos resultados da tarefa assíncrona (`getLengthTask`) até que a tarefa seja aguardada. As seguintes linhas de saída representam esse trabalho.
+Como em `AccessTheWebAsync`, `startButton_Click` pode continuar com o trabalho que não dependa dos resultados da tarefa assíncrona (`getLengthTask`) até que a tarefa seja aguardada. As seguintes linhas de saída representam o trabalho:
 
-```
+```console
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -327,9 +327,9 @@ Na ilustração a seguir, as setas mostram o fluxo de controle da expressão awa
 
 ### <a name="step-five"></a>Etapa CINCO
 
-Quando `client.GetStringAsync` sinaliza que está concluído, o processamento em `AccessTheWebAsync` é liberado da suspensão e pode continuar após a instrução await. As seguintes linhas de saída representam a retomada do processamento.
+Quando `client.GetStringAsync` sinaliza que está concluído, o processamento em `AccessTheWebAsync` é liberado da suspensão e pode continuar após a instrução await. As seguintes linhas de saída representam a retomada do processamento:
 
-```
+```console
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -350,7 +350,7 @@ Quando `AccessTheWebAsync` sinaliza que está concluído, o processamento pode c
 
 As seguintes linhas de saída representam a retomada do processamento em `startButton_Async`:
 
-```
+```console
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.
@@ -371,5 +371,5 @@ A imagem a seguir mostra o retorno do controle de `AccessTheWebAsync` para `star
 
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tipos de retorno assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Passo a passo: Acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Passo a passo: Acessando a Web usando Async e Await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Exemplo de Async: Fluxo de controle em programas assíncronos (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

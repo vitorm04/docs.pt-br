@@ -2,12 +2,12 @@
 title: Exemplo de tecnologia de serialização básica
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663775"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353146"
 ---
 # <a name="basic-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica
 
@@ -25,7 +25,7 @@ Revise os comentários no código de origem e nos arquivos build.proj para obter
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>Para criar o exemplo usando Visual Studio
 
-1. Abra o Explorador de arquivos e navegue até um dos subdiretórios específicos do idioma para o exemplo.
+1. Abra o explorador de arquivos e navegue até um dos subdiretórios específicos do idioma para o exemplo.
 
 2. Clique duas vezes no ícone para o arquivo SerializationCS.sln, SerializationJSL.sln ou SerializationVB.sln, dependendo de sua escolha da linguagem de programação para abrir o arquivo no Visual Studio.
 
@@ -48,7 +48,7 @@ O aplicativo de exemplo aceita parâmetros da linha de comando indicando qual te
 
 Por exemplo:
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Para desserializar o arquivo **Test.xml** do exemplo anterior, use os parâmetro
 
 Por exemplo:
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ Nos dois exemplos acima, o "x" na opção de linha de comando indica que você q
 
 Por exemplo:
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 
@@ -72,11 +72,11 @@ Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas 
 
 - Serialização em tempo de execução
 
-  - <xref:System.Runtime.Serialization.IFormatter> Usado para referir-se a um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou um <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> objeto.
+  - <xref:System.Runtime.Serialization.IFormatter> usado para fazer referência a um objeto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Usado para serializar uma lista vinculada a um fluxo em um formato binário. O formatador binário usa um formato que somente o tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> entende. No entanto, os dados são concisos.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> usado para serializar uma lista vinculada em um fluxo em um formato binário. O formatador binário usa um formato que somente o tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> entende. No entanto, os dados são concisos.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Usado para serializar uma lista vinculada a um fluxo no formato SOAP. SOAP é um formato padrão.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> usado para serializar uma lista vinculada em um fluxo no formato SOAP. SOAP é um formato padrão.
 
 - E/S de fluxo
 

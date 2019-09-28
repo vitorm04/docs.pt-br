@@ -3,14 +3,15 @@ title: Structs – Guia de C#
 description: Saiba mais sobre os tipos de struct e como criá-los
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608014"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396126"
 ---
 # <a name="structs"></a>Structs
+
 Um *struct* é um tipo de valor. Quando um struct é criado, a variável à qual o struct é atribuído contém os dados reais do struct. Quando o struct é atribuído a uma nova variável, ele é copiado. A nova variável e a variável original, portanto, contêm duas cópias separadas dos mesmos dados. As alterações feitas em uma cópia não afetam a outra cópia.
 
 As variáveis de tipo de valor contêm diretamente seus valores, o que significa que a memória é alocada embutida em qualquer contexto em que a variável é declarada. Não há nenhuma alocação de heap separada ou sobrecarga de coleta de lixo para variáveis do tipo de valor.  
@@ -51,7 +52,8 @@ Na maioria das vezes, os structs compartilham a mesma sintaxe das classes, embor
   
 - Um struct pode implementar interfaces.
 
-## <a name="literal-values"></a>Valores literais  
+## <a name="literal-values"></a>Valores literais
+
 No C#, valores literais recebem um tipo do compilador. Você pode especificar como um literal numérico deve ser digitado anexando uma letra ao final do número. Por exemplo, para especificar que o valor 4,56 deve ser tratado como um float, acrescente um "f" ou "F" após o número: `4.56f`. Se nenhuma letra for anexada, o compilador inferirá o tipo `double` para o literal. Para obter mais informações sobre quais tipos podem ser especificados com sufixos de letra, consulte as páginas de referência de tipos individuais em [Tipos de valor](./language-reference/keywords/value-types.md).  
   
 Como os literais são tipados e todos os tipos derivam basicamente de <xref:System.Object>, você pode escrever e compilar o código como o seguinte:  
@@ -62,8 +64,9 @@ Os dois últimos exemplos demonstram os recursos de linguagem introduzidos no C#
 
 O segundo demonstra *literais binários*, que permitem especificar os padrões de bit diretamente, em vez de usar notação hexadecimal.
 
-## <a name="nullable-types"></a>Tipos que permitem valor nulo  
-Os tipos comuns de valor não podem ter valor [nulo](./language-reference/keywords/null.md). No entanto, você pode criar tipos de valor que permitem valor nulo afixando um **?** após o tipo. Por exemplo, **int?** é um tipo **int** que também pode ter o valor [nulo](./language-reference/keywords/null.md). No CTS, os tipos anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos que permitem valor nulo são especialmente úteis quando você está passando dados entre bancos de dados nos quais os valores numéricos podem ser nulos. Para obter mais informações, consulte [Tipos que permitem valor nulo (Guia de programação em C#)](./programming-guide/nullable-types/index.md).
+## <a name="nullable-value-types"></a>Tipos de valor anuláveis
+
+Os tipos comuns de valor não podem ter um valor [nulo](language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](./language-reference/keywords/null.md). Os tipos de valor anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos ou indefinidos. Para obter mais informações, consulte [tipos de valor anulável](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
