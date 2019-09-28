@@ -6,19 +6,19 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 4bef609289cdbb192116469bac4fca66ee10fd09
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ab4a77395b478df06f34240212438f3e6e18f6e
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662515"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592201"
 ---
 # <a name="function-expression-visual-basic"></a>Expressão de função (Visual Basic)
-Declara os parâmetros e o código que define uma expressão lambda de função.  
+Declara os parâmetros e o código que definem uma expressão lambda de função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 Function ( [ parameterlist ] ) expression  
 - or -  
 Function ( [ parameterlist ] )  
@@ -30,32 +30,32 @@ End Function
   
 |Termo|Definição|  
 |---|---|  
-|`parameterlist`|Opcional. Uma lista de nomes de variáveis locais que representam os parâmetros deste procedimento. Os parênteses devem estar presentes mesmo quando a lista está vazia. Ver [lista de parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`parameterlist`|Opcional. Uma lista de nomes de variáveis locais que representam os parâmetros deste procedimento. Os parênteses devem estar presentes mesmo quando a lista estiver vazia. Consulte a [lista de parâmetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`expression`|Necessário. Uma única expressão. O tipo da expressão é o tipo de retorno da função.|  
-|`statements`|Necessário. Uma lista de instruções que retorna um valor usando o `Return` instrução. (Consulte [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md).) O tipo do valor retornado é o tipo de retorno da função.|  
+|`statements`|Necessário. Uma lista de instruções que retorna um valor usando a instrução `Return`. (Consulte a [instrução return](../../../visual-basic/language-reference/statements/return-statement.md).) O tipo do valor retornado é o tipo de retorno da função.|  
   
 ## <a name="remarks"></a>Comentários  
- Um *expressão lambda* é uma função sem um nome que calcula e retorna um valor. Você pode usar uma expressão lambda em qualquer lugar você pode usar um tipo de delegado, exceto como um argumento para `RemoveHandler`. Para obter mais informações sobre delegados e o uso de expressões lambda com delegados, consulte [declaração de delegado](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Uma *expressão lambda* é uma função sem um nome que calcula e retorna um valor. Você pode usar uma expressão lambda em qualquer lugar em que possa usar um tipo delegado, exceto como um argumento para `RemoveHandler`. Para obter mais informações sobre delegados e o uso de expressões lambda com delegados, consulte [instrução delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) e [conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Sintaxe da expressão lambda  
- A sintaxe de uma expressão lambda lembra a de uma função padrão. As diferenças são da seguinte maneira:  
+ A sintaxe de uma expressão lambda é semelhante à de uma função padrão. As diferenças são as seguintes:  
   
 - Uma expressão lambda não tem um nome.  
   
 - Expressões lambda não podem ter modificadores, como `Overloads` ou `Overrides`.  
   
-- Expressões lambda não usam um `As` cláusula para designar o tipo de retorno da função. Em vez disso, o tipo é inferido do valor que avalia o corpo de uma expressão lambda de linha única, ou o valor retornado de uma expressão lambda de várias linhas. Por exemplo, se o corpo de uma expressão lambda de linha única estiver `Where cust.City = "London"`, seu tipo de retorno é `Boolean`.  
+- As expressões lambda não usam uma cláusula `As` para designar o tipo de retorno da função. Em vez disso, o tipo é inferido do valor que o corpo de uma expressão lambda de linha única avalia ou o valor de retorno de uma expressão lambda de várias linhas. Por exemplo, se o corpo de uma expressão lambda de linha única for `Where cust.City = "London"`, seu tipo de retorno será `Boolean`.  
   
-- O corpo de uma expressão lambda de linha única deve ser uma expressão, não uma instrução. O corpo pode consistir de uma chamada para um procedimento function, mas não uma chamada para um procedimento sub.  
+- O corpo de uma expressão lambda de linha única deve ser uma expressão, não uma instrução. O corpo pode consistir em uma chamada para um procedimento Function, mas não uma chamada para um procedimento Sub.  
   
-- Ou todos os parâmetros devem ter especificado devem ser deduzidos a tipos de dados ou todos.  
+- Todos os parâmetros devem ter tipos de dados especificados ou todos devem ser inferidos.  
   
-- Parâmetros opcionais e Paramarray não são permitidos.  
+- Parâmetros optional e ParamArray não são permitidos.  
   
 - Parâmetros genéricos não são permitidos.  
   
 ## <a name="example"></a>Exemplo  
- Os exemplos a seguir mostram duas maneiras de criar expressões lambda simples. O primeiro usa um `Dim` para fornecer um nome para a função. Para chamar a função, você envia um valor para o parâmetro.  
+ Os exemplos a seguir mostram duas maneiras de criar expressões lambda simples. O primeiro usa um `Dim` para fornecer um nome para a função. Para chamar a função, você envia em um valor para o parâmetro.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
@@ -67,12 +67,12 @@ End Function
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
- A seguir está um exemplo de uma expressão lambda que aumenta seu argumento e retorna o valor. O exemplo mostra os dois a sintaxe da expressão lambda de linha única e várias linhas para uma função. Para obter mais exemplos, consulte [expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Veja a seguir um exemplo de uma expressão lambda que incrementa seu argumento e retorna o valor. O exemplo mostra a sintaxe da expressão lambda de linha única e de várias linhas para uma função. Para obter mais exemplos, consulte [expressões lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Exemplo  
- Expressões lambda são a base de muitos dos operadores de consulta em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]e pode ser usada explicitamente em consultas com base em método. O exemplo a seguir mostra um típico [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta, seguido pela tradução da consulta em formato de método.  
+ As expressões lambda baseiam-se em muitos dos operadores de consulta no [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] e podem ser usadas explicitamente em consultas baseadas em método. O exemplo a seguir mostra uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] típica, seguida pela conversão da consulta em formato de método.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

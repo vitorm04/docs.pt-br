@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>'deve implementar'<methodname>'para interface'<interfacename>'
+title: <type1>'<typename>' deve implementar '<methodname>' para interface '<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c387b0225375f4675042bef593b23a084305b4fd
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013602"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591591"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<typename >' deve implementar '\<methodname >' para interface '\<interfacename >'
-Uma classe ou estrutura para implementar uma interface de declarações, mas não implementa um procedimento definido pela interface. Todos os membros da interface devem ser implementado.  
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 > ' \<typename > ' deve implementar ' \<methodname > ' para a interface ' \<interfacename > '
+Uma classe ou estrutura alega implementar uma interface, mas não implementa um procedimento definido pela interface. Todos os membros da interface devem ser implementados.  
   
  **ID do erro:** BC30149  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Declara um procedimento com o mesmo nome e assinatura, conforme definido na interface. Não se esqueça de incluir pelo menos o `End Function` ou `End Sub` instrução.  
+1. Declare um procedimento com o mesmo nome e assinatura, conforme definido na interface. Certifique-se de incluir pelo menos a instrução `End Function` ou `End Sub`.  
   
-2. Adicionar um `Implements` cláusula no final dos `Function` ou `Sub` instrução. Por exemplo:  
+2. Adicione uma cláusula `Implements` ao final da instrução `Function` ou `Sub`. Por exemplo:  
   
-    ```  
+    ```vb  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
     ```  
   

@@ -14,24 +14,24 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929946"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592108"
 ---
 # <a name="partial-visual-basic"></a>Parcial (Visual Basic)
 Indica que uma declaração de tipo é uma definição parcial do tipo.  
   
- Você pode dividir a definição de um tipo entre várias declarações usando a `Partial` palavra-chave. Você pode usar quantas declarações parciais desejar, em quantos arquivos de origem diferentes desejar. No entanto, todas as declarações devem estar no mesmo assembly e no mesmo namespace.  
+ Você pode dividir a definição de um tipo entre várias declarações usando a palavra-chave `Partial`. Você pode usar quantas declarações parciais desejar, em quantos arquivos de origem diferentes desejar. No entanto, todas as declarações devem estar no mesmo assembly e no mesmo namespace.  
   
 > [!NOTE]
 > O Visual Basic dá suporte a *métodos parciais*, que normalmente são implementados em classes parciais. Para obter mais informações, consulte [partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) e [sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
 Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]  
     [ Inherits classname ]  
@@ -59,7 +59,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`interfacenames`|Necessário se você usar `Implements`. Os nomes das interfaces que esse tipo implementa.|  
 |`variabledeclarations`|Opcional. Instruções que declaram variáveis e eventos adicionais para o tipo.|  
 |`proceduredeclarations`|Opcional. Instruções que declaram e definem procedimentos adicionais para o tipo.|  
-|`End Class` ou `End Structure`|Finaliza essa definição `Class` ou `Structure` parcial.|  
+|`End Class` ou `End Structure`|Termina essa definição parcial `Class` ou `Structure`.|  
   
 ## <a name="remarks"></a>Comentários  
  Visual Basic usa definições de classe parcial para separar o código gerado do código criado pelo usuário em arquivos de origem separados. Por exemplo, o **Windows Form Designer** define classes parciais para controles, como <xref:System.Windows.Forms.Form>. Você não deve modificar o código gerado nesses controles.  
@@ -68,9 +68,9 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="best-practices"></a>Práticas recomendadas  
   
-- Em circunstâncias normais, você não deve dividir o desenvolvimento de um único tipo entre duas ou mais declarações. Portanto, na maioria dos casos, você não precisa `Partial` da palavra-chave.  
+- Em circunstâncias normais, você não deve dividir o desenvolvimento de um único tipo entre duas ou mais declarações. Portanto, na maioria dos casos, você não precisa da palavra-chave `Partial`.  
   
-- Para facilitar a leitura, todas as declarações parciais de um tipo `Partial` devem incluir a palavra-chave. O compilador permite no máximo uma declaração parcial para omitir a palavra-chave; se dois ou mais omitirem, o compilador sinalizará um erro.  
+- Para facilitar a leitura, cada declaração parcial de um tipo deve incluir a palavra-chave `Partial`. O compilador permite no máximo uma declaração parcial para omitir a palavra-chave; se dois ou mais omitirem, o compilador sinalizará um erro.  
   
 ## <a name="behavior"></a>Comportamento  
   
@@ -80,14 +80,14 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
      O compilador mescla definições parciais somente quando seus caminhos totalmente qualificados são idênticos.  
   
- A `Partial` palavra-chave pode ser usada nesses contextos:  
+ A palavra-chave `Partial` pode ser usada nesses contextos:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
  [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir divide a definição da classe `sampleClass` em duas declarações, cada uma delas define um procedimento `Sub` diferente.  
+ O exemplo a seguir divide a definição da classe `sampleClass` em duas declarações, cada uma delas define um procedimento diferente de `Sub`.  
   
  [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: d387b2dfdbb3fefe357364f7b2a3dde155cbd489
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aaa7c1b9ab7f6c920180d97b55c3bdeb23f00e02
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968348"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592239"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;Operador (Visual Basic)
 Gera uma concatenação de cadeia de caracteres de duas expressões.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 result = expression1 & expression2  
 ```  
   
 ## <a name="parts"></a>Partes  
  `result`  
- Necessário. Qualquer `String` variável `Object` ou.  
+ Necessário. Qualquer variável `String` ou `Object`.  
   
  `expression1`  
  Necessário. Qualquer expressão com um tipo de dados que amplia para `String`.  
@@ -37,18 +37,18 @@ result = expression1 & expression2
  Necessário. Qualquer expressão com um tipo de dados que amplia para `String`.  
   
 ## <a name="remarks"></a>Comentários  
- Se o tipo de dados `expression1` de `expression2` ou não `String` for, mas se `String`expandir para, ele será `String`convertido em. Se um dos tipos de dados não for ampliado `String`para, o compilador gerará um erro.  
+ Se o tipo de dados de `expression1` ou `expression2` não for `String`, mas for ampliado para `String`, ele será convertido em `String`. Se um dos tipos de dados não for ampliado para `String`, o compilador gerará um erro.  
   
- O tipo de dados `result` de `String`é. Se uma ou ambas as expressões forem avaliadas como [Nothing](../../../visual-basic/language-reference/nothing.md) ou se <xref:System.DBNull.Value?displayProperty=nameWithType>tiverem um valor de, elas serão tratadas como uma cadeia de caracteres com um valor de "".  
-  
-> [!NOTE]
-> O `&` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ O tipo de dados de `result` é `String`. Se uma ou ambas as expressões forem avaliadas como [Nothing](../../../visual-basic/language-reference/nothing.md) ou se tiverem um valor de <xref:System.DBNull.Value?displayProperty=nameWithType>, elas serão tratadas como uma cadeia de caracteres com um valor de "".  
   
 > [!NOTE]
-> O caractere de e comercial (&) também pode ser usado para identificar variáveis `Long`como tipo. Para obter mais informações, consulte [tipos de caracteres](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+> O operador `&` pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+  
+> [!NOTE]
+> O caractere de e comercial (&) também pode ser usado para identificar variáveis como tipo `Long`. Para obter mais informações, consulte [tipos de caracteres](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `&` operador para forçar a concatenação de cadeia de caracteres. O resultado é um valor de cadeia de caracteres que representa a concatenação dos dois operandos de cadeia de caracteres.  
+ Este exemplo usa o operador `&` para forçar a concatenação de cadeia de caracteres. O resultado é um valor de cadeia de caracteres que representa a concatenação dos dois operandos de cadeia de caracteres.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   

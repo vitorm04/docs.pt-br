@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88b5f365c47b98964d9f5a0d22a941d85dcfb95f
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923715"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592143"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Não é possível usar parâmetros de tipo como qualificadores
 Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.  
   
- Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído. Ele não representa um tipo específico de definidos. Uma cadeia de caracteres de qualificação deve incluir apenas os elementos que são definidos em tempo de compilação.  
+ Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído. Ele não representa um tipo definido específico. Uma cadeia de caracteres de qualificação deve incluir apenas elementos que são definidos no momento da compilação.  
   
  As instruções a seguir podem gerar esse erro.  
   
-```  
+```vb  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
     ByVal badText As String) As Boolean  
   
@@ -34,9 +34,9 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Remover o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.  
+1. Remova o parâmetro de tipo da cadeia de caracteres de qualificação ou substitua-o por um tipo definido.  
   
-2. Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.  
+2. Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, deverá usar a lógica de programa adicional.  
   
 ## <a name="see-also"></a>Consulte também
 

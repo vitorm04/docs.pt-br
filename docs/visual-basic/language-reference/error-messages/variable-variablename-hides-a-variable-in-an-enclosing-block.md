@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 36fe543dd4546c6fe930f259a55cea856917370f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662660"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592058"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Variável '\<variablename >' oculta uma variável em um bloco delimitador
-Uma variável incluída em um bloco tem o mesmo nome que outra variável local.  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>A variável ' \<variablename > ' oculta uma variável em um bloco delimitador
+Uma variável colocada em um bloco tem o mesmo nome que outra variável local.  
   
  **ID do erro:** BC30616  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Renomear a variável no bloco incluído para que não seja o mesmo que qualquer outra variável local. Por exemplo:  
+- Renomeie a variável no bloco incluído para que ela não seja a mesma que qualquer outra variável local. Por exemplo:  
   
-    ```  
+    ```vb  
     Dim a, b, x As Integer  
     If a = b Then  
        Dim y As Integer = 20 ' Uniquely named block variable.  
     End If  
     ```  
   
-- Uma causa comum desse erro é o uso de `Catch e As Exception` dentro de um manipulador de eventos. Se esse for o caso, o nome do `Catch` variável de bloco `ex` em vez de `e`.  
+- Uma causa comum desse erro é o uso de `Catch e As Exception` dentro de um manipulador de eventos. Se esse for o caso, nomeie a variável de bloco `Catch` `ex` em vez de `e`.  
   
-- Outra origem comum desse erro é uma tentativa de acessar uma variável local declarada dentro de um `Try` bloco em um separado `Catch` bloco. Para corrigir isso, declare a variável de fora a `Try...Catch...Finally` estrutura.  
+- Outra fonte comum desse erro é uma tentativa de acessar uma variável local declarada dentro de um bloco `Try` em um bloco separado `Catch`. Para corrigir isso, declare a variável fora da estrutura `Try...Catch...Finally`.  
   
 ## <a name="see-also"></a>Consulte também
 
