@@ -31,9 +31,9 @@
       href: generics/
     - name: Namespaces
       href: namespaces/
-    - name: Tipos que permitem valor nulo
+    - name: Tipos de valor anuláveis
       href: nullable-types/
-    - name: Código não gerenciado e ponteiros
+    - name: Código não seguro e ponteiros
       href: unsafe-code-pointers/
     - name: Comentários da documentação XML
       href: xmldoc/
