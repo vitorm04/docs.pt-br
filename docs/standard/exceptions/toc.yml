@@ -11,6 +11,8 @@
       href: how-to-explicitly-throw-exceptions.md
     - name: 'Como: criar exceções definidas pelo usuário'
       href: how-to-create-user-defined-exceptions.md
+    - name: Como criar exceções definidas pelo usuário com mensagens de exceção localizadas
+      href: how-to-create-localized-exception-messages.md
     - name: Usando manipuladores de exceções filtrados pelo usuário
       href: using-user-filtered-exception-handlers.md
     - name: 'Como: usar blocos finally'

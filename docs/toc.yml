@@ -317,13 +317,18 @@
       items:
         - name: Visão geral
           href: core/tools/index.md
-        - name: Ferramentas Globais
+        - name: Ferramentas
           expanded: true
           items:
-            - name: Visão geral
-              href: core/tools/global-tools.md
-            - name: Criar uma ferramenta global
-              href: core/tools/global-tools-how-to-create.md
+            - name: Ferramentas Globais
+              expanded: true
+              items:
+                - name: Visão geral
+                  href: core/tools/global-tools.md
+                - name: Criar uma ferramenta global
+                  href: core/tools/global-tools-how-to-create.md
+            - name: Solucionar problemas de uso da ferramenta
+              href: core/tools/troubleshoot-usage-issues.md
         - name: Acesso elevado
           href: core/tools/elevated-access.md
         - name: Modelo de Extensibilidade

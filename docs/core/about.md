@@ -69,7 +69,7 @@ Esses componentes são distribuídos das seguintes maneiras:
 
 ### <a name="open-source"></a>Código Aberto
 
-O [.NET Core](https://github.com/dotnet/core) é um software livre ([licença MIT](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) que foi concedido ao [.NET Foundation](https://dotnetfoundation.org) pela Microsoft em 2014. Agora é um dos projetos mais ativos do .NET Foundation. Ele pode ser usado por indivíduos e empresas, inclusive para fins pessoais, acadêmicos ou comerciais. Várias empresas usam o .NET Core como parte de aplicativos, ferramentas, novas plataformas e serviços de hospedagem. Algumas dessas empresas fazer contribuições significativas para o .NET Core no GitHub e fornecem diretrizes sobre a direção de produto como parte do [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome).
+O [.NET Core](https://github.com/dotnet/core) é um software livre ([licença MIT](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) que foi concedido ao [.NET Foundation](https://dotnetfoundation.org) pela Microsoft em 2014. Agora é um dos projetos mais ativos do .NET Foundation. Ele pode ser usado por indivíduos e empresas, inclusive para fins pessoais, acadêmicos ou comerciais. Várias empresas usam o .NET Core como parte de aplicativos, ferramentas, novas plataformas e serviços de hospedagem. Algumas dessas empresas fazem contribuições significativas para o .NET Core no GitHub e fornecem diretrizes sobre a direção de produto como parte do [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome).
 
 ### <a name="designed-for-adaptability"></a>Projetado para adaptabilidade
 
