@@ -19,6 +19,8 @@
       href: repair.md
     - name: Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework
       href: troubleshoot-blocked-installations-and-uninstallations.md
+    - name: Solucionar problemas da mensagem 'Esse aplicativo não pôde ser iniciado'
+      href: application-not-started.md
     - name: 'Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8'
       href: dotnet-35-windows-10.md
     - name: 'Executar aplicativos do .NET Framework 1.1 no Windows 8, Windows 8.1 ou Windows 10'

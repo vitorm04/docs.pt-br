@@ -1,7 +1,7 @@
-- name: Tipos que permitem valor nulo
+- name: Tipos de valor anuláveis
   href: index.md
   items:
-    - name: Usar tipos que permitem valor nulo
+    - name: Usar tipos de valor anuláveis
       href: using-nullable-types.md
-    - name: 'Como: identificar um tipo que permite valor nulo'
+    - name: Como identificar um tipo de valor anulável
       href: how-to-identify-a-nullable-type.md
