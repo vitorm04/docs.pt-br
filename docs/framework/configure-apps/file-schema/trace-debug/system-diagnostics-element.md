@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926940"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699191"
 ---
-# <a name="systemdiagnostics-element"></a>\<Elemento de > System. Diagnostics
+# <a name="systemdiagnostics-element"></a>Elemento \<system. Diagnostics >
 Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  
   
- \<configuration>  
-\<System. Diagnostics >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<system. diagnostics >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,10 +52,10 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do  **\<elemento System. Diagnostics >** . A `General` opção de rastreamento é definida para <xref:System.Diagnostics.TraceLevel> o nível. O ouvinte `myListener` de rastreamento cria um `MyListener.log` arquivo chamado e grava a saída no arquivo.  
+ O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do elemento **\<System. diagnostics >** . A opção de rastreamento `General` é definida como o nível <xref:System.Diagnostics.TraceLevel>. O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo.  
   
 > [!NOTE]
-> No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou usar o texto que representa `Error` um valor de enumeração, como <xref:System.Diagnostics.TraceSwitch>para um. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  
+> No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou usar o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

@@ -2,12 +2,12 @@
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais como a versão da linguagem C# é determinada com base em seu projeto e os diferentes valores para os quais você pode ajustá-la manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040346"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698802"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
@@ -21,9 +21,11 @@ O compilador determina um padrão com base nestas regras:
 
 |Estrutura de destino|version|Padrão da versão da linguagem C#|
 |----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
+|.NET Core|Win|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET Standard|all|C# 7.3|
+|.NET Standard|2.1|C# 8.0|
+|.NET Standard|2.0|C# 7.3|
+|.NET Standard|1.x|C# 7.3|
 |.NET Framework|all|C# 7.3|
 
 ## <a name="default-for-previews"></a>Padrão para versões prévias
@@ -71,7 +73,7 @@ A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilado
 |Valor|Significado|
 |------------|-------------|
 |versão prévia|O compilador aceita todas as sintaxes de linguagem válidas da versão prévia mais recente.|
-|mais recente|O compilador aceita a sintaxe da versão lançada mais recente do compilador (incluindo a versão secundária).|
+|latest|O compilador aceita a sintaxe da versão lançada mais recente do compilador (incluindo a versão secundária).|
 |latestMajor|O compilador aceita a sintaxe da versão principal mais recente lançada do compilador.|
 |8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior.|
 |7.3|O compilador aceita somente a sintaxe incluída no C# 7.3 ou inferior.|

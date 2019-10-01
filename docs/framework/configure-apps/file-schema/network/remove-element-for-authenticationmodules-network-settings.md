@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9b73c0dc1fe161616c08ef0501241d55e9fea9bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664046"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697937"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<remover o elemento > para authenticationModules (configurações de rede)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<remove > elemento para authenticationModules (configurações de rede)
 Remove um módulo de autenticação do aplicativo.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,9 +52,9 @@ Remove um módulo de autenticação do aplicativo.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `remove` elemento remove módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
+ O elemento `remove` remove módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
   
- O valor do `type` atributo deve ser um nome de classe válido.  
+ O valor do atributo `type` deve ser um nome de classe válido.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f448f34dc5909b9128fc700abab5b4f00e911edf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934271"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701009"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>O nome da variável de intervalo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos
-Um elemento de programação que usa um ou mais argumentos está incluído em uma consulta LINQ. O compilador é capaz de inferir uma variável de intervalo do elemento de programação.  
+Um elemento de programação que usa um ou mais argumentos é incluído em uma consulta LINQ. O compilador não pode inferir uma variável de intervalo desse elemento de programação.  
   
  **ID do erro:** BC36599  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Forneça um nome de variável explícito para o elemento de programação, como mostrado no código a seguir:  
+1. Forneça um nome de variável explícito para o elemento de programação, conforme mostrado no código a seguir:  
   
-```  
+```vb  
 Dim query = From var1 In collection1   
             Select VariableAlias= SampleFunction(var1), var1  
 ```  

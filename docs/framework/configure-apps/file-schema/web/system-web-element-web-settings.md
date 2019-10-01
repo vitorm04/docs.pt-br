@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5c5c857d4494b6d78b819e56bae4213abc5e2035
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941377"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699100"
 ---
-# <a name="systemweb-element-web-settings"></a>\<Elemento de > System. Web (configurações da Web)
+# <a name="systemweb-element-web-settings"></a>Elemento @no__t -0system. Web > (configurações da Web)
 Contém informações sobre como a camada de hospedagem ASP.NET gerencia o comportamento de todo o processo.  
   
- \<configuration>  
-\<Elemento de > System. Web (configurações da Web)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. web >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,10 +29,12 @@ Contém informações sobre como a camada de hospedagem ASP.NET gerencia o compo
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+
+As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+
+nenhuma.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -47,10 +49,12 @@ Contém informações sobre como a camada de hospedagem ASP.NET gerencia o compo
 |[\<configuration>](../configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelo Common Language Runtime e .NET Framework aplicativos.|  
   
 ## <a name="remarks"></a>Comentários  
- O `system.web` elemento e seu elemento `applicationPool` filho foram adicionados à .NET Framework a partir de .NET Framework 3,5 SP1. Quando você executa o IIS 7,0 ou versões posteriores no modo integrado, essa combinação de elementos permite que você configure como o ASP.NET gerencia threads e como ele enfileira solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar o IIS 7,0 ou versões posteriores no modo clássico ou ISAPI, essas configurações serão ignoradas.  
+
+O elemento `system.web` e seu elemento filho `applicationPool` foram adicionados à .NET Framework a partir do .NET Framework 3,5 SP1. Quando você executa o IIS 7,0 ou versões posteriores no modo integrado, essa combinação de elementos permite que você configure como o ASP.NET gerencia threads e como ele enfileira solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar o IIS 7,0 ou versões posteriores no modo clássico ou ISAPI, essas configurações serão ignoradas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo Aspnet. config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está sendo executado no modo integrado e que o aplicativo está usando o .NET Framework 3,5 SP1 ou uma versão posterior. Esse comportamento não ocorre em versões do .NET Framework anteriores ao .NET Framework 3,5 SP1. Os valores no exemplo são os valores padrão.  
+
+O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo Aspnet. config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está sendo executado no modo integrado e que o aplicativo está usando o .NET Framework 3,5 SP1 ou uma versão posterior. Esse comportamento não ocorre em versões do .NET Framework anteriores ao .NET Framework 3,5 SP1. Os valores no exemplo são os valores padrão.  
   
 ```xml  
 <configuration>  

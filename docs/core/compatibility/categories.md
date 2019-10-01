@@ -4,12 +4,12 @@ description: Saiba mais sobre as maneiras como as alterações da falha são cat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: 68cd3580e80305e54b41610f05d939a6aff8b54d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: HT
+ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "69577148"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698452"
 ---
 # <a name="breaking-change-categories"></a>Categorias de alteração significativa
 
@@ -49,4 +49,4 @@ Manter a compatibilidade com versões futuras não é uma meta do .NET Core.
 
 ## <a name="see-also"></a>Consulte também
 
-[Avaliar alterações da falha no .NET Core](index.md)
+- [Avaliar alterações da falha no .NET Core](index.md)

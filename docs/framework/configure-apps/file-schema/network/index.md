@@ -12,15 +12,17 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 0f5d762a2b688bebcb7c027be6c639b6d64c069d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664114"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698160"
 ---
 # <a name="network-settings-schema"></a>Esquema de configurações de rede
-As configurações de rede especificam como o .NET Framework se conecta à Internet. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
+As configurações de rede especificam como o .NET Framework se conecta à Internet.
+
+As configurações do @no__t -0system. net > especificam como o .NET Framework se conecta à rede. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -31,7 +33,7 @@ As configurações de rede especificam como o .NET Framework se conecta à Inter
 |[\<requestCaching> Element (Network Settings)](requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]|Controla o mecanismo de cache para solicitações de rede.|  
 |[\<webRequestModules> Element (Network Settings)](webrequestmodules-element-network-settings.md) [Elemento webRequestModules> (configurações de rede)]|Especifica os módulos usados para solicitar informações de hosts da Internet.|  
   
- As configurações de URI especificam como o .NET Framework controla endereços da Web expressos usando URIs (Uniform Resource Identifiers). A tabela a seguir descreve a função de cada elemento de configuração filho no [\<Uri> Element (Uri Settings)](uri-element-uri-settings.md) [Elemento Uri> (configurações de URI)].  
+As configurações de > \<uri especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes). A tabela a seguir descreve a função de cada elemento de configuração filho no [elemento \<uri > (configurações de URI)](uri-element-uri-settings.md).  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  

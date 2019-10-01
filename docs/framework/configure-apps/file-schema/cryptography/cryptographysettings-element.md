@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927658"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699816"
 ---
-# <a name="cryptographysettings-element"></a>\<Elemento de > cryptographySettings
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > elemento
 Contém configurações de criptografia.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ Contém configurações de criptografia.
 |`mscorlib`|Contém o `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<elemento cryptographySettings >** para conter mapeamentos de nome de criptografia e mapeamentos de OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> o retorne um `MyHashClass` objeto `MyCryptoClass` e a classe seja mapeada para o identificador de objeto 1.3.36.2.1.  
+ O exemplo a seguir mostra como usar o elemento **\<cryptographySettings >** para conter mapeamentos de nome de criptografia e mapeamentos de OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> retorne um objeto `MyHashClass` e a classe `MyCryptoClass` seja mapeada para o identificador de objeto 1.3.36.2.1.  
   
 ```xml  
 <configuration>  

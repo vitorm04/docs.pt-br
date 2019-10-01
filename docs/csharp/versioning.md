@@ -3,12 +3,12 @@ title: Controle de versão de C# – Guia de C#
 description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926589"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699919"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -25,9 +25,9 @@ Idealmente, as informações de versão que você fornece a sua biblioteca devem
 
 A abordagem mais básica ao SemVer é o formato de 3 componentes `MAJOR.MINOR.PATCH`, em que:
 
-* `MAJOR` é incrementado quando você faz alterações em APIs incompatíveis
-* `MINOR` é incrementado quando você adiciona funcionalidades de maneira compatível com versões anteriores
-* `PATCH` é incrementado quando você faz correções de bugs compatíveis com versões anteriores
+- `MAJOR` é incrementado quando você faz alterações em APIs incompatíveis
+- `MINOR` é incrementado quando você adiciona funcionalidades de maneira compatível com versões anteriores
+- `PATCH` é incrementado quando você faz correções de bugs compatíveis com versões anteriores
 
 Também há maneiras de especificar outros cenários, como versões de pré-lançamento etc. ao aplicar informações de versão à sua biblioteca .NET.
 
@@ -38,31 +38,31 @@ Uma nova versão da biblioteca será compatível com a origem de uma versão ant
 
 Aqui estão algumas coisas a serem consideradas ao tentar manter a compatibilidade com versões mais antigas de sua biblioteca:
 
-* Métodos virtuais: Quando você transforma um método virtual em não virtual na nova versão, isso significa que os projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
-* Assinaturas de método: Quando a atualização do comportamento de um método exige a alteração de sua assinatura também, você deve criar uma sobrecarga, de modo que o código que chamar esse método ainda funcione.
+- Métodos virtuais: Quando você transforma um método virtual em não virtual na nova versão, isso significa que os projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
+- Assinaturas de método: Ao atualizar um comportamento de método, é necessário alterar sua assinatura também, em vez disso, você deve criar uma sobrecarga para que o código que chama esse método ainda funcione.
 Você sempre pode manipular a assinatura de método antiga para chamar a nova assinatura de método para que a implementação permaneça consistente.
-* [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Use esse atributo no código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
-* Argumentos de método opcionais: Quando você tornar argumentos de método que antes eram opcionais em obrigatórios ou alterar seu valor padrão, todo o código que não fornecer esses argumentos precisará ser atualizado.
+- [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Use esse atributo no código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
+- Argumentos de método opcionais: Quando você tornar argumentos de método que antes eram opcionais em obrigatórios ou alterar seu valor padrão, todo o código que não fornecer esses argumentos precisará ser atualizado.
 
 > [!NOTE]
-> Tornar argumentos compulsórios em opcionais deve ter muito pouco efeito, especialmente se não alterar o comportamento do método.
+> Tornar os argumentos compulsórios opcionais deve ter muito pouco efeito, especialmente se ele não alterar o comportamento do método.
 
 Quanto mais fácil for para os usuários atualizarem para a nova versão da sua biblioteca, mais provável será que eles atualizem o quanto antes.
 
 ### <a name="application-configuration-file"></a>Arquivo de Configuração do Aplicativo
 
 Como um desenvolvedor de .NET, há uma chance muito grande de você já ter encontrado o [arquivo o `app.config`](../framework/configure-apps/file-schema/index.md) na maioria dos tipos de projeto.
-Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Em geral, você deve projetar suas bibliotecas de forma que as informações que provavelmente serão alteradas regularmente sejam armazenadas no arquivo `app.config`. Dessa forma, quando essas informações forem atualizadas, o arquivo de configuração de versões mais antigas só precisa ser substituído pelo novo, sem a necessidade de recompilar a biblioteca.
+Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Em geral, você deve criar suas bibliotecas de forma que as informações que provavelmente forem alteradas regularmente sejam armazenadas no arquivo `app.config`, dessa forma, quando essas informações forem atualizadas, o arquivo de configuração de versões mais antigas precisará ser substituído pelo novo sem o necessidade de recompilação da biblioteca.
 
 ## <a name="consuming-libraries"></a>Consumindo bibliotecas
 
 Como um desenvolvedor que consome bibliotecas .NET criadas por outros desenvolvedores, vocês provavelmente está ciente de que uma nova versão de uma biblioteca pode não ser totalmente compatível com seu projeto e pode acabar precisando atualizar seu código para trabalhar com essas alterações.
 
-Para sua sorte, o ecossistema do C# e do .NET tem recursos e técnicas que permitem facilmente atualizar nosso aplicativo para trabalhar com novas versões das bibliotecas que podem introduzir alterações significativas.
+Sorte para você, C# e o ecossistema .net vem com recursos e técnicas que nos permitem atualizar facilmente nosso aplicativo para trabalhar com novas versões de bibliotecas que podem introduzir alterações significativas.
 
 ### <a name="assembly-binding-redirection"></a>Redirecionamento de associação de assembly
 
-Você pode usar o arquivo `app.config` para atualizar a versão de uma biblioteca que seu aplicativo usa. Adicionando o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem precisar recompilar o aplicativo. O exemplo a seguir mostra como atualizar o arquivo `app.config` de seu aplicativo para uso com a versão de patch `1.0.1` do `ReferencedLibrary` em vez da versão `1.0.0` com que ele foi compilado originalmente.
+Você pode usar o arquivo *app. config* para atualizar a versão de uma biblioteca que seu aplicativo usa. Ao adicionar o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem precisar recompilar seu aplicativo. O exemplo a seguir mostra como você atualizaria o arquivo *app. config* do aplicativo para usar a versão de patch `1.0.1` do `ReferencedLibrary` em vez da versão `1.0.0` em que foi originalmente compilado.
 
 ```xml
 <dependentAssembly>
@@ -81,11 +81,11 @@ Você usa o modificador `new` para ocultar membros herdados de uma classe base. 
 
 Veja o exemplo a seguir:
 
-[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
 **Saída**
 
-```
+```console
 A base method
 A derived method
 ```
@@ -103,7 +103,7 @@ O modificador `override` significa que uma implementação derivada estende a im
 
 **Saída**
 
-```
+```console
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```

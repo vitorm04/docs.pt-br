@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: aa455945b839ada4100138d5bdf9fc239376e5cb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ec2c8388411e24940041dc9dcb7f6a6755e89805
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663980"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697580"
 ---
-# <a name="socket-element-network-settings"></a>\<Elemento de > de soquete (configurações de rede)
+# <a name="socket-element-network-settings"></a>\<socket > elemento (configurações de rede)
 Especifica se as operações de soquete usam portas de conclusão.  
   
- \<configuration>  
-\<system.net>  
-\<> de configurações  
-\<> de soquete  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<socket >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ Especifica se as operações de soquete usam portas de conclusão.
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Indica se o soquete sempre deve usar as portas de conclusão para aceitar chamadas de método. O valor padrão é `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Indica se o soquete sempre deve usar portas de conclusão para chamadas de método Connect. O valor padrão é `false`.|  
-|`ipProtectionLevel`|Especifica o padrão <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> a ser usado para um soquete. O valor padrão depende da versão do Windows.|  
+|`ipProtectionLevel`|Especifica o <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> padrão a ser usado para um soquete. O valor padrão depende da versão do Windows.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,15 +54,15 @@ Especifica se as operações de soquete usam portas de conclusão.
 |[settings](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
- Os `alwaysUseCompletionPortsForAccept` atributos `alwaysUseCompletionPortsForConnect` e são usados para especificar o comportamento padrão em relação ao uso de portas de conclusão <xref:System.Net.Sockets?displayProperty=nameWithType>pelas classes no namespace. As portas de conclusão são recomendadas para aplicativos de servidor de alto desempenho.  
+ Os atributos `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` são usados para especificar o comportamento padrão em relação ao uso de portas de conclusão pelas classes no @no__t -2. namespace. As portas de conclusão são recomendadas para aplicativos de servidor de alto desempenho.  
   
- O valor padrão para os `alwaysUseCompletionPortsForAccept` atributos `alwaysUseCompletionPortsForConnect` e é **false**.  
+ O valor padrão para os atributos `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` é **false**.  
   
- O <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> pode ser usado para obter o valor atual `alwaysUseCompletionPortsForAccept` do atributo dos arquivos de configuração aplicáveis. O <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> pode ser usado para obter o valor atual `alwaysUseCompletionPortsForConnect` do atributo dos arquivos de configuração aplicáveis.  
+ O <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> pode ser usado para obter o valor atual do atributo `alwaysUseCompletionPortsForAccept` dos arquivos de configuração aplicáveis. O <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> pode ser usado para obter o valor atual do atributo `alwaysUseCompletionPortsForConnect` dos arquivos de configuração aplicáveis.  
   
- O `ipProtectionLevel` atributo especifica o padrão <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> a ser usado para um soquete. A <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propriedade permite a configuração de uma restrição para um soquete IPv6 para um escopo especificado, como endereços com o mesmo link local ou local do site. Essa opção permite que os aplicativos coloquem restrições de acesso em soquetes IPv6. Essas restrições permitem que um aplicativo em execução em uma LAN privada proteja-se de modo simples e robusto contra ataques externos. Essa opção amplia ou limita o escopo de um soquete de escuta, habilitando o acesso irrestrito de usuários públicos e privados quando apropriado ou restringindo o acesso somente ao mesmo site, conforme necessário.  
+ O atributo `ipProtectionLevel` especifica o <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> padrão a ser usado para um soquete. A propriedade <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> permite a configuração de uma restrição para um soquete IPv6 para um escopo especificado, como endereços com o mesmo link local ou local do site. Essa opção permite que os aplicativos coloquem restrições de acesso em soquetes IPv6. Essas restrições permitem que um aplicativo em execução em uma LAN privada proteja-se de modo simples e robusto contra ataques externos. Essa opção amplia ou limita o escopo de um soquete de escuta, habilitando o acesso irrestrito de usuários públicos e privados quando apropriado ou restringindo o acesso somente ao mesmo site, conforme necessário.  
   
- Essa `ipProtectionLevel` configuração de atributo afeta apenas o tráfego de entrada inicial:  
+ Essa configuração de atributo `ipProtectionLevel` afeta apenas o tráfego de entrada inicial:  
   
 - Um servidor TCP escutando conexões de entrada em um soquete.  
   
@@ -70,7 +70,7 @@ Especifica se as operações de soquete usam portas de conclusão.
   
  Essa definição de configuração não afeta as conexões TCP já estabelecidas (o tráfego é irrestrito em ambas as direções) e não afeta um aplicativo que envia pacotes UDP.  
   
- Os valores possíveis para a `ipProtectionLevel` configuração de atributo correspondem aos níveis de proteção definidos especificados <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> na enumeração da seguinte maneira:  
+ Os valores possíveis para a configuração de atributo `ipProtectionLevel` correspondem aos níveis de proteção definidos especificados na enumeração de <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> da seguinte maneira:  
   
 |**Valor do atributo**|**Descrição**|  
 |-|-|  
@@ -79,15 +79,15 @@ Especifica se as operações de soquete usam portas de conclusão.
 |Irrestrito|O nível de proteção de IP é irrestrito. Esse valor seria usado por aplicativos projetados para operar com a Internet, incluindo os aplicativos que aproveitam os recursos de passagem NAT IPv6 internos no Windows (Teredo, por exemplo). Esses aplicativos podem ignorar firewalls IPv4, de modo que os aplicativos devem ser protegidos contra ataques de Internet direcionados à porta aberta. No Windows Server 2008 R2 e Windows Vista, o valor padrão para o nível de proteção de IP em um soquete é irrestrito.|  
 |Não especificado|O nível de proteção de IP não é especificado. No Windows 7 e Windows Server 2008 R2, o valor padrão para o nível de proteção de IP em um soquete é não especificado.|  
   
- O valor padrão para o `ipProtectionLevel` atributo não é **especificado**.  
+ O valor padrão para o atributo `ipProtectionLevel` não está **especificado**.  
   
- A <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propriedade pode ser usada para obter o valor atual `ipProtectionLevel` do atributo dos arquivos de configuração aplicáveis.  
+ A propriedade <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> pode ser usada para obter o valor atual do atributo `ipProtectionLevel` dos arquivos de configuração aplicáveis.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar que as portas de conclusão devem ser usadas e que <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> o padrão deve ser irrestrito.  
+ O exemplo a seguir mostra como especificar que as portas de conclusão devem ser usadas e que o <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> padrão deve ser irrestrito.  
   
 ```xml  
 <configuration>  

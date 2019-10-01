@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664246"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698425"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Adicionar > elemento para authenticationModules (configurações de rede)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<add > elemento para authenticationModules (configurações de rede)
 Adiciona um módulo de autenticação ao aplicativo.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ Adiciona um módulo de autenticação ao aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`type`|O nome do tipo totalmente qualificado (indicado pela <xref:System.Type.FullName%2A> Propriedade) e o nome do assembly (indicado <xref:System.Reflection.Assembly.FullName%2A> pela propriedade), separados por uma vírgula.|  
+|`type`|O nome do tipo totalmente qualificado (indicado pela propriedade <xref:System.Type.FullName%2A>) e o nome do assembly (indicado pela propriedade <xref:System.Reflection.Assembly.FullName%2A>), separados por uma vírgula.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -52,9 +52,9 @@ Adiciona um módulo de autenticação ao aplicativo.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `add` elemento adiciona um módulo de autenticação ao final da lista de módulos de autenticação registrados. Os módulos de autenticação são chamados na ordem em que foram adicionados à lista.  
+ O elemento `add` adiciona um módulo de autenticação ao final da lista de módulos de autenticação registrados. Os módulos de autenticação são chamados na ordem em que foram adicionados à lista.  
   
- O valor do `type` atributo deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.  
+ O valor do atributo `type` deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

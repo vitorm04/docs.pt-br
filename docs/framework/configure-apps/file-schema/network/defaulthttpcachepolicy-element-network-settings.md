@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664149"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698273"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<Elemento de > DefaultHttpCachePolicy (configurações de rede)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > elemento (configurações de rede)
 Descreve se o cache HTTP está ativo e descreve a política de cache padrão.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultHttpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,9 +56,9 @@ Descreve se o cache HTTP está ativo e descreve a política de cache padrão.
 |[requestCaching](requestcaching-element-network-settings.md)|Controla o mecanismo de cache para solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor `policyLevel` do atributo `BypassCache` é ou `Default`.  
+ O valor do atributo `policyLevel` é `BypassCache` ou `Default`.  
   
- Os valores para `maximumAge`os `maximumStale`elementos, `minimumFresh` e são um intervalo de tempo explícito com um formato de *d*. *HH*:*mm*:*SS* (dias, horas, minutos e segundos) ou as constantes `minValue` ou `maxValue`, conforme apropriado.  
+ Os valores para os elementos `maximumAge`, `maximumStale` e `minimumFresh` são um intervalo de tempo explícito com um formato de *d*. *hh*:*mm*:*SS* (dias, horas, minutos e segundos) ou as constantes `minValue` ou `maxValue`, conforme apropriado.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

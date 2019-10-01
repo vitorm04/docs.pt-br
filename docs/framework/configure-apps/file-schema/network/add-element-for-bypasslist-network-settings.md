@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927488"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699605"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Adicionar > elemento para BypassList (configurações de rede)
+# <a name="add-element-for-bypasslist-network-settings"></a>\<add > elemento para BypassList (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<> BypassList  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,11 +53,11 @@ Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.
 |[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
   
 ## <a name="remarks"></a>Comentários  
- O `add` elemento insere expressões regulares descrevendo endereços IP ou nomes de servidores DNS na lista de endereços que ignoram um servidor proxy.  
+ O elemento `add` insere expressões regulares descrevendo endereços IP ou nomes de servidores DNS na lista de endereços que ignoram um servidor proxy.  
   
- O valor do `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
+ O valor do atributo `address` deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
   
- Tome cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] +\\. contoso\\. com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder apenas a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] +\\. contoso\\. com $".  
+ Tome cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] + @no__t -0.contoso\\.com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder apenas a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
   
  Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).  
   

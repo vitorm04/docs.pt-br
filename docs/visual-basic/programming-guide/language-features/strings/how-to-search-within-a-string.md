@@ -1,41 +1,41 @@
 ---
-title: 'Como: Pesquisar em uma cadeia de caracteres (Visual Basic)'
+title: 'Como: Pesquisar dentro de uma cadeia de caracteres-Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 57a3d9650ad78e1c8580fd46839c9a1cbc7794c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665337"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700071"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>Como: Pesquisar em uma cadeia de caracteres (Visual Basic)
-Este exemplo chama o <xref:System.String.IndexOf%2A> método em um <xref:System.String> objeto para relatar o índice da primeira ocorrência de uma subcadeia de caracteres.  
-  
-## <a name="example"></a>Exemplo  
- [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Este exemplo requer:  
-  
-- Uma `Imports` instrução que especifica o <xref:System> namespace. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
-  
-## <a name="robust-programming"></a>Programação robusta  
- O <xref:System.String.IndexOf%2A> método relata o local do primeiro caractere da primeira ocorrência da subcadeia de caracteres. O índice é baseado em 0, o que significa que o primeiro caractere de uma cadeia de caracteres tem um índice de 0.  
-  
- Se <xref:System.String.IndexOf%2A> não localizar a subcadeia de caracteres, ele retornará -1.  
-  
- O <xref:System.String.IndexOf%2A> método diferencia maiusculas de minúsculas e usa a cultura atual.  
-  
- Para controle de erro ideal, você talvez queira incluir a pesquisa de cadeia de caracteres na `Try` block de um [tente... Catch... Instrução Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) construção.  
-  
+# <a name="how-to-search-within-a-string-visual-basic"></a>Como: Pesquisar dentro de uma cadeia de caracteres (Visual Basic)
+
+Este artigo mostra um exemplo de como Pesquisar dentro de uma cadeia de caracteres em Visual Basic.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo chama o método <xref:System.String.IndexOf%2A> em um objeto <xref:System.String> para relatar o índice da primeira ocorrência de uma subcadeia de caracteres:
+
+ [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]
+
+## <a name="robust-programming"></a>Programação robusta
+
+O método <xref:System.String.IndexOf%2A> retorna o local do primeiro caractere da primeira ocorrência da subcadeia de caracteres. O índice é baseado em 0, o que significa que o primeiro caractere de uma cadeia de caracteres tem um índice de 0.
+
+Se <xref:System.String.IndexOf%2A> não encontrar a subcadeia de caracteres, ela retornará-1.
+
+O método <xref:System.String.IndexOf%2A> diferencia maiúsculas de minúsculas e usa a cultura atual.
+
+Para obter um controle de erro ideal, talvez você queira colocar a pesquisa de cadeia de caracteres no bloco `Try` de uma [tentativa... Capturar... Instrução Finally](../../../language-reference/statements/try-catch-finally-statement.md) .
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.String.IndexOf%2A>
-- [Instrução Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [Cadeias de Caracteres](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Instrução Try...Catch...Finally](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Introdução às cadeias de caracteres no Visual Basic](introduction-to-strings.md)
+- [Cadeias de Caracteres](index.md)

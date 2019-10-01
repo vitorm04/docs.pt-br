@@ -10,19 +10,19 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 870460d78eb2e627de2984c79571fd5172672b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 337d651e831dc2ab132056f6e9a1f2b5300bf7f8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629125"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701326"
 ---
-# <a name="-operator-visual-basic"></a>>> Operador (Visual Basic)
-Executa um deslocamento aritmético à direita em um padrão de bit.  
+# <a name="-operator-visual-basic"></a>Operador de > de > (Visual Basic)
+Executa um deslocamento aritmético para a direita em um padrão de bit.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 result = pattern >> amount  
 ```  
   
@@ -37,54 +37,54 @@ result = pattern >> amount
  Necessário. Expressão numérica. O número de bits para deslocar o padrão de bit. O tipo de dados deve ser `Integer` ou ampliado para `Integer`.  
   
 ## <a name="remarks"></a>Comentários  
- Deslocamentos aritméticos não são circulares, que significa que os bits deslocados em uma extremidade do resultado não são reintroduzidos na outra extremidade. Em um deslocamento aritmético à direita, os bits deslocados além da posição do bit mais à direita são descartados e o bit mais à esquerda (entrada) é propagado para as posições de bits vagas à esquerda. Isso significa que se `pattern` tem um valor negativo, as posições vagas são definidas como um; caso contrário, eles são definidos como zero.  
+ Deslocamentos aritméticos não são circulares, o que significa que os bits deslocados uma extremidade do resultado não são reintroduzidos na outra extremidade. Em um deslocamento aritmético à direita, os bits deslocados além da posição do bit mais à direita são descartados e o bit mais à esquerda (sinal) é propagado para as posições de bits vagas à esquerda. Isso significa que, se `pattern` tiver um valor negativo, as posições vagas serão definidas como um; caso contrário, eles serão definidos como zero.  
   
- Observe que os tipos de dados `Byte`, `UShort`, `UInteger`, e `ULong` são assinados e, portanto, não há nenhum bit de sinal para propagar. Se `pattern` é de qualquer tipo não assinado, as posições vazias são sempre definidas como zero.  
+ Observe que os tipos de dados `Byte`, `UShort`, `UInteger` e `ULong` não são assinados e, portanto, não há nenhum bit de sinal para se propagar. Se `pattern` for de qualquer tipo não assinado, as posições vagadas sempre serão definidas como zero.  
   
- Para impedir que o deslocamento de bits maior do que o resultado pode comportar, Visual Basic mascara o valor de `amount` com uma máscara de tamanho correspondente ao tipo de dados de `pattern`. O binário AND desses valores é usado para o valor de deslocamento. As máscaras de tamanho são da seguinte maneira:  
+ Para evitar a mudança por mais bits do que o resultado pode conter, Visual Basic mascara o valor de `amount` com uma máscara de tamanho correspondente ao tipo de dados de `pattern`. O binário e desses valores é usado para o valor de deslocamento. As máscaras de tamanho são as seguintes:  
   
-|Tipo de dados do `pattern`|Máscara de tamanho (decimal)|Máscara de tamanho (hexadecimal)|  
+|Tipo de dados de `pattern`|Máscara de tamanho (Decimal)|Máscara de tamanho (hexadecimal)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&H00000007|  
 |`Short`, `UShort`|15|&H0000000F|  
 |`Integer`, `UInteger`|31|&H0000001F|  
 |`Long`, `ULong`|63|&H0000003F|  
   
- Se `amount` for zero, o valor da `result` é idêntico ao valor de `pattern`. Se `amount` é negativo, ele é interpretado como um valor sem sinal e mascarado com a máscara de tamanho apropriado.  
+ Se `amount` for zero, o valor de `result` será idêntico ao valor de `pattern`. Se `amount` for negativo, ele será usado como um valor não assinado e mascarado com a máscara de tamanho apropriada.  
   
- Deslocamentos aritméticos nunca geram exceções de estouro.  
+ As turnos aritméticos nunca geram exceções de estouro.  
   
 ## <a name="overloading"></a>Sobrecarga  
- O `>>` operador pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo de classe ou estrutura. Se seu código usa esse operador em uma classe ou estrutura, certifique-se de que você entende seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ O operador `>>` pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `>>` operador para executar aritméticos deslocamentos para a direito em valores integrais. O resultado sempre tem os mesmos dados de tipo da expressão a ser deslocado.  
+ O exemplo a seguir usa o operador `>>` para executar deslocamentos aritméticos à direita em valores integrais. O resultado sempre tem o mesmo tipo de dados que a expressão que está sendo deslocada.  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- Os resultados do exemplo anterior são da seguinte maneira:  
+ Os resultados do exemplo anterior são os seguintes:  
   
 - `result1` é 2560 (0000 1010 0000 0000).  
   
-- `result2` é de 160 (0000 0000 1010 0000).  
+- `result2` é 160 (0000 0000 1010 0000).  
   
 - `result3` é 2 (0000 0000 0000 0010).  
   
 - `result4` é 640 (0000 0010 1000 0000).  
   
-- `result5` é 0 (deslocadas 15 locais para a direita).  
+- `result5` é 0 (deslocada 15 locais para a direita).  
   
- O valor de deslocamento para `result4` é calculado como 18 AND 15, que é igual a 2.  
+ O valor de deslocamento para `result4` é calculado como 18 e 15, que é igual a 2.  
   
- O exemplo a seguir mostra os deslocamentos aritméticos em um valor negativo.  
+ O exemplo a seguir mostra deslocamentos aritméticos em um valor negativo.  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- Os resultados do exemplo anterior são da seguinte maneira:  
+ Os resultados do exemplo anterior são os seguintes:  
   
-- `negresult1` é -512 (1111 1110 0000 0000).  
+- `negresult1` é-512 (1111 1110 0000 0000).  
   
-- `negresult2` é -1 (o bit de sinal é propagado).  
+- `negresult2` é-1 (o bit de sinal é propagado).  
   
 ## <a name="see-also"></a>Consulte também
 

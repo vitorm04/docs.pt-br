@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: cbdf6150010ca2dace3f0610d9caa90c2bf52746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed2a4d06906d2928be62aed20a75484c3eea946
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921052"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699763"
 ---
-# <a name="oidentry-element"></a>\<Elemento de > oidEntry
+# <a name="oidentry-element"></a>\<oidEntry > elemento
 Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
-\<oidEntry>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<oidMap >** ](oidmap-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 **\<oidEntry >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**OID**|Atributo obrigatório.<br /><br /> Especifica a OID ASN. 1 correspondente ao algoritmo implementado pela sua classe.|  
-|**name**|Atributo obrigatório.<br /><br /> Especifica o valor do atributo **Name** na marca [ \<> de nameEntry](nameentry-element.md) .|  
+|**name**|Atributo obrigatório.<br /><br /> Especifica o valor do atributo **Name** na marca de [> \<nameEntry](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -56,7 +56,7 @@ Mapeia um OID (identificador de objeto) do ASN.1 para um nome amigável.
  Os identificadores de objeto ASN. 1 identificam algoritmos em alguns formatos criptográficos. Mapeie identificadores de objeto para nomes amigáveis para os algoritmos que você deseja identificar.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<elemento > oidEntry** para mapear um identificador de objeto para o algoritmo de hash RIPEMD-160 para uma implementação desse algoritmo de hash.  
+ O exemplo a seguir mostra como usar o elemento **\<oidEntry >** para mapear um identificador de objeto para o algoritmo de hash RIPEMD-160 para uma implementação desse algoritmo de hash.  
   
 ```xml  
 <configuration>  

@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920450"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697205"
 ---
-# <a name="source-element"></a>\<Elemento de > de origem
+# <a name="source-element"></a>\<source > elemento
 Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.  
   
- \<configuration>  
-\<System. Diagnostics >  
-\<fontes >  
-\<> de origem  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<source >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,9 +38,9 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`name`|Atributo opcional.<br /><br /> Especifica o nome da origem do rastreamento.|  
-|`switchName`|Atributo opcional.<br /><br /> Especifica o nome de uma instância de opção de rastreamento no aplicativo. Se a opção não for identificada em `<switches>` um elemento, o valor especificará o nível para a opção.|  
+|`switchName`|Atributo opcional.<br /><br /> Especifica o nome de uma instância de opção de rastreamento no aplicativo. Se a opção não for identificada em um elemento `<switches>`, o valor especificará o nível para a opção.|  
 |`switchType`|Atributo opcional.<br /><br /> Especifica o tipo da opção de rastreamento. Se presente, o tipo deve ser um nome de classe válido e não pode ser uma cadeia de caracteres vazia.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica o valor para um atributo específico de origem de rastreamento identificado pelo <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para essa origem de rastreamento.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica o valor para um atributo específico de origem de rastreamento identificado pelo método <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> para essa origem de rastreamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -60,7 +60,7 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
  Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<source>` elemento para adicionar a origem `mySource` de rastreamento e definir o nível para a opção de origem `sourceSwitch`denominada. Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
+ O exemplo a seguir mostra como usar o elemento `<source>` para adicionar a fonte de rastreamento `mySource` e definir o nível para a opção de origem denominada `sourceSwitch`. Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
   
 ```xml  
 <configuration>  

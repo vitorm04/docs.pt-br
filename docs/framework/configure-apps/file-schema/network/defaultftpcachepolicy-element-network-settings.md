@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659417"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698326"
 ---
-# <a name="defaultftpcachepolicy-element-network-settings"></a>\<Elemento de > defaultFtpCachePolicy (configurações de rede)
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > elemento (configurações de rede)
 Descreve se o cache FTP está ativo e descreve a política de cache padrão.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultFtpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ Descreve se o cache FTP está ativo e descreve a política de cache padrão.
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar uma política de cache de `NoCacheNoStore`FTP do.  
+ O exemplo a seguir mostra como especificar uma política de cache de FTP de `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  

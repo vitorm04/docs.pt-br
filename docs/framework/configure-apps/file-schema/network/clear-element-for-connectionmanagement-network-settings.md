@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17b380b12977423669fd413132d69a3082daca41
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659440"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698368"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<limpar > elemento para connectionManagement (configurações de rede)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<clear > elemento para connectionManagement (configurações de rede)
 Limpa a lista de gerenciamento de conexão.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,13 +47,13 @@ Limpa a lista de gerenciamento de conexão.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `clear` elemento limpa todas as entradas da lista de gerenciamento de conexão.  
+ O elemento `clear` limpa todas as entradas da lista de gerenciamento de conexão.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir limpa a lista de gerenciamento de conexão e, em seguida, adiciona novas entradas `www.contoso.com` de gerenciamento de conexão para o servidor e todos os outros hosts de rede.  
+ O exemplo a seguir limpa a lista de gerenciamento de conexão e, em seguida, adiciona novas entradas de gerenciamento de conexão para o servidor `www.contoso.com` e todos os outros hosts de rede.  
   
 ```xml  
 <configuration>  

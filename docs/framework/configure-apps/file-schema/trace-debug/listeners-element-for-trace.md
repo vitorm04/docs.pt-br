@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927014"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699350"
 ---
-# <a name="listeners-element-for-trace"></a>\<elemento de > de ouvintes para > de \<rastreamento
+# <a name="listeners-element-for-trace"></a>\<listeners > elemento para \<trace >
 Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.  
   
- \<Elemento de > de configuração  
-\<Elemento de > System. Diagnostics  
-\<Elemento de > de rastreamento  
-\<elemento de > de ouvintes para > de \<rastreamento  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direc
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Adiciona um ouvinte na coleção `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Limpa a coleção `Listeners` do rastreamento.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Remove um ouvinte da `Listeners` coleção.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Remove um ouvinte da coleção `Listeners`.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -55,13 +55,13 @@ Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direc
 |`trace`|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- As <xref:System.Diagnostics.Debug> classes <xref:System.Diagnostics.Trace> e compartilham a mesma coleção de ouvintes. Se você adicionar um objeto de ouvinte à coleção em uma dessas classes, a outra classe usará o mesmo ouvinte. As classes de ouvinte fornecidas com o .NET Framework derivam da <xref:System.Diagnostics.TraceListener> classe.  
+ As classes <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> compartilham a mesma coleção de **ouvintes** . Se você adicionar um objeto de ouvinte à coleção em uma dessas classes, a outra classe usará o mesmo ouvinte. As classes de ouvinte fornecidas com o .NET Framework derivam da classe <xref:System.Diagnostics.TraceListener>.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<elemento >** de ouvintes `MyListener` para adicionar os ouvintes `MyEventListener` e a coleção de **ouvintes** . `MyListener`Cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. `MyEventListener`Cria uma entrada no log de eventos.  
+ O exemplo a seguir mostra como usar o elemento **\<listeners >** para adicionar os ouvintes `MyListener` e `MyEventListener` à coleção de **ouvintes** . `MyListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. `MyEventListener` cria uma entrada no log de eventos.  
   
 ```xml  
 <configuration>  

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06e0d8863c74041f81977b3187fe99a1d05bcd53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622672"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700889"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<membername >' é ambíguo entre as interfaces herdadas\<interfacename1 >' e '\<interfacename2 >'
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>' \<membername > ' é ambíguo nas interfaces herdadas ' \<interfacename1 > ' e ' \<interfacename2 > '
 A interface herda dois ou mais membros com o mesmo nome de várias interfaces.  
   
  **ID do erro:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Converta o valor para a interface base que você deseja usar. Por exemplo:  
+- Converta o valor para a interface base que você deseja usar; por exemplo:  
   
-    ```  
+    ```vb  
     Interface Left  
         Sub MySub()  
     End Interface  

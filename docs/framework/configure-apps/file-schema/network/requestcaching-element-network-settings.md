@@ -8,19 +8,19 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659130"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697835"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<Elemento requestCaching> (configurações de rede)
 Controla o mecanismo de cache para solicitações de rede.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,7 +65,7 @@ Controla o mecanismo de cache para solicitações de rede.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache HTTP está ativo e descreve a política de cache padrão.|  
-|[\<Elemento de > defaultFtpCachePolicy (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
+|[\<defaultFtpCachePolicy > elemento (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

@@ -9,27 +9,25 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: d53d3a105203addfacb1c982e0960bd12996f571
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 71b9e46a8c2d60c853af63ee78e2ed5dbe6e98f4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941420"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699147"
 ---
 # <a name="web-settings-schema"></a>Esquema de configurações Web
 As configurações de Web especificam as configurações do ASP.NET em nível de execução que se aplicam ao comportamento de todo o processo gerenciado pela camada de hospedagem do ASP.NET. Essas configurações são diferentes das configurações de tipo de domínio do aplicativo que são especificadas no arquivo Web.config de um aplicativo ASP.NET.  
   
- As configurações da Web estão contidas em arquivos Aspnet.config, que estão localizados nas pastas de instalação das versões do .NET Framework. Por exemplo, o arquivo Aspnet. config para .NET Framework 2,0 está na seguinte pasta:  
+As configurações da Web estão contidas em arquivos Aspnet.config, que estão localizados nas pastas de instalação das versões do .NET Framework. Por exemplo, o arquivo Aspnet. config para .NET Framework 2,0 está na seguinte pasta:  
   
- `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
+`C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
- As configurações da Web não são usadas em nenhum outro arquivo de configuração, como o arquivo machine.config, o Web.config raiz ou os arquivos Web.config do nível do aplicativo.  
+As configurações da Web não são usadas em nenhum outro arquivo de configuração, como o arquivo machine.config, o Web.config raiz ou os arquivos Web.config do nível do aplicativo.  
   
- [Elemento \<configuration>](../configuration-element.md)  
-  
- [\<system.web> Element (Web Settings)](system-web-element-web-settings.md) [Elemento system.web> (configurações da Web)]  
-  
- [\<applicationPool> Element (Web Settings)](applicationpool-element-web-settings.md) [Elemento applicationPool> (configurações da Web)]  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. Web >** ](system-web-element-web-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<applicationPool >** ](applicationpool-element-web-settings.md)  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  

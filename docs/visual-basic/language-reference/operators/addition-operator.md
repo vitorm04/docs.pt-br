@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: ab18a7137a31ed8e616f465e7d617305c96d7b10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3187551afb7d25470f48dad894188766a811bb0a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943017"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701005"
 ---
 # <a name="-operator-visual-basic"></a>Operador + (Visual Basic)
 Adiciona dois números ou retorna o valor positivo de uma expressão numérica. Também pode ser usado para concatenar duas expressões de cadeia de caracteres.  
@@ -23,9 +23,13 @@ Adiciona dois números ou retorna o valor positivo de uma expressão numérica. 
 ## <a name="syntax"></a>Sintaxe  
   
 ```vb
-expression1 + expression2  
-- or -  
-+ expression1  
+expression1 + expression2
+```
+  
+ou
+
+```vb  
++expression1  
 ```  
   
 ## <a name="parts"></a>Partes  
@@ -38,11 +42,11 @@ expression1 + expression2
 ## <a name="result"></a>Resultado  
  Se `expression1` e`expression2` forem ambos numéricos, o resultado será sua soma aritmética.  
   
- Se `expression2` estiver ausente, o `+` operador será o operador de identidade *unário* para o valor inalterado de uma expressão. Nesse sentido, a operação consiste em reter o sinal de `expression1`, portanto, o resultado será negativo se `expression1` for negativo.  
+ Se `expression2` estiver ausente, o operador `+` será o operador de identidade *unário* para o valor inalterado de uma expressão. Nesse sentido, a operação consiste em reter o sinal de `expression1`, portanto, o resultado será negativo se `expression1` for negativo.  
   
  Se `expression1` e`expression2` forem as duas cadeias de caracteres, o resultado será a concatenação de seus valores.  
   
- Se `expression1` e`expression2` forem de tipos mistos, a ação executada dependerá de seus tipos, do seu conteúdo e da configuração da [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md). Para obter mais informações, consulte as tabelas em "Comentários".  
+ Se `expression1` e `expression2` forem de tipos mistos, a ação executada dependerá de seus tipos, do conteúdo e da configuração da [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md). Para obter mais informações, consulte as tabelas em "Comentários".  
   
 ## <a name="supported-types"></a>Tipos com suporte  
  Todos os tipos numéricos, incluindo os tipos de ponto flutuante e não assinado `Decimal`e `String`e.  
@@ -58,7 +62,7 @@ expression1 + expression2
 |Ambas as expressões são do tipo`String`|Concatenar.|  
 |Uma expressão é um tipo de dados numérico e a outra é uma cadeia de caracteres|Se `Option Strict` for`On`, gere um erro do compilador.<br /><br /> Se `Option Strict` `String` `Double` for `Off`, converta implicitamente o para e adicione.<br /><br /> Se o `String` não puder ser convertido `Double`em, lance uma <xref:System.InvalidCastException> exceção.|  
 |Uma expressão é um tipo de dados numérico e a outra é [Nothing](../../../visual-basic/language-reference/nothing.md)|Adicionar, com `Nothing` valor igual a zero.|  
-|Uma expressão é uma cadeia de caracteres e a outra é`Nothing`|Concatenar, com `Nothing` valor "".|  
+|Uma expressão é uma cadeia de caracteres e a outra é`Nothing`|Concatenar, com `Nothing` valor como "".|  
   
  Se uma expressão for uma `Object` expressão, Visual Basic executará as seguintes ações.  
   
@@ -83,7 +87,7 @@ expression1 + expression2
 > Ao usar o operador `+` , talvez você não consiga determinar se a adição ou a concatenação de cadeia de caracteres ocorrerá. Use o `&` operador para concatenação para eliminar ambigüidade e fornecer código de autodocumentação.  
   
 ## <a name="overloading"></a>Sobrecarga  
- O `+` operador pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ O operador `+` pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa `+` o operador para adicionar números. Se os operandos forem numéricos, Visual Basic calculará o resultado aritmético. O resultado aritmético representa a soma dos dois operandos.  

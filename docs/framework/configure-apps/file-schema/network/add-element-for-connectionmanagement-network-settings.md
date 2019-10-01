@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664224"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698382"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Adicionar > elemento para connectionManagement (configurações de rede)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<add > elemento para connectionManagement (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,9 +54,9 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor do `address` atributo deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
+ O valor do atributo `address` deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
   
- Se o URI passado para qualquer API http contiver Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> o que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
+ Se o URI passado para qualquer API HTTP contiver Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A>, que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

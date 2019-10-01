@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9cd2b0d426e8f31f6312a4951f94ed1c52929d9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cae4ce2e1d5cdef097f4095a7748f09b80d1acdb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789664"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699075"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migração do .NET Framework 4
 
@@ -65,7 +65,7 @@ Namespaces: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Securi
 | **Sites do SharePoint** | Se você tentar executar um site da Web ASP.NET 4 implantado como filho de um site da Web do SharePoint que contém um nível de confiança parcial personalizado nomeado `WSS_Minimal`, você verá o seguinte erro:<br><br>`Could not find permission set named 'ASP.Net'.` | No momento, nenhuma versão do SharePoint é compatível com o ASP.NET. Como resultado, você não deverá tentar executar um site da Web do ASP.NET 4 como um filho de um site da Web do SharePoint. |
 | **Padrões XHTML 1.1** | Para habilitar a conformidade XHTML 1.1 para novos sites da Web, os controles ASP.NET no .NET Framework 4 gerarão HTML compatível com XHTML 1.1. Essa renderização é habilitada usando a seguinte opção no arquivo Web.config dentro do elemento `<system.Web>`:<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>Essa opção é definida, por padrão, como 4.0. Os projetos da Web atualizados do Visual Studio 2008 têm a configuração 3.5 habilitada para compatibilidade. | nenhuma. |
 
-## <a name="core"></a>Núcleo
+## <a name="core"></a>Core
 
 ### <a name="general-features"></a>Recursos gerais
 
@@ -316,17 +316,9 @@ Namespaces: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.X
 
 ## <a name="see-also"></a>Consulte também
 
-### <a name="reference"></a>Referência
-
 - [Novos tipos e membros no .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-
-### <a name="concepts"></a>Conceitos
-
 - [Guia de migração do .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [Novidades do .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [Compatibilidade de versão no .NET Framework](version-compatibility.md)
 - [Migração de soluções do Office para o .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
-
-### <a name="other-resources"></a>Outros recursos
-
 - [O que está obsoleto na biblioteca de classes .NET Framework](../whats-new/whats-obsolete.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdf8649e3cb2221e5c74eefd22959dc4b382236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7df668487601e4278b56e196a43d1154b643fd29
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747688"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700742"
 ---
 # <a name="icordebugcodegetaddress-method"></a>Método ICorDebugCode::GetAddress
-Obtém o endereço virtual relativo (RVA) ou o segmento de código que representa essa interface "ICorDebugCode".  
+Obtém o endereço virtual relativo (RVA) do segmento de código que essa interface "ICorDebugCode" representa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +37,13 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parâmetros  
  `pStart`  
- [out] Um ponteiro para o RVA do segmento de código.  
+ fora Um ponteiro para o RVA do segmento de código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Consulte também
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

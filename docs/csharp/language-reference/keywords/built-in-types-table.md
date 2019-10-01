@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605981"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698790"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela de tipos internos (Referência de C#)
 
-A tabela a seguir mostra as palavras-chave para tipos internos do C#, que são aliases de tipos predefinidos no namespace <xref:System>.  
-  
+A tabela a seguir mostra as palavras-chave para C# tipos internos, que são aliases de tipos predefinidos no namespace <xref:System>:
+
 |Tipo de C#|Tipo .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,9 +38,9 @@ A tabela a seguir mostra as palavras-chave para tipos internos do C#, que são a
   
 ## <a name="remarks"></a>Comentários
 
-Todos os tipos na tabela, exceto `object` e `string`, são referidos como tipos simples.  
-  
-As palavras-chave do tipo C# e seus aliases são intercambiáveis. Por exemplo, é possível declarar uma variável de inteiro usando uma das seguintes declarações:  
+Todos os tipos na tabela, exceto `object` e `string`, são referidos como tipos simples.
+
+As palavras-chave do tipo C# e seus aliases são intercambiáveis. Por exemplo, é possível declarar uma variável de inteiro usando uma das seguintes declarações:
 
 ```csharp
 int x = 123;

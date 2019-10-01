@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: HT
+ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092742"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696729"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Como usar o bloco try/catch para capturar exceções
 
@@ -27,7 +27,7 @@ Colocar todas as instruções de código que podem elevar ou gerar uma exceção
 No exemplo a seguir, um <xref:System.IO.StreamReader> abre um arquivo chamado *data.txt* e recupera uma linha desse arquivo. Uma vez que o código pode gerar qualquer uma de três exceções, ele é colocado em um bloco `try`. Três blocos `catch` capturam as exceções e lidam com elas, exibindo os resultados no console.
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
-[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
 O CLR (Common Language Runtime) captura exceções não manipuladas pelos blocos `catch`. Se uma exceção é capturada pelo CLR, um dos seguintes resultados pode ocorrer dependendo da configuração do CLR:
 
@@ -40,5 +40,5 @@ O CLR (Common Language Runtime) captura exceções não manipuladas pelos blocos
 
 ## <a name="see-also"></a>Consulte também
 
-[Exceções](index.md)  
-[Tratamento de erros de E/S no .NET](../io/handling-io-errors.md)
+- [Exceções](index.md)
+- [Tratamento de erros de E/S no .NET](../io/handling-io-errors.md)

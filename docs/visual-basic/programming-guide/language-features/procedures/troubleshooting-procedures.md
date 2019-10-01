@@ -8,129 +8,132 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 1a8cd568f1a9a05721f311cc72a22bfc2b6bcfc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8309b9bd63a2a3d1b0b56f97be121a06b78d6b6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625464"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700130"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Solucionando problemas de procedimentos (Visual Basic)
-Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com procedimentos.  
+
+Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com procedimentos.
+
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Retornando um tipo de matriz de um procedimento de função
+
+ Se um procedimento `Function` retornar um tipo de dados de matriz, você não poderá usar o nome de `Function` para armazenar valores nos elementos da matriz. Se você tentar fazer isso, o compilador o interpretará como uma chamada para o `Function`. O exemplo a seguir gera erros de compilador.
+
+ ```vb
+ Function AllOnes(n As Integer) As Integer()
+     For i = 1 To n - 1
+         ' The following statement generates a COMPILER ERROR.
+         AllOnes(i) = 1
+     Next
+     ' The following statement generates a COMPILER ERROR.
+     Return AllOnes()
+ End Function
+ ```
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Retornando um tipo de matriz de um procedimento Function  
- Se um `Function` procedimento retorna um tipo de dados de matriz, você não pode usar o `Function` nome para armazenar os valores nos elementos da matriz. Se você tentar fazer isso, o compilador interpreta como uma chamada para o `Function`. O exemplo a seguir gera erros de compilador.  
-  
- `Function allOnes(ByVal n As Integer) As Integer()`  
-  
- `For i As Integer = 1 To n - 1`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `allOnes(i) = 1`  
-  
- `Next i`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `Return allOnes()`  
-  
- `End Function`  
-  
- A instrução `allOnes(i) = 1` gera um erro do compilador porque ele aparece para chamar `allOnes` com um argumento de tipo de dados errado (um singleton `Integer` em vez de um `Integer` matriz). A instrução `Return allOnes()` gera um erro do compilador porque ele aparece para chamar `allOnes` com nenhum argumento.  
-  
- **Abordagem correta:** Para ser capaz de modificar os elementos de uma matriz que é retornada, define uma matriz interna como uma variável local. O exemplo a seguir compila sem erro.  
-  
- [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
-  
-## <a name="argument-not-being-modified-by-procedure-call"></a>Argumento não sendo modificado pela chamada de procedimento  
- Se você pretende permitir que um procedimento alterar um elemento de programação subjacente um argumento no código de chamada, você deve passar por referência. Mas um procedimento pode acessar os elementos de um argumento de tipo de referência, mesmo se você passá-lo por valor.  
-  
-- **Variável de base**. Para permitir que o procedimento substituir o valor do elemento variável subjacente, o procedimento deve declarar o parâmetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Além disso, o código de chamada deve não coloque o argumento entre parênteses, porque isso poderia substituir o `ByRef` mecanismo de passagem.  
-  
-- **Fazer referência a elementos do tipo**. Se você declarar um parâmetro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), o procedimento não é possível modificar o elemento variável subjacente. No entanto, se o argumento for um tipo de referência, o procedimento pode modificar os membros do objeto para o qual ele aponta, mesmo que ele não é possível substituir o valor da variável. Por exemplo, se o argumento for uma variável de matriz, o procedimento não é possível atribuir uma nova matriz a ela, mas ele pode alterar um ou mais dos seus elementos. Os elementos alterados são refletidos na variável de matriz subjacente no código de chamada.  
-  
- O exemplo a seguir define dois procedimentos que tenham uma variável de matriz por valor e operam em seus elementos. Procedimento `increase` simplesmente adiciona um para cada elemento. Procedimento `replace` atribui uma nova matriz para o parâmetro `a()` e, em seguida, adiciona um para cada elemento. No entanto, a reatribuição não afeta a variável de matriz subjacente no código de chamada porque `a()` é declarado `ByVal`.  
-  
- [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
-  
- [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
-  
- O exemplo a seguir faz chamadas para `increase` e `replace`.  
-  
- [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
-  
- A primeira `MsgBox` chamada exibe "após increase (n): 11, 21, 31, 41". Porque `n` é um tipo de referência `increase` podem alterar seus membros, mesmo que ele seja passado `ByVal`.  
-  
- O segundo `MsgBox` chamada exibe "Após Replace (n): 11, 21, 31, 41". Porque `n` é passado `ByVal`, `replace` não é possível modificar a variável `n` atribuindo uma nova matriz a ela. Quando `replace` cria a nova instância de matriz `k` e o atribui à variável local `a`, ele perde a referência à `n` passado pelo código de chamada. Quando ele aumenta os membros da `a`, apenas a matriz local `k` é afetado.  
-  
- **Abordagem correta:** Para ser capaz de modificar um elemento variável subjacente, passá-lo por referência. O exemplo a seguir mostra a alteração na declaração de `replace` que permite que ele substitua um array com outro no código de chamada.  
-  
- [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
-  
-## <a name="unable-to-define-an-overload"></a>Não é possível definir uma sobrecarga  
- Se você quiser definir uma versão sobrecarregada de um procedimento, você deve usar o mesmo nome mas uma assinatura diferente. Se o compilador não pode diferenciar sua declaração de uma sobrecarga com a mesma assinatura, ele gera um erro.  
-  
- O *assinatura* de um procedimento é determinado pelo nome do procedimento e a lista de parâmetros. Cada sobrecarga deve ter o mesmo nome de todas as outras sobrecargas, mas deve ser diferente de todos eles em pelo menos um dos outros componentes da assinatura. Para obter mais informações, consulte [sobrecarga de procedimento](./procedure-overloading.md).  
-  
- Os seguintes itens, mesmo que pertençam à lista de parâmetros, não são componentes da assinatura do procedimento:  
-  
-- Palavras-chave com o modificador de procedimento, como `Public`, `Shared`, e `Static`  
-  
-- Nomes de parâmetro  
-  
-- Palavras-chave com o modificador de parâmetro, como `ByRef` e `Optional`  
-  
-- o tipo de dados do valor de retorno (exceto para um operador de conversão)  
-  
- Você não pode sobrecarregar um procedimento, variando apenas um ou mais dos itens anteriores.  
-  
- **Abordagem correta:** Para poder definir uma sobrecarga de procedimento, você deve variar a assinatura. Como você deve usar o mesmo nome, você deve variar o número, ordem ou tipos de dados dos parâmetros. Em um procedimento genérico, você pode variar o número de parâmetros de tipo. Em um operador de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md)), você pode variar o tipo de retorno.  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Sobrecarga de resolução com opcional e argumentos ParamArray  
- Se você estiver sobrecarregando um procedimento com um ou mais [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parâmetros ou um [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parâmetro, você deve evitar a duplicação de qualquer um dos *sobrecargas implícitas*. Para obter informações, consulte [considerações sobre procedimentos de sobrecarga](./considerations-in-overloading-procedures.md).  
-  
-## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Chamando uma versão incorreta de um procedimento sobrecarregado  
- Se um procedimento tem várias versões sobrecarregadas, você deve estar familiarizado com todas as suas listas de parâmetros e entender como o Visual Basic resolve chamadas entre as sobrecargas. Caso contrário, você poderia chamar uma sobrecarga que não seja o pretendido.  
-  
- Quando você determinou qual sobrecarga você deseja chamar, tenha cuidado para observar as seguintes regras:  
-  
-- Forneça o número correto de argumentos e na ordem correta.  
-  
-- O ideal é que seus argumentos devem ter os mesmos tipos de dados como os parâmetros correspondentes. Em qualquer caso, o tipo de dados de cada argumento deve ampliar ao de seu parâmetro correspondente. Isso é verdadeiro mesmo com o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) definido como `Off`. Se uma sobrecarga exigir qualquer conversão de redução da sua lista de argumentos, que sobrecarregam não é elegível para ser chamado.  
-  
-- Se você fornecer argumentos que exigem conversões de ampliação, faça seus tipos de dados o mais próximo possível para os tipos de dados do parâmetro correspondente. Se duas ou mais sobrecargas aceitam os tipos de dados do argumento, o compilador resolve a chamada para a sobrecarga que chama para a menor quantidade de ampliação.  
-  
- Você pode reduzir a chance de incompatibilidade de tipo de dados usando o [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) palavra de-de chave do conversão ao preparar seus argumentos.  
-  
-### <a name="overload-resolution-failure"></a>Falha na resolução de sobrecarga  
- Quando você chama um procedimento sobrecarregado, o compilador tenta eliminar todos, exceto uma das sobrecargas. Se tiver êxito, ele resolve a chamada para essa sobrecarga. Se ele elimina todas as sobrecargas, ou se ele não é possível reduzir as sobrecargas qualificadas para uma única de candidato, ele gera um erro.  
-  
- O exemplo a seguir ilustra o processo de resolução de sobrecarga.  
-  
- [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
-  
- [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
-  
- Na primeira chamada, o compilador elimina a primeira sobrecarga porque o tipo do primeiro argumento (`Short`) restringe-se para o tipo do parâmetro correspondente (`Byte`). Em seguida, ele elimina a terceira sobrecarga porque cada tipo de argumento na segunda sobrecarga (`Short` e `Single`) é ampliado para o tipo correspondente no terceiro sobrecarregamento (`Integer` e `Single`). A segunda sobrecarga requer menos alargamento, portanto, o compilador usa para a chamada.  
-  
- Na segunda chamada, o compilador não pode eliminar qualquer uma das sobrecargas com base na restrição. Elimina a terceira sobrecarga pela mesma razão que na primeira chamada, pois ele pode chamar a segunda sobrecarga com menos alargamento dos tipos de argumento. No entanto, o compilador não pode resolver entre as primeiros e segunda sobrecargas. Cada um tem um tipo de parâmetro definidas se expande para o tipo correspondente no outro (`Byte` à `Short`, mas `Single` para `Double`). Portanto, o compilador gera um erro de resolução de sobrecarga.  
-  
- **Abordagem correta:** Para poder chamar um procedimento sobrecarregado sem ambiguidade, use [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para corresponder os tipos de dados de argumento para os tipos de parâmetro. O exemplo a seguir mostra uma chamada para `z` que força a resolução para a segunda sobrecarga.  
-  
- [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Sobrecarga de resolução com opcional e argumentos ParamArray  
- Se duas sobrecargas de um procedimento possuem assinaturas idênticas, exceto pelo fato de que o último parâmetro é declarado [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) em um e [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) no outro, o compilador resolve uma chamada para o procedimento de acordo com a correspondência mais próxima. Para obter mais informações, consulte [resolução de sobrecarga](./overload-resolution.md).  
-  
+ A instrução `AllOnes(i) = 1` gera um erro de compilador porque parece chamar `AllOnes` com um argumento do tipo de dados incorreto (um @no__t escalar-2, em vez de uma matriz `Integer`). A instrução `Return AllOnes()` gera um erro de compilador porque parece chamar `AllOnes` sem argumento.
+
+ **Abordagem correta:** Para poder modificar os elementos de uma matriz que deve ser retornada, defina uma matriz interna como uma variável local. O exemplo a seguir é compilado sem erro.
+
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
+
+## <a name="argument-not-being-modified-by-procedure-call"></a>O argumento não está sendo modificado pela chamada de procedimento
+
+ Se você pretende permitir que um procedimento altere um elemento de programação subjacente a um argumento no código de chamada, você deve passá-lo por referência. Mas um procedimento pode acessar os elementos de um argumento de tipo de referência mesmo se você passá-lo por valor.
+
+- **Variável subjacente**. Para permitir que o procedimento substitua o valor do elemento variável subjacente, o procedimento deve declarar o parâmetro [ByRef](../../../language-reference/modifiers/byref.md). Além disso, o código de chamada não deve colocar o argumento entre parênteses, porque isso substituiria o mecanismo de passagem `ByRef`.
+
+- **Elementos de tipo de referência**. Se você declarar um parâmetro [ByVal](../../../language-reference/modifiers/byval.md), o procedimento não poderá modificar o elemento Variable subjacente. No entanto, se o argumento for um tipo de referência, o procedimento poderá modificar os membros do objeto para o qual ele aponta, mesmo que não possa substituir o valor da variável. Por exemplo, se o argumento for uma variável de matriz, o procedimento não poderá atribuir uma nova matriz a ele, mas poderá alterar um ou mais de seus elementos. Os elementos alterados são refletidos na variável de matriz subjacente no código de chamada.
+
+ O exemplo a seguir define dois procedimentos que usam uma variável de matriz por valor e operam em seus elementos. O procedimento `increase` simplesmente adiciona um a cada elemento. O procedimento `replace` atribui uma nova matriz ao parâmetro `a()` e, em seguida, adiciona uma a cada elemento. No entanto, a reatribuição não afeta a variável de matriz subjacente no código de chamada porque `a()` é declarado `ByVal`.
+
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
+
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
+
+ O exemplo a seguir faz chamadas para `increase` e `replace`.
+
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
+
+ A primeira chamada `MsgBox` exibe "após o aumento (n): 11, 21, 31, 41 ". Como `n` é um tipo de referência, `increase` pode alterar seus membros, mesmo que seja passado `ByVal`.
+
+ A segunda chamada `MsgBox` exibe "após Replace (n): 11, 21, 31, 41 ". Como `n` é passado `ByVal`, `replace` não pode modificar a variável `n` atribuindo uma nova matriz a ela. Quando `replace` cria a nova instância de matriz `k` e a atribui à variável local `a`, ela perde a referência a `n` passado pelo código de chamada. Quando ele incrementa os membros de `a`, somente a matriz local `k` é afetada.
+
+ **Abordagem correta:** Para poder modificar um elemento variável subjacente, passe-o por referência. O exemplo a seguir mostra a alteração na declaração de `replace` que permite substituir uma matriz por outra no código de chamada.
+
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
+
+## <a name="unable-to-define-an-overload"></a>Não é possível definir uma sobrecarga
+
+ Se você quiser definir uma versão sobrecarregada de um procedimento, deverá usar o mesmo nome, mas uma assinatura diferente. Se o compilador não puder diferenciar a declaração de uma sobrecarga com a mesma assinatura, ele gerará um erro.
+
+ A *assinatura* de um procedimento é determinada pelo nome do procedimento e pela lista de parâmetros. Cada sobrecarga deve ter o mesmo nome de todas as outras sobrecargas, mas deve ser diferente de todas elas em pelo menos um dos outros componentes da assinatura. Para obter mais informações, consulte [sobrecarga de procedimento](procedure-overloading.md).
+
+ Os itens a seguir, embora eles pertençam à lista de parâmetros, não são componentes da assinatura de um procedimento:
+
+- Palavras-chave do modificador de procedimento, como `Public`, `Shared` e `Static`
+
+- Nomes de parâmetro
+
+- Palavras-chave do modificador de parâmetro, como `ByRef` e `Optional`
+
+- O tipo de dados do valor de retorno (exceto para um operador de conversão)
+
+ Não é possível sobrecarregar um procedimento, variando apenas um ou mais dos itens anteriores.
+
+ **Abordagem correta:** Para poder definir uma sobrecarga de procedimento, você deve variar a assinatura. Como você deve usar o mesmo nome, você deve variar o número, a ordem ou os tipos de dados dos parâmetros. Em um procedimento genérico, você pode variar o número de parâmetros de tipo. Em um operador de conversão ([função CType](../../../language-reference/functions/ctype-function.md)), você pode variar o tipo de retorno.
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Resolução de sobrecarga com argumentos opcional e ParamArray
+
+ Se você estiver sobrecarregando um procedimento com um ou mais parâmetros [opcionais](../../../language-reference/modifiers/optional.md) ou um parâmetro [ParamArray](../../../language-reference/modifiers/paramarray.md) , você deve evitar duplicar qualquer uma das *sobrecargas implícitas*. Para obter informações, consulte [Considerações sobre sobrecarga de procedimentos](considerations-in-overloading-procedures.md).
+
+## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Chamando uma versão incorreta de um procedimento sobrecarregado
+
+ Se um procedimento tiver várias versões sobrecarregadas, você deve estar familiarizado com todas as suas listas de parâmetros e entender como Visual Basic resolve chamadas entre as sobrecargas. Caso contrário, você poderia chamar uma sobrecarga diferente da pretendida.
+
+ Quando você tiver determinado qual sobrecarga você deseja chamar, tenha cuidado para observar as seguintes regras:
+
+- Forneça o número correto de argumentos e na ordem correta.
+
+- O ideal é que os argumentos tenham exatamente os mesmos tipos de dados que os parâmetros correspondentes. Em qualquer caso, o tipo de dados de cada argumento deve ampliar para o parâmetro correspondente. Isso é verdadeiro mesmo com a [instrução Option Strict](../../../language-reference/statements/option-strict-statement.md) definida como `Off`. Se uma sobrecarga exigir qualquer conversão de restrição da sua lista de argumentos, essa sobrecarga não será qualificada para ser chamada.
+
+- Se você fornecer argumentos que exigem alargamento, torne seus tipos de dados o mais próximo possível dos tipos de dados de parâmetro correspondentes. Se duas ou mais sobrecargas aceitarem os tipos de dados de argumento, o compilador resolverá sua chamada para a sobrecarga que chama para a menor quantidade de alargamento.
+
+ Você pode reduzir a chance de incompatibilidades de tipo de dados usando a palavra-chave de conversão de [função CType](../../../language-reference/functions/ctype-function.md) ao preparar seus argumentos.
+
+### <a name="overload-resolution-failure"></a>Falha na resolução de sobrecarga
+
+ Quando você chama um procedimento sobrecarregado, o compilador tenta eliminar tudo, exceto uma das sobrecargas. Se tiver sucesso, ele resolverá a chamada para essa sobrecarga. Se ele eliminar todas as sobrecargas ou se não puder reduzir as sobrecargas qualificadas para um único candidato, ele gerará um erro.
+
+ O exemplo a seguir ilustra o processo de resolução de sobrecarga.
+
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
+
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
+
+ Na primeira chamada, o compilador elimina a primeira sobrecarga porque o tipo do primeiro argumento (`Short`) é limitado ao tipo do parâmetro correspondente (`Byte`). Em seguida, ele elimina a terceira sobrecarga porque cada tipo de argumento na segunda sobrecarga (`Short` e `Single`) se amplia ao tipo correspondente na terceira sobrecarga (`Integer` e `Single`). A segunda sobrecarga requer menos alargamento, portanto o compilador a utiliza para a chamada.
+
+ Na segunda chamada, o compilador não pode eliminar nenhuma das sobrecargas com base na restrição. Ele elimina a terceira sobrecarga pelo mesmo motivo que na primeira chamada, porque ela pode chamar a segunda sobrecarga com menos alargamento dos tipos de argumento. No entanto, o compilador não pode resolver entre a primeira e a segunda sobrecargas. Cada tem um tipo de parâmetro definido que amplia o tipo correspondente no outro (`Byte` a `Short`, mas `Single` a `Double`). O compilador, portanto, gera um erro de resolução de sobrecarga.
+
+ **Abordagem correta:** Para poder chamar um procedimento sobrecarregado sem ambigüidade, use a [função CType](../../../language-reference/functions/ctype-function.md) para corresponder os tipos de dados de argumento aos tipos de parâmetro. O exemplo a seguir mostra uma chamada para `z` que força a resolução para a segunda sobrecarga.
+
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Resolução de sobrecarga com argumentos opcional e ParamArray
+
+ Se duas sobrecargas de um procedimento tiverem assinaturas idênticas, exceto que o último parâmetro é declarado [opcional](../../../language-reference/modifiers/optional.md) em um e [ParamArray](../../../language-reference/modifiers/paramarray.md) no outro, o compilador resolverá uma chamada para esse procedimento de acordo com a correspondência mais próxima. Para obter mais informações, consulte [sobrecarga de resolução](overload-resolution.md).
+
 ## <a name="see-also"></a>Consulte também
 
-- [Procedimentos](./index.md)
-- [Subprocedimentos](./sub-procedures.md)
-- [Procedimentos de Função](./function-procedures.md)
-- [Procedimentos de Propriedade](./property-procedures.md)
-- [Procedimentos de Operador](./operator-procedures.md)
-- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
-- [Sobrecarga de Procedimento](./procedure-overloading.md)
-- [Considerações sobre Procedimentos de Sobrecarga](./considerations-in-overloading-procedures.md)
-- [Resolução de Sobrecarga](./overload-resolution.md)
+- [Procedimentos](index.md)
+- [Subprocedimentos](sub-procedures.md)
+- [Procedimentos de Função](function-procedures.md)
+- [Procedimentos de Propriedade](property-procedures.md)
+- [Procedimentos de Operador](operator-procedures.md)
+- [Parâmetros e Argumentos de Procedimento](procedure-parameters-and-arguments.md)
+- [Sobrecarga de Procedimento](procedure-overloading.md)
+- [Considerações sobre Procedimentos de Sobrecarga](considerations-in-overloading-procedures.md)
+- [Resolução de Sobrecarga](overload-resolution.md)

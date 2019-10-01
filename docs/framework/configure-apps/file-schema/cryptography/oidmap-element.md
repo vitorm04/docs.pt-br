@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d2929167f5a7de96a868cd1ac884d2203d09dfb6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927523"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698445"
 ---
-# <a name="oidmap-element"></a>\<Elemento de > oidMap
+# <a name="oidmap-element"></a>\<oidMap > elemento
 Contém mapeamentos de OID (identificador de objeto) ASN para classes.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<oidMap>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<oidMap >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ Contém mapeamentos de OID (identificador de objeto) ASN para classes.
 |`mscorlib`|Contém o `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento de  **\<> oidMap** para conter um mapeamento de um OID para o algoritmo de hash RIPEMD-160 para uma implementação desse algoritmo de hash.  
+ O exemplo a seguir mostra como usar o elemento **\<oidMap >** para conter um mapeamento de um OID para o algoritmo de hash RIPEMD-160 para uma implementação desse algoritmo de hash.  
   
 ```xml  
 <configuration>  

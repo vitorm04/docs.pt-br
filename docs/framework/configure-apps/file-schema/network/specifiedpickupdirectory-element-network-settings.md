@@ -8,21 +8,21 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 47aa357dac8b6bf71ce8c391004af16f8c98e347
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659090"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697601"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<Elemento de > specifiedPickupDirectory (configurações de rede)
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > elemento (configurações de rede)
 Configura o diretório local para um servidor SMTP (Simple Mail Transport Protocol).  
   
- \<configuration>  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
-\<specifiedPickupDirectory>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailSettings >** ](mailsettings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<smtp >** ](smtp-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<specifiedPickupDirectory >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,10 +48,10 @@ Configura o diretório local para um servidor SMTP (Simple Mail Transport Protoc
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Elemento de > SMTP (configurações de rede)](smtp-element-network-settings.md)|Configura as opções de envio de email do protocolo SMTP.|  
+|[\<smtp > elemento (configurações de rede)](smtp-element-network-settings.md)|Configura as opções de envio de email do protocolo SMTP.|  
   
 ## <a name="remarks"></a>Comentários  
- O `specifiedPickupDirectory` atributo define o diretório em que os aplicativos salvam mensagens de email a serem processadas pelo servidor SMTP.  
+ O atributo `specifiedPickupDirectory` define o diretório em que os aplicativos salvam mensagens de email a serem processadas pelo servidor SMTP.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir especifica c:\maildrop como o diretório de recebimento de email.  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663939"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697470"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<Elemento de > webRequestModules (configurações de rede)
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > elemento (configurações de rede)
 Especifica os módulos a serem usados para solicitar informações de hosts de rede.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,9 +50,9 @@ Especifica os módulos a serem usados para solicitar informações de hosts de r
 |[system.net](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `webRequestModules` elemento registra os <xref:System.Net.WebRequest> descendentes da classe para tratar as solicitações de informações para os hosts de rede. Os módulos de solicitação da Web <xref:System.Net.IWebRequestCreate> devem implementar a interface.  
+ O elemento `webRequestModules` registra os descendentes da classe <xref:System.Net.WebRequest> para tratar as solicitações de informações para os hosts de rede. Os módulos de solicitação da Web devem implementar a interface <xref:System.Net.IWebRequestCreate>.  
   
- O .NET Framework inclui módulos de solicitação da Web para URIs que `http://`começam `https://`com, `file://`e. Você pode substituir os módulos padrão somente registrando um módulo personalizado no arquivo de configuração.  
+ O .NET Framework inclui módulos de solicitação da Web para URIs que começam com `http://`, `https://` e `file://`. Você pode substituir os módulos padrão somente registrando um módulo personalizado no arquivo de configuração.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

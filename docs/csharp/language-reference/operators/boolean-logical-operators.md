@@ -1,7 +1,7 @@
 ---
 title: Operadores lógicos boolianos – referência do C#
 description: Saiba mais sobre operadores C# que executam operações de negação lógica, conjunção (AND) e disjunção inclusiva e exclusiva (OR) com operandos booleanos.
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353371"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698676"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos boolianos (referência do C#)
 
@@ -54,6 +54,8 @@ Para os operandos de tipos [integrais](../builtin-types/integral-numeric-types.m
 O operador `!` calcula a negação lógica de seu operando. Ou seja, ele produz `true`, se o operando for avaliado como `false`, e `false`, se o operando for avaliado como `true`:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+A partir C# do 8,0, o operador `!` de sufixo unário é um operador NULL-tolerante. Em um contexto de anotação anulável habilitado, você o usa para declarar que a expressão `x` de um tipo de referência anulável não é nula: `x!`. Para obter mais informações, consulte [tipos de referência anuláveis](../../nullable-references.md).
 
 ## <a name="logical-and-operator-"></a> Operador AND lógico &amp;
 

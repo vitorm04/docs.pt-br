@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665157"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698576"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>A expressão chama recursivamente a propriedade recipiente '\<propertyname >'
-Uma instrução no `Set` procedimento de uma definição de propriedade armazena um valor no nome da propriedade.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>A expressão chama recursivamente a propriedade recipiente ' \<propertyname > '
+Uma instrução no procedimento `Set` de uma definição de propriedade armazena um valor no nome da propriedade.  
   
- A abordagem recomendada para armazenar o valor de uma propriedade é definir uma `Private` variável no recipiente da propriedade e usá-lo em ambos os `Get` e `Set` procedimentos. O `Set` procedimento deve, em seguida, armazenar o valor de entrada desta `Private` variável.  
+ A abordagem recomendada para manter o valor de uma propriedade é definir uma variável `Private` no contêiner da propriedade e usá-la nos procedimentos `Get` e `Set`. O procedimento `Set` deve armazenar o valor de entrada nessa variável `Private`.  
   
- O `Get` procedimento se comporta como uma `Function` procedimento, para que ele possa atribuir um valor para o nome da propriedade e retornar controle encontrando o `End Get` instrução. No entanto, é a abordagem recomendada incluir a `Private` variável como o valor em uma [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ O procedimento `Get` se comporta como um procedimento `Function`, portanto, ele pode atribuir um valor ao nome da propriedade e ao controle de retorno ao encontrar a instrução `End Get`. No entanto, a abordagem recomendada é incluir a variável `Private` como o valor em uma [instrução return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- O `Set` procedimento se comporta como um `Sub` procedimento, que não retorna um valor. Portanto, o nome do procedimento ou propriedade não tem significado especial em um `Set` procedimento e você não pode armazenar um valor para ele.  
+ O procedimento `Set` se comporta como um procedimento `Sub`, que não retorna um valor. Portanto, o nome do procedimento ou da propriedade não tem um significado especial dentro de um procedimento `Set` e você não pode armazenar um valor nele.  
   
- O exemplo a seguir ilustra a abordagem que pode causar esse erro, seguido pela abordagem recomendada.  
+ O exemplo a seguir ilustra a abordagem que pode causar esse erro, seguida da abordagem recomendada.  
   
-```  
+```vb  
 Public Class illustrateProperties  
 ' The code in the following property causes this error.  
     Public Property badProp() As Char  

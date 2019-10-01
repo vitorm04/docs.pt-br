@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664059"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697994"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > elemento (configurações de rede)
 Habilita ou desabilita os contadores de desempenho de rede.  
   
- \<configuration>  
-\<system.net>  
-\<> de configurações  
-\<performanceCounters>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performanceCounters >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,7 +56,7 @@ Habilita ou desabilita os contadores de desempenho de rede.
   
  O valor padrão é que os contadores de desempenho de rede estão desabilitados.  
   
- A <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> propriedade pode ser usada para obter o valor atual do atributo **habilitado** dos arquivos de configuração aplicáveis.  
+ A propriedade <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> pode ser usada para obter o valor atual do atributo **habilitado** dos arquivos de configuração aplicáveis.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como configurar o <xref:System.Net> e os namespaces relacionados para habilitar os contadores de desempenho de rede.  

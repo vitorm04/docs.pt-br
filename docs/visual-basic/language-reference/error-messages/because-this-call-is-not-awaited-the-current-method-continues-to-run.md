@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619556"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701192"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída
-Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere aplicar o operador 'Await' ao resultado da chamada.  
+Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere aplicar o operador ' Await ' ao resultado da chamada.  
   
- O método atual chama um método assíncrono que retorna um <xref:System.Threading.Tasks.Task> ou um <xref:System.Threading.Tasks.Task%601> e não se aplica a [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador para o resultado. A chamada ao método assíncrono inicia uma tarefa assíncrona. No entanto, como nenhum operador `Await` é aplicado, o programa continua sem esperar que a tarefa seja concluída. Na maioria dos casos, esse comportamento não é esperado. Geralmente, os outros aspectos do método de chamada dependem dos resultados da chamada ou, no mínimo, é esperado que o método chamado seja concluído antes de retornar do método que contém a chamada.  
+ O método atual chama um método Async que retorna um <xref:System.Threading.Tasks.Task> ou um <xref:System.Threading.Tasks.Task%601> e não aplica o operador [Await](../../../visual-basic/language-reference/operators/await-operator.md) ao resultado. A chamada ao método assíncrono inicia uma tarefa assíncrona. No entanto, como nenhum operador `Await` é aplicado, o programa continua sem esperar que a tarefa seja concluída. Na maioria dos casos, esse comportamento não é esperado. Geralmente, os outros aspectos do método de chamada dependem dos resultados da chamada ou, no mínimo, é esperado que o método chamado seja concluído antes de retornar do método que contém a chamada.  
   
- Igualmente importante é o que acontece com as exceções que são geradas no método assíncrono chamado. Uma exceção que é acionada em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> é armazenado na tarefa retornada. Se você não aguardar a tarefa ou verificar explicitamente se há exceções, a exceção será perdida. Se você aguardar a tarefa, a exceção será relançada.  
+ Um problema igualmente importante é o que acontece com as exceções que são geradas no método assíncrono chamado. Uma exceção que é gerada em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> é armazenado na tarefa retornada. Se você não aguardar a tarefa ou verificar explicitamente se há exceções, a exceção será perdida. Se você aguardar a tarefa, a exceção será relançada.  
   
  Como uma melhor prática, você sempre deve aguardar a chamada.  
   
@@ -83,7 +83,7 @@ Como esta chamada não era esperada, a execução do método atual continua ante
   
      No exemplo, se você escolher a Chamada nº 1 ou Chamada nº 2, o método assíncrono não aguardado (`CalledMethodAsync`) será concluído após o chamador (`CallingMethodAsync`) e o chamador do chamador (`StartButton_Click`) serem concluídos. A última linha na saída a seguir mostra quando o método chamado termina. A entrada e a saída do manipulador de eventos que chama `CallingMethodAsync` no exemplo completo estão marcadas na saída.  
   
-    ```  
+    ```console  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  
@@ -119,7 +119,7 @@ Como esta chamada não era esperada, a execução do método atual continua ante
   
      Para obter mais informações sobre o Designer XAML, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simples, confira as seções "Para criar um aplicativo WPF" e "Para criar um MainWindow simples do WPF" do [Passo a passo: acessar a Web usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4. Substitua o código no XAML. vb pelo código a seguir.  
+4. Substitua o código em MainWindow. XAML. vb pelo código a seguir.  
   
     ```vb  
     Class MainWindow   

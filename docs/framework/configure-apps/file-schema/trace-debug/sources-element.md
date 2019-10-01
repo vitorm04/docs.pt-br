@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926950"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699203"
 ---
-# <a name="sources-element"></a>\<Elemento de > de fontes
+# <a name="sources-element"></a>\<sources > elemento
 Especifica fontes de rastreamento que iniciam mensagens de rastreamento.  
   
- \<configuration>  
-\<System. Diagnostics >  
-\<fontes >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sources >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,7 +54,7 @@ Especifica fontes de rastreamento que iniciam mensagens de rastreamento.
  Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<sources>` elemento para adicionar a origem `mySource` de rastreamento e definir o nível para a opção de origem `sourceSwitch`denominada. Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
+ O exemplo a seguir mostra como usar o elemento `<sources>` para adicionar a fonte de rastreamento `mySource` e definir o nível para a opção de origem denominada `sourceSwitch`. Um ouvinte de rastreamento de console é adicionado que grava informações de rastreamento no console do.  
   
 ```xml  
 <configuration>  

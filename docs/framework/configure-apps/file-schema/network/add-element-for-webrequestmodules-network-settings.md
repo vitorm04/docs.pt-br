@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664213"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699584"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Adicionar > elemento para webRequestModules (configurações de rede)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<add > elemento para webRequestModules (configurações de rede)
 Adiciona um módulo de solicitação da Web personalizado ao aplicativo.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ Adiciona um módulo de solicitação da Web personalizado ao aplicativo.
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
 |`prefix`|O prefixo de URI para solicitações tratadas por este módulo de solicitação da Web.|  
-|`type`|O nome do tipo totalmente qualificado (indicado pela <xref:System.Type.FullName%2A> Propriedade) e o nome do assembly (indicado <xref:System.Reflection.Assembly.FullName%2A> pela propriedade), separados por uma vírgula, que implementa esse módulo de solicitação da Web.|  
+|`type`|O nome do tipo totalmente qualificado (indicado pela propriedade <xref:System.Type.FullName%2A>) e o nome do assembly (indicado pela propriedade <xref:System.Reflection.Assembly.FullName%2A>), separados por uma vírgula, que implementa esse módulo de solicitação da Web.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,13 +54,13 @@ Adiciona um módulo de solicitação da Web personalizado ao aplicativo.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica os módulos a serem usados para solicitar informações de hosts de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `prefix` atributo define o prefixo de URI que usa o módulo de solicitação da Web especificado. Os módulos de solicitação da Web normalmente são registrados para lidar com um protocolo específico, como HTTP ou FTP, mas podem ser registrados para lidar com uma solicitação para um servidor ou caminho específico em um servidor.  
+ O atributo `prefix` define o prefixo do URI que usa o módulo de solicitação da Web especificado. Os módulos de solicitação da Web normalmente são registrados para lidar com um protocolo específico, como HTTP ou FTP, mas podem ser registrados para lidar com uma solicitação para um servidor ou caminho específico em um servidor.  
   
- O módulo de solicitação da Web é criado quando um prefixo de correspondência de URI <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> é passado para o método.  
+ O módulo de solicitação da Web é criado quando um prefixo de correspondência de URI é passado para o método <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>.  
   
- O valor `prefix` do atributo deve ser os caracteres à esquerda de um URI válido. Por exemplo `http` ou `http://www.contoso.com`.
+ O valor do atributo `prefix` deve ser o caractere à esquerda de um URI válido. Por exemplo `http` ou `http://www.contoso.com`.
   
- O valor do `type` atributo deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.
+ O valor do atributo `type` deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

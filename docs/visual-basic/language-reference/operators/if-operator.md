@@ -11,52 +11,52 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 244c0598c65ba691decc09c36293799571211a40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663499"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701161"
 ---
 # <a name="if-operator-visual-basic"></a>Operador If (Visual Basic)
-Usos de curto-circuito avaliação para retornar condicionalmente um dos dois valores. O `If` operador pode ser chamado com três argumentos ou com dois argumentos.  
+Usa a avaliação de circuito curto para retornar condicionalmente um dos dois valores. O operador `If` pode ser chamado com três argumentos ou com dois argumentos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 If( [argument1,] argument2, argument3 )  
 ```  
   
-## <a name="if-operator-called-with-three-arguments"></a>Se o operador de chamada com três argumentos  
- Quando `If` é chamado usando três argumentos, o primeiro argumento deve ser avaliada como um valor que pode ser convertido como um `Boolean`. Que `Boolean` valor determinará qual dos outros dois argumentos é avaliado e retornado. A lista a seguir se aplica somente quando o `If` operador é chamado usando três argumentos.  
+## <a name="if-operator-called-with-three-arguments"></a>Operador If chamado com três argumentos  
+ Quando `If` é chamado usando três argumentos, o primeiro argumento deve ser avaliado como um valor que pode ser convertido como um `Boolean`. Esse valor `Boolean` determinará quais dos outros dois argumentos serão avaliados e retornados. A lista a seguir se aplica somente quando o operador `If` é chamado usando três argumentos.  
   
 ## <a name="parts"></a>Partes  
   
 |Termo|Definição|  
 |---|---|  
-|`argument1`|Necessário. `Boolean`. Determina qual dos outros argumentos para avaliar e retornar.|  
-|`argument2`|Necessário. `Object`. Avaliado e retornado se `argument1` for avaliada como `True`.|  
-|`argument3`|Necessário. `Object`. Avaliado e retornado se `argument1` for avaliada como `False` ou se `argument1` é uma [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variável que é avaliada como [nada](../../../visual-basic/language-reference/nothing.md).|  
+|`argument1`|Necessário. [https://aka.ms/AzureNVblog](`Boolean`). Determina quais dos outros argumentos a serem avaliados e retornados.|  
+|`argument2`|Necessário. [https://aka.ms/AzureNVblog](`Object`). Avaliado e retornado se `argument1` for avaliada como `True`.|  
+|`argument3`|Necessário. [https://aka.ms/AzureNVblog](`Object`). Avaliado e retornado se `argument1` for avaliado como `False` ou se `argument1` for uma variável `Boolean` [anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)que é avaliada como [Nothing](../../../visual-basic/language-reference/nothing.md).|  
   
- Uma `If` operador que é chamado com três argumentos funciona como um `IIf` função, exceto pelo fato de que ele usa avaliação curto-circuito. Uma `IIf` função sempre avalia todas as três de seus argumentos, enquanto um `If` operador que tem três argumentos avalia apenas dois deles. A primeira `If` argumento é avaliado e o resultado é convertido como um `Boolean` valor, `True` ou `False`. Se o valor for `True`, `argument2` é avaliada e seu valor é retornado, mas `argument3` não será avaliado. Se o valor da `Boolean` expressão é `False`, `argument3` é avaliada e seu valor é retornado, mas `argument2` não será avaliado. Os exemplos a seguir ilustram o uso do `If` quando três argumentos são usados:  
+ Um operador `If` que é chamado com três argumentos funciona como uma função `IIf`, exceto pelo fato de que usa a avaliação de circuito curto. Uma função `IIf` sempre avalia todos os três argumentos, enquanto que um operador `If` que tem três argumentos avalia apenas dois deles. O primeiro argumento `If` é avaliado e o resultado é convertido como um valor de `Boolean`, `True` ou `False`. Se o valor for `True`, `argument2` será avaliado e seu valor será retornado, mas `argument3` não será avaliado. Se o valor da expressão `Boolean` for `False`, `argument3` será avaliado e seu valor será retornado, mas `argument2` não será avaliado. Os exemplos a seguir ilustram o uso de `If` quando três argumentos são usados:  
   
  [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
- O exemplo a seguir ilustra o valor de avaliação de curto-circuito. O exemplo mostra duas tentativas de dividir variável `number` pela variável `divisor` exceto quando `divisor` é zero. Nesse caso, um 0 deve ser retornado, e deve ser feita nenhuma tentativa de executar a divisão porque resultaria um erro de tempo de execução. Porque o `If` avaliação de curto-circuito do uso de expressões, ela avalia o segundo ou terceiro argumento, dependendo do valor do primeiro argumento. Se o primeiro argumento for true, o divisor não é zero e é seguro avaliar o segundo argumento e executar a divisão. Se o primeiro argumento for false, somente o terceiro argumento é avaliado e 0 é retornado. Portanto, quando o divisor for 0, nenhuma tentativa é feita para executar a divisão e nenhum resultado de erro. No entanto, porque `IIf` não usa avaliação curto-circuito, o segundo argumento é avaliado, mesmo quando o primeiro argumento for false. Isso causa um erro de divisão por zero tempo de execução.  
+ O exemplo a seguir ilustra o valor da avaliação de circuito curto. O exemplo mostra duas tentativas de dividir a variável `number` por variável `divisor`, exceto quando `divisor` é zero. Nesse caso, um 0 deve ser retornado e nenhuma tentativa deve ser feita para executar a divisão porque ocorreria um erro em tempo de execução. Como a expressão `If` usa uma avaliação de circuito curto, ela avalia o segundo ou o terceiro argumento, dependendo do valor do primeiro argumento. Se o primeiro argumento for true, o divisor não será zero e será seguro avaliar o segundo argumento e executar a divisão. Se o primeiro argumento for false, somente o terceiro argumento será avaliado e um 0 será retornado. Portanto, quando o divisor é 0, nenhuma tentativa é feita para executar a divisão e nenhum resultado de erro. No entanto, como `IIf` não usa a avaliação de circuito curto, o segundo argumento é avaliado mesmo quando o primeiro argumento é falso. Isso causa um erro de divisão por zero em tempo de execução.  
   
  [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
-## <a name="if-operator-called-with-two-arguments"></a>Se o operador de chamada com dois argumentos  
- O primeiro argumento para `If` pode ser omitido. Isso permite que o operador a ser chamado usando apenas dois argumentos. A lista a seguir se aplica somente quando o `If` operador é chamado com dois argumentos.  
+## <a name="if-operator-called-with-two-arguments"></a>Operador If chamado com dois argumentos  
+ O primeiro argumento para `If` pode ser omitido. Isso permite que o operador seja chamado usando apenas dois argumentos. A lista a seguir se aplica somente quando o operador `If` é chamado com dois argumentos.  
   
 ## <a name="parts"></a>Partes  
   
 |Termo|Definição|  
 |---|---|  
-|`argument2`|Necessário. `Object`. Deve ser uma referência ou um tipo anulável. Avaliado e retornado quando ele for avaliado como algo diferente de `Nothing`.|  
-|`argument3`|Necessário. `Object`. Avaliado e retornado se `argument2` for avaliada como `Nothing`.|  
+|`argument2`|Necessário. [https://aka.ms/AzureNVblog](`Object`). Deve ser um tipo de referência ou anulável. Avaliado e retornado quando ele é avaliado como algo diferente de `Nothing`.|  
+|`argument3`|Necessário. [https://aka.ms/AzureNVblog](`Object`). Avaliado e retornado se `argument2` for avaliada como `Nothing`.|  
   
- Quando o `Boolean` argumento for omitido, o primeiro argumento deve ser uma referência ou um tipo anulável. Se o primeiro argumento é avaliado como `Nothing`, o valor do segundo argumento é retornado. Em todos os outros casos, o valor do primeiro argumento é retornado. O exemplo a seguir ilustra como funciona essa avaliação.  
+ Quando o argumento `Boolean` é omitido, o primeiro argumento deve ser um tipo de referência ou anulável. Se o primeiro argumento for avaliado como `Nothing`, o valor do segundo argumento será retornado. Em todos os outros casos, o valor do primeiro argumento é retornado. O exemplo a seguir ilustra como essa avaliação funciona.  
   
  [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   

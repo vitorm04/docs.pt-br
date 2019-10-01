@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663950"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697505"
 ---
 # <a name="systemnet-element-network-settings"></a>\<Elemento system.Net> (configurações de rede)
 Contém configurações que especificam como o .NET Framework se conecta à rede.  
   
- \<configuration>  
-\<system.net>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. net >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura o servidor proxy HTTP (Hypertext Transfer Protocol).|  
 |[mailSettings](mailsettings-element-network-settings.md)|Configura as opções de envio de email do protocolo SMTP.|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controla o mecanismo de cache para solicitações de rede.|  
-|[settings](settings-element-network-settings.md)|Configura as opções básicas de rede para classes nos <xref:System.Net> namespaces filho relacionados.|  
+|[settings](settings-element-network-settings.md)|Configura as opções básicas de rede para classes no <xref:System.Net> e namespaces filho relacionados.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica os módulos a serem usados para solicitar informações de hosts da Internet.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -53,10 +53,10 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 |[configuração](../configuration-element.md)|Contém configurações para todos os namespaces.|  
   
 ## <a name="remarks"></a>Comentários  
- <xref:System.Net> O [ \<elemento System. net >](system-net-element-network-settings.md) contém configurações para classes nos namespaces filho relacionados. As configurações definem módulos de autenticação, gerenciamento de conexão, configurações de email, o servidor proxy e os módulos de solicitação da Internet para receber informações de hosts da Internet.  
+ O elemento [@no__t -1System. net >](system-net-element-network-settings.md) contém configurações para classes no <xref:System.Net> e namespaces filho relacionados. As configurações definem módulos de autenticação, gerenciamento de conexão, configurações de email, o servidor proxy e os módulos de solicitação da Internet para receber informações de hosts da Internet.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma configuração típica usada <xref:System.Net> por classes.  
+ O exemplo a seguir mostra uma configuração típica usada pelas classes <xref:System.Net>.  
   
 ```xml  
 <configuration>  

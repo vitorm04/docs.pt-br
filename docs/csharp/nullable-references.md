@@ -2,12 +2,12 @@
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência que permitem valor nulo, adicionados no C# 8. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332368"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699954"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -65,7 +65,7 @@ O contexto de anotação anulável e o contexto de aviso anulável podem ser def
 - `warnings`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
   - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão habilitados.
 - `annotations`: O contexto de anotação que permite valor nulo está **habilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
-  - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão habilitados.
+  - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão desabilitados.
 - `disable`: O contexto de anotação que permite valor nulo está **desabilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
   - As variáveis de um tipo de referência são alheias, como as versões anteriores do C#. Todos os avisos de nulidade estão desabilitados.
 

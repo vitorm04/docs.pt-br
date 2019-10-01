@@ -4,12 +4,12 @@ description: Ajuda para os proprietários de projeto que desejam compilar sua so
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
-ms.translationtype: HT
+ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186059"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698929"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organize seu projeto para oferecer suporte ao .NET Framework e ao .NET Core
 
@@ -52,7 +52,7 @@ Reorganize o repositório para que todos os arquivos *\*.csproj* existentes seja
 
 Observe as seguintes alterações:
 
-* Substituição de *packages.config* e *\*.csproj* por um novo [*\*.csproj* do .NET Core](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pacotes NuGet são especificados com `<PackageReference> ItemGroup`.
+* Substituição de *packages.config* e *\*.csproj* por um novo [ *\*.csproj* do .NET Core](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pacotes NuGet são especificados com `<PackageReference> ItemGroup`.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Manter projetos existentes e criar um projeto do .NET Core
 
@@ -69,4 +69,4 @@ Observe as seguintes alterações:
 
 ## <a name="see-also"></a>Consulte também
 
-Confira a [Documentação de portabilidade do .NET Core](index.md) para obter mais diretrizes de migração para o .NET Core.
+- [Documentação de portabilidade do .NET Core](index.md)

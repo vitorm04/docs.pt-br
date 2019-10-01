@@ -12,19 +12,19 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac7096e998dd8d2a416dc739e1d7625e1abff7a6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747029"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696831"
 ---
 # <a name="externalsource-directive"></a>Diretiva #ExternalSource
-Indica um mapeamento entre linhas específicas do código-fonte e texto externo à origem.  
+Indica um mapeamento entre linhas específicas de código-fonte e texto externo à origem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 #ExternalSource( StringLiteral , IntLiteral )  
     [ LogicalLine+ ]  
 #End ExternalSource  
@@ -38,17 +38,17 @@ Indica um mapeamento entre linhas específicas do código-fonte e texto externo 
  O número de linha da primeira linha da fonte externa.  
   
  `LogicalLine`  
- A linha onde o erro ocorre na fonte externa.  
+ A linha em que o erro ocorre na fonte externa.  
   
  `#End ExternalSource`  
- Encerra o `#ExternalSource` bloco.  
+ Encerra o bloco `#ExternalSource`.  
   
 ## <a name="remarks"></a>Comentários  
- Essa diretiva é usada apenas pelo compilador e o depurador.  
+ Essa diretiva é usada somente pelo compilador e pelo depurador.  
   
- Um arquivo de origem pode incluir diretivas de fonte externa, que indicam um mapeamento entre linhas específicas do código no arquivo de origem e o texto externo à origem, como um arquivo. aspx. Se forem encontrados erros no código-fonte designado durante a compilação, eles são identificados como proveniente da fonte externa.  
+ Um arquivo de origem pode incluir diretivas de origem externas, que indicam um mapeamento entre linhas específicas de código no arquivo de origem e o texto externo à fonte, como um arquivo. aspx. Se forem encontrados erros no código-fonte designado durante a compilação, eles serão identificados como provenientes da fonte externa.  
   
- Diretivas de fonte externa não têm nenhum efeito na compilação e não podem ser aninhadas. Eles são destinados a uso interno por apenas o aplicativo.  
+ As diretivas de origem externa não têm nenhum efeito na compilação e não podem ser aninhadas. Eles são destinados ao uso interno somente pelo aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
 

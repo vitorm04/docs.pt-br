@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664037"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697838"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remover o elemento > para connectionManagement (configurações de rede)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remove > elemento para connectionManagement (configurações de rede)
 Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,15 +52,15 @@ Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `remove` elemento remove a entrada da lista de gerenciamento de conexões para o servidor especificado.  
+ O elemento `remove` remove a entrada da lista de gerenciamento de conexões para o servidor especificado.  
   
- O valor do `address` atributo deve ser um nome de host ou endereço IP válido.  
+ O valor do atributo `address` deve ser um nome de host ou endereço IP válido.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir remove todas as entradas da lista de gerenciamento `www.adventure-works.com` de conexões do servidor e, em seguida, configura um aplicativo para usar `www.contoso.com` quatro conexões com o servidor e duas conexões com todos os outros servidores.  
+ O exemplo a seguir remove todas as entradas da lista de gerenciamento de conexões para o servidor `www.adventure-works.com` e, em seguida, configura um aplicativo para usar quatro conexões com o servidor `www.contoso.com` e duas conexões com todos os outros servidores.  
   
 ```xml  
 <configuration>  

@@ -9,46 +9,46 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917211"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701360"
 ---
 # <a name="is-operator-visual-basic"></a>Operador Is (Visual Basic)
 Compara duas variáveis de referência de objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 result = object1 Is object2  
 ```  
   
 ## <a name="parts"></a>Partes  
  `result`  
- Necessário. Qualquer `Boolean` valor.  
+ Necessário. Qualquer valor `Boolean`.  
   
  `object1`  
- Necessário. Qualquer `Object` nome.  
+ Necessário. Qualquer nome `Object`.  
   
  `object2`  
- Necessário. Qualquer `Object` nome.  
+ Necessário. Qualquer nome `Object`.  
   
 ## <a name="remarks"></a>Comentários  
- O `Is` operador determina se duas referências de objeto se referem ao mesmo objeto. No entanto, ele não executa comparações de valor. Se `object1` e `True` `result` `result` `False`ambos se referirem exatamente à mesma instância de objeto, será; se não forem, será. `object2`  
+ O operador `Is` determina se duas referências de objeto se referem ao mesmo objeto. No entanto, ele não executa comparações de valor. Se `object1` e `object2` fizerem referência exatamente à mesma instância de objeto, `result` será `True`; Se não tiverem, `result` será `False`.  
   
- `Is`também pode ser usado com a `TypeOf` palavra-chave para `TypeOf`criar um... `Is` expressão, que testa se uma variável de objeto é compatível com um tipo de dados.  
+ `Is` também pode ser usado com a palavra-chave `TypeOf` para criar uma expressão `TypeOf`... `Is`, que testa se uma variável de objeto é compatível com um tipo de dados.  
   
 > [!NOTE]
-> A `Is` palavra-chave também é usada no [Select... Instrução Case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> A palavra-chave `Is` também é usada no [Select... Instrução Case](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `Is` o operador para comparar pares de referências de objeto. Os resultados são atribuídos a um `Boolean` valor que representa se os dois objetos são idênticos.  
+ O exemplo a seguir usa o operador `Is` para comparar pares de referências de objeto. Os resultados são atribuídos a um valor `Boolean` que representa se os dois objetos são idênticos.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Como demonstra o exemplo anterior, você pode usar o `Is` operador para testar os objetos ligados antecipadamente e associação tardia.  
+ Como demonstra o exemplo anterior, você pode usar o operador `Is` para testar os objetos ligados antecipadamente e associação tardia.  
   
 ## <a name="see-also"></a>Consulte também
 

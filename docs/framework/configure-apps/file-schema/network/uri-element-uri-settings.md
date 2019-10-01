@@ -1,21 +1,19 @@
 ---
-title: Elemento <Uri> (Configurações de URI)
+title: Elemento <uri> (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 80d71da5ca680872e4948fa8ff135fbbdf08cffe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663972"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697435"
 ---
-# <a name="uri-element-uri-settings"></a>\<Elemento de > URI (configurações de URI)
+# <a name="uri-element-uri-settings"></a>\<uri > elemento (configurações de URI)
 Contém configurações que especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes).  
   
-## <a name="schema-hierarchy"></a>Hierarquia de esquema  
- [Elemento \<configuration>](../configuration-element.md)  
-  
- [\<uri>](uri-element-uri-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<uri >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +33,7 @@ Contém configurações que especificam como o .NET Framework trata os endereço
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
 |[idn](idn-element-uri-settings.md)|Especifica se a análise de IDN (Nome de Domínio Internacionalizado) será aplicada aos nomes de domínio.|  
-|[iriParsing](iriparsing-element-uri-settings.md)|Especifica se a <xref:System.Uri> análise do IRI (identificador de recurso internacional) é aplicada e se as regras de análise de IRI devem ser aplicadas.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|Especifica se a análise do IRI (identificador de recurso internacional) é aplicada a <xref:System.Uri> e se as regras de análise de IRI devem ser aplicadas.|  
 |[schemeSettings](schemesettings-element-uri-settings.md)|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -45,12 +43,12 @@ Contém configurações que especificam como o .NET Framework trata os endereço
 |[configuração](../configuration-element.md)|Contém configurações para todos os namespaces.|  
   
 ## <a name="remarks"></a>Comentários  
- O `uri` elemento contém configurações para membros <xref:System.Uri> da classe <xref:System.Net> usada por classes no namespace. As configurações configuram o suporte para IRI e IDN.  
+ O elemento `uri` contém configurações para membros da classe <xref:System.Uri> usada por classes no namespace <xref:System.Net>. As configurações configuram o suporte para IRI e IDN.  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir mostra uma configuração usada pela <xref:System.Uri> classe para dar suporte a análise de IRI e nomes IDN. O exemplo também limpa todas as configurações de esquema e, em seguida, adiciona suporte para não escape de delimitadores de caminho codificados por porcentagem para o esquema http.  
+ O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri> para dar suporte à análise IRI e a nomes IDN. O exemplo também limpa todas as configurações de esquema e, em seguida, adiciona suporte para não escape de delimitadores de caminho codificados por porcentagem para o esquema http.  
   
 ### <a name="code"></a>Código  
   
