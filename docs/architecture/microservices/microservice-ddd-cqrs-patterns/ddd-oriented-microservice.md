@@ -4,7 +4,7 @@ description: Arquitetura de Microsserviços .NET para aplicativos .NET em contê
 ms.date: 10/08/2018
 ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674343"
@@ -53,7 +53,7 @@ O excelente livro de Eric Evans, [Domain Driven Design](https://domainlanguage.c
 
 **Camada de modelo de domínio**: Responsável por representar conceitos dos negócios, informações sobre a situação de negócios e as regras de negócios. O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. Essa camada é a essência do software de negócios.
 
-A camada de modelo de domínio é onde os negócios é expresso. Quando você implementa uma camada de modelo de domínio de microsserviço em .NET, essa camada é codificada como uma biblioteca de classes com as entidades de domínio que capturam dados mais comportamento (métodos com lógica).
+A camada de modelo de domínio é o local em que os negócios são expressados. Quando você implementa uma camada de modelo de domínio de microsserviço em .NET, essa camada é codificada como uma biblioteca de classes com as entidades de domínio que capturam dados mais comportamento (métodos com lógica).
 
 Seguindo os princípios de [Ignorância da Persistência](https://deviq.com/persistence-ignorance/) e a [Ignorância da Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), essa camada deve ignorar totalmente os detalhes de persistência de dados. Essas tarefas de persistência devem ser executadas pela camada de infraestrutura. Portanto, essa camada não deveria receber dependências diretas da infraestrutura, o que significa que uma regra importante é que suas classes de entidade do modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)s.
 
@@ -81,7 +81,7 @@ A meta é que a lógica do domínio na camada de modelo de domínio, suas invari
 
 A camada de infraestrutura é como os dados inicialmente mantidos em entidades de domínio (em memória) são mantidos em bancos de dados ou outro repositório persistente. Um exemplo é usar o código do Entity Framework Core para implementar as classes padrão do repositório que usam um DBContext para manter os dados em um banco de dados relacional.
 
-Conforme mencionado anteriormente nos princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), a camada de infraestrutura não deve ser "contaminar" a camada de modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
+Conforme mencionado anteriormente nos princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), a camada de infraestrutura não deve "contaminar" a camada de modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
 
 Assim, suas camadas ou bibliotecas e projetos de classes devem, por fim, depender da sua camada de modelo de domínio (biblioteca), não vice-versa, conforme mostra a Figura 7-7.
 

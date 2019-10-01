@@ -45,6 +45,10 @@
           href: tutorials/mlnet-cli.md
         - name: Analisar sentimentos usando o Construtor de modelo e as Razor Pages
           href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: Programação probabilística com o Infer.NET
+          href: how-to-guides/matchup-app-infer-net.md
 - name: Conceitos
   items:
     - name: Tarefas (tipos de modelo) do ML.NET
@@ -95,10 +99,6 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: Usar a API de ML automatizado
           href: how-to-guides/how-to-use-the-automl-api.md
-    - name: Infer.NET
-      items:
-        - name: Programação probabilística com o Infer.NET
-          href: how-to-guides/matchup-app-infer-net.md
 - name: Referência
   items:
     - name: API

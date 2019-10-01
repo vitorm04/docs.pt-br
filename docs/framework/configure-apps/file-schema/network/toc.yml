@@ -81,7 +81,7 @@
               href: remove-element-for-webrequestmodules-network-settings.md
             - name: Elemento <clear> para webRequestModules (Configurações de Rede)
               href: clear-element-for-webrequestmodules-network-settings.md
-    - name: Elemento <Uri> (Configurações de URI)
+    - name: Elemento <uri> (Configurações de URI)
       href: uri-element-uri-settings.md
       items:
         - name: Elemento <idn> (Configurações de URI)
