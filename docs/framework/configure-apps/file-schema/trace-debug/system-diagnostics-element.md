@@ -8,54 +8,54 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926940"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699191"
 ---
-# <a name="systemdiagnostics-element"></a><span data-ttu-id="aebbc-102">\<Elemento de > System. Diagnostics</span><span class="sxs-lookup"><span data-stu-id="aebbc-102">\<system.diagnostics> Element</span></span>
-<span data-ttu-id="aebbc-103">Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.</span><span class="sxs-lookup"><span data-stu-id="aebbc-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  
+# <a name="systemdiagnostics-element"></a><span data-ttu-id="391cc-102">Elemento \<system. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="391cc-102">\<system.diagnostics> Element</span></span>
+<span data-ttu-id="391cc-103">Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.</span><span class="sxs-lookup"><span data-stu-id="391cc-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  
   
- <span data-ttu-id="aebbc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="aebbc-104">\<configuration></span></span>  
-<span data-ttu-id="aebbc-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="aebbc-105">\<system.diagnostics></span></span>  
+[<span data-ttu-id="391cc-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="391cc-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="391cc-105">&nbsp; @ no__t-1 **\<system. diagnostics >**</span><span class="sxs-lookup"><span data-stu-id="391cc-105">&nbsp;&nbsp;**\<system.diagnostics>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aebbc-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="aebbc-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="391cc-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="391cc-106">Syntax</span></span>  
   
 ```xml  
 <system.diagnostics>   
 </system.diagnostics>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="aebbc-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="aebbc-107">Attributes and Elements</span></span>  
- <span data-ttu-id="aebbc-108">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="aebbc-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="391cc-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="391cc-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="391cc-108">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="391cc-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="aebbc-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="aebbc-109">Attributes</span></span>  
- <span data-ttu-id="aebbc-110">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="aebbc-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="391cc-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="391cc-109">Attributes</span></span>  
+ <span data-ttu-id="391cc-110">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="391cc-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="aebbc-111">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="aebbc-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="391cc-111">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="391cc-111">Child Elements</span></span>  
   
-|<span data-ttu-id="aebbc-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="aebbc-112">Element</span></span>|<span data-ttu-id="aebbc-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="aebbc-113">Description</span></span>|  
+|<span data-ttu-id="391cc-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="391cc-112">Element</span></span>|<span data-ttu-id="391cc-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="391cc-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="aebbc-114">\<assert></span><span class="sxs-lookup"><span data-stu-id="aebbc-114">\<assert></span></span>](assert-element.md)|<span data-ttu-id="aebbc-115">Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.</span><span class="sxs-lookup"><span data-stu-id="aebbc-115">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
-|[<span data-ttu-id="aebbc-116">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="aebbc-116">\<performanceCounters></span></span>](performancecounters-element.md)|<span data-ttu-id="aebbc-117">Especifica o tamanho da memória global compartilhada por contadores de desempenho.</span><span class="sxs-lookup"><span data-stu-id="aebbc-117">Specifies the size of the global memory shared by performance counters.</span></span>|  
-|[<span data-ttu-id="aebbc-118">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="aebbc-118">\<sharedListeners></span></span>](sharedlisteners-element.md)|<span data-ttu-id="aebbc-119">Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="aebbc-119">Contains listeners that any source or trace element can reference.</span></span> <span data-ttu-id="aebbc-120">Os ouvintes identificados como ouvintes compartilhados podem ser adicionados a fontes ou rastreamentos por nome.</span><span class="sxs-lookup"><span data-stu-id="aebbc-120">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>|  
-|[<span data-ttu-id="aebbc-121">\<sources></span><span class="sxs-lookup"><span data-stu-id="aebbc-121">\<sources></span></span>](sources-element.md)|<span data-ttu-id="aebbc-122">Especifica fontes de rastreamento que iniciam mensagens de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="aebbc-122">Specifies trace sources that initiate tracing messages.</span></span>|  
-|[<span data-ttu-id="aebbc-123">\<switches></span><span class="sxs-lookup"><span data-stu-id="aebbc-123">\<switches></span></span>](switches-element.md)|<span data-ttu-id="aebbc-124">Contém opções de rastreamento e os níveis em que as opções de rastreamento são definidas.</span><span class="sxs-lookup"><span data-stu-id="aebbc-124">Contains trace switches and the levels where the trace switches are set.</span></span>|  
-|[<span data-ttu-id="aebbc-125">\<trace></span><span class="sxs-lookup"><span data-stu-id="aebbc-125">\<trace></span></span>](trace-element.md)|<span data-ttu-id="aebbc-126">Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="aebbc-126">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|[<span data-ttu-id="391cc-114">\<assert></span><span class="sxs-lookup"><span data-stu-id="391cc-114">\<assert></span></span>](assert-element.md)|<span data-ttu-id="391cc-115">Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.</span><span class="sxs-lookup"><span data-stu-id="391cc-115">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="391cc-116">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="391cc-116">\<performanceCounters></span></span>](performancecounters-element.md)|<span data-ttu-id="391cc-117">Especifica o tamanho da memória global compartilhada por contadores de desempenho.</span><span class="sxs-lookup"><span data-stu-id="391cc-117">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="391cc-118">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="391cc-118">\<sharedListeners></span></span>](sharedlisteners-element.md)|<span data-ttu-id="391cc-119">Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="391cc-119">Contains listeners that any source or trace element can reference.</span></span> <span data-ttu-id="391cc-120">Os ouvintes identificados como ouvintes compartilhados podem ser adicionados a fontes ou rastreamentos por nome.</span><span class="sxs-lookup"><span data-stu-id="391cc-120">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>|  
+|[<span data-ttu-id="391cc-121">\<sources></span><span class="sxs-lookup"><span data-stu-id="391cc-121">\<sources></span></span>](sources-element.md)|<span data-ttu-id="391cc-122">Especifica fontes de rastreamento que iniciam mensagens de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="391cc-122">Specifies trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="391cc-123">\<switches></span><span class="sxs-lookup"><span data-stu-id="391cc-123">\<switches></span></span>](switches-element.md)|<span data-ttu-id="391cc-124">Contém opções de rastreamento e os níveis em que as opções de rastreamento são definidas.</span><span class="sxs-lookup"><span data-stu-id="391cc-124">Contains trace switches and the levels where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="391cc-125">\<trace></span><span class="sxs-lookup"><span data-stu-id="391cc-125">\<trace></span></span>](trace-element.md)|<span data-ttu-id="391cc-126">Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.</span><span class="sxs-lookup"><span data-stu-id="391cc-126">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="aebbc-127">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="aebbc-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="391cc-127">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="391cc-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="aebbc-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="aebbc-128">Element</span></span>|<span data-ttu-id="aebbc-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="aebbc-129">Description</span></span>|  
+|<span data-ttu-id="391cc-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="391cc-128">Element</span></span>|<span data-ttu-id="391cc-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="391cc-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="aebbc-130">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="aebbc-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`configuration`|<span data-ttu-id="391cc-130">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="391cc-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="aebbc-131">Exemplo</span><span class="sxs-lookup"><span data-stu-id="aebbc-131">Example</span></span>  
- <span data-ttu-id="aebbc-132">O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do  **\<elemento System. Diagnostics >** .</span><span class="sxs-lookup"><span data-stu-id="aebbc-132">The following example shows how to embed a trace switch and a trace listener inside the **\<system.diagnostics>** element.</span></span> <span data-ttu-id="aebbc-133">A `General` opção de rastreamento é definida para <xref:System.Diagnostics.TraceLevel> o nível.</span><span class="sxs-lookup"><span data-stu-id="aebbc-133">The `General` trace switch is set to the <xref:System.Diagnostics.TraceLevel> level.</span></span> <span data-ttu-id="aebbc-134">O ouvinte `myListener` de rastreamento cria um `MyListener.log` arquivo chamado e grava a saída no arquivo.</span><span class="sxs-lookup"><span data-stu-id="aebbc-134">The trace listener `myListener` creates a file called `MyListener.log` and writes the output to the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="391cc-131">Exemplo</span><span class="sxs-lookup"><span data-stu-id="391cc-131">Example</span></span>  
+ <span data-ttu-id="391cc-132">O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do elemento **\<System. diagnostics >** .</span><span class="sxs-lookup"><span data-stu-id="391cc-132">The following example shows how to embed a trace switch and a trace listener inside the **\<system.diagnostics>** element.</span></span> <span data-ttu-id="391cc-133">A opção de rastreamento `General` é definida como o nível <xref:System.Diagnostics.TraceLevel>.</span><span class="sxs-lookup"><span data-stu-id="391cc-133">The `General` trace switch is set to the <xref:System.Diagnostics.TraceLevel> level.</span></span> <span data-ttu-id="391cc-134">O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo.</span><span class="sxs-lookup"><span data-stu-id="391cc-134">The trace listener `myListener` creates a file called `MyListener.log` and writes the output to the file.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="aebbc-135">No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção.</span><span class="sxs-lookup"><span data-stu-id="aebbc-135">In the .NET Framework version 2.0, you can use text to specify the value for a switch.</span></span> <span data-ttu-id="aebbc-136">Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou usar o texto que representa `Error` um valor de enumeração, como <xref:System.Diagnostics.TraceSwitch>para um.</span><span class="sxs-lookup"><span data-stu-id="aebbc-136">For example, you can specify `true` for a <xref:System.Diagnostics.BooleanSwitch> or use the text representing an enumeration value such as `Error` for a <xref:System.Diagnostics.TraceSwitch>.</span></span> <span data-ttu-id="aebbc-137">A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.</span><span class="sxs-lookup"><span data-stu-id="aebbc-137">The line `<add name="myTraceSwitch" value="Error" />` is equivalent to `<add name="myTraceSwitch" value="1" />`.</span></span>  
+> <span data-ttu-id="391cc-135">No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção.</span><span class="sxs-lookup"><span data-stu-id="391cc-135">In the .NET Framework version 2.0, you can use text to specify the value for a switch.</span></span> <span data-ttu-id="391cc-136">Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou usar o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>.</span><span class="sxs-lookup"><span data-stu-id="391cc-136">For example, you can specify `true` for a <xref:System.Diagnostics.BooleanSwitch> or use the text representing an enumeration value such as `Error` for a <xref:System.Diagnostics.TraceSwitch>.</span></span> <span data-ttu-id="391cc-137">A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.</span><span class="sxs-lookup"><span data-stu-id="391cc-137">The line `<add name="myTraceSwitch" value="Error" />` is equivalent to `<add name="myTraceSwitch" value="1" />`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,8 +72,8 @@ ms.locfileid: "69926940"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="aebbc-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="aebbc-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="391cc-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="391cc-138">See also</span></span>
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
-- [<span data-ttu-id="aebbc-139">Esquema de configurações de rastreamento e depuração</span><span class="sxs-lookup"><span data-stu-id="aebbc-139">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="391cc-139">Esquema de configurações de rastreamento e depuração</span><span class="sxs-lookup"><span data-stu-id="391cc-139">Trace and Debug Settings Schema</span></span>](index.md)
