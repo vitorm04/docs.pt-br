@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 6488bfcd97e27a184b4a8cd1498d1c60f32babda
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 4fe44deba951e5302518ed855589ad1b0ca75343
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659480"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699529"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<Elemento de > authenticationModules (configurações de rede)
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > elemento (configurações de rede)
 Especifica os módulos usados para autenticar solicitações de rede.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<authenticationModules >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ Especifica os módulos usados para autenticar solicitações de rede.
 |[system.net](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `authenticationModule` elemento Especifica os módulos de autenticação que conduzem o processo de autenticação com um servidor. Um módulo de autenticação deve implementar <xref:System.Net.IAuthenticationModule> a interface.  
+ O elemento `authenticationModule` especifica os módulos de autenticação que conduzem o processo de autenticação com um servidor. Um módulo de autenticação deve implementar a interface <xref:System.Net.IAuthenticationModule>.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

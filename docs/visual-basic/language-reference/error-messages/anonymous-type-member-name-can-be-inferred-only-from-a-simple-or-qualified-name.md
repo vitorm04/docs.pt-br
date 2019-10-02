@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: f657048a8aa9748104e40503e727a5e6d90a87ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38f669fe183ac79ebed6e5a122bc70aedc9bb753
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646864"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701223"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>O nome do membro de tipo anônimo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos
-Você não é possível inferir um nome de membro de tipo anônimo de uma expressão complexa.  
+Não é possível inferir um nome de membro de tipo anônimo de uma expressão complexa.  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,7 +23,7 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- Para obter mais informações sobre fontes das quais os tipos anônimos podem e não é possível inferir os tipos e nomes de membros, consulte [como: Inferir nomes de propriedade e tipos em declarações de tipo anônimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ Para obter mais informações sobre fontes das quais tipos anônimos podem e não podem inferir nomes e tipos de membros, consulte [How para: Inferir nomes e tipos de propriedade em declarações de tipo anônimos @ no__t-0.  
   
  **ID do erro:** BC36556  
   
@@ -31,11 +31,11 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
   
 - Atribua a expressão a um nome de membro, conforme mostrado no código a seguir:  
   
-    ```  
+    ```vb  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Como: Inferir nomes de propriedade e tipos em declarações de tipo anônimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Como: Inferir nomes e tipos de propriedade em declarações de tipo anônimo @ no__t-0
