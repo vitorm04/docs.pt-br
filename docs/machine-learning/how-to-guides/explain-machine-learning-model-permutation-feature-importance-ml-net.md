@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167651"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736867"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Explicar previsões do modelo usando Importância do Recurso de Permutação
 
@@ -18,7 +18,7 @@ Aprenda a explicar as previsões de modelo de machine learning do ML.NET compree
 
 Modelos de machine learning geralmente são considerados caixas pretas que pegam entradas e geram uma saída. As etapas intermediárias ou as interações entre os recursos que influenciam a saída raramente são compreendidas. Conforme o aprendizado de máquina é introduzido em mais aspectos da vida diária, como serviços de saúde, é de extrema importância entender por que um modelo de machine learning toma as decisões que ele toma. Por exemplo, se os diagnósticos forem feitos por um modelo de machine learning, os profissionais de saúde precisarão de uma maneira de examinar os fatores que contribuíram para esse diagnóstico. Fornecer o diagnóstico certo pode fazer uma grande diferença em se um paciente tem uma recuperação rápida ou não. Portanto, quanto maior o nível de capacidade de explicação de um modelo, mais confiança os profissionais de saúde terão em aceitar ou rejeitar as decisões tomadas pelo modelo.
 
-Várias técnicas são usadas para explicar os modelos, uma delas é a PFI. PFI é uma técnica usada para explicar os modelos de classificação e regressão inspirados pelo artigo de [Breiman chamado *Random Forests* (Florestas aleatórias) ](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)(veja a seção 10). Em um alto nível, a maneira como eles funcionam é embaralhando aleatoriamente um recurso de dados por vez para todo o conjunto de dados e calculando o quanto a métrica de desempenho de interesse diminui. Quanto maior a alteração, mais importante é esse recurso. 
+Várias técnicas são usadas para explicar os modelos, uma delas é a PFI. PFI é uma técnica usada para explicar os modelos de classificação e regressão que são inspirados pelo [documento de *florestas aleatórias* do Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (consulte a seção 10). Em um alto nível, a maneira como eles funcionam é embaralhando aleatoriamente um recurso de dados por vez para todo o conjunto de dados e calculando o quanto a métrica de desempenho de interesse diminui. Quanto maior a alteração, mais importante é esse recurso. 
 
 Além disso, ao realçar os recursos mais importantes, construtores de modelo podem se concentrar no uso de um subconjunto de recursos mais significativos que pode reduzir o ruído e tempo de treinamento.
 
@@ -26,7 +26,7 @@ Além disso, ao realçar os recursos mais importantes, construtores de modelo po
 
 Os recursos no conjunto de dados que está sendo usado para este exemplo estão nas colunas 1 a 12. A meta é prever `Price`. 
 
-| Column | Recurso | DESCRIÇÃO 
+| Column | Recurso | Descrição 
 | --- | --- | --- |
 | 1 | CrimeRate | Taxa de criminalidade per capita
 | 2 | ResidentialZones | Zonas residenciais da cidade

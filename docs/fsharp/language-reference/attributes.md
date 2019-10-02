@@ -2,12 +2,12 @@
 title: Atributos
 description: Saiba como F# os atributos permitem que os metadados sejam aplicados a um constructo de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082936"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736807"
 ---
 # <a name="attributes"></a>Atributos
 
@@ -25,13 +25,13 @@ Na sintaxe anterior, o *destino* é opcional e, se presente, especifica o tipo d
 
 O *atributo-nome* refere-se ao nome (possivelmente qualificado com namespaces) de um tipo de atributo válido, com ou sem `Attribute` o sufixo que geralmente é usado em nomes de tipo de atributo. Por exemplo, o tipo `ObsoleteAttribute` pode ser reduzido para apenas `Obsolete` neste contexto.
 
-Os *argumentos* são os argumentos para o construtor para o tipo de atributo. Se um atributo tiver um construtor padrão, a lista de argumentos e os parênteses poderão ser omitidos. Os atributos dão suporte a argumentos posicionais e argumentos nomeados. *Argumentos posicionais* são argumentos que são usados na ordem em que aparecem. Argumentos nomeados podem ser usados se o atributo tiver propriedades públicas. Você pode defini-los usando a sintaxe a seguir na lista de argumentos.
+Os *argumentos* são os argumentos para o construtor para o tipo de atributo. Se um atributo tiver um construtor sem parâmetros, a lista de argumentos e os parênteses poderão ser omitidos. Os atributos dão suporte a argumentos posicionais e argumentos nomeados. *Argumentos posicionais* são argumentos que são usados na ordem em que aparecem. Argumentos nomeados podem ser usados se o atributo tiver propriedades públicas. Você pode defini-los usando a sintaxe a seguir na lista de argumentos.
 
 ```fsharp
 property-name = property-value
 ```
 
-Essas inicializações de propriedade podem estar em qualquer ordem, mas devem seguir quaisquer argumentos posicionais. Veja a seguir um exemplo de um atributo que usa argumentos posicionais e inicializações de propriedade.
+Essas inicializações de propriedade podem estar em qualquer ordem, mas devem seguir quaisquer argumentos posicionais. Veja a seguir um exemplo de um atributo que usa argumentos posicionais e inicializações de propriedade:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
@@ -41,13 +41,13 @@ Os atributos são uma construção de programação .NET que permite que um obje
 
 Os atributos F# in podem ser aplicados às seguintes construções de programação: funções, métodos, assemblies, módulos, tipos (classes, registros, estruturas, interfaces, delegados, enumerações, uniões e assim por diante), construtores, propriedades, campos, parâmetros, parâmetros de tipo e valores de retorno. Atributos não são permitidos em `let` associações dentro de classes, expressões ou expressões de fluxo de trabalho.
 
-Normalmente, a declaração de atributo aparece diretamente antes da declaração do destino do atributo. Várias declarações de atributo podem ser usadas juntas, da seguinte maneira.
+Normalmente, a declaração de atributo aparece diretamente antes da declaração do destino do atributo. Várias declarações de atributo podem ser usadas juntas, da seguinte maneira:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
 Você pode consultar atributos em tempo de execução usando a reflexão do .NET.
 
-Você pode declarar vários atributos individualmente, como no exemplo de código anterior, ou pode declará-los em um conjunto de colchetes se usar um ponto e vírgula para separar os atributos e construtores individuais, como mostrado aqui.
+Você pode declarar vários atributos individualmente, como no exemplo de código anterior, ou pode declará-los em um conjunto de colchetes se usar um ponto e vírgula para separar os atributos e construtores individuais, da seguinte maneira:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
@@ -55,13 +55,13 @@ Normalmente, os atributos encontrados `Obsolete` incluem o atributo, os atributo
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Para os destinos `assembly` de atributo `module`e, você aplica os atributos a uma associação de `do` nível superior em seu assembly. Você pode incluir a palavra `assembly` ou `module` na declaração de atributo, da seguinte maneira.
+Para os destinos `assembly` de atributo `module`e, você aplica os atributos a uma associação de `do` nível superior em seu assembly. Você pode incluir a palavra `assembly` ou `module` na declaração de atributo, da seguinte maneira:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
 Se você omitir o destino de atributo para um atributo aplicado `do` a uma associação F# , o compilador tentará determinar o destino do atributo que faz sentido para esse atributo. Muitas classes de atributo têm um atributo de `System.AttributeUsageAttribute` tipo que inclui informações sobre os possíveis destinos com suporte para esse atributo. Se o `System.AttributeUsageAttribute` indicar que o atributo dá suporte a funções como destinos, o atributo será levado para ser aplicado ao ponto de entrada principal do programa. Se o `System.AttributeUsageAttribute` indicar que o atributo dá suporte a assemblies como destinos, o compilador usa o atributo para aplicar ao assembly. A maioria dos atributos não se aplica a funções e assemblies, mas nos casos em que eles fazem, o atributo é levado para ser aplicado à função main do programa. Se o atributo target for especificado explicitamente, o atributo será aplicado ao destino especificado.
 
-Embora você normalmente não precise especificar o destino do atributo explicitamente, os valores válidos para o *destino* em um atributo são mostrados na tabela a seguir, juntamente com exemplos de uso.
+Embora você normalmente não precise especificar o destino do atributo explicitamente, os valores válidos para o *destino* em um atributo juntamente com exemplos de uso são mostrados na tabela a seguir:
 
 <table>
   <tr>
@@ -89,7 +89,7 @@ Embora você normalmente não precise especificar o destino do atributo explicit
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
   </tr>
   <tr>
-    <td>tipo</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
 [&lt;type: StructLayout(Sequential)&gt;] 

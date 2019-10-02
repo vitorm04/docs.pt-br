@@ -2,16 +2,16 @@
 title: Construtores
 description: Saiba como definir e usar construtores no F# para criar e inicializar objetos de classe e estrutura.
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627601"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736842"
 ---
 # <a name="constructors"></a>Construtores
 
-Este tópico descreve como definir e usar construtores para criar e inicializar objetos de classe e estrutura.
+Este artigo descreve como definir e usar construtores para criar e inicializar objetos de classe e estrutura.
 
 ## <a name="construction-of-class-objects"></a>Construção de objetos de classe
 
@@ -21,11 +21,11 @@ O Construtor principal contém `let` e `do` associações que aparecem no iníci
 
 Independentemente de o construtor que você deseja chamar ser um construtor primário ou um Construtor adicional, você pode criar objetos usando uma `new` expressão, com ou sem a palavra-chave opcional. `new` Você inicializa os objetos junto com argumentos de construtor, seja listando os argumentos em ordem e separados por vírgulas e entre parênteses, ou usando argumentos nomeados e valores entre parênteses. Você também pode definir propriedades em um objeto durante a construção do objeto usando os nomes de propriedade e atribuindo valores da mesma forma que usa argumentos de Construtor nomeados.
 
-O código a seguir ilustra uma classe que tem um construtor e várias maneiras de criar objetos.
+O código a seguir ilustra uma classe que tem um construtor e várias maneiras de criar objetos:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
-A saída é a seguinte.
+A saída é a seguinte:
 
 ```console
 Initialized object that has coordinates (1, 2, 3)
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>Construção de estruturas
 
-As estruturas seguem todas as regras de classes. Portanto, você pode ter um construtor principal e pode fornecer construtores adicionais usando `new`o. No entanto, há uma diferença importante entre estruturas e classes: estruturas podem ter um construtor sem parâmetros (ou seja, um sem argumentos) mesmo que nenhum construtor principal seja definido. O construtor sem parâmetros inicializa todos os campos para o valor padrão desse tipo, geralmente zero ou seu equivalente. Todos os construtores que você definir para estruturas devem ter pelo menos um argumento para que não entrem em conflito com o construtor padrão.
+As estruturas seguem todas as regras de classes. Portanto, você pode ter um construtor principal e pode fornecer construtores adicionais usando `new`o. No entanto, há uma diferença importante entre estruturas e classes: estruturas podem ter um construtor sem parâmetros (ou seja, um sem argumentos) mesmo que nenhum construtor principal seja definido. O construtor sem parâmetros inicializa todos os campos para o valor padrão desse tipo, geralmente zero ou seu equivalente. Todos os construtores que você definir para estruturas devem ter pelo menos um argumento para que não entrem em conflito com o construtor sem parâmetros.
 
 Além disso, as estruturas geralmente têm campos que são criados usando `val` a palavra-chave; as classes também podem ter esses campos. Estruturas e classes que têm campos definidos usando a `val` palavra-chave também podem ser inicializadas em construtores adicionais usando expressões de registro, conforme mostrado no código a seguir.
 
@@ -64,7 +64,7 @@ Em outros membros, você fornece um nome para o objeto atual na definição de c
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-Em construtores adicionais, você também pode definir um autoidentifier colocando a `as` cláusula logo após os parâmetros do construtor. O exemplo a seguir ilustra essa sintaxe.
+Em construtores adicionais, você também pode definir um autoidentifier colocando a `as` cláusula logo após os parâmetros do construtor. O exemplo a seguir ilustra essa sintaxe:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
@@ -74,11 +74,11 @@ O nome do autoidentifier não precisa ser `this`. Pode ser qualquer identificado
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>Atribuindo valores a propriedades na inicialização
 
-Você pode atribuir valores às propriedades de um objeto de classe no código de inicialização acrescentando uma lista de atribuições do formulário `property = value` à lista de argumentos para um construtor. Isso será mostrado no exemplo de código a seguir.
+Você pode atribuir valores às propriedades de um objeto de classe no código de inicialização acrescentando uma lista de atribuições do formulário `property = value` à lista de argumentos para um construtor. Isso é mostrado no exemplo de código a seguir:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-A seguinte versão do código anterior ilustra a combinação de argumentos comuns, argumentos opcionais e configurações de propriedade em uma chamada de construtor.
+A seguinte versão do código anterior ilustra a combinação de argumentos comuns, argumentos opcionais e configurações de propriedade em uma chamada de construtor:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 

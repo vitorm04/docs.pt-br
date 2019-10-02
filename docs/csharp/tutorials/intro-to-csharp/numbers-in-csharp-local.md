@@ -3,12 +3,12 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 436e8db10f973b468458987150e1312a16103b91
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b0dbb654253b7c6a1ead8f0454be86227a4afb68
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850686"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736715"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
@@ -114,7 +114,7 @@ A saída demonstra que a multiplicação é executada antes da adição.
 Você pode forçar uma ordem diferente de operações, adicionando parênteses para delimitar a operação, ou operações, que você quer realizar primeiro. Adicione as seguintes linhas e execute novamente:
 
 ```csharp
-d = (a  + b) * c;
+d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
@@ -133,7 +133,7 @@ Se você ainda não viu esse comportamento, tente o seguinte código ao final de
 int e = 7;
 int f = 4;
 int g = 3;
-int h = (e  + f) / g;
+int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
@@ -171,7 +171,7 @@ namespace NumbersInCSharp
             int d = a + b * c;
             Console.WriteLine(d);
 
-            d = (a  + b) * c;
+            d = (a + b) * c;
             Console.WriteLine(d);
 
             d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -204,7 +204,7 @@ Você pode obter o **restante** usando o operador **module**, o caractere `%`. E
 int a = 7;
 int b = 4;
 int c = 3;
-int d = (a  + b) / c;
+int d = (a + b) / c;
 int e = (a + b) % c;
 Console.WriteLine($"quotient: {d}");
 Console.WriteLine($"remainder: {e}");
@@ -242,7 +242,7 @@ Vamos explorar. Adicione o seguinte código e veja o resultado:
 double a = 5;
 double b = 4;
 double c = 2;
-double d = (a  + b) / c;
+double d = (a + b) / c;
 Console.WriteLine(d);
 ```
 
@@ -252,7 +252,7 @@ Observe que a resposta inclui a parte decimal do quociente. Experimente uma expr
 double e = 19;
 double f = 23;
 double g = 8;
-double h = (e  + f) / g;
+double h = (e + f) / g;
 Console.WriteLine(h);
 ```
 

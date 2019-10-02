@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aae38c8c2446ead128925e0e1d910ae12c8f220f
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045573"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736753"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 
@@ -42,20 +42,20 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
 Há várias vantagens para este modelo:
 
 - Você pode adicionar recursos de culturas novas incrementalmente depois de ter implantado um aplicativo. Como o desenvolvimento posterior de recursos específicos da cultura pode exigir uma quantidade significativa de tempo, isso permite que você libere seu aplicativo principal primeiro e forneça recursos específicos de cultura em uma data posterior.
-
 - Você pode atualizar e alterar assemblies de satélite do aplicativo sem recompilar o aplicativo.
-
 - Um aplicativo precisa carregar apenas os assemblies de satélite que contêm os recursos necessários para uma determinada cultura. Isso pode reduzir significativamente o uso de recursos do sistema.
 
  No entanto, também há desvantagens para este modelo:
 
 - Você deve gerenciar vários conjuntos de recursos.
-
 - Aumenta o custo inicial de um aplicativo de teste, porque você deve testar várias configurações. Observe que a longo prazo será mais fácil e menos dispendioso para testar um aplicativo básico com vários satélites que testar e manter várias versões internacionais paralelas.
 
-## <a name="resource-naming-conventions"></a>Convenções de Nomenclatura do Recurso
+## <a name="resource-naming-conventions"></a>Convenções de nomenclatura de recursos
 
 Ao empacotar os recursos de seu aplicativo, você deve nomeá-los usando as convenções de nomenclatura esperadas pelo Common Language Runtime. O tempo de execução identifica um recurso pelo seu nome de cultura. Cada cultura tem um nome exclusivo, que normalmente é uma combinação de um nome de cultura de duas letras minúsculas associado a um idioma e, se necessário, um nome de subcultura de duas letras maiúsculas associado a um país ou região. O nome de subcultura vem depois do nome da cultura, separado por um traço (-). Exemplos incluem ja-JP para japonês falado no Japão, en-US para inglês falado nos Estados Unidos, de-DE para alemão falado na Alemanha, ou de-AT para alemão falado na Áustria. Confira a coluna **Marca de idioma** na [lista de nomes de idioma/região com suporte do Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Os nomes de cultura seguem o padrão definido pelo [BCP 47](https://tools.ietf.org/html/bcp47).
+
+> [!NOTE]
+> Há algumas exceções para os nomes de cultura de duas letras, como `zh-Hans` para chinês (simplificado).
 
 > [!NOTE]
 > Para obter informações sobre como criar arquivos de recursos, consulte [Criando arquivos de recursos](creating-resource-files-for-desktop-apps.md) e [Criando assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -204,8 +204,8 @@ e para o recurso de idioma russo da seguinte maneira:
 
 O código-fonte do aplicativo reside em um arquivo chamado Example1.cs ou Example1.vb. Ele inclui o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para indicar que o recurso de aplicativo padrão está no subdiretório fr. Ele cria uma instância do Gerenciador de Recursos, recupera o valor do recurso `Greeting` e o exibe para o console.
 
-[!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
-[!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
+[!code-csharp[Conceptual.Resources.Packaging#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+[!code-vb[Conceptual.Resources.Packaging#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
 Em seguida, você pode compilar o código-fonte C# na linha de comando da seguinte maneira:
 
