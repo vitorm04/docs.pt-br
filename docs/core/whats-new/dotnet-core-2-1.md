@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116223"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834256"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -55,7 +55,7 @@ Várias ferramentas que estavam disponíveis apenas por projeto usando [`DotnetC
 
    Observe a opção `--` que precede a opção `--verbose`. Isso delimita as opções passadas diretamente para o comando `dotnet watch` dos argumentos que são passados para o processo `dotnet` filho. Sem isso, a opção `--verbose` se aplica ao comando `dotnet watch`, não ao comando `dotnet build`.
   
-   Para saber mais, confira [Desenvolver aplicativos ASP.NET Core usando dotnet watch](/aspnet/core/tutorials/dotnet-watch)
+   Para obter mais informações, consulte [desenvolver ASP.NET Core aplicativos usando o relógio dotnet](/aspnet/core/tutorials/dotnet-watch).
 
 - `dotnet dev-certs` gera e gerencia os certificados usados durante o desenvolvimento de aplicativos do ASP.NET Core.
 

@@ -3,12 +3,12 @@ title: Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: 3ba99a061d060ebe7740fe61846c3684b5c3085d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 645fd09de91d8190384faea9df2ef18511162c2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045482"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834531"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5
 
@@ -110,7 +110,7 @@ Você pode instalar a ferramenta de identidade e acesso por meio das extensões 
 
 - O utilitário autônomo de Federação (FedUtil) não está disponível no WIF 4.5. Você pode usar a ferramenta de acesso e identidade para modificar os arquivos de configuração para terceirizar o gerenciamento de identidade para um STS.
 
-Para obter mais informações, consulte [Ferramenta de identidade e acesso para o Visual Studio 2012](identity-and-access-tool-for-vs.md)
+Para obter mais informações sobre a ferramenta de identidade e acesso, consulte [ferramenta de identidade e acesso para o Visual Studio 2012](identity-and-access-tool-for-vs.md).
 
 <a name="BKMK_ToolingChanges"></a>
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: baeb091f7c1757e62ba049afc7a92ae8e73d3925
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70014952"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835275"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -83,6 +83,26 @@ Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrut
 - [MSBuild](/visualstudio/msbuild/msbuild), o mecanismo de build usado para compilar projetos
 - [NuGet](/nuget/), o gerenciador de pacotes da Microsoft para o .NET
 - Ferramentas de orquestração de build em software livre, como [CAKE](https://cakebuild.net/) e [FAKE](https://fake.build/)
+
+## <a name="applicable-standards"></a>Padrões aplicáveis
+
+A C# linguagem e as especificações de Common Language Infrastructure (CLI) são padronizadas por meio de [® ECMA International](https://www.ecma-international.org/). As primeiras edições desses padrões foram publicadas pela ECMA em dezembro de 2001.
+
+As revisões subsequentes para os padrões foram desenvolvidas pelos grupos de tarefas TC49C#-tg2 () e TC49-TG3 (CLI) no comitê técnico de linguagens de programação ([TC49](https://www.ecma-international.org/memento/tc49.htm)) e adotadas pelo assembly geral da ECMA e subsequentemente por ISO/IEC JTC 1 por meio do processo de controle rápido ISO.
+
+### <a name="latest-standards"></a>Padrões mais recentes
+
+Os documentos ECMA oficiais a seguir estão disponíveis [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) para o e a [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
+
+- **O C# idioma padrão (versão 5,0)** : [ECMA-334. pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **O Common Language Infrastructure**: Isso está disponível em formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e formato [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
+- **Informações derivadas do arquivo XML da partição IV**: Isso está disponível em formatos [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
+ 
+Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO/IEC [publicamente disponível](https://standards.iso.org/ittf/PubliclyAvailableStandards/) . Esses links são diretos dessa página:
+
+- **Tecnologia da informação-linguagens C#de programação-** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **Tecnologia da informação — Common Language Infrastructure (CLI) partições I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Tecnologia da informação — Common Language Infrastructure (CLI) — relatório técnico sobre informações derivadas do arquivo XML da partição IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>Consulte também
 

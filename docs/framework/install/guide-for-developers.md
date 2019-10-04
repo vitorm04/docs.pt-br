@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051952"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833651"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 
@@ -155,7 +155,7 @@ Os instaladores offline e da Web são projetados para computadores baseados em x
 
 - O .NET Framework 4.5, suas versões de ponto, o .NET Framework 4.6 e suas versões de ponto, o .NET Framework 4.7 e suas versões de ponto e o .NET Framework 4.8 substituem o .NET Framework 4. Quando você instala essas versões em um sistema que tem o .NET Framework 4 instalado, os assemblies são substituídos.
 
-- A desinstalação do .NET Framework 4.5, de suas versões de ponto, do .NET Framework 4.6 e de suas versões de ponto, do .NET Framework 4.7 e de suas versões de ponto ou do .NET Framework 4.8 também remove arquivos do .NET Framework 4 pré-existentes. Se quiser voltar para o .NET Framework 4, você deverá reinstalá-lo e todas as suas atualizações. (Confira [Instalação do .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).)
+- A desinstalação do .NET Framework 4.5, de suas versões de ponto, do .NET Framework 4.6 e de suas versões de ponto, do .NET Framework 4.7 e de suas versões de ponto ou do .NET Framework 4.8 também remove arquivos do .NET Framework 4 pré-existentes. Se quiser voltar para o .NET Framework 4, você deverá reinstalá-lo e todas as suas atualizações. Consulte [instalando o .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
 
 - É necessário ter credenciais administrativas para instalar o .NET Framework 4.5, suas versões de ponto, o .NET Framework 4.6 e suas versões de ponto, o .NET Framework 4.7 e sua versão de ponto e o .NET Framework 4.8.
 

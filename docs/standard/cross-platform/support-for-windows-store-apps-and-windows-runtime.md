@@ -11,68 +11,68 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c49e9a5c4b8785704f8c4cbd1c9b7af10dc0c689
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 2f46d21123ecfda4bd336edbbd79fabf01e002a4
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661779"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835336"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime
 
-O .NET Framework 4.5 oferece suporte a vários cenários de desenvolvimento de software com o tempo de execução do Windows. Esses cenários se enquadram em três categorias:
+O .NET Framework 4,5 dá suporte a vários cenários de desenvolvimento de software com o Windows Runtime. Esses cenários se enquadram em três categorias:
 
-- Desenvolvendo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos com controles XAML, conforme descrito em [aplicativos de roteiro para Windows Store usando c# ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [como tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), e [visão geral de aplicativos .NET para Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
+- Desenvolver aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] com controles XAML, conforme descrito em [roteiro para aplicativos da Windows Store C# usando ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [como o TOS (XAML) e o](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)) [.net para aplicativos da Windows Store visão geral](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
-- Desenvolvimento de bibliotecas de classes para usar no [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos que você cria com o .NET Framework.
+- Desenvolver bibliotecas de classes para usar nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] que você cria com o .NET Framework.
 
-- Desenvolvendo componentes de tempo de execução do Windows, empacotados em. Arquivos WinMD, que podem ser usados por qualquer linguagem de programação que dá suporte ao tempo de execução do Windows. Por exemplo, consulte [Criando componentes do tempo de execução do Windows em c# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+- Desenvolvendo Windows Runtime componentes, empacotados em. Arquivos WinMD, que podem ser usados por qualquer linguagem de programação que dê suporte ao Windows Runtime. Por exemplo, consulte [criando Windows Runtime componentes no C# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
-Este tópico descreve o suporte que o .NET Framework fornece para todas as três categorias e descreve os cenários para componentes de tempo de execução do Windows. A primeira seção inclui informações básicas sobre a relação entre o .NET Framework e o tempo de execução do Windows e explica algumas Singularidades do que você pode encontrar no sistema de Ajuda e o IDE. O [segunda seção](#WindowsRuntimeComponents) aborda cenários para o desenvolvimento de componentes de tempo de execução do Windows.
+Este tópico descreve o suporte que o .NET Framework fornece para todas as três categorias, além de descrever os cenários de Windows Runtime componentes. A primeira seção inclui informações básicas sobre a relação entre o .NET Framework e o Windows Runtime e explica algumas singularidades que você pode encontrar no sistema de ajuda e no IDE. A [segunda seção](#WindowsRuntimeComponents) discute cenários para o desenvolvimento de componentes Windows Runtime.
 
-## <a name="the-basics"></a>Os conceitos básicos
+## <a name="the-basics"></a>Noções básicas
 
-O .NET Framework oferece suporte os cenários de desenvolvimento de três listados anteriormente, fornecendo [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]e dando suporte a tempo de execução do Windows em si.
+O .NET Framework dá suporte aos três cenários de desenvolvimento listados anteriormente fornecendo [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e oferecendo suporte ao Windows Runtime em si.
 
-- [Namespaces do .NET framework e o tempo de execução do Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) fornece uma exibição simplificada das bibliotecas de classes do .NET Framework e incluem somente os tipos e membros que você pode usar para criar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos e componentes de tempo de execução do Windows.
+- Os [namespaces .NET Framework e Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) fornecem uma visão simplificada das bibliotecas de classes de .NET Framework e incluem apenas os tipos e os membros que você pode usar para criar aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] e componentes de Windows Runtime.
 
-  - Quando você usa o Visual Studio (Visual Studio 2012 ou posterior) para desenvolver um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo ou um componente de tempo de execução do Windows, um conjunto de assemblies de referência garante que você vê apenas os tipos relevantes e membros.
+  - Quando você usa o Visual Studio (Visual Studio 2012 ou posterior) para desenvolver um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou um componente Windows Runtime, um conjunto de assemblies de referência garante que você veja apenas os tipos e membros relevantes.
 
-  - Esse conjunto de APIs simplificado é simplificado ainda mais pela remoção de recursos que estão duplicadas dentro do .NET Framework ou que duplicar o tempo de execução do Windows apresenta. Por exemplo, ele contém apenas as versões genéricas dos tipos de coleção, e o modelo de objeto do documento XML é eliminado em favor a API do Windows em tempo de execução XML definido.
+  - Esse conjunto de APIs simplificado é simplificado mais detalhadamente pela remoção de recursos duplicados dentro do .NET Framework ou por duplicação de recursos de Windows Runtime. Por exemplo, ele contém apenas as versões genéricas dos tipos de coleção, e o modelo de objeto de documento XML é eliminado em favor do conjunto de API XML Windows Runtime.
 
-  - Recursos que simplesmente encapsulam a API do sistema operacional também são removidos, porque o tempo de execução do Windows é fácil chamar do código gerenciado.
+  - Os recursos que simplesmente encapsulam a API do sistema operacional também são removidos, porque a Windows Runtime é fácil de chamar a partir de código gerenciado.
 
-  Para ler mais sobre o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consulte o [visão geral de aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Para ler sobre o processo de seleção de API, consulte o [.NET para aplicativos estilo Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) entrada no blog do .NET.
+  Para ler mais sobre o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consulte a [visão geral do .net para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Para ler sobre o processo de seleção de API, consulte a entrada [.net para aplicativos estilo Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) no blog do .net.
 
-- O [tempo de execução do Windows](/uwp/api/) fornece elementos da interface do usuário para a compilação [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos e fornece acesso aos recursos do sistema operacional. Como o .NET Framework, o tempo de execução do Windows tem metadados que permite que o C# e bibliotecas de classes de compiladores do Visual Basic para usar o tempo de execução do Windows da maneira que eles usam o .NET Framework. O .NET Framework torna mais fácil de usar o tempo de execução do Windows, ocultando algumas diferenças:
+- O [Windows Runtime](/uwp/api/) fornece os elementos da interface do usuário para a criação de aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] e fornece acesso aos recursos do sistema operacional. Assim como o .NET Framework, o Windows Runtime tem metadados que permitem C# que os compiladores e Visual Basic usem o Windows Runtime como eles usam as bibliotecas de classes de .NET Framework. O .NET Framework torna mais fácil usar o Windows Runtime ocultando algumas diferenças:
 
-  - Algumas diferenças nos padrões entre o .NET Framework e o tempo de execução do Windows, como o padrão para adicionar e remover manipuladores de eventos, de programação estão ocultos. Você simplesmente usa o padrão do .NET Framework.
+  - Algumas diferenças nos padrões de programação entre o .NET Framework e o Windows Runtime, como o padrão para adicionar e remover manipuladores de eventos, estão ocultas. Basta usar o padrão de .NET Framework.
 
-  - Algumas diferenças nos tipos comumente usados (por exemplo, tipos primitivos e coleções) ficam ocultos. Basta usar o tipo do .NET Framework, conforme discutido em [diferenças que são visíveis no IDE](#DifferencesVisibleInIDE), mais adiante neste artigo.
+  - Algumas diferenças em tipos comumente usados (por exemplo, tipos primitivos e coleções) são ocultas. Você simplesmente usa o tipo de .NET Framework, conforme discutido em [diferenças que são visíveis no IDE](#DifferencesVisibleInIDE), mais adiante neste artigo.
 
-Na maioria das vezes, o suporte do .NET Framework para o tempo de execução do Windows é transparente. A próxima seção discute algumas das diferenças aparentes entre código gerenciado e o tempo de execução do Windows.
+Na maioria das vezes, .NET Framework suporte para o Windows Runtime é transparente. A próxima seção aborda algumas das diferenças aparentes entre o código gerenciado e o Windows Runtime.
 
 <a name="AboutReferenceDocumentation"></a>
 
-### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>O .NET Framework e a documentação de referência de tempo de execução do Windows
+### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>A .NET Framework e a documentação de referência do Windows Runtime
 
-O tempo de execução do Windows e os conjuntos de documentação do .NET Framework são separados. Se você pressionar F1 para exibir a Ajuda em um tipo ou membro, documentação de referência do conjunto apropriado de é exibida. No entanto, se você procurar por meio de [referência de tempo de execução do Windows](/uwp/api/) você pode encontrar exemplos parecem confusas:
+O Windows Runtime e os conjuntos de documentação .NET Framework são separados. Se você pressionar F1 para exibir a ajuda em um tipo ou membro, a documentação de referência do conjunto apropriado será exibida. No entanto, se você navegar pela [referência de Windows Runtime](/uwp/api/) , poderá encontrar exemplos que parecem enigmático:
 
-- Tópicos como a <xref:Windows.Foundation.Collections.IIterable%601> interface não tiver a sintaxe de declaração para o Visual Basic ou c#. Em vez disso, uma anotação é exibida acima da seção de sintaxe (nesse caso, ".NET: Essa interface é exibido como System.Collections.Generic.IEnumerable\<T > "). Isso ocorre porque o .NET Framework e o tempo de execução do Windows fornecem funcionalidade semelhante com interfaces diferentes. Além disso, há diferenças de comportamento: `IIterable` tem uma `First` método em vez de um <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> método para retornar o enumerador. Em vez de forçá-lo a aprender uma maneira diferente de executar uma tarefa comum, o .NET Framework dá suporte a tempo de execução do Windows, fazendo com que seu código gerenciado são exibidos usar o tipo que você está familiarizado com. Você não verá o `IIterable` no IDE de interface e, portanto, a única maneira de você o encontrará na documentação de referência do tempo de execução do Windows está navegando por meio dessa documentação diretamente.
+- Tópicos como a interface <xref:Windows.Foundation.Collections.IIterable%601> não têm sintaxe de declaração para Visual Basic ou C#. Em vez disso, uma observação aparece acima da seção de sintaxe (neste caso, ".NET: Essa interface aparece como System. Collections. Generic. IEnumerable @ no__t-0T > "). Isso ocorre porque o .NET Framework e o Windows Runtime fornecem funcionalidade semelhante com interfaces diferentes. Além disso, há diferenças comportamentais: `IIterable` tem um método `First` em vez de um método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> para retornar o enumerador. Em vez de forçá-lo a aprender uma maneira diferente de executar uma tarefa comum, o .NET Framework dá suporte ao Windows Runtime, fazendo com que seu código gerenciado pareça usar o tipo com o qual você está familiarizado. Você não verá a interface `IIterable` no IDE e, portanto, a única maneira de encontrá-la na documentação de referência do Windows Runtime é navegar diretamente pela documentação.
 
-- O <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> documentação ilustra um problema intimamente relacionado: Seus tipos de parâmetro parecem ser diferentes para diferentes idiomas. Para c# e Visual Basic, os tipos de parâmetro são <xref:System.String?displayProperty=nameWithType> e <xref:System.Uri?displayProperty=nameWithType>. Novamente, isso ocorre porque o .NET Framework tem seu próprio `String` e `Uri` tipos de e para tipos tais comumente usadas, ele não faz sentido para forçar os usuários do .NET Framework para aprender uma maneira diferente de fazer as coisas. No IDE, o .NET Framework impede que os tipos de tempo de execução do Windows correspondentes.
+- A documentação <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> ilustra um problema bem relacionado: Seus tipos de parâmetro parecem ser diferentes para idiomas diferentes. Para C# e Visual Basic, os tipos de parâmetro são <xref:System.String?displayProperty=nameWithType> e <xref:System.Uri?displayProperty=nameWithType>. Novamente, isso ocorre porque o .NET Framework tem seus próprios tipos `String` e `Uri` e, para esses tipos comumente usados, não faz sentido forçar os usuários .NET Framework a aprender uma maneira diferente de fazer as coisas. No IDE, a .NET Framework oculta os tipos de Windows Runtime correspondentes.
 
-- Em alguns casos, como o <xref:Windows.UI.Xaml.GridLength> estrutura, o .NET Framework fornece um tipo com o mesmo nome, mas mais funcionalidade. Por exemplo, um conjunto de tópicos do construtor e a propriedade estão associados `GridLength`, mas eles têm blocos de sintaxe apenas do Visual Basic e c# porque os membros estão disponíveis apenas em código gerenciado. No tempo de execução do Windows, as estruturas têm apenas campos. A estrutura de tempo de execução do Windows requer uma classe auxiliar, <xref:Windows.UI.Xaml.GridLengthHelper>, para fornecer funcionalidade equivalente. Você não verá que a classe auxiliar no IDE quando você está escrevendo o código gerenciado.
+- Em alguns casos, como a estrutura <xref:Windows.UI.Xaml.GridLength>, o .NET Framework fornece um tipo com o mesmo nome, mas com mais funcionalidade. Por exemplo, um conjunto de tópicos de construtor e propriedade são associados a `GridLength`, mas eles têm blocos de sintaxe somente para C# Visual Basic e porque os membros estão disponíveis somente em código gerenciado. No Windows Runtime, as estruturas têm apenas campos. A estrutura de Windows Runtime requer uma classe auxiliar, <xref:Windows.UI.Xaml.GridLengthHelper>, para fornecer funcionalidade equivalente. Você não verá essa classe auxiliar no IDE quando estiver escrevendo código gerenciado.
 
-- No IDE, os tipos de tempo de execução do Windows são exibidos derivar de <xref:System.Object?displayProperty=nameWithType>. Eles parecem ter membros herdados <xref:System.Object>, tais como <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Esses membros operam como fariam se os tipos, na verdade, herdada de <xref:System.Object>, e tipos de tempo de execução do Windows podem ser convertidos em <xref:System.Object>. Essa funcionalidade é parte do suporte que o .NET Framework fornece para o tempo de execução do Windows. No entanto, se você exibir os tipos na documentação de referência do tempo de execução do Windows, esses membros não são exibidos. A documentação para esses membros herdados aparentes é fornecida pelo <xref:System.Object?displayProperty=nameWithType> documentação de referência.
+- No IDE, os tipos de Windows Runtime parecem derivar de <xref:System.Object?displayProperty=nameWithType>. Eles parecem ter membros herdados de <xref:System.Object>, como <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Esses membros funcionam como fariam se os tipos realmente herdados de <xref:System.Object> e tipos de Windows Runtime podem ser convertidos em <xref:System.Object>. Essa funcionalidade faz parte do suporte que o .NET Framework fornece para o Windows Runtime. No entanto, se você exibir os tipos na documentação de referência do Windows Runtime, nenhum desses membros será exibido. A documentação para esses membros herdados aparentes é fornecida pela documentação de referência do <xref:System.Object?displayProperty=nameWithType>.
 
 <a name="DifferencesVisibleInIDE"></a>
 
-### <a name="differences-that-are-visible-in-the-ide"></a>Diferenças que são visíveis no IDE
+### <a name="differences-that-are-visible-in-the-ide"></a>Diferenças visíveis no IDE
 
-Mais programação cenários avançados, como o uso de um componente de tempo de execução do Windows escrito em C# para fornecer a lógica do aplicativo para um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo compilado para Windows usando JavaScript, essas diferenças são aparentes no IDE, bem como no documentação. Quando o seu componente retorna um `IDictionary<int, string>` com o JavaScript e examinar o depurador do JavaScript, você verá os métodos de `IMap<int, string>` como o JavaScript usa o tipo de tempo de execução do Windows. Alguns usados com frequência a coleção de tipos que aparecem de forma diferente em dois idiomas são mostrados na tabela a seguir:
+Em cenários de programação mais avançados, como usar um componente de Windows Runtime escrito C# em para fornecer a lógica do aplicativo para um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] criado para o Windows usando JavaScript, essas diferenças são aparentes no IDE, bem como na documentação. Quando o componente retorna um `IDictionary<int, string>` para JavaScript e você o examina no depurador do JavaScript, você verá os métodos de `IMap<int, string>` porque o JavaScript usa o tipo de Windows Runtime. Alguns tipos de coleção comumente usados que aparecem de forma diferente nos dois idiomas são mostrados na tabela a seguir:
 
-|Tipo do Windows Runtime|Tipo correspondente do .NET Framework|
+|Tipo do Windows Runtime|Tipo de .NET Framework correspondente|
 |--------------------------------------------------------------|---------------------------------------|
 |`IIterable<T>`|`IEnumerable<T>`|
 |`IIterator<T>`|`IEnumerator<T>`|
@@ -86,17 +86,17 @@ Mais programação cenários avançados, como o uso de um componente de tempo de
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
-No tempo de execução Windows `IMap<K, V>` e `IMapView<K, V>` são iterados usando `IKeyValuePair`. Quando você os transmite para código gerenciado, eles aparecem como `IDictionary<TKey, TValue>` e `IReadOnlyDictionary<TKey, TValue>`, então, naturalmente, você usa `System.Collections.Generic.KeyValuePair<TKey, TValue>` para enumerá-los.
+No Windows Runtime, `IMap<K, V>` e `IMapView<K, V>` são iterados usando `IKeyValuePair`. Quando você os transmite para código gerenciado, eles aparecem como `IDictionary<TKey, TValue>` e `IReadOnlyDictionary<TKey, TValue>`, então, naturalmente, você usa `System.Collections.Generic.KeyValuePair<TKey, TValue>` para enumerá-los.
 
 A forma como as interfaces aparecem no código gerenciado afeta a forma como aparecem os tipos que implementam essas interfaces. Por exemplo, a classe `PropertySet` implementa `IMap<K, V>`, que aparece no código gerenciado como `IDictionary<TKey, TValue>`. `PropertySet` aparece como se ele tivesse implementado `IDictionary<TKey, TValue>` em vez de `IMap<K, V>`, por isso, no código gerenciado, ele parece ter um método `Add`, que se comporta como o método `Add` em dicionários do .NET Framework. Ela não parece ter um método `Insert`.
 
-Para obter mais informações sobre como usar o .NET Framework para criar um componente de tempo de execução do Windows e um passo a passo que mostra como usar um componente com JavaScript, consulte [Criando componentes do tempo de execução do Windows em C# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+Para obter mais informações sobre como usar o .NET Framework para criar um componente do Windows Runtime e um passo a passos que mostra como usar esse componente com JavaScript, consulte [criando componentes C# do Windows Runtime no e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
 ### <a name="primitive-types"></a>Tipos primitivos
 
-Para habilitar o uso natural do Windows Runtime em código gerenciado, tipos primitivos do .NET Framework aparecem em vez de tipos primitivos de tempo de execução do Windows em seu código. No .NET Framework, os tipos primitivos como a estrutura `Int32`, têm muitas propriedades e métodos úteis, como o método `Int32.TryParse`. Por outro lado, tipos primitivos e estruturas em tempo de execução do Windows têm apenas campos. Quando você usa primitivos no código gerenciado, eles parecem ser tipos do .NET Framework, e você pode usar as propriedades e métodos de tipos do .NET Framework, como faria normalmente. A lista a seguir fornece um resumo:
+Para habilitar o uso natural do Windows Runtime no código gerenciado, .NET Framework tipos primitivos aparecem em vez de Windows Runtime tipos primitivos em seu código. No .NET Framework, os tipos primitivos como a estrutura `Int32`, têm muitas propriedades e métodos úteis, como o método `Int32.TryParse`. Por outro lado, tipos primitivos e estruturas no Windows Runtime têm apenas campos. Quando você usa primitivos em código gerenciado, eles parecem ser .NET Framework tipos e você pode usar as propriedades e métodos dos tipos de .NET Framework como faria normalmente. A lista a seguir fornece um resumo:
 
-- Para os primitivos de tempo de execução do Windows `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (uma coleção imutável de caracteres Unicode) `Enum`, `UInt32`, `UInt64`, e `Guid`, use o tipo de mesmo nome no `System` namespace.
+- Para os primitivos de Windows Runtime `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (uma coleção imutável de caracteres Unicode), `Enum`, `UInt32`, `UInt64` e `Guid`, use o tipo de mesmo nome no namespace 0.
 
 - Para `UInt8`, use `System.Byte`.
 
@@ -104,64 +104,64 @@ Para habilitar o uso natural do Windows Runtime em código gerenciado, tipos pri
 
 - Para a interface `IInspectable`, use `System.Object`.
 
-- Para `HRESULT`, use uma estrutura com um `System.Int32` membro.
+- Para `HRESULT`, use uma estrutura com um membro `System.Int32`.
 
-Como com tipos de interface, a única vez em que você pode ver evidências de que essa representação é quando seu projeto do .NET Framework é um componente de tempo de execução do Windows que é usado por um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo criado usando JavaScript.
+Assim como acontece com os tipos de interface, a única vez que você pode ver evidências dessa representação é quando seu projeto de .NET Framework é um componente Windows Runtime usado por um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] criado usando JavaScript.
 
-Outros tipos de tempo de execução do Windows básicos, comumente usados que aparecem no código gerenciado como seus equivalentes do .NET Framework incluem o `Windows.Foundation.DateTime` estrutura, que aparece no código gerenciado como o <xref:System.DateTimeOffset?displayProperty=nameWithType> estrutura e o `Windows.Foundation.TimeSpan` estrutura, que aparece como o <xref:System.TimeSpan?displayProperty=nameWithType> estrutura.
+Outros tipos de Windows Runtime básicos, comumente usados que aparecem no código gerenciado como seus equivalentes .NET Framework incluem a estrutura `Windows.Foundation.DateTime`, que aparece em código gerenciado como a estrutura <xref:System.DateTimeOffset?displayProperty=nameWithType> e a estrutura `Windows.Foundation.TimeSpan`, que aparece como <xref:System.TimeSpan?displayProperty=nameWithType> estruturá.
 
 ### <a name="other-differences"></a>Outras diferenças
 
-Em alguns casos, o fato de que os tipos do .NET Framework aparecem no seu código em vez de tipos de tempo de execução do Windows requer a ação de sua parte. Por exemplo, o <xref:Windows.Foundation.Uri?displayProperty=nameWithType> classe aparece como <xref:System.Uri?displayProperty=nameWithType> no código do .NET Framework. <xref:System.Uri?displayProperty=nameWithType> permite que um URI relativo, mas <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requer um URI absoluto. Portanto, quando você passar um URI para um método de tempo de execução do Windows, você deve garantir que ele é absoluto. (Consulte [passando um URI para o tempo de execução do Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).)
+Em alguns casos, o fato de que .NET Framework tipos aparecem em seu código em vez de Windows Runtime tipos requer ação de sua parte. Por exemplo, a classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> aparece como <xref:System.Uri?displayProperty=nameWithType> no código .NET Framework. <xref:System.Uri?displayProperty=nameWithType> permite um URI relativo, mas <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requer um URI absoluto. Portanto, ao passar um URI para um método Windows Runtime, você deve garantir que ele seja absoluto. Consulte [passando um URI para a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
-## <a name="scenarios-for-developing-windows-runtime-components"></a>Cenários para o desenvolvimento de componentes de tempo de execução do Windows
+## <a name="scenarios-for-developing-windows-runtime-components"></a>Cenários para o desenvolvimento de componentes Windows Runtime
 
-Os cenários com suporte para componentes de tempo de execução do Windows gerenciados dependem dos seguintes princípios gerais:
+Os cenários com suporte para componentes gerenciados Windows Runtime dependem dos seguintes princípios gerais:
 
-- Componentes de tempo de execução do Windows que são criados usando o .NET Framework não têm nenhuma diferença aparente de outros Runtimelibraries do Windows. Por exemplo, se você implementar novamente um componente de tempo de execução do Windows nativo usando código gerenciado, os dois componentes são indistinguíveis externamente. O fato de que seu componente é escrito em código gerenciado é invisível para o código que usa a ele, mesmo que o código seja próprio código gerenciado. No entanto, internamente, o componente é o verdadeiro código gerenciado e é executado no common language runtime (CLR).
+- Windows Runtime componentes criados usando o .NET Framework não têm nenhuma diferença aparente de outras Runtimelibraries do Windows. Por exemplo, se você reimplementar um componente de Windows Runtime nativo usando código gerenciado, os dois componentes serão indistinguíveis de forma retroativa. O fato de que seu componente é escrito em código gerenciado é invisível para o código que o utiliza, mesmo que esse código seja código gerenciado. No entanto, internamente, o componente é um código gerenciado verdadeiro e é executado no Common Language Runtime (CLR).
 
-- Componentes podem conter tipos que implementam a lógica do aplicativo, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] UI controles, ou ambos.
-
-  > [!NOTE]
-  > É recomendável separar elementos de interface do usuário da lógica do aplicativo. Além disso, você não pode usar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] controles de interface do usuário em um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo compilado para Windows usando JavaScript e HTML.
-
-- Um componente pode ser um projeto dentro de uma solução do Visual Studio para um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo ou um componente reutilizável que você pode adicionar a várias soluções.
+- Os componentes podem conter tipos que implementam a lógica do aplicativo, os controles de interface do usuário do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou ambos.
 
   > [!NOTE]
-  > Se seu componente for usado apenas com C# ou Visual Basic, não é motivo para torná-lo em um componente de tempo de execução do Windows. Se você fizer uma biblioteca de classes do .NET Framework comum em vez disso, você não tiver que restringir sua superfície de API pública para tipos de tempo de execução do Windows.
+  > É uma prática recomendada separar elementos da interface do usuário da lógica do aplicativo. Além disso, você não pode usar os controles de interface do usuário do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] em um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] criado para o Windows usando JavaScript e HTML.
 
-- Você pode liberar versões dos componentes reutilizáveis, usando o tempo de execução do Windows <xref:Windows.Foundation.Metadata.VersionAttribute> atributo para identificar quais tipos (e quais membros dentro de um tipo) foram adicionadas em versões diferentes.
+- Um componente pode ser um projeto dentro de uma solução do Visual Studio para um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou um componente reutilizável que você pode adicionar a várias soluções.
 
-- Os tipos no seu componente podem derivar de tipos de tempo de execução do Windows. Controles podem derivar dos tipos primitivos de controle na <xref:Windows.UI.Xaml.Controls.Primitives> namespace ou de mais terminado controles como <xref:Windows.UI.Xaml.Controls.Button>.
+  > [!NOTE]
+  > Se seu componente for usado somente com C# o ou Visual Basic, não há motivo para torná-lo um componente Windows Runtime. Se você transformá-lo em uma biblioteca de classes .NET Framework comum, não precisa restringir sua superfície de API pública a tipos Windows Runtime.
+
+- Você pode liberar versões de componentes reutilizáveis usando o atributo Windows Runtime <xref:Windows.Foundation.Metadata.VersionAttribute> para identificar quais tipos (e quais membros de um tipo) foram adicionados em versões diferentes.
+
+- Os tipos em seu componente podem derivar de tipos de Windows Runtime. Os controles podem derivar dos tipos de controle primitivos no namespace <xref:Windows.UI.Xaml.Controls.Primitives> ou de controles mais concluídos, como <xref:Windows.UI.Xaml.Controls.Button>.
 
   > [!IMPORTANT]
-  > Começando com [!INCLUDE[win8](../../../includes/win8-md.md)] e o .NET Framework 4.5, todos os tipos públicos em um componente de tempo de execução do Windows gerenciado deve ser lacrado. Um tipo em outro componente de tempo de execução do Windows não pode derivar de-los. Se você quiser fornecer um comportamento polimórfico no seu componente, você pode criar uma interface e implementá-lo nos tipos polimórficos.
+  > Começando com [!INCLUDE[win8](../../../includes/win8-md.md)] e o .NET Framework 4,5, todos os tipos públicos em um componente de Windows Runtime gerenciado devem ser lacrados. Um tipo em outro componente Windows Runtime não pode derivar deles. Se você quiser fornecer um comportamento polimórfico em seu componente, poderá criar uma interface e implementá-la nos tipos polimórficos.
 
-- Todos os tipos de parâmetro e retorno sobre os tipos públicos em seu componente devem ser tipos de tempo de execução do Windows (incluindo os tipos de tempo de execução do Windows que define seu componente).
+- Todos os tipos de parâmetro e de retorno nos tipos públicos em seu componente devem ser Windows Runtime tipos (incluindo os tipos de Windows Runtime que seu componente define).
 
 As seções a seguir fornecem exemplos de cenários comuns.
 
-### <a name="application-logic-for-a-includewin8appnamelongincludeswin8-appname-long-mdmd-app-with-javascript"></a>Lógica do aplicativo para um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo com o JavaScript
+### <a name="application-logic-for-a-includewin8_appname_longincludeswin8-appname-long-mdmd-app-with-javascript"></a>Lógica do aplicativo para um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] com JavaScript
 
-Quando você desenvolve um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo para Windows usando JavaScript, você pode descobrir que algumas partes da lógica do aplicativo funcionar melhor em código gerenciado, ou são mais fáceis de desenvolver. JavaScript não é possível usar as bibliotecas de classes do .NET Framework diretamente, mas você pode tornar a biblioteca de classes um. Arquivo WinMD. Nesse cenário, o componente de tempo de execução do Windows é parte integrante do aplicativo, portanto, não faz sentido para fornecer atributos de versão.
+Ao desenvolver um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows usando JavaScript, você pode achar que algumas partes da lógica do aplicativo têm melhor desempenho no código gerenciado ou são mais fáceis de desenvolver. O JavaScript não pode usar .NET Framework bibliotecas de classes diretamente, mas você pode tornar a biblioteca de classes a. Arquivo WinMD. Nesse cenário, o componente Windows Runtime é parte integrante do aplicativo, portanto, não faz sentido fornecer atributos de versão.
 
-### <a name="reusable-includewin8appnamelongincludeswin8-appname-long-mdmd-ui-controls"></a>Reutilizável [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] controles de interface do usuário
+### <a name="reusable-includewin8_appname_longincludeswin8-appname-long-mdmd-ui-controls"></a>Controles de interface do usuário [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] reutilizáveis
 
-Você pode empacotar um conjunto de controles de interface do usuário relacionados em um componente reutilizável de tempo de execução do Windows. O componente pode ser comercializado por conta própria ou usado como um elemento em aplicativos que você cria. Nesse cenário, faz sentido usar o tempo de execução do Windows <xref:Windows.Foundation.Metadata.VersionAttribute> atributo para melhorar a compatibilidade.
+Você pode empacotar um conjunto de controles de interface do usuário relacionados em um componente de Windows Runtime reutilizável. O componente pode ser comercializado por conta própria ou usado como um elemento nos aplicativos que você criar. Nesse cenário, faz sentido usar o atributo Windows Runtime <xref:Windows.Foundation.Metadata.VersionAttribute> para melhorar a compatibilidade.
 
-### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>Lógica de aplicativo reutilizáveis de aplicativos existentes do .NET Framework
+### <a name="reusable-application-logic-from-existing-net-framework-apps"></a>Lógica de aplicativo reutilizável de aplicativos .NET Framework existentes
 
-Você pode empacotar o código gerenciado de seus aplicativos de área de trabalho existentes como um componente de tempo de execução do Windows autônomo. Isso permite que você use o componente no [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] os aplicativos criados usando C++ ou JavaScript, bem como em [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos criados usando c# ou Visual Basic. Controle de versão é uma opção, se houver vários cenários de reutilização para que o código.
+Você pode empacotar o código gerenciado de seus aplicativos de área de trabalho existentes como um componente Windows Runtime autônomo. Isso permite que você use o componente em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] criados usando C++ o ou JavaScript, bem como em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] criados usando C# ou Visual Basic. O controle de versão é uma opção se houver vários cenários de reutilização para o código.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Descreve os tipos do .NET Framework e os membros que você pode usar para criar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] RuntimeComponents do Windows e aplicativos. (No Centro de desenvolvimento do Windows.)|
-|[Roteiro para aplicativos da Windows Store usando c# ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Fornece os principais recursos para ajudá-lo a começar a desenvolver [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos usando c# ou Visual Basic, incluindo muitos tópicos do guia de início rápido, diretrizes e práticas recomendadas. (No Centro de desenvolvimento do Windows.)|
-|[Como tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Fornece os principais recursos para ajudá-lo a começar a desenvolver [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos usando c# ou Visual Basic, incluindo muitos tópicos do guia de início rápido, diretrizes e práticas recomendadas. (No Centro de desenvolvimento do Windows.)|
-|[Criando componentes do Windows Runtime no C# e no Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|Descreve como criar um componente de tempo de execução do Windows usando o .NET Framework, explica como usá-lo como parte de um [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativo compilado para Windows usando JavaScript e descreve como depurar a combinação com o Visual Studio. (No Centro de desenvolvimento do Windows.)|
-|[Referência de tempo de execução do Windows](/uwp/api/)|A documentação de referência para o tempo de execução do Windows. (No Centro de desenvolvimento do Windows.)|
-|[Passando um URI para o Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Descreve um problema que pode surgir quando você passa um URI de código gerenciado para o tempo de execução do Windows e como evitá-la.|
+|[Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Descreve os tipos de .NET Framework e os membros que você pode usar para criar aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] e o Windows RuntimeComponents. (No centro de desenvolvimento do Windows.)|
+|[Roteiro para aplicativos da Windows Store C# usando ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Fornece recursos importantes para ajudá-lo a começar a desenvolver aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C# usando ou Visual Basic, incluindo vários tópicos de início rápido, diretrizes e práticas recomendadas. (No centro de desenvolvimento do Windows.)|
+|[Como o TOS (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Fornece recursos importantes para ajudá-lo a começar a desenvolver aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] C# usando ou Visual Basic, incluindo vários tópicos de início rápido, diretrizes e práticas recomendadas. (No centro de desenvolvimento do Windows.)|
+|[Criando componentes do Windows Runtime no C# e no Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|Descreve como criar um componente de Windows Runtime usando o .NET Framework, explica como usá-lo como parte de um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] criado para o Windows usando JavaScript e descreve como depurar a combinação com o Visual Studio. (No centro de desenvolvimento do Windows.)|
+|[Referência de Windows Runtime](/uwp/api/)|A documentação de referência para o Windows Runtime. (No centro de desenvolvimento do Windows.)|
+|[Passando um URI para o Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Descreve um problema que pode surgir quando você passa um URI do código gerenciado para o Windows Runtime e como evitá-lo.|

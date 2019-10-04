@@ -2,19 +2,19 @@
 title: Introdução aos literais XML no Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834269"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834990"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introdução a literais XML no Visual Basic
-Esta seção fornece informações sobre como criar árvores XML no Visual Basic.  
+Esta seção fornece informações sobre a criação de árvores XML no Visual Basic.  
   
  Para obter informações sobre como usar os resultados de consultas LINQ como o conteúdo de uma árvore XML, consulte [construção funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Para obter mais informações sobre literais XML no Visual Basic, consulte [visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obter mais informações sobre literais XML no Visual Basic, consulte [visão geral de LINQ to XML em Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Criando árvores XML  
  O exemplo a seguir mostra como criar <xref:System.Xml.Linq.XElement>, nesse caso `contacts`:  
@@ -190,7 +190,7 @@ Console.WriteLine("Child2 was {0}", _
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  

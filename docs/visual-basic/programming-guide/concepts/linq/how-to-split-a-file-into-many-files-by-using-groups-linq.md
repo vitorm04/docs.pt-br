@@ -1,22 +1,22 @@
 ---
-title: 'Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)'
+title: 'Como: Dividir um arquivo em muitos arquivos usando grupos (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e12de7380ca34478506fde98aecae2501d2529ee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592472"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835106"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Como: Dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Como: Dividir um arquivo em muitos arquivos usando grupos (LINQ) (Visual Basic)
 Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
   
 1. Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em se
   
 2. Copie estes nomes em um arquivo de texto chamado names2.txt e salve-o na pasta do projeto: Observe que os dois arquivos tem alguns nomes em comum.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -116,7 +116,7 @@ End Class
  O programa grava um arquivo separado para cada grupo na mesma pasta que os arquivos de dados.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
-Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

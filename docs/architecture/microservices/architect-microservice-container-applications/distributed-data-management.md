@@ -2,12 +2,12 @@
 title: Desafios e soluções do gerenciamento de dados distribuídos
 description: Saiba quais são os desafios e soluções de gerenciamento de dados distribuídos no mundo de microsserviços.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673133"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834454"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -47,7 +47,7 @@ Em uma versão monolítica hipotética deste aplicativo, quando o preço é alte
 
 No entanto, em um aplicativo baseado em microsserviços, as tabelas de Produto e Carrinho de compras pertencem aos seus respectivos microsserviços. Um microsserviço nunca deve incluir tabelas/armazenamento pertencentes a outro microsserviço em suas próprias transações, nem mesmo em consultas diretas, conforme é mostrado na Figura 4-9.
 
-![Um microsserviço não pode acessar diretamente uma tabela em outro microsserviço, a consistência eventual deve ser usada para sincronizar os dados.](./media/image9.png)
+![Diagrama mostrando que não é possível compartilhar os dados do banco de dado dos microservices.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Figura 4-9**. Um microsserviço não pode acessar diretamente uma tabela em outro microsserviço
 

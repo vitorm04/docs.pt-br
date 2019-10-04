@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779204"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834834"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
 
 Este tópico descreve como configurar o recurso de Store de instância de fluxo de trabalho SQL para ativar persistência para os fluxos de trabalho e fluxo de trabalho serviços de aplicativos por meio e usando um arquivo de configuração.
 
-A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [configuração de persistência do App Fabric](https://go.microsoft.com/fwlink/?LinkId=201204)
+A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [configuração de persistência do App Fabric](https://go.microsoft.com/fwlink/?LinkId=201204).
 
 Antes de usar o recurso de Store de instância de fluxo de trabalho SQL, crie um base de dados que o recurso usa para manter instâncias de fluxo de trabalho. Arquivos de script SQL das cópias do programa de instalação de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] associados com o recurso de Store de instância de fluxo de trabalho SQL ao %WINDIR% \ Microsoft.NET \ Framework \ v4.xxx pasta \ \ EN SQL. Executar esses arquivos de script em um base de dados SQL Server 2005 ou SQL Server 2008 que você deseja a instância Store de fluxo de trabalho SQL para usar para persistir instâncias de fluxo de trabalho. Execute o arquivo de SqlWorkflowInstanceStoreSchema.sql primeiro e execute o arquivo de SqlWorkflowInstanceStoreLogic.sql.
 
@@ -29,9 +29,9 @@ Antes de usar o recurso de Store de instância de fluxo de trabalho SQL, crie um
 > [!IMPORTANT]
 > Se você não criar um base de dados de persistência, o recurso de Store de instância de fluxo de trabalho do SQL gerencie uma exceção similar à seguinte quando um host tenta manter fluxos de trabalho.
 >
-> System.Data.SqlClient.SqlException: Não foi possível encontrar o procedimento armazenado 'System.Activities.DurableInstancing.CreateLockOwner'
+> System.Data.SqlClient.SqlException: Não foi possível encontrar o procedimento armazenado ' System. Activities. DurableInstancing. CreateLockOwner '
 
-As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. Para obter mais informações sobre as propriedades de Store de instância de fluxo de trabalho do SQL, consulte [propriedades do SQL fluxo de trabalho instância Store](properties-of-sql-workflow-instance-store.md).
+As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. Para obter mais informações sobre as propriedades do repositório de instâncias do fluxo de trabalho SQL, consulte [Propriedades do repositório de instâncias do fluxo de trabalho SQL](properties-of-sql-workflow-instance-store.md).
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Ativando a persistência para fluxos de trabalho são hospedados que usam WorkflowApplication
 
@@ -39,7 +39,7 @@ Você pode ativar persistência para fluxos de trabalho são hospedados que usam
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>Para ativar persistência para fluxos de trabalho são hospedados
 
-1. Adicione uma referência ao System.Activities.DurableInstancing.dll.
+1. Adicione uma referência a System. Activities. DurableInstancing. dll.
 
 2. Adicione a seguinte declaração na parte superior do arquivo de origem após a existência declarações “using”.
 
@@ -72,7 +72,7 @@ Você pode ativar persistência para fluxos de trabalho são hospedados que usam
    ```
 
 > [!NOTE]
-> Consulte o [como: Criar e executar um fluxo de trabalho de execução longa](how-to-create-and-run-a-long-running-workflow.md) etapa do [Tutorial de Introdução](getting-started-tutorial.md) para obter instruções passo a passo.
+> Consulte o [How para: Crie e execute uma etapa de fluxo de trabalho de longa execução @ no__t-0 do [Tutorial introdução](getting-started-tutorial.md) para obter instruções passo a passo.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Ativando a persistência para os serviços são hospedados de fluxo de trabalho que usam o WorkflowServiceHost
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Você pode ativar persistência para serviços são hospedados hospedado ou do Windows do processo de ativação de serviço (-) WAS de fluxo de trabalho usando um arquivo de configuração. Um serviço Estar- hospedado de fluxo de trabalho usa o WorkflowServiceHost como serviços são hospedados de fluxo de trabalho fazem.
 
-O `SqlWorkflowInstanceStoreBehavior`, um comportamento de serviço que permite que você altere convenientemente as [Store de instância de fluxo de trabalho do SQL](sql-workflow-instance-store.md) propriedades por meio de configuração XML. Para serviços Estar- hospedados de fluxo de trabalho, use o arquivo web.config. O seguinte exemplo de configuração mostra como configurar a instância Store de fluxo de trabalho do SQL usando o elemento do comportamento de `sqlWorkflowInstanceStore` em um arquivo de configuração.
+O `SqlWorkflowInstanceStoreBehavior`, um comportamento de serviço que permite alterar convenientemente as propriedades de [armazenamento da instância do fluxo de trabalho SQL](sql-workflow-instance-store.md) por meio da configuração XML. Para serviços Estar- hospedados de fluxo de trabalho, use o arquivo web.config. O seguinte exemplo de configuração mostra como configurar a instância Store de fluxo de trabalho do SQL usando o elemento do comportamento de `sqlWorkflowInstanceStore` em um arquivo de configuração.
 
 ```xml
 <serviceBehaviors>
@@ -156,13 +156,13 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> É recomendável que você não armazene informações sigilosas como nomes de usuário e senhas no arquivo web.config. Se você armazenar informações confidenciais no arquivo web.config, você deve proteger o acesso ao arquivo web.config usando listas de controle de acesso (ACLs) do sistema de arquivos. Além disso, você também pode proteger os valores de configuração dentro de um arquivo de configuração conforme mencionado na [Criptografando informações de configuração usando configuração protegida](https://go.microsoft.com/fwlink/?LinkId=178419).
+> É recomendável que você não armazene informações sigilosas como nomes de usuário e senhas no arquivo web.config. Se você armazenar informações confidenciais no arquivo web.config, você deve proteger o acesso ao arquivo web.config usando listas de controle de acesso (ACLs) do sistema de arquivos. Além disso, você também pode proteger os valores de configuração em um arquivo de configuração, conforme mencionado na [criptografia de informações de configuração usando a configuração protegida](https://go.microsoft.com/fwlink/?LinkId=178419).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementos Machine.config relacionados ao recurso de Store de instância de fluxo de trabalho do SQL
 
 A instalação de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] adicione os seguintes elementos relacionados ao recurso de Store de instância de fluxo de trabalho SQL ao arquivo Machine.config:
 
-- Adiciona o elemento de extensão de comportamento a seguir ao arquivo Machine. config para que você possa usar o \<sqlWorkflowInstanceStore > elemento de comportamento de serviço no arquivo de configuração para configurar a persistência para seus serviços.
+- Adiciona o seguinte elemento de extensão de comportamento ao arquivo Machine. config para que você possa usar o elemento de comportamento de serviço \<sqlWorkflowInstanceStore > no arquivo de configuração para configurar a persistência para seus serviços.
 
     ```xml
     <configuration>

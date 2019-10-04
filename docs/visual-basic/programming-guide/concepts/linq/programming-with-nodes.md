@@ -1,15 +1,15 @@
 ---
-title: Programando conosco (Visual Basic)
+title: Programando com nós (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a331d77f1c54f6428d36b6ccb403dcc01094c98
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756930"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834927"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>Programando conosco (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>Programando com nós (Visual Basic)
 desenvolvedores de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que precisam geralmente escrever programas como um editor XML, um sistema uma transformação, ou uma necessidade o gravador de relatório escrever programas que funcionam no nível mais fino de granularidade dos elementos e atributos. Freqüentemente necessitam de trabalhar no nível de nó, em nós de manipulação de texto, as instruções de processamento, e os comentários. Este tópico fornece alguns detalhes sobre programação no nível do nó.  
   
 ## <a name="node-details"></a>Detalhes do nó  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent Is Nothing)
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 True  
 True  
 ```  
@@ -53,7 +53,7 @@ Console.WriteLine(xmlTree.Nodes().OfType(Of XText)().Count())
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 1  
 1  
 2  
@@ -75,7 +75,7 @@ Console.WriteLine(">>{0}<<", textNode2)
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 >><<  
 ```  
   
@@ -117,7 +117,7 @@ Next
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -143,7 +143,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 3  
 0  
 ```  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to XML (Visual Basic) de programação avançada](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

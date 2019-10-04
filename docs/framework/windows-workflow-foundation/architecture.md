@@ -2,15 +2,15 @@
 title: Arquitetura de fluxo de trabalho do Windows
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: d341ebd354d5324c5ad71436837cb85737f46c08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2effc0f53153057b8a9034e4dc80cb19bbe7685
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605891"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834860"
 ---
 # <a name="windows-workflow-architecture"></a>Arquitetura de fluxo de trabalho do Windows
-Windows Workflow Foundation (WF) aumenta o nível de abstração para o desenvolvimento de aplicativos interativos de longa execução. As unidades de trabalho são encapsuladas como atividades. As atividades executam em um ambiente que fornece recursos para o controle de fluxo, manipulação de exceção, a propagação de falha, persistência de dados do estado, ao carregamento e descarregamento de fluxos de trabalho em andamento de memória, de rastreamento, e de fluxo de transação.  
+Windows Workflow Foundation (WF) gera o nível de abstração para o desenvolvimento de aplicativos interativos de longa execução. As unidades de trabalho são encapsuladas como atividades. As atividades executam em um ambiente que fornece recursos para o controle de fluxo, manipulação de exceção, a propagação de falha, persistência de dados do estado, ao carregamento e descarregamento de fluxos de trabalho em andamento de memória, de rastreamento, e de fluxo de transação.  
   
 ## <a name="activity-architecture"></a>Arquitetura de atividades  
  As atividades são desenvolvidas como os tipos de CLR que derivam de <xref:System.Activities.Activity>, de <xref:System.Activities.CodeActivity>, de <xref:System.Activities.AsyncCodeActivity>, ou de <xref:System.Activities.NativeActivity>, ou as suas variantes que retornam um valor, <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601>, ou <xref:System.Activities.NativeActivity%601>. Desenvolver as atividades que derivam de <xref:System.Activities.Activity> permite que o usuário reúne atividades pré-compilação existentes para criar rapidamente as unidades de trabalho que executam no ambiente de fluxo de trabalho. <xref:System.Activities.CodeActivity>, por outro lado, permite a lógica de execução a ser criado em código gerenciado usando <xref:System.Activities.CodeActivityContext> principalmente para acesso aos argumentos de atividade. <xref:System.Activities.AsyncCodeActivity> é semelhante a <xref:System.Activities.CodeActivity> exceto que pode ser usado para implementar tarefas assíncronas. Desenvolver as atividades que derivam de <xref:System.Activities.NativeActivity> permite que os usuários acessem o tempo de execução com <xref:System.Activities.NativeActivityContext> para a funcionalidade como filhos de programação, criando indexadores, invocando o trabalho assíncrona, registrando transações, e mais.  
@@ -41,12 +41,12 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
  [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
   
 ## <a name="activity-life-cycle"></a>Ciclo de vida de atividades  
- Uma instância de uma atividade começa em estado de <xref:System.Activities.ActivityInstanceState.Executing> . A menos que as exceções são localizadas, permanece nesse estado até que todas as atividades filho sejam executar completo e qualquer outro trabalho pendente (<xref:System.Activities.Bookmark> objetos, por exemplo) está concluído, ao ponto que ele faz a transição de estado de <xref:System.Activities.ActivityInstanceState.Closed> . O pai de uma instância da atividade pode solicitar um filho; cancelar se o filho pode ser cancelado termina em estado de <xref:System.Activities.ActivityInstanceState.Canceled> . Se uma exceção é lançada durante a execução, o tempo de execução coloca a atividade no estado de <xref:System.Activities.ActivityInstanceState.Faulted> e propaga a exceção acima da cadeia pai de atividades. A seguir estão os três estados de conclusão de uma atividade:  
+ Uma instância de uma atividade começa em estado de <xref:System.Activities.ActivityInstanceState.Executing> . A menos que as exceções são localizadas, permanece nesse estado até que todas as atividades filho sejam executar completo e qualquer outro trabalho pendente (<xref:System.Activities.Bookmark> objetos, por exemplo) está concluído, ao ponto que ele faz a transição de estado de <xref:System.Activities.ActivityInstanceState.Closed> . O pai de uma instância da atividade pode solicitar um filho; cancelar se o filho pode ser cancelado termina em estado de <xref:System.Activities.ActivityInstanceState.Canceled> . Se uma exceção é lançada durante a execução, o tempo de execução coloca a atividade no estado de <xref:System.Activities.ActivityInstanceState.Faulted> e propaga a exceção acima da cadeia pai de atividades. A seguir estão os três Estados de conclusão de uma atividade:
   
-- **Fechado:** A atividade concluir seu trabalho e foi encerrado.  
+- **Legenda** A atividade concluiu seu trabalho e foi encerrada.  
   
-- **Cancelados:** A atividade normalmente abandonada seu trabalho e foi encerrado. O trabalho não será revertido explicitamente quando esse estado está conectado.  
+- **Cancel** A atividade abandonou seu trabalho e saiu. O trabalho não será revertido explicitamente quando esse estado está conectado.  
   
-- **Com falha:** A atividade encontrou um erro e foi encerrado sem concluir seu trabalho.  
+- **Com falha** A atividade encontrou um erro e foi encerrada sem concluir seu trabalho.  
   
  As atividades permanecem no estado de <xref:System.Activities.ActivityInstanceState.Executing> quando são persistentes ou descarregadas.

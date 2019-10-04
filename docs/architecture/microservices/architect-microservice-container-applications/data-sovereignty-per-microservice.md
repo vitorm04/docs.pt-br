@@ -2,12 +2,12 @@
 title: Soberania de dados por microsserviço
 description: Soberania de dados por microsserviço é um dos pontos principais dos microsserviços. Cada microsserviço deve ser o proprietário único de seu banco de dados, compartilhando-o com ninguém mais. É claro que todas as instâncias de um microsserviço conectam-se ao mesmo banco de dados de alta disponibilidade.
 ms.date: 09/20/2018
-ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566206"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834462"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 
@@ -19,11 +19,11 @@ Esse princípio é semelhante no [DDD (design controlado por domínio)](https://
 
 Por outro lado, a abordagem tradicional (dados monolíticos) usada em diversos aplicativos é ter um banco de dados único centralizado ou poucos bancos de dados. Geralmente, trata-se de um Banco de Dados SQL normalizado utilizado para o aplicativo inteiro e todos seus subsistemas internos, conforme mostrado na Figura 4-7.
 
-![Na abordagem tradicional, há um único banco de dados individual entre todos os serviços, normalmente em uma arquitetura em camadas. Na abordagem de microsserviços, cada microsserviço tem seu próprio modelo/dados](./media/image7.png)
+![Diagrama mostrando as duas abordagens de banco de dados.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
 **Figura 4-7**. Comparação de soberania de dados: banco de dados monolítico x microsserviços
 
-A abordagem de banco de dados centralizado aparenta ser mais simples inicialmente e parece permitir a reutilização de entidades em subsistemas diferentes para tornar tudo consistente. Mas a realidade é que você acaba com uma quantidade enorme de tabelas que servem para muitos subsistemas diferentes e incluem atributos e colunas que não são necessárias na maioria dos casos. É como tentar usar o mesmo mapa físico para uma caminhada em uma trilha pequena, uma viagem de carro de um dia e para aprender geografia.
+Na abordagem tradicional, há um único banco de dados individual entre todos os serviços, normalmente em uma arquitetura em camadas. Na abordagem de microserviços, cada microserviço possui seu modelo/dados. A abordagem de banco de dados centralizado aparenta ser mais simples inicialmente e parece permitir a reutilização de entidades em subsistemas diferentes para tornar tudo consistente. Mas a realidade é que você acaba com uma quantidade enorme de tabelas que servem para muitos subsistemas diferentes e incluem atributos e colunas que não são necessárias na maioria dos casos. É como tentar usar o mesmo mapa físico para uma caminhada em uma trilha pequena, uma viagem de carro de um dia e para aprender geografia.
 
 Um aplicativo monolítico com normalmente um único banco de dados relacional tem dois benefícios importantes: [Transações ACID](https://en.wikipedia.org/wiki/ACID) e a linguagem SQL, ambas funcionando em todas as tabelas e dados relacionados ao aplicativo. Essa abordagem é uma maneira fácil de gravar consultas que combinam dados de diversas tabelas.
 

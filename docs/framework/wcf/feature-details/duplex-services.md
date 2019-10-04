@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 4fd8b679dcd4ac9efce5fa915118736b15206068
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895176"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834776"
 ---
 # <a name="duplex-services"></a>Serviços de duplex
 
@@ -87,7 +87,7 @@ O código de exemplo a seguir mostra como especificar o endereço do ponto de ex
 ```
 
 > [!WARNING]
-> O modelo duplex não detecta automaticamente quando um serviço ou cliente fecha seu canal. Portanto, se um cliente for encerrado inesperadamente, por padrão, o serviço não será notificado, ou se um serviço for encerrado inesperadamente, o cliente não será notificado. Se você usar um serviço que está desconectado, <xref:System.ServiceModel.CommunicationException> a exceção será gerada. Os clientes e serviços podem implementar seu próprio protocolo para notificar uns aos outros se escolherem. Para obter mais informações sobre o tratamento de erros, consulte [controle de erros do WCF](../wcf-error-handling.md)
+> O modelo duplex não detecta automaticamente quando um serviço ou cliente fecha seu canal. Portanto, se um cliente for encerrado inesperadamente, por padrão, o serviço não será notificado, ou se um serviço for encerrado inesperadamente, o cliente não será notificado. Se você usar um serviço que está desconectado, <xref:System.ServiceModel.CommunicationException> a exceção será gerada. Os clientes e serviços podem implementar seu próprio protocolo para notificar uns aos outros se escolherem. Para obter mais informações sobre o tratamento de erros, consulte [controle de erros do WCF](../wcf-error-handling.md).
 
 ## <a name="see-also"></a>Consulte também
 

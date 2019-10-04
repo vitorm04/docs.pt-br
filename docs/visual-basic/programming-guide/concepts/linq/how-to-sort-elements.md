@@ -2,12 +2,12 @@
 title: 'Como: Elementos de classificação (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1bd76ade02f8f891e98b048ac866b6b9de65062f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710481"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835092"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Como: Elementos de classificação (Visual Basic)
 Este exemplo mostra como escrever uma consulta que classifica seus resultados.  
@@ -29,7 +29,7 @@ Next
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  
@@ -64,7 +64,7 @@ End Module
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  

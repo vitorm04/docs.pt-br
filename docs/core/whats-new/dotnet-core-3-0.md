@@ -38,7 +38,7 @@ C#8,0 também faz parte desta versão, que inclui o recurso de tipos de referên
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-Embora o .NET Core 3,0 ofereça suporte a **.net Standard 2,1**, `dotnet new classlib` o modelo padrão gera um projeto que ainda tem como alvo **.net Standard 2,0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
+Embora o .NET Core 3,0 ofereça suporte a **.NET Standard 2,1**, `dotnet new classlib` o modelo padrão gera um projeto que ainda tem como alvo **.NET Standard 2,0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

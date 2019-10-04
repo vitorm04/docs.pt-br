@@ -2,23 +2,23 @@
 title: '- Dividir (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: d4e4c1449b665e6dea22bfcc0ee2277478b4da1a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 79fdbebc648daac4f695387d52d2a915383f99ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251048"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833884"
 ---
 # <a name="-divide-entity-sql"></a>/ (Divisão) (Entity SQL)
 Divide um número por outro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 dividend / divisor  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `dividend`  
  A expressão numérica a divisão. `dividend` é qualquer expressão válida de ambos os tipos de dados numéricos.  
   
@@ -31,11 +31,11 @@ dividend / divisor
 ## <a name="example"></a>Exemplo  
  A consulta Entity SQL a seguir usa o operador/aritmética para dividir um número por outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
+1. Siga o procedimento em [How para: Executa uma consulta que retorna os resultados de Estruturaistype @ no__t-0.  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#DIVIDE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#divide)]  
+ [!code-sql[DP EntityServices Concepts#DIVIDE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#divide)]  
   
 ## <a name="see-also"></a>Consulte também
 

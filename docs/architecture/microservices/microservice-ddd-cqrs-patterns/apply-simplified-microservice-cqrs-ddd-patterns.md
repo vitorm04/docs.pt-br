@@ -2,12 +2,12 @@
 title: Aplicando padrões CQRS e DDD simplificados em um microsserviço
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Entender a relação geral entre os padrões CQRS e DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674373"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834311"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicar padrões CQRS e DDD simplificados em um microsserviço
 
@@ -27,9 +27,11 @@ CQRS significa ter dois objetos para uma operação de leitura/gravação, em qu
 
 Um exemplo desse tipo de serviço é o microsserviço de ordenação do aplicativo eShopOnContainers de referência. Este serviço implementa um microsserviço com base em uma abordagem CQRS simplificada. Ele usa uma única fonte de dados ou banco de dados, mas dois modelos lógicos, além de padrões DDD para o domínio transacional, conforme mostrado na Figura 7-2.
 
-![O microsserviço Pedidos lógico inclui o banco de dados do Pedidos, que pode estar ou não no mesmo host do Docker. É bom ter o banco de dados no mesmo host do Docker para desenvolvimento, mas não para produção.](./media/image2.png)
+![Diagrama mostrando um microserviço do CQRS e do DDD de alto nível simplificado.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Figura 7-2**. Microsserviço baseado em CQRS e DDD simplificado
+
+O microserviço "ordenando" lógico inclui seu banco de dados de ordenação, que pode ser, mas não precisa ser, o mesmo host do Docker. É bom ter o banco de dados no mesmo host do Docker para desenvolvimento, mas não para produção.
 
 A camada de aplicativo pode ser a própria API Web. O aspecto de design importante aqui é que o microsserviço dividiu as consultas e ViewModels (modelos de dados criados especialmente para os aplicativos cliente) dos comandos, do modelo de domínio e das transações que seguem o padrão CQRS. Essa abordagem mantém as consultas independentes de restrições provenientes de padrões DDD que só fazem sentido para transações e atualizações, conforme explicado nas seções posteriores.
 

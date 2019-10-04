@@ -2,12 +2,12 @@
 title: Arquitetura de microsserviços
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Exibição de 30.000 pés da arquitetura de microsserviços.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672983"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834392"
 ---
 # <a name="microservices-architecture"></a>Arquitetura de microsserviços
 
@@ -19,11 +19,11 @@ Por que uma arquitetura de microsserviços? Em resumo, ela oferece agilidade de 
 
 Como uma vantagem adicional, os microsserviços podem ser aumentados de forma independente. Em vez de ter um único aplicativo monolítico que você deve aumentar como uma unidade, é possível aumentar microsserviços específicos. Desta forma, é possível escalar apenas a área funcional que precisa de mais potência de processamento ou largura de banda de rede para dar suporte à demanda, em vez de aumentar outras áreas do aplicativo que não precisam ser escaladas. Isso significa economias de custo, porque você precisa de menos hardware.
 
-![Na abordagem monolítica tradicional, o aplicativo é dimensionado clonando todo o aplicativo em vários servidores/VMs. Na abordagem de microsserviços, a funcionalidade é separada em serviços menores para que cada serviço possa ser dimensionado independentemente.](./media/image6.png)
+![Diagrama das diferenças entre os dois métodos de implantação.](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **Figura 4-6**. Implantação monolítica versus a abordagem de microsserviços
 
-Como mostra a Figura 4-6, a abordagem de microsserviços permite alterações ágeis e rápida iteração de cada microsserviço, porque é possível alterar áreas pequenas específicas de aplicativos grandes, complexos e escalonáveis.
+Como mostra a Figura 4-6, na abordagem monolítica tradicional, o aplicativo é dimensionado clonando o aplicativo inteiro em vários servidores/VM. Na abordagem de microsserviços, a funcionalidade é separada em serviços menores para que cada serviço possa ser dimensionado independentemente. A abordagem de microserviços permite alterações ágeis e iteração rápida de cada microserviço, pois você pode alterar áreas específicas e pequenas de aplicativos complexos, grandes e escalonáveis.
 
 A arquitetura de aplicativos baseados em microsserviços refinados permite práticas de integração e de entrega contínua. Ela também acelera a entrega de novas funções no aplicativo. A composição refinada de aplicativos também permite a você executar e testar microsserviços em isolamento e evoluí-los de maneira autônoma ao manter contratos claros entre eles. Desde que você não altere a interfaces ou contratos, é possível alterar a implementação interna de qualquer microsserviço ou adicionar novas funcionalidades sem interromper outros microsserviços.
 

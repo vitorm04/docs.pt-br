@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856196"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834744"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Visão geral dos recursos bidirecionais no WPF
 
@@ -178,7 +178,7 @@ Isso permitiu que os aplicativos processassem valores numéricos sem a necessida
 
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dá continuidade à mesma tradição e adiciona suporte adicional a esse recurso, o que permite maior controle do usuário sobre quando e como a substituição é usada. Embora esse recurso tenha sido projetado para qualquer idioma, ele é particularmente útil no conteúdo bidirecional, em que a formatação de dígitos de um idioma específico é, de modo geral, um desafio para os desenvolvedores de aplicativos, devido às várias culturas nas quais um aplicativo pode ser executado.
 
-A propriedade Core que controla como o número de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] substituição funciona <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> é a propriedade de dependência. A <xref:System.Windows.Media.NumberSubstitution> classe especifica como os números no texto devem ser exibidos. Ela tem três propriedades públicas que definem seu comportamento. Veja a seguir um resumo de cada uma das propriedades.
+A propriedade Core que controla como o número de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] substituição funciona <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> é a propriedade de dependência. A <xref:System.Windows.Media.NumberSubstitution> classe especifica como os números no texto devem ser exibidos. Ela tem três propriedades públicas que definem seu comportamento. Veja a seguir um resumo de cada uma das propriedades:
 
 **CultureSource:**
 

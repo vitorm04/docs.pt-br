@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207460bc66c7d19558a69828797408df4ad92d64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973148"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835318"
 ---
 # <a name="assembly-names"></a>Nomes de assembly
 Um nome de assembly é armazenado em metadados e tem um impacto significativo no escopo e uso do assembly por um aplicativo. Um assembly de nome forte tem um nome totalmente qualificado que inclui o nome, a cultura, a chave pública e o número de versão do assembly. Isso muitas vezes é chamado de nome de exibição, e para os assemblies carregados pode ser obtido usando a propriedade <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -30,7 +30,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
   
  O código que solicita tipos em um assembly deve usar um nome totalmente qualificado do assembly. Isso é chamado de associação totalmente qualificada. A associação parcial, que especifica um nome de assembly, não tem permissão ao fazer referência a assemblies no .NET Framework.  
   
- Todas as referências de assembly para os assemblies que compõem o .NET Framework também devem conter um nome totalmente qualificado do assembly. Por exemplo, para fazer referência ao assembly System.Data.NET Framework para a versão 1.0 você incluiria:  
+ Todas as referências de assembly a assemblies que compõem o .NET Framework também devem conter o nome totalmente qualificado do assembly. Por exemplo, uma referência ao assembly System. Data .NET Framework para a versão 1,0 incluiria:  
   
 ```  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  

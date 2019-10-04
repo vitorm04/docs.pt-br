@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588097"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834169"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Como: usar as funcionalidades da documentação XML
 
@@ -137,3 +137,5 @@ A documentação XML começa com ///. Quando você cria um novo projeto, os assi
 - [Guia de Programação em C#](../index.md)
 - [-doc (opções do compilador do C#)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Comentários da documentação XML](./index.md)
+- [Processador de documentação do DocFX](https://dotnet.github.io/docfx/)
+- [Processador de documentação do Sandcastle](https://github.com/EWSoftware/SHFB)

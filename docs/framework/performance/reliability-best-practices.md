@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046252"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834535"
 ---
 # <a name="reliability-best-practices"></a>Práticas recomendadas de confiabilidade
 
@@ -75,13 +75,13 @@ Condições de falta de memória não são raras no SQL Server.
 
 Se bibliotecas hospedadas no SQL Server não atualizarem corretamente o estado compartilhado, há uma grande probabilidade de que o código não se recuperará até o banco de dados ter sido reiniciado.  Além disso, em alguns casos extremos, é possível que isso possa causar falha no processo do SQL Server, fazendo com que o banco de dados seja reinicializado.  Reinicializar o banco de dados pode deixar um site da Web inoperante ou afetar as operações da empresa, afetando a disponibilidade.  Uma perda lenta de recursos de sistema operacional como memória ou identificadores pode fazer com que o servidor eventualmente falhe ao alocar identificadores sem possibilidade de recuperação; também é possível que o desempenho do servidor se degrade lentamente e reduza a disponibilidade de aplicativos do cliente.  É claro que queremos evitar esses cenários.
 
-## <a name="best-practice-rules"></a>Regras de prática recomendada
+## <a name="best-practice-rules"></a>Regras de práticas recomendadas
 
 A introdução se concentrou no que a revisão de código para o código gerenciado que é executado no servidor precisaria capturar para aumentar a estabilidade e a confiabilidade do framework. Todas essas verificações são uma boa prática em geral e uma necessidade absoluta no servidor.
 
 No caso de uma restrição de recurso ou um deadlock, o SQL Server anulará um thread ou subdividirá um <xref:System.AppDomain>.  Quando isso acontece, o único elemento que certamente está em execução é o código de recuo em uma CER (região de execução restrita).
 
-### <a name="use-safehandle-to-avoid-resource-leaks"></a>Usar SafeHandle para evitar perdas de recursos
+### <a name="use-safehandle-to-avoid-resource-leaks"></a>Usar SafeHandle para evitar vazamentos de recursos
 
 No caso de um descarregamento de <xref:System.AppDomain>, você não pode depender de blocos `finally` ou finalizadores serem executados, portanto, é importante abstrair todo acesso a recursos do sistema operacional por meio da classe <xref:System.Runtime.InteropServices.SafeHandle> em vez de <xref:System.IntPtr>, <xref:System.Runtime.InteropServices.HandleRef> ou classes semelhantes. Isso permite que o CLR acompanhe e feche os identificadores que você usa até mesmo no caso de desativação de <xref:System.AppDomain>.  <xref:System.Runtime.InteropServices.SafeHandle> estará usando um finalizador crítico que o CLR sempre executará.
 
@@ -101,11 +101,11 @@ RCWs (Runtime Callable Wrappers) podem ser limpos pelo CLR sem código adicional
 
 Use <xref:System.Runtime.InteropServices.SafeHandle> para encapsular recursos do sistema operacional. Não use <xref:System.Runtime.InteropServices.HandleRef> ou campos do tipo <xref:System.IntPtr>.
 
-### <a name="ensure-finalizers-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>Verifique se os finalizadores não precisam executar para impedir a perda de recursos do sistema operacional
+### <a name="ensure-finalizers-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>Garantir que os finalizadores não precisem ser executados para evitar vazamento de recursos do sistema operacional
 
 Examine seus finalizadores cuidadosamente para assegurar que, mesmo se eles não forem executados, um recurso crítico do sistema operacional não será perdido.  Ao contrário de um descarregamento de <xref:System.AppDomain> normal quando o aplicativo está em execução em um estado estável ou quando um servidor como o SQL Server é desligado, objetos não são finalizados durante um descarregamento de <xref:System.AppDomain> abrupto.  Verifique se recursos não são perdidos no caso de um descarregamento abrupto, já que a correção de um aplicativo não pode ser garantida, mas a integridade do servidor deve ser mantida evitando-se a perda de recursos.  Use <xref:System.Runtime.InteropServices.SafeHandle> para liberar eventuais recursos do sistema operacional.
 
-### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>Verifique se as cláusulas finally não precisam executar para impedir a perda de recursos do sistema operacional
+### <a name="ensure-that-finally-clauses-do-not-have-to-run-to-prevent-leaking-operating-system-resources"></a>Certifique-se de que cláusulas finally não precisem ser executadas para evitar vazamento de recursos do sistema operacional
 
 Não há garantia de que cláusulas `finally` sejam executadas fora de CERs, exigindo que os desenvolvedores de biblioteca não confiem no código dentro de um bloco `finally` para liberar recursos não gerenciados.  Usar <xref:System.Runtime.InteropServices.SafeHandle> é a solução recomendada.
 
@@ -125,23 +125,23 @@ Outros mecanismos de bloqueio como bloqueios de rotação e <xref:System.Threadi
 
 Marcar e identificar todos os bloqueios usando <xref:System.Threading.Thread.BeginCriticalRegion%2A> e <xref:System.Threading.Thread.EndCriticalRegion%2A>. Não use <xref:System.Threading.Interlocked.CompareExchange%2A>, <xref:System.Threading.Interlocked.Increment%2A> e <xref:System.Threading.Interlocked.Decrement%2A> em um loop.  Não faça uma plataforma de invocação das variantes Win32 desses métodos.  Não use <xref:System.Threading.Thread.Sleep%2A> em loop.  Não use campos voláteis.
 
-### <a name="cleanup-code-must-be-in-a-finally-or-a-catch-block-not-following-a-catch"></a>O código de limpeza deve estar em um bloco finally ou catch e não deve seguir um catch
+### <a name="cleanup-code-must-be-in-a-finally-or-a-catch-block-not-following-a-catch"></a>O código de limpeza deve estar em um bloco finally ou catch, não seguindo um catch
 
-Código de limpeza nunca deve seguir um bloco `catch`; ele deve estar em um `finally` ou no bloco `catch` em si.  Isso deve ser uma prática recomendada normal.  Um bloco `finally` é geralmente preferível porque ele executa o mesmo código de erro quando uma exceção é gerada e quando o fim do bloco `try` é normalmente encontrado.  No caso de uma exceção inesperada ser gerada, por exemplo uma <xref:System.Threading.ThreadAbortException>, o código de limpeza não será executado.  Quaisquer recursos não gerenciados que você limparia em um `finally` devem idealmente estar encapsulados em um <xref:System.Runtime.InteropServices.SafeHandle> para evitar perdas.  Observe que a palavra-chave `using` do C# pode ser usada com eficiência para descartar objetos, incluindo identificadores.
+Código de limpeza nunca deve seguir um bloco `catch`; ele deve estar em um `finally` ou no bloco `catch` em si. Isso deve ser uma prática recomendada normal. Um bloco `finally` é geralmente preferível porque ele executa o mesmo código de erro quando uma exceção é gerada e quando o fim do bloco `try` é normalmente encontrado.  No caso de uma exceção inesperada ser gerada, por exemplo uma <xref:System.Threading.ThreadAbortException>, o código de limpeza não será executado.  Quaisquer recursos não gerenciados que você limparia em um `finally` devem idealmente estar encapsulados em um <xref:System.Runtime.InteropServices.SafeHandle> para evitar perdas.  Observe que a palavra-chave `using` do C# pode ser usada com eficiência para descartar objetos, incluindo identificadores.
 
-Embora a reciclagem de <xref:System.AppDomain> possa limpar recursos no thread do finalizador, ainda é importante colocar o código de limpeza no local correto.  Observe que, se um thread recebe uma exceção assíncrona sem manter um bloqueio, o CLR tenta encerrar o thread sem a necessidade de reciclar o <xref:System.AppDomain>.  Assegurar que recursos sejam limpos cedo em vez de tarde ajuda por meio da disponibilização de mais recursos e do melhor gerenciamento do tempo de vida.  Se você não fechar explicitamente um identificador para um arquivo em algum caminho de código de erro, aguarde que o finalizador <xref:System.Runtime.InteropServices.SafeHandle> o limpe; na próxima vez que seu código executar, ele pode poderá falhar ao tentar acessar exatamente o mesmo arquivo, se o finalizador ainda não tiver executado.  Por esse motivo, garantir que o código de limpeza existe e está funcionando corretamente ajudará a recuperar-se de falhas de modo mais claro e rápido, embora isso não seja estritamente necessário.
+Embora a reciclagem de <xref:System.AppDomain> possa limpar recursos no thread do finalizador, ainda é importante colocar o código de limpeza no local correto. Observe que, se um thread recebe uma exceção assíncrona sem manter um bloqueio, o CLR tenta encerrar o thread sem a necessidade de reciclar o <xref:System.AppDomain>.  Assegurar que recursos sejam limpos cedo em vez de tarde ajuda por meio da disponibilização de mais recursos e do melhor gerenciamento do tempo de vida. Se você não fechar explicitamente um identificador para um arquivo em algum caminho de código de erro, aguarde que o finalizador <xref:System.Runtime.InteropServices.SafeHandle> o limpe; na próxima vez que seu código executar, ele pode poderá falhar ao tentar acessar exatamente o mesmo arquivo, se o finalizador ainda não tiver executado.  Por esse motivo, garantir que o código de limpeza existe e está funcionando corretamente ajudará a recuperar-se de falhas de modo mais claro e rápido, embora isso não seja estritamente necessário.
 
 #### <a name="code-analysis-rule"></a>Regra de análise de código
 
-O código de limpeza após `catch` deve estar em um bloco `finally`. Faça chamadas para descartar em um bloco finally.  Blocos `catch` devem terminar com um lançamento ou relançamento.  Embora haja exceções, tais como o código detectar se é possível estabelecer uma conexão de rede em que você pode obter uma de um grande número de exceções, qualquer código que requer a captura de um número de exceções em circunstâncias normais deve fornecer uma indicação de que o código deve ser testado para ver se terá êxito.
+O código de limpeza após `catch` deve estar em um bloco `finally`. Faça chamadas para descartar em um bloco finally. Blocos `catch` devem terminar com um lançamento ou relançamento. Embora haja exceções, tais como o código detectar se é possível estabelecer uma conexão de rede em que você pode obter uma de um grande número de exceções, qualquer código que requer a captura de um número de exceções em circunstâncias normais deve fornecer uma indicação de que o código deve ser testado para ver se terá êxito.
 
-### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>Um estado compartilhado mutável de todo o processo entre domínios do aplicativo deve ser eliminado ou usar uma região de execução restrita
+### <a name="process-wide-mutable-shared-state-between-application-domains-should-be-eliminated-or-use-a-constrained-execution-region"></a>O estado compartilhado mutável de todo o processo entre domínios de aplicativo deve ser eliminado ou usar uma região de execução restrita
 
 Conforme descrito na introdução, pode ser muito difícil escrever código gerenciado que monitore o estado compartilhado em todo o processo entre domínios de aplicativo de maneira confiável.  Um estado compartilhado por todo o processo é qualquer tipo de estrutura de dados compartilhada entre domínios do aplicativo, podendo ser em código Win32, dentro do CLR ou então em código gerenciado usando comunicação remota.  Qualquer estado compartilhado mutável é muito difícil de escrever corretamente em código gerenciado e qualquer estado compartilhado estático pode ser feito somente com muito cuidado.  Se você tiver um estado compartilhado por todo o computador, encontre alguma forma de eliminá-lo ou proteger o estado compartilhado usando uma CER (região de execução restrita).  Observe que qualquer biblioteca com estado compartilhado que não é identificada e corrigida pode causar falha em um host como o SQL Server, que requer um descarregamento de <xref:System.AppDomain> limpo.
 
 Se o código usa um objeto COM, evite compartilhar esse objeto COM entre domínios do aplicativo.
 
-### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>Os bloqueios não funcionam em todo o processo ou entre domínios do aplicativo.
+### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>Os bloqueios não funcionam em todo o processo ou entre domínios de aplicativo.
 
 No passado, <xref:System.Threading.Monitor.Enter%2A> e a [instrução lock](../../csharp/language-reference/keywords/lock-statement.md) foram usados para criar bloqueios de processo global.  Por exemplo, isso ocorre ao bloquear classes ágeis de <xref:System.AppDomain>, tais como instâncias de <xref:System.Type> de assemblies não compartilhados, objetos de <xref:System.Threading.Thread>, cadeias de caracteres internas e algumas cadeias de caracteres compartilhadas entre domínios do aplicativo usando comunicação remota.  Esses bloqueios não são mais para todo o processo.  Para identificar a presença de um bloqueio de entre domínios do aplicativo em todo o processo, determine se o código dentro do bloqueio usa qualquer recurso externo persistente como um arquivo em disco ou, possivelmente, um banco de dados.
 
@@ -195,7 +195,7 @@ public static MyClass SingletonProperty
 }
 ```
 
-#### <a name="a-note-about-lockthis"></a>Uma observação sobre Lock(this)
+#### <a name="a-note-about-lockthis"></a>Uma observação sobre o bloqueio (isso)
 
 É geralmente aceitável usar um bloqueio em um objeto individual que é acessível publicamente.  No entanto, se o objeto é um objeto singleton que pode causar deadlock em um subsistema inteiro, considere usar o padrão de design acima também.  Por exemplo, um bloqueio em um objeto <xref:System.Security.SecurityManager> pode causar um deadlock dentro de <xref:System.AppDomain>, tornando todo o <xref:System.AppDomain> inutilizável. É recomendável não usar um bloqueio em um objeto publicamente acessível desse tipo.  No entanto, um bloqueio em uma matriz ou coleção individual geralmente não deve representar um problema.
 
@@ -203,7 +203,7 @@ public static MyClass SingletonProperty
 
 Não use bloqueios em tipos que podem ser usados em domínios do aplicativo ou não têm um forte senso de identidade. Não chame <xref:System.Threading.Monitor.Enter%2A> em um <xref:System.Type>, <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.PropertyInfo>, <xref:System.String>, <xref:System.ValueType>, <xref:System.Threading.Thread> ou qualquer objeto que derive de <xref:System.MarshalByRefObject>.
 
-### <a name="remove-gckeepalive-calls"></a>Remover chamadas GC.KeepAlive
+### <a name="remove-gckeepalive-calls"></a>Remova o GC. Chamadas KeepAlive
 
 Uma quantidade significativa de código existente não usa <xref:System.GC.KeepAlive%2A> quando deveria ou então usa quando ele não é adequado.  Depois de converter em <xref:System.Runtime.InteropServices.SafeHandle>, as classes não precisam chamar <xref:System.GC.KeepAlive%2A>, supondo que elas não têm um finalizador, mas dependem de <xref:System.Runtime.InteropServices.SafeHandle> para finalizar os identificadores do sistema operacional.  Embora o custo de desempenho de retenção de uma chamada para <xref:System.GC.KeepAlive%2A> possa ser insignificante, a percepção de que uma chamada para <xref:System.GC.KeepAlive%2A> é necessária ou suficiente para resolver um problema de tempo de vida que talvez não exista mais torna mais difícil manter o código.  No entanto, ao usar os RCWs (Runtime Callable Wrappers) do CLR de interoperabilidade COM, <xref:System.GC.KeepAlive%2A> ainda é exigido pelo código.
 
@@ -211,7 +211,7 @@ Uma quantidade significativa de código existente não usa <xref:System.GC.KeepA
 
 Remova <xref:System.GC.KeepAlive%2A>.
 
-### <a name="use-the-host-protection-attribute"></a>Usar o atributo de proteção ao host
+### <a name="use-the-hostprotection-attribute"></a>Usar o atributo HostProtection
 
 O <xref:System.Security.Permissions.HostProtectionAttribute> (HPA) fornece o uso de ações de segurança declarativa para determinar os requisitos de proteção de host, permitindo que o host impeça até mesmo código totalmente confiável de chamar determinados métodos que não são apropriados para o host especificado, tais como <xref:System.Environment.Exit%2A> ou <xref:System.Windows.Forms.MessageBox.Show%2A> para o SQL Server.
 
@@ -251,11 +251,11 @@ Aqui estão alguns exemplos de APIs problemáticas.  Pipes (anônimos e nomeados
 
 Bloquear sem um tempo limite em código não gerenciado é um ataque de negação de serviço. Não execute chamadas de invocação de plataforma para `WaitForSingleObject`, `WaitForSingleObjectEx`, `WaitForMultipleObjects`, `MsgWaitForMultipleObjects` e `MsgWaitForMultipleObjectsEx`.  Não use NMPWAIT_WAIT_FOREVER.
 
-### <a name="identify-any-sta-dependent-features"></a>Identifique quaisquer recursos dependentes de STA.
+### <a name="identify-any-sta-dependent-features"></a>Identificar todos os recursos dependentes do STA
 
 Identifique qualquer código que use STAs (apartments de thread único) COM.  STAs são desabilitados no processo do SQL Server.  Recursos que dependem de `CoInitialize`, assim como contadores de desempenho ou a área de transferência, devem ser desabilitados no SQL Server.
 
-### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>Assegurar que os finalizadores estão livres de problemas de sincronização
+### <a name="ensure-finalizers-are-free-of-synchronization-problems"></a>Garantir que os finalizadores estejam livres de problemas de sincronização
 
 Vários threads finalizadores podem existir em futuras versões do .NET Framework, o que significa que os finalizadores para instâncias diferentes do mesmo tipo são executados simultaneamente.  Eles não precisam ser completamente thread-safe; o coletor de lixo garante que apenas um thread executará o finalizador para uma determinada instância do objeto.  No entanto, os finalizadores devem ser codificados para evitar deadlocks e condições de corrida quando executados simultaneamente em várias instâncias de objeto diferentes.  Ao usar qualquer estado externo, por exemplo, ao gravar em um arquivo de log em um finalizador, problemas de threading devem ser solucionados.  Não dependa da finalização para fornecer acesso thread-safe. Não use o armazenamento local de thread, gerenciado ou nativo, para armazenar o estado no thread do finalizador.
 
@@ -263,15 +263,15 @@ Vários threads finalizadores podem existir em futuras versões do .NET Framewor
 
 Os finalizadores devem estar livres de problemas de sincronização. Não use um estado mutável estático em um finalizador.
 
-### <a name="avoid-unmanaged-memory-if-possible"></a>Evitar memória não gerenciada, se possível
+### <a name="avoid-unmanaged-memory-if-possible"></a>Evite memória não gerenciada, se possível
 
 Memória não gerenciada pode ser perdida, assim como um identificador de sistema operacional. Se possível, tente usar memória na pilha usando [stackalloc](../../csharp/language-reference/operators/stackalloc.md) ou um objeto gerenciado fixo, como a [instrução fixed](../../csharp/language-reference/keywords/fixed-statement.md) ou um <xref:System.Runtime.InteropServices.GCHandle> usando um byte[]. O <xref:System.GC> limpa esses elementos eventualmente. No entanto, se você precisar alocar memória não gerenciada, considere o uso de uma classe que deriva de <xref:System.Runtime.InteropServices.SafeHandle> para encapsular a alocação de memória.
 
-Observe que há pelo menos um caso em que <xref:System.Runtime.InteropServices.SafeHandle> não é adequado.  Para chamadas de método COM que alocam ou liberam memória, é comum que uma DLL aloque memória por meio de `CoTaskMemAlloc` e, em seguida, outra DLL libere essa memória com `CoTaskMemFree`.  Usar <xref:System.Runtime.InteropServices.SafeHandle> nesses locais seria inadequado, já que ele tentará associar o tempo de vida da memória não gerenciada ao tempo de vida do <xref:System.Runtime.InteropServices.SafeHandle> em vez de permitir que outra DLL controle o tempo de vida da memória.
+Observe que há pelo menos um caso em que <xref:System.Runtime.InteropServices.SafeHandle> não é adequado. Para chamadas de método COM que alocam ou liberam memória, é comum que uma DLL aloque memória por meio de `CoTaskMemAlloc` e, em seguida, outra DLL libere essa memória com `CoTaskMemFree`.  Usar <xref:System.Runtime.InteropServices.SafeHandle> nesses locais seria inadequado, já que ele tentará associar o tempo de vida da memória não gerenciada ao tempo de vida do <xref:System.Runtime.InteropServices.SafeHandle> em vez de permitir que outra DLL controle o tempo de vida da memória.
 
-### <a name="review-all-uses-of-catchexception"></a>Examinar todos os usos de Catch(Exception)
+### <a name="review-all-uses-of-catchexception"></a>Examinar todos os usos de catch (exceção)
 
-Blocos catch que capturam todas as exceções, em vez de uma exceção específica, agora capturarão exceções assíncronas também.  Examine cada bloco catch(Exception), procurando por nenhuma liberação de recursos importantes ou código de recuo que possa ser ignorado, bem como comportamento potencialmente incorreto dentro do próprio bloco catch para tratar uma <xref:System.Threading.ThreadAbortException>, <xref:System.StackOverflowException> ou <xref:System.OutOfMemoryException>.  Observe que é possível que esse código esteja registrando em log ou fazendo algumas suposições de que ele pode apenas ver determinadas exceções ou que sempre que uma exceção ocorre, ele falhou exatamente por um motivo específico.  Essas pressuposições talvez precisem ser atualizadas para incluir <xref:System.Threading.ThreadAbortException>.
+Blocos catch que capturam todas as exceções, em vez de uma exceção específica, agora capturarão exceções assíncronas também. Examine cada bloco catch(Exception), procurando por nenhuma liberação de recursos importantes ou código de recuo que possa ser ignorado, bem como comportamento potencialmente incorreto dentro do próprio bloco catch para tratar uma <xref:System.Threading.ThreadAbortException>, <xref:System.StackOverflowException> ou <xref:System.OutOfMemoryException>.  Observe que é possível que esse código esteja registrando em log ou fazendo algumas suposições de que ele pode apenas ver determinadas exceções ou que sempre que uma exceção ocorre, ele falhou exatamente por um motivo específico.  Essas pressuposições talvez precisem ser atualizadas para incluir <xref:System.Threading.ThreadAbortException>.
 
 Considere a possibilidade de alterar todos os locais que capturam todas as exceções para capturar um tipo específico de exceção que você espera ser gerada, tal como uma <xref:System.FormatException> de métodos de formatação de cadeia de caracteres.  Isso impede que o bloco catch encontre exceções inesperadas e ajuda a garantir que o código não oculte bugs capturando exceções inesperadas.  Como regra geral, nunca manipule uma exceção no código de biblioteca (código que requer que você capture uma exceção pode indicar uma falha de design no código que você está chamando).  Em alguns casos, talvez você queira capturar uma exceção e gerar um tipo de exceção diferente para fornecer mais dados.  Usar exceções aninhadas nesse caso, armazenando a causa real da falha na propriedade <xref:System.Exception.InnerException%2A> da nova exceção.
 
@@ -279,17 +279,17 @@ Considere a possibilidade de alterar todos os locais que capturam todas as exce�
 
 Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  No C# `catch` , isso significa sinalizar {} e `catch(Exception)`. {}  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.
 
-### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Não suponha que um thread gerenciado é um thread do Win32 – ele é uma fibra
+### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Não presuma que um thread gerenciado seja um Thread Win32 – é uma fibra
 
-O uso do armazenamento local de thread gerenciado funciona, mas você não pode usar o armazenamento local de thread não gerenciado ou supor que o código será executado novamente no thread do sistema operacional atual.  Não altere as configurações, como o local de thread.  Não chame `InitializeCriticalSection` ou `CreateMutex` por meio de invocação de plataforma porque eles requerem que o thread de sistema operacional que entra em um bloqueio também saia do bloqueio.  Como isso não será o caso ao usar fibras, mutexes e seções críticas do Win32 não podem ser usados no SQL diretamente.  Observe que a classe <xref:System.Threading.Mutex> gerenciada não lida com essas preocupações de afinidade de thread.
+O uso do armazenamento local de thread gerenciado funciona, mas você não pode usar o armazenamento local de thread não gerenciado ou supor que o código será executado novamente no thread do sistema operacional atual. Não altere as configurações, como o local de thread. Não chame `InitializeCriticalSection` ou `CreateMutex` por meio de invocação de plataforma porque eles requerem que o thread de sistema operacional que entra em um bloqueio também saia do bloqueio. Como isso não será o caso ao usar fibras, mutexes e seções críticas do Win32 não podem ser usados no SQL diretamente.  Observe que a classe <xref:System.Threading.Mutex> gerenciada não lida com essas preocupações de afinidade de thread.
 
-Você pode usar com segurança a maior parte do estado em um objeto <xref:System.Threading.Thread> gerenciado, incluindo o armazenamento local de thread gerenciado e a cultura de interface do usuário atual do thread.  Você também pode usar o <xref:System.ThreadStaticAttribute>, que torna o valor de uma variável estática existente acessível somente pelo thread gerenciado atual (essa é outra maneira de fazer o armazenamento local de fibra no CLR).  Para a programação de motivos de modelo, você não pode alterar a cultura atual de um thread durante a execução no SQL.
+Você pode usar com segurança a maior parte do estado em um objeto <xref:System.Threading.Thread> gerenciado, incluindo o armazenamento local de thread gerenciado e a cultura de interface do usuário atual do thread. Você também pode usar o <xref:System.ThreadStaticAttribute>, que torna o valor de uma variável estática existente acessível somente pelo thread gerenciado atual (essa é outra maneira de fazer o armazenamento local de fibra no CLR). Para a programação de motivos de modelo, você não pode alterar a cultura atual de um thread durante a execução no SQL.
 
 #### <a name="code-analysis-rule"></a>Regra de análise de código
 
 O SQL Server é executado no modo de fibra; não use o armazenamento local de thread. Evite chamadas de invocação de plataforma para `TlsAlloc`, `TlsFree`, `TlsGetValue` e `TlsSetValue.`
 
-### <a name="let-sql-server-handle-impersonation"></a>Permitir a representação de identificador do SQL Server
+### <a name="let-sql-server-handle-impersonation"></a>Permitir que SQL Server manipule a representação
 
 Já que a representação opera em nível de thread e o SQL pode executar em modo de fibra, o código gerenciado não deve representar usuários e não deve chamar `RevertToSelf`.
 
@@ -297,7 +297,7 @@ Já que a representação opera em nível de thread e o SQL pode executar em mod
 
 Permita a representação de identificador do SQL Server. Não use `RevertToSelf`, `ImpersonateAnonymousToken`, `DdeImpersonateClient`, `ImpersonateDdeClientWindow`, `ImpersonateLoggedOnUser`, `ImpersonateNamedPipeClient`, `ImpersonateSelf`, `RpcImpersonateClient`, `RpcRevertToSelf`, `RpcRevertToSelfEx` nem `SetThreadToken`.
 
-### <a name="do-not-call-threadsuspend"></a>Não chame Thread::Suspend
+### <a name="do-not-call-threadsuspend"></a>Não chamar Thread:: Suspend
 
 A capacidade de suspender um thread pode parecer uma operação simples, mas pode causar deadlocks.  Se um thread mantendo que um bloqueio é suspenso por um segundo thread e, em seguida, o segundo thread tenta usar o mesmo bloqueio, ocorre um deadlock.  <xref:System.Threading.Thread.Suspend%2A> pode atualmente interferir com a segurança, o carregamento de classe, a comunicação remota e a reflexão.
 
@@ -305,7 +305,7 @@ A capacidade de suspender um thread pode parecer uma operação simples, mas pod
 
 Não chame <xref:System.Threading.Thread.Suspend%2A>. Considere o uso de um primitivo de sincronização real em vez disso, assim como um <xref:System.Threading.Semaphore> ou <xref:System.Threading.ManualResetEvent>.
 
-### <a name="protect-critical-operations-with-constrained-execution-regions-and-reliability-contracts"></a>Proteger as operações essenciais com regiões de execução restrita e contratos de confiabilidade
+### <a name="protect-critical-operations-with-constrained-execution-regions-and-reliability-contracts"></a>Proteger operações críticas com regiões de execução restritas e contratos de confiabilidade
 
 Ao executar uma operação complexa que atualiza um status compartilhado ou que precisa de forma determinística ser totalmente bem-sucedido ou falhar totalmente, verifique se ele é protegido por uma CER (região de execução restrita). Isso garante que o código seja executado em todos os casos, até mesmo uma operação de anulação de thread abrupta ou um descarregamento de <xref:System.AppDomain> abrupto.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781023"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833677"
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 
@@ -38,12 +38,12 @@ O método <xref:System.Linq.Enumerable.Union%2A> é definido para multisets como
 
 ### <a name="take-skip"></a>Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A>os <xref:System.Linq.Enumerable.Skip%2A> métodos e são bem definidos somente em *conjuntos ordenados*. A semântica de conjuntos ou de multisets não ordenados é indefinida.
+os métodos <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> são bem definidos somente em *conjuntos ordenados*. A semântica de conjuntos ou de multisets não ordenados é indefinida.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> possuem certas limitações quando são usados em consultas no SQL Server 2000. Para obter mais informações, consulte a entrada "ignorar e considerar exceções no SQL Server 2000" em [solução de problemas](troubleshooting.md).
 
-Devido a limitações na ordenação do SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , o tenta mover a ordenação do argumento desses métodos para o resultado do método. Por exemplo, considere a seguinte consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
+Devido a limitações na ordenação do SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta mover a ordenação do argumento desses métodos para o resultado do método. Por exemplo, considere a seguinte consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -94,15 +94,15 @@ O valor de `null` na ordenação é definido pelo SQL Server. O [!INCLUDE[vbtecd
 
 ### <a name="aggregates"></a>Agregações
 
-O método de agregação do operador de consulta padrão <xref:System.Linq.Enumerable.Sum%2A> avalia uma sequência vazia ou uma sequência que contém somente nulos como zero. No [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], a semântica de SQL permanece inalterada e <xref:System.Linq.Enumerable.Sum%2A> é avaliada `null` em vez de zero para uma sequência vazia ou para uma sequência que contém somente valores nulos.
+O método de agregação do operador de consulta padrão <xref:System.Linq.Enumerable.Sum%2A> avalia uma sequência vazia ou uma sequência que contém somente nulos como zero. Em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], a semântica de SQL permanece inalterada e <xref:System.Linq.Enumerable.Sum%2A> é avaliada como `null` em vez de zero para uma sequência vazia ou para uma sequência que contém somente valores nulos.
 
-As limitações do SQL em resultados intermediários se aplicam às agregações no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. As <xref:System.Linq.Enumerable.Sum%2A> quantidades de inteiros de 32 bits não são computadas usando resultados de 64 bits. Pode ocorrer estouro para uma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tradução de <xref:System.Linq.Enumerable.Sum%2A>, mesmo que a implementação do operador de consulta padrão não cause um estouro para a sequência na memória correspondente.
+As limitações do SQL em resultados intermediários se aplicam às agregações no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. O <xref:System.Linq.Enumerable.Sum%2A> de quantidades de inteiros de 32 bits não é computado usando resultados de 64 bits. Pode ocorrer estouro para uma conversão [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de <xref:System.Linq.Enumerable.Sum%2A>, mesmo que a implementação do operador de consulta padrão não cause um estouro para a sequência na memória correspondente.
 
 Da mesma forma, a conversão de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de valores inteiros do <xref:System.Linq.Enumerable.Average%2A> é computada como um `integer`, não como um `double`.
 
 ### <a name="entity-arguments"></a>Argumentos de entidade
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]habilita os <xref:System.Linq.Enumerable.GroupBy%2A> tipos de entidade a serem usados nos <xref:System.Linq.Enumerable.OrderBy%2A> métodos e. Na conversão desses operadores, o uso de um argumento de um tipo é considerado ser o equivalente a especificar todos os membros desse tipo. Por exemplo, o código a seguir é equivalente:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permite que os tipos de entidade sejam usados nos métodos <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A>. Na conversão desses operadores, o uso de um argumento de um tipo é considerado ser o equivalente a especificar todos os membros desse tipo. Por exemplo, o código a seguir é equivalente:
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -121,17 +121,17 @@ A igualdade dos argumentos é necessária na implementação dos seguintes méto
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]dá suporte a igualdade e comparação para argumentos *simples* , mas não para argumentos que contenham sequências ou. Um argumento simples é um tipo que pode ser mapeado para uma linha SQL. Uma projeção de um ou mais tipos de entidade, que podem ser determinados estaticamente por não conterem uma sequência, é considerada um argumento simples.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte a igualdade e comparação para argumentos *simples* , mas não para argumentos que contenham sequências. Um argumento simples é um tipo que pode ser mapeado para uma linha SQL. Uma projeção de um ou mais tipos de entidade, que podem ser determinados estaticamente por não conterem uma sequência, é considerada um argumento simples.
 
-Os seguintes são exemplos de argumentos simples:
+Veja a seguir exemplos de argumentos simples:
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-Os seguintes são exemplos de argumentos que não são simples (hierárquicos).
+Veja a seguir exemplos de argumentos não-simples (hierárquicos):
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Conversão de função do Visual Basic
 
@@ -158,7 +158,7 @@ Métodos de conversão:
 
 ### <a name="inheritance-mapping-restrictions"></a>Restrições de mapeamento de herança
 
-Para obter mais informações, confira [Como: Mapear hierarquias](how-to-map-inheritance-hierarchies.md)de herança.
+Para obter mais informações, confira [Como: Mapeie hierarquias de herança @ no__t-0.
 
 ### <a name="inheritance-in-queries"></a>Herança em consultas
 
@@ -198,7 +198,7 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não dá s
 
 ## <a name="sql-server-2000-support"></a>Suporte do SQL Server 2000
 
-As limitações a seguir SQL Server 2000 (em comparação com Microsoft SQL Server 2005 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ) afetam o suporte.
+As limitações a seguir SQL Server 2000 (em comparação com Microsoft SQL Server 2005) afetam o suporte a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operadores Cross Apply e Outer Apply
 
@@ -208,13 +208,13 @@ O `Cross Apply` e o `Outer Apply` são gerados para navegações de relacionamen
 
 ### <a name="text--ntext"></a>text/ntext
 
-Os tipos `text`  /  dedados /  nãopodemserusadosemdeterminadasoperaçõesdeconsulta,quetêmsuportedoMicrosoftSQLServer2005.`nvarchar(max)` `varchar(max)` `ntext`
+Os tipos de dados `text` @ no__t-1 @ no__t-2 não podem ser usados em determinadas operações de consulta em relação a `varchar(max)` @ no__t-4 @ no__t-5, que têm suporte do Microsoft SQL Server 2005.
 
 Nenhuma resolução está disponível para essa limitação. Especificamente, você não pode usar `Distinct()` em resultados que contêm membros que são mapeados para colunas `text` ou `ntext`.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamento disparado por consultas aninhadas
 
-SQL Server o associador 2000 (por meio do SP4) tem algumas idiossincrasias disparadas por consultas aninhadas. O conjunto de consultas SQL que dispara essas idiossincrasias não está bem definido. Por esse motivo, você não pode definir o conjunto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de consultas que podem causar SQL Server exceções.
+SQL Server o associador 2000 (por meio do SP4) tem algumas idiossincrasias disparadas por consultas aninhadas. O conjunto de consultas SQL que dispara essas idiossincrasias não está bem definido. Por esse motivo, você não pode definir o conjunto de consultas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que podem causar SQL Server exceções.
 
 ### <a name="skip-and-take-operators"></a>Operadores Skip e Take
 
@@ -232,7 +232,7 @@ A materialização cria objetos CLR das linhas que são retornadas por uma ou ma
 
   - Conversões de tipos em projeções
 
-- Os métodos que seguem <xref:System.Linq.Enumerable.AsEnumerable%2A> o método são *executados localmente*. Esse método não provoca uma execução imediata.
+- Os métodos que seguem o método <xref:System.Linq.Enumerable.AsEnumerable%2A> são *executados localmente*. Esse método não provoca uma execução imediata.
 
 - Você pode usar `struct` como o tipo de retorno de um resultado de consulta ou como um membro do tipo de resultado. As entidades precisam ser classes. Tipos anônimos são materializados como instâncias de classe, mas structs nomeados (não entidades) podem ser usados na projeção.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895264"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835258"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -22,19 +22,19 @@ Este tópico lista os nomes dos principais recursos para cada versão do Visual 
 ## <a name="current-version"></a>Versão atual
 
 Visual Basic 16,0/Visual Studio 2019 versão 16,0  
-Para obter novos recursos, consulte [Visual Basic 16,0](#visual-basic-160)
+Para obter novos recursos, consulte [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versões anteriores
 
-Visual Basic 15.8 / Visual Studio 2017 Versão 15.8 Para novos recursos, confira [Visual Basic 15.8](#visual-basic-158)
+Visual Basic 15,8/Visual Studio 2017 versão 15,8 para novos recursos, consulte [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15.5 / Visual Studio 2017 Versão 15.5 Para novos recursos, confira [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15,5/Visual Studio 2017 versão 15,5 para novos recursos, consulte [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15.3 / Visual Studio 2017 Version 15.3 Para novos recursos, confira [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15,3/Visual Studio 2017 versão 15,3 para novos recursos, consulte [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017 / Visual Studio 2017 Para novos recursos, confira [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017/Visual Studio 2017 para obter novos recursos, consulte [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic / Visual Studio 2015 Para novos recursos, confira [Visual Basic 14](#visual-basic-14)
+Visual Basic/Visual Studio 2015 para obter novos recursos, consulte o [Visual Basic 14](#visual-basic-14).
 
 Visual Basic / Visual Studio 2013 Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
 

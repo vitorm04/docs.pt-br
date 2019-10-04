@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Compreenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo de API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676573"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834360"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -203,7 +203,7 @@ Você envia um comando a um único destinatário; você não publica um comando.
 
 Um comando é implementado com uma classe que contém campos de dados ou coleções com todas as informações necessárias para executar esse comando. Um comando é um tipo especial de DTO (Objeto de Transferência de Dados), usado especificamente para solicitar alterações ou transações. O próprio comando baseia-se estritamente nas informações necessárias para processar o comando e nada mais.
 
-O exemplo a seguir mostra a classe CreateOrderCommand simplificada. Este é um comando imutável que é usado no microsserviço de ordenação em eShopOnContainers.
+O exemplo a seguir mostra a classe `CreateOrderCommand` simplificada. Este é um comando imutável que é usado no microsserviço de ordenação em eShopOnContainers.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ O exemplo a seguir mostra a classe CreateOrderCommand simplificada. Este é um c
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -287,7 +287,7 @@ Como uma característica adicional, os comandos são imutáveis, porque o uso es
 
 Lembre-se de que se você pretende ou espera que os comandos passem por um processo de serialização/desserialização, as propriedades devem ter um setter privado e o atributo `[DataMember]` (ou `[JsonProperty]`), caso contrário, o desserializador não consegue reconstruir o objeto no destino com os valores necessários.
 
-Por exemplo, a classe de comando para a criação de um pedido é, provavelmente, semelhante em relação aos dados para o pedido que você deseja criar, mas é provável que você não precise dos mesmos atributos. Por exemplo, a CreateOrderCommand não tem uma ID de pedido, porque o pedido ainda não foi criado.
+Por exemplo, a classe de comando para a criação de um pedido é, provavelmente, semelhante em relação aos dados para o pedido que você deseja criar, mas é provável que você não precise dos mesmos atributos. Por exemplo, `CreateOrderCommand` não tem uma ID de pedido, porque a ordem ainda não foi criada.
 
 Muitas classes de comando podem ser simples, exigindo apenas alguns campos de algum estado que tenha que ser alterado. Esse seria o caso se você estivesse apenas alterando o status de um pedido de "em processo" para "pago" ou "enviado", usando um comando semelhante ao seguinte:
 
@@ -335,7 +335,7 @@ O ponto importante aqui é que, quando um comando está sendo processado, toda a
 
 Quando manipuladores de comandos se tornam complexos, com muita lógica, começam a ficar parecidos com código. Examine-os e, se você encontrar lógica de domínio, refatore o código para mover esse comportamento de domínio para os métodos dos objetos de domínio (a raiz de agregação e a entidade filho).
 
-Como um exemplo de uma classe manipuladora de comandos, o código a seguir mostra a mesma classe CreateOrderCommandHandler que você viu no início deste capítulo. Nesse caso, queremos realçar o método Handle e as operações com os objetos/agregações do modelo de domínio.
+Como exemplo de uma classe de manipulador de comando, o código a seguir mostra a mesma classe `CreateOrderCommandHandler` que você viu no início deste capítulo. Nesse caso, queremos realçar o método Handle e as operações com os objetos/agregações do modelo de domínio.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -473,14 +473,17 @@ Outra boa razão para usar o padrão Mediador foi explicada por Jimmy Bogard dur
 
 > Acho que vale a pena mencionar testes aqui – eles oferecem uma janela consistente e adequada sobre o comportamento do seu sistema. Solicitação entra, resposta sai. Descobrimos que esse aspecto é bastante valioso na construção de testes de comportamentos consistentes.
 
-Primeiro, vamos dar uma olhada em um controlador de WebAPI de exemplo no local em que você usaria o objeto mediador. Se não estivesse usando o objeto mediador, você teria que injetar todas as dependências desse controlador, como um objeto do agente e outras coisas. Portanto, o construtor ficaria muito complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
+Primeiro, vamos dar uma olhada em um controlador de WebAPI de exemplo no local em que você usaria o objeto mediador. Se você não estiver usando o objeto mediador, precisará injetar todas as dependências para esse controlador, coisas como um objeto logger e outros. Portanto, o construtor ficaria muito complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
 
 ```csharp
 public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 Veja que o mediador fornece um construtor de controlador da API Web simples e eficiente. Além disso, dentro dos métodos do controlador, o código para enviar um comando para o objeto mediador tem quase uma linha:

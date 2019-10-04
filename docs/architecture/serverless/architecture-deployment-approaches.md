@@ -4,12 +4,12 @@ description: Um guia para diferentes maneiras como as arquiteturas empresariais 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577629"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834332"
 ---
 # <a name="architecture-deployment-approaches"></a>Abordagens de implantação de arquitetura
 
@@ -97,7 +97,7 @@ Os benefícios dos contêineres incluem:
 
 Um contêiner é executado em um host de contêiner (que, por sua vez, pode ser executado em um computador bare-metal ou uma máquina virtual). Vários contêineres ou instâncias dos mesmos contêineres podem ser executados em um único host. Para failover e resiliência reais, os contêineres devem ser dimensionados entre os hosts.
 
-Para obter mais informações sobre contêineres do Docker, consulte [o que é o Docker](../microservices/container-docker-introduction/docker-defined.md)?
+Para obter mais informações sobre contêineres do Docker, consulte [o que é o Docker](../microservices/container-docker-introduction/docker-defined.md).
 
 O gerenciamento de contêineres em hosts normalmente requer uma ferramenta de orquestração como kubernetes. Configurar e gerenciar soluções de orquestração pode adicionar sobrecarga e complexidade adicionais aos projetos. Felizmente, muitos provedores de nuvem fornecem serviços de orquestração por meio de soluções PaaS para simplificar o gerenciamento de contêineres.
 
@@ -141,11 +141,11 @@ Há um amplo espectro de opções disponíveis para arquitetura, incluindo uma a
 |**Ajustar Escala**|VM       |Instância |Aplicação      |Função  |
 |**Abstrai**|Hardware|Plataforma|Host do sistema operacional|Tempo de execução   |
 |**Unidade** |VM       |Projeto  |Image    |Código      |
-|**Tempo de Vida**|Meses|Dias para meses|Minutos a dias|Milissegundos a minutos|
+|**Tempo de Vida**|meses|Dias para meses|Minutos a dias|Milissegundos a minutos|
 |**Responsabilidade**|Aplicativos, dependências, tempo de execução e sistema operacional|Aplicativos e dependências|Aplicativos, dependências e tempo de execução|Função
 
 * A **escala** se refere à unidade usada para dimensionar o aplicativo
-* Os resumos referem-se à camada que é abstrata pela implementação
+* Os **resumos** referem-se à camada que é abstrata pela implementação
 * **Unidade** refere-se ao escopo do que está implantado
 * Tempo de **vida** refere-se ao tempo de execução típico de uma instância específica
 * **Responsabilidade** refere-se à sobrecarga para criar, implantar e manter o aplicativo

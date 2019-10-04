@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107073"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835306"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo
 
@@ -43,7 +43,7 @@ Os aplicativos .NET que usam informações de data e hora são muito diferentes 
 O .NET inclui os tipos <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan> e <xref:System.TimeZoneInfo>, que podem ser usados para criar aplicativos que funcionam com datas e horas.
 
 > [!NOTE]
-> Este tópico não aborda <xref:System.TimeZone> porque sua funcionalidade está quase totalmente incorporada à <xref:System.TimeZoneInfo> classe. Sempre que possível, use <xref:System.TimeZoneInfo> a classe em vez <xref:System.TimeZone> da classe.
+> Este tópico não discute <xref:System.TimeZone> porque sua funcionalidade está quase totalmente incorporada na classe <xref:System.TimeZoneInfo>. Sempre que possível, use a classe <xref:System.TimeZoneInfo> em vez da classe <xref:System.TimeZone>.
 
 ## <a name="the-datetime-structure"></a>A estrutura DateTime
 
@@ -90,7 +90,7 @@ Um valor <xref:System.DateTimeOffset> não está vinculado a um determinado fuso
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-A saída mostra que cada valor de data e hora nesse exemplo pode pertencer a pelo menos três fusos horários diferentes. O valor<xref:System.DateTimeOffset> de 6/10/2007 mostra que, se um valor de data e hora representa um horário de verão, seu deslocamento do UTC não corresponde necessariamente ao deslocamento base do UTC do fuso horário originário ou ao deslocamento do UTC encontrado no seu nome de exibição. Isso significa que, como um único valor <xref:System.DateTimeOffset> não está acoplado ao seu fuso horário, ele não pode refletir a transição de um fuso horário para e do horário de verão. Isso pode ser particularmente problemático quando a aritmética de data e hora é usada para manipular um valor <xref:System.DateTimeOffset>. (Para uma discussão sobre como realizar a aritmética de data e hora de uma maneira que leve em conta as regras de ajuste de um fuso horário, consulte [Executando operações aritméticas com datas e horas](../../../docs/standard/datetime/performing-arithmetic-operations.md).)
+A saída mostra que cada valor de data e hora nesse exemplo pode pertencer a pelo menos três fusos horários diferentes. O valor<xref:System.DateTimeOffset> de 6/10/2007 mostra que, se um valor de data e hora representa um horário de verão, seu deslocamento do UTC não corresponde necessariamente ao deslocamento base do UTC do fuso horário originário ou ao deslocamento do UTC encontrado no seu nome de exibição. Isso significa que, como um único valor <xref:System.DateTimeOffset> não está acoplado ao seu fuso horário, ele não pode refletir a transição de um fuso horário para e do horário de verão. Isso pode ser particularmente problemático quando a aritmética de data e hora é usada para manipular um valor <xref:System.DateTimeOffset>. Para ver uma discussão sobre como realizar a aritmética de data e hora de uma forma que considere as regras de ajuste de um fuso horário, consulte [Executando operações aritméticas com datas e horas](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>A estrutura TimeSpan
 
@@ -100,7 +100,7 @@ A estrutura <xref:System.TimeSpan> representa um intervalo de tempo. Seus dois u
 
 - Calcular o tempo decorrido. Por exemplo, a propriedade <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> retorna um valor <xref:System.TimeSpan> que reflete o intervalo de tempo decorrido desde a chamada de um método <xref:System.Diagnostics.Stopwatch> que começa a medir o tempo decorrido.
 
-Um <xref:System.TimeSpan> valor também pode ser usado como uma substituição para um <xref:System.DateTime> valor quando esse valor reflete uma hora sem referência a um dia específico. Esse uso é semelhante para as propriedades <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, que retornam um valor <xref:System.TimeSpan> que representa o tempo sem referência a uma data. Por exemplo, a estrutura <xref:System.TimeSpan> pode ser usada para refletir a abertura diária ou a hora de fechamento de uma loja ou ela pode ser usada para representar a hora em que qualquer evento regular ocorre.
+Um valor <xref:System.TimeSpan> também pode ser usado como uma substituição para um valor de <xref:System.DateTime> quando esse valor reflete uma hora sem referência a um dia específico. Esse uso é semelhante para as propriedades <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, que retornam um valor <xref:System.TimeSpan> que representa o tempo sem referência a uma data. Por exemplo, a estrutura <xref:System.TimeSpan> pode ser usada para refletir a abertura diária ou a hora de fechamento de uma loja ou ela pode ser usada para representar a hora em que qualquer evento regular ocorre.
 
 O exemplo a seguir define uma estrutura `StoreInfo` que inclui objetos <xref:System.TimeSpan> para armazenar a hora de abertura e fechamento da loja, bem como um objeto <xref:System.TimeZoneInfo> que representa o fuso horário da loja. A estrutura também inclui dois métodos, `IsOpenNow` e `IsOpenAt`, que indicam se a loja está aberta em um momento especificado pelo usuário, que se considera estar no fuso horário local.
 

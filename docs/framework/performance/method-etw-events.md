@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046380"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834547"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
@@ -36,7 +36,7 @@ Eventos de método do CLR são mais subdivididos no seguinte:
 
 ## <a name="clr-method-events"></a>Eventos de método do CLR
 
-A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)
+A tabela a seguir mostra a palavra-chave e o nível. Para obter mais informações, consulte [palavras-chave e níveis do ETW do CLR](clr-etw-keywords-and-levels.md).
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
@@ -45,7 +45,7 @@ A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informaç�
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Informativo (4)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Informativo (4)|
 
-A tabela a seguir mostra as informações do evento.
+A seguinte tabela mostra as informações do evento:
 
 |evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
@@ -54,7 +54,7 @@ A tabela a seguir mostra as informações do evento.
 |`MethodDCStart_V1`|137|Enumera métodos durante um encerramento inicial.|
 |`MethodDCEnd_V1`|138|Enumera métodos durante um encerramento final.|
 
-A tabela a seguir mostra os dados do evento.
+A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
@@ -74,7 +74,7 @@ A tabela a seguir mostra os dados do evento.
 
 Esses eventos são acionados apenas no provedor de encerramento. Eles significam o final de enumeração de método durante o encerramento inicial ou final. (Ou seja, eles são gerados quando a palavra-chave `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword` ou `AppDomainResourceManagementRundownKeyword` está habilitada.)
 
-A tabela a seguir mostra a palavra-chave e o nível.
+A seguinte tabela mostra a palavra-chave e o nível:
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
@@ -82,7 +82,7 @@ A tabela a seguir mostra a palavra-chave e o nível.
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Informativo (4)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Informativo (4)|
 
-A tabela a seguir mostra as informações do evento.
+A seguinte tabela mostra as informações do evento:
 
 |evento|ID do evento|Descrição|
 |-----------|--------------|----------------|
@@ -91,7 +91,7 @@ A tabela a seguir mostra as informações do evento.
 |`DCEndInit_V1`|148|Enviado antes do início da enumeração durante um encerramento final.|
 |`DCEndComplete_V1`|146|Enviado antes do término da enumeração durante um encerramento final.|
 
-A tabela a seguir mostra os dados do evento.
+A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
@@ -103,7 +103,7 @@ A tabela a seguir mostra os dados do evento.
 
 ## <a name="clr-method-verbose-events"></a>Eventos detalhados de método do CLR
 
-A tabela a seguir mostra a palavra-chave e o nível.
+A seguinte tabela mostra a palavra-chave e o nível:
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
@@ -112,7 +112,7 @@ A tabela a seguir mostra a palavra-chave e o nível.
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Detalhado (5)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Detalhado (5)|
 
-A tabela a seguir mostra as informações do evento.
+A seguinte tabela mostra as informações do evento:
 
 |evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
@@ -121,7 +121,7 @@ A tabela a seguir mostra as informações do evento.
 |`MethodDCStartVerbose_V1`|141|Enumera métodos durante um encerramento inicial.|
 |`MethodDCEndVerbose_V1`|142|Enumera métodos durante um encerramento final.|
 
-A tabela a seguir mostra os dados do evento.
+A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|
@@ -142,7 +142,7 @@ A tabela a seguir mostra os dados do evento.
 
 ## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted
 
-A tabela a seguir mostra a palavra-chave e o nível.
+A seguinte tabela mostra a palavra-chave e o nível:
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
@@ -151,13 +151,13 @@ A tabela a seguir mostra a palavra-chave e o nível.
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Detalhado (5)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Detalhado (5)|
 
-A tabela a seguir mostra as informações do evento.
+A seguinte tabela mostra as informações do evento:
 
 |evento|ID do evento|Descrição|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Gerado quando um método está sendo compilado por JIT.|
 
-A tabela a seguir mostra os dados do evento.
+A seguinte tabela mostra os dados do evento:
 
 |Nome do campo|Tipo de dados|Descrição|
 |----------------|---------------|-----------------|

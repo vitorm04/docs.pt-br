@@ -2,17 +2,17 @@
 title: Introdução ao C# – familiarize-se com as ferramentas de desenvolvimento
 description: Este artigo fornece uma introdução básica às ferramentas que você usará para desenvolver aplicativos C# e .NET no seu computador.
 ms.date: 10/23/2018
-ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850758"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834084"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Familiarize-se com as ferramentas de desenvolvimento .NET
 
 A primeira etapa para executar um tutorial em seu computador é configurar um ambiente de desenvolvimento.
-O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local em Mac, PC ou Linux.
+O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou MacOS.
 
 Como alternativa, você pode instalar o [SDK do .NET Core](https://dotnet.microsoft.com/download) e o [Visual Studio Code](https://code.visualstudio.com/).
 

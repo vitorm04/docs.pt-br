@@ -2,12 +2,12 @@
 title: Gerenciar ambientes de produção do Docker
 description: Saiba os principais pontos do gerenciamento de um ambiente de produção baseado em contêiner.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673463"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834502"
 ---
 # <a name="manage-production-docker-environments"></a>Gerenciar ambientes de produção do Docker
 
@@ -17,13 +17,13 @@ O gerenciamento e a orquestração de clusters é o processo de controlar um gru
 
 O Serviço de Contêiner fornece implantação rápida de soluções populares de orquestração e clustering de contêiner open-source. Ele utiliza imagens do Docker para garantir que os contêineres de aplicativo sejam totalmente portáteis. Com o Serviço de Contêiner, é possível implantar DC/OS (desenvolvido pela Mesosphere e o Apache Mesos) e clusters do Docker Swarm com modelos do Azure Resource Manager ou o portal do Azure para garantir que esses aplicativos possam ser dimensionados para milhares – até mesmo dezenas de milhares – de contêineres.
 
-Você implanta esses clusters usando Conjuntos de Escala de Máquina Virtual do Azure e tiram proveito das ofertas de rede e armazenamento do Azure. Para acessar o Serviço de Contêiner, você precisa de uma assinatura do Azure. O Serviço de Contêiner permite aproveitar os recursos empresariais do Azure e manter a portabilidade do aplicativo, até mesmo nas camadas de orquestração.
+Você implanta esses clusters usando conjuntos de dimensionamento de máquinas virtuais do Azure, e os clusters aproveitam as ofertas de rede e armazenamento do Azure. Para acessar o Serviço de Contêiner, você precisa de uma assinatura do Azure. O Serviço de Contêiner permite aproveitar os recursos empresariais do Azure e manter a portabilidade do aplicativo, até mesmo nas camadas de orquestração.
 
 A Tabela 6-1 lista as ferramentas de gerenciamento comuns relacionadas aos seus orquestradores, agendadores e à plataforma de clustering.
 
 **Tabela 6-1**. Ferramentas de gerenciamento do Docker
 
-| Ferramentas de gerenciamento | DESCRIÇÃO | Orquestradores relacionados |
+| Ferramentas de gerenciamento | Descrição | Orquestradores relacionados |
 |------------------|-------------|-----------------------|
 | [Azure Monitor para Contêineres](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Ferramenta de gerenciamento do Kubernetes dedicada ao Azure | AKS (Serviços do Kubernetes do Azure) |
 | [Interface do usuário da Web do Kubernetes (painel)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | A ferramenta de gerenciamento do Kubernetes pode monitorar e gerenciar o cluster local do Kubernetes | AKS (Serviço de Kubernetes do Azure)<br/>Kubernetes local |
@@ -34,7 +34,7 @@ A Tabela 6-1 lista as ferramentas de gerenciamento comuns relacionadas aos seus 
 
 Outra opção para gerenciamento e implantação de cluster é o Azure Service Fabric. O [Service Fabric](https://azure.microsoft.com/services/service-fabric/) é uma plataforma de microsserviços da Microsoft que conta com orquestração de contêineres e modelos de programação para desenvolvedores para criar aplicativos de microsserviço altamente escalonáveis. O Service Fabric é compatível com os contêineres do Docker no Linux e no Windows e pode ser executado em servidores de ambos os sistemas operacionais.
 
-Confira as ferramentas de gerenciamento do Service Fabric:
+A seguir estão Service Fabric ferramentas de gerenciamento:
 
 - [Portal do Azure para Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) para operações relacionadas a clusters (criar/atualizar/excluir) ou configuração de infraestrutura (VMs, balanceador de carga, rede etc.)
 

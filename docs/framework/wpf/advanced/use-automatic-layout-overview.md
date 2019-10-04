@@ -5,30 +5,30 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d4a0fd819d08fdd936dd1ef35e8cd8c00947f9e0
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662674"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834666"
 ---
 # <a name="use-automatic-layout-overview"></a>Visão geral do uso de layout automático
 
-Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos com localizáveis [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. No passado, a localização de uma interface do usuário era um processo demorado. A interface do usuário foi adaptado para cada idioma necessário um ajuste pixel por pixel. Hoje, com o design e o direito de padrões de codificação, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser criado para que os localizadores tenham menos redimensionamento e reposicionamento. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design do aplicativo.
+Este tópico apresenta diretrizes para desenvolvedores sobre como gravar aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] com @no__t localizável-1. No passado, a localização de uma interface do usuário era um processo demorado. Cada idioma para o qual a interface do usuário foi adaptada exigia um ajuste de pixel por pixel. Hoje, com o design certo e com os padrões de codificação corretos, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser construído para que os localizadores tenham menos redimensionamento e reposicionamento para fazer. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando o design de aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="advantages_of_autolayout"></a>
 
 ## <a name="advantages-of-using-automatic-layout"></a>Vantagens de usar o layout automático
 
-Porque o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de apresentação é poderoso e flexível, ele fornece a capacidade de dispor os elementos em um aplicativo que pode ser ajustada para atender às necessidades de diferentes idiomas. A lista a seguir destaca algumas das vantagens do layout automático.
+Como o sistema de apresentação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é poderoso e flexível, ele fornece a capacidade de layout de elementos em um aplicativo que pode ser ajustado para atender aos requisitos de diferentes idiomas. A lista a seguir destaca algumas das vantagens do layout automático.
 
-- Interface do usuário exibe bem em qualquer idioma.
+- A interface do usuário é bem exibida em qualquer idioma.
 
 - Reduz a necessidade de reajustar a posição e o tamanho dos controles após o texto ser traduzido.
 
 - Reduz a necessidade de reajustar o tamanho da janela.
 
-- Layout da interface do usuário é renderizada corretamente em qualquer idioma.
+- O layout da interface do usuário é renderizado corretamente em qualquer idioma.
 
 - A localização pode ser reduzida a tal ponto que é pouco mais do que uma tradução de cadeia de caracteres.
 
@@ -52,17 +52,17 @@ O gráfico a seguir mostra a saída dos exemplos de código:
 
 ## <a name="automatic-layout-and-coding-standards"></a>Layout automático e padrões de codificação
 
-Usando a abordagem de layout automático requer um conjunto de padrões de design e codificação e as regras para produzir uma interface do usuário completamente localizável. As diretrizes a seguir ajudarão na sua codificação de layout automático.
+O uso da abordagem de layout automático requer um conjunto de padrões de codificação e design e regras para produzir uma interface do usuário totalmente localizável. As diretrizes a seguir ajudarão na sua codificação de layout automático.
 
-**Não use posições absolutas**
+**Não usar posições absolutas**
 
 - Não use <xref:System.Windows.Controls.Canvas> porque ele posiciona elementos absolutamente.
 
-- Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, e <xref:System.Windows.Controls.Grid> para posicionar controles.
+- Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel> e <xref:System.Windows.Controls.Grid> para posicionar controles.
 
-Para uma discussão sobre diversos tipos de painéis, consulte [visão geral de painéis](../controls/panels-overview.md).
+Para obter uma discussão sobre vários tipos de painéis, consulte [visão geral dos painéis](../controls/panels-overview.md).
 
-**Não defina um tamanho fixo para uma janela**
+**Não definir um tamanho fixo para uma janela**
 
 - Use <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Por exemplo:
 
@@ -70,17 +70,17 @@ Para uma discussão sobre diversos tipos de painéis, consulte [visão geral de 
 
 **Adicionar um <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
-- Adicionar um <xref:System.Windows.FrameworkElement.FlowDirection%2A> ao elemento raiz do seu aplicativo.
+- Adicione um <xref:System.Windows.FrameworkElement.FlowDirection%2A> ao elemento raiz do seu aplicativo.
 
-  O WPF fornece uma maneira conveniente de dar suporte a horizontais, bidirecionais e layouts verticais. No framework de apresentação, o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade pode ser usada para definir o layout. Os padrões de direção de fluxo são:
+  O WPF fornece uma maneira conveniente para dar suporte a layouts horizontais, bidirecionais e verticais. Na estrutura de apresentação, a propriedade <xref:System.Windows.FrameworkElement.FlowDirection%2A> pode ser usada para definir o layout. Os padrões de direção de fluxo são:
 
-  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — layout horizontal para latim, Leste Asiático e assim por diante.
+  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) – layout horizontal para latim, leste asiático e assim por diante.
 
-  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) — bidirecional para árabe, hebraico e assim por diante.
+  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) – bidirecional para árabe, Hebraico e assim por diante.
 
-**Use fontes de composição em vez de fontes físicas**
+**Usar fontes compostas em vez de fontes físicas**
 
-- Com fontes compostas, o <xref:System.Windows.Controls.Control.FontFamily%2A> propriedade não precisa ser localizada.
+- Com fontes compostas, a propriedade <xref:System.Windows.Controls.Control.FontFamily%2A> não precisa ser localizada.
 
 - Os desenvolvedores podem usar uma das seguintes fontes ou criar suas próprias.
 
@@ -90,32 +90,32 @@ Para uma discussão sobre diversos tipos de painéis, consulte [visão geral de 
 
 **Adicionar XML: lang**
 
-- Adicione a `xml:lang` atributo no elemento raiz da sua interface do usuário, como `xml:lang="en-US"` para um aplicativo em inglês.
+- Adicione o atributo `xml:lang` no elemento raiz da interface do usuário, como `xml:lang="en-US"` para um aplicativo em inglês.
 
-- Como usam fontes de composição `xml:lang` para determinar qual fonte utilizar, defina essa propriedade para dar suporte a cenários multilíngues.
+- Como as fontes compostas usam `xml:lang` para determinar qual fonte usar, defina essa propriedade para dar suporte a cenários multilíngues.
 
 <a name="autolay_grids"></a>
 
 ## <a name="automatic-layout-and-grids"></a>Layout automático e grades
 
-O <xref:System.Windows.Controls.Grid> elemento, é útil para layout automático porque ele permite que um desenvolvedor posicione elementos. Um <xref:System.Windows.Controls.Grid> controle é capaz de distribuir o espaço disponível entre seus elementos filhos, usando uma disposição de linha e coluna. Os elementos de interface do usuário podem abranger várias células, e é possível que haja grades dentro de grades. As grades são úteis porque permitem que você crie e posicione a interface do usuário complexa. O exemplo a seguir demonstra o uso de uma grade para posicionar alguns botões e o texto. Observe que a altura e largura das células são definidas como <xref:System.Windows.GridUnitType.Auto>; portanto, a célula que contém o botão com uma imagem é ajustada para ajustar a imagem.
+O elemento <xref:System.Windows.Controls.Grid>, é útil para layout automático porque permite que um desenvolvedor Posicione elementos. Um controle <xref:System.Windows.Controls.Grid> é capaz de distribuir o espaço disponível entre seus elementos filho, usando uma organização de coluna e linha. Os elementos da interface do usuário podem abranger várias células e é possível ter grades dentro de grades. As grades são úteis porque permitem que você crie e posicione uma interface do usuário complexa. O exemplo a seguir demonstra o uso de uma grade para posicionar alguns botões e o texto. Observe que a altura e a largura das células são definidas como <xref:System.Windows.GridUnitType.Auto>; Portanto, a célula que contém o botão com uma imagem é ajustada para se ajustar à imagem.
 
 [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]
 
 O gráfico a seguir mostra a grade produzida pelo código anterior.
 
-![Exemplo de grade](./media/glob-grid.png "glob_grid") grade
+Grade de ![exemplo]de grade(./media/glob-grid.png "glob_grid")
 
 <a name="autolay_grids_issharedsizescope"></a>
 
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Layout automático e grades que utilizam a propriedade IsSharedSizeScope
 
-Um <xref:System.Windows.Controls.Grid> elemento é útil em aplicativos localizáveis para criar controles que são ajustadas para que o conteúdo. No entanto, às vezes, você deseja que os controles mantenham um tamanho específico, independentemente do conteúdo. Por exemplo, se tiver os botões "OK", "Cancelar" e "Procurar", provavelmente você não desejará que os botões sejam redimensionados para se ajustarem ao conteúdo. Nesse caso, o <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> propriedade anexada é útil para compartilhar o mesmo tamanho entre vários elementos da grade. O exemplo a seguir demonstra como compartilhar dados entre vários de tamanho de linha e coluna <xref:System.Windows.Controls.Grid> elementos.
+Um elemento <xref:System.Windows.Controls.Grid> é útil em aplicativos localizáveis para criar controles que se ajustam para ajustar o conteúdo. No entanto, às vezes, você deseja que os controles mantenham um tamanho específico, independentemente do conteúdo. Por exemplo, se tiver os botões "OK", "Cancelar" e "Procurar", provavelmente você não desejará que os botões sejam redimensionados para se ajustarem ao conteúdo. Nesse caso, a propriedade anexada <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> é útil para compartilhar o mesmo dimensionamento entre vários elementos de grade. O exemplo a seguir demonstra como compartilhar dados de dimensionamento de coluna e linha entre vários elementos <xref:System.Windows.Controls.Grid>.
 
 [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]
 
 > [!NOTE]
-> Para o exemplo de código completo, consulte [compartilhar propriedades de dimensionamento entre grades](../controls/how-to-share-sizing-properties-between-grids.md)
+> Para obter o exemplo de código completo, consulte [compartilhar Propriedades de dimensionamento entre grades](../controls/how-to-share-sizing-properties-between-grids.md).
 
 ## <a name="see-also"></a>Consulte também
 

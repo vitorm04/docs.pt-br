@@ -2,12 +2,12 @@
 title: 'Como: Atualização dinâmica'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972086"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834715"
 ---
 # <a name="how-to-dynamic-update"></a>Como: Atualização dinâmica
 Este tópico descreve as etapas básicas necessárias para criar e atualizar dinamicamente a configuração de roteamento. Neste exemplo, a configuração de roteamento inicial é obtida do arquivo de configuração e roteia todas as mensagens para o serviço de calculadora regularCalc; no entanto, ele é posteriormente atualizado programaticamente para alterar o ponto de extremidade de destino do serviço roundingCalc.  
@@ -163,7 +163,8 @@ Este tópico descreve as etapas básicas necessárias para criar e atualizar din
     > Como o método para fornecer um novo RoutingConfiguration está contido na extensão de serviço RoutingExtension, novos objetos RoutingConfiguration podem ser fornecidos em qualquer lugar no modelo de extensibilidade do WCF que tem ou pode obter uma referência para o ServiceHost ou Extensões (como em outra imextension).
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma lista completa do aplicativo de console usado neste exemplo.  
+
+A seguir está uma lista completa do aplicativo de console usado neste exemplo:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma lista completa do arquivo de configuração usado neste exemplo.  
+ 
+A seguir está uma lista completa do arquivo de configuração usado neste exemplo:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,4 +300,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serviços de roteamento](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Serviços de roteamento](../samples/routing-services.md)

@@ -2,12 +2,12 @@
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 description: Aprenda as etapas do "loop externo" do fluxo de trabalho de DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673703"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834570"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 
@@ -104,7 +104,7 @@ Portanto, após criar os contêineres de aplicativo no pipeline de CI, você tam
 
 Se estiver usando um único host, você poderá usar comandos do Docker, como docker-compose, para compilar e implantar contêineres relacionados ao testar e à validação do ambiente do Docker em uma única VM. No entanto, se estiver trabalhando com um cluster de orquestrador, como Docker Swarm, Kubernetes ou DC/OS, você precisará implantar seus contêineres por meio de um mecanismo ou orquestrador diferente, dependendo do cluster/agendador selecionado.
 
-A seguir, temos diversos tipos de testes que podem ser executados em contêineres do Docker:
+Estes são vários tipos de testes que podem ser executados em contêineres do Docker:
 
 - Testes de unidade para contêineres do Docker
 

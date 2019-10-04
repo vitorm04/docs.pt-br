@@ -2,12 +2,12 @@
 title: 'Como: Gravar consultas em XML em namespaces (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709870"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835003"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Como: Gravar consultas em XML em namespaces (Visual Basic)
 Para escrever uma consulta em XML que está em um namespace, você deve usar os objetos <xref:System.Xml.Linq.XName> que têm o namespace correto.  
@@ -45,7 +45,7 @@ End Module
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 1  
 2  
 3  
@@ -82,7 +82,7 @@ End Module
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 1  
 2  
 3  

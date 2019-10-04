@@ -2,12 +2,12 @@
 title: Criar um serviço WCF habilitado para AJAX e um cliente ASP.NET no Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053688"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834782"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Como: Criar um serviço WCF habilitado para AJAX e um cliente ASP.NET que acessa o serviço
 
@@ -104,11 +104,11 @@ Este tópico mostra como usar o Visual Studio para criar um serviço de Windows 
 
 ## <a name="run-the-program"></a>Execute o programa
 
-Verifique se o *WebForm1. aspx* tem foco e pressione o botão **Iniciar** para iniciar o cliente Web. O botão tem um triângulo verde e diz algo como **IIS Express (Microsoft Edge)** . Ou, você pode pressionar **F5**. Clique no botão **preço de 3 pizzas** para gerar a saída esperada de "3,75".
+Verifique se o *WebForm1. aspx* tem foco e pressione o botão **Iniciar** para iniciar o cliente Web. O botão tem um triângulo verde e diz algo como **IIS Express (Microsoft Edge)** . Ou, você pode pressionar <kbd>F5</kbd>. Clique no botão **preço de 3 pizzas** para gerar a saída esperada de "3,75".
 
-## <a name="example-code"></a>Código de exemplo
+## <a name="example"></a>Exemplo
 
-A seguir está o código completo no arquivo *CostService.svc.cs* :
+Este é o código completo no arquivo *CostService.svc.cs* :
 
 ```csharp
 using System.ServiceModel;

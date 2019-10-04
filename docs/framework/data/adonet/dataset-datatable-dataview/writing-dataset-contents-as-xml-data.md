@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: bf73adff89ca5cad3a71239421ac826105a387cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9a63e79b2fce137ba9d21db861850a471cb42b9f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785225"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833962"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Gravando o conteúdo do DataSet como dados XML
 No ADO.NET, você pode gravar a representação XML de um <xref:System.Data.DataSet>, com ou sem seu esquema. Se as informações de esquema forem embutidas no XML embutido, elas serão gravadas através da linguagem de definição de esquema XML (XSD). O esquema contém as definições de tabela do <xref:System.Data.DataSet>, bem como as definições de relação e de restrição.  
@@ -39,9 +39,9 @@ string xmlDS = custDS.GetXml();
 |**WriteSchema**|Grava o conteúdo atual do <xref:System.Data.DataSet> como dados XML com a estrutura relacional como um esquema XML embutido.|  
 |**DiffGram**|Grava todo o <xref:System.Data.DataSet> como um DiffGram, incluindo valores originais e atuais. Para obter mais informações, consulte [DiffGrams](diffgrams.md).|  
   
- Ao escrever uma representação XML de um <xref:System.Data.DataSet> que contenha objetos **DataRelation** , você provavelmente desejará que o XML resultante tenha as linhas filhas de cada relação aninhada em seus elementos pai relacionados. Para fazer isso, defina a propriedade **aninhada** da **relação** como **true** quando você adicionar <xref:System.Data.DataSet>a **DataRelation** ao. Para obter mais informações, consulte [aninhando DataRelations](nesting-datarelations.md).  
+ Ao gravar uma representação XML de um <xref:System.Data.DataSet> que contém objetos **DataRelation** , você provavelmente desejará que o XML resultante tenha as linhas filhas de cada relação aninhada em seus elementos pai relacionados. Para fazer isso, defina a propriedade **aninhada** da **relação** como **true** quando você adicionar a **DataRelation** ao <xref:System.Data.DataSet>. Para obter mais informações, consulte [aninhando DataRelations](nesting-datarelations.md).  
   
- A seguir, há dois exemplos de como gravar a representação XML de um <xref:System.Data.DataSet> em um arquivo. O primeiro exemplo passa o nome do arquivo para o XML resultante como uma cadeia de caracteres para **WriteXml**. O segundo exemplo passa um objeto **System. IO. StreamWriter** .  
+ Veja a seguir dois exemplos de como gravar a representação XML de um <xref:System.Data.DataSet> em um arquivo. O primeiro exemplo passa o nome do arquivo para o XML resultante como uma cadeia de caracteres para **WriteXml**. O segundo exemplo passa um objeto **System. IO. StreamWriter** .
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  

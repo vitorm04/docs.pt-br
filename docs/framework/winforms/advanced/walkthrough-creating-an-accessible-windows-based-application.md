@@ -9,12 +9,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: b8f0c7c4584505d382e78aca68e2e99c9fa7748f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306334"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834627"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Passo a passo: criar um aplicativo baseado no Windows acessível
 
@@ -46,7 +46,7 @@ A ênfase deste passo a passo não é no código para um sistema de pedidos de v
 
 #### <a name="to-begin-making-the-application"></a>Para começar a criar o aplicativo
 
-- Crie um novo aplicativo do Windows em Visual Basic ou C#Visual. Nomeie o projeto como **PizzaOrder**. (Para obter detalhes, consulte [Criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects)).
+- Crie um novo aplicativo do Windows em Visual Basic ou C#Visual. Nomeie o projeto como **PizzaOrder**. Para obter detalhes, consulte [criando novas soluções e projetos](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="adding-the-controls-to-the-form"></a>Adicionando os controles ao formulário
 

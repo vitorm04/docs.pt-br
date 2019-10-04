@@ -3,14 +3,14 @@ title: Migrar serviços do WCF duplex para gRPC-gRPC para desenvolvedores do WCF
 description: Saiba como migrar várias formas de serviço de duplex do WCF para serviços de streaming do gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 06ac784a31df43fd270f7ef0475bcdc282efad8f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 525dc3006c45f773242ab08b112dba72087a2e3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184333"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834515"
 ---
-# <a name="migrate-wcf-duplex-services-to-grpc"></a>Migrar serviços de duplex do WCF para o gRPC
+# <a name="migrate-wcf-duplex-services-to-grpc"></a>Migrar serviços duplex do WCF para gRPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -244,7 +244,7 @@ static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, Can
 > [!TIP]
 > A seção sobre [bibliotecas de cliente](client-libraries.md#iobservable) no final deste capítulo analisa como adicionar um método e classes de extensão para encapsular `IAsyncStreamReader<T>` um `IObservable<T>` para desenvolvedores usando padrões de programação reativos.
 
-Novamente, tenha cuidado para capturar exceções aqui devido à possibilidade de falha de rede, bem como a <xref:System.OperationCanceledException> que será inevitavelmente gerada porque o código está usando um <xref:System.Threading.CancellationToken> para interromper o loop. O `RpcException` tipo tem muitas informações úteis sobre erros de tempo de execução gRPC, incluindo `StatusCode`o. Para obter mais informações, consulte [ *tratamento de erros* no capítulo 4](error-handling.md)
+Novamente, tenha cuidado para capturar exceções aqui devido à possibilidade de falha de rede, bem como a <xref:System.OperationCanceledException> que será inevitavelmente gerada porque o código está usando um <xref:System.Threading.CancellationToken> para interromper o loop. O `RpcException` tipo tem muitas informações úteis sobre erros de tempo de execução gRPC, incluindo `StatusCode`o. Para obter mais informações, consulte [ *tratamento de erros* no capítulo 4](error-handling.md).
 
 ## <a name="bidirectional-streaming"></a>Streaming bidirecional
 

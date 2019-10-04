@@ -3,12 +3,12 @@ title: Controle de versão de C# – Guia de C#
 description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699919"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834053"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -110,5 +110,4 @@ Derived Method One: Derived Method One
 
 O modificador `override` é avaliado em tempo de compilação e o compilador gerará um erro se não encontrar um membro virtual para substituir.
 
-Seu conhecimento sobre as técnicas discutidas, bem como sua compreensão das situações em que usá-las, farão muita diferença para facilitar a transição entre versões de uma biblioteca.
- 
+Seu conhecimento das técnicas discutidas e sua compreensão das situações em que elas serão usadas, será um longo caminho para facilitar a transição entre as versões de uma biblioteca.
