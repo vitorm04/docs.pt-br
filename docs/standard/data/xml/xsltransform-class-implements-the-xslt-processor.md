@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c36ff35622ae5c9cddf4ffd1ebd0a60feb348a8
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 8cc3eb3e3f147d8ed15587946af743c96739a9b1
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170887"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956861"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>A classe XslTransform implementa do processador XSLT
 
@@ -180,9 +180,9 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-O exemplo usa os arquivos de library.xml e de print_root.xsl como entrada e saída o seguinte no console.
+O exemplo usa os arquivos library. xml e print_root. xsl como entrada e gera o seguinte para o console:
 
-```
+```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
 Root node is book.
 ```

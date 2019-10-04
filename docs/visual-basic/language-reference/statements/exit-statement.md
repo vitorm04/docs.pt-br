@@ -12,82 +12,88 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638110"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956943"
 ---
 # <a name="exit-statement-visual-basic"></a>Instrução Exit (Visual Basic)
-Sai de um procedimento ou bloco e transfere o controle imediatamente para a instrução após a chamada de procedimento ou a definição de bloco.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-Exit { Do | For | Function | Property | Select | Sub | Try | While }  
-```  
-  
-## <a name="statements"></a>Instruções  
+
+Sai de um procedimento ou bloco e transfere o controle imediatamente para a instrução após a chamada de procedimento ou a definição de bloco.
+
+## <a name="syntax"></a>Sintaxe
+
+```vb
+Exit { Do | For | Function | Property | Select | Sub | Try | While }
+```
+
+## <a name="statements"></a>Instruções
+
  `Exit Do`  
- Sai imediatamente o `Do` loop no qual ele aparece. A execução continua com a instrução após a `Loop` instrução. `Exit Do` pode ser usado somente dentro de um `Do` loop. Quando usado dentro aninhados `Do` loops, `Exit Do` sai do loop interno e transfere o controle para o próximo nível mais alto de aninhamento.  
-  
+ Sai imediatamente do loop `Do` no qual ele aparece. A execução continua com a instrução após a instrução `Loop`. `Exit Do` pode ser usado somente dentro de um loop `Do`. Quando usado em loops `Do` aninhados, `Exit Do` sai do loop mais interno e transfere o controle para o próximo nível mais alto de aninhamento.
+
  `Exit For`  
- Sai imediatamente o `For` loop no qual ele aparece. A execução continua com a instrução após a `Next` instrução. `Exit For` pode ser usado somente dentro de um `For`... `Next` ou `For Each`... `Next` loop. Quando usado dentro aninhados `For` loops, `Exit For` sai do loop interno e transfere o controle para o próximo nível mais alto de aninhamento.  
-  
+ Sai imediatamente do loop `For` no qual ele aparece. A execução continua com a instrução após a instrução `Next`. `Exit For` só pode ser usado dentro de um loop `For`... `Next` ou `For Each`... `Next`. Quando usado em loops `For` aninhados, `Exit For` sai do loop mais interno e transfere o controle para o próximo nível mais alto de aninhamento.
+
  `Exit Function`  
- Sai imediatamente o `Function` procedimento no qual ele aparece. A execução continua com a instrução após a instrução que chamou o `Function` procedimento. `Exit Function` pode ser usado somente dentro de um `Function` procedimento.  
-  
- Para especificar um valor de retorno, você pode atribuir o valor para o nome da função em uma linha antes do `Exit Function` instrução. Para atribuir o valor de retorno e a função em uma instrução de saída, em vez disso, você pode usar o [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md).  
-  
+ Sai imediatamente do procedimento `Function` no qual ele aparece. A execução continua com a instrução após a instrução que chamou o procedimento `Function`. `Exit Function` só pode ser usado dentro de um procedimento `Function`.
+
+ Para especificar um valor de retorno, você pode atribuir o valor ao nome da função em uma linha antes da instrução `Exit Function`. Para atribuir o valor de retorno e sair da função em uma instrução, em vez disso, você pode usar a [instrução return](return-statement.md).
+
  `Exit Property`  
- Sai imediatamente o `Property` procedimento no qual ele aparece. A execução continua com a instrução que chamou o `Property` procedimento, ou seja, com a instrução solicitando ou definindo o valor da propriedade. `Exit Property` pode ser usado somente dentro de uma propriedade `Get` ou `Set` procedimento.  
-  
- Para especificar um valor de retorno em uma `Get` procedimento, você pode atribuir o valor para o nome da função em uma linha antes do `Exit Property` instrução. Para atribuir o valor de retorno e a saída a `Get` procedimento em uma instrução, você pode usar o `Return` instrução.  
-  
- Em um `Set` procedimento, o `Exit Property` instrução é equivalente ao `Return` instrução.  
-  
+ Sai imediatamente do procedimento `Property` no qual ele aparece. A execução continua com a instrução que chamou o procedimento `Property`, ou seja, com a instrução solicitando ou definindo o valor da propriedade. `Exit Property` só pode ser usado dentro de um procedimento `Get` ou `Set` de uma propriedade.
+
+ Para especificar um valor de retorno em um procedimento `Get`, você pode atribuir o valor ao nome da função em uma linha antes da instrução `Exit Property`. Para atribuir o valor de retorno e sair do procedimento `Get` em uma instrução, em vez disso, você pode usar a instrução `Return`.
+
+ Em um procedimento `Set`, a instrução `Exit Property` é equivalente à instrução `Return`.
+
  `Exit Select`  
- Sai imediatamente o `Select Case` bloco no qual ele aparece. A execução continua com a instrução após a `End Select` instrução. `Exit Select` pode ser usado somente dentro de um `Select Case` instrução.  
-  
+ Sai imediatamente do bloco `Select Case` no qual ele aparece. A execução continua com a instrução após a instrução `End Select`. `Exit Select` pode ser usado somente dentro de uma instrução `Select Case`.
+
  `Exit Sub`  
- Sai imediatamente o `Sub` procedimento no qual ele aparece. A execução continua com a instrução após a instrução que chamou o `Sub` procedimento. `Exit Sub` pode ser usado somente dentro de um `Sub` procedimento.  
-  
- Em um `Sub` procedimento, o `Exit Sub` instrução é equivalente ao `Return` instrução.  
-  
+ Sai imediatamente do procedimento `Sub` no qual ele aparece. A execução continua com a instrução após a instrução que chamou o procedimento `Sub`. `Exit Sub` só pode ser usado dentro de um procedimento `Sub`.
+
+ Em um procedimento `Sub`, a instrução `Exit Sub` é equivalente à instrução `Return`.
+
  `Exit Try`  
- Sai imediatamente a `Try` ou `Catch` bloco no qual ele aparece. A execução continua com o `Finally` bloquear se houver um, ou com a instrução após a `End Try` instrução caso contrário. `Exit Try` pode ser usado somente dentro de um `Try` ou `Catch` bloco e não estão dentro um `Finally` bloco.  
-  
+ Sai imediatamente do bloco `Try` ou `Catch` no qual ele aparece. A execução continua com o bloco `Finally` se houver um, ou com a instrução após a instrução `End Try`, caso contrário. `Exit Try` pode ser usado somente dentro de um bloco `Try` ou `Catch` e não dentro de um bloco `Finally`.
+
  `Exit While`  
- Sai imediatamente o `While` loop no qual ele aparece. A execução continua com a instrução após a `End While` instrução. `Exit While` pode ser usado somente dentro de um `While` loop. Quando usados aninhados dentro `While` loops `Exit While` transfere o controle para o loop que está um nível acima do loop onde `Exit While` ocorre.  
-  
-## <a name="remarks"></a>Comentários  
- Não confunda `Exit` instruções com `End` instruções. `Exit` não defina o final de uma instrução.  
-  
-## <a name="example"></a>Exemplo  
- No exemplo a seguir, a condição de loop para o loop quando a `index` variável é maior que 100. O `If` instrução no loop, no entanto, faz com que o `Exit Do` instrução para interromper o loop quando a variável de índice é maior que 10.  
-  
- [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir atribui o valor de retorno para o nome da função `myFunction`e, em seguida, usa `Exit Function` para retornar da função.  
-  
- [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md) para atribuir o valor de retorno e a função de saída.  
-  
- [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
-  
+ Sai imediatamente do loop `While` no qual ele aparece. A execução continua com a instrução após a instrução `End While`. `Exit While` pode ser usado somente dentro de um loop `While`. Quando usado em loops `While` aninhados, o `Exit While` transfere o controle para o loop que é um nível aninhado acima do loop onde `Exit While` ocorre.
+
+## <a name="remarks"></a>Comentários
+
+Não confunda instruções `Exit` com instruções `End`. `Exit` não define o fim de uma instrução.
+
+## <a name="example"></a>Exemplo
+
+No exemplo a seguir, a condição de loop para o loop quando a variável `index` é maior que 100. No entanto, a instrução `If` no loop faz com que a instrução `Exit Do` Pare o loop quando a variável de índice é maior que 10.
+
+[!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir atribui o valor de retorno ao nome da função `myFunction` e, em seguida, usa `Exit Function` para retornar da função:
+
+[!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir usa a [instrução return](return-statement.md) para atribuir o valor de retorno e sair da função:
+
+[!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
+
 ## <a name="see-also"></a>Consulte também
 
-- [Instrução Continue](../../../visual-basic/language-reference/statements/continue-statement.md)
-- [Instrução Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [Instrução End](../../../visual-basic/language-reference/statements/end-statement.md)
-- [Instrução For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Instrução For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Instrução Return](../../../visual-basic/language-reference/statements/return-statement.md)
-- [Instrução Stop](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Instrução Continue](continue-statement.md)
+- [Instrução Do...Loop](do-loop-statement.md)
+- [Instrução End](end-statement.md)
+- [Instrução For Each...Next](for-each-next-statement.md)
+- [Instrução For...Next](for-next-statement.md)
+- [Instrução Function](function-statement.md)
+- [Instrução Return](return-statement.md)
+- [Instrução Stop](stop-statement.md)
+- [Instrução Sub](sub-statement.md)
+- [Instrução Try...Catch...Finally](try-catch-finally-statement.md)

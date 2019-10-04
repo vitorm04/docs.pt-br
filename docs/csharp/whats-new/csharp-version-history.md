@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391958"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956635"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -28,7 +28,7 @@ As ferramentas de compilação do C# consideram a versão mais recente da lingua
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
-Quando voltar e olhar, C# a versão 1,0, lançada com o Visual Studio.NET 2002, ficou muito parecida com o Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
+Quando voltar e olhar, C# a versão 1,0, lançada com o Visual Studio .NET 2002, ficou muito parecida com o Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
 
 Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Carecia das funcionalidades assíncronas internas e algumas das funcionalidades relacionadas a genéricos que você nem valoriza. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam alguns anos para sair.
 
@@ -48,7 +48,7 @@ Os principais recursos do C# 1.0 incluíam:
 
 ## <a name="c-version-12"></a>C# versão 1.2
 
-C# versão 1.2 fornecido com o Visual Studio 2003. Ele continha algumas pequenas melhorias na linguagem. Muito notável é que, a partir desta versão, o código gerado em um loop `foreach` chamou <xref:System.IDisposable.Dispose%2A>, em um <xref:System.Collections.IEnumerator>, quando o <xref:System.Collections.IEnumerator> implementou <xref:System.IDisposable>.
+C#a versão 1,2 foi fornecida com o Visual Studio .NET 2003. Ele continha algumas pequenas melhorias na linguagem. Muito notável é que, a partir desta versão, o código gerado em um loop `foreach` chamou <xref:System.IDisposable.Dispose%2A>, em um <xref:System.Collections.IEnumerator>, quando o <xref:System.Collections.IEnumerator> implementou <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# versão 2.0
 

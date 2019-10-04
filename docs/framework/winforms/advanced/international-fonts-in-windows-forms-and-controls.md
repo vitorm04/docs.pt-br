@@ -1,5 +1,5 @@
 ---
-title: Fontes internacionais em formulários do Windows e controles
+title: Fontes internacionais em Windows Forms e controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ddbd6d7a1b614d588a2572b410957a5ed3b768c
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942890"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956912"
 ---
-# <a name="international-fonts-in-windows-forms-and-controls"></a>Fontes internacionais em formulários do Windows e controles
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Fontes internacionais em Windows Forms e controles
 
-Em aplicativos internacionais, o método recomendado de selecionar fontes é usar fallback de fonte sempre que possível. Fallback de fonte significa que o sistema determina a qual script o caractere pertence.
+Em aplicativos internacionais, o método recomendado para selecionar fontes é usar o fallback de fonte sempre que possível. Fallback de fonte significa que o sistema determina a qual script o caractere pertence.
 
 ## <a name="using-font-fallback"></a>Usando fallback de fonte
 
-Para tirar proveito desse recurso, não defina o <xref:System.Drawing.Font> propriedade para seu formulário ou qualquer outro elemento. O aplicativo usará automaticamente a fonte padrão do sistema, que difere de um idioma localizado do sistema operacional para outro. Quando o aplicativo é executado, o sistema fornecerá automaticamente a fonte correta para a cultura selecionada no sistema operacional.
+Para aproveitar esse recurso, não defina a propriedade <xref:System.Drawing.Font> para seu formulário ou qualquer outro elemento. O aplicativo usará automaticamente a fonte padrão do sistema, que difere de um idioma localizado do sistema operacional para outro. Quando o aplicativo é executado, o sistema fornecerá automaticamente a fonte correta para a cultura selecionada no sistema operacional.
 
-Há uma exceção à regra de não configurar a fonte, o que é para alterar o estilo da fonte. Isso pode ser importante para um aplicativo no qual o usuário clica em um botão para exibir texto em uma caixa de texto em negrito. Para fazer isso, crie uma função para alterar o estilo da fonte da caixa de texto para negrito, tendo como base qualquer fonte usada pelo formulário. É importante chamar essa função em dois lugares: no botão <xref:System.Windows.Forms.Control.Click> manipulador de eventos e, no <xref:System.Windows.Forms.Control.FontChanged> manipulador de eventos. Se a função é chamada apenas no <xref:System.Windows.Forms.Control.Click> manipulador de eventos e alguma outra parte do código altera a família de fontes de todo o formulário, a caixa de texto não muda com o restante do formulário.
+Há uma exceção à regra de não definir a fonte, que é para alterar o estilo da fonte. Isso pode ser importante para um aplicativo no qual o usuário clica em um botão para exibir texto em uma caixa de texto em negrito. Para fazer isso, crie uma função para alterar o estilo da fonte da caixa de texto para negrito, tendo como base qualquer fonte usada pelo formulário. É importante chamar essa função em dois locais: no manipulador de eventos <xref:System.Windows.Forms.Control.Click> do botão e no manipulador de eventos <xref:System.Windows.Forms.Control.FontChanged>. Se a função for chamada apenas no manipulador de eventos <xref:System.Windows.Forms.Control.Click> e alguma outra parte do código alterar a família de fontes do formulário inteiro, a caixa de texto não será alterada com o restante do formulário.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-No entanto, quando você localiza o aplicativo, a fonte em negrito pode ser exibida incorretamente para determinados idiomas. Se isso for uma preocupação, será recomendável proporcionar aos localizadores a opção de alternar a fonte de negrito para texto normal. Como os localizadores normalmente não são desenvolvedores e não tem acesso ao código-fonte, somente a arquivos de recurso, essa opção precisa ser definido nos arquivos de recurso. Para fazer isso, você definiria o <xref:System.Drawing.Font.Bold%2A> propriedade para `true`. Isso resulta na configuração de fonte nos arquivos de recurso, nos quais os localizadores podem editá-la. Você escreverá então código após o método `InitializeComponent` para redefinir a fonte com base em qualquer fonte usada, porém utilizando o estilo da fonte especificado no arquivo de recurso.
+No entanto, quando você localiza o aplicativo, a fonte em negrito pode ser exibida incorretamente para determinados idiomas. Se isso for uma preocupação, será recomendável proporcionar aos localizadores a opção de alternar a fonte de negrito para texto normal. Como os localizadores normalmente não são desenvolvedores e não têm acesso ao código-fonte, somente aos arquivos de recursos, essa opção precisa ser definida nos arquivos de recursos. Para fazer isso, defina a propriedade <xref:System.Drawing.Font.Bold%2A> como `true`. Isso resulta na configuração de fonte nos arquivos de recurso, nos quais os localizadores podem editá-la. Você escreverá então código após o método `InitializeComponent` para redefinir a fonte com base em qualquer fonte usada, porém utilizando o estilo da fonte especificado no arquivo de recurso.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,4 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Consulte também
 
-- [Globalizando aplicativos dos Windows Forms](globalizing-windows-forms.md)
 - [Usando fontes e texto](using-fonts-and-text.md)

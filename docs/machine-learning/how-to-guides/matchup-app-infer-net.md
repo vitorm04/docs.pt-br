@@ -3,12 +3,12 @@ title: Criar um aplicativo de lista de campeonato com o Infer.NET e a programaç
 description: Descubra como usar a programação probabilística com o Infern.NET para criar um aplicativo de lista de campeonato com base em uma versão simplificada do TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117995"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957208"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
 
@@ -138,7 +138,7 @@ dotnet run
 
 Os resultados devem ser semelhantes aos seguintes:
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50

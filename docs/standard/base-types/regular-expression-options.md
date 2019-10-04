@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663979"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957350"
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 
@@ -172,7 +172,7 @@ O exemplo a seguir extrai nomes e pontuações de jogadores de boliche e os adic
 
 O padrão de expressão regular `^(\w+)\s(\d+)\r*$` é definido conforme mostrado na tabela a seguir.
 
-|Padrão|DESCRIÇÃO|
+|Pattern|Descrição|
 |-------------|-----------------|
 |`^`|Começar no início da linha.|
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|
@@ -214,9 +214,7 @@ Por padrão, grupos de capturas são definidos pelo uso de parênteses no padrã
 
 Constructos de agrupamento costumam ser usados apenas para aplicar quantificadores a vários elementos de linguagem; as subcadeias de caracteres capturadas não são de interesse. Por exemplo, se a seguinte expressão regular:
 
-```
-\b\(?((\w+),?\s?)+[\.!?]\)?
-```
+`\b\(?((\w+),?\s?)+[\.!?]\)?`
 
 for feita somente para extrair frases que terminem com um ponto, ponto de exclamação ou ponto de interrogação de um documento, apenas a frase resultante (representada pelo objeto <xref:System.Text.RegularExpressions.Match>) é de interesse. As palavras individuais na coleção não são.
 
@@ -229,7 +227,7 @@ O exemplo a seguir exibe informações sobre as correspondências retornadas pel
 
 O padrão de expressão regular`\b\(?((?>\w+),?\s?)+[\.!?]\)?` é definido como mostra a tabela a seguir.
 
-|Padrão|DESCRIÇÃO|
+|Pattern|Descrição|
 |-------------|-----------------|
 |`\b`|Começar em um limite de palavra.|
 |`\(?`|Corresponder zero ou uma ocorrência do parêntese de abertura (“(“).|
@@ -339,7 +337,7 @@ Observe também que a asserção lookahead (o elemento de linguagem `(?=`*subexp
 
 O padrão de expressão regular é definido como mostra a tabela a seguir.
 
-|Padrão|DESCRIÇÃO|
+|Pattern|Descrição|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|O início da correspondência deve ser antecedido por um ou dois dígitos decimais seguidos por um espaço.|
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|
@@ -376,7 +374,7 @@ O comportamento das expressões regulares ECMAScript e canônicas difere em trê
 
   A expressão regular é definida como mostrado na tabela a seguir.
 
-  |Padrão|DESCRIÇÃO|
+  |Pattern|Descrição|
   |-------------|-----------------|
   |(a+)|Corresponda a letra "a" uma ou mais vezes. Este é o segundo grupo de captura.|
   |(\1)|Corresponda a subcadeia de caracteres capturada pelo primeiro grupo de captura. Este é o terceiro grupo de captura.|
@@ -388,8 +386,8 @@ O comportamento das expressões regulares ECMAScript e canônicas difere em trê
   |Expressão regular|Comportamento canônico|Comportamento de ECMAScript|
   |------------------------|------------------------|-------------------------|
   |`\0` seguido por 0 - 2 dígitos octais|Interprete como um octal. Por exemplo, `\044` é sempre interpretado como um valor octal e significa "$".|Mesmo comportamento.|
-  |`\` seguido por um dígito de 1 a 9, seguido por nenhum dígito decimal adicional, |interprete como uma referência inversa. Por exemplo, `\9` sempre significa referência inversa 9, mesmo que um nono grupo de capturas não exista. Se o grupo de captura não existir, o analisador de expressão regular lança uma <xref:System.ArgumentException>.|Se existir um grupo de capturas de um único dígito decimal, faça referência inversa a esse dígito. Caso contrário, interprete o valor como literal.|
-  |`\` seguido por um dígito de 1 a 9, seguido por dígitos decimais adicionais, |interprete como um valor decimal. Se o grupo de capturas existir, interprete a expressão como referência inversa.<br /><br /> Caso contrário, interprete os dígitos octais iniciais até o octal 377; ou seja, considere apenas 8 bits inferiores do valor. Interprete os dígitos restantes como literais. Por exemplo, na expressão `\3000`, se o grupo de capturas 300 existir, interprete como referência inversa 300; se o grupo de capturas 300 não existir, interprete como um octal 300 seguido por 0.|Interprete como uma referência inversa convertendo todos os dígitos possíveis para um valor decimal que pode fazer referência a uma captura. Se nenhum dígito puder ser convertido, interprete como um octal usando os dígitos octais iniciais até o octal 377; interprete os dígitos restantes como literais.|
+  |`\` seguido por um dígito de 1 a 9, seguido por nenhum dígito decimal adicional,|Interprete como referência inversa. Por exemplo, `\9` sempre significa referência inversa 9, mesmo que um nono grupo de capturas não exista. Se o grupo de captura não existir, o analisador de expressão regular lança uma <xref:System.ArgumentException>.|Se existir um grupo de capturas de um único dígito decimal, faça referência inversa a esse dígito. Caso contrário, interprete o valor como literal.|
+  |`\` seguido por um dígito de 1 a 9, seguido por dígitos decimais adicionais|Interprete os dígitos como um valor decimal. Se o grupo de capturas existir, interprete a expressão como referência inversa.<br /><br /> Caso contrário, interprete os dígitos octais iniciais até o octal 377; ou seja, considere apenas 8 bits inferiores do valor. Interprete os dígitos restantes como literais. Por exemplo, na expressão `\3000`, se o grupo de capturas 300 existir, interprete como referência inversa 300; se o grupo de capturas 300 não existir, interprete como um octal 300 seguido por 0.|Interprete como uma referência inversa convertendo todos os dígitos possíveis para um valor decimal que pode fazer referência a uma captura. Se nenhum dígito puder ser convertido, interprete como um octal usando os dígitos octais iniciais até o octal 377; interprete os dígitos restantes como literais.|
 
 [Voltar ao início](#Top)
 

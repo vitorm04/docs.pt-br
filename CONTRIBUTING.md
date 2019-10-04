@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104629"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955965"
 ---
 # <a name="contributing"></a>Contribuição
 
 Agradecemos seu interesse em contribuir com a documentação do .NET.
 
-> Estamos no processo de movimentação das nossas diretrizes para um guia de contribuição em todo o site. 
+> Estamos no processo de movimentação das nossas diretrizes para um guia de contribuição em todo o site.
 > Para ver as novas diretrizes, acesse a [Visão geral do guia de colaborador do Microsoft Docs](https://docs.microsoft.com/contribute/).
 
 O documento aborda o processo para contribuir para os artigos e exemplos de código hospedados no [site de documentação do .NET](https://docs.microsoft.com/dotnet). As contribuições podem ser tão simples quanto correções de erro de digitação ou tão complexas quanto novos artigos.
@@ -22,20 +22,21 @@ O documento aborda o processo para contribuir para os artigos e exemplos de cód
 
 Esse repositório contém a documentação conceitual do .NET. O site de documentação do .NET foi criado com base em vários repositórios, além desse:
 
-- [Exemplos e snippets de código](https://github.com/dotnet/samples)
-- [Referência de API](https://github.com/dotnet/dotnet-api-docs)
-- [Referência do SDK do .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
-
-Acompanhamos os problemas e as tarefas desses repositórios aqui.
+- [Exemplos e snippets de código](https://github.com/dotnet/samples)  
+    Os problemas e as tarefas deste repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Referência da API REST](https://github.com/dotnet/dotnet-api-docs)  
+    Os problemas e as tarefas deste repositório são acompanhados em [dotnet/dotnet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Referência do SDK do .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
+    Problemas e demora para este repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
 
 ## <a name="process-for-contributing"></a>Processo de contribuição
 
 Você precisa de uma compreensão básica do [Git e do GitHub.com](https://guides.github.com/activities/hello-world/).
 
 **Etapa 1:** Ignore esta etapa para pequenas alterações (por exemplo, se você estiver corrigindo um erro de digitação ou abrindo imediatamente uma solicitação de pull para resolver um problema encontrado nos documentos). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
-O conteúdo dentro da pasta **docs** é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
+O conteúdo dentro da pasta *docs* é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
 
--ou-
+- ou -
 
 Também é possível escolher entre as questões existentes, para as quais contribuições da comunidade são bem-vindas. [Projetos para os colaboradores da comunidade do .NET](https://github.com/dotnet/docs/projects/35) lista vários itens de trabalho que estão disponíveis para os colaboradores da comunidade. Dependendo de seus interesses e nível de compromisso, você pode escolher entre questões nas seguintes categorias:
 
@@ -43,7 +44,7 @@ Também é possível escolher entre as questões existentes, para as quais contr
 
 - **Atualizações de conteúdo**. Considerando a enormidade do conjunto de documentos, o conteúdo se torna facilmente desatualizado e precisa de revisão. Além disso, por uma variedade de motivos, certos conteúdos podem ser duplicados ou até mesmo triplicados. A atualização do conteúdo envolve garantir que os tópicos individuais sejam atuais, ou revisar o conteúdo em uma área para eliminar duplicação e se certificar que todo conteúdo exclusivo seja preservado no menor conjunto de documentação.
 
-- **Criação de novo conteúdo**. Se você estiver interessado na criação do seu próprio tópico, estas questões listam tópicos que gostaríamos de adicionar ao nosso conjunto de documentos. Fale conosco antes de começar a trabalhar em um tópico, no entanto. Se você estiver interessado em escrever um tópico que não está listado aqui, abra uma questão. 
+- **Criação de novo conteúdo**. Se você estiver interessado na criação do seu próprio tópico, estas questões listam tópicos que gostaríamos de adicionar ao nosso conjunto de documentos. Fale conosco antes de começar a trabalhar em um tópico, no entanto. Se você estiver interessado em escrever um tópico que não está listado aqui, abra uma questão.
 
 Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição. 
 
@@ -58,7 +59,7 @@ Se for um novo tópico, você poderá usar esse [arquivo de modelo](./styleguide
 Navegue até a pasta que corresponde à localização do Sumário determinado para o seu artigo na etapa 1.
 Essa pasta contém os arquivos Markdown para todos os artigos nesta seção.
 Se necessário, crie uma pasta para colocar os arquivos do seu conteúdo. O artigo principal desta seção chama-se *index.md*.
-Para imagens e outros recursos estáticos, crie uma subpasta chamada **mídia** dentro da pasta que contém seu artigo, se ainda não houver. Dentro da pasta **mídia**, crie uma subpasta com o nome do artigo (exceto para o arquivo de índice).
+Para imagens e outros recursos estáticos, crie uma subpasta chamada *mídia* dentro da pasta que contém seu artigo, se ainda não houver. Dentro da pasta *mídia*, crie uma subpasta com o nome do artigo (exceto para o arquivo de índice).
 Inclua exemplos maiores na pasta *exemplos* na raiz do repositório.
 
 Siga a sintaxe de Markdown apropriada. Para saber mais, confira o [guia de estilo](./styleguide/template.md).
@@ -76,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**Etapa 4:** Envie uma PR (solicitação de pull) de seu branch `dotnet/docs/master`.
+**Etapa 4:** Envie uma solicitação de pull (PR) de seu Branch para `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` ou `dotnet/samples/master`.
 
 A PR deve *sempre* ser direcionada ao branch mestre. Você *nunca* deve abrir uma PR direcionada ao branch dinâmico.
 

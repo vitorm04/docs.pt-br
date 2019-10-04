@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666525"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957140"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como: Executar uma transformação XSLT usando um assembly
 O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly. O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
@@ -134,15 +134,15 @@ O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly.
   
 1. A execução do comando a seguir a partir da linha de comando cria dois assemblies nomeados `Transform.dll` e `Transform_Script1.dll` (Esse é o comportamento padrão. A menos que de outra forma especificado, o nome da classe e do assembly usa como padrão o nome da folha de estilos principal):  
   
-    ```  
+    ```console  
     xsltc /settings:script+ Transform.xsl  
+    ```
+  
+    O comando a seguir define explicitamente o nome da classe como Transform:  
+  
+    ```console  
+    xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
-  
- O comando a seguir define explicitamente o nome da classe como Transform:  
-  
-```  
-xsltc /settings:script+ /class:Transform Transform.xsl  
-```  
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Para incluir o assembly compilado como uma referência ao compilar o código.  
   
@@ -150,36 +150,36 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 2. Para a linha de comando com C#, use o seguinte:  
   
-    ```  
+    ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 3. Para a linha de comando com Visual Basic, use o seguinte:  
   
-    ```  
+    ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Para usar o assembly compilado em seu código.  
   
-1. O exemplo a seguir mostra como executar a transformação XSLT usando a folha de estilos compilada.  
+O exemplo a seguir mostra como executar a transformação XSLT usando a folha de estilos compilada.  
   
- [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
- [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
+[!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
+[!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Para vincular ao assembly compilado dinamicamente, substitua  
+Para vincular ao assembly compilado dinamicamente, substitua
   
-```  
-xslt.Load(typeof(Transform))  
-```  
-  
- with  
-  
-```  
-xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
+```csharp  
+xslt.Load(typeof(Transform));  
 ```  
   
- no exemplo anterior. Para obter mais informações sobre o método Assembly.Load, consulte <xref:System.Reflection.Assembly.Load%2A>  
+with  
+  
+```csharp 
+xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
+``` 
+  
+no exemplo anterior. Para obter mais informações sobre o método assembly. Load, consulte <xref:System.Reflection.Assembly.Load%2A>.  
   
 ## <a name="see-also"></a>Consulte também
 

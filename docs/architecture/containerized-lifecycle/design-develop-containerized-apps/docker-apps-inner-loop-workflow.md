@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Conheça o fluxo de trabalho de "loop interno" para desenvolvimento de aplicativos do Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: c97cd9ba8d740f13c22caa45e344c4961e3b0600
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834488"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956562"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -54,10 +54,10 @@ Com as versões mais recentes do Docker para Mac e Windows, é mais fácil do qu
 
 Além disso, você precisará de um editor de código para que possa desenvolver o aplicativo enquanto estiver usando a CLI do Docker.
 
-A Microsoft fornece o Visual Studio Code, que é um editor de código leve com suporte no Mac, no Windows e no Linux, além do IntelliSense com [suporte para várias linguagens](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python e a maioria das linguagens modernas), [depuração](https://code.visualstudio.com/Docs/editor/debugging), [integração com Git](https://code.visualstudio.com/Docs/editor/versioncontrol) e [suporte para extensões](https://code.visualstudio.com/docs/extensions/overview). Esse editor é uma excelente opção para desenvolvedores de Mac e Linux. No Windows, também é possível usar o aplicativo do Visual Studio completo.
+A Microsoft fornece Visual Studio Code, que é um editor de código leve com suporte no Windows, Linux e macOS, e fornece IntelliSense com [suporte para várias linguagens](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .net, go, Java, Ruby, Python e linguagens mais modernas), [depuração](https://code.visualstudio.com/Docs/editor/debugging), [integração com git](https://code.visualstudio.com/Docs/editor/versioncontrol) e [suporte a extensões](https://code.visualstudio.com/docs/extensions/overview). Esse editor é uma ótima opção para desenvolvedores de macOS e Linux. No Windows, você também pode usar o Visual Studio.
 
 > [!TIP]
-> Para obter instruções sobre como instalar o Visual Studio Code para Windows, Mac ou Linux, acesse <https://code.visualstudio.com/docs/setup/setup-overview/>.
+> Para obter instruções sobre como instalar o Visual Studio Code para Windows, Linux ou macOS, acesse <https://code.visualstudio.com/docs/setup/setup-overview/>.
 >
 > Para obter instruções sobre como configurar o Docker para Mac, acesse <https://docs.docker.com/docker-for-mac/>.
 
@@ -209,7 +209,7 @@ O serviço Redis usa a [imagem pública do Redis mais recente](https://hub.docke
 
 Se seu aplicativo tiver apenas um contêiner, você precisará apenas executá-lo implantando-o no host do Docker (VM ou servidor físico). No entanto, se o aplicativo for composto por vários serviços, você também precisará *compô-lo*. Vejamos as diferentes opções.
 
-***Opção A: Executar um único contêiner ou serviço***
+***Option A: Executar um único contêiner ou serviço***
 
 Você pode executar a imagem do Docker usando o comando docker run, conforme mostrado aqui:
 
@@ -219,7 +219,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Para essa implantação específica, redirecionaremos as solicitações enviadas à porta 80 para a porta 5000 interna. Agora, o aplicativo está escutando na porta 80 externa no nível do host.
 
-***Opção B: Compor e executar um aplicativo de vários contêineres***
+***Option B: Compor e executar um aplicativo de vários contêineres***
 
 Na maioria dos cenários empresariais, um aplicativo do Docker será composto por vários serviços. Nesses casos, você pode executar o comando `docker-compose up` (Figura 4-27), que usará o arquivo docker-compose.yml, que talvez tenha criado anteriormente. Executar esse comando implanta um aplicativo composto com todos os contêineres relacionados.
 
@@ -265,9 +265,8 @@ O Visual Studio Code dá suporte à depuração do Docker quando você está usa
 
 Você também pode depurar contêineres do .NET Core ou .NET Framework no Docker ao usar o Visual Studio para Windows ou Mac, conforme descrito na próxima seção.
 
-> [!INFORMAÇÕES]
->
-> Para saber mais sobre a depuração de contêineres do Docker do Node.js, acesse <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
+> [!TIP]
+> To saiba mais sobre a depuração de contêineres do Docker do node. js, consulte <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
 
 >[!div class="step-by-step"]
 >[Anterior](docker-apps-development-environment.md)

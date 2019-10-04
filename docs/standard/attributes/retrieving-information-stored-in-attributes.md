@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968592"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957336"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperando informações armazenadas em atributos
 Recuperar um atributo personalizado é um processo simples. Primeiro, declare uma instância do atributo que você deseja recuperar. Em seguida, use o método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar o novo atributo para o valor do atributo que você deseja recuperar. Após a inicialização do novo atributo, basta usar suas propriedades para obter os valores.  
@@ -44,7 +44,7 @@ Recuperar um atributo personalizado é um processo simples. Primeiro, declare um
   
  Este programa exibe o texto a seguir quando executado.  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  Se o atributo não for encontrado, o método **GetCustomAttribute** inicializará `MyAttribute` com um valor nulo. Este exemplo verifica em `MyAttribute` a existência dessa instância e notifica o usuário caso nenhum atributo seja encontrado. Se o `DeveloperAttribute` não for encontrado no escopo da classe, a mensagem a seguir será exibida no console.  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   

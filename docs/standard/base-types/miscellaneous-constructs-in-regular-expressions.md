@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6b4e9072100a25c297dbf3bfb70a928e16b06da4
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959477"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956886"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construtores diversos em expressões regulares
 As expressões regulares em .NET incluem três constructos diversos de linguagem. Um deles permite habilitar ou desabilitar opções específicas de correspondência no meio de um padrão de expressão regular. Os dois restantes permitem incluir comentários em uma expressão regular.  
@@ -25,13 +25,11 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
 ## <a name="inline-options"></a>Opções embutidas  
  É possível definir ou desabilitar opções específicas de correspondência de padrão para parte de uma expressão regular mediante uso da sintaxe  
   
-```  
-(?imnsx-imnsx)  
-```  
+`(?imnsx-imnsx)`  
   
  Você lista as opções que deseja habilitar após o ponto de interrogação e as opções que deseja desabilitar após o sinal de subtração. A tabela a seguir descreve cada opção. Para obter mais informações sobre cada opção, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |`i`|Correspondência sem diferenciação entre maiúsculas e minúsculas.|  
 |`m`|Modo multilinha.|  
@@ -51,7 +49,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  O exemplo define duas expressões regulares. A primeira, `\b(D\w+)\s(d\w+)\b`, corresponde a duas palavras consecutivas que começam com um “D” maiúsculo e um “d” minúsculo. A segunda expressão regular, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opções embutidas para modificar esse padrão, conforme descrito na tabela a seguir. Uma comparação dos resultados confirma o efeito do constructo `(?ixn)`.  
   
-|Padrão|DESCRIÇÃO|  
+|Pattern|Descrição|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(D\w+)`|Corresponder a um “D” maiúsculo seguido por um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -65,7 +63,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  O exemplo a seguir repete o primeiro padrão de expressão regular do exemplo na seção anterior. Ele adiciona dois comentários embutidos na expressão regular para indicar se a comparação diferencia maiúsculas de minúsculas. O padrão de expressão regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, é definido da seguinte forma.  
   
-|Padrão|DESCRIÇÃO|  
+|Pattern|Descrição|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(?# case-sensitive comparison)`|Um comentário. Não afeta o comportamento de correspondência.|  
@@ -86,7 +84,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Padrão|DESCRIÇÃO|  
+|Pattern|Descrição|  
 |-------------|-----------------|  
 |`\{`|Corresponder a uma chave de abertura.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
