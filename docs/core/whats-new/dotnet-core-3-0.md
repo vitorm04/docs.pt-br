@@ -16,13 +16,13 @@ ms.locfileid: "71216270"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
-Este artigo descreve o que há de novo no .NET Core 3,0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
+Este artigo descreve o que há de novo no .NET Core 3.0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
 
 O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview)ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**.
 
-[Baixe e comece a usar o .NET Core 3,0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
+[Baixe e comece a usar o .NET Core 3.0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
 
-Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 O .NET Core RC1 foi considerado pronto para produção pela Microsoft e foi totalmente suportado. Se você estiver usando uma versão de visualização, deverá mover para a versão RTM para obter suporte contínuo.
 
@@ -34,11 +34,11 @@ Para obter mais informações sobre controle de versão, consulte [Visão geral 
 
 ## <a name="c-80"></a>C# 8.0
 
-C#8,0 também faz parte desta versão, que inclui o recurso de tipos de referência anulável, fluxos assíncronos e mais padrões. Para obter mais informações sobre recursos do C# 8.0, consulte [Novidades do C# 8.0](../../csharp/whats-new/csharp-8.md).
+C# 8.0 também faz parte desta versão, que inclui o recurso de tipos de referência anulável, fluxos assíncronos e mais padrões. Para obter mais informações sobre recursos do C# 8.0, consulte [Novidades do C# 8.0](../../csharp/whats-new/csharp-8.md).
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-Embora o .NET Core 3,0 ofereça suporte a **.NET Standard 2,1**, `dotnet new classlib` o modelo padrão gera um projeto que ainda tem como alvo **.NET Standard 2,0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
+Embora o .NET Core 3.0 ofereça suporte a **.NET Standard 2.1**, `dotnet new classlib` o modelo padrão gera um projeto que ainda tem como alvo **.NET Standard 2.0**. Para direcionar ao **.NET Standard 2.1**, edite seu arquivo de projeto e altere a propriedade `TargetFramework` para `netstandard2.1`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -500,7 +500,7 @@ Para saber mais sobre o suporte limitado para a porta serial no Linux, confira o
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Limites de memória do Docker e cgroup
 
-A execução do .NET Core 3,0 no Linux com o Docker funciona melhor com limites de memória CGroup. Executar um contêiner do Docker com limites de memória, tais como `docker run -m`, altera o comportamento do .NET Core.
+A execução do .NET Core 3.0 no Linux com o Docker funciona melhor com limites de memória CGroup. Executar um contêiner do Docker com limites de memória, tais como `docker run -m`, altera o comportamento do .NET Core.
 
 - Tamanho de heap do GC (coletor de lixo) padrão: máximo de 20 MB ou 75% do limite de memória no contêiner.
 - O tamanho explícito pode ser definido como um número absoluto ou um percentual do limite de cgroup.
