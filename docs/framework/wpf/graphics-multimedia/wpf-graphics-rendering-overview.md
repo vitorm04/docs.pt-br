@@ -8,21 +8,21 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: ea219d653e6f41f9ebeceb8f33803ebb9246d8bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962853"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004172"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Visão geral de renderização de gráficos do WPF
-Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ele se concentra na função da classe para <xref:System.Windows.Media.Visual> o suporte de renderização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no modelo.  
+Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ele se concentra na função da classe <xref:System.Windows.Media.Visual> para suporte de renderização no modelo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>Função do objeto visual  
- A <xref:System.Windows.Media.Visual> classe é a abstração básica da qual cada <xref:System.Windows.FrameworkElement> objeto deriva. Ela também serve como o ponto de entrada para escrever novos controles em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e, de muitas formas, pode ser pensada como o HWND (identificador de janela) no modelo de aplicativo Win32.  
+ A classe <xref:System.Windows.Media.Visual> é a abstração básica da qual cada objeto de <xref:System.Windows.FrameworkElement> deriva. Ela também serve como o ponto de entrada para escrever novos controles em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e, de muitas formas, pode ser pensada como o HWND (identificador de janela) no modelo de aplicativo Win32.  
   
- O <xref:System.Windows.Media.Visual> objeto é um objeto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] principal, cuja função principal é fornecer suporte à renderização. Controles de interface do usuário, <xref:System.Windows.Controls.Button> como <xref:System.Windows.Controls.TextBox>e, derivam <xref:System.Windows.Media.Visual> da classe e o usam para persistir seus dados de renderização. O <xref:System.Windows.Media.Visual> objeto fornece suporte para:  
+ O objeto <xref:System.Windows.Media.Visual> é um objeto principal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], cuja função principal é fornecer suporte à renderização. Os controles de interface do usuário, como <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TextBox>, derivam da classe <xref:System.Windows.Media.Visual> e o usam para persistir seus dados de renderização. O objeto <xref:System.Windows.Media.Visual> fornece suporte para:  
   
 - Exibição de saída: Renderizando o conteúdo de desenho serializado e persistente de um Visual.  
   
@@ -34,7 +34,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
 - Cálculos de caixa delimitadora: Determinando o retângulo delimitador de um Visual.  
   
- No entanto <xref:System.Windows.Media.Visual> , o objeto não inclui suporte para recursos de não renderização, como:  
+ No entanto, o objeto <xref:System.Windows.Media.Visual> não inclui suporte para recursos de não renderização, como:  
   
 - Manipulação de eventos  
   
@@ -46,7 +46,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
 - Globalização  
   
- <xref:System.Windows.Media.Visual>é exposto como uma classe abstrata pública da qual as classes filhas devem ser derivadas. A ilustração a seguir mostra a hierarquia dos objetos visuais que são expostos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual> é exposto como uma classe abstrata pública da qual as classes filhas devem ser derivadas. A ilustração a seguir mostra a hierarquia dos objetos visuais que são expostos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  ![Diagrama de classes derivadas do objeto visual](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
@@ -54,82 +54,82 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
  O <xref:System.Windows.Media.DrawingVisual> é uma classe leve de desenho que é usada para renderizar formas, imagens ou texto. Essa classe é considerada leve porque não fornece layout ou manipulação de eventos, o que melhora o desempenho de tempo de execução. Por esse motivo, desenhos são ideais para planos de fundo e clip-art. O <xref:System.Windows.Media.DrawingVisual> pode ser usado para criar um objeto visual personalizado. Para obter mais informações, consulte [Usando objetos DrawingVisual](using-drawingvisual-objects.md).  
   
 ### <a name="viewport3dvisual-class"></a>Classe Viewport3DVisual  
- O <xref:System.Windows.Media.Media3D.Viewport3DVisual> fornece uma ponte entre 2D <xref:System.Windows.Media.Visual> e <xref:System.Windows.Media.Media3D.Visual3D> objetos. A <xref:System.Windows.Media.Media3D.Visual3D> classe é a classe base para todos os elementos visuais 3D. O <xref:System.Windows.Media.Media3D.Viewport3DVisual> requer que você defina um <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> valor e um <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> valor. A câmera permite que você exiba a cena. O visor estabelece o local para o qual a projeção é mapeada na superfície 2D. Para obter mais informações sobre 3D em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md).  
+ O <xref:System.Windows.Media.Media3D.Viewport3DVisual> fornece uma ponte entre objetos 2D <xref:System.Windows.Media.Visual> e <xref:System.Windows.Media.Media3D.Visual3D>. A classe <xref:System.Windows.Media.Media3D.Visual3D> é a classe base para todos os elementos visuais 3D. O <xref:System.Windows.Media.Media3D.Viewport3DVisual> requer que você defina um valor de <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> e um valor <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>. A câmera permite que você exiba a cena. O visor estabelece o local para o qual a projeção é mapeada na superfície 2D. Para obter mais informações sobre 3D em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md).  
   
 ### <a name="containervisual-class"></a>Classe ContainerVisual  
- A <xref:System.Windows.Media.ContainerVisual> classe é usada como um contêiner para uma coleção de <xref:System.Windows.Media.Visual> objetos. A <xref:System.Windows.Media.DrawingVisual> classe deriva <xref:System.Windows.Media.ContainerVisual> da classe, permitindo que ela contenha uma coleção de objetos visuais.  
+ A classe <xref:System.Windows.Media.ContainerVisual> é usada como um contêiner para uma coleção de objetos <xref:System.Windows.Media.Visual>. A classe <xref:System.Windows.Media.DrawingVisual> deriva da classe <xref:System.Windows.Media.ContainerVisual>, permitindo que ela contenha uma coleção de objetos visuais.  
   
 ### <a name="drawing-content-in-visual-objects"></a>Desenhar conteúdo em objetos visuais  
- Um <xref:System.Windows.Media.Visual> objeto armazena seus dados de renderização como uma **lista de instruções de gráficos vetoriais**. Cada item na lista de instruções representa um conjunto de baixo nível de dados gráficos e recursos associados em um formato serializado. Há quatro tipos diferentes de dados de renderização que podem conter conteúdo de desenho.  
+ Um objeto <xref:System.Windows.Media.Visual> armazena seus dados de renderização como uma **lista de instruções de gráficos de vetor**. Cada item na lista de instruções representa um conjunto de baixo nível de dados gráficos e recursos associados em um formato serializado. Há quatro tipos diferentes de dados de renderização que podem conter conteúdo de desenho.  
   
 |Tipo de conteúdo de desenho|Descrição|  
 |--------------------------|-----------------|  
-|Gráficos vetoriais|Representa dados de gráficos vetoriais e quaisquer <xref:System.Windows.Media.Brush> informações <xref:System.Windows.Media.Pen> e associadas.|  
+|Gráficos vetoriais|Representa dados de gráficos vetoriais e quaisquer informações <xref:System.Windows.Media.Brush> e <xref:System.Windows.Media.Pen> associadas.|  
 |Image|Representa uma imagem em uma região definida por um <xref:System.Windows.Rect>.|  
 |Glifo|Representa um desenho que renderiza um <xref:System.Windows.Media.GlyphRun>, que é uma sequência de glifos de um recurso de fonte especificado. Este é o modo pelo qual o texto é representado.|  
 |Vídeo|Representa um desenho que renderiza vídeo.|  
   
- O <xref:System.Windows.Media.DrawingContext> permite que você preencha um <xref:System.Windows.Media.Visual> com conteúdo visual. Quando você usa os <xref:System.Windows.Media.DrawingContext> comandos Draw de um objeto, na verdade está armazenando um conjunto de dados de renderização que serão usados posteriormente pelo sistema de gráficos; você não está desenhando na tela em tempo real.  
+ O <xref:System.Windows.Media.DrawingContext> permite que você preencha um <xref:System.Windows.Media.Visual> com conteúdo visual. Quando você usa os comandos Draw de um objeto <xref:System.Windows.Media.DrawingContext>, na verdade está armazenando um conjunto de dados de renderização que serão usados posteriormente pelo sistema de gráficos; Você não está desenhando na tela em tempo real.  
   
- Quando você cria um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controle, como um <xref:System.Windows.Controls.Button>, o controle gera implicitamente dados de renderização para o próprio desenho. Por exemplo, definir a <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade <xref:System.Windows.Controls.Button> de faz com que o controle armazene uma representação de renderização de um glifo.  
+ Quando você cria um controle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como um <xref:System.Windows.Controls.Button>, o controle gera implicitamente dados de renderização para o próprio desenho. Por exemplo, definir a propriedade <xref:System.Windows.Controls.ContentControl.Content%2A> de <xref:System.Windows.Controls.Button> faz com que o controle armazene uma representação de renderização de um glifo.  
   
- Um <xref:System.Windows.Media.Visual> descreve seu conteúdo como um ou mais <xref:System.Windows.Media.Drawing> objetos contidos em um <xref:System.Windows.Media.DrawingGroup>. <xref:System.Windows.Media.DrawingGroup> Também descreve máscaras de opacidade, transformações, efeitos de bitmap e outras operações que são aplicadas ao seu conteúdo. <xref:System.Windows.Media.DrawingGroup>as operações são aplicadas na seguinte ordem quando o conteúdo é renderizado <xref:System.Windows.Media.DrawingGroup.Opacity%2A>: <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A> <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A> <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>,,, e <xref:System.Windows.Media.DrawingGroup.Transform%2A>, em seguida.  
+ Um <xref:System.Windows.Media.Visual> descreve seu conteúdo como um ou mais objetos <xref:System.Windows.Media.Drawing> contidos em um <xref:System.Windows.Media.DrawingGroup>. Um <xref:System.Windows.Media.DrawingGroup> também descreve máscaras de opacidade, transformações, efeitos de bitmap e outras operações que são aplicadas ao seu conteúdo. as operações <xref:System.Windows.Media.DrawingGroup> são aplicadas na seguinte ordem quando o conteúdo é renderizado: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> e, em seguida, <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
- A ilustração a seguir mostra a ordem na <xref:System.Windows.Media.DrawingGroup> qual as operações são aplicadas durante a sequência de renderização.  
+ A ilustração a seguir mostra a ordem na qual as operações de <xref:System.Windows.Media.DrawingGroup> são aplicadas durante a sequência de renderização.  
   
- ![Ordem das operações do DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![Ordem de graphcismm_drawinggroup_order de operações do DrawingGroup](./media/graphcismm-drawinggroup-order.png "")  
 Ordem das operações do DrawingGroup  
   
  Para obter mais informações, consulte a [Visão geral de objetos de desenho](drawing-objects-overview.md).  
   
 #### <a name="drawing-content-at-the-visual-layer"></a>Conteúdo de desenho na camada visual  
- Você nunca instancia diretamente um <xref:System.Windows.Media.DrawingContext>; você pode, no entanto, adquirir um contexto de desenho de determinados métodos <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> , <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>como e. O exemplo a seguir recupera <xref:System.Windows.Media.DrawingContext> um de <xref:System.Windows.Media.DrawingVisual> um e o usa para desenhar um retângulo.  
+ Você nunca instancia diretamente um <xref:System.Windows.Media.DrawingContext>; no entanto, você pode adquirir um contexto de desenho de determinados métodos, como <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> e <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>. O exemplo a seguir recupera um <xref:System.Windows.Media.DrawingContext> de um <xref:System.Windows.Media.DrawingVisual> e o usa para desenhar um retângulo.  
   
  [!code-csharp[drawingvisualsample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
  [!code-vb[drawingvisualsample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 #### <a name="enumerating-drawing-content-at-the-visual-layer"></a>Enumerar conteúdo de desenho na camada visual  
- Além de seus outros usos, <xref:System.Windows.Media.Drawing> os objetos também fornecem um modelo de objeto para enumerar o conteúdo de um. <xref:System.Windows.Media.Visual>  
+ Além de seus outros usos, os objetos <xref:System.Windows.Media.Drawing> também fornecem um modelo de objeto para enumerar o conteúdo de um <xref:System.Windows.Media.Visual>.  
   
 > [!NOTE]
-> Ao enumerar o conteúdo do Visual, você está recuperando <xref:System.Windows.Media.Drawing> objetos e não a representação subjacente da lista de instruções de renderização de dados como elementos gráficos de vetor.  
+> Ao enumerar o conteúdo do Visual, você está recuperando objetos <xref:System.Windows.Media.Drawing>, e não a representação subjacente dos dados de renderização como uma lista de instruções de gráficos vetoriais.  
   
- O exemplo a seguir usa <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> o método para recuperar <xref:System.Windows.Media.DrawingGroup> o valor de <xref:System.Windows.Media.Visual> a e enumerá-lo.  
+ O exemplo a seguir usa o método <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> para recuperar o valor de <xref:System.Windows.Media.DrawingGroup> de um <xref:System.Windows.Media.Visual> e enumerá-lo.  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 <a name="how_visual_objects_are_used_to_build_controls"></a>   
 ## <a name="how-visual-objects-are-used-to-build-controls"></a>Como objetos visuais são usados para compilar controles  
- Muitos dos objetos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são compostos de outros objetos visuais, o que significa que eles podem conter diversas hierarquias de objetos descendentes. Muitos dos elementos da interface do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tais como controles, são compostos de múltiplos objetos visuais que representam diferentes tipos de elementos de renderização. Por exemplo, o <xref:System.Windows.Controls.Button> controle pode conter vários outros objetos, incluindo <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, <xref:System.Windows.Controls.ContentPresenter>e <xref:System.Windows.Controls.TextBlock>.  
+ Muitos dos objetos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são compostos de outros objetos visuais, o que significa que eles podem conter diversas hierarquias de objetos descendentes. Muitos dos elementos da interface do usuário no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tais como controles, são compostos de múltiplos objetos visuais que representam diferentes tipos de elementos de renderização. Por exemplo, o controle <xref:System.Windows.Controls.Button> pode conter vários outros objetos, incluindo <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, <xref:System.Windows.Controls.ContentPresenter> e <xref:System.Windows.Controls.TextBlock>.  
   
- O código a seguir mostra <xref:System.Windows.Controls.Button> um controle definido na marcação.  
+ O código a seguir mostra um controle <xref:System.Windows.Controls.Button> definido na marcação.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet1)]  
   
- Se você fosse enumerar os objetos visuais que compõem o controle <xref:System.Windows.Controls.Button> padrão, encontraria a hierarquia dos objetos visuais ilustrada abaixo:  
+ Se você fosse enumerar os objetos visuais que compõem o controle <xref:System.Windows.Controls.Button> padrão, encontraria a hierarquia de objetos visuais ilustrada abaixo:  
   
  ![Diagrama de hierarquia de árvore visual](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
- O <xref:System.Windows.Controls.Button> controle contém um <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento que, por sua vez, contém <xref:System.Windows.Controls.ContentPresenter> um elemento. O <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento é responsável por desenhar uma borda e um plano de fundo <xref:System.Windows.Controls.Button>para o. O <xref:System.Windows.Controls.ContentPresenter> elemento é responsável por exibir o conteúdo <xref:System.Windows.Controls.Button>do. Nesse caso, como você está exibindo texto, o <xref:System.Windows.Controls.ContentPresenter> elemento contém um <xref:System.Windows.Controls.TextBlock> elemento. O fato de que <xref:System.Windows.Controls.Button> o controle usa <xref:System.Windows.Controls.ContentPresenter> um significa que o conteúdo pode ser representado por outros elementos, como um <xref:System.Windows.Controls.Image> ou uma geometria, como um <xref:System.Windows.Media.EllipseGeometry>.  
+ O controle <xref:System.Windows.Controls.Button> contém um elemento <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, que, por sua vez, contém um elemento <xref:System.Windows.Controls.ContentPresenter>. O elemento <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> é responsável por desenhar uma borda e um plano de fundo para o <xref:System.Windows.Controls.Button>. O elemento <xref:System.Windows.Controls.ContentPresenter> é responsável por exibir o conteúdo do <xref:System.Windows.Controls.Button>. Nesse caso, como você está exibindo texto, o elemento <xref:System.Windows.Controls.ContentPresenter> contém um elemento <xref:System.Windows.Controls.TextBlock>. O fato de que o controle <xref:System.Windows.Controls.Button> usa um <xref:System.Windows.Controls.ContentPresenter> significa que o conteúdo pode ser representado por outros elementos, como um <xref:System.Windows.Controls.Image> ou uma geometria, como um <xref:System.Windows.Media.EllipseGeometry>.  
   
 ### <a name="control-templates"></a>Modelos de controle  
- A chave para a expansão de um controle em uma hierarquia de controles é o <xref:System.Windows.Controls.ControlTemplate>. Um modelo de controle especifica a hierarquia visual de um controle. Quando você referencia um controle explicitamente, você referencia implicitamente sua hierarquia visual. Você pode substituir os valores padrão de um modelo de controle para criar uma aparência visual personalizada para um controle. Por exemplo, você pode modificar o valor de cor do plano <xref:System.Windows.Controls.Button> de fundo do controle para que ele use um valor de cor de gradiente linear em vez de um valor de cor sólido. Para obter mais informações, consulte [Estilos e modelos de botão](../controls/button-styles-and-templates.md).  
+ A chave para a expansão de um controle em uma hierarquia de controles é a <xref:System.Windows.Controls.ControlTemplate>. Um modelo de controle especifica a hierarquia visual de um controle. Quando você referencia um controle explicitamente, você referencia implicitamente sua hierarquia visual. Você pode substituir os valores padrão de um modelo de controle para criar uma aparência visual personalizada para um controle. Por exemplo, você pode modificar o valor de cor do plano de fundo do controle <xref:System.Windows.Controls.Button> para que ele use um valor de cor de gradiente linear em vez de um valor de cor sólido. Para obter mais informações, consulte [Estilos e modelos de botão](../controls/button-styles-and-templates.md).  
   
- Um elemento de interface do usuário, como <xref:System.Windows.Controls.Button> um controle, contém várias listas de instruções de gráficos vetoriais que descrevem toda a definição de renderização de um controle. O código a seguir mostra <xref:System.Windows.Controls.Button> um controle definido na marcação.  
+ Um elemento de interface do usuário, como um controle <xref:System.Windows.Controls.Button>, contém várias listas de instruções de gráficos vetoriais que descrevem toda a definição de renderização de um controle. O código a seguir mostra um controle <xref:System.Windows.Controls.Button> definido na marcação.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
   
- Se você fosse enumerar os objetos visuais e as listas de instruções de gráficos vetoriais <xref:System.Windows.Controls.Button> que compõem o controle, você encontraria a hierarquia de objetos ilustrada abaixo:  
+ Se você fosse enumerar os objetos visuais e as listas de instruções de gráficos vetoriais que compõem o controle <xref:System.Windows.Controls.Button>, você encontraria a hierarquia de objetos ilustrada abaixo:  
   
  ![Diagrama de árvore visual e dados de renderização](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
- O <xref:System.Windows.Controls.Button> controle contém um <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento que, por sua vez, contém <xref:System.Windows.Controls.ContentPresenter> um elemento. O <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento é responsável por desenhar todos os elementos gráficos discretos que compõem a borda e o plano de fundo de um botão. O <xref:System.Windows.Controls.ContentPresenter> elemento é responsável por exibir o conteúdo <xref:System.Windows.Controls.Button>do. Nesse caso, como você está exibindo uma imagem, o <xref:System.Windows.Controls.ContentPresenter> elemento contém um <xref:System.Windows.Controls.Image> elemento.  
+ O controle <xref:System.Windows.Controls.Button> contém um elemento <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, que, por sua vez, contém um elemento <xref:System.Windows.Controls.ContentPresenter>. O elemento <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> é responsável por desenhar todos os elementos gráficos discretos que compõem a borda e o plano de fundo de um botão. O elemento <xref:System.Windows.Controls.ContentPresenter> é responsável por exibir o conteúdo do <xref:System.Windows.Controls.Button>. Nesse caso, como você está exibindo uma imagem, o elemento <xref:System.Windows.Controls.ContentPresenter> contém um elemento <xref:System.Windows.Controls.Image>.  
   
  Há diversos pontos a observar sobre a hierarquia de objetos visuais e listas de instruções de gráficos vetoriais:  
   
 - A ordem na hierarquia representa a ordem de renderização das informações de desenho. Do elemento visual raiz, a ordem de renderização passa pelos elementos filho da esquerda para a direita, de cima para baixo. Se um determinado elemento tem elementos visuais filho, a ordem de renderização passa por eles antes de passar pelos irmãos desse elemento.  
   
-- Elementos de nó não folha na hierarquia, <xref:System.Windows.Controls.ContentPresenter>como, são usados para conter elementos filho — eles não contêm listas de instruções.  
+- Elementos de nó não folha na hierarquia, como <xref:System.Windows.Controls.ContentPresenter>, são usados para conter elementos filho — eles não contêm listas de instruções.  
   
 - Se um elemento visual contém uma lista de instruções de gráfico vetorial e filhos visuais, a lista de instruções no elemento visual pai é renderizada antes de desenhos em qualquer um dos objetos filho visuais.  
   
@@ -139,11 +139,11 @@ Ordem das operações do DrawingGroup
 ## <a name="visual-tree"></a>Árvore visual  
  A árvore visual contém todos os elementos visuais usados na interface do usuário de um aplicativo. Já que um elemento visual contém informações de desenho persistentes, você pode pensar na árvore visual como um grafo de cena, contendo todas as informações de renderização necessárias para compor a saída para o dispositivo de vídeo. Esta árvore é o acúmulo de todos os elementos visuais criados diretamente pelo aplicativo, seja no código ou em marcação. A árvore visual também contém todos os elementos visuais criados pela expansão de modelo de elementos tais como controles e objetos de dados.  
   
- O código a seguir mostra <xref:System.Windows.Controls.StackPanel> um elemento definido na marcação.  
+ O código a seguir mostra um elemento <xref:System.Windows.Controls.StackPanel> definido na marcação.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet3)]  
   
- Se você fosse enumerar os objetos visuais que compõem o <xref:System.Windows.Controls.StackPanel> elemento no exemplo de marcação, você encontraria a hierarquia de objetos visuais ilustrada abaixo:  
+ Se você fosse enumerar os objetos visuais que compõem o elemento <xref:System.Windows.Controls.StackPanel> no exemplo de marcação, você encontraria a hierarquia de objetos visuais ilustrada abaixo:  
   
  ![Diagrama de hierarquia de árvore visual](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
@@ -153,33 +153,33 @@ Ordem das operações do DrawingGroup
  ![Diagrama da ordem de renderização da árvore visual](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>Visual raiz  
- O **visual raiz** é o elemento mais alto em uma hierarquia de árvore visual. Na maioria dos aplicativos, a classe base do Visual raiz é <xref:System.Windows.Window> ou. <xref:System.Windows.Navigation.NavigationWindow> No entanto, se você estivesse hospedando objetos visuais em um aplicativo Win32, o visual raiz seria o visual mais alto que você estivesse hospedando na janela Win32. Para obter mais informações, confira [Tutorial: Hospedagem de objetos visuais em um aplicativo](tutorial-hosting-visual-objects-in-a-win32-application.md)Win32.  
+ O **visual raiz** é o elemento mais alto em uma hierarquia de árvore visual. Na maioria dos aplicativos, a classe base do Visual raiz é <xref:System.Windows.Window> ou <xref:System.Windows.Navigation.NavigationWindow>. No entanto, se você estivesse hospedando objetos visuais em um aplicativo Win32, o visual raiz seria o visual mais alto que você estivesse hospedando na janela Win32. Para obter mais informações, confira [Tutorial: Hospedagem de objetos visuais em um aplicativo Win32 @ no__t-0.  
   
 ### <a name="relationship-to-the-logical-tree"></a>Relacionamento com a árvore lógica  
- A árvore lógica no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representa os elementos de um aplicativo em tempo de execução. Embora você não manipule esta árvore diretamente, essa exibição do aplicativo é útil para entender a herança de propriedades e o roteamento de eventos. Ao contrário da árvore visual, a árvore lógica pode representar objetos de dados não visuais, como <xref:System.Windows.Documents.ListItem>. Em muitos casos, a árvore lógica mapeia de modo muito próximo às definições de marcação de um aplicativo. O código a seguir mostra <xref:System.Windows.Controls.DockPanel> um elemento definido na marcação.  
+ A árvore lógica no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representa os elementos de um aplicativo em tempo de execução. Embora você não manipule esta árvore diretamente, essa exibição do aplicativo é útil para entender a herança de propriedades e o roteamento de eventos. Ao contrário da árvore visual, a árvore lógica pode representar objetos de dados não visuais, como <xref:System.Windows.Documents.ListItem>. Em muitos casos, a árvore lógica mapeia de modo muito próximo às definições de marcação de um aplicativo. O código a seguir mostra um elemento <xref:System.Windows.Controls.DockPanel> definido na marcação.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
   
- Se você fosse enumerar os objetos lógicos que compõem <xref:System.Windows.Controls.DockPanel> o elemento no exemplo de marcação, você encontraria a hierarquia de objetos lógicos ilustrada abaixo:  
+ Se você fosse enumerar os objetos lógicos que compõem o elemento <xref:System.Windows.Controls.DockPanel> no exemplo de marcação, você encontraria a hierarquia de objetos lógicos ilustrada abaixo:  
   
  ![Diagrama de árvore](./media/tree1-wcp.gif "Tree1_wcp")  
 Diagrama de árvore lógica  
   
- A árvore visual e a árvore lógica são sincronizadas com o conjunto atual de elementos do aplicativo, refletindo qualquer adição, exclusão ou modificação de elementos. No entanto, as árvores apresentam diferentes exibições do aplicativo. Ao contrário da árvore visual, a árvore lógica não expande o elemento <xref:System.Windows.Controls.ContentPresenter> de um controle. Isso significa que não há uma correspondência um para um direta entre uma árvore lógica e uma árvore visual para o mesmo conjunto de objetos. Na verdade, invocar o método do <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> objeto LogicalTreeHelper e o método do <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> objeto VisualTreeHelper usando o mesmo elemento como um parâmetro produz resultados diferentes.  
+ A árvore visual e a árvore lógica são sincronizadas com o conjunto atual de elementos do aplicativo, refletindo qualquer adição, exclusão ou modificação de elementos. No entanto, as árvores apresentam diferentes exibições do aplicativo. Diferentemente da árvore visual, a árvore lógica não expande o elemento <xref:System.Windows.Controls.ContentPresenter> de um controle. Isso significa que não há uma correspondência um para um direta entre uma árvore lógica e uma árvore visual para o mesmo conjunto de objetos. Na verdade, invocar o método <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> do objeto **LogicalTreeHelper** e o método <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> do objeto **VisualTreeHelper** usando o mesmo elemento que um parâmetro produz resultados diferentes.  
   
  Para obter mais informações sobre a árvore lógica, consulte [Árvores no WPF](../advanced/trees-in-wpf.md).  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Exibindo a árvore visual com XamlPad  
- A ferramenta do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XamlPad, fornece uma opção para visualizar e explorar a árvore visual que corresponde ao conteúdo [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] definido atualmente. Clique no botão **Mostrar Árvore Visual** na barra de menus para exibir a árvore visual. A seguir, ilustra a expansão de conteúdo [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] em nós de árvore visual no painel **Gerenciador de Árvore Visual** do XamlPad:  
+ A ferramenta [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XamlPad, fornece uma opção para exibir e explorar a árvore visual que corresponde ao conteúdo XAML definido no momento. Clique no botão **Mostrar Árvore Visual** na barra de menus para exibir a árvore visual. O seguinte ilustra a expansão do conteúdo XAML em nós de árvore visual no painel do **Visual Tree Explorer** do XamlPad:  
   
  ![Painel Gerenciador de Árvore Visual no XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
 
- Observe como os <xref:System.Windows.Controls.Label>controles <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.Button> cada um exibem uma hierarquia de objetos visuais separada no painel do **Visual Tree Explorer** do XamlPad. Isso ocorre porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os controles têm <xref:System.Windows.Controls.ControlTemplate> um que contém a árvore visual desse controle. Quando você referencia um controle explicitamente, você referencia implicitamente sua hierarquia visual.  
+ Observe como os controles <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.Button> exibem uma hierarquia de objetos visuais separada no painel do **Visual Tree Explorer** do XamlPad. Isso ocorre porque os controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm um <xref:System.Windows.Controls.ControlTemplate> que contém a árvore visual desse controle. Quando você referencia um controle explicitamente, você referencia implicitamente sua hierarquia visual.  
   
 ### <a name="profiling-visual-performance"></a>Criação de perfil de desempenho Visual  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um conjunto de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A ferramenta Visual Profiler fornece uma exibição gráfica sofisticada de dados de desempenho, por meio do mapeamento diretamente para a árvore visual do aplicativo. Nessa tela, a seção **Uso de CPU** do Visual Profiler lhe dá um detalhamento preciso do uso de um objeto de serviços do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], assim como renderização e layout.  
   
- ![Saída de exibição do Visual] Profiler (./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ (./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04") de ![saída de exibição do Visual Profiler]  
 Saída de exibição do Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
@@ -207,7 +207,7 @@ Saída de exibição do Visual Profiler
   
  ![Diferenças entre grafos rasterizados e vetoriais](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
- A marcação a seguir mostra <xref:System.Windows.Shapes.Path> dois elementos definidos. O segundo elemento usa um <xref:System.Windows.Media.ScaleTransform> para redimensionar as instruções de desenho do primeiro elemento em 300%. Observe que as instruções de desenho nos <xref:System.Windows.Shapes.Path> elementos permanecem inalteradas.  
+ A marcação a seguir mostra dois elementos <xref:System.Windows.Shapes.Path> definidos. O segundo elemento usa um <xref:System.Windows.Media.ScaleTransform> para redimensionar as instruções de desenho do primeiro elemento em 300%. Observe que as instruções de desenho nos elementos <xref:System.Windows.Shapes.Path> permanecem inalteradas.  
   
  [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
   
@@ -225,15 +225,15 @@ Elementos gráficos e texto em diferentes configurações de DPI
   
 <a name="visualtreehelper_class"></a>   
 ## <a name="visualtreehelper-class"></a>Classe VisualTreeHelper  
- A <xref:System.Windows.Media.VisualTreeHelper> classe é uma classe auxiliar estática que fornece funcionalidade de baixo nível para programação no nível de objeto visual, que é útil em cenários muito específicos, como o desenvolvimento de controles personalizados de alto desempenho. Na maioria dos casos, os objetos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estrutura de nível superior, <xref:System.Windows.Controls.Canvas> como <xref:System.Windows.Controls.TextBlock>e, oferecem maior flexibilidade e facilidade de uso.  
+ A classe <xref:System.Windows.Media.VisualTreeHelper> é uma classe auxiliar estática que fornece funcionalidade de baixo nível para programação no nível de objeto visual, que é útil em cenários muito específicos, como o desenvolvimento de controles personalizados de alto desempenho. Na maioria dos casos, os objetos de estrutura [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de nível superior, como <xref:System.Windows.Controls.Canvas> e <xref:System.Windows.Controls.TextBlock>, oferecem maior flexibilidade e facilidade de uso.  
   
 ### <a name="hit-testing"></a>Testes de clique  
- A <xref:System.Windows.Media.VisualTreeHelper> classe fornece métodos para teste de clique em objetos visuais quando o suporte de teste de clique padrão não atende às suas necessidades. Você pode usar os <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> métodos <xref:System.Windows.Media.VisualTreeHelper> na classe para determinar se um valor de geometria ou de coordenada de ponto está dentro do limite de um determinado objeto, como um controle ou elemento gráfico. Por exemplo, você pode usar o teste de clique para determinar se um clique do mouse dentro do retângulo delimitador de um objeto está dentro da geometria de um círculo. Você também pode optar por substituir a implementação padrão de teste de clique para executar seus próprios cálculos de teste de clique personalizados.  
+ A classe <xref:System.Windows.Media.VisualTreeHelper> fornece métodos para teste de clique em objetos visuais quando o suporte de teste de clique padrão não atende às suas necessidades. Você pode usar os métodos <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> na classe <xref:System.Windows.Media.VisualTreeHelper> para determinar se um valor de coordenadas de geometria ou de ponto está dentro do limite de um determinado objeto, como um elemento de controle ou gráfico. Por exemplo, você pode usar o teste de clique para determinar se um clique do mouse dentro do retângulo delimitador de um objeto está dentro da geometria de um círculo. Você também pode optar por substituir a implementação padrão de teste de clique para executar seus próprios cálculos de teste de clique personalizados.  
   
  Para obter mais informações sobre teste de clique, consulte [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md).  
   
 ### <a name="enumerating-the-visual-tree"></a>Enumerar a árvore Visual  
- A <xref:System.Windows.Media.VisualTreeHelper> classe fornece a funcionalidade para enumerar os membros de uma árvore visual. Para recuperar um pai, chame o <xref:System.Windows.Media.VisualTreeHelper.GetParent%2A> método. Para recuperar um filho ou um descendente direto de um objeto visual, chame o <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> método. Esse método retorna um filho <xref:System.Windows.Media.Visual> do pai no índice especificado.  
+ A classe <xref:System.Windows.Media.VisualTreeHelper> fornece funcionalidade para enumerar os membros de uma árvore visual. Para recuperar um pai, chame o método <xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>. Para recuperar um filho ou um descendente direto de um objeto visual, chame o método <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>. Esse método retorna um filho <xref:System.Windows.Media.Visual> do pai no índice especificado.  
   
  O exemplo a seguir mostra como enumerar todos os descendentes de um objeto visual, que é uma técnica que talvez você queira usar caso esteja interessado em serializar a informação de renderização de uma hierarquia de objetos visuais.  
   
@@ -242,7 +242,7 @@ Elementos gráficos e texto em diferentes configurações de DPI
   
  Na maioria dos casos, a árvore lógica é uma representação mais útil dos elementos em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Embora você não modifique a árvore lógica diretamente, essa exibição do aplicativo é útil para entender a herança de propriedades e o roteamento de eventos. Ao contrário da árvore visual, a árvore lógica pode representar objetos de dados não visuais, como <xref:System.Windows.Documents.ListItem>. Para obter mais informações sobre a árvore lógica, consulte [Árvores no WPF](../advanced/trees-in-wpf.md).  
   
- A <xref:System.Windows.Media.VisualTreeHelper> classe fornece métodos para retornar o retângulo delimitador de objetos visuais. Você pode retornar o retângulo delimitador de um objeto visual chamando <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>. Você pode retornar o retângulo delimitador de todos os descendentes de um objeto visual, incluindo o próprio objeto visual, chamando <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>. O código a seguir mostra como você calcularia o retângulo delimitador de um objeto visual e todos os seus descendentes.  
+ A classe <xref:System.Windows.Media.VisualTreeHelper> fornece métodos para retornar o retângulo delimitador de objetos visuais. Você pode retornar o retângulo delimitador de um objeto visual chamando <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>. Você pode retornar o retângulo delimitador de todos os descendentes de um objeto visual, incluindo o próprio objeto visual, chamando <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>. O código a seguir mostra como você calcularia o retângulo delimitador de um objeto visual e todos os seus descendentes.  
   
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
@@ -255,5 +255,5 @@ Elementos gráficos e texto em diferentes configurações de DPI
 - [Elementos gráficos e geração de imagens 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md)
 - [Usando objetos DrawingVisual](using-drawingvisual-objects.md)
-- [Tutorial: Hospedando objetos visuais em um aplicativo Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Tutorial: Hospedando objetos visuais em um aplicativo Win32 @ no__t-0
 - [Otimizando o desempenho do aplicativo WPF](../advanced/optimizing-wpf-application-performance.md)

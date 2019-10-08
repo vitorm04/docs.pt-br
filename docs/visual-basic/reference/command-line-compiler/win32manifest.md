@@ -6,19 +6,19 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6eb9d50a3ecd80acb0349f1ba315d9cf8ccc6dc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cae6b34aadf6698a337e52aa1ea1ce44206836ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937232"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004631"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário para ser inserido no arquivo executável portátil (PE) de um projeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -win32manifest: fileName  
 ```  
   
@@ -38,13 +38,13 @@ Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário pa
   
  Seu aplicativo estará sujeito à virtualização se qualquer uma das seguintes condições for verdadeira:  
   
-1. Você usa a `-nowin32manifest` opção e não fornece um manifesto em uma etapa de compilação posterior ou como parte de um arquivo de recurso do Windows (. res) usando a `-win32resource` opção.  
+1. Você usa a opção `-nowin32manifest` e não fornece um manifesto em uma etapa de compilação posterior ou como parte de um arquivo de recurso do Windows (. res) usando a opção `-win32resource`.  
   
 2. Você fornece um manifesto personalizado que não especifica um nível de execução solicitado.  
   
  O Visual Studio cria um arquivo .manifest padrão e o armazena nos diretórios de depuração e liberação juntamente com o arquivo executável. Você pode exibir ou editar o arquivo app. manifest padrão clicando em **exibir configurações de UAC** na guia **aplicativo** no designer de projeto. Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Você pode fornecer o manifesto do aplicativo como uma etapa de pós-compilação personalizada ou como parte de um arquivo de recurso do Win32 usando `-nowin32manifest` a opção. Use essa mesma opção se quiser que o aplicativo seja sujeito à virtualização de arquivo ou Registro no Windows Vista. Isso impedirá que o compilador crie e incorpore um manifesto padrão no arquivo PE.  
+ Você pode fornecer o manifesto do aplicativo como uma etapa de pós-compilação personalizada ou como parte de um arquivo de recurso do Win32 usando a opção `-nowin32manifest`. Use essa mesma opção se quiser que o aplicativo seja sujeito à virtualização de arquivo ou Registro no Windows Vista. Isso impedirá que o compilador crie e incorpore um manifesto padrão no arquivo PE.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra o manifesto padrão que o Visual Basic compilador insere em um PE.  

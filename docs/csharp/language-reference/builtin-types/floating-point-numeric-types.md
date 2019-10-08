@@ -12,17 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
+- size of floating-point types [C#]
 - types [C#], floating-point types
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 0d97b3ffd587e8398e5572706a47937716a6e709
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
-ms.translationtype: HT
+ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236054"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002199"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
@@ -32,11 +33,11 @@ Os **tipos de ponto flutuante** são um subconjunto dos **tipos simples** e pode
 
 O C# é compatível com os seguintes tipos de pontos flutuantes predefinidos:
   
-|palavra-chave/tipo C#|Intervalo aproximado|Precisão|Tipo .NET|
-|----------|-----------------------|---------------|--------------|
-|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|Aproximadamente de 6 a 9 dígitos|<xref:System.Single?displayProperty=nameWithType>|
-|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|Aproximadamente de 15 a 17 dígitos|<xref:System.Double?displayProperty=nameWithType>|
-|`decimal`|±1,0 x 10<sup>-28</sup> para ±7,9228 x 10<sup>28</sup>|28 a 29 dígitos|<xref:System.Decimal?displayProperty=nameWithType>|
+|palavra-chave/tipo C#|Intervalo aproximado|Precisão|Size|Tipo .NET|
+|----------|-----------------------|---------------|--------------|--------------|
+|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|Aproximadamente de 6 a 9 dígitos|4 bytes|<xref:System.Single?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|Aproximadamente de 15 a 17 dígitos|8 bytes|<xref:System.Double?displayProperty=nameWithType>|
+|`decimal`|±1,0 x 10<sup>-28</sup> para ±7,9228 x 10<sup>28</sup>|28 a 29 dígitos|16 bytes|<xref:System.Decimal?displayProperty=nameWithType>|
 
 Na tabela anterior, cada palavra-chave do tipo C# da coluna mais à esquerda é um alias do tipo .NET correspondente. Eles são intercambiáveis. Por exemplo, as declarações a seguir declaram variáveis do mesmo tipo:
 

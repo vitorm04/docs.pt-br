@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627293"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005699"
 ---
 # <a name="controls-by-category"></a>Controles por categoria
-Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamente em várias categorias. Essas categorias podem ser usadas para selecionar o controle apropriado para seu cenário, ajudando a ver quais controles têm padrões de uso ou funcionalidades semelhantes.  
+Os controles de Windows Presentation Foundation (WPF) podem ser agrupados logicamente em várias categorias. Essas categorias podem ser usadas para selecionar o controle apropriado para seu cenário, ajudando a ver quais controles têm padrões de uso ou funcionalidades semelhantes.  
   
 ## <a name="layout"></a>Layout  
  Controles de layout são usados para gerenciar o tamanho, dimensões, posição e disposição dos elementos filho.  
@@ -56,7 +56,7 @@ Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamen
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Botões  
- Botões são um dos controles mais básicos da interface do usuário. Aplicativos normalmente executam alguma tarefa no <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento quando um usuário clica neles.  
+ Botões são um dos controles mais básicos da interface do usuário. Normalmente, os aplicativos executam alguma tarefa no evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> quando um usuário clica neles.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -171,7 +171,7 @@ Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamen
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Tinta digital  
- Controles de tinta digital fornecem suporte integrado para recursos [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], como exibição e entrada de tinta.  
+ Os controles de tinta digital fornecem suporte integrado para os recursos do Tablet PC, como a exibição de tinta e a entrada à tinta.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: bbefaba4491fca1b21b6a214048d9db1394c4bc7
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 38f9a9c79bfda9abb46181f433d28268b8a37762
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545337"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004574"
 ---
 # <a name="typography"></a>Tipografia
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]inclui suporte para apresentação rica de conteúdo de texto. O texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no é renderizado usando o Microsoft ClearType, o que aumenta a clareza e a legibilidade do texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]o também oferece suporte a [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] fontes OpenType, que fornecem recursos adicionais além daqueles definidos pelo formato.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclui suporte para apresentação rica de conteúdo de texto. O texto no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é renderizado usando o Microsoft ClearType, o que aumenta a clareza e a legibilidade do texto. o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece suporte a fontes OpenType, que fornecem recursos adicionais além daqueles definidos pelo formato de® TrueType.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipografia no WPF](typography-in-wpf.md)  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 880fdf4931dadea547d64d0506bd3e978956468e
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788980"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005404"
 ---
 # <a name="-nowarn"></a>-nowarn
-Suprime a capacidade do compilador para gerar avisos.  
+Suprime a capacidade do compilador de gerar avisos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -nowarn[:numberList]  
 ```  
   
@@ -26,28 +26,28 @@ Suprime a capacidade do compilador para gerar avisos.
   
 |Termo|Definição|  
 |---|---|  
-|`numberList`|Opcional. Lista delimitada por vírgula dos números de ID de aviso que o compilador deve eliminar. Se as IDs de aviso não forem especificadas, todos os avisos estão suprimidos.|  
+|`numberList`|Opcional. Lista delimitada por vírgulas dos números de ID de aviso que o compilador deve suprimir. Se as IDs de aviso não forem especificadas, todos os avisos serão suprimidos.|  
   
 ## <a name="remarks"></a>Comentários  
- O `-nowarn` opção faz com que o compilador não gere avisos. Para suprimir um aviso individual, forneça a ID do aviso para o `-nowarn` opção após os dois-pontos. Separe vários números de aviso com vírgulas.  
+ A opção `-nowarn` faz com que o compilador não gere avisos. Para suprimir um aviso individual, forneça a ID de aviso à opção `-nowarn` após os dois-pontos. Separe vários números de aviso com vírgulas.  
   
- Você precisa especificar somente a parte numérica do identificador de aviso. Por exemplo, se você desejar suprimir BC42024, o aviso para variáveis locais não utilizados, especificar `-nowarn:42024`.  
+ Você precisa especificar apenas a parte numérica do identificador de aviso. Por exemplo, se você quiser suprimir BC42024, o aviso para variáveis locais não usadas, especifique `-nowarn:42024`.  
   
- Para obter mais informações sobre os números de ID do aviso, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Para obter mais informações sobre os números de identificação de aviso, consulte [Configurando avisos no Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|Definir - nowarn no ambiente de desenvolvimento integrado do Visual Studio|  
+|Para definir-nowarn no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Selecione o **desabilitar todos os avisos** caixa de seleção para desabilitar todos os avisos.<br />     - ou -<br />     Para desabilitar um aviso específico, clique em **nenhum** na lista suspensa adjacente ao aviso.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Marque a caixa de seleção **desabilitar todos os avisos** para desabilitar todos os avisos.<br />     - ou -<br />     Para desabilitar um aviso específico, clique em **nenhum** na lista suspensa adjacente ao aviso.|  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código compila `T2.vb` e não exibe todos os avisos.  
+ O código a seguir compila `T2.vb` e não exibe nenhum aviso.  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código compila `T2.vb` e não exibe os avisos para variáveis locais não utilizadas (42024).  
+ O código a seguir compila `T2.vb` e não exibe os avisos para variáveis locais não utilizadas (42024).  
   
 ```console
 vbc -nowarn:42024 t2.vb  

@@ -8,49 +8,49 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d281fe07754f0471f8d6c0e31cf3ea890060504
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625903"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005343"
 ---
 # <a name="-optionstrict"></a>-optionstrict
-Impõe semântica de tipo estrito para restringir conversões de tipo implícito.  
+Impõe uma semântica de tipo estrito para restringir conversões implícitas de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. O `-optionstrict+` opção restringe a conversão implícita de tipo. O padrão para essa opção é `-optionstrict-`. O `-optionstrict+` opção é o mesmo que `-optionstrict`. Você pode usar ambos para a semântica de tipo permissível.  
+ Opcional. A opção `-optionstrict+` restringe a conversão de tipo implícita. O padrão para essa opção é `-optionstrict-`. A opção `-optionstrict+` é a mesma que `-optionstrict`. Você pode usar ambas as semânticas de tipo permissivas.  
   
  `custom`  
- Necessário. Avise quando a semântica de linguagem estrita não for respeitada.  
+ Necessário. Avisar quando a semântica de linguagem estrita não for respeitada.  
   
 ## <a name="remarks"></a>Comentários  
- Quando `-optionstrict+` é na verdade, apenas conversões de tipo de expansão podem ser feitas implicitamente. Implícita reduzir conversões de tipo, como a atribuição de um `Decimal` tipo de objeto a um objeto de tipo inteiro, são relatados como erros.  
+ Quando `-optionstrict+` está em vigor, apenas conversões de tipo de alargamento podem ser feitas implicitamente. As conversões de tipo de estreitamento implícita, como a atribuição de um objeto de tipo `Decimal` a um objeto de tipo inteiro, são relatadas como erros.  
   
- Para gerar avisos para conversões de tipo de estreitamento implícitas, use `-optionstrict:custom`. Use `-nowarn:numberlist` para ignorar os avisos específicos e `-warnaserror:numberlist` para tratar específicos avisos como erros.  
+ Para gerar avisos para conversões de tipo de estreitamento implícita, use `-optionstrict:custom`. Use `-nowarn:numberlist` para ignorar avisos específicos e `-warnaserror:numberlist` para tratar avisos específicos como erros.  
   
-### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Definir - optionstrict no IDE do Visual Studio  
+### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Para Set-optionstrict no IDE do Visual Studio  
   
-1. Selecione um projeto no **Gerenciador de Soluções**. Sobre o **Project** menu, clique em **propriedades.**   
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **projeto** , clique em **Propriedades.**   
   
 2. Clique na guia **Compilar**.  
   
-3. Modificar o valor de **Option Strict** caixa.  
+3. Modifique o valor na caixa **Option Strict** .  
   
-### <a name="to-set--optionstrict-programmatically"></a>Definir - optionstrict programaticamente  
+### <a name="to-set--optionstrict-programmatically"></a>Para Set-optionstrict programaticamente  
   
-- Ver [opção Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Consulte a [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código compila `Test.vb` usando a semântica de tipo estrito.  
+ O código a seguir compila `Test.vb` usando semântica de tipo estrito.  
   
 ```console
 vbc -optionstrict+ test.vb  

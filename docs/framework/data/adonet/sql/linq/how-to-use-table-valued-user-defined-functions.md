@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 31797ae7d0fe23227cc4af733fbceac5d474f779
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781451"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003178"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Como: usar funções definidas pelo usuário com valor de tabela
 Uma função de tabela valorizada retorna um único rowset (em vez de procedimentos armazenados, que podem retornar várias formas de resultado). Porque o tipo de retorno de uma função de tabela valorizada é `Table`, você pode usar uma função de tabela valorizada em qualquer lugar em SQL que você pode usar uma tabela. Você também pode tratar a função de tabela valorizada assim como você uma tabela.  
@@ -18,7 +18,7 @@ Uma função de tabela valorizada retorna um único rowset (em vez de procedimen
 ## <a name="example"></a>Exemplo  
  A função a seguir indica explicitamente SQL que retorna `TABLE`. Portanto, a estrutura de rowset retornado é definida implicitamente.  
   
-```  
+```sql
 CREATE FUNCTION ProductsCostingMoreThan(@cost money)  
 RETURNS TABLE  
 AS  
@@ -36,7 +36,7 @@ RETURN
 ## <a name="example"></a>Exemplo  
  O código a seguir mostra SQL que você pode se juntar a tabela que a função e retorna a trata de outra maneira como você faria qualquer outra tabela:  
   
-```  
+```sql
 SELECT p2.ProductName, p1.UnitPrice  
 FROM dbo.ProductsCostingMoreThan(80.50)  
 AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID  

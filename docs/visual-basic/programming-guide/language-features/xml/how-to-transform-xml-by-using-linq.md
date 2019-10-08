@@ -5,25 +5,25 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08378775f2c30d8ebfcc4f7ceea6fc3ecb2066e5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028428"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003256"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Como: Transformar XML usando LINQ (Visual Basic)
-[Literais XML](../../../../visual-basic/language-reference/xml-literals/index.md) torná-lo mais fácil de ler o XML de uma fonte e transformá-lo em um novo formato XML. Você pode tirar proveito das consultas LINQ para recuperar o conteúdo para transformar ou alterar o conteúdo em um documento existente em um novo formato XML.  
+Os [literais XML](../../../../visual-basic/language-reference/xml-literals/index.md) facilitam a leitura de XML de uma fonte e a transformação para um novo formato XML. Você pode aproveitar as consultas LINQ para recuperar o conteúdo para transformar ou alterar o conteúdo de um documento existente para um novo formato XML.  
   
- O exemplo neste tópico transforma o conteúdo de um documento de origem XML HTML a ser exibida em um navegador.  
+ O exemplo neste tópico transforma o conteúdo de um documento de origem XML em HTML a ser exibido em um navegador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-transform-an-xml-document"></a>Para transformar um documento XML  
   
-1. No Visual Studio, crie um novo projeto do Visual Basic na **aplicativo de Console** modelo de projeto.  
+1. No Visual Studio, crie um novo projeto de Visual Basic no modelo de projeto de **aplicativo de console** .  
   
-2. Clique duas vezes no arquivo Module1.vb criado no projeto para modificar o código do Visual Basic. Adicione o seguinte código para o `Sub Main` do `Module1` módulo. Esse código cria o documento XML de origem como um <xref:System.Xml.Linq.XDocument> objeto.  
+2. Clique duas vezes no arquivo Module1. vb criado no projeto para modificar o código de Visual Basic. Adicione o código a seguir ao `Sub Main` do módulo `Module1`. Esse código cria o documento XML de origem como um objeto <xref:System.Xml.Linq.XDocument>.  
   
     ```vb  
     Dim catalog =   
@@ -57,11 +57,11 @@ ms.locfileid: "62028428"
         </Catalog>  
     ```  
   
-     [Como: Carregar XML de um arquivo, cadeia de caracteres ou Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [Como: Carregar XML de um arquivo, Cadeia de caracteres ou fluxo @ no__t-0.  
   
-3. Após o código para criar o documento XML de origem, adicione o seguinte código para recuperar todos os \<livro > elementos do objeto e transformá-los em um documento HTML. A lista de \<livro > elementos é criado usando uma consulta LINQ que retorna uma coleção de <xref:System.Xml.Linq.XElement> objetos que contém o HTML transformado. Você pode usar expressões inseridas para colocar os valores do documento de origem no novo formato XML.  
+3. Depois do código para criar o documento XML de origem, adicione o código a seguir para recuperar todos os elementos de > de @no__t 0Book do objeto e transformá-los em um documento HTML. A lista de elementos de > de @no__t 0Book é criada usando uma consulta LINQ que retorna uma coleção de objetos <xref:System.Xml.Linq.XElement> que contêm o HTML transformado. Você pode usar expressões inseridas para colocar os valores do documento de origem no novo formato XML.  
   
-     O documento HTML resultante é gravado em um arquivo usando o <xref:System.Xml.Linq.XElement.Save%2A> método.  
+     O documento HTML resultante é gravado em um arquivo usando o método <xref:System.Xml.Linq.XElement.Save%2A>.  
   
     ```vb  
     Dim htmlOutput =   
@@ -82,11 +82,11 @@ ms.locfileid: "62028428"
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4. Após `Sub Main` dos `Module1`, adicione um novo método (`Sub`) para transformar um \<descrição > nó em formato HTML especificado. Esse método é chamado pelo código na etapa anterior e é usado para preservar o formato do \<descrição > elementos.  
+4. Após `Sub Main` de `Module1`, adicione um novo método (`Sub`) para transformar um nó \<Description > no formato HTML especificado. Esse método é chamado pelo código na etapa anterior e é usado para preservar o formato dos elementos de > de @no__t 0Description.  
   
-     Esse método substitui subelementos do \<descrição > elemento com HTML. O `ReplaceWith` método é usado para preservar a localização de subelementos. O conteúdo transformado do \<descrição > elemento é incluído em um parágrafo HTML (\<p >) elemento. O <xref:System.Xml.Linq.XContainer.Nodes%2A> propriedade é usada para recuperar o conteúdo transformado do \<descrição > elemento. Isso garante que os subelementos são incluídos no conteúdo transformado.  
+     Esse método substitui os subelementos do elemento \<Description > com HTML. O método `ReplaceWith` é usado para preservar o local dos subelementos. O conteúdo transformado do elemento \<Description > está incluído em um elemento de parágrafo HTML (\<p >). A propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> é usada para recuperar o conteúdo transformado do elemento de > \<Description. Isso garante que os subelementos sejam incluídos no conteúdo transformado.  
   
-     Adicione o seguinte código após `Sub Main` de `Module1`.  
+     Adicione o código a seguir após `Sub Main` de `Module1`.  
   
     ```vb  
     Public Function TransformDescription(ByVal desc As XElement) As XElement  
@@ -118,7 +118,7 @@ ms.locfileid: "62028428"
   
 6. Pressione F5 para executar o código. O documento salvo resultante será semelhante ao seguinte:  
   
-    ```  
+    ```html  
     <?xml version="1.0"?>  
     <html>  
       <body>  
@@ -160,6 +160,6 @@ ms.locfileid: "62028428"
 - [Literais XML](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Manipulando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Como: Carregar XML de um arquivo, cadeia de caracteres ou Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [Como: Carregar XML de um arquivo, Cadeia de caracteres ou fluxo @ no__t-0
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

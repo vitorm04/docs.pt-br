@@ -8,69 +8,64 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: f34b5d512a8054b0ab0d3fba54525801eb560143
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: af441c0fd040897ebcd7af2edd6122a47e70468a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040467"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002126"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opções do compilador C#)
 
-Faz com que o compilador aceite somente a sintaxe incluída na especificação de linguagem C# escolhida.  
-  
-## <a name="syntax"></a>Sintaxe  
+Faz com que o compilador aceite somente a sintaxe incluída na especificação de linguagem C# escolhida.
+
+## <a name="syntax"></a>Sintaxe
 
 ```console
--langversion:option  
+-langversion:option
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
  `option`  
- Os seguintes valores são válidos:  
-  
-|Opção|Significado|  
-|------------|-------------|  
-|versão prévia|O compilador aceita toda as sintaxes de linguagem válidas da versão prévia mais recente à qual dá suporte.|
-|mais recente|O compilador aceita toda as sintaxes de linguagem válidas da versão (incluindo versões secundárias) mais recente à qual dá suporte.|
-|latestMajor|O compilador aceita toda a sintaxe de linguagem válida da versão principal mais recente à qual dá suporte.|
-|8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior. <sup id="TCS80">[CS80](#FCS80)</sup>|
-|7.3|O compilador aceita somente a sintaxe incluída em C# 7.3 ou inferior <sup id="TCS73">[CS73](#FCS73)</sup>|
-|7.2|O compilador aceita somente a sintaxe incluída em C# 7.2 ou inferior <sup id="TCS72">[CS72](#FCS72)</sup>|
-|7.1|O compilador aceita somente a sintaxe incluída em C# 7.1 ou inferior <sup id="TCS71">[CS71](#FCS71)</sup>|
-|7|O compilador aceita somente a sintaxe incluída em C# 7.0 ou inferior <sup id="TCS7">[CS7](#FCS7)</sup>|
-|6|O compilador aceita somente a sintaxe incluída em C# 6.0 ou inferior <sup id="TCS6">[CS6](#FCS6)</sup>|
-|5|O compilador aceita somente a sintaxe incluída em C# 5.0 ou inferior <sup id="TCS5">[CS5](#FCS5)</sup>|
-|4|O compilador aceita somente a sintaxe incluída em C# 4.0 ou inferior <sup id="TCS4">[CS4](#FCS4)</sup>|
-|3|O compilador aceita somente a sintaxe incluída em C# 3.0 ou inferior <sup id="TCS3">[CS3](#FCS3)</sup>|
-|ISO-2|O compilador aceita somente a sintaxe incluída em C# ISO/IEC 23270:2006 (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup>|
-|ISO-1|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2003 C# (1.0/1.2) <sup id="TISO1">[ISO1](#FISO1)</sup>|  
+ Os seguintes valores são válidos:
 
-A versão da linguagem padrão depende da estrutura de destino do aplicativo e da versão do SDK ou do Visual Studio instalado. Essas regras são definidas no artigo sobre como [Configurar a versão da linguagem](../configure-language-version.md#defaults)
+|Opção|Significado|
+|------------|-------------|
+|versão prévia|O compilador aceita toda as sintaxes de linguagem válidas da versão prévia mais recente à qual dá suporte.|
+|latest|O compilador aceita toda as sintaxes de linguagem válidas da versão (incluindo versões secundárias) mais recente à qual dá suporte.|
+|latestMajor|O compilador aceita toda a sintaxe de linguagem válida da versão principal mais recente à qual dá suporte.|
+|8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior.|
+|7.3|O compilador aceita somente a sintaxe incluída no C# 7.3 ou inferior.|
+|7.2|O compilador aceita somente a sintaxe incluída no C# 7.2 ou inferior.|
+|7.1|O compilador aceita somente a sintaxe incluída no C# 7.1 ou inferior.|
+|7|O compilador aceita somente a sintaxe incluída no C# 7.0 ou inferior.|
+|6|O compilador aceita somente a sintaxe incluída no C# 6.0 ou inferior.|
+|5|O compilador aceita somente a sintaxe incluída no C# 5.0 ou inferior.|
+|4|O compilador aceita somente a sintaxe incluída no C# 4.0 ou inferior.|
+|3|O compilador aceita somente a sintaxe incluída no C# 3.0 ou inferior.|
+|ISO-2|O compilador aceita apenas a sintaxe que está incluída no ISO/IEC C# 23270:2006 (2,0).|
+|ISO-1|O compilador aceita apenas a sintaxe que está incluída no ISO/IEC C# 23270:2003 (1.0/1.2).|
+
+A versão da linguagem padrão depende da estrutura de destino do aplicativo e da versão do SDK ou do Visual Studio instalado. Essas regras são definidas no artigo [Configurando a versão do idioma](../configure-language-version.md#defaults) .
 
 ## <a name="remarks"></a>Comentários
 
- Os metadados referenciados pelo seu aplicativo de C# não estão sujeitos à opção do compilador **-langversion**.  
+Os metadados referenciados pelo seu aplicativo de C# não estão sujeitos à opção do compilador **-langversion**.
   
- Como cada versão do compilador do C# contém extensões para a especificação de linguagem, **-langversion** não dá a funcionalidade equivalente de uma versão anterior do compilador.  
+Como cada versão do compilador do C# contém extensões para a especificação de linguagem, **-langversion** não dá a funcionalidade equivalente de uma versão anterior do compilador.
 
- Além disso, embora as atualizações de versão do C# geralmente coincidam com as versões principais do .NET Framework, a nova sintaxe e as funcionalidades não estão necessariamente vinculadas a essa versão de estrutura específica. Embora as novas funcionalidades definitivamente exijam uma nova atualização do compilador que também é liberada junto com a revisão do C#, cada funcionalidade específica tem seus próprios requisitos mínimos de API ou do Common Language Runtime do .NET que podem permitir que ela seja executada em estruturas de nível inferior com a inclusão de pacotes NuGet ou de outras bibliotecas.
-  
- Independentemente de qual configuração **-langversion** for usada, você usará a versão atual do Common Language Runtime para criar seu .exe ou .dll. Uma exceção são os assemblies amigáveis e [-moduleassemblyname (Opção do compilador do C#)](./moduleassemblyname-compiler-option.md), que funcionarão em **-langversion:ISO-1**.  
+Além disso, embora as atualizações de versão do C# geralmente coincidam com as versões principais do .NET Framework, a nova sintaxe e as funcionalidades não estão necessariamente vinculadas a essa versão de estrutura específica. Embora as novas funcionalidades definitivamente exijam uma nova atualização do compilador que também é liberada junto com a revisão do C#, cada funcionalidade específica tem seus próprios requisitos mínimos de API ou do Common Language Runtime do .NET que podem permitir que ela seja executada em estruturas de nível inferior com a inclusão de pacotes NuGet ou de outras bibliotecas.
 
- Para descobrir outras maneiras de especificar a versão da linguagem do C#, confira o tópico [Selecionar a versão da linguagem do C#](../configure-language-version.md).
-  
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.  
+Independentemente de qual configuração **-langversion** for usada, você usará a versão atual do Common Language Runtime para criar seu .exe ou .dll. Uma exceção são os assemblies amigáveis e [-moduleassemblyname (Opção do compilador do C#)](./moduleassemblyname-compiler-option.md), que funcionarão em **-langversion:ISO-1**.  
 
-## <a name="see-also"></a>Consulte também
+Para outras maneiras de especificar a C# versão do idioma, consulte o artigo [selecionar a versão C# do idioma](../configure-language-version.md) .
 
-- [Opções do compilador de C#](index.md)
-- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.
 
 ### <a name="c-language-specification"></a>Especificação da Linguagem C#
 
-|Versão|Link|DESCRIÇÃO|
+|Versão|Link|Descrição|
 |-------|----|-----------|
 |C# 7.0 e posterior||não disponível atualmente|
 |C# 6.0|[Link](../language-specification/index.md)|Especificação da Linguagem C# Versão 6 – Rascunho não oficial: .NET Foundation|
@@ -82,14 +77,19 @@ A versão da linguagem padrão depende da estrutura de destino do aplicativo e d
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Versão mínima do compilador necessária para dar suporte a todos os recursos de idioma
 
-[↩](#TCS80)<a name="FCS80">CS80</a>: Microsoft Visual Studio/Ferramentas de Build 2019, versão 16 ou SDK do .NET Core 3.0  
-[↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Ferramentas de Build 2017, versão 15.7  
-[↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Ferramentas de Build 2017, versão 15.5  
-[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Ferramentas de Build 2017, versão 15.3  
-[↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Ferramentas de Build 2017  
-[↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Ferramentas de Build 2015  
-[↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Ferramentas de Build 2012 ou compilador do .NET Framework 4.5 em pacote  
-[↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Ferramentas de Build 2010 ou compilador do .NET Framework 4.0 em pacote  
-[↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Ferramentas de Build 2008 ou compilador do .NET Framework 3.5 em pacote  
-[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Ferramentas de Build 2005 ou compilador do .NET Framework 2.0 em pacote  
-[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Ferramentas de Build 2002 ou compilador do .NET Framework 1.0 em pacote  
+CS80: Microsoft Visual Studio/Ferramentas de Build 2019, versão 16 ou SDK do .NET Core 3.0  
+CS73: Microsoft Visual Studio/Ferramentas de Build 2017, versão 15.7  
+CS72: Microsoft Visual Studio/Ferramentas de Build 2017, versão 15.5  
+CS71: Microsoft Visual Studio/Ferramentas de Build 2017, versão 15.3  
+CS7: Microsoft Visual Studio/Ferramentas de Build 2017  
+CS6: Microsoft Visual Studio/Ferramentas de Build 2015  
+CS5: Microsoft Visual Studio/Ferramentas de Build 2012 ou compilador do .NET Framework 4.5 em pacote  
+CS3 Microsoft Visual Studio/Ferramentas de Build 2010 ou compilador do .NET Framework 4.0 em pacote  
+CS3 Microsoft Visual Studio/Ferramentas de Build 2008 ou compilador do .NET Framework 3.5 em pacote  
+ISO2: Microsoft Visual Studio/Ferramentas de Build 2005 ou compilador do .NET Framework 2.0 em pacote  
+ISO1: Microsoft Visual Studio/Ferramentas de Build 2002 ou compilador do .NET Framework 1.0 em pacote  
+
+## <a name="see-also"></a>Consulte também
+
+- [Opções do compilador de C#](index.md)
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -8,37 +8,37 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054387"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004722"
 ---
 # <a name="take-clause-visual-basic"></a>Cláusula Take (Visual Basic)
 Retorna um número especificado de elementos contíguos do início de uma coleção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 Take count  
 ```  
   
 ## <a name="parts"></a>Partes  
  `count`  
- Necessário. Um valor ou uma expressão que é avaliada como o número de elementos da sequência a retornar.  
+ Necessário. Um valor ou uma expressão que é avaliada como o número de elementos da sequência a ser retornado.  
   
 ## <a name="remarks"></a>Comentários  
- O `Take` cláusula faz com que uma consulta incluir um número especificado de elementos contíguos do início de uma lista de resultados. O número de elementos para incluir é especificado pelo `count` parâmetro.  
+ A cláusula `Take` faz com que uma consulta inclua um número especificado de elementos contíguos do início de uma lista de resultados. O número de elementos a serem incluídos é especificado pelo parâmetro `count`.  
   
- Você pode usar o `Take` cláusula com o `Skip` cláusula para retornar um intervalo de dados de qualquer segmento de uma consulta. Para fazer isso, passe o índice do primeiro elemento do intervalo para o `Skip` cláusula e o tamanho do intervalo para o `Take` cláusula. Nesse caso, o `Take` cláusula deve ser especificada após o `Skip` cláusula.  
+ Você pode usar a cláusula `Take` com a cláusula `Skip` para retornar um intervalo de dados de qualquer segmento de uma consulta. Para fazer isso, passe o índice do primeiro elemento do intervalo para a cláusula `Skip` e o tamanho do intervalo para a cláusula `Take`. Nesse caso, a cláusula `Take` deve ser especificada após a cláusula `Skip`.  
   
- Quando você usa o `Take` cláusula em uma consulta, você também precisará garantir que os resultados são retornados em uma ordem que permitirá que o `Take` cláusula para incluir os resultados pretendidos. Para obter mais informações sobre a ordenação de resultados da consulta, consulte [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Quando você usa a cláusula `Take` em uma consulta, também pode ser necessário garantir que os resultados sejam retornados em uma ordem que permitirá que a cláusula `Take` inclua os resultados pretendidos. Para obter mais informações sobre como ordenar os resultados da consulta, consulte [cláusula order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Você pode usar o `TakeWhile` cláusula para especificar que somente determinados elementos ser retornado, dependendo de uma condição fornecida.  
+ Você pode usar a cláusula `TakeWhile` para especificar que apenas determinados elementos sejam retornados, dependendo de uma condição fornecida.  
   
 ## <a name="example"></a>Exemplo  
- O seguinte exemplo de código usa o `Take` cláusula junto com o `Skip` cláusula para retornar dados de uma consulta em páginas. A função GetCustomers usa a `Skip` cláusula para ignorar os clientes na lista até que o de índice inicial fornecido valor e usa o `Take` cláusula para retornar uma página de clientes a partir desse valor de índice.  
+ O exemplo de código a seguir usa a cláusula `Take` junto com a cláusula `Skip` para retornar dados de uma consulta em páginas. A função GetCustomers usa a cláusula `Skip` para ignorar os clientes na lista até o valor de índice inicial fornecido e usa a cláusula `Take` para retornar uma página de clientes que inicia com esse valor de índice.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70016136"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005244"
 ---
 # <a name="opentype-font-features"></a>Recursos de fonte OpenType
 
-Este tópico fornece uma visão geral de alguns dos principais recursos da tecnologia de fontes OpenType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]no.  
+Este tópico fornece uma visão geral de alguns dos principais recursos da tecnologia de fontes OpenType no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato de fonte OpenType  
- O formato de fonte OpenType é uma extensão do [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato de fonte, adicionando suporte para dados de fonte PostScript. O formato de fonte OpenType foi desenvolvido em conjunto pela Microsoft e pela Adobe Corporation. As fontes OpenType e os serviços do sistema operacional que dão suporte a fontes OpenType fornecem aos usuários uma maneira simples de instalar e usar fontes, [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] quer as fontes contenham contornos ou contornos de CFF (PostScript).  
+ O formato de fonte OpenType é uma extensão do formato de fonte® TrueType, adicionando suporte para dados de fonte PostScript. O formato de fonte OpenType foi desenvolvido em conjunto pela Microsoft e pela Adobe Corporation. As fontes OpenType e os serviços do sistema operacional que dão suporte a fontes OpenType fornecem aos usuários uma maneira simples de instalar e usar fontes, quer as fontes contenham contornos TrueType ou contornos de CFF (PostScript).  
   
  O formato de fonte OpenType aborda os seguintes desafios de desenvolvedor:  
   
@@ -37,12 +37,12 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 - Suporte mais amplo para controle tipográfico avançado.  
   
 > [!NOTE]
-> O SDK do Windows contém um conjunto de fontes OpenType de exemplo que você pode usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] com aplicativos. Essas fontes oferecem a maioria dos recursos ilustrados no restante deste tópico. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
+> O SDK do Windows contém um conjunto de fontes OpenType de exemplo que você pode usar com aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Essas fontes oferecem a maioria dos recursos ilustrados no restante deste tópico. Para obter mais informações, consulte [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md).  
   
  Consulte a [especificação OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) para obter detalhes do formato de fonte OpenType.  
   
 ### <a name="advanced-typographic-extensions"></a>Extensões tipográficas avançadas  
- As tabelas tipográficas avançadas (tabelas de layout OpenType) estendem a funcionalidade [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] de fontes com contornos ou CFF. Fontes de layout OpenType contêm informações adicionais que ampliam os recursos das fontes para dar suporte à tipografia Internacional de alta qualidade. A maioria das fontes OpenType expõe apenas um subconjunto do total de recursos OpenType disponíveis. As fontes OpenType fornecem os seguintes recursos.  
+ As tabelas tipográficas avançadas (tabelas de layout OpenType) estendem a funcionalidade de fontes com contornos TrueType ou CFF. Fontes de layout OpenType contêm informações adicionais que ampliam os recursos das fontes para dar suporte à tipografia Internacional de alta qualidade. A maioria das fontes OpenType expõe apenas um subconjunto do total de recursos OpenType disponíveis. As fontes OpenType fornecem os seguintes recursos.  
   
 - O mapeamento avançado entre caracteres e glifos dá suporte a ligaduras, formas posicionais, alternativos e outras substituições de fonte.  
   
@@ -52,37 +52,37 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  As tabelas de layout OpenType são descritas mais detalhadamente na seção ["tabelas de arquivo de fontes"](https://www.microsoft.com/typography/otspec/otff.htm) da especificação OpenType.  
   
- O restante desta visão geral apresenta a amplitude e a flexibilidade de alguns dos recursos OpenType visualmente interessantes que são expostos pelas propriedades do <xref:System.Windows.Documents.Typography> objeto. Para obter mais informações sobre esse objeto, consulte [Classe de tipografia](#typography_class).  
+ O restante desta visão geral apresenta a amplitude e a flexibilidade de alguns dos recursos OpenType visualmente interessantes que são expostos pelas propriedades do objeto <xref:System.Windows.Documents.Typography>. Para obter mais informações sobre esse objeto, consulte [Classe de tipografia](#typography_class).  
   
 <a name="variants"></a>   
 ## <a name="variants"></a>Variantes  
  As variantes são usadas para renderizar diferentes estilos tipográficos, como sobrescritos e subscritos.  
   
 ### <a name="superscripts-and-subscripts"></a>Sobrescritos e Subscritos  
- A <xref:System.Windows.Documents.Typography.Variants%2A> propriedade permite que você defina valores sobrescritos e subscritores para uma fonte OpenType.  
+ A propriedade <xref:System.Windows.Documents.Typography.Variants%2A> permite definir valores sobrescritos e subscritores para uma fonte OpenType.  
   
  O texto a seguir exibe sobrescritos para a fonte Palatino Linotype.  
   
- ![Texto usando sobrescritos OpenType](./media/opentype-font-features/opentype-superscripts.gif "Texto usando sobrescritos OpenType")  
+ ![Texto usando sobrescritos OpenType](./media/opentype-font-features/opentype-superscripts.gif "texto usando sobrescritos OpenType")  
   
- O exemplo de marcação a seguir mostra como definir sobrescritos para a fonte Palatino Linotype, usando as propriedades do <xref:System.Windows.Documents.Typography> objeto.  
+ O exemplo de marcação a seguir mostra como definir sobrescritos para a fonte Palatino Linotype, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
  O texto a seguir exibe subscritos para a fonte Palatino Linotype.  
   
- ![Texto usando subscritos OpenType](./media/opentype-font-features/opentype-subscripts.gif "Texto usando subscritos OpenType")  
+ ![Texto usando subscritos OpenType](./media/opentype-font-features/opentype-subscripts.gif "texto usando subscritos OpenType")  
   
- O exemplo de marcação a seguir mostra como definir subscritos para a fonte Palatino Linotype, usando as propriedades do <xref:System.Windows.Documents.Typography> objeto.  
+ O exemplo de marcação a seguir mostra como definir subscritos para a fonte Palatino Linotype, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Usos decorativos de sobrescritos e subscritos  
  Sobrescritos e subscritos também podem ser utilizados para criar efeitos decorativos em textos que contêm maiúsculas e minúsculas. O texto a seguir exibe texto sobrescrito e subscrito para a fonte Palatino Linotype. Observe que as letras maiúsculas não são afetadas.  
   
- ![Texto usando sobrescritos e] subscritos OpenType (./media/opentype-font-features/opentype-superscripts-subscripts.gif "Texto usando sobrescritos e") subscritos OpenType  
+ ![Texto usando sobrescritos OpenType e texto de subscritos](./media/opentype-font-features/opentype-superscripts-subscripts.gif "usando") sobrescritos e subscritos OpenType  
 
- O exemplo de marcação a seguir mostra como definir sobrescritos e subscritos para uma fonte, usando as propriedades do <xref:System.Windows.Documents.Typography> objeto.  
+ O exemplo de marcação a seguir mostra como definir sobrescritos e subscritos para uma fonte, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
@@ -92,27 +92,27 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  O texto a seguir exibe letras maiúsculas padrão para a fonte Pescadero, seguidas pelas letras nos estilos “SmallCaps” e “AllSmallCaps”. Nesse caso, o mesmo tamanho de fonte é usado para todas as três palavras.  
   
- ![Texto usando maiúsculas OpenType](./media/opentype-font-features/opentype-capitals.gif "Texto usando maiúsculas OpenType")  
+ ![Texto usando maiúsculas OpenType](./media/opentype-font-features/opentype-capitals.gif "texto usando") maiúsculas OpenType  
   
- O exemplo de marcação a seguir mostra como definir maiúsculas para a fonte Pescadero, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto. Quando o formato “SmallCaps” é utilizado, todas as letras maiúsculas à esquerda são ignoradas.  
+ O exemplo de marcação a seguir mostra como definir maiúsculas para a fonte Pescadero, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>. Quando o formato “SmallCaps” é utilizado, todas as letras maiúsculas à esquerda são ignoradas.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
 ### <a name="titling-capitals"></a>Letras maiúsculas inclinadas  
  As letras maiúsculas inclinadas são mais leves, em peso e proporção, e foram concebidas para dar uma aparência mais elegante do que as letras maiúsculas normais. Normalmente, elas são usadas em tamanhos de fonte maiores, como títulos. O texto a seguir exibe maiúsculas normais e inclinadas para a fonte Pescadero. Observe as larguras mais estreitas das hastes na segunda linha do texto.  
   
- ![Texto usando maiúsculas de título OpenType](./media/opentype-font-features/opentype-titling-capitals.gif "Texto usando maiúsculas de título OpenType")  
+ ![Texto usando]maiúsculas de títulos de(./media/opentype-font-features/opentype-titling-capitals.gif "texto OpenType usando maiúsculas de título OpenType")  
   
- O exemplo de marcação a seguir mostra como definir maiúsculas de título para a fonte Pescadero, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir maiúsculas de título para a fonte Pescadero, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
 ### <a name="capital-spacing"></a>Espaçamento de letras maiúsculas  
  O espaçamento de letras maiúsculas é um recurso que permite oferecer um espaçamento maior ao usar somente letras maiúsculas no texto. Letras maiúsculas normalmente são projetadas para misturar com letras minúsculas. O espaçamento que parece atraente entre o e uma letra maiúscula e uma letra minúscula pode parecer muito apertado quando todas as letras maiúsculas são usadas. O texto a seguir exibe o espaçamento normal e de maiúsculas para a fonte Pescadero.  
   
- ![Texto usando o espaçamento de maiúsculas OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "Texto usando o espaçamento de maiúsculas OpenType")  
+ ![Texto usando o texto de espaçamento de maiúsculas OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "usando o espaçamento de capital OpenType")  
  
- O exemplo de marcação a seguir mostra como definir o espaçamento de maiúsculas para a fonte Pescadero <xref:System.Windows.Documents.Typography> , usando as propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir o espaçamento de maiúsculas para a fonte Pescadero, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
@@ -130,29 +130,29 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  O texto a seguir exibe glifos com ligadura padrão para a fonte Pericles.  
   
- ![Texto usando ligaturas padrão OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "Texto usando ligaturas padrão OpenType")  
+ ![Texto usando ligaturas padrão OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "texto usando ligaturas padrão OpenType")  
   
- O exemplo de marcação a seguir mostra como definir glifos de Ligadura padrão para a fonte Pericles, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir glifos de Ligadura padrão para a fonte Pericles, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
  O texto a seguir exibe glifos com ligadura discricionária para a fonte Pericles.  
   
- ![Texto usando ligaduras condicionais OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "Texto usando ligaduras condicionais OpenType")  
+ ![Texto usando ligaduras condicionais OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "texto usando ligaturas condicionais OpenType")  
   
- O exemplo de marcação a seguir mostra como definir glifos de ligadura condicional para a fonte Pericles, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto.  
+ O exemplo de marcação a seguir mostra como definir glifos de ligadura condicional para a fonte Pericles, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- Por padrão, as fontes OpenType [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] em habilitam ligaturas padrão. Por exemplo, se a fonte Palatino Linotype for usada, as ligaduras padrão “fi”, “ff” e “fl” aparecerão como um glifo de caracteres combinados. Observe que o par de caracteres para cada ligadura padrão toca um no outro.  
+ Por padrão, as fontes OpenType no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] habilitam ligaturas padrão. Por exemplo, se a fonte Palatino Linotype for usada, as ligaduras padrão “fi”, “ff” e “fl” aparecerão como um glifo de caracteres combinados. Observe que o par de caracteres para cada ligadura padrão toca um no outro.  
   
- ![Texto usando ligaturas padrão OpenType com Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Texto usando ligaturas padrão OpenType com Palatino Linotype")    
+ ![Texto usando ligaturas padrão OpenType com o texto Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "usando ligaturas padrão OpenType com Palatino Linotype")    
    
  No entanto, é possível desabilitar os recursos de ligadura padrão para que uma ligadura padrão como “ff” seja exibida como dois glifos separados, em vez de como um glifo de caracteres combinados.  
   
- ![Texto usando ligaduras padrão OpenType desabilitadas](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Texto usando ligaduras padrão OpenType desabilitadas")  
+ ![Texto usando ligaduras padrão OpenType desabilitadas](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "texto usando ligaturas padrão OpenType desabilitadas")  
     
- O exemplo de marcação a seguir mostra como desabilitar glifos de Ligadura padrão para a fonte Palatino Linotype, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como desabilitar glifos de Ligadura padrão para a fonte Palatino Linotype, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
@@ -160,22 +160,22 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 ## <a name="swashes"></a>Swashes  
  Swashes são glifos decorativos que utilizam ornamentação elaborada, geralmente associada à caligrafia. O texto a seguir exibe os glifos padrão e Swash para a fonte Pescadero.  
   
- ![Texto usando glifos padrão OpenType e traços violentos](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "Texto usando glifos padrão OpenType e traços violentos")  
+ ![Texto usando glifos OpenType padrão e traços violentos](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "usando glifos OpenType padrão e Swash")  
 
  Muitas vezes, os swashes são utilizados como elementos decorativos em frases curtas, como anúncios de eventos. O texto a seguir usa traços violentos para enfatizar as letras maiúsculas do nome do evento.  
   
- ![Texto usando traços violentos OpenType](./media/opentype-font-features/opentype-swashes.gif "Texto usando traços violentos OpenType")  
+ ![Texto usando traços violentos OpenType](./media/opentype-font-features/opentype-swashes.gif "usando traços de Swash OpenType")  
   
- O exemplo de marcação a seguir mostra como definir traços violentos para uma fonte, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir traços violentos para uma fonte, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
 ### <a name="contextual-swashes"></a>Swashes contextuais  
  Algumas combinações de glifos swash podem causar uma aparência pouco atraente, como descendentes sobrepostos em letras adjacentes. O uso de um Swash contextual permite que você use um glifo Swash substituto que produz uma aparência melhor. O texto a seguir mostra a mesma palavra antes e depois que um Swash contextual é aplicado.  
   
- ![Texto usando swashs contextuais OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "Texto usando swashs contextuais OpenType")  
+ ![Texto usando traços violentos contextuais OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "usando traços de Swash contextuais OpenType")  
   
- O exemplo de marcação a seguir mostra como definir um Swash contextual para a fonte Pescadero, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto.  
+ O exemplo de marcação a seguir mostra como definir um Swash contextual para a fonte Pescadero, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
@@ -183,19 +183,19 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 ## <a name="alternates"></a>Alternativos  
  Os alternativos são glifos que podem ser substituídos por um glifo padrão. Fontes OpenType, como a fonte Pericles usada nos exemplos a seguir, podem conter glifos alternativos que você pode usar para criar aparências diferentes para texto. O texto a seguir exibe glifos padrão para a fonte Pericles.  
   
- ![Texto usando glifos padrão OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "Texto usando glifos padrão OpenType")  
+ ![Texto usando glifos padrão OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "texto usando glifos padrão OpenType")  
 
  A fonte OpenType de Pericles contém glifos adicionais que fornecem alternativas estilísticos ao conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
   
- ![Texto usando glifos alternativos estilísticos OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "Texto usando glifos alternativos estilísticos OpenType")  
+ ![Texto usando glifos alternativos de texto alternativo OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "usando glifos alternativos estilísticos OpenType")  
   
- O exemplo de marcação a seguir mostra como definir glifos alternativos estilísticos para a fonte Pericles, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir glifos alternativos estilísticos para a fonte Pericles, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
  O texto a seguir exibe vários outros glifos alternativos estilísticos para a fonte Pericles.  
   
- ![Texto usando glifos alternativos estilísticos OpenType para a fonte Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Texto usando glifos alternativos estilísticos OpenType para a fonte Pericles")
+ ![Texto usando glifos alternativos estilísticos OpenType para o texto da fonte Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "usando glifos alternativos estilísticos OpenType para a fonte Pericles")
 
  O exemplo de marcação a seguir mostra como definir esses outros glifos alternativos estilísticos.  
   
@@ -204,18 +204,18 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
 ### <a name="random-contextual-alternates"></a>Alternativos contextuais aleatórios  
  Os alternativos contextuais aleatórios fornecem vários glifos substitutos para um único caractere. Quando implementadas com fontes de tipo de script, esse recurso pode simular manuscrito usando um conjunto de glifos escolhidos aleatoriamente com pequenas diferenças na aparência. O texto a seguir usa alternativas contextuais aleatórias para a fonte Lindsey. Observe que a letra "a" varia ligeiramente na aparência  
   
- ![Texto usando alternativas contextuais aleatórias OpenType](./media/opentype-font-features/opentype-random-contextual-alternates.gif "Texto usando alternativas contextuais aleatórias OpenType")  
+ ![Texto usando alternativas contextuais aleatórias OpenType](./media/opentype-font-features/opentype-random-contextual-alternates.gif "texto usando alternativas contextuais aleatórias OpenType")  
   
- O exemplo de marcação a seguir mostra como definir alternativas contextuais aleatórias para a fonte Lindsey, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir alternativas contextuais aleatórias para a fonte Lindsey, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
 ### <a name="historical-forms"></a>Formas históricas  
  As formas históricas são convenções tipográficas que foram comuns no passado. O texto a seguir exibe a frase “Boston, Massachusetts” usando uma forma histórica de glifos para a fonte Palatino Linotype.  
   
- ![Texto usando formulários de histórico OpenType](./media/opentype-font-features/opentype-historical-forms.gif "Texto usando formulários de histórico OpenType")  
+ ![Texto usando formulários de histórico OpenType](./media/opentype-font-features/opentype-historical-forms.gif "usando formulários de histórico OpenType")  
    
- O exemplo de marcação a seguir mostra como definir formulários históricos para a fonte Palatino Linotype, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto.  
+ O exemplo de marcação a seguir mostra como definir formulários históricos para a fonte Palatino Linotype, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
@@ -228,22 +228,22 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  O texto a seguir exibe estilos de fração para a fonte Palatino Linotype.  
   
- ![Texto usando frações desempilhadas e barras OpenType](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "Texto usando frações desempilhadas e barras OpenType")  
+ ![Texto usando frações cortadas OpenType e empilhadas de](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "texto usando frações cortadas e com barras Espilhadas OpenType")  
    
- O exemplo de marcação a seguir mostra como definir estilos de fração para a fonte Palatino Linotype, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir estilos de fração para a fonte Palatino Linotype, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Numerais em estilo antigo  
  As fontes OpenType dão suporte a um formato de numeral de estilo antigo. Esse formato é útil para exibir numerais em estilos que não são mais padrão. O texto a seguir exibe uma data do século 18 em formatos de numerais padrão e em estilo antigo para a fonte Palatino Linotype.  
   
- ![Texto usando numerais de estilo antigo OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "Texto usando numerais de estilo antigo OpenType")  
+ ![Texto usando numerais de estilo antigo OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "usando numerais de estilo antigo OpenType")  
     
  O texto a seguir exibe numerais padrão para a fonte Palatino Linotype, seguidos por numerais em estilo antigo.  
   
- ![Texto usando conjuntos de numerais de estilo antigo OpenType](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "Texto usando conjuntos de numerais de estilo antigo OpenType")  
+ O ![texto que usa o número do estilo antigo OpenType define]o(./media/opentype-font-features/opentype-old-style-numeral-sets.gif "texto usando conjuntos de numerais do estilo antigo OpenType")  
   
- O exemplo de marcação a seguir mostra como definir numerais de estilo antigo para a fonte Palatino Linotype, usando as <xref:System.Windows.Documents.Typography> Propriedades do objeto.  
+ O exemplo de marcação a seguir mostra como definir numerais de estilo antigo para a fonte Palatino Linotype, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
@@ -252,9 +252,9 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  O texto a seguir exibe duas figuras proporcionais na primeira coluna, usando a fonte Miramonte. Observe a diferença de largura entre os numerais "5" e "1". A segunda coluna mostra os mesmos dois valores numéricos com as larguras ajustadas usando o recurso de figura tabular.  
   
- ![Texto usando números tabulares & de tabela OpenType](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "Texto usando números de tabela e proporcional OpenType")  
+ ![Texto usando a & proporcional de valores tabulares de tabela](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "usando números de tabela e proporcional OpenType")  
     
- O exemplo de marcação a seguir mostra como definir números proporcionais e tabulares para a fonte Miramonte, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto.  
+ O exemplo de marcação a seguir mostra como definir números proporcionais e tabulares para a fonte Miramonte, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
@@ -263,21 +263,21 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
   
  O texto a seguir exibe um exemplo de identificador de ordem usando a fonte Miramonte. A primeira linha usa numerais padrão. A segunda linha usou numerais zero cortados para fornecer melhor contraste com a letra "O" maiúscula.  
   
- ![Texto usando numerais zero cortados OpenType](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "Texto usando numerais zero cortados OpenType")  
+ ![Texto usando numerais com zeros cortados OpenType](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "usando numerais zero cortados OpenType")  
     
- O exemplo de marcação a seguir mostra como definir numerais zero cortados para a fonte Miramonte, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto.  
+ O exemplo de marcação a seguir mostra como definir numerais zero cortados para a fonte Miramonte, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>Classe de tipografia  
- O <xref:System.Windows.Documents.Typography> objeto expõe o conjunto de recursos aos quais uma fonte OpenType dá suporte. Ao definir as propriedades de <xref:System.Windows.Documents.Typography> na marcação, você pode facilmente criar documentos que aproveitam os recursos do OpenType.  
+ O objeto <xref:System.Windows.Documents.Typography> expõe o conjunto de recursos aos quais uma fonte OpenType dá suporte. Ao definir as propriedades de <xref:System.Windows.Documents.Typography> na marcação, você pode facilmente criar documentos que aproveitam os recursos do OpenType.  
   
  O texto a seguir exibe letras maiúsculas padrão para a fonte Pescadero, seguidas pelas letras nos estilos “SmallCaps” e “AllSmallCaps”. Nesse caso, o mesmo tamanho de fonte é usado para todas as três palavras.  
   
- ![Texto usando maiúsculas OpenType](./media/opentype-font-features/opentype-capitals.gif "Texto usando maiúsculas OpenType")  
+ ![Texto usando maiúsculas OpenType](./media/opentype-font-features/opentype-capitals.gif "texto usando") maiúsculas OpenType  
     
- O exemplo de marcação a seguir mostra como definir maiúsculas para a fonte Pescadero, usando as propriedades <xref:System.Windows.Documents.Typography> do objeto. Quando o formato “SmallCaps” é utilizado, todas as letras maiúsculas à esquerda são ignoradas.  
+ O exemplo de marcação a seguir mostra como definir maiúsculas para a fonte Pescadero, usando as propriedades do objeto <xref:System.Windows.Documents.Typography>. Quando o formato “SmallCaps” é utilizado, todas as letras maiúsculas à esquerda são ignoradas.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -287,7 +287,7 @@ Este tópico fornece uma visão geral de alguns dos principais recursos da tecno
  [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
 ### <a name="typography-class-properties"></a>Propriedades da classe de tipografia  
- A tabela a seguir lista as propriedades, os valores e as configurações padrão <xref:System.Windows.Documents.Typography> do objeto.  
+ A tabela a seguir lista as propriedades, os valores e as configurações padrão do objeto <xref:System.Windows.Documents.Typography>.  
   
 |Propriedade|Valor(es)|Valor padrão|  
 |--------------|----------------|-------------------|  

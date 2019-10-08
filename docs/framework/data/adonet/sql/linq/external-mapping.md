@@ -2,28 +2,28 @@
 title: Mapeamento externo
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ba5af75ae34b233354fec6e9074f3cc96d924c7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793993"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003051"
 ---
 # <a name="external-mapping"></a>Mapeamento externo
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]dá suporte ao *mapeamento externo*, um processo pelo qual você usa um arquivo XML separado para especificar o mapeamento entre o modelo de dados do banco de dado e o modelo de objeto. As vantagens de usar um arquivo de mapeamento externo incluem o seguinte:  
+o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte ao *mapeamento externo*, um processo pelo qual você usa um arquivo XML separado para especificar o mapeamento entre o modelo de dados do banco e o modelo de objeto. As vantagens de usar um arquivo de mapeamento externo incluem o seguinte:  
   
 - Você pode manter seu código de mapeamento fora de seu código do aplicativo. Essa abordagem reduz a confusão no código do aplicativo.  
   
 - Você pode manipular um arquivo de mapeamento externo algo como um arquivo de configuração. Por exemplo, você pode atualizar como o aplicativo se comporta após enviar os binários apenas alternando para fora o arquivo de mapeamento externo.  
   
 ## <a name="requirements"></a>Requisitos  
- O arquivo de mapeamento deve ser um arquivo XML e o arquivo deve ser validado [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] em relação a um arquivo de definição de esquema (. xsd).  
+ O arquivo de mapeamento deve ser um arquivo XML e o arquivo deve ser validado em relação a um arquivo de definição de esquema [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (. xsd).  
   
  As seguintes regras se aplicam:  
   
 - O arquivo de mapeamento deve ser um arquivo XML.  
   
-- O arquivo de mapeamento de XML deve ser válido no arquivo de definição de esquema XML. Para obter mais informações, confira [Como: Valide os arquivos](how-to-validate-dbml-and-external-mapping-files.md)dbml e de mapeamento externo.  
+- O arquivo de mapeamento de XML deve ser válido no arquivo de definição de esquema XML. Para obter mais informações, confira [Como: Valide os arquivos DBML e de mapeamento externo @ no__t-0.  
   
 - As substituições externos de mapeamento atributos com o mapeamento. Ou seja quando você usa uma fonte externa de mapeamento para criar <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora todos os atributos de mapeamento que você criou em classes. Esse comportamento é verdadeiro se a classe está incluída no arquivo de mapeamento externo.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "70793993"
  Distinguir este arquivo de definição do esquema do arquivo de definição do esquema que é usado para validar um arquivo DBML. Para obter mais informações, consulte [geração de código no LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Os usuários do Visual Studio também encontrarão esse arquivo XSD na caixa de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar esse arquivo corretamente para validar um arquivo de mapeamento externo, [consulte Como: Valide os arquivos](how-to-validate-dbml-and-external-mapping-files.md)dbml e de mapeamento externo.  
+> Os usuários do Visual Studio também encontrarão esse arquivo XSD na caixa de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar esse arquivo corretamente para validar um arquivo de mapeamento externo, consulte [How para: Valide os arquivos DBML e de mapeamento externo @ no__t-0.  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/mapping/2007" xmlns="http://schemas.microsoft.com/linqtosql/mapping/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Geração de código em LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Referência](reference.md)
-- [Como: Gerar o modelo de objeto como um arquivo externo](how-to-generate-the-object-model-as-an-external-file.md)
+- [Como: Gerar o modelo de objeto como um arquivo externo @ no__t-0

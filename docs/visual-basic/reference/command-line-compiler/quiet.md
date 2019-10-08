@@ -9,28 +9,28 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: a22773e2e37eb60ab6f1e88305266f41764311e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e773c60469e8426956c92a5aa377741ba5af4d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788837"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005282"
 ---
 # <a name="-quiet"></a>-quiet
 
-Impede que o compilador exibindo o código para avisos e erros de sintaxe.
+Impede que o compilador exiba código para erros e avisos relacionados à sintaxe.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```console
 -quiet
 ```
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, `-quiet` não está em vigor. Quando o compilador relatará um erro de sintaxe ou aviso, ele também produz a linha do código-fonte. Para aplicativos que analisar a saída do compilador, pode ser mais conveniente para o compilador gerar apenas o texto do diagnóstico.
+Por padrão, `-quiet` não está em vigor. Quando o compilador relata um erro ou aviso relacionado à sintaxe, ele também gera a linha do código-fonte. Para aplicativos que analisam a saída do compilador, pode ser mais conveniente para o compilador gerar somente o texto do diagnóstico.
 
-No exemplo a seguir `Module1` gera um erro que inclui código-fonte quando compilado sem `-quiet`.
+No exemplo a seguir, `Module1` gera um erro que inclui o código-fonte quando compilado sem `-quiet`.
 
 ```vb
 Module Module1
@@ -51,18 +51,18 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
 
 Compilado com `-quiet`, o compilador gera apenas o seguinte:
 
-```
+```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> O `-quiet` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.
+> A opção `-quiet` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.
 
 ## <a name="example"></a>Exemplo
 
-O seguinte código compila `T2.vb` e não exibe o código para o diagnóstico de compilador relacionados com a sintaxe:
+O código a seguir compila `T2.vb` e não exibe código para diagnósticos de compilador relacionados à sintaxe:
 
-```
+```console
 vbc -quiet t2.vb
 ```
 

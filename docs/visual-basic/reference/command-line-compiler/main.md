@@ -6,47 +6,47 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793907"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005500"
 ---
 # <a name="-main"></a>-main
 Especifica a classe ou o módulo que contém o procedimento `Sub Main`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -main:location  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `location`  
- Necessário. O nome da classe ou módulo que contém o `Sub Main` procedimento a ser chamado quando o programa é iniciado. Isso pode ser na forma **-principal: module** ou **-main:namespace.module**.  
+ Necessário. O nome da classe ou do módulo que contém o procedimento `Sub Main` a ser chamado quando o programa é iniciado. Isso pode estar no formato **-principal: módulo** ou **-principal: namespace. Module**.  
   
 ## <a name="remarks"></a>Comentários  
- Use esta opção quando você cria um arquivo executável ou programa executável do Windows. Se o **-principal** opção for omitida, o compilador pesquisa válido compartilhado `Sub Main` em todas as classes públicas e módulos.  
+ Use essa opção quando você criar um arquivo executável ou programa executável do Windows. Se a opção **-Main** for omitida, o compilador pesquisará um `Sub Main` compartilhado válido em todas as classes e módulos públicos.  
   
- Ver [procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para uma discussão sobre as várias formas dos `Main` procedimento.  
+ Consulte o [procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obter uma discussão sobre as várias formas do procedimento `Main`.  
   
- Quando `location` é uma classe que herda <xref:System.Windows.Forms.Form>, o compilador fornece um padrão `Main` procedimento que inicia o aplicativo se a classe não tem nenhum `Main` procedimento. Isso permite que você compilar o código na linha de comando que foi criado no ambiente de desenvolvimento.  
+ Quando `location` é uma classe que herda de <xref:System.Windows.Forms.Form>, o compilador fornece um procedimento padrão `Main` que inicia o aplicativo se a classe não tiver um procedimento `Main`. Isso permite que você compile o código na linha de comando que foi criada no ambiente de desenvolvimento.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
-### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Para definir - principal no ambiente de desenvolvimento integrado do Visual Studio  
+### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Para definir o principal no ambiente de desenvolvimento integrado do Visual Studio  
   
 1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.  
   
 2. Clique na guia **Aplicativo**.  
   
-3. Verifique se o **habilitar estrutura de aplicativo** caixa de seleção não estiver marcada.  
+3. Verifique se a caixa de seleção **habilitar estrutura de aplicativo** não está marcada.  
   
-4. Modificar o valor de **objeto de inicialização** caixa.  
+4. Modifique o valor na caixa **objeto de inicialização** .  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código compila `T2.vb` e `T3.vb`, especificando que o `Sub Main` procedimento será encontrado na `Test2` classe.  
+ O código a seguir compila `T2.vb` e `T3.vb`, especificando que o procedimento `Sub Main` será encontrado na classe `Test2`.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
@@ -55,6 +55,6 @@ vbc t2.vb t3.vb -main:Test2
 ## <a name="see-also"></a>Consulte também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

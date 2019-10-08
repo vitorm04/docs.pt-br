@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991372"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005715"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Chamado por PresentationHost.exe para obter mensagens de erro e andamento personalizadas do host, se implementado.  
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- fora O nome da classe que é a interface do usuário de progresso fornecida pelo host, preferivelmente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] um <xref:System.Windows.Controls.Page> arquivo com é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzProgressAssemblyName`.  
+ fora O nome da classe que é a interface do usuário de progresso fornecida pelo host, preferivelmente um arquivo XAML com <xref:System.Windows.Controls.Page> é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzProgressAssemblyName`.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- fora O nome da classe que é a interface do usuário de erro fornecida pelo host, preferivelmente um arquivo <xref:System.Windows.Controls.Page> XAML com o é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzErrorAssemblyName`.  
+ fora O nome da classe que é a interface do usuário de erro fornecida pelo host, preferivelmente um arquivo XAML com <xref:System.Windows.Controls.Page> é seu elemento de nível superior. Essa classe reside no assembly especificado por `pwzErrorAssemblyName`.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  HRESULT: Ignorado.  

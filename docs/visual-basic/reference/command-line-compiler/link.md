@@ -11,25 +11,29 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e131b39e05badf0bb90fbbb14761571003156f85
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972314"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005518"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Faz com que o compilador disponibilize as informações de tipo COM nos assemblies especificados para o projeto sendo compilado no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -link:fileList  
-' -or-  
+```
+
+ou  
+
+```console
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
@@ -79,7 +83,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Exemplo  
- A linha de comando a seguir compila o arquivo `OfficeApp.vb` de origem e os `COMData1.dll` assemblies de referência `OfficeApp.exe`de e `COMData2.dll` para produzir.  
+ A linha de comando a seguir compila o arquivo de origem `OfficeApp.vb` e os assemblies de referência de `COMData1.dll` e `COMData2.dll` para produzir `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

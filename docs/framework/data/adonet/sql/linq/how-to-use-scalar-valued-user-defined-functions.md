@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781479"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003228"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Como: usar funções definidas pelo usuário com valor escalar
 Você pode mapear um método de cliente definido em uma classe a uma função definida pelo usuário usando o atributo <xref:System.Data.Linq.Mapping.FunctionAttribute> . Observe que o corpo do método constrói uma expressão que captura a intenção da chamada de método, e passa essa expressão a <xref:System.Data.Linq.DataContext> para a tradução e a execução.  
   
 > [!NOTE]
-> A execução direta ocorre somente se a função é chamada fora de uma consulta. Para obter mais informações, confira [Como: Chame funções definidas pelo usuário em](how-to-call-user-defined-functions-inline.md)linha.  
+> A execução direta ocorre somente se a função é chamada fora de uma consulta. Para obter mais informações, confira [Como: Chame funções definidas pelo usuário embutidas em @ no__t-0.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir SQL apresenta uma função definida pelo usuário escalar- avaliada `ReverseCustName()`.  
   
-```  
+```sql  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
 RETURNS varchar(100)  
 AS  

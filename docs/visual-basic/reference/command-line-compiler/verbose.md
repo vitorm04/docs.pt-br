@@ -6,31 +6,31 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 5b3899462af7c4aa8e0f77377a8d7485975f9867
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c5bc1d2ce331b8fe9461f91d64fbeab5a070b59
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937268"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004978"
 ---
 # <a name="-verbose"></a>-verbose
 Faz com que o compilador produza mensagens de erro e status detalhados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -verbose[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
  Opcional. Especificar `-verbose` é o mesmo que especificar `-verbose+`, o que faz com que o compilador emita mensagens detalhadas. O padrão para essa opção é `-verbose-`.  
   
 ## <a name="remarks"></a>Comentários  
- A `-verbose` opção exibe informações sobre o número total de erros emitidos pelo compilador, relata quais assemblies estão sendo carregados por um módulo e exibe quais arquivos estão sendo compilados no momento.  
+ A opção `-verbose` exibe informações sobre o número total de erros emitidos pelo compilador, relata quais assemblies estão sendo carregados por um módulo e exibe quais arquivos estão sendo compilados no momento.  
   
 > [!NOTE]
-> A `-verbose` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ela está disponível somente durante a compilação na linha de comando.  
+> A opção `-verbose` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `In.vb` e direciona o compilador para exibir informações detalhadas de status.  

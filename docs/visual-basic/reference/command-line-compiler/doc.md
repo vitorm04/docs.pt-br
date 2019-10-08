@@ -6,25 +6,29 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: c3bff4e44ddee1c4dfb6ab366464ad54e991b595
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624273"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005642"
 ---
 # <a name="-doc"></a>-doc
 Processa comentários de documentação para um arquivo XML.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 -doc[+ | -]  
-' -or-  
+```
+
+ou  
+
+```console
 -doc:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
