@@ -18,7 +18,7 @@ ms.locfileid: "71216270"
 
 Este artigo descreve o que há de novo no .NET Core 3.0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
 
-O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview)ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**.
+O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio para Mac 8.3](/visualstudio/mac/install-preview)ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**.
 
 [Baixe e comece a usar o .NET Core 3.0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
 
