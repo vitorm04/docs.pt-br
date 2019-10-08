@@ -2,12 +2,12 @@
 title: Eventos de domínio. design e implementação
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Obtenha uma visão detalhada dos eventos de domínio, um conceito fundamental para estabelecer a comunicação entre agregações.
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926554"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031843"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -84,7 +84,7 @@ Conforme mostrado na Figura 7-15, começando pelo mesmo evento de domínio, voc�
 
 Os manipuladores de eventos normalmente ficam na camada de aplicativo, porque você usará objetos de infraestrutura, como repositórios, ou uma API de aplicativo para o comportamento do microsserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
 
-Ter um número indefinido de manipuladores por evento de domínio permite que você adicione quantas regras de domínio forem necessárias sem afetar o código atual. Por exemplo, a implementação da seguinte regra de negócios poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
+Ter um número aberto de manipuladores por evento de domínio permite que você adicione quantas regras de domínio forem necessárias, sem afetar o código atual. Por exemplo, a implementação da seguinte regra de negócios poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
 
 > Quando o valor total comprado por um cliente na loja, em qualquer número de pedidos, excede US$ 6.000, aplicar 10% de desconto para cada novo pedido e notificar o cliente com um email, informando sobre esse desconto para pedidos futuros.
 
