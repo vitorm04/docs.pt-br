@@ -8,7 +8,7 @@ ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
 ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70169114"
@@ -136,7 +136,7 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()` executa no thread no qual foi chamado.  Quando ele chama `Task.Run`, coloca na fila cara operação vinculada à CPU, `DoExpensiveCalculation()`, no pool de threads e recebe um identificador `Task<int>`.  `DoExpensiveCalculation()` é finalmente executado simultaneamente no próximo thread disponível, provavelmente em outro núcleo da CPU.  É possível fazer o trabalho simultâneo enquanto `DoExpensiveCalculation()` está ocupado em outro thread, pois o thread que chamou `CalculateResult()` ainda está em execução.
+`CalculateResult()` executa no thread no qual foi chamado.  Quando ele chama `Task.Run`, coloca na fila uma operação cara vinculada à CPU, `DoExpensiveCalculation()`, no pool de threads e recebe um identificador `Task<int>`.  `DoExpensiveCalculation()` é finalmente executado simultaneamente no próximo thread disponível, provavelmente em outro núcleo da CPU.  É possível fazer o trabalho simultâneo enquanto `DoExpensiveCalculation()` está ocupado em outro thread, pois o thread que chamou `CalculateResult()` ainda está em execução.
 
 Uma vez que `await` é encontrado, a execução de `CalculateResult()` é gerada para seu chamador, permitindo que outro trabalho seja realizado com o thread atual enquanto `DoExpensiveCalculation()` está produzindo um resultado.  Ao terminar, o resultado é enfileirado para ser executado no thread principal.  No fim, o thread principal retornará para a execução de `CalculateResult()`, ponto em que ele terá o resultado de `DoExpensiveCalculation()`.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925350"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275808"
 ---
 # <a name="c-reference"></a>Referência de C#
 Esta seção fornece o material de referência sobre palavras-chave do C#, operadores, caracteres especiais, diretivas de pré-processador, opções de compilador e erros de compilador e avisos.  
@@ -55,7 +55,7 @@ Os recursos que foram implementados nas versões do C# depois da 6.0 são repres
  C# 7.3 é outra versão de ponto que inclui várias atualizações pequenas. Você pode usar novas restrições em parâmetros de tipo genérico. Outras alterações facilitam trabalhar com campos `fixed`, incluindo o uso de alocações [`stackalloc`](./operators/stackalloc.md). As variáveis locais declaradas com a palavra-chave `ref` podem ser reatribuídas para se referir ao novo armazenamento. Você pode colocar os atributos em propriedades autoimplementadas que direcionam o campo de suporte gerado pelo compilador. As variáveis de expressão podem ser usadas em inicializadores. As tuplas podem ser comparadas quanto à igualdade (ou desigualdade). Também houve algumas melhorias para a resolução de sobrecarga.
   
  [C#8,0 propostas de especificação](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8,0 está disponível com o .NET Core 3,0. Os recursos incluem tipos de referência anuláveis, correspondência de padrões recursivos, membros de interface padrão, fluxos assíncronos, intervalos e índices, com base em padrões usando e usando declarações, atribuição de União nula e membros de instância ReadOnly.
+ C#8,0 está disponível com o .NET Core 3,0. Os recursos incluem tipos de referência anuláveis, correspondência de padrões recursivos, métodos de interface padrão, fluxos assíncronos, intervalos e índices, com base em padrões usando e usando declarações, atribuição de União nula e membros de instância ReadOnly.
   
 ## <a name="related-sections"></a>Seções relacionadas  
 

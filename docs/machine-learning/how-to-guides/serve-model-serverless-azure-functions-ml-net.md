@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef028fee6cafcf4a775e061d9a5f91f0cf9a7e36
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332701"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179370"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implantar um modelo no Azure Functions
 
@@ -149,7 +149,16 @@ Defina o parâmetro `watchForChanges` como `true`, e o `PredictionEnginePool` in
 
 O modelo é identificado pelo parâmetro `modelName` para que mais de um modelo por aplicativo possa ser recarregado após a alteração. 
 
-Como alternativa, você pode usar o método `FromUri` ao trabalhar com modelos armazenados remotamente. Em vez de observar os eventos de alteração de arquivo, `FromUri` pesquisa o local remoto em busca de alterações. O padrão do intervalo de sondagem é de 5 minutos. Você pode aumentar ou diminuir o intervalo de sondagem com base nos requisitos do seu aplicativo.
+> [!TIP]
+> Como alternativa, você pode usar o método `FromUri` ao trabalhar com modelos armazenados remotamente. Em vez de observar os eventos de alteração de arquivo, `FromUri` pesquisa o local remoto em busca de alterações. O padrão do intervalo de sondagem é de 5 minutos. Você pode aumentar ou diminuir o intervalo de sondagem com base nos requisitos do seu aplicativo. No exemplo de código abaixo, o `PredictionEnginePool` sonda o modelo armazenado no URI especificado a cada minuto.
+>    
+>```csharp
+>builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>   .FromUri(
+>       modelName: "SentimentAnalysisModel", 
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       period: TimeSpan.FromMinutes(1));
+>```
 
 ## <a name="load-the-model-into-the-function"></a>Carregar o modelo na função
 

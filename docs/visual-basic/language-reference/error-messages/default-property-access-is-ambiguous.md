@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512748"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250376"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>O acesso à propriedade padrão é ambíguo entre os membros da\<interface herdada ' defaultpropertyname >\<' da interface ' interfacename1\<> ' e ' defaultpropertyname >\< ' da interface ' interfacename2 > '
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>O acesso à propriedade padrão é ambíguo entre os membros da interface herdada ' \<defaultpropertyname > ' da interface ' \<interfacename1 > ' e ' \<defaultpropertyname > ' da interface ' \<interfacename2 > '
 
 Uma interface herda de duas interfaces, cada uma delas declara uma propriedade padrão com o mesmo nome. O compilador não pode resolver um acesso a essa propriedade padrão sem qualificação. O exemplo a seguir ilustra essa situação.
 
@@ -42,7 +42,7 @@ Quando você especifica `testObj(1)`, o compilador tenta resolvê-lo para a prop
 
 ## <a name="to-correct-this-error"></a>Para corrigir este erro
 
-- Evite herdar todos os membros com o mesmo nome. No exemplo anterior, se `testObj` não precisar de nenhum dos membros de, digamos, `Iface2`e, em seguida, declare-o da seguinte maneira:
+- Evite herdar todos os membros com o mesmo nome. No exemplo anterior, se `testObj` não precisar de nenhum dos membros de, digamos, `Iface2`, então declare-o da seguinte maneira:
 
   ```vb
   Dim testObj As Iface1
@@ -66,4 +66,4 @@ Quando você especifica `testObj(1)`, o compilador tenta resolvê-lo para a prop
 
 ## <a name="see-also"></a>Consulte também
 
-- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Interfaces](../../programming-guide/language-features/interfaces/index.md)

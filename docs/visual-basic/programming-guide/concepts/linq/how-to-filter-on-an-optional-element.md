@@ -2,12 +2,12 @@
 title: 'Como: Filtrar em um elemento opcional (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 4de8c0b07eebc340a53785e6b932a66cb9d2fec9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710416"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249999"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Como: Filtrar em um elemento opcional (Visual Basic)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
@@ -50,7 +50,7 @@ Next
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -100,7 +100,7 @@ End Module
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  

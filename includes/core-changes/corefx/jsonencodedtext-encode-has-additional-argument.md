@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 377f22409558c21d1c57f6214c13572dedf9e419
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217069"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237283"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>Os métodos JsonEncodedText. Encode têm um argumento JavaScriptEncoder adicional
 
-A partir do .NET Core 3,0 Preview 8, <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> os métodos contêm um <xref:System.Text.Encodings.Web.JavaScriptEncoder> argumento opcional.
+A partir do .NET Core 3,0 Preview 8, os métodos <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> contêm um argumento <xref:System.Text.Encodings.Web.JavaScriptEncoder> opcional.
 
-#### <a name="details"></a>Detalhes
+#### <a name="change-description"></a>Alterar descrição
 
-O .NET Core 3,0 inclui um novo tipo, xref: System. Text. JSON. JsonEncodedText. Encode% 2A? displayproperty = nameWithType >. A partir do .NET Core 3,0 Preview 8, a assinatura de <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> todas as sobrecargas de método foi alterada para <xref:System.Text.Encodings.Web.JavaScriptEncoder> incluir um parâmetro opcional. Essa alteração foi feita para permitir um codificador diferente ou personalizado.
+O .NET Core 3,0 inclui um novo tipo, xref: System. Text. JSON. JsonEncodedText. Encode% 2A? displayproperty = nameWithType >. A partir do .NET Core 3,0 Preview 8, a assinatura de todas as sobrecargas do método <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> foi alterada para incluir um parâmetro opcional <xref:System.Text.Encodings.Web.JavaScriptEncoder>. Essa alteração foi feita para permitir um codificador diferente ou personalizado.
 
-A assinatura dos `Encode` métodos no .NET Core 3,0 Preview 7 é:
+A assinatura dos métodos `Encode` no .NET Core 3,0 Preview 7 é:
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-A assinatura dos mesmos `Encode` métodos no .NET Core 3,0 Preview 8 e versões posteriores é:
+A assinatura dos mesmos métodos `Encode` no .NET Core 3,0 Preview 8 e versões posteriores é:
 
 ```csharp
 namespace System.Text.Json

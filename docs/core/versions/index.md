@@ -4,12 +4,12 @@ description: Este artigo ensina como controlar a versão do SDK do .NET Core (se
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849288"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179954"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
@@ -82,11 +82,11 @@ Os arquivos baixados para .NET Core têm a versão, por exemplo, `dotnet-sdk-2.1
 
 ### <a name="preview-versions"></a>Versões prévias
 
-As versões prévias têm um `-preview[number]-([build]|"final")` anexado à versão. Por exemplo, `2.0.0-preview1-final`.
+As versões prévias têm um `-preview[number]-([build]|"final")` anexado à versão. Por exemplo: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versões de manutenção
 
-Depois que uma versão sai, os branches de versão geralmente param de produzir builds diários e, em vez disso, iniciam a produção de builds de manutenção. As versões de manutenção têm um `-servicing-[number]` anexado à versão. Por exemplo, `2.0.1-servicing-006924`.
+Depois que uma versão sai, os branches de versão geralmente param de produzir builds diários e, em vez disso, iniciam a produção de builds de manutenção. As versões de manutenção têm um `-servicing-[number]` anexado à versão. Por exemplo: `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>Relacionamento com versões do .NET Standard
 
@@ -103,6 +103,8 @@ Cada versão do .NET Core implementa uma versão do .NET Standard. Implementar u
 | 1.0       | até 1.6     |
 | 2.0       | até 2.0     |
 | 2.1       | até 2.0     |
+| 2.2       | até 2.0     |
+| 3.0       | até 2,1     |
 
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: 'Como: Localizar um único descendente usando o método descendentes (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 7e90e7e8c4a6cd4c91b15037be0fa422dd2108e3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: dbde5686d1b7670290d434c0a04515cbc10622fd
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709084"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249957"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Como: Localizar um único descendente usando o método descendentes (Visual Basic)
 Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente. Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico. Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -39,7 +39,7 @@ Console.WriteLine(grandChild3)
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 GC3 Value  
 ```  
   
@@ -76,7 +76,7 @@ End Module
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 GC3 Value  
 ```  
   

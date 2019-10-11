@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: d61e4da187b3ede5e49fa80903d6e4c3b40578b9
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 75ba041a93b71377928591967e1554742e1d17e1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216291"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237279"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Tipos no namespace Microsoft. VisualBasic. MyServices não estão disponíveis
 
-Os tipos no <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace não estão disponíveis.
+Os tipos no namespace <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> não estão disponíveis.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 .NET Core 3,0 Preview 8
 
-#### <a name="details"></a>Detalhes
+#### <a name="change-description"></a>Alterar descrição
 
-Os tipos no <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> namespace estavam disponíveis em algumas versões de visualização do .NET Core 3,0. Eles não estão mais disponíveis a partir do .NET Core 3,0 Preview 9.
+Os tipos no namespace <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> estavam disponíveis em algumas versões de visualização do .NET Core 3,0. Eles não estão mais disponíveis a partir do .NET Core 3,0 Preview 9.
 
 Os tipos foram removidos para evitar dependências de assembly desnecessárias ou alterações significativas nas versões subsequentes.
  
@@ -26,9 +26,9 @@ Se seu código depende do uso de tipos **Microsoft. VisualBasic. MyServices** e 
 
 |Tipo Microsoft. VisualBasic. MyServices|Tipo de biblioteca de classes .NET|
 |--|--|
-|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType>para aplicativos do WPF <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> , para aplicativos Windows Forms| 
-|<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|Tipos no <xref:System.IO> namespace|
-|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|Tipos relacionados ao registro no <xref:Microsoft.Win32> namespace|
+|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType> para aplicativos do WPF, <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> para aplicativos Windows Forms| 
+|<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|Tipos no namespace <xref:System.IO>|
+|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|Tipos relacionados ao registro no namespace <xref:Microsoft.Win32>|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|
 
 #### <a name="category"></a>Categoria
