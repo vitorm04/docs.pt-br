@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
-ms.date: 08/08/2019
-ms.openlocfilehash: 6194d70a8a14e63adbcad39c7dabbbd220ca329d
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
-ms.translationtype: HT
+ms.date: 10/07/2019
+ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179973"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250188"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -66,9 +66,9 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 ## <a name="options"></a>Opções
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration {CONFIGURATION}`**
 
-  Define a configuração da compilação. O valor padrão é `Debug`.
+  Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 * **`-f|--framework <FRAMEWORK>`**
 
