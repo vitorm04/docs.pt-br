@@ -12,17 +12,17 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: a770bcbbc8ac553c55e9dda5097abec8790182e5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: be8dcfce44347e8099e8cfa693bcee341514de2b
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663730"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291434"
 ---
 # <a name="graphics-and-multimedia"></a>Gráficos e multimídia
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece suporte para multimídia, gráficos vetoriais, animação e composição de conteúdo, tornando mais fácil para os desenvolvedores criem interfaces de usuário interessantes e de conteúdo. Usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], você pode criar gráficos vetoriais ou animações complexas e integrar mídias em seus aplicativos.
+ @ no__t-2 fornece suporte para multimídia, gráficos vetoriais, animação e composição de conteúdo, facilitando para os desenvolvedores a criação de conteúdo e interfaces de usuário interessantes. Usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], você pode criar gráficos vetoriais ou animações complexas e integrar mídias em seus aplicativos.
 
 Este tópico apresenta os recursos de gráficos, animação e mídia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], que permitem que você adicione gráficos, efeitos de transição, som e vídeo a seus aplicativos.
 
@@ -37,33 +37,33 @@ Várias alterações foram feitas com relação aos gráficos e animações.
 
 - Arredondamento de layout
 
-  Quando a borda de um objeto está no meio de um dispositivo de pixel, o sistema de gráficos independente de DPI pode criar artefatos de renderização, como bordas desfocadas ou semitransparentes. Versões anteriores do WPF incluíam o ajuste de pixels para ajudar a lidar com esse caso. O Silverlight 2 introduziu o arredondamento de layout, que é outra maneira de mover elementos para que as bordas fiquem nos limites de pixels inteiros. Agora o WPF dá suporte ao arredondamento de layout com o <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> propriedade anexada em <xref:System.Windows.FrameworkElement>.
+  Quando a borda de um objeto está no meio de um dispositivo de pixel, o sistema de gráficos independente de DPI pode criar artefatos de renderização, como bordas desfocadas ou semitransparentes. Versões anteriores do WPF incluíam o ajuste de pixels para ajudar a lidar com esse caso. O Silverlight 2 introduziu o arredondamento de layout, que é outra maneira de mover elementos para que as bordas fiquem nos limites de pixels inteiros. O WPF agora dá suporte ao arredondamento de layout com a propriedade anexada <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> em <xref:System.Windows.FrameworkElement>.
 
 - Composição em cache
 
-  Ao usar os novos <xref:System.Windows.Media.BitmapCache> e <xref:System.Windows.Media.BitmapCacheBrush> classes, você pode armazenar em cache uma parte complexa da árvore visual como um bitmap e aprimorar o tempo de renderização. O bitmap permanece responsivo a entradas do usuário, como cliques do mouse e você pode pintá-lo em outros elementos, como faria com qualquer pincel.
+  Usando as novas classes <xref:System.Windows.Media.BitmapCache> e <xref:System.Windows.Media.BitmapCacheBrush>, você pode armazenar em cache uma parte complexa da árvore visual como um bitmap e melhorar muito o tempo de renderização. O bitmap permanece responsivo a entradas do usuário, como cliques do mouse e você pode pintá-lo em outros elementos, como faria com qualquer pincel.
 
 - Suporte para o Sombreador de Pixel 3
 
-  O WPF 4 se baseia na parte superior do <xref:System.Windows.Media.Effects.ShaderEffect> suporte introduzido no WPF 3.5 SP1, permitindo que os aplicativos gravem efeitos usando Pixel Shader (PS) versão 3.0. O modelo de sombreador PS 3.0 é mais sofisticado do que o PS 2.0, o que permite ainda mais efeitos em hardware com suporte.
+  O WPF 4 baseia-se no suporte a <xref:System.Windows.Media.Effects.ShaderEffect> introduzido no WPF 3,5 SP1, permitindo que os aplicativos gravem efeitos usando o sombreador de pixel (PS) versão 3,0. O modelo de sombreador PS 3.0 é mais sofisticado do que o PS 2.0, o que permite ainda mais efeitos em hardware com suporte.
 
 - Funções de easing
 
-  Você pode aprimorar animações com funções de easing, que fornecem controle adicional sobre o comportamento das animações. Por exemplo, você pode aplicar um <xref:System.Windows.Media.Animation.ElasticEase> a uma animação para dar a ela um comportamento semelhante. Para obter mais informações, consulte os tipos de easing a <xref:System.Windows.Media.Animation> namespace.
+  Você pode aprimorar animações com funções de easing, que fornecem controle adicional sobre o comportamento das animações. Por exemplo, você pode aplicar um <xref:System.Windows.Media.Animation.ElasticEase> a uma animação para dar a animação um comportamento de passagem. Para obter mais informações, consulte os tipos de atenuação no namespace <xref:System.Windows.Media.Animation>.
 
 <a name="graphics_and_rendering"></a>
 
 ## <a name="graphics-and-rendering"></a>Gráficos e renderização
 
-O WPF inclui suporte para gráficos 2D de alta qualidade. A funcionalidade inclui pincéis, geometrias, imagens, formas e transformações. Para obter mais informações, consulte [Gráficos](graphics.md). A renderização de elementos gráficos se baseia o <xref:System.Windows.Media.Visual> classe. A estrutura de objetos visuais na tela é descrita pela árvore visual. Para obter mais informações, consulte [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md).
+O WPF inclui suporte para gráficos 2D de alta qualidade. A funcionalidade inclui pincéis, geometrias, imagens, formas e transformações. Para obter mais informações, consulte [Gráficos](graphics.md). A renderização de elementos gráficos baseia-se na classe <xref:System.Windows.Media.Visual>. A estrutura de objetos visuais na tela é descrita pela árvore visual. Para obter mais informações, consulte [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md).
 
 ### <a name="2-d-shapes"></a>Formas 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fornece uma biblioteca de comumente usadas, vetoriais 2D formas, como retângulos e elipses, que mostra a ilustração a seguir.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece uma biblioteca de formas 2D e desenhadas com vetores usadas, como retângulos e elipses, que a ilustração a seguir mostra.
 
-![Diagrama mostrando elipses e retângulos.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
+![Diagrama mostrando reticências e retângulos.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Essas formas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] intrínsecas não são apenas formas: elas são elementos programáveis que implementam muitos dos recursos que você espera da maioria dos controles comuns, que incluem a entrada de mouse e teclado. O exemplo a seguir mostra como lidar com o <xref:System.Windows.UIElement.MouseUp> evento gerado ao clicar em um <xref:System.Windows.Shapes.Ellipse> elemento.
+Essas formas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] intrínsecas não são apenas formas: elas são elementos programáveis que implementam muitos dos recursos que você espera da maioria dos controles comuns, que incluem a entrada de mouse e teclado. O exemplo a seguir mostra como manipular o evento <xref:System.Windows.UIElement.MouseUp> gerado clicando em um elemento <xref:System.Windows.Shapes.Ellipse>.
 
 ```xaml
 <Window
@@ -95,13 +95,13 @@ End Class
 
 A ilustração a seguir mostra a saída para a marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] anterior e code-behind.
 
-![Uma caixa de mensagem dizendo "You clicked elipse!"](./media/index/messagebox-text-output.png)
+![Uma caixa de mensagem dizendo "você clicou na elipse!"](./media/index/messagebox-text-output.png)
 
 Para obter mais informações, consulte [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md). Para ver um exemplo introdutório, consulte [Amostra de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037).
 
 ### <a name="2-d-geometries"></a>Geometrias 2D
 
-Quando o 2D que molda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece não forem suficientes, você pode usar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dão suporte para geometrias e caminhos para criar seus próprios. A ilustração a seguir mostra como você pode usar geometrias para criar formas, como um pincel de desenho e cortar outros elementos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Quando as formas 2D que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece não são suficientes, você pode usar o suporte a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para geometrias e caminhos para criar o seu próprio. A ilustração a seguir mostra como você pode usar geometrias para criar formas, como um pincel de desenho e cortar outros elementos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
 ![Captura de tela mostrando como você pode usar geometrias para criar formas.](./media/index/use-geometries-create-shapes.png)
 
@@ -109,9 +109,9 @@ Para obter mais informações, consulte [Visão geral de geometria](geometry-ove
 
 ### <a name="2-d-effects"></a>Efeitos 2D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fornece uma biblioteca de classes de 2D que você pode usar para criar uma variedade de efeitos. A capacidade de renderização 2D do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece a capacidade de pintar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos que têm gradientes, bitmaps, desenhos e vídeos; e manipulá-los por meio de rotação, dimensionamento e distorção. A ilustração a seguir fornece um exemplo dos muitos efeitos que você pode obter usando pincéis [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece uma biblioteca de classes 2D que você pode usar para criar uma variedade de efeitos. A capacidade de renderização de 2D de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece a capacidade de pintar elementos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que têm gradientes, bitmaps, desenhos e vídeos; e para manipulá-los usando rotação, dimensionamento e distorção. A ilustração a seguir fornece um exemplo dos muitos efeitos que você pode obter usando pincéis [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
-![Ilustração mostrando os elementos de pintura e diferentes pincéis do WPF.](./media/index/brushes-paint-elements.png)
+![Ilustração mostrando os diferentes pincéis do WPF e elementos de pintura.](./media/index/brushes-paint-elements.png)
 
 Para obter mais informações, consulte [Visão geral de pincéis do WPF](wpf-brushes-overview.md). Para ver um exemplo introdutório, consulte [Amostra de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973).
 
@@ -119,9 +119,9 @@ Para obter mais informações, consulte [Visão geral de pincéis do WPF](wpf-br
 
 ## <a name="3-d-rendering"></a>Renderização 3D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Fornece um conjunto de funcionalidades de renderização 3D que se integram com elementos gráficos em 2D suporte no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para que você crie um layout mais interessante, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]e visualização de dados. Em uma extremidade do espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite que você renderize imagens 2D nas superfícies de formas 3D, que demonstra a ilustração a seguir.
+o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece um conjunto de recursos de renderização 3D que se integram ao suporte a gráficos 2-D no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para que você possa criar layouts mais empolgantes, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] e visualização de dados. Em uma extremidade do espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite que você processe imagens 2D nas superfícies de formas 3D, que a ilustração a seguir demonstra.
 
-![Captura de tela de um exemplo que mostra as formas 3D com texturas diferentes.](./media/index/visual-three-dimensional-shape.png)
+![Captura de tela de um exemplo mostrando formas 3D com texturas diferentes.](./media/index/visual-three-dimensional-shape.png)
 
 Para obter mais informações, consulte [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md). Para ver um exemplo introdutório, consulte [Amostra de sólidos em 3D](https://go.microsoft.com/fwlink/?LinkID=159964).
 
@@ -145,7 +145,7 @@ Imagens, vídeo e áudio são formas de mídia avançadas que transmitem informa
 
 Imagens, que incluem ícones, planos de fundo e até mesmo partes de animações, são uma parte principal da maioria dos aplicativos. Como você precisa usar imagens com frequência, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expõe a capacidade de trabalhar com elas de diversas formas. A ilustração a seguir mostra apenas uma dessas formas.
 
-![Captura de tela de exemplo de definição de estilo](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![Captura de tela de exemplo](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 Para obter mais informações, consulte [Visão geral de geração de imagens](imaging-overview.md).
 
@@ -157,7 +157,7 @@ Um recurso principal das funcionalidades gráficas do [!INCLUDE[TLA2#tla_wpf](..
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />
 ```
 
-<xref:System.Windows.Controls.MediaElement> é capaz de executar áudio e vídeo e é extensível o suficiente para permitir a fácil criação de custom [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].
+o <xref:System.Windows.Controls.MediaElement> é capaz de reproduzir vídeo e áudio e é extensível o suficiente para permitir a fácil criação de UIs personalizadas.
 
 Para obter mais informações, consulte [Visão geral de multimídia](multimedia-overview.md).
 
