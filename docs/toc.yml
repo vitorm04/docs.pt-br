@@ -581,7 +581,7 @@
         - name: Cenários avançados de interpolação de cadeia de caracteres
           href: csharp/tutorials/string-interpolation.md
         - name: Atualizar interfaces de forma segura com membros de interface padrão
-          href: csharp/tutorials/default-interface-members-versions.md
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Explore os índices e os intervalos
           href: csharp/tutorials/ranges-indexes.md
         - name: Trabalhar com tipos de referência nula
