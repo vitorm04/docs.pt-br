@@ -39,7 +39,7 @@ No exemplo de código anterior, foi definida uma função `square` que recebe um
 val square: x:int -> int
 ```
 
-Isso é o que é conhecido como assinatura de tipo da função.  Ele pode ser lido da seguinte maneira: "Square é uma função que usa um inteiro chamado x e produz um inteiro".  Observe que o compilador `square` fornecia `int` o tipo por enquanto-isso ocorre porque a multiplicação não é genérica em *todos os* tipos, mas sim em um conjunto fechado de tipos.  O F# compilador escolheu `int` neste ponto, mas ajustará a assinatura de tipo se você chamar `square` com um tipo de entrada diferente, como um `float`.
+Isso é o que é conhecido como assinatura do tipo da função.  Ela pode ser lida da seguinte maneira: "Square é uma função que recebe um inteiro chamado x e produz um inteiro".  Observe que o compilador define por hora o tipo do `square` como `int` – isso ocorre porque a multiplicação não é genérica em *todos os* tipos, mas sim em um conjunto fechado de tipos.  O compilador do F# escolheu `int` neste caso, mas ajustará a assinatura de tipo se você chamar `square` com um tipo de entrada diferente, como um `float`.
 
 Outra função, `main`, é definida e decorada com  o atributo `EntryPoint` para informar ao compilador do F# que a execução do programa deve iniciar lá.  Ele segue a mesma convenção que outras [linguagens de programação em estilo C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), em que argumentos de linha de comando podem ser passados para essa função e um código inteiro é retornado (normalmente `0`).
 
