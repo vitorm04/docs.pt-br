@@ -200,7 +200,7 @@
       items:
         - name: nova restrição
           href: keywords/new-constraint.md
-        - name: where
+        - name: onde
           href: keywords/where-generic-type-constraint.md
     - name: Palavras-chave de acesso
       items:
@@ -236,7 +236,7 @@
           href: keywords/set.md
         - name: when (condição de filtro)
           href: keywords/when.md
-        - name: Valor
+        - name: 'Valor '
           href: keywords/value.md
         - name: yield
           href: keywords/yield.md
@@ -315,6 +315,9 @@
     - name: 'Operador ?:'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
+    - name: '! Operador do (null-forgiving)'
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
     - name: '?? e operadores ??='
       href: operators/null-coalescing-operator.md
       displayName: 'null-coalescing, assignment'
@@ -621,7 +624,7 @@
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: Correspondência de padrões recursiva
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: Membros da interface padrão
+    - name: Métodos de interface padrão
       href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: Fluxos assíncronos
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md

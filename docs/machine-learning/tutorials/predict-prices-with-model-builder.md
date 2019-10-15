@@ -3,19 +3,19 @@ title: 'Tutorial: Prever os preços usando regressão com o Construtor de Modelo
 description: Este tutorial mostra como criar um modelo de regressão usando o Construtor de Modelo do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332588"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180277"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Prever os preços usando regressão com o Construtor de Modelo
 
-Saiba como usar o Construtor de Modelo do ML.NET para criar um modelo de regressão() e prever preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
+Saiba como usar o ML.NET Model Builder para criar um modelo de regressão para prever os preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
 
 O modelo de previsão de preço do Construtor de Modelo pode ser usado em qualquer cenário que exija um valor de previsão numérico. Exemplos de cenários incluem: previsão de preço, previsão de demanda e previsão de vendas de casas.
 

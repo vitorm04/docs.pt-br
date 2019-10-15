@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117600"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275757"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -85,7 +85,7 @@ Na maioria dos casos, você não precisa usar o comando `dotnet restore` explici
 
 Às vezes, pode ser inconveniente executar `dotnet restore` implicitamente. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar que o `dotnet restore` seja executado implicitamente, use o sinalizador `--no-restore` com um desses comandos para desabilitar a restauração implícita.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `ROOT`
 
@@ -137,7 +137,7 @@ Especifica uma origem de pacote NuGet a ser usada durante a operação de restau
 
 `--verbosity <LEVEL>`
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `minimal`.
 
 `--interactive`
 
@@ -179,11 +179,11 @@ Especifica um tempo de execução para a restauração do pacote. Isso é usado 
 
 `-s|--source <SOURCE>`
 
-Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *NuGet. config* , lendo efetivamente o arquivo *NuGet. config* como se o `<packageSource>` elemento não estivesse lá. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
+Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *NuGet. config* , lendo efetivamente o arquivo *NuGet. config* como se o elemento `<packageSource>` não estivesse lá. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
 
 `--verbosity <LEVEL>`
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`.
 
 ---
 
@@ -205,6 +205,6 @@ Restaure as dependências e as ferramentas para o projeto no diretório atual us
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-Restaure as dependências e as ferramentas do projeto no diretório atual e mostre apenas a saída mínima:
+Restaure as dependências e as ferramentas para o projeto no diretório atual mostrando a saída detalhada:
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

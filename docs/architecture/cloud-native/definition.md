@@ -1,14 +1,14 @@
 ---
-title: Definindo a nuvem nativa
+title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6a4a63f003c8ff0c7381d29f4e569838e45bd669
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183465"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291205"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -22,9 +22,9 @@ Os sistemas nativos de nuvem são projetados para adotar alteração rápida, gr
 
 A base de computação nativa da nuvem fornece uma [definição oficial](https://github.com/cncf/foundation/blob/master/charter.md):
 
-> *As tecnologias nativas de nuvem capacitam as organizações a criar e executar aplicativos escalonáveis em ambientes modernos e dinâmicos, como nuvens públicas, privadas e híbridas. Contêineres, malhas de serviço, microservices, infraestrutura imutável e APIs declarativas exemplificam essa abordagem.*
+> as tecnologias *Cloud-Native capacitam as organizações a criar e executar aplicativos escalonáveis em ambientes modernos e dinâmicos, como nuvens públicas, privadas e híbridas. Contêineres, malhas de serviço, microservices, infraestrutura imutável e APIs declarativas exemplificam essa abordagem.*
 
-> *Essas técnicas permitem sistemas menos rígidos resilientes, gerenciáveis e observáveis. Combinada com a automação robusta, eles permitem que os engenheiros façam alterações de alto impacto com frequência e previsíveis com o mínimo de toil.*
+> as técnicas de @no__t 0These habilitam sistemas livremente acoplados que são resilientes, gerenciáveis e observáveis. Combinada com a automação robusta, eles permitem que os engenheiros façam alterações de alto impacto com frequência e previsíveis com o mínimo de toil. *
 
 Os aplicativos se tornaram cada vez mais complexos com os usuários exigindo mais e mais. Os usuários esperam uma rápida capacidade de resposta, recursos inovadores e zero tempo de inatividade. Problemas de desempenho, erros recorrentes e a incapacidade de mover rapidamente não são mais aceitáveis. Eles mudarão facilmente para o seu concorrente.
 
@@ -40,11 +40,11 @@ Aqui estão algumas empresas que implementaram essas técnicas. Pense na velocid
 
 Como você pode ver, Netflix, Uber e WeChat expõem sistemas que consistem em centenas de microservices independentes. Esse estilo de arquitetura permite que eles respondam rapidamente às condições do mercado. Eles podem atualizar de forma instantânea áreas pequenas de um aplicativo dinâmico e complexo e dimensionar individualmente essas áreas conforme necessário.
 
-A velocidade e a agilidade da nuvem nativa vêm de vários fatores. A maioria é a infraestrutura de nuvem. Cinco pilares básicos adicionais mostrados na Figura 1-1 também fornecem o Fundação para sistemas nativos de nuvem.
+A velocidade e a agilidade da nuvem nativa vêm de vários fatores. A maioria é a infraestrutura de nuvem. Cinco pilares básicos adicionais mostrados na Figura 1-3 também fornecem o Fundação para sistemas nativos de nuvem.
 
 ![Pilares básicos nativos da nuvem](./media/cloud-native-foundational-pillars.png)
 
-**Figura 1-1**. Pilares básicos nativos da nuvem
+**Figura 1-3**. Pilares básicos nativos da nuvem
 
 Vamos dar algum tempo para entender melhor o significado de cada pilar.
 
@@ -54,7 +54,7 @@ Os sistemas nativos de nuvem aproveitam ao máximo o modelo de serviço de nuvem
 
 Projetado para prosperar em um ambiente de nuvem dinâmico e virtualizado, esses sistemas fazem uso extensivo da infraestrutura de computação e dos serviços gerenciados de [PaaS (plataforma como serviço)](https://azure.microsoft.com/overview/what-is-paas/) . Eles tratam a infraestrutura subjacente como *desdescartável* -provisionado em minutos e redimensionados, dimensionados, movidos ou destruídos sob demanda – via automação.
 
-Considere o conceito de DevOps de [pets amplamente aceito versus Burro](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Em um data center tradicional, os servidores são tratados como *animais de estimação*: um computador físico, dado um nome significativo e cuidados para. Você dimensiona adicionando mais recursos ao mesmo computador (expandindo verticalmente). Se o servidor se tornar doente, você o enfermaria de volta para a integridade. Se o servidor ficar indisponível, todos os avisos serão percebidos.
+Considere o conceito de DevOps amplamente aceito de [Pets versus Burro @ no__t-0. Em um data center tradicional, os servidores são tratados como *animais de estimação*: um computador físico, dado um nome significativo e cuidados para. Você dimensiona adicionando mais recursos ao mesmo computador (expandindo verticalmente). Se o servidor se tornar doente, você o enfermaria de volta para a integridade. Se o servidor ficar indisponível, todos os avisos serão percebidos.
 
 O modelo de serviço *burro* é diferente. Você provisiona cada instância como uma máquina virtual ou contêiner. Eles são idênticos e atribuídos a um identificador de sistema, como Service-01, Service-02 e assim por diante. Você dimensiona criando mais deles (expandindo). Quando um se torna indisponível, ninguém percebe.
 
@@ -146,15 +146,15 @@ Criado como um conjunto distribuído de serviços pequenos e independentes que i
 
 - Eles compõem juntos para formar um aplicativo.
 
-A Figura 1-2 contrasta uma abordagem de aplicativo monolítico com uma abordagem de microserviços. Observe como o monolítico é composto de uma arquitetura em camadas, que é executada em um único processo. Normalmente, ele consome um banco de dados relacional. No entanto, a abordagem de microserviço separa a funcionalidade em serviços independentes que incluem a lógica e os dados. Cada Microservice hospeda seu próprio repositório de armazenamento.
+A Figura 1-4 contrasta uma abordagem de aplicativo monolítico com uma abordagem de microserviços. Observe como o monolítico é composto de uma arquitetura em camadas, que é executada em um único processo. Normalmente, ele consome um banco de dados relacional. No entanto, a abordagem de microserviço separa a funcionalidade em serviços independentes que incluem a lógica e os dados. Cada Microservice hospeda seu próprio repositório de armazenamento.
 
 ![Implantação monolítica versus microserviços](./media/monolithic-vs-microservices.png)
 
-**Figura 1-2.** Implantação monolítica versus microserviços
+**Figura 1-4.** Implantação monolítica versus microserviços
 
 Observe como os microserviços promovem o princípio "uma base de código, um aplicativo" do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
-> *O \#fator 1 especifica "uma única base de código para cada microserviço, armazenado em seu próprio repositório. Acompanhado com o controle de versão, ele pode ser implantado em vários ambientes "*
+> *Factor \#1 especifica "uma única base de código para cada microserviço, armazenado em seu próprio repositório. Acompanhado com o controle de versão, ele pode ser implantado em vários ambientes "*
 
 ### <a name="why-microservices"></a>Por que os microserviços?
 
@@ -166,7 +166,7 @@ No início do capítulo, comparamos um aplicativo de comércio eletrônico criad
 
 - Cada microserviço pode ser dimensionado de forma independente. Em vez de dimensionar todo o aplicativo como uma única unidade, você dimensiona apenas os serviços que exigem mais capacidade de processamento ou largura de banda de rede. Essa abordagem refinada para o dimensionamento oferece maior controle do seu sistema e ajuda a reduzir os custos gerais à medida que você dimensiona partes do seu sistema, não tudo.
 
-Um excelente guia de referência para entender os microserviços é [o .net microservices: Arquitetura para aplicativos .NET em contêineres](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). O livro se aprofunda no design e na arquitetura de microserviços. É um complemento para uma [arquitetura de referência de microatendimento de pilha completa](https://github.com/dotnet-architecture/eShopOnContainers) disponível como um download gratuito da Microsoft.
+Um excelente guia de referência para entender os microserviços é o [.NET: Arquitetura para aplicativos .NET em contêineres](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). O livro se aprofunda no design e na arquitetura de microserviços. É um complemento para uma [arquitetura de referência de microatendimento de pilha completa](https://github.com/dotnet-architecture/eShopOnContainers) disponível como um download gratuito da Microsoft.
 
 ### <a name="developing-microservices"></a>Desenvolvendo microserviços
 
@@ -186,17 +186,17 @@ O contêiner de um microserviço é simples e direto. O código, suas dependênc
 
 Quando necessário, você transforma a imagem em uma instância de contêiner em execução. A instância é executada em qualquer computador que tenha um mecanismo de [tempo de execução de contêiner](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) instalado. Você pode ter tantas instâncias do serviço em contêineres, conforme necessário.
 
-A Figura 1-3 mostra três microserviços diferentes, cada um em seu próprio contêiner, em execução em um único host.
+A Figura 1-5 mostra três microserviços diferentes, cada um em seu próprio contêiner, em execução em um único host.
 
 ![Vários contêineres em execução em um host de contêiner](./media/hosting-mulitple-containers.png)  
 
-**Figura 1-3**. Vários contêineres em execução em um host de contêiner
+**Figura 1-5**. Vários contêineres em execução em um host de contêiner
 
 Observe como cada contêiner mantém seu próprio conjunto de dependências e tempo de execução, que pode ser diferente. Aqui, vemos versões diferentes do microserviço de produto em execução no mesmo host. Cada contêiner compartilha uma fatia do sistema operacional do host subjacente, da memória e do processador, mas é isolado uns dos outros. 
 
 Observe como o modelo de contêiner adota o princípio de "dependências" do [aplicativo de doze fatores](https://12factor.net/).
 
-> *O \#fator 2 especifica que "cada microserviço isola e empacota suas próprias dependências, adotando as alterações sem afetar o sistema inteiro".*
+> *O fator \#2 especifica que "cada microserviço isola e empacota suas próprias dependências, adotando as alterações sem afetar o sistema inteiro".*
 
 Contêineres dão suporte a cargas de trabalho do Linux e do Windows. A nuvem do Azure adota as duas opções. Curiosamente, é Linux, não Windows Server, que se tornou o sistema operacional mais popular no Azure.
 
@@ -214,11 +214,11 @@ Ao compartilhar o sistema operacional subjacente e os recursos do host, os cont�
 
 Embora ferramentas como o Docker criem imagens e executem contêineres, você também precisará de ferramentas para gerenciá-las. O gerenciamento de contêineres é feito com um programa de software especial chamado orquestrador de contêiner. Ao operar em escala, a orquestração de contêiner é essencial. 
 
-A Figura 1-4 mostra as tarefas de gerenciamento que os orquestradores de contêiner fornecem.
+A Figura 1-6 mostra as tarefas de gerenciamento que os orquestradores de contêiner fornecem.
 
 ![O que os orquestradores de contêiner fazem](./media/what-container-orchestrators-do.png)
 
-**Figura 1-4**. O que os orquestradores de contêiner fazem
+**Figura 1-6**. O que os orquestradores de contêiner fazem
 
 A tabela a seguir descreve as tarefas de orquestração comuns.
 
@@ -235,9 +235,9 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 
 Observe como os orquestradores adotam os princípios de Disposability e simultaneidade do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
-> *O \#fator 9 especifica que "as instâncias de serviço devem ser descartáveis, favorecendo as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. "*
+> *Factor \#9 especifica que "as instâncias de serviço devem ser descartáveis, favorecendo as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. "*
 
-> *O \#fator 8 especifica que "os serviços se expandem por um grande número de pequenos processos idênticos (cópias), em oposição à expansão de uma única instância grande no computador mais potente disponível".*
+> *O fator \#8 especifica que "os serviços se expandem por um grande número de pequenos processos idênticos (cópias) em oposição à expansão de uma única instância grande no computador mais potente disponível".*
 
 Embora existam vários orquestradores de contêiner, [kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) se tornou o padrão de fato para o mundo nativo da nuvem. É uma plataforma portátil, extensível e de software livre para gerenciar cargas de trabalho em contêineres. 
 
@@ -249,15 +249,15 @@ Os serviços Kubernetess do Azure são abordados no capítulo 2 de detalhes, *Di
 
 Os sistemas nativos de nuvem dependem de vários recursos auxiliares diferentes, como armazenamentos de dados, agentes de mensagens, monitoramento e serviços de identidade. Esses serviços são conhecidos como [serviços de backup](https://12factor.net/backing-services).
 
- A Figura 1-5 mostra muitos serviços de apoio comuns que os sistemas nativos de nuvem consomem.
+ A Figura 1-7 mostra muitos serviços de apoio comuns que os sistemas nativos de nuvem consomem.
 
 ![Serviços de suporte comuns](./media/common-backing-services.png)
 
-**Figura 1-5**. Serviços de suporte comuns
+**Figura 1-7**. Serviços de suporte comuns
 
 Os serviços de backup promovem o princípio "sem estado" do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
->*O \#fator 6* especifica que, "cada microserviço deve ser executado em seu próprio processo, isolado de outros serviços em execução. Externaize o estado necessário para um serviço de backup, como um cache distribuído ou armazenamento de dados. "
+>O *fator \#6* especifica que, "cada microserviço deve ser executado em seu próprio processo, isolado de outros serviços em execução. Externaize o estado necessário para um serviço de backup, como um cache distribuído ou armazenamento de dados. "
 
 Você pode hospedar seus próprios serviços de backup, mas, em seguida, você será responsável por licenciar, provisionar e gerenciar esses recursos.
 
@@ -267,9 +267,9 @@ Os sistemas nativos de nuvem favorecem serviços de backup gerenciados de fornec
 
 Uma prática recomendada é tratar um serviço de backup como um *recurso anexado*, vinculado dinamicamente a um Microservice com informações (uma URL e credenciais) armazenadas em uma configuração externa. Este guia é escrito no aplicativo de [doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
->*O \#fator 4* especifica que os serviços de backup "devem ser expostos por meio de uma URL endereçável. Isso desacopla o recurso do aplicativo, permitindo que ele seja intercambiável. "
+>O *fator \#4* especifica que os serviços de backup "devem ser expostos por meio de uma URL endereçável. Isso desacopla o recurso do aplicativo, permitindo que ele seja intercambiável. "
 
->*O \#fator 3* especifica que "as informações de configuração são movidas do microserviço e externas por meio de uma ferramenta de gerenciamento de configuração fora do código".
+>O *fator \#3* especifica que "as informações de configuração são movidas do microserviço e externas por meio de uma ferramenta de gerenciamento de configuração fora do código".
 
 Com esse padrão, um serviço de backup pode ser anexado e desanexado sem alterações de código. Você pode promover um microserviço de QA para um ambiente de preparo. Você atualiza a configuração de microserviço para apontar para os serviços de backup em preparo e injetar as configurações em seu contêiner por meio de uma variável de ambiente.
 
@@ -297,15 +297,15 @@ No artigo, [o que é infraestrutura como código](https://docs.microsoft.com/azu
 
 O [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente, chama para etapas separadas ao transformar o código concluído em um aplicativo em execução.
 
-> *O \#fator 5* especifica que "cada versão deve impor uma separação estrita nos estágios de Build, versão e execução. Cada um deve ser marcado com uma ID exclusiva e dar suporte à capacidade de reverter. "
+> O *fator \#5* especifica que "cada versão deve impor uma separação estrita nos estágios de Build, versão e execução. Cada um deve ser marcado com uma ID exclusiva e dar suporte à capacidade de reverter. "
 
 Os sistemas de CI/CD modernos ajudam a atender a esse princípio. Eles fornecem etapas de implantação separadas e ajudam a garantir o código consistente e de qualidade que está prontamente disponível para os usuários. 
 
-A Figura 1,6 mostra a separação entre o processo de implantação.
+A Figura 1-8 mostra a separação entre o processo de implantação.
 
 ![Etapas de implantações no pipeline de CI/CD](./media/build-release-run-pipeline.png)
 
-**Figura 1-6**. Etapas de implantação em um pipeline de CI/CD
+**Figura 1-8**. Etapas de implantação em um pipeline de CI/CD
 
 Na figura anterior, preste atenção especial à separação de tarefas. 
 
@@ -321,11 +321,11 @@ Aplicando essas práticas, as organizações evoluíram radicalmente como elas e
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-A nuvem do Azure inclui um novo serviço de CI/CD intitulado [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/), que faz parte da oferta do [Azure DevOps](https://azure.microsoft.com/services/devops/) mostrada na Figura 1-7.
+A nuvem do Azure inclui um novo serviço de CI/CD intitulado [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/), que faz parte da oferta do [Azure DevOps](https://azure.microsoft.com/services/devops/) mostrada na Figura 1-9.
 
 ![Azure Pipelines em DevOps](./media/devops-components.png)
 
-**Figura 1-7**. Ofertas do Azure DevOps
+**Figura 1-9**. Ofertas do Azure DevOps
 
 Azure Pipelines é um serviço de nuvem que combina CI (integração contínua) e CD (entrega contínua). Você pode testar, compilar e enviar seu código automaticamente para qualquer destino.
 

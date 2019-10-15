@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216209"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291241"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -130,8 +130,8 @@ O elemento `<Project>` raiz do arquivo *.csproj* tem um novo atributo chamado `S
 1. O SDK do .NET Core com a ID `Microsoft.NET.Sdk`
 2. O SDK da Web do .NET Core com a ID `Microsoft.NET.Sdk.Web`
 3. O SDK da Biblioteca de Classes Razor do .NET Core com a ID `Microsoft.NET.Sdk.Razor`
-4. O serviço de `Microsoft.NET.Sdk.Worker` trabalho do .NET Core com a ID (desde o .NET Core 3,0)
-5. O .NET Core WinForms e o WPF com a ID `Microsoft.NET.Sdk.WindowsDesktop` (desde o .NET Core 3,0)
+4. O serviço de trabalho do .NET Core com a ID de `Microsoft.NET.Sdk.Worker` (desde o .NET Core 3,0)
+5. O .NET Core WinForms e o WPF com a ID de `Microsoft.NET.Sdk.WindowsDesktop` (desde o .NET Core 3,0)
 
 É necessário ter o atributo `Sdk` definido com uma dessas IDs no elemento `<Project>` para usar as ferramentas do .NET Core e compilar o código.
 
@@ -264,13 +264,13 @@ Um valor booliano que especifica se o cliente deve solicitar que o consumidor ac
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo, `Apache-2.0`.
+Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo: `Apache-2.0`.
 
 Aqui está a lista completa dos [identificadores de licença SPDX](https://spdx.org/licenses/). O NuGet.org aceita apenas licenças aprovadas por OSI ou FSF ao usar expressão de tipo de licença.
 
 A sintaxe exata das expressões de licença será descrita abaixo em [ABNF](https://tools.ietf.org/html/rfc5234).
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -347,6 +347,12 @@ Especifica a URL para o repositório em que reside o código-fonte do pacote e/o
 ### <a name="repositorytype"></a>RepositoryType
 
 Especifica o tipo do repositório. O padrão é “git”.
+
+### <a name="repositorybranch"></a>RepositoryBranch
+Especifica o nome da ramificação de origem no repositório. Quando o projeto é empacotado em um pacote NuGet, ele é adicionado aos metadados do pacote.
+
+### <a name="repositorycommit"></a>RepositoryCommit
+Confirmação opcional do repositório ou conjunto de alterações para indicar de qual fonte o pacote foi criado. `RepositoryUrl` também deve ser especificado para que essa propriedade seja incluída. Quando o projeto é empacotado em um pacote NuGet, esse Commit ou conjunto de alterações é adicionado aos metadados do pacote.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

@@ -2,14 +2,14 @@
 title: Atualizar APIs com atributos para definir expectativas nulas
 description: Este artigo explica as motivações e técnicas para adicionar atributos descritivos para descrever o estado nulo de argumentos e retornar valores de APIs
 ms.date: 07/31/2019
-ms.openlocfilehash: b6c6be213cb920459e5f1adbe3ee822ff6ddbf33
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fedd701fb7a3bcdff96fc1abc5451cc59c01f34f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834193"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291314"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualize as bibliotecas para usar tipos de referência anuláveis e comunicar regras anuláveis a chamadores.
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualizar bibliotecas para usar tipos de referência anuláveis e comunicar regras anuláveis a chamadores
 
 A adição de [tipos de referência anuláveis](nullable-references.md) significa que você pode declarar se um valor `null` é ou não permitido ou esperado para cada variável. Isso fornece uma ótima experiência à medida que você escreve o código. Você receberá avisos se uma variável não anulável puder ser definida como `null`. Você receberá avisos se uma variável anulável não for marcada como nula antes de você desreferenciá-la. Atualizar suas bibliotecas pode levar tempo, mas os benefícios valem a pena. Quanto mais informações você fornecer ao compilador sobre *quando* um valor `null` é permitido ou proibido, os melhores avisos que os usuários da sua API obterão. Vamos começar com um exemplo familiar. Imagine que sua biblioteca tenha a seguinte API para recuperar uma cadeia de caracteres de recurso:
 

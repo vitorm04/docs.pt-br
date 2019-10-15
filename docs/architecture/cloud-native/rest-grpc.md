@@ -3,12 +3,12 @@ title: REST e gRPC
 description: Saiba mais sobre o gRPC, sua função em aplicativos nativos de nuvem e como ele difere do HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214541"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291323"
 ---
 # <a name="rest-and-grpc"></a>REST e gRPC
 
@@ -61,7 +61,7 @@ o gRPC é bem adequado para os seguintes cenários:
 - Ambientes poliglota – as ferramentas de gRPC dão suporte às linguagens de desenvolvimento mais populares, o que o torna uma boa opção para ambientes com vários idiomas.
 - Ambientes com restrição de rede – as mensagens gRPC são serializadas com Protobuf, um formato de mensagem leve. Uma mensagem gRPC é sempre menor do que uma mensagem JSON equivalente.
 
-Na elaboração deste livro, a maioria dos navegadores tem suporte limitado para gRPC. gRPC usa intensamente recursos HTTP/2 e nenhum navegador fornece o nível de controle necessário em relação a solicitações da Web para dar suporte a um cliente gRPC. gRPC normalmente é usado para a comunicação interna de microserviço com o Microservice. A Figura 4-22 mostra um padrão de uso simples, mas comum.
+No momento da elaboração deste livro, a maioria dos navegadores tem suporte limitado para gRPC. gRPC usa intensamente recursos HTTP/2 e nenhum navegador fornece o nível de controle necessário em relação a solicitações da Web para dar suporte a um cliente gRPC. gRPC normalmente é usado para a comunicação interna de microserviço com o Microservice. A Figura 4-22 mostra um padrão de uso simples, mas comum.
 
 ![Padrões de uso do gRPC](./media/grpc-usage.png)
 

@@ -5,32 +5,32 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: f4096d6441c64499dae8003a63100b59037897ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92bad8b5ad556d79480a5b4da489d070545701da
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932774"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291393"
 ---
 # <a name="accessibility-best-practices"></a>Práticas recomendadas de Acessibilidade
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte API de automação [Windows: Automação da interface do usuário @ no__t-0.  
   
- A implementação das seguintes práticas recomendadas em controles ou aplicativos melhorará sua acessibilidade para as pessoas que usam dispositivos de tecnologia assistencial. Muitas dessas práticas recomendadas se concentram [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] em um bom design. Cada prática recomendada inclui informações de implementação [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] para controles ou aplicativos. Em muitos casos, o trabalho para atender a essas práticas recomendadas já está [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] incluído nos controles.  
+ A implementação das seguintes práticas recomendadas em controles ou aplicativos melhorará sua acessibilidade para as pessoas que usam dispositivos de tecnologia assistencial. Muitas dessas práticas recomendadas se concentram em um design [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] bom. Cada prática recomendada inclui informações de implementação para controles ou aplicativos [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. Em muitos casos, o trabalho para atender a essas práticas recomendadas já está incluído nos controles [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="Programmatic_Access"></a>   
 ## <a name="programmatic-access"></a>Acesso programático  
- O acesso programático envolve garantir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] que todos os elementos sejam rotulados, que os valores de propriedade sejam expostos e que os eventos apropriados sejam gerados. Para controles [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] padrão, a maior parte desse trabalho já foi feita <xref:System.Windows.Automation.Peers.AutomationPeer>por meio do. Os controles personalizados exigem trabalho adicional para garantir que o acesso programático seja implementado corretamente.  
+ O acesso programático envolve garantir que todos os elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sejam rotulados, os valores de propriedade são expostos e os eventos apropriados são gerados. Para controles padrão [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], a maior parte desse trabalho já foi feita por meio de <xref:System.Windows.Automation.Peers.AutomationPeer>. Os controles personalizados exigem trabalho adicional para garantir que o acesso programático seja implementado corretamente.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Habilitar o acesso programático a todos os elementos e texto da interface do usuário  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)]os elementos devem habilitar o acesso programático. Se o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] for um controle [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] padrão, o suporte para acesso programático será incluído no controle. Se o controle for um controle personalizado – um controle que tenha sido subclasse de um controle comum ou um controle que tenha sido subclasse do controle – em seguida, você deve verificar a <xref:System.Windows.Automation.Peers.AutomationPeer> implementação de áreas que podem precisar de modificação.  
+ Elementos da interface do usuário devem habilitar o acesso programático. Se o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] for um controle padrão de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], o suporte para acesso programático será incluído no controle. Se o controle for um controle personalizado – um controle que tenha sido subclasse de um controle comum ou um controle que tenha sido subclasse do controle – em seguida, você deverá verificar a implementação de <xref:System.Windows.Automation.Peers.AutomationPeer> em busca de áreas que possam precisar de modificação.  
   
- Seguir essa prática recomendada permite que fornecedores de tecnologia assistencial identifiquem e manipulem elementos de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]seus produtos.  
+ Seguir essa prática recomendada permite que fornecedores de tecnologia assistencial identifiquem e manipulem elementos do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] do seu produto.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Coloque nomes, títulos e descrições em objetos, quadros e páginas da interface do usuário  
- Tecnologias assistenciais, especialmente leitores de tela, usam o título para entender o local do quadro, objeto ou página no esquema de navegação. Portanto, o título deve ser muito descritivo. Por exemplo, um título de página da Web de "página da Web da Microsoft" é inútil se o usuário navegou profundamente em alguma área específica. Um título descritivo é essencial para os usuários que são cegos e dependem de leitores de tela. Da mesma forma [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , para <xref:System.Windows.Automation.AutomationProperties.NameProperty> controles <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> e são importantes para dispositivos de tecnologia assistencial.  
+ Tecnologias assistenciais, especialmente leitores de tela, usam o título para entender o local do quadro, objeto ou página no esquema de navegação. Portanto, o título deve ser muito descritivo. Por exemplo, um título de página da Web de "página da Web da Microsoft" é inútil se o usuário navegou profundamente em alguma área específica. Um título descritivo é essencial para os usuários que são cegos e dependem de leitores de tela. Da mesma forma, para os controles [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Automation.AutomationProperties.NameProperty> e <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> são importantes para dispositivos de tecnologia assistencial.  
   
  Seguir essa prática recomendada permite que tecnologias assistenciais identifiquem e manipulem [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] em aplicativos e controles de exemplo.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69932774"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Garantir que toda a interface do usuário seja dimensionada corretamente por qualquer configuração de DPI  
- Verifique se todos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] podem ser dimensionados corretamente por qualquer configuração de pontos por polegada (DPI). Além disso, verifique [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] se os elementos se encaixam em uma tela de 1024 x 768 com 120 pontos por polegada (DPI).  
+ Verifique se todos os [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] podem ser dimensionados corretamente por qualquer configuração de pontos por polegada (DPI). Além disso, certifique-se de que os elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] caibam em uma tela de 1024 x 768 com 120 pontos por polegada (DPI).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navegação  
@@ -74,7 +74,7 @@ ms.locfileid: "69932774"
   
 <a name="Provide_Keyboard_Interface_for_all_UI_Elements"></a>   
 ### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Fornecer interface de teclado para todos os elementos da interface do usuário  
- As paradas de tabulação, especialmente quando planejadas cuidadosamente, dão aos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]usuários outra maneira de navegar pelo.  
+ As paradas de tabulação, especialmente quando planejadas cuidadosamente, dão aos usuários outra maneira de navegar no [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
  Os aplicativos devem fornecer as seguintes interfaces de teclado:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "69932774"
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Suporte a padrões de navegação e esquemas de navegação avançados  
- Diferentes aspectos da navegação por teclado fornecem maneiras diferentes para os usuários navegarem pelo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Diferentes aspectos da navegação por teclado fornecem maneiras diferentes para os usuários navegarem no [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
  Os aplicativos devem fornecer as seguintes interfaces de teclado:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "69932774"
   
 <a name="Multimodal_Interface"></a>   
 ## <a name="multimodal-interface"></a>Interface multimodal  
- As práticas recomendadas nesta seção garantem [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] que o aplicativo inclua alternativas para elementos visuais.  
+ As práticas recomendadas nesta seção garantem que o aplicativo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] inclui alternativas para elementos visuais.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>   
 ### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Fornecer equivalentes selecionáveis pelo usuário para elementos que não são de texto  
  Para cada elemento que não seja texto, forneça um equivalente selecionável pelo usuário para texto, transcrições ou descrições de áudio, como texto alternativo, legendas ou comentários visuais.  
   
- Elementos sem texto abrangem uma ampla gama de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementos, incluindo: imagens, regiões de mapa de imagem, animações, applets, quadros, scripts, botões gráficos, sons, arquivos de áudio autônomos e vídeo. Elementos que não são de texto são importantes quando contêm informações visuais, fala ou informações gerais de áudio que o usuário precisa acessar para entender o conteúdo do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Elementos sem texto abrangem uma ampla gama de elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], incluindo: imagens, regiões de mapa de imagem, animações, applets, quadros, scripts, botões gráficos, sons, arquivos de áudio autônomos e vídeo. Elementos que não são de texto são importantes quando contêm informações visuais, fala ou informações gerais de áudio que o usuário precisa acessar para entender o conteúdo do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 <a name="Use_Color_but_also_Provide_Alternatives_to_Color"></a>   
 ### <a name="use-color-but-also-provide-alternatives-to-color"></a>Usar cor, mas também fornecer alternativas para cor  
@@ -128,7 +128,7 @@ ms.locfileid: "69932774"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Usar APIs de entrada padrão com chamadas independentes de dispositivo  
- As chamadas independentes de dispositivo garantem a igualdade de recursos de teclado e mouse, oferecendo, ao mesmo tempo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], tecnologia assistencial com as informações necessárias sobre o.  
+ As chamadas independentes de dispositivo garantem a igualdade de recursos de teclado e mouse, oferecendo, ao mesmo tempo, tecnologia assistencial com as informações necessárias sobre o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Chamar uma função do Windows que use tipos não assinados (Visual Basic)'
+title: 'Como: Chamar uma função do Windows que usa tipos não assinados (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022357"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053322"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Como: Chamar uma função do Windows que use tipos não assinados (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Como: Chamar uma função do Windows que usa tipos não assinados (Visual Basic)
 
-Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de tipos de inteiro sem sinal, você pode acessar esses membros com o Visual Basic.
+Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de tipos inteiros não assinados, poderá acessar esses membros com Visual Basic.
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para chamar uma função do Windows que usa um tipo sem sinal
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para chamar uma função do Windows que usa um tipo sem sinal
 
-1. Use uma [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para informar ao Visual Basic qual biblioteca contém a função, o que seu nome é nessa biblioteca, o que é a sua sequência de chamada e como converter cadeias de caracteres ao chamá-la.
+1. Use uma [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) para informar Visual Basic qual biblioteca contém a função, qual nome está nessa biblioteca, qual é a sequência de chamada e como converter cadeias de caracteres ao chamá-la.
 
-2. No `Declare` instrução, use `UInteger`, `ULong`, `UShort`, ou `Byte` conforme apropriado para cada parâmetro com um tipo sem sinal.
+2. `ULong` Nainstrução,`Byte` use `UInteger` ,`UShort`, ou conforme apropriado para cada parâmetro com um tipo não assinado. `Declare`
 
-3. Consulte a documentação para a função do Windows chamado para localizar os nomes e valores de constantes que são usadas. Muitos deles são definidos no arquivo WinUser h.
+3. Consulte a documentação da função do Windows que você está chamando para localizar os nomes e valores das constantes que ele usa. Muitos deles são definidos no arquivo WinUser. h.
 
-4. Declare constantes necessárias em seu código. As constantes de Windows muitos são valores sem sinal de 32 bits, e você deve declarar essas `As UInteger`.
+4. Declare as constantes necessárias no seu código. Muitas constantes do Windows são valores não assinados de 32 bits e você deve declará- `As UInteger`los.
 
-5. Chame a função da maneira normal. O exemplo a seguir chama a função do Windows `MessageBox`, que leva um argumento de inteiro sem sinal.
+5. Chame a função da maneira normal. O exemplo a seguir chama a função `MessageBox`do Windows, que usa um argumento inteiro sem sinal.
 
     ```vb
     Public Class windowsMessage
@@ -70,13 +70,13 @@ Se você estiver consumindo uma classe, módulo ou estrutura que tem membros de 
     ```
 
     > [!CAUTION]
-    > O `UInteger`, `ULong`, `UShort`, e `SByte` tipos de dados não são parte do [independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), então um código compatível com CLS não pode consumir um componente que usa-los.
+    > Os tipos de dados `UInteger`, `ULong`, `UShort` e `SByte` não fazem parte da [independência de linguagem e dos componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md) (CLS), portanto, o código em conformidade com CLS não pode consumir um componente que os utilize.
 
     > [!IMPORTANT]
-    > Fazer uma chamada para código não gerenciado, como a interface de programação de aplicativo (API) do Windows expõe seu código possíveis riscos de segurança.
+    > Fazer uma chamada para código não gerenciado, como a API (interface de programação de aplicativo) do Windows, expõe seu código a possíveis riscos de segurança.
 
     > [!IMPORTANT]
-    > Chamar a API do Windows requer a permissão de código não gerenciado, que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, consulte <xref:System.Security.Permissions.SecurityPermission> e [permissões de acesso do código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Chamar a API do Windows requer permissão de código não gerenciado, o que pode afetar sua execução em situações de confiança parcial. Para obter mais informações, <xref:System.Security.Permissions.SecurityPermission> consulte e [permissões de acesso ao código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Consulte também
 

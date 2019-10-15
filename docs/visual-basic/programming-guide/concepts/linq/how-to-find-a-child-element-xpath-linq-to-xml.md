@@ -2,12 +2,12 @@
 title: 'Como: Localizar um elemento filho (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dac53f70882791fb05265d4a04444c98adff451
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855238"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249983"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Como: Localizar um elemento filho (XPath-LINQ to XML) (Visual Basic)
 Este tópico compara o eixo de elemento filho XPath com o método [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.  
@@ -41,11 +41,11 @@ Console.WriteLine(el1)
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console
 Results are identical  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
 ```  
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

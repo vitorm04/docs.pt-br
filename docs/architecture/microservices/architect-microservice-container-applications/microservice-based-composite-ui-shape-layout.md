@@ -2,16 +2,16 @@
 title: Criando a interface do usuário composta baseada em microsserviços
 description: A arquitetura de microsserviços não se destina apenas ao back-end. Obtenha uma visão rápida e saiba como usá-la no front-end.
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834372"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275733"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Criando a interface do usuário composta baseada em microsserviços
 
-A arquitetura de microsserviços geralmente começa com a manipulação de dados e de lógica do lado do servidor. No entanto, uma abordagem mais avançada é criar sua interface do usuário de aplicativo com base em microsserviços também. Isso significa ter uma interface do usuário de composição produzida pelos microsserviços, em vez de ter microsserviços no servidor e apenas um aplicativo cliente monolítico consumindo os microsserviços. Com essa abordagem, os microsserviços que você criar poderão estar completos com lógica e representação visual.
+A arquitetura de microserviços geralmente começa com a lógica e os dados de manipulação do lado do servidor, mas, em muitos casos, a interface do usuário ainda é tratada como uma monolítica. No entanto, uma abordagem mais avançada, chamada de [micro front-ends](https://martinfowler.com/articles/micro-frontends.html), é criar a interface do usuário do aplicativo com base em microserviços também. Isso significa ter uma interface do usuário de composição produzida pelos microsserviços, em vez de ter microsserviços no servidor e apenas um aplicativo cliente monolítico consumindo os microsserviços. Com essa abordagem, os microsserviços que você criar poderão estar completos com lógica e representação visual.
 
 A Figura 4-20 mostra a abordagem mais simples de apenas consumir microsserviços de um aplicativo cliente monolítico. Obviamente, é possível ter um serviço MVC ASP.NET no meio termo produzindo o HTML e o JavaScript. A figura é uma simplificação que destaca que você tem uma única interface do usuário do cliente (monolítica) consumindo microsserviços, que se concentram apenas em lógica e nos dados, e não na forma da interface do usuário (HTML e JavaScript).
 
@@ -39,19 +39,25 @@ No entanto, recomendamos que você use as seguintes referências para saber mais
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Interface do usuário composta usando o ASP.NET (Particular’s Workshop)**  \
+- **Micro front-ends (blog de Martin Fowler)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **Micro front-ends (site Michael Geers)**  
+  <https://micro-frontends.org/>
+  
+- **Interface do usuário composta usando o ASP.NET (workshop específico)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. O front-end monolítico na arquitetura de microsserviços** \
+- **Ruben Oostinga. O front-end monolítico na arquitetura de microserviços @ no__t-0  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. O segredo de uma composição melhor de interface do usuário** \
+- **Mauro Servienti. O segredo da melhor composição de interface do usuário @ no__t-0  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Incluindo componentes Web de front-end em microsserviços** \
+- **Viktor Farcic. Incluindo componentes Web de front-end em microserviços @ no__t-0  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Gerenciando o front-end na arquitetura de microsserviços** \
+- **Gerenciando o front-end na arquitetura de microserviços**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

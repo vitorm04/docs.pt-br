@@ -2,21 +2,21 @@
 title: Correlação duplex durável
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856580"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291585"
 ---
 # <a name="durable-duplex-correlation"></a>Correlação duplex durável
-Correlação duplex durável, também conhecido como correlação de retorno de chamada, é útil quando um serviço de fluxo de trabalho tem um requisito para enviar um retorno de chamada ao chamador inicial. Ao contrário de duplex do WCF, o retorno de chamada pode ocorrer a qualquer momento no futuro e não está vinculado ao mesmo canal ou o tempo de vida do canal; o único requisito é que o chamador tem um ponto de extremidade ativo escuta para a mensagem de retorno de chamada. Isso permite que dois serviços de fluxo de trabalho para se comunicar em uma conversa de longa execução. Este tópico fornece uma visão geral de correlação duplex durável.  
+A correlação de duplex durável, também conhecida como correlação de retorno de chamada, é útil quando um serviço de fluxo de trabalho tem um requisito para enviar um retorno de chamada para o chamador inicial. Ao contrário do WCF duplex, o retorno de chamada pode ocorrer a qualquer momento no futuro e não está vinculado ao mesmo canal ou ao tempo de vida do canal; o único requisito é que o chamador tenha um ponto de extremidade ativo ouvindo a mensagem de retorno de chamada. Isso permite que dois serviços de fluxo de trabalho se comuniquem em uma conversa de execução longa. Este tópico fornece uma visão geral da correlação de duplex durável.  
   
-## <a name="using-durable-duplex-correlation"></a>Usando correlação Duplex durável  
- Para usar a correlação duplex durável, os dois serviços devem usar uma associação habilitada para contexto que dá suporte a operações de duas vias, tais como <xref:System.ServiceModel.NetTcpContextBinding> ou <xref:System.ServiceModel.WSHttpContextBinding>. Os registros de serviço chamada um <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> com a associação desejada no cliente <xref:System.ServiceModel.Endpoint>. O serviço de recebimento recebe esses dados em que a chamada inicial e, em seguida, usa-lo por conta própria <xref:System.ServiceModel.Endpoint> no <xref:System.ServiceModel.Activities.Send> atividade que faz a chamada para o serviço de chamada. Neste exemplo, dois serviços se comunicam entre si. O primeiro serviço invoca um método no serviço de segundo e, em seguida, aguarda uma resposta. O segundo serviço sabe o nome do método de retorno de chamada, mas o ponto de extremidade do serviço que implementa este método não é conhecido em tempo de design.  
+## <a name="using-durable-duplex-correlation"></a>Usando a correlação de duplex durável  
+ Para usar a correlação de duplex durável, os dois serviços devem usar uma associação habilitada para contexto que dá suporte a operações de duas vias, como <xref:System.ServiceModel.NetTcpContextBinding> ou <xref:System.ServiceModel.WSHttpContextBinding>. O serviço de chamada registra um <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> com a associação desejada em seu cliente <xref:System.ServiceModel.Endpoint>. O serviço de recebimento recebe esses dados na chamada inicial e, em seguida, usa-os em seu próprio <xref:System.ServiceModel.Endpoint> na atividade <xref:System.ServiceModel.Activities.Send> que faz a chamada de volta para o serviço de chamada. Neste exemplo, dois serviços se comunicam entre si. O primeiro serviço invoca um método no segundo serviço e aguarda uma resposta. O segundo serviço sabe o nome do método de retorno de chamada, mas o ponto de extremidade do serviço que implementa esse método não é conhecido em tempo de design.  
   
 > [!NOTE]
-> Frente e verso durável só pode ser usado quando o <xref:System.ServiceModel.Channels.AddressingVersion> do ponto de extremidade é configurado com <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Se não, então um <xref:System.InvalidOperationException> exceção é lançada com a seguinte mensagem: "A mensagem contém um cabeçalho de contexto do retorno de chamada com uma referência de ponto de extremidade para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Contexto do retorno de chamada pode ser transmitido apenas quando o AddressingVersion é configurado com 'WSAddressing10'.
+> O duplex durável só pode ser usado quando o <xref:System.ServiceModel.Channels.AddressingVersion> do ponto de extremidade estiver configurado com <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Se não estiver, uma exceção <xref:System.InvalidOperationException> será lançada com a seguinte mensagem: "A mensagem contém um cabeçalho de contexto de retorno de chamada com uma referência de ponto de extremidade para [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). O contexto de retorno de chamada só poderá ser transmitido quando o AddressingVersion estiver configurado com ' WSAddressing10 '.
   
  No exemplo a seguir, um serviço de fluxo de trabalho é hospedado que cria um retorno de chamada <xref:System.ServiceModel.Endpoint> usando <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -37,7 +37,7 @@ host1.Open();
 Console.WriteLine("Service1 waiting at: {0}", baseAddress1);  
 ```  
   
- O fluxo de trabalho que implementa esse serviço de fluxo de trabalho inicializa a correlação de retorno de chamada com o seu <xref:System.ServiceModel.Activities.Send> atividade e faz referência a esse ponto de extremidade do retorno de chamada a <xref:System.ServiceModel.Activities.Receive> atividade que se correlaciona com a <xref:System.ServiceModel.Activities.Send>. O exemplo a seguir representa o fluxo de trabalho que é retornado o `GetWF1` método.  
+ O fluxo de trabalho que implementa esse serviço de fluxo de trabalho Inicializa a correlação de retorno de chamada com sua atividade <xref:System.ServiceModel.Activities.Send> e faz referência a esse ponto de extremidade de retorno de chamada da atividade <xref:System.ServiceModel.Activities.Receive> que se correlaciona com o <xref:System.ServiceModel.Activities.Send>. O exemplo a seguir representa o fluxo de trabalho que é retornado do método `GetWF1`.  
   
 ```csharp  
 Variable<CorrelationHandle> CallbackHandle = new Variable<CorrelationHandle>();  
@@ -104,7 +104,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- O segundo serviço de fluxo de trabalho é hospedado usando uma associação fornecida pelo sistema, com base em contexto.  
+ O segundo serviço de fluxo de trabalho é hospedado usando uma associação baseada em contexto, fornecida pelo sistema.  
   
 ```csharp  
 // Host WF Service 2.  
@@ -120,7 +120,7 @@ host2.Open();
 Console.WriteLine("Service2 waiting at: {0}", baseAddress2);  
 ```  
   
- O fluxo de trabalho que implementa esse serviço de fluxo de trabalho começa com um <xref:System.ServiceModel.Activities.Receive> atividade. Isso receber atividade inicializa a correlação de retorno de chamada para esse serviço, atrasa por um período de tempo para simular trabalho de longa execução e, em seguida, chama de volta para o primeiro serviço usando o contexto de retorno de chamada que foi passado na primeira chamada para o serviço. O exemplo a seguir representa o fluxo de trabalho que é retornado de uma chamada para `GetWF2`. Observe que o <xref:System.ServiceModel.Activities.Send> atividade tem um endereço de espaço reservado de `http://www.contoso.com`; o endereço real usado em tempo de execução é o endereço de retorno de chamada fornecido.  
+ O fluxo de trabalho que implementa esse serviço de fluxo de trabalho começa com uma atividade <xref:System.ServiceModel.Activities.Receive>. Essa atividade Receive Inicializa a correlação de retorno de chamada para esse serviço, atrasa por um período de tempo para simular o trabalho de execução longa e, em seguida, chama o primeiro serviço usando o contexto de retorno de chamada que foi passado na primeira ligação para o serviço. O exemplo a seguir representa o fluxo de trabalho que é retornado de uma chamada para `GetWF2`. Observe que a atividade <xref:System.ServiceModel.Activities.Send> tem um endereço de espaço reservado de `http://www.contoso.com`; o endereço real usado em tempo de execução é o endereço de retorno de chamada fornecido.  
   
 ```csharp  
 Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle>();  
@@ -184,9 +184,9 @@ Activity wf = new Sequence
 };  
 ```  
   
- Quando o `StartOrder` método é invocado no primeiro fluxo de trabalho, a seguinte saída é exibida, que mostra o fluxo de execução por meio de dois fluxos de trabalho.  
+ Quando o método `StartOrder` é invocado no primeiro fluxo de trabalho, a saída a seguir é exibida, mostrando o fluxo de execução por meio dos dois fluxos de trabalho.  
   
-```Output  
+```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
 Press enter to exit.   
@@ -198,4 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- Neste exemplo, ambos os fluxos de trabalho de gerenciar explicitamente correlação usando um <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Porque não havia apenas uma única correlação nesses fluxos de trabalho de exemplo, o padrão <xref:System.ServiceModel.Activities.CorrelationHandle> gerenciamento seria suficiente.
+ Neste exemplo, os fluxos de trabalho gerenciam explicitamente a correlação usando um <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Como havia apenas uma única correlação nesses fluxos de trabalho de exemplo, o gerenciamento padrão de <xref:System.ServiceModel.Activities.CorrelationHandle> seria suficiente.
