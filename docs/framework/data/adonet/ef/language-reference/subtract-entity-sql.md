@@ -2,38 +2,38 @@
 title: '- Subtrair (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: bc4327f9-09c0-438f-a008-927c5c478040
-ms.openlocfilehash: 8b5cfee4c82757e55babdf1ad14f6cf3c743a5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fe9152100bddac86f3fb7fae1ab3c0b81ae58418
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249014"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319322"
 ---
-# <a name="--subtract-entity-sql"></a><span data-ttu-id="b0557-102">- (Subtração) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b0557-102">- (Subtract) (Entity SQL)</span></span>
-<span data-ttu-id="b0557-103">Subtrai dois números.</span><span class="sxs-lookup"><span data-stu-id="b0557-103">Subtracts two numbers.</span></span>  
+# <a name="--subtract-entity-sql"></a><span data-ttu-id="84527-102">- (Subtração) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="84527-102">- (Subtract) (Entity SQL)</span></span>
+<span data-ttu-id="84527-103">Subtrai dois números.</span><span class="sxs-lookup"><span data-stu-id="84527-103">Subtracts two numbers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0557-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b0557-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84527-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="84527-104">Syntax</span></span>  
   
-```  
+```sql  
 expression - expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="b0557-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="b0557-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="84527-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="84527-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="b0557-106">Qualquer expressão válida de qualquer dos tipos de dados numéricos.</span><span class="sxs-lookup"><span data-stu-id="b0557-106">Any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="84527-106">Qualquer expressão válida de qualquer dos tipos de dados numéricos.</span><span class="sxs-lookup"><span data-stu-id="84527-106">Any valid expression of any one of the numeric data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="b0557-107">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="b0557-107">Result Types</span></span>  
- <span data-ttu-id="b0557-108">O tipo de dados que resulta da promoção de tipos implícito dos dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="b0557-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="b0557-109">Para obter mais informações sobre a promoção de tipos implícitas, consulte [sistema de tipos](type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="b0557-109">For more information about implicit type promotion, see [Type System](type-system-entity-sql.md).</span></span>  
+## <a name="result-types"></a><span data-ttu-id="84527-107">Tipos de resultado</span><span class="sxs-lookup"><span data-stu-id="84527-107">Result Types</span></span>  
+ <span data-ttu-id="84527-108">O tipo de dados que resulta da promoção de tipos implícito dos dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="84527-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="84527-109">Para obter mais informações sobre a promoção de tipos implícitas, consulte [sistema de tipos](type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="84527-109">For more information about implicit type promotion, see [Type System](type-system-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0557-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b0557-110">Example</span></span>  
- <span data-ttu-id="b0557-111">A seguinte consulta SQL Entity usa o operador - aritmético para subtrair dois números.</span><span class="sxs-lookup"><span data-stu-id="b0557-111">The following Entity SQL query uses the - arithmetic operator to subtract two numbers.</span></span> <span data-ttu-id="b0557-112">A consulta é baseada no modelo de vendas AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="b0557-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="b0557-113">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="b0557-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="84527-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="84527-110">Example</span></span>  
+ <span data-ttu-id="84527-111">A seguinte consulta SQL Entity usa o operador - aritmético para subtrair dois números.</span><span class="sxs-lookup"><span data-stu-id="84527-111">The following Entity SQL query uses the - arithmetic operator to subtract two numbers.</span></span> <span data-ttu-id="84527-112">A consulta é baseada no modelo de vendas AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="84527-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="84527-113">Para compilar e executar essa consulta, siga estas etapas:</span><span class="sxs-lookup"><span data-stu-id="84527-113">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="b0557-114">Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.</span><span class="sxs-lookup"><span data-stu-id="b0557-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="84527-114">Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="84527-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2. <span data-ttu-id="b0557-115">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="b0557-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="84527-115">Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:</span><span class="sxs-lookup"><span data-stu-id="84527-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
- [!code-csharp[DP EntityServices Concepts 2#SUBTRACT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#subtract)]  
+ [!code-sql[DP EntityServices Concepts#SUBTRACT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#subtract)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0557-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b0557-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84527-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="84527-116">See also</span></span>
 
-- [<span data-ttu-id="b0557-117">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b0557-117">Entity SQL Reference</span></span>](entity-sql-reference.md)
+- [<span data-ttu-id="84527-117">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="84527-117">Entity SQL Reference</span></span>](entity-sql-reference.md)
