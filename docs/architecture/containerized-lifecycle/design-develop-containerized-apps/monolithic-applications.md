@@ -2,12 +2,12 @@
 title: Aplicativos monolíticos
 description: Entenda os principais conceitos da implantação de aplicativos monolíticos em contêineres.
 ms.date: 02/15/2019
-ms.openlocfilehash: a67015452fb1245ef4b24a8dc50a4b33d3f9f32e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673593"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394711"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -17,11 +17,11 @@ Para gerenciar esse modelo, implante um contêiner único para representar o apl
 
 Seguindo o princípio de que um contêiner executa uma ação e faz isso em um processo, o padrão monolítico pode gerar um conflito. É possível incluir vários componentes/bibliotecas ou camadas internas em cada contêiner, conforme ilustrado na Figura 4-1.
 
-![Um aplicativo monolítico tem todas ou a maioria das funcionalidades em um único processo ou contêiner, além dividir os componentes em camadas ou bibliotecas internas.](./media/image1.png)
+![Diagrama mostrando um aplicativo monolítico que se expande clonando o aplicativo.](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **Figura 4-1.** Um exemplo de arquitetura de aplicativo monolítico
 
-O ponto negativo dessa abordagem ficará evidente se ou quando o aplicativo crescer e for necessário dimensioná-lo. Se o aplicativo inteiro for dimensionado, isso não será realmente um problema. Entretanto, na maioria dos casos, algumas partes do aplicativo são os pontos de redução que exigem dimensionamento, enquanto outros componentes são menos utilizados.
+Um aplicativo monolítico tem todas ou a maioria das funcionalidades em um único processo ou contêiner, além dividir os componentes em camadas ou bibliotecas internas. O ponto negativo dessa abordagem ficará evidente se ou quando o aplicativo crescer e for necessário dimensioná-lo. Se o aplicativo inteiro for dimensionado, isso não será realmente um problema. Entretanto, na maioria dos casos, algumas partes do aplicativo são os pontos de redução que exigem dimensionamento, enquanto outros componentes são menos utilizados.
 
 Usando o exemplo típico de comércio eletrônico, o que você provavelmente precisa é dimensionar o componente de informações do produto. Uma quantidade muito maior de clientes procura produtos em vez de comprá-los. Mais clientes usam o carrinho em vez do pipeline de pagamento. Menos clientes fazem comentários ou exibem o histórico de compras. E você provavelmente tem apenas um grupo de funcionários, em uma única região, que precisa gerenciar o conteúdo e as campanhas de marketing. Ao dimensionar o design monolítico, todo o código é implantado várias vezes.
 
@@ -31,7 +31,7 @@ A abordagem monolítica é comum e muitas organizações estão desenvolvendo co
 
 De uma perspectiva de infraestrutura, cada servidor pode executar vários aplicativos no mesmo host e ter um índice de eficiência razoável de uso de recursos, conforme mostrado na Figura 4-2.
 
-![Um único host pode executar vários aplicativos em contêineres separados.](./media/image2.png)
+![Um diagrama que mostra um host com vários aplicativos em contêineres separados.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **Figura 4-2.** Um host executando vários aplicativos/contêineres
 
@@ -43,9 +43,9 @@ Também é possível usar os [Serviços de Aplicativos do Azure](https://azure.m
 
 É possível implantar várias VMs como hosts do Docker e executar qualquer quantidade de contêineres por VM. Em seguida, usando o Azure Load Balancer, conforme ilustrado na Figura 4-3, você pode gerenciar o dimensionamento.
 
-![Um aplicativo monolítico pode ser expandido para hosts diferentes, em que cada um executa o aplicativo em contêineres.](./media/image3.png)
+![Um diagrama que mostra um aplicativo monolítico dimensionado para hosts diferentes.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**Figura 4-3**. Vários hosts expandindo um único aplicativo do Docker – aplicativos/contêineres
+**Figura 4-3**. Vários hosts expandindo um único aplicativo Docker
 
 É possível gerenciar a implantação dos próprios hosts por meio de técnicas de implantação tradicionais.
 
@@ -71,7 +71,7 @@ Usar o Serviço de Aplicativo do Azure é intuitivo e você pode começar a trab
 
 Agora, conforme mostrado na Figura 4-4, ao usar o Visual Studio 2017, o suporte para contêineres no Serviço de Aplicativo do Azure oferece a capacidade de incluir tudo o que você deseja no ambiente do aplicativo. Se você tiver adicionado uma dependência ao aplicativo porque ele está sendo executado em um contêiner, terá a capacidade de incluir essas dependências no Dockerfile ou na imagem do Docker.
 
-![Exibição do assistente do Visual Studio para publicar no Serviço de Aplicativo do Azure, destacando o seletor do registro de contêiner.](./media/image4.png)
+![Captura de tela da caixa de diálogo Criar serviço de aplicativo mostrando um registro de contêiner.](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **Figura 4-4**. Publicação de um contêiner no Serviço de Aplicativo do Azure nos aplicativos/contêineres do Visual Studio
 

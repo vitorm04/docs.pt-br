@@ -2,12 +2,12 @@
 title: Estado e dados em aplicativos do Docker
 description: Saiba qual é a opção disponível para salvar o estado nos aplicativos em contêineres.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673553"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394632"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
@@ -47,7 +47,7 @@ As **montagens `tmpfs`** são pastas virtuais que só existem na memória do hos
 
 Conforme mostrado na Figura 4-5, os volumes Docker regulares podem ser armazenados fora dos contêineres de si, mas dentro dos limites físicos do servidor host ou VM. No entanto, contêineres do Docker não podem acessar um volume de um servidor host ou VM para outro. Em outras palavras, com esses volumes, não é possível gerenciar os dados compartilhados entre contêineres executados em hosts diferentes do Docker, embora esses dados possam ser obtidos com um driver de volume que dá suporte a hosts remotos.
 
-![Volumes podem ser compartilhados entre contêineres, mas apenas no mesmo host, a menos que você use um driver remoto que dá suporte a hosts remotos. ](./media/image5.png)
+![Diagrama mostrando os volumes do Docker armazenados fora dos contêineres.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Figura 4-5**. Volumes e fontes de dados externas para aplicativos baseados em contêiner
 
@@ -63,7 +63,7 @@ Além disso, quando gerenciados por um orquestrador, contêineres do Docker pode
 
 - O Armazenamento de Tabelas armazena conjuntos de dados estruturados. O Armazenamento de Tabelas é um armazenamento de dados do atributo-chave NoSQL, que permite o rápido desenvolvimento e acesso a grandes quantidades de dados.
 
-**Bancos de dados relacionais e bancos de dados NoSQL.** Há muitas opções de bancos de dados externos, de bancos de dados relacionais, como SQL Server, PostgreSQL, Oracle ou bancos de dados NoSQL, como Azure Cosmos DB, MongoDB, etc. Esses bancos de dados não serão explicados neste guia, pois são um tópico completamente diferente.
+**Bancos de dados relacionais e bancos de dados NoSQL.** Há muitas opções para bancos de dados externos, de bancos de dados relacionais como bancos de dados SQL Server, PostgreSQL, Oracle ou NoSQL, como Azure Cosmos DB, MongoDB, etc. Esses bancos de dados não serão explicados como parte deste guia, pois eles são um tópico diferente.
 
 >[!div class="step-by-step"]
 >[Anterior](monolithic-applications.md)

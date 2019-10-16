@@ -2,12 +2,12 @@
 title: Modernizar seus aplicativos com o monitoramento e telemetria
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Modernizar seus aplicativos com monitoramento e telemetria
 ms.date: 04/30/2018
-ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373959"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393851"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizar seus aplicativos com o monitoramento e telemetria
 
@@ -19,7 +19,7 @@ O Application Insights é um serviço de gerenciamento de desempenho de aplicati
 
 A Figura 4-10 mostra um exemplo de como o Application Insights monitora o aplicativo e como ele o orienta a um painel.
 
-![Painel de monitoramento de Application Insights](./media/image10.png)
+![Captura de tela do painel de monitoramento de Application Insights.](./media/modernize-your-apps-with-monitoring-and-telemetry/application-insights-monitoring-dashboard.png)
 
 **Figura 4-10.** Painel de monitoramento de Application Insights
 
@@ -43,7 +43,7 @@ A [solução de monitoramento de contêiner](https://docs.microsoft.com/azure/lo
 
 A Figura 4-11 mostra as relações entre vários hosts de contêiner e agentes e OMS.
 
-![Log Analytics solução de monitoramento de contêiner](./media/image11.png)
+![Captura de tela da solução de monitoramento de contêiner Log Analytics.](./media/modernize-your-apps-with-monitoring-and-telemetry/log-analytics-container-monitoring-solution.png)
 
 **Figura 4-11.** Log Analytics solução de monitoramento de contêiner
 
@@ -89,4 +89,4 @@ Você pode usar a solução de monitoramento de contêiner Log Analytics para:
 
 >[!div class="step-by-step"]
 >[Anterior](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
->[Próximo](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Próximo](life-cycle-ci-cd-pipelines-devops-tools.md)

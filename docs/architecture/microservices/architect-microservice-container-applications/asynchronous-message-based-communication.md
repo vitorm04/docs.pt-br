@@ -2,12 +2,12 @@
 title: Comunicação assíncrona baseada em mensagens
 description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Contêineres | A comunicação assíncrona baseada em mensagens é um conceito essencial na arquitetura de microsserviços, porque ela é a melhor maneira de manter microsserviços independentes uns dos outros, estando também simultaneamente sincronizados no fim das contas.
 ms.date: 09/20/2018
-ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834479"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394570"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -84,12 +84,12 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 - **Mensagens controladas por evento** \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Publicar/assinar canal** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan. CQRS esclarecida** \
+- **Udi Dahan. @No__t de CQRS esclarecida**-1
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **CQRS (Segregação de Responsabilidade de Comando e Consulta)**  \
@@ -101,7 +101,7 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 - **Consistência eventual** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento** \
+- **Jimmy Bogard. Refatoração em relação à resiliência: avaliando o acoplamento** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

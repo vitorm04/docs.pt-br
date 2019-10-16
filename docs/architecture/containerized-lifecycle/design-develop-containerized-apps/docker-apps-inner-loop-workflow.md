@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Conheça o fluxo de trabalho de "loop interno" para desenvolvimento de aplicativos do Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956562"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394773"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -39,7 +39,7 @@ A Figura 4-22 mostra as etapas básicas que normalmente você precisaria executa
 
 **Figura 4-22**. Fluxo de trabalho de alto nível do ciclo de vida de aplicativos em contêineres do Docker usando a CLI do Docker
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Etapa 1: Iniciar a codificação no Visual Studio Code e criar a linha de base do aplicativo/serviço inicial
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Etapa 1: iniciar a codificação em Visual Studio Code e criar sua linha de base de aplicativo/serviço inicial
 
 A maneira como você desenvolve seu aplicativo é semelhante à maneira como o faz sem o Docker. A diferença é que, durante o desenvolvimento, você está implantando e testando o aplicativo ou os serviços em execução dentro de contêineres do Docker colocados no ambiente local (como uma VM Linux ou Windows).
 
@@ -85,7 +85,7 @@ Para instalar a extensão do Docker, pressione Ctrl + Shift + P, digite `ext ins
 
 **Figura 4-23**. Instalando a extensão do Docker no Visual Studio Code
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Etapa 2: Criar um DockerFile relacionado a uma imagem existente (ambientes de desenvolvimento ou SO sem formatação, como Ruby, Node.js e .NET Core)
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Etapa 2: criar um DockerFile relacionado a uma imagem existente (ambientes de sistema operacional simples ou de desenvolvimento como .NET Core, Node. js e Ruby)
 
 Você precisará de um `DockerFile` por imagem personalizada a ser criada e por contêiner a ser implantado. Se seu aplicativo for composto por um único serviço personalizado, você precisará de um único `DockerFile`. No entanto, se o aplicativo for composto por vários serviços (por exemplo, em uma arquitetura de microsserviços), você precisará de um `Dockerfile` por serviço.
 
@@ -145,7 +145,7 @@ Efetuar pull da imagem [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-d
 
 Você pode criar sua própria imagem base do Docker do zero, conforme explicado neste [artigo](https://docs.docker.com/engine/userguide/eng-image/baseimages/) do Docker. Esse cenário provavelmente não é recomendado para iniciantes no Docker, mas, se você quiser definir os bits específicos de sua própria imagem base, poderá fazer isso.
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Etapa 3: Criar suas imagens do Docker personalizadas inserindo seu serviço nelas
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Etapa 3: criar suas imagens personalizadas do Docker inserindo seu serviço nele
 
 Para cada serviço personalizado que compõe seu aplicativo, você precisará criar uma imagem relacionada. Se seu aplicativo for composto por um único serviço ou aplicativo Web, você precisará apenas de uma única imagem.
 
@@ -172,7 +172,7 @@ Você pode encontrar as imagens existentes no repositório local (seu computador
 
 **Figura 4-26**. Exibindo imagens existentes usando imagens do Docker
 
-### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Etapa 4: Definir os serviços em docker-compose.yml ao criar um aplicativo composto do Docker com vários serviços
+### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Etapa 4: definir seus serviços em Docker-Compose. yml ao criar um aplicativo do Docker composto com vários serviços
 
 Com o arquivo `docker-compose.yml`, você pode definir um conjunto de serviços relacionados para que sejam implantados como um aplicativo composto usando os comandos de implantação explicados na seção sobre a próxima etapa.
 
@@ -205,11 +205,11 @@ Nesse caso específico, o arquivo define dois serviços: o serviço Web (seu ser
 
 O serviço Redis usa a [imagem pública do Redis mais recente](https://hub.docker.com/_/redis/) extraída do registro do Docker Hub. [redis](https://redis.io/) é um sistema de cache popular para aplicativos do lado do servidor.
 
-### <a name="step-5-build-and-run-your-docker-app"></a>Etapa 5: Criar e executar seu aplicativo do Docker
+### <a name="step-5-build-and-run-your-docker-app"></a>Etapa 5: criar e executar o aplicativo Docker
 
 Se seu aplicativo tiver apenas um contêiner, você precisará apenas executá-lo implantando-o no host do Docker (VM ou servidor físico). No entanto, se o aplicativo for composto por vários serviços, você também precisará *compô-lo*. Vejamos as diferentes opções.
 
-***Option A: Executar um único contêiner ou serviço***
+***Opção A: executar um único contêiner ou serviço***
 
 Você pode executar a imagem do Docker usando o comando docker run, conforme mostrado aqui:
 
@@ -219,7 +219,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Para essa implantação específica, redirecionaremos as solicitações enviadas à porta 80 para a porta 5000 interna. Agora, o aplicativo está escutando na porta 80 externa no nível do host.
 
-***Option B: Compor e executar um aplicativo de vários contêineres***
+***Opção B: compor e executar um aplicativo de vários contêineres***
 
 Na maioria dos cenários empresariais, um aplicativo do Docker será composto por vários serviços. Nesses casos, você pode executar o comando `docker-compose up` (Figura 4-27), que usará o arquivo docker-compose.yml, que talvez tenha criado anteriormente. Executar esse comando implanta um aplicativo composto com todos os contêineres relacionados.
 
@@ -233,7 +233,7 @@ Depois de executar `docker-compose up`, implante seu aplicativo e os contêinere
 
 **Figura 4-28**. VM com contêineres do Docker implantados
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Etapa 6: Testar seu aplicativo do Docker (localmente, na VM de CD local)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Etapa 6: testar o aplicativo Docker (localmente, em sua VM de CD local)
 
 Esta etapa varia de acordo com o que seu aplicativo está fazendo.
 
@@ -266,7 +266,7 @@ O Visual Studio Code dá suporte à depuração do Docker quando você está usa
 Você também pode depurar contêineres do .NET Core ou .NET Framework no Docker ao usar o Visual Studio para Windows ou Mac, conforme descrito na próxima seção.
 
 > [!TIP]
-> To saiba mais sobre a depuração de contêineres do Docker do node. js, consulte <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
+> Para saber mais sobre como depurar contêineres do Docker do node. js, confira <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
 
 >[!div class="step-by-step"]
 >[Anterior](docker-apps-development-environment.md)

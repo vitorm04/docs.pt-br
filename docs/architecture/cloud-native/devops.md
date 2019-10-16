@@ -2,12 +2,12 @@
 title: DevOps nativo de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | DevOps nativo de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: a056da833d7c6da11ab956337b77deab5e9bd159
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183185"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393724"
 ---
 # <a name="cloud-native-devops"></a>DevOps nativo de nuvem
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183185"
 
 A mantra favorita dos consultores de software é responder "depende" de qualquer pergunta apresentada. Não é porque os consultores de software estão boass de não tomar uma posição. É porque não há uma resposta verdadeira para qualquer pergunta no software. Não há nenhum direito absoluto e errado, mas sim um equilíbrio entre os opostos.
 
-Veja, por exemplo, as duas principais escolas do desenvolvimento de aplicativos Web: Aplicativos de página única (SPAs) versus aplicativos do lado do servidor. Por um lado, a experiência do usuário tende a ser melhor com o SPAs e a quantidade de tráfego para o servidor Web pode ser minimizada, tornando possível hospedá-los em algo tão simples quanto a hospedagem estática. Por outro lado, SPAs tendem a ser mais lentos de desenvolver e mais difíceis de testar. Qual é a escolha certa? Bem, depende de sua situação.
+Considere, por exemplo, as duas principais escolas do desenvolvimento de aplicativos Web: SPAs (aplicativos de página única) versus aplicativos do lado do servidor. Por um lado, a experiência do usuário tende a ser melhor com o SPAs e a quantidade de tráfego para o servidor Web pode ser minimizada, tornando possível hospedá-los em algo tão simples quanto a hospedagem estática. Por outro lado, SPAs tendem a ser mais lentos de desenvolver e mais difíceis de testar. Qual é a escolha certa? Bem, depende de sua situação.
 
 Os aplicativos nativos de nuvem não estão imunes ao mesmo dicotomia. Eles têm vantagens claras em termos de velocidade de desenvolvimento, estabilidade e escalabilidade, mas gerenciá-los pode ser um pouco mais difícil.
 
@@ -78,9 +78,9 @@ Dividir o código para os microserviços no projeto DevOps do Azure pode ser um 
 
 Uma das principais ideias por trás de microserviços é que os serviços devem ser silodos e separados uns dos outros. Ao usar o design controlado por domínio para decidir sobre os limites dos serviços, os serviços atuam como limites transacionais. As atualizações de banco de dados não devem abranger vários serviços. Essa coleção de dados relacionados é conhecida como um contexto limitado.  Essa ideia é refletida pelo isolamento de dados de microserviço para um banco de dado separado e autônomo do restante dos serviços. Isso faz muito sentido para levar essa ideia até o código-fonte do.
 
-No entanto, essa abordagem não está sem seus problemas. Um dos mais gnarly problemas de desenvolvimento do nosso tempo é o gerenciamento de dependências. Considere o número de arquivos que compõem o diretório `node_modules` médio. Uma nova instalação de algo parecido `create-react-app` com o provavelmente trará milhares de pacotes. A questão de como gerenciar essas dependências é uma tarefa difícil. 
+No entanto, essa abordagem não está sem seus problemas. Um dos mais gnarly problemas de desenvolvimento do nosso tempo é o gerenciamento de dependências. Considere o número de arquivos que compõem o diretório médio `node_modules`. Uma nova instalação de algo como `create-react-app` provavelmente trará com milhares de pacotes. A questão de como gerenciar essas dependências é uma tarefa difícil. 
 
-Se uma dependência for atualizada, os pacotes downstream também deverão atualizar essa dependência. Infelizmente, isso leva o trabalho de desenvolvimento, portanto, invariavelmente, o `node_modules` diretório termina com várias versões de um único pacote, cada um com uma dependência de algum outro pacote com controle de versão em uma cadência um pouco diferente. Ao implantar um aplicativo, qual versão de uma dependência deve ser usada? A versão que está em produção no momento? A versão atualmente em beta, mas é provável que esteja em produção no momento em que o consumidor faz isso para produção? Problemas difíceis que não são resolvidos apenas com o uso de microservices.
+Se uma dependência for atualizada, os pacotes downstream também deverão atualizar essa dependência. Infelizmente, isso leva o trabalho de desenvolvimento para que, invariavelmente, o diretório `node_modules` termine com várias versões de um único pacote, cada uma com uma dependência de algum outro pacote com controle de versão em uma cadência um pouco diferente. Ao implantar um aplicativo, qual versão de uma dependência deve ser usada? A versão que está em produção no momento? A versão atualmente em beta, mas é provável que esteja em produção no momento em que o consumidor faz isso para produção? Problemas difíceis que não são resolvidos apenas com o uso de microservices.
 
 Há bibliotecas que dependem de uma ampla variedade de projetos. Dividindo os microserviços por um em cada repositório, as dependências internas podem ser melhor resolvidas usando o repositório interno, Azure Artifacts. As compilações para bibliotecas enviarão suas versões mais recentes para Azure Artifacts para consumo interno. O projeto downstream ainda deve ser atualizado manualmente para assumir uma dependência dos pacotes recentemente atualizados.
 
@@ -118,7 +118,7 @@ Independentemente do único versus de vários repositórios, cada serviço terá
 
 ![Figura 11-3 uma estrutura de diretório padrão para os serviços de email e de entrada](./media/dir-struct.png)
 
-Sempre que um novo projeto é criado, um modelo que coloca a estrutura correta deve ser usado. Esse modelo também pode incluir itens úteis como um arquivo LEIAme de esqueleto e `azure-pipelines.yml`um. Em qualquer arquitetura de microserviço, um alto grau de variação entre projetos torna as operações em massa em relação aos serviços mais difíceis.
+Sempre que um novo projeto é criado, um modelo que coloca a estrutura correta deve ser usado. Esse modelo também pode incluir itens úteis como um arquivo LEIAme de esqueleto e um `azure-pipelines.yml`. Em qualquer arquitetura de microserviço, um alto grau de variação entre projetos torna as operações em massa em relação aos serviços mais difíceis.
 
 Há muitas ferramentas que podem fornecer Templating para um diretório inteiro, contendo vários diretórios de código-fonte. O [Yeoman](https://yeoman.io/) é popular no mundo do JavaScript e o GitHub lançou recentemente [modelos de repositório](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/), que fornecem grande parte da mesma funcionalidade.
 
@@ -128,7 +128,7 @@ O gerenciamento de tarefas em qualquer projeto pode ser difícil. Na frente, há
 
 Os aplicativos nativos de nuvem tendem a ser menores do que os produtos de software tradicionais ou pelo menos eles são divididos em serviços menores. O rastreamento de problemas ou tarefas relacionadas a esses serviços permanece tão importante quanto qualquer outro projeto de software. Ninguém deseja perder o controle de algum item de trabalho ou explicar a um cliente que seu problema não foi registrado corretamente. As placas são configuradas no nível do projeto, mas dentro de cada projeto, as áreas podem ser definidas. Eles permitem a interrupção de problemas em vários componentes. A vantagem de manter todo o trabalho para todo o aplicativo em um só lugar é que é fácil mover itens de trabalho de uma equipe para outra, já que eles são bem compreendidos.
 
-O DevOps do Azure vem com vários modelos populares pré-configurados. Na configuração mais básica, tudo o que é necessário saber é o que há na lista de pendências, em que as pessoas estão trabalhando e o que é feito. É importante ter essa visibilidade no processo de criação de software, para que o trabalho possa ser priorizado e tarefas concluídas relatadas ao cliente. É claro que poucos projetos de software se encontram em um processo `to do`tão `doing`simples quanto `done`, e. Não demora muito para que as pessoas comecem a adicionar `QA` etapas `Detailed Specification` como ou ao processo.
+O DevOps do Azure vem com vários modelos populares pré-configurados. Na configuração mais básica, tudo o que é necessário saber é o que há na lista de pendências, em que as pessoas estão trabalhando e o que é feito. É importante ter essa visibilidade no processo de criação de software, para que o trabalho possa ser priorizado e tarefas concluídas relatadas ao cliente. É claro que poucos projetos de software se encontram em um processo tão simples quanto `to do`, `doing` e `done`. Não demora muito para as pessoas começarem a adicionar etapas como `QA` ou `Detailed Specification` ao processo.
 
 Uma das partes mais importantes das metodologias Agile é a auto-introspecção em intervalos regulares. Essas revisões destinam-se a fornecer informações sobre quais problemas a equipe está enfrentando e como eles podem ser aprimorados. Frequentemente, isso significa alterar o fluxo de problemas e recursos por meio do processo de desenvolvimento. Portanto, é perfeitamente saudável expandir os layouts das placas com estágios adicionais.
 
@@ -166,7 +166,7 @@ A importância de automatizar o processo de criação e entrega é acentuada por
 
 O Azure DevOps fornece um conjunto de ferramentas para tornar a integração e a implantação contínuas mais fáceis do que nunca. Essas ferramentas estão localizadas em Azure Pipelines. O primeiro deles é o Azure builds, que é uma ferramenta para executar definições de compilação baseadas em YAML em escala. Os usuários podem trazer seus próprios computadores de compilação (ótimo para se a compilação exigir um ambiente de configuração meticulosa) ou usar um computador de um pool atualizado constantemente de máquinas virtuais hospedadas do Azure. Esses agentes de compilação hospedados vêm pré-instalados com uma ampla gama de ferramentas de desenvolvimento, não apenas para o desenvolvimento do .NET, mas para tudo, desde Java até Python até o desenvolvimento do iPhone.
 
-O DevOps inclui uma ampla gama de definições de compilação prontas para uso que podem ser personalizadas para qualquer compilação. As definições de compilação são definidas em um arquivo `azure-pipelines.yml` chamado e verificadas no repositório para que possam ter controle de versão junto com o código-fonte. Isso torna muito mais fácil fazer alterações no pipeline de compilação em uma ramificação, pois as alterações podem ser verificadas apenas nessa ramificação. Um exemplo `azure-pipelines.yml` para criar um aplicativo Web ASP.net na estrutura completa é mostrado na Figura 11-8.
+O DevOps inclui uma ampla gama de definições de compilação prontas para uso que podem ser personalizadas para qualquer compilação. As definições de compilação são definidas em um arquivo chamado `azure-pipelines.yml` e verificadas no repositório para que possam ter controle de versão junto com o código-fonte. Isso torna muito mais fácil fazer alterações no pipeline de compilação em uma ramificação, pois as alterações podem ser verificadas apenas nessa ramificação. Um exemplo `azure-pipelines.yml` para criar um aplicativo Web ASP.NET na estrutura completa é mostrado na Figura 11-8.
 
 ```yml
 name: $(rev:r)
@@ -200,7 +200,7 @@ steps:
   displayName: 'Build solution'
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
+    msbuildArgs: '-p:DeployOnBuild=true -p:WebPublishMethod=Package -p:PackageAsSingleFile=true -p:SkipInvalidConfigurations=true -p:PackageLocation="$(build.artifactstagingdirectory)\\"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
@@ -250,7 +250,7 @@ Não há nenhum custo para configurar muitos pipelines de Build, portanto, é va
 
 ### <a name="versioning-releases"></a>Versões de controle de versão
 
-Uma desvantagem de usar a funcionalidade de versões é que ela não pode ser definida em um arquivo `azure-pipelines.yml` com check-in. Há muitas razões pelas quais você pode querer fazer isso de ter definições de versão por ramificação para incluir um esqueleto de versão em seu modelo de projeto. Felizmente, o trabalho é contínuo para mudar alguns dos estágios com suporte para o componente de compilação. Isso será conhecido como compilação de vários estágios e a [primeira versão estará disponível agora](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)!
+Uma desvantagem de usar a funcionalidade de versões é que ela não pode ser definida em um arquivo com check-in `azure-pipelines.yml`. Há muitas razões pelas quais você pode querer fazer isso de ter definições de versão por ramificação para incluir um esqueleto de versão em seu modelo de projeto. Felizmente, o trabalho é contínuo para mudar alguns dos estágios com suporte para o componente de compilação. Isso será conhecido como compilação de vários estágios e a [primeira versão estará disponível agora](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)!
 
 >[!div class="step-by-step"]
 >[Anterior](azure-security.md)

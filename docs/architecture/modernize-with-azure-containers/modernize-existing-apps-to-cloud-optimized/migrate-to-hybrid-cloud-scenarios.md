@@ -2,12 +2,12 @@
 title: Migrar para cenários de nuvem híbrida
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Migrar para cenários de nuvem híbrida
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373939"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394539"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrar para cenários de nuvem híbrida
 
@@ -25,17 +25,17 @@ O Azure Stack é uma plataforma de nuvem híbrida que permite que você forneça
 
 A Figura 4-13 mostra uma visão geral da verdadeira plataforma de nuvem híbrida que a Microsoft oferece.
 
-![Plataforma de nuvem híbrida da Microsoft com Azure Stack e Azure](./media/image13.jpg)
+![Diagrama da plataforma de nuvem híbrida da Microsoft com o Azure Stack e o Azure.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **Figura 4-13.** Plataforma de nuvem híbrida da Microsoft com Azure Stack e Azure
 
 O Azure Stack é oferecido em duas opções de implantação para atender às suas necessidades:
 
-- Sistemas integrados do Azure Stack
+- Sistemas integrados Azure Stack
 
 - Kit de Desenvolvimento do Azure Stack
 
-### <a name="azure-stack-integrated-systems"></a>Sistemas integrados do Azure Stack
+### <a name="azure-stack-integrated-systems"></a>Sistemas integrados Azure Stack
 
 Azure Stack sistemas integrados são oferecidos por meio de uma parceria de parceiros de hardware e da Microsoft. A parceria cria uma solução que oferece inovação no ritmo da nuvem que é equilibrada com simplicidade no gerenciamento. Como o Azure Stack é oferecido como um sistema integrado de hardware e software, você obtém a quantidade certa de flexibilidade e controle, ao mesmo tempo que ainda está adotando a inovação da nuvem. Azure Stack intervalo de sistemas integrados de tamanho de 4 a 12 nós e tem suporte em conjunto pelo parceiro de hardware e pela Microsoft. Use Azure Stack sistemas integrados para implementar novos cenários para suas cargas de trabalho de produção.
 
@@ -66,5 +66,5 @@ O Microsoft Azure Stack Development Kit é uma implantação de nó único do Az
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Anterior](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[Próximo](../walkthroughs-technical-get-started-overview.md)
