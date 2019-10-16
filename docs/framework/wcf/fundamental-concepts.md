@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: eb03a164ce0ff0140c32b3b56bcb502674e5fecd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990299"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319843"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 
-Este documento fornece uma exibição de alto nível da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço e cliente do WCF, consulte [introdução tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender sobre a programação do WCF, consulte [programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md).
+Este documento fornece uma exibição de alto nível da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço e cliente do WCF, consulte [introdução tutorial](getting-started-tutorial.md). Para aprender sobre a programação do WCF, consulte [programação básica do WCF](basic-wcf-programming.md).
 
 ## <a name="wcf-fundamentals"></a>Princípios básicos do WCF
 
@@ -26,7 +26,7 @@ O WCF é um tempo de execução e um conjunto de APIs para criar sistemas que en
 
 O WCF é baseado na noção de comunicação baseada em mensagem, e qualquer coisa que possa ser modelada como uma mensagem (por exemplo, uma solicitação HTTP ou uma mensagem de enfileiramento de mensagens (também conhecida como MSMQ) pode ser representada de forma uniforme no modelo de programação. Isso permite uma API unificada em mecanismos de transporte diferentes.
 
-O modelo distingue entre _clientes_, que são aplicativos que iniciam a comunicação e os _Serviços_, que são aplicativos que esperam que os clientes se comuniquem com eles e respondam a essa comunicação. Um único aplicativo pode atuar como um cliente e um serviço. Para obter exemplos, consulte [Serviços duplex](../../../docs/framework/wcf/feature-details/duplex-services.md) e [rede ponto a ponto](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).
+O modelo distingue entre _clientes_, que são aplicativos que iniciam a comunicação e os _Serviços_, que são aplicativos que esperam que os clientes se comuniquem com eles e respondam a essa comunicação. Um único aplicativo pode atuar como um cliente e um serviço. Para obter exemplos, consulte [Serviços duplex](./feature-details/duplex-services.md) e [rede ponto a ponto](./feature-details/peer-to-peer-networking.md).
 
 As mensagens são enviadas entre pontos de extremidade. Os _pontos de extremidade_ são locais onde as mensagens são enviadas ou recebidas (ou ambas) e definem todas as informações necessárias para a troca de mensagens. Um serviço expõe um ou mais pontos de extremidade do aplicativo (assim como zero ou mais pontos de extremidade de infraestrutura) e o cliente gera um ponto de extremidade que é compatível com um dos pontos de extremidade do serviço.
 
@@ -81,7 +81,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
 **Associação**  
- Define como um ponto de extremidade comunica-se com o mundo. Ele é construído de um conjunto de componentes chamados elementos de associação que “empilham” um sobre o outro para criar a infraestrutura de comunicação. No mínimo, uma associação define o transporte (como HTTP ou TCP) e a codificação que está sendo usada (como texto ou binário). Uma associação pode conter elementos de associação que especificam detalhes como mecanismos de segurança usados para proteger mensagens, ou o padrão de mensagem usado por um ponto de extremidade. Para obter mais informações, consulte [Configurando serviços](../../../docs/framework/wcf/configuring-services.md).
+ Define como um ponto de extremidade comunica-se com o mundo. Ele é construído de um conjunto de componentes chamados elementos de associação que “empilham” um sobre o outro para criar a infraestrutura de comunicação. No mínimo, uma associação define o transporte (como HTTP ou TCP) e a codificação que está sendo usada (como texto ou binário). Uma associação pode conter elementos de associação que especificam detalhes como mecanismos de segurança usados para proteger mensagens, ou o padrão de mensagem usado por um ponto de extremidade. Para obter mais informações, consulte [Configurando serviços](configuring-services.md).
 
 **Elemento Binding**  
  Representa uma parte específica da associação, como um transporte, uma codificação, uma implementação de um protocolo de nível de infraestrutura (como WS-ReliableMessaging), ou qualquer outro componente da pilha de comunicação.
@@ -90,7 +90,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Um componente que controla vários aspectos de tempo de execução de um serviço, um ponto de extremidade, uma operação específico ou um cliente. Os comportamentos são agrupados de acordo com o escopo: os comportamentos comuns afetam todos os pontos de extremidade globalmente, os aspectos de serviço afetam somente aspectos relacionados a serviço, os comportamentos de ponto de extremidade afetam somente as propriedades relacionadas a ponto de extremidade e os comportamentos de nível de operação afetam operações específicas. Por exemplo, um comportamento do serviço é a limitação, que especifica como um serviço reage quando um excesso de mensagens ameaça sobrecarregar seus recursos de manipulação. Um comportamento de ponto de extremidade, por outro lado, controla somente os aspectos que são relevantes para os pontos de extremidade, por exemplo, como e onde localizar uma credencial de segurança.
 
 **Associações fornecidas pelo sistema**  
- WCF inclui um número o sistema forneceu associações. Essas são coleções de elementos de associação que são otimizados para cenários específicos. Por exemplo, o <xref:System.ServiceModel.WSHttpBinding> é projetado para interoperabilidade com serviços que implementam várias\* especificações do WS. Essas associações predefinidas economizam tempo apresentando somente essas opções que podem ser corretamente aplicadas ao cenário específico. Se uma associação predefinida não atender aos requisitos, você poderá criar sua própria associação personalizada.
+ WCF inclui um número o sistema forneceu associações. Essas são coleções de elementos de associação que são otimizados para cenários específicos. Por exemplo, o <xref:System.ServiceModel.WSHttpBinding> foi projetado para interoperabilidade com serviços que implementam várias especificações WS-\*. Essas associações predefinidas economizam tempo apresentando somente essas opções que podem ser corretamente aplicadas ao cenário específico. Se uma associação predefinida não atender aos requisitos, você poderá criar sua própria associação personalizada.
 
 **Configuração versus codificação**  
  O controle de um aplicativo pode ser feito por meio de codificação, configuração ou uma combinação de ambos. A configuração tem a vantagem de permitir que alguém que não seja o desenvolvedor (por exemplo, um administrador de rede) defina o cliente e os parâmetros de serviço após o código ser escrito e sem ter que recompilar. A configuração permite que você não apenas defina os valores como endereços de ponto de extremidade, mas também permite um controle adicional para adicionar pontos de extremidade, associações e comportamentos. A codificação permite que o desenvolvedor mantenha o controle restrito sobre todos os componentes de serviço ou cliente, e as configurações feitas podem ser inspecionadas e, se necessário, substituídas pelo código.
@@ -134,23 +134,23 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Cliente WCF**  
  Uma construção de aplicativo cliente que expõe as operações de serviço como métodos (na linguagem de programação .NET Framework de sua escolha, como Visual Basic ou Visual C#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.
 
-Um cliente WCF pode ser gerado automaticamente usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e apontando-o para um serviço em execução que publica metadados.
+Um cliente WCF pode ser gerado automaticamente usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) e apontando-o para um serviço em execução que publica metadados.
 
 **Metadados**  
- Em um serviço, descreve as características do serviço que uma entidade externa precisa entender para se comunicar com o serviço. Os metadados podem ser consumidos pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF e acompanhar a configuração que um aplicativo cliente pode usar para interagir com o serviço.
+ Em um serviço, descreve as características do serviço que uma entidade externa precisa entender para se comunicar com o serviço. Os metadados podem ser consumidos pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF e acompanhar a configuração que um aplicativo cliente pode usar para interagir com o serviço.
 
 Os metadados expostos pelo serviço incluem os documentos XML do esquema, que definem o contrato de dados do serviço, e os documentos WSDL, que descrevem os métodos do serviço.
 
 Quando ativados, os metadados para o serviço são gerados automaticamente pela inspecionando o serviço e seus pontos de extremidade. Para publicar metadados de um serviço, você deverá explicitamente ativar o comportamento dos metadados.
 
-**Segurança**  
- No WCF, inclui confidencialidade (criptografia de mensagens para evitar a espionagem), integridade (o meio de detecção de violação com a mensagem), autenticação (o meio de validação de servidores e clientes) e autorização (o controle de acesso a recursos). Essas funções são fornecidas aproveitando os mecanismos de segurança existentes, como o TLS sobre http (também conhecido como https) ou implementando uma ou mais das várias especificações do WS\* -Security.
+**Security**  
+ No WCF, inclui confidencialidade (criptografia de mensagens para evitar a espionagem), integridade (o meio de detecção de violação com a mensagem), autenticação (o meio de validação de servidores e clientes) e autorização (o controle de acesso a recursos). Essas funções são fornecidas aproveitando os mecanismos de segurança existentes, como o TLS sobre HTTP (também conhecido como HTTPS), ou implementando uma ou mais das várias especificações de segurança WS-\*.
 
 **Modo de segurança de transporte**  
  Especifica que a confidencialidade, a integridade e a autenticação são fornecidas pelos mecanismos da camada de transporte (como HTTPS). Ao usar um transporte como HTTPS, esse modo tem a vantagem de ser eficiente no desempenho, além de bem-compreendido devido à sua predominância na Internet. A desvantagem é que esse tipo de segurança é aplicado separadamente em cada salto no caminho de comunicação, tornando a comunicação suscetível a um ataque de intermediários.
 
 **Modo de segurança da mensagem**  
- Especifica que a segurança é fornecida pela implementação de uma ou mais especificações de segurança, como a especificação chamada [especificação Web Services Security: Segurança](https://go.microsoft.com/fwlink/?LinkId=94684)de mensagem SOAP. Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se tornam parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (elas são chamadas de _declarações_). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.
+ Especifica que a segurança é fornecida pela implementação de uma ou mais especificações de segurança, como a especificação chamada [especificação Web Services Security: segurança de mensagem SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se tornam parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (elas são chamadas de _declarações_). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.
 
 **Transporte com o modo de segurança de credencial da mensagem**  
  Especifica o uso da camada de transporte para fornecer confidencialidade, autenticação e integridade de mensagens, embora cada uma das mensagens possa conter várias credenciais (reivindicações) exigidas pelos destinatários da mensagem.
@@ -160,5 +160,5 @@ Quando ativados, os metadados para o serviço são gerados automaticamente pela 
 
 ## <a name="see-also"></a>Consulte também
 
-- [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Arquitetura do Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+- [O que é o Windows Communication Foundation](whats-wcf.md)
+- [Arquitetura do Windows Communication Foundation](architecture.md)

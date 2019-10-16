@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: cf941e5e3fa3fc6313ef8b2ff5c176aec68c1e6b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 865e55a28e2f3db85d50a81f6ab29c354ee3c62a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291721"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319088"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (operador NULL-tolerante) (C# referência)
 
-Disponível em C# 8,0 e posterior, o operador sufixo unário `!` é o operador NULL-tolerante. Em um [contexto de anotação anulável](../../nullable-references.md#nullable-annotation-context)habilitado, você usa o operador NULL-tolerante para declarar que a expressão `x` de um tipo de referência não é nula: `x!`. O prefixo unário `!` é um [operador lógico de negação](boolean-logical-operators.md#logical-negation-operator-).
+Disponível em C# 8,0 e posterior, o operador sufixo unário `!` é o operador NULL-tolerante. Em um [contexto de anotação anulável](../../nullable-references.md#nullable-annotation-context)habilitado, você usa o operador NULL-tolerante para declarar que a expressão `x` de um tipo de referência não é nula: `x!`. O prefixo unário `!` é o [operador lógico de negação](boolean-logical-operators.md#logical-negation-operator-).
 
 O operador NULL-tolerante não tem nenhum efeito no tempo de execução. Ele afeta apenas a análise de fluxo estático do compilador, alterando o estado nulo da expressão. Em tempo de execução, a expressão `x!` é avaliada como o resultado da expressão subjacente `x`.
 
@@ -37,7 +37,7 @@ Você também pode usar o operador NULL-tolerante quando sabe definitivamente qu
 
 [!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
 
-Sem o operador NULL-tolerante, o compilador gera o seguinte aviso para o código `p.Name`: `Warning CS8602: Dereference of a possibly null reference.`.
+Sem o operador NULL-tolerante, o compilador gera o seguinte aviso para o código `p.Name`: `Warning CS8602: Dereference of a possibly null reference`.
 
 Se você puder modificar o método `IsValid`, poderá usar o atributo [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) para permitir que o compilador saiba que um argumento do método `IsValid` não pode ser `null` quando o método retornar `true`:
 
@@ -45,8 +45,12 @@ Se você puder modificar o método `IsValid`, poderá usar o atributo [NotNullWh
 
 No exemplo anterior, você não precisa usar o operador NULL-tolerante porque o compilador tem informações suficientes para descobrir que `p` não pode ser `null` dentro da instrução `if`. Para obter mais informações sobre os atributos que permitem especificar informações adicionais sobre o estado nulo de uma variável, consulte [Atualizar APIs com atributos para definir expectativas nulas](../../nullable-attributes.md).
 
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, consulte [a seção operador NULL-tolerante](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) do [rascunho da especificação de tipos de referência anulável](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
+
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
-- [Tutorial: Design com tipos de referência anuláveis @ no__t-0
+- [Tutorial: design com tipos de referência anuláveis](../../tutorials/nullable-reference-types.md)

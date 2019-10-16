@@ -2,12 +2,12 @@
 title: IGNORAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 19d3001fb8f226b02f16167dfb51ce1caa80ba3b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 75140384823588b8f6785de00b0ab3cd17314a3f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249227"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319337"
 ---
 # <a name="skip-entity-sql"></a>IGNORAR (Entity SQL)
 
@@ -15,7 +15,7 @@ Você pode executar a físico paginação usando a cláusula subpropriedades de 
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```sql
 [ SKIP n ]
 ```
 
@@ -34,13 +34,15 @@ Se uma subpropriedades cláusula de expressão de SKIP está presente em uma cl�
 > [!NOTE]
 > No SQL Server 2000, usar SKIP com ORDER BY em colunas não chave pode retornar resultados incorretos. Mais do que o número de linhas especificado podem ser ignoradas se a coluna de chave não tem dados duplicados nele. Isso ocorre devido a como o SKIP é convertido para SQL Server 2000. Por exemplo, o seguinte código mais de cinco linhas podem ser ignoradas se `E.NonKeyColumn` tem valores duplicados:
 >
-> `SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L`
+> ```sql
+> SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L
+> ```
 
-A [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta em [como: A página através dos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) resultados da consulta usa o operador order by com Skip para especificar a ordem de classificação usada nos objetos retornados em uma instrução SELECT.
+A consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] em [como: paginar os resultados da consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) usa o operador order by com Skip para especificar a ordem de classificação usada nos objetos retornados em uma instrução SELECT.
 
 ## <a name="see-also"></a>Consulte também
 
 - [ORDER BY](order-by-entity-sql.md)
-- [Como: Página por meio de resultados da consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [Como: paginar os resultados da consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Paginação](paging-entity-sql.md)
 - [TOP](top-entity-sql.md)

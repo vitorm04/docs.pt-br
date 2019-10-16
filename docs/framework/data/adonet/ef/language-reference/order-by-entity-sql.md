@@ -2,19 +2,19 @@
 title: ORDENAR POR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249762"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319439"
 ---
 # <a name="order-by-entity-sql"></a>ORDENAR POR (Entity SQL)
 Especifica a ordem de classificação usado em objetos retornados em uma instrução SELECT.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 [ ORDER BY   
    {  
       order_by_expression [SKIP n] [LIMIT n]  
@@ -52,16 +52,18 @@ Especifica a ordem de classificação usado em objetos retornados em uma instru�
  Cada expressão na cláusula ORDER BY deve avaliar a qualquer tipo que pode ser comparado para desigualdade ordenada (menor que ou maior do que, e assim por diante). Esses tipos são geralmente primitivos escalares como números, cadeias de caracteres, e datas. RowTypes de tipos comparáveis também é comparado ordem.  
   
  Se seu código itera através de um conjunto ordenado, exceto para uma projeção de nível superior, a saída não é garantida para ter sua ordem preservada.  
-  
-```  
--- In the following sample, order is guaranteed to be preserved:  
+
+No exemplo a seguir, é garantido que a ordem seja preservada:
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query ordering of the nested query is ignored.  
+
+Na consulta a seguir, a ordenação da consulta aninhada é ignorada:  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -70,7 +72,7 @@ SELECT C2.FirstName, C2.LastName
   
  Para ter uma operação UNION, UNION ALL, EXCEPT, ou INTERSECT ordenada, use o padrão a seguir:  
   
-```  
+```sql  
 SELECT ...  
 FROM ( UNION/EXCEPT/INTERSECT operation )  
 ORDER BY ...  
@@ -99,16 +101,18 @@ ORDER BY ...
   
 ## <a name="ordering-nested-queries"></a>Ordenando consultas aninhadas  
  Em Entity Framework, uma expressão aninhada pode ser colocada em qualquer lugar na consulta; a ordem de uma consulta aninhada não é preservada.  
-  
-```  
--- The following query will order the results by the last name.  
+
+A consulta a seguir ordenará os resultados pelo sobrenome:  
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query, ordering of the nested query is ignored.  
+
+Na consulta a seguir, a ordenação da consulta aninhada é ignorada:  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -118,11 +122,11 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>Exemplo  
  A seguinte consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa o operador cláusula ORDER pelo especificar ordem de classificação usado em objetos retornados em uma instrução SELECT. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
+ [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
 ## <a name="see-also"></a>Consulte também
 

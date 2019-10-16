@@ -4,12 +4,12 @@ description: Saiba o que fazer se você vir uma caixa de diálogo ' este aplicat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2019
-ms.openlocfilehash: 2534979e8dea886c2d7298c57e12b66d7a962c69
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8fa8381f1b05445f259b4e4af5cc17fa487b2ce0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401700"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319175"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Solução de problemas de uma mensagem de erro "este aplicativo não pôde ser iniciado"
 
@@ -53,7 +53,7 @@ Para resolver esse problema para que você possa executar o aplicativo, faça o 
    |Windows Vista SP2|[.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130)|
 
    > [!NOTE]
-   >  .NET Framework 4,8 é pré-instalado no Windows 10 pode ser 2019 atualização.
+   > .NET Framework 4,8 é pré-instalado no Windows 10 pode ser 2019 atualização.
 
 1. Tentativa de iniciar o aplicativo.
 

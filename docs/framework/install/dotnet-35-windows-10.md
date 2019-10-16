@@ -4,12 +4,12 @@ description: Saiba como instalar o .NET Framework 3.5 no Windows 10, no Windows 
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515189"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319162"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8
 
@@ -19,7 +19,7 @@ Talvez você precise do .NET Framework 3.5 para executar um aplicativo no Window
 
 Se você tentar executar um aplicativo que exige o .NET Framework 3.5, você verá a seguinte caixa de diálogo de configuração. Escolha **Instalar este recurso** para habilitar o .NET Framework 3.5. Essa opção exige uma conexão com a Internet.
 
-![Diálogo Instalação do .NET Framework](./media/dotnet-framework-installation-dialog.jpg)
+![Captura de tela da caixa de diálogo de instalação do .NET Framework.](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>Por que estou recebendo este pop-up?
 
@@ -29,13 +29,13 @@ O .NET Framework é criado pela Microsoft e fornece um ambiente para a execuçã
 
 Você pode habilitar o .NET Framework 3.5 por meio do Painel de Controle do Windows. Essa opção exige uma conexão com a Internet.
 
-1. Pressione a tecla Windows ![logotipo do Windows](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) no teclado, digite “Recursos do Windows” e pressione Enter. A caixa de diálogo **Ativar ou desativar recursos do Windows** é exibida.
+1. Pressione a tecla Windows ![Screenshot do logotipo de chave do Windows. ](./media/dotnet-35-windows-10/windows-keyboard-logo.png) no teclado, digite "recursos do Windows" e pressione Enter. A caixa de diálogo **Ativar ou desativar recursos do Windows** é exibida.
 
-2. Marque a caixa de seleção **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)**, selecione **OK** e reinicialize o computador, se isso for solicitado.
+2. Marque a caixa de seleção **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)** , selecione **OK** e reinicialize o computador, se isso for solicitado.
 
-   ![Instalar o .NET com o painel de controle](./media/dotnet-control-panel.png)
+   ![Captura de tela mostrando a instalação do .NET com o painel de controle.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Não é necessário selecionar os itens filho para a **Ativação HTTP do WCF (Windows Communication Foundation)** e para a **Ativação Não HTTP do WCF (Windows Communication Foundation)**, a menos que você seja um desenvolvedor ou administrador de servidor que exija essa funcionalidade.
+   Não é necessário selecionar os itens filho para a **Ativação HTTP do WCF (Windows Communication Foundation)** e para a **Ativação Não HTTP do WCF (Windows Communication Foundation)** , a menos que você seja um desenvolvedor ou administrador de servidor que exija essa funcionalidade.
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Solucionar problemas de instalação do .NET Framework 3.5
 

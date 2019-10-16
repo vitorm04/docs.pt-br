@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179370"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321273"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implantar um modelo no Azure Functions
 
@@ -19,7 +19,7 @@ Saiba como implantar um modelo de machine learning do ML.NET pré-treinado para 
 > [!NOTE]
 > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" e “desenvolvimento do Azure” instalados.
 - Pacote NuGet Microsoft.NET.Sdk.Functions versão 1.0.28+.
@@ -75,7 +75,7 @@ Crie uma classe para prever o sentimento. Adicione uma nova classe ao seu projet
     ```csharp
     public class AnalyzeSentiment
     {
-    
+
     }
     ```
 
@@ -83,9 +83,9 @@ Crie uma classe para prever o sentimento. Adicione uma nova classe ao seu projet
 
 Você precisa criar algumas classes para os dados e previsões de entrada. Adicione uma nova classe ao seu projeto:
 
-1. Crie um diretório chamado *DataModels* em seu projeto para salvar os modelos de dados: No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Adicionar > Nova pasta**. Digite "DataModels" e pressione ENTER.
+1. Crie um diretório chamado *Datamodels* em seu projeto para salvar seus modelos de dados: no Gerenciador de soluções, clique com o botão direito do mouse no seu projeto e selecione **Adicionar > nova pasta**. Digite "DataModels" e pressione ENTER.
 2. No Gerenciador de Soluções, clique com o botão direito do mouse no diretório *DataModels* e selecione **Adicionar > Novo Item**.
-3. Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentData.cs*. Em seguida, selecione o botão **Adicionar**. 
+3. Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentData.cs*. Em seguida, selecione o botão **Adicionar**.
 
     O arquivo *SentimentData.cs* é aberto no editor de códigos. Adicione a seguinte instrução using na parte superior do *SentimentData.cs*:
 
@@ -113,7 +113,7 @@ Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xre
 O link a seguir fornece mais informações se você quiser saber mais sobre [injeção de dependência](https://en.wikipedia.org/wiki/Dependency_injection).
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Novo Item**.
-1. Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *Startup.cs*. Em seguida, selecione o botão **Adicionar**. 
+1. Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *Startup.cs*. Em seguida, selecione o botão **Adicionar**.
 
     O arquivo *Startup.cs* é aberto no editor de códigos. Adicione a seguinte instrução using na parte superior do *Startup.cs*:
 
@@ -141,13 +141,13 @@ O link a seguir fornece mais informações se você quiser saber mais sobre [inj
     }
     ```
 
-Em um alto nível, esse código inicializa os objetos e os serviços automaticamente para uso posterior quando solicitado pelo aplicativo em vez de ter que fazê-lo manualmente. 
+Em um alto nível, esse código inicializa os objetos e os serviços automaticamente para uso posterior quando solicitado pelo aplicativo em vez de ter que fazê-lo manualmente.
 
-Os modelos de aprendizado de máquina não são estáticos. À medida que novos dados de treinamento ficam disponíveis, o modelo é retreinado e reimplantado. Uma maneira de obter a versão mais recente do modelo em seu aplicativo é reimplantar o aplicativo inteiro. No entanto, isso introduz o tempo de inatividade do aplicativo. O serviço `PredictionEnginePool` fornece um mecanismo para recarregar um modelo atualizado sem levar seu aplicativo para baixo. 
+Os modelos de aprendizado de máquina não são estáticos. À medida que novos dados de treinamento ficam disponíveis, o modelo é retreinado e reimplantado. Uma maneira de obter a versão mais recente do modelo em seu aplicativo é reimplantar o aplicativo inteiro. No entanto, isso introduz o tempo de inatividade do aplicativo. O serviço `PredictionEnginePool` fornece um mecanismo para recarregar um modelo atualizado sem levar seu aplicativo para baixo.
 
 Defina o parâmetro `watchForChanges` como `true`, e o `PredictionEnginePool` inicia um [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) que escuta as notificações de alteração do sistema de arquivos e gera eventos quando há uma alteração no arquivo. Isso solicita que o `PredictionEnginePool` recarregue o modelo automaticamente.
 
-O modelo é identificado pelo parâmetro `modelName` para que mais de um modelo por aplicativo possa ser recarregado após a alteração. 
+O modelo é identificado pelo parâmetro `modelName` para que mais de um modelo por aplicativo possa ser recarregado após a alteração.
 
 > [!TIP]
 > Como alternativa, você pode usar o método `FromUri` ao trabalhar com modelos armazenados remotamente. Em vez de observar os eventos de alteração de arquivo, `FromUri` pesquisa o local remoto em busca de alterações. O padrão do intervalo de sondagem é de 5 minutos. Você pode aumentar ou diminuir o intervalo de sondagem com base nos requisitos do seu aplicativo. No exemplo de código abaixo, o `PredictionEnginePool` sonda o modelo armazenado no URI especificado a cada minuto.
@@ -209,7 +209,7 @@ Agora que está tudo definido, é hora de testar o aplicativo:
     ```
 
     Se houver êxito, a saída deverá ser semelhante ao texto abaixo:
-    
+
     ```powershell
     Negative
     ```

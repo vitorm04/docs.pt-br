@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac27329278edc2b9ca693aa15bcc5bb58edffe05
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928621"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320154"
 ---
 # <a name="implementing-service-contracts"></a>Implementando contratos de serviço
-Um serviço é uma classe que expõe a funcionalidade disponível para clientes em um ou mais pontos de extremidade. Para criar um serviço, escreva uma classe que implementa um contrato do Windows Communication Foundation (WCF). Você pode fazer isso de duas maneiras. Você pode definir o contrato separadamente como uma interface e, em seguida, crie uma classe que implementa essa interface. Como alternativa, você pode criar o contrato e a classe diretamente, colocando o <xref:System.ServiceModel.ServiceContractAttribute> atributo na classe em si e o <xref:System.ServiceModel.OperationContractAttribute> atributo sobre os métodos disponíveis para os clientes do serviço.  
+Um serviço é uma classe que expõe a funcionalidade disponível para clientes em um ou mais pontos de extremidade. Para criar um serviço, escreva uma classe que implemente um contrato de Windows Communication Foundation (WCF). Você pode fazer isso de uma das duas maneiras. Você pode definir o contrato separadamente como uma interface e, em seguida, criar uma classe que implementa essa interface. Como alternativa, você pode criar a classe e o contrato diretamente colocando o atributo <xref:System.ServiceModel.ServiceContractAttribute> na própria classe e o atributo <xref:System.ServiceModel.OperationContractAttribute> nos métodos disponíveis para os clientes do serviço.  
   
 ## <a name="creating-a-service-class"></a>Criando uma classe de serviço  
- A seguir está um exemplo de um serviço que implementa um `IMath` contrato que tenha sido definido separadamente.  
+ Veja a seguir um exemplo de um serviço que implementa um contrato `IMath` que foi definido separadamente.  
   
 ```csharp  
 // Define the IMath contract.  
@@ -37,7 +37,7 @@ public class MathService : IMath
 }  
 ```  
   
- Como alternativa, um serviço pode expor um contrato diretamente. A seguir está um exemplo de uma classe de serviço que define e implementa um `MathService` contrato.  
+ Como alternativa, um serviço pode expor um contrato diretamente. Veja a seguir um exemplo de uma classe de serviço que define e implementa um contrato `MathService`.  
   
 ```csharp  
 // Define the MathService contract directly on the service class.  
@@ -51,15 +51,15 @@ class MathService
 }  
 ```  
   
- Observe que os serviços acima expõem contratos diferentes porque os nomes de contrato são diferentes. No primeiro caso, o contrato exposto é denominado "`IMath`while" no segundo caso, o contrato é denominado"`MathService`".  
+ Observe que os serviços anteriores expõem contratos diferentes porque os nomes de contrato são diferentes. No primeiro caso, o contrato exposto é denominado "`IMath`" enquanto, no segundo caso, o contrato é denominado "`MathService`".  
   
- Você pode definir algumas coisas no serviço e operação de níveis de implementação, bem como de instanciação e simultaneidade. Para obter mais informações, consulte [projetar e implementar serviços](../../../docs/framework/wcf/designing-and-implementing-services.md).  
+ Você pode definir algumas coisas nos níveis de implementação de serviço e operação, como simultaneidade e instanciação. Para obter mais informações, consulte [projetando e implementando serviços](designing-and-implementing-services.md).  
   
- Depois de implementar um contrato de serviço, você deve criar um ou mais pontos de extremidade para o serviço. Para obter mais informações, consulte [visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md). Para obter mais informações sobre como executar um serviço, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).  
+ Depois de implementar um contrato de serviço, você deve criar um ou mais pontos de extremidade para o serviço. Para obter mais informações, consulte [visão geral da criação de ponto de extremidade](endpoint-creation-overview.md). Para obter mais informações sobre como executar um serviço, consulte [serviços de hospedagem](hosting-services.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Como: Criar um serviço com uma classe de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [Como: Criar um serviço com uma Interface de contrato](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
-- [Especificando o comportamento em tempo de execução do serviço](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Serviços de design e implantação](designing-and-implementing-services.md)
+- [Como criar um serviço com uma classe de contrato](./feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [Como criar um serviço com interface de contrato](./feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Especificando o comportamento em tempo de execução do serviço](specifying-service-run-time-behavior.md)

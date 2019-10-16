@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 671e650a494d314ec1da1957eaae91e2d1811213
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aea26c3a814a34c9d2985bb1bf02dbb80d32ef12
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952835"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320284"
 ---
 # <a name="using-sessions"></a>Utilizando sessões
 Em aplicativos Windows Communication Foundation (WCF), uma *sessão* correlaciona um grupo de mensagens em uma conversa. As sessões do WCF são diferentes do objeto de sessão disponível em aplicativos ASP.NET, dão suporte a comportamentos diferentes e são controladas de maneiras diferentes. Este tópico descreve os recursos que as sessões habilitam em aplicativos WCF e como usá-las.  
@@ -30,7 +30,7 @@ Em aplicativos Windows Communication Foundation (WCF), uma *sessão* correlacion
   
 - Não há nenhum repositório de dados geral associado a uma sessão WCF.  
   
- Se você estiver familiarizado com a <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe em aplicativos ASP.net e a funcionalidade que ele fornece, você poderá observar as seguintes diferenças entre esse tipo de sessão e sessões do WCF:  
+ Se você estiver familiarizado com a classe <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> em aplicativos ASP.NET e a funcionalidade que ele fornece, você poderá observar as seguintes diferenças entre esse tipo de sessão e sessões do WCF:  
   
 - As sessões ASP.NET são sempre iniciadas pelo servidor.  
   
@@ -49,7 +49,7 @@ Em aplicativos Windows Communication Foundation (WCF), uma *sessão* correlacion
 - Como entender e controlar a criação e o encerramento da sessão e a relação da sessão com a instância do serviço.  
   
 ## <a name="default-execution-behavior-using-sessions"></a>Comportamento de execução padrão usando sessões  
- Uma associação que tenta iniciar uma sessão é chamada de associação *baseada em sessão* . Os contratos de serviço especificam que eles exigem, permitem ou recusam associações baseadas em sessão definindo <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> a propriedade na interface do contrato de serviço (ou classe) como um <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> dos valores de enumeração. Por padrão, o valor dessa propriedade é <xref:System.ServiceModel.SessionMode.Allowed>, o que significa que, se um cliente usar uma associação baseada em sessão com uma implementação de serviço WCF, o serviço estabelecerá e usará a sessão fornecida.  
+ Uma associação que tenta iniciar uma sessão é chamada de associação *baseada em sessão* . Os contratos de serviço especificam que exigem, permitem ou recusam associações baseadas em sessão definindo a propriedade <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> na interface do contrato de serviço (ou classe) como um dos valores de enumeração de <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>. Por padrão, o valor dessa propriedade é <xref:System.ServiceModel.SessionMode.Allowed>, o que significa que, se um cliente usar uma associação baseada em sessão com uma implementação de serviço WCF, o serviço estabelecerá e usará a sessão fornecida.  
   
  Quando um serviço WCF aceita uma sessão de cliente, os seguintes recursos são habilitados por padrão:  
   
@@ -62,18 +62,18 @@ Em aplicativos Windows Communication Foundation (WCF), uma *sessão* correlacion
   
  O WCF fornece os seguintes tipos de comportamento de aplicativo baseado em sessão:  
   
-- O <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> oferece suporte a sessões baseadas em segurança, nas quais ambas as extremidades da comunicação têm acordado uma conversa segura específica. Para obter mais informações, consulte [Securing Services](../../../docs/framework/wcf/securing-services.md). Por exemplo, a <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> associação, que contém suporte para sessões de segurança e sessões confiáveis, por padrão usa apenas uma sessão segura que criptografa e assina digitalmente as mensagens.  
+- O <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> dá suporte a sessões baseadas em segurança, nas quais ambas as extremidades da comunicação têm acordado uma conversa segura específica. Para obter mais informações, consulte [Securing Services](securing-services.md). Por exemplo, a associação <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, que contém suporte para sessões de segurança e sessões confiáveis, por padrão usa apenas uma sessão segura que criptografa e assina digitalmente as mensagens.  
   
-- A <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> Associação dá suporte a sessões baseadas em TCP/IP para garantir que todas as mensagens sejam correlacionadas pela conexão no nível do soquete.  
+- A associação <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> dá suporte a sessões baseadas em TCP/IP para garantir que todas as mensagens sejam correlacionadas pela conexão no nível do soquete.  
   
-- O <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> elemento, que implementa a especificação WS-ReliableMessaging, fornece suporte para sessões confiáveis nas quais as mensagens podem ser configuradas para serem entregues em ordem e exatamente uma vez, garantindo que as mensagens sejam recebidas mesmo quando as mensagens viajam em vários nós durante a conversa. Para obter mais informações, consulte [sessões confiáveis](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- O elemento <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>, que implementa a especificação WS-ReliableMessaging, fornece suporte para sessões confiáveis nas quais as mensagens podem ser configuradas para serem entregues em ordem e exatamente uma vez, garantindo que as mensagens sejam recebidas mesmo quando as mensagens viajam por vários nós durante a conversa. Para obter mais informações, consulte [sessões confiáveis](./feature-details/reliable-sessions.md).  
   
-- A <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> associação fornece sessões de datagrama MSMQ. Para obter mais informações, consulte [filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- A associação <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> fornece sessões de datagrama MSMQ. Para obter mais informações, consulte [filas no WCF](./feature-details/queues-in-wcf.md).  
   
- Definir a <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade não especifica o tipo de sessão que o contrato requer, apenas que ele requer um.  
+ Definir a propriedade <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> não especifica o tipo de sessão que o contrato requer, apenas que ele requer um.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>Criando um contrato que requer uma sessão  
- A criação de um contrato que requer uma sessão declara que o grupo de operações que o contrato de serviço declara deve ser executado dentro da mesma sessão e que as mensagens devem ser entregues em ordem. Para declarar o nível de suporte de sessão que um contrato de serviço requer, <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> defina a propriedade na sua interface de contrato de serviço ou classe como <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> o valor da enumeração para especificar se o contrato:  
+ A criação de um contrato que requer uma sessão declara que o grupo de operações que o contrato de serviço declara deve ser executado dentro da mesma sessão e que as mensagens devem ser entregues em ordem. Para declarar o nível de suporte de sessão que um contrato de serviço requer, defina a propriedade <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> em sua interface de contrato de serviço ou classe como o valor da enumeração <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> para especificar se o contrato:  
   
 - Requer uma sessão.  
   
@@ -81,9 +81,9 @@ Em aplicativos Windows Communication Foundation (WCF), uma *sessão* correlacion
   
 - Proíbe uma sessão.  
   
- No entanto, definir a <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> propriedade não especifica o tipo de comportamento baseado em sessão que o contrato requer. Ele instrui o WCF a confirmar em tempo de execução que a associação configurada (que cria o canal de comunicação) para o serviço faz, não pode estabelecer uma sessão ao implementar um serviço. Novamente, a associação pode atender a esse requisito com qualquer tipo de comportamento baseado em sessão que ele escolhe — segurança, transporte, confiável ou alguma combinação. O comportamento exato depende do <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> valor selecionado. Se a associação configurada do serviço não estiver de acordo com o <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>valor de, uma exceção será lançada. Associações e os canais que eles criam que dão suporte a sessões são considerados baseados em sessão.  
+ No entanto, definir a propriedade <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> não especifica o tipo de comportamento baseado em sessão que o contrato requer. Ele instrui o WCF a confirmar em tempo de execução que a associação configurada (que cria o canal de comunicação) para o serviço faz, não pode estabelecer uma sessão ao implementar um serviço. Novamente, a associação pode atender a esse requisito com qualquer tipo de comportamento baseado em sessão que ele escolhe — segurança, transporte, confiável ou alguma combinação. O comportamento exato depende do valor de <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> selecionado. Se a associação configurada do serviço não estiver de acordo com o valor de <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>, uma exceção será lançada. Associações e os canais que eles criam que dão suporte a sessões são considerados baseados em sessão.  
   
- O contrato de serviço a seguir especifica que todas as `ICalculatorSession` operações no devem ser trocadas em uma sessão. Nenhuma das operações retorna um valor para o chamador, exceto o `Equals` método. No entanto `Equals` , o método não usa parâmetros e, portanto, pode retornar apenas um valor diferente de zero dentro de uma sessão na qual os dados já foram passados para as outras operações. Este contrato requer uma sessão para funcionar corretamente. Sem uma sessão associada a um cliente específico, a instância de serviço não tem como saber quais dados anteriores esse cliente enviou.  
+ O contrato de serviço a seguir especifica que todas as operações no `ICalculatorSession` devem ser trocadas em uma sessão. Nenhuma das operações retorna um valor para o chamador, exceto o método `Equals`. No entanto, o método `Equals` não usa parâmetros e, portanto, pode retornar apenas um valor diferente de zero dentro de uma sessão na qual os dados já foram passados para as outras operações. Este contrato requer uma sessão para funcionar corretamente. Sem uma sessão associada a um cliente específico, a instância de serviço não tem como saber quais dados anteriores esse cliente enviou.  
   
  [!code-csharp[S_Service_Session#1](../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
@@ -99,48 +99,48 @@ Em aplicativos Windows Communication Foundation (WCF), uma *sessão* correlacion
   
 - Um destruidor é chamado quando a referência do objeto é destruída.  
   
- As sessões permitem um comportamento semelhante entre clientes e serviços, contanto que o comportamento da instância de serviço padrão seja usado. Se um contrato de serviço exigir ou oferecer suporte a sessões, uma ou mais operações de contrato poderão ser marcadas como iniciando ou encerrando <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> uma sessão definindo as <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> Propriedades e.  
+ As sessões permitem um comportamento semelhante entre clientes e serviços, contanto que o comportamento da instância de serviço padrão seja usado. Se um contrato de serviço exigir ou oferecer suporte a sessões, uma ou mais operações de contrato poderão ser marcadas como iniciando ou encerrando uma sessão definindo as propriedades <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> e <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>.  
   
  *As operações de inicialização* são aquelas que devem ser chamadas como a primeira operação de uma nova sessão. Iniciar operações não pode ser chamado somente após pelo menos uma operação iniciando foi chamada. Portanto, você pode criar um tipo de construtor de sessão para seu serviço declarando operações de inicialização criadas para obter entrada de clientes apropriados para o início da instância do serviço. (No entanto, o estado é associado à sessão, e não ao objeto de serviço.)  
   
  *As operações de encerramento*, por outro lado, são aquelas que devem ser chamadas como a última mensagem em uma sessão existente. Em casos padrão, WCF recicla o objeto de serviço e seu contexto após a sessão com que o serviço foi associado é fechada. Você pode, portanto, criar um tipo de destruidor declarando operações de encerramento projetadas para executar uma função apropriada ao final da instância do serviço.  
   
 > [!NOTE]
-> Embora o comportamento padrão tenha uma aparência para construtores e destruidores locais, é apenas uma semelhança. Qualquer operação de serviço WCF pode ser uma operação de inicialização ou encerramento, ou ambas ao mesmo tempo. Além disso, no caso padrão, as operações de inicialização podem ser chamadas de qualquer número de vezes em qualquer ordem; nenhuma sessão adicional é criada depois que ela é estabelecida e associada a uma instância, a menos que você controle explicitamente o tempo de vida da instância do serviço <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (manipulando o objeto). Por fim, o estado é associado à sessão e não ao objeto de serviço.  
+> Embora o comportamento padrão tenha uma aparência para construtores e destruidores locais, é apenas uma semelhança. Qualquer operação de serviço WCF pode ser uma operação de inicialização ou encerramento, ou ambas ao mesmo tempo. Além disso, no caso padrão, as operações de inicialização podem ser chamadas de qualquer número de vezes em qualquer ordem; nenhuma sessão adicional é criada depois que ela é estabelecida e associada a uma instância, a menos que você controle explicitamente o tempo de vida da instância do serviço (manipulando o objeto <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>). Por fim, o estado é associado à sessão e não ao objeto de serviço.  
   
- Por exemplo, o `ICalculatorSession` contrato usado no exemplo anterior requer que o objeto cliente do WCF primeiro chame a `Clear` operação antes de qualquer outra operação e que a sessão com esse objeto cliente WCF seja encerrada ao chamar o `Equals` operação. O exemplo de código a seguir mostra um contrato que impõe esses requisitos. `Clear`deve ser chamado primeiro para iniciar uma sessão e essa sessão termina quando `Equals` é chamado.  
+ Por exemplo, o contrato `ICalculatorSession` usado no exemplo anterior requer que o objeto cliente do WCF chame primeiro a operação `Clear` antes de qualquer outra operação e que a sessão com esse objeto cliente WCF seja encerrada ao chamar a operação `Equals`. O exemplo de código a seguir mostra um contrato que impõe esses requisitos. `Clear` deve ser chamado primeiro para iniciar uma sessão e essa sessão termina quando `Equals` é chamado.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  Os serviços não iniciam sessões com clientes. Em aplicativos cliente WCF, existe uma relação direta entre o tempo de vida do canal baseado em sessão e o tempo de vida da própria sessão. Dessa forma, os clientes criam novas sessões criando novos canais baseados em sessão e subdividindo sessões existentes fechando os canais baseados em sessão normalmente. Um cliente inicia uma sessão com um ponto de extremidade de serviço chamando um dos seguintes:  
   
-- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>no canal retornado por uma chamada para <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> no canal retornado por uma chamada para <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>no objeto cliente do WCF gerado pela [ferramenta do utilitário de metadados ServiceModel (svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> no objeto de cliente do WCF gerado pela [ferramenta do utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 - Uma operação de inicialização em qualquer tipo de objeto de cliente WCF (por padrão, todas as operações são iniciadas). Quando a primeira operação é chamada, o objeto cliente do WCF abre o canal automaticamente e inicia uma sessão.  
   
  Normalmente, um cliente encerra uma sessão com um ponto de extremidade de serviço chamando um dos seguintes:  
   
-- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>no canal retornado por uma chamada para <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> no canal retornado por uma chamada para <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>no objeto cliente do WCF gerado por svcutil. exe.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> no objeto de cliente do WCF gerado por svcutil. exe.  
   
 - Uma operação de encerramento em qualquer tipo de objeto de cliente do WCF (por padrão, nenhuma operação está sendo encerrada; o contrato deve especificar explicitamente uma Operation de encerramento). Quando a primeira operação é chamada, o objeto cliente do WCF abre o canal automaticamente e inicia uma sessão.  
   
- Para ver mais exemplos, veja [Como: Crie um serviço que exija sessões](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , bem como o [comportamento do serviço padrão](../../../docs/framework/wcf/samples/default-service-behavior.md) e amostras de [instanciação](../../../docs/framework/wcf/samples/instancing.md) .  
+ Para obter exemplos, consulte [como criar um serviço que requer sessões](./feature-details/how-to-create-a-service-that-requires-sessions.md) , bem como o [comportamento do serviço padrão](./samples/default-service-behavior.md) e amostras de [instanciação](./samples/instancing.md) .  
   
- Para obter mais informações sobre clientes e sessões, consulte Acessando [serviços usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Para obter mais informações sobre clientes e sessões, consulte [acessando serviços usando um cliente WCF](./feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Sessões interagem com configurações de InstanceContext  
- Há uma interação entre a <xref:System.ServiceModel.SessionMode> enumeração em um contrato e a <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> Propriedade, que controla a associação entre canais e objetos de serviço específicos. Para obter mais informações, consulte [sessões, instanciação e simultaneidade](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Há uma interação entre a enumeração <xref:System.ServiceModel.SessionMode> em um contrato e a propriedade <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>, que controla a associação entre canais e objetos de serviço específicos. Para obter mais informações, consulte [sessões, instanciação e simultaneidade](./feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Compartilhando objetos InstanceContext  
- Você também pode controlar qual canal baseado em sessão ou chamada está associado a qual <xref:System.ServiceModel.InstanceContext> objeto executando essa associação por conta própria. 
+ Você também pode controlar qual canal baseado em sessão ou chamada está associado a qual objeto <xref:System.ServiceModel.InstanceContext> executando essa associação por conta própria. 
   
 ## <a name="sessions-and-streaming"></a>Sessões e streaming  
- Quando você tem uma grande quantidade de dados a serem transferidos, o modo de transferência de streaming no WCF é uma alternativa viável para o comportamento padrão de armazenamento em buffer e processamento de mensagens na memória em sua totalidade. Você pode obter um comportamento inesperado durante o streaming de chamadas com uma associação baseada em sessão. Todas as chamadas de streaming são feitas por um único canal (o canal de datagrama) que não oferece suporte a sessões mesmo que a associação que está sendo usada esteja configurada para usar sessões. Se vários clientes fizerem chamadas de streaming para o mesmo objeto de serviço em uma associação baseada em sessão, e o modo de simultaneidade do objeto de serviço for definido como único e seu `PerSession`modo de contexto de instância for definido como, todas as chamadas deverão passar pelo canal do datagrama e, portanto, apenas uma chamada é processada de cada vez. Portanto, um ou mais clientes podem atingir o tempo limite. Você pode contornar esse problema Configurando o objeto `InstanceContextMode` de serviço para `PerCall` ou a simultaneidade com vários.  
+ Quando você tem uma grande quantidade de dados a serem transferidos, o modo de transferência de streaming no WCF é uma alternativa viável para o comportamento padrão de armazenamento em buffer e processamento de mensagens na memória em sua totalidade. Você pode obter um comportamento inesperado durante o streaming de chamadas com uma associação baseada em sessão. Todas as chamadas de streaming são feitas por um único canal (o canal de datagrama) que não oferece suporte a sessões mesmo que a associação que está sendo usada esteja configurada para usar sessões. Se vários clientes fizerem chamadas de streaming para o mesmo objeto de serviço em uma associação baseada em sessão, e o modo de simultaneidade do objeto de serviço for definido como único e seu modo de contexto de instância estiver definido como `PerSession`, todas as chamadas deverão passar pelo canal do datagrama e, portanto, apenas uma a chamada é processada de cada vez. Um ou mais clientes podem atingir o tempo limite. Você pode contornar esse problema definindo o `InstanceContextMode` do objeto de serviço como `PerCall` ou simultaneidade para vários.  
   
 > [!NOTE]
 > MaxConcurrentSessions não têm nenhum efeito nesse caso porque há apenas uma "sessão" disponível.  

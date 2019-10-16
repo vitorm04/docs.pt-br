@@ -2,19 +2,19 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 9d35306d1299e91ecaa55a7d2818ee1e2982793f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08bcaad4fdc0cf5324ff9976fcf48c23b206e72f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249192"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319386"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 Retorna uma referência a uma instância de entidade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 REF( expression )   
 ```  
   
@@ -22,7 +22,7 @@ REF( expression )
  `expression`  
  Qualquer expressão válida que produzir uma instância de um tipo de objeto.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Uma referência à instância de entidade especificada.  
   
 ## <a name="remarks"></a>Comentários  
@@ -33,11 +33,11 @@ REF( expression )
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o operador de referência para retornar a referência para um argumento de entidade de entrada. A mesma consulta desreferencia a referência porque estamos usando uma operação de extração de propriedade (.) para acessar uma propriedade de entidade do produto. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna os resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)de primitivatype.  
+1. Siga o procedimento em [como executar uma consulta que retorna os resultados de primitivatype](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
+ [!code-sql[DP EntityServices Concepts#REF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#ref)]  
   
 ## <a name="see-also"></a>Consulte também
 

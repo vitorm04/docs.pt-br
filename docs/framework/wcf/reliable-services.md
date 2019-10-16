@@ -8,43 +8,43 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 67da784646cd918d7ce4a269311eedb6abee5013
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 78f492c7a7c5abd7b72c40fc5695b8d56003f822
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651029"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319884"
 ---
 # <a name="reliable-services"></a>Serviços confiáveis
-Sessões confiáveis e filas são os recursos do Windows Communication Foundation (WCF) que implementam o sistema de mensagens confiável. Este tópico explica os recursos de mensagens confiáveis do WCF.  
+As filas e as sessões confiáveis são os recursos de Windows Communication Foundation (WCF) que implementam mensagens confiáveis. Este tópico explica os recursos de mensagens confiáveis do WCF.  
   
- *Mensagens confiáveis* é como uma fonte confiável de mensagens (chamado de *código-fonte*) transfere mensagens de forma confiável para um destino de sistema de mensagens confiável (chamado o *destino*).  
+ O *sistema de mensagens confiável* é como uma fonte de mensagens confiável (chamada de *origem*) transfere mensagens de forma confiável para um destino de mensagem confiável (chamado de *destino*).  
   
- Sistema de mensagens confiável executa as seguintes funções:  
+ O sistema de mensagens confiável executa as seguintes funções:  
   
-- Transfere garantias para as mensagens enviadas de uma fonte para um destino, independentemente das falhas de transporte ou transferência de mensagem.  
+- Transfere garantias de mensagens enviadas de uma origem para um destino, independentemente da transferência de mensagens ou falhas de transporte.  
   
-- Separa o código-fonte e o destino uns dos outros. Isso fornece falha independente e recuperação do código-fonte e o destino, bem como transferência confiável e entrega de mensagens, mesmo quando a origem ou destino está indisponível.  
+- Separa a origem e o destino entre si. Isso fornece falha independente e recuperação da origem e do destino, bem como transferência confiável e entrega de mensagens, mesmo quando a origem ou o destino não está disponível.  
   
- Mensagens confiáveis com frequência vem às custas de alta latência. *Latência* é o tempo necessário para a mensagem alcançar o destino da origem. WCF, portanto, fornece os seguintes tipos de sistema de mensagens confiável:  
+ As mensagens confiáveis frequentemente são o custo de alta latência. *Latência* é o tempo que leva para a mensagem alcançar o destino da origem. O WCF, portanto, fornece os seguintes tipos de mensagens confiáveis:  
   
-- [Sessões confiáveis](../../../docs/framework/wcf/feature-details/reliable-sessions.md), que oferece uma transferência confiável sem o custo de alta latência.  
+- [Sessões confiáveis](./feature-details/reliable-sessions.md), que oferecem transferência confiável sem o custo de alta latência.  
   
-- [As filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), que oferece transferências confiáveis e a separação entre a origem e destino.  
+- [Filas no WCF](./feature-details/queues-in-wcf.md), que oferece transferências confiáveis e separação entre a origem e o destino.  
   
 ## <a name="reliable-sessions"></a>Sessões confiáveis  
- Sessões confiáveis fornecem transferência confiável de ponta a ponta de mensagens entre uma origem e um destino usando o protocolo WS-confiável de mensagens, independentemente do número ou tipo de intermediários que separam os pontos de extremidade de mensagens (origem e destino). Isso inclui qualquer intermediário de transporte que não usa SOAP (por exemplo, proxies HTTP) ou intermediários que usam o SOAP (por exemplo, roteadores baseados em SOAP ou pontes) que são necessários para que as mensagens fluam entre os pontos de extremidade. Sessões confiáveis usam uma janela de transferência na memória para falhas de nível de mensagem SOAP máscara e restabelecer as conexões no caso de falhas de transporte.  
+ As sessões confiáveis fornecem transferência de mensagens confiável de ponta a ponta entre uma origem e um destino usando o protocolo de mensagens WS-Reliable, independentemente do número ou tipo de intermediários que separam os pontos de extremidade de mensagens (origem e destino). Isso inclui os intermediários de transporte que não usam SOAP (por exemplo, proxies HTTP) ou intermediários que usam SOAP (por exemplo, roteadores ou pontes baseados em SOAP) que são necessários para que as mensagens fluam entre os pontos de extremidade. As sessões confiáveis usam uma janela de transferência na memória para mascarar falhas de nível de mensagem SOAP e restabelecer conexões no caso de falhas de transporte.  
   
- Sessões confiáveis fornecem transferências de mensagens confiáveis de baixa latência. Eles fornecem para mensagens SOAP sobre quaisquer proxies ou intermediários, equivalente ao qual o TCP fornece para pacotes em pontes IP. Para obter mais informações sobre as sessões confiáveis, consulte [sessões confiáveis](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ As sessões confiáveis fornecem transferências de mensagens confiáveis de baixa latência. Eles fornecem mensagens SOAP sobre quaisquer proxies ou intermediários, equivalentes ao que o TCP fornece para pacotes em pontes IP. Para obter mais informações sobre sessões confiáveis, consulte [sessões confiáveis](./feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Filas  
- As filas no WCF fornecem ambas as transferências de confiáveis de mensagens e a separação entre origens e destinos às custas de alta latência. WCF em fila comunicação baseia-se na parte superior Message Queuing (MSMQ).  
+ As filas no WCF fornecem transferências confiáveis de mensagens e separação entre origens e destinos ao custo de alta latência. A comunicação na fila do WCF é criada com base no MSMQ (enfileiramento de mensagens).  
   
- MSMQ é fornecido como um componente opcional do Windows. O serviço MSMQ é executado como um serviço do Windows. Ele captura mensagens para transmissão em uma fila de transmissão em nome de origem e a entrega para uma fila de destino. A fila de destino aceita mensagens em nome de destino para entrega posterior sempre que o destino solicita as mensagens. Os gerenciadores de MSMQ implementam um protocolo de transferência de mensagens confiável, de modo que as mensagens não são perdidas durante a transmissão. O protocolo pode ser nativo ou um protocolo baseado em SOAP chamado Reliable Messaging protocolo SRMP (SOAP).  
+ O MSMQ é fornecido como um componente opcional com o Windows. O serviço MSMQ é executado como um serviço do Windows. Ele captura mensagens para transmissão em uma fila de transmissão em nome da origem e a entrega a uma fila de destino. A fila de destino aceita mensagens em nome do destino para entrega posterior sempre que o destino solicita mensagens. Os gerenciadores MSMQ implementam um protocolo de transferência de mensagens confiável para que as mensagens não sejam perdidas na transmissão. O protocolo pode ser nativo ou um protocolo baseado em SOAP chamado de SRMP (protocolo de mensagens confiáveis SOAP).  
   
- A separação, juntamente com as transferências de mensagens confiável entre as filas, permite que os aplicativos que são flexíveis para se comunicar de forma confiável. Ao contrário de sessões confiáveis, a origem e destino não precisa estar em execução ao mesmo tempo. Implicitamente, isso possibilita cenários em que filas são, na verdade, usadas como um mecanismo de nivelamento de carga quando a taxa da origem de produção de mensagem e a taxa do destino do consumo de mensagem não coincidem. Para obter mais informações sobre filas, consulte [filas no WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ A separação, combinada com transferências de mensagens confiáveis entre filas, permite que os aplicativos que são livremente acoplados se comuniquem de forma confiável. Ao contrário de sessões confiáveis, a origem e o destino não precisam estar em execução ao mesmo tempo. Isso habilita implicitamente cenários em que as filas são, na verdade, usadas como um mecanismo de nivelamento de carga quando a taxa de produção de mensagem da origem e a taxa de destino do consumo de mensagem não coincidem. Para obter mais informações sobre filas, consulte [filas no WCF](./feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral de sessões confiáveis](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
-- [Enfileiramento no WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Visão geral de sessões confiáveis](./feature-details/reliable-sessions-overview.md)
+- [Enfileiramento no WCF](./feature-details/queuing-in-wcf.md)

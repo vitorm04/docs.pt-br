@@ -2,12 +2,12 @@
 title: Modelos do Visual Studio do WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916784"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320483"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 Os modelos do Windows Communication Foundation (WCF) do Visual Studio são modelos de projeto e item predefinidos que você pode usar no Visual Studio para criar rapidamente serviços WCF e aplicativos adjacentes.  
@@ -27,7 +27,7 @@ Os modelos do Windows Communication Foundation (WCF) do Visual Studio são model
 - Arquivo de configuração de aplicativo (App. config). O arquivo de configuração fornece os elementos básicos de um modelo de serviço WCF com uma associação HTTP segura. Ele também inclui um ponto de extremidade para o serviço e habilita a troca de metadados.  
   
 > [!NOTE]
-> O Visual Studio é configurado para reconhecer o arquivo app. config como o arquivo de configuração para o projeto quando ele é executado usando o [host de serviço do WCF (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que é a configuração padrão. Se você hospedar a biblioteca de serviços em um executável, precisará mover o código de configuração para o arquivo de configuração do executável, pois os arquivos de configuração para DLLs não são válidos.  
+> O Visual Studio é configurado para reconhecer o arquivo app. config como o arquivo de configuração para o projeto quando ele é executado usando o [host de serviço do WCF (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md), que é a configuração padrão. Se você hospedar a biblioteca de serviços em um executável, precisará mover o código de configuração para o arquivo de configuração do executável, pois os arquivos de configuração para DLLs não são válidos.  
   
 ### <a name="wcf-service-application-template"></a>Modelo de aplicativo de serviço WCF  
  O modelo de aplicativo de serviço WCF está disponível na caixa de diálogo novo projeto em **Visual C#\WCF** e **Visual Basic\WCF**.  
@@ -59,12 +59,12 @@ Os modelos do Windows Communication Foundation (WCF) do Visual Studio são model
  Um arquivo de host de serviço (Service1. svc) também será criado se o projeto existente for um projeto Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modelo de item e projeto de serviço WCF WF.  
- Esses modelos criam serviços WCF que hospedam um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço Web. Existem modelos separados para modelos de programação XAML ou imperativos. Usando os modelos, você pode criar um fluxo de trabalho Sequencial ou de máquina de estado. Para obter mais informações sobre esses tipos de fluxo de [trabalho, consulte Como: Crie um fluxo](../windows-workflow-foundation/how-to-create-a-workflow.md)de trabalho. Para obter mais informações sobre como criar projetos de fluxo de trabalho, consulte [criando projetos de fluxo de trabalho herdados](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Esses modelos criam serviços WCF que hospedam um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço Web. Existem modelos separados para modelos de programação XAML ou imperativos. Usando os modelos, você pode criar um fluxo de trabalho Sequencial ou de máquina de estado. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [como: criar um fluxo de trabalho](../windows-workflow-foundation/how-to-create-a-workflow.md). Para obter mais informações sobre como criar projetos de fluxo de trabalho, consulte [criando projetos de fluxo de trabalho herdados](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  O Visual Studio designer é mais responsivo quando os fluxos de trabalho do tipo XOML são usados em vez de códigos baseados em código. Fluxo de trabalho de XOML é o tipo de fluxo de trabalho padrão a ser criado.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Modelo de biblioteca de serviço de distribuição do WCF  
- Este modelo permite que você exponha seu feed no formato RSS ou ATOM como um serviço WCF. Para obter mais informações, consulte agregação do [WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Este modelo permite que você exponha seu feed no formato RSS ou ATOM como um serviço WCF. Para obter mais informações, consulte [agregação do WCF](./feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Alterando o endereço do feed  
  O modelo de distribuição usa o Internet Explorer durante a execução. Ao clicar com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** e você poderá ver o endereço padrão do modelo. O Internet Explorer tenta abrir o feed neste endereço.  
@@ -80,9 +80,9 @@ Os modelos do Windows Communication Foundation (WCF) do Visual Studio são model
  Para acessar esse modelo, clique com o botão direito do mouse em um site da Web ou em um projeto de aplicativo Web no **Gerenciador de soluções**, clique em **Adicionar um novo item**e clique em **serviço WCF habilitado para Silverlight**.  
   
 > [!NOTE]
-> O serviço WCF habilitado para Silverlight expõe um `basicHttpBinding` ponto de extremidade sem habilitar nenhuma configuração de segurança. Portanto, as informações sobre o serviço podem ser obtidas por todos os clientes que se conectam a esse serviço. As mensagens trocadas entre o serviço e o cliente também não são assinadas ou criptografadas. Para proteger o ponto de extremidade corretamente, você deve usar a autenticação ASP.NET, HTTPS ou outros mecanismos.  
+> O serviço WCF habilitado para Silverlight expõe um ponto de extremidade `basicHttpBinding` sem habilitar nenhuma configuração de segurança. Portanto, as informações sobre o serviço podem ser obtidas por todos os clientes que se conectam a esse serviço. As mensagens trocadas entre o serviço e o cliente também não são assinadas ou criptografadas. Para proteger o ponto de extremidade corretamente, você deve usar a autenticação ASP.NET, HTTPS ou outros mecanismos.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Host de serviço do WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [Cliente de teste do WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

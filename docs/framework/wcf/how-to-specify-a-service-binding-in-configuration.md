@@ -1,27 +1,27 @@
 ---
-title: 'Como: especificar uma associação de serviço na configuração'
+title: Como especificar uma associação de serviço em configuração
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9790d3fb5fc20b3d2c6ce776070274ef0403732
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967164"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319866"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Como: especificar uma associação de serviço na configuração
-Neste exemplo, um `ICalculator` contrato é definido para um serviço de calculadora básica, o serviço é implementado `CalculatorService` na classe e, em seguida, seu ponto de extremidade é configurado no arquivo Web. config, onde é especificado que o serviço usa <xref:System.ServiceModel.BasicHttpBinding> o . Para obter uma descrição de como configurar esse serviço usando o código em vez de uma configuração [, consulte Como: Especifique uma associação de serviço no](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)código.  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Como especificar uma associação de serviço em configuração
+Neste exemplo, um contrato `ICalculator` é definido para um serviço de calculadora básica, o serviço é implementado na classe `CalculatorService` e, em seguida, seu ponto de extremidade é configurado no arquivo Web. config, onde é especificado que o serviço usa o <xref:System.ServiceModel.BasicHttpBinding>. Para obter uma descrição de como configurar esse serviço usando o código em vez de uma configuração, consulte [como especificar uma associação de serviço no código](how-to-specify-a-service-binding-in-code.md).  
   
  Geralmente, é a prática recomendada especificar a associação e as informações de endereço de forma declarativa na configuração, em vez de imperativa no código. A definição de pontos de extremidade no código geralmente não é prática porque as associações e os endereços para um serviço implantado são normalmente diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, manter as informações de vinculação e endereçamento do código permite que elas sejam alteradas sem a necessidade de recompilar ou reimplantar o aplicativo.  
   
- Todas as etapas de configuração a seguir podem ser executadas usando a [ferramenta do editor de configuração (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Todas as etapas de configuração a seguir podem ser executadas usando a [ferramenta do editor de configuração (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Para a cópia de origem deste exemplo, consulte [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md).  
+ Para a cópia de origem deste exemplo, consulte [BasicBinding](./samples/basicbinding.md).  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Para especificar o BasicHttpBinding a ser usado para configurar o serviço  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Para especificar o BasicHttpBinding a ser usado para configurar o serviço  
   
 1. Defina um contrato de serviço para o tipo de serviço.  
   
@@ -36,7 +36,7 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço de calcula
     > [!NOTE]
     > As informações de endereço ou de associação não são especificadas dentro da implementação do serviço. Além disso, o código não precisa ser escrito para buscar essas informações do arquivo de configuração.  
   
-3. Crie um arquivo Web. config para configurar um ponto de extremidade `CalculatorService` para o que <xref:System.ServiceModel.WSHttpBinding>usa o.  
+3. Crie um arquivo Web. config para configurar um ponto de extremidade para o `CalculatorService` que usa o <xref:System.ServiceModel.WSHttpBinding>.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -79,9 +79,9 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço de calcula
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Para modificar os valores padrão das propriedades de associação  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>Para modificar os valores padrão das propriedades de associação  
   
-1. Para modificar um dos valores de propriedade padrão do <xref:System.ServiceModel.WSHttpBinding>, crie um novo `<binding name="Binding1">` nome de configuração de associação, dentro do [ \<elemento WSHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) e defina os novos valores para os atributos da Associação nesta associação elementos. Por exemplo, para alterar os valores de tempo limite de abertura e fechamento padrão de 1 minuto para 2 minutos, adicione o seguinte ao arquivo de configuração.  
+1. Para modificar um dos valores de propriedade padrão do <xref:System.ServiceModel.WSHttpBinding>, crie um novo nome de configuração de associação-`<binding name="Binding1">`-dentro do elemento de [> de \<wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) e defina os novos valores para os atributos da Associação nesse elemento de associação. Por exemplo, para alterar os valores de tempo limite de abertura e fechamento padrão de 1 minuto para 2 minutos, adicione o seguinte ao arquivo de configuração.  
   
     ```xml  
     <wsHttpBinding>  
@@ -94,5 +94,5 @@ Neste exemplo, um `ICalculator` contrato é definido para um serviço de calcula
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md)
+- [Especificando um endereço do ponto de extremidade](specifying-an-endpoint-address.md)

@@ -4,59 +4,59 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 8c1e44609a0a20ffcec55af43e49ee62b0842378
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348194"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320754"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Visão geral de associações do Windows Communication Foundation
-Associações são objetos que são usados para especificar os detalhes de comunicação que são necessárias para se conectar ao ponto de extremidade de um serviço do Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF requer uma associação a ser bem especificado. Este tópico descreve os tipos dos detalhes de comunicação que definem as associações, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  
+Associações são objetos que são usados para especificar os detalhes de comunicação que são necessários para se conectar ao ponto de extremidade de um serviço de Windows Communication Foundation (WCF). Cada ponto de extremidade em um serviço WCF exige que uma associação seja bem especificada. Este tópico descreve os tipos de detalhes de comunicação que as associações definem, os elementos de uma associação, quais associações são incluídas no WCF e como uma associação pode ser especificada para um ponto de extremidade.  
   
-## <a name="what-a-binding-defines"></a>O que define uma associação  
- As informações em uma associação podem ser muito básico ou muito complexos. A associação mais básica especifica somente o protocolo de transporte (como HTTP) que deve ser usado para se conectar ao ponto de extremidade. De modo geral, as informações de que uma associação contém sobre como se conectar a um ponto de extremidade se enquadra em uma das seguintes categorias:  
+## <a name="what-a-binding-defines"></a>O que uma associação define  
+ As informações em uma associação podem ser muito básicas ou muito complexas. A associação mais básica especifica apenas o protocolo de transporte (como HTTP) que deve ser usado para se conectar ao ponto de extremidade. Em geral, as informações que uma associação contém sobre como se conectar a um ponto de extremidade se enquadram em uma das seguintes categorias:  
   
  **Protocolos**  
- Determina o mecanismo de segurança que está sendo usado: recurso de mensagens confiável ou configurações de fluxo do contexto de transação.  
+ Determina o mecanismo de segurança que está sendo usado: capacidade de mensagens confiável ou configurações de fluxo de contexto de transação.  
   
- **Encoding**  
- Determina a codificação de mensagens (por exemplo, texto ou binário).  
+ **Mecanismo**  
+ Determina a codificação de mensagem (por exemplo, texto ou binário).  
   
- **Transporte**  
- Determina o protocolo de transporte subjacente usada (por exemplo, TCP ou HTTP).  
+ **Porta**  
+ Determina o protocolo de transporte subjacente a ser usado (por exemplo, TCP ou HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Os elementos de uma associação  
- Uma associação consiste basicamente em uma pilha ordenada de elementos, de associação de cada um deles especifica parte das informações de comunicação necessárias para se conectar a um ponto de extremidade de serviço. Duas camadas mais baixas na pilha são ambos necessários. Na base da pilha é o elemento de associação de transporte e logo acima do que isso é o elemento que contém as especificações de codificação de mensagem. Os elementos de associação opcional que especifica os protocolos de comunicação são colocadas em camadas acima desses dois elementos necessários. Para obter mais informações sobre esses elementos de associação e a ordem correta, consulte [ligações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Uma associação basicamente consiste em uma pilha ordenada de elementos de associação, cada um deles especifica parte das informações de comunicação necessárias para se conectar a um ponto de extremidade de serviço. As duas camadas mais baixas na pilha são obrigatórias. Na base da pilha está o elemento de ligação de transporte e logo acima é o elemento que contém as especificações de codificação de mensagem. Os elementos de associação opcionais que especificam os outros protocolos de comunicação são dispostos em camadas acima desses dois elementos necessários. Para obter mais informações sobre esses elementos de ligação e sua ordenação correta, consulte [associações personalizadas](./extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema  
- As informações em uma associação podem ser complexas, e algumas configurações podem não ser compatíveis com outras pessoas. Por esse motivo, o WCF inclui um conjunto de associações fornecidas pelo sistema. Essas associações são projetadas para abranger a maioria dos requisitos do aplicativo. As classes a seguir representam alguns exemplos das associações fornecidas pelo sistema:  
+ As informações em uma associação podem ser complexas e algumas configurações podem não ser compatíveis com outras. Por esse motivo, o WCF inclui um conjunto de associações fornecidas pelo sistema. Essas associações foram projetadas para abranger a maioria dos requisitos de aplicativo. As classes a seguir representam alguns exemplos de associações fornecidas pelo sistema:  
   
-- <xref:System.ServiceModel.BasicHttpBinding>: Um protocolo HTTP adequado para se conectar a serviços Web de associação que está em conformidade com o WS-eu especificação do Basic Profile (por exemplo, a serviços baseados em serviços da Web do ASP.NET).  
+- <xref:System.ServiceModel.BasicHttpBinding>: uma associação de protocolo HTTP adequada para conexão com serviços Web que está em conformidade com a especificação de perfil básico WS-I (por exemplo, serviços baseados em serviços Web do ASP.NET).  
   
-- <xref:System.ServiceModel.WSHttpBinding>: Uma associação interoperável adequada para se conectar a pontos de extremidade que estão em conformidade com o WS-* protocolos.  
+- <xref:System.ServiceModel.WSHttpBinding>: uma associação interoperável adequada para se conectar a pontos de extremidade que estão em conformidade com os protocolos WS-*.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa o .NET Framework para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: usa o .NET Framework para se conectar a outros pontos de extremidade do WCF no mesmo computador.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Usa o .NET Framework para criar na fila de mensagens conexões com outros pontos de extremidade do WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: usa o .NET Framework para criar conexões de mensagens em fila com outros pontos de extremidade do WCF.  
 
-- <xref:System.ServiceModel.NetTcpBinding>: Esta associação oferece um desempenho mais alto que associações HTTP e é ideal para uso em uma rede local.
+- <xref:System.ServiceModel.NetTcpBinding>: essa associação oferece um desempenho maior que as associações HTTP e é ideal para uso em uma rede local.
   
- Para obter uma lista completa, com descrições de todas as associações de fornecido com o WCF, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
+ Para obter uma lista completa, com descrições de todas as associações fornecidas pelo WCF, consulte [associações fornecidas pelo sistema](system-provided-bindings.md).  
   
-## <a name="using-your-own-bindings"></a>Usando suas próprias ligações  
- Se nenhuma das associações fornecidas pelo sistema incluídas tem a combinação certa de recursos necessários para um aplicativo de serviço, você pode criar sua própria associação. Há duas formas de fazer isso. Você pode criar uma nova associação de preexistente em elementos de associação usando um <xref:System.ServiceModel.Channels.CustomBinding> objeto ou você pode criar uma associação completamente definida pelo usuário, derivando do <xref:System.ServiceModel.Channels.Binding> associação. Para obter mais informações sobre como criar sua própria associação usando estas duas abordagens, consulte [ligações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md) e [Criando associações](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+## <a name="using-your-own-bindings"></a>Usando suas próprias associações  
+ Se nenhuma das associações fornecidas pelo sistema incluída tiver a combinação certa de recursos que um aplicativo de serviço requer, você poderá criar sua própria associação. Há duas formas de fazer isso. Você pode criar uma nova associação a partir de elementos de associação pré-existentes usando um objeto <xref:System.ServiceModel.Channels.CustomBinding> ou pode criar uma associação totalmente definida pelo usuário derivando da Associação de <xref:System.ServiceModel.Channels.Binding>. Para obter mais informações sobre como criar sua própria Associação usando essas duas abordagens, consulte [associações personalizadas](./extending/custom-bindings.md) e [Criando associações definidas pelo usuário](./extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Usando associações  
- Usando associações envolve duas etapas básicas:  
+ O uso de associações envolve duas etapas básicas:  
   
-1. Selecione ou defina uma associação. É o método mais fácil escolher uma das associações fornecidas pelo sistema incluídas com o WCF e usá-lo com suas configurações padrão. Também pode escolher uma associação fornecida pelo sistema e de redefinição de seus valores de propriedade para atender às suas necessidades. Como alternativa, você pode criar uma ligação personalizada ou uma associação definida pelo usuário ter níveis mais altos de controle e personalização.  
+1. Selecione ou defina uma associação. O método mais fácil é escolher uma das associações fornecidas pelo sistema incluídas com o WCF e usá-la com suas configurações padrão. Você também pode escolher uma associação fornecida pelo sistema e redefinir seus valores de propriedade para atender às suas necessidades. Como alternativa, você pode criar uma associação personalizada ou uma associação definida pelo usuário para ter mais graus de controle e personalização.  
   
-2. Crie um ponto de extremidade que usa a associação selecionada ou definido.  
+2. Crie um ponto de extremidade que usa a associação selecionada ou definida.  
   
-## <a name="code-and-configuration"></a>Configuração e código  
- Você pode definir associações de duas maneiras: por meio de código ou por meio da configuração. Essas duas abordagens não dependem se você estiver usando uma associação fornecida pelo sistema ou uma associação personalizada. Em geral, usando código lhe dá controle total sobre a definição de uma associação em tempo de design. Por outro lado, usando a configuração, permite que um administrador do sistema ou o usuário de um serviço WCF ou o cliente para alterar os parâmetros de uma associação sem ter que recompilar o aplicativo de serviço. Essa flexibilidade geralmente é desejável porque não há nenhuma maneira de prever os requisitos de máquina específica em que um aplicativo WCF deve ser implantado. Manter a associação (e o endereçamento) informações fora do código permite que eles alterem os sem a necessidade de recompilação ou reimplantação do aplicativo. Observe que associações definidas em código são criadas após associações especificadas na configuração, permitindo que as associações definidas pelo código substituir todas as associações definidas por configuração.  
+## <a name="code-and-configuration"></a>Código e configuração  
+ Você pode definir associações de duas maneiras: por meio de código ou por meio de configuração. Essas duas abordagens não dependem se você estiver usando uma associação fornecida pelo sistema ou uma associação personalizada. Em geral, o uso de código lhe dá controle total sobre a definição de uma associação em tempo de design. Usar a configuração, por outro lado, permite que um administrador do sistema ou o usuário de um serviço ou cliente do WCF altere os parâmetros de uma associação sem precisar recompilar o aplicativo de serviço. Essa flexibilidade geralmente é desejável porque não há como prever requisitos de máquina específicos nos quais um aplicativo WCF deve ser implantado. Manter a associação (e as informações de endereçamento) do código permite que elas sejam alteradas sem a necessidade de recompilação ou reimplantação do aplicativo. Observe que as associações definidas no código são criadas após associações especificadas na configuração, permitindo que as associações definidas pelo código substituam quaisquer associações definidas pela configuração.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md)

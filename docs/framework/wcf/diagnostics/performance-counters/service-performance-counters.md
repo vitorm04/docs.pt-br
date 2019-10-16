@@ -2,15 +2,15 @@
 title: Contadores de desempenho de serviço
 ms.date: 03/30/2017
 ms.assetid: 4210f549-31f2-4ea7-99bd-69eaffb98ddf
-ms.openlocfilehash: 4ce0efbeb0a1d6f2409bb976102b8ec8821d5cdc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 929ddcb2f271b7488270ea39e7a3a0037158c855
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848989"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320024"
 ---
 # <a name="service-performance-counters"></a>Contadores de desempenho de serviço
-Os contadores de desempenho de serviço medem o comportamento do serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no objeto `ServiceModelService 4.0.0.0` de desempenho ao exibir com o monitor de desempenho (Perfmon. exe). As instâncias são nomeadas usando o seguinte padrão:  
+Os contadores de desempenho de serviço medem o comportamento do serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no objeto de desempenho `ServiceModelService 4.0.0.0` ao exibir com o monitor de desempenho (Perfmon. exe). As instâncias são nomeadas usando o seguinte padrão:  
   
 `ServiceName@ServiceBaseAddress`
   
@@ -19,4 +19,4 @@ Os contadores de desempenho de serviço medem o comportamento do serviço como u
   
 ## <a name="see-also"></a>Consulte também
 
-- [Contadores de desempenho](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+- [Contadores de desempenho](index.md)

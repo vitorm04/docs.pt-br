@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567569"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320015"
 ---
 # <a name="net-framework-application-essentials"></a>Fundamentos do aplicativo .NET Framework
 Esta seção da documentação do .NET Framework oferece informações sobre tarefas básicas de desenvolvimento do aplicativo no .NET Framework.  
@@ -54,8 +54,7 @@ Esta seção da documentação do .NET Framework oferece informações sobre tar
  [Globalização e localização](../../docs/standard/globalization-localization/index.md)  
  Oferece informações para ajudar você a projetar e desenvolver aplicativos prontos para uso.  
   
- Acessibilidade  
- Oferece informações sobre a Automação da Interface do Usuário Microsoft, que é uma estrutura de acessibilidade que lida com as necessidades de produtos de tecnologia adaptativa e estruturas de teste automatizado fornecendo acesso programático a informações sobre a interface do usuário.  
+ [Acessibilidade](../../docs/framework/ui-automation/index.md) Fornece informações sobre a automação da interface do usuário da Microsoft, que é uma estrutura de acessibilidade que aborda as necessidades de produtos de tecnologia assistencial e estruturas de teste automatizadas, fornecendo acesso programático a informações sobre a interface do usuário.  
   
  [Atributos](../../docs/standard/attributes/index.md)  
  Descreve como usar atributos para personalizar metadados.  
@@ -67,5 +66,5 @@ Esta seção da documentação do .NET Framework oferece informações sobre tar
  [Guia de desenvolvimento](../../docs/framework/development-guide.md)  
  Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
   
- [Segurança](../../docs/standard/security/index.md)  
+ [Security](../../docs/standard/security/index.md)  
  Oferece informações sobre classes e serviços no Command Language Runtime e no .NET Framework que facilitam um desenvolvimento seguro do aplicativo.

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca466af71f62ef72e021753b132afdc847f75d76
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608769"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320690"
 ---
 # <a name="configuring-client-behaviors"></a>Configurando comportamentos do cliente
-Windows Communication Foundation (WCF) configura a comportamentos de duas maneiras: referindo-se às configurações de comportamento – que são definidas no `<behavior>` seção de um arquivo de configuração de aplicativo do cliente – ou programaticamente na chamada aplicativo. Este tópico descreve as duas abordagens.  
+O Windows Communication Foundation (WCF) configura comportamentos de duas maneiras: seja referindo-se a configurações de comportamento, que são definidas na seção `<behavior>` de um arquivo de configuração de aplicativo cliente – ou programaticamente no aplicativo de chamada. Este tópico descreve as duas abordagens.  
   
- Ao usar um arquivo de configuração, a configuração de comportamento é uma coleção nomeada de definições de configuração. O nome de cada configuração de comportamento deve ser exclusivo. Essa cadeia é usada a `behaviorConfiguration` atributo de uma configuração de ponto de extremidade para vincular o ponto de extremidade para o comportamento.  
+ Ao usar um arquivo de configuração, a configuração de comportamento é uma coleção nomeada de definições de configuração. O nome de cada configuração de comportamento deve ser exclusivo. Essa cadeia de caracteres é usada no atributo `behaviorConfiguration` de uma configuração de ponto de extremidade para vincular o ponto de extremidade ao comportamento.  
   
 ## <a name="example"></a>Exemplo  
- O código de configuração a seguir define um comportamento chamado `myBehavior`. O ponto de extremidade do cliente faz referência a esse comportamento no `behaviorConfiguration` atributo.  
+ O código de configuração a seguir define um comportamento chamado `myBehavior`. O ponto de extremidade do cliente faz referência a esse comportamento no atributo `behaviorConfiguration`.  
   
 ```xml  
 <configuration>  
@@ -42,15 +42,15 @@ Windows Communication Foundation (WCF) configura a comportamentos de duas maneir
 </configuration>  
 ```  
   
-## <a name="using-behaviors-programmatically"></a>Usando comportamentos de forma programática  
- Você também pode configurar ou inserir comportamentos de forma programática, localizando apropriado `Behaviors` propriedade no objeto de cliente do Windows Communication Foundation (WCF) ou no objeto de fábrica de canal cliente antes da abertura do cliente.  
+## <a name="using-behaviors-programmatically"></a>Usando comportamentos programaticamente  
+ Você também pode configurar ou inserir comportamentos programaticamente, localizando a propriedade `Behaviors` apropriada no objeto de cliente Windows Communication Foundation (WCF) ou no objeto de fábrica de canais do cliente antes de abrir o cliente.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir mostra como inserir programaticamente um comportamento, acessando o <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> propriedade no <xref:System.ServiceModel.Description.ServiceEndpoint> retornados do <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> propriedade antes da criação do objeto de canal.  
+ O exemplo de código a seguir mostra como inserir programaticamente um comportamento acessando a propriedade <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> no <xref:System.ServiceModel.Description.ServiceEndpoint> retornado da propriedade <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> antes da criação do objeto de canal.  
   
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<behaviors >](../configure-apps/file-schema/wcf/behaviors.md)

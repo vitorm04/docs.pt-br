@@ -2,19 +2,19 @@
 title: '- Subtrair (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: bc4327f9-09c0-438f-a008-927c5c478040
-ms.openlocfilehash: 8b5cfee4c82757e55babdf1ad14f6cf3c743a5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fe9152100bddac86f3fb7fae1ab3c0b81ae58418
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249014"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319322"
 ---
 # <a name="--subtract-entity-sql"></a>- (Subtração) (Entity SQL)
 Subtrai dois números.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 expression - expression  
 ```  
   
@@ -28,11 +28,11 @@ expression - expression
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o operador - aritmético para subtrair dois números. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   
- [!code-csharp[DP EntityServices Concepts 2#SUBTRACT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#subtract)]  
+ [!code-sql[DP EntityServices Concepts#SUBTRACT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#subtract)]  
   
 ## <a name="see-also"></a>Consulte também
 

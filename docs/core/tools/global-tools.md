@@ -4,12 +4,12 @@ description: Uma visão geral do que são as Ferramentas Globais do .NET Core e 
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332014"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318309"
 ---
 # <a name="net-core-global-tools-overview"></a>Visão geral das Ferramentas Globais do .NET Core
 
@@ -31,13 +31,12 @@ Caso deseje usar uma Ferramenta Global do .NET Core:
 
 ## <a name="find-a-net-core-global-tool"></a>Encontrar uma Ferramenta Global do .NET Core
 
-Atualmente, há não uma funcionalidade de pesquisa de Ferramenta Global na CLI (interface de linha de comando) do .NET Core.
+Atualmente, há não uma funcionalidade de pesquisa de Ferramenta Global na CLI (interface de linha de comando) do .NET Core. Veja a seguir algumas recomendações sobre como encontrar ferramentas:
 
-Encontre Ferramentas Globais do .NET Core no [NuGet](https://www.nuget.org). No entanto, o NuGet ainda não permite a pesquisa especificamente de Ferramentas Globais do .NET Core.
-
-Você também pode encontrar recomendações de ferramentas em postagens no blog ou no repositório [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) do GitHub.
-
-Veja também o código-fonte das Ferramentas Globais criadas pela equipe do ASP.NET no repositório [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) do GitHub.
+* Encontre Ferramentas Globais do .NET Core no [NuGet](https://www.nuget.org). No entanto, o NuGet ainda não permite a pesquisa especificamente de Ferramentas Globais do .NET Core.
+* Você pode encontrar recomendações de ferramentas em Postagens de blog ou no repositório GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
+* Você pode ver o código-fonte das ferramentas globais criadas pela equipe do ASP.NET no repositório GitHub do [ASPNET/DotNetTools](https://github.com/aspnet/DotNetTools/) .
+* Você pode aprender sobre as ferramentas de diagnóstico em [ferramentas globais de diagnóstico dotnet do .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Verificar o autor e as estatísticas
 
@@ -70,7 +69,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 As Ferramentas Globais podem ser instaladas no diretório padrão ou em um local específico. Os diretórios padrão são:
 
-| OS          | Path                          |
+| Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |

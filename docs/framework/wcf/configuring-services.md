@@ -4,37 +4,37 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593318"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320657"
 ---
 # <a name="configuring-wcf-services"></a>Configurando serviços WCF
 
-Depois que você tiver projetado e implementado o contrato de serviço, você está pronto para configurar seu serviço. Isso é onde você pode definir e personalizar como o serviço é exposto aos clientes, incluindo especificando o endereço em que ele pode ser encontrado, o transporte e ele usa para enviar e receber mensagens e o tipo de segurança requer a codificação de mensagem.  
+Depois de criar e implementar seu contrato de serviço, você estará pronto para configurar seu serviço. É aí que você define e personaliza como o serviço é exposto aos clientes, incluindo a especificação do endereço onde ele pode ser encontrado, o transporte e a codificação de mensagens que ele usa para enviar e receber mensagens e o tipo de segurança que ela exige.  
   
- Configuração como utilizado aqui inclui todas as maneiras, imperativa no código ou usando um arquivo de configuração, no qual você pode definir e personalizar vários aspectos de um serviço, como especificando seus endereços de ponto de extremidade, os transportes usados e seus esquemas de segurança. Na prática, gravar a configuração é a principal parte da programação de aplicativos do WCF.  
+ A configuração conforme usada aqui inclui todas as formas, imperativamente no código ou usando um arquivo de configuração, no qual você pode definir e personalizar os vários aspectos de um serviço, como especificar seus endereços de ponto de extremidade, os transportes usados e seus esquemas de segurança. Na prática, escrever a configuração é uma parte importante da programação de aplicativos WCF.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- Começando com [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], o WCF é fornecido com um novo modelo de configuração padrão que simplifica os requisitos de configuração do WCF. Se você não fornecer nenhuma configuração do WCF para um serviço específico, o tempo de execução configura automaticamente o seu serviço com comportamentos, associações e pontos de extremidade padrão.  
+ [Configuração simplificada](simplified-configuration.md)  
+ A partir do [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], o WCF vem com um novo modelo de configuração padrão que simplifica os requisitos de configuração do WCF. Se você não fornecer nenhuma configuração do WCF para um serviço específico, o tempo de execução configurará automaticamente seu serviço com pontos de extremidade padrão, associações e comportamentos.  
   
- [Configurando serviços usando arquivos de configuração](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Um serviço do Windows Communication Foundation (WCF) é configurável usando a tecnologia de configuração do .NET Framework. Mais comumente, os elementos XML são adicionados ao arquivo Web. config para um site de serviços de informações da Internet (IIS) que hospeda um serviço WCF. Os elementos permitem que você altere detalhes, como os endereços de ponto de extremidade (endereços reais usados para se comunicar com o serviço) em uma base por máquina.  
+ [Configurando serviços usando arquivos de configuração](configuring-services-using-configuration-files.md)  
+ Um serviço do Windows Communication Foundation (WCF) é configurável usando a tecnologia de configuração do .NET Framework. Normalmente, os elementos XML são adicionados ao arquivo Web. config para um site Serviços de Informações da Internet (IIS) que hospeda um serviço WCF. Os elementos permitem que você altere os detalhes, como os endereços de ponto de extremidade (os endereços reais usados para se comunicar com o serviço) em uma base de máquina por máquina.  
   
- [Associações](../../../docs/framework/wcf/bindings.md)  
- Além disso, o WCF inclui diversas configurações comuns fornecidos pelo sistema na forma de associações que permitem que você selecionar rapidamente os recursos mais básicos para como um serviço e o cliente se comunicam, como os transportes, segurança e mensagem codificações usadas.  
+ [Associações](bindings.md)  
+ Além disso, o WCF inclui várias configurações comuns fornecidas pelo sistema na forma de associações que permitem selecionar rapidamente os recursos mais básicos de como um cliente e serviço se comunicam, como os transportes, a segurança e as codificações de mensagens usadas.  
   
- [Pontos de extremidade](../../../docs/framework/wcf/endpoints.md)  
- Toda a comunicação com um serviço WCF ocorre por meio de *pontos de extremidade* do serviço. Pontos de extremidade contêm o contrato, as informações de configuração que são especificadas nas associações e os endereços que indicam onde encontrar o serviço ou onde obter informações sobre o serviço.  
+ [Pontos de extremidade](endpoints.md)  
+ Toda a comunicação com um serviço WCF ocorre por meio dos *pontos de extremidade* do serviço. Os pontos de extremidade contêm o contrato, as informações de configuração especificadas nas associações e os endereços que indicam onde encontrar o serviço ou onde obter informações sobre o serviço.  
   
- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
- Usando o WCF e existente mecanismos de segurança, você pode implementar a confidencialidade, integridade, autenticação e autorização em qualquer serviço. Você também pode fazer a auditoria para falhas e êxitos de segurança.  
+ [Protegendo serviços](securing-services.md)  
+ Usando o WCF e mecanismos de segurança existentes, você pode implementar confidencialidade, integridade, autenticação e autorização em qualquer serviço. Você também pode auditar as falhas e êxitos de segurança.  
   
- [Criando serviços interoperáveis de perfil básico do WS-I 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
- Os requisitos para implantar um serviço que é interoperável com serviços e clientes em qualquer plataforma ou sistema operacional são descritos em WS-I Basic Profile 1.1 especificação.  
+ [Criando serviços interoperáveis de perfil básico do WS-I 1.1](./creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ Os requisitos para a implantação de um serviço que é interoperável com serviços e clientes em qualquer outra plataforma ou sistema operacional são descritos na especificação WS-I Basic Profile 1,1.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  
@@ -44,20 +44,20 @@ Depois que você tiver projetado e implementado o contrato de serviço, você es
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Ciclo de vida de programação básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [Ciclo de vida de programação básica](basic-programming-lifecycle.md)  
   
- [Serviços de design e implantação](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Serviços de design e implantação](designing-and-implementing-services.md)  
   
- [Hospedando serviços](../../../docs/framework/wcf/hosting-services.md)  
+ [Hospedando serviços](hosting-services.md)  
   
- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)  
+ [Compilando clientes](building-clients.md)  
   
- [Introdução à extensibilidade](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ [Introdução à extensibilidade](introduction-to-extensibility.md)  
   
- [Administração e diagnósticos](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Administração e diagnósticos](./diagnostics/index.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)
-- [Detalhes de recursos do WCF](../../../docs/framework/wcf/feature-details/index.md)
+- [Programação básica do WCF](basic-wcf-programming.md)
+- [Visão geral conceitual](conceptual-overview.md)
+- [Detalhes de recursos do WCF](./feature-details/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
-ms.translationtype: MT
+ms.openlocfilehash: 53d7bbf214a71daff9372efcd5978f34c066c657
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291735"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319999"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. pipelines no .NET
 
@@ -55,7 +55,7 @@ Para corrigir os problemas anteriores, as seguintes alterações são necessári
 
 * Armazenar os dados de entrada em buffer até que uma nova linha seja encontrada.
 * Analise todas as linhas retornadas no buffer.
-* É possível que a linha seja maior que 1 KB (1024 bytes). O código precisa redimensionar o buffer de entrada uma linha completa é encontrada.
+* É possível que a linha seja maior que 1 KB (1024 bytes). O código precisa redimensionar o buffer de entrada até que o delimitador seja encontrado para ajustar a linha completa dentro do buffer.
 
   * Se o buffer for redimensionado, mais cópias de buffer serão feitas conforme as linhas mais longas aparecerem na entrada.
   * Para reduzir o espaço desperdiçado, compacte o buffer usado para ler as linhas.
@@ -122,8 +122,8 @@ Para um desempenho ideal, há um equilíbrio entre pausas frequentes e alocaçã
 
 Para resolver o problema anterior, o `Pipe` tem duas configurações para controlar o fluxo de dados:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: Determina a quantidade de dados que deve ser armazenada em buffer antes de chamadas para <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> pausar.
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Determina a quantidade de dados que o leitor deve observar antes de chamadas para `PipeWriter.FlushAsync` retomar.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: determina a quantidade de dados que deve ser armazenada em buffer antes de chamadas para <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> pausa.
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: determina a quantidade de dados que o leitor deve observar antes de chamadas para a retomada de `PipeWriter.FlushAsync`.
 
 ![Diagrama com ResumeWriterThreshold e PauseWriterThreshold](./media/pipelines/resume-pause.png)
 

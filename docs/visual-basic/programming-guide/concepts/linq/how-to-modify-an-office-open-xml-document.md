@@ -1,18 +1,18 @@
 ---
-title: 'Como: Modificar um documento do Office Open XML (Visual Basic)'
+title: Como modificar um documento XML aberto do Office (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb8704608fa7d529b32e44e754c0274d7a67b1d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942552"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319955"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Como: Modificar um documento do Office Open XML (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Como modificar um documento XML aberto do Office (Visual Basic)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, modifica-o e salva-o.  
   
- Para obter mais informações sobre o Office Open XML, consulte [Blog de Eric White](http://www.ericwhite.com).  
+ Para obter mais informações sobre o Office Open XML, consulte [blog de Eric White](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza o primeiro elemento de parágrafo no documento. Ele recupera o texto do parágrafo e, em seguida, exclui todas as execuções do texto no parágrafo. Ele cria uma nova execução de texto que consiste no texto do primeiro parágrafo que foi convertido para maiúsculas. Ele em seguida serializa o XML modificado no pacote Open XML e fecha-o.  
@@ -137,12 +137,12 @@ End Module
   
  Se você abrir o `SampleDoc.docx` depois de executar este programa, verá que este programa converteu o primeiro parágrafo no documento para maiúsculas.  
   
- Quando executado com o documento Open XML de exemplo descrito em [criando o código-fonte Office documento Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
+ Quando executado com o documento XML aberto de exemplo descrito em [criando o documento Office Open XML de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
   
-```  
+```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Técnicas de consulta avançada (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
