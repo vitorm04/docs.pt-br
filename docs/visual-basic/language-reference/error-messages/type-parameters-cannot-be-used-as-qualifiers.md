@@ -7,26 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 88b5f365c47b98964d9f5a0d22a941d85dcfb95f
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 3ff4b189539bf119351a94dabadd596c336ac723
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592143"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250339"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Não é possível usar parâmetros de tipo como qualificadores
-Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.  
-  
- Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído. Ele não representa um tipo definido específico. Uma cadeia de caracteres de qualificação deve incluir apenas elementos que são definidos no momento da compilação.  
-  
- As instruções a seguir podem gerar esse erro.  
-  
+
+Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.
+
+Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído. Ele não representa um tipo definido específico. Uma cadeia de caracteres de qualificação deve incluir apenas elementos que são definidos no momento da compilação.
+
+O código a seguir pode gerar esse erro:
+
 ```vb  
-Public Function checkText(Of c As System.Windows.Forms.Control)(  
-    ByVal badText As String) As Boolean  
+Public Function CheckText(Of c As System.Windows.Forms.Control)(
+    badText As String) As Boolean
   
     Dim saveText As c.Text  
-    ' Insert code to look for badText within saveText.  
+    ' Insert code to look for badText within saveText.
 End Function  
 ```  
   
@@ -40,6 +41,6 @@ End Function
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
+- [Referências a Elementos Declarados](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Tipos genéricos no Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Lista de Tipos](../statements/type-list.md)

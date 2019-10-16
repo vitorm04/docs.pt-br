@@ -2,15 +2,15 @@
 title: Adicione uma referência de serviço em um projeto de subconjunto portátil
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782415"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320847"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Adicione uma referência de serviço em um projeto de subconjunto portátil
-Projetos de subconjunto portáteis permitem que os programadores do assembly .NET manter uma única árvore de origem e o sistema de compilação e ainda dar suporte a várias implementações do .NET (área de trabalho, Silverlight, Windows Phone e XBOX). Projetos de subconjunto portáteis somente fazem referência a bibliotecas portáteis .NET, que são um assembly do framework .NET que pode ser usado em qualquer implementação do .NET.  
+Os projetos de subconjuntos portáteis permitem que os programadores de assembly .NET mantenham uma única árvore de origem e um sistema de compilação enquanto ainda dão suporte a várias implementações do .NET (desktop, Silverlight, Windows Phone e XBOX). Os projetos de subconjuntos portáteis só fazem referência a bibliotecas portáteis .NET que são um assembly do .NET Framework que pode ser usado em qualquer implementação do .NET.  
   
 ## <a name="add-service-reference-details"></a>Detalhes de Adicionar Referência de Serviço  
  Ao adicionar uma referência de serviço em um projeto de subconjunto portátil, as seguintes restrições são aplicadas:  
@@ -45,5 +45,5 @@ Projetos de subconjunto portáteis permitem que os programadores do assembly .NE
   
 ## <a name="see-also"></a>Consulte também
 
-- [Usando um cliente do WCF para acessar serviços](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Usando um cliente do WCF para acessar serviços](accessing-services-using-a-wcf-client.md)
 - [Biblioteca de classes portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

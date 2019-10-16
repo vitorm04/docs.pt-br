@@ -2,19 +2,19 @@
 title: O que há de C# novo no C# guia de 8,0
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736708"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275773"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
 C#8,0 adiciona os seguintes recursos e aprimoramentos ao C# Idioma:
 
 - [Membros somente leitura](#readonly-members)
-- [Membros da interface padrão](#default-interface-members)
+- [Métodos de interface padrão](#default-interface-methods)
 - [Aprimoramentos de correspondência de padrões](#more-patterns-in-more-places):
   - [Expressões Switch](#switch-expressions)
   - [Padrões da propriedade](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Esse recurso permite que você especifique sua intenção de design para que o compilador possa impô-la e faça otimizações com base nessa intenção.
 
-## <a name="default-interface-members"></a>Membros da interface padrão
+## <a name="default-interface-methods"></a>Métodos de interface padrão
 
-Agora é possível adicionar membros a interfaces e fornecer uma implementação para esses membros. Esse recurso de linguagem permite que os autores de API adicionem métodos a uma interface em versões posteriores sem interromper a fonte ou a compatibilidade binária com implementações existentes dessa interface. As implementações existentes *herdam* a implementação padrão. Esse recurso também permite que o C# interopere com APIs que direcionam o Android ou o Swift, que dão suporte a recursos semelhantes. Membros da interface padrão também permitem cenários semelhantes a um recurso de linguagem de “características”.
+Agora é possível adicionar membros a interfaces e fornecer uma implementação para esses membros. Esse recurso de linguagem permite que os autores de API adicionem métodos a uma interface em versões posteriores sem interromper a fonte ou a compatibilidade binária com implementações existentes dessa interface. As implementações existentes *herdam* a implementação padrão. Esse recurso também permite que o C# interopere com APIs que direcionam o Android ou o Swift, que dão suporte a recursos semelhantes. Os métodos de interface padrão também habilitam cenários semelhantes a um recurso de linguagem de "características".
 
-Os membros da interface padrão afetam muitos cenários e elementos de linguagem. Nosso primeiro tutorial aborda [como atualizar uma interface com implementações padrão](../tutorials/default-interface-members-versions.md). Outros tutoriais e atualizações de referência chegarão a tempo para a versão geral.
+Os métodos de interface padrão afetam muitos cenários e elementos de linguagem. Nosso primeiro tutorial aborda [como atualizar uma interface com implementações padrão](../tutorials/default-interface-methods-versions.md). Outros tutoriais e atualizações de referência chegarão a tempo para a versão geral.
 
 ## <a name="more-patterns-in-more-places"></a>Mais padrões em mais partes
 
@@ -382,7 +382,7 @@ Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
 - O índice do operador end `^`, que especifica que um índice é relativo ao final da sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador `..`Range, que especifica o início e o término de um intervalo como seus operandos.
+- O operador de intervalo `..`, que especifica o início e o término de um intervalo como operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence.Length - n`.
 
@@ -451,7 +451,7 @@ Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices
 
 ## <a name="null-coalescing-assignment"></a>Atribuição de União nula
 
-C#8,0 apresenta o operador `??=`de atribuição de União nula. Você pode usar o `??=` operador para atribuir o valor do seu operando à direita para seu operando à esquerda somente se o operando esquerdo for avaliado como. `null`
+C#8,0 apresenta o operador de atribuição de União nula `??=`. Você pode usar o operador `??=` para atribuir o valor do seu operando à direita para seu operando à esquerda somente se o operando esquerdo for avaliado como `null`.
 
 ```csharp
 List<int> numbers = null;
@@ -471,7 +471,7 @@ Para obter mais informações, consulte [?? e?? =](../language-reference/operato
 
 No C# 7,3 e anterior, um tipo construído (um tipo que inclui pelo menos um argumento de tipo) não pode ser um [tipo não gerenciado](../language-reference/builtin-types/unmanaged-types.md). A partir C# de 8,0, um tipo de valor construído não será gerenciado se ele contiver campos apenas de tipos não gerenciados.
 
-Por exemplo, dada a seguinte definição do tipo genérico `Coords<T>` :
+Por exemplo, considerando a seguinte definição do tipo genérico `Coords<T>`:
 
 ```csharp
 public struct Coords<T>
@@ -481,7 +481,7 @@ public struct Coords<T>
 }
 ```
 
-o `Coords<int>` tipo é um tipo não gerenciado em C# 8,0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável desse tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias desse tipo:
+o tipo `Coords<int>` é um tipo não gerenciado em C# 8,0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável desse tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias desse tipo:
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -496,7 +496,7 @@ Para obter mais informações, consulte [tipos não gerenciados](../language-ref
 
 ## <a name="stackalloc-in-nested-expressions"></a>stackalloc em expressões aninhadas
 
-A partir C# de 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) <xref:System.Span%601?displayProperty=nameWithType> for do tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> ou, você poderá usar a `stackalloc` expressão em outras expressões:
+A partir C# de 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) for do tipo <xref:System.Span%601?displayProperty=nameWithType> ou <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, você poderá usar a expressão `stackalloc` em outras expressões:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -506,4 +506,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cadeias de caracteres idênticas interpoladas
 
-A `$` ordem dos tokens e `@` nas cadeias de caracteres `$@"..."` idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode `@$"..."` ser any: e são cadeias de caracteres idênticas interpoladas válidas. Em versões C# anteriores, o `$` token deve aparecer antes do `@` token.
+A ordem dos tokens `$` e `@` em cadeias de caracteres idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode ser qualquer: `$@"..."` e `@$"..."` são cadeias de caracteres textuais interpoladas válidas. Em versões C# anteriores, o token `$` deve aparecer antes do token `@`.

@@ -2,12 +2,12 @@
 title: TOPO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248982"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319271"
 ---
 # <a name="top-entity-sql"></a>TOPO (Entity SQL)
 
@@ -15,13 +15,13 @@ A cláusula SELECT pode ter uma cláusula as subjanelas TOP opcional após o mod
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```sql
 [ TOP (n) ]
 ```
 
 ## <a name="arguments"></a>Arguments
 
-`n`A expressão numérica que especifica o número de linhas a serem retornadas. `n` pode ser um único literal numérico ou um único parâmetro.
+`n` a expressão numérica que especifica o número de linhas a serem retornadas. `n` pode ser um único literal numérico ou um único parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -45,11 +45,11 @@ A TOP é não determinística a menos que a consulta é classificada. Se você p
 
 A seguinte consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa a TOP para especificar a uma linha superior a ser retornado do resultado da consulta. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:
 
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).
 
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:
 
-    [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]
+    [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
 ## <a name="see-also"></a>Consulte também
 

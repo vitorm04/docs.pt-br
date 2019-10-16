@@ -3,12 +3,12 @@ title: Solucionar problemas de uso da ferramenta .NET Core
 description: Descubra os problemas comuns ao executar as ferramentas do .NET Core e as possíveis soluções.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332973"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318293"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solucionar problemas de uso da ferramenta .NET Core
 
@@ -19,7 +19,7 @@ Você pode encontrar problemas ao tentar instalar ou executar uma ferramenta .NE
 Quando uma ferramenta do .NET Core não é executada, é muito provável que você tenha executado um dos seguintes problemas:
 
 * O arquivo executável da ferramenta não foi encontrado.
-* A versão correta do tempo de execução do .NET Core não foi encontrada. 
+* A versão correta do tempo de execução do .NET Core não foi encontrada.
 
 ### <a name="executable-file-not-found"></a>Arquivo executável não encontrado
 
@@ -44,7 +44,7 @@ O nome do executável determina como você invoca a ferramenta. A tabela a segui
 
     As ferramentas globais podem ser instaladas no diretório padrão ou em um local específico. Os diretórios padrão são:
 
-    | OS          | Path                          |
+    | Sistema operacional          | Caminho                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -58,18 +58,18 @@ O nome do executável determina como você invoca a ferramenta. A tabela a segui
   * Se você estiver usando o macOS 10,14 "Mojave" ou versões anteriores, e tiver instalado o SDK do .NET Core usando arquivos *. tar. gz* e não *. pkg*.
   * Se você instalou o SDK do .NET Core 3,0 e definiu a variável de ambiente `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` como `false`.
   * Se você tiver instalado o SDK do .NET Core 2,2 ou versões anteriores, e tiver definido a variável de ambiente `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` como `true`.
-  
+
   Para obter mais informações sobre ferramentas globais, consulte [visão geral das ferramentas globais do .NET Core](global-tools.md).
 
 * Ferramentas locais
 
   Se você estiver tentando executar uma ferramenta local, verifique se há um arquivo de manifesto chamado *dotnet-Tools. JSON* no diretório atual ou em qualquer um de seus diretórios pai. Esse arquivo também pode residir em uma pasta chamada *. config* em qualquer lugar na hierarquia de pastas do projeto, em vez da pasta raiz. Se *dotnet-Tools. JSON* existir, abra-o e verifique a ferramenta que você está tentando executar. Se o arquivo não contiver uma entrada para `"isRoot": true`, verifique também a hierarquia de arquivos para arquivos de manifesto da ferramenta adicional.
 
-    Se você estiver tentando executar uma ferramenta do .NET Core que foi instalada com um caminho especificado, precisará incluir esse caminho ao usar a ferramenta. Um exemplo de como usar uma ferramenta instalada por caminho de ferramenta é:
+  Se você estiver tentando executar uma ferramenta do .NET Core que foi instalada com um caminho especificado, precisará incluir esse caminho ao usar a ferramenta. Um exemplo de como usar uma ferramenta instalada por caminho de ferramenta é:
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>Tempo de execução não encontrado
 
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 Se você tentar instalar um pacote NuGet que é um pacote NuGet regular e não uma ferramenta .NET Core, verá um erro semelhante ao seguinte:
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212: combinação de pacote de projeto inválida para `<ToolName>`. O estilo de projeto DotnetToolReference só pode conter referências do tipo DotnetTool.
 
 ### <a name="nuget-feed-cant-be-accessed"></a>O feed do NuGet não pode ser acessado
 
@@ -161,4 +161,5 @@ A instalação da ferramenta requer acesso ao feed do NuGet que contém o pacote
 Um motivo comum para a falha é que o nome da ferramenta não está correto. Isso pode ocorrer devido a digitação incorreta ou porque a ferramenta foi movida ou foi preterida. Para ferramentas no NuGet.org, uma maneira de garantir que você tenha o nome correto é Pesquisar a ferramenta em NuGet.org e copiar o comando de instalação.
 
 ## <a name="see-also"></a>Consulte também
+
 * [Visão geral das Ferramentas Globais do .NET Core](global-tools.md)

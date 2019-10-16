@@ -1,15 +1,15 @@
 ---
-title: 'Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)'
+title: 'Como: unir conteúdo de arquivos não semelhantes (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6fd9a1083cca941422eb89cd6bf23328fc8b5f6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593495"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320560"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Como: unir conteúdo de arquivos não semelhantes (LINQ) (Visual Basic)
 
 Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
   
@@ -17,7 +17,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
   
 1. Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto. O arquivo representa dados da planilha. A coluna 1 é a ID do aluno e as colunas 2 a 5 são resultados de testes.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -34,7 +34,7 @@ Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas q
   
 2. Copie as seguintes linhas para um arquivo chamado names.csv e salve-o na sua pasta do projeto. O arquivo representa uma planilha que contém o sobrenome, o nome e a ID do aluno.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

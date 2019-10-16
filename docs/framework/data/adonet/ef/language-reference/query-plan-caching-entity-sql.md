@@ -2,12 +2,12 @@
 title: Armazenamento em cache do plano de consulta (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: ca95f3aed5c092247a97bbfe5b0237a45b95ae16
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 020b2b3f08262fc15ace8603c26e2d6c059baafd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249291"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319401"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Armazenamento em cache do plano de consulta (Entity SQL)
 Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consulta pesquisa seu cache do plano de consulta para ver se a consulta exata já está compilada e disponível. Em caso afirmativo, reutiliza o plano armazenado em cachê em vez de criar um novo. Se uma correspondência não for encontrada no cache do plano de consulta, a consulta é criada e armazenadas em cachê. Uma consulta é identificada por sua coleção de texto e o parâmetro de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (nomes e tipos). Todas as comparações de texto diferenciam maiúsculas de minúsculas.  
@@ -22,14 +22,16 @@ Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consul
 ## <a name="recommended-practice"></a>Prática recomendada  
  Consultas dinâmicos devem ser evitadas, geralmente. O exemplo a seguir dinâmica de consulta é vulnerável a ataques de injeção SQL, porque recebe entrada do usuário diretamente sem qualquer validação.  
   
- `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
-  
+ ```csharp
+ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;  
+ ```
+ 
  Se você usar consultas gerados dinamicamente, considere desativar o cachê do plano de consulta para evitar desnecessário consumo de memória para as entradas de cache que são improvável de ser reutilizado.  
   
  Consulte o cachê de fundo em consultas estáticos e consultas parametrizadas podem fornecer benefícios de desempenho. A seguir está um exemplo de uma consulta estático:  
   
-```  
-"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
+```csharp
+var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
 ```  
   
  Para que as consultas são igualadas corretamente pelo cache do plano de consulta, devem estar de acordo com os seguintes requisitos:  

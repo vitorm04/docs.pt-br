@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834666"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291264"
 ---
 # <a name="use-automatic-layout-overview"></a>Visão geral do uso de layout automático
 
-Este tópico apresenta diretrizes para desenvolvedores sobre como gravar aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] com @no__t localizável-1. No passado, a localização de uma interface do usuário era um processo demorado. Cada idioma para o qual a interface do usuário foi adaptada exigia um ajuste de pixel por pixel. Hoje, com o design certo e com os padrões de codificação corretos, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser construído para que os localizadores tenham menos redimensionamento e reposicionamento para fazer. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando o design de aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Este tópico apresenta diretrizes para desenvolvedores sobre como escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] com interfaces do usuário localizáveis (UIs). No passado, a localização de uma interface do usuário era um processo demorado. Cada idioma para o qual a interface do usuário foi adaptada exigia um ajuste de pixel por pixel. Hoje, com o design certo e com os padrões de codificação corretos, as interfaces do projeto podem ser construídas para que os localizadores tenham menos redimensionamento e reposicionamento para fazer. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando o design de aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 <a name="advantages_of_autolayout"></a>
 

@@ -5,65 +5,65 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591926"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319816"
 ---
 # <a name="guide-to-the-documentation"></a>Guia para a documentação
-Fornecido aqui é orientação sobre a documentação do Windows Communication Foundation (WCF). Documentos associados são pontos de partida recomendados agrupados de acordo com interesses e níveis específicos de experiência.  
+Aqui estão as diretrizes sobre a documentação do Windows Communication Foundation (WCF). Documentos associados são pontos de partida recomendados agrupados de acordo com interesses e níveis específicos de experiência.  
   
- Para instalar uma versão autônoma da documentação e um visualizador de Ajuda, baixe o [v do Microsoft Windows SDK 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
+ Para instalar uma versão autônoma da documentação e um visualizador da ajuda, baixe o [SDK do Microsoft Windows v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
   
-## <a name="new-to-windows-communication-foundation-programming"></a>Novo para programação do Windows Communication Foundation  
+## <a name="new-to-windows-communication-foundation-programming"></a>Novo na programação de Windows Communication Foundation  
   
-- Se você for iniciante em programação com o WCF e você quiser apenas ver exemplos de aplicativos que funcionam, consulte os tópicos listados em [exemplos do Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md).  
+- Se você for novo na programação com o WCF e quiser ver aplicativos de exemplo que funcionam, consulte os tópicos listados em [Windows Communication Foundation exemplos](./samples/index.md).  
   
-- Para obter um tutorial que orienta as etapas básicas de criação de um serviço WCF e um cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md).  
+- Para obter um tutorial que percorre as etapas básicas de criação de um serviço e cliente do WCF, consulte [introdução tutorial](getting-started-tutorial.md).  
   
-- Se você estiver interessado nos conceitos por detrás do WCF, consulte os tópicos a [visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md) seção.  
+- Se você estiver interessado nos conceitos por trás do WCF, consulte os tópicos na seção [visão geral conceitual](conceptual-overview.md) .  
   
-- Para ver exemplos de gráficos de configurações de segurança de cliente/servidor, consulte [cenários comuns de segurança](../../../docs/framework/wcf/feature-details/common-security-scenarios.md).  
+- Para ver exemplos gráficos de configurações de segurança de cliente/servidor, consulte [cenários comuns de segurança](./feature-details/common-security-scenarios.md).  
   
 ## <a name="programming-in-depth"></a>Programação detalhada  
   
-- Se você estiver pronto para começar a desenvolver um aplicativo, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).  
+- Se você estiver pronto para começar a desenvolver um aplicativo, consulte [programação básica do WCF](basic-wcf-programming.md).  
   
-- Se você estiver procurando diretrizes sobre um determinado recurso ou funcionalidade do WCF, consulte os tópicos em [detalhes de recursos do WCF](../../../docs/framework/wcf/feature-details/index.md).  
+- Se você estiver procurando diretrizes sobre um recurso específico ou capacidade do WCF, consulte os tópicos em [detalhes do recurso WCF](./feature-details/index.md).  
   
-- Se você quiser estender ou personalizar o WCF para atender às suas necessidades, consulte [estendendo o WCF](../../../docs/framework/wcf/extending/index.md).  
+- Se você quiser estender ou personalizar o WCF para atender às suas necessidades, consulte [estendendo o WCF](./extending/index.md).  
   
-- Para obter informações sobre as ferramentas que ajudam a criar e depurar aplicativos do WCF, consulte [ferramentas do Windows Communication Foundation](../../../docs/framework/wcf/tools.md).  
+- Para obter informações sobre as ferramentas que ajudam a criar e depurar aplicativos WCF, consulte [ferramentas de Windows Communication Foundation](tools.md).  
   
-- Usando arquivos XML de configuração é dos principais meios de programação de serviços do WCF e clientes. Para obter a documentação de referência para os elementos XML usados em arquivos de configuração, consulte [esquema de configuração do WCF](../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+- A configuração usando arquivos XML é uma maneira principal de programar serviços WCF e clientes. Para obter a documentação de referência para os elementos XML usados em arquivos de configuração, consulte [esquema de configuração do WCF](../configure-apps/file-schema/wcf/index.md).  
   
 ## <a name="troubleshooting"></a>Solução de problemas  
- Para obter informações sobre como solucionar problemas comuns do WCF, consulte [início rápido de solução de problemas do WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md).  
+ Para obter informações sobre como solucionar problemas comuns do WCF, consulte [início rápido de solução de problemas do WCF](wcf-troubleshooting-quickstart.md).  
   
-## <a name="using-windows-communication-foundation-with-other-technologies"></a>Usando o Windows Communication Foundation com outras tecnologias  
+## <a name="using-windows-communication-foundation-with-other-technologies"></a>Usando Windows Communication Foundation com outras tecnologias  
   
-- Para criar um serviço que se comunica com clientes do ASP.NET, consulte [como: Configurar o serviço do WCF para interoperar com clientes de serviço Web do ASP.NET](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
+- Para criar um serviço que se comunica com clientes ASP.NET, consulte [como: configurar o serviço WCF para interoperar com clientes de serviço Web do ASP.net](./feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
-- Integração com a comunicação remota do .NET Framework é explicada [Migrando aplicativos de comunicação remota do .NET para WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
+- A integração com o .NET Framework comunicação remota é explicada em [migrar aplicativos de comunicação remota do .net para o WCF](./feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
-- Para integrar um aplicativo COM+ existente com um cliente ou um serviço WCF, consulte [integração com visão geral de aplicativos COM+](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md).  
+- Para integrar um aplicativo COM+ existente a um serviço ou cliente WCF, consulte [visão geral integrando com aplicativos com+](./feature-details/integrating-with-com-plus-applications-overview.md).  
   
-- Para integrar um aplicativo COM existente com um cliente ou um serviço WCF, consulte [integrando aplicativos COM](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md).  
+- Para integrar um aplicativo COM existente a um serviço ou cliente WCF, consulte [integrando com aplicativos com](./feature-details/integrating-with-com-applications.md).  
   
-- Para integrar um aplicativo de MSMQ existente com um cliente ou um serviço WCF, consulte [como: Troca de mensagens com pontos de extremidade do WCF em fila](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) e [como: Trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+- Para integrar um aplicativo MSMQ existente a um serviço ou cliente WCF, consulte [como: trocar mensagens em fila com pontos de extremidade WCF](./feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) e [como trocar mensagens com pontos de extremidade WCF e aplicativos de enfileiramento de mensagens](./feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
-- Para usar os serviços de informações da Internet (IIS) para hospedar um serviço, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).  
+- Para usar Serviços de Informações da Internet (IIS) para hospedar um serviço, consulte [serviços de hospedagem](hosting-services.md).  
   
-- Para usar o WCF para consumir um serviço de extensões WSE (Web Services) 3.0, consulte [como: Acessar um WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
+- Para usar o WCF para consumir um serviço do WSE (Web Services Extensions) 3,0, consulte [como acessar um serviço wse 3,0](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
   
-## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>WS-* protocolos com suporte no Windows Communication Foundation  
- Para ver uma lista de protocolos com suporte nas associações fornecidas pelo sistema, consulte [Web Services protocolos com suporte pelas associações de interoperabilidade System-Provided](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Para ver a lista de associações fornecidas pelo sistema, consulte [System-Provided associações](../../../docs/framework/wcf/system-provided-bindings.md).  
+## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Protocolos WS-* com suporte no Windows Communication Foundation  
+ Para ver uma lista de protocolos com suporte nas associações fornecidas pelo sistema, consulte [protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Para ver a lista de associações fornecidas pelo sistema, consulte [associações fornecidas pelo sistema](system-provided-bindings.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Amostras do Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)
-- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)
-- [Diretrizes e práticas recomendadas](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)
+- [Amostras do Windows Communication Foundation](./samples/index.md)
+- [Visão geral conceitual](conceptual-overview.md)
+- [Diretrizes e práticas recomendadas](guidelines-and-best-practices.md)
+- [Compilando clientes](building-clients.md)

@@ -2,12 +2,12 @@
 title: 'Como: Filtrar em um atributo (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ee90e90e1087ffeeeefb475b637f3307a179bff
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855472"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250031"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Como: Filtrar em um atributo (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
@@ -47,7 +47,7 @@ Next
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console
 Results are identical  
 <Address Type="Shipping">  
   <Name>Ellen Adams</Name>  
@@ -77,4 +77,4 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

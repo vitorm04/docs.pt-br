@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Analisar comentários de site – classificação binária'
+title: 'Tutorial: analisar comentários do site-classificação binária'
 description: Este tutorial mostra como criar um aplicativo de console do .NET Core que classifica sentimentos de comentários de um site e executa a ação adequada. O classificador binário de sentimento usa C# no Visual Studio.
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6b9d51a8ab91b4365c909993211f11ab3436808
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e241ae8c0d39e6573b40c69611985f7095114629
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700854"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320139"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Analisar sentimento de comentários de um site com classificação binária em ML.NET
+# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: analisar o sentimentos dos comentários do site com a classificação binária no ML.NET
 
 Este tutorial mostra como criar um aplicativo de console do .NET Core que classifica sentimentos de comentários de um site e executa a ação adequada. O classificador binário de sentimento usa C# no Visual Studio 2017.
 
@@ -28,7 +28,7 @@ Neste tutorial, você aprenderá como:
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "Desenvolvimento multiplataforma do .NET Core" instalada
 
@@ -42,12 +42,12 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 3. Instalar o **Pacote NuGet Microsoft.ML**:
 
-    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a fonte do pacote e, em seguida, selecione a guia **Procurar**. Pesquise **Microsoft.ML**, selecione o pacote que você deseja e, em seguida, selecione o botão **Instalar**. Prossiga com a instalação concordando com os termos de licença do pacote que você escolher. Faça o mesmo para o pacote NuGet **Microsoft.ML.FastTree**.
+    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote e, em seguida, selecione a guia **procurar** . procure **Microsoft.ml**, selecione o pacote desejado e, em seguida, selecione o botão **instalar** . Prossiga com a instalação concordando com os termos de licença do pacote que você escolher. Faça o mesmo para o pacote NuGet **Microsoft.ML.FastTree**.
 
 ## <a name="prepare-your-data"></a>Preparar seus dados
 
 > [!NOTE]
-> Os conjuntos de dados deste tutorial são de "From Group to Individual Labels using Deep Features”, Kotzias et. al,. KDD 2015, e hospedados no UCI Machine Learning Repository – Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
+> Os conjuntos de dados deste tutorial são de "From Group to Individual Labels using Deep Features”, Kotzias et. al,. KDD 2015 e hospedado na UCI Machine Learning Repository-Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: Universidade da Califórnia, escola de informações e ciência da computação.
 
 1. Baixe o [arquivo zip do conjunto de dados de Sentenças de sentimentos rotuladas da UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e descompacte-o.
 
@@ -61,26 +61,21 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
-2. Crie dois campos globais para armazenar o caminho do arquivo de conjunto de dados baixado recentemente e o caminho do arquivo de modelo salvo:
-
-    - `_dataPath` tem o demarcador para o conjunto de dados usado para treinar o modelo.
-    - `_modelPath` tem o demarcador em que o modelo treinado é salvo.
-
-3. Adicione o seguinte código à linha logo acima do método `Main` para especificar os caminhos:
+1. Adicione o seguinte código à linha à direita acima do método `Main`, para criar um campo para manter o caminho do arquivo do conjunto de código baixado recentemente:
 
     [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-4. Em seguida, crie classes para os dados de entrada e as previsões. Adicione uma nova classe ao seu projeto:
+1. Em seguida, crie classes para os dados de entrada e as previsões. Adicione uma nova classe ao seu projeto:
 
     - No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Novo Item**.
 
     - Na caixa de diálogo **Adicionar Novo Item**, selecione **Classe** e altere o campo **Nome** para *SentimentData.cs*. Em seguida, selecione o botão **Adicionar**.
 
-5. O arquivo *SentimentData.cs* é aberto no editor de códigos. Adicione a seguinte instrução `using` acima de *SentimentData.cs*:
+1. O arquivo *SentimentData.cs* é aberto no editor de códigos. Adicione a seguinte instrução `using` acima de *SentimentData.cs*:
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
-6. Remova a definição de classe existente e adicione o seguinte código, que possui duas classes `SentimentData` e `SentimentPrediction`, ao arquivo *SentimentData.cs*:
+1. Remova a definição de classe existente e adicione o seguinte código, que possui duas classes `SentimentData` e `SentimentPrediction`, ao arquivo *SentimentData.cs*:
 
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
@@ -91,7 +86,7 @@ A classe de conjunto de dados de entrada, `SentimentData`, tem um `string` para 
 |--------------------------------------|----------|
 |A garçonete foi um pouco lenta no serviço.|    0     |
 |A torrada não é boa.                    |    0     |
-|Puxa! Adorei esse lugar.              |    1     |
+|Wow... Adorei este lugar.              |    1     |
 |O serviço era muito rápido.              |    1     |
 
 `SentimentPrediction` é a classe de previsão usada após o treinamento do modelo. Ela herda `SentimentData` de modo que a entrada `SentimentText` possa ser exibida junto com a previsão de saída. O booliano `Prediction` é o valor que o modelo prevê quando fornecido com a nova entrada `SentimentText`.
@@ -184,7 +179,7 @@ Ao preparar um modelo, você usa parte do conjunto de dados para treiná-lo e pa
     |--------------------------------------|----------|----------------------|
     |A garçonete foi um pouco lenta no serviço.|    0     |[0,76, 0,65, 0,44, …] |
     |A torrada não é boa.                    |    0     |[0,98, 0,43, 0,54, …] |
-    |Puxa! Adorei esse lugar.              |    1     |[0,35, 0,73, 0,46, …] |
+    |Wow... Adorei este lugar.              |    1     |[0,35, 0,73, 0,46, …] |
     |O serviço era muito rápido.              |    1     |[0,39, 0, 0,75, …]    |
 
 ### <a name="add-a-learning-algorithm"></a>Adicionar um algoritmo de aprendizado

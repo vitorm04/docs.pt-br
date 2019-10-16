@@ -1,15 +1,15 @@
 ---
-title: Mapeando eShopOnContainers para os serviços do Azure
+title: Como mapear o eShopOnContainers para os Serviços do Azure
 description: Mapeamento de eShopOnContainers para serviços do Azure, como o serviço kubernetes do Azure, o gateway de API e o barramento de serviço do Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: feb6d8f5ca05ab55ce4695d1200766a18b8f744a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182814"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275811"
 ---
-# <a name="mapping-eshoponcontainers-to-azure-services"></a>Mapeando eShopOnContainers para os serviços do Azure
+# <a name="mapping-eshoponcontainers-to-azure-services"></a>Como mapear o eShopOnContainers para os Serviços do Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -17,8 +17,7 @@ Embora não seja necessário, o Azure é bem adequado para dar suporte ao eShopO
 
 A arquitetura do aplicativo é mostrada na Figura 2-5. À esquerda estão os aplicativos cliente, divididos em tipos móveis, da Web tradicional e de SPA (aplicativo de página única) da Web. À direita estão os componentes do lado do servidor que compõem o sistema, cada um deles pode ser hospedado em contêineres e clusters kubernetes do Docker. O aplicativo Web tradicional é fornecido pela plataforma de ASP.NET Core aplicativos MVC mostrados em amarelo. Esse aplicativo e os aplicativos de SPA móveis e da Web se comunicam com os microserviços individuais por meio de um ou mais gateways de API. Os gateways de API seguem o padrão de "back-ends para front-ends" (BFF), o que significa que cada gateway é projetado para dar suporte a um determinado cliente front-end. Os microserviços individuais são listados à direita dos gateways de API e incluem a lógica de negócios e algum tipo de armazenamento de persistência. Os diferentes serviços fazem uso de bancos de dados SQL Server, instâncias de cache Redis e armazenamentos MongoDB/CosmosDB. Na extrema direita, está o barramento de evento do sistema, que é usado para a comunicação entre os microserviços.
 
-![arquitetura](./media/eshoponcontainers-architecture.png)
-eShopOnContainers**Figura 2-5**. A arquitetura eShopOnContainers.
+Arquitetura ![eShopOnContainers @ no__t-1**figura 2-5**. A arquitetura eShopOnContainers.
 
 Todos os componentes do lado do servidor dessa arquitetura são mapeados facilmente para os serviços do Azure.
 
@@ -26,7 +25,7 @@ Todos os componentes do lado do servidor dessa arquitetura são mapeados facilme
 
 Os serviços hospedados por contêiner do aplicativo, de ASP.NET Core aplicativos MVC para os microserviços de catálogo individual e ordenação, podem ser hospedados e gerenciados no AKS (serviço kubernetes do Azure). O aplicativo pode ser executado localmente no Docker e no kubernetes, e os mesmos contêineres podem ser implantados em ambientes de produção e de preparo hospedados em AKS. Esse processo pode ser automatizado, como veremos na próxima seção.
 
-O AKS fornece serviços de gerenciamento para clusters individuais de contêineres. O aplicativo implantará clusters AKS separados para cada microserviço mostrado no diagrama de arquitetura acima. Essa abordagem permite que cada serviço individual seja independente de acordo com suas demandas de recursos. Cada microserviço também pode ser implantado de forma independente e, teoricamente, essas implantações devem incorrer em tempo de inatividade do sistema
+O AKS fornece serviços de gerenciamento para clusters individuais de contêineres. O aplicativo implantará clusters AKS separados para cada microserviço mostrado no diagrama de arquitetura acima. Essa abordagem permite que cada serviço individual seja dimensionado de forma independente de acordo com suas demandas de recursos. Cada microserviço também pode ser implantado de forma independente e, teoricamente, essas implantações devem incorrer em tempo de inatividade do sistema
 
 ## <a name="api-gateway"></a>Gateway de API
 

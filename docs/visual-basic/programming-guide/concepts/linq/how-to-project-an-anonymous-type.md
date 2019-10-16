@@ -1,18 +1,18 @@
 ---
-title: 'Como: Projetar um tipo anônimo (Visual Basic)'
+title: Como projetar um tipo anônimo (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
-ms.openlocfilehash: cc8e59ac1037fc173cb44d8c8ff344374c5766ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a4498913cdcff0f813f184be18816e4dc5179b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644293"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321492"
 ---
-# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Como: Projetar um tipo anônimo (Visual Basic)
+# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Como projetar um tipo anônimo (Visual Basic)
 Em alguns casos você pode querer projetar uma consulta a um novo tipo, mesmo que você soubesse que você usará apenas este tipo para um curto quando. É muito trabalho adicional para criar apenas um novo tipo para usar na projeção. Uma abordagem mais eficiente nesse caso é projeto para um tipo anônimo. Tipos anônimos permitem que você defina uma classe, então declare e inicialize um objeto de aquela classe, sem dar um nome para a classe.  
   
- Os tipos anônimos são a implementação de C# do conceito matemático de uma *tupla*. O tuple o termo matemático proveniente da sequência única, double, triplo, quádruplo, quintuple, n- tuple. Refere-se a uma sequência finito rotuladas de objetos, cada um de um tipo específico. Isso é às vezes chamado uma lista de pares nome/valor. Por exemplo, o conteúdo de um endereço no documento XML [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) pode ser expresso da seguinte maneira:  
+ Os tipos anônimos são a implementação de C# do conceito matemático de uma *tupla*. O tuple o termo matemático proveniente da sequência única, double, triplo, quádruplo, quintuple, n- tuple. Refere-se a uma sequência finito rotuladas de objetos, cada um de um tipo específico. Isso é às vezes chamado uma lista de pares nome/valor. Por exemplo, o conteúdo de um endereço no documento XML [Arquivo XML de exemplo: pedido de compra típico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) pode ser expresso da seguinte maneira:  
   
 ```  
 Name: Ellen Adams  
@@ -28,7 +28,7 @@ Country: USA
 ## <a name="example"></a>Exemplo  
  Nesse exemplo, a cláusula de `Select` projetos de um tipo anônimo. O exemplo usa em `Dim` para criar o objeto de `IEnumerable` . Dentro do loop de `For Each` , a variável de iteração torna-se em uma instância do tipo anônimo criado na expressão de consulta.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -46,7 +46,7 @@ Next
   
  Esse código gera a seguinte saída:  
   
-```  
+```console  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  

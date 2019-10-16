@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698676"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319103"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos boolianos (referência do C#)
 
@@ -51,11 +51,11 @@ Para os operandos de tipos [integrais](../builtin-types/integral-numeric-types.m
 
 ## <a name="logical-negation-operator-"></a>Operador de negação lógica !
 
-O operador `!` calcula a negação lógica de seu operando. Ou seja, ele produz `true`, se o operando for avaliado como `false`, e `false`, se o operando for avaliado como `true`:
+O operador `!` de prefixo unário computa a negação lógica de seu operando. Ou seja, ele produz `true`, se o operando for avaliado como `false`, e `false`, se o operando for avaliado como `true`:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-A partir C# do 8,0, o operador `!` de sufixo unário é um operador NULL-tolerante. Em um contexto de anotação anulável habilitado, você o usa para declarar que a expressão `x` de um tipo de referência anulável não é nula: `x!`. Para obter mais informações, consulte [tipos de referência anuláveis](../../nullable-references.md).
+A partir C# do 8,0, o operador sufixo unário `!` é o [operador NULL-tolerante](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Operador AND lógico &amp;
 
@@ -117,7 +117,7 @@ O [operador OR lógico](#logical-or-operator-) `|` também computa o OR lógico 
 
 Para os operandos `bool?`, os operadores `&` e `|` oferecem suporte à lógica de três valores. A semântica desses operadores é definida pela tabela a seguir:  
   
-|x|y|x&y|x&#124;y|  
+|x|s|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  

@@ -1,19 +1,19 @@
 ---
-title: 'Como: Projetar um gráfico de objeto (Visual Basic)'
+title: Como projetar um grafo de objeto (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c4a040600b26e3e2d3d031c8eb991dd9c14fbac
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038227"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320268"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>Como: Projetar um gráfico de objeto (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>Como projetar um grafo de objeto (Visual Basic)
 Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.  
   
 ## <a name="example"></a>Exemplo  
- O seguinte código popula um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML [Arquivo XML de exemplo: Ordem de compra típica (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ O código a seguir preenche um grafo de objeto com as classes `Address`, `PurchaseOrder` e `PurchaseOrderItem` do documento XML de [Arquivo XML de exemplo: pedido de compra típico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Class Address  
@@ -300,7 +300,7 @@ End Sub
   
  O exemplo produz a seguinte saída:  
   
-```  
+```console  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   

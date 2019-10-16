@@ -3,16 +3,16 @@ title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: e58f2bac23fabf734df93aa2a643106f1c1bd5f3
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956655"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291384"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo
 
-O C# 8 introduz **tipos de referência que permitem valor nulo** que complementam os tipos de referência da mesma maneira que os tipos de valor que permitem valor nulo complementam os tipos de valor. Para declarar que uma variável é um **tipo de referência que permite valor nulo**, anexe um `?` ao tipo. Por exemplo, `string?` representa uma `string` que permite valor nulo. Você pode usar esses novos tipos para expressar mais claramente sua intenção de design: algumas variáveis *devem sempre ter um valor*, outras *podem ter um valor* ausente.
+C#8,0 apresenta [tipos de referência anuláveis](../nullable-references.md), que complementam os tipos de referência da mesma maneira que os tipos de valores de valor nulo complementam tipos Value. Para declarar que uma variável é um **tipo de referência que permite valor nulo**, anexe um `?` ao tipo. Por exemplo, `string?` representa uma `string` que permite valor nulo. Você pode usar esses novos tipos para expressar mais claramente sua intenção de design: algumas variáveis *devem sempre ter um valor*, outras *podem ter um valor* ausente.
 
 Neste tutorial, você aprenderá a:
 
@@ -25,7 +25,7 @@ Neste tutorial, você aprenderá a:
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8 está disponível com o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)ou o [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8,0 está disponível com o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)ou o [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -37,7 +37,7 @@ O código que você gravará para este exemplo expressa essa intenção e o comp
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Criar o aplicativo e habilitar os tipos de referência que permitem valor nulo
 
-Crie um novo aplicativo de console no Visual Studio ou na linha de comando usando `dotnet new console`. Dê o nome `NullableIntroduction` ao aplicativo. Depois de criar o aplicativo, você precisará especificar que todo o projeto será compilado em um **contexto de anotação anulável**`enabled`. Abra o arquivo `csproj` e adicione um elemento `Nullable` ao elemento `PropertyGroup`. Defina seu valor como `enabled`. Você deve aceitar o recurso dos **tipos de referência que permitem valor nulo**, mesmo em projetos do C# 8. Isso porque, quando o recurso é ativado, as declarações de variáveis de referência existentes tornam-se **tipos de referência que não permitem valor nulo**. Embora essa decisão ajude a encontrar problemas em que o código existente pode não ter verificações nulas adequadas, ele pode não refletir com precisão sua intenção de design original:
+Crie um novo aplicativo de console no Visual Studio ou na linha de comando usando `dotnet new console`. Dê o nome `NullableIntroduction` ao aplicativo. Depois de criar o aplicativo, você precisará especificar que todo o projeto será compilado em um **contexto de anotação anulável**habilitado. Abra o arquivo *. csproj* e adicione um elemento `Nullable` ao elemento `PropertyGroup`. Defina seu valor como `enable`. Você deve optar pelo recurso **tipos de referência anulável** , mesmo em C# projetos de 8,0. Isso porque, quando o recurso é ativado, as declarações de variáveis de referência existentes tornam-se **tipos de referência que não permitem valor nulo**. Embora essa decisão ajude a encontrar problemas em que o código existente pode não ter verificações nulas adequadas, ele pode não refletir com precisão sua intenção de design original:
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-O compilador interpreta cada declaração de variável de tipo de referência como um tipo de referência **não anulável** para código em um contexto que permite valor nulo. Para ver seu primeiro aviso, adicione propriedades ao texto da pergunta e tipo de pergunta, conforme mostrado no código a seguir:
+O compilador interpreta cada declaração de variável de tipo de referência como um tipo de referência **não anulável** para o código em um contexto de anotação anulável habilitado. Para ver seu primeiro aviso, adicione propriedades ao texto da pergunta e tipo de pergunta, conforme mostrado no código a seguir:
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ Alterne para *Program.cs* no seu editor e substitua o conteúdo de `Main` pelas 
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Como todo o projeto está em um contexto que permite valor nulo, você receberá avisos quando passar `null` a qualquer método que esteja esperando um tipo de referência não anulável. Experimente adicionar a seguinte linha a `Main`:
+Como o projeto inteiro está em um contexto de anotação anulável habilitado, você receberá avisos quando passar `null` para qualquer método que espera um tipo de referência não anulável. Experimente adicionar a seguinte linha a `Main`:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);

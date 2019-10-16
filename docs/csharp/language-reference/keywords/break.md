@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602252"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179928"
 ---
 # <a name="break-c-reference"></a>break (Referência de C#)
 
@@ -27,12 +27,6 @@ Neste exemplo, a instrução condicional tem um contador que deveria contar de 1
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, a instrução `break` é usada para interromper um loop aninhado interno e retornar o controle para o loop externo.
-
-[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
-
-## <a name="example"></a>Exemplo
-
 Este exemplo demonstra o uso de `break` em uma instrução [switch](./switch.md).
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
@@ -43,6 +37,18 @@ Se você digitou `4`, a saída seria:
 Enter your selection (1, 2, or 3): 4
 Sorry, invalid selection.
 ```
+
+## <a name="example"></a>Exemplo
+
+Neste exemplo, a instrução `break` é usada para interromper um loop aninhado interno e retornar o controle para o loop externo. O controle _só_ retornou um nível acima nos loops aninhados.
+
+[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
+
+## <a name="example"></a>Exemplo
+
+Neste exemplo, a instrução `break` é usada apenas para interromper a ramificação atual durante cada iteração do loop. O loop em si não é afetado pelas instâncias de `break` que pertencem à instrução [switch](./switch.md) aninhada.
+
+[!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 

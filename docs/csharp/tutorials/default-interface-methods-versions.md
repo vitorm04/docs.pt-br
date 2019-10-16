@@ -1,16 +1,16 @@
 ---
-title: Atualizar interfaces com segurança usando membros de interface padrão em C#
+title: Atualizar com segurança as interfaces usando métodos de interface padrão noC#
 description: Este tutorial avançado explora como adicionar novos recursos com segurança às definições de interface existentes sem interromper todas as classes e structs que implementam essa interface.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216569"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275997"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Atualizar interfaces com membros da interface padrão no C# 8.0
+# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Tutorial: Atualizar interfaces com métodos de interface padrão C# no 8,0
 
 Desde o C# 8.0 no .NET Core 3.0, é possível definir uma implementação em que você declara um membro de uma interface. O cenário mais comum é adicionar membros com segurança a uma interface já lançada e usada por vários clientes.
 
@@ -38,17 +38,17 @@ Eles definiram uma segunda interface que representava um pedido:
 
 Dessas interfaces, a equipe poderia criar uma biblioteca para os usuários criarem uma experiência melhor para os clientes. A meta era criar um relacionamento mais profundo com os clientes existentes e melhorar o relacionamento com clientes novos.
 
-Agora é hora de atualizar a biblioteca para a próxima versão. Um dos recursos solicitados habilitará um desconto de fidelidade para os clientes que tiverem muitos pedidos. Esse novo desconto de fidelidade é aplicado sempre que um cliente faz um pedido. O desconto específico é uma propriedade de cada cliente. Cada implementação do `ICustomer` pode definir regras diferentes para o desconto de fidelidade. 
+Agora é hora de atualizar a biblioteca para a próxima versão. Um dos recursos solicitados habilitará um desconto de fidelidade para os clientes que tiverem muitos pedidos. Esse novo desconto de fidelidade é aplicado sempre que um cliente faz um pedido. O desconto específico é uma propriedade de cada cliente. Cada implementação de `ICustomer` pode definir regras diferentes para o desconto de fidelidade. 
 
 A forma mais natural de adicionar essa funcionalidade é melhorar a interface `ICustomer` com um método para aplicar qualquer desconto de fidelidade. Essa sugestão de design causou preocupação entre desenvolvedores experientes: "Interfaces são imutáveis depois que são lançadas! Esta é uma alteração da falha!" O C# 8.0 adiciona *implementações de interface padrão* para interfaces de atualização. Os autores de biblioteca podem adicionar novos membros à interface e fornecer uma implementação padrão para esses membros.
 
 Implementações de interface padrão permitem que os desenvolvedores atualizem uma interface, permitindo que qualquer implementador substitua essa implementação. Os usuários da biblioteca podem aceitar a implementação padrão como uma alteração da falha. Se as regras de negócio forem diferentes, elas poderão substituir a implementação.
 
-## <a name="upgrade-with-default-interface-members"></a>Atualizar com membros de interface padrão
+## <a name="upgrade-with-default-interface-methods"></a>Atualizar com métodos de interface padrão
 
 A equipe concordou na implementação padrão mais provável: um desconto de fidelidade para os clientes.
 
-A atualização deve fornecer a funcionalidade para definir duas propriedades: o número de pedidos necessários para ser qualificado para o desconto e o percentual de desconto. Isso se constitui em um cenário perfeito para membros de interface padrão. Você pode adicionar um método à `ICustomer` interface e fornecer a implementação mais provável. Todas as implementações novas e existentes podem usar a implementação padrão ou fornecer as suas próprias.
+A atualização deve fornecer a funcionalidade para definir duas propriedades: o número de pedidos necessários para ser qualificado para o desconto e o percentual de desconto. Isso o torna um cenário perfeito para métodos de interface padrão. Você pode adicionar um método à interface `ICustomer` e fornecer a implementação mais provável. Todas as implementações novas e existentes podem usar a implementação padrão ou fornecer as suas próprias.
 
 Primeiro, adicione o novo método à implementação:
 

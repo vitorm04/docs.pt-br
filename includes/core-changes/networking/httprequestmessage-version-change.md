@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 78d2ec6fb505573ad36d55a9ca0a20452b7fa244
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b50a108d2efbfd3da0d690cb02537a12f766b26b
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002875"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237277"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>Valor padrão de HttpRequestMessage. Version alterado para 1,1 
 
@@ -14,7 +14,7 @@ O valor padrão da propriedade <xref:System.Net.Http.HttpRequestMessage.Version?
 
 .NET Core 3.0
 
-#### <a name="details"></a>Detalhes
+#### <a name="change-description"></a>Alterar descrição
 
 No .NET Core 1,0 até 2,0, o valor padrão da propriedade <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> é 1,1. A partir do .NET Core 2,1, ele foi alterado para 2,1. 
 

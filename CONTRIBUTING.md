@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955965"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315874"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -33,26 +33,26 @@ Esse repositório contém a documentação conceitual do .NET. O site de documen
 
 Você precisa de uma compreensão básica do [Git e do GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Etapa 1:** Ignore esta etapa para pequenas alterações (por exemplo, se você estiver corrigindo um erro de digitação ou abrindo imediatamente uma solicitação de pull para resolver um problema encontrado nos documentos). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
+**Etapa 1:** Ignore esta etapa para alterações pequenas (por exemplo, se você estiver corrigindo um erro de digitação ou imediatamente abrindo uma solicitação de pull para resolver um problema encontrado nos documentos). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
 O conteúdo dentro da pasta *docs* é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
 
-- ou -
+\- ou -
 
 Também é possível escolher entre as questões existentes, para as quais contribuições da comunidade são bem-vindas. [Projetos para os colaboradores da comunidade do .NET](https://github.com/dotnet/docs/projects/35) lista vários itens de trabalho que estão disponíveis para os colaboradores da comunidade. Dependendo de seus interesses e nível de compromisso, você pode escolher entre questões nas seguintes categorias:
 
 - **Manutenção**. Essa categoria inclui contribuições bastante simples, como corrigir links corrompidos ou incorretos, adicionar exemplos de código ausentes ou abordar problemas de conteúdo limitado. Em alguns casos, essas questões podem envolver grandes quantidades de arquivos. Nesse caso, informe-nos com o que você gostaria de trabalhar antes de começar.
 
-- **Atualizações de conteúdo**. Considerando a enormidade do conjunto de documentos, o conteúdo se torna facilmente desatualizado e precisa de revisão. Além disso, por uma variedade de motivos, certos conteúdos podem ser duplicados ou até mesmo triplicados. A atualização do conteúdo envolve garantir que os tópicos individuais sejam atuais, ou revisar o conteúdo em uma área para eliminar duplicação e se certificar que todo conteúdo exclusivo seja preservado no menor conjunto de documentação.
+- **Atualizações de conteúdo**. Considerando a enormidade do conjunto de documentos, o conteúdo se torna facilmente desatualizado e precisa de revisão. Além disso, por vários motivos, algum conteúdo foi duplicado ou uniformemente preenvolvido. A atualização do conteúdo envolve garantir que os tópicos individuais sejam atuais, ou revisar o conteúdo em uma área para eliminar duplicação e se certificar que todo conteúdo exclusivo seja preservado no menor conjunto de documentação.
 
 - **Criação de novo conteúdo**. Se você estiver interessado na criação do seu próprio tópico, estas questões listam tópicos que gostaríamos de adicionar ao nosso conjunto de documentos. Fale conosco antes de começar a trabalhar em um tópico, no entanto. Se você estiver interessado em escrever um tópico que não está listado aqui, abra uma questão.
 
 Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição. 
 
-**Etapa 2:** Crie fork dos repositórios `dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs`, conforme necessário, e crie um branch para as alterações.
+**Etapa 2:** bifurque os repositórios `dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` conforme necessário e crie um branch para suas alterações.
 
 Para pequenas alterações, você pode usar a interface da Web do GitHub. Basta clicar em **Editar o arquivo na sua bifurcação deste projeto** no arquivo que você deseja alterar. O GitHub cria o novo branch para você após enviar as alterações.
 
-**Etapa 3:** Faça as alterações nesse novo branch.
+**Etapa 3:** fazer as alterações nesse novo branch.
 
 Se for um novo tópico, você poderá usar esse [arquivo de modelo](./styleguide/template.md) como ponto de partida. Ele contém as diretrizes de escrita e também explica os metadados necessários para cada artigo, como informações do autor.
 
@@ -87,7 +87,7 @@ Se a PR estiver resolvendo um problema existente, adicione a palavra-chave `Fixe
 
 A equipe do .NET examinará a PR e informará se outras atualizações/alterações são necessárias para aprová-la.
 
-**Etapa 5:** Faça as atualizações necessárias no branch, conforme discutido com a equipe.
+**Etapa 5:** faça as atualizações necessárias no branch, conforme discutido com a equipe.
 
 Os mantenedores mesclarão sua PR no branch mestre depois que os comentários forem aplicados e sua alteração for aprovada.
 
@@ -120,7 +120,7 @@ Para saber mais, confira o [Leiame da amostra](https://github.com/dotnet/samples
 
 ## <a name="the-c-interactive-experience"></a>A experiência interativa em C#
 
-Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Código de exemplos embutidos usam a marcação `csharp-interactive`. Para snippets incluídos da fonte, use a marcação `code-csharp-interactive`.) Esses códigos de exemplo exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra. 
+Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Os exemplos de código embutido usam a marca `csharp-interactive`, para trechos inclusos da origem, use a marca `code-csharp-interactive`.) Esses exemplos de código exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra. 
 
 A experiência interativa em C# altera o modo como trabalhamos com amostras. Os visitantes podem executar a amostra para ver os resultados. Uma série de fatores ajuda a determinar se a amostra ou o texto correspondente deve incluir informações sobre a saída.
 

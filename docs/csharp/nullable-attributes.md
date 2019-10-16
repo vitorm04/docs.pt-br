@@ -2,14 +2,14 @@
 title: Atualizar APIs com atributos para definir expectativas nulas
 description: Este artigo explica as motivações e técnicas para adicionar atributos descritivos para descrever o estado nulo de argumentos e retornar valores de APIs
 ms.date: 07/31/2019
-ms.openlocfilehash: b6c6be213cb920459e5f1adbe3ee822ff6ddbf33
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834193"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319066"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualize as bibliotecas para usar tipos de referência anuláveis e comunicar regras anuláveis a chamadores.
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualizar bibliotecas para usar tipos de referência anuláveis e comunicar regras anuláveis a chamadores
 
 A adição de [tipos de referência anuláveis](nullable-references.md) significa que você pode declarar se um valor `null` é ou não permitido ou esperado para cada variável. Isso fornece uma ótima experiência à medida que você escreve o código. Você receberá avisos se uma variável não anulável puder ser definida como `null`. Você receberá avisos se uma variável anulável não for marcada como nula antes de você desreferenciá-la. Atualizar suas bibliotecas pode levar tempo, mas os benefícios valem a pena. Quanto mais informações você fornecer ao compilador sobre *quando* um valor `null` é permitido ou proibido, os melhores avisos que os usuários da sua API obterão. Vamos começar com um exemplo familiar. Imagine que sua biblioteca tenha a seguinte API para recuperar uma cadeia de caracteres de recurso:
 
@@ -82,13 +82,13 @@ Vários atributos foram adicionados para expressar informações adicionais sobr
 
 As regras para suas APIs são provavelmente mais complicadas, como vimos com o cenário de API `TryGetValue`. Muitas de suas APIs têm regras mais complexas para quando as variáveis podem ou não ser `null`. Nesses casos, você usará um dos seguintes atributos para expressar essas regras:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): Um argumento de entrada não anulável pode ser nulo.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Um argumento de entrada anulável nunca deve ser nulo.
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): Um valor de retorno não anulável pode ser nulo.
-- Não [nulo](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): Um valor de retorno anulável nunca será nulo.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Um argumento `out` ou `ref` não anulável pode ser nulo quando o valor de retorno satisfizer uma condição.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Um argumento `out` ou `ref` anulável não pode ser nulo quando o valor de retorno satisfizer uma condição.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): Um valor de retorno não será nulo se o argumento de entrada para o parâmetro especificado não for nulo.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): um argumento de entrada não anulável pode ser nulo.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): um argumento de entrada anulável nunca deve ser nulo.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): um valor de retorno não anulável pode ser nulo.
+- Não [nulo](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): um valor de retorno anulável nunca será nulo.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): um argumento de entrada não anulável pode ser nulo quando o método retorna o valor `bool` especificado.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): um argumento de entrada anulável não será nulo quando o método retornar o valor `bool` especificado.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): um valor de retorno não será nulo se o argumento do parâmetro especificado não for nulo.
 
 As descrições anteriores são uma referência rápida para o que cada atributo faz. Cada seção a seguir descreve o comportamento e significa mais detalhadamente.
 
@@ -128,7 +128,7 @@ O exemplo anterior demonstra o que procurar ao adicionar o atributo `AllowNull` 
 
 Geralmente, você precisará desse atributo para propriedades, ou `in`, `out` e argumentos `ref`. O atributo `AllowNull` é a melhor opção quando uma variável normalmente é não nula, mas você precisa permitir `null` como uma pré-condição.
 
-Compare com cenários para usar `DisallowNull`: Você usa esse atributo para especificar que uma variável de entrada de um tipo anulável não deve ser `null`. Considere uma propriedade em que `null` é o valor padrão, mas os clientes só podem defini-lo como um valor não nulo. Considere o código a seguir:
+Compare com cenários para usar `DisallowNull`: você usa esse atributo para especificar que uma variável de entrada de um tipo anulável não deve ser `null`. Considere uma propriedade em que `null` é o valor padrão, mas os clientes só podem defini-lo como um valor não nulo. Considere o código a seguir:
 
 ```csharp
 public string ReviewComment
@@ -160,8 +160,8 @@ Essas situações são comuns no código que era originalmente *nulo alheios*. P
 
 Os atributos `AllowNull` e `DisallowNull` permitem que você especifique que as pré-condições nas variáveis podem não corresponder às anotações anuláveis nessas variáveis. Eles fornecem mais detalhes sobre as características de sua API. Essas informações adicionais ajudam os chamadores a usar sua API corretamente. Lembre-se de especificar as pré-condições usando os seguintes atributos:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): Um argumento de entrada não anulável pode ser nulo.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Um argumento de entrada anulável nunca deve ser nulo.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): um argumento de entrada não anulável pode ser nulo.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): um argumento de entrada anulável nunca deve ser nulo.
 
 ## <a name="specify-post-conditions-maybenull-and-notnull"></a>Especificar pós-condições: `MaybeNull` e `NotNull`
 
@@ -209,16 +209,16 @@ Depois de habilitar tipos de referência NULL, você deseja garantir que o códi
 public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 ```
 
-O código anterior expressa o contrato existente muito claramente: Os chamadores podem passar uma variável com o valor `null`, mas é garantido que o valor de retorno nunca seja nulo. O atributo `NotNull` é mais útil para argumentos `ref` e `out` em que `null` pode ser passado como um argumento, mas esse argumento é garantido como não nulo quando o método retorna.
+O código anterior expressa o contrato existente muito claramente: os chamadores podem passar uma variável com o valor `null`, mas é garantido que o valor de retorno nunca seja nulo. O atributo `NotNull` é mais útil para argumentos `ref` e `out` em que `null` pode ser passado como um argumento, mas esse argumento é garantido como não nulo quando o método retorna.
 
 Você especifica condições de erro incondicionais usando os seguintes atributos:
 
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): Um valor de retorno não anulável pode ser nulo.
-- Não [nulo](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): Um valor de retorno anulável nunca será nulo.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): um valor de retorno não anulável pode ser nulo.
+- Não [nulo](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): um valor de retorno anulável nunca será nulo.
 
-## <a name="specify-conditional-post-conditions-notnullwhen-and-maybenullwhen"></a>Especificar pós-condições condicionais: `NotNullWhen` e `MaybeNullWhen`
+## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Especificar pós-condições condicionais: `NotNullWhen`, `MaybeNullWhen` e `NotNullIfNotNull`
 
-Você provavelmente está familiarizado com o método `string` <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. Esse método retorna `true` quando o argumento é nulo ou uma cadeia de caracteres vazia. É uma forma de verificação nula: Os chamadores não precisam ser nulos – Verifique o argumento se o método retornar `false`. Para tornar um método como esse reconhecimento anulável, você definiria o argumento como um tipo anulável e adicionaria o atributo `NotNullWhen`:
+Você provavelmente está familiarizado com o método `string` <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. Esse método retorna `true` quando o argumento é nulo ou uma cadeia de caracteres vazia. É uma forma de verificação nula: os chamadores não precisam ser nulos. Verifique o argumento se o método retornar `false`. Para tornar um método como esse reconhecimento anulável, você definiria o argumento como um tipo anulável e adicionaria o atributo `NotNullWhen`:
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);
@@ -276,9 +276,9 @@ O valor de retorno e o argumento foram anotados com o `?`, indicando que pode se
 
 Você especifica condições recondicionais usando estes atributos:
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Um argumento `out` ou `ref` não anulável pode ser nulo quando o valor de retorno satisfizer uma condição.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Um argumento `out` ou `ref` anulável não pode ser nulo quando o valor de retorno satisfizer uma condição.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): Um valor de retorno não será nulo se o argumento de entrada para o parâmetro especificado não for nulo.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): um argumento de entrada não anulável pode ser nulo quando o método retorna o valor `bool` especificado.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): um argumento de entrada anulável não será nulo quando o método retornar o valor `bool` especificado.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): um valor de retorno não será nulo se o argumento de entrada para o parâmetro especificado não for nulo.
 
 ## <a name="generic-definitions-and-nullability"></a>Definições genéricas e nulidade
 
@@ -296,10 +296,10 @@ A adição de tipos de referência anuláveis fornece um vocabulário inicial pa
 
 Conforme você atualiza as bibliotecas para um contexto anulável, adicione esses atributos para orientar os usuários de suas APIs para o uso correto. Esses atributos ajudam você a descrever totalmente o estado nulo dos argumentos de entrada e valores de retorno:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): Um argumento de entrada não anulável pode ser nulo.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Um argumento de entrada anulável nunca deve ser nulo.
-- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): Um valor de retorno não anulável pode ser nulo.
-- Não [nulo](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): Um valor de retorno anulável nunca será nulo.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Um argumento `out` ou `ref` não anulável pode ser nulo quando o valor de retorno satisfizer uma condição.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Um argumento `out` ou `ref` anulável não pode ser nulo quando o valor de retorno satisfizer uma condição.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): Um valor de retorno não será nulo se o argumento de entrada para o parâmetro especificado não for nulo.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): um argumento de entrada não anulável pode ser nulo.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): um argumento de entrada anulável nunca deve ser nulo.
+- [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): um valor de retorno não anulável pode ser nulo.
+- Não [nulo](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): um valor de retorno anulável nunca será nulo.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): um argumento de entrada não anulável pode ser nulo quando o método retorna o valor `bool` especificado.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): um argumento de entrada anulável não será nulo quando o método retornar o valor `bool` especificado.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): um valor de retorno não será nulo se o argumento de entrada para o parâmetro especificado não for nulo.

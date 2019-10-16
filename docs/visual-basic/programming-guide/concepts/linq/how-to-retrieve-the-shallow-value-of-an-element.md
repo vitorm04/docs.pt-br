@@ -1,15 +1,15 @@
 ---
-title: 'Como: Recuperar o valor superficial de um elemento (Visual Basic)'
+title: Como recuperar o valor superficial de um elemento (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 69e85c3b87ef1052bbb3eab832f93774fa35066f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184186a92865b022118b9989633a97c75274e7f4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918080"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320427"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Como: Recuperar o valor superficial de um elemento (Visual Basic)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Como recuperar o valor superficial de um elemento (Visual Basic)
 
 Este tópico mostra como obter o valor raso de um elemento. O valor raso é o valor do elemento específico somente, diferentemente de valor maior, que inclui os valores de todos os elementos descendentes concatenados em uma única cadeia de caracteres.
 
@@ -69,7 +69,7 @@ End Module
 
 Este exemplo gera a seguinte saída:
 
-```
+```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
 Column  Name="Name"         =Customer.Name.Heading
 Column  Name="CustomerId"   =Customer.CustomerId

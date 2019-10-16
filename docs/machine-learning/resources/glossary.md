@@ -4,12 +4,12 @@ description: Um glossário de termos essenciais sobre o aprendizado de máquina,
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929262"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180184"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -136,7 +136,7 @@ Na [classificação](#classification), o recall de uma classe é o número de it
  Regularização penaliza um modelo linear por ser complicado demais. Há dois tipos de regularização:
 
 - A regularização $L_1$ zera pesos para recursos insignificantes. O tamanho do modelo salvo pode ficar menor após esse tipo de regularização.
-- A regularização $L_2$ minimiza o intervalo de peso para recursos insignificantes. Esse é um processo mais geral e menos sensível a exceções.
+- $L _2 $ regularização minimiza o intervalo de peso para recursos insignificantes. Esse é um processo mais geral e é menos sensível a exceções.
 
 ## <a name="regression"></a>Regressão
 

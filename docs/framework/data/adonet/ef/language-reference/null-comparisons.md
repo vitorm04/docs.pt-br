@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8eca2ee1afec5662e40d4f43347c469bd538c066
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854326"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319492"
 ---
 # <a name="null-comparisons"></a>Comparações nulas
-Um valor `null` na fonte de dados indica que o valor é desconhecido. Em consultas LINQ to Entities, você pode verificar se há valores nulos para que determinados cálculos ou comparações sejam executados somente em linhas que tenham dados válidos, ou não nulos. A semântica nula do CLR, no entanto, pode diferir da semântica nula da fonte de dados. A maioria dos bancos de dados usa uma versão da lógica de três valores para manipular comparações nulas. Ou seja, uma comparação com um valor nulo não é avaliada `true` como `false`ou, ela é avaliada como `unknown`. Geralmente, essa é uma implementação de valores nulos ANSI, mas isso nem sempre acontece.  
+Um valor `null` na fonte de dados indica que o valor é desconhecido. Em consultas LINQ to Entities, você pode verificar se há valores nulos para que determinados cálculos ou comparações sejam executados somente em linhas que tenham dados válidos, ou não nulos. A semântica nula do CLR, no entanto, pode diferir da semântica nula da fonte de dados. A maioria dos bancos de dados usa uma versão da lógica de três valores para manipular comparações nulas. Ou seja, uma comparação com um valor nulo não é avaliada como `true` ou `false`, ela é avaliada como `unknown`. Geralmente, essa é uma implementação de valores nulos ANSI, mas isso nem sempre acontece.  
   
- Por padrão, no SQL Server, a comparação nulo igual a nulo retorna um valor nulo. No exemplo a seguir, as linhas em `ShipDate` que is NULL são excluídas do conjunto de resultados e a instrução Transact-SQL retornaria 0 linhas.  
+ Por padrão, no SQL Server, a comparação nulo igual a nulo retorna um valor nulo. No exemplo a seguir, as linhas em que `ShipDate` é NULL são excluídas do conjunto de resultados e a instrução Transact-SQL retornaria 0 linhas.  
   
-```  
+```sql  
 -- Find order details and orders with no ship date.  
 SELECT h.SalesOrderID  
 FROM Sales.SalesOrderHeader h  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Passando coleções nulas para funções agregadas  
- Em LINQ to Entities, quando você passa uma coleção que dá `IQueryable` suporte a uma função de agregação, as operações de agregação são executadas no banco de dados. Pode haver diferenças nos resultados de uma consulta que foi executada na memória e uma consulta que foi executada no banco de dados. Com uma consulta na memória, se não houver nenhuma correspondência, a consulta retornará zero. No banco de dados, a mesma consulta retorna `null`. Se um `null` valor for passado para uma função de agregação LINQ, uma exceção será lançada. Para aceitar os `null` valores possíveis, converta os tipos e as propriedades dos tipos que recebem resultados da consulta para tipos anuláveis.  
+ Em LINQ to Entities, quando você passa uma coleção que dá suporte a `IQueryable` a uma função de agregação, as operações de agregação são executadas no banco de dados. Pode haver diferenças nos resultados de uma consulta que foi executada na memória e uma consulta que foi executada no banco de dados. Com uma consulta na memória, se não houver nenhuma correspondência, a consulta retornará zero. No banco de dados, a mesma consulta retorna `null`. Se um valor `null` for passado para uma função de agregação LINQ, uma exceção será lançada. Para aceitar os valores possíveis de `null`, converta os tipos e as propriedades dos tipos que recebem resultados da consulta para tipos anuláveis.  
   
 ## <a name="see-also"></a>Consulte também
 

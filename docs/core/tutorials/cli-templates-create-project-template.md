@@ -5,14 +5,14 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926142"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318284"
 ---
-# <a name="tutorial-create-a-project-template"></a>Tutorial: Criar um modelo de projeto
+# <a name="tutorial-create-a-project-template"></a>Tutorial: criar um modelo de projeto
 
 Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte dois de uma série que ensina como criar, instalar e desinstalar modelos para usar com o comando `dotnet new`.
 
@@ -26,7 +26,7 @@ Nesta parte da série, você aprenderá a:
 > * Testar um modelo de item
 > * Desinstalar um modelo de item
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * Conclua a [parte 1](cli-templates-create-item-template.md) desta série de tutoriais.
 * Abra um terminal e navegue até a pasta _working\templates\\_ .
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>Testar o modelo do projeto
 
-Agora que você tem um modelo de item instalado, teste-o. Navegue até a pasta _test_ e crie um novo aplicativo de console com `dotnet new console`. Isso gera um projeto funcional que você pode testar facilmente com o comando `dotnet run`.
+Agora que você tem um modelo de item instalado, teste-o. Navegue até a pasta _test_ e crie um novo aplicativo de console com `dotnet new consoleasync`. Isso gera um projeto funcional que você pode testar facilmente com o comando `dotnet run`.
 
 ```console
 C:\test> dotnet new consoleasync

@@ -3,13 +3,13 @@ title: Pré-requisitos para o .NET Core no Linux
 description: Versões do Linux e dependências do .NET Core com suporte para desenvolver, implantar e executar aplicativos .NET Core em computadores Linux.
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591693"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318331"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Pré-requisitos para o .NET Core no Linux
 
@@ -36,7 +36,7 @@ O .NET Core 3,0 tem suporte nas seguintes distribuições/versões do Linux:
 > [!NOTE]
 > Um símbolo `+` representa a versão mínima.
 
-| OS                             | Versão               | Arquiteturas    |
+| Sistema operacional                             | Version               | Arquiteturas    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6 +, 7                 | X64 |
 | Oracle Linux                   | 7                     | X64 |
@@ -64,7 +64,7 @@ O .NET Core 2,2 tem suporte nas seguintes distribuições/versões do Linux:
 > [!NOTE]
 > Um símbolo `+` representa a versão mínima.
 
-| OS                             |  Versão                |  Arquiteturas   |
+| Sistema operacional                             |  Version                |  Arquiteturas   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7                   | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -87,7 +87,7 @@ Para obter links de download e mais informações, consulte [downloads do .NET C
 
 O .NET Core 2,1 tem suporte nas seguintes distribuições/versões do Linux:
 
-| OS                             |  Versão                |  Arquiteturas   |
+| Sistema operacional                             |  Version                |  Arquiteturas   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -128,6 +128,13 @@ Para versões anteriores ao .NET Core 2.1, as seguintes dependências também s�
 * libunwind8
 * libuuid1
 
+Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você também precisa da seguinte dependência:
+
+* libgdiplus (versão 6.0.1 ou posterior)
+
+> [!NOTE]
+> A maioria das versões do Ubuntu inclui uma versão anterior do libgdiplus. Você pode instalar uma versão recente do libgdiplus adicionando o repositório do mono ao seu sistema. Para obter mais informações, consulte <https://www.mono-project.com/download/stable/>.
+
 ### <a name="centos-and-fedora"></a>CentOS e Fedora
 
 As distribuições do CentOS requerem que as seguintes bibliotecas estejam instaladas:
@@ -139,7 +146,7 @@ As distribuições do CentOS requerem que as seguintes bibliotecas estejam insta
 * libicu
 * zlib
 
-Usuários do Fedora: Se a versão do OpenSSL for >= 1.1, será necessário instalar compat-openssl10.
+Usuários do Fedora: se sua versão do OpenSSL for >= 1.1, será necessário instalar compat-openssl10.
 
 Para versões anteriores ao .NET Core 2.1, as seguintes dependências também são necessárias:
 
@@ -147,6 +154,13 @@ Para versões anteriores ao .NET Core 2.1, as seguintes dependências também s�
 * libuuid
 
 Para obter mais informações sobre as dependências, confira [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (Aplicativos Linux autossuficientes).
+
+Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você também precisará da seguinte dependência:
+
+* libgdiplus (versão 6.0.1 ou posterior)
+
+> [!NOTE]
+> A maioria das versões do CentOS e do Fedora inclui uma versão anterior do libgdiplus. Você pode instalar uma versão recente do libgdiplus adicionando o repositório do mono ao seu sistema. Para obter mais informações, consulte <https://www.mono-project.com/download/stable/>.
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>Instalando as dependências do .NET Core com os instaladores nativos
 
@@ -169,7 +183,7 @@ O padrão do script é instalar a versão "LTS" mais recente, que é .NET Core 1
 
 O script bash do instalador é usado em cenários de automação e em instalações não realizadas por administrador. Esse script também lê as opções do PowerShell para que elas possam ser usadas com o script em sistemas Linux/OS X.
 
-## <a name="troubleshoot"></a>Solucionar problemas
+## <a name="troubleshoot"></a>Solução de problemas
 
 Se você tiver problemas com a instalação do .NET Core em uma versão/distribuição do Linux compatível, consulte os tópicos a seguir relacionadas a suas versões/distribuições instaladas:
 

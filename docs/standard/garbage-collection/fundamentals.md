@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895277"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180190"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
@@ -176,7 +176,7 @@ Antes de iniciar uma coleta de lixo, todos os threads gerenciados são suspensos
 
 A ilustração a seguir mostra um thread que dispara uma coleta de lixo e faz com que outros threads sejam suspensos.
 
-![Quando um thread dispara uma coleta de lixo](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") O thread que dispara uma coleta de lixo
+![Quando um thread dispara uma coleta de lixo](../../../docs/standard/garbage-collection/media/gc-triggered.png "quando um thread dispara uma coleta de lixo")
 
 [Voltar ao início](#top)
 
@@ -208,7 +208,7 @@ O coletor de lixo tem autoajuste e pode trabalhar em uma ampla variedade de cen�
 
 A ilustração a seguir mostra os threads dedicados que executam a coleta de lixo em um servidor.
 
-![Threads da coleta de lixo do servidor](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Coleta de lixo do servidor
+Threads de coleta de(../../../docs/standard/garbage-collection/media/gc-server.png "lixo do") servidor ![threads]do servidor
 
 ### <a name="configuring-garbage-collection"></a>Configurar a coleta de lixo
 
@@ -262,7 +262,7 @@ A coleta de lixo simultânea tem um conjunto de trabalho ligeiramente maior (em 
 
 A ilustração a seguir mostra a coleta de lixo simultânea executada em um thread dedicado separado.
 
-![Threads da coleta de lixo do simultânea](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Server") Coleta de lixo simultânea
+Threads simultâneos de coleta de(../../../docs/standard/garbage-collection/media/gc-concurrent.png "lixo") de ![threads]de coleta de lixo
 
 [Voltar ao início](#top)
 
@@ -270,7 +270,7 @@ A ilustração a seguir mostra a coleta de lixo simultânea executada em um thre
 
 ## <a name="background-workstation-garbage-collection"></a>Coleta de lixo de estação de trabalho em segundo plano
 
-A coleta de lixo em segundo plano substitui a coleta de lixo da estação de trabalho simultânea começando com o .NET Framework 4 e substitui a coleta de lixo do servidor simultâneo, começando com o .NET Framework 4,5.  Na coleta de lixo em segundo plano, as gerações efêmeras (0 e 1) são coletadas conforme o necessário, enquanto a coleta da geração 2 estiver em andamento. Ele é executado em um thread dedicado e é aplicável somente a coleções de geração 2. A coleta de lixo em segundo plano é habilitada automaticamente por padrão e pode ser habilitada ou desabilitada com a definição de [ \<configuração gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) em aplicativos .NET Framework. 
+A coleta de lixo em segundo plano substitui a coleta de lixo da estação de trabalho simultânea começando com o .NET Framework 4 e substitui a coleta de lixo do servidor simultâneo, começando com o .NET Framework 4,5.  Na coleta de lixo em segundo plano, as gerações efêmeras (0 e 1) são coletadas conforme o necessário, enquanto a coleta da geração 2 estiver em andamento. Ele é executado em um thread dedicado e é aplicável somente a coleções de geração 2. A coleta de lixo em segundo plano é habilitada automaticamente por padrão e pode ser habilitada ou desabilitada com o parâmetro de configuração [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) em aplicativos .NET Framework. 
 
 > [!NOTE]
 > A coleta de lixo em segundo plano está disponível apenas no .NET Framework 4 e em versões posteriores. No .NET Framework 4, ela é compatível somente para a coleta de lixo de estação de trabalho. A partir do .NET Framework 4.5, a coleta de lixo em segundo plano está disponível para a coleta de lixo de estação de trabalho e de servidor.
@@ -283,7 +283,7 @@ A coleta de lixo em segundo plano remove as restrições de alocação impostas 
 
 A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em uma estação de trabalho:
 
-![O diagrama mostra a coleta de lixo da estação de trabalho em segundo plano.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Diagrama que mostra a coleta de lixo da estação de trabalho em segundo plano.](./media/fundamentals/background-workstation-garbage-collection.png "Diagrama que mostra a coleta de lixo da estação de trabalho em segundo plano.")
 
 [Voltar ao início](#top)
 
@@ -295,7 +295,7 @@ A partir do .NET Framework 4.5, a coleta de lixo de servidor em segundo plano é
 
 A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em um servidor:
 
-![O diagrama mostra a coleta de lixo do servidor em segundo plano.](./media/fundamentals/background-server-garbage-collection.png)
+![Diagrama que mostra a coleta de lixo do servidor em segundo plano.](./media/fundamentals/background-server-garbage-collection.png "Diagrama que mostra a coleta de lixo do servidor em segundo plano.")
 
 ## <a name="see-also"></a>Consulte também
 

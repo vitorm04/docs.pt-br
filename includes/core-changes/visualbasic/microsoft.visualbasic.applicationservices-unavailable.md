@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: c3211752282b231e818d9af25322efbb6c93cf78
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 294c077b837899bd714deb2afd1bdff2b3185f38
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181812"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237274"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Os tipos no namespace Microsoft. VisualBasic. ApplicationServices não estão disponíveis
 
-Os tipos no <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> namespace não estão disponíveis.
+Os tipos no namespace <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> não estão disponíveis.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 .NET Core 3,0 Preview 8
 
-#### <a name="details"></a>Detalhes
+#### <a name="change-description"></a>Alterar descrição
 
-Os tipos no <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> namespace estavam disponíveis em algumas versões de visualização do .NET Core 3,0. Eles não estão mais disponíveis a partir do .NET Core 3,0 Preview 9.
+Os tipos no namespace <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> estavam disponíveis em algumas versões de visualização do .NET Core 3,0. Eles não estão mais disponíveis a partir do .NET Core 3,0 Preview 9.
 
 Os tipos foram removidos para evitar dependências de assembly desnecessárias ou alterações significativas nas versões subsequentes.
  
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se o seu código depende do uso de <xref:Microsoft.VisualBasic.ApplicationServices> tipos e de seus membros, você poderá usar um tipo ou membro correspondente na biblioteca de classes do .net. Por exemplo, alguns <xref:System.Environment?displayProperty=nameWithType> Membros <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> e fornecem funcionalidade equivalente <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> às propriedades da classe.
+Se seu código depende do uso de tipos <xref:Microsoft.VisualBasic.ApplicationServices> e seus membros, você poderá usar um tipo ou membro correspondente na biblioteca de classes do .NET. Por exemplo, alguns membros <xref:System.Environment?displayProperty=nameWithType> e <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> fornecem funcionalidade equivalente às propriedades da classe <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.
 
 #### <a name="category"></a>Categoria
 

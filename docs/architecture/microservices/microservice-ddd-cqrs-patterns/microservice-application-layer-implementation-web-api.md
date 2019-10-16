@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Compreenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo de API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: d462f692366575fd01842f41252fc96658fdcac5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002340"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249742"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Implementar comandos idempotentes
 
-Em **eShopOnContainers**, um exemplo mais avançado que o que foi visto está enviando um objeto CreateOrderCommand do microsserviço de pedidos. Mas como o processo comercial de ordenação é um pouco mais complexo e, em nosso caso, ele realmente começa no Microservice da cesta, essa ação de enviar o objeto CreateOrderCommand é executada a partir de um manipulador de eventos de integração chamado [ UserCheckoutAcceptedIntegrationEvent](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) em vez de um controlador WebAPI simples chamado do aplicativo cliente como no exemplo mais simples anterior.
+Em **eShopOnContainers**, um exemplo mais avançado que o que foi visto está enviando um objeto CreateOrderCommand do microsserviço de pedidos. Mas como o processo comercial de ordenação é um pouco mais complexo e, em nosso caso, ele realmente começa no Microservice da cesta, essa ação de enviar o objeto CreateOrderCommand é executada a partir de um manipulador de eventos de integração chamado [ UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) em vez de um controlador WebAPI simples chamado do aplicativo cliente como no exemplo mais simples anterior.
 
 Mesmo assim, a ação de enviar o Comando para o MediatR é bem semelhante, conforme mostrado no código a seguir.
 
