@@ -6,52 +6,52 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 8ac605b562531329333b5f05e081d89de55d8cd2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae820e88a790aeaad7c57cde2db84b8168f273a9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645441"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321060"
 ---
 # <a name="introduction-to-extensibility"></a>Introdução à extensibilidade
-O modelo de aplicativo do Windows Communication Foundation (WCF) foi projetado para resolver a maior parte dos requisitos de comunicação de qualquer aplicativo distribuído. Mas sempre há cenários que não são compatíveis com o modelo de aplicativo padrão e implementações fornecida pelo sistema. O modelo de extensibilidade do WCF destina-se para dar suporte a cenários personalizados, permitindo que você modificar o comportamento do sistema em todos os níveis, até mesmo para o ponto de substituir o modelo de aplicativo inteiro. Este tópico descreve várias áreas de extensão e aponta para obter mais informações sobre cada um.  
+O modelo de aplicativo Windows Communication Foundation (WCF) foi projetado para resolver a maior parte dos requisitos de comunicação de qualquer aplicativo distribuído. Mas há sempre cenários para os quais o modelo de aplicativo padrão e as implementações fornecidas pelo sistema não oferecem suporte. O modelo de extensibilidade do WCF destina-se a oferecer suporte a cenários personalizados, permitindo que você modifique o comportamento do sistema em todos os níveis, mesmo no ponto de substituir todo o modelo de aplicativo. Este tópico descreve as várias áreas de extensão e aponta para mais informações sobre cada uma delas.  
   
-## <a name="areas-to-extend"></a>Áreas para estender  
+## <a name="areas-to-extend"></a>Áreas a estender  
  Você pode estender:  
   
-- O tempo de execução do aplicativo. Isso estende a distribuição e o processamento de mensagens para o aplicativo. Essa área também inclui estendendo o sistema de segurança, o sistema de metadados, o sistema de serialização e as associações e elementos de associação que conecta o aplicativo com o sistema de canal subjacente.  
+- O tempo de execução do aplicativo. Isso estende a expedição e o processamento de mensagens para o aplicativo. Essa área também inclui a extensão do sistema de segurança, o sistema de metadados, o sistema de serialização e as associações e os elementos de associação que conectam o aplicativo ao sistema de canal subjacente.  
   
-- O canal e o tempo de execução do canal. Isso estende o sistema que funciona no nível da mensagem, fornecendo o protocolo de transporte e suporte a codificação.  
+- O tempo de execução do canal e canal. Isso estende o sistema que funciona no nível de mensagem, fornecendo suporte de protocolo, transporte e codificação.  
   
-- O tempo de execução do host. Isso estende a relação do domínio do aplicativo de hospedagem para o tempo de execução do aplicativo e de canal.  
+- O tempo de execução do host. Isso estende a relação entre o domínio do aplicativo de hospedagem e o tempo de execução do aplicativo e do canal.  
   
 ### <a name="extending-the-application-runtime"></a>Estendendo o tempo de execução do aplicativo  
- Em aplicativos do WCF, há uma distinção entre as mensagens que são destinadas a um canal correspondente e as mensagens que são destinadas para o aplicativo em si. Mensagens do canal de suportam a algumas funcionalidades relacionadas ao canal, como estabelecer uma conversa segura ou estabelecer uma sessão confiável. Essas mensagens não estão disponíveis para o tempo de execução do aplicativo; eles são processados antes que a camada de aplicativo está envolvida.  
+ Em aplicativos WCF, há uma distinção entre as mensagens que são destinadas a um canal correspondente e mensagens que são destinadas ao próprio aplicativo. As mensagens de canal dão suporte a algumas funcionalidades relacionadas ao canal, como o estabelecimento de uma conversa segura ou o estabelecimento de uma sessão confiável. Essas mensagens não estão disponíveis para o tempo de execução do aplicativo; Eles são processados antes que a camada de aplicativo esteja envolvida.  
   
- Mensagens de aplicativo contêm dados que são destinados a um cliente ou operação de serviço que você ou seu cliente tiver sido criado. Essas mensagens estão disponíveis para o sistema de extensão de nível de aplicativo no formato de mensagem ou objeto, dependendo das suas necessidades.  
+ As mensagens de aplicativo contêm dados destinados a uma operação de cliente ou de serviço que você ou o cliente criou. Essas mensagens estão disponíveis para o sistema de extensão de nível de aplicativo na forma de mensagem ou de objeto, dependendo das suas necessidades.  
   
- Todas as mensagens passam pelo sistema canal; apenas as mensagens de aplicativo são passadas do sistema de canal para o aplicativo. Para criar a nova funcionalidade de nível de canal, você deve estender o sistema de canal. Para criar a nova funcionalidade de nível de aplicativo, você deve estender o tempo de execução do serviço ou cliente (dispatchers e fábricas de canais, respectivamente). Para obter mais informações sobre como estender o tempo de execução do aplicativo, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Todas as mensagens passam pelo sistema do canal; somente as mensagens de aplicativo são passadas do sistema de canal para o aplicativo. Para criar uma nova funcionalidade de nível de canal, você deve estender o sistema do canal. Para criar uma nova funcionalidade de nível de aplicativo, você deve estender o tempo de execução do serviço ou do cliente (expatches e fábricas de canal, respectivamente). Para obter mais informações sobre como estender o tempo de execução do aplicativo, consulte [estendendo o ServiceHost e a camada do modelo de serviço](./extending/extending-servicehost-and-the-service-model-layer.md).  
   
 #### <a name="extending-security"></a>Segurança estendida  
- Para criar mecanismos de segurança personalizada, como tokens e credenciais, você deve estender o sistema de segurança. Para obter mais informações, consulte [estendendo segurança](../../../docs/framework/wcf/extending/extending-security.md).  
+ Para criar mecanismos de segurança personalizados, como tokens e credenciais, você deve estender o sistema de segurança. Para obter mais informações, consulte [estendendo a segurança](./extending/extending-security.md).  
   
 #### <a name="extending-metadata"></a>Estendendo metadados  
- Para expor seus metadados na forma diferente do padrão, você deve estender o sistema de metadados. Para obter mais informações, consulte [estendendo o sistema de metadados](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Para expor seus metadados de forma diferente do padrão, você deve estender o sistema de metadados. Para obter mais informações, consulte [estendendo o sistema de metadados](./extending/extending-the-metadata-system.md).  
   
 #### <a name="extending-serialization"></a>Estendendo a serialização  
- Para criar codificadores personalizados, fornecer substitutos de dados ou outro trabalho que envolve a personalização dos dados transferidos, você deve estender o sistema de serialização. Para obter mais informações, consulte [estendendo codificadores e serializadores](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+ Para criar codificadores personalizados, fornecer substitutos de dados ou outro trabalho que envolva a personalização de dados transferidos, você deve estender o sistema de serialização. Para obter mais informações, consulte [estendendo codificadores e serializadores](./extending/extending-encoders-and-serializers.md).  
   
 #### <a name="extending-bindings"></a>Estendendo associações  
- Para associar os canais de transporte ou protocolo de camada de aplicativo, você deve estender o sistema de associação. Para obter mais informações, consulte [estendendo associações](../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Para associar canais de transporte ou de protocolo à camada de aplicativo, você deve estender o sistema de associação. Para obter mais informações, consulte [estendendo associações](./extending/extending-bindings.md).  
   
-### <a name="extending-the-channel-system"></a>Estendendo o sistema de canal  
- Para criar canais que dão suporte a transportes personalizados ou funcionalidade de protocolo, consulte [estendendo a camada do canal](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+### <a name="extending-the-channel-system"></a>Estendendo o sistema do canal  
+ Para criar canais com suporte para transportes personalizados ou funcionalidade de protocolo, consulte [estendendo a camada de canal](./extending/extending-the-channel-layer.md).  
   
-### <a name="extending-the-service-hosting-system"></a>Estendendo o sistema de hospedagem de serviço  
- Para modificar o modelo de todo o serviço de aplicativo, você deve estender <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> classe. Para obter mais informações, consulte [estendendo ServiceHost e a camada de modelo de serviço](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+### <a name="extending-the-service-hosting-system"></a>Estendendo o sistema de Hospedagem de serviço  
+ Para modificar o modelo de aplicativo de todo o serviço, você deve estender a classe <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>. Para obter mais informações, consulte [estendendo o ServiceHost e a camada do modelo de serviço](./extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Para modificar a relação entre o domínio de aplicativo de hospedagem e o host de serviço, você deve estender o <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> classe. Para obter mais informações, consulte [estendendo hospedagem usando ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ Para modificar a relação entre o domínio do aplicativo de hospedagem e o host de serviço, você deve estender a classe <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>. Para obter mais informações, consulte [estendendo hospedagem usando ServiceHostFactory](./extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estendendo o WCF](../../../docs/framework/wcf/extending/index.md)
+- [Estendendo o WCF](./extending/index.md)

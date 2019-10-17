@@ -8,31 +8,31 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929331"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319805"
 ---
 # <a name="guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas
-Esta seção contém tópicos que fornecem diretrizes para criação de aplicativos do Windows Communication Foundation (WCF).  
+Esta seção contém tópicos que fornecem diretrizes para criar aplicativos Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Práticas recomendadas: Controle de versão de contrato de dados](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- Explica como e quando criar contratos de dados que não são interrompidas quando versões futuras são criadas.  
+ [Práticas recomendadas: controle de versão de contrato de dados](best-practices-data-contract-versioning.md)  
+ Explica como e quando criar contratos de dados que não são interrompidos quando versões futuras são criadas.  
   
- [Controle de versão de serviço](../../../docs/framework/wcf/service-versioning.md)  
- Explica como considerar o controle de versão do WCF. Após a implantação, serviços (e os pontos de extremidade que expõem) talvez precisem ser alterada, por exemplo, para atender aos requisitos de negócios ou requisitos de TI, a alteração ou para corrigir problemas. Cada alteração introduz uma nova versão do serviço.  
+ [Controle de versão de serviço](service-versioning.md)  
+ Explica como considerar o controle de versão no WCF. Após a implantação, os serviços (e os pontos de extremidade que eles expõem) talvez precisem ser alterados, por exemplo, para atender aos requisitos de negócios em constante alteração ou aos requisitos de ti, ou para corrigir problemas. Cada alteração introduz uma nova versão do serviço.  
   
- [Balanceamento de carga](../../../docs/framework/wcf/load-balancing.md)  
- Lista as diretrizes para balanceamento de carga com uma Web farm.  
+ [Balanceamento de carga](load-balancing.md)  
+ Lista as diretrizes para balanceamento de carga com um Web farm.  
   
- [Controlando o consumo de recursos e a melhoria do desempenho](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
- Descreve as propriedades que são projetadas para ajudar a evitar o consumo de recursos desnecessários e melhorar a segurança e aponta para obter informações mais completas sobre seu uso.  
+ [Controlando o consumo de recursos e a melhoria do desempenho](controlling-resource-consumption-and-improving-performance.md)  
+ Descreve as propriedades que são criadas para ajudar a evitar o consumo de recursos indevidos e melhorar a segurança e aponta para informações mais completas sobre seu uso.  
   
- [Implantando aplicativos do WCF com ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
- Descreve as considerações para ser feitas ao usar o recurso do ClickOnce.  
+ [Implantando aplicativos do WCF com ClickOnce](deploying-wcf-applications-with-clickonce.md)  
+ Descreve as considerações a serem feitas ao usar o recurso ClickOnce.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  
@@ -40,13 +40,13 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Visão geral conceitual](conceptual-overview.md)  
   
- [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Programação básica do WCF](basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Exemplos do Windows Communication Foundation (WCF)](./samples/index.md)
-- [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)
-- [Compilando clientes](../../../docs/framework/wcf/building-clients.md)
+- [O que é o Windows Communication Foundation](whats-wcf.md)
+- [Exemplos de Windows Communication Foundation (WCF)](./samples/index.md)
+- [Visão geral conceitual](conceptual-overview.md)
+- [Compilando clientes](building-clients.md)

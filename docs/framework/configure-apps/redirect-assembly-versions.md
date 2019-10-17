@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971554"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319745"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 
@@ -65,11 +65,11 @@ Se outro projeto em seu aplicativo fizer referência à versão 1.0.0.0 do mesmo
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Você pode habilitar o redirecionamento de associação automática se seu aplicativo for destinado a versões mais antigas do .NET Framework. Você pode substituir esse comportamento padrão fornecendo informações de redirecionamento de associação no arquivo app. config para qualquer assembly ou desativando o recurso de redirecionamento de associação. Para obter informações sobre como ativar ou desativar esse recurso, consulte [como: Habilitar e desabilitar o redirecionamento automático de associação](how-to-enable-and-disable-automatic-binding-redirection.md).
+Você pode habilitar o redirecionamento de associação automática se seu aplicativo for destinado a versões mais antigas do .NET Framework. Você pode substituir esse comportamento padrão fornecendo informações de redirecionamento de associação no arquivo app. config para qualquer assembly ou desativando o recurso de redirecionamento de associação. Para obter informações sobre como ativar ou desativar esse recurso, consulte [como habilitar e desabilitar o redirecionamento de associação automática](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Ignorando a política do Publicador
- Você pode substituir a política do Publicador no arquivo de configuração do aplicativo, se necessário. Por exemplo, novas versões de assemblies que alegam ser compatíveis com versões anteriores ainda podem interromper um aplicativo. Se você quiser ignorar a política do editor, adicione um [ \<elemento publisherPolicy Apply >](./file-schema/runtime/publisherpolicy-element.md) ao [ \<elemento dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) no arquivo de configuração do aplicativo e defina o atributo **aplicar** como **não**, que Substitui as configurações **Sim** anteriores.
+ Você pode substituir a política do Publicador no arquivo de configuração do aplicativo, se necessário. Por exemplo, novas versões de assemblies que alegam ser compatíveis com versões anteriores ainda podem interromper um aplicativo. Se você quiser ignorar a política do Publicador, adicione um elemento [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) ao elemento [> @no__t 3dependentAssembly](./file-schema/runtime/dependentassembly-element.md) no arquivo de configuração do aplicativo e defina o atributo **aplicar** como **não**, o que substitui qualquer configurações **Sim** anteriores.
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Especificando a associação de assembly em arquivos de configuração
- Você usa o mesmo formato XML para especificar redirecionamentos de associação, seja no arquivo de configuração do aplicativo, no arquivo de configuração do computador ou no arquivo de política do Publicador. Para redirecionar uma versão de assembly para outra, use o [ \<elemento bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . O atributo **OldVersion** pode especificar uma única versão de assembly ou um intervalo de versões. O `newVersion` atributo deve especificar uma única versão.  Por exemplo, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` especifica que o tempo de execução deve usar a versão 2.0.0.0 em vez das versões de assembly entre 1.1.0.0 e 1.2.0.0.
+ Você usa o mesmo formato XML para especificar redirecionamentos de associação, seja no arquivo de configuração do aplicativo, no arquivo de configuração do computador ou no arquivo de política do Publicador. Para redirecionar uma versão de assembly para outra, use o elemento [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . O atributo **OldVersion** pode especificar uma única versão de assembly ou um intervalo de versões. O atributo `newVersion` deve especificar uma única versão.  Por exemplo, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` especifica que o tempo de execução deve usar a versão 2.0.0.0 em vez das versões de assembly entre 1.1.0.0 e 1.2.0.0.
 
- O exemplo de código a seguir demonstra uma variedade de cenários de redirecionamento de associação. O exemplo especifica um redirecionamento para um intervalo de `myAssembly`versões para, e um único redirecionamento de associação para. `mySecondAssembly` O exemplo também especifica que o arquivo de política do Publicador não substituirá os redirecionamentos de associação para `myThirdAssembly`.
+ O exemplo de código a seguir demonstra uma variedade de cenários de redirecionamento de associação. O exemplo especifica um redirecionamento para um intervalo de versões para `myAssembly` e um único redirecionamento de associação para `mySecondAssembly`. O exemplo também especifica que o arquivo de política do Publicador não substituirá os redirecionamentos de associação para `myThirdAssembly`.
 
- Para associar um assembly, você deve especificar a cadeia de caracteres "urn: schemas-microsoft-com: asm. v1" com o atributo **xmlns** na marca de [ \<> assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
+ Para associar um assembly, você deve especificar a cadeia de caracteres "urn: schemas-microsoft-com: asm. v1" com o atributo **xmlns** na marca [> \<assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Limitando associações de assembly a uma versão específica
- Você pode usar o atributo **AppliesTo** no [ \<elemento de > assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica do .NET Framework. Esse atributo opcional usa um número de versão .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) se aplica a todas as versões do .NET Framework.
+ Você pode usar o atributo **AppliesTo** no elemento [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica do .NET Framework. Esse atributo opcional usa um número de versão .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) se aplica a todas as versões do .NET Framework.
 
  Por exemplo, para redirecionar a associação de assembly para um assembly .NET Framework 3,5, você incluiria o seguinte código XML em seu arquivo de configuração de aplicativo.
 
@@ -154,8 +154,8 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Habilitar e desabilitar o redirecionamento automático de associações](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<Elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
+- [Como habilitar e desabilitar o redirecionamento automático de associações](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [\<bindingRedirect > elemento](./file-schema/runtime/bindingredirect-element.md)
 - [Permissão de segurança para redirecionamento de associações de assemblies](assembly-binding-redirection-security-permission.md)
 - [Assemblies no .NET](../../standard/assembly/index.md)
 - [Programação com assemblies](../../standard/assembly/program.md)
@@ -163,4 +163,4 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 - [Configurando aplicativos](index.md)
 - [Esquema de configurações do tempo de execução](./file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](./file-schema/index.md)
-- [Como: Criar uma política de Publicador](how-to-create-a-publisher-policy.md)
+- [Como criar uma política de editor](how-to-create-a-publisher-policy.md)

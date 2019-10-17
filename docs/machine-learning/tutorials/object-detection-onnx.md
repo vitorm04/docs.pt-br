@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Detectar objetos usando o aprendizado profundo com ONNX e ML.NET'
+title: 'Tutorial: detectar objetos usando o aprendizado profundo com ONNX e ML.NET'
 description: Este tutorial mostra como usar um modelo de aprendizado profundo ONNX pré-treinado no ML.NET para detectar objetos em imagens.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332633"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318526"
 ---
-# <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detectar objetos usando ONNX no ML.NET
+# <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
 Saiba como usar um modelo ONNX pré-treinado no ML.NET para detectar objetos em imagens.
 
@@ -34,7 +34,7 @@ Neste tutorial, você aprenderá como:
 - [Pacote NuGet do Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Pacote NuGet Microsoft.ML.ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Pacote NuGet Microsoft.ML.OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
-- [Modelo pré-treinado Tiny YOLOv2](https://github.com/onnx/models/tree/master/tiny_yolov2)
+- [Modelo pré-treinado Tiny YOLOv2](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)
 - [Netron](https://github.com/lutzroeder/netron) (opcional)
 
 ## <a name="onnx-object-detection-sample-overview"></a>Visão geral do exemplo de detecção de objetos ONNX
@@ -64,7 +64,7 @@ Há diferentes tipos de redes neurais, as mais comuns são a MLP (Perceptron Mul
 
 ### <a name="understand-the-model"></a>Entender o modelo
 
-A detecção de objetos é uma tarefa de processamento de imagem. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o Tiny YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: Better, Faster, Stronger" por Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
+A detecção de objetos é uma tarefa de processamento de imagem. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o pequeno modelo de YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: melhor, mais rápido e mais forte" por Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
 
 ![Camada de entrada sendo dividida em camadas ocultas e, em seguida, camada de saída](./media/object-detection-onnx/netron-model-map.png)
 
@@ -707,7 +707,7 @@ Para ver as imagens com as caixas delimitadoras, navegue até o diretório `asse
 
 Parabéns! Você criou com êxito um modelo de machine learning para detecção de objetos reutilizando um modelo `ONNX` pré-treinado no ML.NET.
 
-Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
+Você pode encontrar o código-fonte deste tutorial no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) .
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
@@ -720,4 +720,4 @@ Neste tutorial, você aprendeu como:
 
 Confira o repositório GitHub de exemplos de Machine Learning para explorar um exemplo de detecção de objetos expandido.
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/DeepLearning_ObjectDetection_Onnx)
+> [dotnet/machinelearning-samples GitHub repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

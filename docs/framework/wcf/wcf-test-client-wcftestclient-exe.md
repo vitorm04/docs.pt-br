@@ -2,17 +2,17 @@
 title: Cliente de Teste do WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: e637a2bb26bd0cc4bea653155c2a85ef5af19fd9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038348"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321185"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de Teste do WCF (WcfTestClient.exe)
 O cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient. exe) é uma ferramenta de GUI que permite que os usuários insiram parâmetros de teste, enviem essa entrada para o serviço e exibam a resposta que o serviço envia de volta. Ele fornece uma experiência de teste de serviço sem interrupção quando combinado com o host de serviço do WCF.
 
-Normalmente, você pode encontrar o cliente de teste do WCF (WcfTestClient. exe) no seguinte `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` local:-a Comunidade pode ser uma "empresa", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado.
+Normalmente, você pode encontrar o cliente de teste do WCF (WcfTestClient. exe) no seguinte local: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-Community pode ser um de "Enterprise", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado.
 
 ## <a name="scenarios-for-using-test-client"></a>Cenários para uso do Cliente de Teste
 
@@ -32,7 +32,7 @@ Você também pode usar o cliente de teste do WCF para ajudar a depurar um proje
 
 Você também pode invocar o cliente de teste do WCF (WcfTestClient. exe) fora do Visual Studio para testar um serviço arbitrário na Internet. Para localizar a ferramenta, vá para o seguinte local:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(onde a Comunidade pode ser uma de "Enterprise", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado no computador)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (em que a Comunidade pode ser uma de "Enterprise", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado no computador)
 
 Para usar a ferramenta, clique duas vezes no nome do arquivo para abri-lo neste local ou inicie-a em uma linha de comando.
 
@@ -58,9 +58,9 @@ O painel esquerdo também lista arquivos de configuração de cliente. Clique du
 
 Para exibir os parâmetros de teste, clique duas vezes em uma operação para abri-la no painel direito. Os parâmetros são mostrados na exibição **formatada** por padrão e você pode inserir valores arbitrários para os parâmetros para testar o serviço.
 
-Para exibir o XML da mensagem, clique em **XML**. Para enviá-los ao serviço, cliqueem invocar.
+Para exibir o XML da mensagem, clique em **XML**. Para enviá-los ao serviço, clique em **invocar**.
 
-Para um parâmetro de conjunto de um, clique em **...** botão ao lado de **Editar...** para editá-lo em uma nova janela mostrando DataGrid. Observe a aparência dos botões **copiar conjunto de DataSet** e **colar conjunto** de notícias. Se o esquema do objeto DataSet for desconhecido na primeira edição, o DataGrid estará vazio. Você precisa colar um objeto DataSet com o mesmo esquema no objeto atual no DataGrid. Observe que você precisa copiar o esquema de algum outro lugar antes da operação de colagem. Você também pode copiar um objeto DataSet para uso futuro clicando no botão **Copy DataSet** .
+Para um parâmetro de conjunto de um, clique em **...** botão ao lado de **Editar...** para editá-lo em uma nova janela mostrando DataGrid. Observe a aparência dos botões **copiar conjunto de DataSet** e **colar conjunto** de notícias. Se o esquema do objeto DataSet for desconhecido na primeira edição, o DataGrid estará vazio. Você precisa colar um objeto DataSet com o mesmo esquema no objeto atual no DataGrid. (Observe que você precisa copiar o esquema de outro lugar antes da operação de colar.) Você também pode copiar um objeto DataSet para uso futuro clicando no botão **Copy DataSet** .
 
 A resposta do serviço aparece abaixo dos parâmetros de teste.
 
@@ -73,9 +73,9 @@ Se você tiver definido uma operação específica como unidirecional quando cri
 
 A caixa de seleção **Iniciar um novo proxy** na guia de uma operação de serviço permite alternar o suporte de sessão. Por padrão, essa caixa está desmarcada.
 
-Quando você insere parâmetros de teste para uma operação específica (ou outra operação no mesmo ponto de extremidade de serviço ) e clica em invocar várias vezes com a caixa de seleção desmarcada, essas operações compartilham um proxy e o status do serviço é persistido entre vários das.
+Quando você insere parâmetros de teste para uma operação específica (ou outra operação no mesmo ponto de extremidade de serviço) e clica em **invocar** várias vezes com a caixa de seleção desmarcada, essas operações compartilham um proxy e o status do serviço é persistido entre vários das.
 
-Se a caixa de seleção **Iniciar um novo proxy** estiver marcada, um novo proxy será iniciado paracada invocação, o cenário de sessão anterior será encerrado e o status do serviço será redefinido.
+Se a caixa de seleção **Iniciar um novo proxy** estiver marcada, um novo proxy será iniciado para cada **invocação**, o cenário de sessão anterior será encerrado e o status do serviço será redefinido.
 
 ### <a name="editing-client-configuration"></a>Editando a configuração do cliente
 
@@ -103,16 +103,16 @@ Durante a geração de proxy, a compilação binária ou a invocação de servi�
 
 #### <a name="persist-client-configuration"></a>Persistir a configuração do cliente
 
-A guia **ferramentas**->**Opções**->**configuração do cliente** contém uma opção **sempre regenerar configuração ao iniciar serviços** , que é habilitada por padrão. Essa opção especifica que sempre que o cliente de teste do WCF carregar um serviço, ele regenerará um arquivo de configuração com base nos arquivos de contrato de serviço e de aplicativo de serviço mais recentes.
+A guia de**configuração de cliente** das **ferramentas**@no__t **-1 @no__t**-3 contém uma opção **sempre regenerar configuração ao iniciar serviços** , que é habilitada por padrão. Essa opção especifica que sempre que o cliente de teste do WCF carregar um serviço, ele regenerará um arquivo de configuração com base nos arquivos de contrato de serviço e de aplicativo de serviço mais recentes.
 
-Se você editou a configuração do cliente para seu serviço WCF e deseja sempre usar esse arquivo atualizado para depurar seu serviço, você pode desmarcar a opção regenerar. Ao fazer isso, mesmo quando você atualiza o serviço e reabre o cliente de teste do WCF, o arquivo client. dll. config é aquele que você atualizou anteriormente em vez de um gerado novamente com base no serviço atualizado.
+Se você editou a configuração do cliente para seu serviço WCF e deseja sempre usar esse arquivo atualizado para depurar seu serviço, você pode desmarcar a opção **regenerar** . Ao fazer isso, mesmo quando você atualiza o serviço e reabre o cliente de teste do WCF, o arquivo client. dll. config é aquele que você atualizou anteriormente em vez de um gerado novamente com base no serviço atualizado.
 
 No entanto, talvez você precise editar o arquivo de configuração para torná-lo consistente com o proxy regenerado. Se o proxy e o arquivo de configuração regenerados forem incompatíveis devido a um serviço atualizado, ocorrerão erros quando o serviço for chamado.
 
 > [!CAUTION]
 > Se você tiver modificado o arquivo de configuração do cliente e o selecionar para reutilização no futuro, poderá localizar o arquivo no seguinte local:
 >
-> \Documents and Settings\\[User Account] \Meus Documents\Test Client Projects.
+> \Documents and Settings @ no__t-0 [User Account] \Meus Documents\Test Client Projects.
 >
 > Todas as informações de credenciais atualizadas armazenadas no arquivo de configuração do cliente são protegidas pela ACL (lista de controle de acesso) dessa pasta.
 
@@ -144,7 +144,7 @@ Durante a geração do proxy, da compilação binária ou da chamada do serviço
 
 Por padrão, o cliente de teste do WCF armazena os arquivos de configuração e o código do cliente gerados na pasta "projetos de cliente do%appdata%\Local\temp\Test". Essa pasta é excluída após a saída do cliente de teste do WCF. Se um arquivo de configuração for modificado no cliente de teste do WCF e a opção **sempre regenerar configuração ao iniciar serviços** estiver desabilitada, o arquivo modificado será copiado para a pasta "CachedConfig" em "meus projetos de cliente do Documents\Test" com um mapeamento ( Metadata-endereço-para-arquivo-arquivo XML como um índice.
 
-Você também pode iniciar o cliente de teste do WCF em uma linha de `/ProjectPath` comando, usar a opção para especificar um novo caminho desejado para armazenar arquivos gerados `/RestoreProjectPath` ou usar a opção para restaurar o local padrão. A sintaxe é a seguinte:
+Você também pode iniciar o cliente de teste do WCF em uma linha de comando, usar a opção `/ProjectPath` para especificar um novo caminho desejado para armazenar arquivos gerados ou usar a opção `/RestoreProjectPath` para restaurar o local padrão. A sintaxe é a seguinte:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
@@ -154,7 +154,7 @@ A execução desse comando não abre o cliente de teste do WCF. Apenas o local d
 
 Veja a seguir uma lista de recursos com suporte pelo cliente de teste do WCF:
 
-- Invocação de serviço: Solicitação/resposta e uma mensagem unidirecional.
+- Chamada de serviço: solicitação/resposta e mensagem unidirecional.
 
 - Associações: todas as associações suportadas por Svcutil.exe.
 
@@ -174,7 +174,7 @@ Veja a seguir uma lista de recursos sem suporte pelo cliente de teste do WCF:
 
 - Segurança: CardSpace, certificado e nome de usuário/senha.
 
-- Associações WSFederationbinding, quaisquer associações de contexto e Associação HTTPS, WebHttpBinding (suporte a mensagens de resposta JSON).
+- Associações: WSFederationbinding, algumas associações de contexto e associação HTTPS, WebHttpbinding (suporte a mensagem de resposta de Json).
 
 ## <a name="closing-wcf-test-client"></a>Fechando o Cliente de Teste do WCF
 
@@ -186,4 +186,4 @@ Você pode fechar o cliente de teste do WCF das seguintes maneiras:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Host de serviço do WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Host de serviço do WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

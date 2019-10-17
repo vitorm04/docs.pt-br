@@ -1,69 +1,69 @@
 ---
-title: 'Como: hospedar um serviço do WCF em um aplicativo gerenciado'
+title: Como hospedar um serviço do WCF em um aplicativo gerenciado
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637590"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320974"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Como: Hospedar um serviço WCF em um aplicativo gerenciado
+# <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Como hospedar um serviço WCF em um aplicativo gerenciado
 
-Para hospedar um serviço dentro de um aplicativo gerenciado, incorporar o código para o serviço dentro do código de aplicativo gerenciado, definir um ponto de extremidade para o serviço imperativa no código, declarativamente por meio de configuração ou usando os pontos de extremidade padrão e, em seguida, criar um instância do <xref:System.ServiceModel.ServiceHost>.
+Para hospedar um serviço dentro de um aplicativo gerenciado, insira o código para o serviço dentro do código do aplicativo gerenciado, defina um ponto de extremidade para o serviço de forma imperativa no código, declarativamente por meio da configuração ou usando pontos de extremidades padrão e, em seguida, crie um instância de <xref:System.ServiceModel.ServiceHost>.
 
-Para iniciar o recebimento de mensagens, chame <xref:System.ServiceModel.ICommunicationObject.Open%2A> em <xref:System.ServiceModel.ServiceHost>. Isso cria e abre o ouvinte para o serviço. Hospedar um serviço dessa maneira é conhecido como "auto-hospedagem" porque o aplicativo gerenciado está fazendo o trabalho de hospedagem em si. Para fechar o serviço, chame <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> em <xref:System.ServiceModel.ServiceHost>.
+Para começar a receber mensagens, chame <xref:System.ServiceModel.ICommunicationObject.Open%2A> em <xref:System.ServiceModel.ServiceHost>. Isso cria e abre o ouvinte para o serviço. Hospedar um serviço dessa maneira geralmente é chamado de "hospedagem interna" porque o aplicativo gerenciado está fazendo o próprio trabalho de hospedagem. Para fechar o serviço, chame <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> em <xref:System.ServiceModel.ServiceHost>.
 
-Um serviço também pode ser hospedado em um serviço gerenciado do Windows, no Internet Information Services (IIS) ou no serviço de ativação de processos para Windows (WAS). Para obter mais informações sobre as opções para um serviço de hospedagem, consulte [serviços de hospedagem](../../../docs/framework/wcf/hosting-services.md).
+Um serviço também pode ser hospedado em um serviço gerenciado do Windows, no Serviços de Informações da Internet (IIS) ou no WAS (serviço de ativação de processos do Windows). Para obter mais informações sobre opções de hospedagem para um serviço, consulte [serviços de hospedagem](hosting-services.md).
 
-Hospedar um serviço em um aplicativo gerenciado é a opção mais flexível porque requer que a infra-estrutura mínimos para implantar. Para obter mais informações sobre hospedagem de serviços em aplicativos gerenciados, consulte [hospedagem em um aplicativo gerenciado](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+Hospedar um serviço em um aplicativo gerenciado é a opção mais flexível porque requer a infraestrutura menos implantada. Para obter mais informações sobre como hospedar serviços em aplicativos gerenciados, consulte [hospedagem em um aplicativo gerenciado](./feature-details/hosting-in-a-managed-application.md).
 
-O procedimento a seguir demonstra como implementar um serviço auto-hospedado em um aplicativo de console.
+O procedimento a seguir demonstra como implementar um serviço hospedado automaticamente em um aplicativo de console.
 
 ## <a name="create-a-self-hosted-service"></a>Criar um serviço auto-hospedado
 
-1. Crie um novo aplicativo de console:
+1. Criar um novo aplicativo de console:
 
-   1. Abra o Visual Studio e selecione **New** > **projeto** do **arquivo** menu.
+   1. Abra o Visual Studio e selecione **novo** **projeto**  >  no menu **arquivo** .
 
-   2. No **modelos instalados** lista, selecione **Visual c#** ou **Visual Basic**e, em seguida, selecione **Windows Desktop**.
+   2. Na lista **modelos instalados** , selecione **Visual C#**  ou **Visual Basic**e, em seguida, selecione área de **trabalho do Windows**.
 
-   3. Selecione o **aplicativo de Console** modelo. Tipo de `SelfHost` no **nome** caixa e, em seguida, escolha **Okey**.
+   3. Selecione o modelo de **aplicativo de console** . Digite `SelfHost` na caixa **nome** e escolha **OK**.
 
-2. Clique com botão direito **SelfHost** na **Gerenciador de soluções** e selecione **Add Reference**. Selecione **System. ServiceModel** da **.NET** guia e, em seguida, escolha **Okey**.
+2. Clique com o botão direito do mouse em **SelfHost** em **Gerenciador de soluções** e selecione **Adicionar referência**. Selecione **System. ServiceModel** na guia **.net** e, em seguida, escolha **OK**.
 
     > [!TIP]
-    > Se o **Gerenciador de soluções** janela não estiver visível, selecione **Gerenciador de soluções** do **exibição** menu.
+    > Se a janela de **Gerenciador de soluções** não estiver visível, selecione **Gerenciador de soluções** no menu **Exibir** .
 
-3. Clique duas vezes em **Program.cs** ou **Module1.vb** na **Gerenciador de soluções** para abri-lo na janela de código, se ele não ainda estiver aberto. Adicione as seguintes instruções na parte superior do arquivo:
+3. Clique duas vezes em **Program.cs** ou **Module1. vb** em **Gerenciador de soluções** para abri-lo na janela de código, se ainda não estiver aberto. Adicione as seguintes instruções na parte superior do arquivo:
 
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
 
-4. Definir e implementar um contrato de serviço. Este exemplo define um `HelloWorldService` que retorna uma mensagem com base na entrada para o serviço.
+4. Defina e implemente um contrato de serviço. Este exemplo define um `HelloWorldService` que retorna uma mensagem com base na entrada para o serviço.
 
      [!code-csharp[CFX_SelfHost4#2](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#2)]
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Para obter mais informações sobre como definir e implementar uma interface de serviço, consulte [como: Definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) e [como: Implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Para obter mais informações sobre como definir e implementar uma interface de serviço, consulte [como: definir um contrato de serviço](how-to-define-a-wcf-service-contract.md) e [como implementar um contrato de serviço](how-to-implement-a-wcf-contract.md).
 
-5. Na parte superior dos `Main` método, crie uma instância da <xref:System.Uri> classe com o endereço base para o serviço.
+5. Na parte superior do método `Main`, crie uma instância da classe <xref:System.Uri> com o endereço base para o serviço.
 
      [!code-csharp[CFX_SelfHost4#3](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#3)]
      [!code-vb[CFX_SelfHost4#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#3)]
 
-6. Criar uma instância das <xref:System.ServiceModel.ServiceHost> classe, passando um <xref:System.Type> que representa o tipo de serviço e a base de identificador de recurso uniforme (URI) para resolver o <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>. Habilitar a publicação de metadados e, em seguida, chame o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método no <xref:System.ServiceModel.ServiceHost> para inicializar o serviço e prepará-lo para receber mensagens.
+6. Crie uma instância da classe <xref:System.ServiceModel.ServiceHost>, passando um <xref:System.Type> que representa o tipo de serviço e o endereço de base Uniform Resource Identifier (URI) para o <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>. Habilite a publicação de metadados e, em seguida, chame o método <xref:System.ServiceModel.ICommunicationObject.Open%2A> no <xref:System.ServiceModel.ServiceHost> para inicializar o serviço e prepará-lo para receber mensagens.
 
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > Este exemplo usa pontos de extremidade padrão e nenhum arquivo de configuração é necessário para este serviço. Se nenhum ponto de extremidade estiverem configurados, o tempo de execução cria um ponto de extremidade para cada endereço base para cada contrato de serviço implementado pelo serviço. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificado](../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Este exemplo usa pontos de extremidade padrão e nenhum arquivo de configuração é necessário para esse serviço. Se nenhum ponto de extremidade estiver configurado, o tempo de execução criará um ponto de extremidade para cada endereço base para cada contrato de serviço implementado pelo serviço. Para obter mais informações sobre pontos de extremidade padrão, consulte [configuração simplificada](simplified-configuration.md) e [configuração simplificada para serviços WCF](./samples/simplified-configuration-for-wcf-services.md).
 
 7. Pressione **Ctrl**+**Shift**+**B** para compilar a solução.
 
@@ -71,25 +71,25 @@ O procedimento a seguir demonstra como implementar um serviço auto-hospedado em
 
 1. Pressione **Ctrl**+**F5** para executar o serviço.
 
-2. Abra **cliente de teste do WCF**.
+2. Abra o **cliente de teste do WCF**.
 
     > [!TIP]
-    > Para abrir **cliente de teste do WCF**, abra o Prompt de comando do desenvolvedor para Visual Studio e executar **WcfTestClient.exe**.
+    > Para abrir o **cliente de teste do WCF**, abra prompt de comando do desenvolvedor para Visual Studio e execute o **WcfTestClient. exe**.
 
-3. Selecione **Adicionar serviço** da **arquivo** menu.
+3. Selecione **Adicionar serviço** no menu **arquivo** .
 
-4. Tipo de `http://localhost:8080/hello` para a caixa de endereço e clique em **Okey**.
+4. Digite `http://localhost:8080/hello` na caixa endereço e clique em **OK**.
 
     > [!TIP]
-    > Verifique se o serviço está em execução ou a etapa atual falhar. Se você tiver alterado o endereço base no código, em seguida, use o endereço base modificado nesta etapa.
+    > Verifique se o serviço está em execução ou se essa etapa falha. Se você alterou o endereço base no código, use o endereço base modificado nesta etapa.
 
-5. Clique duas vezes em **SayHello** sob o **meus projetos de serviço** nó. Digite seu nome na **valor** coluna na **solicitar** lista e clique em **Invoke**.
+5. Clique duas vezes em **SayHello** no nó **meus projetos de serviço** . Digite seu nome na coluna **valor** na lista **solicitação** e clique em **invocar**.
 
-   Será exibida uma mensagem de resposta na **resposta** lista.
+   Uma mensagem de resposta é exibida na lista de **respostas** .
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria uma <xref:System.ServiceModel.ServiceHost> objeto para hospedar um serviço do tipo `HelloWorldService`e, em seguida, chama o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método em <xref:System.ServiceModel.ServiceHost>. Um endereço base é fornecido no código, a publicação de metadados está habilitada e pontos de extremidade padrão são usados.
+O exemplo a seguir cria um objeto <xref:System.ServiceModel.ServiceHost> para hospedar um serviço do tipo `HelloWorldService` e, em seguida, chama o método <xref:System.ServiceModel.ICommunicationObject.Open%2A> em <xref:System.ServiceModel.ServiceHost>. Um endereço base é fornecido no código, A publicação de metadados está habilitada e os pontos de extremidade padrão são usados.
 
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
@@ -99,11 +99,11 @@ O exemplo a seguir cria uma <xref:System.ServiceModel.ServiceHost> objeto para h
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Como: Hospedar um serviço WCF no IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Auto-hospedagem](../../../docs/framework/wcf/samples/self-host.md)
-- [Hospedando serviços](../../../docs/framework/wcf/hosting-services.md)
-- [Como: Definir um contrato de serviço](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Como: Implementar um contrato de serviço](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Usando associações para configurar serviços e clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Associações fornecidas pelo sistema](../../../docs/framework/wcf/system-provided-bindings.md)
+- [Como hospedar um serviço WCF no IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Auto-hospedagem](./samples/self-host.md)
+- [Hospedando serviços](hosting-services.md)
+- [Como definir um contrato de serviço](how-to-define-a-wcf-service-contract.md)
+- [Como implementar um contrato de serviço](how-to-implement-a-wcf-contract.md)
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Usando associações para configurar serviços e clientes](using-bindings-to-configure-services-and-clients.md)
+- [Associações fornecidas pelo sistema](system-provided-bindings.md)

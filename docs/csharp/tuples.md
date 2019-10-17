@@ -3,12 +3,12 @@ title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105904"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319753"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C#
 
@@ -53,7 +53,7 @@ Você cria uma tupla nomeada especificando os nomes de cada elemento. Uma maneir
 
 Esses sinônimos são manipulados pelo compilador e pela linguagem para que você possa usar as tuplas nomeadas de forma eficaz. Os editores e IDEs podem ler esses nomes semânticos usando APIs Roslyn. É possível fazer referência aos elementos de uma tupla nomeada com nomes semânticos em qualquer lugar no mesmo assembly. O compilador substitui os nomes que você definiu com equivalentes `Item*` ao gerar a saída compilada. A MSIL (Microsoft Intermediate Language) compilada não inclui os nomes que você atribuiu a esses elementos.
 
-Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)** . O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
+Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)**. O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -148,7 +148,7 @@ Um dos usos mais comuns de tuplas é como um valor retornado do método. Vamos e
 > Esses exemplos calculam o desvio padrão de exemplo não corrigido.
 > A fórmula do desvio padrão de exemplo corrigida dividiria a soma das diferenças da média ao quadrado por (N-1) em vez de N, como o método de extensão `Average` faz. Consulte um texto sobre estatísticas para obter mais detalhes sobre as diferenças entre essas fórmulas para desvio padrão.
 
-O código anterior segue a fórmula típica para o desvio padrão. Ele produz a resposta correta, mas é uma implementação ineficiente. Esse método enumera a sequência duas vezes: uma vez para produzir a média, e uma vez para produzir a média do quadrado da diferença da média.
+O código anterior segue a fórmula típica para o desvio padrão. Ele produz a resposta correta, mas é uma implementação ineficiente. Esse método enumera a sequência de duas vezes: uma vez para produzir a média e uma vez para produzir a média do quadrado da diferença da média.
 (Lembre-se de que consultas LINQ são avaliadas lentamente, então o cálculo das diferenças da média e a média dessas diferenças compõem apenas uma enumeração.)
 
 Há uma alternativa fórmula que calcula o desvio padrão usando apenas uma enumeração da sequência.  Esse cálculo produz dois valores conforme enumera a sequência: a soma de todos os itens na sequência e a soma de cada valor ao quadrado:
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 O método `Deconstruct` pôde converter o objeto`Person` `p` em uma tupla que contém duas cadeias de caracteres, mas não é aplicável no contexto de testes de igualdade.
+
+## <a name="tuples-as-out-parameters"></a>Parâmetros de tuplas como saída
+
+As tuplas podem ser usadas como parâmetros out em *si*. Não deve ser confundido com nenhuma ambiguidade mencionada anteriormente na seção de [desconstrução](#deconstruction) . Em uma chamada de método, você só precisa descrever a forma da tupla:
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+Como alternativa, você pode usar uma tupla [_sem nome_](#named-and-unnamed-tuples) e fazer referência a seus campos como `Item1` e `Item2`:
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>Conclusão 
 

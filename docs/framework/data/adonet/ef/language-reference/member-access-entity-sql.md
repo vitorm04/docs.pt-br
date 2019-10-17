@@ -2,19 +2,19 @@
 title: . (Acesso de membro) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: 1db6be632da90eaa7a761bb213e395182ae42347
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e63caba9e9efb91d5c4629b9da0b1feca905ace
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250291"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319655"
 ---
 # <a name="-member-access-entity-sql"></a>. (Acesso de membro) (Entity SQL)
-O operador de ponto (.) é [!INCLUDE[esql](../../../../../../includes/esql-md.md)] o operador de acesso de membro. Você usa o operador de acesso de membro para produzir o valor de uma propriedade ou um campo de uma instância do tipo estrutural de modelo conceitual.  
+O operador de ponto (.) é o operador de acesso de membro [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Você usa o operador de acesso de membro para produzir o valor de uma propriedade ou um campo de uma instância do tipo estrutural de modelo conceitual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
 expression.identifier  
 ```  
   
