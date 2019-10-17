@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701053"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396009"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensão (Visual Basic)
 
 Os métodos de extensão permitem que os desenvolvedores adicionem funcionalidade personalizada a tipos de dados que já estão definidos sem a criação de um novo tipo derivado. Os métodos de extensão possibilitam escrever um método que pode ser chamado como se fosse um método de instância do tipo existente.
-  
+
 ## <a name="remarks"></a>Comentários
 
 Um método de extensão pode ser apenas um procedimento `Sub` ou um procedimento `Function`. Você não pode definir uma propriedade de extensão, um campo ou um evento. Todos os métodos de extensão devem ser marcados com o atributo de extensão `<Extension>` do namespace <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> e devem ser definidos em um [módulo](../../../language-reference/statements/module-statement.md). Se um método de extensão for definido fora de um módulo, o compilador Visual Basic gerará o erro [BC36551](../../../misc/bc36551.md), "os métodos de extensão podem ser definidos somente em módulos".
@@ -29,7 +29,7 @@ O atributo `Extension` só pode ser aplicado a um Visual Basic [`Module`](../../
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir define uma extensão `Print` para o tipo de dados <xref:System.String>. O método usa `Console.WriteLine` para exibir uma cadeia de caracteres. O parâmetro do método `Print`, `aString`, estabelece que o método estende a classe <xref:System.String>.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 Observe que a definição do método de extensão está marcada com o atributo de extensão `<Extension()>`. Marcar o módulo no qual o método é definido é opcional, mas cada método de extensão deve ser marcado. <xref:System.Runtime.CompilerServices> deve ser importado para acessar o atributo de extensão.
@@ -45,7 +45,6 @@ O exemplo a seguir, `PrintAndPunctuate`, também é uma extensão para <xref:Sys
 O método é chamado enviando em um argumento de cadeia de caracteres para `punc`: `example.PrintAndPunctuate(".")`
 
 O exemplo a seguir mostra `Print` e `PrintAndPunctuate` definidos e chamados. <xref:System.Runtime.CompilerServices> é importado no módulo de definição para habilitar o acesso ao atributo de extensão.
-
 
 ```vb
 Imports System.Runtime.CompilerServices

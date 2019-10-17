@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 586e50818fc8ceaad5ca1925c0636b31015d81d4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925365"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395158"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referência de C#)
 
@@ -38,7 +38,7 @@ Não é possível usar o modificador `virtual` com os modificadores `static`, `a
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-Propriedades virtuais se comportam como métodos abstratos, exceto pelas diferenças na sintaxe de declaração e chamada.
+As propriedades virtuais se comportam como métodos virtuais, exceto pelas diferenças na declaração e na sintaxe de invocação.
 
 - É um erro usar o modificador `virtual` em uma propriedade estática.
 

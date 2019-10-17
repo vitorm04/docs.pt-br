@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 53d7bbf214a71daff9372efcd5978f34c066c657
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: HT
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319999"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395922"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. pipelines no .NET
 
@@ -23,6 +23,7 @@ ms.locfileid: "72319999"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>Qual problema o System. IO. pipelines resolve
+
 <!-- corner case doesn't MT (machine translate)   -->
 Aplicativos que analisam dados de streaming são compostos por código clichê com muitos fluxos de código especializados e incomuns. O código de caso clichê e especial é complexo e difícil de manter.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -97,7 +98,7 @@ No segundo loop, o `PipeReader` consome os buffers gravados por `PipeWriter`. Os
 * Retorna um <xref:System.IO.Pipelines.ReadResult> que contém duas partes importantes de informações:
 
   * Os dados que foram lidos na forma de `ReadOnlySequence<byte>`.
-  * Um booliano `IsCompleted` que indica se o fim dos dados (EOF) foi atingido. 
+  * Um booliano `IsCompleted` que indica se o fim dos dados (EOF) foi atingido.
 
 Depois de encontrar o delimitador de fim de linha (EOL) e analisar a linha:
 
@@ -304,7 +305,7 @@ Ao escrever auxiliares que lêem o buffer, qualquer carga retornada deve ser cop
 
 ## <a name="pipewriter"></a>PipeWriter
 
-O <xref:System.IO.Pipelines.PipeWriter> gerencia buffers para gravação em nome do chamador. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>` torna possível obter acesso a buffers para executar gravações sem cópias de buffer adicionais.
+O <xref:System.IO.Pipelines.PipeWriter> gerencia buffers para gravação em nome do chamador. `PipeWriter` implementa [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` torna possível obter acesso a buffers para executar gravações sem cópias de buffer adicionais.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

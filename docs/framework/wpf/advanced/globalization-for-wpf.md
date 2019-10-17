@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291466"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395836"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para o mercado global. Os elementos de programação de globalização são definidos no .NET no namespace <xref:System.Globalization>.
@@ -23,7 +23,7 @@ Este tópico apresenta problemas que você deve estar atento ao escrever aplicat
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Referências de Caractere
-Uma referência de caractere fornece a unidade de código UTF16 do caractere [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] específico que ela representa, em decimal ou hexadecimal. O exemplo a seguir mostra uma referência de caractere decimal para a letra maiúscula CÓPTICA HORI ou ' Ϩ ':
+Uma referência de caractere fornece a unidade de código UTF16 do caractere Unicode específico que ela representa, em decimal ou hexadecimal. O exemplo a seguir mostra uma referência de caractere decimal para a letra maiúscula CÓPTICA HORI ou ' Ϩ ':
 
 ```
 &#1000;
@@ -37,7 +37,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>Codificando
- A codificação com suporte do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 e UTF-8. A instrução Encoding está no início do documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+ A codificação com suporte de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, Unicode UTF-16 e UTF-8. A instrução Encoding está no início do documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ### <a name="language-attribute"></a>Atributo de idioma
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) para representar o atributo language de um elemento.  Para aproveitar a classe <xref:System.Globalization.CultureInfo>, o valor do atributo language precisa ser um dos nomes de cultura predefinidos por <xref:System.Globalization.CultureInfo>. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) é herdável na árvore de elementos (pelas regras de XML, não necessariamente devido a herança de propriedade de dependência) e seu valor padrão será uma cadeia de caracteres vazia se ele não for definido explicitamente.
 
- O atributo de idioma é muito útil para especificar dialetos. Por exemplo, francês tem ortografia, vocabulário e pronúncia diferentes na França, Bélgica, Quebec e Suíça. Além disso, o idioma chinês, japonês e coreano compartilham pontos de código no [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], mas as formas ideográficas são diferentes e usam fontes totalmente diferentes.
+ O atributo de idioma é muito útil para especificar dialetos. Por exemplo, francês tem ortografia, vocabulário e pronúncia diferentes na França, Bélgica, Quebec e Suíça. Além disso, o chinês, o japonês e o coreano compartilham pontos de código em Unicode, mas as formas ideográficas são diferentes e usam fontes totalmente diferentes.
 
  O exemplo a seguir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] usa o atributo de linguagem `fr-CA` para especificar o francês canadense.
 
@@ -57,7 +57,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dá suporte a todos os recursos de [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], incluindo substitutos. Contanto que o conjunto de caracteres possa ser mapeado para [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ele terá suporte. Por exemplo, GB18030 apresenta alguns caracteres que são mapeados para o chinês, japonês e coreano (CFK), extensão A e B e pares substitutos, portanto, ele é totalmente com suporte. Um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode usar <xref:System.Globalization.StringInfo> para manipular cadeias de caracteres sem entender se eles têm pares substitutos ou combinando.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dá suporte a todos os recursos Unicode, incluindo substitutos. Desde que o conjunto de caracteres possa ser mapeado para Unicode, ele tem suporte. Por exemplo, GB18030 apresenta alguns caracteres que são mapeados para o chinês, japonês e coreano (CFK), extensão A e B e pares substitutos, portanto, ele é totalmente com suporte. Um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode usar <xref:System.Globalization.StringInfo> para manipular cadeias de caracteres sem entender se eles têm pares substitutos ou combinando.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Criando uma Interface do usuário internacional com XAML
@@ -125,7 +125,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
  Todos os mecanismos do sistema de escrita dão suporte a fontes OpenType. As fontes OpenType podem incluir as tabelas de layout OpenType que permitem aos criadores de fontes criar melhores fontes tipográficas internacionais e de ponta. As tabelas de layout de fonte OpenType contêm informações sobre substituições de glifos, posicionamento de glifo, justificação e posicionamento de linha de base, permitindo que aplicativos de processamento de texto aprimorem o layout de texto.
 
- As fontes OpenType permitem a manipulação de grandes conjuntos de glifos usando a codificação [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]. Tal codificação permite um amplo suporte internacional, bem como para variantes tipográficas de glifos.
+ As fontes OpenType permitem a manipulação de grandes conjuntos de glifos usando a codificação Unicode. Tal codificação permite um amplo suporte internacional, bem como para variantes tipográficas de glifos.
 
  a renderização de texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é alimentada pela tecnologia de subpixel do Microsoft ClearType que dá suporte à independência de resolução. Isso significativamente melhora a legibilidade e fornece a capacidade de dar suporte a documentos no estilo de revista de alta qualidade para todos os scripts.
 

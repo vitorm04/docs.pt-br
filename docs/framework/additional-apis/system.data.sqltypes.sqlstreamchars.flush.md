@@ -1,5 +1,5 @@
 ---
-title: Método SqlStreamChars.Flush (SqlTypes)
+title: Método SqlStreamChars. Flush (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634330"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395619"
 ---
-# <a name="sqlstreamcharsflush-method"></a>Método SqlStreamChars.Flush
+# <a name="sqlstreamcharsflush-method"></a>Método SqlStreamChars. Flush
 
-Quando é substituído em uma classe derivada, limpa todos os buffers nesse fluxo e faz com que todos os dados armazenados em buffer sejam gravados no dispositivo subjacente. O assembly que contém este método tem uma relação de amigo com SQLAccess.dll. Ele é destinado a uso pelo SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido pelo banco de dados.
+Quando é substituído em uma classe derivada, limpa todos os buffers nesse fluxo e faz com que todos os dados armazenados em buffer sejam gravados no dispositivo subjacente. O assembly que contém esse método tem uma relação Friend com SQLAccess. dll. Ele é destinado ao uso por SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido por esse banco.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,14 +32,14 @@ public abstract void Flush ();
 ## <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> O `SqlStreamChars.Flush` método é privado e não se destina a ser usado diretamente em seu código.
+> O método `SqlStreamChars.Flush` é privado e não se destina a ser usado diretamente no seu código.
 >
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso desse método em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (em dll)
+**Assembly:** System. Data (em System. Data. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

@@ -1,20 +1,20 @@
 ---
-title: 'Como: Comparar cadeias de caracteres – Guia do C#'
+title: Como comparar cadeias de caracteres – Guia do C#
 description: Saiba como comparar e ordenar valores de cadeia de caracteres, com ou sem ordem específica de cultura ou de diferenciação entre maiúsculas e minúsculas
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759866"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395451"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C\#
 
-Você compara cadeias de caracteres para responder uma dessas duas perguntas: “Essas duas cadeias de caracteres são iguais?” ou "Em que ordem essas cadeias de caracteres devem ser colocadas ao classificá-las?"
+Você compara cadeias de caracteres para responder uma dessas duas perguntas: "Essas duas cadeias de caracteres são iguais?" ou "Em que ordem essas cadeias de caracteres devem ser colocadas ao classificá-las?"
 
 Essas duas perguntas são complicadas devido a fatores que afetam as comparações de cadeia de caracteres:
 
@@ -29,19 +29,19 @@ Ao comparar cadeias de caracteres, você pode definir uma ordem entre elas. As c
 
 ## <a name="default-ordinal-comparisons"></a>Comparações ordinárias padrão
 
-As operações mais comuns:
+Por padrão, as operações mais comuns:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> e <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>, ou seja, [operadores de igualdade `==` e `!=`](../language-reference/operators/equality-operators.md#string-equality), respectivamente
 
-usar uma comparação ordinal, uma comparação que diferencia maiúsculas de minúsculas e a cultura atual. Os resultados são mostrados no exemplo a seguir:
+Execute uma comparação ordinal que diferencia maiúsculas de minúsculas e, se necessário, use a cultura atual. O exemplo a seguir demonstra que:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-A comparação ordinal padrão não considera regras linguísticas ao comparar cadeias de caracteres. Ela compara o valor binário de cada objeto <xref:System.Char> em duas cadeias de caracteres. Como resultado, a comparação ordinal padrão também diferencia maiúsculas de minúsculas. 
+A comparação ordinal padrão não leva em conta as regras linguísticas ao comparar cadeias de caracteres. Ela compara o valor binário de cada objeto <xref:System.Char> em duas cadeias de caracteres. Como resultado, a comparação ordinal padrão também diferencia maiúsculas de minúsculas.
 
-Observe que o teste de igualdade com <xref:System.String.Equals%2A?displayProperty=nameWithType> e <xref:System.String.op_Equality%2A?displayProperty=nameWithType> difere da comparação de cadeias de caracteres usando os métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> e <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Embora os testes de igualdade façam uma comparação ordinal com distinção entre maiúsculas e minúsculas, o método de comparação faz uma comparação que diferencia cultura e maiúsculas de minúsculas usando a cultura atual. Como os métodos de comparação padrão geralmente fazem diferentes tipos de comparações, recomendamos que você sempre esclareça a intenção do seu código, chamando uma sobrecarga que especifica explicitamente o tipo de comparação a ser feita.
+Observe que o teste para igualdade com <xref:System.String.Equals%2A?displayProperty=nameWithType> e os operadores `==` e `!=` difere da comparação de cadeias de caracteres usando os métodos <xref:System.String.CompareTo%2A?displayProperty=nameWithType> e <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Embora os testes de igualdade executem uma comparação ordinal que diferencia maiúsculas de minúsculas, os métodos de comparação executam uma comparação de diferenciação de maiúsculas e minúsculas, com a cultura atual. Como os métodos de comparação padrão geralmente fazem diferentes tipos de comparações, recomendamos que você sempre esclareça a intenção do seu código, chamando uma sobrecarga que especifica explicitamente o tipo de comparação a ser feita.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparações ordinais que não diferenciam maiúsculas de minúsculas
 

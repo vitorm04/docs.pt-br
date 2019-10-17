@@ -1,5 +1,5 @@
 ---
-title: Método SqlStreamChars.Close (SqlTypes)
+title: Método SqlStreamChars. Close (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 942ee987f1c56abe2cb1718347886dd397e7217e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c33c60842d181be7011528ca7550f3d09f291f43
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634350"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395631"
 ---
-# <a name="sqlstreamcharsclose-method"></a>Método SqlStreamChars.Close
+# <a name="sqlstreamcharsclose-method"></a>Método SqlStreamChars. Close
 
-Fecha o fluxo atual e libera os recursos de sistema associados ao fluxo. O assembly que contém este método tem uma relação de amigo com SQLAccess.dll. Ele é destinado a uso pelo SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido pelo banco de dados.
+Fecha o fluxo atual e libera todos os recursos do sistema associados ao fluxo. O assembly que contém esse método tem uma relação Friend com SQLAccess. dll. Ele é destinado ao uso por SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido por esse banco.
 
 ```csharp
 public virtual void Close ();
@@ -30,14 +30,14 @@ public virtual void Close ();
 ## <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> O `SqlStreamChars.Close` método é privado e não se destina a ser usado diretamente em seu código.
+> O método `SqlStreamChars.Close` é privado e não se destina a ser usado diretamente no seu código.
 >
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso desse método em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (em dll)
+**Assembly:** System. Data (em System. Data. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

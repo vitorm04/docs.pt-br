@@ -4,12 +4,12 @@ description: Aprenda a empacotar, nomear e controlar a versão do .NET Core para
 author: tmds
 ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250134"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393589"
 ---
 # <a name="net-core-distribution-packaging"></a>Pacote de distribuição do .NET Core
 
@@ -72,7 +72,7 @@ Embora haja um único host, a maioria dos outros componentes está em diretório
 
 - (3) **sdk/\<versão do sdk>** O SDK (também conhecido como "as ferramentas") é um conjunto de ferramentas gerenciadas usado para escrever e compilar aplicativos e bibliotecas do .NET Core. O SDK inclui a CLI (interface de linha de comando) do .NET Core, os compiladores de linguagens gerenciadas, o MSBuild, tarefas e destinos de compilação associados, o NuGet, novos modelos de projeto e assim por diante.
 
-- (4) **sdk/NuGetFallbackFolder** contém um cache de pacotes do NuGet usados por um SDK durante a operação de restauração, como ao executar `dotnet restore` ou `dotnet build /t:Restore`. Esta pasta é usada somente antes do .NET Core 3,0. Ele não pode ser compilado da origem, pois contém ativos binários pré-criados de `nuget.org`.
+- (4) **sdk/NuGetFallbackFolder** contém um cache de pacotes do NuGet usados por um SDK durante a operação de restauração, como ao executar `dotnet restore` ou `dotnet build`. Esta pasta é usada somente antes do .NET Core 3,0. Ele não pode ser compilado da origem, pois contém ativos binários pré-criados de `nuget.org`.
 
 A pasta **compartilhada** contém estruturas. Uma estrutura compartilhada fornece um conjunto de bibliotecas em um local central para que elas possam ser usadas por aplicativos diferentes.
 
@@ -104,7 +104,7 @@ As pastas marcadas com `(*)` são usadas por vários pacotes. Alguns formatos de
 
 O controle de versão do .NET Core é baseado nos números de versão `[major].[minor]` do componente de tempo de execução.
 A versão do SDK usa o mesmo `[major].[minor]` e tem um `[patch]` independente que combina as semânticas de recurso e de patch para o SDK.
-Por exemplo: O SDK versão 2.2.302 é a segunda versão de patch da terceira versão do recurso do SDK que dá suporte ao tempo de execução 2.2. Para obter mais informações sobre como o controle de versão funciona, veja [Visão geral do controle de versão do .NET Core](../versions/index.md).
+Por exemplo: SDK versão 2.2.302 é a segunda versão de patch da terceira versão de recurso do SDK que dá suporte ao tempo de execução 2,2. Para obter mais informações sobre como o controle de versão funciona, veja [Visão geral do controle de versão do .NET Core](../versions/index.md).
 
 Alguns pacotes incluem parte do número de versão no nome deles. Isso permite que você instale uma versão específica.
 O restante da versão não está incluído no nome da versão. Isso permite ao gerenciador de pacotes de SO atualize os pacotes (por exemplo, instalando automaticamente correções de segurança). Gerenciadores de pacotes com suporte são específicos do Linux.
@@ -114,13 +114,13 @@ Veja a seguir uma lista dos pacotes recomendados:
 - `dotnet-sdk-[major].[minor]`-instala o SDK mais recente para tempo de execução específico
   - **Versão:** versão \<runtime >
   - **Exemplo:** dotnet-sdk-2,1
-  - **Terá** (3),(4)
+  - **Contém:** (3), (4)
   - **Dependências:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`-instala um tempo de execução de ASP.NET Core específico
   - **Versão:** versão de tempo de execução \<aspnetcore >
   - **Exemplo:** aspnetcore-runtime-2,1
-  - **Terá** (6)
+  - **Contém:** (6)
   - **Dependências:** `dotnet-runtime-[major].[minor]`
 
 - `dotnet-runtime-deps-[major].[minor]` _(opcional)_ – instala as dependências para executar aplicativos independentes
@@ -131,39 +131,39 @@ Veja a seguir uma lista dos pacotes recomendados:
 - `dotnet-runtime-[major].[minor]`-instala um tempo de execução específico
   - **Versão:** versão \<runtime >
   - **Exemplo:** dotnet-tempo de execução-2,1
-  - **Terá** (5)
+  - **Contém:** (5)
   - **Dependências:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`-dependência
   - **Versão:** versão \<runtime >
   - **Exemplo:** dotnet-hostfxr-3,0
-  - **Terá** (2)
+  - **Contém:** (2)
   - **Dependências:** `dotnet-host`
 
 - `dotnet-host`-dependência
   - **Versão:** versão \<runtime >
   - **Exemplo:** dotnet-host
-  - **Terá** (1), (8), (9), (10), (16)
+  - **Contém:** (1), (8), (9), (10), (16)
 
 - `dotnet-apphost-pack-[major].[minor]`-dependência
   - **Versão:** versão \<runtime >
-  - **Terá** 13
+  - **Contém:** (13)
 
 - `dotnet-targeting-pack-[major].[minor]`-permite direcionar um tempo de execução não mais recente
   - **Versão:** versão \<runtime >
-  - **Terá** 12
+  - **Contém:** (12)
 
 - `aspnetcore-targeting-pack-[major].[minor]`-permite direcionar um tempo de execução não mais recente
   - **Versão:** versão de tempo de execução \<aspnetcore >
-  - **Terá** 11
+  - **Contém:** (11)
 
 - `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`-permite direcionar uma versão do netstandard
   - **Versão:** versão \<sdk >
-  - **Terá** 15
+  - **Contém:** (15)
 
 - `dotnet-templates-[major].[minor]`
   - **Versão:** versão \<sdk >
-  - **Terá** 15
+  - **Contém:** (15)
 
 O `dotnet-runtime-deps-[major].[minor]` requer a compreensão das _dependências específicas do distribuição_. Como o sistema de compilação distribuição pode ser capaz de derivar isso automaticamente, o pacote é opcional; nesse caso, essas dependências são adicionadas diretamente ao pacote `dotnet-runtime-[major].[minor]`.
 

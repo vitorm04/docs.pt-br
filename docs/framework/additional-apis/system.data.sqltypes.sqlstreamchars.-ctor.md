@@ -1,5 +1,5 @@
 ---
-title: Construtor SqlStreamChars (SqlTypes)
+title: Construtor SqlStreamChars (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7de715d2833f4aa26f8251e32e6bf8853b0bd704
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 34c5dcfe458ca57aa3bd5388e8b4c66c3c497df6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634589"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395652"
 ---
 # <a name="sqlstreamchars-constructor"></a>Construtor SqlStreamChars
 
-Inicializa uma nova instância da classe `SqlStreamChars`. O assembly que contém este construtor tem uma relação de amigo com SQLAccess.dll. Ele é destinado a uso pelo SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido pelo banco de dados.
+Inicializa uma nova instância da classe `SqlStreamChars` . O assembly que contém esse construtor tem uma relação Friend com SQLAccess. dll. Ele é destinado ao uso por SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido por esse banco.
 
 ```csharp
 protected SqlStreamChars ();
@@ -30,14 +30,14 @@ protected SqlStreamChars ();
 ## <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> O `SqlStreamChars` construtor é protegido e não se destina a ser usado diretamente em seu código.
+> O Construtor `SqlStreamChars` é protegido e não deve ser usado diretamente no seu código.
 >
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso desse construtor em um aplicativo de produção sob nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (em dll)
+**Assembly:** System. Data (em System. Data. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

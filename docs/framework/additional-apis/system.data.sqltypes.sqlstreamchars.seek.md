@@ -1,5 +1,5 @@
 ---
-title: Método SqlStreamChars.Seek (Int64, SeekOrigin) (SqlTypes)
+title: Método SqlStreamChars. Seek (Int64, SeekOrigin) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6b69f87da9fb3829d765dc135de1f6c10765b63a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: db8aba0a86c140ba62af8056011226532d415951
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634353"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395590"
 ---
-# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>Método SqlStreamChars.Seek (Int64, SeekOrigin)
+# <a name="sqlstreamcharsseekint64-seekorigin-method"></a>Método SqlStreamChars. Seek (Int64, SeekOrigin)
 
-Quando substituído em uma classe derivada, define a posição dentro do fluxo atual. O assembly que contém este método tem uma relação de amigo com SQLAccess.dll. Ele é destinado a uso pelo SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido pelo banco de dados.
+Quando substituído em uma classe derivada, define a posição dentro do fluxo atual. O assembly que contém esse método tem uma relação Friend com SQLAccess. dll. Ele é destinado ao uso por SQL Server. Para outros bancos de dados, use o mecanismo de hospedagem fornecido por esse banco.
 
 ```csharp
 public abstract long Seek (long offset, System.IO.SeekOrigin origin);
@@ -43,14 +43,14 @@ A nova posição dentro do fluxo atual.
 ## <a name="remarks"></a>Comentários
 
 > [!WARNING]
-> O `SqlStreamChars.Seek` método é privado e não se destina a ser usado diretamente em seu código.
+> O método `SqlStreamChars.Seek` é privado e não se destina a ser usado diretamente no seu código.
 >
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso desse método em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System. Data (em dll)
+**Assembly:** System. Data (em System. Data. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

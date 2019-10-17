@@ -2,15 +2,15 @@
 title: Protegendo as mensagens com a segurança de mensagens
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911769"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395711"
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
-Esta seção aborda a segurança de mensagens do WCF <xref:System.ServiceModel.NetMsmqBinding>ao usar o.  
+Esta seção discute a segurança de mensagens do WCF ao usar o <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 > Antes de ler este tópico, é recomendável que você leia os [conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
@@ -28,9 +28,9 @@ Esta seção aborda a segurança de mensagens do WCF <xref:System.ServiceModel.N
  A segurança de mensagens do WCF adiciona cabeçalhos de segurança à mensagem do WCF que se integram a infraestruturas de segurança existentes, como um certificado ou o protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial da mensagem  
- Usando a segurança da mensagem, o serviço e o cliente podem apresentar credenciais para autenticar um ao outro. Você pode selecionar segurança de mensagem definindo o <xref:System.ServiceModel.NetMsmqBinding.Security%2A> modo como `Message` ou `Both` (ou seja, usar segurança de transporte e segurança de mensagem).  
+ Usando a segurança da mensagem, o serviço e o cliente podem apresentar credenciais para autenticar um ao outro. Você pode selecionar segurança de mensagem definindo o modo <xref:System.ServiceModel.NetMsmqBinding.Security%2A> como `Message` ou `Both` (ou seja, usar segurança de transporte e segurança de mensagem).  
   
- O serviço pode usar a <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> propriedade para inspecionar a credencial usada para autenticar o cliente. Isso também pode ser usado para outras verificações de autorização que o serviço opta por implementar.  
+ O serviço pode usar a propriedade <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> para inspecionar a credencial usada para autenticar o cliente. Isso também pode ser usado para outras verificações de autorização que o serviço opta por implementar.  
   
  Esta seção explica os diferentes tipos de credenciais e como usá-los com filas do.  
   
@@ -41,7 +41,7 @@ Esta seção aborda a segurança de mensagens do WCF <xref:System.ServiceModel.N
   
  Considerando a natureza desconectada das filas, o cliente e o serviço podem não estar online ao mesmo tempo. Assim, o cliente e o serviço precisam trocar certificados fora de banda. Em particular, o cliente, em virtude de manter o certificado do serviço (que pode ser encadeado a uma autoridade de certificação) em seu repositório confiável, deve confiar que está se comunicando com o serviço correto. Para autenticar o cliente, o serviço usa o certificado X. 509 anexado à mensagem para que ele corresponda ao certificado em seu repositório para verificar a autenticidade do cliente. Novamente, o certificado deve ser encadeado a uma autoridade de certificação.  
   
- Em um computador que executa o Windows, os certificados são mantidos em vários tipos de armazenamentos. Para obter mais informações sobre os diferentes repositórios, consulte repositórios de [certificados](https://go.microsoft.com/fwlink/?LinkId=87787).  
+ Em um computador que executa o Windows, os certificados são mantidos em vários tipos de armazenamentos. Para obter mais informações sobre os diferentes repositórios, consulte [repositórios de certificados](https://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  O tipo de credencial de mensagem do Windows usa o protocolo Kerberos.  
@@ -52,7 +52,7 @@ Esta seção aborda a segurança de mensagens do WCF <xref:System.ServiceModel.N
   
  Observe que, ao usar esse tipo de credencial, o serviço deve estar em execução na conta de serviço.  
   
- O protocolo Kerberos é usado por padrão ao escolher a credencial da mensagem. Para obter mais informações, consulte [explorando o Kerberos, o protocolo para segurança distribuída no Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ O protocolo Kerberos é usado por padrão ao escolher a credencial da mensagem.
   
 ### <a name="username-password"></a>Senha do nome de usuário  
  Usando essa propriedade, o cliente pode se autenticar no servidor usando uma senha de nome de usuário no cabeçalho de segurança da mensagem.  

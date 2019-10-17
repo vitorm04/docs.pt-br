@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3acfa0da0caa29b503f47f23b0e9042d73ef0657
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353394"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393716"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -310,7 +310,7 @@ End Function
 
 **Compatibilidade com chaves efêmeras**
 
-Opcionalmente, a importação PFX pode carregar chave privada direto da memória, ignorando o disco rígido. Quando o novo sinalizador <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> é especificado em um construtor <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ou uma das sobrecargas do método <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, as chaves privadas serão carregadas como chaves efêmeras. Isso impede as chaves de ficarem visíveis no disco. No entanto:
+Opcionalmente, a importação PFX pode carregar chave privada direto da memória, ignorando o disco rígido. Quando o novo sinalizador <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> for especificado em um Construtor <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ou em uma das sobrecargas do método <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, as chaves privadas serão carregadas como chaves efêmeras. Isso impede as chaves de ficarem visíveis no disco. No entanto:
 
 - Como as chaves não são persistidas no disco, os certificados carregados com esse sinalizador não são bons candidatos para serem adicionados a um X509Store.
 
@@ -330,7 +330,7 @@ A partir do .NET Framework 4.7.2, a classe <xref:System.Security.Cryptography.Pk
 
 **Deixar um fluxo encapsulado aberto depois de descartar CryptoStream**
 
-A partir do .NET Framework 4.7.2, a classe <xref:System.Security.Cryptography.CryptoStream> tem um construtor adicional que permite que <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> não feche o fluxo encapsulado. Para manter o fluxo encapsulado aberto após o descarte da instância <xref:System.Security.Cryptography.CryptoStream>, chame o novo construtor <xref:System.Security.Cryptography.CryptoStream> da seguinte maneira:
+A partir do .NET Framework 4.7.2, a classe <xref:System.Security.Cryptography.CryptoStream> tem um construtor adicional que permite que <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> não feche o fluxo encapsulado. Para deixar o fluxo encapsulado aberto depois que a instância <xref:System.Security.Cryptography.CryptoStream> for descartada, chame o novo Construtor <xref:System.Security.Cryptography.CryptoStream> da seguinte maneira:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -499,7 +499,7 @@ O fluxo básico do Always Encrypted com base em enclave é:
 
 **Localizar ResourceDictionaries por origem**
 
-A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar o  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> criado de um determinado URI de origem. (Esse recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio permite ao usuário editar um ResourceDictionary com a intenção de que as alterações sejam aplicadas ao aplicativo em execução. Uma etapa para conseguir isso é localizar todos os ResourceDictionaries que o aplicativo em execução criou com base no dicionário que está sendo editado. Por exemplo, um aplicativo pode declarar um ResourceDictionary cujo conteúdo é copiado de um determinado URI de origem:
+A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar o  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> criado de um determinado URI de origem. (Esse recurso é para uso pelos assistentes de diagnóstico, não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio permite que seu usuário edite um ResourceDictionary com a intenção de que as alterações sejam aplicadas ao aplicativo em execução. Uma etapa para conseguir isso é localizar todos os ResourceDictionaries que o aplicativo em execução criou com base no dicionário que está sendo editado. Por exemplo, um aplicativo pode declarar um ResourceDictionary cujo conteúdo é copiado de um determinado URI de origem:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
@@ -519,7 +519,7 @@ O método retornará um enumerável vazio, a menos que  <xref:System.Windows.Di
 
 **Localizar os proprietários de ResourceDictionary**
 
-A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar os proprietários de um determinado <xref:Windows.UI.Xaml.ResourceDictionary>. O recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção. Sempre que uma alteração for feita em um <xref:Windows.UI.Xaml.ResourceDictionary>, o WPF encontra automaticamente todos as referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que podem ser afetadas pela alteração.
+A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar os proprietários de um determinado <xref:Windows.UI.Xaml.ResourceDictionary>. (O recurso é para uso por assistentes de diagnóstico e não por aplicativos de produção.) Sempre que uma alteração é feita em um <xref:Windows.UI.Xaml.ResourceDictionary>, o WPF localiza automaticamente todas as referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que podem ser afetadas pela alteração.
 
 Um assistente de diagnóstico, como o recurso de "Editar e continuar" do Visual Studio pode desejar estendê-lo para tratar as referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A primeira etapa nesse processo é localizar os proprietários do dicionário; ou seja, para localizar todos os objetos cuja propriedade `Resources` se refere ao dicionário (direta ou indiretamente por meio da propriedade <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Três novos métodos estáticos implementados na classe <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, um para cada um dos tipos base que tem uma propriedade `Resources`, compatível com esta etapa:
 
@@ -533,7 +533,7 @@ Esses métodos retornarão um enumerável vazio, a menos que  <xref:System.Wind
 
 **Localizar referências StaticResource**
 
-Agora, um assistente de diagnóstico pode receber uma notificação sempre que uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) for resolvida. O recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção. Um assistente de diagnóstico como o recurso de "Editar e continuar" do Visual Studio pode querer atualizar todos os usos de um recurso quando seu valor em um <xref:Windows.UI.Xaml.ResourceDictionary> é alterado. O WPF faz isso automaticamente para referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), mas ele intencionalmente não o faz para referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partir do .NET Framework 4.7.2, o assistente de diagnóstico pode usar essas notificações para localizar os usos do recurso estático.
+Agora, um assistente de diagnóstico pode receber uma notificação sempre que uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) for resolvida. (O recurso é para uso pelos assistentes de diagnóstico, não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio pode querer atualizar todos os usos de um recurso quando seu valor em um <xref:Windows.UI.Xaml.ResourceDictionary> for alterado. O WPF faz isso automaticamente para referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), mas ele intencionalmente não o faz para referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partir do .NET Framework 4.7.2, o assistente de diagnóstico pode usar essas notificações para localizar os usos do recurso estático.
 
 A notificação é implementada pelo novo evento <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -542,10 +542,10 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 ```
 
 ```vb
-Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
+Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Esse evento é gerado sempre que o tempo de execução resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Os argumentos <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md), o  <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
+Esse evento é gerado sempre que o tempo de execução resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Os argumentos <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e a @ no__t-2 e a chave usada para a resolução:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -600,9 +600,9 @@ Além disso, um dos objetivos principais do .NET Framework 4.7.1 é a melhoria d
 
 #### <a name="base-classes"></a>Classes base
 
-**Compatível com o .NET Standard 2.0**
+**Suporte para .NET Standard 2.0**
 
-O [.NET Standard](../../standard/net-standard.md) define um conjunto das APIs que precisam estar disponíveis em todas as implementações do .NET compatíveis com a versão do standard. O .NET Framework 4.7.1 dá suporte total ao .NET Standard 2.0 e adiciona [cerca de 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) que são definidas no .NET Standard 2.0 e não estão presentes nas versões 4.6.1, 4.6.2 e 4.7 do .NET Framework. (Observe que essas versões do .NET Framework são compatíveis com o .NET Standard 2.0 somente se os arquivos de suporte do .NET Standard estiverem implantados no sistema de destino.) Para obter mais informações, consulte “BLC – Suporte ao .NET Standard 2.0” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
+O [.NET Standard](../../standard/net-standard.md) define um conjunto das APIs que precisam estar disponíveis em todas as implementações do .NET compatíveis com a versão do standard. O .NET Framework 4.7.1 dá suporte total ao .NET Standard 2.0 e adiciona [cerca de 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) que são definidas no .NET Standard 2.0 e não estão presentes nas versões 4.6.1, 4.6.2 e 4.7 do .NET Framework. (Observe que essas versões do .NET Framework oferecem suporte a .NET Standard 2,0 somente se os arquivos de suporte .NET Standard adicionais também forem implantados no sistema de destino.) Para obter mais informações, consulte "suporte a BCL-.NET Standard 2,0" na postagem do blog [.NET Framework 4.7.1 tempo de execução e recursos do compilador](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
 
 **Suporte para construtores de configuração**
 
@@ -843,7 +843,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Nome                                 | Valor                                     |
+| Name                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -1272,7 +1272,7 @@ Para saber mais sobre o .NET Framework 4.6.1, consulte os seguintes tópicos:
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Criptografia: Suporte aos certificados X509 contendo ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Criptografia: suporte para certificados X509 contendo ECDSA
 
 O .NET Framework 4.6 adicionou suporte a RSACng para certificados X509. O .NET Framework 4.6.1 adiciona suporte para certificados X509 ECDSA (Algoritmo de Assinatura Digital de Curva Elíptica).
 
@@ -1848,7 +1848,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
   - É possível usar as APIs do Tempo de Execução do Windows em bibliotecas portáteis que tenham como destino Windows 8.1, Windows Phone 8.1 e Windows Phone Silverlight 8.1.
 
-  - Você pode incluir XAML (Windows.UI.XAML types) em bibliotecas portáteis quando o destino for Windows 8.1 ou Windows Phone 8.1. Há suporte para os seguintes modelos XAML:  Página em Branco, Dicionário de Recursos, Controle Modelo e Controle de Usuário.
+  - Você pode incluir XAML (Windows.UI.XAML types) em bibliotecas portáteis quando o destino for Windows 8.1 ou Windows Phone 8.1. Os seguintes modelos XAML são compatíveis: Blank Page, Resource Dictionary, Templated Control e User Control.
 
   - Você pode criar um componente de Tempo de Execução do Windows portátil (.winmd file) para uso em Store apps cujo destino seja Windows 8.1 e Windows Phone 8.1.
 
@@ -1862,7 +1862,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
 Os novos recursos e aprimoramentos nas classes base do .NET Framework 4.5.1 incluem:
 
-- Redirecionamento de associação automático de assemblies. Desde o Visual Studio 2013, quando você compilar um aplicativo destinado ao .NET Framework 4.5.1, os redirecionamentos de associação poderão ser adicionados ao arquivo de configuração do aplicativo se o aplicativo ou seus componentes referenciarem várias versões do mesmo assembly. Você também pode habilitar esse recurso para projetos que se destinam a versões anteriores do .NET Framework. Para obter mais informações, confira [Como: Habilitar e desabilitar o redirecionamento automático de associação](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Redirecionamento de associação automático de assemblies. Desde o Visual Studio 2013, quando você compilar um aplicativo destinado ao .NET Framework 4.5.1, os redirecionamentos de associação poderão ser adicionados ao arquivo de configuração do aplicativo se o aplicativo ou seus componentes referenciarem várias versões do mesmo assembly. Você também pode habilitar esse recurso para projetos que se destinam a versões anteriores do .NET Framework. Para saber mais, confira [Como habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Capacidade de coletar informações de diagnóstico para ajudar desenvolvedores na melhoria do desempenho dos aplicativos de servidor e de nuvem. Para obter mais informações, consulte os métodos <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> e <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> na classe <xref:System.Diagnostics.Tracing.EventSource>.
 
@@ -1914,7 +1914,7 @@ Para novos recursos no ASP.NET 4.5.1, confira [Notas sobre a versão do ASP.NET 
 
 - Compilação JIT (just-in-time) em segundo plano, disponível como opção em vários processadores multicore para melhorar o desempenho do aplicativo. Consulte <xref:System.Runtime.ProfileOptimization>.
 
-- Capacidade de limitar por quanto tempo o mecanismo de expressões regulares tentará resolver uma expressão regular antes de expirar. Consulte a propriedade <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType>.
+- Capacidade de limitar quanto tempo o mecanismo de expressão regular tentará resolver uma expressão regular antes de atingir o tempo limite. Consulte a propriedade <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType>.
 
 - Capacidade de definir a cultura padrão para um domínio de aplicativo. Consulte a classe <xref:System.Globalization.CultureInfo>.
 

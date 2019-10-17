@@ -2,12 +2,12 @@
 title: Problemas conhecidos em SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 18e3ad59af4014086bd475815011b6008bcb5052
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854555"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395516"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conhecidos em SqlClient para Entity Framework
 Esta seção descreve os problemas conhecidos relacionados ao provedor de dados. NET Framework para SQL Server (SqlClient).  
@@ -36,19 +36,19 @@ Esta seção descreve os problemas conhecidos relacionados ao provedor de dados.
 - Uma consulta que tenha uma compilação de DEREF sobre uma compilação de referência.  
   
 ## <a name="skip-operator"></a>Operador SKIP  
- Se você estiver usando SQL Server 2000, usar ignorar por colunas não chave pode retornar resultados incorretos. Mais do que o número de linhas especificado podem ser ignoradas se a coluna de chave não tem dados duplicados nele. Isso ocorre devido a como o SKIP é convertido para SQL Server 2000. Por exemplo, na consulta a seguir, mais de cinco linhas podem ser ignoradas se `E.NonKeyColumn` houver valores duplicados:  
+ Se você estiver usando SQL Server 2000, usar ignorar por colunas não chave pode retornar resultados incorretos. Mais do que o número de linhas especificado podem ser ignoradas se a coluna de chave não tem dados duplicados nele. Isso ocorre devido a como o SKIP é convertido para SQL Server 2000. Por exemplo, na consulta a seguir, mais de cinco linhas podem ser ignoradas se `E.NonKeyColumn` tiver valores duplicados:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Direcionamento a versão correta do SQL Server  
- O Entity Framework se destina à consulta Transact-SQL com base na versão SQL Server especificada no `ProviderManifestToken` atributo do elemento Schema no arquivo de modelo de armazenamento (. SSDL). Esta versão pode diferir de versão do SQL Server que você real é conectada. Por exemplo, se você estiver usando SQL Server 2005, mas o `ProviderManifestToken` atributo for definido como 2008, a consulta Transact-SQL gerada poderá não ser executada no servidor. Por exemplo, uma consulta que usa os novos tipos de data/hora que foram introduzidos no SQL Server 2008 não será executada em versões anteriores do SQL Server. Se você estiver usando SQL Server 2005, mas o `ProviderManifestToken` atributo for definido como 2000, a consulta Transact-SQL gerada poderá ser menos otimizada ou você poderá receber uma exceção informando que não há suporte para a consulta. Para obter mais informações, consulte a seção operadores de aplicação CRUZada e externa, anteriormente neste tópico.  
+ O Entity Framework tem como alvo a consulta Transact-SQL com base na versão de SQL Server especificada no atributo `ProviderManifestToken` do elemento de esquema no arquivo de modelo de armazenamento (. SSDL). Esta versão pode diferir de versão do SQL Server que você real é conectada. Por exemplo, se você estiver usando SQL Server 2005, mas o atributo `ProviderManifestToken` for definido como 2008, a consulta Transact-SQL gerada poderá não ser executada no servidor. Por exemplo, uma consulta que usa os novos tipos de data/hora que foram introduzidos no SQL Server 2008 não será executada em versões anteriores do SQL Server. Se você estiver usando SQL Server 2005, mas o atributo `ProviderManifestToken` for definido como 2000, a consulta Transact-SQL gerada poderá ser menos otimizada ou você poderá receber uma exceção informando que não há suporte para a consulta. Para obter mais informações, consulte a seção operadores de aplicação CRUZada e externa, anteriormente neste tópico.  
   
- Determinados comportamentos de base de dados depende de nível de compatibilidade definido para base de dados. Se o `ProviderManifestToken` atributo for definido como 2005 e sua versão de SQL Server for 2005, mas o nível de compatibilidade de um banco de dados for definido como "80" (SQL Server 2000), o Transact-SQL gerado será direcionado SQL Server 2005, mas poderá não ser executado conforme o esperado devido ao configuração de nível de compatibilidade. Por exemplo, você pode perder ordenação informações se um nome de coluna na cláusula ORDER a lista corresponde a um nome de coluna no seletor.  
+ Determinados comportamentos de base de dados depende de nível de compatibilidade definido para base de dados. Se o atributo `ProviderManifestToken` for definido como 2005 e sua versão de SQL Server for 2005, mas o nível de compatibilidade de um banco de dados for definido como "80" (SQL Server 2000), o Transact-SQL gerado será direcionado a SQL Server 2005, mas poderá não ser executado conforme o esperado devido ao configuração de nível de compatibilidade. Por exemplo, você pode perder ordenação informações se um nome de coluna na cláusula ORDER a lista corresponde a um nome de coluna no seletor.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas aninhadas na projeção  
- Consultas aninhadas em uma cláusula de projeção podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores back-end, incluindo o SLQ Server, isso pode fazer com que a tabela TempDB fique muito grande. Isso pode diminuir o desempenho do servidor.  
+ Consultas aninhadas em uma cláusula de projeção podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores back-end, incluindo SQL Server, isso pode fazer com que a tabela TempDB fique muito grande. Isso pode diminuir o desempenho do servidor.  
   
  Veja a seguir um exemplo de uma consulta aninhada em uma cláusula de projeção:  
   
