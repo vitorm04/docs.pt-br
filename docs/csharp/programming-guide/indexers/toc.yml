@@ -1,9 +1,0 @@
-- name: Indexadores
-  href: index.md
-  items:
-    - name: Usar indexadores
-      href: using-indexers.md
-    - name: Indexadores em interfaces
-      href: indexers-in-interfaces.md
-    - name: Comparação entre propriedades e indexadores
-      href: comparison-between-properties-and-indexers.md

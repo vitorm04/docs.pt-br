@@ -1,9 +1,0 @@
-- name: Interfaces
-  href: index.md
-  items:
-    - name: Implementação explícita da interface
-      href: explicit-interface-implementation.md
-    - name: 'Como: implementar membros de interface de forma explícita'
-      href: how-to-explicitly-implement-interface-members.md
-    - name: 'Como: implementar membros de duas interfaces de forma explícita'
-      href: how-to-explicitly-implement-members-of-two-interfaces.md

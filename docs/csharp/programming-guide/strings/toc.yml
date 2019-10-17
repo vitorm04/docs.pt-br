@@ -1,5 +1,0 @@
-- name: Cadeias de caracteres
-  href: index.md
-  items:
-    - name: 'Como: determinar se uma cadeia de caracteres representa um valor numérico'
-      href: how-to-determine-whether-a-string-represents-a-numeric-value.md

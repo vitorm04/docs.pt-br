@@ -1,6 +1,0 @@
-- name: Guia de Introdução
-  items:
-    - name: Como usar este guia
-      href: index.md
-    - name: 'Introdução à linguagem C# e ao .NET Framework'
-      href: introduction-to-the-csharp-language-and-the-net-framework.md
