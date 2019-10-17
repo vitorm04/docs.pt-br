@@ -1,7 +1,0 @@
-- name: Tipos de valor anuláveis
-  href: index.md
-  items:
-    - name: Usar tipos de valor anuláveis
-      href: using-nullable-types.md
-    - name: Como identificar um tipo de valor anulável
-      href: how-to-identify-a-nullable-type.md
