@@ -1,27 +1,27 @@
 ---
-title: 'Como: usar as funcionalidades da documentação XML – Guia de Programação do C#'
+title: 'Como: usar os recursos de documentação XML- C# guia de programação'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834169"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523458"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="d0bff-102">Como: usar as funcionalidades da documentação XML</span><span class="sxs-lookup"><span data-stu-id="d0bff-102">How to: Use the XML documentation features</span></span>
+# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="b4ca1-102">Como usar as funcionalidades da documentação XML</span><span class="sxs-lookup"><span data-stu-id="b4ca1-102">How to: Use the XML documentation features</span></span>
 
-<span data-ttu-id="d0bff-103">O exemplo a seguir fornece uma visão geral básica de um tipo que foi documentado.</span><span class="sxs-lookup"><span data-stu-id="d0bff-103">The following sample provides a basic overview of a type that has been documented.</span></span>
+<span data-ttu-id="b4ca1-103">O exemplo a seguir fornece uma visão geral básica de um tipo que foi documentado.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-103">The following sample provides a basic overview of a type that has been documented.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d0bff-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d0bff-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b4ca1-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b4ca1-104">Example</span></span>
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-<span data-ttu-id="d0bff-105">O exemplo gera um arquivo .xml com o seguinte conteúdo:</span><span class="sxs-lookup"><span data-stu-id="d0bff-105">The example generates an .xml file with the following contents:</span></span>
+<span data-ttu-id="b4ca1-105">O exemplo gera um arquivo .xml com o seguinte conteúdo:</span><span class="sxs-lookup"><span data-stu-id="b4ca1-105">The example generates an .xml file with the following contents:</span></span>
 
 ```xml
 <?xml version="1.0"?>
@@ -107,35 +107,35 @@ ms.locfileid: "71834169"
 </doc>
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="d0bff-106">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="d0bff-106">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="b4ca1-106">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="b4ca1-106">Compiling the code</span></span>
 
-<span data-ttu-id="d0bff-107">Para compilar o exemplo, digite a seguinte linha de comando:</span><span class="sxs-lookup"><span data-stu-id="d0bff-107">To compile the example, type the following command line:</span></span>
+<span data-ttu-id="b4ca1-107">Para compilar o exemplo, digite a seguinte linha de comando:</span><span class="sxs-lookup"><span data-stu-id="b4ca1-107">To compile the example, type the following command line:</span></span>
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-<span data-ttu-id="d0bff-108">Esse comando cria o arquivo XML *XMLsample.xml*, que você pode exibir no navegador ou usando o comando TYPE.</span><span class="sxs-lookup"><span data-stu-id="d0bff-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
+<span data-ttu-id="b4ca1-108">Esse comando cria o arquivo XML *XMLsample.xml*, que você pode exibir no navegador ou usando o comando TYPE.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
 
-## <a name="robust-programming"></a><span data-ttu-id="d0bff-109">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="d0bff-109">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="b4ca1-109">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="b4ca1-109">Robust programming</span></span>
 
-<span data-ttu-id="d0bff-110">A documentação XML começa com ///.</span><span class="sxs-lookup"><span data-stu-id="d0bff-110">XML documentation starts with ///.</span></span> <span data-ttu-id="d0bff-111">Quando você cria um novo projeto, os assistentes colocam algumas linhas iniciais /// para você.</span><span class="sxs-lookup"><span data-stu-id="d0bff-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="d0bff-112">O processamento desses comentários tem algumas restrições:</span><span class="sxs-lookup"><span data-stu-id="d0bff-112">The processing of these comments has some restrictions:</span></span>
+<span data-ttu-id="b4ca1-110">A documentação XML começa com ///.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-110">XML documentation starts with ///.</span></span> <span data-ttu-id="b4ca1-111">Quando você cria um novo projeto, os assistentes colocam algumas linhas iniciais /// para você.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="b4ca1-112">O processamento desses comentários tem algumas restrições:</span><span class="sxs-lookup"><span data-stu-id="b4ca1-112">The processing of these comments has some restrictions:</span></span>
 
-- <span data-ttu-id="d0bff-113">A documentação deve ser em XML bem formado.</span><span class="sxs-lookup"><span data-stu-id="d0bff-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="d0bff-114">Se o XML não estiver bem formado, um aviso será gerado e o arquivo de documentação conterá um comentário que diz que foi encontrado um erro.</span><span class="sxs-lookup"><span data-stu-id="d0bff-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
+- <span data-ttu-id="b4ca1-113">A documentação deve ser em XML bem formado.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="b4ca1-114">Se o XML não estiver bem formado, um aviso será gerado e o arquivo de documentação conterá um comentário que diz que foi encontrado um erro.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
 
-- <span data-ttu-id="d0bff-115">Os desenvolvedores são livres para criar seu próprio conjunto de marcas.</span><span class="sxs-lookup"><span data-stu-id="d0bff-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="d0bff-116">Há um conjunto de marcas recomendadas (confira [Marcas recomendadas para comentários da documentação](recommended-tags-for-documentation-comments.md)).</span><span class="sxs-lookup"><span data-stu-id="d0bff-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="d0bff-117">Algumas das marcas recomendadas têm significado especial:</span><span class="sxs-lookup"><span data-stu-id="d0bff-117">Some of the recommended tags have special meanings:</span></span>
+- <span data-ttu-id="b4ca1-115">Os desenvolvedores são livres para criar seu próprio conjunto de marcas.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="b4ca1-116">Há um conjunto de marcas recomendadas (confira [Marcas recomendadas para comentários da documentação](recommended-tags-for-documentation-comments.md)).</span><span class="sxs-lookup"><span data-stu-id="b4ca1-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="b4ca1-117">Algumas das marcas recomendadas têm significado especial:</span><span class="sxs-lookup"><span data-stu-id="b4ca1-117">Some of the recommended tags have special meanings:</span></span>
 
-  - <span data-ttu-id="d0bff-118">A marca \<param> é usada para descrever parâmetros.</span><span class="sxs-lookup"><span data-stu-id="d0bff-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="d0bff-119">Se ela é usada, o compilador verifica se o parâmetro existe e se todos os parâmetros são descritos na documentação.</span><span class="sxs-lookup"><span data-stu-id="d0bff-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="d0bff-120">Se a verificação falhar, o compilador emitirá um aviso.</span><span class="sxs-lookup"><span data-stu-id="d0bff-120">If the verification failed, the compiler issues a warning.</span></span>
+  - <span data-ttu-id="b4ca1-118">A marca \<param> é usada para descrever parâmetros.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="b4ca1-119">Se ela é usada, o compilador verifica se o parâmetro existe e se todos os parâmetros são descritos na documentação.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="b4ca1-120">Se a verificação falhar, o compilador emitirá um aviso.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-120">If the verification failed, the compiler issues a warning.</span></span>
 
-  - <span data-ttu-id="d0bff-121">O atributo `cref` pode ser anexado a qualquer marca para fornecer uma referência a um elemento de código.</span><span class="sxs-lookup"><span data-stu-id="d0bff-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="d0bff-122">O compilador verifica se esse elemento de código existe.</span><span class="sxs-lookup"><span data-stu-id="d0bff-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="d0bff-123">Se a verificação falhar, o compilador emitirá um aviso.</span><span class="sxs-lookup"><span data-stu-id="d0bff-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="d0bff-124">O compilador respeita qualquer instrução `using` quando procura por um tipo descrito no atributo `cref`.</span><span class="sxs-lookup"><span data-stu-id="d0bff-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
+  - <span data-ttu-id="b4ca1-121">O atributo `cref` pode ser anexado a qualquer marca para fornecer uma referência a um elemento de código.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="b4ca1-122">O compilador verifica se esse elemento de código existe.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="b4ca1-123">Se a verificação falhar, o compilador emitirá um aviso.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="b4ca1-124">O compilador respeita qualquer instrução `using` quando procura por um tipo descrito no atributo `cref`.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
 
-  - <span data-ttu-id="d0bff-125">A marca \<summary> é usada pelo IntelliSense no Visual Studio para exibir informações adicionais sobre um tipo ou membro.</span><span class="sxs-lookup"><span data-stu-id="d0bff-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
+  - <span data-ttu-id="b4ca1-125">A marca \<summary> é usada pelo IntelliSense no Visual Studio para exibir informações adicionais sobre um tipo ou membro.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="d0bff-126">O arquivo XML não fornece informações completas sobre o tipo e os membros (por exemplo, ele não contém nenhuma informação de tipo).</span><span class="sxs-lookup"><span data-stu-id="d0bff-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="d0bff-127">Para obter informações completas sobre um tipo ou membro, o arquivo de documentação deve ser usado com a reflexão no membro ou tipo real.</span><span class="sxs-lookup"><span data-stu-id="d0bff-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
+    > <span data-ttu-id="b4ca1-126">O arquivo XML não fornece informações completas sobre o tipo e os membros (por exemplo, ele não contém nenhuma informação de tipo).</span><span class="sxs-lookup"><span data-stu-id="b4ca1-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="b4ca1-127">Para obter informações completas sobre um tipo ou membro, o arquivo de documentação deve ser usado com a reflexão no membro ou tipo real.</span><span class="sxs-lookup"><span data-stu-id="b4ca1-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d0bff-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d0bff-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4ca1-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b4ca1-128">See also</span></span>
 
-- [<span data-ttu-id="d0bff-129">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="d0bff-129">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="d0bff-130">-doc (opções do compilador do C#)</span><span class="sxs-lookup"><span data-stu-id="d0bff-130">/doc (C# Compiler Options)</span></span>](../../language-reference/compiler-options/doc-compiler-option.md)
-- [<span data-ttu-id="d0bff-131">Comentários da documentação XML</span><span class="sxs-lookup"><span data-stu-id="d0bff-131">XML Documentation Comments</span></span>](./index.md)
-- [<span data-ttu-id="d0bff-132">Processador de documentação do DocFX</span><span class="sxs-lookup"><span data-stu-id="d0bff-132">DocFX documentation processor</span></span>](https://dotnet.github.io/docfx/)
-- [<span data-ttu-id="d0bff-133">Processador de documentação do Sandcastle</span><span class="sxs-lookup"><span data-stu-id="d0bff-133">Sandcastle documentation processor</span></span>](https://github.com/EWSoftware/SHFB)
+- [<span data-ttu-id="b4ca1-129">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="b4ca1-129">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="b4ca1-130">-doc (opções do compilador do C#)</span><span class="sxs-lookup"><span data-stu-id="b4ca1-130">-doc (C# Compiler Options)</span></span>](../../language-reference/compiler-options/doc-compiler-option.md)
+- [<span data-ttu-id="b4ca1-131">Comentários da documentação XML</span><span class="sxs-lookup"><span data-stu-id="b4ca1-131">XML Documentation Comments</span></span>](./index.md)
+- [<span data-ttu-id="b4ca1-132">Processador de documentação do DocFX</span><span class="sxs-lookup"><span data-stu-id="b4ca1-132">DocFX documentation processor</span></span>](https://dotnet.github.io/docfx/)
+- [<span data-ttu-id="b4ca1-133">Processador de documentação do Sandcastle</span><span class="sxs-lookup"><span data-stu-id="b4ca1-133">Sandcastle documentation processor</span></span>](https://github.com/EWSoftware/SHFB)
