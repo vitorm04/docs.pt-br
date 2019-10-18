@@ -4,12 +4,12 @@ description: Aprenda a analisar as dependências externas para fazer a portabili
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: HT
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904330"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521478"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analisar suas dependências para fazer a portabilidade do código para o .NET Core
 
@@ -20,8 +20,8 @@ Para fazer a portabilidade de seu código para o .NET Core ou .NET Standard, é 
 Se você fizer referência a pacotes NuGet em seu projeto, será necessário verificar se eles são compatíveis com o .NET Core.
 Há duas maneiras de fazer isso:
 
-* [Usar o aplicativo do Explorador de Pacotes NuGet](#analyze-nuget-packages-using-nuget-package-explorer)
-* [Usar o site nuget.org](#analyze-nuget-packages-using-nugetorg)
+- [Usar o aplicativo do Explorador de Pacotes NuGet](#analyze-nuget-packages-using-nuget-package-explorer)
+- [Usar o site nuget.org](#analyze-nuget-packages-using-nugetorg)
 
 Depois de analisar os pacotes, se eles não forem compatíveis com o .NET Core e destinarem-se apenas ao .NET Framework, você poderá verificar se o [modo de compatibilidade do .NET Framework](#net-framework-compatibility-mode) pode ajudar no processo de portabilidade.
 
@@ -104,7 +104,7 @@ Saiba mais em [Migrar de packages.config para PackageReference](/nuget/reference
 Há algumas coisas que você pode fazer se um pacote NuGet do qual você depende não for executado no .NET Core:
 
 1. Se o projeto for um software livre e estiver hospedado em algum lugar como o GitHub, você poderá entrar em contato diretamente com os desenvolvedores.
-2. Você pode entrar em contato diretamente com o autor no [nuget.org](https://www.nuget.org/). Pesquise o pacote e clique em **Entrar em contato com os proprietários** no lado esquerdo da página do pacote.
+2. Você pode entrar em contato com o autor diretamente no [NuGet.org](https://www.nuget.org/). Pesquise o pacote e clique em **contatar proprietários** no lado esquerdo da página do pacote.
 3. Você pode pesquisar outro pacote que seja executado no .NET Core e realize a mesma tarefa que o pacote que você estava usando.
 4. Você pode tentar escrever por conta própria o código do que o pacote estava fazendo.
 5. Você pode eliminar a dependência do pacote alterando a funcionalidade do aplicativo, pelo menos até que uma versão compatível do pacote fique disponível.

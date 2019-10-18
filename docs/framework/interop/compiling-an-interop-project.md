@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5bc92eb9d4b7b0ae5db56303f3fbfa991c58e06a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969093"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523836"
 ---
 # <a name="compiling-an-interop-project"></a>Compilando um projeto de interoperabilidade
 
@@ -24,15 +24,15 @@ Os projetos de interoperabilidade COM que referenciam um ou mais assemblies que 
 
  Há duas maneiras de referenciar assemblies de interoperabilidade:
 
-- Tipos de interoperabilidade inseridos: Do .NET Framework 4 e do Visual Studio 2010 em diante, é possível instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade ao seu executável. Esta é a técnica recomendada.
+- Tipos de interoperabilidade inseridos: a partir do .NET Framework 4 e do Visual Studio 2010, você pode instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade em seu executável. Esta é a técnica recomendada.
 
-- Implantando assemblies de interoperabilidade: Crie uma referência padrão a um assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo.
+- Implantando assemblies de interoperabilidade: é possível criar uma referência padrão a um assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo.
 
  As diferenças entre essas duas técnicas são abordadas mais detalhadamente em [Usando tipos COM em um código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 
- A inserção de tipos de interoperabilidade com o Visual Studio é demonstrada em [Passo a passo: Inserindo tipos de assemblies gerenciados no Visual](../../standard/assembly/embed-types-visual-studio.md)Studio.
+ A incorporação de tipos de interoperabilidade com o Visual Studio é demonstrada em [instruções: incorporando tipos de assemblies gerenciados no Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Para referenciar um assembly de interoperabilidade com um compilador de linha de comando e inserir informações de tipo nos executáveis, use a opção do compilador [/link (Opções do Compilador do C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) ou [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e especifique o nome do assembly de interoperabilidade.
+ Para fazer referência a um assembly de interoperabilidade com um compilador de linha de comando e inserir informações de tipo em seus executáveis, use a opção [-link (C# opções do compilador)](../../csharp/language-reference/compiler-options/link-compiler-option.md) ou o conjunto de compiladores [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e especifique o nome do assembly de interoperabilidade.
 
 > [!NOTE]
 > Os aplicativos do Visual C++ não podem inserir informações de tipo, mas podem interoperar com aplicativos ou suplementos que têm essa capacidade.
@@ -44,5 +44,5 @@ Os projetos de interoperabilidade COM que referenciam um ou mais assemblies que 
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../standard/language-independence-and-language-independent-components.md)
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Passo a passo: Inserindo tipos de assemblies gerenciados no Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
+- [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)

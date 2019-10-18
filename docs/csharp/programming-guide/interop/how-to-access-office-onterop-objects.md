@@ -1,5 +1,5 @@
 ---
-title: 'Como: acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# – Guia de Programação em C#'
+title: Como acessar objetos de interoperabilidade do Office usando C# os recursos C# visuais – guia de programação
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834204"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523555"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como: acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Como acessar objetos de interoperabilidade do Office usando funcionalidades do Visual C# (Guia de Programação em C#)
 
 O Visual C# tem funcionalidades que simplificam o acesso a objetos de API do Office. Os novos recursos incluem argumentos nomeados e opcionais, um novo tipo chamado `dynamic` e a capacidade de passar argumentos para parâmetros de referência em métodos COM como se fossem parâmetros de valor.
 
@@ -49,7 +49,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nome do projeto e, em seguida, clique em **Adicionar Referência**. A caixa de diálogo **Adicionar Referência** é exibida.
 
-2. Na página **Assemblies**, selecione **Microsoft.Office.Interop.Word** na lista **Nome do Componente** e, mantendo a tecla CTRL pressionada, selecione **Microsoft.Office.Interop.Excel**.  Se você não vir os assemblies, talvez seja necessário garantir que eles sejam instalados e exibidos. Confira [Como Instale os assemblies de interoperabilidade primária do Office @ no__t-0.
+2. Na página **Assemblies**, selecione **Microsoft.Office.Interop.Word** na lista **Nome do Componente** e, mantendo a tecla CTRL pressionada, selecione **Microsoft.Office.Interop.Excel**.  Se você não vir os assemblies, talvez seja necessário garantir que eles sejam instalados e exibidos. Consulte [como instalar assemblies de interoperabilidade primária do Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
 3. Clique em **OK**.
 
@@ -57,7 +57,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo *Program.cs* e, em seguida, clique em **Exibir Código**.
 
-2. Adicione as seguintes diretivas `using` à parte superior do arquivo de código:
+2. Adicione as seguintes diretivas de `using` à parte superior do arquivo de código:
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
@@ -95,7 +95,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     O C# 4, e versões posteriores, converterão o `Object` retornado em `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [/link](../../language-reference/compiler-options/link-compiler-option.md) ou, de forma equivalente, se a propriedade **Embed Interop Types** do Excel estiver definida como true. True é o valor padrão para essa propriedade.
+     C#4, e versões posteriores, converte o `Object` retornado para `dynamic` automaticamente se o assembly for referenciado pela opção do compilador [-link](../../language-reference/compiler-options/link-compiler-option.md) ou, de maneira equivalente, se a propriedade **inserir tipos de interoperabilidade** do Excel estiver definida como true. True é o valor padrão para essa propriedade.
 
 ## <a name="to-run-the-project"></a>Para executar o projeto
 
@@ -137,7 +137,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Para definir a propriedade Inserir Tipos Interop
 
-1. Melhorias adicionais são possíveis quando você chama um tipo COM que não requer um assembly de interoperabilidade primário (PIA) no tempo de execução. A remoção da dependência nos PIAs resulta na independência de versão e em uma implantação mais fácil. Para saber mais sobre as vantagens de programação sem PIAs, confira [Instruções passo a passo: inserir tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md).
+1. Melhorias adicionais são possíveis quando você chama um tipo COM que não requer um assembly de interoperabilidade primário (PIA) no tempo de execução. A remoção da dependência nos PIAs resulta na independência de versão e em uma implantação mais fácil. Para obter mais informações sobre as vantagens da programação sem PIAs, consulte [Passo a passo: inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md).
 
      Além disso, a programação é mais fácil porque os tipos necessários e retornados por métodos COM podem ser representados usando o tipo `dynamic`, em vez de `Object`. Variáveis com o tipo `dynamic` não são avaliadas até o tempo de execução, o que elimina a necessidade de conversão explícita. Para obter mais informações, veja [Usando o tipo dynamic](../types/using-type-dynamic.md).
 
@@ -149,7 +149,7 @@ Para concluir este passo a passo, você deve ter o Microsoft Office Excel 2007 e
 
 3. Se você não conseguir ver a janela **Propriedades**, pressione **F4**.
 
-4. Localize **Inserir Tipos Interop** na lista de propriedades e altere seu valor para **False**. De maneira equivalente, você pode compilar usando a opção do compilador [/reference](../../language-reference/compiler-options/reference-compiler-option.md) em vez de [/link](../../language-reference/compiler-options/link-compiler-option.md) em um prompt de comando.
+4. Localize **Inserir Tipos Interop** na lista de propriedades e altere seu valor para **False**. De maneira equivalente, você pode compilar usando a opção [-Reference](../../language-reference/compiler-options/reference-compiler-option.md) do compilador em vez de [-link](../../language-reference/compiler-options/link-compiler-option.md) em um prompt de comando.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Para adicionar formatação adicional à tabela
 
@@ -179,4 +179,4 @@ O código a seguir mostra um exemplo completo.
 - [dynamic](../../language-reference/keywords/dynamic.md)
 - [Usando o tipo dynamic](../types/using-type-dynamic.md)
 - [Argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md)
-- [Como: usar argumentos nomeados e opcionais na programação do Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Como usar argumentos nomeados e opcionais na programação do Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

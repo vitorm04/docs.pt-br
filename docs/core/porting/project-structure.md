@@ -4,33 +4,33 @@ description: Ajuda para os proprietários de projeto que desejam compilar sua so
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 701aa64be8d6c712ef635411ad6c226a3c3ab8ed
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698929"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522975"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organize seu projeto para oferecer suporte ao .NET Framework e ao .NET Core
 
 Saiba como criar uma solução compilada para .NET Framework e .NET Core simultaneamente. Veja várias opções para organizar projetos que o ajudam a atingir esse objetivo. Estes são alguns cenários típicos que você deve considerar ao decidir como configurar o layout de projeto com o .NET Core. A lista pode não abordar tudo o que você deseja, priorize dependendo das necessidades do seu projeto.
 
-* [**Combinar projetos existentes e projetos do .NET Core em um mesmo projeto**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
+- [**Combinar projetos existentes e projetos do .NET Core em um mesmo projeto**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *Isso é bom para:*
-  * Simplificar o processo de compilação ao compilar um único projeto em vez de vários, cada um direcionado para uma versão ou plataforma diferente do .NET Framework.
-  * Simplificar o gerenciamento de arquivos de origem para projetos multiplataforma, pois é necessário gerenciar um único arquivo de projeto. Ao adicionar/remover arquivos da origem, as alternativas exigem que você sincronize manualmente esses recursos com outros projetos.
-  * Fácil geração de um pacote NuGet para consumo.
-  * Permite que você escreva código para uma versão específica do .NET Framework nas suas bibliotecas usando diretivas de compilador.
+  - Simplificar o processo de compilação ao compilar um único projeto em vez de vários, cada um direcionado para uma versão ou plataforma diferente do .NET Framework.
+  - Simplificar o gerenciamento de arquivos de origem para projetos multiplataforma, pois é necessário gerenciar um único arquivo de projeto. Ao adicionar/remover arquivos da origem, as alternativas exigem que você sincronize manualmente esses recursos com outros projetos.
+  - Fácil geração de um pacote NuGet para consumo.
+  - Permite que você escreva código para uma versão específica do .NET Framework nas suas bibliotecas usando diretivas de compilador.
 
   *Cenários sem suporte:*
-  * Requer que os desenvolvedores usem o Visual Studio 2017 para abrir projetos existentes. Para dar suporte a versões mais antigas do Visual Studio, [manter seus arquivos de projeto em pastas diferentes](#support-vs) é uma opção melhor.
+  - Requer que os desenvolvedores usem o Visual Studio 2017 para abrir projetos existentes. Para dar suporte a versões mais antigas do Visual Studio, [manter seus arquivos de projeto em pastas diferentes](#support-vs) é uma opção melhor.
 
-* <a name="support-vs"></a>[**Manter os projetos existentes e os novos projetos do .NET Core separados**](#keep-existing-projects-and-create-a-net-core-project)
+- <a name="support-vs"></a>[**Manter os projetos existentes e os novos projetos do .NET Core separados**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Isso é bom para:*
-  * Continuar a dar suporte ao desenvolvimento em projetos existentes sem a necessidade de atualizar para os desenvolvedores/colaboradores que podem não ter o Visual Studio 2017.
-  * Diminuir a possibilidade de criar novos bugs em projetos existentes porque nenhuma variação de código é necessária nesses projetos.
+  - Continuar a dar suporte ao desenvolvimento em projetos existentes sem a necessidade de atualizar para os desenvolvedores/colaboradores que podem não ter o Visual Studio 2017.
+  - Diminuir a possibilidade de criar novos bugs em projetos existentes porque nenhuma variação de código é necessária nesses projetos.
 
 ## <a name="example"></a>Exemplo
 
@@ -52,7 +52,7 @@ Reorganize o repositório para que todos os arquivos *\*.csproj* existentes seja
 
 Observe as seguintes alterações:
 
-* Substituição de *packages.config* e *\*.csproj* por um novo [ *\*.csproj* do .NET Core](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pacotes NuGet são especificados com `<PackageReference> ItemGroup`.
+- Substituição de *packages.config* e *\*.csproj* por um novo [ *\*.csproj* do .NET Core](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj). Pacotes NuGet são especificados com `<PackageReference> ItemGroup`.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Manter projetos existentes e criar um projeto do .NET Core
 
@@ -64,8 +64,8 @@ Se houver projetos existentes que usam estruturas mais antigas, poderá ser úti
 
 Observe as seguintes alterações:
 
-* O .NET Core e projetos existentes são mantidos em pastas separadas.
-  * Manter projetos em pastas separadas evita a necessidade de ter o Visual Studio 2017. Você pode criar uma solução separada que abre somente os projetos antigos.
+- O .NET Core e projetos existentes são mantidos em pastas separadas.
+  - Manter projetos em pastas separadas evita forçá-lo a ter o Visual Studio 2017 ou versões posteriores. Você pode criar uma solução separada que abre somente os projetos antigos.
 
 ## <a name="see-also"></a>Consulte também
 

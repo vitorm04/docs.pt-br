@@ -5,14 +5,14 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: 828e55e0ddb0382c16c60ae3d9e5958c18e42c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3ae5fb63540e47e5b8da2e2d60d5bd736e019d7
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940796"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524664"
 ---
-# <a name="see-visual-basic"></a>\<Consulte > (Visual Basic)
+# <a name="see-visual-basic"></a>> de \<see (Visual Basic)
 Especifica um link para outro membro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,12 +26,12 @@ Especifica um link para outro membro.
  Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída. `member` deve ser exibido entre aspas duplas (" ").  
   
 ## <a name="remarks"></a>Comentários  
- Use o `<see>` marca para especificar um link de dentro do texto. Use [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) para indicar o texto que você talvez queira aparecem em uma seção "Consulte também".  
+ Use a marca `<see>` para especificar um link de dentro do texto. Use [\<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) para indicar o texto que você pode querer que apareça em uma seção "Veja também".  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<see>` marcar na `UpdateRecord` seção para se referir a comentários de `DoesRecordExist` método.  
+ Este exemplo usa a marca `<see>` na seção `UpdateRecord` comentários para fazer referência ao método `DoesRecordExist`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

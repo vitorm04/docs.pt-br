@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: e905d48da31bb5a2e16a645620f2c4f57dda4413
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216244"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522806"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -146,7 +146,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
-      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações do perfil são mostradas na seção **Resumo** da guia. **Tempo de Execução de Destino** identifica qual tempo de execução foi publicado e **Local de Destino** identifica o local em que os arquivos da implantação autocontida foram gravados.
+      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As definições de configuração do perfil são mostradas na seção **Resumo** da guia. o **tempo de execução de destino** identifica qual tempo de execução foi publicado e o local de **destino** identifica onde os arquivos da implantação autônoma foram pré-gravados.
 
       1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada tempo de execução de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 
@@ -194,7 +194,7 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
   
 1. Selecione o local em que o Visual Studio publica seu aplicativo.
 
-   Se você apenas estiver publicando em uma única plataforma, será possível aceitar o valor padrão na caixa de texto **Escolher uma pasta**; isso publicará a implantação dependente de estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\*.
+   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente da estrutura do seu aplicativo no diretório *\<project > \bin\Release\netcoreapp2.1\publish* .
 
    Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\linux*.
 

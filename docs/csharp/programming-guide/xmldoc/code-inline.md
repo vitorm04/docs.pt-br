@@ -11,12 +11,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: c881b9ec577fb04381f9e10c7df8f9d0da44cd66
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 9454ef8cc4b72d1d6bdcac26faf76eb17080328c
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588175"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523539"
 ---
 # <a name="c-c-programming-guide"></a>\<c> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -32,7 +32,7 @@ ms.locfileid: "69588175"
 ## <a name="remarks"></a>Comentários  
  A marca \<c> oferece uma maneira de indicar que o texto em uma descrição deve ser marcado como código. Use [\<code>](./code.md) para indicar várias linhas como código.  
   
- Compile com [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#2)]  

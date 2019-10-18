@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 7333d4a4d051c157f6732224da0fffe4d7cd35ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 904d573514bf35b773d47321b7fd3b6a86e90262
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940823"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524694"
 ---
-# <a name="permission-visual-basic"></a>\<permissão > (Visual Basic)
+# <a name="permission-visual-basic"></a>> de \<permission (Visual Basic)
 Especifica uma permissão necessária para o membro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,12 +29,12 @@ Especifica uma permissão necessária para o membro.
  Uma descrição do acesso ao membro.  
   
 ## <a name="remarks"></a>Comentários  
- Use o `<permission>` marca para documentar o acesso de um membro. Use o <xref:System.Security.PermissionSet> classe para especificar o acesso a um membro.  
+ Use a marca `<permission>` para documentar o acesso de um membro. Use a classe <xref:System.Security.PermissionSet> para especificar o acesso a um membro.  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<permission>` marca para descrever o que o <xref:System.Security.Permissions.FileIOPermission> é necessária para o `ReadFile` método.  
+ Este exemplo usa a marca `<permission>` para descrever que o <xref:System.Security.Permissions.FileIOPermission> é exigido pelo método `ReadFile`.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

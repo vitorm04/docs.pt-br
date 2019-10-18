@@ -5,14 +5,14 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664166"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524726"
 ---
-# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+# <a name="param-visual-basic"></a>> de \<param (Visual Basic)
 Define um nome de parâmetro e uma descrição.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -29,18 +29,18 @@ Define um nome de parâmetro e uma descrição.
  Uma descrição do parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
- O `<param>` marca deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros do método.  
+ A marca de `<param>` deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros para o método.  
   
- O texto para o `<param>` marca será exibida nos seguintes locais:  
+ O texto da marca de `<param>` aparecerá nos seguintes locais:  
   
-- Informações do parâmetro do IntelliSense. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense).  
+- Informações de parâmetro do IntelliSense. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense).  
   
 - Pesquisador de objetos. Para obter mais informações, consulte [Exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<param>` marca para descrever o `id` parâmetro.  
+ Este exemplo usa a marca `<param>` para descrever o parâmetro `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -2,18 +2,19 @@
 title: Arquitetura das ferramentas de linha de comando do .NET Core
 description: Saiba mais sobre as camadas de ferramentas do .NET Core e o que foi alterado nas versões recentes.
 ms.date: 03/06/2017
-ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 05183a9edc26615e00d6383043fd10d8bec06f2b
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675687"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521301"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Visão geral de alto nível das alterações nas ferramentas do .NET Core
 
 Este documento descreve as alterações associadas à movimentação de *project.json* para o MSBuild e para o sistema de projeto *csproj*, com informações sobre as alterações na camada de ferramentas do .NET Core e a implementação dos comandos da CLI. Essas alterações ocorreram com o lançamento do SDK 1.0 do .NET Core e do Visual Studio 2017 em 7 de março de 2017 (veja o [comunicado](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)), mas foram implementadas inicialmente com o lançamento do SDK Preview 3 do .NET Core.
 
 ## <a name="moving-away-from-projectjson"></a>Deixando o project.json
+
 A maior alteração nas ferramentas do .NET Core é certamente a [mudança de project.json para csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) como o sistema de projeto. As últimas versões das ferramentas de linha de comando não dão suporte a arquivos *project.json*. Isso significa que ele não pode ser usado para compilar, executar ou publicar aplicativos e bibliotecas baseados no project.json. Para usar essa versão das ferramentas, é necessário migrar os projetos existentes ou iniciar projetos novos. 
 
 Como parte dessa mudança, o mecanismo de build personalizado desenvolvido para compilar projetos project.json foi substituído por um mecanismo de build maduro e totalmente capaz, chamado [MSBuild](https://github.com/Microsoft/msbuild). O MSBuild é um mecanismo conhecido na comunidade do .NET, pois tem sido uma tecnologia chave desde a primeira versão da plataforma. Naturalmente, como precisa compilar aplicativos .NET Core, o MSBuild foi movido para o .NET Core e pode ser usado em qualquer plataforma que executa o .NET Core. Uma das principais promessas do .NET Core é uma pilha de desenvolvimento de plataforma cruzada e nós garantimos que essa mudança não quebra essa promessa.
@@ -22,6 +23,7 @@ Como parte dessa mudança, o mecanismo de build personalizado desenvolvido para 
 > Se você é iniciante no MSBuild e deseja de saber mais sobre ele, comece lendo o artigo [Conceitos do MSBuild](/visualstudio/msbuild/msbuild-concepts). 
 
 ## <a name="the-tooling-layers"></a>As camadas de ferramentas
+
 Com a mudança do sistema de projeto existente, bem como com a criação de comutadores de mecanismo, a pergunta que surge naturalmente é: essas mudanças alteram as "camadas" gerais do ecossistema de ferramentas do .NET Core? Existem novos bits e componentes?
 
 Vamos começar recapitulando as camadas na Visualização 2, conforme mostrado na figura a seguir:
@@ -34,7 +36,7 @@ Com a mudança para o novo sistema de projeto, o diagrama anterior se altera:
 
 ![Arquitetura de alto nível do SDK 1.0.0 do .NET Core](media/cli-msbuild-architecture/p3-arch.png)
 
-A principal diferença é que a CLI não é mais a camada básica; agora, essa função é executada pelo "componente SDK compartilhado". Esse componente SDK compartilhado é um conjunto de destinos e tarefas associadas responsáveis por compilar o seu código, publicá-lo, empacotar pacotes NuGet etc. O SDK em si é aberto e está disponível no GitHub no [repositório SDK](https://github.com/dotnet/sdk). 
+A principal diferença é que a CLI não é mais a camada básica; agora, essa função é executada pelo "componente SDK compartilhado". Esse componente SDK compartilhado é um conjunto de destinos e tarefas associadas que são responsáveis por compilar seu código, publicá-lo, empacotar pacotes do NuGet, etc. O próprio SDK é de código-fonte aberto e está disponível no GitHub no [repositório do SDK](https://github.com/dotnet/sdk). 
 
 > [!NOTE]
 > Um "destino" é um termo do MSBuild que indica uma operação nomeada que o MSBuild pode invocar. Normalmente, ele está acoplado com uma ou mais tarefas que executam alguma lógica que o destino deve realizar. O MSBuild oferece suporte a muitos destinos prontos como `Copy` ou `Execute`; ele também permite aos usuários gravar suas próprias tarefas usando código gerenciado e definir metas para executar essas tarefas. Para mais informações, consulte [Tarefas do MSBuild](/visualstudio/msbuild/msbuild-tasks). 
@@ -46,23 +48,27 @@ O componente SDK compartilhado significa que a maioria dos comandos CLI existent
 
 De uma perspectiva de uso, ele não altera a maneira de usar a CLI. A CLI ainda tem os comandos principais que existem na versão da Visualização 2:
 
-* `new`
-* `restore`
-* `run` 
-* `build`
-* `publish`
-* `test`
-* `pack` 
+- `new`
+- `restore`
+- `run` 
+- `build`
+- `publish`
+- `test`
+- `pack` 
 
 Esses comandos ainda fazem o que você espera que eles façam (criar um projeto, compilá-lo, publicá-lo, empacotá-lo e assim por diante). A maioria das opções não foi alterada e ainda está disponível. Além disso, é possível consultar as telas de ajuda dos comandos (usando `dotnet <command> --help`) ou a documentação neste site para se familiarizar com as alterações. 
 
 De uma perspectiva de execução, os comandos CLI assumirão seus parâmetros e construirão uma chamada para o MSBuild "bruto" que defina as propriedades necessárias e execute o destino desejado. Para ilustrar melhor, considere o seguinte comando: 
 
-   `dotnet publish -o pub -c Release`
+   ```dotnetcli
+   dotnet publish -o pub -c Release
+   ```
     
 Esse comando está publicando um aplicativo em uma pasta `pub` usando a configuração de "Versão". Internamente, esse comando é convertido na seguinte invocação do MSBuild: 
 
-   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
+   ```dotnetcli
+   dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
+   ```
 
 A exceção notável a essa regra são os comandos `new` e `run`, pois eles não foram implementados como destinos do MSBuild.
 

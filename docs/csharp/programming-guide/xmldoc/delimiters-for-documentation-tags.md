@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: c8d20284b7ef2e06fb987f94f05cbe1dde1dc431
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 17594e557df922c1c512b4d643cd85ac76ea5a81
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928077"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523499"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores para marcações de documentação (Guia de Programação em C#)
 O uso de comentários do documento XML requer delimitadores, que indicam ao compilador em que um comentário de documentação começa e termina. Você pode usar os seguintes tipos de delimitadores com as marcas de documentação XML:  

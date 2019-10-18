@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25a0b307756401bed4d4c77d3668c2af53ba8b42
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940758"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524637"
 ---
-# <a name="summary-visual-basic"></a>\<Resumo > (Visual Basic)
+# <a name="summary-visual-basic"></a>> de \<summary (Visual Basic)
 Especifica o resumo do membro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,14 +26,14 @@ Especifica o resumo do membro.
  Um resumo do objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Use o `<summary>` marca para descrever um tipo ou membro de tipo. Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) para adicionar mais informações a uma descrição de tipo.  
+ Use a marca `<summary>` para descrever um tipo ou um membro de tipo. Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) para adicionar mais informações a uma descrição de tipo.  
   
- O texto para o `<summary>` marca é a única fonte de informações sobre o tipo no IntelliSense e também é exibida no Pesquisador de objetos. Para obter informações sobre o Pesquisador de objetos, consulte [exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
+ O texto para a marca de `<summary>` é a única fonte de informações sobre o tipo no IntelliSense e também é exibido no Pesquisador de objetos. Para obter informações sobre o pesquisador de objetos, consulte [exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<summary>` marca para descrever o `ResetCounter` método e `Counter` propriedade.  
+ Este exemplo usa a marca `<summary>` para descrever o método `ResetCounter` e a propriedade `Counter`.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

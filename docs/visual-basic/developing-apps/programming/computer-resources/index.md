@@ -6,17 +6,17 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5eb240b23d255987e96c58fefc7007c8030c6502
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662684"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524394"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>Acessar recursos de computador (Visual Basic)
 
-O objeto `My.Computer` é um dos três objetos centrais em `My`, fornecendo acesso a informações e a funcionalidades usadas com frequência. `My.Computer` fornece métodos, propriedades e eventos para acessar o computador no qual o aplicativo é executado. Seus objetos incluem:  
-  
+O objeto `My.Computer` é um dos três objetos centrais em `My`, fornecendo acesso a informações e a funcionalidades usadas com frequência. `My.Computer` fornece métodos, propriedades e eventos para acessar o computador no qual o aplicativo é executado. Seus objetos incluem:
+
 - <xref:Microsoft.VisualBasic.Devices.Audio>
 - Área de Transferência (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
 - <xref:Microsoft.VisualBasic.Devices.Clock>
@@ -27,29 +27,29 @@ O objeto `My.Computer` é um dos três objetos centrais em `My`, fornecendo aces
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - Registro (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
-  
+
 ## <a name="in-this-section"></a>Nesta seção
 
-[Reprodução de Sons](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)   
+[Executando Sons](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
 Lista tarefas associadas a `My.Computer.Audio`, como reproduzir um som em segundo plano.
 
-[Armazenar dados e ler da Área de Transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)   
+[Armazenando Dados e Lendo da Área de Transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
 Lista tarefas associadas a `My.Computer.Clipboard`, como leitura ou gravação de dados na Área de Transferência.
 
-[Obter informações sobre o computador](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)   
+[Obtendo Informações sobre o Computador](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)  
 Lista tarefas associadas a `My.Computer.Info`, como determinar o nome completo ou endereços IP do computador.
 
-[Acessando o teclado](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)   
+[Acessando o Teclado](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
 Lista tarefas associadas a `My.Computer.Keyboard`, como determinar se CAPS LOCK está ativado.
 
-[Acessar o mouse](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)   
+[Acessando o Mouse](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
 Lista tarefas associadas a `My.Computer.Mouse`, como determinar se um mouse está presente.
 
-[Realizar operações de rede](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)   
+[Realizando Operações de Rede](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)  
 Lista tarefas associadas a `My.Computer.Network`, como carregar ou baixar arquivos.
 
-[Acessar as portas do computador](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)   
+[Acessando as Portas do Computador](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)  
 Lista tarefas associadas a `My.Computer.Ports`, como mostrar as portas seriais disponíveis ou enviar cadeias de caracteres a portas seriais.
 
-[Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+[Lendo e Gravando do Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
 Lista tarefas associadas a `My.Computer.Registry`, como leitura ou gravação de dados em chaves do Registro.

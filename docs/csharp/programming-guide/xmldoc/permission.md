@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: e9eb50394f01072a194d3f746577707f89ba65dd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 454928d5dfd023639bc68f194f2f5ec9e2d7dc22
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587885"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523388"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -35,7 +35,7 @@ ms.locfileid: "69587885"
 ## <a name="remarks"></a>Comentários  
  A marca \<permissão > permite documentar o acesso de um membro. A classe <xref:System.Security.PermissionSet> permite que você especifique o acesso a um membro.  
   
- Compile com [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  

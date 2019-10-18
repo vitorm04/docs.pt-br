@@ -3,12 +3,12 @@ title: Documentando seu código com comentários em XML
 description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104779"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521164"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -34,7 +34,7 @@ Comentários de documentação XML, como todos os outros comentários, são igno
 
 - Se estiver desenvolvendo um aplicativo usando o Visual Studio, clique com botão direito do mouse no projeto e selecione **Propriedades**. Na caixa de diálogo Propriedades, selecione a guia **Build** e marque **Arquivo de documentação XML**. Também é possível alterar o local em que o compilador grava o arquivo.
 
-- Se você estiver compilando um aplicativo .NET Framework da linha de comando, adicione a [opção do compilador /doc](language-reference/compiler-options/doc-compiler-option.md) durante a compilação.  
+- Se você estiver Compilando um aplicativo .NET Framework na linha de comando, adicione a [opção-doc do compilador](language-reference/compiler-options/doc-compiler-option.md) ao compilar.  
 
 Comentários de documentação XML usam três barras (`///`) e o corpo do comentário formatado em XML. Por exemplo:
 
@@ -136,7 +136,7 @@ Pode ser qualquer tipo definido no projeto ou um assembly referenciado.
 
 ## <a name="param"></a>\<param>
 
-Você usa a marca `<param>` para descrever os parâmetros de um método. Aqui está um exemplo do método duplo `Add`: O parâmetro que a marca descreve é especificado no atributo `name` **necessário**.
+Você usa a marca `<param>` para descrever os parâmetros de um método. Este é um exemplo do método `Add` duplo: o parâmetro que a marca descreve é especificado no atributo `name` **obrigatório**.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 

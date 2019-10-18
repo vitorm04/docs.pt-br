@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
 ms.date: 10/07/2019
-ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250188"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522781"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -17,7 +17,7 @@ ms.locfileid: "72250188"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet build` – Compila um projeto e todas as suas dependências.
 
@@ -58,7 +58,7 @@ Além das próprias opções, o comando `dotnet build` também aceita opções d
 
 A execução de `dotnet build` é equivalente a `dotnet msbuild -restore -target:Build`.
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
@@ -66,85 +66,85 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 ## <a name="options"></a>Opções
 
-* **`-c|--configuration {CONFIGURATION}`**
+- **`-c|--configuration {Debug|Release}`**
 
   Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Compila para uma [estrutura](../../standard/frameworks.md) específica. A estrutura precisa ser definida no [arquivo de projeto](csproj.md).
 
-* **`--force`**
+- **`--force`**
 
   Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*. Disponível desde o SDK do .NET Core 2.0.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Permite que o comando pare e aguarde entrada ou ação do usuário. Por exemplo, para concluir a autenticação. Disponível desde o SDK do .NET Core 3.0.
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
 
-* **`--no-incremental`**
+- **`--no-incremental`**
 
   Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   Não executa uma restauração implícita durante o build. Disponível desde o SDK do .NET Core 2.0.
 
-* **`--nologo`**
+- **`--nologo`**
 
   Não exibe a faixa de inicialização nem a mensagem de direitos autorais. Disponível desde o SDK do .NET Core 3.0.
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   Diretório no qual os binários compilados são colocados. Você também precisa definir `--framework` ao especificar essa opção. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.
 
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   Especifica o tempo de execução de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   Define o nível de detalhamento do MSBuild. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`.
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   Define o valor da propriedade `$(VersionSuffix)` a ser usada ao compilar o projeto. Isso funcionará apenas se a propriedade `$(Version)` não estiver definida. Em seguida, `$(Version)` é definido como o `$(VersionPrefix)` combinado com o `$(VersionSuffix)`, separado por um traço.
 
 ## <a name="examples"></a>Exemplos
 
-* Compile um projeto e suas dependências:
+- Compile um projeto e suas dependências:
 
   ```dotnetcli
   dotnet build
   ```
 
-* Compile um projeto e suas dependências usando a configuração da Versão:
+- Compile um projeto e suas dependências usando a configuração da Versão:
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-* Compile um projeto e suas dependências para um tempo de execução específico (no exemplo, Ubuntu 18.04):
+- Compile um projeto e suas dependências para um tempo de execução específico (no exemplo, Ubuntu 18.04):
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* Compile o projeto e use a fonte do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
+- Compile o projeto e use a fonte do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-* Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação usando a `-p` [opção MSBuild](#msbuild):
+- Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação usando a `-p` [opção MSBuild](#msbuild):
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

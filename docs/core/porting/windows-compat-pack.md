@@ -4,12 +4,12 @@ description: Saiba mais sobre o Pacote de Compatibilidade do Windows e como voc�
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202555"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521285"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usar o Pacote de Compatibilidade do Windows para fazer a portabilidade pra o .NET Core
 
@@ -25,23 +25,23 @@ O *Pacote de Compatibilidade do Windows* é fornecido por meio do Pacote NuGet [
 
 Ele fornece cerca de 20.000 APIs, incluindo APIs somente Windows, bem como APIs de multiplataforma das seguintes áreas de tecnologia:
 
-* Páginas de código
-* CodeDom
-* Configuração
-* Serviços de Diretório
-* Desenho
-* ODBC
-* Permissões
-* Portas
-* ACL (Listas de Controle de Acesso) do Windows
-* Windows Communication Foundation (WCF)
-* Criptografia do Windows
-* EventLog do Windows
-* WMI (Instrumentação de Gerenciamento do Windows)
-* Contadores de Desempenho do Windows
-* Registro do Windows
-* Cache do Windows Runtime
-* Serviços Windows
+- Páginas de código
+- CodeDom
+- Configuração
+- Serviços de Diretório
+- Desenho
+- ODBC
+- Permissões
+- Portas
+- ACL (Listas de Controle de Acesso) do Windows
+- Windows Communication Foundation (WCF)
+- Criptografia do Windows
+- EventLog do Windows
+- WMI (Instrumentação de Gerenciamento do Windows)
+- Contadores de Desempenho do Windows
+- Registro do Windows
+- Cache do Windows Runtime
+- Serviços Windows
 
 Para obter mais informações, confira a [especificação do pacote de compatibilidade](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 

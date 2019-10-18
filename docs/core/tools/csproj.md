@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291241"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522795"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -33,11 +33,11 @@ Os metapacotes são referenciados implicitamente de acordo com as estruturas de 
 
 Como os metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` são referenciados implicitamente, estas são nossas melhores práticas:
 
-* Durante o direcionamento do .NET Core ou do .NET Standard, nunca tenha uma referência explícita aos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` por meio de um item `<PackageReference>` no arquivo de projeto.
-* Se precisar de uma versão específica do tempo de execução ao direcionar o .NET Core, use a propriedade `<RuntimeFrameworkVersion>` no projeto (por exemplo, `1.0.4`) em vez de referenciar o metapacote.
-  * Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do tempo de execução do 1.0.0 LTS, por exemplo.
-* Se precisar de uma versão específica do metapacote `NETStandard.Library` ao direcionar o .NET Core, use a propriedade `<NetStandardImplicitPackageVersion>` e defina a versão necessária.
-* Não adicione explicitamente nem atualize referências a nenhum dos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` em projetos do .NET Framework. Se uma versão do `NETStandard.Library` for necessária ao usar um pacote NuGet baseado no .NET Standard, o NuGet automaticamente instalará essa versão.
+- Durante o direcionamento do .NET Core ou do .NET Standard, nunca tenha uma referência explícita aos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` por meio de um item `<PackageReference>` no arquivo de projeto.
+- Se precisar de uma versão específica do tempo de execução ao direcionar o .NET Core, use a propriedade `<RuntimeFrameworkVersion>` no projeto (por exemplo, `1.0.4`) em vez de referenciar o metapacote.
+  - Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do tempo de execução do 1.0.0 LTS, por exemplo.
+- Se precisar de uma versão específica do metapacote `NETStandard.Library` ao direcionar o .NET Core, use a propriedade `<NetStandardImplicitPackageVersion>` e defina a versão necessária.
+- Não adicione explicitamente nem atualize referências a nenhum dos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` em projetos do .NET Framework. Se uma versão do `NETStandard.Library` for necessária ao usar um pacote NuGet baseado no .NET Standard, o NuGet automaticamente instalará essa versão.
 
 ## <a name="implicit-version-for-some-package-references"></a>Versão implícita para algumas referências de pacote
 
@@ -59,8 +59,8 @@ Essas referências aos metapacotes do ASP.NET Core têm um comportamento ligeira
 
 Se uma versão *for* especificada, ela será tratada como a *versão mínima* da estrutura compartilhada do ASP.NET Core para implantações dependentes de estrutura e como uma versão *exata* para implementações autossuficientes. Isso pode ter as seguintes consequências:
 
-* Se a versão do ASP.NET Core instalada no servidor for menor que a versão especificada no PackageReference, o processo do .NET Core falhará ao iniciar. Atualizações para o metapacote estão frequentemente disponíveis no NuGet.org antes de as atualizações serem disponibilizadas em ambientes de hospedagem como o Azure. A atualização da versão no PackageReference para o ASP.NET Core pode fazer com que um aplicativo implantado falhe.
-* Se o aplicativo for implantado como uma [implantação autossuficiente](../deploying/index.md#self-contained-deployments-scd), ele poderá não conter as atualizações de segurança mais recentes para o .NET Core. Quando uma versão não é especificada, o SDK pode incluir automaticamente a versão mais recente do ASP.NET Core na implantação autossuficiente.
+- Se a versão do ASP.NET Core instalada no servidor for menor que a versão especificada no PackageReference, o processo do .NET Core falhará ao iniciar. Atualizações para o metapacote estão frequentemente disponíveis no NuGet.org antes de as atualizações serem disponibilizadas em ambientes de hospedagem como o Azure. A atualização da versão no PackageReference para o ASP.NET Core pode fazer com que um aplicativo implantado falhe.
+- Se o aplicativo for implantado como uma [implantação autossuficiente](../deploying/index.md#self-contained-deployments-scd), ele poderá não conter as atualizações de segurança mais recentes para o .NET Core. Quando uma versão não é especificada, o SDK pode incluir automaticamente a versão mais recente do ASP.NET Core na implantação autossuficiente.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusões de compilação padrão em projetos do .NET Core
 
@@ -72,8 +72,8 @@ A seguinte tabela mostra qual elemento e quais [globs](https://en.wikipedia.org/
 
 | Elemento           | Incluir glob                              | Excluir glob                                                  | Remover glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                      |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
+| Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/A                      |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
 | Nenhum              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
@@ -143,7 +143,7 @@ Um elemento de item `<PackageReference>` especifica uma [dependência do NuGet n
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>Versão
+#### <a name="version"></a>Version
 
 O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
 
@@ -160,26 +160,27 @@ O atributo `PrivateAssets` especifica quais ativos que pertencem ao pacote espec
 
 Esses atributos podem conter um ou mais dos itens a seguir, separados pelo caractere de ponto e vírgula `;` se houver mais de um:
 
-* `Compile` – o conteúdo da pasta lib está disponível para compilação.
-* `Runtime` – o conteúdo da pasta de tempo de execução é distribuído.
-* `ContentFiles` – o conteúdo da pasta *contentfiles* é usado.
-* `Build` – as propriedades/destinos na pasta build são usados.
-* `Native` – o conteúdo de ativos nativos é copiado para a pasta de saída para o tempo de execução.
-* `Analyzers` – os analisadores são usados.
+- `Compile` – o conteúdo da pasta *lib* está disponível para ser compilado.
+- `Runtime` – o conteúdo da pasta de *tempo de execução* é distribuído.
+- `ContentFiles` – o conteúdo da pasta *contentfiles* é usado.
+- `Build` – as props/destinos na pasta *Build* são usados.
+- `Native` – o conteúdo de ativos nativos é copiado para a pasta de *saída* para tempo de execução.
+- `Analyzers` – os analisadores são usados.
 
 Como alternativa, o atributo pode conter:
 
-* `None` – nenhum dos ativos é usado.
-* `All` – todos os ativos são usados.
+- `None` – nenhum dos ativos é usado.
+- `All` – todos os ativos são usados.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+
 Um elemento de item `<DotNetCliToolReference>` especifica a ferramenta da CLI que o usuário deseja restaurar no contexto do projeto. É uma substituição do nó `tools` em *project.json*.
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>Versão
+#### <a name="version"></a>Version
 
 `Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
 
@@ -224,7 +225,7 @@ O exemplo a seguir especifica os fallbacks apenas para o destino `netcoreapp2.1`
 
 ## <a name="nuget-metadata-properties"></a>Propriedades de metadados do NuGet
 
-Com a migração para o MSBuild, migramos os metadados de entrada usados ao empacotar um pacote NuGet de arquivos *project.json* para *.csproj*. As entradas são propriedades do MSBuild e, portanto, precisam estar em um grupo `<PropertyGroup>`. A seguir está a lista de propriedades que são usadas como entradas para o processo de empacotamento ao usar o comando `dotnet pack` ou o destino do MSBuild `Pack` que faz parte do SDK.
+Com a migração para o MSBuild, migramos os metadados de entrada usados ao empacotar um pacote NuGet de arquivos *project.json* para *.csproj*. As entradas são propriedades do MSBuild e, portanto, precisam estar em um grupo `<PropertyGroup>`. A seguir está a lista de propriedades que são usadas como entradas para o processo de empacotamento ao usar o comando `dotnet pack` ou o destino `Pack` MSBuild que faz parte do SDK:
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -244,7 +245,7 @@ Um título amigável do pacote, geralmente usado em exibições de interface do 
 
 ### <a name="authors"></a>Autores
 
-Uma lista separada por ponto e vírgula de autores de pacotes, que correspondem aos nomes de perfil em nuget.org. Eles são exibidos na Galeria do NuGet em nuget.org e são usados para fazer referência cruzada aos pacotes dos mesmos autores.
+Uma lista separada por ponto-e-vírgula de autores de pacotes, que correspondem aos nomes de perfil em nuget.org. Eles são exibidos na galeria do NuGet em nuget.org e são usados para fazer referência cruzada de pacotes pelos mesmos autores.
 
 ### <a name="packagedescription"></a>PackageDescription
 
@@ -264,7 +265,7 @@ Um valor booliano que especifica se o cliente deve solicitar que o consumidor ac
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo: `Apache-2.0`.
+Um [identificador de licença SPDX](https://spdx.org/licenses/) ou uma expressão. Por exemplo, `Apache-2.0`.
 
 Aqui está a lista completa dos [identificadores de licença SPDX](https://spdx.org/licenses/). O NuGet.org aceita apenas licenças aprovadas por OSI ou FSF ao usar expressão de tipo de licença.
 
@@ -401,7 +402,7 @@ Lista separada por ponto e vírgula de pares chave-valor.
 
 Cada atributo tem uma propriedade que controla seu conteúdo e outra para desabilitar a geração dele, conforme mostrado na tabela a seguir:
 
-| Atributo                                                      | Propriedade               | Propriedade para desabilitar                             |
+| Atributo                                                      | propriedade               | Propriedade para desabilitar                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
 | <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
 | <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |
@@ -416,11 +417,11 @@ Cada atributo tem uma propriedade que controla seu conteúdo e outra para desabi
 
 Notas:
 
-* O padrão de `AssemblyVersion` e `FileVersion` é usar o valor de `$(Version)` sem sufixo. Por exemplo, se `$(Version)` fosse `1.2.3-beta.4`, então o valor seria `1.2.3`.
-* `InformationalVersion` usa por padrão o valor de `$(Version)`.
-* `$(SourceRevisionId)` é acrescentado a `InformationalVersion` se a propriedade está presente. Ele pode ser desabilitado usando `IncludeSourceRevisionInInformationalVersion`.
-* As propriedades `Copyright` e `Description` também são usadas para metadados do NuGet.
-* `Configuration` é compartilhado com o processo de build e definido por meio do parâmetro `--configuration` de comandos `dotnet`.
+- O padrão de `AssemblyVersion` e `FileVersion` é usar o valor de `$(Version)` sem sufixo. Por exemplo, se `$(Version)` fosse `1.2.3-beta.4`, então o valor seria `1.2.3`.
+- `InformationalVersion` usa por padrão o valor de `$(Version)`.
+- `$(SourceRevisionId)` é acrescentado a `InformationalVersion` se a propriedade está presente. Ele pode ser desabilitado usando `IncludeSourceRevisionInInformationalVersion`.
+- As propriedades `Copyright` e `Description` também são usadas para metadados do NuGet.
+- `Configuration` é compartilhado com o processo de build e definido por meio do parâmetro `--configuration` de comandos `dotnet`.
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

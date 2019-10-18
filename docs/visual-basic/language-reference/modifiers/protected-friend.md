@@ -1,26 +1,26 @@
 ---
-title: Friend protegido (Visual Basic)
+title: Amigo protegido (Visual Basic)
 ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3592feaece1d5ce85ee6e2657d8a2715c4097a3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053880"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524779"
 ---
-# <a name="protected-friend-visual-basic"></a>Friend protegido (Visual Basic)
+# <a name="protected-friend-visual-basic"></a>Amigo protegido (Visual Basic)
 
-A combinação de palavras-chave `Protected Friend` é um modificador de acesso de membro. Ele confere ambos [amigo](friend.md) acesso e [protegido](protected.md) acesso os elementos declarados, portanto, eles são acessíveis de qualquer lugar no mesmo assembly, de sua própria classe e de classes derivadas. Você pode especificar `Protected Friend` somente em membros de classes; não é possível aplicar `Protected Friend` aos membros de uma estrutura porque as estruturas não podem ser herdadas.
+A combinação de palavras-chave `Protected Friend` é um modificador de acesso de membro. Ele confere o acesso [Friend](friend.md) e o acesso [protegido](protected.md) nos elementos declarados, para que eles possam ser acessados de qualquer lugar no mesmo assembly, de sua própria classe e de classes derivadas. Você pode especificar `Protected Friend` somente em membros de classes; Você não pode aplicar `Protected Friend` aos membros de uma estrutura porque as estruturas não podem ser herdadas.
 
 > [!NOTE]
-> No Visual Studio, selecionando a Ajuda de F1 na `protected friend` fornece ajuda para o [protegidos](protected.md) ou [amigo](friend.md). O IDE escolherá o token único sob o cursor em vez da palavra composta.
+> No Visual Studio, a seleção de ajuda F1 no `protected friend` fornece ajuda para o [Protected](protected.md) ou o [Friend](friend.md). O IDE escolhe o único token sob o cursor em vez da palavra composta.
 
 ## <a name="rules"></a>Regras
 
-- **Contexto da declaração.** Você pode usar `Protected Friend` somente no nível de classe. Isso significa que o contexto da declaração para um `Protected` elemento deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, estrutura, módulo ou procedimento. 
+**Contexto de declaração.** Você pode usar `Protected Friend` apenas no nível de classe. Isso significa que o contexto de declaração para um elemento de `Protected` deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, módulo, estrutura ou procedimento.
 
 ## <a name="see-also"></a>Consulte também
 

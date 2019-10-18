@@ -1,5 +1,5 @@
 ---
-title: 'Como: Referenciar objetos COM de Visual Basic'
+title: Como fazer referência a objetos COM a partir do Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ea0e1d9b0ae9f151d901c425512508ba7bc05343
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351991"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524360"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Como: Referenciar objetos COM de Visual Basic
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Como fazer referência a objetos COM a partir do Visual Basic
 No Visual Basic, a adição de referências a objetos COM que têm bibliotecas de tipos requer a criação de um assembly de interoperabilidade para a biblioteca COM. As referências aos membros do objeto COM são roteadas para o assembly de interoperabilidade e, em seguida, encaminhadas para o objeto COM real. As respostas do objeto COM são roteadas para o assembly de interoperabilidade e encaminhadas para seu aplicativo .NET Framework.  
   
- Você pode referenciar um objeto COM sem usar um assembly de interoperabilidade inserindo as informações de tipo para o objeto COM em um assembly .NET. Para inserir informações de tipo, defina a propriedade `Embed Interop Types` como `True` para a referência ao objeto COM. Se você estiver compilando usando o compilador de linha de comando, use a opção `/link` para fazer referência à biblioteca COM. Para obter mais informações, consulte [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Você pode referenciar um objeto COM sem usar um assembly de interoperabilidade inserindo as informações de tipo para o objeto COM em um assembly .NET. Para inserir informações de tipo, defina a propriedade `Embed Interop Types` como `True` para a referência ao objeto COM. Se você estiver compilando usando o compilador de linha de comando, use a opção `/link` para fazer referência à biblioteca COM. Para obter mais informações, consulte [-link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
  Visual Basic cria automaticamente assemblies de interoperabilidade quando você adiciona uma referência a uma biblioteca de tipos do ambiente de desenvolvimento integrado (IDE). Ao trabalhar na linha de comando, você pode usar o utilitário TLBIMP para criar manualmente assemblies de interoperabilidade.  
   
@@ -57,6 +57,6 @@ No Visual Basic, a adição de referências a objetos COM que têm bibliotecas d
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Passo a passo: implementação de herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Instruções passo a passo: implementando a herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Solução de problemas de Interoperabilidade](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 - [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

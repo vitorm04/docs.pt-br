@@ -7,12 +7,12 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
-ms.translationtype: MT
+ms.openlocfilehash: bb07df382974bdbb185ce7d52117729eaa638869
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214445"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523868"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -58,7 +58,7 @@ No entanto, ter como destino versões do .NET Standard inferiores introduz diver
 Há duas regras principais de controle de versão:
 
 - Aditivo: as versões do .NET Standard são círculos logicamente concêntricos: versões mais recentes incorporam todas as APIs das versões anteriores. Não há alterações significativas entre as versões.
-- Imutável: Após o envio, as versões do .NET Standard são congeladas. As novas APIs ficarão disponíveis primeiro em implementações específicas do .NET, como .NET Core. Se a banca examinadora do .NET Standard achar que as novas APIs devem estar disponíveis para todas as implementações do .NET, elas serão adicionadas em uma nova versão do .NET Standard.
+- Imutável: após o envio, as versões do .NET Standard serão congeladas. As novas APIs ficarão disponíveis primeiro em implementações específicas do .NET, como .NET Core. Se a banca examinadora do .NET Standard achar que as novas APIs devem estar disponíveis para todas as implementações do .NET, elas serão adicionadas em uma nova versão do .NET Standard.
 
 ## <a name="specification"></a>Especificação
 
@@ -164,3 +164,4 @@ Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standar
 ## <a name="see-also"></a>Consulte também
 
 - [Versões do .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [Criar uma biblioteca de .NET Standard](../core/tutorials/library-with-visual-studio.md)

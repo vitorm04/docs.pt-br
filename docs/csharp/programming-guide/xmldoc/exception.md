@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 639e3a345fc8ed3d348461718f73ead6167158db
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610906"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523467"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -35,7 +35,7 @@ ms.locfileid: "59610906"
 ## <a name="remarks"></a>Comentários  
  A marca \<exception> permite que você especifique quais exceções podem ser lançadas. Essa marca pode ser aplicada às definições de métodos, propriedades, eventos e indexadores.  
   
- Compile com [/doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.  
   
  Para obter mais informações sobre o tratamento de exceção, consulte [Exceções e tratamento de exceção](../exceptions/index.md).  
   

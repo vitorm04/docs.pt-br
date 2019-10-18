@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4295d485611e75e8b6c8d8f95e079654f0cfa3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940854"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524755"
 ---
-# <a name="list-visual-basic"></a>\<lista > (Visual Basic)
+# <a name="list-visual-basic"></a>> de \<list (Visual Basic)
 Define uma lista ou tabela.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,25 +40,25 @@ Define uma lista ou tabela.
   
 ## <a name="parameters"></a>Parâmetros  
  `type`  
- O tipo de lista. Deve ser "bullet" para uma lista com marcadores, "number" para uma lista numerada ou "table" para uma tabela de duas colunas.  
+ O tipo da lista. Deve ser um "Bullet" para uma lista com marcadores, "Number" para uma lista numerada ou "Table" para uma tabela de duas colunas.  
   
  `term`  
- Somente usado ao `type` é "table". Um termo para definir, que é definido na marca de descrição.  
+ Usado somente quando `type` é "Table". Um termo a definir, que é definido na marca de descrição.  
   
  `description`  
- Quando `type` é "bullet" ou "number" `description` é um item na lista quando `type` é "table" `description` é a definição de `term`.  
+ Quando `type` é "Bullet" ou "Number", `description` é um item na lista quando `type` é "Table", `description` é a definição de `term`.  
   
 ## <a name="remarks"></a>Comentários  
- O `<listheader>` bloco define o título de uma tabela ou uma definição de lista. Ao definir uma tabela, você só precisará fornecer uma entrada para `term` no título.  
+ O bloco `<listheader>` define o cabeçalho de uma tabela ou de uma lista de definições. Ao definir uma tabela, você só precisa fornecer uma entrada para `term` no título.  
   
- Cada item na lista é especificado com um `<item>` bloco. Ao criar uma lista de definições, você deve especificar ambos `term` e `description`. No entanto, para uma tabela, lista com marcadores ou lista numerada, você só precisa fornecer uma entrada para `description`.  
+ Cada item na lista é especificado com um bloco de `<item>`. Ao criar uma lista de definições, você deve especificar `term` e `description`. No entanto, para uma tabela, lista com marcadores ou lista numerada, você só precisa fornecer uma entrada para `description`.  
   
- Uma lista ou tabela pode ter quantos `<item>` bloqueia conforme necessário.  
+ Uma lista ou tabela pode ter tantos blocos de `<item>` quantos forem necessários.  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<list>` marca para definir uma lista com marcadores na seção comentários.  
+ Este exemplo usa a marca de `<list>` para definir uma lista com marcadores na seção de comentários.  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
