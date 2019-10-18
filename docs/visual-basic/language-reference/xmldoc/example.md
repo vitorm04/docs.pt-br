@@ -5,14 +5,14 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f28dbf19bc03cb9d91323e9fa43a7081c1990db
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772496"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524012"
 ---
-# <a name="example-visual-basic"></a>\<exemplo > (Visual Basic)
+# <a name="example-visual-basic"></a>> de \<example (Visual Basic)
 Especifica um exemplo para o membro.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,12 +26,12 @@ Especifica um exemplo para o membro.
  Uma descrição do exemplo de código.  
   
 ## <a name="remarks"></a>Comentários  
- O `<example>` marca permite que você especifique um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolve o uso da marca [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+ A marca `<example>` permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolve o uso da marca [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
+ Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<example>` tag para incluir um exemplo para usar o `ID` campo.  
+ Este exemplo usa a marca de `<example>` para incluir um exemplo para usar o campo `ID`.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
