@@ -17,6 +17,8 @@
       href: file-format.md
     - name: 'Como: usar e depurar a capacidade de descarregamento de assembly no .NET Core'
       href: unloadability.md
+    - name: Assemblies de referência
+      href: reference-assemblies.md
     - name: Resolver carregamentos de assembly
       href: resolve-loads.md
     - name: Programar com assemblies
