@@ -1,25 +1,25 @@
 ---
-title: Aproveitando funções sem servidor
+title: Como aproveitar funções sem servidor
 description: Aproveitamento e Azure Functions sem servidor em aplicativos nativos de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: 61bf4db6d61160c7ec11ffa3f178cc3917ae6cf9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182821"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578921"
 ---
-# <a name="leveraging-serverless-functions"></a>Aproveitando funções sem servidor
+# <a name="leveraging-serverless-functions"></a>Como aproveitar funções sem servidor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-No espectro de gerenciamento de computadores e sistemas operacionais completos para aproveitar os recursos de nuvem, as vidas sem servidor no fim extremo em que a única coisa que você é responsável é seu código, e você só paga pelo seu código quando ele é executado. Azure Functions fornece uma maneira de criar recursos sem servidor em seus aplicativos. 
+No espectro de gerenciamento de computadores e sistemas operacionais completos para aproveitar os recursos de nuvem, as vidas sem servidor no fim extremo em que a única coisa que você é responsável é seu código, e você só paga quando seu código é executado. Azure Functions fornece uma maneira de criar recursos sem servidor em seus aplicativos. 
 
 ## <a name="what-is-serverless"></a>O que é sem servidor?
 
 A computação sem servidor não significa que não haja um servidor envolvido na execução do aplicativo-o código ainda é executado em um servidor em algum lugar. A diferença é que a equipe de desenvolvimento de aplicativos não precisa mais se preocupar com o gerenciamento da infraestrutura do servidor. Soluções de computação sem servidor como Azure Functions ajudam as equipes a aumentarem a produtividade e permitir que as organizações otimizem seus recursos e se concentrem em fornecer soluções.
 
-A computação sem servidor usa contêineres com estado disparado por eventos para hospedar seu aplicativo ou parte do seu aplicativo. As plataformas sem servidor podem ser escaladas verticalmente para atender à demanda conforme necessário. Plataformas como Azure Functions têm acesso fácil direto a outros serviços do Azure, como filas, eventos e armazenamento.
+A computação sem servidor usa contêineres com estado disparado por eventos para hospedar seu aplicativo ou parte do seu aplicativo. As plataformas sem servidor podem escalar horizontalmente e em para atender à demanda conforme necessário. Plataformas como Azure Functions têm acesso fácil direto a outros serviços do Azure, como filas, eventos e armazenamento.
 
 ## <a name="what-challenges-are-solved-by-serverless"></a>Quais desafios são resolvidos sem servidor?
 
@@ -45,10 +45,10 @@ Muitos aplicativos têm processos de execução longa como parte de seus fluxos 
 
 ## <a name="when-should-you-avoid-serverless"></a>Quando você não deve evitar servidor?
 
-A computação sem servidor é melhor usada para tarefas que não bloqueiam a interface do usuário. Isso significa que eles não são ideais para hospedar aplicativos Web ou APIs Web diretamente. O principal motivo para isso é que as soluções sem servidor são provisionadas e dimensionadas sob demanda. Quando uma nova instância de uma função é necessária, chamada de inicialização a *frio*, leva tempo para provisionar. Esse tempo é normalmente de alguns segundos, mas pode ser mais demorado dependendo de uma variedade de fatores. Uma única instância pode, muitas vezes, ser mantida indefinidamente (por exemplo, fazendo periodicamente uma solicitação para ela), mas o problema de inicialização a frio permanece se o número de instâncias precisar ser dimensionado verticalmente.
+A computação sem servidor é melhor usada para tarefas que não bloqueiam a interface do usuário. Isso significa que eles não são ideais para hospedar aplicativos Web ou APIs Web diretamente. O principal motivo para isso é que as soluções sem servidor são provisionadas e dimensionadas sob demanda. Quando uma nova instância de uma função é necessária, chamada de inicialização a *frio*, leva tempo para provisionar. Esse tempo é normalmente de alguns segundos, mas pode ser mais demorado dependendo de uma variedade de fatores. Uma única instância pode, muitas vezes, ser mantida ativa indefinidamente (por exemplo, fazendo uma solicitação periodicamente), mas o problema de inicialização a frio permanece se o número de instâncias precisar ser escalado verticalmente.
 
-![Inativo versus a](./media/cold-start-warm-start.png)
-figura de início quente**3-10**. Início frio versus início quente.
+![Cold versus inicialização a quente ](./media/cold-start-warm-start.png)
+**figura 3-10**. Início frio versus início quente.
 
 Se você precisar evitar a inicialização a frio, poderá optar por alternar de um [plano de consumo para um plano dedicado](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). Você também pode [Configurar uma ou mais instâncias pré-configuradas](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) com o plano Premium para que, quando precisar adicionar outra instância, já esteja pronto e pronta para começar. Essas opções podem atenuar uma das principais preocupações associadas à computação sem servidor.
 
