@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de classes e APIs adicionais
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395655"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579109"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de classes e APIs adicionais
 
@@ -57,20 +57,21 @@ Essas APIs dão suporte à infraestrutura de produto e não se destinam/não tê
 * [Método System. Data. SqlTypes. SqlStreamChars. SetLength](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [Método System. Data. SqlTypes. SqlStreamChars. Write](system.data.sqltypes.sqlstreamchars.write.md)
 * [Classe System .net. Connection](connection.md)
-* [Campo System .net. Connection. m @ no__t-1WriteList](m_writelist.md)
+* [Campo System .net. Connection. m \_WriteList](m_writelist.md)
 * [Classe System .net. ConnectionObject](connectiongroup.md)
-* [Sistema .net. ConnectionObject. m @ no__t-1ConnectionList campo](m_connectionlist.md)
+* [Campo System .net. Connection. m \_ConnectionList](m_connectionlist.md)
 * [Classe System .net. CoreResponseData](coreresponsedata.md)
-* [Campo System .net. CoreResponseData. m @ no__t-1ResponseHeaders](coreresponsedata_m_responseheaders.md)
-* [Campo System .net. CoreResponseData. m @ no__t-1StatusCode](coreresponsedata_m_statuscode.md)
+* [Campo System .net. CoreResponseData. m \_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [Campo System .net. CoreResponseData. m \_StatusCode](coreresponsedata_m_statuscode.md)
 * [Campo System .net. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
 * [Campo System .net. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
 * [Campo System .net. HttpWebRequest. \_HttpResponse](_httpresponse.md)
-* [Campo System .net. 1ConnectionGroupList. m @ no__t-](m_connectiongrouplist.md)
-* [Campo System .net. ServicePointManager. s @ no__t-1ServicePointTable](s_servicepointtable.md)
-* [System. Windows. Diagnostics. VisualDiagnostics. s @ no__t-1isDebuggerCheckDisabledForTestPurposes campo](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Campo de \_ConnectionGroupList System .net .% Point. m](m_connectiongrouplist.md)
+* [Campo System .net. ServicePointManager. s \_ServicePointTable](s_servicepointtable.md)
+* [Campo System. Windows. Diagnostics. VisualDiagnostics. s \_isDebuggerCheckDisabledForTestPurposes](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [Classe System. Windows. Forms. Design. DataMemberFieldEditor](datamemberfieldeditor-class.md)
 * [Classe System. Windows. Forms. Design. DataMemberListEditor](datamemberlisteditor-class.md)
+* [Método System. xml. XmlReader. CreateSqlReader](system.xml.xmlreader.createsqlreader.md)
 * [ActiveX. Interface de conexão](adodb.connection.md)
 * [ActiveX. EventReason enum](adodb.eventreasonenum.md)
 * [ActiveX. EventStatus enum](adodb.eventstatusenum.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964808"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582496"
 ---
 # <a name="application-development"></a>Desenvolvimento do aplicativo
 <a name="introduction"></a>O Windows Presentation Foundation (WPF) é uma estrutura de apresentação que pode ser usada para desenvolver os seguintes tipos de aplicativos:  
   
 - Aplicativos autônomos (aplicativos de estilo tradicional do Windows criados como assemblies executáveis que são instalados e executados no computador cliente).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](aplicativos compostos por páginas de navegação criadas como assemblies executáveis e hospedados por navegadores da Web, como o Microsoft Internet Explorer ou Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplicativos compostos de páginas de navegação criadas como assemblies executáveis e hospedados por navegadores da Web, como o Microsoft Internet Explorer ou Mozilla Firefox).  
   
 - Bibliotecas de controles personalizados (assemblies não executáveis contendo controles reutilizáveis).  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69964808"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]amplia o suporte principal no Microsoft .NET Framework para recursos inseridos com suporte para três tipos de arquivos de dados não executáveis: recurso, conteúdo e dados. Para mais informações, consulte [Arquivos de recurso, conteúdo e dados do aplicativo WPF](wpf-application-resource-content-and-data-files.md).  
+ o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o suporte principal no Microsoft .NET Framework para recursos inseridos com suporte para três tipos de arquivos de dados não executáveis: recurso, conteúdo e dados. Para mais informações, consulte [Arquivos de recurso, conteúdo e dados do aplicativo WPF](wpf-application-resource-content-and-data-files.md).  
   
- Um componente chave do suporte para arquivos de dados não executáveis do WPF é a capacidade de identificar e carregá-los usando um único [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Para obter mais informações, consulte [URIs "pack://" no WPF](pack-uris-in-wpf.md).  
+ Um componente-chave do suporte a arquivos de dados não executáveis do WPF é a capacidade de identificá-los e carregá-los usando um URI exclusivo. Para obter mais informações, consulte [URIs "pack://" no WPF](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Janelas e caixas de diálogo  
@@ -74,7 +74,7 @@ ms.locfileid: "69964808"
   
  <xref:System.Windows.Window> é compatível com a criação de um tipo especial de janela conhecido como caixa de diálogo. Tipos modais e sem janela restrita de caixas de diálogo podem ser criados.  
   
- Para sua conveniência, os benefícios da reutilização e uma experiência de usuário consistente entre aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , expõem três das caixas de diálogo comuns <xref:Microsoft.Win32.OpenFileDialog>do <xref:Microsoft.Win32.SaveFileDialog>Windows: <xref:System.Windows.Controls.PrintDialog>, e.  
+ Para sua conveniência, e os benefícios da reutilização e uma experiência de usuário consistente entre aplicativos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expõe três das caixas de diálogo comuns do Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> e <xref:System.Windows.Controls.PrintDialog>.  
   
  Uma caixa de mensagem é um tipo especial de caixa de diálogo para mostrar informações textuais importantes para os usuários e para fazer perguntas simples como Sim/Não/OK/Cancelar. Use a classe <xref:System.Windows.MessageBox> para criar e exibir caixas de mensagem.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69964808"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hospedagem  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]pode ser hospedado no Microsoft Internet Explorer ou no Firefox. Cada modelo de hospedagem tem seu próprio conjunto de considerações e restrições que são abordados em [Hospedagem](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] pode ser hospedado no Microsoft Internet Explorer ou no Firefox. Cada modelo de hospedagem tem seu próprio conjunto de considerações e restrições que são abordados em [Hospedagem](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilar e implantar  

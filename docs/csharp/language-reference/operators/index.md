@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 766da517d247361f747591c3758e8610927866a9
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116097"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579201"
 ---
 # <a name="c-operators-c-reference"></a>Operadores C# (Referência de C#)
 
@@ -43,7 +43,7 @@ A tabela a seguir lista os operadores C#, começando com a precedência mais alt
 | Operadores | Categoria ou nome |
 | --------- | ---------------- |
 | [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primária |
-| [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(T) x](type-testing-and-cast.md#cast-operator-), [Await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true e false](true-false-operators.md) | Unário |
+| [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(t) x](type-testing-and-cast.md#cast-operator-), [Await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true e false](true-false-operators.md) | Unário |
 | [x.. Iar](member-access-operators.md#range-operator-) | Intervalo |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | Multiplicativo|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Aditivo |
@@ -57,14 +57,14 @@ A tabela a seguir lista os operadores C#, começando com a precedência mais alt
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | OR condicional |
 | [x ?? y](null-coalescing-operator.md) | Operador de coalescência nula |
 | [c ? t : f](conditional-operator.md) | Operador condicional |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), x [^ = y](boolean-logical-operators.md#compound-assignment), [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md),[=>](lambda-operator.md) | Declaração de atribuição e lambda |
+| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), x [^ = y](boolean-logical-operators.md#compound-assignment), [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [4](lambda-operator.md) | Declaração de atribuição e lambda |
 
 ## <a name="operator-associativity"></a>Associação de operador
 
 Quando os operadores têm a mesma precedência, a associação dos operadores determina a ordem na qual as operações são executadas:
 
-- Os operadores *associativos esquerdos* são avaliados na ordem da esquerda para a direita. Com exceção dos [operadores de atribuição](assignment-operator.md) e do [operador de união nula `??`](null-coalescing-operator.md), todos os operadores binários são associativos esquerdos. Por exemplo, `a + b - c` é avaliado como `(a + b) - c`.
-- Os operadores *associativos direitos* são avaliados na ordem da direita para a esquerda. Os operadores de atribuição, o operador de união nula `??` e o [operador condicional `?:`](conditional-operator.md) são associativos direitos. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
+- Os operadores *associativos esquerdos* são avaliados na ordem da esquerda para a direita. Exceto para os operadores de [atribuição](assignment-operator.md) e os [operadores de União nulo](null-coalescing-operator.md), todos os operadores binários são associativos à esquerda. Por exemplo, `a + b - c` é avaliado como `(a + b) - c`.
+- Os operadores *associativos direitos* são avaliados na ordem da direita para a esquerda. Os operadores de atribuição, os operadores de União nula e o [operador condicional `?:`](conditional-operator.md) são associativos à direita. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
 
 Use parênteses para alterar a ordem de avaliação imposta pela associação de operador:
 
@@ -85,7 +85,7 @@ Sem considerar a relação com a precedência e a associação de operadores, os
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-Normalmente, todos os operandos do operador são avaliados. Alguns operadores avaliam os operandos condicionalmente. Ou seja, o valor do primeiro operando de tal operador define se (ou quais) outros operandos devem ser avaliados. Esses operadores são os operadores lógicos [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), o [operador de união nula `??`](null-coalescing-operator.md), os [operadores condicionais nulos `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-) e o [operador condicional `?:`](conditional-operator.md). Confira a descrição de cada operador para obter mais detalhes.
+Normalmente, todos os operandos do operador são avaliados. Alguns operadores avaliam os operandos condicionalmente. Ou seja, o valor do primeiro operando de tal operador define se (ou quais) outros operandos devem ser avaliados. Esses operadores são os operadores lógicos condicionais [and (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [or (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , os [operadores de União nula `??` e `??=`](null-coalescing-operator.md), os [operadores condicionais nulos `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-)e o [ operador condicional 1](conditional-operator.md). Confira a descrição de cada operador para obter mais detalhes.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835258"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581970"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -26,34 +26,49 @@ Para obter novos recursos, consulte [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versões anteriores
 
-Visual Basic 15,8/Visual Studio 2017 versão 15,8 para novos recursos, consulte [Visual Basic 15,8](#visual-basic-158).
+Visual Basic 15.8 / Visual Studio 2017 Versão 15.8  
+Para obter novos recursos, consulte [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 versão 15,5 para novos recursos, consulte [Visual Basic 15,5](#visual-basic-155).
+Visual Basic 15.5/Visual Studio 2017 versão 15.5  
+Para obter novos recursos, consulte [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 versão 15,3 para novos recursos, consulte [Visual Basic 15,3](#visual-basic-153).
+Visual Basic 15.3/Visual Studio 2017 versão 15.3  
+Para obter novos recursos, consulte [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 para obter novos recursos, consulte [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 2017/Visual Studio 2017  
+Para obter novos recursos, consulte [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015 para obter novos recursos, consulte o [Visual Basic 14](#visual-basic-14).
+Visual Basic/Visual Studio 2015  
+Para obter novos recursos, consulte [Visual Basic 14](#visual-basic-14).
 
-Visual Basic / Visual Studio 2013 Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
+Visual Basic/Visual Studio 2013  
+Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
 
-Visual Basic / Visual Studio 2012 Palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador
+Visual Basic/Visual Studio 2012  
+palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador
 
-Visual Basic, Visual Studio 2010 Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global
+Visual Basic, Visual Studio 2010  
+Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global
 
-Visual Basic / Visual Studio 2008 LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável
+Visual Basic/Visual Studio 2008  
+LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável
 
-Visual Basic / Visual Studio 2005 O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)
+Visual Basic/Visual Studio 2005  
+O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)
 
-Visual Basic / Visual Studio .NET 2003 Operadores bit shift, declaração de variável de loop
+Visual Basic / Visual Studio .NET 2003  
+Operadores bit shift, declaração de variável de loop
 
-Visual Basic / Visual Studio .NET 2002 A primeira versão do Visual Basic .NET
+Visual Basic / Visual Studio .NET 2002  
+A primeira versão do Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
-Visual Basic 16,0 concentra-se em fornecer mais recursos do Visual Basic Runtime (Microsoft. VisualBasic. dll) para o .NET Core e é a primeira versão do Visual Basic concentrada no .NET Core. Muitas partes do Visual Basic Runtime dependem de WinForms e elas serão adicionadas em uma versão posterior do Visual Basic. 
 
-**Comentários permitidos em mais lugares dentro de instruções** No Visual Basic 15,8 e versões anteriores, os comentários são permitidos somente em linhas em branco, no final de uma instrução ou em locais específicos dentro de uma instrução em que uma continuação de linha implícita é permitida. A partir do Visual Basic 16,0, os comentários também são permitidos após as continuaçãos de linha explícitas e dentro de uma instrução em uma linha que começa com um espaço seguido por um sublinhado.
+Visual Basic 16,0 concentra-se em fornecer mais recursos do Visual Basic Runtime (Microsoft. VisualBasic. dll) para o .NET Core e é a primeira versão do Visual Basic concentrada no .NET Core. Muitas partes do Visual Basic Runtime dependem de WinForms e elas serão adicionadas em uma versão posterior do Visual Basic.
+
+**Comentários permitidos em mais lugares dentro de instruções**
+
+No Visual Basic 15,8 e versões anteriores, os comentários são permitidos somente em linhas em branco, no final de uma instrução ou em locais específicos dentro de uma instrução em que uma continuação de linha implícita é permitida. A partir do Visual Basic 16,0, os comentários também são permitidos após as continuaçãos de linha explícitas e dentro de uma instrução em uma linha que começa com um espaço seguido por um sublinhado.
 
 ```vb
 Public Sub Main()

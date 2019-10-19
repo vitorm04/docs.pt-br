@@ -7,19 +7,19 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 42d0f86dd6561806701d17846bae6d88252ce46a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68590702835e47e5f0f2e0380bc0fe4017d5eb15
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625481"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582663"
 ---
 # <a name="interface-statement-visual-basic"></a>Instrução Interface (Visual Basic)
-Declara o nome de uma interface e apresenta as definições dos membros que compõe a interface.  
+Declara o nome de uma interface e apresenta as definições dos membros que a interface compreende.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
 Interface name [ ( Of typelist ) ]  
     [ Inherits interfacenames ]  
@@ -37,80 +37,80 @@ End Interface
   
 |Termo|Definição|  
 |---|---|  
-|`attributelist`|Opcional. Ver [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional. Pode ser uma das seguintes opções:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Friend protegido](../../language-reference/modifiers/protected-friend.md)<br/>- [Privado protegido](../../language-reference/modifiers/private-protected.md)<br /><br /> Ver [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcional. Ver [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`name`|Necessário. Nome dessa interface. Ver [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`attributelist`|Opcional. Consulte a [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Opcional. Pode ser um dos seguintes:<br /><br /> [público](../../../visual-basic/language-reference/modifiers/public.md) -   <br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [amigo](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [amigo protegido](../../language-reference/modifiers/protected-friend.md)<br/>- [privada protegida](../../language-reference/modifiers/private-protected.md)<br /><br /> Consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcional. Consulte [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`name`|Necessário. Nome desta interface. Consulte [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que esta é uma interface genérica.|  
-|`typelist`|Necessário se você usar o [de](../../../visual-basic/language-reference/statements/of-clause.md) palavra-chave. Lista de parâmetros de tipo para essa interface. Opcionalmente, cada parâmetro de tipo pode ser declarado variante usando `In` e `Out` modificadores genéricos. Ver [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Opcional. Indica que esta interface herda os atributos e membros de outra interface ou interfaces. Ver [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`interfacenames`|Necessário se você usar o `Inherits` instrução. Os nomes das interfaces da qual deriva dessa interface.|  
-|`modifiers`|Opcional. Modificadores apropriados para o membro de interface que está sendo definido.|  
+|`typelist`|Necessário se você usar a palavra-chave [of](../../../visual-basic/language-reference/statements/of-clause.md) . Lista de parâmetros de tipo para esta interface. Opcionalmente, cada parâmetro de tipo pode ser declarado como Variant usando `In` e `Out` modificadores genéricos. Consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Opcional. Indica que essa interface herda os atributos e membros de outra interface ou interfaces. Consulte a [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`interfacenames`|Necessário se você usar a instrução `Inherits`. Os nomes das interfaces das quais essa interface deriva.|  
+|`modifiers`|Opcional. Modificadores apropriados para o membro da interface que está sendo definido.|  
 |`Property`|Opcional. Define uma propriedade que é um membro da interface.|  
-|`Function`|Opcional. Define uma `Function` procedimento que é um membro da interface.|  
-|`Sub`|Opcional. Define uma `Sub` procedimento que é um membro da interface.|  
+|`Function`|Opcional. Define um procedimento `Function` que é um membro da interface.|  
+|`Sub`|Opcional. Define um procedimento `Sub` que é um membro da interface.|  
 |`Event`|Opcional. Define um evento que é um membro da interface.|  
-|`Interface`|Opcional. Define uma interface que está aninhada dentro desta interface. A definição de interface aninhada deve terminar com um `End Interface` instrução.|  
-|`Class`|Opcional. Define uma classe que é um membro da interface. A definição de classe de membro deve terminar com um `End Class` instrução.|  
-|`Structure`|Opcional. Define uma estrutura que é um membro da interface. A definição da estrutura de membro deve terminar com um `End Structure` instrução.|  
+|`Interface`|Opcional. Define uma interface que é aninhada dentro desta interface. A definição de interface aninhada deve terminar com uma instrução `End Interface`.|  
+|`Class`|Opcional. Define uma classe que é membro da interface. A definição de classe de membro deve terminar com uma instrução `End Class`.|  
+|`Structure`|Opcional. Define uma estrutura que é membro da interface. A definição da estrutura do membro deve terminar com uma instrução `End Structure`.|  
 |`membername`|Necessário para cada propriedade, procedimento, evento, interface, classe ou estrutura definida como um membro da interface. O nome do membro.|  
-|`End Interface`|Encerra o `Interface` definição.|  
+|`End Interface`|Encerra a definição de `Interface`.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma *interface* define um conjunto de membros, como propriedades e procedimentos, que as classes e estruturas podem implementar. A interface define apenas as assinaturas dos membros e não seu funcionamento interno.  
+ Uma *interface* define um conjunto de membros, como propriedades e procedimentos, que as classes e estruturas podem implementar. A interface define apenas as assinaturas dos membros e não seus trabalhos internos.  
   
- Uma classe ou estrutura implementa a interface fornecendo código para todos os membros definidos pela interface. Por fim, quando o aplicativo cria uma instância da classe ou estrutura, um objeto existe e é executada na memória. Para obter mais informações, consulte [objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) e [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Uma classe ou estrutura implementa a interface fornecendo o código para cada membro definido pela interface. Por fim, quando o aplicativo cria uma instância dessa classe ou estrutura, um objeto existe e é executado na memória. Para obter mais informações, consulte [objetos e classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) e [interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Você pode usar `Interface` apenas no nível de namespace ou módulo. Isso significa que o *contexto de declaração* para uma interface deve ser um arquivo de origem, namespace, classe, estrutura, módulo ou interface e não pode ser um procedimento ou bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Você pode usar `Interface` apenas em nível de namespace ou de módulo. Isso significa que o *contexto de declaração* para uma interface deve ser um arquivo de origem, namespace, classe, estrutura, módulo ou interface e não pode ser um procedimento ou bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Interfaces padrão para [amigo](../../../visual-basic/language-reference/modifiers/friend.md) acesso. Você pode ajustar os níveis de acesso com os modificadores de acesso. Para obter mais informações, consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Interfaces padrão para acesso [Friend](../../../visual-basic/language-reference/modifiers/friend.md) . Você pode ajustar seus níveis de acesso com os modificadores de acesso. Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regras  
   
-- **Interfaces de aninhamento.** Você pode definir uma interface dentro de outra. A interface externa é chamada a *que contém a interface*, e a interface interna é chamada uma *interface aninhada*.  
+- **Aninhando interfaces.** Você pode definir uma interface dentro de outra. A interface externa é chamada de *interface que a contém*e a interface interna é chamada de *interface aninhada*.  
   
-- **Declaração de membro.** Quando você declara uma propriedade ou procedimento como um membro de uma interface, você está definindo apenas o *assinatura* da propriedade ou procedimento. Isso inclui o tipo de elemento (propriedade ou procedimento), seus parâmetros e tipos de parâmetro e seu tipo de retorno. Por isso, a definição de membro usa apenas uma linha de código e declarações de finalização como `End Function` ou `End Property` não são válidos em uma interface.  
+- **Declaração de membro.** Quando você declara uma propriedade ou um procedimento como membro de uma interface, você está definindo apenas a *assinatura* dessa propriedade ou procedimento. Isso inclui o tipo de elemento (Propriedade ou procedimento), seus parâmetros e tipos de parâmetro e seu tipo de retorno. Por isso, a definição de membro usa apenas uma linha de código e as instruções de término, como `End Function` ou `End Property`, não são válidas em uma interface.  
   
-     Por outro lado, quando você define uma enumeração ou estrutura, ou uma classe aninhada ou interface, é necessário incluir seus membros de dados.  
+     Por outro lado, quando você define uma enumeração ou uma estrutura, ou uma classe ou interface aninhada, é necessário incluir seus membros de dados.  
   
-- **Modificador de membro.** Você não pode usar qualquer modificador de acesso ao definir membros de módulo, nem especificar [Shared](../../../visual-basic/language-reference/modifiers/shared.md) ou qualquer modificador de procedimento exceto [sobrecarrega](../../../visual-basic/language-reference/modifiers/overloads.md). Você pode declarar qualquer membro com [sombras](../../../visual-basic/language-reference/modifiers/shadows.md), e você pode usar [padrão](../../../visual-basic/language-reference/modifiers/default.md) ao definir uma propriedade, bem como [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) ou [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **Modificadores de membro.** Você não pode usar nenhum modificador de acesso ao definir membros de módulo, nem pode especificar qualquer modificador [compartilhado](../../../visual-basic/language-reference/modifiers/shared.md) ou de procedimento, exceto [sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md). Você pode declarar qualquer membro com [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)e pode usar [Default](../../../visual-basic/language-reference/modifiers/default.md) ao definir uma propriedade, bem como [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) ou [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
-- **Herança.** Se a interface usa o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você pode especificar uma ou mais interfaces base. Você pode herdar de duas interfaces, mesmo se cada um deles definir um membro com o mesmo nome. Se você fizer isso, o código de implementação deve usar a qualificação de nome para especificar qual membro que está implementando.  
+- **Herança.** Se a interface usar a [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), você poderá especificar uma ou mais interfaces base. Você pode herdar de duas interfaces, mesmo se cada uma delas definir um membro com o mesmo nome. Se você fizer isso, o código de implementação deverá usar a qualificação de nome para especificar qual membro está sendo implementado.  
   
-     Uma interface não pode herdar de outra interface com um nível de acesso mais restritivo. Por exemplo, uma `Public` interface não pode herdar de um `Friend` interface.  
+     Uma interface não pode herdar de outra interface com um nível de acesso mais restritivo. Por exemplo, uma interface `Public` não pode herdar de uma interface `Friend`.  
   
-     Uma interface não pode herdar de uma interface aninhada dentro dele.  
+     Uma interface não pode herdar de uma interface aninhada dentro dela.  
   
-- **Implementação.** Quando uma classe usa a [implementa](../../../visual-basic/language-reference/statements/implements-clause.md) instrução para implementar esta interface, ele deve implementar todos os membros definidos dentro da interface. Além disso, cada assinatura no código de implementação deve corresponder exatamente a assinatura correspondente definida nessa interface. No entanto, o nome do membro no código de implementação não precisa corresponder ao nome do membro, conforme definido na interface.  
+- **Implementação.** Quando uma classe usa a instrução [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) para implementar essa interface, ela deve implementar todos os membros definidos na interface. Além disso, cada assinatura no código de implementação deve corresponder exatamente à assinatura correspondente definida nesta interface. No entanto, o nome do membro no código de implementação não precisa corresponder ao nome do membro conforme definido na interface.  
   
-     Quando uma classe está implementando um procedimento, ele não pode designar o procedimento como `Shared`.  
+     Quando uma classe está implementando um procedimento, ela não pode designar o procedimento como `Shared`.  
   
-- **Propriedade padrão.** Uma interface pode especificar no máximo uma propriedade como seu *propriedade padrão*, que pode ser referenciado sem usar o nome da propriedade. Especificar essa propriedade, declarando-o com o [padrão](../../../visual-basic/language-reference/modifiers/default.md) modificador.  
+- **Propriedade padrão.** Uma interface pode especificar, no máximo, uma propriedade como sua *propriedade padrão*, que pode ser referenciada sem usar o nome da propriedade. Você especifica tal propriedade declarando-a com o modificador [padrão](../../../visual-basic/language-reference/modifiers/default.md) .  
   
-     Observe que isso significa que uma interface pode definir uma propriedade padrão apenas se ela não herda nada.  
+     Observe que isso significa que uma interface pode definir uma propriedade padrão somente se ela não herda nenhuma.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Nível de acesso.** Todos os membros de interface possuem implicitamente [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso. É possível usar qualquer modificador de acesso ao definir um membro. No entanto, uma classe que implementa a interface pode declarar um nível de acesso para cada membro implementado.  
+- **Nível de acesso.** Todos os membros de interface implicitamente têm acesso [público](../../../visual-basic/language-reference/modifiers/public.md) . Você não pode usar nenhum modificador de acesso ao definir um membro. No entanto, uma classe que implementa a interface pode declarar um nível de acesso para cada membro implementado.  
   
-     Se você atribuir uma instância da classe a uma variável, o nível de acesso de seus membros pode depender se o tipo de dados da variável é a interface subjacente ou a classe de implementação. O exemplo a seguir ilustra essa situação.  
+     Se você atribuir uma instância de classe a uma variável, o nível de acesso de seus membros poderá depender se o tipo de dados da variável é a interface subjacente ou a classe de implementação. O exemplo a seguir ilustra essa situação.  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
-     Se você acessar membros de classe por meio de `varAsInterface`, todos eles têm acesso público. No entanto, se você acessar membros por meio `varAsClass`, o `Sub` procedimento `doSomething` tem acesso privado.  
+     Se você acessar membros de classe por meio de `varAsInterface`, todos eles terão acesso público. No entanto, se você acessar membros por meio de `varAsClass`, o procedimento `Sub` `doSomething` terá acesso privado.  
   
-- **Escopo.** Uma interface está no escopo em todo o seu namespace, classe, estrutura ou módulo.  
+- **Com.** Uma interface está no escopo em todo o namespace, classe, estrutura ou módulo.  
   
-     O escopo de cada membro da interface é toda a interface.  
+     O escopo de cada membro de interface é a interface inteira.  
   
-- **Tempo de vida.** Uma interface em si tem um tempo de vida, nem seus membros. Quando uma classe implementa uma interface e um objeto é criado como uma instância do que a classe, o objeto tem um tempo de vida do aplicativo no qual ele está em execução. Para obter mais informações, consulte "Tempo de vida" em [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **Existência.** Uma interface não tem, ela própria, um tempo de vida, nem seus membros. Quando uma classe implementa uma interface e um objeto é criado como uma instância dessa classe, o objeto tem um tempo de vida dentro do aplicativo no qual está sendo executado. Para obter mais informações, consulte "Lifetime" na [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Interface` instrução para definir uma interface denominada `thisInterface`, que deve ser implementado com um `Property` instrução e um `Function` instrução.  
+ O exemplo a seguir usa a instrução `Interface` para definir uma interface chamada `thisInterface`, que deve ser implementada com uma instrução `Property` e uma instrução `Function`.  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
- Observe que o `Property` e `Function` instruções não introduzem blocos terminados com `End Property` e `End Function` dentro da interface. A interface define apenas as assinaturas de seus membros. Completo `Property` e `Function` blocos aparecem em uma classe que implementa `thisInterface`.  
+ Observe que as instruções `Property` e `Function` não introduzem blocos que terminam com `End Property` e `End Function` dentro da interface. A interface define somente as assinaturas de seus membros. Os blocos Full `Property` e `Function` aparecem em uma classe que implementa `thisInterface`.  
   
 ## <a name="see-also"></a>Consulte também
 

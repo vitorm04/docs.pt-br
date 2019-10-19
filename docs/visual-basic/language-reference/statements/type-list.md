@@ -24,20 +24,20 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: aae9135207bbd3f9d0cc7c072e423a50902c372a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0d489684b8f98e871211e6d0d95d42284275954
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751510"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582890"
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 
-Especifica o *parâmetros de tipo* para um *genérico* elemento de programação. Vários parâmetros são separados por vírgulas. A seguir está a sintaxe para um parâmetro de tipo.
+Especifica os *parâmetros de tipo* para um elemento de programação *genérico* . Vários parâmetros são separados por vírgulas. A seguir está a sintaxe para um parâmetro de tipo.
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```vb
 [genericmodifier] typename [ As constraintlist ]
 ```
 
@@ -45,55 +45,55 @@ Especifica o *parâmetros de tipo* para um *genérico* elemento de programação
 
 |Termo|Definição|
 |---|---|
-|`genericmodifier`|Opcional. Pode ser usado somente em interfaces e delegados genéricos. Você pode declarar um tipo de covariante usando o [horizontalmente](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) palavra-chave ou contravariante usando a [em](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) palavra-chave. Consulte [Covariância e contravariância](../../programming-guide/concepts/covariance-contravariance/index.md).|
-|`typename`|Necessário. Nome do parâmetro de tipo. Isso é um espaço reservado, a ser substituído por um tipo definido fornecido pelo argumento de tipo correspondente.|
-|`constraintlist`|Opcional. Lista de requisitos que restringe o tipo de dados que pode ser fornecido para `typename`. Se você tiver várias restrições, coloque-as entre chaves (`{ }`) e separe-as com vírgulas. Você deve apresentar a lista de restrições com o [como](../../../visual-basic/language-reference/statements/as-clause.md) palavra-chave. Você usa `As` apenas uma vez, no início da lista.|
+|`genericmodifier`|Opcional. Pode ser usado somente em interfaces e delegados genéricos. Você pode declarar um tipo covariant usando a palavra-chave [out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) ou contravariant usando a palavra-chave [in](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) . Consulte [Covariância e contravariância](../../programming-guide/concepts/covariance-contravariance/index.md).|
+|`typename`|Necessário. Nome do parâmetro de tipo. Este é um espaço reservado, a ser substituído por um tipo definido fornecido pelo argumento de tipo correspondente.|
+|`constraintlist`|Opcional. Lista de requisitos que restringem o tipo de dados que pode ser fornecido para `typename`. Se você tiver várias restrições, coloque-as entre chaves (`{ }`) e separe-as com vírgulas. Você deve introduzir a lista de restrições com [a palavra-](../../../visual-basic/language-reference/statements/as-clause.md) chave as. Você usa `As` apenas uma vez, no início da lista.|
 
 ## <a name="remarks"></a>Comentários
 
-Cada elemento de programação genérico deve executar pelo menos um parâmetro de tipo. Um parâmetro de tipo é um espaço reservado para um tipo específico (um *elemento construído*) que o código de cliente especifica quando ele cria uma instância do tipo genérico. Você pode definir uma classe genérica, estrutura, interface, procedimento ou delegado.
+Cada elemento de programação genérico deve ter pelo menos um parâmetro de tipo. Um parâmetro de tipo é um espaço reservado para um tipo específico (um *elemento construído*) que o código do cliente especifica quando ele cria uma instância do tipo genérico. Você pode definir uma classe genérica, estrutura, interface, procedimento ou delegado.
 
-Para obter mais informações sobre quando definir um tipo genérico, consulte [tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Para obter mais informações sobre nomes de parâmetro de tipo, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+Para obter mais informações sobre quando definir um tipo genérico, consulte [tipos genéricos em Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Para obter mais informações sobre nomes de parâmetro de tipo, consulte [nomes de elemento declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="rules"></a>Regras
 
-- **Parênteses.** Se você fornecer uma lista de parâmetros de tipo, você deve colocá-la entre parênteses e você deve apresentar a lista com o [de](../../../visual-basic/language-reference/statements/of-clause.md) palavra-chave. Você usa `Of` apenas uma vez, no início da lista.
+- **Parênteses.** Se você fornecer uma lista de parâmetros de tipo, deverá colocá-la entre parênteses e deverá introduzir a lista com a palavra-chave [de](../../../visual-basic/language-reference/statements/of-clause.md) . Você usa `Of` apenas uma vez, no início da lista.
 
-- **Restrições.** Uma lista dos *restrições* em um tipo de parâmetro pode incluir os seguintes itens em qualquer combinação:
+- **Reflexiva.** Uma lista de *restrições* em um parâmetro de tipo pode incluir os seguintes itens em qualquer combinação:
 
-  - Qualquer número de interfaces. O tipo fornecido deve implementar cada interface nessa lista.
+  - Qualquer número de interfaces. O tipo fornecido deve implementar todas as interfaces nesta lista.
 
   - No máximo uma classe. O tipo fornecido deve herdar dessa classe.
 
-  - A palavra-chave `New`. O tipo fornecido deve expor um construtor sem parâmetros que o tipo genérico pode acessar. Isso é útil se você restringir um parâmetro de tipo por uma ou mais interfaces. Um tipo que implementa as interfaces não necessariamente expõe um construtor e, dependendo do nível de acesso de um construtor, o código dentro de tipo genérico pode não ser capaz de acessá-lo.
+  - A palavra-chave `New`. O tipo fornecido deve expor um construtor sem parâmetros que o seu tipo genérico possa acessar. Isso será útil se você restringir um parâmetro de tipo por uma ou mais interfaces. Um tipo que implementa interfaces não expõe necessariamente um construtor e, dependendo do nível de acesso de um construtor, o código dentro do tipo genérico pode não ser capaz de acessá-lo.
 
-  - Ambos os `Class` palavra-chave ou o `Structure` palavra-chave. O `Class` palavra-chave restringe um parâmetro de tipo genérico para exigir que qualquer argumento de tipo passado para ele ser um tipo de referência, por exemplo uma cadeia de caracteres, matriz ou delegado, ou um objeto criado de uma classe. O `Structure` palavra-chave restringe um parâmetro de tipo genérico para exigir que qualquer argumento de tipo passado para ele seja um tipo de valor, por exemplo, uma estrutura, enumeração ou dados elementar digite. Você não pode incluir ambos `Class` e `Structure` no mesmo `constraintlist`.
+  - A palavra-chave `Class` ou a palavra-chave `Structure`. A palavra-chave `Class` restringe um parâmetro de tipo genérico para exigir que qualquer argumento de tipo passado para ele seja um tipo de referência, por exemplo, uma cadeia de caracteres, matriz ou delegado, ou um objeto criado a partir de uma classe. A palavra-chave `Structure` restringe um parâmetro de tipo genérico para exigir que qualquer argumento de tipo passado para ele seja um tipo de valor, por exemplo, um tipo de dados de estrutura, enumeração ou elementar. Você não pode incluir `Class` e `Structure` na mesma `constraintlist`.
 
-  O tipo fornecido deve satisfazer todos os requisitos incluem no `constraintlist`.
+  O tipo fornecido deve atender a todos os requisitos que você incluir no `constraintlist`.
 
   Restrições em cada parâmetro de tipo são independentes de restrições em outros parâmetros de tipo.
 
 ## <a name="behavior"></a>Comportamento
 
-- **Substituição de tempo de compilação.** Quando você cria um tipo construído de um elemento de programação genérico, você fornece um tipo definido para cada parâmetro de tipo. O compilador do Visual Basic substitui esse tipo fornecido para cada ocorrência de `typename` dentro do elemento genérico.
+- **Substituição de tempo de compilação.** Quando você cria um tipo construído a partir de um elemento de programação genérico, você fornece um tipo definido para cada parâmetro de tipo. O compilador Visual Basic substitui esse tipo fornecido para cada ocorrência de `typename` dentro do elemento genérico.
 
-- **Ausência de restrições.** Se você não especificar todas as restrições em um parâmetro de tipo, seu código é limitado às operações e membros com suporte a [tipo de dados de objeto](../../../visual-basic/language-reference/data-types/object-data-type.md) para esse parâmetro de tipo.
+- **Ausência de restrições.** Se você não especificar nenhuma restrição em um parâmetro de tipo, seu código será limitado às operações e aos membros com suporte do [tipo de dados Object](../../../visual-basic/language-reference/data-types/object-data-type.md) para esse parâmetro de tipo.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra uma definição de uma classe de dicionário genéricas, incluindo uma função em esqueleto para adicionar uma nova entrada ao dicionário.
+O exemplo a seguir mostra uma definição de esqueleto de uma classe de dicionário genérica, incluindo uma função de esqueleto para adicionar uma nova entrada ao dicionário.
 
 [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]
 
 ## <a name="example"></a>Exemplo
 
-Porque `dictionary` é genérico, o código que usa a ele pode criar uma variedade de objetos dele, cada um tendo a mesma funcionalidade mas agindo em outro tipo de dados. O exemplo a seguir mostra uma linha de código que cria uma `dictionary` do objeto com `String` entradas e `Integer` chaves.
+Como `dictionary` é genérico, o código que o usa pode criar uma variedade de objetos a partir dele, cada um com a mesma funcionalidade, mas agindo em um tipo de dados diferente. O exemplo a seguir mostra uma linha de código que cria um objeto `dictionary` com entradas de `String` e `Integer` chaves.
 
 [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra a definição de esqueleto equivalente gerada pelo exemplo anterior.
+O exemplo a seguir mostra a definição esqueleto equivalente gerada pelo exemplo anterior.
 
 [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]
 
@@ -106,7 +106,7 @@ O exemplo a seguir mostra a definição de esqueleto equivalente gerada pelo exe
 - [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Como: usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Como usar uma classe genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Covariância e Contravariância](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
 - [Saída](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

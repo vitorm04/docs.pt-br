@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 3c6766d9084962d006fe5e5d7d5cc723c2aad441
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3da04b85865389a2b4466b78091ff28529346269
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046640"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582253"
 ---
 # <a name="withend-with-statement-visual-basic"></a>Instrução With...End With (Visual Basic)
 
@@ -28,7 +28,7 @@ Executa uma série de instruções que referenciam repetidamente um único objet
 
 ## <a name="syntax"></a>Sintaxe
 
-```
+```vb
 With objectExpression
     [ statements ]
 End With
@@ -67,7 +67,7 @@ Você não pode ramificar em uma instrução `With` de fora do bloco.
 A menos que o bloco contenha um loop, as instruções são executadas somente uma vez. Você pode aninhar diferentes tipos de estruturas de controle. Para obter mais informações, consulte [estruturas de controle aninhado](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> Você também pode usar a palavra-chave `With` em inicializadores de objetos. Para obter mais informações e exemplos, [consulte inicializadores de objeto: Tipos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) [anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)e nomeados e anônimos.
+> Você também pode usar a palavra-chave `With` em inicializadores de objetos. Para obter mais informações e exemplos, consulte [inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) e [tipos anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Se você estiver usando um bloco `With` somente para inicializar as propriedades ou os campos de um objeto que acabou de instanciar, considere usar um inicializador do objeto como alternativa.
 
@@ -87,5 +87,5 @@ O exemplo a seguir aninha instruções `With…End With`. Na instrução `With` 
 
 - <xref:System.Collections.Generic.List%601>
 - [Estruturas de Controle Aninhadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

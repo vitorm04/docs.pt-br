@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: 1f0c6b052ead303e0b43465dac2067422abc4ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 865e99aa0e27591d10fde1465047a2e6bf183bbf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637733"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581786"
 ---
 # <a name="implements-statement"></a>Instrução Implements
-Especifica um ou mais interfaces, ou membros de interface, que devem ser implementados na classe ou definição de estrutura na qual ele aparece.  
+Especifica uma ou mais interfaces, ou membros de interface, que devem ser implementados na definição de classe ou estrutura na qual ele aparece.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 Implements interfacename [, ...]  
--or-  
+' -or-  
 Implements interfacename.interfacemember [, ...]  
 ```  
   
@@ -32,26 +32,26 @@ Implements interfacename.interfacemember [, ...]
  Necessário. Uma interface cujas propriedades, procedimentos e eventos devem ser implementados por membros correspondentes na classe ou estrutura.  
   
  `interfacemember`  
- Necessário. O membro de uma interface que está sendo implementado.  
+ Necessário. O membro de uma interface que está sendo implementada.  
   
 ## <a name="remarks"></a>Comentários  
- Uma interface é uma coleção de protótipos que representam os membros (propriedades, procedimentos e eventos) encapsula a interface. Interfaces contêm apenas as declarações de membros; classes e estruturas implementam esses membros. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Uma interface é uma coleção de protótipos que representa os membros (Propriedades, procedimentos e eventos) que a interface encapsula. As interfaces contêm apenas as declarações para membros; classes e estruturas implementam esses membros. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- O `Implements` instrução deve vir logo após o `Class` ou `Structure` instrução.  
+ A instrução `Implements` deve seguir imediatamente a instrução `Class` ou `Structure`.  
   
- Quando você implementa uma interface, você deve implementar todos os membros declarados na interface. A omissão de qualquer membro é considerada um erro de sintaxe. Para implementar um membro individual, você deve especificar o [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) palavra-chave (que é separada do `Implements` instrução) quando você declara o membro na classe ou estrutura. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Ao implementar uma interface, você deve implementar todos os membros declarados na interface. A omissão de qualquer membro é considerada um erro de sintaxe. Para implementar um membro individual, você especifica a palavra-chave [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) (que é separada da instrução `Implements`) quando você declara o membro na classe ou estrutura. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- As classes podem usar [privada](../../../visual-basic/language-reference/modifiers/private.md) implementações de propriedades e procedimentos, mas esses membros são acessíveis somente pela conversão de uma instância da classe de implementação em uma variável declarada para ser do tipo da interface.  
+ As classes podem usar implementações [privadas](../../../visual-basic/language-reference/modifiers/private.md) de propriedades e procedimentos, mas esses membros são acessíveis somente por meio da conversão de uma instância da classe de implementação em uma variável declarada para ser do tipo da interface.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `Implements` instrução para implementar membros de uma interface. Ele define uma interface denominada `ICustomerInfo` com um evento, uma propriedade e um procedimento. A classe `customerInfo` implementa todos os membros definidos na interface.  
+ O exemplo a seguir mostra como usar a instrução `Implements` para implementar membros de uma interface. Ele define uma interface chamada `ICustomerInfo` com um evento, uma propriedade e um procedimento. A classe `customerInfo` implementa todos os membros definidos na interface.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Observe que a classe `customerInfo` usa o `Implements` instrução em uma linha de código de origem separado para indicar que a classe implementa todos os membros do `ICustomerInfo` interface. Em seguida, cada membro na classe usa o `Implements` palavra-chave como parte de sua declaração de membro para indicar que ele implementa o membro da interface.  
+ Observe que a classe `customerInfo` usa a instrução `Implements` em uma linha de código-fonte separada para indicar que a classe implementa todos os membros da interface `ICustomerInfo`. Em seguida, cada membro na classe usa a palavra-chave `Implements` como parte de sua declaração de membro para indicar que ela implementa esse membro de interface.  
   
 ## <a name="example"></a>Exemplo  
- Os dois procedimentos a seguir mostram como você poderia usar a interface implementada no exemplo anterior. Para testar a implementação, adicione esses procedimentos no seu projeto e chame o `testImplements` procedimento.  
+ Os dois procedimentos a seguir mostram como você pode usar a interface implementada no exemplo anterior. Para testar a implementação, adicione esses procedimentos ao seu projeto e chame o procedimento de `testImplements`.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   

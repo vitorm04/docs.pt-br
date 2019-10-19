@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 570f6bdb8eda462b815dfc7c45f6e9a3a515f0ad
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395876"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583517"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Implantar um aplicativo .NET para Apache Spark no Databricks
 
@@ -19,17 +19,17 @@ Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
-> - Preparar o Microsoft.Spark.Worker
-> - Publicar seu aplicativo Spark .NET
-> - Implantar seu aplicativo no Databricks
-> - Executar seu aplicativo
+> * Preparar o Microsoft.Spark.Worker
+> * Publicar seu aplicativo Spark .NET
+> * Implantar seu aplicativo no Databricks
+> * Executar seu aplicativo
 
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, faça o seguinte:
 
-- Baixe a [CLI do Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
-- Baixe o [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) para seu computador local. Esse é um script auxiliar que você usa posteriormente para copiar arquivos dependentes do .NET para Apache Spark para os nós de trabalho do cluster do Spark.
+* Baixe a [CLI do Databricks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
+* Baixe o [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) para seu computador local. Esse é um script auxiliar que você usa posteriormente para copiar arquivos dependentes do .NET para Apache Spark para os nós de trabalho do cluster do Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Preparar dependências de trabalho
 
@@ -63,9 +63,9 @@ O **Microsoft.Spark.Worker** é um componente de back-end que reside nos nós de
 
 4. Carregue o seguinte para um sistema de arquivos distribuído (por exemplo, DBFS) ao qual seu cluster tem acesso:
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: esse jar é incluído como parte do pacote NuGet do [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) e é colocado no diretório de saída da compilação do seu aplicativo.
-   - `<your app>.zip`
-   - Arquivos (como arquivos de dependência ou dados comuns acessíveis a cada trabalho) ou assemblies (como DLLs que contêm suas funções definidas pelo usuário ou bibliotecas das quais seu aplicativo depende) serão colocados no diretório de trabalho de cada executor.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: esse jar é incluído como parte do pacote NuGet do [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) e é colocado no diretório de saída da compilação do seu aplicativo.
+   * `<your app>.zip`
+   * Arquivos (como arquivos de dependência ou dados comuns acessíveis a cada trabalho) ou assemblies (como DLLs que contêm suas funções definidas pelo usuário ou bibliotecas das quais seu aplicativo depende) serão colocados no diretório de trabalho de cada executor.
 
 ## <a name="deploy-to-databricks"></a>Implantar no Databricks
 
@@ -137,21 +137,21 @@ O [Set JAR](https://docs.databricks.com/user-guide/jobs.html#create-a-job) permi
 
 2. Esta etapa será necessária apenas se os assemblies do aplicativo (por exemplo, DLLs que contêm funções definidas pelo usuário junto com as respectivas dependências) precisarem ser colocados no diretório de trabalho de cada **Microsoft.Spark.Worker**.
 
-   - Carregar os assemblies do aplicativo para o cluster do Databricks
+   * Carregar os assemblies do aplicativo para o cluster do Databricks
 
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
-   - Remova a marca de comentário e modifique a seção de dependências do aplicativo em [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) para apontar para o caminho de dependências do aplicativo e carregar para o cluster do Databricks.
+   * Remova a marca de comentário e modifique a seção de dependências do aplicativo em [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) para apontar para o caminho de dependências do aplicativo e carregar para o cluster do Databricks.
 
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
 
-   - Reinicie seu cluster.
+   * Reinicie seu cluster.
 
 3. Vá para o cluster do Databricks em seu workspace do Databricks. Em **Trabalhos**, selecione seu trabalho e, em seguida, selecione **Executar Agora** para executá-lo.
 

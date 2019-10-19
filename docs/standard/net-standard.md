@@ -7,12 +7,12 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bb07df382974bdbb185ce7d52117729eaa638869
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4fa0153cfa9dd52f4d80301d228dde3f16225bfd
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523868"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582031"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -165,3 +165,4 @@ Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standar
 
 - [Versões do .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Criar uma biblioteca de .NET Standard](../core/tutorials/library-with-visual-studio.md)
+- [Direcionamento de plataforma cruzada](./library-guidance/cross-platform-targeting.md)

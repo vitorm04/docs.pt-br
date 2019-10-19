@@ -2,24 +2,24 @@
 title: Consultas compiladas estaticamente (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: ed701f57821c18f4cfa75a3bb7cd5a652ab384d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f295e8aa8b747b90933d6a35e5352f66740ef071
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373729"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582913"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Consultas compiladas estaticamente (LINQ to XML) (Visual Basic)
 
 Um de desempenho mais importante beneficia LINQ to XML, diferentemente de <xref:System.Xml.XmlDocument>, é que as consultas em LINQ to XML são compiladas estaticamente, enquanto as consultas XPath devem ser interpretado em tempo de execução. Esse recurso é interna a LINQ to XML, portanto você não precisa executar etapas adicionais para aproveitá-lo, mas é útil entender a diferença ao escolher entre as duas tecnologias. Este tópico explica a diferença.
 
-## <a name="statically-compiled-queries-vs-xpath"></a>Consultas estaticamente compilado contra. XPath
+## <a name="statically-compiled-queries-vs-xpath"></a>Consultas compiladas estaticamente versus XPath
 
 O exemplo a seguir mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.
 
 O seguinte é a expressão XPath equivalente:
 
-```
+```vb
 //Address[@Type='Shipping']
 ```
 

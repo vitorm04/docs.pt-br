@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583510"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581579"
 ---
 # <a name="option-compare-statement"></a>Instrução Option Compare
 Declara o método padrão de comparação a ser usado ao comparar dados da cadeia de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Quando uma Instrução Option Compare Não Está Presente  
- Se o código-fonte não contiver uma `Option Compare` instrução, o **Option Compare** definindo no [página de compilação, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) é usado. Se você usar o compilador de linha de comando, a configuração especificada pela [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) opção de compilador é usada.  
+ Se o código-fonte não contiver uma instrução `Option Compare`, a **opção comparar** configuração na [página compilar, designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) será usada. Se você usar o compilador de linha de comando, a configuração especificada pela opção de compilador [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) será usada.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. Clique na guia **Compilar**.  
   
-3. Defina o valor na **Option Compare** caixa.  
+3. Defina o valor na caixa de **comparação de opções** .  
   
- Quando você cria um projeto, o **Option Compare** definindo na **compilar** for definido como o **Option Compare** definindo no **opções** caixa de diálogo. Para alterar essa configuração, nos **ferramentas** menu, clique em **opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração inicial padrão nos **padrões de VB** é **binário**.  
+ Quando você cria um projeto, a **opção comparar** configuração na guia **Compilar** é definida como a **opção comparar** configuração na caixa de diálogo **Opções** . Para alterar essa configuração, no menu **ferramentas** , clique em **Opções**. Na caixa de diálogo **Opções**, expanda **Projetos e Soluções** e, em seguida, clique em **Padrões de VB**. A configuração padrão inicial em **padrões do VB** é **Binary**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Para definir o Option Compare na linha de comando  
   
-- Incluir o [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) opção de compilador na **vbc** comando.  
+- Inclua a opção de compilador [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) no comando **Vbc** .  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa a instrução `Option Compare` para definir a comparação binária como o método padrão de comparação de cadeia de caracteres. Para usar esse código, retire os comentários da instrução `Option Compare Binary` e coloque-os na parte superior do arquivo de origem.  

@@ -4,12 +4,12 @@ description: Saiba mais sobre cenários de Apache Spark e Big Data.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: ccf41f08df3c68a039210320f14219e6b6229a64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396232"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583479"
 ---
 # <a name="what-is-apache-spark"></a>O que é Apache Spark?
 
@@ -69,30 +69,30 @@ Cada executor, ou nó de trabalho, recebe uma tarefa do driver e executa essa ta
 
 O Gerenciador de cluster se comunica com o driver e os executores para:
 
-- Gerenciar alocação de recursos
-- Gerenciar divisão de programa
-- Gerenciar a execução do programa
+* Gerenciar alocação de recursos
+* Gerenciar divisão de programa
+* Gerenciar a execução do programa
 
 ## <a name="language-support"></a>Suporte a linguagens
 
 O Apache Spark dá suporte às seguintes linguagens de programação:
 
-- Scale
-- Python
-- Java
-- SQL
-- R
-- .NET
+* Scale
+* Python
+* Java
+* SQL
+* R
+* .NET
 
 ## <a name="spark-apis"></a>APIs do Spark
 
 O Apache Spark dá suporte às seguintes APIs:
 
-- [API de escala do Spark](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
-- [API do Spark Java](https://spark.apache.org/docs/2.2.0/api/java/index.html)
-- [API do Python do Spark](https://spark.apache.org/docs/2.2.0/api/python/index.html)
-- [API do Spark R](https://spark.apache.org/docs/2.2.0/api/R/index.html)
-- [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), funções internas
+* [API de escala do Spark](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
+* [API do Spark Java](https://spark.apache.org/docs/2.2.0/api/java/index.html)
+* [API do Python do Spark](https://spark.apache.org/docs/2.2.0/api/python/index.html)
+* [API do Spark R](https://spark.apache.org/docs/2.2.0/api/R/index.html)
+* [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), funções internas
 
 ## <a name="next-steps"></a>Próximas etapas
 

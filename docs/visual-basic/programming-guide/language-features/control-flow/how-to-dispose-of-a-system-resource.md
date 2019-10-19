@@ -1,5 +1,5 @@
 ---
-title: 'Como: Descartar um recurso do sistema (Visual Basic)'
+title: Como descartar um recurso do sistema (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c780ee1a174ad044593960bc30a3ee2e1f929390
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906731"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583137"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como: Descartar um recurso do sistema (Visual Basic)
-Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco. Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como descartar um recurso do sistema (Visual Basic)
+Você pode usar um bloco de `Using` para garantir que o sistema descarte um recurso quando o código sair do bloco. Isso será útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou que outros componentes também queiram usar.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para descartar uma conexão de banco de dados quando seu código for concluído com ele  
   
-1. Certifique-se de incluir apropriado [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início de seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).  
+1. Certifique-se de incluir a [instrução Imports apropriada (namespace e tipo do .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início do seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).  
   
-2. Criar uma `Using` bloco com o `Using` e `End Using` instruções. Dentro do bloco, coloque o código que lida com a conexão de banco de dados.  
+2. Crie um bloco de `Using` com as instruções `Using` e `End Using`. Dentro do bloco, coloque o código que lida com a conexão de banco de dados.  
   
-3. A conexão de declarar e criar uma instância dela como parte do `Using` instrução.  
+3. Declare a conexão e crie uma instância dela como parte da instrução de `Using`.  
   
-    ```  
+    ```vb  
     ' Insert the following line at the beginning of your source file.  
     Imports System.Data.SqlClient  
     Public Sub AccessSql(ByVal s As String)  
@@ -38,11 +38,11 @@ Você pode usar um `Using` bloco para garantir que o sistema de descarte de um r
     End Sub  
     ```  
   
-     O sistema descarta o recurso não importa como você sai do bloco, incluindo o caso de uma exceção sem tratamento.  
+     O sistema descarta o recurso, independentemente de como você sai do bloco, incluindo o caso de uma exceção sem tratamento.  
   
-     Observe que você não pode acessar `sqc` de fora a `Using` bloquear, porque seu escopo é limitado ao bloco.  
+     Observe que você não pode acessar `sqc` de fora do bloco de `Using`, porque seu escopo é limitado ao bloco.  
   
-     Você pode usar essa mesma técnica em um recurso do sistema como um identificador de arquivo ou um wrapper COM. Você usa um `Using` bloquear quando você deseja deixar o recurso disponível para outros componentes após você ter saído do `Using` bloco.  
+     Você pode usar essa mesma técnica em um recurso do sistema, como um identificador de arquivo ou um wrapper COM. Você usará um bloco de `Using` quando quiser ter certeza de deixar o recurso disponível para outros componentes depois de ter saído do bloco de `Using`.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -2,12 +2,12 @@
 title: O que há de C# novo no C# guia de 8,0
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275773"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579143"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -261,25 +261,36 @@ Explore técnicas de correspondência de padrões neste [tutorial avançado sobr
 Uma **declaração using** é uma declaração de variável precedida pela palavra-chave `using`. Ele informa ao compilador que a variável que está sendo declarada deve ser descartada ao final do escopo delimitador. Por exemplo, considere o seguinte código que grava um arquivo de texto:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 No exemplo anterior, o arquivo é descartado quando a chave de fechamento do método é atingida. Esse é o final do escopo no qual `file` é declarado. O código anterior equivale ao código a seguir que usa as [instruções using](../language-reference/keywords/using-statement.md) clássicas:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 
@@ -382,7 +398,7 @@ Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
 - O índice do operador end `^`, que especifica que um índice é relativo ao final da sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador de intervalo `..`, que especifica o início e o término de um intervalo como operandos.
+- O operador Range `..`, que especifica o início e o término de um intervalo como seus operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence.Length - n`.
 
@@ -471,7 +487,7 @@ Para obter mais informações, consulte [?? e?? =](../language-reference/operato
 
 No C# 7,3 e anterior, um tipo construído (um tipo que inclui pelo menos um argumento de tipo) não pode ser um [tipo não gerenciado](../language-reference/builtin-types/unmanaged-types.md). A partir C# de 8,0, um tipo de valor construído não será gerenciado se ele contiver campos apenas de tipos não gerenciados.
 
-Por exemplo, considerando a seguinte definição do tipo genérico `Coords<T>`:
+Por exemplo, considerando a seguinte definição do tipo de `Coords<T>` genérico:
 
 ```csharp
 public struct Coords<T>
@@ -481,7 +497,7 @@ public struct Coords<T>
 }
 ```
 
-o tipo `Coords<int>` é um tipo não gerenciado em C# 8,0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável desse tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias desse tipo:
+o tipo de `Coords<int>` é um tipo não gerenciado em C# 8,0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável desse tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias desse tipo:
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -506,4 +522,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cadeias de caracteres idênticas interpoladas
 
-A ordem dos tokens `$` e `@` em cadeias de caracteres idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode ser qualquer: `$@"..."` e `@$"..."` são cadeias de caracteres textuais interpoladas válidas. Em versões C# anteriores, o token `$` deve aparecer antes do token `@`.
+A ordem dos tokens de `$` e `@` em cadeias de caracteres idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode ser qualquer: `$@"..."` e `@$"..."` são cadeias de caracteres textuais interpoladas válidas. Em versões C# anteriores, o token de `$` deve aparecer antes do token de `@`.

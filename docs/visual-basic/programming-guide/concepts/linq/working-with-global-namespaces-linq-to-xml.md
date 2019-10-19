@@ -2,15 +2,15 @@
 title: Trabalhar com namespaces globais (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710377"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582355"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Trabalhar com namespaces globais (Visual Basic) (LINQ to XML)
-Um dos principais recursos de literais XML no Visual Basic é a capacidade de declarar namespaces XML usando a `Imports` instrução. Usando esse recurso, você pode declarar um namespace XML que usa um prefixo, ou você pode declarar um namespace XML padrão.  
+Um dos principais recursos de literais XML no Visual Basic é a capacidade de declarar namespaces XML usando a instrução `Imports`. Usando esse recurso, você pode declarar um namespace XML que usa um prefixo, ou você pode declarar um namespace XML padrão.  
   
  Esse recurso é útil em duas situações. Primeiro, namespaces declaradas em literais XML não transferem em expressões inseridas. Declarar namespaces globais reduz a quantidade de trabalho que você tem que fazer para usar expressões inseridas com namespaces. Segundo, você deve declarar namespaces globais para usar namespaces com propriedades XML.  
   
@@ -134,7 +134,7 @@ Console.WriteLine(root.<Child>.Count())
   
  Este exemplo indica que não há nenhum elemento de `Child` . Gerencia a saída a seguir:  
   
-```  
+```console  
 0  
 ```  
   
@@ -156,7 +156,7 @@ End Module
   
  Este exemplo indica que há um elemento de `Child` . Gerencia a saída a seguir:  
   
-```  
+```console  
 1  
 ```  
   
@@ -193,7 +193,7 @@ End Module
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```console  
 http://www.adventure-works.com  
 ```  
   

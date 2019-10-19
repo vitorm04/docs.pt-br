@@ -7,32 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 04c94d3d32660d1a186a9bb377c49a53e1451be6
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512742"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582822"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>A cláusula de identificadores requer uma variável WithEvents definida no tipo recipiente ou em um de seus tipos base
-Você não forneceu uma `WithEvents` variável em sua `Handles` cláusula. A `Handles` palavra-chave no final de uma declaração de procedimento faz com que ele manipule eventos gerados por uma variável de `WithEvents` objeto declarada usando a palavra-chave.
-  
- **ID do erro:** BC30506
+
+Você não forneceu uma variável `WithEvents` na sua cláusula `Handles`. A palavra-chave `Handles` no final de uma declaração de procedimento faz com que ele manipule eventos gerados por uma variável de objeto declarada usando a palavra-chave `WithEvents`.
+
+**ID do erro:** BC30506
 
 ## <a name="to-correct-this-error"></a>Para corrigir este erro
-  
-- Forneça a variável `WithEvents` necessária.
-  
+
+Forneça a variável de `WithEvents` necessária.
+
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, Visual Basic gera um erro `BC30506` de compilador porque a palavra-chave [WithEvents](../modifiers/withevents.md) não é usada na <xref:System.Timers.Timer?displayProperty=nameWithType> definição da instância.
+No exemplo a seguir, Visual Basic gera `BC30506` de erro do compilador porque a palavra-chave [WithEvents](../modifiers/withevents.md) não é usada na definição da instância <xref:System.Timers.Timer?displayProperty=nameWithType>.
 
 ```vb
 Imports System.Timers
 
 Module Module1
     Private _timer1 As New Timer() With {.Interval = 1000, .Enabled = True}
-    
+
     Sub Main()
         Console.WriteLine("Press any key to start the timer...")
         Console.ReadKey()
@@ -46,7 +47,7 @@ Module Module1
 End Module
 ```
 
-O exemplo a seguir é compilado com êxito porque a `_timer1` variável é definida com a `WithEvents` palavra-chave:
+O exemplo a seguir é compilado com êxito porque a variável `_timer1` é definida com a palavra-chave `WithEvents`:
 
 ```vb
 Imports System.Timers

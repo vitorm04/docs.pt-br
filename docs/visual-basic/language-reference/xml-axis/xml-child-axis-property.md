@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 8f8283e7ed09e657a20addab0b203b3d99420d3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88d0b1f315bc1bb9dc474604d222a8ebcc1e40aa
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025204"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582237"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Propriedade do eixo filho XML (Visual Basic)
 Fornece acesso aos descendentes de um dos seguintes: um objeto de <xref:System.Xml.Linq.XElement> , um objeto de <xref:System.Xml.Linq.XDocument> , uma coleção de objetos <xref:System.Xml.Linq.XElement> , ou uma coleção de <xref:System.Xml.Linq.XDocument> objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 object.<child>  
 ```  
   
@@ -30,46 +30,46 @@ object.<child>
   
 |Termo|Definição|  
 |---|---|  
-|`object`|Necessário. Uma <xref:System.Xml.Linq.XElement> objeto, um <xref:System.Xml.Linq.XDocument> objeto, uma coleção de <xref:System.Xml.Linq.XElement> objetos ou uma coleção de <xref:System.Xml.Linq.XDocument> objetos.|  
-|.<|Necessário. Indica o início de uma propriedade de eixo filho.|  
-|`child`|Necessário. Nome de nós filho para acessar, do formulário [`prefix:]name`.<br /><br /> -   `Prefix` -Opcional. Prefixo de namespace XML para o nó filho. Deve ser um namespace XML global definido com um `Imports` instrução.<br />-   `Name` -Required. Nome do nó filho local. Ver [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Necessário. Indica o início de uma propriedade de eixo filho.|  
+|`object`|Necessário. Um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.|  
+|. <|Necessário. Denota o início de uma propriedade de eixo filho.|  
+|`child`|Necessário. Nome dos nós filho a serem acessados, no formato [`prefix:]name`.<br /><br /> -    `Prefix`-opcional. Prefixo do namespace XML para o nó filho. Deve ser um namespace XML global definido com uma instrução `Imports`.<br />-    `Name`-obrigatório. Nome do nó filho local. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Necessário. Denota o final de uma propriedade do eixo filho.|  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Uma coleção de objetos <xref:System.Xml.Linq.XElement> .  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar uma propriedade de eixo filho XML para acessar os nós filho pelo nome de um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objeto, ou de uma coleção de <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objetos. Use o XML `Value` propriedade para acessar o valor do primeiro nó filho na coleção retornada. Para obter mais informações, consulte [propriedade do valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Você pode usar uma propriedade de eixo filho XML para acessar nós filho pelo nome de um objeto <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> ou de uma coleção de objetos <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>. Use a propriedade XML `Value` para acessar o valor do primeiro nó filho na coleção retornada. Para obter mais informações, consulte [propriedade de valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- O compilador do Visual Basic converte propriedades de eixo filho em chamadas para o <xref:System.Xml.Linq.XContainer.Elements%2A> método.  
+ O compilador Visual Basic converte Propriedades de eixo filho em chamadas para o método <xref:System.Xml.Linq.XContainer.Elements%2A>.  
   
 ## <a name="xml-namespaces"></a>Namespaces XML  
- O nome em uma propriedade de eixo filho pode usar somente prefixos de namespace XML declarados globalmente com o `Imports` instrução. Ele não é possível usar prefixos de namespace XML declarados localmente em literais de elemento XML. Para obter mais informações, consulte [instrução Imports (Namespace de XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ O nome em uma propriedade de eixo filho pode usar somente os prefixos de namespace XML declarados globalmente com a instrução `Imports`. Ele não pode usar prefixos de namespace XML declarados localmente em literais de elemento XML. Para obter mais informações, consulte [instrução Imports (namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como acessar os nós filho chamados `phone` do `contact` objeto.  
+ O exemplo a seguir mostra como acessar os nós filho chamados `phone` do objeto `contact`.  
   
  [!code-vb[VbXMLSamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#17)]  
   
- Esse código exibe o texto a seguir:  
+ Esse código exibe o seguinte texto:  
   
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como acessar os nós filho chamados `phone` da coleção retornada pela `contact` propriedade de eixo filho do `contacts` objeto.  
+ O exemplo a seguir mostra como acessar os nós filho chamados `phone` da coleção retornada pela propriedade eixo filho `contact` do objeto `contacts`.  
   
  [!code-vb[VbXMLSamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#18)]  
   
- Esse código exibe o texto a seguir:  
+ Esse código exibe o seguinte texto:  
   
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir declara `ns` como um prefixo de namespace XML. Ele usa o prefixo de namespace para criar um literal XML e acessar o primeiro nó filho com o nome qualificado `ns:name`.  
+ O exemplo a seguir declara `ns` como um prefixo de namespace XML. Em seguida, ele usa o prefixo do namespace para criar um literal XML e acessar o primeiro nó filho com o nome qualificado `ns:name`.  
   
  [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
- Esse código exibe o texto a seguir:  
+ Esse código exibe o seguinte texto:  
   
  `Patrick Hines`  
   

@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos integrais – Referência C#
 description: Saiba o intervalo, o tamanho de armazenamento e os usos para cada um dos tipos numéricos integrais.
-ms.date: 06/25/2019
+ms.date: 10/18/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
-ms.translationtype: HT
+ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236085"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579191"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos integrais (Referência C#)
 
-Os **tipos numéricos integrais** são um subconjunto de **tipos simples** e podem ser inicializados com [*literais*](#integral-literals). Todos os tipos integrais também são tipos de valor. Todos os tipos numéricos integrais dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), [bit a bit lógicos](../operators/bitwise-and-shift-operators.md), de [comparação e igualdade](../operators/equality-operators.md).
+Os **tipos numéricos integrais** são um subconjunto de **tipos simples** e podem ser inicializados com [*literais*](#integer-literals). Todos os tipos integrais também são tipos de valor. Todos os tipos numéricos integrais dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos](../operators/bitwise-and-shift-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-integral-types"></a>Características dos tipos integrais
 
@@ -69,9 +69,15 @@ O valor padrão de cada tipo integral é zero, `0`. Cada um dos tipos integrais 
 
 Use a estrutura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para representar um inteiro com sinal sem nenhum limite superior ou inferior.
 
-## <a name="integral-literals"></a>Literais integrais
+## <a name="integer-literals"></a>Literais inteiros
 
-Os literais integrais podem ser especificados como *literais decimais*, *literais hexadecimais* ou *literais binários*. Abaixo, um exemplo de cada:
+Literais inteiros podem ser
+
+- *decimal*: sem nenhum prefixo
+- *hexadecimal*: com o prefixo de `0x` ou `0X`
+- *Binary*: com o prefixo `0b` ou `0B` (disponível em C# 7,0 e posterior)
+
+O código a seguir demonstra um exemplo de cada um:
 
 ```csharp
 var decimalLiteral = 42;
@@ -79,38 +85,35 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-Literais decimais não exigem nenhum prefixo. O prefixo `x` ou `X` significa um *literal hexadecimal*. O prefixo `b` ou `B` significa um *literal binário*. A declaração de `binaryLiteral` demonstra o uso de `_` como um *separador de dígito*. O separador de dígito pode ser usado com todos os literais numéricos. Os literais binários e o separador de dígitos `_` são compatíveis a partir do C# 7.0.
+O exemplo anterior também mostra o uso de `_` como um *separador de dígito*, que tem C# suporte a partir de 7,0. Você pode usar o separador de dígitos com todos os tipos de literais numéricos.
 
-### <a name="literal-suffixes"></a>Sufixos literais
+O tipo de um inteiro literal é determinado por seu sufixo da seguinte maneira:
 
-O sufixo `l` ou `L` especifica que o literal integral deve ser do tipo `long`. O sufixo `ul` ou `UL` especifica o tipo `ulong`. Se o sufixo `L` for usado em um literal maior que 9.223.372.036.854.775.807 (o valor máximo de `long`), o valor será convertido para o tipo `ulong`. Se o valor representado por um literal integral exceder <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilador [CS1021](../../misc/cs1021.md). 
+- Se o literal não tiver nenhum sufixo, seu tipo será o primeiro dos seguintes tipos em que seu valor pode ser representado: `int`, `uint`, `long` `ulong`.
+- Se o literal for sufixado por `U` ou `u`, seu tipo será o primeiro dos seguintes tipos em que seu valor pode ser representado: `uint` `ulong`.
+- Se o literal for sufixado por `L` ou `l`, seu tipo será o primeiro dos seguintes tipos em que seu valor pode ser representado: `long` `ulong`.
 
-> [!NOTE]
-> Você pode usar a letra minúscula "l" como sufixo. No entanto, isso gera um aviso do compilador porque a letra "l" é facilmente confundida com o dígito "1". Use "L" para fins de clareza.
+  > [!NOTE]
+  > Você pode usar a letra minúscula `l` como um sufixo. No entanto, isso gera um aviso do compilador porque a letra `l` pode ser confundida com o `1` de dígitos. Use `L` para maior clareza.
 
-### <a name="type-of-an-integral-literal"></a>Tipo de um literal integral
+- Se o literal for sufixado por `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU` ou `lu`, seu tipo será `ulong`.
 
-Se um literal integral não tiver sufixo, seu tipo será o primeiro dos tipos a seguir em que seu valor pode ser representado:
+Se o valor representado por um literal inteiro exceder <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilador [CS1021](../../misc/cs1021.md).
 
-1. `int`
-1. `uint`
-1. `long`
-1. `ulong`
-
-Você pode converter um literal integral em um tipo com um intervalo menor que o padrão usando uma atribuição ou uma conversão:
+O valor representado por um inteiro literal pode ser convertido implicitamente em um tipo com um intervalo menor do que o tipo determinado do literal. Isso é possível quando o valor está dentro do intervalo do tipo de destino:
 
 ```csharp
-byte byteVariable = 42; // type is byte
-var signedByte = (sbyte)42; // type is sbyte.
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-Você pode converter um literal integral em um tipo com um intervalo maior que o padrão usando uma atribuição, uma conversão ou um sufixo no literal:
+Como mostra o exemplo anterior, se o valor do literal não estiver dentro do intervalo do tipo de destino, ocorrerá um erro de compilador [CS0031](../../misc/cs0031.md) .
+
+Você também pode usar uma conversão para converter o valor representado por um literal inteiro para o tipo diferente do tipo determinado do literal:
 
 ```csharp
-var unsignedLong = 42UL;
-var longVariable = 42L;
-ulong anotherUnsignedLong = 42;
-var anotherLong = (long)42;
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
 ```
 
 ## <a name="conversions"></a>Conversões
@@ -119,9 +122,15 @@ Há uma conversão implícita (chamada de *conversão de ampliação*) entre qua
 
 Você deverá usar uma conversão explícita para converter um tipo integral em outro tipo integral quando uma conversão implícita não for definida por meio do tipo de fonte para o tipo de destino. Isso é chamado de *conversão de estreitamento*. O caso explícito é necessário porque a conversão pode resultar em perda de dados.
 
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
+
+- [Tipos integrais](~/_csharplang/spec/types.md#integral-types)
+- [Literais inteiros](~/_csharplang/spec/lexical-structure.md#integer-literals)
+
 ## <a name="see-also"></a>Consulte também
 
-- [Especificação da linguagem C# – Tipos integrais](~/_csharplang/spec/types.md#integral-types)
 - [Referência de C#](../index.md)
 - [Tipos de ponto flutuante](floating-point-numeric-types.md)
 - [Tabela de valores padrão](../keywords/default-values-table.md)

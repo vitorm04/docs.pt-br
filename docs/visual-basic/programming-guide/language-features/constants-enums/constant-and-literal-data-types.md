@@ -9,43 +9,43 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9db7fa3f36021a39fafe6cf3da5af7070f0b5b0d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906965"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582970"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Tipos de dados constante e literal (Visual Basic)
-Um literal é um valor que é expresso como em si em vez de um valor de variável ou o resultado de uma expressão, como o número 3 ou a cadeia de caracteres "Hello". Uma constante é um nome significativo que toma o lugar de um literal e mantém esse mesmo valor em todo o programa, em vez de uma variável, cujo valor pode ser alterado.  
+Um literal é um valor que é expresso como ele mesmo, e não como o valor de uma variável ou o resultado de uma expressão, como o número 3 ou a cadeia de caracteres "Olá". Uma constante é um nome significativo que assume o lugar de um literal e retém esse mesmo valor em todo o programa, em oposição a uma variável, cujo valor pode ser alterado.  
   
- Quando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) é `Off` e [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) é `On`, você deve declarar todas as constantes explicitamente com um tipo de dados. No exemplo a seguir, o tipo de dados `MyByte` for declarado explicitamente como tipo de dados `Byte`:  
+ Quando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) é `Off` e [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) é `On`, você deve declarar todas as constantes explicitamente com um tipo de dados. No exemplo a seguir, o tipo de dados de `MyByte` é declarado explicitamente como tipo de dados `Byte`:  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- Quando `Option Infer` está `On` ou `Option Strict` é `Off`, você pode declarar uma constante sem especificar um tipo de dados com um `As` cláusula. O compilador determina o tipo da constante do tipo da expressão. Um numérico literal de inteiro é convertido por padrão para o `Integer` tipo de dados. Tipo de dados padrão para são de números de ponto flutuante `Double`e as palavras-chave `True` e `False` especificar um `Boolean` constante.  
+ Quando `Option Infer` é `On` ou `Option Strict` é `Off`, você pode declarar uma constante sem especificar um tipo de dados com uma cláusula `As`. O compilador determina o tipo da constante do tipo da expressão. Um literal inteiro numérico é convertido por padrão no tipo de dados `Integer`. O tipo de dados padrão para números de ponto flutuante é `Double` e as palavras-chave `True` e `False` especificam uma constante de `Boolean`.  
   
 ## <a name="literals-and-type-coercion"></a>Literais e coerção de tipo  
- Em alguns casos, talvez você queira forçar um literal para um determinado tipo de dados; Por exemplo, ao atribuir um valor literal inteiro muito grande para uma variável do tipo `Decimal`. O exemplo a seguir produz um erro:  
+ Em alguns casos, talvez você queira forçar um literal para um tipo de dados específico; por exemplo, ao atribuir um valor literal integral especialmente grande a uma variável do tipo `Decimal`. O exemplo a seguir produz um erro:  
   
-```  
+```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- Os resultados de erro da representação do literal. O `Decimal` tipo de dados pode conter um valor muito grande, mas o literal implicitamente é representado como um `Long`, que não é possível.  
+ O erro resulta da representação do literal. O tipo de dados `Decimal` pode conter um valor tão grande, mas o literal é representado implicitamente como um `Long`, que não pode.  
   
- Você pode forçar um literal para um determinado tipo de dados de duas maneiras: anexando um caractere de tipo a ele, ou colocando-o entre caracteres delimitadores. Um caractere de tipo ou delimitador caracteres deve imediatamente preceder e/ou siga o literal, sem nenhum espaço intermediário ou caracteres de qualquer tipo.  
+ Você pode forçar um literal para um tipo de dados específico de duas maneiras: anexando um caractere de tipo a ele ou colocando-o entre caracteres delimitadores. Um caractere de tipo ou caracteres delimitadores devem anteceder e/ou seguir o literal imediatamente, sem nenhum espaço intermediário ou caracteres de qualquer tipo.  
   
- Para fazer com que o exemplo anterior funcione, você pode acrescentar a `D` digite o caractere literal, o que faz com que ele seja representado como um `Decimal`:  
+ Para que o exemplo anterior funcione, você pode acrescentar o caractere do tipo `D` ao literal, o que faz com que ele seja representado como um `Decimal`:  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- O exemplo a seguir demonstra o uso correto de caracteres de tipo e caracteres de delimitadores:  
+ O exemplo a seguir demonstra o uso correto de caracteres de tipo e caracteres de delimitador:  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- A tabela a seguir mostra os caracteres delimitadores e tipos de caracteres disponíveis no Visual Basic.  
+ A tabela a seguir mostra os caracteres delimitadores e os caracteres de tipo disponíveis no Visual Basic.  
   
 |Tipo de dados|Caractere delimitador|Caractere de tipo acrescentado|  
 |---|---|---|  
@@ -53,9 +53,9 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Byte`|(nenhum)|(nenhum)|  
 |`Char`|"|C|  
 |`Date`|#|(nenhum)|  
-|`Decimal`|(nenhum)|1!d ou @|  
+|`Decimal`|(nenhum)|D ou @|  
 |`Double`|(nenhum)|R ou #|  
-|`Integer`|(nenhum)|I ou %|  
+|`Integer`|(nenhum)|I ou%|  
 |`Long`|(nenhum)|L ou &|  
 |`Short`|(nenhum)|S|  
 |`Single`|(nenhum)|F ou!|  
@@ -64,12 +64,12 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 ## <a name="see-also"></a>Consulte também
 
 - [Constantes Definidas pelo Usuário](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
-- [Como: Declarar uma constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [Como declarar uma constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
 - [Visão Geral de Constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Instrução Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Visão geral de Enumerações](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [Como: Declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Como declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Enumerações e Qualificação de Nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
 - [Constantes e Enumerações](../../../../visual-basic/language-reference/constants-and-enumerations.md)

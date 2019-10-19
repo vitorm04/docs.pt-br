@@ -1,5 +1,5 @@
 ---
-title: Herda de instrução (Visual Basic)
+title: Instrução Inherits (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Inherits
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: c39272d53fea136c83a5a09444b65a594fe3b7a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e92e12908c89bb7a0bf385a2122b0c8f1eb8a6f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625517"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581750"
 ---
 # <a name="inherits-statement"></a>Instrução Inherits
-Faz com que a classe ou interface atual herde atributos, variáveis, propriedades, procedimentos e eventos de outra classe ou conjunto de interfaces.  
+Faz com que a classe ou a interface atual herde os atributos, variáveis, propriedades, procedimentos e eventos de outra classe ou conjunto de interfaces.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 Inherits basetypenames  
 ```  
   
@@ -28,31 +28,31 @@ Inherits basetypenames
   
 |Termo|Definição|  
 |---|---|  
-|`basetypenames`|Necessário. O nome da classe da qual essa classe deriva.<br /><br /> - ou -<br /><br /> Os nomes das interfaces da qual deriva dessa interface. Use vírgulas para separar vários nomes.|  
+|`basetypenames`|Necessário. O nome da classe da qual essa classe deriva.<br /><br /> \- ou -<br /><br /> Os nomes das interfaces das quais essa interface deriva. Use vírgulas para separar vários nomes.|  
   
 ## <a name="remarks"></a>Comentários  
- Se usado, o `Inherits` instrução deve ser a primeira linha não está em branco, sem comentário em uma definição de classe ou interface. Você deve seguir imediatamente o `Class` ou `Interface` instrução.  
+ Se usado, a instrução `Inherits` deve ser a primeira linha não em branco, que não seja de comentário em uma definição de classe ou de interface. Ele deve seguir imediatamente a instrução `Class` ou `Interface`.  
   
- Você pode usar `Inherits` somente em uma classe ou interface. Isso significa que o contexto da declaração para uma herança não pode ser um arquivo de origem, namespace, estrutura, módulo, procedimento ou bloco.  
+ Você pode usar `Inherits` apenas em uma classe ou interface. Isso significa que o contexto de declaração para uma herança não pode ser um arquivo de origem, namespace, estrutura, módulo, procedimento ou bloco.  
   
 ## <a name="rules"></a>Regras  
   
-- **Herança de classe.** Se uma classe usa o `Inherits` instrução, você pode especificar apenas uma classe base.  
+- **Herança de classe.** Se uma classe usar a instrução `Inherits`, você poderá especificar apenas uma classe base.  
   
-     Uma classe não pode herdar de uma classe aninhada dentro dele.  
+     Uma classe não pode herdar de uma classe aninhada dentro dela.  
   
-- **Herança de interface.** Se uma interface usa o `Inherits` instrução, você pode especificar uma ou mais interfaces base. Você pode herdar de duas interfaces, mesmo se cada um deles definir um membro com o mesmo nome. Se você fizer isso, o código de implementação deve usar a qualificação de nome para especificar qual membro que está implementando.  
+- **Herança de interface.** Se uma interface usar a instrução `Inherits`, você poderá especificar uma ou mais interfaces base. Você pode herdar de duas interfaces, mesmo se cada uma delas definir um membro com o mesmo nome. Se você fizer isso, o código de implementação deverá usar a qualificação de nome para especificar qual membro está sendo implementado.  
   
-     Uma interface não pode herdar de outra interface com um nível de acesso mais restritivo. Por exemplo, uma `Public` interface não pode herdar de um `Friend` interface.  
+     Uma interface não pode herdar de outra interface com um nível de acesso mais restritivo. Por exemplo, uma interface `Public` não pode herdar de uma interface `Friend`.  
   
-     Uma interface não pode herdar de uma interface aninhada dentro dele.  
+     Uma interface não pode herdar de uma interface aninhada dentro dela.  
   
- Um exemplo de herança de classe no .NET Framework é o <xref:System.ArgumentException> classe, que herda o <xref:System.SystemException> classe. Isso fornece ao <xref:System.ArgumentException> todas as propriedades pré-definidas e procedimentos exigidos por exceções de sistema, como o <xref:System.Exception.Message%2A> propriedade e o <xref:System.Exception.ToString%2A> método.  
+ Um exemplo de herança de classe no .NET Framework é a classe <xref:System.ArgumentException>, que é herdada da classe <xref:System.SystemException>. Isso fornece a <xref:System.ArgumentException> todas as propriedades predefinidas e os procedimentos exigidos pelas exceções do sistema, como a propriedade <xref:System.Exception.Message%2A> e o método <xref:System.Exception.ToString%2A>.  
   
- Um exemplo de herança de interface no .NET Framework é o <xref:System.Collections.ICollection> interface, que herda o <xref:System.Collections.IEnumerable> interface. Isso faz com que <xref:System.Collections.ICollection> para herdar a definição do enumerador necessário para percorrer uma coleção.  
+ Um exemplo de herança de interface no .NET Framework é a interface <xref:System.Collections.ICollection>, que é herdada da interface <xref:System.Collections.IEnumerable>. Isso faz com que <xref:System.Collections.ICollection> herdem a definição do enumerador necessário para atravessar uma coleção.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Inherits` instrução para mostrar como uma classe chamada `thisClass` pode herdar todos os membros de uma classe base chamada `anotherClass`.  
+ O exemplo a seguir usa a instrução `Inherits` para mostrar como uma classe denominada `thisClass` pode herdar todos os membros de uma classe base denominada `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
@@ -61,7 +61,7 @@ Inherits basetypenames
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- Interface chamada `thisInterface` agora inclui todas as definições na <xref:System.IComparable>, <xref:System.IDisposable>, e <xref:System.IFormattable> interfaces membros herdados fornecem respectivamente para comparação de tipo específico de dois objetos, o liberando alocados a recursos e expressar o valor de um objeto como um `String`. Uma classe que implementa `thisInterface` deve implementar todos os membros de interface base.  
+ A interface chamada `thisInterface` agora inclui todas as definições nas interfaces <xref:System.IComparable>, <xref:System.IDisposable> e <xref:System.IFormattable>. os membros herdados fornecem, respectivamente, a comparação específica de tipo de dois objetos, liberando recursos alocados e expressando o valor de um objeto como um `String`. Uma classe que implementa `thisInterface` deve implementar todos os membros de cada interface base.  
   
 ## <a name="see-also"></a>Consulte também
 

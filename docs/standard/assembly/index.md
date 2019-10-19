@@ -14,18 +14,18 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970009"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583018"
 ---
 # <a name="assemblies-in-net"></a>Assemblies no .NET
 
 Os assemblies formam as unidades fundamentais de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para o. Aplicativos baseados em rede. Um assembly é uma coleção de tipos e recursos compilados para funcionar juntos e formar uma unidade lógica de funcionalidade. Os assemblies assumem a forma de arquivos executáveis ( *. exe*) ou Dynamic Link Library ( *. dll*) e são os blocos de construção de aplicativos .net. Eles oferecem ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Você pode pensar em um assembly como uma coleção de tipos e recursos que formam uma unidade lógica de funcionalidade e são criados para trabalharem juntos.
 
-No .NET Core e .NET Framework, você pode criar um assembly a partir de um ou mais arquivos de código-fonte. No .NET Framework, os assemblies podem conter um ou mais módulos. Isso permite que projetos maiores sejam planejados para que vários desenvolvedores possam trabalhar em módulos ou arquivos de código-fonte separados, que são combinados para criar um único assembly. Para obter mais informações sobre os módulos, confira o tópico [Como: Compilar um assembly](../../framework/app-domains/build-multifile-assembly.md)de multiarquivos.
+No .NET Core e .NET Framework, você pode criar um assembly a partir de um ou mais arquivos de código-fonte. No .NET Framework, os assemblies podem conter um ou mais módulos. Isso permite que projetos maiores sejam planejados para que vários desenvolvedores possam trabalhar em módulos ou arquivos de código-fonte separados, que são combinados para criar um único assembly. Para obter mais informações sobre módulos, consulte [como compilar um assembly de multiarquivos](../../framework/app-domains/build-multifile-assembly.md).
 
 Os assemblies têm as seguintes propriedades:
 
@@ -37,7 +37,7 @@ Os assemblies têm as seguintes propriedades:
 
 - Você pode obter informações programaticamente sobre um assembly usando reflexão. Para obter mais informações, confira [Reflexão (C#)](../../csharp/programming-guide/concepts/reflection.md) ou [Reflexão (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Você pode carregar um assembly apenas para inspecioná-lo usando a <xref:System.Reflection.MetadataLoadContext> classe no .NET Core e o <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> método <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> or no .NET Core e .NET Framework.
+- Você pode carregar um assembly apenas para inspecioná-lo usando a classe <xref:System.Reflection.MetadataLoadContext> no .NET Core e o método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> no .NET Core e .NET Framework.
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>Assemblies no Common Language Runtime
 
@@ -45,7 +45,7 @@ Os assemblies fornecem o Common Language Runtime com as informações de que ele
 
 Um assembly define as seguintes informações:  
   
-- Código que o Common Language Runtime é executado. Observe que cada assembly pode ter apenas um ponto de entrada `DllMain`: `WinMain`, ou `Main`.
+- Código que o Common Language Runtime é executado. Observe que cada assembly pode ter apenas um ponto de entrada: `DllMain`, `WinMain` ou `Main`.
   
 - Limite de segurança. Um assembly é a unidade na qual as permissões são solicitadas e concedidas. Para obter mais informações sobre limites de segurança em assemblies, consulte [considerações de segurança do assembly](security-considerations.md).  
   
@@ -87,7 +87,7 @@ Como os assemblies contêm informações sobre conteúdo, controle de versão e 
 Para usar um assembly em um aplicativo, você deve adicionar uma referência a ele. Depois que um assembly é referenciado, todos os tipos, propriedades, métodos e outros membros acessíveis de seus namespaces estão disponíveis para seu aplicativo como se o código fosse parte de seu arquivo de origem.
 
 > [!NOTE]
-> A maioria dos assemblies da Biblioteca de Classes .NET é referenciada automaticamente. Se um assembly do sistema não for referenciado automaticamente, para o .NET Core, você poderá adicionar uma referência ao pacote NuGet que contém o assembly. Use o Gerenciador de pacotes NuGet no Visual Studio ou adicione um [ \<elemento PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element) para o assembly para o projeto *. csproj* ou *. vbproj* . No .NET Framework, você pode adicionar uma referência ao assembly usando a caixa de diálogo **Adicionar referência** no Visual Studio ou usando a `-reference` opção de linha de comando para os [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiladores ou [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> A maioria dos assemblies da Biblioteca de Classes .NET é referenciada automaticamente. Se um assembly do sistema não for referenciado automaticamente, para o .NET Core, você poderá adicionar uma referência ao pacote NuGet que contém o assembly. Use o Gerenciador de pacotes NuGet no Visual Studio ou adicione um [\<PackageReference elemento >](../../core/tools/dependencies.md#the-new-packagereference-element) para o assembly para o projeto *. csproj* ou *. vbproj* . No .NET Framework, você pode adicionar uma referência ao assembly usando a caixa de diálogo **Adicionar referência** no Visual Studio ou usando a opção de linha de comando `-reference` para os [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiladores do ou do [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
 No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. Para obter mais informações, consulte [alias externo](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -115,6 +115,7 @@ No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. 
 - [Formato de arquivo do assembly .NET](file-format.md)
 - [Assemblies no .NET](index.md)
 - [Assemblies Friend](friend.md)
-- [Como: Carregar e descarregar assemblies](load-unload.md)
-- [Como: Usar e depurar a descargabilidade do assembly no .NET Core](unloadability.md)
-- [Como: Determinar se um arquivo é um assembly](identify.md)
+- [Assemblies de referência](reference-assemblies.md)
+- [Como carregar e descarregar assemblies](load-unload.md)
+- [Como usar e depurar a descargabilidade do assembly no .NET Core](unloadability.md)
+- [Como determinar se um arquivo é um assembly](identify.md)

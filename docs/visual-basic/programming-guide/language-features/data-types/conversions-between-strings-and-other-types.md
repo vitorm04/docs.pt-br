@@ -9,43 +9,43 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907316"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582932"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversões entre cadeias de caracteres e outros tipos (Visual Basic)
-Você pode converter um numérico `Boolean`, ou valor de data/hora um `String`. Você também pode converter na direção inversa — de um valor de cadeia de caracteres para numérico, `Boolean`, ou `Date` — desde que o conteúdo da cadeia de caracteres pode ser interpretado como um valor válido do tipo de dados de destino. Em caso negativo, ocorrerá um erro de tempo de execução.  
+Você pode converter um valor numérico, `Boolean` ou de data/hora em um `String`. Você também pode converter na direção inversa — de um valor de cadeia de caracteres para Numeric, `Boolean` ou `Date` – desde que o conteúdo da cadeia de caracteres possa ser interpretado como um valor válido do tipo de dados de destino. Se não puderem, ocorrerá um erro em tempo de execução.  
   
- As conversões para todas as essas atribuições, em qualquer direção, são conversões de estreitamento. Você deve usar as palavras-chave de conversão de tipo (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, `CUShort`, e `CType`). O <xref:Microsoft.VisualBasic.Strings.Format%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A> funções oferecem controle adicional sobre as conversões entre cadeias de caracteres e números.  
+ As conversões para todas essas atribuições, em qualquer direção, são conversões redutoras. Você deve usar as palavras-chave de conversão de tipo (`CBool`, `CByte`, `CDate`, `CDbl`, `CDec`, `CInt`, `CLng`, `CSByte`, `CShort`, `CSng`, 0, 1, 2 , 3 e 4). As funções <xref:Microsoft.VisualBasic.Strings.Format%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A> fornecem controle adicional sobre conversões entre cadeias de caracteres e números.  
   
- Se você tiver definido uma classe ou estrutura, você pode definir operadores de conversão de tipo entre `String` e o tipo de sua classe ou estrutura. Para obter mais informações, confira [Como: Definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Se você tiver definido uma classe ou estrutura, poderá definir operadores de conversão de tipo entre `String` e o tipo de sua classe ou estrutura. Para obter mais informações, consulte [como: definir um operador de conversão](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="conversion-of-numbers-to-strings"></a>Conversão de números em cadeias de caracteres  
- Você pode usar o `Format` função para converter um número em uma cadeia de caracteres formatada, que pode incluir não apenas os dígitos apropriados, mas também a formatação de símbolos, como um símbolo de moeda (como `$`), milhares separadores ou *agrupamento de dígitos símbolos* (como `,`) e um separador decimal (como `.`). `Format` usa automaticamente os símbolos apropriados de acordo com o **opções regionais** as configurações especificadas no Windows **painel de controle**.  
+ Você pode usar a função `Format` para converter um número em uma cadeia de caracteres formatada, que pode incluir não apenas os dígitos apropriados, mas também os símbolos de formatação, como um símbolo de moeda (como `$`), milhares de separadores ou *símbolos de agrupamento de dígitos* (como @no __t_3) e um separador decimal (como `.`). `Format` usa automaticamente os símbolos apropriados de acordo com as configurações de **Opções regionais** especificadas no **painel de controle**do Windows.  
   
- Observe que a concatenação (`&`) operador pode converter um número em uma cadeia de caracteres implicitamente, como mostra o exemplo a seguir.  
+ Observe que o operador concatenação (`&`) pode converter um número em uma cadeia de caracteres implicitamente, como mostra o exemplo a seguir.  
   
-```  
+```vb  
 ' The following statement converts count to a String value.  
 Str = "The total count is " & count  
 ```  
   
 ## <a name="conversion-of-strings-to-numbers"></a>Conversão de cadeias de caracteres em números  
- Você pode usar o `Val` função para converter explicitamente os dígitos em uma cadeia de caracteres em um número. `Val` lê a cadeia de caracteres até encontrar um caractere que não seja um dígito, espaço, tabulação, alimentação de linha ou período. As sequências de "& S" e "& H" alterar a base do sistema de número e terminar o processo de verificação. Até que ele interrompe a leitura, `Val` converte todos os caracteres apropriados para um valor numérico. Por exemplo, a instrução a seguir retorna o valor `141.825`.  
+ Você pode usar a função `Val` para converter explicitamente os dígitos em uma cadeia de caracteres em um número. `Val` lê a cadeia de caracteres até encontrar um caractere diferente de dígito, espaço, tabulação, alimentação de linha ou ponto. As sequências "& O" e "& H" alteram a base do sistema numérico e encerram a verificação. Até que a leitura seja interrompida, `Val` converte todos os caracteres apropriados em um valor numérico. Por exemplo, a instrução a seguir retorna o valor `141.825`.  
   
  `Val("   14   1.825 miles")`  
   
- Quando o Visual Basic converte uma cadeia de caracteres para um valor numérico, ele usa o **opções regionais** as configurações especificadas no Windows **painel de controle** interpretar milhares separador, o separador decimal, e símbolo de moeda. Isso significa que uma conversão pode ter êxito em uma configuração, mas não em outro. Por exemplo, `"$14.20"` é aceitável na localidade inglês (Estados Unidos), mas não em qualquer localidade francês.  
+ Quando Visual Basic converte uma cadeia de caracteres em um valor numérico, ele usa as configurações de **Opções regionais** especificadas no **painel de controle** do Windows para interpretar o separador de milhar, o separador decimal e o símbolo de moeda. Isso significa que uma conversão pode ter sucesso em uma configuração, mas não em outra. Por exemplo, `"$14.20"` é aceitável na localidade inglês (Estados Unidos), mas não em qualquer localidade em francês.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Como: Converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Como converter um objeto em outro tipo em Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Conversões de Matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
 - [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

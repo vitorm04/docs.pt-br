@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784144"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583501"
 ---
 # <a name="of-clause-visual-basic"></a>Cláusula Of (Visual Basic)
-Apresenta uma `Of` cláusula, que identifica uma *parâmetro de tipo* em uma *genérico* classe, estrutura, interface, delegado ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Apresenta uma cláusula `Of`, que identifica um *parâmetro de tipo* em uma classe *genérica* , estrutura, interface, delegado ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos em Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Usando a palavra-chave  
- O seguinte exemplo de código usa o `Of` palavra-chave para definir o contorno de uma classe que usa dois parâmetros de tipo. Ele *restringe* o `keyType` parâmetro com o <xref:System.IComparable> interface, o que significa que o código de consumo deve fornecer um argumento de tipo que implementa <xref:System.IComparable>. Isso é necessário para que o `add` procedimento pode chamar o <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> método. Para obter mais informações sobre restrições, consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Usando a palavra-chave of  
+ O exemplo de código a seguir usa a palavra-chave `Of` para definir o contorno de uma classe que usa dois parâmetros de tipo. Ele *restringe* o parâmetro `keyType` pela interface <xref:System.IComparable>, o que significa que o código de consumo deve fornecer um argumento de tipo que implemente <xref:System.IComparable>. Isso é necessário para que o procedimento de `add` possa chamar o método <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>. Para obter mais informações sobre restrições, consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,15 +42,15 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Se você concluir a definição de classe anterior, você pode construir uma variedade de `dictionary` classes dele. Os tipos que você fornece ao `entryType` e `keyType` determinar que tipo de entrada a classe contém e o tipo de chave associa a cada entrada. Por causa da restrição, você deve fornecer a `keyType` um tipo que implementa <xref:System.IComparable>.  
+ Se você concluir a definição de classe anterior, poderá construir uma variedade de classes de `dictionary` a partir dela. Os tipos fornecidos para `entryType` e `keyType` determinam que tipo de entrada a classe contém e que tipo de chave ela associa a cada entrada. Devido à restrição, você deve fornecer a `keyType` um tipo que implementa <xref:System.IComparable>.  
   
- O exemplo de código a seguir cria um objeto que retém `String` entradas e associa um `Integer` chave com cada um deles. `Integer` implementa <xref:System.IComparable> e, portanto, satisfaz a restrição em `keyType`.  
+ O exemplo de código a seguir cria um objeto que contém `String` entradas e associa uma chave de `Integer` a cada uma. `Integer` implementa <xref:System.IComparable> e, portanto, satisfaz a restrição em `keyType`.  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- O `Of` palavra-chave pode ser usada nesses contextos:  
+ A palavra-chave `Of` pode ser usada nesses contextos:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   

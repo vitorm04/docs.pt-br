@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 12447e56f89914121dcc9eda2bee0700343baf12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ae0cbd3a518bf863a3c57f50934837a486d2901
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646991"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583130"
 ---
 # <a name="uinteger-data-type"></a>tipo de dados UInteger
 
-Armazena inteiros sem sinal de 32 bits (4 bytes) variando de 0 a 4.294.967.295.  
-  
+Mantém inteiros de 32 bits (4 bytes) não assinados, variando no valor de 0 a 4.294.967.295.
+
 ## <a name="remarks"></a>Comentários
 
- O `UInteger` tipo de dados fornece o maior valor sem sinal à largura de dados mais eficiente.  
-  
- O valor padrão de `UInteger` é 0.  
-  
+O tipo de dados `UInteger` fornece o maior valor não assinado na largura de dados mais eficiente.
+
+O valor padrão de `UInteger` é 0.
+
 ## <a name="literal-assignments"></a>Atribuições de literal
 
-Você pode declarar e inicializar um `UInteger` variável atribuindo a ela um literal decimal, um literal hexadecimal, um literal octal, ou (começando com o Visual Basic 2017) um literal binário. Se o literal inteiro estiver fora do intervalo de `UInteger` (ou seja, se for menor que <xref:System.UInt32.MinValue?displayProperty=nameWithType> ou maior que <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilação.
+Você pode declarar e inicializar uma variável `UInteger` atribuindo-lhe um literal decimal, um literal hexadecimal, um literal octal ou (começando com Visual Basic 2017) um literal binário. Se o literal inteiro estiver fora do intervalo de `UInteger` (ou seja, se for menor que <xref:System.UInt32.MinValue?displayProperty=nameWithType> ou maior que <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilação.
 
 No exemplo a seguir, inteiros iguais a 3.000.000.000 representados como literais decimais, hexadecimais e binários são atribuídos a valores `UInteger`.
-  
-[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]  
 
-> [!NOTE] 
-> Use o prefixo `&h` ou `&H` a fim de denotar um literal hexadecimal, o prefixo `&b` ou `&B` para indicar um literal binário e o prefixo `&o` ou `&O` para denotar um literal octal. Literais decimais não têm nenhum prefixo.
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
-Começando com o Visual Basic 2017, você pode também usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como o exemplo a seguir mostra.
+> [!NOTE]
+> Você usa o prefixo `&h` ou `&H` para indicar um literal hexadecimal, o prefixo `&b` ou `&B` para denotar um literal binário e o prefixo `&o` ou `&O` para indicar um literal octal. Literais decimais não têm nenhum prefixo.
 
-[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
+A partir do Visual Basic 2017, você também pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como mostra o exemplo a seguir.
 
-Começando com o Visual Basic 15.5, você pode também usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos octais, hexadecimais ou binários. Por exemplo:
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
+
+A partir do Visual Basic 15,5, você também pode usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos hexadecimal, binário ou octal. Por exemplo:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Literais numéricos também podem incluir o `UI` ou `ui` [caractere de tipo](../../programming-guide/language-features/data-types/type-characters.md) para denotar o `UInteger` tipo de dados, como mostra o exemplo a seguir.
+Os literais numéricos também podem incluir o `UI` ou `ui` [caractere de tipo](../../programming-guide/language-features/data-types/type-characters.md) para denotar o tipo de dados `UInteger`, como mostra o exemplo a seguir.
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,25 +64,25 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>Dicas de programação
 
- O `UInteger` e `Integer` tipos de dados fornecem um desempenho ideal em um processador de 32 bits, porque os tipos de inteiro menores (`UShort`, `Short`, `Byte`, e `SByte`), mesmo que eles usam o bits menos, levará mais tempo para carregar, armazenar e buscar.  
-  
-- **Números negativos.** Porque `UInteger` é um tipo sem sinal, ele não pode representar um número negativo. Se você usar o operador unário menos (`-`) ou uma expressão que é avaliada para o tipo `UInteger`, Visual Basic converte a expressão para `Long` primeiro.  
-  
-- **Conformidade com CLS.** O `UInteger` tipo de dados não é parte do [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), então um código compatível com CLS não pode consumir um componente que usa-o.
-  
-- **Considerações de interoperabilidade.** Se você estiver fazendo interface com componentes não escritos para o .NET Framework, como objetos Automation ou COM, tenha em mente que tipos como `uint` pode ter uma largura de dados diferente (16 bits) em outros ambientes. Se você estiver passando um argumento de 16 bits para tal componente, declare-o como `UShort` em vez de `UInteger` no seu código gerenciado do Visual Basic.  
-  
-- **Ampliação.** O `UInteger` tipo de dados amplia a `Long`, `ULong`, `Decimal`, `Single`, e `Double`. Isso significa que você pode converter `UInteger` para qualquer um desses tipos sem encontrar uma <xref:System.OverflowException?displayProperty=nameWithType> erro.  
-  
-- **Caracteres de tipo.** Acrescentar os caracteres de tipo literal `UI` a um literal o força ao `UInteger` tipo de dados. `UInteger` não tem nenhum caractere de tipo de identificador.  
-  
-- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.UInt32?displayProperty=nameWithType>.  
-  
+Os tipos de dados `UInteger` e `Integer` fornecem um desempenho ideal em um processador de 32 bits, porque os tipos de inteiro menores (`UShort`, `Short`, `Byte` e `SByte`), embora usem menos bits, levam mais tempo para carregar , armazenar e buscar.
+
+- **Números negativos.** Como `UInteger` é um tipo não assinado, ele não pode representar um número negativo. Se você usar o operador menos unário (`-`) em uma expressão avaliada como tipo `UInteger`, Visual Basic converterá a expressão para `Long` primeiro.
+
+- **Conformidade com CLS.** O tipo de dados `UInteger` não faz parte do [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), portanto o código em conformidade com CLS não pode consumir um componente que o utiliza.
+
+- **Considerações sobre interoperabilidade.** Se você estiver fazendo a interface com componentes não escritos para o .NET Framework, por exemplo, automação ou objetos COM, tenha em mente que tipos como `uint` podem ter uma largura de dados diferente (16 bits) em outros ambientes. Se você estiver passando um argumento de 16 bits para esse componente, declare-o como `UShort` em vez de `UInteger` em seu código de Visual Basic gerenciado.
+
+- **Ampliação.** O tipo de dados `UInteger` amplia a `Long`, `ULong`, `Decimal`, `Single` e `Double`. Isso significa que você pode converter `UInteger` em qualquer um desses tipos sem encontrar um erro de <xref:System.OverflowException?displayProperty=nameWithType>.
+
+- **Digite os caracteres.** Acrescentar os caracteres do tipo literal `UI` a um literal o força ao tipo de dados `UInteger`. `UInteger` não tem um caractere de tipo de identificador.
+
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.UInt32?displayProperty=nameWithType>.
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.UInt32>
 - [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
 - [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Como: chamar uma função do Windows que use tipos não assinados](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Como chamar uma função do Windows que use tipos não assinados](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

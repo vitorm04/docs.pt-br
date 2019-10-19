@@ -2,12 +2,12 @@
 title: 'Como: usar anotações para transformar LINQ to XML árvores em um estilo XSLT (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b950f823b65299689f4ed829138a6689f6789c18
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395956"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581984"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Como: usar anotações para transformar LINQ to XML árvores em um estilo XSLT (Visual Basic)
 
@@ -85,7 +85,7 @@ End Module
 
 ## <a name="a-more-complicated-transform"></a>Uma transformação mais complicada
 
- O exemplo a seguir consulta a árvore e calcula a média e a soma dos elementos de `Data` , e adicioná-los como os novos elementos na árvore.
+O exemplo a seguir consulta a árvore e calcula a média e a soma dos elementos de `Data` , e adicioná-los como os novos elementos na árvore.
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -133,10 +133,10 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newData)
     End Sub
-End Module 
+End Module
 ```
 
- Este exemplo gera a seguinte saída:
+Este exemplo gera a seguinte saída:
 
 ```console
 Before Transform
@@ -165,7 +165,7 @@ Uma função pequena, `XForm`, cria uma nova árvore transformada de original, a
 O código pseudo- para a função é bastante simples:
 
 > A função usa um XElement como um argumento e retorna um XElement.
-> 
+>
 > Se um elemento tiver uma anotação XElement, retorne um novo XElement:
 >
 > - O nome do novo XElement é o nome do elemento de anotação.
@@ -338,7 +338,7 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newRoot)
     End Sub
-End Module 
+End Module
 ```
 
 Este exemplo gera a seguinte saída:

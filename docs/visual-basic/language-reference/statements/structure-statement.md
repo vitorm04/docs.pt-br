@@ -12,19 +12,19 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: c6871a9bae84d0eff79876d7d9668ec5e91d3ebc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cec04880dd7cadc627ab090a45468dbad83c8d84
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615091"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583207"
 ---
 # <a name="structure-statement"></a>Instrução Structure
-Declara o nome de uma estrutura e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a estrutura.  
+Declara o nome de uma estrutura e apresenta a definição das variáveis, propriedades, eventos e procedimentos que a estrutura compreende.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
 Structure name [ ( Of typelist ) ]  
     [ Implements interfacenames ]  
@@ -37,70 +37,70 @@ End Structure
   
 |Termo|Definição|  
 |---|---|  
-|`attributelist`|Opcional. Ver [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional. Pode ser uma das seguintes opções:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Friend protegido](../../language-reference/modifiers/protected-friend.md)<br/>- [Privado protegido](../../language-reference/modifiers/private-protected.md) <br /><br /> Ver [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcional. Ver [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|Opcional. Indica uma definição parcial da estrutura. Ver [parcial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Necessário. Nome dessa estrutura. Ver [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`attributelist`|Opcional. Consulte a [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Opcional. Pode ser um dos seguintes:<br /><br /> [público](../../../visual-basic/language-reference/modifiers/public.md) -   <br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [amigo](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />- [amigo protegido](../../language-reference/modifiers/protected-friend.md)<br/>- [privada protegida](../../language-reference/modifiers/private-protected.md) <br /><br /> Consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcional. Consulte [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`Partial`|Opcional. Indica uma definição parcial da estrutura. Consulte [parcial](../../../visual-basic/language-reference/modifiers/partial.md).|  
+|`name`|Necessário. Nome desta estrutura. Consulte [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que esta é uma estrutura genérica.|  
-|`typelist`|Necessário se você usar o [de](../../../visual-basic/language-reference/statements/of-clause.md) palavra-chave. Lista de parâmetros de tipo para essa estrutura. Ver [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|Opcional. Indica que essa estrutura implementa os membros de uma ou mais interfaces. Ver [implementa a instrução](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Necessário se você usar o `Implements` instrução. Os nomes das interfaces que essa estrutura implementa.|  
-|`datamemberdeclarations`|Necessário. Zero ou mais `Const`, `Dim`, `Enum`, ou `Event` instruções declarando *membros de dados* da estrutura.|  
-|`methodmemberdeclarations`|Opcional. Zero ou mais declarações de `Function`, `Operator`, `Property`, ou `Sub` procedimentos, que servem como *membros método* da estrutura.|  
-|`End Structure`|Necessário. Encerra o `Structure` definição.|  
+|`typelist`|Necessário se você usar a palavra-chave [of](../../../visual-basic/language-reference/statements/of-clause.md) . Lista de parâmetros de tipo para esta estrutura. Consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Implements`|Opcional. Indica que essa estrutura implementa os membros de uma ou mais interfaces. Consulte a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|Necessário se você usar a instrução `Implements`. Os nomes das interfaces que essa estrutura implementa.|  
+|`datamemberdeclarations`|Necessário. Zero ou mais instruções `Const`, `Dim`, `Enum` ou `Event` declarando *membros de dados* da estrutura.|  
+|`methodmemberdeclarations`|Opcional. Zero ou mais declarações de `Function`, `Operator`, `Property` ou procedimentos `Sub`, que servem como *membros de método* da estrutura.|  
+|`End Structure`|Necessário. Encerra a definição de `Structure`.|  
   
 ## <a name="remarks"></a>Comentários  
- O `Structure` instrução define um tipo de valor composto que você pode personalizar. Um *estrutura* é uma generalização do que o tipo definido pelo usuário (UDT) de versões anteriores do Visual Basic. Para obter mais informações, consulte [estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
+ A instrução `Structure` define um tipo de valor composto que você pode personalizar. Uma *estrutura* é uma generalização do tipo definido pelo usuário (UDT) de versões anteriores do Visual Basic. Para obter mais informações, consulte [estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
   
- Estruturas oferecem suporte a muitos dos mesmos recursos como classes. Por exemplo, estruturas podem ter propriedades e procedimentos, podem implementar interfaces, e eles podem ter construtores parametrizados. No entanto, há diferenças significativas entre estruturas e classes em áreas como herança, declarações e uso. Além disso, as classes são tipos de referência e estruturas são tipos de valor. Para obter mais informações, consulte [estruturas e Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ As estruturas dão suporte a muitos dos mesmos recursos que as classes. Por exemplo, estruturas podem ter propriedades e procedimentos, elas podem implementar interfaces e podem ter construtores com parâmetros. No entanto, há diferenças significativas entre estruturas e classes em áreas como herança, declarações e uso. Além disso, as classes são tipos de referência e estruturas são tipos de valor. Para obter mais informações, consulte [estruturas e classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Você pode usar `Structure` apenas no nível de namespace ou módulo. Isso significa que o *contexto de declaração* para uma estrutura deve ser um arquivo de origem, namespace, classe, estrutura, módulo ou interface e não pode ser um procedimento ou bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Você pode usar `Structure` apenas em nível de namespace ou de módulo. Isso significa que o *contexto de declaração* para uma estrutura deve ser um arquivo de origem, namespace, classe, estrutura, módulo ou interface e não pode ser um procedimento ou bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Padrão para estruturas [amigo](../../../visual-basic/language-reference/modifiers/friend.md) acesso. Você pode ajustar os níveis de acesso com os modificadores de acesso. Para obter mais informações, consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ As estruturas assumem como padrão o acesso [Friend](../../../visual-basic/language-reference/modifiers/friend.md) . Você pode ajustar seus níveis de acesso com os modificadores de acesso. Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Regras  
   
-- **Aninhamento.** Você pode definir uma estrutura dentro de outra. A estrutura externa é chamada a *que contém a estrutura*, e a estrutura interna é chamada uma *aninhados estrutura*. No entanto, você não pode acessar membros de uma estrutura aninhada através da estrutura contida. Em vez disso, você deve declarar uma variável do tipo de dados da estrutura aninhada.  
+- **Aninhamento.** Você pode definir uma estrutura dentro de outra. A estrutura externa é chamada de *estrutura de contenção*e a estrutura interna é chamada de *estrutura aninhada*. No entanto, você não pode acessar os membros de uma estrutura aninhada por meio da estrutura que a contém. Em vez disso, você deve declarar uma variável do tipo de dados da estrutura aninhada.  
   
-- **Declaração de membro.** Você deve declarar cada membro de uma estrutura. Um membro da estrutura não pode ser [Protected](../../../visual-basic/language-reference/modifiers/protected.md) ou `Protected Friend` porque nada pode herdar de uma estrutura. A estrutura em si, no entanto, pode ser `Protected` ou `Protected Friend`.  
+- **Declaração de membro.** Você deve declarar todos os membros de uma estrutura. Um membro de estrutura não pode ser [protegido](../../../visual-basic/language-reference/modifiers/protected.md) ou `Protected Friend` porque nada pode herdar de uma estrutura. No entanto, a própria estrutura pode ser `Protected` ou `Protected Friend`.  
   
-     Você pode declarar zero ou mais variáveis não compartilhadas ou compartilhadas, ou eventos em uma estrutura. Você não pode ter apenas constantes, propriedades e procedimentos, mesmo se algumas delas sejam compartilhadas.  
+     Você pode declarar zero ou mais variáveis não compartilhadas ou eventos não compartilhados e não-personalizados em uma estrutura. Você não pode ter apenas constantes, propriedades e procedimentos, mesmo que algumas delas não sejam compartilhadas.  
   
-- **Inicialização.** Você não pode inicializar o valor de qualquer membro de dados não compartilhado de uma estrutura como parte de sua declaração. Você deve inicializar tal membro de dados por meio de um construtor parametrizado na estrutura, ou atribuir um valor ao membro depois de ter criado uma instância da estrutura.  
+- **Initialization.** Você não pode inicializar o valor de nenhum membro de dados não compartilhado de uma estrutura como parte de sua declaração. Você deve inicializar um membro de dados desse tipo por meio de um construtor com parâmetros na estrutura ou atribuir um valor ao membro depois de ter criado uma instância da estrutura.  
   
-- **Herança.** Uma estrutura não pode herdar de qualquer tipo diferente de <xref:System.ValueType>, de que todas as estruturas herdam. Em particular, uma estrutura não pode herdar de outra.  
+- **Herança.** Uma estrutura não pode herdar de qualquer tipo que não seja <xref:System.ValueType>, da qual todas as estruturas herdam. Em particular, uma estrutura não pode herdar de outra.  
   
-     Não é possível usar o [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md) em uma definição de estrutura, mesmo para especificar <xref:System.ValueType>.  
+     Você não pode usar a [instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md) em uma definição de estrutura, mesmo para especificar <xref:System.ValueType>.  
   
-- **Implementação.** Se a estrutura usa a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deve implementar todos os membros definidos em cada interface que você especificar no `interfacenames`.  
+- **Implementação.** Se a estrutura usar a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md), você deverá implementar todos os membros definidos por cada interface especificada no `interfacenames`.  
   
-- **Propriedade padrão.** Uma estrutura pode especificar no máximo uma propriedade como seu *propriedade padrão*, usando o [padrão](../../../visual-basic/language-reference/modifiers/default.md) modificador. Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Propriedade padrão.** Uma estrutura pode especificar, no máximo, uma propriedade como sua *propriedade padrão*, usando o modificador [padrão](../../../visual-basic/language-reference/modifiers/default.md) . Para obter mais informações, consulte [padrão](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Nível de acesso.** Dentro de uma estrutura, você pode declarar cada membro com seu próprio nível de acesso. Todos os membros de estrutura padrão [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso. Observe que se a própria estrutura tem um nível de acesso mais restrito, isso restringe automaticamente o acesso a seus membros, mesmo se você ajustar seus níveis de acesso com os modificadores de acesso.  
+- **Nível de acesso.** Dentro de uma estrutura, você pode declarar cada membro com seu próprio nível de acesso. Todos os membros da estrutura assumem como padrão o acesso [público](../../../visual-basic/language-reference/modifiers/public.md) . Observe que, se a estrutura em si tiver um nível de acesso mais restrito, isso restringe automaticamente o acesso a seus membros, mesmo se você ajustar seus níveis de acesso com os modificadores de acesso.  
   
-- **Escopo.** Uma estrutura está no escopo em todo o seu namespace, classe, estrutura ou módulo recipiente.  
+- **Com.** Uma estrutura está no escopo em todo o namespace, classe, estrutura ou módulo que o contém.  
   
-     O escopo de cada membro de estrutura é a estrutura inteira.  
+     O escopo de cada membro da estrutura é a estrutura inteira.  
   
-- **Tempo de vida.** Uma estrutura em si tem um tempo de vida. Em vez disso, cada instância dessa estrutura tem um tempo de vida independente de todas as outras instâncias.  
+- **Existência.** Uma estrutura não tem, em si, um tempo de vida. Em vez disso, cada instância dessa estrutura tem um tempo de vida independente de todas as outras instâncias.  
   
-     O tempo de vida de uma instância começa quando ela é criada por um [novo operador](../../../visual-basic/language-reference/operators/new-operator.md) cláusula. Ela termina quando o tempo de vida da variável que contém termina.  
+     O tempo de vida de uma instância começa quando é criado por uma [nova cláusula Operator](../../../visual-basic/language-reference/operators/new-operator.md) . Ele termina quando o tempo de vida da variável que a mantém termina.  
   
-     Você não pode estender o tempo de vida de uma instância da estrutura. Uma aproximação da estrutura estática é fornecida por um módulo. Para obter mais informações, consulte [declaração de módulo](../../../visual-basic/language-reference/statements/module-statement.md).  
+     Não é possível estender o tempo de vida de uma instância de estrutura. Uma aproximação da funcionalidade de estrutura estática é fornecida por um módulo. Para obter mais informações, consulte [instrução de módulo](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-     Membros de estrutura têm tempos de vida, dependendo de como e onde eles são declarados. Para obter mais informações, consulte "Tempo de vida" em [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
+     Os membros da estrutura têm tempos de vida, dependendo de como e onde eles são declarados. Para obter mais informações, consulte "Lifetime" na [declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md).  
   
-- **Qualificação.** Código fora de uma estrutura deve qualificar o nome do membro com o nome da estrutura.  
+- **Aprovação.** O código fora de uma estrutura deve qualificar o nome de um membro com o nome dessa estrutura.  
   
-     Se o código dentro de uma estrutura aninhada fizer uma referência não qualificada a um elemento de programação, Visual Basic procura esse elemento primeiramente na estrutura aninhada, em seguida, em sua estrutura contida e assim por diante-out para o elemento contido mais externo. Para obter mais informações, consulte [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+     Se o código dentro de uma estrutura aninhada fizer uma referência não qualificada a um elemento de programação, Visual Basic pesquisará o elemento primeiro na estrutura aninhada e, em seguida, na estrutura que a contém, e assim por diante, para o elemento contendo mais externo. Para obter mais informações, consulte [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-- **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo de memória total de uma estrutura somando as alocações de armazenamento nominais de seus membros. Além disso, você não pode presumir com segurança que a ordem de armazenamento na memória é a mesma que sua ordem de declaração. Se você precisar controlar o layout de armazenamento de uma estrutura, você pode aplicar a <xref:System.Runtime.InteropServices.StructLayoutAttribute> de atributo para o `Structure` instrução.  
+- **Consumo de memória.** Assim como acontece com todos os tipos de dados compostos, você não pode calcular com segurança o consumo total de memória de uma estrutura adicionando as alocações de armazenamento nominal de seus membros. Além disso, você não pode supor com segurança que a ordem de armazenamento na memória é igual à sua ordem de declaração. Se você precisar controlar o layout de armazenamento de uma estrutura, poderá aplicar o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> à instrução `Structure`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Structure` instrução para definir um conjunto de dados relacionados de um funcionário. Ele mostra o uso de `Public`, `Friend`, e `Private` membros para refletir a sensibilidade dos itens de dados. Ele também mostra os membros de procedimento, propriedade e evento.  
+ O exemplo a seguir usa a instrução `Structure` para definir um conjunto de dados relacionados para um funcionário. Ele mostra o uso de membros `Public`, `Friend` e `Private` para refletir a sensibilidade dos itens de dados. Ele também mostra os membros de evento, propriedade e procedimento.  
   
  [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
