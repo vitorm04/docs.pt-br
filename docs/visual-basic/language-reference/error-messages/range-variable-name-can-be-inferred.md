@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: f448f34dc5909b9128fc700abab5b4f00e911edf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca50ddd86cfbba8db0148ed315645714acabc18d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701009"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582420"
 ---
-# <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="37c3f-102">O nome da variável de intervalo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos</span><span class="sxs-lookup"><span data-stu-id="37c3f-102">Range variable name can be inferred only from a simple or qualified name with no arguments</span></span>
-<span data-ttu-id="37c3f-103">Um elemento de programação que usa um ou mais argumentos é incluído em uma consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="37c3f-103">A programming element that takes one or more arguments is included in a LINQ query.</span></span> <span data-ttu-id="37c3f-104">O compilador não pode inferir uma variável de intervalo desse elemento de programação.</span><span class="sxs-lookup"><span data-stu-id="37c3f-104">The compiler is unable to infer a range variable from that programming element.</span></span>  
-  
- <span data-ttu-id="37c3f-105">**ID do erro:** BC36599</span><span class="sxs-lookup"><span data-stu-id="37c3f-105">**Error ID:** BC36599</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="37c3f-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="37c3f-106">To correct this error</span></span>  
-  
-1. <span data-ttu-id="37c3f-107">Forneça um nome de variável explícito para o elemento de programação, conforme mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="37c3f-107">Supply an explicit variable name for the programming element, as shown in the following code:</span></span>  
-  
-```vb  
-Dim query = From var1 In collection1   
-            Select VariableAlias= SampleFunction(var1), var1  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="37c3f-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37c3f-108">See also</span></span>
+# <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="1ad88-102">O nome da variável de intervalo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos</span><span class="sxs-lookup"><span data-stu-id="1ad88-102">Range variable name can be inferred only from a simple or qualified name with no arguments</span></span>
 
-- [<span data-ttu-id="37c3f-109">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37c3f-109">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="37c3f-110">Cláusula Select</span><span class="sxs-lookup"><span data-stu-id="37c3f-110">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+<span data-ttu-id="1ad88-103">Um elemento de programação que usa um ou mais argumentos é incluído em uma consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="1ad88-103">A programming element that takes one or more arguments is included in a LINQ query.</span></span> <span data-ttu-id="1ad88-104">O compilador não pode inferir uma variável de intervalo desse elemento de programação.</span><span class="sxs-lookup"><span data-stu-id="1ad88-104">The compiler is unable to infer a range variable from that programming element.</span></span>
+
+<span data-ttu-id="1ad88-105">**ID do erro:** BC36599</span><span class="sxs-lookup"><span data-stu-id="1ad88-105">**Error ID:** BC36599</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="1ad88-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1ad88-106">To correct this error</span></span>
+
+<span data-ttu-id="1ad88-107">Forneça um nome de variável explícito para o elemento de programação, conforme mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="1ad88-107">Supply an explicit variable name for the programming element, as shown in the following code:</span></span>
+
+```vb
+Dim query = From var1 In collection1
+            Select VariableAlias= SampleFunction(var1), var1
+```
+
+## <a name="see-also"></a><span data-ttu-id="1ad88-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1ad88-108">See also</span></span>
+
+- [<span data-ttu-id="1ad88-109">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1ad88-109">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="1ad88-110">Cláusula Select</span><span class="sxs-lookup"><span data-stu-id="1ad88-110">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)

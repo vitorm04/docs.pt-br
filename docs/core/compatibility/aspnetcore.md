@@ -1,24 +1,21 @@
 ---
 title: ASP.NET Core alterações significativas-.NET Core
 description: Lista as alterações significativas em ASP.NET Core.
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2b9ef4cd53772e30198ab2b4171f78503088ae83
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522879"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579980"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="5bc2c-103">ASP.NET Core alterações significativas</span><span class="sxs-lookup"><span data-stu-id="5bc2c-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="1dcb6-103">ASP.NET Core alterações significativas</span><span class="sxs-lookup"><span data-stu-id="1dcb6-103">ASP.NET Core breaking changes</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="5bc2c-104">Este artigo está em construção.</span><span class="sxs-lookup"><span data-stu-id="5bc2c-104">This article is under construction.</span></span> <span data-ttu-id="5bc2c-105">Esta não é uma lista completa de ASP.NET Core alterações significativas.</span><span class="sxs-lookup"><span data-stu-id="5bc2c-105">This is not a complete list of ASP.NET Core breaking changes.</span></span> <span data-ttu-id="5bc2c-106">Para obter mais informações sobre ASP.NET Core alterações significativas, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github.</span><span class="sxs-lookup"><span data-stu-id="5bc2c-106">For more information on ASP.NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
+<span data-ttu-id="1dcb6-104">A seguir está uma lista de ASP.NET Core alterações significativas por versão ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="1dcb6-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="1dcb6-105">ASP.NET Core fornece os recursos de desenvolvimento de aplicativo Web usados pelo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1dcb6-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-<span data-ttu-id="5bc2c-107">A seguir está uma lista de ASP.NET Core alterações significativas por versão ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="5bc2c-107">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="5bc2c-108">ASP.NET Core fornece os recursos de desenvolvimento de aplicativo Web usados pelo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5bc2c-108">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
-
-## <a name="aspnet-core-30"></a><span data-ttu-id="5bc2c-109">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="5bc2c-109">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="1dcb6-106">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="1dcb6-106">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
