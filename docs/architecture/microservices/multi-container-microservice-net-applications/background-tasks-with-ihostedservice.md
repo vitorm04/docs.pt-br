@@ -2,12 +2,12 @@
 title: Implementar tarefas em segundo plano em microsserviços com IHostedService e a classe BackgroundService
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Compreenda as novas opções para usar IHostedService e BackgroundService para implementar tarefas em segundo plano em microsserviços do .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ad91268925ad36d5b60d5d0601eee7544b79ab2e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039879"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318677"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tarefas em segundo plano em microsserviços com IHostedService e a classe BackgroundService
 
@@ -222,9 +222,9 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>Diagrama de classe de resumo
 
-A imagem a seguir mostra um resumo visual das classes e interfaces envolvidas na implementação do IHostedServices.
+A imagem a seguir mostra um resumo visual das classes e interfaces envolvidas ao implementar IHostedServices.
 
-![Diagrama de classe: IWebHost e IHost podem hospedar muitos serviços, herdados de BackgroundService, que implementa IHostedService.](./media/image27.png)
+![Diagrama de classe: o IWebHost e o IHost podem hospedar muitos serviços, herdados de BackgroundService, que implementa o IHostedService.](./media/image27.png)
 
 **Figura 6-27**. Diagrama de classe mostrando as várias classes e interfaces relacionadas ao IHostedService
 

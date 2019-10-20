@@ -2,12 +2,12 @@
 title: Comunicação resiliente
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Comunicação resiliente
 ms.date: 06/30/2019
-ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 324f5426af1c892db73aa6fc2336a19b7a8e499e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214497"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315804"
 ---
 # <a name="resilient-communications"></a>Comunicações resilientes
 
@@ -20,7 +20,7 @@ Em todo este livro, nós evangelizedmos os méritos de se moverem além do desig
 - *Resiliência.* Como gerenciar falhas de curta duração e manter o sistema estável?
 - *Balanceamento de carga.* Como o tráfego de entrada é distribuído entre várias instâncias de um serviço?
 - *Segurança.* Como as questões de segurança, como criptografia de nível de transporte e gerenciamento de certificados, são impostas?
-- \* Monitoramento distribuído. -Como correlacionar e capturar a rastreabilidade e o monitoramento de uma única solicitação entre vários serviços de consumo?
+- *Monitoramento distribuído.* -Como correlacionar e capturar a rastreabilidade e o monitoramento de uma única solicitação entre vários serviços de consumo?
 
 Embora essas preocupações possam ser tratadas com várias bibliotecas e estruturas, implementá-las dentro de sua base de código pode ser cara, complexa e demorada. Além disso, você acaba com uma solução em que as preocupações com a infraestrutura são ligadas à lógica de negócios.
 
@@ -34,7 +34,7 @@ Uma abordagem melhor é considerar uma nova e rápida evolução da malha de *se
 
 Na figura anterior, observe como o proxy intercepta e gerencia a comunicação entre os microserviços e o cluster.
 
-Uma malha de serviço é dividida logicamente em dois componentes diferentes: Um plano de [dados](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) e um [plano de controle](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). A Figura 6-10 mostra esses componentes e suas responsabilidades.
+Uma malha de serviço é dividida logicamente em dois componentes diferentes: um [plano de dados](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) e um [plano de controle](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). A Figura 6-10 mostra esses componentes e suas responsabilidades.
 
 ![Controle de malha de serviço e plano de dados](./media/istio-control-and-data-plane.png)
 

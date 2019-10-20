@@ -3,12 +3,12 @@ title: Comunicação entre serviços
 description: Saiba como os microserviços nativos de nuvem de back-end se comunicam com outros microserviços de back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214392"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315860"
 ---
 # <a name="service-to-service-communication"></a>Comunicação entre serviços
 
@@ -50,7 +50,7 @@ A execução de uma solicitação infrequente que faz uma única chamada HTTP di
 
 **Figura 4-9**. Encadeando consultas HTTP
 
-Certamente, você pode imaginar o risco no design mostrado na imagem anterior. O que acontece se \#a etapa 3 falhar? Ou a \#etapa 8 falha? Como você se recupera? E se a \#etapa 6 estiver lenta porque o serviço subjacente está ocupado? Como você continua? Mesmo que tudo funcione corretamente, considere a latência que essa chamada incorreria, que é a soma da latência de cada etapa.
+Certamente, você pode imaginar o risco no design mostrado na imagem anterior. O que acontecerá se a etapa \#3 falhar? Ou a etapa \#8 falha? Como você se recupera? E se a etapa \#6 estiver lenta porque o serviço subjacente está ocupado? Como você continua? Mesmo que tudo funcione corretamente, considere a latência que essa chamada incorreria, que é a soma da latência de cada etapa.
 
 O grande grau de acoplamento na imagem anterior sugere que os serviços não foram modelados de forma ideal. Seria cabe a equipe a revisitar seu design.
 
@@ -90,7 +90,7 @@ Geralmente, o produtor não requer uma resposta e pode *acionar e esquecer* a me
 
 Uma fila de mensagens é uma construção intermediária por meio da qual um produtor e um consumidor passam uma mensagem. As filas implementam um padrão de mensagens assíncronas de ponto a ponto. O produtor sabe onde um comando precisa ser enviado e direcionado adequadamente. A fila garante que uma mensagem seja processada por exatamente uma das instâncias de consumidor que estão sendo lidas do canal. Nesse cenário, o produtor ou o serviço de consumidor pode escalar horizontalmente sem afetar o outro. Além disso, as tecnologias podem ser diferentes em cada lado, o que significa que poderemos ter um microserviço Java chamando um microserviço do [Golang](https://golang.org) . 
 
-No capítulo 1, falamos sobre os *serviços de backup*. Os serviços de backup são recursos complementares dos quais os sistemas nativos de nuvem dependem. As filas de mensagens estão fazendo serviços de backup. A nuvem do Azure dá suporte a dois tipos de filas de mensagens que seus sistemas nativos de nuvem podem consumir para implementar o sistema de mensagens de comando: Filas do armazenamento do Azure e filas do barramento de serviço do Azure.
+No capítulo 1, falamos sobre os *serviços de backup*. Os serviços de backup são recursos complementares dos quais os sistemas nativos de nuvem dependem. As filas de mensagens estão fazendo serviços de backup. A nuvem do Azure dá suporte a dois tipos de filas de mensagens que seus sistemas nativos de nuvem podem consumir para implementar mensagens de comando: filas do armazenamento do Azure e filas do barramento de serviço do Azure.
 
 ### <a name="azure-storage-queues"></a>Filas do armazenamento do Azure
 
@@ -134,7 +134,7 @@ Mais dois recursos corporativos são particionamento e sessões. Uma fila conven
 
 As [sessões do barramento de serviço](https://codingcanvas.com/azure-service-bus-sessions/) fornecem uma maneira de agrupar mensagens relacionadas. Imagine um cenário de fluxo de trabalho em que as mensagens devem ser processadas em conjunto e a operação seja concluída no final. Para tirar proveito, as sessões devem ser explicitamente habilitadas para a fila e cada mensagem relacionada deve conter a mesma ID de sessão.
 
-No entanto, há algumas advertências importantes: O tamanho das filas do barramento de serviço é limitado a 80 GB, o que é muito menor do que o que está disponível nas filas de armazenamento. Além disso, as filas do barramento de serviço incorrem em custo base e cobrança por operação.
+No entanto, há algumas advertências importantes: o tamanho das filas do barramento de serviço é limitado a 80 GB, o que é muito menor do que o que está disponível nas filas de armazenamento. Além disso, as filas do barramento de serviço incorrem em custo base e cobrança por operação.
 
 A Figura 4-14 descreve a arquitetura de alto nível de uma fila do barramento de serviço.
 
@@ -166,9 +166,9 @@ Com eventos, mudamos da tecnologia de enfileiramento para *Tópicos*. Um [tópic
 
 **Figura 4-16**. Arquitetura do tópico
 
-Na figura anterior, os editores enviam mensagens para o tópico. No final, os assinantes recebem mensagens de assinaturas. No meio, o tópico encaminha mensagens para assinaturas com base em um conjunto de *regras*, mostrado em caixas azuis escuras. As regras atuam como um filtro que encaminha mensagens específicas para uma assinatura. Aqui, um evento "CreateOrder" seria enviado à assinatura \#1 e à assinatura \#3, mas não à assinatura \#2. Um evento "OrderCompleted" seria enviado para a assinatura \#2 e a \#assinatura 3.
+Na figura anterior, os editores enviam mensagens para o tópico. No final, os assinantes recebem mensagens de assinaturas. No meio, o tópico encaminha mensagens para assinaturas com base em um conjunto de *regras*, mostrado em caixas azuis escuras. As regras atuam como um filtro que encaminha mensagens específicas para uma assinatura. Aqui, um evento "CreateOrder" seria enviado à assinatura \#1 e à assinatura \#3, mas não à assinatura \#2. Um evento "OrderCompleted" seria enviado para a assinatura \#2 e a assinatura \#3.
 
-A nuvem do Azure dá suporte a dois serviços de tópico diferentes: Tópicos do barramento de serviço do Azure e EventGrid do Azure.
+A nuvem do Azure dá suporte a dois serviços de tópico diferentes: tópicos do barramento de serviço do Azure e EventGrid do Azure.
 
 ### <a name="azure-service-bus-topics"></a>Tópicos do barramento de serviço do Azure
 
@@ -208,7 +208,7 @@ A grade de eventos é um serviço de nuvem sem servidor totalmente gerenciado. E
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Transmissão de mensagens na nuvem do Azure
 
-O barramento de serviço do Azure e a grade de eventos fornecem excelente suporte para aplicativos que expõem eventos únicos e discretos, como um novo documento inserido em um Cosmos DB). Mas e se o seu sistema nativo de nuvem precisar processar um *fluxo de eventos relacionados*? Os [fluxos de eventos](https://msdn.microsoft.com/magazine/dn904671.aspx?f=255&MSPPError=-2147217396) são mais complexos. Normalmente, eles são ordenados por tempo, inter-relacionados e devem ser processados como um grupo.
+O barramento de serviço do Azure e a grade de eventos fornecem excelente suporte para aplicativos que expõem eventos únicos e discretos como um novo documento inserido em um Cosmos DB. Mas e se o seu sistema nativo de nuvem precisar processar um *fluxo de eventos relacionados*? Os [fluxos de eventos](https://msdn.microsoft.com/magazine/dn904671) são mais complexos. Normalmente, eles são ordenados por tempo, inter-relacionados e devem ser processados como um grupo.
 
 O [Hub de eventos do Azure](https://azure.microsoft.com/services/event-hubs/) é uma plataforma de streaming de dados e um serviço de ingestão de eventos que coleta, transforma e armazena eventos. Ele é ajustado para capturar dados de streaming, como notificações de eventos contínuos emitidas de um contexto de telemetria. O serviço é altamente escalonável e pode armazenar e [processar milhões de eventos por segundo](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Mostrado na Figura 4-18, geralmente é uma porta frontal para um pipeline de eventos, desacoplando o fluxo de ingestão do consumo de eventos.
 

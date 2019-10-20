@@ -1,15 +1,15 @@
 ---
-title: Padrões de resiliência do aplicativo
+title: Padrões de resiliência de aplicativo
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de resiliência do aplicativo
 ms.date: 06/30/2019
-ms.openlocfilehash: 8455584fe1d5b02f6d9543c3bad32cca7369c158
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183717"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315947"
 ---
-# <a name="application-resiliency-patterns"></a>Padrões de resiliência do aplicativo
+# <a name="application-resiliency-patterns"></a>Padrões de resiliência de aplicativo
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,7 +27,7 @@ Observe como, na figura anterior, as políticas de resiliência se aplicam a men
 
 **Figura 6-3**. Códigos de status HTTP para tentar novamente
 
-Pergunta: Você tentaria novamente um código de status HTTP de 403-Proibido? Nº Aqui, o sistema está funcionando corretamente, mas informando ao chamador que eles não estão autorizados a executar a operação solicitada. Deve-se ter cuidado para repetir apenas as operações causadas por falhas.
+Pergunta: você tentaria novamente um código de status HTTP de 403-Proibido? Nº Aqui, o sistema está funcionando corretamente, mas informando ao chamador que eles não estão autorizados a executar a operação solicitada. Deve-se ter cuidado para repetir apenas as operações causadas por falhas.
 
 Como recomendado no capítulo 1, os desenvolvedores da Microsoft que constroem aplicativos nativos de nuvem devem ter como destino o .NET Core. A versão 2,1 introduziu a biblioteca [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) para criar instâncias de cliente http para interagir com recursos baseados em URL. Substituindo a classe HTTPClient original, a classe Factory dá suporte a muitos recursos avançados, um dos quais é uma [integração total](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) com a biblioteca de resiliência Polly. Com ele, você pode definir facilmente políticas de resiliência na classe de inicialização do aplicativo para lidar com falhas parciais e problemas de conectividade.
 
@@ -45,7 +45,7 @@ O [padrão de repetição](https://docs.microsoft.com/azure/architecture/pattern
 
 Na figura anterior, um padrão de repetição foi implementado para uma operação de solicitação. Ele está configurado para permitir até quatro repetições antes de falhar com um intervalo de retirada (tempo de espera) a partir de dois segundos, o que exponencialmente dobra para cada tentativa subsequente.
 
-- A primeira invocação falha e retorna um código de status HTTP de 500. O aplicativo aguarda dois segundos e vincula novamente a chamada.
+- A primeira invocação falha e retorna um código de status HTTP de 500. O aplicativo aguarda dois segundos e tenta novamente a chamada.
 - A segunda invocação também falha e retorna um código de status HTTP de 500. O aplicativo agora dobra o intervalo de retirada para quatro segundos e tenta novamente a chamada.
 - Por fim, a terceira chamada é realizada com sucesso.
 - Nesse cenário, a operação de repetição teria tentado até quatro repetições enquanto dobra a duração da retirada antes de falhar a chamada.

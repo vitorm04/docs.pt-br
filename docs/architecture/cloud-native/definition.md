@@ -3,12 +3,12 @@ title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291205"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315938"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -22,9 +22,9 @@ Os sistemas nativos de nuvem são projetados para adotar alteração rápida, gr
 
 A base de computação nativa da nuvem fornece uma [definição oficial](https://github.com/cncf/foundation/blob/master/charter.md):
 
-> as tecnologias *Cloud-Native capacitam as organizações a criar e executar aplicativos escalonáveis em ambientes modernos e dinâmicos, como nuvens públicas, privadas e híbridas. Contêineres, malhas de serviço, microservices, infraestrutura imutável e APIs declarativas exemplificam essa abordagem.*
+> *As tecnologias nativas de nuvem capacitam as organizações a criar e executar aplicativos escalonáveis em ambientes modernos e dinâmicos, como nuvens públicas, privadas e híbridas. Contêineres, malhas de serviço, microservices, infraestrutura imutável e APIs declarativas exemplificam essa abordagem.*
 
-> as técnicas de @no__t 0These habilitam sistemas livremente acoplados que são resilientes, gerenciáveis e observáveis. Combinada com a automação robusta, eles permitem que os engenheiros façam alterações de alto impacto com frequência e previsíveis com o mínimo de toil. *
+> *Essas técnicas permitem sistemas menos rígidos resilientes, gerenciáveis e observáveis. Combinada com a automação robusta, eles permitem que os engenheiros façam alterações de alto impacto com frequência e previsíveis com o mínimo de toil.*
 
 Os aplicativos se tornaram cada vez mais complexos com os usuários exigindo mais e mais. Os usuários esperam uma rápida capacidade de resposta, recursos inovadores e zero tempo de inatividade. Problemas de desempenho, erros recorrentes e a incapacidade de mover rapidamente não são mais aceitáveis. Eles mudarão facilmente para o seu concorrente.
 
@@ -54,7 +54,7 @@ Os sistemas nativos de nuvem aproveitam ao máximo o modelo de serviço de nuvem
 
 Projetado para prosperar em um ambiente de nuvem dinâmico e virtualizado, esses sistemas fazem uso extensivo da infraestrutura de computação e dos serviços gerenciados de [PaaS (plataforma como serviço)](https://azure.microsoft.com/overview/what-is-paas/) . Eles tratam a infraestrutura subjacente como *desdescartável* -provisionado em minutos e redimensionados, dimensionados, movidos ou destruídos sob demanda – via automação.
 
-Considere o conceito de DevOps amplamente aceito de [Pets versus Burro @ no__t-0. Em um data center tradicional, os servidores são tratados como *animais de estimação*: um computador físico, dado um nome significativo e cuidados para. Você dimensiona adicionando mais recursos ao mesmo computador (expandindo verticalmente). Se o servidor se tornar doente, você o enfermaria de volta para a integridade. Se o servidor ficar indisponível, todos os avisos serão percebidos.
+Considere o conceito de DevOps amplamente aceito de [pets versus burro](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Em um data center tradicional, os servidores são tratados como *animais de estimação*: um computador físico, dado um nome significativo e cuidados para. Você dimensiona adicionando mais recursos ao mesmo computador (expandindo verticalmente). Se o servidor se tornar doente, você o enfermaria de volta para a integridade. Se o servidor ficar indisponível, todos os avisos serão percebidos.
 
 O modelo de serviço *burro* é diferente. Você provisiona cada instância como uma máquina virtual ou contêiner. Eles são idênticos e atribuídos a um identificador de sistema, como Service-01, Service-02 e assim por diante. Você dimensiona criando mais deles (expandindo). Quando um se torna indisponível, ninguém percebe.
 
@@ -154,7 +154,7 @@ A Figura 1-4 contrasta uma abordagem de aplicativo monolítico com uma abordagem
 
 Observe como os microserviços promovem o princípio "uma base de código, um aplicativo" do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
-> *Factor \#1 especifica "uma única base de código para cada microserviço, armazenado em seu próprio repositório. Acompanhado com o controle de versão, ele pode ser implantado em vários ambientes "*
+> *O fator \#1 especifica "uma única base de código para cada microserviço, armazenado em seu próprio repositório. Acompanhado com o controle de versão, ele pode ser implantado em vários ambientes. "*
 
 ### <a name="why-microservices"></a>Por que os microserviços?
 
@@ -166,7 +166,7 @@ No início do capítulo, comparamos um aplicativo de comércio eletrônico criad
 
 - Cada microserviço pode ser dimensionado de forma independente. Em vez de dimensionar todo o aplicativo como uma única unidade, você dimensiona apenas os serviços que exigem mais capacidade de processamento ou largura de banda de rede. Essa abordagem refinada para o dimensionamento oferece maior controle do seu sistema e ajuda a reduzir os custos gerais à medida que você dimensiona partes do seu sistema, não tudo.
 
-Um excelente guia de referência para entender os microserviços é o [.NET: Arquitetura para aplicativos .NET em contêineres](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). O livro se aprofunda no design e na arquitetura de microserviços. É um complemento para uma [arquitetura de referência de microatendimento de pilha completa](https://github.com/dotnet-architecture/eShopOnContainers) disponível como um download gratuito da Microsoft.
+Um excelente guia de referência para entender os microserviços é o [.net microservices: arquitetura para aplicativos .net em contêineres](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). O livro se aprofunda no design e na arquitetura de microserviços. É um complemento para uma [arquitetura de referência de microatendimento de pilha completa](https://github.com/dotnet-architecture/eShopOnContainers) disponível como um download gratuito da Microsoft.
 
 ### <a name="developing-microservices"></a>Desenvolvendo microserviços
 
@@ -174,7 +174,7 @@ Os microserviços podem ser criados com qualquer plataforma de desenvolvimento m
 
 A plataforma Microsoft .NET Core é uma excelente opção. Gratuito e de código aberto, ele tem muitos recursos internos para simplificar o desenvolvimento de microserviço. O .NET Core é uma plataforma cruzada. Os aplicativos podem ser criados e executados no Windows, no macOS e na maioria dos tipos de Linux.
 
-O .NET Core é altamente funcional e tem um bom desempenho em comparação com o Node. js e outras plataformas em execução. Curiosamente, a [TechEmpower](https://www.techempower.com/) realizou um amplo conjunto de [benchmarks de desempenho](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) em várias plataformas e estruturas de aplicativos Web. .NET Core pontuado nos 10 principais-bem acima do node. js e outras plataformas concorrentes. 
+O .NET Core é altamente funcional e pontuado bem em comparação com o Node. js e outras plataformas concorrentes. Curiosamente, a [TechEmpower](https://www.techempower.com/) realizou um amplo conjunto de [benchmarks de desempenho](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) em várias plataformas e estruturas de aplicativos Web. .NET Core pontuado nos 10 principais-bem acima do node. js e outras plataformas concorrentes. 
 
 O .NET Core é mantido pela Microsoft e pela Comunidade do .NET no GitHub. 
 
@@ -235,7 +235,7 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 
 Observe como os orquestradores adotam os princípios de Disposability e simultaneidade do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.
 
-> *Factor \#9 especifica que "as instâncias de serviço devem ser descartáveis, favorecendo as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. "*
+> *O fator \#9 especifica que "as instâncias de serviço devem ser descartáveis, favorecendo as inicializações rápidas para aumentar as oportunidades de escalabilidade e os desligamentos normais para deixar o sistema em um estado correto. Os contêineres do Docker junto com um orquestrador atendem inerentemente a esse requisito. "*
 
 > *O fator \#8 especifica que "os serviços se expandem por um grande número de pequenos processos idênticos (cópias) em oposição à expansão de uma única instância grande no computador mais potente disponível".*
 
@@ -287,7 +287,7 @@ Com o IaC, você automatiza o provisionamento de plataforma e a implantação de
 
 ### <a name="automating-infrastructure"></a>Automatizando a infraestrutura
 
-Ferramentas como [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), [Terraform e o [CLI do Azure](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest), permitem que você retenha declarativamente a infraestrutura de nuvem necessária para o script. Nomes de recursos, locais, capacidades e segredos são parametrizados e dinâmicos. O script tem versão e fez check-in do controle do código-fonte como um artefato do seu projeto. Você invoca o script para provisionar uma infraestrutura consistente e reproduzível entre ambientes de sistema, como QA, preparo e produção. 
+Ferramentas como [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform e o [CLI do Azure](https://docs.microsoft.com/cli/azure/), permitem que você declarate o script de infraestrutura de nuvem de forma declarativa. Nomes de recursos, locais, capacidades e segredos são parametrizados e dinâmicos. O script tem versão e fez check-in do controle do código-fonte como um artefato do seu projeto. Você invoca o script para provisionar uma infraestrutura consistente e reproduzível entre ambientes de sistema, como QA, preparo e produção. 
 
 Nos bastidores, IaC é idempotente, o que significa que você pode executar o mesmo script repetidamente sem efeitos colaterais. Se a equipe precisar fazer uma alteração, ela Editará e executará novamente o script. Somente os recursos atualizados são afetados.
 

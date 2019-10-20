@@ -1,23 +1,23 @@
 ---
-title: Registro em log com pilha elástica
+title: Como registrar em log com a pilha elástica
 description: Registro em log usando Stack elástico, Logstash e Kibana
 ms.date: 09/23/2019
-ms.openlocfilehash: b3fd3ea30f46914e6513be79f7d949499142b381
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182828"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315794"
 ---
-# <a name="logging-with-elastic-stack"></a>Registro em log com pilha elástica 
+# <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica 
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Há muitas boas ferramentas de registro em log centralizadas e elas variam de acordo com as ferramentas gratuitas de software livre, até opções mais caras. Em muitos casos, as ferramentas gratuitas são tão boas ou melhores do que as ofertas pagas. Uma dessas ferramentas é uma combinação de três componentes de código-fonte aberto: Pesquisa elástica, Logstash e Kibana. Coletivamente, essas ferramentas são conhecidas como pilha elástica ou pilha ELK.
+Há muitas boas ferramentas de registro em log centralizadas e elas variam de acordo com as ferramentas gratuitas de software livre, até opções mais caras. Em muitos casos, as ferramentas gratuitas são tão boas ou melhores do que as ofertas pagas. Uma dessas ferramentas é uma combinação de três componentes de código-fonte aberto: pesquisa elástica, Logstash e Kibana. Coletivamente, essas ferramentas são conhecidas como pilha elástica ou pilha ELK.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quais são as vantagens da pilha elástica?
 
-A pilha elástica fornece registro em log centralizado de maneira econômica, escalonável e fácil de ser compatível com a nuvem. Sua interface do usuário simplifica a análise de dados para que você possa passar o seu tempo coletando informações de seus dados em vez de combater uma interface desajeitado. Ele dá suporte a uma ampla variedade de entradas, de forma que o aplicativo distribuído se estenda por mais e tipos diferentes de serviços, você pode esperar continuar a poder alimentar o log e os dados de métrica no sistema. A pilha elástica também dá suporte a pesquisas rápidas mesmo em grandes conjuntos de dados, possibilitando que até mesmo aplicativos grandes registrem dados detalhados e ainda possam ter visibilidade dele de forma eficaz.
+A pilha elástica fornece registro em log centralizado de maneira econômica, escalonável e fácil de ser compatível com a nuvem. Sua interface do usuário simplifica a análise de dados para que você possa passar o seu tempo coletando informações de seus dados em vez de combater uma interface desajeitado. Ele dá suporte a uma ampla variedade de entradas, de forma que o aplicativo distribuído se estenda por mais e tipos diferentes de serviços, você pode esperar continuar a poder alimentar o log e os dados de métrica no sistema. A pilha elástica também dá suporte a pesquisas rápidas mesmo em grandes conjuntos de dados, o que possibilita até que aplicativos grandes registrem dados detalhados e ainda possam ter visibilidade dele de forma eficaz.
 
 ## <a name="logstash"></a>Logstash
 

@@ -2,12 +2,12 @@
 title: Escolher plataformas de computação do Azure para aplicativos baseados em contêiner
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Escolhendo plataformas de computação do Azure para aplicativos baseados em contêiner
 ms.date: 05/04/2018
-ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331969"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318675"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Escolher plataformas de computação do Azure para aplicativos baseados em contêiner
 
@@ -16,8 +16,8 @@ Como você observou depois de ler as seções anteriores, o Azure é uma nuvem a
 Como uma recomendação *por padrão* , estes são os principais critérios recomendados nestas diretrizes:
 
 - **Aplicativo monolítico único:** Escolher serviço de Azure App
-- **Aplicativo de N camadas:** Escolha orquestradores como o AKS (serviço de kubernetes do Azure) ou serviço de aplicativo se você tiver um ou poucos serviços de back-end
-- **Microsserviços** Escolher AKS ou aplicativos Web do Azure para contêineres
+- **Aplicativo de N camadas:** Escolha orquestradores como o AKS (serviço de kubernetes do Azure) ou serviço de aplicativo se você tiver um único ou alguns serviços de back-end
+- **Microserviços:** Escolher AKS ou aplicativos Web do Azure para contêineres
 - **Funções sem servidor & manipuladores de eventos:** Escolha Azure Functions
 - **Lote em larga escala:** Escolher lote do Azure
 

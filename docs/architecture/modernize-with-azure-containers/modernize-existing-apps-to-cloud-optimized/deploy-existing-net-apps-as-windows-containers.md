@@ -2,12 +2,12 @@
 title: Implantar aplicativos .NET existentes como contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Implantar aplicativos .NET existentes como contêineres do Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926481"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318627"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -51,7 +51,7 @@ Melhorias significativas na agilidade, portabilidade e controle, por fim, levam 
 
 O [Docker](https://www.docker.com/) é um [projeto de código-fonte aberto](https://github.com/docker/docker) que automatiza a implantação de aplicativos como contêineres portáteis e autônomos que podem ser executados na nuvem ou localmente. O Docker é também um [empresa](https://www.docker.com/) que promove e evolui essa tecnologia. A empresa trabalha em colaboração com fornecedores de nuvem, Linux e Windows, incluindo a Microsoft.
 
-![O Docker implanta contêineres em todas as camadas da nuvem híbrida](./media/image6.png)
+![Diagrama mostrando como o Docker implanta contêineres na nuvem híbrida.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **Figura 4-6.** O Docker implanta contêineres em todas as camadas da nuvem híbrida
 
@@ -83,7 +83,7 @@ Para Linux, várias distribuições estão disponíveis e há compatibilidade co
 
 A Figura 4-7 mostra as versões do sistema operacional que você pode direcionar, dependendo da versão do aplicativo do .NET Framework.
 
-![Sistemas operacionais a serem direcionados com base na versão .NET Framework](./media/image7.png)
+![Diagrama que mostra o sistema operacional a ser direcionado com base na versão .NET Framework.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **Figura 4-7.** Sistemas operacionais a serem direcionados com base na versão .NET Framework
 
@@ -93,15 +93,15 @@ Ao adicionar o nome da imagem ao arquivo Dockerfile, você pode selecionar o sis
 
 > | **Tags** | **Sistema e versão** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x no Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x com personalização ASP.NET adicional, no Windows Server Core |
+> | **Microsoft/DOTNET-Framework: 4. x-windowsservercore** | .NET Framework 4. x no Windows Server Core |
+> | **Microsoft/ASPNET: 4. x-windowsservercore** | .NET Framework 4. x com personalização ASP.NET adicional, no Windows Server Core |
 
 Para o .NET Core (multiplataforma para Linux e Windows), as marcas se pareceriam com o seguinte:
 
 > | **Tags** | **Sistema e versão**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Somente tempo de execução do .NET Core 2,0 no Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2,0 de tempo de execução somente no Windows nano Server |
+> | **Microsoft/dotnet: 2.0.0-tempo de execução** | Somente tempo de execução do .NET Core 2,0 no Linux |
+> | **Microsoft/dotnet: 2.0.0-Runtime-beserver** | .NET Core 2,0 de tempo de execução somente no Windows nano Server |
 
 ### <a name="multi-arch-images"></a>Imagens de vários arcos
 
@@ -113,9 +113,9 @@ Para .NET Framework imagens, como o .NET Framework tradicional dá suporte apena
 
 Assim como os contêineres do Linux, os contêineres do Windows Server são gerenciados usando o mecanismo do Docker. Ao contrário dos contêineres do Linux, os contêineres do Windows incluem dois tipos diferentes de contêineres ou tempos de execução – contêineres do Windows Server e isolamento do Hyper-V.
 
-**Contêineres do Windows Server**: Fornece isolamento de aplicativo por meio de tecnologia de isolamento de processo e namespace. Um contêiner do Windows Server compartilha um kernel com o host do contêiner e todos os contêineres que estão em execução no host. Esses contêineres não fornecem um limite de segurança hostil e não devem ser usados para isolar código não confiável. Devido ao espaço do kernel compartilhado, esses contêineres exigem a mesma versão e configuração do kernel.
+**Contêineres do Windows Server**: fornece isolamento de aplicativo por meio da tecnologia de isolamento de processo e namespace. Um contêiner do Windows Server compartilha um kernel com o host do contêiner e todos os contêineres que estão em execução no host. Esses contêineres não fornecem um limite de segurança hostil e não devem ser usados para isolar código não confiável. Devido ao espaço do kernel compartilhado, esses contêineres exigem a mesma versão e configuração do kernel.
 
-**Isolamento do Hyper-V**: Expande o isolamento fornecido pelos contêineres do Windows Server executando cada contêiner em uma VM altamente otimizada. Nessa configuração, o kernel do host do contêiner não é compartilhado com outros contêineres no mesmo host. Esses contêineres são projetados para hospedagem multilocatário hostil, com as mesmas garantias de segurança de uma VM. Como esses contêineres não compartilham o kernel com o host ou outros contêineres no host, eles podem executar kernels com diferentes versões e configurações (com versões com suporte). Por exemplo, todos os contêineres do Windows no Windows 10 usam o isolamento do Hyper-V para utilizar a versão e a configuração do kernel do Windows Server.
+**Isolamento do Hyper-V**: expande o isolamento fornecido pelos contêineres do Windows Server executando cada contêiner em uma VM altamente otimizada. Nessa configuração, o kernel do host do contêiner não é compartilhado com outros contêineres no mesmo host. Esses contêineres são projetados para hospedagem multilocatário hostil, com as mesmas garantias de segurança de uma VM. Como esses contêineres não compartilham o kernel com o host ou outros contêineres no host, eles podem executar kernels com diferentes versões e configurações (com versões com suporte). Por exemplo, todos os contêineres do Windows no Windows 10 usam o isolamento do Hyper-V para utilizar a versão e a configuração do kernel do Windows Server.
 
 Executar um contêiner no Windows com ou sem o isolamento do Hyper-V é uma decisão em tempo de execução. Você pode optar por criar o contêiner com o isolamento do Hyper-V inicialmente e, em tempo de execução, optar por executá-lo como um contêiner do Windows Server em vez disso.
 
@@ -129,7 +129,7 @@ Executar um contêiner no Windows com ou sem o isolamento do Hyper-V é uma deci
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Infográfico Microsoft e contêineres**
+- **Infográfico: Microsoft e contêineres**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,15 +138,15 @@ Executar um contêiner no Windows com ou sem o isolamento do Hyper-V é uma deci
 Nas seções anteriores, foi explicado quais são os benefícios dos contêineres do Docker, bem como detalhes sobre as imagens de contêiner específicas para aplicativos .NET. Todas essas informações genéricas são fundamentais para desenvolver ou colocar um aplicativo em contêiner.
 No entanto, ao pensar no ambiente de implantação de produção ou até mesmo em ambientes de QA e desenvolvimento/teste, Microsoft Azure fornece uma ampla variedade de opções, um ecossistema de contêiner completo na nuvem (mostrado no diagrama abaixo). Dependendo das necessidades específicas do seu aplicativo, você deve escolher um ou outro produto do Azure.
 
-![O ecossistema do contêiner no Azure](./media/image7.5.png)
+![Diagrama do ecossistema do contêiner no Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **Figura 4-7.5.** O ecossistema do contêiner no Azure
 
 No ecossistema do contêiner no Azure, os seguintes produtos dão suporte a contêineres que são considerados infraestrutura:
 
 - **ACI (instâncias de contêiner do Azure)**
-- **Máquinas virtuais do Azure** (Com suporte do contêiner)
-- **Conjuntos de dimensionamento de máquinas virtuais do Azure** (Com suporte do contêiner)
+- **Máquinas virtuais do Azure** (com suporte do contêiner)
+- **Conjuntos de dimensionamento de máquinas virtuais do Azure** (com suporte do contêiner)
 
 Dentre essas três, o ACI fornece um grande benefício, que é o fato de que você não precisa manter o sistema operacional subjacente, sem necessidade de atualização/patch, etc., mas o ACI ainda está posicionado no nível de infraestrutura, conforme melhor explicado nas próximas seções deste livro.
 

@@ -1,15 +1,15 @@
 ---
-title: Aproveitando contêineres e orquestradores
+title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 4008a14e4db28e07d5fda0a1f175aada9ffe6734
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182877"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315885"
 ---
-# <a name="leveraging-containers-and-orchestrators"></a>Aproveitando contêineres e orquestradores
+# <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -53,8 +53,8 @@ E mais, os contêineres são definidos por arquivos simples que podem ser verifi
 
 Os contêineres são imutáveis. Quando você tiver a definição de um contêiner, poderá recriar esse contêiner e ele será executado exatamente da mesma maneira. Essa imutabilidade se presta ao design baseado em componentes. Se algumas partes de um aplicativo não forem alteradas com frequência como outras, por que reimplantar todo o aplicativo quando você puder apenas implantar as partes que mudam com mais frequência? Diferentes recursos e preocupações abrangentes de um aplicativo podem ser divididos em unidades separadas. A Figura 3-2 mostra como um aplicativo monolítico pode aproveitar os contêineres e os microserviços delegando determinados recursos ou funcionalidades. A funcionalidade restante no aplicativo também foi contida em contêineres.
 
-![Dividir um aplicativo monolítico para usar os microserviços no back-end. **Figura 3-2**. ](./media/breaking-up-monolith-with-backend-microservices.png)
- Dividir um aplicativo monolítico para usar os microserviços no back-end.
+![Breaking um aplicativo monolítico para usar os microserviços no back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
+**figura 3-2**. Dividir um aplicativo monolítico para usar os microserviços no back-end.
 
 Os aplicativos nativos de nuvem criados usando contêineres separados beneficiam-se da capacidade de implantar o máximo ou o mínimo de um aplicativo, conforme necessário. Serviços individuais podem ser hospedados em nós com recursos apropriados para cada serviço. O ambiente em que cada serviço é executado é imutável, pode ser compartilhado entre desenvolvimento, teste e produção e pode ser facilmente com controle de versão. O acoplamento entre diferentes áreas do aplicativo ocorre explicitamente como chamadas ou mensagens entre serviços, não as dependências de tempo de compilação dentro do monolítico. E qualquer parte do aplicativo geral pode escolher a tecnologia que faz mais sentido para esse recurso ou recurso sem a necessidade de alterações no restante do aplicativo.
 
@@ -62,14 +62,14 @@ Os aplicativos nativos de nuvem criados usando contêineres separados beneficiam
 
 Os serviços criados nos contêineres podem aproveitar os benefícios de dimensionamento fornecidos pelas ferramentas de orquestração como o kubernetes. Os contêineres de design só sabem sobre si mesmos. Depois de começar a ter vários contêineres que precisam trabalhar juntos, pode valer a pena organizá-los em um nível mais alto. Organizar grandes números de contêineres e suas dependências compartilhadas, como a configuração de rede, é onde as ferramentas de orquestração entram para economizar o dia! O kubernetes é uma plataforma de orquestração de contêiner projetada para automatizar a implantação, o dimensionamento e o gerenciamento de aplicativos em contêineres. Ele cria uma camada de abstração sobre grupos de contêineres e os organiza em *pods*. O pods é executado em computadores de trabalho conhecidos como *nós*. O grupo organizado inteiro é conhecido como um *cluster*. A Figura 3-3 mostra os diferentes componentes de um cluster kubernetes.
 
-![Componentes do cluster kubernetes. **Figura 3-3**. ](./media/kubernetes-cluster-components.png)
- Componentes do cluster kubernetes.
+![Kubernetes componentes de cluster. ](./media/kubernetes-cluster-components.png)
+**figura 3-3**. Componentes do cluster kubernetes.
 
 O kubernetes tem suporte interno para dimensionar clusters para atender à demanda. Combinado com micro-Services em contêineres, isso fornece aos aplicativos nativos de nuvem a capacidade de responder de forma rápida e eficiente a picos de demanda com recursos adicionais quando e onde eles são necessários.
 
 ### <a name="declarative-versus-imperative"></a>Declarativa versus imperativo
 
-O kubernetes dá suporte à configuração de objeto declarativo e imperativo. A abordagem imperativa envolve a execução de vários comandos que dizem ao kubernetes o que fazer em cada etapa do caminho. *Executar* esta imagem. *Excluir* este Pod. *Expor* esta porta. Com a abordagem declarativa, você usa um arquivo de configuração que descreve *o que você deseja* em vez do *que fazer* e kubernetes descobre o que fazer para atingir o estado final desejado. Se você já tiver configurado o cluster usando comandos imperativos, poderá exportar um manifesto declarativo `kubectl get svc SERVICENAME -o yaml > service.yaml`usando o. Isso produzirá um arquivo de manifesto como este:
+O kubernetes dá suporte à configuração de objeto declarativo e imperativo. A abordagem imperativa envolve a execução de vários comandos que dizem ao kubernetes o que fazer em cada etapa do caminho. *Executar* esta imagem. *Excluir* este Pod. *Expor* esta porta. Com a abordagem declarativa, você usa um arquivo de configuração que descreve *o que você deseja* em vez do *que fazer* e kubernetes descobre o que fazer para atingir o estado final desejado. Se você já tiver configurado o cluster usando comandos imperativos, poderá exportar um manifesto declarativo usando `kubectl get svc SERVICENAME -o yaml > service.yaml`. Isso produzirá um arquivo de manifesto como este:
 
 ```yaml
 apiVersion: v1
@@ -97,7 +97,7 @@ status:
   loadBalancer: {}
 ```
 
-Ao usar a configuração declarativa, você pode visualizar as alterações que serão feitas antes de confirmá- `kubectl diff -f FOLDERNAME` las usando a pasta em que os arquivos de configuração estão localizados. Quando tiver certeza de que deseja aplicar as alterações, execute `kubectl apply -f FOLDERNAME`. Adicionar `-R` para processar recursivamente uma hierarquia de pastas.
+Ao usar a configuração declarativa, você pode visualizar as alterações que serão feitas antes de confirmá-las usando `kubectl diff -f FOLDERNAME` em relação à pasta em que os arquivos de configuração estão localizados. Quando tiver certeza de que deseja aplicar as alterações, execute `kubectl apply -f FOLDERNAME`. Adicione `-R` para processar recursivamente uma hierarquia de pastas.
 
 Além dos serviços, você pode usar a configuração declarativa para outros recursos do kubernetes, como *implantações*. Implantações declarativas são usadas por controladores de implantação para atualizar recursos de cluster. As implantações são usadas para distribuir novas alterações, escalar verticalmente para dar suporte a mais carga ou reverter para uma revisão anterior. Se um cluster estiver instável, as implantações declarativas fornecerão um mecanismo para colocar automaticamente o cluster de volta para um estado desejado.
 
@@ -121,7 +121,7 @@ Se você não estiver implantando ou não puder criar seu aplicativo seguindo os
 
 ## <a name="development-resources"></a>Recursos de desenvolvimento
 
-Esta seção mostra uma lista curta de recursos de desenvolvimento que podem ajudá-lo a começar a usar contêineres e orquestradores para seu próximo aplicativo. Se você estiver procurando orientação sobre como projetar seu aplicativo de arquitetura de microserviços nativos de nuvem, leia o complemento deste livro [, microservices do .net: Arquitetura para aplicativos .NET em contêineres](https://aka.ms/microservicesebook).
+Esta seção mostra uma lista curta de recursos de desenvolvimento que podem ajudá-lo a começar a usar contêineres e orquestradores para seu próximo aplicativo. Se você estiver procurando orientação sobre como projetar seu aplicativo de arquitetura de microserviços nativos de nuvem, leia o complemento deste livro, [microservices .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
 
 ### <a name="local-kubernetes-development"></a>Desenvolvimento de kubernetes local
 
@@ -139,7 +139,7 @@ O que é o Minikube? O projeto Minikube diz "Minikube implementa um cluster kube
 - Habilitando o CNI (interface de rede de contêiner)
 - Entrada
 
-Depois de instalar o Minikube, você pode começar rapidamente a usá- `minikube start` lo executando o comando, que baixa uma imagem e inicia o cluster kubernetes local. Depois que o cluster é iniciado, você interage com ele usando os comandos `kubectl` padrão do kubernetes.
+Depois de instalar o Minikube, você pode começar rapidamente a usá-lo executando o comando `minikube start`, que baixa uma imagem e inicia o cluster kubernetes local. Depois que o cluster é iniciado, você interage com ele usando os comandos kubernetes `kubectl` padrão.
 
 ### <a name="docker-desktop"></a>Área de trabalho do Docker
 
@@ -192,15 +192,15 @@ O comportamento padrão quando o aplicativo é executado é configurado para usa
 
 **Figura 3-7**. Opções de execução do Docker do Visual Studio
 
-Além do desenvolvimento local, o [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) fornece uma maneira conveniente para vários desenvolvedores trabalharem com suas próprias configurações de kubernetes no Azure. Como você pode ver na Figura 3-10, você também pode executar o aplicativo em Azure Dev Spaces.
+Além do desenvolvimento local, o [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) fornece uma maneira conveniente para vários desenvolvedores trabalharem com suas próprias configurações de kubernetes no Azure. Como você pode ver na Figura 3-7, você também pode executar o aplicativo em Azure Dev Spaces.
 
-Se você não adicionar o suporte do Docker ao seu aplicativo ASP.NET Core ao criá-lo, você sempre poderá adicioná-lo mais tarde. No Gerenciador de soluções do Visual Studio, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **suporte ao Docker**, conforme mostrado na Figura 3-8.
+Se você não adicionar o suporte do Docker ao seu aplicativo ASP.NET Core ao criá-lo, você sempre poderá adicioná-lo mais tarde. No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mouse no projeto e selecione **Adicionar** **suporte ao docker**de  > , conforme mostrado na Figura 3-8.
 
 ![Adicionar suporte ao Docker ao Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Adicionar suporte ao Docker ao Visual Studio
 
-Além do suporte ao Docker, você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-11. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um `azds.yaml` arquivo é adicionado à raiz do projeto e uma `charts` pasta é adicionada contendo os gráficos Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
+Além do suporte ao Docker, você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um arquivo `azds.yaml` é adicionado à raiz do projeto e uma pasta `charts` é adicionada contendo os gráficos do Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
 
 ![Adicionar suporte ao Orchestrator no Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 
