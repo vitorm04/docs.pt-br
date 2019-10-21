@@ -4,12 +4,12 @@ description: Saiba como criar páginas com mais facilidade, trabalhar com roteam
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: c31544156250a9e97ff8c0b17338f418817b21d2
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 693eee270a46ccb56ed5fef8fced1d4a1cf1974f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275825"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520234"
 ---
 # <a name="pages-routing-and-layouts"></a>Páginas, roteamento e layouts
 
@@ -17,7 +17,7 @@ ms.locfileid: "72275825"
 
 ASP.NET Web Forms aplicativos são compostos de páginas definidas em arquivos *. aspx* . O endereço de cada página é baseado em seu caminho de arquivo físico no projeto. Quando um navegador faz uma solicitação para a página, o conteúdo da página é processado dinamicamente no servidor. As contas de renderização para a marcação HTML da página e seus controles de servidor.
 
-No mais ou menos, cada página no aplicativo é um componente, normalmente definido em um arquivo *. Razor* , com uma ou mais rotas especificadas. O roteamento ocorre principalmente no lado do cliente sem envolver uma solicitação de servidor específica. O navegador primeiro faz uma solicitação para o endereço raiz do aplicativo. Um componente raiz `Router` no aplicativo mais alto, então, lida com a interceptação de solicitações de navegação e para o componente correto.
+No mais ou menos, cada página no aplicativo é um componente, normalmente definido em um arquivo *. Razor* , com uma ou mais rotas especificadas. O roteamento ocorre principalmente no lado do cliente sem envolver uma solicitação de servidor específica. O navegador primeiro faz uma solicitação para o endereço raiz do aplicativo. Um componente de `Router` raiz no aplicativo mais incrivelmente lida com a interceptação de solicitações de navegação e com o componente correto.
 
 Também dá suporte a *vinculação profunda*. A vinculação profunda ocorre quando o navegador faz uma solicitação para uma rota específica diferente da raiz do aplicativo. As solicitações de links profundos enviados ao servidor são roteadas para o aplicativo mais grande, que roteia a solicitação do lado do cliente para o componente correto.
 
@@ -84,7 +84,7 @@ A página equivalente em um aplicativo mais incrivelmente ficaria assim:
 
 ## <a name="create-pages"></a>Criar páginas
 
-Para criar uma página no mais alto, crie um componente e adicione a diretiva `@page` Razor para especificar a rota para o componente. A diretiva `@page` usa um único parâmetro, que é o modelo de rota a ser adicionado a esse componente.
+Para criar uma página no mais incrivelmente, crie um componente e adicione a diretiva `@page` Razor para especificar a rota para o componente. A diretiva `@page` usa um único parâmetro, que é o modelo de rota a ser adicionado a esse componente.
 
 ```razor
 @page "/counter"
@@ -122,7 +122,7 @@ Para obter uma lista completa das restrições de rota com suporte do mais grand
 
 ## <a name="router-component"></a>Componente do roteador
 
-O roteamento no mais alto é tratado pelo componente `Router`. O componente `Router` normalmente é usado no componente raiz do aplicativo (*app. Razor*).
+O roteamento no mais incrivelmente é tratado pelo componente `Router`. O componente `Router` normalmente é usado no componente raiz do aplicativo (*app. Razor*).
 
 ```razor
 <Router AppAssembly="@typeof(Program).Assembly">
@@ -137,9 +137,9 @@ O roteamento no mais alto é tratado pelo componente `Router`. O componente `Rou
 </Router>
 ```
 
-O componente `Router` descobre os componentes roteáveis no `AppAssembly` especificado e, opcionalmente, `AdditionalAssemblies`. Quando o navegador navega, o `Router` intercepta a navegação e renderiza o conteúdo de seu parâmetro `Found` com o `RouteData` extraído se uma rota corresponde ao endereço, caso contrário, o `Router` renderiza seu parâmetro `NotFound`.
+O componente `Router` descobre os componentes roteáveis no `AppAssembly` especificado e, opcionalmente, o `AdditionalAssemblies` especificado. Quando o navegador navega, o `Router` intercepta a navegação e renderiza o conteúdo de seu parâmetro `Found` com o `RouteData` extraído se uma rota corresponde ao endereço, caso contrário, o `Router` processa seu parâmetro `NotFound`.
 
-O componente `RouteView` manipula a renderização do componente correspondente especificado pelo `RouteData` com seu layout, se tiver um. Se o componente correspondente não tiver um layout, a opção opcionalmente especificada `DefaultLayout` será usada.
+O componente `RouteView` manipula a renderização do componente correspondente especificado pelo `RouteData` com seu layout, se tiver um. Se o componente correspondente não tiver um layout, o `DefaultLayout` opcionalmente especificado será usado.
 
 O componente `LayoutView` renderiza seu conteúdo filho dentro do layout especificado. Veremos os layouts mais detalhadamente mais adiante neste capítulo.
 
@@ -156,12 +156,12 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 
 O retorno de uma resposta de redirecionamento normalmente não é possível no mais. O mais alto que não usa um modelo de solicitação-resposta. No entanto, é possível disparar navegações do navegador diretamente, como você pode com o JavaScript.
 
-O mais útil fornece um serviço `NavigationManager` que pode ser usado para:
+O mais incrivelmente fornece um serviço `NavigationManager` que pode ser usado para:
 
-* Obter o endereço do navegador atual
-* Obter o endereço base
-* Disparar navegações
-* Seja notificado quando o endereço for alterado
+- Obter o endereço do navegador atual
+- Obter o endereço base
+- Disparar navegações
+- Seja notificado quando o endereço for alterado
 
 Para navegar para um endereço diferente, use o método `NavigateTo`:
 
@@ -178,11 +178,11 @@ Para navegar para um endereço diferente, use o método `NavigateTo`:
 }
 ```
 
-Para obter uma descrição de todos os membros de `NavigationManager`, consulte [URI e auxiliares de estado de navegação](/aspnet/core/blazor/routing#uri-and-navigation-state-helpers).
+Para obter uma descrição de todos os membros do `NavigationManager`, consulte [URI e auxiliares de estado de navegação](/aspnet/core/blazor/routing#uri-and-navigation-state-helpers).
 
 ## <a name="base-urls"></a>URLs de base
 
-Se seu aplicativo mais alto é implantado em um caminho base, você precisa especificar a URL base nos metadados da página usando a marca `<base>` para roteamento para a propriedade de trabalho. Se a página host do aplicativo for renderizada pelo servidor usando o Razor, você poderá usar a sintaxe `~/` para especificar o endereço base do aplicativo. Se a página host for HTML estático, você precisará especificar a URL base explicitamente.
+Se o seu aplicativo mais útil for implantado em um caminho base, você precisará especificar a URL base nos metadados da página usando a marca `<base>` para roteamento para a propriedade de trabalho. Se a página host do aplicativo for renderizada pelo servidor usando o Razor, você poderá usar a sintaxe `~/` para especificar o endereço base do aplicativo. Se a página host for HTML estático, você precisará especificar a URL base explicitamente.
 
 ```html
 <base href="~/" />
@@ -190,7 +190,7 @@ Se seu aplicativo mais alto é implantado em um caminho base, você precisa espe
 
 ## <a name="page-layout"></a>Layout da página
 
-O layout de página no ASP.NET Web Forms é manipulado por páginas mestras. As páginas mestras definem um modelo com um ou mais espaços reservados de conteúdo que podem ser fornecidos por páginas individuais. As páginas mestras são definidas em arquivos *. Master* e começam com a diretiva `<%@ Master %>`. O conteúdo dos arquivos *. Master* é codificado como você faria com uma página *. aspx* , mas com a adição de controles `<asp:ContentPlaceHolder>` para marcar onde as páginas podem fornecer conteúdo.
+O layout de página no ASP.NET Web Forms é manipulado por páginas mestras. As páginas mestras definem um modelo com um ou mais espaços reservados de conteúdo que podem ser fornecidos por páginas individuais. As páginas mestras são definidas em arquivos *. Master* e começam com a diretiva `<%@ Master %>`. O conteúdo dos arquivos *. Master* é codificado como você faria com uma página *. aspx* , mas com a adição de controles de `<asp:ContentPlaceHolder>` para marcar onde as páginas podem fornecer conteúdo.
 
 *Site. Master*
 
@@ -242,7 +242,7 @@ Para aplicar um layout a uma página, use a diretiva `@layout`:
 
 Você pode especificar o layout de todos os componentes em uma pasta e subpastas usando um arquivo *_Imports. Razor* . Você também pode especificar um layout padrão para todas as suas páginas usando o [componente do roteador](#router-component).
 
-As páginas mestras podem definir vários espaços reservados de conteúdo, mas os layouts no mais alto que têm apenas uma única propriedade `Body`. Essa limitação dos componentes de layout mais claros será abordada em uma versão futura.
+As páginas mestras podem definir vários espaços reservados de conteúdo, mas os layouts no mais simples têm apenas uma única propriedade de `Body`. Essa limitação dos componentes de layout mais claros será abordada em uma versão futura.
 
 As páginas mestras no ASP.NET Web Forms podem ser aninhadas. Ou seja, uma página mestra também pode usar uma página mestra. Os componentes de layout no mais grande número também podem ser aninhados. Você pode aplicar um componente de layout a um componente de layout. O conteúdo do layout interno será renderizado dentro do layout externo.
 
@@ -276,9 +276,9 @@ A saída renderizada para a página seria:
 </div>
 ```
 
-Os layouts no mais alto normalmente não definem os elementos HTML raiz de uma página (`<html>`, `<body>`, `<head>` e assim por diante). Os elementos HTML raiz são definidos na página host de um aplicativo mais novo, que é usada para renderizar o conteúdo HTML inicial para o aplicativo (consulte o mais novo e de [Bootstrap](project-structure.md#bootstrap-blazor)). A página host pode renderizar vários componentes raiz para o aplicativo com marcação ao redor.
+Os layouts que normalmente não definem os elementos HTML raiz de uma página (`<html>`, `<body>`, `<head>` e assim por diante). Os elementos HTML raiz são definidos na página host de um aplicativo mais novo, que é usada para renderizar o conteúdo HTML inicial para o aplicativo (consulte o mais novo e de [Bootstrap](project-structure.md#bootstrap-blazor)). A página host pode renderizar vários componentes raiz para o aplicativo com marcação ao redor.
 
-Os componentes do mais alto, incluindo páginas, não podem processar marcas `<script>`. Essa restrição de renderização existe porque as marcas `<script>` são carregadas uma vez e não podem ser alteradas. Pode ocorrer um comportamento inesperado se você tentar renderizar as marcas dinamicamente usando sintaxe Razor. Em vez disso, todas as marcas `<script>` devem ser adicionadas à página host do aplicativo.
+Os componentes do mais incrivelmente, incluindo páginas, não podem renderizar `<script>` marcas. Essa restrição de renderização existe porque as marcas de `<script>` são carregadas uma vez e não podem ser alteradas. Pode ocorrer um comportamento inesperado se você tentar renderizar as marcas dinamicamente usando sintaxe Razor. Em vez disso, todas as marcas de `<script>` devem ser adicionadas à página host do aplicativo.
 
 >[!div class="step-by-step"]
 >[Anterior](components.md)

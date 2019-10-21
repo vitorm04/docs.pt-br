@@ -4,12 +4,12 @@ description: Uma introdução ao mais alto e escrever aplicativos Web de pilha c
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 922e72514f0283b66de971d679fab0af436f1c75
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183843"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520305"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Uma introdução ao mais incrivelmente para desenvolvedores de Web Forms ASP.NET
 
@@ -62,25 +62,25 @@ Por si só, a capacidade de executar código .NET em um navegador não fornece u
 
 O mais lindo é um excelente suporte de ferramentas no Visual Studio e Visual Studio Code. A estrutura também inclui um modelo de componente completo da interface do usuário e tem instalações internas para:
 
-* Formulários e validação
-* Injeção de dependência
-* Roteamento do lado do cliente
-* Layouts
-* Depuração no navegador
-* Interoperabilidade do JavaScript
+- Formulários e validação
+- Injeção de dependência
+- Roteamento do lado do cliente
+- Layouts
+- Depuração no navegador
+- Interoperabilidade do JavaScript
 
 Há muito mais em comum com ASP.NET Web Forms. Ambas as estruturas oferecem modelos de programação de interface do usuário com estado baseado em componente e orientados por eventos. A principal diferença arquitetônica é que ASP.NET Web Forms é executado somente no servidor. O mais incrivelmente pode ser executado no cliente no navegador. Mas se você estiver vindo de uma ASP.NET Web Forms plano de fundo, há muito mais em um grande prazer que se sentirá familiar. O mais grande é uma solução natural para ASP.NET Web Forms desenvolvedores que buscam uma maneira de aproveitar o desenvolvimento do lado do cliente e o futuro da plataforma cruzada de software livre do .NET.
 
 Este livro fornece uma introdução ao mais incrivelmente que se destina especificamente a desenvolvedores de Web Forms ASP.NET. Cada conceito mais incrivelmente é apresentado no contexto de Web Forms ASP.NET análogas e recursos e práticas. No final deste livro, você terá uma compreensão de:
 
-* Como criar aplicativos mais Incrivelmenteos.
-* Como funciona o mais incrivelmente.
-* O quão recente é o .NET Core.
-* Estratégias razoáveis para migrar aplicativos ASP.NET Web Forms existentes para um mais incrivelmente quando apropriado.
+- Como criar aplicativos mais Incrivelmenteos.
+- Como funciona o mais incrivelmente.
+- O quão recente é o .NET Core.
+- Estratégias razoáveis para migrar aplicativos ASP.NET Web Forms existentes para um mais incrivelmente quando apropriado.
 
 ## <a name="get-started-with-blazor"></a>Introdução ao mais incrivelmente
 
-É fácil começar com o mais rápido. Vá para <https://blazor.net> e siga os links para instalar os modelos de projeto SDK do .NET Core e mais incrivelmente adequados. Você também encontrará instruções para configurar as ferramentas mais modestas no Visual Studio ou Visual Studio Code.
+É fácil começar com o mais rápido. Vá para <https://blazor.net> e siga os links para instalar os modelos de projeto de SDK do .NET Core e de mais incrivelmente apropriados. Você também encontrará instruções para configurar as ferramentas mais modestas no Visual Studio ou Visual Studio Code.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

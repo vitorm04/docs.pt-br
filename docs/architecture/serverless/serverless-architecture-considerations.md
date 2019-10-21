@@ -4,12 +4,12 @@ description: Entenda os desafios da arquitetura de aplicativos sem servidor, des
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ecbffbbd435b4926608e4def519fdaddddab688d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577429"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522433"
 ---
 # <a name="serverless-architecture-considerations"></a>Considerações sobre a arquitetura sem servidor
 
@@ -21,9 +21,9 @@ As funções sem servidor, assim como com os microservices em geral, não têm e
 
 Há várias soluções para adotar o estado sem comprometer os benefícios do servidor. Algumas das soluções mais populares incluem:
 
-* Use um armazenamento de dados temporário ou um cache distribuído, como Redis
-* Armazene o estado em um banco de dados, como SQL ou CosmosDB
-* Tratar o estado por meio de um mecanismo de fluxo de trabalho como funções duráveis
+- Use um armazenamento de dados temporário ou um cache distribuído, como Redis
+- Armazene o estado em um banco de dados, como SQL ou CosmosDB
+- Tratar o estado por meio de um mecanismo de fluxo de trabalho como funções duráveis
 
 O resultado final é que você deve estar ciente da necessidade de qualquer gerenciamento de estado dentro dos processos que está pensando em implementar sem servidor.
 
@@ -37,9 +37,9 @@ Há algumas exceções e soluções. Uma solução pode ser dividir o processo e
 
 Uma preocupação potencial com implementações sem servidor é o tempo de inicialização. Para conservar recursos, muitos provedores sem servidor criam infraestrutura "sob demanda". Quando uma função sem servidor é disparada após um período de tempo, os recursos para hospedar a função podem precisar ser criados ou reiniciados. Em algumas situações, inícios frios podem resultar em atrasos de vários segundos. O tempo de inicialização varia entre provedores e níveis de serviço. Há algumas abordagens para abordar o tempo de inicialização se for importante minimizar para o sucesso do aplicativo.
 
-* Alguns provedores permitem que os usuários paguem por níveis de serviço que garantem que a infraestrutura está "sempre ativa".
-* Implemente um mecanismo Keep-Alive (execute ping no ponto de extremidade para mantê-lo "ativo").
-* Use orquestração como kubernetes com uma abordagem de função em contêiner (o host já está em execução, portanto, a rotação de novas instâncias é extremamente rápida).
+- Alguns provedores permitem que os usuários paguem por níveis de serviço que garantem que a infraestrutura está "sempre ativa".
+- Implemente um mecanismo Keep-Alive (execute ping no ponto de extremidade para mantê-lo "ativo").
+- Use orquestração como kubernetes com uma abordagem de função em contêiner (o host já está em execução, portanto, a rotação de novas instâncias é extremamente rápida).
 
 ## <a name="database-updates-and-migrations"></a>Atualizações e migrações de banco de dados
 
@@ -71,7 +71,7 @@ Uma arquitetura sem servidor pode incluir funções que dependem de outras funç
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Gerenciamento de falhas e fornecimento de resiliência
 
-Também é importante considerar o padrão de *separação de circuito*: Se, por algum motivo, um serviço continuar a falhar, não é aconselhável chamar esse serviço repetidamente. Em vez disso, um serviço alternativo é chamado ou uma mensagem retornada até que a integridade do serviço dependente seja restabelecida. A arquitetura sem servidor precisa levar em conta a estratégia para resolver e gerenciar dependências entre serviços.
+Também é importante considerar o padrão de *separação de circuito*: se, por algum motivo, um serviço continuar a falhar, não é aconselhável chamar esse serviço repetidamente. Em vez disso, um serviço alternativo é chamado ou uma mensagem retornada até que a integridade do serviço dependente seja restabelecida. A arquitetura sem servidor precisa levar em conta a estratégia para resolver e gerenciar dependências entre serviços.
 
 Para continuar o padrão de separação de circuito, os serviços precisam ser tolerantes a falhas e resilientes. Tolerância a falhas refere-se à capacidade do seu aplicativo de continuar em execução mesmo após exceções inesperadas ou Estados inválidos serem encontrados. A tolerância a falhas normalmente é uma função do próprio código e como ela é escrita para lidar com exceções. Resiliência refere-se à capacidade com que o aplicativo está em recuperação de falhas. A resiliência é geralmente gerenciada pela plataforma sem servidor. A plataforma deve ser capaz de criar uma nova instância de função sem servidor quando a existente falhar. A plataforma também deve ser inteligente o suficiente para interromper a rotação de novas instâncias quando cada nova instância falhar.
 

@@ -2,12 +2,12 @@
 title: Resiliência da plataforma Azure
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Resiliência de infraestrutura de nuvem com o Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214203"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520767"
 ---
 # <a name="azure-platform-resiliency"></a>Resiliência da plataforma Azure
 
@@ -68,17 +68,17 @@ A nuvem prospera no dimensionamento. A capacidade de aumentar/diminuir os recurs
 
 - *Aproveite os recursos de dimensionamento automático da plataforma.* Use recursos internos de dimensionamento automático sempre que possível, em vez de mecanismos personalizados ou de terceiros. Sempre que possível, use regras de dimensionamento agendadas para garantir que os recursos estejam disponíveis sem um atraso de inicialização, mas adicione o dimensionamento automático reativo às regras conforme apropriado, para lidar com alterações inesperadas na demanda. Para obter mais informações, consulte [diretrizes de dimensionamento](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)automático.
 
-- *Escalar verticalmente de forma agressiva.* Uma prática final seria escalar verticalmente de forma agressiva para que você possa atender rapidamente a picos imediatos de tráfego sem perder negócios. E, em seguida, reduzir verticalmente (ou seja, remover recursos desnecessários) de forma conservadora para manter o sistema estável. Uma maneira simples de implementar isso é definir o período de resfriamento, que é o tempo de espera entre as operações de dimensionamento, cinco minutos para adicionar recursos e até 15 minutos para remover instâncias.
+- *Escalar horizontalmente de forma agressiva.* Uma prática final seria escalar horizontalmente de forma agressiva para que você possa atender rapidamente a picos imediatos de tráfego sem perder negócios. E, em seguida, reduzir (ou seja, remover instâncias desnecessárias) de forma conservadora para manter o sistema estável. Uma maneira simples de implementar isso é definir o período de resfriamento, que é o tempo de espera entre as operações de dimensionamento, cinco minutos para adicionar recursos e até 15 minutos para remover instâncias.
 
 ## <a name="built-in-retry-in-services"></a>Repetição interna em serviços
 
 Incentivamos a prática recomendada de implementar operações de repetição programáticas em uma seção anterior. Tenha em mente que muitos serviços do Azure e seus SDKs de cliente correspondentes também incluem mecanismos de repetição. A lista a seguir resume os recursos de repetição nos muitos dos serviços do Azure que são discutidos neste livro:
 
-- *Azure Cosmos DB.* A <xref:Microsoft.Azure.Documents.Client.DocumentClient> classe da API do cliente desativa automaticamente as tentativas com falha. O número de repetições e o tempo de espera máximo são configuráveis. As exceções geradas pela API do cliente são solicitações que excedem a política de repetição ou erros não transitórios.
+- *Azure Cosmos DB.* A classe <xref:Microsoft.Azure.Documents.Client.DocumentClient> da API do cliente desativa automaticamente as tentativas com falha. O número de repetições e o tempo de espera máximo são configuráveis. As exceções geradas pela API do cliente são solicitações que excedem a política de repetição ou erros não transitórios.
 
 - *Cache Redis do Azure.* O cliente Redis StackExchange usa uma classe de Gerenciador de conexões que inclui novas tentativas em tentativas com falha. O número de repetições, a política de repetição específica e o tempo de espera são todos configuráveis.
 
-- *Barramento de serviço do Azure.* O cliente do barramento de serviço expõe uma [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que pode ser configurada com um intervalo de retirada, contagem <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>de repetição e, que especifica o tempo máximo que uma operação pode tomar. A política padrão é de nove tentativas de repetição máximas com um período de retirada de 30 segundos entre as tentativas.
+- *Barramento de serviço do Azure.* O cliente do barramento de serviço expõe uma [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que pode ser configurada com um intervalo de retirada, contagem de repetição e <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, que especifica o tempo máximo que uma operação pode tomar. A política padrão é de nove tentativas de repetição máximas com um período de retirada de 30 segundos entre as tentativas.
 
 - *Banco de dados SQL do Azure.* O suporte de repetição é fornecido ao usar a biblioteca de [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) .
 

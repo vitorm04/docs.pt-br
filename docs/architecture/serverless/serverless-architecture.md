@@ -4,12 +4,12 @@ description: Exploração de várias arquiteturas e aplicativos que têm suporte
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577349"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522398"
 ---
 # <a name="serverless-architecture"></a>Arquitetura sem servidor
 
@@ -27,12 +27,12 @@ Alguns projetos podem se beneficiar com a criação de uma abordagem "tudo" para
 
 O back-end completo sem servidor é ideal para vários tipos de cenários, especialmente ao criar aplicativos novos ou "de campo verde". Um aplicativo com uma grande área de superfície de APIs pode se beneficiar da implementação de cada API como uma função sem servidor. Aplicativos baseados na arquitetura de microserviços são outro exemplo que podem ser implementados como um back-end completo sem servidor. Os microserviços se comunicam por vários protocolos entre si. Os cenários específicos incluem:
 
-* Produtos SaaS baseados em API (exemplo: processador de pagamentos financeiros).
-* Aplicativos orientados a mensagens (exemplo: solução de monitoramento de dispositivo).
-* Aplicativos focados na integração entre serviços (exemplo: aplicativo de reservas de viagens).
-* Processos que são executados periodicamente (exemplo: limpeza de banco de dados baseada em temporizador).
-* Aplicativos focados na transformação de dados (exemplo: importação disparada por upload de arquivo).
-* Extrair processos de ETL (transformação e carregamento).
+- Produtos SaaS baseados em API (exemplo: processador de pagamentos financeiros).
+- Aplicativos orientados a mensagens (exemplo: solução de monitoramento de dispositivo).
+- Aplicativos focados na integração entre serviços (exemplo: aplicativo de reservas de viagens).
+- Processos que são executados periodicamente (exemplo: limpeza de banco de dados baseada em temporizador).
+- Aplicativos focados na transformação de dados (exemplo: importação disparada por upload de arquivo).
+- Extrair processos de ETL (transformação e carregamento).
 
 Há outros casos de uso mais específicos que são abordados posteriormente neste documento.
 
@@ -42,7 +42,7 @@ Um desafio comum é migrar um aplicativo monolítico existente para a nuvem. A a
 
 ![Migração monolítica sem servidor](./media/serverless-monolith-migration.png)
 
-Para saber mais sobre essa abordagem, Assista ao vídeo: [Traga seu aplicativo para a nuvem com Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
+Para saber mais sobre essa abordagem, Assista ao vídeo: [traga seu aplicativo para a nuvem com Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Aplicativos Web
 
@@ -66,10 +66,10 @@ A IoT refere-se a objetos físicos que estão em rede. Às vezes, eles são cham
 
 O enorme volume de dispositivos e informações geralmente determina uma arquitetura orientada por eventos para rotear e processar mensagens. Sem servidor é uma solução ideal por vários motivos:
 
-* Habilita o dimensionamento conforme o volume de dispositivos e dados aumenta.
-* Acomoda a adição de novos pontos de extremidade para dar suporte a novos dispositivos e sensores.
-* Facilita o controle de versão independente para que os desenvolvedores possam atualizar a lógica de negócios de um dispositivo específico sem precisar implantar o sistema inteiro.
-* Resiliência e menos tempo de inatividade.
+- Habilita o dimensionamento conforme o volume de dispositivos e dados aumenta.
+- Acomoda a adição de novos pontos de extremidade para dar suporte a novos dispositivos e sensores.
+- Facilita o controle de versão independente para que os desenvolvedores possam atualizar a lógica de negócios de um dispositivo específico sem precisar implantar o sistema inteiro.
+- Resiliência e menos tempo de inatividade.
 
 A disseminação da IoT resultou em vários produtos sem servidor que se concentram especificamente em preocupações com a IoT, como o [Hub IOT do Azure](https://docs.microsoft.com/azure/iot-hub). O servidor automatiza tarefas como registro de dispositivos, imposição de políticas, acompanhamento e até mesmo implantação de código para dispositivos na *borda*. A borda se refere a dispositivos como sensores e atuadores que estão conectados a, mas não a uma parte ativa do, à Internet.
 

@@ -4,12 +4,12 @@ description: Saiba como as estruturas de projeto dos projetos ASP.NET Web Forms 
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: f9af8f88008ef45438a9104374d766cdbf8cc9a0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183815"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520226"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Estrutura do projeto para aplicativos mais Incrivelmenteos
 
@@ -59,9 +59,9 @@ O arquivo de projeto para um aplicativo Webassembly mais complicado parece um po
 
 Os projetos Webassembly de mais alto-alvo .NET Standard em vez do .NET Core porque eles são executados no navegador em um tempo de execução .NET baseado em Webassembly. Você não pode instalar o .NET em um navegador da Web como você pode em um computador de servidor ou de desenvolvedor. Consequentemente, o projeto faz referência à estrutura mais Incrivelmentea usando referências de pacote individuais.
 
-Por comparação, um projeto ASP.NET Web Forms padrão inclui quase 300 linhas de XML em seu arquivo *. csproj* , a maior parte deles está listando explicitamente os vários arquivos de código e conteúdo no projeto. Muitas das simplificações dos projetos baseados no .NET Core e no .net standard são provenientes dos destinos e das propriedades padrão importadas referenciando o `Microsoft.NET.Sdk.Web` SDK, geralmente conhecido como simplesmente o SDK da Web. O SDK da Web inclui curingas e outras conveniências que simplificam a inclusão de código e arquivos de conteúdo no projeto. Você não precisa listar os arquivos explicitamente. Ao direcionar o .NET Core, o Web SDK também adiciona referências de estrutura às estruturas compartilhadas do .NET Core e do ASP.NET Core. As estruturas são visíveis no nó de**estruturas** de **dependências** > na janela **Gerenciador de soluções** . As estruturas compartilhadas são coleções de assemblies que foram instalados no computador durante a instalação do .NET Core.
+Por comparação, um projeto ASP.NET Web Forms padrão inclui quase 300 linhas de XML em seu arquivo *. csproj* , a maior parte deles está listando explicitamente os vários arquivos de código e conteúdo no projeto. Muitas das simplificações dos projetos baseados no .NET Core e no .NET Standard são provenientes dos destinos e das propriedades padrão importadas referenciando o SDK do `Microsoft.NET.Sdk.Web`, geralmente conhecido como simplesmente o SDK da Web. O SDK da Web inclui curingas e outras conveniências que simplificam a inclusão de código e arquivos de conteúdo no projeto. Você não precisa listar os arquivos explicitamente. Ao direcionar o .NET Core, o Web SDK também adiciona referências de estrutura às estruturas compartilhadas do .NET Core e do ASP.NET Core. As estruturas são visíveis no nó **dependências**  > **estruturas** , na janela **Gerenciador de soluções** . As estruturas compartilhadas são coleções de assemblies que foram instalados no computador durante a instalação do .NET Core.
 
-Embora eles tenham suporte, as referências de assembly individuais são menos comuns em projetos do .NET Core. A maioria das dependências do projeto é tratada como referências de pacote NuGet. Você só precisa referenciar as dependências de pacote de nível superior em projetos do .NET Core. Dependências transitivas são incluídas automaticamente. Em vez de usar o arquivo *Packages. config* normalmente encontrado em ASP.NET Web Forms projetos para referenciar pacotes, as referências de pacote são adicionadas `<PackageReference>` ao arquivo de projeto usando o elemento.
+Embora eles tenham suporte, as referências de assembly individuais são menos comuns em projetos do .NET Core. A maioria das dependências do projeto é tratada como referências de pacote NuGet. Você só precisa referenciar as dependências de pacote de nível superior em projetos do .NET Core. Dependências transitivas são incluídas automaticamente. Em vez de usar o arquivo *Packages. config* normalmente encontrado em ASP.NET Web Forms projetos para referenciar pacotes, as referências de pacote são adicionadas ao arquivo de projeto usando o elemento `<PackageReference>`.
 
 ```xml
 <ItemGroup>
@@ -92,7 +92,7 @@ public class Program
 
 Os aplicativos Webassembly mais incrivelmente também definem um ponto de entrada em *Program.cs*. O código parece um pouco diferente. O código é semelhante, pois está configurando o host de aplicativo para fornecer os mesmos serviços de nível de host para o aplicativo. No entanto, o host do aplicativo Webassembly não configura um servidor HTTP porque ele é executado diretamente no navegador.
 
-Os aplicativos mais poseriais têm uma `Startup` classe em vez de um arquivo *global. asax* para definir a lógica de inicialização para o aplicativo. A `Startup` classe é usada para configurar o aplicativo e quaisquer serviços específicos do aplicativo. No aplicativo de servidor mais grande, a `Startup` classe é usada para configurar o ponto de extremidade para a conexão em tempo real usada pelo mais alto nível entre os navegadores do cliente e o servidor. No aplicativo Webassembly mais incrivelmente, a `Startup` classe define os componentes raiz para o aplicativo e onde eles devem ser renderizados. Vamos dar uma olhada `Startup` mais detalhada na classe na seção de inicialização do [aplicativo](./app-startup.md) .
+Os aplicativos mais incrivelmente têm uma classe `Startup` em vez de um arquivo *global. asax* para definir a lógica de inicialização para o aplicativo. A classe `Startup` é usada para configurar o aplicativo e quaisquer serviços específicos do aplicativo. No aplicativo de servidor mais grande, a classe `Startup` é usada para configurar o ponto de extremidade para a conexão em tempo real usada pelo mais alto nível entre os navegadores de cliente e o servidor. No aplicativo Webassembly mais incrivelmente, a classe `Startup` define os componentes raiz para o aplicativo e onde eles devem ser renderizados. Vamos dar uma olhada mais detalhada na classe `Startup` na seção de [inicialização do aplicativo](./app-startup.md) .
 
 ## <a name="static-files"></a>Arquivos estáticos
 
@@ -123,7 +123,7 @@ A maioria dos arquivos em projetos mais podestas são arquivos *. Razor* . O Raz
 
 Cada arquivo de componente do Razor é compilado em uma classe do .NET quando o projeto é compilado. A classe gerada captura o estado do componente, a lógica de renderização, os métodos de ciclo de vida, os manipuladores de eventos e outras lógicas. Veremos os componentes de criação na seção [criando componentes de interface do usuário reutilizáveis com mais capacidade](./components.md) .
 
-Os arquivos *_Imports. Razor* não são arquivos de componente do Razor. Em vez disso, eles definem um conjunto de diretivas do Razor para importar para outros arquivos *. Razor* dentro da mesma pasta e em suas subpastas. Por exemplo, um arquivo *_Imports. Razor* é uma maneira convencional de adicionar `using` instruções para namespaces comumente usados:
+Os arquivos *_Imports. Razor* não são arquivos de componente do Razor. Em vez disso, eles definem um conjunto de diretivas do Razor para importar para outros arquivos *. Razor* dentro da mesma pasta e em suas subpastas. Por exemplo, um arquivo *_Imports. Razor* é uma maneira convencional de adicionar instruções `using` para namespaces comumente usados:
 
 ```razor
 @using System.Net.Http
@@ -139,7 +139,7 @@ Os arquivos *_Imports. Razor* não são arquivos de componente do Razor. Em vez 
 
 ## <a name="pages"></a>Pages (Páginas)
 
-Onde estão as páginas nos aplicativos mais incrivelmente? O mais incrivelmente não define uma extensão de arquivo separada para páginas endereçáveis, como os arquivos *. aspx* em ASP.NET Web Forms aplicativos. Em vez disso, as páginas são definidas por meio da atribuição de rotas a componentes. Uma rota é normalmente atribuída usando a `@page` diretiva Razor. Por exemplo, o `Counter` componente criado no arquivo *pages/Counter. Razor* define a seguinte rota:
+Onde estão as páginas nos aplicativos mais incrivelmente? O mais incrivelmente não define uma extensão de arquivo separada para páginas endereçáveis, como os arquivos *. aspx* em ASP.NET Web Forms aplicativos. Em vez disso, as páginas são definidas por meio da atribuição de rotas a componentes. Uma rota é normalmente atribuída usando a diretiva `@page` Razor. Por exemplo, o componente `Counter` criado no arquivo *pages/Counter. Razor* define a seguinte rota:
 
 ```razor
 @page "/counter"
@@ -159,10 +159,10 @@ No ASP.NET Web Forms aplicativos, o layout de página comum é manipulado usando
 
 Para a inicialização mais incrivelmente, o aplicativo deve:
 
-* Especifique o local na página em que o componente raiz (*app. Razor*) deve ser renderizado.
-* Adicione o script de estrutura de mais incrivelmente correspondente.
+- Especifique o local na página em que o componente raiz (*app. Razor*) deve ser renderizado.
+- Adicione o script de estrutura de mais incrivelmente correspondente.
 
-No aplicativo de servidor mais novo, a página host do componente raiz é definida no arquivo *_Host. cshtml* . Esse arquivo define uma página Razor, não um componente. Razor Pages usar sintaxe Razor para definir uma página endereçável do servidor, muito parecida com uma página *. aspx* . O `Html.RenderComponentAsync<TComponent>(RenderMode)` método é usado para definir onde um componente de nível raiz deve ser renderizado. A `RenderMode` opção indica a maneira como o componente deve ser renderizado. A tabela a seguir descreve as opções com `RenderMode` suporte.
+No aplicativo de servidor mais novo, a página host do componente raiz é definida no arquivo *_Host. cshtml* . Esse arquivo define uma página Razor, não um componente. Razor Pages usar sintaxe Razor para definir uma página endereçável do servidor, muito parecida com uma página *. aspx* . O método `Html.RenderComponentAsync<TComponent>(RenderMode)` é usado para definir onde um componente de nível raiz deve ser renderizado. A opção `RenderMode` indica a maneira como o componente deve ser renderizado. A tabela a seguir descreve as opções de `RenderMode` com suporte.
 
 |Opção                        |Descrição       |
 |------------------------------|------------------|
@@ -197,7 +197,7 @@ A referência de script para *_framework/mais alto. Server. js* estabelece a con
 </html>
 ```
 
-No aplicativo Webassembly mais novo, a página host é um arquivo HTML estático simples em *wwwroot/index.html*. O `<app>` elemento é usado para indicar onde o componente raiz deve ser renderizado.
+No aplicativo Webassembly mais novo, a página host é um arquivo HTML estático simples em *wwwroot/index.html*. O elemento `<app>` é usado para indicar onde o componente raiz deve ser renderizado.
 
 ```html
 <!DOCTYPE html>
@@ -218,7 +218,7 @@ No aplicativo Webassembly mais novo, a página host é um arquivo HTML estático
 </html>
 ```
 
-O componente específico a ser renderizado é configurado no método `Startup.Configure` do aplicativo com um seletor CSS correspondente, indicando onde o componente deve ser renderizado.
+O componente específico a ser renderizado é configurado no método de `Startup.Configure` do aplicativo com um seletor CSS correspondente, indicando onde o componente deve ser renderizado.
 
 ```csharp
 public class Startup
@@ -240,14 +240,14 @@ Quando um projeto mais elaborado é criado, todos os arquivos de componente e c�
 
 ## <a name="run-the-app"></a>Executar o aplicativo
 
-Para executar o aplicativo de servidor mais incrivelmente, `F5` pressione no Visual Studio. Aplicativos mais incrivelmenteos não dão suporte à compilação em tempo de execução. Para ver os resultados das alterações de marcação de código e de componente, recompile e reinicie o aplicativo com o depurador anexado. Se você executar sem o depurador anexado (`Ctrl+F5`), o Visual Studio inspecionará as alterações de arquivo e reiniciará o aplicativo conforme as alterações forem feitas. Você atualiza manualmente o navegador conforme as alterações são feitas.
+Para executar o aplicativo de servidor mais incrivelmente, pressione `F5` no Visual Studio. Aplicativos mais incrivelmenteos não dão suporte à compilação em tempo de execução. Para ver os resultados das alterações de marcação de código e de componente, recompile e reinicie o aplicativo com o depurador anexado. Se você executar sem o depurador anexado (`Ctrl+F5`), o Visual Studio inspecionará as alterações de arquivo e reiniciará o aplicativo conforme as alterações forem feitas. Você atualiza manualmente o navegador conforme as alterações são feitas.
 
 Para executar o aplicativo Webassembly mais incrivelmente, escolha uma das seguintes abordagens:
 
-* Execute o projeto do cliente diretamente usando o servidor de desenvolvimento.
-* Execute o projeto de servidor ao hospedar o aplicativo com ASP.NET Core.
+- Execute o projeto do cliente diretamente usando o servidor de desenvolvimento.
+- Execute o projeto de servidor ao hospedar o aplicativo com ASP.NET Core.
 
-Aplicativos Webassembly de mais de-estúdio não dão suporte à depuração usando o Visual Studio. Para executar o aplicativo, use `Ctrl+F5` em vez `F5`de. Em vez disso, você pode depurar aplicativos Webassembly mais incrivelmente diretamente no navegador. Consulte [depurar ASP.NET Core mais incrivelmente](/aspnet/core/blazor/debug) para obter detalhes.
+Aplicativos Webassembly de mais de-estúdio não dão suporte à depuração usando o Visual Studio. Para executar o aplicativo, use `Ctrl+F5` em vez de `F5`. Em vez disso, você pode depurar aplicativos Webassembly mais incrivelmente diretamente no navegador. Consulte [depurar ASP.NET Core mais incrivelmente](/aspnet/core/blazor/debug) para obter detalhes.
 
 >[!div class="step-by-step"]
 >[Anterior](hosting-models.md)
