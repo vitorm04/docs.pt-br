@@ -4,12 +4,12 @@ description: As Azure Functions duráveis estendem o tempo de execução de Azur
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577509"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522857"
 ---
 # <a name="durable-azure-functions"></a>Funções duráveis do Azure
 
@@ -27,7 +27,7 @@ Fluxos de trabalho com estado no Durable Functions podem ser divididos em dois c
 
 As orquestrações são exclusivas em comparação com outros estilos de operações disparadas no Azure Functions. Durable Functions permite a execução de funções que podem levar horas ou até mesmo dias para serem concluídas. Esse tipo de comportamento vem com a necessidade de verificar o status de uma orquestração em execução, encerrar preempção ou enviar notificações de eventos externos.
 
-Para esses casos, a extensão Durable Functions fornece a `DurableOrchestrationClient` classe que permite que você interaja com funções orquestradas. Você obtém acesso ao cliente de orquestração usando a `OrchestrationClientAttribute` associação. Em geral, você incluiria esse atributo com outro tipo de gatilho, como `HttpTrigger` um `ServiceBusTrigger`ou. Depois que a função de origem tiver sido disparada, o cliente de orquestração poderá ser usado para iniciar uma função de orquestrador.
+Para esses casos, a extensão Durable Functions fornece a classe `DurableOrchestrationClient` que permite que você interaja com funções orquestradas. Você obtém acesso ao cliente de orquestração usando a associação de `OrchestrationClientAttribute`. Em geral, você incluiria esse atributo com outro tipo de gatilho, como um `HttpTrigger` ou `ServiceBusTrigger`. Depois que a função de origem tiver sido disparada, o cliente de orquestração poderá ser usado para iniciar uma função de orquestrador.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Anotar uma função com o OrchestrationTriggerAttribute em Azure Functions marca que funciona como uma função de orquestrador. É responsável por gerenciar as várias atividades que compõem seu fluxo de trabalho com estado.
 
-As funções de orquestrador não podem fazer uso de associações diferentes de OrchestrationTriggerAttribute. Esse atributo só pode ser usado com um tipo de parâmetro de DurableOrchestrationContext. Nenhuma outra entrada pode ser usada, pois a desserialização de entradas na assinatura de função não tem suporte. Para obter as entradas fornecidas pelo cliente de orquestração, o método\<T\> de entrada deve ser usado.
+As funções de orquestrador não podem fazer uso de associações diferentes de OrchestrationTriggerAttribute. Esse atributo só pode ser usado com um tipo de parâmetro de DurableOrchestrationContext. Nenhuma outra entrada pode ser usada, pois a desserialização de entradas na assinatura de função não tem suporte. Para obter as entradas fornecidas pelo cliente de orquestração, o método de \> de \<T de entrada deve ser usado.
 
 Além disso, os tipos de retorno das funções de orquestração devem ser void, Task ou um valor serializável JSON.
 
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Várias instâncias de uma orquestração podem ser iniciadas e executadas ao mesmo tempo. Chamar o `StartNewAsync` método `DurableOrchestrationClient` no inicia uma nova instância da orquestração. O método retorna um `Task<string>` que é concluído quando a orquestração é iniciada. Uma exceção do tipo `TimeoutException` é gerada se a orquestração não tiver começado dentro de 30 segundos.
+Várias instâncias de uma orquestração podem ser iniciadas e executadas ao mesmo tempo. Chamar o método `StartNewAsync` na `DurableOrchestrationClient` inicia uma nova instância da orquestração. O método retorna um `Task<string>` que é concluído quando a orquestração é iniciada. Uma exceção do tipo `TimeoutException` será lançada se a orquestração não tiver começado dentro de 30 segundos.
 
-O from `Task<string>` `StartNewAsync` concluído deve conter a ID exclusiva da instância de orquestração. Essa ID de instância pode ser usada para invocar operações nessa orquestração específica. A orquestração pode ser consultada para o status ou notificações de eventos enviadas.
+O `Task<string>` concluído de `StartNewAsync` deve conter a ID exclusiva da instância de orquestração. Essa ID de instância pode ser usada para invocar operações nessa orquestração específica. A orquestração pode ser consultada para o status ou notificações de eventos enviadas.
 
 ### <a name="the-activity-functions"></a>As funções de atividade
 
 Funções de atividade são operações discretas que são compostas em uma função de orquestração para criar o fluxo de trabalho. Aqui está o local em que a maior parte do trabalho real ocorre. Eles representam a lógica de negócios, os processos de longa duração e as peças de quebra-cabeça para uma solução maior.
 
-O `ActivityTriggerAttribute` é usado para anotar um parâmetro de função do `DurableActivityContext`tipo. O uso da anotação informa ao tempo de execução que a função destina-se a ser usada como uma função de atividade. Os valores `GetInput<T>` `DurableActivityContext` de entrada para as funções de atividade são recuperados usando o método do parâmetro.
+O `ActivityTriggerAttribute` é usado para anotar um parâmetro de função do tipo `DurableActivityContext`. O uso da anotação informa ao tempo de execução que a função destina-se a ser usada como uma função de atividade. Os valores de entrada para as funções de atividade são recuperados usando o método `GetInput<T>` do parâmetro `DurableActivityContext`.
 
 Semelhante às funções de orquestração, os tipos de retorno das funções de atividade devem ser void, Task ou um valor serializável JSON.
 
-Todas as exceções sem tratamento que são lançadas em funções de atividade serão enviadas para a função de orquestrador de chamada e apresentadas `TaskFailedException`como um. Neste ponto, o erro pode ser capturado e registrado no orquestrador, e a atividade pode ser repetida.
+Todas as exceções sem tratamento que são lançadas em funções de atividade serão enviadas para a função de orquestrador de chamada e apresentadas como um `TaskFailedException`. Neste ponto, o erro pode ser capturado e registrado no orquestrador, e a atividade pode ser repetida.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,9 +96,9 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Associações para Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-* [Gerenciar instâncias no Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Associações para Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Gerenciar instâncias no Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[Anterior](event-grid.md)

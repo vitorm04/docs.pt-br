@@ -2,12 +2,12 @@
 title: Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373928"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522918"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
 
@@ -41,7 +41,7 @@ A lista a seguir descreve as principais filosofias ou práticas para aplicativos
 
 A Figura 4-2 mostra os principais pilares opcionais de um aplicativo otimizado para a nuvem. Quanto mais pilares você implementar, o readier seu aplicativo será ter sucesso ao atender às expectativas dos clientes.
 
-![Principais pilares de um aplicativo otimizado para nuvem](./media/image2.png)
+![Diagrama que nomeia os pilares principais de um aplicativo otimizado para a nuvem.](./media/main-pillars-cloud-optimized-application.png)
 
 **Figura 4-2.** Principais pilares de um aplicativo otimizado para nuvem
 

@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834444"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522952"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -17,7 +17,7 @@ Em uma arquitetura de microsserviços, cada microsserviço expõe um conjunto de
 
 Uma abordagem possível é usar uma arquitetura de comunicação direta de cliente com microsserviço. Nessa abordagem, um aplicativo cliente pode fazer solicitações diretamente para alguns dos microsserviços, conforme mostra a Figura 4-12.
 
-![Diagrama mostrando a arquitetura de comunicação de cliente para microserviço.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![Diagrama mostrando a arquitetura de comunicação de cliente para microserviço.](./media/direct-client-to-microservice-communication.png)
 
 **Figura 4-12**. Usando uma arquitetura de comunicação direta de cliente com microsserviço
 
@@ -57,9 +57,9 @@ Portanto, ter um nível intermediário ou indireto (Gateway) pode ser muito conv
 
 - **Muitas viagens de ida e volta**: uma única página/tela no aplicativo cliente pode exigir diversas chamadas para vários serviços. Isso pode resultar em várias viagens de ida e volta na rede entre o cliente e o servidor, adicionando uma latência significativa. A agregação manipulada em um nível intermediário pode melhorar o desempenho e a experiência do usuário para o aplicativo cliente.
 
-- **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao “mundo externo”, tornando a superfície de ataque maior do que se você ocultar os microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
+- **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao "mundo externo", tornando a superfície de ataque maior do que se você ocultar microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
 
-- **Interesses paralelos**: cada microsserviço publicado abertamente deve tratar de interesses como autorização, SSL, etc. Em muitas situações, esses interessas podem ser tratados em uma única camada para que os microsserviços internos sejam simplificados.
+- **Preocupações**abrangentes: cada microserviço publicado publicamente deve lidar com questões como autorização, SSL, etc. Em muitas situações, essas questões podem ser tratadas em uma única camada para que os microserviços internos sejam simplificados.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Por que o padrão de Gateway de API?
 
@@ -132,7 +132,7 @@ O [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-manag
 
 **Figura 4-14**. Usando o Gerenciamento de API do Azure para o Gateway de API
 
-O Gerenciamento de API do Azure soluciona as necessidades do Gerenciamento e do Gateway de API, como log, segurança, medição, etc. Neste caso, ao usar um produto como o Gerenciamento de API do Azure, o fato de que você pode ter um único Gateway de API não é tão arriscado, pois esses tipos de Gateways de API são "mais finos", o que significa que não implementam código C# personalizado que pode evoluir para um componente monolítico. 
+O gerenciamento de API do Azure resolve o gateway de API e as necessidades de gerenciamento, como log, segurança, medição, etc. Nesse caso, ao usar um produto como o gerenciamento de API do Azure, o fato de que você pode ter um único gateway de API não é tão arriscado porque esses tipos de gateways de API são "mais finos" C# , o que significa que você não implementa código personalizado que poderia evoluir para um componente monolítico. 
 
 Os produtos de Gateway de API costumam atuar como um proxy reverso para comunicação de entrada, em que você também pode filtrar as APIs dos microsserviços internos e aplicar a autorização para as APIs publicadas nessa camada única.
 
@@ -146,7 +146,7 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), a arqu
 
 O [Ocelot](https://github.com/ThreeMammals/Ocelot) é um Gateway de API leve, recomendado para abordagens mais simples. O Ocelot é um Gateway de API baseado no .NET Core de Software Livre, feito especialmente para a arquitetura de microsserviços que precisa de pontos de entrada unificados no sistema. Ele é leve, rápido, escalonável e fornece roteamento e autenticação entre muitos outros recursos.
 
-A principal razão para escolher o Ocelot no [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) se deve ao fato de o Ocelot ser um Gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de aplicativos em que os microsserviços/contêineres são implantados, como um Host do Docker, Kubernetes etc. E, como ele é baseado no .NET Core, é uma plataforma cruzada que permite a implantação no Linux ou no Windows.
+O principal motivo para escolher Ocelot para o [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de implantação de aplicativos em que você está implantando seus microserviços/ contêineres, como um host do Docker, kubernetes, etc. E, como ele é baseado no .NET Core, ele é multiplataforma que permite que você implante no Linux ou no Windows.
 
 Os diagramas anteriores que mostram os Gateways de API personalizados em execução nos contêineres correspondem precisamente ao modo como você também pode executar o Ocelot em um contêiner e em um aplicativo baseado em microsserviço.
 
@@ -170,7 +170,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão: gateway de API/back-end para front-end** \
+- **Chris Richardson. Padrão: gateway de API/back-end para front-end**  \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Padrão de Gateway de API** \
@@ -182,10 +182,10 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 - **Gerenciamento de API do Azure** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. Composição orientada a serviços** \
+- **Udi Dahan. @No__t_1 de composição orientada a serviço**
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Mensagens e microsserviços na GOTO 2016 (vídeo)**  \
+- **Grandes Clemenss. Mensagens e microserviços em GOTO 2016 (vídeo)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Resumo sobre o Gateway de API** (série de tutoriais do Gateway de API do ASP.NET Core) \

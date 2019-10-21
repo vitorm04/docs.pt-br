@@ -2,12 +2,12 @@
 title: Comunicação assíncrona baseada em mensagens
 description: Arquitetura de Microsserviços do .NET para Aplicativos .NET em Contêineres | A comunicação assíncrona baseada em mensagens é um conceito essencial na arquitetura de microsserviços, porque ela é a melhor maneira de manter microsserviços independentes uns dos outros, estando também simultaneamente sincronizados no fim das contas.
 ms.date: 09/20/2018
-ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394570"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522752"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicação assíncrona baseada em mensagens
 
@@ -77,7 +77,7 @@ Um desafio ao implementar uma arquitetura orientada a eventos em vários micross
 
 - Usando o padrão [Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
-- Usando o [Padrão de caixa de saída](http://gistlabs.com/2014/05/the-outbox/): uma tabela de banco de dados transacional como uma fila de mensagens que será a base de um componente do criador do evento que criará e publicará o evento.
+- Usando o [Padrão de caixa de saída](http://www.kamilgrzybek.com/design/the-outbox-pattern/): uma tabela de banco de dados transacional como uma fila de mensagens que será a base de um componente do criador do evento que criará e publicará o evento.
 
 Tópicos adicionais a serem considerados ao usar comunicação assíncrona são idempotência de mensagem e eliminação de duplicação de mensagem. Esses tópicos são abordados na seção [Implementar a comunicação baseada em eventos entre microsserviços (eventos de integração)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) mais adiante neste guia.
 
@@ -89,7 +89,7 @@ Tópicos adicionais a serem considerados ao usar comunicação assíncrona são 
 - **Publicar/assinar canal** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan. @No__t de CQRS esclarecida**-1
+- **Udi Dahan. @No__t_1 de CQRS esclarecidas**
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **CQRS (Segregação de Responsabilidade de Comando e Consulta)**  \

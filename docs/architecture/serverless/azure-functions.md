@@ -4,12 +4,12 @@ description: O Azure Functions fornece recursos sem servidor em váriosC#idiomas
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577599"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522874"
 ---
 # <a name="azure-functions"></a>Verificação de
 
@@ -27,7 +27,7 @@ Há duas versões do tempo de execução de Azure Functions: 1. x e 2. x. A vers
 
 A [versão 2. x também está geralmente disponível agora](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Ele aproveita o .NET Core e dá suporte ao desenvolvimento de plataforma cruzada em computadores Windows, macOS e Linux. 2. x adiciona o suporte de primeira classe para Java, mas ainda não dá suporte diretamente a qualquer uma das linguagens experimentais. A versão 2. x usa um novo modelo de extensibilidade de associação que permite extensões de terceiros para a plataforma, controle de versão independente de associações e um ambiente de execução mais simplificado.
 
-> **Há um problema conhecido em 1. x com [suporte para](https://github.com/Azure/azure-functions-host/issues/992)redirecionamento de associação.** O problema é específico do desenvolvimento do .NET. Os projetos com dependências em bibliotecas que são uma versão diferente das bibliotecas incluídas no tempo de execução são afetados. A equipe de funções se comprometeu a fazer o progresso concreto do problema. A equipe abordará redirecionamentos de associação em 2. x antes de entrar em disponibilidade geral. A declaração de equipe oficial com correções e soluções alternativas sugeridas está disponível aqui: [Resolução de assembly em Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **Há um problema conhecido em 1. x com [suporte para redirecionamento de associação](https://github.com/Azure/azure-functions-host/issues/992).** O problema é específico do desenvolvimento do .NET. Os projetos com dependências em bibliotecas que são uma versão diferente das bibliotecas incluídas no tempo de execução são afetados. A equipe de funções se comprometeu a fazer o progresso concreto do problema. A equipe abordará redirecionamentos de associação em 2. x antes de entrar em disponibilidade geral. A declaração de equipe oficial com correções e soluções alternativas sugeridas está disponível aqui: [resolução de assembly em Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
 Para obter mais informações, consulte [comparar 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
@@ -35,14 +35,14 @@ Para obter mais informações, consulte [comparar 1. x e 2. x](https://docs.micr
 
 Os idiomas a seguir têm suporte em disponibilidade geral (GA), visualização ou experimental.
 
-|Idioma      |1.x         |2.x      |
+|Linguagem      |1.x         |2.x      |
 |--------------|------------|---------|
 |**C#**        |3º          |Visualizar  |
 |**JavaScript**|3º          |Visualizar  |
 |**F#**        |3º          |         |
 |**Java**      |            |Visualizar  |
 |**Python**    |Habilitação|         |
-|**PHP**       |Habilitação|         |
+|**DESTINADOS**       |Habilitação|         |
 |**TypeScript**|Habilitação|         |
 |**Lote**     |Habilitação|         |
 |**Raso**      |Habilitação|         |
@@ -60,9 +60,9 @@ Para obter mais informações, consulte [planos do serviço de aplicativo](https
 
 Há três maneiras comuns de criar aplicativos de funções.
 
-* Funções de script no Portal.
-* Crie os recursos necessários usando a CLI (interface de linha de comando) do Azure.
-* Crie funções localmente usando seu IDE favorito e publique-as no Azure.
+- Funções de script no Portal.
+- Crie os recursos necessários usando a CLI (interface de linha de comando) do Azure.
+- Crie funções localmente usando seu IDE favorito e publique-as no Azure.
 
 Para obter mais informações sobre como criar uma função com script no portal, consulte [criar sua primeira função no portal do Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).
 
@@ -76,16 +76,16 @@ As funções são invocadas por um *gatilho* e podem ter exatamente uma. Além d
 
 Alguns gatilhos comuns incluem:
 
-* Armazenamento de BLOBs: invoque sua função quando um arquivo ou pasta for carregado ou alterado no armazenamento.
-* HTTP: invoque sua função como uma API REST.
-* Fila: invoque sua função quando houver itens em uma fila.
-* Temporizador: invocar sua função em uma cadência regular.
+- Armazenamento de BLOBs: invoque sua função quando um arquivo ou pasta for carregado ou alterado no armazenamento.
+- HTTP: invoque sua função como uma API REST.
+- Fila: invoque sua função quando houver itens em uma fila.
+- Temporizador: invocar sua função em uma cadência regular.
 
 Exemplos de associações incluem:
 
-* CosmosDB: Conecte-se facilmente ao banco de dados para carregar ou salvar arquivos.
-* Armazenamento de tabelas: trabalhe com o armazenamento de chave/valor do seu aplicativo de funções.
-* Armazenamento de filas: recuperar facilmente itens de uma fila ou colocar novos itens na fila.
+- CosmosDB: Conecte-se facilmente ao banco de dados para carregar ou salvar arquivos.
+- Armazenamento de tabelas: trabalhe com o armazenamento de chave/valor do seu aplicativo de funções.
+- Armazenamento de filas: recuperar facilmente itens de uma fila ou colocar novos itens na fila.
 
 O arquivo *functions. JSON* de exemplo a seguir define um gatilho e uma associação:
 
@@ -111,7 +111,7 @@ O arquivo *functions. JSON* de exemplo a seguir define um gatilho e uma associa�
 }
 ```
 
-Neste exemplo, a função é disparada por uma alteração no armazenamento de BLOBs no `images` contêiner. As informações para o arquivo são passadas para que o gatilho também atue como uma associação. Existe outra associação para colocar informações em uma fila chamada `images`.
+Neste exemplo, a função é disparada por uma alteração no armazenamento de BLOBs no contêiner de `images`. As informações para o arquivo são passadas para que o gatilho também atue como uma associação. Existe outra associação para colocar informações em uma fila chamada `images`.
 
 Este é o C# script para a função:
 
@@ -131,17 +131,17 @@ Para obter uma lista completa de gatilhos e associações, consulte [Azure Funct
 
 Os proxies fornecem funcionalidade de redirecionamento para seu aplicativo. Os proxies expõem um ponto de extremidade e mapeiam esse ponto de extremidade para outro recurso. Com proxies, você pode:
 
-* Redirecionar uma solicitação de entrada para outro ponto de extremidade.
-* Modifique a solicitação de entrada antes de ela ser passada.
-* Modifique ou forneça uma resposta.
+- Redirecionar uma solicitação de entrada para outro ponto de extremidade.
+- Modifique a solicitação de entrada antes de ela ser passada.
+- Modifique ou forneça uma resposta.
 
 Os proxies são usados para cenários como:
 
-* Simplificando, reduzindo ou alterando a URL.
-* Fornecer um prefixo de API consistente para vários serviços de back-end.
-* Simulação de uma resposta a um ponto de extremidade que está sendo desenvolvido.
-* Fornecer uma resposta estática para um ponto de extremidade bem conhecido.
-* Manter um ponto de extremidade de API consistente enquanto o back-end é movido ou migrado.
+- Simplificando, reduzindo ou alterando a URL.
+- Fornecer um prefixo de API consistente para vários serviços de back-end.
+- Simulação de uma resposta a um ponto de extremidade que está sendo desenvolvido.
+- Fornecer uma resposta estática para um ponto de extremidade bem conhecido.
+- Manter um ponto de extremidade de API consistente enquanto o back-end é movido ou migrado.
 
 Os proxies são armazenados como definições de JSON. Veja um exemplo:
 
@@ -169,13 +169,13 @@ Os proxies são armazenados como definições de JSON. Veja um exemplo:
 }
 ```
 
-O `Domain Redirect` proxy usa uma rota reduzida e a mapeia para o recurso de função mais longo. A transformação é semelhante a:
+O proxy de `Domain Redirect` usa uma rota reduzida e a mapeia para o recurso de função mais longo. A transformação é semelhante a:
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-O `Root` proxy leva algo enviado para a URL raiz (`https://--shorturl--/`) e redireciona-o para o site de documentação.
+O proxy de `Root` faz algo enviado para a URL raiz (`https://--shorturl--/`) e o redireciona para o site de documentação.
 
-Um exemplo de uso de proxies é mostrado no vídeo [Azure: Traga seu aplicativo para a nuvem com Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)sem servidor. Em tempo real, um aplicativo ASP.NET Core em execução no SQL Server local é migrado para a nuvem do Azure. Os proxies são usados para ajudar a refatorar um projeto de API Web tradicional para usar funções.
+Um exemplo de uso de proxies é mostrado no vídeo [Azure: Traga seu aplicativo para a nuvem com Azure Functions sem servidor](https://channel9.msdn.com/events/Connect/2017/E102). Em tempo real, um aplicativo ASP.NET Core em execução no SQL Server local é migrado para a nuvem do Azure. Os proxies são usados para ajudar a refatorar um projeto de API Web tradicional para usar funções.
 
 Para obter mais informações sobre proxies, consulte [trabalhar com proxies do Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 

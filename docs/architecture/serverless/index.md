@@ -1,17 +1,17 @@
 ---
-title: 'Aplicativos sem servidor: Arquitetura, padrões e implementação no Azure'
+title: 'Aplicativos sem servidor: arquitetura, padrões e implementação no Azure'
 description: Guia para arquitetura sem servidor. Saiba quando, por que e como implementar uma arquitetura sem servidor [em vez de uma IaaS (infraestrutura como serviço) ou uma PaaS (plataforma como serviço)] em seus aplicativos empresariais.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: HT
+ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70222817"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522852"
 ---
-# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicativos sem servidor: Arquitetura, padrões e implementação no Azure
+# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicativos sem servidor: arquitetura, padrões e implementação no Azure
 
 ![Captura de tela que mostra a capa do livro eletrônico Aplicativos sem servidor.](./media/index/serverless-apps-cover.jpg)
 
@@ -23,7 +23,7 @@ Divisão de Desenvolvedores Microsoft, equipes dos produtos .NET e Visual Studio
 
 Uma divisão da Microsoft Corporation
 
-One Microsoft Way
+Uma maneira de Microsoft
 
 Redmond, Washington 98052-6399
 
@@ -63,10 +63,10 @@ Participantes e revisores:
 
 A computação [sem servidor](https://azure.microsoft.com/solutions/serverless/) é a evolução das plataformas de nuvem na direção do código nativo de nuvem pura. Ela aproxima os desenvolvedores da lógica de negócios, isolando-os das questões de infraestrutura. É um padrão que não quer dizer "nenhum servidor", mas sim, "sem servidor". O código sem servidor é controlado por eventos. O código pode ser disparado por qualquer coisa, desde uma solicitação da Web HTTP tradicional até um temporizador ou o carregamento de um arquivo. A infraestrutura por trás da computação sem servidor permite dimensionar instantaneamente para atender a demandas elásticas e oferece a microcobrança, que realmente permite "pagar por aquilo que você usar". A computação sem servidor requer uma nova maneira de pensar e abordar a criação de aplicativos e não é a solução certa para todos os problemas. Como desenvolvedor, você precisa decidir:
 
-* Quais são os prós e contras do uso da computação sem servidor?
-* Por que você deve considerar a computação sem servidor para seus próprios aplicativos?
-* Como pode você compilar, testar, implantar e manter seu código sem servidor?
-* Em que caso é interessante migrar o código de aplicativos existentes para a computação sem servidor, e qual é a melhor maneira de realizar essa transformação?
+- Quais são os prós e contras do uso da computação sem servidor?
+- Por que você deve considerar a computação sem servidor para seus próprios aplicativos?
+- Como pode você compilar, testar, implantar e manter seu código sem servidor?
+- Em que caso é interessante migrar o código de aplicativos existentes para a computação sem servidor, e qual é a melhor maneira de realizar essa transformação?
 
 ## <a name="about-this-guide"></a>Sobre este guia
 
@@ -82,31 +82,31 @@ A computação sem servidor é a culminação de várias iterações de platafor
 
 Antes da nuvem, existia um limite perceptível entre desenvolvimento e operações. A implantação de um aplicativo significava responder a uma grande variedade de perguntas como:
 
-* Qual hardware deve ser instalado?
-* Como é o acesso físico ao computador protegido?
-* O data center exige um no-break?
-* Para onde os backups de armazenamento são enviados?
-* É necessário que haja uma energia redundante?
+- Qual hardware deve ser instalado?
+- Como é o acesso físico ao computador protegido?
+- O data center exige um no-break?
+- Para onde os backups de armazenamento são enviados?
+- É necessário que haja uma energia redundante?
 
-A lista continua e a sobrecarga era enorme. Em muitas situações, os departamentos de TI eram obrigados a lidar com um enorme desperdício. O desperdício era devido à alocação excessiva de servidores como máquinas de backup para recuperação de desastre e de servidores em espera para permitir a expansão. Felizmente, a introdução da tecnologia de virtualização (como o [Hyper-V](/virtualization/hyper-v-on-windows/about/)) com VMs (máquinas virtuais) permitiu o surgimento da IaaS (infraestrutura como serviço). A infraestrutura virtualizada permitiu que as operações estabelecessem um conjunto padrão de servidores como o backbone, levando a um ambiente flexível com a capacidade de provisionar de servidores exclusivos "sob demanda”. Ainda mais importante, a virtualização preparou o terreno para que a nuvem pudesse ser usada para fornecer máquinas virtuais "como serviço”. As empresas puderam realmente parar de se preocupar com computadores físicos ou com fonte de alimentação redundante. Com isso, elas passaram a se concentrar no ambiente virtual.
+A lista continua e a sobrecarga era enorme. Em muitas situações, os departamentos de TI eram obrigados a lidar com um enorme desperdício. O desperdício era devido à alocação excessiva de servidores como máquinas de backup para recuperação de desastres e servidores em espera para habilitar a expansão. Felizmente, a introdução da tecnologia de virtualização (como o [Hyper-V](/virtualization/hyper-v-on-windows/about/)) com máquinas virtuais (VMS) deu origem à IaaS (infraestrutura como serviço). A infraestrutura virtualizada permitiu que as operações estabelecessem um conjunto padrão de servidores como o backbone, levando a um ambiente flexível com a capacidade de provisionar de servidores exclusivos "sob demanda”. Ainda mais importante, a virtualização preparou o terreno para que a nuvem pudesse ser usada para fornecer máquinas virtuais "como serviço”. As empresas puderam realmente parar de se preocupar com computadores físicos ou com fonte de alimentação redundante. Com isso, elas passaram a se concentrar no ambiente virtual.
 
 A IaaS ainda requer uma sobrecarga pesada porque as operações ainda são responsáveis por várias tarefas. Essas tarefas incluem:
 
-* Aplicar patches e fazer backup de servidores.
-* Instalar pacotes.
-* Manter o sistema operacional atualizado.
-* Monitorar o aplicativo.
+- Aplicar patches e fazer backup de servidores.
+- Instalar pacotes.
+- Manter o sistema operacional atualizado.
+- Monitorar o aplicativo.
 
 A próxima evolução reduziu a sobrecarga ao fornecer a PaaS (plataforma como serviço). Com a PaaS, o provedor de nuvem lida com sistemas operacionais, patches de segurança e até mesmo com os pacotes necessários para dar suporte a uma plataforma específica. Em vez de criar uma VM e, em seguida, configurar o .NET Framework e estabelecer servidores de serviços de IIS (Serviços de Informações da Internet), os desenvolvedores simplesmente escolhem uma "plataforma de destino" como "aplicativo Web" ou "Ponto de extremidade de API" e implantam o código diretamente. As perguntas de infraestrutura são reduzidas para:
 
-* Qual o tamanho dos serviços necessários?
-* Como os serviços podem ser expandidos (adicionar mais servidores ou nós)?
-* Como os serviços podem ser escalados verticalmente (aumentar a capacidade de hospedar servidores ou nós)?
+- Qual o tamanho dos serviços necessários?
+- Como os serviços podem ser expandidos (adicionar mais servidores ou nós)?
+- Como os serviços podem ser escalados verticalmente (aumentar a capacidade de hospedar servidores ou nós)?
 
 A computação sem servidor abstrai ainda mais os servidores, concentrando-se no código controlado por eventos. Em vez de se concentrarem em uma plataforma, os desenvolvedores podem se concentrar em um microsserviço que faz apenas uma coisa. As duas principais perguntas para compilar o código sem servidor são:
 
-* O que dispara o código?
-* O que o código faz?
+- O que dispara o código?
+- O que o código faz?
 
 Com a computação sem servidor, a infraestrutura é abstraída. Em alguns casos, o desenvolvedor nem precisa se preocupar mais com o host. Independentemente de haver uma instância do IIS, do Kestrel, do Apache ou de algum outro servidor Web em execução para gerenciar solicitações da Web, o desenvolvedor se concentrará em um gatilho HTTP. O gatilho fornece o conteúdo padrão e de plataforma cruzada para a solicitação. Além de simplificar o processo de desenvolvimento, o conteúdo também facilita os testes e, em alguns casos, torna o código facilmente portátil entre plataformas.
 
@@ -118,16 +118,16 @@ Este guia enfatiza especificamente as abordagens de arquitetura e os padrões de
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-* [Centro de Arquitetura do Azure](https://docs.microsoft.com/azure/architecture/)
-* [Práticas recomendadas para aplicativos de nuvem](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Centro de Arquitetura do Azure](https://docs.microsoft.com/azure/architecture/)
+- [Práticas recomendadas para aplicativos de nuvem](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Quem deve usar o guia
 
 Este guia foi escrito para desenvolvedores e arquitetos de solução que desejam criar aplicativos empresariais com o .NET que podem usar componentes sem servidor localmente ou na nuvem. Ele é útil para desenvolvedores, arquitetos e tomadores de decisões técnicas interessados em:
 
-* Entender os prós e contras do desenvolvimento sem servidor
-* Saber como abordar a arquitetura sem servidor
-* Exemplos de implementações de aplicativos sem servidor
+- Entender os prós e contras do desenvolvimento sem servidor
+- Saber como abordar a arquitetura sem servidor
+- Exemplos de implementações de aplicativos sem servidor
 
 ## <a name="how-to-use-the-guide"></a>Como usar o guia
 

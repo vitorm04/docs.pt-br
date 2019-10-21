@@ -4,12 +4,12 @@ description: Application Insights é uma plataforma de diagnóstico sem servidor
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577719"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522736"
 ---
 # <a name="telemetry-with-application-insights"></a>Telemetria com Application Insights
 
@@ -19,12 +19,12 @@ ms.locfileid: "69577719"
 
 Adicionar Application Insights a aplicativos existentes é tão fácil quanto adicionar uma chave de instrumentação às configurações do seu aplicativo. Com Application Insights você pode:
 
-* Crie gráficos personalizados e alertas com base em métricas, como o número de invocações de função, o tempo necessário para executar uma função e exceções
-* Analisar falhas e exceções de servidor
-* Detalhar o desempenho por operação e medir o tempo necessário para chamar dependências de terceiros
-* Monitore o uso da CPU, a memória e as taxas em todos os servidores que hospedam seus aplicativos de funções
-* Exibir uma transmissão ao vivo de métricas, incluindo contagem de solicitações e latência para seus aplicativos de funções
-* Use a [análise](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) para pesquisar, consultar e criar gráficos personalizados sobre seus dados de função
+- Crie gráficos personalizados e alertas com base em métricas, como o número de invocações de função, o tempo necessário para executar uma função e exceções
+- Analisar falhas e exceções de servidor
+- Detalhar o desempenho por operação e medir o tempo necessário para chamar dependências de terceiros
+- Monitore o uso da CPU, a memória e as taxas em todos os servidores que hospedam seus aplicativos de funções
+- Exibir uma transmissão ao vivo de métricas, incluindo contagem de solicitações e latência para seus aplicativos de funções
+- Use a [análise](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) para pesquisar, consultar e criar gráficos personalizados sobre seus dados de função
 
 ![Gerenciador de métricas](./media/metrics-explorer.png)
 

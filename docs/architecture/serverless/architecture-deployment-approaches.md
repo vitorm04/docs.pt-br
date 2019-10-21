@@ -4,12 +4,12 @@ description: Um guia para diferentes maneiras como as arquiteturas empresariais 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834332"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522734"
 ---
 # <a name="architecture-deployment-approaches"></a>Abordagens de implantação de arquitetura
 
@@ -19,38 +19,38 @@ Independentemente da abordagem de arquitetura usada para criar um aplicativo de 
 
 O [padrão de arquitetura de N camadas](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) é uma arquitetura madura e simplesmente se refere a aplicativos que separam várias camadas lógicas em camadas físicas separadas. A arquitetura de n camadas é uma implementação física da arquitetura de N camadas. A implementação mais comum dessa arquitetura inclui:
 
-* Uma camada de apresentação, por exemplo, um aplicativo Web.
-* Uma API ou uma camada de acesso a dados, como uma API REST.
-* Uma camada de dados, como um banco de dado SQL.
+- Uma camada de apresentação, por exemplo, um aplicativo Web.
+- Uma API ou uma camada de acesso a dados, como uma API REST.
+- Uma camada de dados, como um banco de dado SQL.
 
 ![Arquitetura de N camadas](./media/n-tier-architecture.png)
 
 As soluções de N camadas têm as seguintes características:
 
-* Normalmente, os projetos são alinhados com camadas.
-* O teste pode ser abordado de forma diferente por camada.
-* As camadas fornecem camadas de abstração, por exemplo, a camada de apresentação normalmente é que desconhecem dos detalhes de implementação da camada de dados.
-* Normalmente, as camadas só interagem com camadas adjacentes.
-* As versões geralmente são gerenciadas no projeto e, portanto, camada, nível. Uma simples alteração de API pode exigir uma nova versão de uma camada intermediária inteira.
+- Normalmente, os projetos são alinhados com camadas.
+- O teste pode ser abordado de forma diferente por camada.
+- As camadas fornecem camadas de abstração, por exemplo, a camada de apresentação normalmente é que desconhecem dos detalhes de implementação da camada de dados.
+- Normalmente, as camadas só interagem com camadas adjacentes.
+- As versões geralmente são gerenciadas no projeto e, portanto, camada, nível. Uma simples alteração de API pode exigir uma nova versão de uma camada intermediária inteira.
 
 Essa abordagem fornece vários benefícios, incluindo:
 
-* Isolamento do banco de dados (geralmente o front-end não tem acesso direto ao back-end do banco de dados).
-* A reutilização da API (por exemplo, clientes móveis, de área de trabalho e de aplicativos Web pode reutilizar as mesmas APIs).
-* Capacidade de escalar horizontalmente camadas de forma independente.
-* Isolamento de refatoração: uma camada pode ser Refatorada sem afetar outras camadas.
+- Isolamento do banco de dados (geralmente o front-end não tem acesso direto ao back-end do banco de dados).
+- A reutilização da API (por exemplo, clientes móveis, de área de trabalho e de aplicativos Web pode reutilizar as mesmas APIs).
+- Capacidade de escalar horizontalmente camadas de forma independente.
+- Isolamento de refatoração: uma camada pode ser Refatorada sem afetar outras camadas.
 
 ## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>Local e infraestrutura como serviço (IaaS)
 
 A abordagem tradicional para hospedar aplicativos requer a compra de hardware e o gerenciamento de todas as instalações de software, incluindo o sistema operacional. Originalmente, isso envolvia data centers caros e hardware físico. Os desafios que acompanham o hardware físico operacional são muitos, incluindo:
 
-* A necessidade de comprar em excesso para cenários de demanda "apenas no caso" ou de pico.
-* Proteção do acesso físico ao hardware.
-* Responsabilidade por falha de hardware (como falha de disco).
-* Cool.
-* Configurando roteadores e balanceadores de carga.
-* Redundância de energia.
-* Proteção do acesso ao software.
+- A necessidade de comprar em excesso para cenários de demanda "apenas no caso" ou de pico.
+- Proteção do acesso físico ao hardware.
+- Responsabilidade por falha de hardware (como falha de disco).
+- Cool.
+- Configurando roteadores e balanceadores de carga.
+- Redundância de energia.
+- Proteção do acesso ao software.
 
 ![Abordagem de IaaS](./media/iaas-approach.png)
 
@@ -68,10 +68,10 @@ A PaaS (plataforma como serviço) oferece soluções configuradas que os desenvo
 
 A PaaS aborda os desafios comuns ao IaaS. A PaaS permite que o desenvolvedor se concentre no esquema de banco de dados ou código em vez de como ele é implantado. Os benefícios do PaaS incluem:
 
-* Pague por modelos de uso que eliminem a sobrecarga de investir em computadores ociosos.
-* Implantação direta e pipelines aprimorados de DevOps, integração contínua (CI) e entrega contínua (CD).
-* Atualizações automáticas, atualizações e patches de segurança.
-* Expansão e escala vertical do botão de ação (escala elástica).
+- Pague por modelos de uso que eliminem a sobrecarga de investir em computadores ociosos.
+- Implantação direta e pipelines aprimorados de DevOps, integração contínua (CI) e entrega contínua (CD).
+- Atualizações automáticas, atualizações e patches de segurança.
+- Expansão e escala vertical do botão de ação (escala elástica).
 
 A principal desvantagem do PaaS tradicionalmente foi o bloqueio do fornecedor. Por exemplo, alguns provedores de PaaS oferecem suporte apenas a ASP.NET, Node. js ou outras linguagens e plataformas específicas. Produtos como Azure App serviço evoluíram para abordar várias plataformas e dar suporte a uma variedade de linguagens e estruturas para hospedar aplicativos Web.
 
@@ -89,11 +89,11 @@ Contêineres são uma solução interessante que permite benefícios semelhantes
 
 Os benefícios dos contêineres incluem:
 
-* Leve e portátil
-* Independente, portanto, não é necessário instalar dependências
-* Fornecer um ambiente consistente independentemente do host (executado exatamente igual em um laptop, como em um servidor de nuvem)
-* Pode ser provisionado rapidamente para expansão
-* Pode ser reiniciado rapidamente para se recuperar de uma falha
+- Leve e portátil
+- Independente, portanto, não é necessário instalar dependências
+- Fornecer um ambiente consistente independentemente do host (executado exatamente igual em um laptop, como em um servidor de nuvem)
+- Pode ser provisionado rapidamente para expansão
+- Pode ser reiniciado rapidamente para se recuperar de uma falha
 
 Um contêiner é executado em um host de contêiner (que, por sua vez, pode ser executado em um computador bare-metal ou uma máquina virtual). Vários contêineres ou instâncias dos mesmos contêineres podem ser executados em um único host. Para failover e resiliência reais, os contêineres devem ser dimensionados entre os hosts.
 
@@ -125,10 +125,10 @@ Os diagramas de ilustração a seguir têm quatro componentes sem servidor. Uma 
 
 As vantagens da inclusão sem servidor:
 
-* **Alta densidade.** Muitas instâncias do mesmo código sem servidor podem ser executadas no mesmo host em comparação com contêineres ou máquinas virtuais. A escala de instâncias em vários hosts aumenta e resiliência.
-* **Micro-cobrança**. A maioria dos provedores sem servidor cobra com base nas execuções sem servidor, permitindo uma economia de custos massiva em determinados cenários.
-* **Escala instantânea**. O servidor não pode ser dimensionado para corresponder cargas de trabalho de forma automática e rápida.
-* **Tempo de colocação no mercado mais rápido** Os desenvolvedores se concentram no código e implantam diretamente na plataforma sem servidor. Os componentes podem ser liberados independentemente um do outro.
+- **Alta densidade.** Muitas instâncias do mesmo código sem servidor podem ser executadas no mesmo host em comparação com contêineres ou máquinas virtuais. A escala de instâncias em vários hosts aumenta e resiliência.
+- **Micro-cobrança.** A maioria dos provedores sem servidor cobra com base nas execuções sem servidor, permitindo uma economia de custos massiva em determinados cenários.
+- **Escala instantânea.** O servidor não pode ser dimensionado para corresponder cargas de trabalho de forma automática e rápida.
+- **Tempo de colocação no mercado mais rápido.** Os desenvolvedores se concentram no código e implantam diretamente na plataforma sem servidor. Os componentes podem ser liberados independentemente um do outro.
 
 O servidor não é mais frequentemente discutido no contexto de computação, mas também pode se aplicar aos dados. Por exemplo, o [Azure SQL](https://docs.microsoft.com/azure/sql-database) e o [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) fornecem bancos de dados de nuvem que não exigem a configuração de máquinas host ou clusters. Este livro se concentra na computação sem servidor.
 
@@ -141,29 +141,29 @@ Há um amplo espectro de opções disponíveis para arquitetura, incluindo uma a
 |**Ajustar Escala**|VM       |Instância |Aplicação      |Função  |
 |**Abstrai**|Hardware|Plataforma|Host do sistema operacional|Tempo de execução   |
 |**Unidade** |VM       |Projeto  |Image    |Código      |
-|**Tempo de Vida**|meses|Dias para meses|Minutos a dias|Milissegundos a minutos|
+|**Tempo de Vida**|Meses|Dias para meses|Minutos a dias|Milissegundos a minutos|
 |**Responsabilidade**|Aplicativos, dependências, tempo de execução e sistema operacional|Aplicativos e dependências|Aplicativos, dependências e tempo de execução|Função
 
-* A **escala** se refere à unidade usada para dimensionar o aplicativo
-* Os **resumos** referem-se à camada que é abstrata pela implementação
-* **Unidade** refere-se ao escopo do que está implantado
-* Tempo de **vida** refere-se ao tempo de execução típico de uma instância específica
-* **Responsabilidade** refere-se à sobrecarga para criar, implantar e manter o aplicativo
+- A **escala** se refere à unidade usada para dimensionar o aplicativo
+- Os **resumos** referem-se à camada que é abstrata pela implementação
+- **Unidade** refere-se ao escopo do que está implantado
+- Tempo de **vida** refere-se ao tempo de execução típico de uma instância específica
+- **Responsabilidade** refere-se à sobrecarga para criar, implantar e manter o aplicativo
 
 O próximo capítulo se concentrará em arquitetura sem servidor, casos de uso e padrões de design.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-* [Guia de arquitetura do aplicativo do Azure](https://docs.microsoft.com/azure/architecture/guide/)
-* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-* [Padrão de arquitetura de N camadas](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-* [Kubernetes no Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Microsserviços](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-* [Arquitetura de referência de N camadas da máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-* [Máquinas virtuais](https://docs.microsoft.com/azure/virtual-machines/)
-* [O que é o Docker?](../microservices/container-docker-introduction/docker-defined.md)
-* [Aplicativo SaaS Wingtip tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Guia de arquitetura do aplicativo do Azure](https://docs.microsoft.com/azure/architecture/guide/)
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+- [SQL do Azure](https://docs.microsoft.com/azure/sql-database)
+- [Padrão de arquitetura de N camadas](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
+- [Kubernetes no Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+- [Microsserviços](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+- [Arquitetura de referência de N camadas da máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [Máquinas virtuais](https://docs.microsoft.com/azure/virtual-machines/)
+- [O que é o Docker?](../microservices/container-docker-introduction/docker-defined.md)
+- [Aplicativo SaaS Wingtip tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[Anterior](architecture-approaches.md)
