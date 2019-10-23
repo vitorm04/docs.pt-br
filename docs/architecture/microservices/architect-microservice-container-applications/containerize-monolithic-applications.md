@@ -2,12 +2,12 @@
 title: Implantar aplicativos monolíticos em contêineres
 description: Colocar em contêineres aplicativos monolíticos, embora não obtenha todos os benefícios da arquitetura de microsserviços, tem benefícios de implantação importantes que podem ser entregues imediatamente.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673213"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771474"
 ---
 # <a name="containerizing-monolithic-applications"></a>Implantar aplicativos monolíticos em contêineres
 
@@ -23,7 +23,7 @@ Para gerenciar esse modelo, implante um contêiner único para representar o apl
 
 O ponto negativo dessa abordagem ficará evidente se o aplicativo crescer e for necessário dimensioná-lo. Se o aplicativo inteiro puder ser dimensionado, não será realmente um problema. Entretanto, na maioria dos casos apenas algumas partes do aplicativo são os pontos de redução que exigem escalonamento, enquanto outros componentes são menos utilizados.
 
-Por exemplo, em um aplicativo comum de comércio eletrônico, provavelmente é preciso dimensionar o subsistema de informações do produto, pois a procura por produtos é maior do que a compra. Mais clientes usam o carrinho em vez do pipeline de pagamento. Menos clientes fazem comentários ou exibem o histórico de compras. E você pode ter apenas alguns funcionários para gerenciar conteúdo e campanhas de marketing. Ao escalonar o design monolítico, todo o código dessas tarefas diferentes é implantado diversas vezes e dimensionado no mesmo grau.
+Por exemplo, em um aplicativo comum de comércio eletrônico, provavelmente é preciso dimensionar o subsistema de informações do produto, pois a procura por produtos é maior do que a compra. Mais clientes usam o carrinho em vez do pipeline de pagamento. Menos clientes fazem comentários ou exibem o histórico de compras. E você pode ter apenas alguns funcionários que precisam gerenciar as campanhas de conteúdo e marketing. Ao escalonar o design monolítico, todo o código dessas tarefas diferentes é implantado diversas vezes e dimensionado no mesmo grau.
 
 Há várias maneiras de dimensionar um aplicativo: duplicação horizontal, divisão de diferentes áreas do aplicativo e partição de conceitos ou dados empresariais semelhantes. No entanto, além do problema de dimensionamento de todos os componentes, alterar um único componente exige testar novamente todo o aplicativo e reimplantar todas as instâncias.
 
@@ -33,7 +33,7 @@ De uma perspectiva de infraestrutura, cada servidor pode executar vários aplica
 
 ![Um host pode executar vários aplicativos monolíticos, cada um em um contêiner separado.](./media/image2.png)
 
-**Figura 4-2**. Abordagem monolítica: Host executando vários aplicativos, cada um em execução como um contêiner
+**Figura 4-2**. Abordagem monolítica: host executando vários aplicativos, cada um em execução como um contêiner
 
 Os aplicativos monolíticos no Microsoft Azure podem ser implantados por meio de VMs dedicadas a cada instância. Além disso, usando [conjuntos de dimensionamento de máquinas virtuais do Azure](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/), você pode dimensionar VMs facilmente. O [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) também executa aplicativos monolíticos e dimensiona instâncias facilmente sem necessidade de gerenciamento de VMs. Desde 2016, o Serviços de Aplicativos do Azure também pode executar instâncias únicas de contêineres do Docker, simplificando a implantação.
 

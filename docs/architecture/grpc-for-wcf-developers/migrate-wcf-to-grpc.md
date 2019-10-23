@@ -3,12 +3,12 @@ title: Migrar uma solução WCF para o gRPC-gRPC para desenvolvedores do WCF
 description: Como migrar diferentes tipos de serviço WCF para o equivalente no gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: a9cfb87361194d998a3c4dfff4fe434be64f0d65
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 77bcb1412803b371778943763308c3010ed35aac
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184291"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770111"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>Migrar uma solução WCF para o gRPC
 
@@ -23,7 +23,7 @@ Este capítulo examinará como trabalhar com os projetos ASP.NET Core 3,0 gRPC e
 
 Também há uma comparação entre usar serviços de streaming versus campos repetidos para retornar conjuntos de dados e o uso de bibliotecas de cliente no final do capítulo.
 
-O aplicativo WCF de exemplo é um stub mínimo de um conjunto de serviços de negociação de estoque, usando a biblioteca de contêineres IoC (inversão de controle de código aberto) chamada *Autofac* para injeção de dependência. Ele inclui três serviços, um para cada tipo de serviço do WCF. Os serviços serão discutidos mais detalhadamente nas seções a seguir. As soluções podem ser baixadas de [RendleLabs/grpc-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers) no github. Os serviços usam dados falsos para minimizar dependências externas.
+O aplicativo WCF de exemplo é um stub mínimo de um conjunto de serviços de negociação de estoque, usando a biblioteca de contêineres IoC (inversão de controle de código aberto) chamada *Autofac* para injeção de dependência. Ele inclui três serviços, um para cada tipo de serviço do WCF. Os serviços serão discutidos mais detalhadamente nas seções a seguir. As soluções podem ser baixadas de [dotnet-Architecture/grpc-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers) no github. Os serviços usam dados falsos para minimizar dependências externas.
 
 Os exemplos incluem as implementações do WCF e do gRPC de cada serviço.
 

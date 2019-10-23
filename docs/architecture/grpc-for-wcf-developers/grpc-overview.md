@@ -3,12 +3,12 @@ title: Visão geral do gRPC-gRPC para desenvolvedores do WCF
 description: Saiba mais sobre o conjunto de princípios que orienta o desenvolvimento do gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b372cc9dcdb2efd605b3d9b688513e4ff8530b01
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 489b91f6aa279d9c457e2e8fccd4438885076779
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184438"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770459"
 ---
 # <a name="grpc-overview"></a>Visão geral do gRPC
 
@@ -20,7 +20,7 @@ ASP.NET Core 3,0 é a primeira versão do ASP.NET que dá suporte nativamente ao
 
 ## <a name="key-principles"></a>Principais princípios
 
-Como discutido no capítulo 1, o Google queria usar a introdução do HTTP/2 para retrabalhar Stubby, sua infraestrutura de RPC de uso geral interna. Stubby, renomeado como gRPC, agora pode aproveitar a padronização e estender sua aplicabilidade à computação móvel, à nuvem e à Internet das Coisas.
+Conforme discutido no capítulo 1, o Google queria usar a introdução do HTTP/2 para substituir o Stubby, sua infraestrutura de RPC de uso geral interna. gRPC, com base em Stubby, agora pode aproveitar a padronização e estender sua aplicabilidade à computação móvel, à nuvem e à Internet das Coisas.
 
 Para conseguir isso, a [CNCF (nuvem Native Computing Foundation)](https://www.cncf.io/) estabeleceu um conjunto de princípios que regeria o gRPC. A lista a seguir mostra as mais relevantes, que se preocupam principalmente com a maximização da acessibilidade e usabilidade:
 

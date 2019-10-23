@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Compreenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo de API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249742"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771112"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -17,7 +17,7 @@ Conforme mencionado anteriormente, a camada de aplicativo pode ser implementada 
 
 Por exemplo, o código da camada de aplicativo do microsserviço de ordenação é implementado diretamente como parte do projeto **Ordering.API** (um projeto da API Web ASP.NET Core), como mostrado na Figura 7-23.
 
-![O modo de exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta do aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.](./media/image20.png)
+![A exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta Aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.](./media/image20.png)
 
 **Figura 7-23**. A camada de aplicativo no projeto Ordering.API da API Web ASP.NET Core
 
@@ -109,7 +109,7 @@ Ao usar a DI no .NET Core, talvez seja interessante verificar um assembly e regi
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Matthew King. Registrando serviços com o Scrutor** \
+- **Matthew King. Registrando serviços com o Scrutor**  \
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** Repositório do GitHub. \
@@ -181,7 +181,7 @@ O padrão Command é intrinsecamente relacionado ao padrão CQRS, apresentado an
 
 Conforme mostrado na Figura 7-24, o padrão é baseado em aceitar comandos do lado do cliente, processá-los com base nas regras do modelo de domínio e, por fim, persistir os estados com as transações.
 
-![O modo de exibição de alto nível do lado das gravações em CQRS: o aplicativo de interface do usuário envia um comando por meio da API que chega a um CommandHandler, que depende do modelo de domínio e da infraestrutura para atualizar o banco de dados.](./media/image21.png)
+![A exibição de alto nível do lado de gravações no CQRS: aplicativo de interface do usuário envia um comando por meio da API que chega a um CommandHandler, que depende do modelo de domínio e da infraestrutura para atualizar o banco de dados.](./media/image21.png)
 
 **Figura 7-24**. Exibição de alto nível dos comandos ou do "lado transacional" em um padrão CQRS
 
@@ -203,7 +203,7 @@ Você envia um comando a um único destinatário; você não publica um comando.
 
 Um comando é implementado com uma classe que contém campos de dados ou coleções com todas as informações necessárias para executar esse comando. Um comando é um tipo especial de DTO (Objeto de Transferência de Dados), usado especificamente para solicitar alterações ou transações. O próprio comando baseia-se estritamente nas informações necessárias para processar o comando e nada mais.
 
-O exemplo a seguir mostra a classe `CreateOrderCommand` simplificada. Este é um comando imutável que é usado no microsserviço de ordenação em eShopOnContainers.
+O exemplo a seguir mostra a classe de `CreateOrderCommand` simplificada. Este é um comando imutável que é usado no microsserviço de ordenação em eShopOnContainers.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -394,7 +394,7 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Mark Seemann. Nos limites, os aplicativos não são orientados a objeto** \
+- **Marque Seemann. Nos limites, os aplicativos não são orientados a objeto**  \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Comandos e eventos** \
@@ -403,10 +403,10 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 - **O que faz um manipulador de comandos?** \
   <http://cqrs.nu/Faq/command-handlers>
 
-- **Jimmy Bogard. Padrões de comando do domínio – manipuladores** \
+- **Jimmy Bogard. Padrões de comando de domínio – manipuladores**  \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
 
-- **Jimmy Bogard. Padrões de comando do domínio – validação** \
+- **Jimmy Bogard. Padrões de comando de domínio – validação**  \
   <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>O pipeline de processo Comando: como disparar um manipulador de comandos
@@ -471,7 +471,7 @@ O uso do padrão Mediador ajuda a reduzir o acoplamento e isolar as preocupaçõ
 
 Outra boa razão para usar o padrão Mediador foi explicada por Jimmy Bogard durante a revisão desse guia:
 
-> Acho que vale a pena mencionar testes aqui – eles oferecem uma janela consistente e adequada sobre o comportamento do seu sistema. Solicitação entra, resposta sai. Descobrimos que esse aspecto é bastante valioso na construção de testes de comportamentos consistentes.
+> Acho que vale a pena mencionar testes aqui – eles oferecem uma janela consistente e adequada sobre o comportamento do seu sistema. Solicitação-entrada, resposta. Descobrimos que o aspecto é bastante valioso na criação de testes com consistência.
 
 Primeiro, vamos dar uma olhada em um controlador de WebAPI de exemplo no local em que você usaria o objeto mediador. Se você não estiver usando o objeto mediador, precisará injetar todas as dependências para esse controlador, coisas como um objeto logger e outros. Portanto, o construtor ficaria muito complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
 
@@ -813,7 +813,7 @@ De maneira semelhante, você pode implementar outros comportamentos para aspecto
 - **CQRS com MediatR e AutoMapper** \
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
-- **Put your controllers on a diet: POSTs and commands.** (Coloque os controladores em dieta: POSTs e comandos) \
+- **Coloque os controladores de dieta: POSTs e comandos.** \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
 - **Lidando com preocupações paralelas com um pipeline de mediadores** \

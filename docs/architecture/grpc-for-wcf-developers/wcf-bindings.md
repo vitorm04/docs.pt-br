@@ -3,12 +3,12 @@ title: Associações e transportes do WCF – gRPC para desenvolvedores do WCF
 description: Saiba como as diferentes associações e transportes do WCF se comparam ao gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 50bac73ee68d7156fc5fed55dfffb3ba7f2de924
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184053"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771604"
 ---
 # <a name="wcf-bindings-and-transports"></a>Associações e transportes do WCF
 
@@ -22,13 +22,11 @@ A associação NetTCP do WCF permite conexões persistentes, mensagens pequenas 
 
 ## <a name="http"></a>HTTP
 
-O BasicHttpBinding do WCF geralmente é baseado em texto, usando SOAP como o formato de conexão e é muito lento pelos padrões de aplicativos modernos em rede. Ele é realmente usado para fornecer interoperabilidade entre plataformas ou conexão pela infra-estrutura da Internet. O equivalente em gRPC — porque ele usa HTTP/2 como a camada de transporte subjacente com o formato de conexão de Protobuf binário para mensagens — pode oferecer desempenho de nível de serviço NetTCP, mas com total interoperabilidade entre plataformas com todas as linguagens de programação modernas e estruturas.
+BasicHttpBinding do WCF geralmente é baseado em texto, usando SOAP como o formato de conexão e é lento em comparação com a associação NetTCP. Ele é geralmente usado para fornecer interoperabilidade entre plataformas ou conexão pela infra-estrutura da Internet. O equivalente em gRPC — porque ele usa HTTP/2 como a camada de transporte subjacente com o formato de conexão de Protobuf binário para mensagens — pode oferecer desempenho de nível de serviço NetTCP, mas com total interoperabilidade entre plataformas com todas as linguagens de programação modernas e estruturas.
 
 ## <a name="named-pipes"></a>Pipes nomeados
 
-O WCF forneceu uma associação de pipes nomeados para comunicação entre processos no mesmo computador físico. Os pipes nomeados não têm suporte na primeira versão do ASP.NET Core gRPC.
-
-Fora do Windows, a funcionalidade fornecida por pipes nomeados é geralmente fornecida pelos soquetes de domínio do UNIX. Esses soquetes são soquetes comuns do tipo TCP representados com endereços do sistema de `/var/run/docker.sock`arquivos, como, com os quais o gRPC pode trabalhar como cliente e servidor. Se você precisar usar a funcionalidade de estilo de pipes nomeados no Windows, a próxima atualização para o Windows 10 e o Windows Server, no 2019 T4, adicionará soquetes de domínio como um recurso nativo totalmente suportado dentro do Windows. Portanto, os serviços gRPCs em execução nessas e em versões posteriores do Windows (ou no Linux) podem usar soquetes de domínio em vez de pipes nomeados. No entanto, se sua equipe não puder atualizar para a versão mais recente do Windows, você precisará usar soquetes TCP de localhost. Questões de segurança sobre o uso de soquetes TCP locais podem ser abordadas com o uso de autenticação de certificado entre cliente e servidor.
+O WCF forneceu uma associação de pipes nomeados para comunicação entre processos no mesmo computador físico. Os pipes nomeados não têm suporte na primeira versão do ASP.NET Core gRPC. Adicionar suporte de cliente e servidor para pipes nomeados (e soquetes de domínio do UNIX) é uma meta para uma versão futura.
 
 ## <a name="msmq"></a>MSMQ
 
@@ -36,7 +34,7 @@ O MSMQ é uma fila de mensagens do Windows proprietária. A ligação do WCF com
 
 ## <a name="webhttpbinding"></a>WebHttpBinding
 
-O WebHttpBinding (também conhecido como WCF REST), com os `WebGet` atributos `WebInvoke` e, permitiu que você desenvolva APIs ReSTful que poderiam falar JSON por vez quando isso fosse menos comum do que agora. Portanto, se você tiver uma API RESTful criada com o WCF REST, considere migrá-la para um aplicativo de API Web do MVC ASP.NET Core regular, que forneceria funcionalidade equivalente, em vez de converter para gRPC.
+O WebHttpBinding (também conhecido como WCF ReST), com os atributos `WebGet` e `WebInvoke`, permitiu que você desenvolva APIs ReSTful que poderiam falar JSON por vez quando isso fosse menos comum do que agora. Portanto, se você tiver uma API RESTful criada com o WCF REST, considere migrá-la para um aplicativo de API Web do MVC ASP.NET Core regular, que forneceria funcionalidade equivalente, em vez de converter para gRPC.
 
 >[!div class="step-by-step"]
 >[Anterior](wcf-endpoints-grpc-methods.md)

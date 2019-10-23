@@ -3,14 +3,14 @@ title: Como o gRPC se aproxima de RPC-gRPC para desenvolvedores do WCF
 description: Comparando os principais recursos do WCF para o gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 65d61c8246569d81dfec3aeb8e3df4bea26258dc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 36d51b96796f274811bfeea64c159afcc9bce301
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184599"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770681"
 ---
-# <a name="how-grpc-approaches-rpc"></a>Como o gRPC se aproxima de RPC
+# <a name="how-grpc-approaches-rpc"></a>Como o gRPC aborda o RPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -25,7 +25,7 @@ A tabela a seguir define como os principais recursos do WCF se relacionam com o 
 | Idioma (capítulo 3-5) | Contratos escritos no C# ou Visual Basic | Idioma do buffer de protocolo |
 | Formato de conexão (capítulo 3) | Configurável, incluindo SOAP/XML, XML simples, JSON, binário do .NET e assim por diante. | Formato binário de buffer de protocolo (embora seja possível usar outros formatos).
 | Interoperabilidade (capítulo 4) | Ao usar SOAP sobre HTTP | Suporte oficial: .NET, Java, Python, JavaScript, C/C++, go, Rust, Ruby, Swift, Dart, php. Suporte não oficial para outros idiomas da Comunidade. |
-| Rede (capítulo 4) | Configurado em tempo de execução. Alterne entre TCP, HTTP, MSMQ e assim por diante. | Sempre HTTP/2 |
+| Rede (capítulo 4) | Configurado em tempo de execução. Alterne entre NetTCP, HTTP, MSMQ e assim por diante. | HTTP/2, atualmente sobre TCP somente com ASP.NET Core gRPC. |
 | Abordagem (capítulo 4) | Geração de tempo de execução de/Deserialization de serialização e código de rede em classes base | Geração de tempo de compilação de/Deserialization de serialização e código de rede em classes base |
 | Segurança (capítulo 6) | Autenticação, WS-Security, criptografia de mensagem | Credenciais, segurança de ASP.NET Core, rede TLS |
 

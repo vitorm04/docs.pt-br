@@ -2,12 +2,12 @@
 title: Aplicativos monolíticos
 description: Entenda os principais conceitos da implantação de aplicativos monolíticos em contêineres.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394711"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771041"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -61,7 +61,7 @@ Como os contêineres são inerentemente imutáveis por design, você nunca preci
 
 Embora aplicativos monolíticos possam se beneficiar do Docker, estamos mencionando apenas as dicas de benefícios. Outros benefícios de gerenciar contêineres são decorrentes da implantação com orquestradores de contêiner, que gerenciam as diversas instâncias e o ciclo de vida de cada instância de contêiner. Dividir o aplicativo monolítico em subsistemas que podem ser dimensionados, desenvolvidos e implantados individualmente é o ponto de entrada no universo dos microsserviços.
 
-Para saber mais sobre como fazer o "lift and shift" de aplicativos monolíticos com contêineres e como modernizar os aplicativos, leia este outro guia da Microsoft, [Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure](../../modernize-with-azure-containers/index.md), que também pode ser baixado como PDF em <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Para saber mais sobre como "migrar e deslocar" aplicativos monolíticos com contêineres e como você pode modernizar seus aplicativos, leia este guia adicional da Microsoft, [modernizando os aplicativos .net existentes com contêineres de nuvem e Windows do Azure](../../modernize-with-azure-containers/index.md), que você também pode baixar como PDF em <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Publicar um aplicativo de contêiner único do Docker no Serviço de Aplicativo do Azure
 

@@ -3,20 +3,20 @@ title: Enumerações Protobuf-gRPC para desenvolvedores do WCF
 description: Saiba como declarar e usar enumerações no Protobuf.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: d93319b713588129a19246976a82bb03a90ce680
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 37fd55e4cbc3c1e1e96e32875ddb3dcae0ca8355
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184235"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771642"
 ---
-# <a name="protobuf-enumerations"></a>Enumerações Protobuf
+# <a name="protobuf-enumerations"></a>Enumerações de Protobuf
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-O Protobuf dá suporte a tipos de enumeração, como visto na seção anterior, em que uma enumeração foi usada para `oneof` determinar o tipo de um campo. Você pode definir seus próprios tipos de enumeração e Protobuf irá compilá- C# los para tipos de enumeração. Como Protobuf pode ser usado com idiomas diferentes, as convenções de nomenclatura para enumerações são diferentes das C# convenções. No entanto, o gerador de código é inteligente e converte os nomes C# para o caso tradicional. Se o equivalente ao caso do Pascal do nome do campo começar com o nome da enumeração, ele será removido.
+O Protobuf dá suporte a tipos de enumeração, como visto na seção anterior, em que uma enumeração foi usada para determinar o tipo de um campo de `oneof`. Você pode definir seus próprios tipos de enumeração e Protobuf irá compilá- C# los para tipos de enumeração. Como Protobuf pode ser usado com idiomas diferentes, as convenções de nomenclatura para enumerações são diferentes das C# convenções. No entanto, o gerador de código é inteligente e converte os nomes C# para o caso tradicional. Se o equivalente ao caso do Pascal do nome do campo começar com o nome da enumeração, ele será removido.
 
-Por exemplo, nesta Enumeração Protobuf, os campos são prefixados `ACCOUNT_STATUS`com, que é equivalente ao nome de enumeração do caso `AccountStatus`Pascal:.
+Por exemplo, nesta Enumeração Protobuf, os campos são prefixados com `ACCOUNT_STATUS`, que é equivalente ao nome de enumeração do caso Pascal: `AccountStatus`.
 
 ```protobuf
 enum AccountStatus {
@@ -41,7 +41,7 @@ public enum AccountStatus
 }
 ```
 
-As definições de enumeração Protobuf **devem** ter uma constante zero como seu primeiro campo. Como no C#, você pode declarar vários campos com o mesmo valor, mas você deve habilitar explicitamente essa opção usando a `allow_alias` opção na enumeração:
+As definições de enumeração Protobuf **devem** ter uma constante zero como seu primeiro campo. Como no C#, você pode declarar vários campos com o mesmo valor, mas você deve habilitar explicitamente essa opção usando a opção `allow_alias` na enumeração:
 
 ```protobuf
 enum AccountStatus {
@@ -55,7 +55,7 @@ enum AccountStatus {
 }
 ```
 
-Você pode declarar enumerações no nível superior em um `.proto` arquivo ou aninhado em uma definição de mensagem. Enumerações aninhadas — como mensagens aninhadas — serão declaradas dentro da `.Types` classe estática na classe de mensagem gerada.
+Você pode declarar enumerações no nível superior em um arquivo de `.proto` ou aninhado em uma definição de mensagem. Enumerações aninhadas — como mensagens aninhadas — serão declaradas dentro da classe estática `.Types` na classe de mensagem gerada.
 
 Não há como aplicar o atributo [[flags]](xref:System.FlagsAttribute) a uma enumeração gerada por Protobuf, e o Protobuf não compreende combinações de enums de bits. Veja o exemplo a seguir:
 
@@ -69,13 +69,13 @@ enum Region {
 }
 
 message Product {
-  Region availableIn = 1;
+  Region available_in = 1;
 }
 ```
 
-Se você definir `product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`como, ele será serializado como o valor `3`inteiro. Quando um cliente ou servidor tenta desserializar o valor, ele não encontra uma correspondência na definição de enumeração para `3` e o resultado `Region.None`será.
+Se você definir `product.AvailableIn` como `Region.NorthAmerica | Region.SouthAmerica`, ele será serializado como o valor inteiro `3`. Quando um cliente ou servidor tenta desserializar o valor, ele não encontra uma correspondência na definição de enum para `3` e o resultado será `Region.None`.
 
-A melhor maneira de trabalhar com vários valores enum em Protobuf é usar um `repeated` campo do tipo enum.
+A melhor maneira de trabalhar com vários valores enum em Protobuf é usar um campo `repeated` do tipo enum.
 
 >[!div class="step-by-step"]
 >[Anterior](protobuf-any-oneof.md)

@@ -2,12 +2,12 @@
 title: Projetando um aplicativo orientado a microsserviços
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os benefícios e as desvantagens de um aplicativo orientado a microsserviços, para que você possa tomar uma decisão informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039821"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772054"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projetando um aplicativo orientado a microsserviços
 
@@ -65,7 +65,7 @@ Para que você possa se concentrar na arquitetura e nas tecnologias, em vez de p
 
 O aplicativo consiste em vários subsistemas, incluindo vários front-ends de interface do usuário da loja (um aplicativo Web e um aplicativo móvel nativo), juntamente com os microsserviços e contêineres de back-end para todas as operações necessárias do lado do servidor com vários Gateways de API como pontos de entrada consolidados para os microsserviços internos. A figura 6-1 mostra a arquitetura do aplicativo de referência.
 
-![Os clientes móveis e SPA se comunicam com pontos de entrada de gateway de API únicos, que então se comunicam com os microsserviços. Os clientes da Web tradicionais se comunicam com o microsserviço MVC, que se comunica com microsserviços](./media/image1.png)
+![Clientes móveis e SPA se comunicam com pontos de extremidade de gateway de API única que se comunicam com os microserviços. Os clientes Web tradicionais se comunicam com o microserviço MVC, que se comunica com os microserviços](./media/image1.png)
 
 **Figura 6-1**. A arquitetura do aplicativo de referência eShopOnContainers para o ambiente de desenvolvimento
 
@@ -89,7 +89,7 @@ Portanto, as unidades de implantação para os microsserviços (e até mesmo par
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **repositório GitHub do eShopOnContainers. Código-fonte do aplicativo de referência** \
+- **repositório GitHub eShopOnContainers. Código-fonte para o aplicativo de referência**  \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviços

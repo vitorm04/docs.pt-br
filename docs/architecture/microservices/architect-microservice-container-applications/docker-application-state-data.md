@@ -2,18 +2,18 @@
 title: Estado e dados em aplicativos do Docker
 description: Gerenciamento de dados e de estado em aplicativos do Docker. Instâncias de Microsserviços são descartáveis, mas os DADOS NÃO O SÃO, como lidar com isso com microsserviços.
 ms.date: 09/20/2018
-ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834421"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771434"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
 Na maioria dos casos, você pode considerar um contêiner uma instância de um processo. Um processo não mantém o estado persistente. Enquanto um contêiner pode gravar em seu armazenamento local, supondo que uma instância permanecerá indefinidamente seria como presumir que um único local na memória será durável. Você deve presumir que as imagens de contêiner, assim como os processos, têm várias instâncias ou serão eventualmente eliminadas. Se forem gerenciadas com um orquestrador de contêineres, você deverá presumir que podem ser movidas de um nó ou VM para outro.
 
-As soluções a seguir são usadas para gerenciar dados persistentes em aplicativos do Docker:
+As soluções a seguir são usadas para gerenciar dados em aplicativos do Docker:
 
 Do host do Docker, como [Volumes do Docker](https://docs.docker.com/engine/admin/volumes/):
 
@@ -31,19 +31,19 @@ Do armazenamento remoto:
 
 Do contêiner do Docker:
 
-> O Docker oferece um recurso chamado *sistema de arquivos de sobreposição*. Ele implementa uma tarefa de cópia em gravação que armazena informações atualizadas no sistema de arquivos de raiz do contêiner. Essas informações são adicionais à imagem original na qual o contêiner se baseia. Se o contêiner for excluído do sistema, essas alterações serão perdidas. Portanto, embora seja possível salvar o estado de um contêiner em seu armazenamento local, criar um sistema com base nisso entraria em conflito com o local do projeto do contêiner, que por padrão é sem estado.
->
-> No entanto, os volumes do Docker anteriormente introduzidos agora são a maneira preferencial para manipulação de dados locais com o Docker. Se você precisar de mais informações sobre o armazenamento em contêineres, procure em [Drivers de armazenamento do Docker](https://docs.docker.com/storage/storagedriver/select-storage-driver/) e [Sobre drivers de armazenamento](https://docs.docker.com/storage/storagedriver/).
+- **Sobreposição do sistema de arquivos**. Esse recurso do Docker implementa uma tarefa de copiar na gravação que armazena informações atualizadas no sistema de arquivos raiz do contêiner. Essas informações estão "na parte superior" da imagem original na qual o contêiner é baseado. Se o contêiner for excluído do sistema, essas alterações serão perdidas. Portanto, embora seja possível salvar o estado de um contêiner em seu armazenamento local, criar um sistema com base nisso entraria em conflito com o local do projeto do contêiner, que por padrão é sem estado.
+
+No entanto, o uso de volumes do Docker agora é a maneira preferida de lidar com dados locais no Docker. Se você precisar de mais informações sobre o armazenamento em contêineres, procure em [Drivers de armazenamento do Docker](https://docs.docker.com/storage/storagedriver/select-storage-driver/) e [Sobre drivers de armazenamento](https://docs.docker.com/storage/storagedriver/).
 
 O exemplo a seguir fornece mais detalhes sobre essas opções:
 
 **Volumes** são diretórios mapeados do sistema operacional do host para diretórios em contêineres. Quando o código no contêiner tem acesso ao diretório, o acesso é, na verdade, a um diretório no sistema operacional host. Esse diretório não está vinculado ao tempo de vida do contêiner em si, sendo que o diretório é gerenciado pelo Docker e isolado em relação à funcionalidade básica do computador host. Assim, os volumes de dados são projetados para persistir dados independentemente do tempo de vida do contêiner. Se você excluir um contêiner ou uma imagem do host do Docker, os dados persistentes no volume de dados não serão excluídos.
 
-Volumes podem ser nomeados ou anônimos (o padrão). Volumes nomeados são a evolução dos **Contêineres de Volume de Dados** e facilitam o compartilhamento de dados entre contêineres. Volumes também dão suporte a drivers de volume, que permitem que você armazene dados em hosts remotos, entre outras opções.
+Volumes podem ser nomeados ou anônimos (o padrão). Volumes nomeados são a evolução dos **Contêineres de Volume de Dados** e facilitam o compartilhamento de dados entre contêineres. Volumes também são compatíveis com drivers de volume, que permitem armazenar dados em hosts remotos, entre outras opções.
 
 **Montagens de associação** estão disponíveis há muito tempo e permitem o mapeamento de qualquer pasta para um ponto de montagem em um contêiner. Montagens de associação têm mais limitações que os volumes e alguns problemas de segurança importantes, por isso os volumes são a opção recomendada.
 
-**Montagens tmpfs** são basicamente pastas virtuais que só existem na memória do host e nunca são gravadas no sistema de arquivos. Elas são rápidas e seguras, mas usam a memória e destinam-se somente a dados não persistentes.
+**Montagens tmpfs** são basicamente pastas virtuais que só existem na memória do host e nunca são gravadas no sistema de arquivos. Elas são rápidas e seguras, mas usam memória e são destinadas apenas a dados temporários não persistentes.
 
 Conforme mostrado na Figura 4-5, os volumes Docker regulares podem ser armazenados fora dos contêineres de si, mas dentro dos limites físicos do servidor host ou VM. No entanto, contêineres do Docker não podem acessar um volume de um servidor host ou VM para outro. Em outras palavras, com esses volumes, não é possível gerenciar os dados compartilhados entre contêineres executados em hosts diferentes do Docker, embora esses dados possam ser obtidos com um driver de volume que dá suporte a hosts remotos.
 
@@ -63,7 +63,7 @@ Volumes podem ser compartilhados entre contêineres, mas apenas no mesmo host, a
 
 - O Armazenamento de Tabelas armazena conjuntos de dados estruturados. O Armazenamento de Tabelas é um armazenamento de dados do atributo-chave NoSQL, que permite o rápido desenvolvimento e acesso a grandes quantidades de dados.
 
-**Bancos de dados relacionais e bancos de dados NoSQL.** Há muitas opções de bancos de dados externos, de bancos de dados relacionais, como SQL Server, PostgreSQL, Oracle ou bancos de dados NoSQL, como Azure Cosmos DB, MongoDB, etc. Esses bancos de dados não serão explicados neste guia, pois estão em um tópico completamente diferente.
+**Bancos de dados relacionais e bancos de dados NoSQL.** Há muitas opções para bancos de dados externos, de bancos de dados relacionais como bancos de dados SQL Server, PostgreSQL, Oracle ou NoSQL, como Azure Cosmos DB, MongoDB, etc. Esses bancos de dados não serão explicados como parte deste guia, pois estão em um assunto completamente diferente.
 
 >[!div class="step-by-step"]
 >[Anterior](containerize-monolithic-applications.md)

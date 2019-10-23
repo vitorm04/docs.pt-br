@@ -3,12 +3,12 @@ title: Infraestrutura de comunicação de malha de serviço
 description: Saiba mais sobre como as tecnologias de malha de serviço simplificam a comunicação de microserviço nativa na nuvem
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: 884b3bf9afd80144a36d3328af916f1c1f12bf4f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214342"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771025"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infraestrutura de comunicação de malha de serviço
 
@@ -26,9 +26,9 @@ Um componente-chave de uma malha de serviço é um proxy. Em um aplicativo nativ
 
 **Figura 4-23**. Malha de serviço com um carro lateral
 
-Observe na figura anterior como as mensagens são interceptadas por um proxy que é executado junto com cada microserviço. Cada proxy pode ser configurado com regras de tráfego específicas para o microserviço. Ele compreende mensagens e pode roteá-las entre seus serviços e o mundo exterior. 
+Observe na figura anterior como as mensagens são interceptadas por um proxy que é executado junto com cada microserviço. Cada proxy pode ser configurado com regras de tráfego específicas para o microserviço. Ele compreende mensagens e pode roteá-las entre seus serviços e o mundo exterior.
 
-Juntamente com o gerenciamento de comunicação serviço a serviço, a malha de serviço fornece suporte para descoberta de serviço e balanceamento de carga. 
+Juntamente com o gerenciamento de comunicação serviço a serviço, a malha de serviço fornece suporte para descoberta de serviço e balanceamento de carga.
 
 Uma vez configurado, uma malha de serviço é altamente funcional. A malha recupera um pool de instâncias correspondente de um ponto de extremidade de descoberta de serviço. Ele envia uma solicitação para uma instância de serviço específica, registrando a latência e o tipo de resposta do resultado. Ele escolhe a instância mais provável de retornar uma resposta rápida com base em diferentes fatores, incluindo a latência observada para solicitações recentes.
 
@@ -38,7 +38,7 @@ No capítulo 6, aprofundamos-se nas tecnologias de malha de serviço, incluindo 
 
 ## <a name="summary"></a>Resumo
 
-Neste capítulo, discutimos padrões de comunicação nativos de nuvem. Começamos examinando como os clientes front-end se comunicam com os microserviços de back-end. Ao longo do caminho, falamos sobre plataformas de gateway de API e comunicação em tempo real. Em seguida, vimos como os microserviços se comunicam com outros serviços de back-end. Examinamos a comunicação HTTP síncrona e as mensagens assíncronas entre serviços. Abordamos o gRPC, uma tecnologia futura no mundo nativo da nuvem. Por fim, apresentamos uma nova e rápida evolução tecnológica qualificada para malha de serviço que pode simplificar a comunicação de microserviço. 
+Neste capítulo, discutimos padrões de comunicação nativos de nuvem. Começamos examinando como os clientes front-end se comunicam com os microserviços de back-end. Ao longo do caminho, falamos sobre plataformas de gateway de API e comunicação em tempo real. Em seguida, vimos como os microserviços se comunicam com outros serviços de back-end. Examinamos a comunicação HTTP síncrona e as mensagens assíncronas entre serviços. Abordamos o gRPC, uma tecnologia futura no mundo nativo da nuvem. Por fim, apresentamos uma nova e rápida evolução tecnológica qualificada para malha de serviço que pode simplificar a comunicação de microserviço.
 
 A ênfase especial foi nos serviços gerenciados do Azure que podem ajudar a implementar a comunicação em sistemas nativos de nuvem:
 
@@ -52,25 +52,25 @@ A ênfase especial foi nos serviços gerenciados do Azure que podem ajudar a imp
 
 Em seguida, mudamos para os dados distribuídos em sistemas nativos de nuvem e os benefícios e os desafios que ele apresenta.
 
-### <a name="references"></a>Referências 
+### <a name="references"></a>Referências
 
-- [Microsserviços do .NET: Arquitetura para aplicativos .NET em contêineres](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
-  
+- [Microserviços .NET: arquitetura para aplicativos .NET em contêineres](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+
 - [Criando comunicação entre serviços para microserviços](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
 - [Serviço do Azure Signalr, um serviço totalmente gerenciado para adicionar funcionalidade em tempo real](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
-  
+
 - [Controlador de entrada do gateway de API do Azure](https://azure.github.io/application-gateway-kubernetes-ingress/)
-  
+
 - [Sobre a entrada no serviço de kubernetes do Azure (AKS)](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
- 
+
 - [GRPC prático](https://www.worldcat.org/title/practical-grpc/oclc/1042342319)
 
 - [Documentação do gRPC](https://grpc.io/docs/guides/)
 
-- [gRPC para desenvolvedores do WCF](https://bing.com) [Livro de gRPC do Mark]
-  
-- [Comparando serviços gRPCs com APIs HTTP](https://docs.microsoft.com/en-us/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [gRPC para desenvolvedores do WCF](https://bing.com) [livro do gRPC do Mark]
+
+- [Comparando serviços gRPCs com APIs HTTP](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 >[!div class="step-by-step"]
 >[Anterior](rest-grpc.md)
