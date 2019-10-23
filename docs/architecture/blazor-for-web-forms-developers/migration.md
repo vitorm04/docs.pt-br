@@ -4,12 +4,12 @@ description: Saiba como abordar a migração de um aplicativo ASP.NET Web Forms 
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 46e3335ec6fe5671da75a868d94ace1abf9098b6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 78742fc0d998a70c6e3992041d1fa62f2fe53f39
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183836"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520275"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrar do ASP.NET Web Forms para o mais incrivelmente
 
@@ -21,10 +21,10 @@ Para este exemplo, o aplicativo eShop disponível no [GitHub](https://github.com
 
 Por que um aplicativo de trabalho deve ser migrado para um mais incrivelmente? Muitas vezes, não há necessidade. O ASP.NET Web Forms continuará a ter suporte por muitos anos. No entanto, muitos dos recursos que o mais incrivelmente oferece têm suporte apenas em um aplicativo migrado. Esses recursos incluem:
 
-* Melhorias de desempenho na estrutura, como`Span<T>`
-* Capacidade de executar como Webassembly
-* Suporte de plataforma cruzada para Linux e macOS
-* Implantação de aplicativo-local ou implantação de estrutura compartilhada sem afetar outros aplicativos
+- Melhorias de desempenho na estrutura, como `Span<T>`
+- Capacidade de executar como Webassembly
+- Suporte de plataforma cruzada para Linux e macOS
+- Implantação de aplicativo-local ou implantação de estrutura compartilhada sem afetar outros aplicativos
 
 Se esses ou outros novos recursos forem atraentes o suficiente, pode haver um valor na migração do aplicativo. A migração pode ter formas diferentes; pode ser o aplicativo inteiro ou apenas determinados pontos de extremidade que exigem as alterações. A decisão de migrar é, por fim, baseada nos problemas de negócios a serem resolvidos pelo desenvolvedor.
 
@@ -32,9 +32,9 @@ Se esses ou outros novos recursos forem atraentes o suficiente, pode haver um va
 
 Conforme descrito no capítulo [modelos de hospedagem](hosting-models.md) , um aplicativo mais incrivelmente pode ser hospedado de duas maneiras diferentes: lado do servidor e do cliente. O modelo do lado do servidor usa ASP.NET Core conexões de sinalização para gerenciar as atualizações do DOM durante a execução de qualquer código real no servidor. O modelo do lado do cliente é executado como Webassembly em um navegador e não requer conexões de servidor. Há várias diferenças que podem afetar o que é melhor para um aplicativo específico:
 
-* A execução como Webassembly ainda está em desenvolvimento e pode não dar suporte a todos os recursos (como Threading) no momento atual
-* A comunicação informal entre o cliente e o servidor pode causar problemas de latência no modo do servidor
-* O acesso a bancos de dados e serviços internos ou protegidos requer um serviço separado com hospedagem do lado do cliente
+- A execução como Webassembly ainda está em desenvolvimento e pode não dar suporte a todos os recursos (como Threading) no momento atual
+- A comunicação informal entre o cliente e o servidor pode causar problemas de latência no modo do servidor
+- O acesso a bancos de dados e serviços internos ou protegidos requer um serviço separado com hospedagem do lado do cliente
 
 No momento da elaboração do artigo, o modelo do lado do servidor se assemelha mais à Web Forms. A maior parte deste capítulo se concentra no modelo de hospedagem do lado do servidor, pois ele está pronto para produção.
 
@@ -72,9 +72,9 @@ No projeto eShop baseado em mais Altova, você pode ver os pacotes que estão in
 </packages>
 ```
 
-O `<packages>` elemento inclui todas as dependências necessárias. É difícil identificar quais desses pacotes são incluídos porque você precisa deles. Alguns `<package>` elementos são listados simplesmente para atender às necessidades de dependências que você precisa.
+O elemento `<packages>` inclui todas as dependências necessárias. É difícil identificar quais desses pacotes são incluídos porque você precisa deles. Alguns elementos `<package>` são listados simplesmente para atender às necessidades das dependências que você precisa.
 
-O projeto mais incrivelmente lista as dependências que você precisa `<ItemGroup>` dentro de um elemento no arquivo de projeto:
+O projeto mais incrivelmente lista as dependências que você precisa dentro de um elemento `<ItemGroup>` no arquivo de projeto:
 
 ```xml
 <ItemGroup>
@@ -90,7 +90,7 @@ Um pacote NuGet que simplifica a vida de Web Forms desenvolvedores é o [pacote 
 
 O processo de inicialização para o mais baixo mudou de Web Forms e segue uma configuração semelhante para outros serviços de ASP.NET Core. Quando hospedados no lado do servidor, os componentes mais podestas são executados como parte de um aplicativo ASP.NET Core normal. Quando hospedado no navegador com Webassembly, os componentes mais poseriais usam um modelo de hospedagem semelhante. A diferença é que os componentes são executados como um serviço separado de qualquer um dos processos de back-end. De qualquer forma, a inicialização é semelhante.
 
-O arquivo *global.asax.cs* é a página de inicialização padrão para projetos Web Forms. No projeto eShop, esse arquivo configura o contêiner inversão de controle (IoC) e manipula os vários eventos de ciclo de vida do aplicativo ou da solicitação. Alguns desses eventos são tratados com middleware ( `Application_BeginRequest`como). Outros eventos exigem a substituição de serviços específicos por meio de injeção de dependência (DI).
+O arquivo *global.asax.cs* é a página de inicialização padrão para projetos Web Forms. No projeto eShop, esse arquivo configura o contêiner inversão de controle (IoC) e manipula os vários eventos de ciclo de vida do aplicativo ou da solicitação. Alguns desses eventos são tratados com middleware (como `Application_BeginRequest`). Outros eventos exigem a substituição de serviços específicos por meio de injeção de dependência (DI).
 
 Por exemplo, o arquivo *global.asax.cs* para eshop contém o seguinte código:
 
@@ -159,7 +159,7 @@ public class Global : HttpApplication, IContainerProviderAccessor
 }
 ```
 
-O arquivo anterior torna- `Startup` se a classe no amcursor do lado do servidor:
+O arquivo anterior torna-se a classe `Startup` no mais alto nível do servidor:
 
 ```csharp
 public class Startup
@@ -252,15 +252,15 @@ Para obter mais informações sobre a inicialização do aplicativo, consulte [i
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migrar módulos e manipuladores HTTP para middleware
 
-Os módulos e manipuladores HTTP são padrões comuns em Web Forms para controlar o pipeline de solicitação HTTP. Classes que `IHttpModule` implementam `IHttpHandler` ou podem ser registradas e processar solicitações de entrada. Web Forms configura módulos e manipuladores no arquivo *Web. config* . O Web Forms também é muito baseado na manipulação de eventos do ciclo de vida do aplicativo. O ASP.NET Core usa o middleware em vez disso. Middleware são registrados no `Configure` método `Startup` da classe. A ordem de execução do middleware é determinada pela ordem de registro.
+Os módulos e manipuladores HTTP são padrões comuns em Web Forms para controlar o pipeline de solicitação HTTP. As classes que implementam `IHttpModule` ou `IHttpHandler` podem ser registradas e processar solicitações de entrada. Web Forms configura módulos e manipuladores no arquivo *Web. config* . O Web Forms também é muito baseado na manipulação de eventos do ciclo de vida do aplicativo. O ASP.NET Core usa o middleware em vez disso. Middleware são registrados no método `Configure` da classe `Startup`. A ordem de execução do middleware é determinada pela ordem de registro.
 
-Na seção [habilitar processo de inicialização](#enable-startup-process) , um evento de ciclo de vida foi gerado por `Application_BeginRequest` Web Forms como o método. Esse evento não está disponível no ASP.NET Core. Uma maneira de atingir esse comportamento é implementar o middleware como visto no exemplo de arquivo *Startup.cs* . Esse middleware faz a mesma lógica e, em seguida, transfere o controle para o próximo manipulador no pipeline de middleware.
+Na seção [habilitar processo de inicialização](#enable-startup-process) , um evento de ciclo de vida foi gerado por Web Forms como o método `Application_BeginRequest`. Esse evento não está disponível no ASP.NET Core. Uma maneira de atingir esse comportamento é implementar o middleware como visto no exemplo de arquivo *Startup.cs* . Esse middleware faz a mesma lógica e, em seguida, transfere o controle para o próximo manipulador no pipeline de middleware.
 
 Para obter mais informações sobre como migrar módulos e manipuladores, consulte [migrar manipuladores e módulos http para ASP.NET Core middleware](/aspnet/core/migration/http-modules).
 
 ## <a name="migrate-static-files"></a>Migrar arquivos estáticos
 
-Para servir arquivos estáticos (por exemplo, HTML, CSS, imagens e JavaScript), os arquivos devem ser expostos por middleware. Chamar o `UseStaticFiles` método permite o serviço de arquivos estáticos do caminho raiz da Web. O diretório raiz padrão da Web é *wwwroot*, mas pode ser personalizado. Conforme incluído no `Configure` método da `Startup` classe eshop:
+Para servir arquivos estáticos (por exemplo, HTML, CSS, imagens e JavaScript), os arquivos devem ser expostos por middleware. Chamar o método `UseStaticFiles` permite o serviço de arquivos estáticos do caminho raiz da Web. O diretório raiz padrão da Web é *wwwroot*, mas pode ser personalizado. Conforme incluído no método `Configure` da classe `Startup` do eShop:
 
 ```csharp
 public void Configure(IApplicationBuilder app)
@@ -520,7 +520,7 @@ Quando convertido para um mais recente, a página Web Forms se traduz no seguint
 }
 ```
 
-Observe que o código e a marcação estão no mesmo arquivo. Todos os serviços necessários são tornados acessíveis `@inject` com o atributo. De acordo `@page` `Catalog/Details/{id}` com a diretiva, essa página pode ser acessada na rota. O valor do espaço reservado da `{id}` rota foi restrito a um número inteiro. Conforme descrito na seção de [Roteamento](pages-routing-layouts.md) , ao contrário de Web Forms, um componente Razor declara explicitamente sua rota e quaisquer parâmetros que estejam incluídos. Muitos controles de Web Forms podem não ter equivalentes exatos no mais grande número. Geralmente, há um trecho HTML equivalente que terá a mesma finalidade. Por exemplo, o `<asp:Label />` controle pode ser substituído por um elemento `<label>` HTML.
+Observe que o código e a marcação estão no mesmo arquivo. Todos os serviços necessários são tornados acessíveis com o atributo `@inject`. De acordo com a diretiva de `@page`, essa página pode ser acessada na rota `Catalog/Details/{id}`. O valor do espaço reservado de `{id}` da rota foi restrito a um número inteiro. Conforme descrito na seção de [Roteamento](pages-routing-layouts.md) , ao contrário de Web Forms, um componente Razor declara explicitamente sua rota e quaisquer parâmetros que estejam incluídos. Muitos controles de Web Forms podem não ter equivalentes exatos no mais grande número. Geralmente, há um trecho HTML equivalente que terá a mesma finalidade. Por exemplo, o controle de `<asp:Label />` pode ser substituído por um elemento de `<label>` HTML.
 
 ### <a name="model-validation-in-blazor"></a>Validação de modelo no mais incrivelmente
 
@@ -557,7 +557,7 @@ No mais ou mais, a marcação equivalente é fornecida em um arquivo *Create. Ra
 </EditForm>
 ```
 
-O `EditForm` contexto inclui suporte à validação e pode ser disposto em torno da entrada. As anotações de dados são uma maneira comum de adicionar validação. Esse suporte à validação pode ser adicionado por `DataAnnotationsValidator` meio do componente. Para obter mais informações sobre esse mecanismo, consulte [ASP.NET Core formulários e validação de](/aspnet/core/blazor/forms-validation)mais mais.
+O contexto de `EditForm` inclui suporte à validação e pode ser disposto em torno da entrada. As anotações de dados são uma maneira comum de adicionar validação. Esse suporte à validação pode ser adicionado por meio do componente `DataAnnotationsValidator`. Para obter mais informações sobre esse mecanismo, consulte [ASP.NET Core formulários e validação de](/aspnet/core/blazor/forms-validation)mais mais.
 
 ## <a name="migrate-built-in-web-forms-controls"></a>Migrar controles de Web Forms internos
 
@@ -565,9 +565,9 @@ O `EditForm` contexto inclui suporte à validação e pode ser disposto em torno
 
 ## <a name="migrate-configuration"></a>Migrar configuração
 
-Em um projeto Web Forms, os dados de configuração são mais comumente armazenados no arquivo *Web. config* . Os dados de configuração são acessados com `ConfigurationManager`o. Normalmente, os serviços eram necessários para analisar objetos. Com o .NET Framework 4.7.2, a capacidade de composição foi adicionada `ConfigurationBuilders`à configuração via. Esses construtores permitiam que os desenvolvedores adicionassem várias fontes de configuração que, em seguida, eram compostas em tempo de execução para recuperar os valores necessários.
+Em um projeto Web Forms, os dados de configuração são mais comumente armazenados no arquivo *Web. config* . Os dados de configuração são acessados com `ConfigurationManager`. Normalmente, os serviços eram necessários para analisar objetos. Com o .NET Framework 4.7.2, a capacidade de composição foi adicionada à configuração via `ConfigurationBuilders`. Esses construtores permitiam que os desenvolvedores adicionassem várias fontes de configuração que, em seguida, eram compostas em tempo de execução para recuperar os valores necessários.
 
-ASP.NET Core introduziu um sistema de configuração flexível que permite que você defina a fonte de configuração ou as fontes usadas pelo seu aplicativo e sua implantação. A `ConfigurationBuilder` infraestrutura que você pode estar usando em seu aplicativo Web Forms foi modelada após os conceitos usados no sistema de configuração de ASP.NET Core.
+ASP.NET Core introduziu um sistema de configuração flexível que permite que você defina a fonte de configuração ou as fontes usadas pelo seu aplicativo e sua implantação. A infraestrutura de `ConfigurationBuilder` que você pode estar usando em seu aplicativo Web Forms foi modelada após os conceitos usados no sistema de configuração ASP.NET Core.
 
 O trecho a seguir demonstra como o projeto Web Forms eShop usa o *Web. config* para armazenar valores de configuração:
 
@@ -599,7 +599,7 @@ O trecho a seguir demonstra como o projeto Web Forms eShop usa o *Web. config* p
 
 JSON é o formato de configuração padrão; no entanto, o ASP.NET Core dá suporte a muitos outros formatos, incluindo XML. Também há vários formatos com suporte da Comunidade.
 
-O Construtor na classe do `Startup` projeto mais incrivelmente aceita uma `IConfiguration` instância por meio de uma técnica de di, conhecida como injeção de construtor:
+O Construtor na classe de `Startup` do projeto mais incrivelmente aceita uma instância de `IConfiguration` por meio de uma técnica de DI, conhecida como injeção de construtor:
 
 ```csharp
 public class Startup
@@ -614,7 +614,7 @@ public class Startup
 }
 ```
 
-Por padrão, variáveis de ambiente, arquivos JSON (*appSettings. JSON* e *appSettings. { Environment}. JSON*) e as opções de linha de comando são registradas como fontes de configuração válidas no objeto de configuração. As fontes de configuração podem ser acessadas via `Configuration[key]`. Uma técnica mais avançada é associar os dados de configuração a objetos usando o padrão de opções. Para obter mais informações sobre configuração e o padrão de opções, consulte [configuração no](/aspnet/core/fundamentals/configuration/) padrão de ASP.NET Core e [opções em ASP.NET Core](/aspnet/core/fundamentals/configuration/options), respectivamente.
+Por padrão, variáveis de ambiente, arquivos JSON (*appSettings. JSON* e *appSettings. { Environment}. JSON*) e as opções de linha de comando são registradas como fontes de configuração válidas no objeto de configuração. As fontes de configuração podem ser acessadas por meio de `Configuration[key]`. Uma técnica mais avançada é associar os dados de configuração a objetos usando o padrão de opções. Para obter mais informações sobre configuração e o padrão de opções, consulte [configuração no](/aspnet/core/fundamentals/configuration/) padrão de ASP.NET Core e [opções em ASP.NET Core](/aspnet/core/fundamentals/configuration/options), respectivamente.
 
 ## <a name="migrate-data-access"></a>Migrar acesso a dados
 
@@ -622,8 +622,8 @@ O acesso a dados é um aspecto importante de qualquer aplicativo. O projeto eSho
 
 As seguintes alterações relacionadas ao EF foram necessárias para eShop:
 
-* Em .NET Framework, o `DbContext` objeto aceita uma cadeia de caracteres do formato *Name = ConnectionString* e usa a cadeia de `ConfigurationManager.AppSettings[ConnectionString]` conexão de para se conectar. No .NET Core, não há suporte para isso. A cadeia de conexão deve ser fornecida.
-* O banco de dados foi acessado de forma síncrona. Embora isso funcione, a escalabilidade pode ser afetada. Essa lógica deve ser movida para um padrão assíncrono.
+- Em .NET Framework, o objeto `DbContext` aceita uma cadeia de caracteres do formato *Name = ConnectionString* e usa a cadeia de conexão de `ConfigurationManager.AppSettings[ConnectionString]` para se conectar. No .NET Core, não há suporte para isso. A cadeia de conexão deve ser fornecida.
+- O banco de dados foi acessado de forma síncrona. Embora isso funcione, a escalabilidade pode ser afetada. Essa lógica deve ser movida para um padrão assíncrono.
 
 Embora não haja o mesmo suporte nativo para associação de conjunto de recursos, o mais incrivelmente fornece flexibilidade C# e potência com seu suporte em uma página Razor. Por exemplo, você pode executar cálculos e exibir o resultado. Para obter mais informações sobre padrões de dados no mais ou mais, consulte o capítulo de [acesso a dados](data.md) .
 
@@ -633,20 +633,20 @@ Por fim, há algumas diferenças de arquitetura importantes a serem consideradas
 
 Como o mais elaborado é baseado no .NET Core, há considerações sobre a garantia de suporte no .NET Core. Algumas das principais alterações incluem a remoção dos seguintes recursos:
 
-* Vários AppDomains
-* Comunicação Remota
-* CAS (Segurança de Acesso do Código)
-* Transparência de Segurança
+- Vários AppDomains
+- Comunicação Remota
+- CAS (Segurança de Acesso do Código)
+- Transparência de Segurança
 
 Para obter mais informações sobre técnicas para identificar as alterações necessárias para dar suporte à execução no .NET Core, consulte [portar seu código do .NET Framework para o .NET Core](/dotnet/core/porting).
 
 ASP.NET Core é uma versão reimaginada do ASP.NET e tem algumas alterações que podem não parecer óbvias inicialmente. As principais alterações são:
 
-* Nenhum contexto de sincronização, o que significa que `HttpContext.Current`não `Thread.CurrentPrincipal`há, ou outros acessadores estáticos
-* Sem cópia de sombra
-* Nenhuma fila de solicitações
+- Nenhum contexto de sincronização, o que significa que não há `HttpContext.Current`, `Thread.CurrentPrincipal` ou outros acessadores estáticos
+- Sem cópia de sombra
+- Nenhuma fila de solicitações
 
-Muitas operações no ASP.NET Core são assíncronas, o que permite o descarregamento mais fácil de tarefas vinculadas a e/s. É importante nunca Bloquear usando `Task.Wait()` o ou `Task.GetResult()`o, que pode esgotar rapidamente os recursos do pool de threads.
+Muitas operações no ASP.NET Core são assíncronas, o que permite o descarregamento mais fácil de tarefas vinculadas a e/s. É importante nunca Bloquear usando `Task.Wait()` ou `Task.GetResult()`, o que pode esgotar rapidamente os recursos do pool de threads.
 
 ## <a name="migration-conclusion"></a>Conclusão da migração
 
