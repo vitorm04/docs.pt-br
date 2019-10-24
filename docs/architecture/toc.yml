@@ -5,6 +5,8 @@
   items:
     - name: Projetar aplicativos Web modernos com o ASP.NET Core e o Microsoft Azure
       href: modern-web-apps-azure/
+    - name: ASP.NET Core gRPC para desenvolvedores do WCF
+      href: grpc-for-wcf-developers/
     - name: Modernizar aplicativos .NET existentes com contêineres do Windows e nuvem do Azure
       href: modernize-with-azure-containers/
     - name: Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft
@@ -20,5 +22,3 @@
       href: cloud-native/
     - name: Blazor para desenvolvedores do ASP.NET Web Forms
       href: blazor-for-web-forms-developers/
-    - name: ASP.NET Core gRPC para desenvolvedores do WCF
-      href: grpc-for-wcf-developers/
