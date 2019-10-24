@@ -2,12 +2,12 @@
 title: Manipulando a reentrância em aplicativos assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352006"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775533"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Manipulando a reentrância em aplicativos assíncronos (Visual Basic)
 
@@ -15,6 +15,9 @@ Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possi
 
 > [!NOTE]
 > Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.
+
+> [!NOTE]
+> O protocolo TLS versão 1,2 agora é a versão mínima a ser usada no desenvolvimento de seu aplicativo. Se seu aplicativo for destinado a uma versão do .NET Framework anterior a 4,7, consulte o artigo a seguir para [práticas recomendadas de TLS (Transport Layer Security) com o .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância
 
@@ -94,7 +97,7 @@ Você pode examinar o código que produz esta saída fazendo a rolagem até o fi
 
 Você pode bloquear o botão **Iniciar** enquanto uma operação estiver em execução, desabilitando o botão na parte superior do manipulador de eventos `StartButton_Click`. Você pode reativar o botão de dentro um bloco `Finally` quando a operação for concluída para que os usuários possam executar o aplicativo novamente.
 
-O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico ou pode baixar o aplicativo concluído em exemplos de [Async: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.
+O código a seguir mostra essas alterações, que estão marcadas com asteriscos. Você pode adicionar as alterações ao código no final deste tópico ou você pode baixar o aplicativo concluído em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -125,7 +128,7 @@ Em vez de desabilitar o botão **Iniciar**, você pode manter o botão ativo, ma
 
 Para obter mais informações sobre cancelamento, consulte ajustar [seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Baixe também o aplicativo concluído em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.
+Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.
 
 1. Declare uma variável <xref:System.Threading.CancellationTokenSource>, `cts`, que está no escopo para todos os métodos.
 
@@ -153,7 +156,7 @@ Para configurar esse cenário, faça as seguintes alterações no código básic
     cts = newCTS
     ```
 
-4. No final do `StartButton_Click`, o processo atual é concluído, portanto, defina o valor de `cts` de volta para `Nothing`.
+4. No final da `StartButton_Click`, o processo atual é concluído, portanto, defina o valor de `cts` de volta como `Nothing`.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -533,7 +536,7 @@ Para entender melhor o aplicativo de exemplo, você pode baixá-lo, compilá-lo 
 
 ### <a name="BKMK_DownloadingTheApp"></a> Baixar o aplicativo
 
-1. Baixe o arquivo compactado em [Amostras assíncronas: Nova entrada em aplicativos da área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).
+1. Baixe o aplicativo compactado em [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).
 
 2. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.
 
@@ -561,7 +564,7 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 4. Na lista de tipos de projeto, escolha **Aplicativo WPF**.
 
-5. Nomeie o projeto como `WebsiteDownloadWPF` e escolha o botão **OK**.
+5. Nomeie o projeto `WebsiteDownloadWPF`, escolha .NET Framework versão 4,6 ou superior e, em seguida, clique no botão **OK** .
 
      O novo projeto aparece no **Gerenciador de Soluções**.
 
@@ -589,7 +592,9 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
      Uma janela simples, contendo uma caixa de texto e um botão, aparecerá no modo de exibição de **Design** de MainWindow.xaml.
 
-8. Adicione uma referência para <xref:System.Net.Http>.
+8. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **referências** e selecione **Adicionar referência**.
+
+     Adicione uma referência para <xref:System.Net.Http>, se ela ainda não estiver selecionada.
 
 9. No **Gerenciador de soluções**, abra o menu de atalho para MainWindow. XAML. vb e escolha **Exibir código**.
 
@@ -603,6 +608,8 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
     Class MainWindow
 
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or System.Net.SecurityProtocolType.Tls12
+
             ' This line is commented out to make the results clearer in the output.
             'ResultsTextBox.Text = ""
 
@@ -677,5 +684,5 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Acessando a Web usando Async e Await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

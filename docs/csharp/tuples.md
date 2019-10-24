@@ -3,12 +3,12 @@ title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319753"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774058"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C#
 
@@ -53,7 +53,7 @@ Você cria uma tupla nomeada especificando os nomes de cada elemento. Uma maneir
 
 Esses sinônimos são manipulados pelo compilador e pela linguagem para que você possa usar as tuplas nomeadas de forma eficaz. Os editores e IDEs podem ler esses nomes semânticos usando APIs Roslyn. É possível fazer referência aos elementos de uma tupla nomeada com nomes semânticos em qualquer lugar no mesmo assembly. O compilador substitui os nomes que você definiu com equivalentes `Item*` ao gerar a saída compilada. A MSIL (Microsoft Intermediate Language) compilada não inclui os nomes que você atribuiu a esses elementos.
 
-Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)**. O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
+Começando com o C# 7.1, os nomes de campo para uma tupla podem ser fornecidos por meio das variáveis usadas para inicializar a tupla. Isso é conhecido como **[inicializadores de projeção de tupla](#tuple-projection-initializers)** . O código a seguir cria uma tupla denominada `accumulation` com elementos `count` (um inteiro) e `sum` (um duplo).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -77,7 +77,7 @@ Para qualquer campo em que um nome explícito não for fornecido, será projetad
 
 Há duas condições nas quais os possíveis nomes de campos não são projetados no campo da tupla:
 
-1. Quando o possível nome é um nome de tupla reservado. Os exemplos incluem `Item3`, `ToString`. ou `Rest`.
+1. Quando o possível nome é um nome de tupla reservado. Os exemplos incluem `Item3`, `ToString` ou `Rest`.
 1. Quando o possível nome é uma duplicata de outro nome de campo de tupla, seja explícito ou implícito.
 
 Essas condições evitam a ambiguidade. Esses nomes causariam ambiguidade se fossem usados como nomes de campo em uma tupla. Nenhuma dessas condições causa erros de tempo de compilação. Em vez disso, os elementos sem nomes projetados não terão nomes semânticos projetados para eles.  Os exemplos a seguir demonstram essas condições:

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045222"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774293"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 
@@ -26,7 +26,7 @@ Os certificados devem ser emitidos por uma autoridade de certificação, que é 
 
 ## <a name="viewing-certificates"></a>Exibindo certificados
 
-Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para obter mais informações, confira [Como: Exibir certificados com o snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)do MMC.
+Para trabalhar com certificados, geralmente é necessário exibi-los e examinar suas propriedades. Isso é feito facilmente com a ferramenta de snap-in do Console de Gerenciamento Microsoft (MMC). Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Repositórios de certificados
 
@@ -57,13 +57,13 @@ Selecionar onde armazenar um certificado depende de como e quando o serviço ou 
 
 ### <a name="accessing-stores"></a>Acessando repositórios
 
-Os repositórios são protegidos por listas de controle de acesso (ACLs), como pastas em um computador. Ao criar um serviço hospedado pelo Serviços de Informações da Internet (IIS), o processo ASP.NET é executado na conta ASP.NET. Essa conta deve ter acesso ao repositório que contém os certificados que um serviço usa. Cada um dos principais repositórios é protegido por uma lista de acesso padrão, mas as listas podem ser modificadas. Se você criar uma função separada para acessar um repositório, deverá conceder permissão de acesso a essa função. Para saber como modificar a lista de acesso usando a ferramenta WinHttpCertConfig. exe, consulte [como: Crie certificados temporários para uso durante](how-to-create-temporary-certificates-for-use-during-development.md)o desenvolvimento. Para obter mais informações sobre como usar certificados do cliente com o IIS, confira [Como chamar um serviço Web usando um certificado do cliente para autenticação em um aplicativo Web ASP.NET](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).
+Os repositórios são protegidos por listas de controle de acesso (ACLs), como pastas em um computador. Ao criar um serviço hospedado pelo Serviços de Informações da Internet (IIS), o processo ASP.NET é executado na conta ASP.NET. Essa conta deve ter acesso ao repositório que contém os certificados que um serviço usa. Cada um dos principais repositórios é protegido por uma lista de acesso padrão, mas as listas podem ser modificadas. Se você criar uma função separada para acessar um repositório, deverá conceder permissão de acesso a essa função. Para saber como modificar a lista de acesso usando a ferramenta WinHttpCertConfig.exe, confira [Como criar certificados temporários para uso durante o desenvolvimento](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="chain-trust-and-certificate-authorities"></a>Confiança de cadeia e autoridades de certificado
 
 Os certificados são criados em uma hierarquia onde cada certificado individual está vinculado à CA que emitiu o certificado. Este é o link para o certificado da CA. Em seguida, o certificado da autoridade de certificação é vinculado à autoridade de certificação que emitiu o certificado da autoridade de certificação original. Esse processo é repetido até que o certificado da CA seja alcançado. O certificado da CA é inerentemente de confiança.
 
-Os certificados digitais são usados para autenticar uma entidade confiando nessa hierarquia, também chamada de *cadeia de confiança*. Exiba uma cadeia de certificado usando o snap-in do MMC clicando duas vezes no certificado e, em seguida, clicando na guia **Caminho do Certificado**. Para obter mais informações sobre como importar cadeias de certificados para uma [autoridade de certificação, consulte Como: Especifique a cadeia de certificados da autoridade de certificação usada](specify-the-certificate-authority-chain-verify-signatures-wcf.md)para verificar as assinaturas.
+Os certificados digitais são usados para autenticar uma entidade confiando nessa hierarquia, também chamada de *cadeia de confiança*. Você pode exibir a cadeia de qualquer certificado usando o snap-in do MMC clicando duas vezes em qualquer certificado e, em seguida, clicando na guia **caminho do certificado** . Para obter mais informações sobre como importar cadeias de certificados para uma autoridade de certificação, consulte [como especificar a cadeia de certificados da autoridade de certificação usada para verificar as assinaturas](specify-the-certificate-authority-chain-verify-signatures-wcf.md).
 
 > [!NOTE]
 > Qualquer emissor pode ser designado uma autoridade confiável colocando o certificado do emissor no repositório de certificados da autoridade confiável.
@@ -72,7 +72,7 @@ Os certificados digitais são usados para autenticar uma entidade confiando ness
 
 Ao criar um novo serviço, você pode usar um certificado que não seja emitido por um certificado raiz confiável ou o próprio certificado de emissão pode não estar no repositório das Autoridades de Certificação Confiáveis. Somente para a finalidade de desenvolvimento, você pode desativar temporariamente o mecanismo que verifica a cadeia de confiança para um certificado. Para fazer isso, defina a propriedade `CertificateValidationMode` para `PeerTrust` ou `PeerOrChainTrust`. Qualquer um dos modos especifica que o certificado pode ser emitido por conta própria (confiança de par) ou parte de uma cadeia de confiança. Você pode definir a propriedade em qualquer uma das seguintes classes.
 
-|Classe|Propriedade|
+|Class|propriedade|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -105,7 +105,7 @@ O cmdlet New-SelfSignedCertificate do PowerShell cria certificados X. 509 e pare
 
 3. Importe o certificado de autoridade no repositório de Autoridades de Certificação Confiáveis.
 
-4. Para obter instruções passo a passo, consulte [como: Crie certificados temporários para uso durante](how-to-create-temporary-certificates-for-use-during-development.md)o desenvolvimento.
+4. Para obter instruções passo a passo, confira [Como criar certificados temporários para uso durante o desenvolvimento](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="which-certificate-to-use"></a>Qual certificado usar?
 
@@ -113,7 +113,7 @@ As perguntas comuns sobre certificados são qual certificado usar e por quê. A 
 
 ### <a name="service-certificates"></a>Certificados de serviço
 
-Os certificados de serviço têm a tarefa principal de autenticar o servidor para clientes. Uma das verificações iniciais feitas quando um cliente autentica um servidor é comparar o valor do campo **Entidade** com o URI (Uniform Resource Identifier) usado para contatar o serviço: o DNS de ambos deve ser correspondente. Por exemplo, se o URI do serviço for `http://www.contoso.com/endpoint/` , o campo **assunto** também deverá conter o valor. `www.contoso.com`
+Os certificados de serviço têm a tarefa principal de autenticar o servidor para clientes. Uma das verificações iniciais feitas quando um cliente autentica um servidor é comparar o valor do campo **Entidade** com o URI (Uniform Resource Identifier) usado para contatar o serviço: o DNS de ambos deve ser correspondente. Por exemplo, se o URI do serviço for `http://www.contoso.com/endpoint/`, o campo **assunto** também deverá conter o valor `www.contoso.com`.
 
 Observe que o campo pode conter vários valores, cada um prefixado com uma inicialização para indicar o valor. Normalmente, a inicialização é "CN" para nome comum, por exemplo, `CN = www.contoso.com`. Também é possível que o campo **Entidade** fique em branco. Nesse caso, o campo **Nome Alternativo da Entidade** pode conter o valor do **Nome DNS**.
 
@@ -141,7 +141,7 @@ Defina também o modo na configuração usando o atributo `revocationMode` da [\
 
 No WCF, em geral, você precisa especificar um certificado ou um conjunto de certificados que um serviço ou um cliente deve usar para autenticar, criptografar ou assinar digitalmente uma mensagem. Você pode fazer isso por meio de programação usando o método `SetCertificate` de várias classes que representam certificados X.509. As seguintes classes usam o método `SetCertificate` para especificar um certificado.
 
-|Classe|Método|
+|Class|Método|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|

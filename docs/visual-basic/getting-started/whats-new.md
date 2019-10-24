@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581970"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774915"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -21,45 +21,45 @@ Este tópico lista os nomes dos principais recursos para cada versão do Visual 
 
 ## <a name="current-version"></a>Versão atual
 
-Visual Basic 16,0/Visual Studio 2019 versão 16,0  
+Visual Basic 16,0/Visual Studio 2019 versão 16,0 \
 Para obter novos recursos, consulte [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versões anteriores
 
-Visual Basic 15.8 / Visual Studio 2017 Versão 15.8  
+Visual Basic 15,8/Visual Studio 2017 versão 15,8 \
 Para obter novos recursos, consulte [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15.5/Visual Studio 2017 versão 15.5  
+Visual Basic 15,5/Visual Studio 2017 versão 15,5 \
 Para obter novos recursos, consulte [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15.3/Visual Studio 2017 versão 15.3  
+Visual Basic 15,3/Visual Studio 2017 versão 15,3 \
 Para obter novos recursos, consulte [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017 \
 Para obter novos recursos, consulte [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015  
+Visual Basic/Visual Studio 2015 \
 Para obter novos recursos, consulte [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013  
+Visual Basic/Visual Studio 2013 \
 Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
 
-Visual Basic/Visual Studio 2012  
+Visual Basic/Visual Studio 2012 \
 palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador
 
-Visual Basic, Visual Studio 2010  
+Visual Basic, Visual Studio 2010 \
 Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global
 
-Visual Basic/Visual Studio 2008  
+Visual Basic/Visual Studio 2008 \
 LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável
 
-Visual Basic/Visual Studio 2005  
+Visual Basic/Visual Studio 2005 \
 O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)
 
-Visual Basic / Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003 \
 Operadores bit shift, declaração de variável de loop
 
-Visual Basic / Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002 \
 A primeira versão do Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 Observe que isso trunca em vez de arredondar os valores de ponto flutuante.
@@ -237,7 +236,7 @@ Você pode ter literais de data no formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`.
 
 **Propriedades de interface readonly**
 
-Você pode implementar propriedades de interface readonly usando uma propriedade readwrite.  A interface garante a funcionalidade mínima e não impede que uma classe de implementação permita que a propriedade seja definida.
+Você pode implementar propriedades de interface readonly usando uma propriedade readwrite. A interface garante a funcionalidade mínima e não impede que uma classe de implementação permita que a propriedade seja definida.
 
 [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)
 

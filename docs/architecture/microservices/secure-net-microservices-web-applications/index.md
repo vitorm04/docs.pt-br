@@ -4,12 +4,12 @@ description: Segurança nos Microsserviços do .NET e aplicativos Web – Conhe�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296471"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798849"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 
@@ -25,9 +25,9 @@ Em cenários de microsserviço, normalmente a autenticação é manipulada centr
 
 **Figura 9-1**. Autenticação centralizada com um Gateway de API
 
-Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. Esses tokens podem ser compartilhados entre aplicativos do ASP.NET Core, se necessário, ao implementar o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing). Esse padrão é ilustrado na Figura 9-2.
+Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. (Esses tokens podem ser compartilhados entre ASP.NET Core aplicativos, se necessário, implementando o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing).) Esse padrão é ilustrado na Figura 9-2.
 
-![Quando os microsserviços são acessados diretamente, a confiança, que inclui autenticação e autorização, é tratada por um token de segurança emitido por um microsserviço dedicado, compartilhado entre os microsserviços.](./media/image2.png)
+![Quando os microservices são acessados diretamente, a confiança, que inclui autenticação e autorização, é tratada por um token de segurança emitido por um Microservice dedicado, compartilhado entre os microserviços.](./media/image2.png)
 
 **Figura 9-2**. Autenticação por microsserviço de identidade; a confiança é compartilhada usando um token de autorização
 
@@ -282,22 +282,19 @@ O middleware de autenticação de portador do JWT também pode dar suporte a cen
 - **Introdução ao Identity** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Autenticação de dois fatores com SMS** \
+- **Rick Anderson. Autenticação de dois fatores com  \ de SMS**
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **Habilitando a autenticação usando o Facebook, o Google e outros provedores externos** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. Uma introdução ao OAuth 2** \
+- **Michell Anicas. Uma introdução ao OAuth 2**  \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (repositório do GitHub para provedores do ASP.NET OAuth) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Danny Strockis. Integrando o Azure AD em um aplicativo Web do ASP.NET Core** \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
-
-- **IdentityServer4. Documentação oficial** \
+- **IdentityServer4. Documentação oficial**  \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]

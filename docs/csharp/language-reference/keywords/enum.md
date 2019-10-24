@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605825"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771863"
 ---
 # <a name="enum-c-reference"></a>enum (Referência de C#)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 Nesta enumeração, a sequência de elementos é forçada a iniciar a partir de `1` em vez de `0`. No entanto, incluir uma constante que tenha o valor de 0 é recomendado. Para obter mais informações, consulte [Tipos de enumeração](../../programming-guide/enumeration-types.md).
 
-Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer [tipo numérico integral](../builtin-types/integral-numeric-types.md). O tipo [char](char.md) não pode ser um tipo subjacente de um enum. O tipo subjacente padrão dos elementos de enumeração é [int](../builtin-types/integral-numeric-types.md). Para declarar um enum de outro tipo integral, como [bytes](../builtin-types/integral-numeric-types.md), use uma vírgula após o identificador seguida pelo tipo, conforme mostrado no exemplo a seguir.
+Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer [tipo numérico integral](../builtin-types/integral-numeric-types.md). O tipo [char](char.md) não pode ser um tipo subjacente de um enum. O tipo subjacente padrão de elementos de enumeração é [int](../builtin-types/integral-numeric-types.md). Para declarar uma enumeração de outro tipo integral, como [byte](../builtin-types/integral-numeric-types.md), use dois-pontos após o identificador seguido pelo tipo, conforme mostrado no exemplo a seguir.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
@@ -101,6 +101,4 @@ Se você remover `Flags`, o exemplo exibirá os seguintes valores:
 - [Palavras-chave do C#](index.md)
 - [Tipos integrais](../builtin-types/integral-numeric-types.md)
 - [Tabela de tipos internos](built-in-types-table.md)
-- [Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md)
-- [Tabela de conversões numéricas explícitas](explicit-numeric-conversions-table.md)
 - [Convenções de Nomenclatura do Enum](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

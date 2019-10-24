@@ -3,12 +3,12 @@ title: Iterators
 description: Saiba como usar iteradores C# internos e como criar seus próprios métodos iteradores personalizados.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: HT
+ms.openlocfilehash: c378ceb651eed7e7a3d8c738bd4b2b3cf7de2a0f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613428"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773883"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -27,7 +27,7 @@ Este tutorial tem várias etapas. Após cada etapa, você poderá executar o apl
 
 ## <a name="iterating-with-foreach"></a>iterando com foreach
 
-Enumerar uma coleção é simples: A palavra-chave `foreach` enumera uma coleção, executando a instrução inserida uma vez para cada elemento na coleção:
+Enumerar uma coleção é simples: a palavra-chave `foreach` enumera uma coleção, executando a instrução inserida uma vez para cada elemento na coleção:
 
 ```csharp
 foreach (var item in collection)
@@ -69,8 +69,8 @@ Você pode (e frequentemente o faz) usar outros constructos de linguagem para si
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 }
 ```
 
@@ -80,14 +80,14 @@ Você não precisa determinar uma ou a outra. Você pode ter quantas instruçõe
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
     index = 100;
-    while (index++ < 110)
-        yield return index;
+    while (index < 110)
+        yield return index++;
 }
 ```
 
@@ -111,8 +111,8 @@ Há uma restrição importante em métodos de iterador: você não pode ter uma 
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -130,8 +130,8 @@ Você pode modificar um pouco o último método para usar `yield return` em todo
 public IEnumerable<int> GetSingleDigitNumbers()
 {
     int index = 0;
-    while (index++ < 10)
-        yield return index;
+    while (index < 10)
+        yield return index++;
 
     yield return 50;
 
@@ -155,9 +155,12 @@ public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
 private IEnumerable<int> IteratorMethod()
 {
     int index = 0;
-    while (index++ < 10)
+    while (index < 10)
+    {
         if (index % 2 == 1)
             yield return index;
+        index++;
+    }
 }
 ```
 
