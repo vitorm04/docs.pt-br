@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788863"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775562"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-O **- refonly** opção indica que a saída primária da compilação deve ser um assembly de referência em vez de um assembly de implementação. O parâmetro `-refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
+A opção **-refonly** indica que a saída primária da compilação deve ser um assembly de referência em vez de um assembly de implementação. O parâmetro `-refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,11 +28,9 @@ O **- refonly** opção indica que a saída primária da compilação deve ser u
 
 ## <a name="remarks"></a>Comentários
 
-Visual Basic oferece suporte a `-refout` alternar a partir da versão 15.3.
+Visual Basic dá suporte à opção de `-refonly` a partir da versão 15,3.
 
-Assemblies de referência são assemblies somente de metadados que contêm metadados, mas nenhum código de implementação. Eles incluem informações de tipo e membro para tudo, exceto tipos anônimos. O motivo para usar corpos `throw null` (em vez de nenhum corpo) é que PEVerify poderia ser executado e passado (validando, assim, a integridade dos metadados).
-
-Assemblies de referência incluem um nível de conjunto [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo. Esse atributo pode ser especificado na origem (assim, o compilador não precisará sintetizá-lo). Devido a esse atributo, tempos de execução se recusarão a carregar assemblies de referência para a execução (mas ainda podem ser carregados em um contexto de somente reflexão). As ferramentas que refletem nos assemblies precisam garantir que elas carreguem assemblies de referência como somente reflexão; Caso contrário, o tempo de execução gera uma <xref:System.BadImageFormatException>.
+Os assemblies de referência são um tipo especial de assembly que contém apenas a quantidade mínima de metadados necessários para representar a superfície da API pública da biblioteca. Eles incluem declarações para todos os membros que são significativos ao referenciar um assembly em ferramentas de compilação, mas excluem todas as implementações de membro e declarações de membros privados que não têm impacto observável em seu contrato de API. Para obter mais informações, consulte [Reference Assemblies](../../../standard/assembly/reference-assemblies.md) in .net Guide.
 
 As opções `-refonly` e [`-refout`](refout-compiler-option.md) são mutualmente exclusivas.
 

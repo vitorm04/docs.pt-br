@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: Criar uma recomendação de filme – fatoração de matriz'
+title: 'Tutorial: criar um recomendador de filmes-fatoração de matriz'
 description: Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
 author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 1db2ad6c078cb6201b2a6a4e2f8572f589cee684
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700958"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774459"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: Criar uma recomendação de filme usando a fatoração de matriz com ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: criar um recomendador de filmes usando matriz factorizaton com ML.NET
 
 Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
 
@@ -36,9 +36,9 @@ Você usará as seguintes etapas para realizar sua tarefa, bem como qualquer out
 3. [Avaliar o modelo](#evaluate-your-model)
 4. [Usar o modelo](#use-your-model)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Selecionar a tarefa de aprendizado de máquina apropriada
 
@@ -52,7 +52,7 @@ Há várias maneiras de abordar problemas de recomendação, como recomendar uma
 
 2. Crie um diretório chamado *Data* no projeto para armazenar o conjunto de dados:
 
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Data" e pressione Enter.
+    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Dados" e pressione Enter.
 
 3. Instale os pacotes NuGet **Microsoft.ML** e **Microsoft.ML.Recommender**:
 
@@ -167,7 +167,7 @@ Adicione o seguinte código ao método `Main()` para chamar o método `LoadData(
 
 ## <a name="build-and-train-your-model"></a>Criar e treinar o modelo
 
-Há três conceitos principais no ML.NET: [Dados](../resources/glossary.md#data), [Transformadores](../resources/glossary.md#transformer) e [Avaliadores](../resources/glossary.md#estimator).
+Há três conceitos principais em ML.NET: [Data](../resources/glossary.md#data), [transformadores](../resources/glossary.md#transformer)e [estimadores](../resources/glossary.md#estimator).
 
 Os algoritmos de treinamento de aprendizado de máquina exigem que os dados estejam em determinado formato. `Transformers` são usados para transformar dados de tabela em um formato compatível.
 
@@ -320,7 +320,7 @@ Use o `PredictionEngine` para prever a classificação adicionando o seguinte c�
 
 [!code-csharp[PredictionEngine](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar o `PredictionEnginePool` em uma API Web do ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application)
+O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.

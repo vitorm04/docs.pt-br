@@ -1,5 +1,5 @@
 ---
-title: Referência de C#
+title: C#referência
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275808"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771837"
 ---
-# <a name="c-reference"></a>Referência de C#
+# <a name="c-reference"></a>C#referência
+
 Esta seção fornece o material de referência sobre palavras-chave do C#, operadores, caracteres especiais, diretivas de pré-processador, opções de compilador e erros de compilador e avisos.  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a>Nesta seção
+
  [Palavras-chave do C#](./keywords/index.md)  
  Fornece links para informações sobre a sintaxe e as palavras-chave do C#.  
   

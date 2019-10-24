@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582866"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775557"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -35,9 +35,7 @@ O caminho e o nome do arquivo do assembly de referência. Em geral, ele deve est
 
 Visual Basic dá suporte à opção de `-refout` a partir da versão 15,3.
 
-Os assemblies de referência são assemblies somente de metadados que contêm metadados, mas nenhum código de implementação. Eles incluem informações de tipo e membro para tudo, exceto tipos anônimos. Seus corpos de método são substituídos por uma única instrução de `throw null`. O motivo para usar `throw null` corpos de método (em oposição a nenhum corpo) é para que PEVerify possa executar e passar (Validando assim a integridade dos metadados).
-
-Os assemblies de referência incluem um atributo [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) no nível do assembly. Esse atributo pode ser especificado na origem (assim, o compilador não precisará sintetizá-lo). Devido a esse atributo, os tempos de execução se recusam a carregar assemblies de referência para execução (mas eles ainda podem ser carregados em um contexto somente de reflexão). As ferramentas que refletem em assemblies precisam garantir que carreguem assemblies de referência como somente reflexão; caso contrário, o tempo de execução gera um <xref:System.BadImageFormatException>.
+Os assemblies de referência são um tipo especial de assembly que contém apenas a quantidade mínima de metadados necessários para representar a superfície da API pública da biblioteca. Eles incluem declarações para todos os membros que são significativos ao referenciar um assembly em ferramentas de compilação, mas excluem todas as implementações de membro e declarações de membros privados que não têm impacto observável em seu contrato de API. Para obter mais informações, consulte [Reference Assemblies](../../../standard/assembly/reference-assemblies.md) in .net Guide.
 
 As opções `-refout` e [`-refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
 

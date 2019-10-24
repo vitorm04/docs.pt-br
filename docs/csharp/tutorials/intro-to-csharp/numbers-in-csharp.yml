@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Loops e branches em C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
-  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72291376"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774007"
 items:
 - durationInMinutes: 1
   content: >
@@ -421,12 +421,8 @@ items:
     Saiba mais sobre os números em C# nos tópicos a seguir:
 
 
-    - [Tipos integrais](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [Tipos numéricos inteiros](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [Tabela de tipos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [Tipos numéricos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [Tabela de tipos internos](../../language-reference/keywords/built-in-types-table.md)
-
-    - [Tabela de conversões numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [Tabela de conversões numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [Conversões numéricas internas](../../language-reference/builtin-types/numeric-conversions.md)

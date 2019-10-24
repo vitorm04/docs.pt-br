@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395443"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773890"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
 Este artigo descreve o que há de novo no .NET Core 3,0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
 
-O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview)ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**.
+O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou mais recente, [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview) ou mais recente ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**mais recente.
 
 [Baixe e comece a usar o .NET Core 3,0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
 
@@ -123,7 +123,7 @@ O SDK do .NET Core 3.0 vem com uma ferramenta que pode reduzir o tamanho dos apl
 
 Os aplicativos autossuficientes incluem todos os componentes necessários para executar seu código, sem exigir que o .NET seja instalado no computador host. No entanto, muitas vezes o aplicativo requer apenas um pequeno subconjunto da estrutura para funcionar, e outras bibliotecas não utilizadas podem ser removidas.
 
-O .NET Core agora inclui uma configuração que usará a ferramenta[Vinculador de IL](https://github.com/mono/linker) para verificar a IL do seu aplicativo. Essa ferramenta detecta qual código é necessário e, em seguida, corta bibliotecas não usadas. Ela pode reduzir significativamente o tamanho da implantação de alguns aplicativos.
+O .NET Core agora inclui uma configuração que usará a ferramenta[Vinculador de IL](https://github.com/mono/linker) para verificar a IL do seu aplicativo. Essa ferramenta detecta o código necessário e, em seguida, corta as bibliotecas não utilizadas. Ela pode reduzir significativamente o tamanho da implantação de alguns aplicativos.
 
 Para habilitá-la, adicione a configuração `<PublishTrimmed>` ao seu projeto e publique um aplicativo autossuficiente:
 

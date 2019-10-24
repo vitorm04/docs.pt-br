@@ -3,12 +3,12 @@ title: Introdução a Eventos
 description: Saiba mais sobre eventos no .NET Core e nossas metas de design de linguagem para eventos nesta visão geral.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
-ms.translationtype: HT
+ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051938"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771911"
 ---
 # <a name="introduction-to-events"></a>Introdução a Eventos
 
@@ -49,7 +49,7 @@ public event EventHandler<FileListArgs> Progress;
 
 O tipo de evento (`EventHandler<FileListArgs>` neste exemplo) deve ser um tipo delegado. Há uma série de convenções que você deve seguir ao declarar um evento. Normalmente, o tipo de delegado do evento tem um retorno nulo.
 Declarações de evento devem ser um verbo ou uma frase verbal.
-Use o tempo passado (como neste exemplo) quando o evento informar que algo aconteceu. Use um tempo verbal presente (por exemplo, `Closing`) para informar algo que está prestes a ocorrer. Frequentemente, usar o tempo presente indica que sua classe dá suporte a algum tipo de comportamento de personalização. Um dos cenários mais comuns é dar suporte ao cancelamento. Por exemplo, um evento `Closing` pode incluir um argumento que indicaria se a operação de encerramento deve continuar ou não.  Outros cenários podem permitir que os chamadores modifiquem o comportamento atualizando propriedades dos argumentos do evento. Você pode acionar um evento para indicar uma próxima ação proposta que um algoritmo usará. O manipulador de eventos pode forçar uma ação diferente modificando as propriedades do argumento do evento.
+Use conjugação anteriores quando o evento relatar algo que aconteceu. Use um tempo verbal presente (por exemplo, `Closing`) para informar algo que está prestes a ocorrer. Frequentemente, usar o tempo presente indica que sua classe dá suporte a algum tipo de comportamento de personalização. Um dos cenários mais comuns é dar suporte ao cancelamento. Por exemplo, um evento `Closing` pode incluir um argumento que indicaria se a operação de encerramento deve continuar ou não.  Outros cenários podem permitir que os chamadores modifiquem o comportamento atualizando propriedades dos argumentos do evento. Você pode acionar um evento para indicar uma próxima ação proposta que um algoritmo usará. O manipulador de eventos pode forçar uma ação diferente modificando as propriedades do argumento do evento.
 
 Quando quiser acionar o evento, você pode chamar os manipuladores de eventos usando a sintaxe de invocação de delegado:
 

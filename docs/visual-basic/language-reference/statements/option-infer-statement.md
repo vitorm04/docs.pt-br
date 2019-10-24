@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582625"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775452"
 ---
 # <a name="option-infer-statement"></a>Instrução Option Infer
 
@@ -62,7 +62,7 @@ Para obter informações adicionais, consulte [inferência de tipo local](../../
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Quando uma Instrução Option Infer Não Está Presente
 
-Se o código-fonte não contiver uma instrução `Option Infer`, a configuração **Option Infer** na [página compilar, designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) será usada. Se o compilador de linha de comando for usado, a opção de compilador [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) será usada.
+Se o código-fonte não contiver uma instrução `Option Infer`, a configuração **Option Infer** na [página compilar, designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) será usada. Se o compilador de linha de comando for usado, a opção de compilador [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) será usada.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>Para definir o Option Infer no IDE
 
@@ -76,7 +76,7 @@ Quando você cria um novo projeto, a configuração **Option Infer** na guia **C
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>Para definir o Option Infer na linha de comando
 
-Inclua a opção de compilador [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) no comando **Vbc** .
+Inclua a opção de compilador [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) no comando **Vbc** .
 
 ## <a name="default-data-types-and-values"></a>Tipos de Dados e Valores Padrão
 
@@ -109,5 +109,5 @@ O exemplo a seguir demonstra o tipo de tempo de execução pode ser diferente qu
 - [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Caixa de diálogo Padrões do Visual Basic, Projetos, Opções](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Conversão boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

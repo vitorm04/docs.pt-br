@@ -3,12 +3,12 @@ title: Criar um aplicativo de lista de campeonato com o Infer.NET e a programaç
 description: Descubra como usar a programação probabilística com o Infern.NET para criar um aplicativo de lista de campeonato com base em uma versão simplificada do TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957208"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774539"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
 
@@ -18,7 +18,7 @@ Este guia de instruções ensina você sobre a programação probabilística usa
 
 A programação probabilística nos permite criar modelos estatísticos de processos do mundo real.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Ambiente de desenvolvimento local configurado
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Projetar o modelo
 
-O exemplo a seguir usa partidas de pingue-pongue ou pebolim dentro da empresa. Temos os participantes e o resultado de cada jogo.  Queremos inferir habilidades do jogador usando esses dados. Suponha que cada jogador tenha uma habilidade latente distribuída normalmente e que o desempenho em uma determinada partida seja uma versão com ruídos dessa habilidade. Os dados forçam o desempenho do vencedor a ser superior ao desempenho do perdedor. Essa é uma versão simplificada do modelo popular do [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/), que também dá suporte a equipes, sorteios e outras extensões. Uma [versão avançada](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) desse modelo é usada para organizar partidas em dois jogos muito vendidos, Halo e Gears of War.
+O exemplo a seguir usa partidas de pingue-pongue ou pebolim dentro da empresa. Temos os participantes e o resultado de cada jogo.  Queremos inferir habilidades do jogador usando esses dados. Suponha que cada jogador tenha uma habilidade latente distribuída normalmente e que o desempenho em uma determinada partida seja uma versão com ruídos dessa habilidade. Os dados forçam o desempenho do vencedor a ser superior ao desempenho do perdedor. Essa é uma versão simplificada do modelo popular do [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/), que também dá suporte a equipes, sorteios e outras extensões. Uma [versão avançada](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) desse modelo é usada para organizar partidas em dois jogos muito vendidos, Halo e Gears of War.
 
 Precisamos listar as habilidades inferidas do jogador com a respectiva variação – a medição da incerteza em torno das habilidades.
 
