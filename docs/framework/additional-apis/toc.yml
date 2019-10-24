@@ -55,6 +55,10 @@
           items:
             - name: Campo m_ConnectionList
               href: m_connectionlist.md
+        - name: Classe ConnectStream
+          items:
+            - name: Propriedade de conexão
+              href: system.net.connectstream.connection.md
         - name: Classe CoreResponseData
           href: coreresponsedata.md
           items:
@@ -70,12 +74,26 @@
               href: httpwebrequest__coreresponse.md
             - name: Campo _HttpResponse
               href: _httpresponse.md
+        - name: Classe PooledStream
+          items:
+            - name: Propriedade NetworkStream
+              href: system.net.pooledstream.networkstream.md
         - name: Classe ServicePoint
           items:
             - name: Campo m_ConnectionGroupList
               href: m_connectiongrouplist.md
             - name: Campo s_ServicePointTable
               href: s_servicepointtable.md
+        - name: Classe TlsStream
+          items:
+            - name: Campo m_Worker
+              href: system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: Classe SslState
+          items:
+            - name: Propriedade SslProtocol
+              href: system.net.security.sslstate.sslprotocol.md
     - name: System.Windows.Diagnostics
       items:
         - name: Classe VisualDiagnostics
