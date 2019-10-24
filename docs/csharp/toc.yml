@@ -1298,14 +1298,16 @@
               items:
                 - name: Recursos dos tipos de valor
                   href: language-reference/keywords/value-types.md
-                - name: bool
-                  href: language-reference/keywords/bool.md
                 - name: Tipos numéricos integrais
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
                 - name: Tipos numéricos de ponto flutuante
-                  displayName: 'float, decimal, double, rational, real'
+                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: Conversões numéricas internas
+                  href: language-reference/builtin-types/numeric-conversions.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
                 - name: char
                   href: language-reference/keywords/char.md
                 - name: enum
@@ -1316,11 +1318,11 @@
               items:
                 - name: Recursos dos tipos de referência
                   href: language-reference/keywords/reference-types.md
-                - name: classe
-                  href: language-reference/keywords/class.md
                 - name: Tipos de referência internos
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
+                - name: classe
+                  href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
             - name: void
@@ -1337,10 +1339,6 @@
                   href: language-reference/keywords/value-types-table.md
                 - name: Tabela de valores padrão
                   href: language-reference/keywords/default-values-table.md
-                - name: Tabela de conversões numéricas implícitas
-                  href: language-reference/keywords/implicit-numeric-conversions-table.md
-                - name: Tabela de conversões numéricas explícitas
-                  href: language-reference/keywords/explicit-numeric-conversions-table.md
                 - name: Tabela de formatação de resultados numéricos
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modificadores

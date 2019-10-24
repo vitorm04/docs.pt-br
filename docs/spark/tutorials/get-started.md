@@ -4,14 +4,14 @@ description: Descubra como executar um aplicativo .NET para Apache Spark usando 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250319"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774369"
 ---
-# <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introdução ao .NET para Apache Spark
+# <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: introdução ao .NET para Apache Spark
 
 Este tutorial ensina como executar um aplicativo .NET para Apache Spark usando o .NET Core no Windows.
 
@@ -44,9 +44,9 @@ Antes de começar, verifique se você pode executar `dotnet`, `java`, `mvn`, `sp
     * Use o comando `java -version` do PowerShell para verificar a instalação.
 
 4. Instale o [Apache Maven 3.6.0+](https://maven.apache.org/download.cgi).
-    * Baixe o [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip).
-    * Extraia para um diretório local. Por exemplo: `c:\bin\apache-maven-3.6.0\`.
-    * Adicione o Apache Maven à sua [variável de ambiente PATH](https://www.java.com/en/download/help/path.xml). Se você tiver extraído para o `c:\bin\apache-maven-3.6.0\`, adicionará `c:\bin\apache-maven-3.6.0\bin` a seu PATH.
+    * Baixe o [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip).
+    * Extraia para um diretório local. Por exemplo, `c:\bin\apache-maven-3.6.2\`.
+    * Adicione o Apache Maven à sua [variável de ambiente PATH](https://www.java.com/en/download/help/path.xml). Se você tiver extraído para o `c:\bin\apache-maven-3.6.2\`, adicionará `c:\bin\apache-maven-3.6.2\bin` a seu PATH.
     * Use o comando `mvn -version` do PowerShell para verificar a instalação.
 
 5. Instale o [Apache Spark 2.3 ou superior](https://spark.apache.org/downloads.html). Não há suporte para o Apache Spark 2.4 ou superior.
@@ -57,8 +57,8 @@ Antes de começar, verifique se você pode executar `dotnet`, `java`, `mvn`, `sp
 
 6. Configure o [WinUtils](https://github.com/steveloughran/winutils).
     * Baixe o binário **winutils.exe** do [repositório WinUtils](https://github.com/steveloughran/winutils). Selecione a versão do Hadoop com a qual a distribuição do Spark foi compilada. Por exemplo, você usa **hadoop-2.7.1** para **Spark 2.3.2**. A versão do Hadoop é anotada no final do nome da pasta de instalação do Spark.
-    * Salve o binário **winutils.exe** em um diretório de sua escolha. Por exemplo: `c:\hadoop\bin`.
-    * Defina `HADOOP_HOME` para refletir o diretório com **winutils.exe** sem `bin`. Por exemplo: `c:\hadoop`.
+    * Salve o binário **winutils.exe** em um diretório de sua escolha. Por exemplo, `c:\hadoop\bin`.
+    * Defina `HADOOP_HOME` para refletir o diretório com **winutils.exe** sem `bin`. Por exemplo, `c:\hadoop`.
     * Defina a variável de ambiente PATH para incluir `%HADOOP_HOME%\bin`.
 
 Verifique se você pode executar `dotnet`, `java`, `mvn`, `spark-shell` da linha de comando antes de passar para a próxima seção.
@@ -67,7 +67,7 @@ Verifique se você pode executar `dotnet`, `java`, `mvn`, `spark-shell` da linha
 
 1. Baixe a versão [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) da página Versões do GitHub do .NET para Apache Spark para seu computador local. Por exemplo, você pode baixá-lo para o caminho, `c:\bin\Microsoft.Spark.Worker\`.
 
-2. Crie uma [nova variável de ambiente](https://www.java.com/en/download/help/path.xml) chamada `DOTNET_WORKER_DIR` e defina-a para o diretório em que você baixou e extraiu **Microsoft.Spark.Worker**. Por exemplo: `c:\bin\Microsoft.Spark.Worker`.
+2. Crie uma [nova variável de ambiente](https://www.java.com/en/download/help/path.xml) chamada `DOTNET_WORKER_DIR` e defina-a para o diretório em que você baixou e extraiu **Microsoft.Spark.Worker**. Por exemplo, `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>Clonar o repositório do GitHub do .NET para Apache Spark
 
