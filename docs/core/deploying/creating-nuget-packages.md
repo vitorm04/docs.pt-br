@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: d36a6ee7d524933577928daa9993fba8ce62f6c7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116701"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771940"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Como criar um pacote NuGet com ferramentas da interface de linha de comando (CLI) do .NET Core
 
@@ -37,11 +37,10 @@ Depois disso, basta apenas um único comando da linha de comando:
 dotnet pack
 ```
 
-Sua pasta `/bin/Debug` agora será assemelhará a esta:
+Sua pasta */bin/Debug* agora terá esta aparência:
 
 ```console
 $ ls bin/Debug
-
 netstandard1.0/
 SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
@@ -53,11 +52,10 @@ Observe que isso gerará um pacote que pode ser depurado. Se você deseja criar 
 dotnet pack --configuration release
 ```
 
-Sua pasta `/bin` agora terá uma pasta `release` que contém o pacote NuGet com binários de versão:
+Sua pasta */bin* agora terá uma pasta *Release* que contém o pacote NuGet com binários de versão:
 
 ```console
 $ ls bin/release
-
 netstandard1.0/
 SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg

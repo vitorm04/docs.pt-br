@@ -2,12 +2,12 @@
 title: Ferramenta de Definição de Esquema XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 7a27b05a12017a3c0de6b0d036f480b3e7fdeda7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 9de4a195f34b0daedcfb3687dbb36495b985092d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392733"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775257"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 
@@ -16,13 +16,13 @@ A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou clas
 ## <a name="syntax"></a>Sintaxe
 
 ```console
-xsd file.xdr [/outputdir:directory][/parameters:file.xml]
-xsd file.xml [/outputdir:directory] [/parameters:file.xml]
+xsd file.xdr [-outputdir:directory][/parameters:file.xml]
+xsd file.xml [-outputdir:directory] [/parameters:file.xml]
 xsd file.xsd {/classes | /dataset} [/element:element]
              [/enableLinqDataSet] [/language:language]
-                          [/namespace:namespace] [/outputdir:directory] [URI:uri]
+                          [/namespace:namespace] [-outputdir:directory] [URI:uri]
                           [/parameters:file.xml]
-xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/parameters:file.xml]
+xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/parameters:file.xml]
 ```
 
 ## <a name="argument"></a>Argumento
@@ -35,39 +35,39 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/h\[elp\]**|Exibe sintaxe de comando e opções para a ferramenta.|
-|**/o\[utputdir\]:** _directory_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
+|**/h \[elp \]**|Exibe sintaxe de comando e opções para a ferramenta.|
+|**/o \[utputdir \]:** _Directory_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
-|**/p\[arameters\]:** _file.xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [comentários](#remarks) .|
+|**/p \[arameters \]:** _File. xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [comentários](#remarks) .|
 
 ## <a name="xsd-file-options"></a>Opções de arquivo XSD
  Você deve especificar somente uma das seguintes opções para arquivos .xsd.
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/c\[lasses\]**|Gera classes que correspondem ao esquema especificado. Para ler dados XML em um objeto, use o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
-|**/d\[ataset\]**|Gera uma classe derivada de <xref:System.Data.DataSet> que corresponde ao esquema especificado. Para ler dados XML na classe derivada, use o método <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
+|**/c \[lasses \]**|Gera classes que correspondem ao esquema especificado. Para ler dados XML em um objeto, use o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
+|**/d \[ataset \]**|Gera uma classe derivada de <xref:System.Data.DataSet> que corresponde ao esquema especificado. Para ler dados XML na classe derivada, use o método <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
 
  Você também pode especificar qualquer uma das seguintes opções para arquivos .xsd.
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/e\[lement\]:** _element_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
+|**/e \[lement \]:** _elemento_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
 |**/enableDataBinding**|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos gerados para habilitar a associação de dados. A forma curta é `/edb`.|
-|**/enableLinqDataSet**|(Forma abreviada: `/eld`.) Especifica que o DataSet gerado pode ser consultado usando LINQ to DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre como usar o LINQ, consulte [LINQ (consulta integrada à C# linguagem)](../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem)-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
-|**/f\[ields\]**|Gera campos em vez de propriedades. Por padrão, as propriedades são geradas.|
-|**/l @ no__t-1anguage @ no__t-2:** _idioma_|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
-|**/n\[amespace\]:** _namespace_|Especifica o namespace de tempo de execução para os tipos gerados. O namespace padrão é `Schemas`.|
+|**/enableLinqDataSet**|(Forma abreviada: `/eld`.) Especifica que o DataSet gerado pode ser consultado em relação ao uso de LINQ to DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre como usar o LINQ, consulte [LINQ (consulta integrada à C# linguagem)](../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem)-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/f \[ields \]**|Gera campos em vez de propriedades. Por padrão, as propriedades são geradas.|
+|**/l \[anguage \]:** _idioma_|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
+|**/n \[amespace \]:** _namespace_|Especifica o namespace de tempo de execução para os tipos gerados. O namespace padrão é `Schemas`.|
 |**/nologo**|Suprime o banner.|
 |**/order**|Gera identificadores de pedido explícito em todos os membros de partícula.|
-|**/o\[ut\]:** _directoryName_|Especifica o diretório de saída no qual colocar os arquivos. O padrão é o diretório atual.|
-|**/u\[ri\]:** _uri_|Especifica o URI para os elementos no esquema para o qual gerar código. Esse URI, se houver, aplica-se a todos os elementos especificados com a opção `/element`.|
+|**/o \[ut \]:** _DirectoryName_|Especifica o diretório de saída no qual colocar os arquivos. O padrão é o diretório atual.|
+|**/u \[ri \]:** _URI_|Especifica o URI para os elementos no esquema para o qual gerar código. Esse URI, se houver, aplica-se a todos os elementos especificados com a opção `/element`.|
 
 ## <a name="dll-and-exe-file-options"></a>Opções de arquivo DLL e EXE
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/t\[ype\]:** _typename_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|
+|**/t \[ype \]:** _TypeName_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -150,11 +150,11 @@ A tabela a seguir mostra os atributos que também podem ser usados com o element
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|language|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
+|linguagem|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
 |namespace|Especifica o namespace para o código gerado. O namespace deve estar em conformidade com os padrões CLR (por exemplo, sem caracteres de espaço ou barra invertida).|
 |opções|Um dos seguintes valores: `none`, `properties` (gera propriedades em vez de campos públicos), `order` ou `enableDataBinding` (consulte as opções `/order` e `/enableDataBinding` na seção anterior Opções de arquivo XSD).|
 
- Você também pode controlar como o código do `DataSet` é gerado usando o elemento `<generateDataSet>`. O XML a seguir especifica que o código gerado usa estruturas `DataSet` (como a classe <xref:System.Data.DataTable>) para criar Visual Basic código para um elemento especificado. As estruturas de DataSet geradas darão suporte a consultas LINQ.
+ Você também pode controlar como o código do `DataSet` é gerado usando o elemento `<generateDataSet>`. O XML a seguir especifica que o código gerado usa estruturas de `DataSet` (como a classe <xref:System.Data.DataTable>) para criar Visual Basic código para um elemento especificado. As estruturas de DataSet geradas darão suporte a consultas LINQ.
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -174,7 +174,7 @@ As opções que você pode definir para o elemento `<generateDataSet>` incluem o
 |Atributo|Descrição|
 |---------------|-----------------|
 |enableLinqDataSet|Especifica que o DataSet gerado pode ser consultado usando LINQ to DataSet. O valor padrão é false.|
-|language|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
+|linguagem|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
 |namespace|Especifica o namespace para o código gerado. O namespace deve estar em conformidade com os padrões CLR (por exemplo, sem caracteres de espaço ou barra invertida).|
 
  Há atributos que você pode definir no elemento `<xsd>` de nível superior. Essas opções podem ser usadas com qualquer um dos elementos filho (`<generateSchemas>`, `<generateClasses>` ou `<generateDataSet>`). O código XML a seguir gera código para um elemento denominado "IDItems" no diretório de saída denominado "MyOutputDirectory".

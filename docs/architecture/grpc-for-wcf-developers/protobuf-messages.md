@@ -3,22 +3,22 @@ title: Mensagens Protobuf-gRPC para desenvolvedores do WCF
 description: Saiba como as mensagens Protobuf são definidas em IDL e geradas C#no.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f6bb67fe3bc37fcb49c0e69b7960a00d584307b8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
-ms.translationtype: MT
+ms.openlocfilehash: 1fdbedaadb33ac3eb99ca360018beb36ac7a8d78
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184200"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771628"
 ---
-# <a name="protobuf-messages"></a>Mensagens Protobuf
+# <a name="protobuf-messages"></a>Mensagens de Protobuf
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Esta seção aborda como declarar mensagens Protobuf em `.proto` arquivos, explica os conceitos fundamentais de números e tipos de campo e examina o C# código que `protoc` é gerado pelo compilador. O restante do capítulo examinará mais detalhadamente como os diferentes tipos de dados são representados em Protobuf.
+Esta seção aborda como declarar mensagens Protobuf em arquivos `.proto`, explica os conceitos fundamentais de números e tipos de campo e examina o C# código gerado pelo compilador de `protoc`. O restante do capítulo examinará mais detalhadamente como os diferentes tipos de dados são representados em Protobuf.
 
 ## <a name="declaring-a-message"></a>Declarando uma mensagem
 
-No WCF, uma `Stock` classe para um aplicativo de comércio no mercado de ações pode ser definida como o exemplo a seguir:
+No WCF, uma classe de `Stock` para um aplicativo de comércio no mercado de ações pode ser definida como o exemplo a seguir:
 
 ```csharp
 namespace TraderSys
@@ -38,7 +38,7 @@ namespace TraderSys
 }
 ```
 
-Para implementar a classe equivalente em Protobuf, ela deve ser declarada `.proto` no arquivo. O `protoc` compilador então irá gerar a classe .net como parte do processo de compilação.
+Para implementar a classe equivalente em Protobuf, ela deve ser declarada no arquivo `.proto`. O compilador de `protoc` irá gerar a classe .NET como parte do processo de compilação.
 
 ```protobuf
 syntax "proto3";
@@ -49,17 +49,17 @@ message Stock {
 
     int32 id = 1;
     string symbol = 2;
-    string displayName = 3;
-    int32 marketId = 4;
+    string display_name = 3;
+    int32 market_id = 4;
 
 }  
 ```
 
 A primeira linha declara a versão de sintaxe que está sendo usada. A versão 3 da linguagem foi lançada em 2016 e é a versão recomendada para os serviços gRPCs.
 
-A `option csharp_namespace` linha especifica o namespace a ser usado para os tipos C# gerados. Essa opção será ignorada quando o `.proto` arquivo for compilado para outros idiomas. É comum que os arquivos Protobuf contenham opções específicas de idioma para vários idiomas.
+A linha de `option csharp_namespace` especifica o namespace a ser usado para os C# tipos gerados. Essa opção será ignorada quando o arquivo de `.proto` for compilado para outros idiomas. É comum que os arquivos Protobuf contenham opções específicas de idioma para vários idiomas.
 
-A `Stock` definição da mensagem Especifica quatro campos, cada um com um tipo, um nome e um número de campo.
+A definição da mensagem de `Stock` especifica quatro campos, cada um com um tipo, um nome e um número de campo.
 
 ## <a name="field-numbers"></a>Números de campo
 
@@ -72,11 +72,11 @@ No formato binário, o número do campo é combinado com um identificador de tip
 As declarações de tipo estão usando os tipos de dados escalares nativos do Protobuf, que são abordados em mais detalhes na [próxima seção](protobuf-data-types.md). O restante deste capítulo abordará os tipos internos do Protobuf e mostrará como eles se relacionam com os tipos .NET comuns.
 
 > [!NOTE]
-> O Protobuf não dá suporte nativo `decimal` a um tipo, portanto, Double é usado em vez disso. Para aplicativos que exigem precisão decimal completa, consulte a [seção sobre decimais](protobuf-data-types.md#decimals) na próxima parte deste capítulo.
+> O Protobuf não dá suporte nativo a um tipo de `decimal`, portanto, Double é usado em vez disso. Para aplicativos que exigem precisão decimal completa, consulte a [seção sobre decimais](protobuf-data-types.md#decimals) na próxima parte deste capítulo.
 
 ## <a name="the-generated-code"></a>O código gerado
 
-Quando você cria seu aplicativo, o Protobuf cria classes para cada uma de suas mensagens, mapeando seus C# tipos nativos para tipos. O tipo `Stock` gerado teria a seguinte assinatura:
+Quando você cria seu aplicativo, o Protobuf cria classes para cada uma de suas mensagens, mapeando seus C# tipos nativos para tipos. O tipo de `Stock` gerado teria a seguinte assinatura:
 
 ```csharp
 public class Stock
@@ -92,7 +92,7 @@ O código real gerado é muito mais complicado do que isso, pois cada classe con
 
 ### <a name="property-names"></a>Nomes de propriedade
 
-Observe que o compilador Protobuf aplicado `PascalCase` aos nomes de propriedade, embora eles `camelCase` estivessem no `.proto` arquivo. É melhor usar `camelCase` na definição de mensagem para que a geração de código para outras plataformas produza o caso esperado para suas convenções.
+Observe que o compilador Protobuf aplicou `PascalCase` aos nomes de propriedade, embora eles fossem `snake_case` no arquivo `.proto`. O [Guia de estilo Protobuf](https://developers.google.com/protocol-buffers/docs/style) recomenda o uso de `snake_case` em suas definições de mensagem para que a geração de código para outras plataformas produza o caso esperado para suas convenções.
 
 >[!div class="step-by-step"]
 >[Anterior](protocol-buffers.md)

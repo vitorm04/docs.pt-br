@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031876"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771496"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -23,11 +23,11 @@ Cada contêiner (uma instância de uma imagem do Docker) inclui os seguintes com
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Fluxo de trabalho para o desenvolvimento de aplicativos baseados em contêiner do Docker
 
-Esta seção descreve o fluxo de trabalho de desenvolvimento do *loop interno* de aplicativos baseados em contêiner do Docker. O fluxo de trabalho de loop interno significa que ele não está considerando o fluxo de trabalho de DevOps mais amplo, que pode incluir até implantação de produção e apenas se concentra no trabalho de desenvolvimento realizado no computador do desenvolvedor. As etapas iniciais para configurar o ambiente não são incluídas, pois elas são executadas apenas uma vez.
+Esta seção descreve o fluxo de trabalho de desenvolvimento do *loop interno* de aplicativos baseados em contêiner do Docker. O fluxo de trabalho de loop interno significa que ele não está considerando o fluxo de trabalho de DevOps mais amplo, que pode incluir até a implantação de produção e só se concentra na tarefa de desenvolvimento feita no computador do desenvolvedor. As etapas iniciais para configurar o ambiente não são incluídas, pois elas são executadas apenas uma vez.
 
 Um aplicativo é composto de seus próprios serviços e de bibliotecas adicionais (dependências). A figura 5-1 a seguir ilustra as etapas básicas que são normalmente realizadas para criar um aplicativo do Docker.
 
-![O processo de desenvolvimento de aplicativos do Docker: 1 – Codificar o aplicativo, 2 – Escrever Dockerfiles, 3 – Criar imagens definidas nos Dockerfiles, 4 – (opcional) Criar serviços no arquivo docker-compose.yml, 5 – Executar o contêiner ou o aplicativo docker-compose, 6 – Testar o aplicativo ou os microsserviços, 7 – Enviar por push para o repositório e repetir. ](./media/image1.png)
+![O processo de desenvolvimento para aplicativos Docker: 1-codificar seu aplicativo, 2-gravar Dockerfile/s, 3-criar imagens definidas em Dockerfile/s, 4-(opcional) compor serviços no arquivo Docker-Compose. yml, 5-executar o contêiner ou o aplicativo Docker-Compose, 6-testar seu aplicativo ou seus microserviços, 7- Envie por push para o repositório e repita. ](./media/image1.png)
 
 **Figura 5-1.** Fluxo de trabalho passo a passo para o desenvolvimento de aplicativos do Docker em contêineres
 
@@ -110,7 +110,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-Nesse caso, a imagem é baseada na versão 2.2 da imagem oficial do Docker do ASP.NET Core (de várias arquiteturas para o Linux e o Windows). Essa é a configuração `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Para obter mais informações sobre essa imagem base, confira a página [Imagem do Docker do .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/).) No Dockerfile, você também precisará instruir o Docker a escutar na porta TCP que você usará em tempo de execução (nesse caso, a porta 80, conforme definido com a configuração EXPOSE).
+Nesse caso, a imagem é baseada na versão 2.2 da imagem oficial do Docker do ASP.NET Core (de várias arquiteturas para o Linux e o Windows). Essa é a configuração `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Para obter mais informações sobre essa imagem base, consulte a página [imagem do Docker do .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) .) No Dockerfile, você também precisa instruir o Docker para escutar na porta TCP que será usada no tempo de execução (nesse caso, a porta 80, conforme configurado com a configuração de exposição).
 
 Você pode especificar mais definições de configurações no Dockerfile, dependendo da linguagem e da estrutura usadas. Por exemplo, a linha ENTRYPOINT com `["dotnet", "MySingleContainerWebApp.dll"]` diz ao Docker para executar um aplicativo do .NET Core. Se você estiver usando o SDK e a CLI do .NET Core (CLI do dotnet) para compilar e executar o aplicativo do .NET, essa configuração será diferente. O essencial é que a linha ENTRYPOINT e outras configurações serão diferentes dependendo da linguagem e da plataforma que você escolher para seu aplicativo.
 
@@ -204,11 +204,11 @@ O Dockerfile inicial pode ser como este:
 
 E estes são os detalhes, linha por linha:
 
-- **#1 de linha:** Inicie um estágio com uma imagem base "pequena" somente em tempo de execução, chamando-a de **base** para referência.
+- **#1 de linha:** Inicie um estágio com uma imagem base somente de tempo de execução "pequeno", chame-a **base** para referência.
 
 - **#2 de linha:** Crie o diretório **/app** na imagem.
 
-- **#3 de linha:** Exponha a porta **80**.
+- **#3 de linha:** Expor a porta **80**.
 
 - **#5 de linha:** Comece um novo estágio com a imagem "grande" para criação/publicação. Chame-o **Build** para referência.
 
@@ -216,7 +216,7 @@ E estes são os detalhes, linha por linha:
 
 - **#7 de linha:** Até a linha 16, copie os arquivos de projeto **. csproj** referenciados para poder restaurar pacotes posteriormente.
 
-- **#17 de linha:** Restaure os pacotes do projeto **Catalog.API** e os projetos referenciados.
+- **#17 de linha:** Restaure os pacotes para o projeto **Catalog. API** e os projetos referenciados.
 
 - **#18 de linha:** Copie **toda a árvore de diretórios da solução** (exceto os arquivos/diretórios incluídos no arquivo **. dockerignore** ) para o diretório **/src** na imagem.
 
@@ -457,7 +457,7 @@ O hash mostrado é a ID do contêiner e também recebe um nome legível aleatór
 
 Se ainda não adicionou o suporte ao orquestrador de contêineres, você também poderá executar um aplicativo de contêiner único no Visual Studio pressionando **Ctrl+F5** e usar **F5** para depurar o aplicativo dentro do contêiner. O contêiner é executado localmente usando o docker run.
 
-### <a name="option-b-running-a-multi-container-application"></a>Opção B: executar um aplicativo de vários contêineres
+### <a name="option-b-running-a-multi-container-application"></a>Opção B: executando um aplicativo de vários contêineres
 
 Na maioria dos cenários empresariais, um aplicativo do Docker será ser composto de vários serviços, o que significa que você precisará executar um aplicativo de vários contêineres, conforme mostrado na Figura 5-10.
 
@@ -533,14 +533,14 @@ Se você estiver desenvolvendo por meio da abordagem de editor/CLI, a depuraçã
 - **Depurando aplicativos em um contêiner do Docker local** \
   [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
-- **Steve Lasker. Compilar, depurar, implantar aplicativos do ASP.NET Core com o Docker.** Vídeo. \
+- **Steve Lasker. Crie, depure, implante aplicativos ASP.NET Core com o Docker.** Vídeo. \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Fluxo de trabalho simplificado ao desenvolver contêineres com o Visual Studio
 
 Efetivamente, o fluxo de trabalho ao usar o Visual Studio é muito mais simples do que ao usar a abordagem de editor/CLI. A maioria das etapas necessárias pelo Docker, relacionadas ao Dockerfile e aos arquivos docker-compose.yml, são ocultas ou simplificadas pelo Visual Studio, conforme mostrado na Figura 5-15.
 
-![Fluxo de trabalho de desenvolvimento de contêiner simplificado com o Visual Studio: 1 – Codificar o aplicativo, 2 – Adicionar o suporte ao Docker aos projetos (uma única vez), 3 – Executar o contêiner ou o aplicativo docker-compose, 4 – Testar o aplicativo ou os microsserviços, 5 – Enviar por push para o repositório e repetir.](./media/image20.png)
+![Fluxo de trabalho de desenvolvimento de contêiner simplificado com o Visual Studio: 1-codifique seu aplicativo, 2-adicionar suporte do Docker a projetos (apenas uma vez), 3-executar contêiner ou Docker-compor aplicativo, 4-testar seu aplicativo ou seus microserviços, 5-enviar por push para o repositório e repetir.](./media/image20.png)
 
 **Figura 5-15**. Fluxo de trabalho simplificado ao desenvolver com o Visual Studio
 

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Criar assemblies Friend não assinados'
+title: 'Como: criar assemblies Friend não assinados'
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9d5699f772dba994b10408d15422faa3c5931f45
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991690"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774344"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>Como: Criar assemblies Friend não assinados
+# <a name="how-to-create-unsigned-friend-assemblies"></a>Como: criar assemblies Friend não assinados
 
 Este exemplo mostra como usar assemblies amigáveis com assemblies não assinados.
 
@@ -20,7 +20,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
 
 1. Abra um prompt de comando.
 
-2. Crie um C# arquivo ou Visual Basic chamado *friend_unsigned_A* que contém o código a seguir. O código usa o <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo para declarar *friend_unsigned_B* como um assembly Friend.
+2. Crie um C# arquivo ou Visual Basic chamado *friend_unsigned_A* que contém o código a seguir. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar *friend_unsigned_B* como um assembly Friend.
 
    ```csharp
    // friend_unsigned_A.cs
@@ -84,7 +84,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. Crie um C# arquivo ou Visual Basic chamado *friend_unsigned_B* que contém o código a seguir. Como *friend_unsigned_A* especifica *friend_unsigned_B* como um assembly Friend, o código em *friend_unsigned_B* pode acessar `internal` osC#tipos e `Friend` Membros () ou (Visual Basic) de *friend_unsigned_A* .
+4. Crie um C# arquivo ou Visual Basic chamado *friend_unsigned_B* que contém o código a seguir. Como *friend_unsigned_A* especifica *friend_unsigned_B* como um assembly Friend, o código em *friend_unsigned_B* pode acessar tipos `internal`C#() ou `Friend` (Visual Basic) e membros de *friend_unsigned_A*.
 
    ```csharp
    // friend_unsigned_B.cs
@@ -136,21 +136,21 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída ( *. exe* ou *. dll*) usando a opção `/out` do compilador. Para obter mais informações, consulte [/outC# (opções do compilador)](../../csharp/language-reference/compiler-options/out-compiler-option.md) ou [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
+   O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída ( *. exe* ou *. dll*) usando a opção de compilador `-out`. Para obter mais informações, consulte [-outC# (opções do compilador)](../../csharp/language-reference/compiler-options/out-compiler-option.md) ou [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
 
 6. Execute o arquivo *friend_unsigned_B. exe* .
 
-   O programa gera duas cadeias de caracteres: **Class1. Test** e **class2. Test**.
+   O programa produz duas cadeias de caracteres: **Class1. Test** e **class2. Test**.
 
 ## <a name="net-security"></a>Segurança do .NET
 
-Há semelhanças entre o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e a classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. A principal diferença é que <xref:System.Security.Permissions.StrongNameIdentityPermission> o pode exigir que as permissões de segurança executem uma determinada seção de <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> código, enquanto o atributo `internal` controla `Friend` a visibilidade dos tipos e dos membros de ou (Visual Basic).
+Há semelhanças entre o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e a classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. A principal diferença é que <xref:System.Security.Permissions.StrongNameIdentityPermission> pode exigir permissões de segurança para executar uma determinada seção de código, enquanto o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla a visibilidade dos membros e tipos `internal` ou `Friend` (Visual Basic).
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblies no .NET](index.md)
 - [Assemblies Friend](friend.md)
-- [Como: Criar assemblies Friend assinados](create-signed-friend.md)
+- [Como criar assemblies Friend assinados](create-signed-friend.md)
 - [Guia de programação em C#](../../csharp/programming-guide/index.md)
 - [Conceitos de programação (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

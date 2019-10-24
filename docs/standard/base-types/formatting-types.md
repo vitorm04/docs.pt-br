@@ -27,93 +27,57 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82dc1e36ae5a0eede7099c8e13ac9a2393bbb904
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e9d53e7a75463e481b667a7ad84b68cb225e7f7c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253978"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774315"
 ---
-# <a name="formatting-types-in-net"></a>Tipos de formatação no .NET
+# <a name="format-types-in-net"></a>Tipos de formato no .NET
 
 Formatação é o processo de conversão de uma instância de classe, estrutura ou valor de enumeração em sua representação de cadeia de caracteres, de forma que a cadeia de caracteres resultante possa ser exibida aos usuários ou desserializada para restaurar o tipo de dados original. Essa conversão pode apresentar uma série de desafios:
 
-- A maneira que os valores são armazenados internamente não necessariamente reflete a maneira que os usuários desejam exibi-los. Por exemplo, um número de telefone pode ser armazenado no formato 8009999999, que não é amigável. Em vez disso, ele deve ser exibido como 800-999-9999. Veja a seção [Cadeias de caracteres de formato personalizado](#customStrings) para obter um exemplo que formata um número dessa maneira.
+- A maneira que os valores são armazenados internamente não necessariamente reflete a maneira que os usuários desejam exibi-los. Por exemplo, um número de telefone pode ser armazenado no formato 8009999999, que não é amigável. Em vez disso, ele deve ser exibido como 800-999-9999. Veja a seção [Cadeias de caracteres de formato personalizado](#custom-format-strings) para obter um exemplo que formata um número dessa maneira.
 
-- Às vezes, a conversão de um objeto para sua representação de cadeia de caracteres não é intuitiva. Por exemplo, não é claro o modo como a representação de cadeia de caracteres de um objeto de Temperatura ou um objeto de Pessoa deve aparecer. Para obter um exemplo que formata um objeto Temperatura de diversas maneiras, veja a seção [Cadeias de caracteres de formato padrão](#standardStrings).
+- Às vezes, a conversão de um objeto para sua representação de cadeia de caracteres não é intuitiva. Por exemplo, não é claro o modo como a representação de cadeia de caracteres de um objeto de Temperatura ou um objeto de Pessoa deve aparecer. Para obter um exemplo que formata um objeto Temperatura de diversas maneiras, veja a seção [Cadeias de caracteres de formato padrão](#standard-format-strings).
 
-- Muitas vezes, os valores exigem formatação que leva em conta a cultura. Por exemplo, em um aplicativo que usa números para refletir os valores monetários, cadeias de caracteres numéricas devem incluir o símbolo da moeda da cultura atual, o separador de grupo (que, na maioria das culturas, é o separador de milhar) e o símbolo decimal. Para ver um exemplo, veja a seção [Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider](#FormatProviders).
+- Muitas vezes, os valores exigem formatação que leva em conta a cultura. Por exemplo, em um aplicativo que usa números para refletir os valores monetários, cadeias de caracteres numéricas devem incluir o símbolo da moeda da cultura atual, o separador de grupo (que, na maioria das culturas, é o separador de milhar) e o símbolo decimal. Para obter um exemplo, consulte a seção [formatação sensível à cultura com provedores de formato](#culture-sensitive-formatting-with-format-providers) .
 
-- Um aplicativo pode ter que exibir o mesmo valor de maneiras diferentes. Por exemplo, um aplicativo pode representar um membro de enumeração ao exibindo uma representação de cadeia de caracteres de seu nome ou exibindo seu valor subjacente. Para obter um exemplo que formata um membro da enumeração <xref:System.DayOfWeek> de maneiras diferentes, veja a seção [Cadeias de caracteres de formato padrão](#standardStrings).
+- Um aplicativo pode ter que exibir o mesmo valor de maneiras diferentes. Por exemplo, um aplicativo pode representar um membro de enumeração ao exibindo uma representação de cadeia de caracteres de seu nome ou exibindo seu valor subjacente. Para obter um exemplo que formata um membro da enumeração <xref:System.DayOfWeek> de maneiras diferentes, veja a seção [Cadeias de caracteres de formato padrão](#standard-format-strings).
 
 > [!NOTE]
 > A formatação converte o valor de um tipo em uma representação de cadeia de caracteres. A análise é o inverso da formatação. Uma operação de análise cria uma instância de um tipo de dados com base em na representação de sua cadeia de caracteres. Para obter informações sobre como converter cadeias de caracteres em outros tipos de dados, veja [Analisando cadeias de caracteres](../../../docs/standard/base-types/parsing-strings.md).
 
 O .NET dá suporte à formatação avançada, que permite aos desenvolvedores atender a esses requisitos.
 
-Esta visão geral contém as seguintes seções:
-
-- [Formatação em .NET](#NetFormatting)
-
-- [Formatação padrão usando o método ToString](#DefaultToString)
-
-- [Substituindo o método ToString](#OverrideToString)
-
-- [As cadeias de caractere de formato e do método ToString](#FormatStrings)
-
-  - [Cadeias de caracteres de formato padrão](#standardStrings)
-
-  - [Cadeias de caracteres de formato personalizado](#customStrings)
-
-  - [Tipos de cadeias de caracteres de formato e de biblioteca de classe do .NET](#stringRef)
-
-- [Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider](#FormatProviders)
-
-  - [Formatação de valores numéricos que leva em conta a cultura](#numericCulture)
-
-  - [Formatação de valores de data e hora que leva em conta a cultura](#dateCulture)
-
-- [A interface IFormattable](#IFormattable)
-
-- [Formatação de composição](#CompositeFormatting)
-
-- [Formatação personalizada com ICustomFormatter](#Custom)
-
-- [Tópicos relacionados](#RelatedTopics)
-
-- [Referência](#Reference)
-
-<a name="NetFormatting"></a>
-
 ## <a name="formatting-in-net"></a>Formatação em .NET
 
-O mecanismo básico de formatação é a implementação padrão do método <xref:System.Object.ToString%2A?displayProperty=nameWithType>, que é abordado na seção [Formatação padrão usando o método ToString](#DefaultToString), mais adiante neste tópico. No entanto, o .NET oferece várias maneiras de modificar e estender o suporte à formatação padrão. Eles incluem o seguinte:
+O mecanismo básico de formatação é a implementação padrão do método <xref:System.Object.ToString%2A?displayProperty=nameWithType>, que é abordado na seção [Formatação padrão usando o método ToString](#default-formatting-using-the-tostring-method), mais adiante neste tópico. No entanto, o .NET oferece várias maneiras de modificar e estender o suporte à formatação padrão. Eles incluem o seguinte:
 
-- A substituição do método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para definir uma representação de cadeia de caracteres personalizada do valor de um objeto. Para obter mais informações, veja a seção [Substituindo o método ToString](#OverrideToString) mais adiante neste tópico.
+- A substituição do método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para definir uma representação de cadeia de caracteres personalizada do valor de um objeto. Para obter mais informações, consulte a seção [substituir o método ToString](#override-the-tostring-method) mais adiante neste tópico.
 
 - A definição dos especificadores de formato que permitem que a representação de cadeia de caracteres do valor de um objeto assuma várias formas. Por exemplo, o especificador de formato "X" na instrução a seguir converte um inteiro na representação de cadeia de caracteres de um valor hexadecimal.
 
      [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
      [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]
 
-     Para obter mais informações sobre especificadores de formato, veja a seção [Cadeias de caracteres de formato e método ToString](#FormatStrings).
+     Para obter mais informações sobre especificadores de formato, veja a seção [Cadeias de caracteres de formato e método ToString](#the-tostring-method-and-format-strings).
 
 - O uso de provedores de formato para aproveitar as convenções de formatação de uma cultura específica. Por exemplo, a instrução a seguir exibe um valor de moeda usando as convenções de formatação da cultura en-US.
 
      [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
      [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]
 
-     Para obter mais informações sobre a formatação com provedores de formato, consulte a seção [Provedores de formato e a interface IFormatProvider](#FormatProviders).
+     Para obter mais informações sobre formatação com provedores de formato, consulte a seção [provedores de formato](#culture-sensitive-formatting-with-format-providers) .
 
-- A implementação da interface <xref:System.IFormattable> para dar suporte tanto à conversão de cadeia de caracteres com a classe <xref:System.Convert> quanto à formatação de composição. Para obter mais informações, consulte a seção [Interface IFormattable](#IFormattable).
+- A implementação da interface <xref:System.IFormattable> para dar suporte tanto à conversão de cadeia de caracteres com a classe <xref:System.Convert> quanto à formatação de composição. Para obter mais informações, consulte a seção [Interface IFormattable](#the-iformattable-interface).
 
-- O uso da formatação de composição para inserir a representação de cadeia de caracteres de um valor em uma cadeia de caracteres maior. Para obter mais informações, veja a seção [Formatação composição](#CompositeFormatting).
+- O uso da formatação de composição para inserir a representação de cadeia de caracteres de um valor em uma cadeia de caracteres maior. Para obter mais informações, veja a seção [Formatação composição](#composite-formatting).
 
-- Implementando <xref:System.ICustomFormatter> e <xref:System.IFormatProvider> para fornecer uma solução completa de formatação personalizada. Para obter mais informações, veja a seção [Formatação personalizada com ICustomFormatter](#Custom).
+- Implementando <xref:System.ICustomFormatter> e <xref:System.IFormatProvider> para fornecer uma solução completa de formatação personalizada. Para obter mais informações, veja a seção [Formatação personalizada com ICustomFormatter](#custom-formatting-with-icustomformatter).
 
 As seções a seguir examinam esses métodos para converter um objeto em sua representação de cadeia de caracteres.
-
-<a name="DefaultToString"></a>
 
 ## <a name="default-formatting-using-the-tostring-method"></a>Formatação padrão usando o método ToString
 
@@ -125,14 +89,12 @@ Cada tipo é derivado de <xref:System.Object?displayProperty=nameWithType> herda
 > [!WARNING]
 > A partir do [!INCLUDE[win81](../../../includes/win81-md.md)], o Windows Runtime inclui uma interface <xref:Windows.Foundation.IStringable> com um único método, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), que fornece suporte à formatação padrão. No entanto, recomendamos que tipos gerenciados não implementem a interface `IStringable`. Para obter mais informações, veja a seção "Windows Runtime e a Interface `IStringable`" na página de referência <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
 
-Já que todos os tipos, com a exceção das interfaces, são derivados de <xref:System.Object>, essa funcionalidade é fornecida automaticamente para suas estruturas ou classes personalizadas. No entanto, a funcionalidade oferecida pelo método `ToString` padrão é limitada: Embora identifique o tipo, não fornece nenhuma informação sobre uma instância do tipo. Para fornecer uma representação de cadeia de caracteres de um objeto que fornece informações sobre o objeto, você deve substituir o método `ToString`.
+Já que todos os tipos, com a exceção das interfaces, são derivados de <xref:System.Object>, essa funcionalidade é fornecida automaticamente para suas estruturas ou classes personalizadas. No entanto, a funcionalidade oferecida pelo método `ToString` padrão é limitada: embora ele identifique o tipo, não fornece nenhuma informação sobre uma instância do tipo. Para fornecer uma representação de cadeia de caracteres de um objeto que fornece informações sobre o objeto, você deve substituir o método `ToString`.
 
 > [!NOTE]
 > As estruturas herdam de <xref:System.ValueType>, que por sua vez é derivado de <xref:System.Object>. Embora <xref:System.ValueType> substitua <xref:System.Object.ToString%2A?displayProperty=nameWithType>, sua implementação é idêntica.
 
-<a name="OverrideToString"></a>
-
-## <a name="overriding-the-tostring-method"></a>Substituindo o método ToString
+## <a name="override-the-tostring-method"></a>Substituir o método ToString
 
 A exibição do nome de um tipo é geralmente de uso limitado e não permite que os consumidores dos seus tipos diferenciem uma instância da outra. No entanto, você pode substituir o método `ToString` para fornecer uma representação mais útil do valor de um objeto. O exemplo a seguir define um objeto `Temperature` e substitui seu método `ToString` para exibir a temperatura em graus Celsius.
 
@@ -141,7 +103,7 @@ A exibição do nome de um tipo é geralmente de uso limitado e não permite que
 
 No .NET, o método `ToString` de cada tipo de valor primitivo foi substituído para exibir o valor do objeto, em vez de seu nome. A tabela a seguir mostra a substituição de cada tipo primitivo. Observe que a maioria dos métodos substituídos chama outra sobrecarga do método `ToString` e passa-a ao especificador de formato "G", que define o formato geral de seu tipo, além de um objeto <xref:System.IFormatProvider> que representa a cultura atual.
 
-|Tipo|Substituição de ToString|
+|Digite|Substituição de ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Retorna <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.Byte> para a cultura atual.|
@@ -158,8 +120,6 @@ No .NET, o método `ToString` de cada tipo de valor primitivo foi substituído p
 |<xref:System.UInt32>|Chama `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.UInt32> para a cultura atual.|
 |<xref:System.UInt64>|Chama `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.UInt64> para a cultura atual.|
 
-<a name="FormatStrings"></a>
-
 ## <a name="the-tostring-method-and-format-strings"></a>As cadeias de caractere de formato e do método ToString
 
 Contar com o método padrão `ToString` ou substituir `ToString` é apropriado quando um objeto tem uma única representação de cadeia de caracteres. No entanto, o valor de um objeto normalmente tem várias representações. Por exemplo, uma temperatura pode ser expressa em graus Fahrenheit, graus Celsius ou kelvins. De forma similar, o valor de inteiro 10 pode ser representado de várias maneiras, incluindo 10, 10,0, 1.0e01 ou US $10,00.
@@ -167,8 +127,6 @@ Contar com o método padrão `ToString` ou substituir `ToString` é apropriado q
 Para permitir que um único valor tenha várias representações de cadeia de caracteres, o .NET usa cadeias de caracteres de formato. Uma cadeia de caracteres de formato é uma cadeia de caracteres que contém um ou mais especificadores de formato predefinidos, que são caracteres únicos ou grupos de caracteres que definem como o método `ToString` deve formatar sua saída. A cadeia de caracteres de formato é passada como um parâmetro para o método `ToString` do objeto e determina como a representação de cadeia de caracteres do valor do objeto deve ser exibida.
 
 Todos os tipos numéricos, de data e hora e tipos de enumeração no .NET dão suporte a um conjunto predefinido de especificadores de formato. Você também pode usar cadeias de caracteres de formato para definir várias representações de cadeia de caracteres de seus tipos de dados definidos pelo aplicativo.
-
-<a name="standardStrings"></a>
 
 ### <a name="standard-format-strings"></a>Cadeias de caracteres de formato padrão
 
@@ -212,7 +170,7 @@ Além disso, cadeias de caracteres de formato numérico podem incluir um especif
 
 Para obter mais informações sobre cadeias de caracteres de formatação numérica de padrão, veja [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).
 
-Cadeias de caracteres de formato padrão para valores de data e hora são aliases para cadeias de caracteres de formato personalizado armazenadas por uma propriedade <xref:System.Globalization.DateTimeFormatInfo> particular. Por exemplo, chamar o método `ToString` de um valor de data e hora com o especificador de formato "D" exibe a data e hora por meio do uso da cadeia de caracteres de formato personalizado armazenada na propriedade <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> da cultura atual. (Para obter mais informações sobre cadeias de caracteres de formato personalizado, consulte a [próxima seção](#customStrings).) O exemplo a seguir ilustra essa relação.
+Cadeias de caracteres de formato padrão para valores de data e hora são aliases para cadeias de caracteres de formato personalizado armazenadas por uma propriedade <xref:System.Globalization.DateTimeFormatInfo> particular. Por exemplo, chamar o método `ToString` de um valor de data e hora com o especificador de formato "D" exibe a data e hora por meio do uso da cadeia de caracteres de formato personalizado armazenada na propriedade <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> da cultura atual. (Para obter mais informações sobre cadeias de caracteres de formato personalizado, consulte a [próxima seção](#custom-format-strings).) O exemplo a seguir ilustra essa relação.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
@@ -229,8 +187,6 @@ Por exemplo, um `Temperature` classe interna pode armazenar a temperatura em gra
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
-
-<a name="customStrings"></a>
 
 ### <a name="custom-format-strings"></a>Cadeias de caracteres de formato personalizado
 
@@ -253,8 +209,6 @@ O exemplo a seguir define uma cadeia de caracteres de formato personalizado que 
 
 Embora as cadeias de caracteres de formato padrão geralmente tratem da maioria das necessidades de formatação para os tipos definidos pelo aplicativo, você também pode definir especificadores de formato personalizado para formatar seus tipos.
 
-<a name="stringRef"></a>
-
 ### <a name="format-strings-and-net-types"></a>Cadeias de caracteres de formato e tipos do .NET
 
 Todos os tipos numéricos (ou seja, os tipos <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64> e <xref:System.Numerics.BigInteger>), bem como o <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, e todos os tipos de enumeração, suportam a formatação com cadeias de caracteres de formato. Para obter informações sobre as cadeias de caracteres de formato específicas às quais cada tipo dá suporte, veja os seguintes tópicos:
@@ -270,9 +224,7 @@ Todos os tipos numéricos (ou seja, os tipos <xref:System.Byte>, <xref:System.De
 |[Cadeias de Caracteres de Formato de Enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)|Descreve cadeias de caracteres de formato padrão que são usadas para criar representações de cadeia de caracteres de valores de enumeração.|
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Descreve cadeias de caracteres de formato padrão para valores <xref:System.Guid>.|
 
-<a name="FormatProviders"></a>
-
-## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Formatação que leva em conta a cultura com provedores de formato e a interface IFormatProvider
+## <a name="culture-sensitive-formatting-with-format-providers"></a>Formatação sensível à cultura com provedores de formato
 
 Embora os especificadores de formato permitam personalizar a formatação de objetos, a produção de uma representação de cadeia de caracteres de objetos significativa geralmente requer informações de formatação adicionais. Por exemplo, formatar um número como um valor de moeda usando a cadeia de caracteres de formato padrão "C" ou então uma cadeia de caracteres de formato personalizado como "$ #,#.00" requer que, no mínimo, informações sobre o símbolo correto da moeda, o separador de grupo e o separador decimal estejam disponíveis para inclusão na cadeia de caracteres formatada. No .NET, essas informações de formatação adicionais são disponibilizadas por meio da interface <xref:System.IFormatProvider>, que é fornecida como um parâmetro para um ou mais sobrecargas do método `ToString` de tipos numéricos e tipos de data e hora. Implementações <xref:System.IFormatProvider> são usadas em .NET para dar suporte à formatação específica à cultura. O exemplo a seguir ilustra como a representação de cadeia de caracteres de um objeto é alterado quando ele é formatado com três objetos <xref:System.IFormatProvider> que representam diferentes culturas.
 
@@ -301,11 +253,9 @@ O .NET fornece três classes que implementam <xref:System.IFormatProvider>:
 
 - <xref:System.Globalization.NumberFormatInfo>, uma classe que fornece informações de formatação numérica para uma cultura específica. Sua implementação de <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> retorna uma instância de si mesma.
 
-- <xref:System.Globalization.CultureInfo>. Sua implementação de <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pode retornar um objeto <xref:System.Globalization.DateTimeFormatInfo> para fornecer informações de formatação numérica ou um objeto <xref:System.Globalization.NumberFormatInfo> para fornecer informações de formatação para valores de data e hora.
+- <xref:System.Globalization.CultureInfo> Sua implementação de <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pode retornar um objeto <xref:System.Globalization.DateTimeFormatInfo> para fornecer informações de formatação numérica ou um objeto <xref:System.Globalization.NumberFormatInfo> para fornecer informações de formatação para valores de data e hora.
 
 Você também pode implementar seu próprio provedor de formato para substituir qualquer uma dessas classes. No entanto, se o seu método <xref:System.IFormatProvider.GetFormat%2A> de sua implementação precisar fornecer informações de formatação ao método `ToString`, ele deverá retornar um objeto do tipo listado na tabela anterior.
-
-<a name="numericCulture"></a>
 
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>Formatação de valores numéricos que leva em conta a cultura
 
@@ -325,8 +275,6 @@ O exemplo a seguir usa objetos <xref:System.Globalization.NumberFormatInfo> que 
 [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
 [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]
 
-<a name="dateCulture"></a>
-
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Formatação de valores de data e hora que leva em conta a cultura
 
 Por padrão, a formatação de valores de data e hora leva em conta a cultura. Se você não especificar uma cultura quando chamar um método de formatação, as convenções de formatação da cultura do thread atual serão usadas. Isso é ilustrado no exemplo a seguir, que altera a cultura do thread atual quatro vezes e, em seguida, chama o método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>. Em cada caso, a cadeia de caracteres de resultado reflete as convenções de formatação da cultura atual. Isso ocorre porque os métodos <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> e <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> encapsulam chamadas para os métodos <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.
@@ -345,8 +293,6 @@ O exemplo a seguir usa objetos <xref:System.Globalization.DateTimeFormatInfo> qu
 [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
 [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]
 
-<a name="IFormattable"></a>
-
 ## <a name="the-iformattable-interface"></a>A interface IFormattable
 
 Normalmente, os tipos que sobrecarregam o método `ToString` com uma cadeia de caracteres de formato e um parâmetro <xref:System.IFormatProvider> também implementam a interface <xref:System.IFormattable>. Essa interface tem um único membro, <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, que inclui como parâmetros uma cadeia de caracteres de formato e um provedor de formato.
@@ -355,7 +301,7 @@ Implementar a interface <xref:System.IFormattable> para a classe definida pelo a
 
 - Suporte para conversão de cadeia de caracteres pela classe <xref:System.Convert>. As chamadas para os métodos <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> e <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> chamam sua implementação <xref:System.IFormattable> automaticamente.
 
-- Suporte à formatação composição. Se um item de formato que inclui uma cadeia de caracteres de formato for usado para formatar seu tipo personalizado, o Common Language Runtime chamará automaticamente a implementação <xref:System.IFormattable> e passará a ele a cadeia de caracteres de formato. Para obter mais informações sobre formatação de composição com métodos como <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, veja a seção [Formatação de composição](#CompositeFormatting).
+- Suporte à formatação composição. Se um item de formato que inclui uma cadeia de caracteres de formato for usado para formatar seu tipo personalizado, o Common Language Runtime chamará automaticamente a implementação <xref:System.IFormattable> e passará a ele a cadeia de caracteres de formato. Para obter mais informações sobre formatação de composição com métodos como <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, veja a seção [Formatação de composição](#composite-formatting).
 
 O exemplo a seguir define uma classe `Temperature` que implementa a interface <xref:System.IFormattable>. Ela dá suporte aos especificadores de formato "C" ou "G" para exibir a temperatura em graus Celsius, o especificador de formato "F" para exibir a temperatura em Fahrenheit e o especificador de formato "K" para exibir a temperatura em Kelvin.
 
@@ -367,9 +313,7 @@ O exemplo a seguir instancia um objeto `Temperature`. Depois, ele chama o métod
 [!code-csharp[Conceptual.Formatting.Overview#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#13)]
 [!code-vb[Conceptual.Formatting.Overview#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#13)]
 
-<a name="CompositeFormatting"></a>
-
-## <a name="composite-formatting"></a>Formatação composta
+## <a name="composite-formatting"></a>Formatação de composição
 
 Alguns métodos, tais como <xref:System.String.Format%2A?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, dão suporte à formatação de composição. Uma cadeia de caracteres de formato de composição é um tipo de modelo que retorna uma única cadeia de caracteres que incorpora a representação de cadeia de caracteres de zero, um ou mais objetos. Cada objeto é representado na cadeia de caracteres de formato de composição por um item de formato indexado. O índice do item de formato corresponde à posição do objeto que ele representa na lista de parâmetros do método. Os índices são baseados em zero. Por exemplo, na seguinte chamada para o método <xref:System.String.Format%2A?displayProperty=nameWithType>, o primeiro item de formato, `{0:D}`, é substituído pela representação de cadeia de caracteres de `thatDate`; o segundo item de formato, `{1}`, é substituído pela representação de cadeia de caracteres de `item1` e, por fim, o terceiro item de formato, `{2:C2}`, é substituído pela representação de cadeia de caracteres de `item1.Value`.
 
@@ -389,9 +333,7 @@ Além de substituir um item de formato pela representação de cadeia de caracte
 
 Para obter mais informações sobre formatação de composição, veja [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md).
 
-<a name="Custom"></a>
-
-## <a name="custom-formatting-with-icustomformatter"></a>Formatação Personalizada com ICustomFormatter
+## <a name="custom-formatting-with-icustomformatter"></a>Formatação personalizada com ICustomFormatter
 
 Dois métodos de formatação de composição <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, incluem um parâmetro de provedor de formato que dá suporte à formatação personalizada. Quando um desses métodos de formatação é chamado, ele passa um objeto <xref:System.Type> que representa uma interface <xref:System.ICustomFormatter> para o método <xref:System.IFormatProvider.GetFormat%2A> do provedor de formato. O método <xref:System.IFormatProvider.GetFormat%2A>, em seguida, será responsável por retornar a implementação <xref:System.ICustomFormatter> que oferece formatação personalizada.
 
@@ -407,8 +349,6 @@ O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inte
 [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
 [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]
 
-<a name="RelatedTopics"></a>
-
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Definição|
@@ -423,8 +363,6 @@ O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inte
 |[Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)|Descreve como inserir um ou mais valores formatados em uma cadeia de caracteres. A cadeia de caracteres pode posteriormente ser exibida no console ou gravada em um fluxo.|
 |[Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)|Lista os tópicos que fornecem instruções passo a passo para executar operações de formatação específicas.|
 |[Análise de cadeias de caracteres](../../../docs/standard/base-types/parsing-strings.md)|Descreve como inicializar objetos para os valores descritos pelas representações de cadeia de caracteres desses objetos. A análise é a operação inversa da formatação.|
-
-<a name="Reference"></a>
 
 ## <a name="reference"></a>Referência
 

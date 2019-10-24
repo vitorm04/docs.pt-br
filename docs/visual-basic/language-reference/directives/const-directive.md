@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 9b8d2da2158a8244b4533eb6ef49049949417216
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 031f35df24fd52aeeafcb7b4c0208806d7fc5fc4
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696849"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774752"
 ---
 # <a name="const-directive"></a>Diretiva #Const
 Define constantes de compilador condicional para Visual Basic.  
@@ -50,7 +50,7 @@ Define constantes de compilador condicional para Visual Basic.
   
 ## <a name="see-also"></a>Consulte também
 
-- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [-definir (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [Diretivas #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

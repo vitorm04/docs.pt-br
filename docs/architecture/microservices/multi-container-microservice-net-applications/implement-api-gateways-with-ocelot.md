@@ -2,12 +2,12 @@
 title: Implementação de Gateways de API com o Ocelot
 description: Saiba como implementar Gateways de API com o Ocelot e como usar o Ocelot em um ambiente baseado em contêiner.
 ms.date: 10/02/2018
-ms.openlocfilehash: 2a1c7b0f4baa979864ac32d555f65397531884b8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676183"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771179"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementar Gateways de API com o Ocelot
 
@@ -30,7 +30,7 @@ Esse diagrama mostra como todo o aplicativo é implantado em um único host do D
 
 Além disso, os ativos de infraestrutura, como bancos de dados, cache e agentes de mensagens devem ser descarregados do orquestrador e implantados em sistemas altamente disponíveis para a infraestrutura, como o Banco de Dados SQL do Azure, o Azure Cosmos DB, o Redis do Azure, o Barramento de Serviço do Azure ou qualquer solução de cluster de HA local.
 
-Como você também pode observar no diagrama, a presença de vários Gateways de API permite que várias equipes de desenvolvimento sejam autônomas (nesse caso, recursos de marketing em relação a recursos de compras) ao desenvolver e implantar seus microsserviços além de seus próprios Gateways de API relacionados.
+Como você também pode observar no diagrama, ter vários gateways de API permite que várias equipes de desenvolvimento sejam autônomas (neste caso, recursos de marketing versus recursos de compra) ao desenvolver e implantar seus microserviços, além de seus próprios gateways de API relacionados.
 
 Se você tivesse um único Gateway de API monolítico, isso significaria um único ponto a ser atualizado por várias equipes de desenvolvimento, o que poderia vincular todos os microsserviços com uma única parte do aplicativo.
 
@@ -390,7 +390,7 @@ No diagrama a seguir, você também poderá ver como os serviços do agregador f
 
 Ampliando ainda mais, na área de negócios “Compras” na imagem a seguir, você pode ver que o número de chamadas entre os aplicativos cliente e os microsserviços é reduzido ao usar os serviços de agregador nos Gateways de API.
 
-![Ampliação da arquitetura de eShopOnContainers, mostrando os serviços de agregador, que "reúne" uma resposta "unindo" a resposta de vários microsserviços para reduzir o número de chamadas com o cliente final.](./media/image38.png)
+![ampliação da arquitetura eShopOnContainers, mostrando os serviços do agregador, que "monta" uma resposta "unindo" a resposta de vários microserviços para reduzir a in com o cliente final.](./media/image38.png)
 
 **Figura 6-38**. Visão ampliada do agregador de serviços
 
@@ -410,7 +410,7 @@ Como o eShopOnContainers está usando vários Gateways de API com limites basead
 
 No entanto, o Ocelot também dá suporte ao uso do microsserviço de Identidade/Autenticação dentro do limite do Gateway de API, como neste outro diagrama.
 
-![Autenticação com o Microsserviço de identidade abaixo do AG (gateway de API): 1) o AG solicita um token de autenticação do microsserviço de identidade, 2) o microsserviço de identidade retorna um token para o AG, 3-4) solicitações do AG nos microsserviços usando o token de autenticação.](./media/image40.png)
+![A autenticação com o microsserviço de Identidade abaixo do AG (gateway de API): 1) o AG solicita um token de autenticação do microsserviço de identidade, 2) o microsserviço de Identidade retorna um token para o AG, 3-4) solicitações do AG nos microsserviços usando o token de autenticação.](./media/image40.png)
 
 **Figura 6-40**. Autenticação no Ocelot
 

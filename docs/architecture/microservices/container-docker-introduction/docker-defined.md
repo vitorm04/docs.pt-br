@@ -2,12 +2,12 @@
 title: O que é o Docker?
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | O que é o Docker?
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674853"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771353"
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
@@ -19,7 +19,7 @@ O [Docker](https://www.docker.com/) é um [projeto de software livre](https://gi
 
 Os contêineres de imagem do Docker podem ser executados nativamente no Linux e no Windows. No entanto, imagens do Windows podem executar somente em hosts do Windows e imagens do Linux podem executar em hosts do Linux e hosts do Windows (usando uma VM do Linux do Hyper-V, até o momento), em que o host significa um servidor ou uma VM.
 
-Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou macOS. No computador de desenvolvimento, o desenvolvedor executa um host Docker em que as imagens do Docker são implantadas, incluindo o aplicativo e suas dependências. Os desenvolvedores que trabalham no Linux ou no Mac usam um host do Docker que é baseado no Linux, e eles podem criar imagens apenas para contêineres do Linux. (Os desenvolvedores que trabalham no Mac podem editar o código ou executar a CLI do Docker no macOS, mas no momento da redação deste artigo, contêineres não são executados diretamente no macOS.) Desenvolvedores que trabalham no Windows podem criar imagens para contêineres do Linux ou do Windows.
+Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou macOS. No computador de desenvolvimento, o desenvolvedor executa um host Docker em que as imagens do Docker são implantadas, incluindo o aplicativo e suas dependências. Os desenvolvedores que trabalham no Linux ou no Mac usam um host do Docker que é baseado no Linux, e eles podem criar imagens apenas para contêineres do Linux. (Os desenvolvedores que trabalham no Mac podem editar código ou executar a CLI do Docker do macOS, mas no momento da redação deste artigo, os contêineres não são executados diretamente no macOS.) Os desenvolvedores que trabalham no Windows podem criar imagens para contêineres do Linux ou do Windows.
 
 Para hospedar contêineres em ambientes de desenvolvimento e fornecer ferramentas para desenvolvedores adicionais, o Docker envia o [Docker Community Edition (CE)](https://www.docker.com/community-edition) para Windows ou para o macOS. Esses produtos instalam a VM necessária (o host do Docker) para hospedar os contêineres. O Docker também disponibiliza o [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), que foi projetado para desenvolvimento empresarial e é usado por equipes de TI que criam, enviam e executam aplicativos de grande porte críticos para os negócios em produção.
 
@@ -37,7 +37,7 @@ A Figura 2-3 mostra uma comparação entre VMs e contêineres do Docker.
 
 | Máquinas virtuais | Contêineres do Docker |
 | -----------------| ------------------|
-|![Para VMs, há três camadas de base no servidor de host, de cima para baixo: infraestrutura, sistema operacional do host e um hipervisor e, acima disso tudo, cada VM tem seu próprio sistema operacional e todas as bibliotecas necessárias.](./media/image3.png)|![Para o Docker, o servidor de host tem apenas a infraestrutura e o sistema operacional e, acima disso tudo, o mecanismo de contêiner que mantém contêiner isolado mas compartilhando os serviços do sistema operacional base.](./media/image4.png)|
+|![Para VMs, há três camadas de base no servidor de host, de cima para baixo: infraestrutura, sistema operacional do host e um hipervisor e, acima disso tudo, cada VM tem seu próprio sistema operacional e todas as bibliotecas necessárias.](./media/image3.png)|![Para o Docker, o servidor host tem apenas a infraestrutura e o sistema operacional e, além disso, o mecanismo de contêiner, que mantém o contêiner isolado, mas compartilha os serviços do sistema operacional base.](./media/image4.png)|
 |As máquinas virtuais incluem o aplicativo, as bibliotecas ou binários necessários e um sistema operacional convidado completo. A virtualização completa requer mais recursos do que a conteinerização. | Os contêineres incluem o aplicativo e todas as suas dependências. No entanto, eles compartilham o kernel do sistema operacional com outros contêineres, executando como processos isolados no espaço do usuário no sistema operacional do host. (Exceto em contêineres do Hyper-V, em que cada contêiner é executado dentro de uma máquina virtual especial por contêiner.) |
 
 **Figura 2-3**. Comparação de máquinas virtuais tradicionais com contêineres do Docker

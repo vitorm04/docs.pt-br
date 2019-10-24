@@ -2,22 +2,19 @@
 title: Acompanhamento
 ms.date: 03/30/2017
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-ms.openlocfilehash: bba4f3400633f2cb697518c1125a5dc8a71cb597
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21089d6e94a5c1127b21c526f3ae9c63098ec906
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004842"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774233"
 ---
 # <a name="tracking"></a>Acompanhamento
-Esta seção contém exemplos que demonstram o fluxo de trabalho de controle do Windows Workflow Foundation (WF).  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Acompanhamento personalizado](custom-tracking.md)  
- Demonstra como criar um participante personalizado de rastreamento e gravar o conteúdo dos dados de acompanhamento no console.  
-  
- [Acompanhamento de eventos de rastreamento de evento no Windows](tracking-events-into-event-tracing-in-windows.md)  
- Demonstra como habilitar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] que acompanha em um serviço de fluxo de trabalho e emitir os eventos de rastreamento no rastreamento de evento para o Windows (ETW).  
-  
- [Acompanhamento de SQL](sql-tracking.md)  
- Demonstra como escrever um participante de rastreamento SQL personalizado, que grava registros de rastreamento em uma base de dados SQL.
+Esta seção contém exemplos que demonstram o rastreamento de fluxo de trabalho no Windows Workflow Foundation (WF).
+
+## <a name="in-this-section"></a>Nesta seção
+ [Acompanhamento personalizado](custom-tracking.md) Demonstra como criar um participante de acompanhamento personalizado e gravar o conteúdo dos dados de rastreamento no console do.
+
+ [Rastreando eventos no rastreamento de eventos no Windows](tracking-events-into-event-tracing-in-windows.md) Demonstra como habilitar o rastreamento de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em um serviço de fluxo de trabalho e emitir os eventos de rastreamento no ETW (rastreamento de eventos para Windows).
+
+ [Rastreamento do SQL](sql-tracking.md) Demonstra como gravar um participante de rastreamento do SQL personalizado que grava registros de rastreamento em um banco de dados SQL.

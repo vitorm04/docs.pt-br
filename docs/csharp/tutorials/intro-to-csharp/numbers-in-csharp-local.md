@@ -3,12 +3,12 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834095"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774019"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 Execute este código digitando `dotnet run` na janela de comando.
 
-Você viu apenas uma das operações matemáticas fundamentais com números inteiros. O tipo `int` representa um **inteiro**, um número inteiro zero, positivo ou negativo. Você usa o símbolo `+` para adição. Outras operações matemáticas comuns para inteiros incluem:
+Você viu apenas uma das operações matemáticas fundamentais com números inteiros. O tipo de `int` representa um número **inteiro**, zero, positivo ou inteiro negativo. Você usa o símbolo `+` para adição. Outras operações matemáticas comuns para inteiros incluem:
 
 - `-` para subtração
 - `*` para multiplicação
@@ -320,8 +320,6 @@ Você concluiu o início rápido "Números em C#". Continue com o início rápid
 
 Saiba mais sobre os números em C# nos tópicos a seguir:
 
-- [Tipos integrais](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Tabela de tipos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [Tabela de tipos internos](../../language-reference/keywords/built-in-types-table.md)
-- [Tabela de conversões numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabela de conversões numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tipos numéricos inteiros](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Tipos numéricos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [Conversões numéricas internas](../../language-reference/builtin-types/numeric-conversions.md)

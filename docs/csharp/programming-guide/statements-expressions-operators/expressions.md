@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921802"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774175"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 
@@ -33,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Estouros
 
- Expressões numéricas podem causar estouros se o valor for maior que o valor máximo do tipo de valor. Para obter mais informações, consulte [Verificado e Não Verificado](../../language-reference/keywords/checked-and-unchecked.md) e [Tabela de Conversões Numéricas Explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Expressões numéricas podem causar estouros se o valor for maior que o valor máximo do tipo de valor. Para obter mais informações, consulte [marcado e desmarcado](../../language-reference/keywords/checked-and-unchecked.md) e a seção de [conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [embutir conversões numéricas](../../language-reference/builtin-types/numeric-conversions.md) .
   
 ## <a name="operator-precedence-and-associativity"></a>Precedência e associatividade do operador
 

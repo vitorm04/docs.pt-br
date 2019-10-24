@@ -6,18 +6,18 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117862"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775228"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novidades no .NET Standard
 
 O .NET Standard é uma especificação formal que define um conjunto com versões das APIs que devem estar disponíveis em implementações .NET que estejam de acordo com a versão standard. O .NET Standard é destinado a desenvolvedores de bibliotecas. Uma biblioteca direcionada a uma versão do .NET Standard pode ser usada em qualquer implementação do .NET Framework, do .NET Core ou do Xamarin que dê suporte a essa versão do Standard.
 
-A versão mais recente do .NET Standard é a 2.0. Ela está incluída com o SDK do .NET Core 2.0, e também com o Visual Studio 2017 versão 15.3 com a carga de trabalho do .NET Core instalada.
+A versão mais recente do .NET Standard é a 2.0. Ele está incluído no SDK do .NET Core 2,0, bem como no Visual Studio 2017 versão 15,3 com a carga de trabalho do .NET Core instalada.
 
 ## <a name="supported-net-implementations"></a>Implementações .NET com suporte
 
@@ -61,7 +61,7 @@ O único requisito é que as APIs chamadas pela biblioteca de classes .NET Frame
 
 ### <a name="support-for-visual-basic"></a>Suporte para Visual Basic
 
-Agora, você pode desenvolver bibliotecas .NET Standard no Visual Basic. Para desenvolvedores em Visual Basic que usam o Visual Studio 2017 versão 15.3 ou posterior com a carga de trabalho do .NET Core instalada, agora o Visual Studio inclui um modelo de biblioteca de classes .NET Standard. Para desenvolvedores em Visual Basic que usam outros ambientes e ferramentas de desenvolvimento, use o comando [dotnet new](../../core/tools/dotnet-new.md) para criar um projeto de biblioteca do .NET Standard. Para saber mais, confira o [Suporte a ferramentas para bibliotecas .NET Standard](#tooling-support-for-net-standard-libraries).
+Agora, você pode desenvolver bibliotecas .NET Standard no Visual Basic. Para Visual Basic desenvolvedores que usam o Visual Studio 2017 versão 15,3 ou posterior com a carga de trabalho do .NET Core instalada, o Visual Studio agora inclui um modelo de biblioteca de classes .NET Standard. Para desenvolvedores em Visual Basic que usam outros ambientes e ferramentas de desenvolvimento, use o comando [dotnet new](../../core/tools/dotnet-new.md) para criar um projeto de biblioteca do .NET Standard. Para saber mais, confira o [Suporte a ferramentas para bibliotecas .NET Standard](#tooling-support-for-net-standard-libraries).
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Suporte a ferramentas para bibliotecas .NET Standard
 
