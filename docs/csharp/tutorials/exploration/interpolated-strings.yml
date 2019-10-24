@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 460accc4f0877265a5a3d72ad3272502da9e5119
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850952"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774040"
 items:
 - durationInMinutes: 2
   content: >
@@ -54,7 +54,39 @@ items:
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Incluir diferentes tipos de dados
   durationInMinutes: 5
-  content: "Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Cada expressão de interpolação que faz parte de uma expressão de cadeia de caracteres interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de várias expressões de tipo de dados em uma cadeia de caracteres interpolada.\n\nNo exemplo a seguir, primeiro definimos uma [tupla](../../tuples.md) que tem os membros `Name`, `Price` e `perPackage`. Execute o seguinte código na janela interativa:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nObserve que a expressão interpolada `item.Price` na cadeia de caracteres interpolada é resolvida como o texto \"1.99\" na cadeia de caracteres de resultado. Isso ocorre porque, quando o tipo do resultado da expressão não é uma cadeia de caracteres, o resultado é resolvido como uma cadeia de caracteres da seguinte maneira:\n\n- Se a expressão de interpolação for avaliada como `null`, uma cadeia de caracteres vazia (\"\" ou <xref:System.String.Empty?displayProperty=nameWithType>) será usada.\n\n- Se a expressão interpolada não foi avaliada como `null`, normalmente o método `ToString` da expressão resultante será chamado. \n\nNa saída deste exemplo, a data é muito precisa (o preço de \"eggplant\" não muda a cada segundo) e o valor do preço não indica uma unidade monetária. Na próxima etapa, você aprenderá a corrigir esses problemas controlando o formato das representações das cadeias de caracteres dos resultados de expressão.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Cada expressão de interpolação que faz parte de uma expressão de cadeia de caracteres interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de várias expressões de tipo de dados em uma cadeia de caracteres interpolada.
+
+
+    No exemplo a seguir, primeiro definimos uma [tupla](../../tuples.md) que tem os membros `Name`, `Price` e `perPackage`. Execute o seguinte código na janela interativa:
+
+
+    ```csharp
+
+    var item = (Name: "eggplant", Price: 1.99m, perPackage: 3);
+
+    var date = DateTime.Now;
+
+    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+
+    ```
+
+
+    Observe que a expressão interpolada `item.Price` na cadeia de caracteres interpolada é resolvida como o texto "1.99" na cadeia de caracteres de resultado. Isso ocorre porque, quando o tipo do resultado da expressão não é uma cadeia de caracteres, o resultado é resolvido como uma cadeia de caracteres da seguinte maneira:
+
+
+    - Se a expressão de interpolação for avaliada como `null`, uma cadeia de caracteres vazia ("" ou <xref:System.String.Empty?displayProperty=nameWithType>) será usada.
+
+
+    - Se a expressão interpolada não foi avaliada como `null`, normalmente o método `ToString` da expressão resultante será chamado.
+
+
+    Na saída deste exemplo, a data é muito precisa (o preço de "eggplant" não muda a cada segundo) e o valor do preço não indica uma unidade monetária. Na próxima etapa, você aprenderá a corrigir esses problemas controlando o formato das representações das cadeias de caracteres dos resultados de expressão.
+
+
+    > [!NOTE]
+
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Controlar a formatação de expressões de interpolação
   durationInMinutes: 5
   content: >
@@ -71,7 +103,7 @@ items:
     Você especifica uma cadeia de caracteres de formato colocando dois-pontos (":") e a cadeia de caracteres de formato após a expressão de interpolação. "d" é uma [cadeia de caracteres de formato de data e hora padrão](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa o formato de data abreviada. "C2" é um [cadeia de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa um número como um valor de moeda com dois dígitos após o ponto decimal.
 
 
-    Diversos tipos nas bibliotecas do .NET são compatíveis com um conjunto predefinido de cadeias de caracteres de formato. Isso inclui todos os tipos numéricos e os tipos de data e hora. Para obter uma lista completa dos tipos que são compatíveis com as cadeias de caracteres de formato, consulte [Cadeias de caracteres de formato e tipos da biblioteca de classes do .NET](../../../standard/base-types/formatting-types.md#stringRef) no artigo [Tipos de formatação no .NET](../../../standard/base-types/formatting-types.md).
+    Diversos tipos nas bibliotecas do .NET são compatíveis com um conjunto predefinido de cadeias de caracteres de formato. Isso inclui todos os tipos numéricos e os tipos de data e hora. Para obter uma lista completa dos tipos que são compatíveis com as cadeias de caracteres de formato, consulte [Cadeias de caracteres de formato e tipos da biblioteca de classes do .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) no artigo [Tipos de formatação no .NET](../../../standard/base-types/formatting-types.md).
 
 
     Tente modificar as cadeias de caracteres de formato no exemplo para ver como elas afetam a formatação da data e hora e o valor numérico. Altere o "d" em `{date:d}` para "t" (para exibir o formato de hora abreviada), para "y" (para exibir o ano e o mês) e para "yyyy" (para exibir o ano como um número de quatro dígitos). Altere o "C2" em `{price:C2}` para "e" (para obter notação exponencial) e para "F3" (para um valor numérico com três dígitos após o ponto decimal).

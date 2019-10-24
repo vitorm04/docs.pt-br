@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Detectar anomalias na venda de produtos'
+title: 'Tutorial: detectar anomalias em vendas de produtos'
 description: Saiba como criar um aplicativo de detecção de anomalias para dados de vendas do produto. Este tutorial cria um aplicativo de console .NET Core usando C# no Visual Studio 2019.
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929050"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774433"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detectar anomalias na venda de produtos com o ML.NET
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: detectar anomalias em vendas de produtos com o ML.NET
 
 Saiba como criar um aplicativo de detecção de anomalias para dados de vendas do produto. Este tutorial cria um aplicativo de console .NET Core usando C# no Visual Studio.
 
@@ -26,9 +26,9 @@ Neste tutorial, você aprenderá como:
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
 * [O conjunto de dados product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -62,7 +62,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 A tabela a seguir é uma visualização de dados do seu arquivo \*.csv:
 
-|Month  |ProductSales |
+|Mês  |ProductSales |
 |-------|-------------|
 |1-Jan  |    271      |
 |2-Jan  |    150.9    |
@@ -133,8 +133,8 @@ A detecção de anomalias é o processo de detectar exceções de dados de séri
 
 A detecção de anomalias pode ser útil de várias maneiras. Por exemplo:
 
-Se você tiver um carro, talvez queira saber: Essa leitura do medidor de gasolina está normal ou tenho um vazamento?
-Se você estiver monitorando o consumo de energia, vai querer saber: Há uma interrupção?
+Se você tiver um carro, talvez queira saber: Este medidor de óleo está lendo normal ou ter um vazamento?
+Se você estiver monitorando o consumo de energia, você desejaria saber: há uma interrupção?
 
 Há dois tipos de anomalias de série temporal que podem ser detectados:
 

@@ -3,12 +3,12 @@ title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105656"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774068"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#
 
@@ -16,25 +16,25 @@ O C# (pronuncia-se "C Sharp") é uma linguagem de programação simples, moderna
 
 O C# é uma linguagem orientada a objeto, mas inclui ainda suporte para programação ***orientada a componentes***. O design de software atual depende cada vez mais dos componentes de software na forma de pacotes independentes e autodescritivos de funcionalidade. O principal é que esses componentes apresentam um modelo de programação com propriedades, métodos e eventos; eles têm atributos que fornecem informações declarativas sobre o componente; e incorporam sua própria documentação. C# fornece construções de linguagem para dar suporte diretamente a esses conceitos, tornando C# uma linguagem muito natural para criação e uso de componentes de software.
 
-Vários recursos de C# auxiliam na construção de aplicativos robustos e duráveis: ***Coleta de lixo*** recupera automaticamente a memória ocupada por objetos inacessíveis não utilizados. ***Tratamento de exceção*** fornece uma abordagem estruturada e extensível para detecção e recuperação de erros. E o design ***fortemente tipado*** da linguagem impossibilita a leitura das variáveis não inicializadas, a indexação de matrizes além dos seus limites ou a execução de conversões de tipo não verificadas.
+Vários recursos do C# auxiliam na construção de aplicativos robustos e duradouros: ***Coleta de lixo*** recupera automaticamente a memória ocupada por objetos inacessíveis não utilizados; ***tratamento de exceção*** fornece uma abordagem estruturada e extensível para detecção e recuperação de erros; e o design ***fortemente tipado*** da linguagem impossibilita a leitura das variáveis não inicializadas, a indexação de matrizes além dos seus limites ou a execução de conversões de tipo não verificadas.
 
 C# tem um ***sistema de tipo unificado***. Todos os tipos do C#, incluindo tipos primitivos, como `int` e `double`, herdam de um único tipo de `object` raiz. Assim, todos os tipos compartilham um conjunto de operações comuns, e valores de qualquer tipo podem ser armazenados, transportados e operados de maneira consistente. Além disso, C# oferece suporte a tipos de referência e tipos de valor definidos pelo usuário, permitindo a alocação dinâmica de objetos, bem como o armazenamento em linha de estruturas leves.
 
-Para garantir que os programas e bibliotecas escritos em C# possam evoluir ao longo do tempo de uma maneira compatível, enfatizou-se muito o ***controle de versão*** no design do C#. Muitas linguagens de programação prestam pouca atenção a esse problema e, como resultado, programas escritos nessas linguagens quebram com mais frequência do que o necessário quando versões mais recentes das bibliotecas dependentes são introduzidas. Aspectos do design do C# que foram diretamente influenciados pelas considerações de controle de versão incluem os modificadores separados `virtual` e `override`, as regras de resolução de sobrecarga de método e suporte para declarações explícitas de membro de interface.
+Para garantir que C# os programas e as bibliotecas possam evoluir ao longo do tempo de maneira compatível, muito ênfase foi colocado no C#design do ***controle de versão*** . Muitas linguagens de programação prestam pouca atenção a esse problema e, como resultado, programas escritos nessas linguagens quebram com mais frequência do que o necessário quando versões mais recentes das bibliotecas dependentes são introduzidas. Aspectos do C#design de do que foram influenciados diretamente pelas considerações de controle de versão incluem os modificadores `virtual` e `override` separados, as regras para resolução de sobrecarga de método e suporte para declarações de membro de interface explícitas.
 
 ## <a name="hello-world"></a>Hello world
 
 O programa "Hello, World" é usado tradicionalmente para introduzir uma linguagem de programação. Este é para C#:
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-Os arquivos de origem em C# normalmente têm a extensão de arquivo `.cs`. Supondo que o programa "Hello, World" esteja armazenado no arquivo `hello.cs`, o programa pode ser compilado usando a linha de comando:
+Os arquivos de origem em C# normalmente têm a extensão de arquivo `.cs`. Supondo que o programa "Olá, mundo" esteja armazenado no arquivo *Hello.cs*, o programa poderá ser compilado usando a linha de comando:
 
 ```console
 csc hello.cs
 ```
 
-que produz um assembly executável chamado hello.exe. O resultado produzido pela execução desse aplicativo é:
+que produz um assembly executável chamado *Hello. exe*. O resultado produzido pela execução desse aplicativo é:
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ A classe `Hello` declarada pelo programa "Hello, World" tem um único membro, o 
 
 A saída do programa é produzida pelo método `WriteLine` da classe `Console` no namespace `System`. Essa classe é fornecida pelas bibliotecas de classe padrão, que, por padrão, são referenciadas automaticamente pelo compilador.
 
-Há muito mais para aprender sobre C#.  Os tópicos a seguir fornecem uma visão geral dos elementos da linguagem C#. Essas visões gerais fornecerão informações básicas sobre todos os elementos da linguagem e fornecerão as informações necessárias para se aprofundar nos elementos da linguagem C#:
+Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão geral dos elementos da linguagem C#. Essas visões gerais fornecerão informações básicas sobre todos os elementos da linguagem e fornecerão as informações necessárias para se aprofundar nos elementos da linguagem C#:
 
 - [Estrutura do programa](program-structure.md)
   - Aprenda os principais conceitos organizacionais na linguagem C#: ***programas***, ***namespaces***, ***tipos***, ***membros*** e ***assemblies***.
@@ -61,7 +61,7 @@ Há muito mais para aprender sobre C#.  Os tópicos a seguir fornecem uma visão
   - Você usa ***instruções*** para expressar as ações de um programa.
 - [Classes e objetos](classes-and-objects.md)
   - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
-- [Estruturas](structs.md)
+- [Structs](structs.md)
   - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
 - [Matrizes](arrays.md)
   - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.

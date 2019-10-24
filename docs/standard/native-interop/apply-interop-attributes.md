@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1a8cc80db9e17000880c006ac1d7c1bd12fec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631490"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775289"
 ---
 # <a name="applying-interop-attributes"></a>Aplicando atributos de interoperabilidade
 O namespace <xref:System.Runtime.InteropServices> fornece três categorias de atributos específicos à interoperabilidade: aquelas aplicadas por você em tempo de design, aquelas aplicadas pelas ferramentas de interoperabilidade COM e as APIs durante o processo de conversão e aquelas aplicadas por você ou pela interoperabilidade COM.  
@@ -30,7 +30,7 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 ## <a name="design-time-attributes"></a>Atributos em tempo de design  
  Ajuste o resultado do processo de conversão executado pelas APIs e pelas ferramentas de interoperabilidade COM usando atributos em tempo de design. A tabela a seguir descreve os atributos que podem ser aplicados ao código-fonte gerenciado. Às vezes, as ferramentas de interoperabilidade COM também podem aplicar os atributos descritos nesta tabela.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Especifica se o tipo deve ter o marshaling realizado usando o marshaler de Automação ou um proxy e stub personalizados.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Controla o tipo de interface gerado para uma classe.|  
@@ -40,7 +40,8 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|Identifica as interfaces que são fontes de eventos para a classe.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|Indica que um método deve ser chamado quando o assembly tem o registro cancelado por meio do COM, de modo que o código escrito pelo usuário possa ser executado durante o processo.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Renderiza tipos invisíveis para o COM quando o valor do atributo é igual a **false**. Esse atributo pode ser aplicado a um tipo individual ou a um assembly inteiro para controlar a visibilidade COM. Por padrão, todos os tipos gerenciados e públicos são visíveis; o atributo não é necessário para torná-los visíveis.|  
-|<xref:System.Runtime.InteropServices.DispIdAttribute>|Especifica o DISPID (identificador de expedição) COM de um método ou campo. Este atributo contém o DISPID do método, do campo ou da propriedade que ele descreve.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
+|<xref:System.Runtime.InteropServices.DispIdAttribute>|Especifica o DISPID (identificador de expedição) COM de um método ou campo. Este atributo contém o DISPID do método, do campo ou da propriedade que ele descreve.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.| 
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Indica a interface padrão para uma classe COM implementada no .NET.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Indica a posição física de cada campo dentro de uma classe quando usado com o **StructLayoutAttribute** e o **LayoutKind** é definido como Explicit.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Especifica o GUID (identificador global exclusivo) de uma classe, uma interface ou toda uma biblioteca de tipos. A cadeia de caracteres passada para o atributo deve ter um formato que seja um argumento de construtor aceitável para o tipo **System.Guid**.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Indica qual implementação da interface **IDispatch** o Common Language Runtime usa ao expor interfaces duplas e dispinterfaces ao COM.|  
@@ -57,7 +58,7 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 ## <a name="conversion-tool-attributes"></a>Atributos da ferramenta de conversão  
  A tabela a seguir descreve os atributos que as ferramentas de interoperabilidade COM aplicam durante o processo de conversão. Esses atributos não são aplicados em tempo de design.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Indica o alias COM de um parâmetro ou tipo de campo. Pode ser usado para parâmetros de atributo, campos ou valores retornados.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Indica que as informações sobre uma classe ou interface foram perdidas quando foram importadas de uma biblioteca de tipos para um assembly.|  

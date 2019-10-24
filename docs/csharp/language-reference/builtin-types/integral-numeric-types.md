@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos integrais – Referência C#
 description: Saiba o intervalo, o tamanho de armazenamento e os usos para cada um dos tipos numéricos integrais.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579191"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773863"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos integrais (Referência C#)
 
@@ -100,7 +100,7 @@ O tipo de um inteiro literal é determinado por seu sufixo da seguinte maneira:
 
 Se o valor representado por um literal inteiro exceder <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilador [CS1021](../../misc/cs1021.md).
 
-O valor representado por um inteiro literal pode ser convertido implicitamente em um tipo com um intervalo menor do que o tipo determinado do literal. Isso é possível quando o valor está dentro do intervalo do tipo de destino:
+Se o tipo determinado de um literal inteiro for `int` e o valor estiver dentro do intervalo do tipo de destino, o valor representado pelo literal poderá ser convertido implicitamente em `sbyte`, `byte`, `short`, `ushort` , `uint` ou `ulong`:
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversões
 
-Há uma conversão implícita (chamada de *conversão de ampliação*) entre quaisquer dois tipos integrais, nos quais o tipo de destino pode armazenar todos os valores do tipo de origem. Por exemplo, há uma conversão implícita de `int` até `long` porque o intervalo dos valores de `int` é um subconjunto adequado de `long`. Não há conversões implícitas de um tipo integral sem sinal menor para um tipo integral com sinal maior. Também há uma conversão implícita de qualquer tipo integral para qualquer tipo de ponto flutuante.  Não há conversões implícitas de qualquer tipo integral com sinal para qualquer tipo integral sem sinal.
-
-Você deverá usar uma conversão explícita para converter um tipo integral em outro tipo integral quando uma conversão implícita não for definida por meio do tipo de fonte para o tipo de destino. Isso é chamado de *conversão de estreitamento*. O caso explícito é necessário porque a conversão pode resultar em perda de dados.
+Você pode converter qualquer tipo numérico integral para qualquer outro tipo numérico integral. Se o tipo de destino puder armazenar todos os valores do tipo de origem, a conversão será implícita. Caso contrário, você precisa usar o [operador cast `()`](../operators/type-testing-and-cast.md#cast-operator-) para invocar uma conversão explícita. Para obter mais informações, consulte [conversões numéricas internas](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
@@ -132,8 +130,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Tipos de ponto flutuante](floating-point-numeric-types.md)
-- [Tabela de valores padrão](../keywords/default-values-table.md)
-- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Tabela de tipos internos](../keywords/built-in-types-table.md)
+- [Tipos de ponto flutuante](floating-point-numeric-types.md)
+- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Numéricos no .NET](../../../standard/numerics.md)

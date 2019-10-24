@@ -3,12 +3,12 @@ title: Como usar a API de ML automatizado do ML.NET
 description: A API de ML automatizado do ML.NET automatiza o processo de criação de modelo e gera um modelo pronto para implantação. Saiba as opções que você pode usar para configurar tarefas de aprendizado de máquina automatizada.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: bb1cd66e7341f2ada57d533d8b2dcbb48f08f726
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332715"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774558"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Como usar a API de aprendizado de máquina automatizado do ML.NET
 
@@ -89,7 +89,7 @@ Eis alguns exemplos:
     ```
 
 1. A configuração `CacheDirectory` é um ponteiro para um diretório em que todos os modelos treinados durante a tarefa AutoML serão salvos. Se `CacheDirectory` for definido como nulo, os modelos serão mantidos na memória, em vez de gravados em disco.
- 
+
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
@@ -128,7 +128,7 @@ A métrica da otimiza, conforme mostrado no exemplo acima, determina a métrica 
 ## <a name="data-pre-processing-and-featurization"></a>Pré-processamento de dados e personalização
 
 > [!NOTE]
-> A coluna de recursos tem suporte apenas para tipos de [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)e [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
+> A coluna de recursos tem suporte apenas para tipos de <xref:System.Boolean>, <xref:System.Single> e <xref:System.String>.
 
 O pré-processamento de dados ocorre por padrão e as etapas a seguir são executadas automaticamente para você:
 
@@ -141,10 +141,10 @@ O pré-processamento de dados ocorre por padrão e as etapas a seguir são execu
     Preencha as células de valor ausente com o valor padrão para o tipo de dados. Acrescente recursos de indicador com o mesmo número de slots de que a coluna de entrada. O valor nos recursos de indicador acrescentados será `1` se o valor na coluna de entrada estiver ausente e `0`, caso contrário.
 
 1. Gerar recursos adicionais
-    
-    Para recursos de texto: Recursos da bolsa de palavras usando unigrams e tri-character-grams.
-    
-    Para recursos categóricos: Codificação one-hot para recursos de baixa cardinalidade e codificação one-hot-hash para recursos categóricos de alta cardinalidade.
+
+    Para recursos de texto: recursos de conjunto de palavras usando unigrams e Tri-Character-grams.
+
+    Para recursos categóricos: codificação One-Hot para recursos de cardinalidade baixa e codificação de hash One-Hot para recursos categóricos de alta cardinalidade.
 
 1. Codificações e transformações
 
@@ -191,7 +191,7 @@ Explore outras sobrecargas para `Execute()` se quiser passar dados de validaçã
 O AutoML oferece um método de execução de experimento sobrecarregado que possibilita que você forneça dados de treinamento. Internamente, o ML automatizado divide os dados em divisões train-validate.
 
 ```csharp
-experiment.Execute(trainDataView);   
+experiment.Execute(trainDataView);
 ```
 
 ### <a name="custom-validation-dataset"></a>Conjunto de dados de validação personalizado
@@ -199,7 +199,7 @@ experiment.Execute(trainDataView);
 Use o conjunto de dados de validação personalizado se divisão aleatória não for aceitável, como normalmente é o caso para dados de série temporal. Você pode especificar seu próprio conjunto de dados de validação. O modelo será avaliado em relação ao conjunto de dados de validação especificado, em vez de um ou mais conjuntos de dados aleatórios.
 
 ```csharp
-experiment.Execute(trainDataView, validationDataView);   
+experiment.Execute(trainDataView, validationDataView);
 ```
 
 ## <a name="explore-model-metrics"></a>Explore as métricas do modelo

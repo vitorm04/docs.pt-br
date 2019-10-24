@@ -5,15 +5,15 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 58026ff84f1ff501bf767adebcfc01f7de5bf4a4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 203380bbe2b2828e159ee36d795b6cd4a24e2917
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005577"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775655"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-Indica se um executável de 64 bits ou um executável marcado pela opção de compilador [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) dá suporte à alta possibilidade de seleção de layout de espaço de endereço (ASLR).  
+Indica se um executável de 64 bits ou um executável que é marcado pela opção de compilador [-Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) dá suporte à alta possibilidade de seleção de layout de espaço de endereço de entropia (ASLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -21,7 +21,7 @@ Indica se um executável de 64 bits ou um executável marcado pela opção de co
 -highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
  Opcional. A opção está desativada por padrão ou se você especificar `-highentropyva-`. A opção estará ativada se você especificar `-highentropyva` ou `-highentropyva+`.  
   
