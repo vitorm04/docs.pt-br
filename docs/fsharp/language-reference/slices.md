@@ -2,16 +2,16 @@
 title: FatiasF#()
 description: Saiba mais sobre como usar fatias para F# tipos de dados existentes e como definir suas próprias fatias para outros tipos de dados.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627140"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798913"
 ---
 # <a name="slices"></a>Fatias
 
-No F#, uma fatia é um subconjunto de um tipo de dados. Para poder tirar uma fatia de um tipo de dados, o tipo de dados deve definir um `GetSlice` método ou uma extensão de [tipo](type-extensions.md) que esteja no escopo. Este artigo explica como obter fatias de tipos F# existentes e como definir seus próprios.
+No F#, uma fatia é um subconjunto de um tipo de dados. Para poder tirar uma fatia de um tipo de dados, o tipo de dados deve definir um `GetSlice` método ou em uma [extensão de tipo](type-extensions.md) que esteja no escopo. Este artigo explica como obter fatias de tipos F# existentes e como definir seus próprios.
 
 As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.
 
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-A F# biblioteca principal não define `GetSlice`para matrizes 3D. Se você quiser segmentar essas ou outras matrizes de mais dimensões, você deve definir `GetSlice` o membro por conta própria.
+A F# biblioteca principal não define`GetSlice`para matrizes 3D. Se você quiser segmentar essas ou outras matrizes de mais dimensões, você deve definir o membro `GetSlice` por conta própria.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definindo fatias para outras estruturas de dados
 
 A F# biblioteca principal define fatias para um conjunto limitado de tipos. Se você quiser definir fatias para mais tipos de dados, poderá fazer isso na própria definição de tipo ou em uma extensão de tipo.
 
-Por exemplo, veja como você pode definir fatias para a <xref:System.ArraySegment%601> classe para permitir uma manipulação de dados conveniente:
+Por exemplo, veja como você pode definir fatias para a classe <xref:System.ArraySegment%601> para permitir uma manipulação de dados conveniente:
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Use o Outlining para evitar boxing, se necessário
 
-Se você estiver definindo fatias para um tipo que é, na verdade, um struct, `inline` recomendamos que você o `GetSlice` membro. O F# compilador otimiza os argumentos opcionais, evitando qualquer alocação de heap como resultado de divisão. Isso é extremamente importante para as construções de fatias, <xref:System.Span%601> como aquelas que não podem ser alocadas no heap.
+Se você estiver definindo fatias para um tipo que é realmente uma struct, é recomendável `inline` o membro `GetSlice`. O F# compilador otimiza os argumentos opcionais, evitando qualquer alocação de heap como resultado de divisão. Isso é extremamente importante para as construções de fatias, como <xref:System.Span%601> que não podem ser alocadas no heap.
 
 ```fsharp
 open System

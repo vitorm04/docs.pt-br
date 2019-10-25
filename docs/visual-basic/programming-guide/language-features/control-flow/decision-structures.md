@@ -21,9 +21,9 @@ Visual Basic permite testar condições e executar operações diferentes depend
   
  A ilustração a seguir mostra uma estrutura de decisão que testa se uma condição é verdadeira e executa ações diferentes dependendo se ela é verdadeira ou falsa.  
   
- ![Um gráfico de fluxo de um if... Então... Outra construção.](./media/decision-structures/if-then-else-construction.gif)  
+ ![Um gráfico de fluxo de um If...Then...Else construção.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>Se... Então... Construção else  
+## <a name="ifthenelse-construction"></a>If...Then...Else construção  
  `If...Then...Else`as construções permitem testar uma ou mais condições e executar uma ou mais instruções, dependendo de cada condição. Você pode testar condições e executar ações das seguintes maneiras:  
   
 - Executar uma ou mais instruções se uma condição for`True`  
@@ -34,12 +34,12 @@ Visual Basic permite testar condições e executar operações diferentes depend
   
 - Testar uma condição adicional se uma condição anterior for`False`  
   
- A estrutura de controle que oferece todas essas possibilidades é a [If... Então... Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Você pode usar uma versão de linha única se tiver apenas um teste e uma instrução para executar. Se você tiver um conjunto mais complexo de condições e ações, poderá usar a versão de várias linhas.  
+ A estrutura de controle que oferece todas essas possibilidades é a [Instrução If...Then...Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Você pode usar uma versão de linha única se tiver apenas um teste e uma instrução para executar. Se você tiver um conjunto mais complexo de condições e ações, poderá usar a versão de várias linhas.  
   
-## <a name="selectcase-construction"></a>Selecionar... Construção de caso  
- A `Select...Case` construção permite avaliar uma expressão uma vez e executar diferentes conjuntos de instruções com base em diferentes valores possíveis. Para obter mais informações, consulte [Select... Instrução Case](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case construção  
+ A `Select...Case` construção permite avaliar uma expressão uma vez e executar diferentes conjuntos de instruções com base em diferentes valores possíveis. Para obter mais informações, consulte [Instrução Select...Case](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Tentar... Capturar... Por fim, construção  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally, construção  
  `Try...Catch...Finally`as construções permitem que você execute um conjunto de instruções em um ambiente que retenha o controle se qualquer uma de suas instruções causar uma exceção. Você pode executar ações diferentes para exceções diferentes. Opcionalmente, você pode especificar um bloco de código que é executado antes de sair `Try...Catch...Finally` da construção inteira, independentemente do que ocorrer. Para obter mais informações, consulte [Instrução Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]

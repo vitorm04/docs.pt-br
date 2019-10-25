@@ -2,12 +2,12 @@
 title: O que há de C# novo no C# guia de 8,0
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579143"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798925"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -28,7 +28,7 @@ C#8,0 adiciona os seguintes recursos e aprimoramentos ao C# Idioma:
 - [Índices e intervalos](#indices-and-ranges)
 - [Atribuição de União nula](#null-coalescing-assignment)
 - [Tipos construídos não gerenciados](#unmanaged-constructed-types)
-- [stackalloc em expressões aninhadas](#stackalloc-in-nested-expressions)
+- [Stackalloc em expressões aninhadas](#stackalloc-in-nested-expressions)
 - [Aprimoramento de cadeias de caracteres idênticas interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
 O restante deste artigo descreve rapidamente esses recursos. Quando houver artigos detalhados disponíveis, forneceremos links para esses tutoriais e visões gerais. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
@@ -73,7 +73,9 @@ O compilador avisa quando há a necessidade de criar uma cópia de defesa.  A pr
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Observe que o modificador `readonly` é necessário em uma propriedade somente leitura. O compilador não pressupõe que os acessadores `get` não modificam o estado; é necessário declarar `readonly` explicitamente. O compilador impõe como regra que membros `readonly` não modificam o estado. O método a seguir não será compilado, a menos que você remova o modificador `readonly`:
+Observe que o modificador `readonly` é necessário em uma propriedade somente leitura. O compilador não pressupõe que os acessadores `get` não modificam o estado; é necessário declarar `readonly` explicitamente. As propriedades implementadas automaticamente são uma exceção; o compilador tratará todos os getters autoimplementados como ReadOnly, portanto, aqui não há necessidade de adicionar o modificador `readonly` às propriedades `X` e `Y`.
+
+O compilador impõe como regra que membros `readonly` não modificam o estado. O método a seguir não será compilado, a menos que você remova o modificador `readonly`:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -461,7 +463,7 @@ Em seguida, o intervalo pode ser usado dentro dos caracteres `[` e `]`:
 var text = words[phrase];
 ```
 
-Não apenas as matrizes dão suporte a índices e intervalos. Você também pode usar índices e intervalos com [cadeia de caracteres](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601>. Para obter mais informações, consulte [suporte de tipo para índices e intervalos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Não apenas as matrizes dão suporte a índices e intervalos. Você também pode usar índices e intervalos com [cadeia de caracteres](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>ou <xref:System.ReadOnlySpan%601>. Para obter mais informações, consulte [suporte de tipo para índices e intervalos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
 
@@ -512,7 +514,7 @@ Para obter mais informações, consulte [tipos não gerenciados](../language-ref
 
 ## <a name="stackalloc-in-nested-expressions"></a>stackalloc em expressões aninhadas
 
-A partir C# de 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) for do tipo <xref:System.Span%601?displayProperty=nameWithType> ou <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, você poderá usar a expressão `stackalloc` em outras expressões:
+A partir C# de 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) for do tipo<xref:System.Span%601?displayProperty=nameWithType>ou<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, você poderá usar a expressão`stackalloc`em outras expressões:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };

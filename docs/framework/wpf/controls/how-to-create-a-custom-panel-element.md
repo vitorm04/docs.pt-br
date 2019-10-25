@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um elemento de painel personalizado'
+title: Como criar um elemento de painel personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: d4fc9d76ada9f27bd52619280b323691af9382c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31edc75114c5dad613e5b65e7d8b051e2c3713af
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910956"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799139"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a>Como: Criar um elemento de painel personalizado
+# <a name="how-to-create-a-custom-panel-element"></a>Como criar um elemento de painel personalizado
 ## <a name="example"></a>Exemplo  
- Este exemplo mostra como substituir o comportamento de layout de padrão para o <xref:System.Windows.Controls.Panel> elemento e criar elementos de layout personalizados que são derivados de <xref:System.Windows.Controls.Panel>.  
+ Este exemplo mostra como substituir o comportamento de layout padrão do elemento <xref:System.Windows.Controls.Panel> e criar elementos de layout personalizados que são derivados de <xref:System.Windows.Controls.Panel>.  
   
- O exemplo define um personalizado simple <xref:System.Windows.Controls.Panel> elemento chamado `PlotPanel`, que posiciona elementos filho acordo com dois embutidos coordenadas x e y-. Neste exemplo, `x` e `y` são definidos como `50`; portanto, todos os elementos filho são posicionados nesse local nos x e y eixos.  
+ O exemplo define um elemento de <xref:System.Windows.Controls.Panel> personalizado simples chamado `PlotPanel`, que posiciona elementos filho de acordo com duas coordenadas x e y embutidas em código. Neste exemplo, `x` e `y` são definidos como `50`; Portanto, todos os elementos filho são posicionados nesse local nos eixos x e y.  
   
- Para implementar personalizado <xref:System.Windows.Controls.Panel> comportamentos, o exemplo usa o <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> métodos. Cada método retorna o <xref:System.Windows.Size> dados que são necessários para posicionar e renderizar elementos filho.  
+ Para implementar comportamentos de <xref:System.Windows.Controls.Panel> personalizados, o exemplo usa os métodos <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>. Cada método retorna os dados de <xref:System.Windows.Size> que são necessários para posicionar e renderizar elementos filho.  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -32,4 +32,3 @@ ms.locfileid: "61910956"
 
 - <xref:System.Windows.Controls.Panel>
 - [Visão geral de painéis](panels-overview.md)
-- [Criar uma amostra de painel de encapsulamento com conteúdo personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)

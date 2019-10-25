@@ -2,28 +2,40 @@
 title: Analisar as dependências para fazer a portabilidade do código para o .NET Core
 description: Aprenda a analisar as dependências externas para fazer a portabilidade de seu projeto do .NET Framework para o .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521478"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798789"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analisar suas dependências para fazer a portabilidade do código para o .NET Core
 
-Para fazer a portabilidade de seu código para o .NET Core ou .NET Standard, é preciso compreender suas dependências. As dependências externas são os [pacotes NuGet](#analyze-referenced-nuget-packages-in-your-projects) ou [DLLs](#analyze-dependencies-that-arent-nuget-packages) que você faz referência em seu projeto, mas que você não compila. Avalie cada dependência e desenvolva um plano de contingência para as dependências que não são compatíveis com o .NET Core. Veja como determinar se a dependência é compatível com o .NET Core.
+Para fazer a portabilidade de seu código para o .NET Core ou .NET Standard, é preciso compreender suas dependências. Dependências externas são os pacotes NuGet ou `.dll`s que você faz referência em seu projeto, mas que você não se compila.
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analisar os pacotes NuGet referenciados em seu projetos
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>Migre seus pacotes NuGet para `PackageReference`
 
-Se você fizer referência a pacotes NuGet em seu projeto, será necessário verificar se eles são compatíveis com o .NET Core.
-Há duas maneiras de fazer isso:
+O .NET Core usa [PackageReference](/nuget/consume-packages/package-references-in-project-files) para especificar as dependências do pacote. Se você estiver usando [Packages. config](/nuget/reference/packages-config) para especificar seus pacotes em seu projeto, precisará convertê-lo no formato de `PackageReference` porque `packages.config` não tem suporte no .NET Core.
 
-- [Usar o aplicativo do Explorador de Pacotes NuGet](#analyze-nuget-packages-using-nuget-package-explorer)
-- [Usar o site nuget.org](#analyze-nuget-packages-using-nugetorg)
+Para saber como migrar, consulte o artigo [migrar de Packages. config para PackageReference](/nuget/reference/migrate-packages-config-to-package-reference) .
 
-Depois de analisar os pacotes, se eles não forem compatíveis com o .NET Core e destinarem-se apenas ao .NET Framework, você poderá verificar se o [modo de compatibilidade do .NET Framework](#net-framework-compatibility-mode) pode ajudar no processo de portabilidade.
+## <a name="upgrade-your-nuget-packages"></a>Atualizar seus pacotes NuGet
+
+Depois de migrar seu projeto para o formato de `PackageReference`, você precisa verificar se os pacotes são compatíveis com o .NET Core.
+
+Primeiro, atualize seus pacotes para a versão mais recente que você pode. Isso pode ser feito com a interface do usuário do Gerenciador de pacotes NuGet no Visual Studio. É provável que as versões mais recentes das suas dependências de pacote já sejam compatíveis com o .NET Core.
+
+## <a name="analyze-your-package-dependencies"></a>Analisar suas dependências de pacote
+
+Se você ainda não verificou que suas dependências de pacote convertidas e atualizadas funcionam no .NET Core, há algumas maneiras de conseguir isso:
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>Analisar pacotes NuGet usando nuget.org
+
+Você pode ver os monikers do Framework de destino (TFMs) que cada pacote dá suporte no [NuGet.org](https://www.nuget.org/) na seção **dependências** da página do pacote.
+
+Embora o uso do site seja um método mais fácil para verificar a compatibilidade, as informações de **dependências** não estão disponíveis no site para todos os pacotes.
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>Analisar pacotes NuGet usando o Explorador de Pacotes NuGet
 
@@ -37,27 +49,7 @@ A maneira mais fácil de inspecionar a pastas do pacote NuGet é usar a ferramen
 4. Selecione o nome do pacote nos resultados da pesquisa e clique em **abrir**.
 5. Expanda a pasta *lib* no lado direito e observe os nomes de pasta.
 
-Procure uma pasta com qualquer um dos seguintes nomes:
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+Procure uma pasta com nomes usando um dos seguintes padrões: `netstandardX.Y` ou `netcoreappX.Y`.
 
 Esses valores são [TFMs (Monikers da Estrutura de Destino)](../../standard/frameworks.md), que são mapeados para versões do [.NET Standard](../../standard/net-standard.md), .NET Core e perfis de PCL (Biblioteca de Classes Portátil) tradicionais que são compatíveis com .NET Core.
 
@@ -65,15 +57,9 @@ Esses valores são [TFMs (Monikers da Estrutura de Destino)](../../standard/fram
 > Ao analisar os TFMs compatíveis com um pacote, observe que o `netcoreapp*`, embora compatível, serve somente para projetos do .NET Core e não para projetos do .NET Standard.
 > Uma biblioteca destinada somente a `netcoreapp*` e não a `netstandard*` só pode ser consumida por outros aplicativos do .NET Core.
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>Analisar pacotes NuGet usando nuget.org
+## <a name="net-framework-compatibility-mode"></a>Modo de compatibilidade do .NET framework
 
-Como alternativa, você pode ver os TFMs que são compatíveis com cada pacote em [nuget.org](https://www.nuget.org/), na seção **Dependências** da página do pacote.
-
-Embora o uso do site seja um método mais fácil para verificar a compatibilidade, as informações de **Dependências** não estão disponíveis no site para todos os pacotes.
-
-### <a name="net-framework-compatibility-mode"></a>Modo de compatibilidade do .NET framework
-
-Depois de analisar os pacotes NuGet, você pode chegar à conclusão de que eles se destinam apenas ao .NET Framework, como a maioria dos pacotes NuGet.
+Depois de analisar os pacotes NuGet, talvez você ache que eles se destinam apenas ao .NET Framework.
 
 O modo de compatibilidade do .NET Framework foi introduzido a partir do .NET Standard 2.0. Esse modo de compatibilidade permite que os projetos do .NET Standard e do .NET Core referenciem bibliotecas do .NET Framework. Fazer referência a bibliotecas do .NET Framework não funciona para todos os projetos, como nos casos em que a biblioteca usa APIs do WPF (Windows Presentation Foundation), mas isso desbloqueia muitos cenários de portabilidade.
 
@@ -92,12 +78,6 @@ Para suprimir o aviso editando o arquivo de projeto, localize a entrada `Package
 ```
 
 Para obter mais informações sobre como suprimir avisos do compilador no Visual Studio, consulte [Suprimir avisos de pacotes NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
-
-## <a name="port-your-packages-to-packagereference"></a>Fazer a portabilidade de seus pacotes para `PackageReference`
-
-O .NET Core usa [PackageReference](/nuget/consume-packages/package-references-in-project-files) para especificar as dependências do pacote. Se você estiver usando [packages.config](/nuget/reference/packages-config) para especificar seus pacotes, converta em `PackageReference`.
-
-Saiba mais em [Migrar de packages.config para PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>O que fazer quando a dependência de pacote NuGet não é executada no .NET Core
 

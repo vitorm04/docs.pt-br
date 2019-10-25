@@ -1,17 +1,17 @@
 ---
 title: Asserções
 description: Saiba como usar a expressão ' Assert ' como um recurso de depuração para testar expressões na linguagem F# de programação.
-ms.date: 05/16/2016
-ms.openlocfilehash: b8b7e9662143b432d650f87515d4af31cced4149
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 10/22/2019
+ms.openlocfilehash: 430db20e5ca307ba43a72e678a0424e03b0ac381
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630031"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799068"
 ---
 # <a name="assertions"></a>Asserções
 
-A `assert` expressão é um recurso de depuração que você pode usar para testar uma expressão. Em caso de falha no modo de depuração, uma asserção gera uma caixa de diálogo de erro do sistema.
+A expressão de `assert` é um recurso de depuração que você pode usar para testar uma expressão. Em caso de falha no modo de depuração, uma asserção gera uma caixa de diálogo de erro do sistema.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,20 +21,17 @@ assert condition
 
 ## <a name="remarks"></a>Comentários
 
-A `assert` expressão tem o `bool -> unit`tipo.
+A expressão de `assert` tem `bool -> unit`de tipo.
 
-Na sintaxe anterior, *Condition* representa uma expressão booliana a ser testada. Se a expressão for avaliada `true`como, a execução continuará inalterada. Se ele for avaliado como `false`, uma caixa de diálogo de erro do sistema será gerada. A caixa de diálogo de erro tem uma legenda que contém a declaração de cadeia de caracteres **com falha**. A caixa de diálogo contém um rastreamento de pilha que indica onde ocorreu a falha de asserção.
+A função `assert` resolve para <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Isso significa que seu comportamento é idêntico a ter chamado <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> diretamente.
 
-A verificação de asserção é habilitada somente quando você compila no modo de depuração; ou seja, se a constante `DEBUG` for definida. No sistema do projeto, por padrão, a `DEBUG` constante é definida na configuração de depuração, mas não na configuração da versão.
+A verificação de asserção é habilitada somente quando você compila no modo de depuração; ou seja, se a constante `DEBUG` for definida. No sistema do projeto, por padrão, a constante `DEBUG` é definida na configuração de depuração, mas não na configuração da versão.
 
 O erro de falha de asserção não pode ser F# capturado usando a manipulação de exceção.
 
-> [!NOTE]
-> A `assert` função é resolvida para <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
-
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir ilustra o uso `assert` da expressão.
+O exemplo de código a seguir ilustra o uso da expressão `assert`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
 

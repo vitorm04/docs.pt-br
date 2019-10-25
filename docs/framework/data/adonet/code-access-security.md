@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971815"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798896"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -71,8 +71,8 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 |-----------------------------------|-----------------|  
 |`Action`|Obtém ou define uma ação de segurança. Herdada de <xref:System.Security.Permissions.SecurityAttribute>.|  
 |`AllowBlankPassword`|Habilita ou desabilita o uso de uma senha em branco em uma cadeia de conexão. Os valores válidos são `true` (para habilitar o uso de senhas em branco) e `false` (para desabilitar o uso de senhas em branco). Herdada de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`ConnectionString`|Identifica uma cadeia de conexão permitida. Várias cadeias de conexão podem ser identificadas. **Observação:**  Não inclua uma ID ou senha de usuário em sua cadeia de conexão. Nesta versão, você não pode modificar restrições de cadeia de conexão usando a Ferramenta de Configuração do .NET Framework. <br /><br /> Herdada de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|Identifica os parâmetros de cadeia de conexão que são permitidos ou não. Os parâmetros da cadeia de conexão são identificados no formato  *\<nome do parâmetro > =* . Vários parâmetros podem ser especificados, sendo delimitados por um ponto e vírgula (;). **Observação:**  Se você não especificar `KeyRestrictions`, mas definir a propriedade `KeyRestrictionBehavior` como `AllowOnly` ou `PreventUsage`, nenhum parâmetro adicional de cadeia de conexão será permitido. Herdada de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`ConnectionString`|Identifica uma cadeia de conexão permitida. Várias cadeias de conexão podem ser identificadas. **Observação:**  Não inclua uma ID de usuário ou senha em sua cadeia de conexão. Nesta versão, você não pode modificar restrições de cadeia de conexão usando a Ferramenta de Configuração do .NET Framework. <br /><br /> Herdada de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|Identifica os parâmetros de cadeia de conexão que são permitidos ou não. Os parâmetros da cadeia de conexão são identificados no formato *\<nome do parâmetro > =* . Vários parâmetros podem ser especificados, sendo delimitados por um ponto e vírgula (;). **Observação:**  Se você não especificar `KeyRestrictions`, mas definir `KeyRestrictionBehavior` Propriedade como `AllowOnly` ou `PreventUsage`, nenhum parâmetro de cadeia de conexão adicional será permitido. Herdada de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictionBehavior`|Identifica os parâmetros de cadeia de conexão como os únicos parâmetros adicionais permitidos (`AllowOnly`), ou identifica os parâmetros adicionais que não são permitidos (`PreventUsage`). `AllowOnly` é o padrão. Herdada de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Obtém um identificador exclusivo para este atributo quando implementado em uma classe derivada. Herdada de <xref:System.Attribute>.|  
 |`Unrestricted`|Indica se a permissão irrestrita ao recurso é declarada. Herdada de <xref:System.Security.Permissions.SecurityAttribute>.|  
@@ -89,7 +89,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>Sintaxe de KeyRestrictions  
- O exemplo a seguir habilita a mesma cadeia de conexão, habilita o uso `Encrypt` das `Packet Size` opções de cadeia de conexão e, mas restringe o uso de qualquer outra opção de cadeia de conexão.  
+ O exemplo a seguir habilita a mesma cadeia de conexão, habilita o uso das opções de cadeia de conexão `Encrypt` e `Packet Size`, mas restringe o uso de qualquer outra opção de cadeia de conexão.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Habilitando a confiança parcial com um conjunto de permissões personalizado  
- Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões para o código que tem <xref:System.Security.Policy.Zone> um `LocalIntranet`do, um administrador do sistema pode copiar o conjunto `LocalIntranet`de permissões para, renomeá-lo como <xref:System.Data.SqlClient> "CustomLocalIntranet", adicionar as permissões, importar o conjunto de permissões CustomLocalIntranet usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md)e defina o `LocalIntranet_Zone` conjunto de permissões de como CustomLocalIntranet.  
+ Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões para o código que tem um <xref:System.Security.Policy.Zone> de `LocalIntranet`, um administrador do sistema pode copiar o conjunto de permissões para `LocalIntranet`, renomeá-lo como "CustomLocalIntranet", adicionar as permissões de <xref:System.Data.SqlClient>, importar o CustomLocalIntranet conjunto de permissões usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md)e defina o conjunto de permissões de `LocalIntranet_Zone` como CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permissões de exemplo  
  A seguir está um conjunto de permissões de exemplo para o Provedor de Dados .NET Framework para SQL Server em um cenário parcialmente confiável. Para obter informações sobre como criar conjuntos de permissões personalizados, consulte [Configurando conjuntos de permissões usando Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -192,7 +192,7 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidade com código não gerenciado  
  O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Windows são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../interop/index.md).  
   
- O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade com avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade com avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
 

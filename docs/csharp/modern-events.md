@@ -3,12 +3,12 @@ title: O padrão de eventos atualizado do .NET Core Event
 description: Saiba como o padrão de evento do .NET Core permite flexibilidade com compatibilidade com versões anteriores e como implementar processamento de eventos seguro com assinantes assíncronos.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751779"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798884"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>O padrão de eventos atualizado do .NET Core Event
 
@@ -51,7 +51,7 @@ Seguindo uma lógica semelhante, qualquer tipo de argumento de evento criado ago
 
 ## <a name="events-with-async-subscribers"></a>Eventos com assinantes assíncronos
 
-Você tem um último padrão para aprender: Como escrever corretamente os assinantes do evento que chamam o código assíncrono. O desafio é descrito no artigo em [async e await](async.md). Métodos assíncronos podem ter um tipo de retorno nulo, mas isso não é recomendável. Quando seu código de assinante de evento chama um método assíncrono, você não terá outra escolha além de criar um método `async void`. A assinatura do manipulador de eventos o exige.
+Você tem um último padrão para aprender: como escrever corretamente os assinantes do evento que chamam o código assíncrono. O desafio é descrito no artigo em [async e await](async.md). Métodos assíncronos podem ter um tipo de retorno nulo, mas isso não é recomendável. Quando seu código de assinante de evento chama um método assíncrono, você não terá outra escolha além de criar um método `async void`. A assinatura do manipulador de eventos o exige.
 
 Você precisa conciliar essas diretrizes opostas. De alguma forma, você precisa criar um método `async void` seguro. As noções básicas do padrão que você precisa implementar estão abaixo:
 
@@ -71,7 +71,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-Primeiro, observe que o manipulador está marcado como um manipulador assíncrono. Como está sendo atribuído a um tipo de delegado de manipulador de eventos, ele terá um tipo de retorno nulo. Isso significa que você deve seguir o padrão mostrado no manipulador e não permitir que qualquer exceção seja gerada fora do contexto do manipulador assíncrono. Como ele não retorna uma tarefa, não há nenhuma tarefa que pode relatar o erro entrando no estado de falha. Como o método é assíncrono, ele não pode simplesmente gerar a exceção. (O método de chamada continua a execução porque é `async`.) O comportamento de tempo de execução real será definido de forma diferente para ambientes diferentes. Ele pode encerrar o thread, pode encerrar o programa ou pode deixar o programa em um estado indeterminado. Nenhum desses são bons resultados.
+Primeiro, observe que o manipulador está marcado como um manipulador assíncrono. Como está sendo atribuído a um tipo de delegado de manipulador de eventos, ele terá um tipo de retorno nulo. Isso significa que você deve seguir o padrão mostrado no manipulador e não permitir que qualquer exceção seja gerada fora do contexto do manipulador assíncrono. Como ele não retorna uma tarefa, não há nenhuma tarefa que pode relatar o erro entrando no estado de falha. Como o método é assíncrono, ele não pode simplesmente gerar a exceção. (O método de chamada continuou a execução porque está `async`.) O comportamento real do tempo de execução será definido de forma diferente para ambientes diferentes. Ele pode encerrar o thread ou o processo que possui o thread ou deixar o processo em um estado indeterminado. Todos esses resultados potenciais são altamente indesejáveis.
 
 É por isso que você deve encapsular a instrução await para a tarefa assíncrona em seu próprio bloco de teste. Se isso causar uma tarefa com falha, você pode registrar o erro em log. Se for um erro do qual não é possível recuperar o aplicativo, você pode sair do programa rápida e normalmente
 
