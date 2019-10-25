@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b420fb451bf1bb2078a4419a648a1407c39ad178
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 63e70ae8cd110786ad7d2069088dbfdfde736a28
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044749"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846740"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Ferramenta de Conversão de CorFlags)
 A ferramenta Conversão CorFlags permite configurar a seção CorFlags do cabeçalho de uma imagem PE (Portable Executable).  
@@ -35,19 +35,19 @@ CorFlags.exe assembly [options]
 |`assembly`|O nome do assembly para o qual configurar o CorFlags.|  
   
 |Opção|Descrição|  
-|------------|-----------------|  
-|**/32BIT[REQ]+**|Define o sinalizador 32BITREQUIRED.|  
-|**/32BIT[REQ]-**|Limpa o sinalizador 32BITREQUIRED.|  
-|**/32BITPREF+**|Define o sinalizador 32BITPREFERRED. O aplicativo é executado como um processo 32 bits, mesmo em plataformas 64 bits. Defina esse sinalizador apenas em arquivos EXE. Se o sinalizador for definido em uma DLL, a DLL não será carregada em processos 64 bits, e uma exceção <xref:System.BadImageFormatException> será acionada. Um arquivo EXE com esse sinalizador pode ser carregado em um processo 64 bits.<br /><br /> Novidades no .NET Framework 4.5.|  
-|**/32BITPREF-**|Limpa o sinalizador 32BITPREFERRED.<br /><br /> Novidades no .NET Framework 4.5.|  
-|**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
-|**/Force**|Força uma atualização, mesmo que o assembly tenha nome forte. **Importante:**  Se atualizar um assembly de nome forte, você deverá assiná-lo novamente antes de executar o código.|  
-|**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
-|**/ILONLY+**|Define o sinalizador ILONLY.|  
-|**/ILONLY-**|Limpa o sinalizador ILONLY.|  
-|**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|  
-|**/RevertCLRHeader**|Reverte a versão do cabeçalho do CLR para 2.0.|  
-|**/UpgradeCLRHeader**|Atualiza a versão do cabeçalho do CLR para 2.5. **Observação:**  Os assemblies devem ter uma versão do cabeçalho do CLR 2.5 ou posterior para serem executados nativamente.|  
+|:------------|-----------------|  
+|`-32BIT[REQ]+`|Define o sinalizador 32BITREQUIRED.|  
+|`-32BIT[REQ]-`|Limpa o sinalizador 32BITREQUIRED.|  
+|`-32BITPREF+`|Define o sinalizador 32BITPREFERRED. O aplicativo é executado como um processo 32 bits, mesmo em plataformas 64 bits. Defina esse sinalizador apenas em arquivos EXE. Se o sinalizador for definido em uma DLL, a DLL não será carregada em processos 64 bits, e uma exceção <xref:System.BadImageFormatException> será acionada. Um arquivo EXE com esse sinalizador pode ser carregado em um processo 64 bits.<br /><br /> Novidades no .NET Framework 4.5.|  
+|`-32BITPREF-`|Limpa o sinalizador 32BITPREFERRED.<br /><br /> Novidades no .NET Framework 4.5.|  
+|`-?`|Exibe sintaxe de comando e opções para a ferramenta.|  
+|`-Force`|Força uma atualização, mesmo que o assembly tenha nome forte. **Importante:** se atualizar um assembly de nome forte, você deverá assiná-lo novamente antes de executar o código.|  
+|`-help`|Exibe sintaxe de comando e opções para a ferramenta.|  
+|`-ILONLY+`|Define o sinalizador ILONLY.|  
+|`-ILONLY-`|Limpa o sinalizador ILONLY.|  
+|`-nologo`|Suprime a exibição do banner de inicialização da Microsoft.|  
+|`-RevertCLRHeader`|Reverte a versão do cabeçalho do CLR para 2.0.|  
+|`-UpgradeCLRHeader`|Atualiza a versão do cabeçalho do CLR para 2.5. **Observação:** os assemblies devem ter uma versão do cabeçalho do CLR 2.5 ou posterior para serem executados nativamente.|  
   
 ## <a name="remarks"></a>Comentários  
  Se nenhuma opção estiver especificada, a ferramenta Conversão CorFlags exibirá os sinalizadores para o assembly especificado.  
