@@ -7,68 +7,68 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a88046868a26c3da29712ffd6a231505ba64f9af
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042590"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846871"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automação de Interface do usuário e Microsoft Active Accessibility
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- O Microsoft Acessibilidade Ativa foi a solução anterior para tornar os aplicativos acessíveis. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]é o novo modelo de acessibilidade [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] para o e destina-se a atender às necessidades de produtos de tecnologia assistencial e ferramentas de teste automatizadas. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]oferece muitos aprimoramentos em Acessibilidade Ativa.  
+ O Microsoft Acessibilidade Ativa foi a solução anterior para tornar os aplicativos acessíveis. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] é o novo modelo de acessibilidade para [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] e destina-se a atender às necessidades de produtos de tecnologia assistencial e ferramentas de teste automatizadas. o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] oferece muitas melhorias em relação a Acessibilidade Ativa.  
   
- Este tópico inclui os principais recursos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e explica como esses recursos são diferentes do acessibilidade ativa.  
+ Este tópico inclui os principais recursos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e explica como esses recursos diferem do Acessibilidade Ativa.  
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>Linguagens de programação  
-< acessibilidade ativa se baseia no Component Object Model (com) com suporte para interfaces duplas e, portanto, é programável em CC++/ [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)], e em linguagens de script. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)](incluindo a biblioteca do provedor do lado do cliente para controles padrão) é escrito em código gerenciado e os aplicativos cliente de automação da interface do C# usuário são programados com mais facilidade usando ou Visual Basic .net. Provedores de automação de interface do usuário, que são implementações de interface, podem ser escritos emC++código gerenciado ou em C/.  
+< Acessibilidade Ativa se baseia no Component Object Model (COM) com suporte para interfaces duplas e, portanto, é programável em CC++/, Microsoft Visual Basic 6,0 e linguagens de script. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (incluindo a biblioteca do provedor do lado do cliente para controles padrão) é escrita em código gerenciado e os aplicativos cliente de automação da interface do C# usuário são programados com mais facilidade usando ou Visual Basic .net. Provedores de automação de interface do usuário, que são implementações de interface, podem ser escritos emC++código gerenciado ou em C/.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Suporte no Windows Presentation Foundation  
- Windows Presentation Foundation (WPF) é o novo modelo para criar interfaces do usuário. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]os elementos não contêm suporte nativo para Acessibilidade Ativa; no entanto, eles [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]oferecem suporte, o que inclui suporte a pontes para clientes acessibilidade ativa. Somente os clientes escritos especificamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para o podem aproveitar ao máximo os recursos de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]acessibilidade do, como o suporte avançado para texto.  
+ Windows Presentation Foundation (WPF) é o novo modelo para criar interfaces do usuário. os elementos de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] não contêm suporte nativo para Acessibilidade Ativa; no entanto, eles oferecem suporte a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], o que inclui suporte a pontes para clientes Acessibilidade Ativa. Somente os clientes escritos especificamente para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] podem aproveitar ao máximo os recursos de acessibilidade do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], como o suporte avançado para texto.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Servidores e clientes  
- Em Acessibilidade Ativa, servidores e clientes se comunicam diretamente, amplamente por meio da implementação do `IAccessible`servidor do.  
+ Em Acessibilidade Ativa, servidores e clientes se comunicam diretamente, amplamente por meio da implementação do servidor de `IAccessible`.  
   
- No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], um serviço principal está entre o servidor (chamado de provedor) e o cliente. O serviço principal faz chamadas para as interfaces implementadas pelos provedores e fornece serviços adicionais, como a geração de identificadores de tempo de execução exclusivos para elementos. Os aplicativos cliente usam funções de biblioteca para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] chamar o serviço.  
+ No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], um serviço principal está entre o servidor (chamado de provedor) e o cliente. O serviço principal faz chamadas para as interfaces implementadas pelos provedores e fornece serviços adicionais, como a geração de identificadores de tempo de execução exclusivos para elementos. Os aplicativos cliente usam funções de biblioteca para chamar o serviço de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
- Provedores de automação de interface do usuário podem fornecer informações para Acessibilidade Ativa clientes e Acessibilidade Ativa servidores podem fornecer informações para aplicativos cliente de automação da interface do usuário. No entanto, como acessibilidade ativa não expõe tantas informações [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]quanto, os dois modelos não são totalmente compatíveis.  
+ Provedores de automação de interface do usuário podem fornecer informações para Acessibilidade Ativa clientes e Acessibilidade Ativa servidores podem fornecer informações para aplicativos cliente de automação da interface do usuário. No entanto, como Acessibilidade Ativa não expõe tantas informações quanto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], os dois modelos não são totalmente compatíveis.  
   
 <a name="UI_Elements_compare"></a>   
 ## <a name="ui-elements"></a>Elementos da interface do usuário  
- Acessibilidade ativa apresenta [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementos como uma `IAccessible` interface ou como um identificador filho. É difícil comparar dois `IAccessible` ponteiros para determinar se eles se referem ao mesmo elemento.  
+ Acessibilidade Ativa apresenta elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] como uma interface `IAccessible` ou como um identificador filho. É difícil comparar dois ponteiros de `IAccessible` para determinar se eles se referem ao mesmo elemento.  
   
- No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], cada elemento é representado como um <xref:System.Windows.Automation.AutomationElement> objeto. A comparação é feita usando o operador de igualdade ou <xref:System.Windows.Automation.AutomationElement.Equals%2A> o método, ambos comparam os identificadores de tempo de execução exclusivos dos elementos.  
+ Em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], cada elemento é representado como um objeto <xref:System.Windows.Automation.AutomationElement>. A comparação é feita usando o operador de igualdade ou o método <xref:System.Windows.Automation.AutomationElement.Equals%2A>, ambos comparam os identificadores de tempo de execução exclusivos dos elementos.  
   
 <a name="Tree_Views_and_Navigation_compare"></a>   
 ## <a name="tree-views-and-navigation"></a>Exibições de árvore e navegação  
- Os [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos na tela podem ser vistos como uma estrutura de árvore com a área de trabalho como raiz, janelas de aplicativo como filhos imediatos e elementos dentro de aplicativos como mais descendentes.  
+ Os elementos de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] na tela podem ser vistos como uma estrutura de árvore com a área de trabalho como raiz, janelas de aplicativo como filhos imediatos e elementos dentro de aplicativos como mais descendentes.  
   
  No Acessibilidade Ativa, muitos elementos de automação que são irrelevantes para os usuários finais são expostos na árvore. Os aplicativos cliente precisam examinar todos os elementos para determinar quais são significativos.  
   
- Os aplicativos cliente de automação da [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] interface do usuário veem o por meio de uma exibição filtrada. O modo de exibição contém apenas elementos de interesse: aqueles que fornecem informações ao usuário ou habilitam a interação. Exibições predefinidas de apenas elementos de controle e somente elementos de conteúdo estão disponíveis; Além disso, os aplicativos podem definir modos de exibição personalizados. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]simplifica a tarefa de descrever o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] para o usuário e ajudar o usuário a interagir com o aplicativo.  
+ Os aplicativos cliente de automação da interface do usuário veem a [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] por meio de uma exibição filtrada. O modo de exibição contém apenas elementos de interesse: aqueles que fornecem informações ao usuário ou habilitam a interação. Exibições predefinidas de apenas elementos de controle e somente elementos de conteúdo estão disponíveis; Além disso, os aplicativos podem definir modos de exibição personalizados. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] simplifica a tarefa de descrever o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] para o usuário e ajudar o usuário a interagir com o aplicativo.  
   
- A navegação entre elementos, em Acessibilidade Ativa, é espacial (por exemplo, mover para o elemento que está à esquerda na tela), lógico (por exemplo, mover para o próximo item de menu ou o próximo item na ordem de tabulação dentro de uma caixa de diálogo) ou hierárquico ( por exemplo, mover o primeiro filho em um contêiner ou do filho para seu pai). A navegação hierárquica é complicada pelo fato de que os elementos filho nem sempre são objetos `IAccessible`que implementam.  
+ A navegação entre elementos, em Acessibilidade Ativa, é espacial (por exemplo, mover para o elemento que está à esquerda na tela), lógico (por exemplo, mover para o próximo item de menu ou o próximo item na ordem de tabulação dentro de uma caixa de diálogo) ou hierárquico ( por exemplo, mover o primeiro filho em um contêiner ou do filho para seu pai). A navegação hierárquica é complicada pelo fato de que os elementos filho nem sempre são objetos que implementam `IAccessible`.  
   
- No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], todos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] os elementos <xref:System.Windows.Automation.AutomationElement> são objetos que dão suporte à mesma funcionalidade básica. (Do ponto de vista do provedor, eles são objetos que implementam uma interface herdada do <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) A navegação é principalmente hierárquica: de pais a filhos e de um irmão para o próximo. (A navegação entre irmãos tem um elemento lógico, pois ele pode seguir a ordem de tabulação.) Você pode navegar de qualquer ponto de partida, usando qualquer exibição filtrada da árvore, usando a <xref:System.Windows.Automation.TreeWalker> classe. Você também pode navegar para filhos ou descendentes específicos usando <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> e <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; por exemplo, é muito fácil recuperar todos os elementos dentro de uma caixa de diálogo que ofereça suporte a um padrão de controle especificado.  
+ Em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], todos os elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] são objetos <xref:System.Windows.Automation.AutomationElement> que dão suporte à mesma funcionalidade básica. (Do ponto de vista do provedor, eles são objetos que implementam uma interface herdada do <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) A navegação é principalmente hierárquica: de pais a filhos e de um irmão para o próximo. (A navegação entre irmãos tem um elemento lógico, pois ele pode seguir a ordem de tabulação.) Você pode navegar de qualquer ponto de partida, usando qualquer exibição filtrada da árvore, usando a classe <xref:System.Windows.Automation.TreeWalker>. Você também pode navegar para filhos ou descendentes específicos usando <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> e <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; por exemplo, é muito fácil recuperar todos os elementos de uma caixa de diálogo que ofereçam suporte a um padrão de controle especificado.  
   
- A navegação [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] no é mais consistente do que no acessibilidade ativa. Alguns elementos como listas suspensas e janelas pop-up aparecem duas vezes na árvore de Acessibilidade Ativa, e a navegação deles pode ter resultados inesperados. Na verdade, é impossível implementar corretamente Acessibilidade Ativa para um controle rebar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]habilita a recolocação e o reposicionamento, para que um elemento possa ser colocado em qualquer lugar na árvore, apesar da hierarquia imposta pela propriedade do Windows.  
+ A navegação no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] é mais consistente do que no Acessibilidade Ativa. Alguns elementos como listas suspensas e janelas pop-up aparecem duas vezes na árvore de Acessibilidade Ativa, e a navegação deles pode ter resultados inesperados. Na verdade, é impossível implementar corretamente Acessibilidade Ativa para um controle rebar. o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite a recolocação e o reposicionamento, para que um elemento possa ser colocado em qualquer lugar na árvore, apesar da hierarquia imposta pela propriedade do Windows.  
   
 <a name="Roles_and_Control_Types"></a>   
 ## <a name="roles-and-control-types"></a>Funções e tipos de controle  
- Acessibilidade Ativa usa a `accRole` Propriedade (`IAccessible::get_actRole`) para recuperar uma descrição da função do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]elemento no, como ROLE_SYSTEM_SLIDER ou ROLE_SYSTEM_MENUITEM. A função de um elemento é a principal pista para sua funcionalidade disponível. A interação com um controle é obtida usando métodos fixos, `IAccessible::accSelect` como `IAccessible::accDoDefaultAction`e. A interação entre o aplicativo cliente e o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] é limitada ao que pode ser feito por `IAccessible`meio do.  
+ Acessibilidade Ativa usa a propriedade `accRole` (`IAccessible::get_actRole`) para recuperar uma descrição da função do elemento na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como ROLE_SYSTEM_SLIDER ou ROLE_SYSTEM_MENUITEM. A função de um elemento é a principal pista para sua funcionalidade disponível. A interação com um controle é obtida usando métodos fixos, como `IAccessible::accSelect` e `IAccessible::accDoDefaultAction`. A interação entre o aplicativo cliente e o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] é limitada ao que pode ser feito por meio de `IAccessible`.  
   
- Por outro lado [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , basicamente dissocia o tipo de controle do elemento (descrito <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> pela propriedade) de sua funcionalidade esperada. A funcionalidade é determinada pelos padrões de controle que são suportados pelo provedor por meio de sua implementação de interfaces especializadas. Os padrões de controle podem ser combinados para descrever o conjunto completo de funcionalidades com suporte [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de um determinado elemento. Alguns provedores são necessários para dar suporte a um padrão de controle específico; por exemplo, o provedor de uma caixa de seleção deve oferecer suporte ao padrão de controle de alternância. Outros provedores são necessários para dar suporte a um ou mais de um conjunto de padrões de controle; por exemplo, um botão deve dar suporte a Toggle ou Invoke. Outros ainda não dão suporte a nenhum padrão de controle; por exemplo, um painel que não pode ser movido, redimensionado ou encaixado não tem nenhum padrão de controle.  
+ Por outro lado, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Basicamente dissocia o tipo de controle do elemento (descrito pela propriedade <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>) de sua funcionalidade esperada. A funcionalidade é determinada pelos padrões de controle que são suportados pelo provedor por meio de sua implementação de interfaces especializadas. Os padrões de controle podem ser combinados para descrever o conjunto completo de funcionalidades com suporte em um determinado elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Alguns provedores são necessários para dar suporte a um padrão de controle específico; por exemplo, o provedor de uma caixa de seleção deve oferecer suporte ao padrão de controle de alternância. Outros provedores são necessários para dar suporte a um ou mais de um conjunto de padrões de controle; por exemplo, um botão deve dar suporte a Toggle ou Invoke. Outros ainda não dão suporte a nenhum padrão de controle; por exemplo, um painel que não pode ser movido, redimensionado ou encaixado não tem nenhum padrão de controle.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]dá suporte a controles personalizados, que são identificados <xref:System.Windows.Automation.ControlType.Custom> pela propriedade e podem ser descritos <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> pela propriedade.  
+ o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dá suporte a controles personalizados, que são identificados pela propriedade <xref:System.Windows.Automation.ControlType.Custom> e podem ser descritos pela propriedade <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>.  
   
- A tabela a seguir mostra o mapeamento de funções de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] acessibilidade ativa para tipos de controle.  
+ A tabela a seguir mostra o mapeamento de funções de Acessibilidade Ativa para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tipos de controle.  
   
-|Acessibilidade Ativa função|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]tipo de controle|  
+|Acessibilidade Ativa função|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tipo de controle|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|Botão|  
 |ROLE_SYSTEM_CLIENT|Calendário|  
@@ -114,91 +114,91 @@ ms.locfileid: "71042590"
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>Estados e propriedades  
- Em acessibilidade ativa, os elementos dão suporte a um conjunto comum de propriedades, e algumas propriedades `accState`(como) devem descrever coisas muito diferentes, dependendo da função do elemento. Os servidores devem implementar todos os `IAccessible` métodos de que retornam uma propriedade, mesmo aqueles que não são relevantes para o elemento.  
+ Em Acessibilidade Ativa, os elementos dão suporte a um conjunto comum de propriedades, e algumas propriedades (como `accState`) devem descrever coisas muito diferentes, dependendo da função do elemento. Os servidores devem implementar todos os métodos de `IAccessible` que retornam uma propriedade, mesmo aqueles que não são relevantes para o elemento.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]define muitas outras propriedades, algumas das quais correspondem a Estados em Acessibilidade Ativa. Algumas são comuns a todos os elementos, mas outras são específicas para controlar tipos e padrões de controle. As propriedades são diferenciadas por identificadores exclusivos e a maioria das propriedades pode ser recuperada usando um <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> único <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>método ou. Muitas propriedades também são facilmente recuperáveis dos acessadores e <xref:System.Windows.Automation.AutomationElement.Current%2A> <xref:System.Windows.Automation.AutomationElement.Cached%2A> da propriedade.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] define muitas outras propriedades, algumas das quais correspondem aos Estados no Acessibilidade Ativa. Algumas são comuns a todos os elementos, mas outras são específicas para controlar tipos e padrões de controle. As propriedades são diferenciadas por identificadores exclusivos e a maioria das propriedades pode ser recuperada usando um único método, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ou <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Muitas propriedades também são facilmente recuperáveis do <xref:System.Windows.Automation.AutomationElement.Current%2A> e <xref:System.Windows.Automation.AutomationElement.Cached%2A> acessadores de propriedade.  
   
- Um provedor de automação de interface do usuário não precisa implementar propriedades irrelevantes, mas pode `null` simplesmente retornar um valor para todas as propriedades para as quais ele não dá suporte. Além disso, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] o serviço principal pode obter algumas propriedades do provedor de janela padrão, e elas são mesclados com propriedades explicitamente implementadas pelo provedor.  
+ Um provedor de automação de interface do usuário não precisa implementar propriedades irrelevantes, mas pode simplesmente retornar um valor de `null` para todas as propriedades para as quais não há suporte. Além disso, o serviço do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] core pode obter algumas propriedades do provedor de janela padrão, e elas são mesclados com propriedades explicitamente implementadas pelo provedor.  
   
- Além de dar suporte a muitas outras propriedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , o fornece melhor desempenho, permitindo que várias propriedades sejam recuperadas com uma única chamada de processo cruzado.  
+ Além de dar suporte a muitas outras propriedades, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornece melhor desempenho, permitindo que várias propriedades sejam recuperadas com uma única chamada de processo cruzado.  
   
  A tabela a seguir mostra a correspondência entre as propriedades nos dois modelos.  
   
-|Acessador de propriedade Acessibilidade Ativa|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ID da propriedade|Comentários|  
+|Acessador de propriedade Acessibilidade Ativa|ID da propriedade de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Comentários|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
-|`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> ou <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty`terá precedência se ambos estiverem presentes.|  
+|`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> ou <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` terá precedência se ambos estiverem presentes.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
 |`get_accRole`|<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|Consulte a tabela anterior para mapeamento de funções para tipos de controle.|  
 |`get_accValue`|<xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType><br /><br /> <xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>|Válido somente para tipos de controle que dão suporte a ValuePattern ou RangeValuePattern. Os valores RangeValue são normalizados para 0-100, para serem consistentes com o comportamento de MSAA. Os itens de valor usam uma cadeia de caracteres.|  
 |`get_accHelp`|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>||  
 |`accLocation`|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>||  
-|`get_accDescription`|Sem suporte em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|`accDescription`Não tinha uma especificação clara dentro de MSAA, o que resultou em provedores que estão colocando diferentes partes de informações nessa propriedade.|  
-|`get_accHelpTopic`|Sem suporte em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]||  
+|`get_accDescription`|Sem suporte no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|`accDescription` não tinha uma especificação clara dentro de MSAA, o que resultou em provedores que estão colocando diferentes partes de informações nessa propriedade.|  
+|`get_accHelpTopic`|Sem suporte no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]||  
   
- A tabela a seguir mostra [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] quais propriedades correspondem a acessibilidade ativa constantes de estado.  
+ A tabela a seguir mostra quais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriedades correspondem a constantes de estado de Acessibilidade Ativa.  
   
 |Estado de Acessibilidade Ativa|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|A alteração de estado de gatilhos?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Para caixa de seleção,<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Para botão de opção,<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|S|  
+|STATE_SYSTEM_CHECKED|Para caixa de seleção, <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Para o botão de opção, <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|S|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|S|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded>or<xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|S|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> ou <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|S|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
-|STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern>para itens de menu|N|  
-|STATE_SYSTEM_INVISIBLE|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>= True e <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A> causas<xref:System.Windows.Automation.NoClickablePointException>|N|  
+|STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> para itens de menu|N|  
+|STATE_SYSTEM_INVISIBLE|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true e <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A> causas <xref:System.Windows.Automation.NoClickablePointException>|N|  
 |STATE_SYSTEM_LINKED|<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> =<br /><br /> <xref:System.Windows.Automation.ControlType.Hyperlink>|N|  
 |STATE_SYSTEM_MIXED|<xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> = <xref:System.Windows.Automation.ToggleState.Indeterminate>|N|  
 |STATE_SYSTEM_MOVEABLE|<xref:System.Windows.Automation.TransformPattern.CanMoveProperty>|N|  
 |STATE_SYSTEM_MUTLISELECTABLE|<xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>|N|  
-|STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>= True|N|  
+|STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true|N|  
 |STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|N|  
 |STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> e <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|N|  
-|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern>tem suporte|N|  
+|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> tem suporte|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
 |STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|S|  
   
- Os Estados a seguir não foram implementados pela maioria dos servidores de controle de Acessibilidade Ativa ou [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]não têm nenhum equivalente no.  
+ Os Estados a seguir não foram implementados pela maioria dos servidores de controle Acessibilidade Ativa ou não têm nenhum equivalente em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 |Estado de Acessibilidade Ativa|Comentários|  
 |-----------------------------------------------------------------------|-------------|  
-|STATE_SYSTEM_BUSY|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_DEFAULT|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_ANIMATED|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_BUSY|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_DEFAULT|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_ANIMATED|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_EXTSELECTABLE|Não amplamente implementado por servidores Acessibilidade Ativa|  
 |STATE_SYSTEM_MARQUEED|Não amplamente implementado por servidores Acessibilidade Ativa|  
 |STATE_SYSTEM_SELFVOICING|Não amplamente implementado por servidores Acessibilidade Ativa|  
-|STATE_SYSTEM_TRAVERSED|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_TRAVERSED|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_ALERT_HIGH|Não amplamente implementado por servidores Acessibilidade Ativa|  
 |STATE_SYSTEM_ALERT_MEDIUM|Não amplamente implementado por servidores Acessibilidade Ativa|  
 |STATE_SYSTEM_ALERT_LOW|Não amplamente implementado por servidores Acessibilidade Ativa|  
 |STATE_SYSTEM_FLOATING|Não amplamente implementado por servidores Acessibilidade Ativa|  
-|STATE_SYSTEM_HOTTRACKED|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
-|STATE_SYSTEM_PRESSED|Não disponível em[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_HOTTRACKED|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
+|STATE_SYSTEM_PRESSED|Não disponível em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- Para obter uma lista completa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de identificadores de propriedade, consulte [visão geral das propriedades de automação da interface do usuário](ui-automation-properties-overview.md).  
+ Para obter uma lista completa de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] identificadores de propriedade, consulte [visão geral das propriedades de automação da interface do usuário](ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>   
-## <a name="events"></a>Events  
- O mecanismo de eventos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]no, diferentemente do acessibilidade ativa, não depende do roteamento de eventos do Windows (que está fortemente ligado com identificadores de janela) e não requer que o aplicativo cliente configure os ganchos. As assinaturas para eventos podem ser ajustadas não apenas a eventos específicos, mas a partes específicas da árvore. Os provedores também podem ajustar sua geração de eventos mantendo o controle de quais eventos estão sendo ouvidos.  
+## <a name="events"></a>Eventos  
+ O mecanismo de eventos no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], diferentemente do em Acessibilidade Ativa, não depende do roteamento de eventos do Windows (que está fortemente ligado com identificadores de janela) e não requer que o aplicativo cliente configure os ganchos. As assinaturas para eventos podem ser ajustadas não apenas a eventos específicos, mas a partes específicas da árvore. Os provedores também podem ajustar sua geração de eventos mantendo o controle de quais eventos estão sendo ouvidos.  
   
  Também é mais fácil para os clientes recuperarem os elementos que geram eventos, pois eles são passados diretamente para o retorno de chamada do evento. As propriedades do elemento serão previamente buscadas automaticamente se uma solicitação de cache estava ativa quando o cliente assinou o evento.  
   
- A tabela a seguir mostra a correspondência de acessibilidade ativa WinEvents [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e eventos.  
+ A tabela a seguir mostra a correspondência dos eventos Acessibilidade Ativa WinEvents e [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-|WinEvent|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]identificador de evento|  
+|WinEvent|identificador de evento de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |--------------|--------------------------------------------------------------------------------------------|  
-|EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>alteração de propriedade|  
-|EVENT_OBJECT_CONTENTSCROLLED|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>ou <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> alteração de propriedade nas barras de rolagem associadas|  
+|EVENT_OBJECT_ACCELERATORCHANGE|alteração da propriedade <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|  
+|EVENT_OBJECT_CONTENTSCROLLED|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> ou <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> alteração de propriedade nas barras de rolagem associadas|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_DEFACTIONCHANGE|Não há equivalência|  
-|EVENT_OBJECT_DESCRIPTIONCHANGE|Nenhum equivalente exato; alteração <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> de <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> talvez ou propriedade|  
+|EVENT_OBJECT_DESCRIPTIONCHANGE|Nenhum equivalente exato; Talvez <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> ou <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> alteração da propriedade|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
-|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>alteração|  
+|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> alterar|  
 |EVENT_OBJECT_HIDE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
-|EVENT_OBJECT_LOCATIONCHANGE|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>alteração de propriedade|  
-|EVENT_OBJECT_NAMECHANGE|<xref:System.Windows.Automation.AutomationElement.NameProperty>alteração de propriedade|  
+|EVENT_OBJECT_LOCATIONCHANGE|alteração da propriedade <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|  
+|EVENT_OBJECT_NAMECHANGE|alteração da propriedade <xref:System.Windows.Automation.AutomationElement.NameProperty>|  
 |EVENT_OBJECT_PARENTCHANGE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_REORDER|Não é usado de forma consistente em Acessibilidade Ativa. Nenhum evento correspondente diretamente está definido em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |EVENT_OBJECT_SELECTION|<xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>|  
@@ -207,7 +207,7 @@ ms.locfileid: "71042590"
 |EVENT_OBJECT_SELECTIONWITHIN|Não há equivalência|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Vários eventos de alteração de propriedade|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>e <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> alterado|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> e <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> alterado|  
 |EVENT_SYSTEM_ALERT|Não há equivalência|  
 |EVENT_SYSTEM_CAPTUREEND|Não há equivalência|  
 |EVENT_SYSTEM_CAPTURESTART|Não há equivalência|  
@@ -222,32 +222,32 @@ ms.locfileid: "71042590"
 |EVENT_SYSTEM_MENUPOPUPEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
 |EVENT_SYSTEM_MENUPOPUPSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
 |EVENT_SYSTEM_MENUSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
-|EVENT_SYSTEM_MINIMIZEEND|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>alteração de propriedade|  
-|EVENT_SYSTEM_MINIMIZESTART|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>alteração de propriedade|  
-|EVENT_SYSTEM_MOVESIZEEND|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>alteração de propriedade|  
-|EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>alteração de propriedade|  
-|EVENT_SYSTEM_SCROLLINGEND|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>ou <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> alteração de propriedade|  
-|EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>ou <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> alteração de propriedade|  
+|EVENT_SYSTEM_MINIMIZEEND|alteração da propriedade <xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
+|EVENT_SYSTEM_MINIMIZESTART|alteração da propriedade <xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
+|EVENT_SYSTEM_MOVESIZEEND|alteração da propriedade <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|  
+|EVENT_SYSTEM_MOVESIZESTART|alteração da propriedade <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|  
+|EVENT_SYSTEM_SCROLLINGEND|alteração de propriedade <xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> ou <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
+|EVENT_SYSTEM_SCROLLINGSTART|alteração de propriedade <xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> ou <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
 |EVENT_SYSTEM_SOUND|Não há equivalência|  
-|EVENT_SYSTEM_SWITCHEND|Nenhum equivalente, mas um <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> evento sinaliza que um novo aplicativo recebeu o foco|  
+|EVENT_SYSTEM_SWITCHEND|Nenhum equivalente, mas um evento <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> sinaliza que um novo aplicativo recebeu o foco|  
 |EVENT_SYSTEM_SWITCHSTART|Não há equivalência|  
-|Não há equivalência|<xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty>alteração de propriedade|  
-|Não há equivalência|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>alteração de propriedade|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.MultipleViewPattern.CurrentViewProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.HorizontallyScrollableProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.VerticallyScrollableProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty>|  
+|Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
 |Não há equivalência|Evento <xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent>|  
 |Não há equivalência|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   
 ## <a name="security"></a>Segurança  
- Alguns `IAccessible` cenários de personalização exigem o encapsulamento de uma base `IAccessible` e a chamada a ele. Isso tem implicações de segurança, pois um componente parcialmente confiável não deve ser um intermediário em um caminho de código.  
+ Alguns cenários de personalização `IAccessible` exigem o encapsulamento de um `IAccessible` base e a chamada a ele. Isso tem implicações de segurança, pois um componente parcialmente confiável não deve ser um intermediário em um caminho de código.  
   
- O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modelo elimina a necessidade de provedores chamarem para outro código de provedor. O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] serviço principal faz toda a agregação necessária.  
+ O modelo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] remove a necessidade de provedores chamarem para outro código de provedor. O serviço do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Core faz toda a agregação necessária.  
   
 ## <a name="see-also"></a>Consulte também
 

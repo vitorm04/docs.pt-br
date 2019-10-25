@@ -3,16 +3,14 @@ title: Associações e transportes do WCF – gRPC para desenvolvedores do WCF
 description: Saiba como as diferentes associações e transportes do WCF se comparam ao gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771604"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846049"
 ---
 # <a name="wcf-bindings-and-transports"></a>Associações e transportes do WCF
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 O WCF tem muitas *associações* internas diferentes que especificam diferentes protocolos de rede, formatos de conexão e outros detalhes de implementação. gRPC efetivamente tem apenas um protocolo de rede e um formato de conexão (tecnicamente, o formato de conexão *pode* ser personalizado, mas isso está além do escopo deste livro). É provável que você descubra que o gRPC oferece a melhor solução na maioria dos casos. O que vem a seguir é uma breve discussão sobre as associações do WCF mais relevantes e como elas se comparam com o equivalente em gRPC.
 

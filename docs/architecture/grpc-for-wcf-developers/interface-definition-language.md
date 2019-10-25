@@ -3,16 +3,14 @@ title: Linguagem de definição de interface-gRPC para desenvolvedores do WCF
 description: Apresentando os buffers de protocolo IDL.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 71bdf8bf488e0a5bed177817343051bcd7847d25
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 00c73619c5c27003e200385d5f67d8b8b7546f9e
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184424"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846644"
 ---
-# <a name="interface-definition-language"></a>Linguagem de definição de interface
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="interface-definition-language"></a>Linguagem IDL
 
 Com o WCF, os serviços podem expor metadados de descrição usando o WSDL (Web Service Definition Language), que é gerado dinamicamente usando a reflexão do .NET em tempo de execução. Os desenvolvedores podem usar esses metadados para gerar clientes para esses serviços, potencialmente em outras linguagens se uma associação de plataforma neutra, como SOAP sobre HTTP, for usada.
 
@@ -20,7 +18,7 @@ gRPC usa o IDL (Interface Definition Language) dos buffers de protocolo. Os buff
 
 Uma das vantagens da Protobuf IDL é que, como uma linguagem personalizada, ela permite que o gRPC seja completamente independente de linguagem e plataforma, não favorecendo nenhuma tecnologia sobre outra.
 
-O Protobuf IDL também é projetado para os seres humanos para leitura e gravação, enquanto o WSDL é destinado a um formato legível por máquina/gravável. A alteração do WSDL de um serviço WCF normalmente requer a realização das alterações no próprio código do serviço, na execução do serviço e na regeneração do arquivo WSDL a partir do servidor. Por outro lado, com `.proto` um arquivo, as alterações são simples de se aplicar a um editor de texto e fluir automaticamente pelo código gerado. O Visual Studio 2019 `.proto` compila arquivos em segundo plano quando eles são salvos; ao usar outros editores, como vs Code as alterações serão aplicadas quando o projeto for compilado.
+O Protobuf IDL também é projetado para os seres humanos para leitura e gravação, enquanto o WSDL é destinado a um formato legível por máquina/gravável. A alteração do WSDL de um serviço WCF normalmente requer a realização das alterações no próprio código do serviço, na execução do serviço e na regeneração do arquivo WSDL a partir do servidor. Por outro lado, com um arquivo de `.proto`, as alterações são simples de aplicar a um editor de texto e fluem automaticamente pelo código gerado. O Visual Studio 2019 compila `.proto` arquivos em segundo plano quando eles são salvos; ao usar outros editores, como VS Code, as alterações serão aplicadas quando o projeto for compilado.
 
 Quando comparado com XML e particularmente SOAP, mensagens codificadas usando Protobuf têm muitas vantagens. As mensagens Protobuf tendem a ser menores do que os mesmos dados serializados como XML SOAP, e codificar, decodificá-los e transmiti-los por meio de uma rede podem ser mais rápidos.
 

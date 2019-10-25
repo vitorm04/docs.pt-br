@@ -3,16 +3,14 @@ title: Comparando o WCF com o gRPC-gRPC para desenvolvedores do WCF
 description: Uma comparação das estruturas do WCF e do gRPC para a criação de aplicativos distribuídos.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: c763048d09e7ed5ca0a3d5240f6b3cf5262f897c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5ab1380d4ded52abff08c35c430adf2f3ed7c58b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184039"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846063"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Comparando o WCF com o gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 O capítulo anterior deve ter dado a você uma boa visão do Protobuf e como o gRPC lida com as mensagens. Antes de trabalhar em uma conversão detalhada do WCF para o gRPC, é importante observar como a variedade de recursos disponíveis atualmente no WCF é tratada em gRPC e quais soluções alternativas você pode usar quando não parece haver um equivalente gRPC. Em particular, este capítulo abordará os seguintes assuntos:
 
@@ -21,11 +19,11 @@ O capítulo anterior deve ter dado a você uma boa visão do Protobuf e como o g
 - Tipos de RPC
 - Metadados
 - Tratamento de erros
-- WS-\* Protocols
+- Protocolos WS-\*
 
 ## <a name="grpc-example"></a>exemplo de gRPC
 
-Quando você cria um novo projeto ASP.NET Core 3,0 gRPC no Visual Studio 2019 ou na linha de comando, o equivalente de gRPC de "Olá, Mundo" é gerado para você. Ele consiste em um `greeter.proto` arquivo que define o serviço e suas mensagens, e um `GreeterService.cs` arquivo com uma implementação do serviço.
+Quando você cria um novo projeto ASP.NET Core 3,0 gRPC no Visual Studio 2019 ou na linha de comando, o equivalente de gRPC de "Olá, Mundo" é gerado para você. Ele consiste em um arquivo de `greeter.proto` que define o serviço e suas mensagens, e um arquivo de `GreeterService.cs` com uma implementação do serviço.
 
 ```protobuf
 syntax = "proto3";

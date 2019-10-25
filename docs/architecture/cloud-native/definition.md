@@ -3,12 +3,12 @@ title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315938"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846735"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -95,7 +95,7 @@ No livro, [além do aplicativo de doze fatores](https://content.pivotal.io/blog
 
 |    |  Novo fator | Explicação  |
 | :-------- | :-------- | :-------- |
-| 13 | Primeiro API | Tornar tudo um serviço. Suponha que seu código será consumido por um cliente front-end. Gateway ou outro serviço. |
+| 13 | Primeiro API | Tornar tudo um serviço. Suponha que seu código será consumido por um cliente front-end, um gateway ou outro serviço. |
 | 14 | Telemetria | Em uma estação de trabalho, você tem visibilidade profunda do seu aplicativo e seu comportamento. Na nuvem, você não tem. Verifique se o design inclui a coleção de dados de monitoramento, específicos do domínio e de integridade/sistema. |
 | 15 | Autenticação/autorização  | Implemente a identidade desde o início. Considere os recursos de [RBAC (controle de acesso baseado em função)](https://docs.microsoft.com/azure/role-based-access-control/overview) disponíveis em nuvens públicas.  |
 

@@ -3,18 +3,16 @@ title: Tratamento de erro-gRPC para desenvolvedores do WCF
 description: A SER ESCRITO
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3535a00aad49f532eb5f5f778116454a12bfd639
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 2ef1a0b38d9b63af7244c6e0428c9adbcb1d6527
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184452"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846668"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-O WCF `FaultException<T>` usa `FaultContract` e para fornecer informações detalhadas de erro, incluindo suporte ao padrão de falha de SOAP.
+O WCF usa `FaultException<T>` e `FaultContract` para fornecer informações detalhadas de erro, incluindo suporte ao padrão de falha SOAP.
 
 Infelizmente, a versão atual do gRPC não tem a sofisticação encontrada com o WCF e só tem tratamento de erro interno limitado com base em códigos de status e metadados simples. A tabela a seguir é um guia rápido para os códigos de status mais usados:
 
@@ -30,7 +28,7 @@ Infelizmente, a versão atual do gRPC não tem a sofisticação encontrada com o
 
 ## <a name="raising-errors-in-aspnet-core-grpc"></a>Gerando erros no ASP.NET Core gRPC
 
-Um serviço gRPC do ASP.NET Core pode enviar uma resposta de erro lançando um `RpcException`, que pode ser capturado pelo cliente como se estivesse no mesmo processo. O `RpcException` deve incluir um código de status e uma descrição e pode, opcionalmente, incluir metadados e uma mensagem de exceção mais longa. Os metadados podem ser usados para enviar dados de suporte, de forma `FaultContract` semelhante a como os objetos podem transportar dados adicionais para erros do WCF.
+Um serviço gRPC do ASP.NET Core pode enviar uma resposta de erro lançando um `RpcException`, que pode ser capturado pelo cliente como se estivesse no mesmo processo. O `RpcException` deve incluir um código de status e uma descrição e pode, opcionalmente, incluir metadados e uma mensagem de exceção mais longa. Os metadados podem ser usados para enviar dados de suporte, de forma semelhante a como `FaultContract` objetos podem transportar dados adicionais para erros do WCF.
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -49,7 +47,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 
 ## <a name="catching-errors-in-grpc-clients"></a>Capturando erros em clientes gRPC
 
-Assim como os clientes WCF podem <xref:System.ServiceModel.FaultException%601> capturar erros, um cliente gRPC pode capturar `RpcException` um para lidar com erros. Como `RpcException` não é um tipo genérico, você não pode capturar tipos de erro diferentes em blocos diferentes, mas C#você pode usar o recurso de filtros `catch` de *exceção* para declarar blocos separados para códigos de status diferentes, conforme mostrado a seguir exemplo
+Assim como os clientes WCF podem capturar erros de <xref:System.ServiceModel.FaultException%601>, um cliente gRPC pode capturar uma `RpcException` para lidar com erros. Como `RpcException` não é um tipo genérico, você não pode capturar tipos de erro diferentes em blocos diferentes, mas C#você pode usar o recurso de *filtros de exceção* para declarar blocos de`catch`separados para códigos de status diferentes, conforme mostrado no exemplo a seguir:
 
 ```csharp
 try
@@ -68,7 +66,7 @@ catch (RpcException)
 ```
 
 > [!IMPORTANT]
-> Ao fornecer metadados adicionais para erros, certifique-se de documentar as chaves e os valores relevantes na documentação da API ou em comentários em `.proto` seu arquivo.
+> Ao fornecer metadados adicionais para erros, certifique-se de documentar as chaves e os valores relevantes na documentação da API ou em comentários no arquivo de `.proto`.
 
 ## <a name="grpc-richer-error-model"></a>Modelo de erro gRPC mais rico
 

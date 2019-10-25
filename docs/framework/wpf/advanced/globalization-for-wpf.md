@@ -97,7 +97,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - Mongol
 
-- Odia
+- Oriá
 
 - Siríaco
 

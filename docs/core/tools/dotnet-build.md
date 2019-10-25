@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
-ms.date: 10/07/2019
-ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.date: 10/14/2019
+ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522781"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846823"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -32,9 +32,17 @@ dotnet build [-h|--help]
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet build` compila o projeto e suas dependências em um conjunto de binários. Os binários incluem o código do projeto em IL (Linguagem Intermediária) com uma extensão *.dll* e arquivos de símbolo usados para depuração com uma extensão *.pdb*. Um arquivo JSON de dependências ( *.deps.json*) é produzido listando as dependências do aplicativo. Um arquivo *.runtimeconfig.json* é produzido e especifica o tempo de execução compartilhado e sua versão do aplicativo.
+O comando `dotnet build` compila o projeto e suas dependências em um conjunto de binários. Os binários incluem o código do projeto em arquivos de IL (linguagem intermediária) com uma extensão *. dll* .  Dependendo do tipo de projeto e das configurações, outros arquivos podem ser incluídos, como:
 
-Se o projeto tiver dependências de terceiros, como bibliotecas do NuGet, elas serão resolvidas no cache NuGet e não estarão disponíveis com a saída de build do projeto. Com isso em mente, o produto de `dotnet build` não está pronto para ser transferido para outro computador para execução. Isso é diferente do comportamento do .NET Framework, no qual compilar um projeto executável (um aplicativo) produz uma saída executável em qualquer computador que tenha o .NET Framework instalado. Para ter uma experiência semelhante com o .NET Core, é necessário usar o comando [dotnet publish](dotnet-publish.md). Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md).
+- Um executável que pode ser usado para executar o aplicativo, se o tipo de projeto for um executável direcionado ao .NET Core 3,0 ou posterior.
+- Arquivos de símbolo usados para depuração com uma extensão *. pdb* .
+- Um arquivo *. deps. JSON* , que lista as dependências do aplicativo ou da biblioteca.
+- Um arquivo *. runtimeconfig. JSON* , que especifica o tempo de execução compartilhado e sua versão para um aplicativo.
+- Outras bibliotecas das quais o projeto depende (por meio de referências de projeto ou referências de pacote NuGet).
+
+Para projetos executáveis que visam versões anteriores ao .NET Core 3,0, as dependências de biblioteca do NuGet normalmente não são copiadas para a pasta de saída.  Eles são resolvidos na pasta de pacotes globais do NuGet em tempo de execução. Com isso em mente, o produto de `dotnet build` não está pronto para ser transferido para outro computador para execução. Para criar uma versão do aplicativo que pode ser implantada, você precisa publicá-la (por exemplo, com o comando [dotnet Publish](dotnet-publish.md) ). Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md).
+
+Para projetos executáveis destinados ao .NET Core 3,0 e posterior, as dependências de biblioteca são copiadas para a pasta de saída. Isso significa que, se não houver nenhuma outra lógica específica de publicação (como os projetos Web têm), a saída da compilação deverá ser implantável.
 
 A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo. O arquivo é criado quando [`dotnet restore`](dotnet-restore.md) é executado. Sem o arquivo de ativos em vigor, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros. Com o SDK do .NET Core 1. x, você precisava executar explicitamente `dotnet restore` antes de executar `dotnet build`. Começando pelo SDK do .NET Core 2.0, o `dotnet restore` é executado implicitamente quando você executa `dotnet build`. Se você deseja desabilitar a restauração implícita ao executar o comando de build, é possível passar a opção `--no-restore`.
 
@@ -48,7 +56,7 @@ O fato de o projeto ser executável ou não é determinado pela propriedade `<Ou
 </PropertyGroup>
 ```
 
-Para produzir uma biblioteca, omita a propriedade `<OutputType>`. A diferença principal na saída da compilação é que a DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.
+Para produzir uma biblioteca, omita a propriedade `<OutputType>` ou altere seu valor para `Library`. A DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -56,7 +64,7 @@ O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte 
 
 Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `-p` para configurar propriedades ou `-l` para definir um agente. Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Ou você também pode usar o comando [dotnet msbuild](dotnet-msbuild.md).
 
-A execução de `dotnet build` é equivalente a `dotnet msbuild -restore -target:Build`.
+A execução de `dotnet build` é equivalente à execução de `dotnet msbuild -restore`; no entanto, o detalhamento padrão da saída é diferente.
 
 ## <a name="arguments"></a>Arguments
 
@@ -104,7 +112,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Diretório no qual os binários compilados são colocados. Você também precisa definir `--framework` ao especificar essa opção. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.
+  Diretório no qual os binários compilados são colocados. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio da propriedade `TargetFrameworks`), você também precisa definir `--framework` ao especificar essa opção.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 

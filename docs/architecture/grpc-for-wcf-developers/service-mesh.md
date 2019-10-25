@@ -3,16 +3,14 @@ title: Malhas de serviço-gRPC para desenvolvedores do WCF
 description: Usar uma malha de serviço para rotear e balancear solicitações para serviços gRPC em um cluster kubernetes.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7fc80b95937dab9153b72aa6bc8da90f6453779f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 18c12af787f32988bbf17b1561d4ba1fb4deaf41
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184088"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846045"
 ---
 # <a name="service-meshes"></a>Malhas de serviço
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Uma malha de serviço é um componente de infraestrutura que assume o controle das solicitações de serviço de roteamento em uma rede. As malhas de serviço podem lidar com todos os tipos de preocupações de nível de rede dentro de um cluster kubernetes, incluindo:
 
@@ -24,7 +22,7 @@ Uma malha de serviço é um componente de infraestrutura que assume o controle d
 
 As malhas do serviço kubernetes funcionam adicionando um contêiner extra, chamado *proxy sidecar*, a cada pod incluído na malha. O proxy assume o tratamento de todas as solicitações de rede de entrada e saída, permitindo que a configuração e o gerenciamento de rede sejam mantidos separados dos contêineres de aplicativos e, em muitos casos, sem a necessidade de qualquer alteração no código do aplicativo.
 
-Pegue o [exemplo do capítulo anterior](kubernetes.md#testing-the-application), em que as solicitações gRPC do aplicativo Web foram todas roteadas para uma única instância do serviço gRPC. Isso acontece porque o nome de host do serviço é resolvido para um endereço IP e esse endereço IP é armazenado em cache durante o tempo `HttpClientHandler` de vida da instância. Pode ser possível contornar isso tratando as pesquisas de DNS manualmente ou criando vários clientes, mas isso complicaria consideravelmente o código do aplicativo sem adicionar nenhum valor comercial ou de cliente.
+Pegue o [exemplo do capítulo anterior](kubernetes.md#testing-the-application), em que as solicitações gRPC do aplicativo Web foram todas roteadas para uma única instância do serviço gRPC. Isso acontece porque o nome de host do serviço é resolvido para um endereço IP e esse endereço IP é armazenado em cache durante o tempo de vida da instância de `HttpClientHandler`. Pode ser possível contornar isso tratando as pesquisas de DNS manualmente ou criando vários clientes, mas isso complicaria consideravelmente o código do aplicativo sem adicionar nenhum valor comercial ou de cliente.
 
 Usando uma malha de serviço, as solicitações do contêiner de aplicativo são enviadas para o proxy sidecar, que pode distribuí-las de forma inteligente em todas as instâncias do outro serviço. A malha também pode:
 
@@ -32,11 +30,11 @@ Usando uma malha de serviço, as solicitações do contêiner de aplicativo são
 - Manipular semânticas de repetição para chamadas com falha ou tempos limite
 - Redirecionar solicitações com falha para uma instância alternativa sem retornar ao aplicativo cliente.
 
-A captura de tela a seguir mostra o aplicativo StockWeb em execução com a malha de serviço do Linkerd, sem alterações no código do aplicativo ou até mesmo a imagem do Docker que está sendo usada. A única alteração necessária foi a adição de uma anotação à implantação nos arquivos YAML para os `stockdata` serviços e. `stockweb`
+A captura de tela a seguir mostra o aplicativo StockWeb em execução com a malha de serviço do Linkerd, sem alterações no código do aplicativo ou até mesmo a imagem do Docker que está sendo usada. A única alteração necessária foi a adição de uma anotação à implantação nos arquivos YAML para os serviços de `stockdata` e `stockweb`.
 
 ![StockWeb com malha de serviço](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-Você pode ver na coluna servidor que as solicitações do aplicativo StockWeb foram roteadas para ambas as réplicas do serviço StockData, apesar de serem originadas de uma única `HttpClient` instância no código do aplicativo. Na verdade, se você examinar o código, verá que todas as solicitações de 100 para o serviço StockData são feitas simultaneamente usando a mesma `HttpClient` instância, mas com a malha de serviço, essas solicitações serão balanceadas em todas as instâncias de serviço, no entanto, estão disponíveis.
+Você pode ver na coluna servidor que as solicitações do aplicativo StockWeb foram roteadas para ambas as réplicas do serviço StockData, apesar de serem originadas de uma única instância de `HttpClient` no código do aplicativo. Na verdade, se você examinar o código, verá que todas as solicitações de 100 para o serviço StockData são feitas simultaneamente usando a mesma instância de `HttpClient`, mas com a malha de serviço, essas solicitações serão balanceadas em todas as instâncias de serviço, no entanto, estão disponíveis.
 
 As malhas de serviço se aplicam somente ao tráfego em um cluster. Para clientes externos, consulte [o próximo capítulo, balanceamento de carga](load-balancing.md).
 
@@ -65,7 +63,7 @@ Com a CLI do Linkerd instalada, siga as instruções [*introdução* no site da 
 
 ### <a name="add-linkerd-to-kubernetes-deployments"></a>Adicionar Linkerd a implantações do kubernetes
 
-A CLI do Linkerd fornece `inject` um comando para adicionar as seções e propriedades necessárias aos arquivos kubernetes. Você pode executar o comando e gravar a saída em um novo arquivo.
+A CLI do Linkerd fornece um comando `inject` para adicionar as seções e propriedades necessárias aos arquivos kubernetes. Você pode executar o comando e gravar a saída em um novo arquivo.
 
 ```console
 linkerd inject stockdata.yml > stockdata-with-mesh.yml
@@ -74,7 +72,7 @@ linkerd inject stockweb.yml > stockweb-with-mesh.yml
 
 Você pode inspecionar os novos arquivos para ver quais alterações foram feitas. Para objetos de implantação, uma anotação de metadados é adicionada para informar ao Linkerd para injetar um contêiner de proxy sidecar no pod quando ele é criado.
 
-Também é possível canalizar a saída do `linkerd inject` `kubectl` comando diretamente. Os comandos a seguir funcionarão no PowerShell ou em qualquer shell do Linux.
+Também é possível canalizar a saída do comando `linkerd inject` para `kubectl` diretamente. Os comandos a seguir funcionarão no PowerShell ou em qualquer shell do Linux.
 
 ```console
 linkerd inject stockdata.yml | kubectl apply -f -
@@ -83,7 +81,7 @@ linkerd inject stockweb.yml | kubectl apply -f -
 
 ### <a name="inspect-services-in-the-linkerd-dashboard"></a>Inspecionar serviços no painel do Linkerd
 
-Inicie o painel do Linkerd usando `linkerd` a CLI.
+Inicie o painel do Linkerd usando a CLI do `linkerd`.
 
 ```console
 linkerd dashboard

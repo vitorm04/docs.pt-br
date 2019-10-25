@@ -3,16 +3,14 @@ title: Protocolos de rede-gRPC para desenvolvedores do WCF
 description: Uma visão geral dos protocolos de rede gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: a176d3e84f5f454f746273c9cc7e7afe7c7f9d8a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cf99b2608d576765856c992679b93b6f21e796cf
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184284"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846393"
 ---
 # <a name="network-protocols"></a>Protocolos de rede
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ao contrário do WCF, o gRPC usa HTTP/2 como base para sua rede. Isso oferece vantagens significativas em relação ao WCF e ao SOAP, que operam apenas no HTTP/1.1. Para os desenvolvedores que desejam usar o gRPC, Considerando que não há nenhuma alternativa ao HTTP/2, parece ser o momento ideal para explorar o HTTP/2 mais detalhadamente e identificar benefícios adicionais ao usar o gRPC.
 

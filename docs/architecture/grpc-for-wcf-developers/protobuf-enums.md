@@ -3,16 +3,14 @@ title: Enumerações Protobuf-gRPC para desenvolvedores do WCF
 description: Saiba como declarar e usar enumerações no Protobuf.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 37fd55e4cbc3c1e1e96e32875ddb3dcae0ca8355
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771642"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846349"
 ---
 # <a name="protobuf-enumerations"></a>Enumerações de Protobuf
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 O Protobuf dá suporte a tipos de enumeração, como visto na seção anterior, em que uma enumeração foi usada para determinar o tipo de um campo de `oneof`. Você pode definir seus próprios tipos de enumeração e Protobuf irá compilá- C# los para tipos de enumeração. Como Protobuf pode ser usado com idiomas diferentes, as convenções de nomenclatura para enumerações são diferentes das C# convenções. No entanto, o gerador de código é inteligente e converte os nomes C# para o caso tradicional. Se o equivalente ao caso do Pascal do nome do campo começar com o nome da enumeração, ele será removido.
 
@@ -41,7 +39,7 @@ public enum AccountStatus
 }
 ```
 
-As definições de enumeração Protobuf **devem** ter uma constante zero como seu primeiro campo. Como no C#, você pode declarar vários campos com o mesmo valor, mas você deve habilitar explicitamente essa opção usando a opção `allow_alias` na enumeração:
+As definições de enumeração Protobuf **devem** ter uma constante zero como seu primeiro campo. Como no C#, você pode declarar vários campos com o mesmo valor, mas você deve habilitar explicitamente essa opção usando a opção`allow_alias`na enumeração:
 
 ```protobuf
 enum AccountStatus {

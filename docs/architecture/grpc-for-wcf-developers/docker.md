@@ -3,16 +3,14 @@ title: Docker-gRPC para desenvolvedores do WCF
 description: Criando imagens do Docker para aplicativos ASP.NET Core gRPC
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2ed3e823c83d8f11fb7290ba6c343b4b47e68e0b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770543"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846679"
 ---
 # <a name="docker"></a>Docker
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Esta seção abordará a criação de imagens do Docker para aplicativos ASP.NET Core gRPC, pronta para execução no Docker, kubernetes ou outros ambientes de contêiner. O aplicativo de exemplo usado, com um ASP.NET Core aplicativo Web MVC e um serviço gRPC, está disponível no repositório [dotnet-Architecture/gRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) no github.
 

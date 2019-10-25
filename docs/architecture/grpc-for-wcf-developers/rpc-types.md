@@ -3,16 +3,14 @@ title: Tipos de RPC-gRPC para desenvolvedores do WCF
 description: Uma revisão dos tipos de chamada de procedimento remoto com suporte pelo WCF e seus equivalentes no gRPC
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4fed4ca7fa4ae6a0f861185719917ff0ed5929fd
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184158"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846227"
 ---
 # <a name="types-of-rpc"></a>Tipos de RPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Como desenvolvedor de Windows Communication Foundation (WCF), você provavelmente está acostumado a lidar com os seguintes tipos de RPC (chamada de procedimento remoto):
 
@@ -60,11 +58,11 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-Como você pode ver, a implementação de um método de serviço RPC unário gRPC é muito semelhante à implementação de uma operação do WCF, exceto pelo fato de que com gRPC você substitui um método de classe base em vez de implementar uma interface. Observe que, no servidor, os métodos de base gRPC sempre <xref:System.Threading.Tasks.Task%601>retornam um, embora o cliente forneça métodos assíncronos e de bloqueio para chamar o serviço.
+Como você pode ver, a implementação de um método de serviço RPC unário gRPC é muito semelhante à implementação de uma operação do WCF, exceto pelo fato de que com gRPC você substitui um método de classe base em vez de implementar uma interface. Observe que, no servidor, os métodos de base gRPC sempre retornam um <xref:System.Threading.Tasks.Task%601>, embora o cliente forneça métodos assíncronos e de bloqueio para chamar o serviço.
 
 ## <a name="wcf-duplex-one-way-to-client"></a>WCF duplex, unidirecional para cliente
 
-Os aplicativos WCF (com determinadas associações) podem criar uma conexão persistente entre cliente e servidor, e o servidor pode enviar dados de forma assíncrona para o cliente até que a conexão seja fechada, usando uma interface <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> de retorno de *chamada* especificada no Propriedade.
+Os aplicativos WCF (com determinadas associações) podem criar uma conexão persistente entre cliente e servidor, e o servidor pode enviar dados de forma assíncrona para o cliente até que a conexão seja fechada, usando uma *interface de retorno de chamada* especificada no <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> Propriedade.
 
 os serviços gRPCs fornecem funcionalidade semelhante com fluxos de mensagens. Os fluxos não são mapeados *exatamente* para os serviços do WCF duplex em termos de implementação, mas os mesmos resultados podem ser obtidos.
 
@@ -116,7 +114,7 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> As RPCs de streaming de servidor são úteis para serviços de estilo de assinatura e também para enviar conjuntos de grandes volumes de banco de altos quando eles seriam ineficientes ou impossíveis de criar todo o conjunto de linhas na memória. No entanto, as respostas de streaming não `repeated` são tão rápidas quanto enviar campos em uma única mensagem, portanto, como um streaming de regra não deve ser usado para pequenos conjuntos de valores.
+> As RPCs de streaming de servidor são úteis para serviços de estilo de assinatura e também para enviar conjuntos de grandes volumes de banco de altos quando eles seriam ineficientes ou impossíveis de criar todo o conjunto de linhas na memória. No entanto, as respostas de streaming não são tão rápidas quanto enviar `repeated` campos em uma única mensagem, portanto, como um streaming de regra não deve ser usado para pequenos conjuntos de linhas.
 
 ### <a name="differences-to-wcf"></a>Diferenças no WCF
 
@@ -190,11 +188,11 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-Novamente, as RPCs de streaming do cliente podem ser usadas para mensagens de incêndio e esquecer, conforme mostrado no exemplo anterior, mas também para enviar conjuntos de grandes volumes de clientes para o servidor. O mesmo aviso sobre o desempenho se aplica: para conjuntos de valores `repeated` menores, use campos em mensagens regulares.
+Novamente, as RPCs de streaming do cliente podem ser usadas para mensagens de incêndio e esquecer, conforme mostrado no exemplo anterior, mas também para enviar conjuntos de grandes volumes de clientes para o servidor. O mesmo aviso sobre o desempenho se aplica: para conjuntos de valores menores, use `repeated` campos em mensagens regulares.
 
 ## <a name="wcf-full-duplex-services"></a>Serviços Full duplex do WCF
 
-A associação duplex do WCF dá suporte a várias operações unidirecionais na interface do serviço e na interface de retorno de chamada do cliente, permitindo conversas contínuas entre o cliente e o servidor. o gRPC dá suporte a algo semelhante com RPCs de streaming bidirecional, em que ambos `stream` os parâmetros são marcados com o modificador.
+A associação duplex do WCF dá suporte a várias operações unidirecionais na interface do serviço e na interface de retorno de chamada do cliente, permitindo conversas contínuas entre o cliente e o servidor. o gRPC dá suporte a algo semelhante com RPCs de streaming bidirecional, em que ambos os parâmetros são marcados com o modificador de `stream`.
 
 ### <a name="chatproto"></a>chat. proto
 
@@ -229,7 +227,7 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-No exemplo anterior, você pode ver que o método de implementação recebe um fluxo de solicitação (`IAsyncStreamReader<MessageRequest>`) e um fluxo de resposta`IServerStreamWriter<MessageResponse>`() e pode ler e gravar mensagens até que a conexão seja fechada.
+No exemplo anterior, você pode ver que o método de implementação recebe um fluxo de solicitação (`IAsyncStreamReader<MessageRequest>`) e um fluxo de resposta (`IServerStreamWriter<MessageResponse>`) e pode ler e gravar mensagens até que a conexão seja fechada.
 
 ### <a name="chatter-client"></a>Cliente informativo
 

@@ -3,18 +3,16 @@ title: Campos repetidos para listas e matrizes-gRPC para desenvolvedores do WCF
 description: Entenda como as coleções são tratadas pelo Protobuf e como elas se relacionam com as coleções do .NET.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: ad06551bf3eaec795865af227815b78c9601d0db
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 740af8af39af9bf31be17ad831f481176e30d81f
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184179"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846316"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>Campos repetidos para listas e matrizes
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-As listas são especificadas em Protobuf usando `repeated` a palavra-chave Prefix. O exemplo a seguir mostra como criar uma lista:
+As listas são especificadas em Protobuf usando a palavra-chave de prefixo `repeated`. O exemplo a seguir mostra como criar uma lista:
 
 ```protobuf
 message Person {
@@ -23,7 +21,7 @@ message Person {
 }
 ```
 
-No código gerado, `repeated` os campos são representados `Google.Protobuf.Collections.RepeatedField<T>` pelo tipo genérico em vez de qualquer um dos tipos de coleção .net internos. O `RepeatedField<T>` tipo inclui o código necessário para serializar e desserializar a lista para o formato de fiação binária. Ele implementa todas as interfaces de coleção do .NET padrão <xref:System.Collections.Generic.IList%601> , <xref:System.Collections.Generic.IEnumerable%601>como e, para que você possa usar consultas LINQ ou convertê-las em uma matriz ou uma lista facilmente.
+No código gerado, `repeated` campos são representados pelo tipo genérico `Google.Protobuf.Collections.RepeatedField<T>` em vez de qualquer um dos tipos de coleção .NET internos. O tipo de `RepeatedField<T>` inclui o código necessário para serializar e desserializar a lista para o formato de fiação binária. Ele implementa todas as interfaces de coleção do .NET padrão, como <xref:System.Collections.Generic.IList%601> e <xref:System.Collections.Generic.IEnumerable%601>, para que você possa usar consultas LINQ ou convertê-las em uma matriz ou uma lista facilmente.
 
 >[!div class="step-by-step"]
 >[Anterior](protobuf-nested-types.md)

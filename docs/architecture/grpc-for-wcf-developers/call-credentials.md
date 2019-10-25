@@ -3,16 +3,14 @@ title: Credenciais de chamada-gRPC para desenvolvedores do WCF
 description: Como implementar e usar as credenciais de chamada do gRPC no ASP.NET Core 3,0.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 483f540a0ed3849883c07cc70f0e3d45a6b121ad
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184592"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846683"
 ---
-# <a name="call-credentials"></a>Chamar credenciais
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="call-credentials"></a>Credenciais de chamada
 
 As credenciais de chamada são todas baseadas em algum tipo de token passado em metadados com cada solicitação.
 
@@ -60,7 +58,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-A `IssuerSigningKey` propriedade requer uma implementação de `Microsoft.IdentityModels.Tokens.SecurityKey` com os dados criptográficos necessários para validar os tokens assinados. Esse token deve ser armazenado com segurança em um *servidor de segredos* , como o Azure keyvault.
+A propriedade `IssuerSigningKey` requer uma implementação de `Microsoft.IdentityModels.Tokens.SecurityKey` com os dados criptográficos necessários para validar os tokens assinados. Esse token deve ser armazenado com segurança em um *servidor de segredos* , como o Azure keyvault.
 
 Em seguida, adicione o serviço de autorização, que controla o acesso ao sistema.
 
@@ -79,7 +77,7 @@ Em seguida, adicione o serviço de autorização, que controla o acesso ao siste
 > [!TIP]
 > Autenticação e autorização são duas etapas separadas. A autenticação é usada para determinar a identidade do usuário. A autorização decide se esse usuário tem permissão para acessar várias partes do sistema.
 
-Agora, adicione o middleware de autenticação e autorização ao pipeline ASP.NET Core no `Configure` método.
+Agora, adicione o middleware de autenticação e autorização ao pipeline ASP.NET Core no método `Configure`.
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -102,7 +100,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-Por fim, aplique `[Authorize]` o atributo a qualquer serviço ou método a ser protegido e use a `User` Propriedade do subjacente `HttpContext` para verificar as permissões.
+Por fim, aplique o atributo `[Authorize]` a quaisquer serviços ou métodos a serem protegidos e use a propriedade `User` da `HttpContext` subjacente para verificar as permissões.
 
 ```csharp
 [Authorize]

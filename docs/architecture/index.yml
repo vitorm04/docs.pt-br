@@ -6,12 +6,14 @@ metadata:
   title: Diretrizes para Arquitetura de Aplicativos .NET
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
-  ms.date: 06/12/2019
+  ms.date: 10/22/2019
 abstract:
   description: Saiba como criar aplicativos .NET prontos para produção com diretrizes para arquitetura de aplicativos gratuitos.
 sections:
   - title: E-books publicados
     items:
+      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">ASP.NET Core gRPC para desenvolvedores do WCF</a></p>
+      - html: '<p>Este guia explica o que é o gRPC, relacionando cada conceito aos recursos equivalentes do WCF e oferece diretrizes para migrar um aplicativo WCF existente para o gRPC.</p></li></ul>'
       - html: <ul><li><p><a href="containerized-lifecycle/index">Ciclo de vida do aplicativo Docker em contêiner com a plataforma e as ferramentas da Microsoft</a></p>
       - html: '<p>Este guia é uma introdução aos processos de ciclo de vida de ponta a ponta recomendados que você usará para desenvolver, validar e implantar aplicativos em contêineres do Docker usando o Visual Studio e o Microsoft Azure.</p></li></ul>'
       - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure</a></p>
@@ -28,5 +30,3 @@ sections:
       - html: '<p>Este guia define o que é nativo na nuvem, apresenta um aplicativo de exemplo criado usando princípios nativos de nuvem e aborda os tópicos comuns à maioria dos aplicativos nativos de nuvem.</p></li></ul>'
       - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Mais incrivelmente para desenvolvedores de Web Forms ASP.NET</a></p>
       - html: <p>Uma introdução ao mais incrivelmente para desenvolvedores de ASP.NET Web Forms. Saiba como criar aplicativos Web de pilha completa com o .NET usando o mais alto nível e o .NET Core de uma maneira simples e familiar.</p></li></ul>
-      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">ASP.NET Core gRPC para desenvolvedores do WCF</a></p>
-      - html: '<p>Este guia explica o que é o gRPC, relacionando cada conceito aos recursos equivalentes do WCF e oferece diretrizes para migrar um aplicativo WCF existente para o gRPC.</p></li></ul>'

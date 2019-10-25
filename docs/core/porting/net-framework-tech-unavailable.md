@@ -2,18 +2,17 @@
 title: Tecnologias do .NET Framework não disponíveis no .NET Core
 description: Saiba mais sobre as tecnologias do .NET Framework que não estão disponíveis no .NET Core
 author: cartermp
-ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660597"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846810"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologias do .NET Framework não disponíveis no .NET Core
 
-Várias tecnologias disponíveis para as bibliotecas do .NET Framework não estão disponíveis para uso com o .NET Core, como AppDomains, Comunicação Remota, CAS (Segurança de acesso do código) e Transparência de segurança. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Se você quiser saber mais sobre compatibilidade de API, a equipe do CoreFX mantém uma [Lista de alterações comportamentais/quebras de compatibilidade e APIs preteridas/herdadas](https://github.com/dotnet/corefx/wiki/ApiCompat) no GitHub.
+Várias tecnologias disponíveis para as bibliotecas do .NET Framework não estão disponíveis para uso com o .NET Core, como AppDomains, Comunicação Remota, CAS (Segurança de acesso do código) e Transparência de segurança. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Para obter mais informações sobre compatibilidade de API, consulte o artigo [alterações significativas do .NET Core](../compatibility/breaking-changes.md) .
 
 Só porque uma API ou tecnologia não está implementada no momento, não significa que ela não tem suporte intencionalmente. Primeiro você deve pesquisar o .NET Core nos repositórios do GitHub para saber se um problema específico encontrado está relacionado ao design, mas se não encontrar esse tipo de indicação, envie um problema em [problemas no repositório dotnet/corefx](https://github.com/dotnet/corefx/issues) no GitHub para solicitar APIs e tecnologias específicas. [As solicitações de portabilidade nos problemas](https://github.com/dotnet/corefx/labels/port-to-core) são marcadas com o rótulo `port-to-core`.
 
@@ -29,7 +28,7 @@ A Comunicação Remota do .NET foi identificada como uma arquitetura problemáti
 
 Para comunicação entre processos, considere mecanismos IPC (comunicação entre processos) como uma alternativa à Comunicação Remota, tais como a classe <xref:System.IO.Pipes> ou <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
 
-Entre computadores, use uma solução baseada em rede como alternativa. De preferência, use um protocolo de texto sem formatação de sobrecarga baixa, como HTTP. O [servidor Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), o servidor Web usado pelo ASP.NET Core, é uma opção. Considere também o uso de <xref:System.Net.Sockets> para cenários entre computadores baseados em rede. Para obter mais opções, confira [Projetos de desenvolvedor de software livre do .NET: Mensagens](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
+Entre computadores, use uma solução baseada em rede como alternativa. De preferência, use um protocolo de texto sem formatação de sobrecarga baixa, como HTTP. O [servidor Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), o servidor Web usado pelo ASP.NET Core, é uma opção. Considere também o uso de <xref:System.Net.Sockets> para cenários entre computadores baseados em rede. Para ter mais opções, veja [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
 
 ## <a name="code-access-security-cas"></a>CAS (Segurança de Acesso do Código)
 

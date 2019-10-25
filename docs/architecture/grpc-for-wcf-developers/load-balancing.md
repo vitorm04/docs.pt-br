@@ -3,16 +3,14 @@ title: Balanceamento de carga gRPC-gRPC para desenvolvedores do WCF
 description: Escolhendo um balanceador de carga para trabalhar com os serviços gRPCs.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5d4a9be9b8f4e511a72af6b68d8a005604fd984d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 18965b9c4765ac693c6ba36ad3ea9848ce858a5c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184389"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846621"
 ---
 # <a name="load-balancing-grpc"></a>GRPC de balanceamento de carga
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Uma implantação típica de um aplicativo gRPC inclui várias instâncias idênticas do serviço, fornecendo resiliência e escalabilidade horizontal. Balanceamento de carga de solicitações de entrada distribuídas entre essas instâncias para fornecer uso total de todos os recursos disponíveis. Para tornar esse balanceamento de carga invisível para o cliente, é comum usar um servidor de balanceador de carga proxy para lidar com solicitações de clientes e roteá-las para instâncias de back-end.
 

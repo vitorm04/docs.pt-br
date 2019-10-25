@@ -3,28 +3,26 @@ title: serviços de streaming gRPC versus campos repetidos-gRPC para desenvolved
 description: Comparando campos repetidos aos serviços de streaming como maneiras de passar coleções de dados com gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7dc3c8f5bf2efc304da7d50661ba47db500e67a0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e48fe4882139e029dbf5b52451a2e68cb4316677
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184067"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846080"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>serviços de streaming gRPC versus campos repetidos
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-os serviços gRPCs fornecem duas maneiras de retornar conjuntos de valores ou listas de objetos. A especificação de mensagem buffers de protocolo `repeated` usa a palavra-chave para declarar listas ou matrizes de mensagens em outra mensagem. A especificação de serviço gRPC usa `stream` a palavra-chave para declarar uma conexão persistente de execução longa sobre a qual várias mensagens são enviadas e pode ser processada individualmente. O `stream` recurso também pode ser usado para dados temporais de longa execução, como notificações ou mensagens de log, mas este capítulo considerará seu uso para retornar um único conjunto de dado.
+os serviços gRPCs fornecem duas maneiras de retornar conjuntos de valores ou listas de objetos. A especificação de mensagem buffers de protocolo usa a palavra-chave `repeated` para declarar listas ou matrizes de mensagens em outra mensagem. A especificação de serviço gRPC usa a palavra-chave `stream` para declarar uma conexão persistente de longa execução sobre a qual várias mensagens são enviadas e pode ser processada individualmente. O recurso de `stream` também pode ser usado para dados temporais de longa execução, como notificações ou mensagens de log, mas este capítulo considerará seu uso para retornar um único conjunto.
 
 Que você deve usar depende de vários fatores, como o tamanho geral do conjunto de data, o tempo necessário para criar o conjunto de um cliente ou servidor de extremidade, e se o consumidor do conjunto de um pode começar a agir assim que o primeiro item estiver disponível ou precisa que o conjunto de dado completo faça algo útil.
 
-## <a name="when-to-use-repeated-fields"></a>Quando usar `repeated` campos
+## <a name="when-to-use-repeated-fields"></a>Quando usar campos de `repeated`
 
-Para qualquer conjunto de data restrito em tamanho e que possa ser gerado em sua totalidade em um curto tempo – digamos, em um segundo, você deve usar um `repeated` campo em uma mensagem Protobuf regular. Por exemplo, em um sistema de comércio eletrônico, para criar uma lista de itens em um pedido é provavelmente rápido e a lista não será muito grande. Retornar uma única mensagem com um `repeated` campo é uma ordem de magnitude mais rápida do que `stream` usar um e incorre em menos sobrecarga de rede.
+Para qualquer conjunto de data restrito em tamanho e que possa ser gerado em sua totalidade em um curto tempo – digamos, em um segundo, você deve usar um campo de `repeated` em uma mensagem de Protobuf comum. Por exemplo, em um sistema de comércio eletrônico, para criar uma lista de itens em um pedido é provavelmente rápido e a lista não será muito grande. Retornar uma única mensagem com um campo de `repeated` é uma ordem de magnitude mais rápido do que usar um `stream` e incorre em menos sobrecarga de rede.
 
-Se o cliente precisar de todos os dados antes de começar a processá-lo e se o conjunto for pequeno o suficiente para construir na `repeated` memória, considere usar um campo mesmo se a criação real do conjunto de dados na memória no servidor for mais lenta.
+Se o cliente precisar de todos os dados antes de começar a processá-lo e se o conjunto for pequeno o suficiente para construir na memória, considere usar um campo `repeated` mesmo se a criação real do conjunto de dados na memória no servidor for mais lenta.
 
-## <a name="when-to-use-stream-methods"></a>Quando usar `stream` métodos
+## <a name="when-to-use-stream-methods"></a>Quando usar os métodos de `stream`
 
 Os conjuntos de valores em que os objetos de mensagem são potencialmente muito grandes são transferidos melhor usando solicitações de streaming ou respostas. É mais eficiente construir um objeto grande na memória, gravá-lo na rede e, em seguida, liberar os recursos. Essa abordagem melhorará a escalabilidade do seu serviço.
 
