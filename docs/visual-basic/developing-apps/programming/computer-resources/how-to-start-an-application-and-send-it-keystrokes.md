@@ -1,31 +1,35 @@
 ---
-title: 'Como: Iniciar um aplicativo e enviar pressionamentos de tecla a ele (Visual Basic)'
-ms.date: 07/20/2015
+title: 'Como: iniciar um aplicativo e enviá-lo com pressionamentos de tecla-Visual Basic'
+ms.date: 10/23/2019
 helpviewer_keywords:
 - keystrokes, sending
 - Shell command example [Visual Basic]
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: 9519fd85177d5d2adf97b54652c19330954edadf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815960"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919386"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Como: Iniciar um aplicativo e enviar pressionamentos de tecla a ele (Visual Basic)
-Este exemplo usa a função `Shell` para iniciar o aplicativo Calculadora e, em seguida, multiplica dois números enviando pressionamentos de tecla usando o método `My.Computer.Keyboard.SendKeys`.  
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Como: iniciar um aplicativo e enviar pressionamentos de tecla (Visual Basic)
+
+Este exemplo usa o método <xref:Microsoft.VisualBasic.Interaction.Shell%2A> para iniciar o aplicativo do bloco de notas e, em seguida, imprime uma frase, enviando pressionamentos de teclas usando o método [My. Computer. Keyboard. SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) .
+
+## <a name="example"></a>Exemplo
+
+[!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]
+
+## <a name="robust-programming"></a>Programação robusta
+
+Uma exceção <xref:System.ArgumentException> será gerada se um aplicativo com o identificador de processo solicitado não puder ser encontrado.  
   
-## <a name="example"></a>Exemplo  
- [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]  
-  
-## <a name="robust-programming"></a>Programação robusta  
- Uma exceção <xref:System.ArgumentException> será gerada se um aplicativo com o identificador do processo solicitado não for localizado.  
-  
-## <a name="net-framework-security"></a>Segurança do .NET Framework  
- A chamada para a função `Shell` exige confiança total (classe <xref:System.Security.SecurityException>).  
-  
+## <a name="net-framework-security"></a>Segurança do .NET Framework
+
+A chamada para a função `Shell` exige confiança total (classe <xref:System.Security.SecurityException>).
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>

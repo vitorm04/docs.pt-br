@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582496"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920208"
 ---
 # <a name="application-development"></a>Desenvolvimento do aplicativo
 <a name="introduction"></a>O Windows Presentation Foundation (WPF) é uma estrutura de apresentação que pode ser usada para desenvolver os seguintes tipos de aplicativos:  
@@ -74,7 +74,7 @@ ms.locfileid: "72582496"
   
  <xref:System.Windows.Window> é compatível com a criação de um tipo especial de janela conhecido como caixa de diálogo. Tipos modais e sem janela restrita de caixas de diálogo podem ser criados.  
   
- Para sua conveniência, e os benefícios da reutilização e uma experiência de usuário consistente entre aplicativos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expõe três das caixas de diálogo comuns do Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> e <xref:System.Windows.Controls.PrintDialog>.  
+ Para sua conveniência, e os benefícios da reutilização e uma experiência de usuário consistente entre aplicativos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expõe três das caixas de diálogo comuns do Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>e <xref:System.Windows.Controls.PrintDialog>.  
   
  Uma caixa de mensagem é um tipo especial de caixa de diálogo para mostrar informações textuais importantes para os usuários e para fazer perguntas simples como Sim/Não/OK/Cancelar. Use a classe <xref:System.Windows.MessageBox> para criar e exibir caixas de mensagem.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "72582496"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilar e implantar  
- Embora aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] simples possam ser criados por meio de um prompt de comando usando compiladores de linha de comando, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se integra ao [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] para dar suporte adicional que simplifica o processo de build e desenvolvimento. Para obter mais informações, consulte [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md).  
+ Embora aplicativos simples de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] possam ser criados a partir de um prompt de comando usando compiladores de linha de comando, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se integra ao Visual Studio para fornecer suporte adicional que simplificava o processo de desenvolvimento e compilação. Para obter mais informações, consulte [Compilando um aplicativo WPF](building-a-wpf-application-wpf.md).  
   
  Dependendo do tipo de aplicativo que você compilar, há uma ou mais opções de implantação para escolher. Para obter mais informações, consulte [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md).  
   

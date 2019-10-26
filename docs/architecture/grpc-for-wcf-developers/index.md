@@ -3,16 +3,14 @@ title: ASP.NET Core gRPC para desenvolvedores do WCF – gRPC para desenvolvedor
 description: A SER ESCRITO
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696915"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919376"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC para desenvolvedores do WCF
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![imagem da capa](./media/cover.png)
 
@@ -22,7 +20,7 @@ Divisão de Desenvolvedores Microsoft, equipes dos produtos .NET e Visual Studio
 
 Uma divisão da Microsoft Corporation
 
-One Microsoft Way
+Uma maneira de Microsoft
 
 Redmond, Washington 98052-6399
 
@@ -36,7 +34,7 @@ Alguns exemplos aqui representados são fornecidos apenas para ilustração e s�
 
 A Microsoft e as marcas comerciais listadas em https://www.microsoft.com na página da Web “Marcas comerciais” são marcas comerciais do grupo de empresas da Microsoft.
 
-O logotipo de baleia do Docker é uma marca registrada da Docker, Inc. usado mediante permissão.
+O logotipo de redistribuição do Docker é uma marca registrada do Docker, Inc. usada pela permissão.
 
 Todas as outras marcas e logotipos são propriedade de seus respectivos proprietários.
 
@@ -62,7 +60,7 @@ TODO
 
 **ATUALIZAR ESTE**
 
-O público-alvo deste guia é desenvolvedores do WCF, líderes de desenvolvimento e arquitetos interessados em migrar soluções WCF no .NET 4 e versões anteriores para ASP.NET Core 3,0 usando os serviços gRPCs.
+O público-alvo deste guia são desenvolvedores do WCF, líderes de desenvolvimento e arquitetos interessados em migrar soluções WCF no .NET Framework 4 e versões anteriores para ASP.NET Core 3,0 usando os serviços gRPCs.
 
 ## <a name="how-you-can-use-this-guide"></a>Como você pode usar este guia
 
