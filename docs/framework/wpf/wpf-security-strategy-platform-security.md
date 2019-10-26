@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774739"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920384"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
 Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam para fornecer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
@@ -165,7 +165,7 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
- O ClickOnce é uma tecnologia de implantação abrangente que é incluída com o .NET Framework e integra-se ao [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) para obter informações detalhadas). Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos podem ser implantados usando o ClickOnce, enquanto aplicativos hospedados em navegador devem ser implantados com o ClickOnce.  
+ O ClickOnce é uma tecnologia de implantação abrangente que está incluída com o .NET Framework e se integra ao Visual Studio (consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) para obter informações detalhadas). Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos podem ser implantados usando o ClickOnce, enquanto aplicativos hospedados em navegador devem ser implantados com o ClickOnce.  
   
  Os aplicativos implantados usando o ClickOnce recebem uma camada de segurança adicional sobre a CAS (segurança de acesso ao código); essencialmente, os aplicativos implantados pelo ClickOnce solicitam as permissões necessárias. Eles recebem somente as permissões se eles não excedem o conjunto de permissões para a zona da qual o aplicativo é implantado. Ao reduzir o conjunto de permissões apenas para aqueles que são necessários, mesmo que eles sejam menores do que os fornecidos pelo conjunto de permissões da zona de inicialização, o número de recursos aos quais o aplicativo tem acesso é reduzido para um mínimo. Consequentemente, se o aplicativo for sequestrado, o potencial de danos ao computador cliente será reduzido.  
   

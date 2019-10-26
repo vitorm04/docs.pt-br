@@ -24,18 +24,18 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 836015c9857837cc2648adea21077c8a476bab9a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c82bba5612e943eb261777074acffec7af330f22
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582402"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920351"
 ---
 # <a name="navigation-overview"></a>Visão geral de navegação
 
 O Windows Presentation Foundation (WPF) dá suporte à navegação em estilo de navegador que pode ser usada em dois tipos de aplicativos: aplicativos autônomos e [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Para empacotar conteúdo para navegação, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece a classe <xref:System.Windows.Controls.Page>. Você pode navegar de um <xref:System.Windows.Controls.Page> para outro de forma declarativa, usando um <xref:System.Windows.Documents.Hyperlink>, ou programaticamente, usando o <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa o diário para lembrar as páginas que foram navegadas e navegar de volta para elas.
 
-<xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService> e o diário formam o núcleo do suporte de navegação oferecido pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esta visão geral explora esses recursos em detalhes antes de abordar o suporte de navegação avançada que inclui a navegação para arquivos soltos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], arquivos HTML e objetos.
+<xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>e o diário formam o núcleo do suporte de navegação oferecido pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esta visão geral explora esses recursos em detalhes antes de abordar o suporte de navegação avançada que inclui a navegação para arquivos soltos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], arquivos HTML e objetos.
 
 > [!NOTE]
 > Neste tópico, o termo "navegador" refere-se apenas a navegadores que podem hospedar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos, que atualmente incluem o Microsoft Internet Explorer e o Firefox. Quando recursos específicos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são suportados apenas por um navegador específico, a versão do navegador é referida.
@@ -85,7 +85,7 @@ Usando <xref:System.Windows.Controls.Page>, você pode implementar declarativame
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-Uma <xref:System.Windows.Controls.Page> implementada na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem `Page` como seu elemento raiz e requer a declaração de namespace [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O elemento `Page` contém o conteúdo que você deseja navegar e exibir. Você adiciona conteúdo definindo o elemento de propriedade `Page.Content`, conforme mostrado na marcação a seguir.
+Uma <xref:System.Windows.Controls.Page> implementada na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem `Page` como seu elemento raiz e requer a declaração de namespace[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O elemento `Page` contém o conteúdo que você deseja navegar e exibir. Você adiciona conteúdo definindo o elemento de propriedade `Page.Content`, conforme mostrado na marcação a seguir.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -113,7 +113,7 @@ Para permitir que um arquivo de marcação e o arquivo code-behind funcionem jun
 - No code-behind, a classe <xref:System.Windows.Controls.Page> deve implementar um construtor que chama o método `InitializeComponent`. `InitializeComponent` é implementada pela classe gerada `partial` do arquivo de marcação para registrar eventos e definir propriedades que são definidas na marcação.
 
 > [!NOTE]
-> Quando você adiciona um novo <xref:System.Windows.Controls.Page> ao seu projeto usando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], a <xref:System.Windows.Controls.Page> é implementada usando marcação e code-behind e inclui a configuração necessária para criar a associação entre os arquivos de marcação e code-behind, conforme descrito aqui.
+> Quando você adiciona um novo <xref:System.Windows.Controls.Page> ao seu projeto usando o Visual Studio, o <xref:System.Windows.Controls.Page> é implementado usando marcação e code-behind e inclui a configuração necessária para criar a associação entre os arquivos de marcação e code-behind, conforme descrito aqui.
 
 Quando tiver um <xref:System.Windows.Controls.Page>, você poderá navegar até ele. Para especificar o primeiro <xref:System.Windows.Controls.Page> para o qual um aplicativo navega, você precisa configurar o <xref:System.Windows.Controls.Page> de início.
 
@@ -130,7 +130,7 @@ Uma definição de aplicativo geralmente é implementada usando marcação e cod
 [!code-csharp[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml.cs#xbapapplicationdefinitioncodebehind)]
 [!code-vb[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/Application.xaml.vb#xbapapplicationdefinitioncodebehind)]
 
-Um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] pode usar sua definição de aplicativo para especificar um <xref:System.Windows.Controls.Page> de início, que é o <xref:System.Windows.Controls.Page> carregado automaticamente quando o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é iniciado. Você faz isso definindo a propriedade <xref:System.Windows.Application.StartupUri%2A> com o URI (Uniform Resource Identifier) para o <xref:System.Windows.Controls.Page> desejado.
+Um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] pode usar sua definição de aplicativo para especificar um <xref:System.Windows.Controls.Page>de início, que é o <xref:System.Windows.Controls.Page> carregado automaticamente quando o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é iniciado. Você faz isso definindo a propriedade <xref:System.Windows.Application.StartupUri%2A> com o URI (Uniform Resource Identifier) para o <xref:System.Windows.Controls.Page>desejado.
 
 > [!NOTE]
 > Na maioria dos casos, a <xref:System.Windows.Controls.Page> é compilada ou implantada com um aplicativo. Nesses casos, o URI que identifica uma <xref:System.Windows.Controls.Page> é um pack URI, que é um URI que está de acordo com o esquema do *pacote* . URIs de pacote são abordados mais detalhadamente em [URIs de pacote no WPF](pack-uris-in-wpf.md). Você também pode navegar para o conteúdo usando o esquema http, que é discutido abaixo.
@@ -152,7 +152,7 @@ Neste exemplo, o atributo `StartupUri` é definido com um URI de pacote relativo
 
 Uma coisa que você pode ter observado na figura anterior é que o título do navegador e do painel de guias é o URI para o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Além de ser longo, o título não é atraente nem informativo. Por esse motivo, o <xref:System.Windows.Controls.Page> oferece uma maneira de alterar o título, definindo a propriedade <xref:System.Windows.Controls.Page.WindowTitle%2A>. Além disso, você pode configurar a largura e a altura da janela do navegador definindo <xref:System.Windows.Controls.Page.WindowWidth%2A> e <xref:System.Windows.Controls.Page.WindowHeight%2A>, respectivamente.
 
-<xref:System.Windows.Controls.Page.WindowTitle%2A>, <xref:System.Windows.Controls.Page.WindowWidth%2A> e <xref:System.Windows.Controls.Page.WindowHeight%2A> podem ser definidos declarativamente na marcação, conforme mostrado no exemplo a seguir.
+<xref:System.Windows.Controls.Page.WindowTitle%2A>, <xref:System.Windows.Controls.Page.WindowWidth%2A>e <xref:System.Windows.Controls.Page.WindowHeight%2A> podem ser definidos declarativamente na marcação, conforme mostrado no exemplo a seguir.
 
 [!code-xaml[NavigationOverviewSnippets#HomePageMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/HomePage.xaml#homepagemarkup)]
 
@@ -231,7 +231,7 @@ Embora <xref:System.Windows.Documents.Hyperlink> permita que um usuário inicie 
 Quando um <xref:System.Windows.Documents.Hyperlink> é clicado, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] chama <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> para localizar e baixar o <xref:System.Windows.Controls.Page> no URI do pacote especificado. O <xref:System.Windows.Controls.Page> baixado é convertido em uma árvore de objetos cujo objeto raiz é uma instância do <xref:System.Windows.Controls.Page> baixado. Uma referência ao objeto de <xref:System.Windows.Controls.Page> raiz é armazenada na propriedade <xref:System.Windows.Navigation.NavigationService.Content%2A?displayProperty=nameWithType>. O URI do pacote para o conteúdo que navegou é armazenado na propriedade <xref:System.Windows.Navigation.NavigationService.Source%2A?displayProperty=nameWithType>, enquanto o <xref:System.Windows.Navigation.NavigationService.CurrentSource%2A?displayProperty=nameWithType> armazena o URI do pacote para a última página à qual foi navegada.
 
 > [!NOTE]
-> É possível que um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tenha mais de um <xref:System.Windows.Navigation.NavigationService> ativo no momento. Para obter mais informações, consulte os [hosts de navegação](#Navigation_Hosts) mais adiante neste tópico.
+> É possível que um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tenha mais de um <xref:System.Windows.Navigation.NavigationService>ativo no momento. Para obter mais informações, consulte os [hosts de navegação](#Navigation_Hosts) mais adiante neste tópico.
 
 <a name="Programmatic_Navigation_with_the_Navigation_Service"></a>
 
@@ -251,7 +251,7 @@ Nessas situações, você precisa escrever código para iniciar a navegação pr
 
 #### <a name="getting-a-reference-to-the-navigationservice"></a>Obter uma referência para o NavigationService
 
-Por motivos que são abordados na seção [hosts de navegação](#Navigation_Hosts) , um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pode ter mais de um <xref:System.Windows.Navigation.NavigationService>. Isso significa que seu código precisa de uma maneira de localizar um <xref:System.Windows.Navigation.NavigationService>, que geralmente é o <xref:System.Windows.Navigation.NavigationService> que navegou para a <xref:System.Windows.Controls.Page> atual. Você pode obter uma referência a um <xref:System.Windows.Navigation.NavigationService> chamando o método `static` <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType>. Para obter o <xref:System.Windows.Navigation.NavigationService> que navegou para um <xref:System.Windows.Controls.Page> específico, você passa uma referência para o <xref:System.Windows.Controls.Page> como o argumento do método <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A>. O código a seguir mostra como obter a <xref:System.Windows.Navigation.NavigationService> para o <xref:System.Windows.Controls.Page> atual.
+Por motivos que são abordados na seção [hosts de navegação](#Navigation_Hosts) , um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pode ter mais de um <xref:System.Windows.Navigation.NavigationService>. Isso significa que seu código precisa de uma maneira de localizar um <xref:System.Windows.Navigation.NavigationService>, que geralmente é o <xref:System.Windows.Navigation.NavigationService> que navegou para a <xref:System.Windows.Controls.Page> atual. Você pode obter uma referência a um <xref:System.Windows.Navigation.NavigationService> chamando o método `static`<xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType>. Para obter o <xref:System.Windows.Navigation.NavigationService> que navegou para um <xref:System.Windows.Controls.Page>específico, você passa uma referência para o <xref:System.Windows.Controls.Page> como o argumento do método <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A>. O código a seguir mostra como obter a <xref:System.Windows.Navigation.NavigationService> para o <xref:System.Windows.Controls.Page> atual.
 
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind1)]
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind2)]
@@ -547,7 +547,7 @@ A seguir estão algumas das maneiras com que os cookies têm suporte no [!INCLUD
 
 - O suporte a cookies no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é o mesmo para todos os navegadores com suporte.
 
-- No Internet Explorer, a política de P3P que pertence a cookies é respeitada pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], particularmente em relação ao [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] de terceiros e de terceiros.
+- No Internet Explorer, a política de P3P que pertence a cookies é respeitada pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], particularmente em relação ao [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]de terceiros e de terceiros.
 
 <a name="Structured_Navigation"></a>
 
@@ -571,7 +571,7 @@ Neste ponto, você viu a gama de serviços de navegação que você provavelment
 
 Para incorporar a navegação no estilo de navegador em seus aplicativos autônomos, você pode usar a classe <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> deriva de <xref:System.Windows.Window> e a estende com o mesmo suporte para navegação que [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] fornecer. Você pode usar <xref:System.Windows.Navigation.NavigationWindow> como a janela principal do seu aplicativo autônomo ou como uma janela secundária, como uma caixa de diálogo.
 
-Para implementar uma <xref:System.Windows.Navigation.NavigationWindow>, assim como a maioria das classes de nível superior no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page> e assim por diante), use uma combinação de marcação e code-behind. Isso é mostrado no exemplo a seguir.
+Para implementar uma <xref:System.Windows.Navigation.NavigationWindow>, assim como a maioria das classes de nível superior no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>e assim por diante), use uma combinação de marcação e code-behind. Isso é mostrado no exemplo a seguir.
 
 [!code-xaml[IntroToNavNavigationWindowSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/IntroToNavNavigationWindowSnippets/CSharp/MainWindow.xaml#navigationwindowmarkup)]
 
@@ -649,9 +649,9 @@ A figura a seguir ilustra o efeito de navegar em um <xref:System.Windows.Control
 Observe que as entradas de diário são mostradas pelo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação na <xref:System.Windows.Controls.Frame>, em vez de pelo Internet Explorer.
 
 > [!NOTE]
-> Se um <xref:System.Windows.Controls.Frame> fizer parte do conteúdo hospedado em um <xref:System.Windows.Window>, <xref:System.Windows.Controls.Frame> usar seu próprio diário e, consequentemente, exibirá seu próprio [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação.
+> Se um <xref:System.Windows.Controls.Frame> fizer parte do conteúdo hospedado em um <xref:System.Windows.Window>, <xref:System.Windows.Controls.Frame> usar seu próprio diário e, consequentemente, exibirá seu próprio [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]de navegação.
 
-Se sua experiência de usuário exigir um <xref:System.Windows.Controls.Frame> para fornecer seu próprio diário sem mostrar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação, você poderá ocultar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação definindo o <xref:System.Windows.Controls.Frame.NavigationUIVisibility%2A> como <xref:System.Windows.Visibility.Hidden>. Isso é mostrado na marcação a seguir.
+Se sua experiência de usuário exigir um <xref:System.Windows.Controls.Frame> para fornecer seu próprio diário sem mostrar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]de navegação, você poderá ocultar o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação definindo o <xref:System.Windows.Controls.Frame.NavigationUIVisibility%2A> como <xref:System.Windows.Visibility.Hidden>. Isso é mostrado na marcação a seguir.
 
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml1)]
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageHidesUIXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPageOwnHiddenJournal.xaml#framehostpagehidesuixaml2)]

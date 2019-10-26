@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF'
+title: 'Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 2609a54ce8ba2076c35567fe5bc1d9961f6fef3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942055"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920315"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
 
- O .NET Framework fornece classes que permitem que você use o Caching em aplicativos .NET Framework. Essas classes estão localizadas no <xref:System.Runtime.Caching> namespace.
+ O .NET Framework fornece classes que permitem que você use o Caching em aplicativos .NET Framework. Essas classes estão localizadas no namespace <xref:System.Runtime.Caching>.
 
 > [!NOTE]
-> O <xref:System.Runtime.Caching> namespace é novo no .NET Framework 4. Esse namespace torna o Caching disponível para todos os aplicativos .NET Framework. Nas versões anteriores do .NET Framework, o Caching estava disponível apenas no <xref:System.Web> namespace e, portanto, exigia uma dependência em classes ASP.net.
+> O namespace <xref:System.Runtime.Caching> é novo no .NET Framework 4. Esse namespace torna o Caching disponível para todos os aplicativos .NET Framework. Nas versões anteriores do .NET Framework, o Caching estava disponível apenas no namespace <xref:System.Web> e, portanto, exigia uma dependência em classes ASP.NET.
 
- Este tutorial mostra como usar a funcionalidade de cache que está disponível no .NET Framework como parte de um [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativo. No passo a passo, você armazenará em cache o conteúdo de um arquivo de texto.
+ Este tutorial mostra como usar a funcionalidade de cache que está disponível no .NET Framework como parte de um aplicativo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. No passo a passo, você armazenará em cache o conteúdo de um arquivo de texto.
 
  As tarefas ilustradas nesta explicação passo a passo incluem o seguinte:
 
@@ -40,12 +40,12 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 - Monitoramento do caminho do arquivo armazenado em cache e notificação da instância de cache a respeito de alterações ao item monitorado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
  Para concluir este passo a passo, você precisará de:
 
-- Microsoft Visual Studio 2010.
+- Visual Studio 2010.
 
-- Um arquivo de texto que contenha uma pequena quantidade de texto. (Você exibirá o conteúdo do arquivo de texto em uma caixa de mensagem). O código ilustrado no passo a passo presume que você esteja trabalhando com o seguinte arquivo:
+- Um arquivo de texto que contenha uma pequena quantidade de texto. (Você exibirá o conteúdo do arquivo de texto em uma caixa de mensagem.) O código ilustrado na explicação explicativa pressupõe que você está trabalhando com o seguinte arquivo:
 
      `c:\cache\cacheText.txt`
 
@@ -78,9 +78,9 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
      O WPF Designer é aberto modo de exibição de **Design** e exibe o arquivo MainWindow.xaml. O Visual Studio cria a pasta **meu projeto** , o arquivo Application. XAML e o arquivo MainWindow. XAML.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Direcionamento ao .NET Framework e adição de uma referência aos assemblies de cache
- Por padrão, os aplicativos do WPF se destinam ao [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar o <xref:System.Runtime.Caching> namespace em um aplicativo do WPF, o aplicativo deve ter como destino o .NET Framework 4 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)](não o) e deve incluir uma referência ao namespace.
+ Por padrão, os aplicativos do WPF se destinam ao [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar o namespace <xref:System.Runtime.Caching> em um aplicativo WPF, o aplicativo deve ter como destino o .NET Framework 4 (não o [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve incluir uma referência ao namespace.
 
- Portanto, a próxima etapa é alterar o destino de .NET Framework e adicionar uma referência ao <xref:System.Runtime.Caching> namespace.
+ Portanto, a próxima etapa é alterar o destino de .NET Framework e adicionar uma referência ao namespace <xref:System.Runtime.Caching>.
 
 > [!NOTE]
 > O procedimento para alterar o destino do .NET Framework é diferente em um projeto do Visual Basic e em um projeto Visual C#.
@@ -143,9 +143,9 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Inicializar o cache e armazenar uma entrada em cache
  Em seguida, você adicionará o código para realizar as seguintes tarefas:
 
-- Crie uma instância da classe de cache, ou seja, você criará uma instância <xref:System.Runtime.Caching.MemoryCache> de um novo objeto.
+- Crie uma instância da classe de cache, ou seja, você criará uma instância de um novo objeto <xref:System.Runtime.Caching.MemoryCache>.
 
-- Especifique que o cache usa um <xref:System.Runtime.Caching.HostFileChangeMonitor> objeto para monitorar as alterações no arquivo de texto.
+- Especifique que o cache usa um objeto <xref:System.Runtime.Caching.HostFileChangeMonitor> para monitorar as alterações no arquivo de texto.
 
 - Ler o arquivo de texto e armazenar seu conteúdo em cache como uma entrada de cache.
 
@@ -177,7 +177,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     Dim cache As ObjectCache = MemoryCache.Default
     ```
 
-     A <xref:System.Runtime.Caching.ObjectCache> classe é uma classe interna que fornece um cache de objeto na memória.
+     A classe <xref:System.Runtime.Caching.ObjectCache> é uma classe interna que fornece um cache de objeto na memória.
 
 4. Adicione o seguinte código para ler o conteúdo de uma entrada de cache chamada `filecontents`:
 
@@ -206,7 +206,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
      Se a entrada de cache especificada não existe, leia o arquivo de texto e adicione-o como uma entrada de cache no cache.
 
-6. No bloco, adicione o código a seguir para criar um novo <xref:System.Runtime.Caching.CacheItemPolicy> objeto que especifica que a entrada de cache expira após 10 segundos. `if/then`
+6. No bloco de `if/then`, adicione o código a seguir para criar um novo objeto de <xref:System.Runtime.Caching.CacheItemPolicy> que especifica que a entrada de cache expira após 10 segundos.
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -218,7 +218,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Se nenhuma informação de remoção ou de expiração for fornecida, o <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>padrão será, o que significa que as entradas de cache nunca expiram com base apenas em um tempo absoluto. Em vez disso, as entradas de cache expiram somente quando há pressão de memória. Como prática recomendada, você sempre deve fornecer explicitamente uma expiração absoluta ou deslizante.
+     Se nenhuma informação de remoção ou de expiração for fornecida, o padrão será <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, o que significa que as entradas de cache nunca expiram com base apenas em um tempo absoluto. Em vez disso, as entradas de cache expiram somente quando há pressão de memória. Como prática recomendada, você sempre deve fornecer explicitamente uma expiração absoluta ou deslizante.
 
 7. Dentro do bloco `if/then` e depois do código adicionado na etapa anterior, adicione o seguinte código para criar uma coleção para os caminhos de arquivo que você deseja monitorar e para adicionar o caminho do arquivo de texto à coleção:
 
@@ -235,7 +235,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     > [!NOTE]
     > Se o arquivo de texto que você deseja usar não for `c:\cache\cacheText.txt`, especifique o caminho em que se encontra o arquivo de texto que você deseja usar.
 
-8. Após o código que você adicionou na etapa anterior, adicione o seguinte código para adicionar um novo <xref:System.Runtime.Caching.HostFileChangeMonitor> objeto à coleção de monitores de alterações para a entrada de cache:
+8. Após o código que você adicionou na etapa anterior, adicione o seguinte código para adicionar um novo objeto <xref:System.Runtime.Caching.HostFileChangeMonitor> à coleção de monitores de alteração para a entrada de cache:
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -245,7 +245,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));
     ```
 
-     O <xref:System.Runtime.Caching.HostFileChangeMonitor> objeto monitora o caminho do arquivo de texto e notifica o cache se ocorrerem alterações. Neste exemplo, a entrada de cache expirará se o conteúdo do arquivo for alterado.
+     O objeto <xref:System.Runtime.Caching.HostFileChangeMonitor> monitora o caminho do arquivo de texto e notifica o cache se ocorrerem alterações. Neste exemplo, a entrada de cache expirará se o conteúdo do arquivo for alterado.
 
 9. Após o código que você adicionou na etapa anterior, adicione o seguinte código para ler o conteúdo do arquivo de texto:
 
@@ -259,7 +259,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
      O carimbo de data/hora é adicionado para que você possa ver quando a entrada de cache expira.
 
-10. Após o código que você adicionou na etapa anterior, adicione o seguinte código para inserir o conteúdo do arquivo no objeto de cache como uma <xref:System.Runtime.Caching.CacheItem> instância:
+10. Após o código que você adicionou na etapa anterior, adicione o seguinte código para inserir o conteúdo do arquivo no objeto de cache como uma instância de <xref:System.Runtime.Caching.CacheItem>:
 
     ```vb
     cache.Set("filecontents", fileContents, policy)
@@ -269,7 +269,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
     cache.Set("filecontents", fileContents, policy);
     ```
 
-     Você especifica informações sobre como a entrada de cache deve ser removida passando o <xref:System.Runtime.Caching.CacheItemPolicy> objeto que você criou anteriormente como um parâmetro.
+     Você especifica informações sobre como a entrada de cache deve ser removida passando o objeto <xref:System.Runtime.Caching.CacheItemPolicy> que você criou anteriormente como um parâmetro.
 
 11. Depois do bloco `if/then`, adicione o seguinte código para exibir o conteúdo do arquivo armazenado em cache em uma caixa de mensagem:
 

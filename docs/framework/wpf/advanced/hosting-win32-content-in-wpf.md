@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3b6e30a612c87880121c227c85c4bd6a7ef31f40
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991466"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920241"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hospedando conteúdo Win32 no WPF
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Consulte [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md).
 
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Um passo a passo do Win32 no Windows Presentation Framework (HwndHost)
 
-[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Para reutilizar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oconteúdo<xref:System.Windows.Interop.HwndHost>dentro de aplicativos, use, que é um controle que torna os HWNDs semelhantes a conteúdo.[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Como <xref:System.Windows.Interop.HwndSource>, `BuildWindowCore` `DestroyWindowCore` <xref:System.Windows.Interop.HwndHost> <xref:System.Windows.Interop.HwndHost> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é simples de usar: derivar de e implementar e métodos, instanciar sua classe derivada e colocá-la dentro de seu <xref:System.Windows.Interop.HwndHost> aplicativo.
+Para reutilizar [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] conteúdo dentro de aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], use <xref:System.Windows.Interop.HwndHost>, que é um controle que faz com que os HWNDs se pareçam com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Assim como o <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> é simples de usar: derive de <xref:System.Windows.Interop.HwndHost> e implemente os métodos `BuildWindowCore` e `DestroyWindowCore` e, em seguida, instancie sua classe derivada de <xref:System.Windows.Interop.HwndHost> e coloque-a dentro de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-Se sua lógica [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] já estiver empacotada como um controle, sua implementação `BuildWindowCore` será um pouco mais do que uma chamada para `CreateWindow`. Por exemplo, para criar um [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] controle ListBox em C++:
+Se sua lógica [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] já estiver empacotada como um controle, sua implementação `BuildWindowCore` será um pouco mais do que uma chamada para `CreateWindow`. Por exemplo, para criar um controle LISTBOX de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] C++no:
 
 ```cpp
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {
@@ -46,17 +46,17 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }
 ```
 
-Mas suponha que o código [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] não é tão independente. Se ele for, você poderá criar uma caixa de diálogo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e inserir seu conteúdo em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] maior. O exemplo mostra isso em [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] e C++, embora também seja possível fazer isso em um idioma diferente ou na linha de comando.
+Mas suponha que o código [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] não é tão independente. Se ele for, você poderá criar uma caixa de diálogo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e inserir seu conteúdo em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] maior. O exemplo mostra isso no Visual Studio e C++, embora também seja possível fazer isso em um idioma diferente ou na linha de comando.
 
 Comece com uma caixa de diálogo simples, que é compilada em um projeto de C++ dll.
 
 Em seguida, coloque a caixa de diálogo no aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] maior:
 
-- Compilar a DLL como gerenciada`/clr`()
+- Compilar a DLL como gerenciada (`/clr`)
 
 - Transforme a caixa de diálogo em um controle
 
-- Definir a classe derivada de <xref:System.Windows.Interop.HwndHost> com `BuildWindowCore` métodos `DestroyWindowCore` e
+- Definir a classe derivada de <xref:System.Windows.Interop.HwndHost> com os métodos `BuildWindowCore` e `DestroyWindowCore`
 
 - Substitua o método `TranslateAccelerator` para manipular as teclas do diálogo
 
@@ -64,7 +64,7 @@ Em seguida, coloque a caixa de diálogo no aplicativo [!INCLUDE[TLA2#tla_winclie
 
 - Substitua o método `OnMnemonic` para dar suporte aos mnemônicos
 
-- Criar uma <xref:System.Windows.Interop.HwndHost> instância da subclasse e colocá-la no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento à direita
+- Crie uma instância da subclasse <xref:System.Windows.Interop.HwndHost> e coloque-a sob o elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à direita
 
 ### <a name="turn-the-dialog-into-a-control"></a>Transforme a Caixa de Diálogo em um Controle
 
@@ -98,7 +98,7 @@ namespace ManagedCpp
     using namespace System::Runtime::InteropServices;
 ```
 
-Em seguida, crie uma classe <xref:System.Windows.Interop.HwndHost> derivada de e `BuildWindowCore` substitua `DestroyWindowCore` os métodos e:
+Em seguida, crie uma classe derivada de <xref:System.Windows.Interop.HwndHost> e substitua os métodos `BuildWindowCore` e `DestroyWindowCore`:
 
 ```cpp
 public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Aqui você vai usar o `CreateDialog` para criar a caixa de diálogo que é, na realidade, um controle. Como esse é um dos primeiros métodos chamados dentro da dll, você também deve fazer uma inicialização padrão [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] chamando uma função que você definirá posteriormente, chamada: `InitializeGlobals()`
+Aqui você vai usar o `CreateDialog` para criar a caixa de diálogo que é, na realidade, um controle. Como esse é um dos primeiros métodos chamados dentro da DLL, você também deve fazer uma inicialização de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] padrão chamando uma função que será definida posteriormente, chamada `InitializeGlobals()`:
 
 ```cpp
 bool initialized = false;
@@ -140,7 +140,7 @@ bool initialized = false;
 
 ### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>Substitua o método TranslateAccelerator para manipular as teclas do diálogo
 
-Se executar este exemplo agora, você obterá um controle de caixa de diálogo que exibe, mas ele ignoraria todo o processamento do teclado que torna uma caixa de diálogo funcional. Agora, você deve substituir `TranslateAccelerator` a implementação (que vem `IKeyboardInputSink`de uma interface que <xref:System.Windows.Interop.HwndHost> implementa). Esse método é chamado quando o aplicativo recebe WM_KEYDOWN e WM_SYSKEYDOWN.
+Se executar este exemplo agora, você obterá um controle de caixa de diálogo que exibe, mas ele ignoraria todo o processamento do teclado que torna uma caixa de diálogo funcional. Agora, você deve substituir a implementação de `TranslateAccelerator` (que vem de `IKeyboardInputSink`, uma interface que <xref:System.Windows.Interop.HwndHost> implementa). Esse método é chamado quando o aplicativo recebe WM_KEYDOWN e WM_SYSKEYDOWN.
 
 ```cpp
 #undef TranslateAccelerator
@@ -193,7 +193,7 @@ Se executar este exemplo agora, você obterá um controle de caixa de diálogo q
         }
 ```
 
-É muito código de uma vez, então as explicações poderiam ser um pouco mais detalhadas. Primeiro, o código usando C++ macros e C++ ; Você precisa estar ciente de que já existe uma macro chamada `TranslateAccelerator`, que é definida em winuser. h:
+É muito código de uma vez, então as explicações poderiam ser um pouco mais detalhadas. Primeiro, o código usando C++ macros e C++ ; Você precisa estar ciente de que já existe uma macro chamada`TranslateAccelerator`, que é definida em winuser. h:
 
 ```cpp
 #define TranslateAccelerator  TranslateAcceleratorW
@@ -201,7 +201,7 @@ Se executar este exemplo agora, você obterá um controle de caixa de diálogo q
 
 Certifique-se de definir um método `TranslateAccelerator` e não um método `TranslateAcceleratorW`.
 
-Da mesma forma, há o winuser.h MSG não gerenciado e o struct `Microsoft::Win32::MSG` gerenciado. Você pode desambiguar entre os dois usando C++ `::` o operador.
+Da mesma forma, há o winuser.h MSG não gerenciado e o struct `Microsoft::Win32::MSG` gerenciado. Você pode desambiguar entre os dois usando C++ o operador de`::`.
 
 ```cpp
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
@@ -333,7 +333,7 @@ Por que não chamar `IsDialogMessage` aqui?  Você tem o mesmo problema que ante
 
 ### <a name="instantiate-the-hwndhost-derived-class"></a>Instanciar a classe derivada de HwndHost
 
-Por fim, agora que todo o suporte de chave e guia está em vigor, você pode <xref:System.Windows.Interop.HwndHost> colocar seu no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativo maior. Se o aplicativo principal for escrito no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a maneira mais fácil de colocá-lo no lugar certo é deixar um elemento vazio <xref:System.Windows.Controls.Border> onde você deseja colocar o <xref:System.Windows.Interop.HwndHost>. Aqui, você cria <xref:System.Windows.Controls.Border> um `insertHwndHostHere`nome:
+Por fim, agora que o suporte de chave e guia está em vigor, você pode colocar seu <xref:System.Windows.Interop.HwndHost> no aplicativo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] maior. Se o aplicativo principal for escrito em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a maneira mais fácil de colocá-lo no lugar certo é deixar um elemento de <xref:System.Windows.Controls.Border> vazio no qual você deseja colocar o <xref:System.Windows.Interop.HwndHost>. Aqui, você cria um <xref:System.Windows.Controls.Border> chamado `insertHwndHostHere`:
 
 ```xaml
 <Window x:Class="WPFApplication1.Window1"
@@ -350,7 +350,7 @@ Por fim, agora que todo o suporte de chave e guia está em vigor, você pode <xr
 </Window>
 ```
 
-Então, tudo o que resta é encontrar um bom local na sequência de código para <xref:System.Windows.Interop.HwndHost> criar uma instância do e <xref:System.Windows.Controls.Border>conectá-lo ao. Neste exemplo, você irá colocá-lo dentro do construtor para a <xref:System.Windows.Window> classe derivada:
+Então, tudo o que resta é encontrar um bom local na sequência de código para criar uma instância do <xref:System.Windows.Interop.HwndHost> e conectá-lo ao <xref:System.Windows.Controls.Border>. Neste exemplo, você irá colocá-lo dentro do construtor para a classe derivada <xref:System.Windows.Window>:
 
 ```csharp
 public partial class Window1 : Window {
@@ -370,4 +370,4 @@ O que fornece:
 
 ## <a name="see-also"></a>Consulte também
 
-- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
