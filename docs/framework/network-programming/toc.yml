@@ -145,7 +145,7 @@
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
             - name: 'Como: Definir uma política de cache baseada em tempo padrão para um aplicativo'
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
-            - name: 'Como: Personalizar uma política de cache baseada em tempo'
+            - name: Como personalizar uma política de cache baseada em tempo
               href: how-to-customize-a-time-based-cache-policy.md
             - name: 'Como: Definir uma política de cache para uma solicitação'
               href: how-to-set-cache-policy-for-a-request.md
