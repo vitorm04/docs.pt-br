@@ -30,6 +30,8 @@
         - name: Filmes recomendados (fatoração de matriz)
           href: tutorials/movie-recommendation.md
         - name: Classificação de imagem (transferência de aprendizado)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: Classificar imagens (composição de modelo)
           href: tutorials/image-classification.md
         - name: Análise de vendas do produto (detecção de anomalias)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: Ferramentas
       items:
+        - name: Carregar dados no Construtor de modelo
+          href: how-to-guides/load-data-model-builder.md
         - name: Instalar o Construtor de modelo
           href: how-to-guides/install-model-builder.md
         - name: Instalar a CLI

@@ -2,12 +2,12 @@
 title: Assinando eventos
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda os detalhes de publicação e assinatura de eventos de integração.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039778"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035647"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -32,7 +32,7 @@ Depois que esse código for executado, o microsserviço assinante escutará por 
 
 ## <a name="publishing-events-through-the-event-bus"></a>Publicando eventos por meio do barramento de eventos
 
-Por fim, o remetente da mensagem (microsserviço de origem) publica os eventos de integração com um código semelhante ao exemplo a seguir. (Esse é um exemplo simplificado, que não leva a atomicidade em consideração). Você poderia implementar um código semelhante sempre que um evento tivesse que ser propagado por vários microsserviços, geralmente logo após a confirmação dos dados ou das transações do microsserviço de origem.
+Por fim, o remetente da mensagem (microsserviço de origem) publica os eventos de integração com um código semelhante ao exemplo a seguir. (Esse é um exemplo simplificado que não leva em conta a atomicidade.) Você implementaria um código semelhante sempre que um evento precisar ser propagado em vários microserviços, normalmente logo após a confirmação dos dados ou das transações do microserviço de origem.
 
 Primeiro, o objeto de implementação do barramento de eventos (baseado no RabbitMQ ou em um barramento de serviço) seria injetado no construtor do controlador, como no código a seguir:
 
@@ -105,7 +105,7 @@ Como mencionado anteriormente na seção de arquitetura, você pode ter várias 
 
 - Usando [mineração do log de transações](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Usando o [padrão Outbox](http://gistlabs.com/2014/05/the-outbox/). Essa é uma tabela transacional para armazenar os eventos de integração (estendendo a transação local).
+- Usando o [padrão Outbox](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Essa é uma tabela transacional para armazenar os eventos de integração (estendendo a transação local).
 
 Neste cenário, o uso do padrão ES (Event Sourcing) completo é uma das melhores abordagens, se não for *a* melhor. No entanto, em muitos cenários de aplicativo, pode ser impossível implementar um sistema completo de ES. O ES significa o armazenamento somente dos eventos de domínio em seu banco de dados transacional, em vez de armazenar dados do estado atual. Armazenar apenas os eventos de domínio pode ter grandes benefícios, como ter o histórico do sistema disponível e poder determinar o estado do sistema em qualquer momento no passado. No entanto, implementar um sistema de ES completo exige que você refaça a arquitetura da maior parte do seu sistema e também pode apresentar muitas outras complexidades e requisitos. Por exemplo, vai ser interessante usar um banco de dados criado especificamente para fornecimento de eventos, como o [Event Store](https://eventstore.org/), ou um banco de dados orientado a documentos, como Azure Cosmos DB, MongoDB, Cassandra, CouchDB ou RavenDB. O ES é uma ótima abordagem para esse problema, mas não é a solução mais fácil, a menos que você já esteja familiarizado com fornecimento de eventos.
 
@@ -326,9 +326,9 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
     <https://go.particular.net/eShopOnContainers>
 
 - **Mensagens controladas por evento** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Refatoração para resiliência: avaliação do acoplamento** \
+- **Jimmy Bogard. Refatoração em relação à resiliência: avaliando o acoplamento** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Canal de publicação/assinatura** \
@@ -340,13 +340,13 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 - **Consistência eventual** \
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown. Estratégias para integrar contextos limitados** \
+- **Philip Brown. Estratégias para a integração de contextos limitados** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações, origem de eventos e CQRS – parte 2** \
+- **Chris Richardson. Desenvolvendo microserviços transacionais usando agregações, fornecimento de eventos e CQRS-parte 2** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Padrão de origem de eventos** \
+- **Chris Richardson. Padrão de fornecimento de evento** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **Introdução à origem de eventos** \
@@ -355,7 +355,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 - **Banco de dados Event Store**. Site oficial. \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen. Gerenciamento de dados controlado por evento para microsserviços** \
+- **Patrick Nommensen. Gerenciamento de Dados orientadas a eventos para microserviços** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **O Teorema de CAP** \
@@ -367,13 +367,13 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 - **Guia de Consistência de Dados** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. O Teorema de CAP: Por que “tudo está diferente” na nuvem e na Internet** \
+- **Rick saling. A CAP teorema: por que "tudo é diferente" com a nuvem e a Internet** \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. CAP doze anos depois: Como as "regras" mudaram** \
+- **Eric Brewer. LIMITE de doze anos mais tarde: como as "regras" foram alteradas** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Barramento de Serviço do Azure. Sistema de mensagens agenciado: Detecção de duplicidades**  \
+- **Barramento de serviço do Azure. Mensagens orientadas:  \ de detecção de duplicidades**
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Guia de Confiabilidade** (documentação do RabbitMQ) \

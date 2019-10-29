@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Comprimento de registro inválido
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: Não é possível converter tipo anônimo em árvore de expressão porque ele contém um campo usado na inicialização de outro campo
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída'
+          href: language-reference/error-messages/bc42358.md
+        - name: Não é possível converter o tipo anônimo em uma árvore de expressão porque uma propriedade de tipo é usada para inicializar outra
+          href: language-reference/error-messages/bc36548.md
         - name: Não é possível criar o componente ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: Não é possível fazer referência a '<name>' porque ele é um membro do campo de tipo de valor '<name>' da classe '<classname>' que tem 'System.MarshalByRefObject' como uma classe base
