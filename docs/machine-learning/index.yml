@@ -9,13 +9,13 @@ metadata:
   ms.collection: collection
   author: natke
   ms.author: nakersha
-  ms.date: 10/02/2019
-  ms.openlocfilehash: 4d9e3f78b02e7e95567dc9f025a1123966038770
-  ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+  ms.date: 10/28/2019
+  ms.openlocfilehash: d5aedcd118fc0558a5f425ccad7fb1ad67992f74
+  ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72320516"
+  ms.lasthandoff: 10/29/2019
+  ms.locfileid: "73038232"
 landingContent:
 - title: Noções básicas do ML.NET
   linkLists:
@@ -53,7 +53,9 @@ landingContent:
       url: tutorials/predict-prices-with-model-builder.md
     - text: Categorizar problemas de suporte (API)
       url: tutorials/github-issue-classification.md
-    - text: Classificar imagens com TensorFlow (API)
+    - text: Classificar imagens com API de classificação de imagem (API)
+      url: tutorials/image-classification-api-transfer-learning.md
+    - text: Classificar imagens usando a composição de modelo (API)
       url: tutorials/image-classification.md
     - text: Detectar objetos em imagens (API)
       url: tutorials/object-detection-onnx.md
