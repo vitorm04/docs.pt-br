@@ -3,12 +3,12 @@ title: Comunicação entre serviços
 description: Saiba como os microserviços nativos de nuvem de back-end se comunicam com outros microserviços de back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094627"
 ---
 # <a name="service-to-service-communication"></a>Comunicação entre serviços
 
@@ -60,13 +60,13 @@ Uma opção popular para remover o acoplamento de microatendimento é o [padrão
 
 ### <a name="service-aggregator-pattern"></a>Padrão de agregador de serviço
 
-Outra opção para eliminar o acoplamento de microserviço para microserviço é um [microserviço agregador](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), mostrado em roxo na Figura 4-10. 
+Outra opção para eliminar o acoplamento de microserviço para microserviço é um [microserviço agregador](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), mostrado em roxo na Figura 4-10.
 
 ![Serviço de agregador](./media/aggregator-service.png)
 
 **Figura 4-10**. Microserviço agregador
 
-O padrão Isola uma operação que faz chamadas para vários microserviços de back-end, centralizando sua lógica em um microserviço especializado.  O microserviço agregador de check-out roxo na figura anterior orquestra o fluxo de trabalho para a operação de check-out. Ele inclui chamadas para vários microserviços de back-end em uma ordem sequenciada. Os dados do fluxo de trabalho são agregados e retornados ao chamador. Embora ainda implemente chamadas HTTP diretas, o microserviço de agregador reduz as dependências diretas entre os microserviços de back-end. 
+O padrão Isola uma operação que faz chamadas para vários microserviços de back-end, centralizando sua lógica em um microserviço especializado.  O microserviço agregador de check-out roxo na figura anterior orquestra o fluxo de trabalho para a operação de check-out. Ele inclui chamadas para vários microserviços de back-end em uma ordem sequenciada. Os dados do fluxo de trabalho são agregados e retornados ao chamador. Embora ainda implemente chamadas HTTP diretas, o microserviço de agregador reduz as dependências diretas entre os microserviços de back-end.
 
 ### <a name="requestreply-pattern"></a>Padrão de solicitação/resposta
 
@@ -80,7 +80,7 @@ Aqui, o produtor da mensagem cria uma mensagem baseada em consulta que contém u
 
 ## <a name="commands"></a>Comandos
 
-Outro tipo de interação de comunicação é um *comando*. Um microserviço pode precisar de outro microserviço para executar uma ação. O microserviço de pedidos pode precisar do microserviço de envio para criar uma remessa para uma ordem aprovada. Na Figura 4-12, um microserviço, chamado produtor, envia uma mensagem para outro microserviço, o consumidor, o comando para fazer algo. 
+Outro tipo de interação de comunicação é um *comando*. Um microserviço pode precisar de outro microserviço para executar uma ação. O microserviço de pedidos pode precisar do microserviço de envio para criar uma remessa para uma ordem aprovada. Na Figura 4-12, um microserviço, chamado produtor, envia uma mensagem para outro microserviço, o consumidor, o comando para fazer algo.
 
 ![Interação do comando com uma fila](./media/command-interaction-with-queue.png)
 
@@ -88,7 +88,7 @@ Outro tipo de interação de comunicação é um *comando*. Um microserviço pod
 
 Geralmente, o produtor não requer uma resposta e pode *acionar e esquecer* a mensagem. Se uma resposta for necessária, o consumidor enviará uma mensagem separada de volta para o produtor em outro canal. Uma mensagem de comando é melhor enviada de forma assíncrona com uma fila de mensagens. com suporte de um agente de mensagem leve. No diagrama anterior, observe como uma fila separa e dissocia os dois serviços.
 
-Uma fila de mensagens é uma construção intermediária por meio da qual um produtor e um consumidor passam uma mensagem. As filas implementam um padrão de mensagens assíncronas de ponto a ponto. O produtor sabe onde um comando precisa ser enviado e direcionado adequadamente. A fila garante que uma mensagem seja processada por exatamente uma das instâncias de consumidor que estão sendo lidas do canal. Nesse cenário, o produtor ou o serviço de consumidor pode escalar horizontalmente sem afetar o outro. Além disso, as tecnologias podem ser diferentes em cada lado, o que significa que poderemos ter um microserviço Java chamando um microserviço do [Golang](https://golang.org) . 
+Uma fila de mensagens é uma construção intermediária por meio da qual um produtor e um consumidor passam uma mensagem. As filas implementam um padrão de mensagens assíncronas de ponto a ponto. O produtor sabe onde um comando precisa ser enviado e direcionado adequadamente. A fila garante que uma mensagem seja processada por exatamente uma das instâncias de consumidor que estão sendo lidas do canal. Nesse cenário, o produtor ou o serviço de consumidor pode escalar horizontalmente sem afetar o outro. Além disso, as tecnologias podem ser diferentes em cada lado, o que significa que poderemos ter um microserviço Java chamando um microserviço do [Golang](https://golang.org) .
 
 No capítulo 1, falamos sobre os *serviços de backup*. Os serviços de backup são recursos complementares dos quais os sistemas nativos de nuvem dependem. As filas de mensagens estão fazendo serviços de backup. A nuvem do Azure dá suporte a dois tipos de filas de mensagens que seus sistemas nativos de nuvem podem consumir para implementar mensagens de comando: filas do armazenamento do Azure e filas do barramento de serviço do Azure.
 
@@ -116,7 +116,7 @@ A Figura 4-13 mostra a hierarquia de uma fila de armazenamento do Azure.
 
 Na figura anterior, observe como as filas de armazenamento armazenam suas mensagens na conta de armazenamento do Azure subjacente.
 
-Para desenvolvedores, a Microsoft fornece várias bibliotecas do cliente e do lado do servidor para o processamento da fila de armazenamento. Há suporte para a maioria das principais plataformas, incluindo .NET, Java, JavaScript, Ruby, Python e go. Os desenvolvedores nunca devem se comunicar diretamente com essas bibliotecas. Isso irá acoplar rigidamente o código de seu microserviço ao serviço Fila de armazenamento do Azure. É uma prática melhor isolar os detalhes de implementação da API. Introduza uma camada de intermediação ou uma API intermediária, que expõe operações genéricas e encapsula a biblioteca concreta. Esse acoplamento flexível permite que você troque um serviço de enfileiramento para outro sem precisar fazer alterações no código de serviço principal. 
+Para desenvolvedores, a Microsoft fornece várias bibliotecas do cliente e do lado do servidor para o processamento da fila de armazenamento. Há suporte para a maioria das principais plataformas, incluindo .NET, Java, JavaScript, Ruby, Python e go. Os desenvolvedores nunca devem se comunicar diretamente com essas bibliotecas. Isso irá acoplar rigidamente o código de seu microserviço ao serviço Fila de armazenamento do Azure. É uma prática melhor isolar os detalhes de implementação da API. Introduza uma camada de intermediação ou uma API intermediária, que expõe operações genéricas e encapsula a biblioteca concreta. Esse acoplamento flexível permite que você troque um serviço de enfileiramento para outro sem precisar fazer alterações no código de serviço principal.
 
 As filas do armazenamento do Azure são uma opção econômica para implementar mensagens de comando em seus aplicativos nativos de nuvem. Especialmente quando um tamanho de fila exceder 80 GB ou um conjunto de recursos simples é aceitável. Você paga apenas pelo armazenamento das mensagens; Não há encargos fixos por hora.
 
@@ -146,9 +146,9 @@ Na figura anterior, observe a relação ponto a ponto. Duas instâncias do mesmo
 
 ## <a name="events"></a>Eventos
 
-O enfileiramento de mensagens é uma maneira eficaz de implementar a comunicação em que um produtor pode enviar uma mensagem por um consumidor de forma assíncrona. No entanto, o que acontece quando *muitos consumidores diferentes* estão interessados na mesma mensagem? Uma fila de mensagens dedicada para cada consumidor não pode ser bem dimensionada e seria difícil de gerenciar. 
+O enfileiramento de mensagens é uma maneira eficaz de implementar a comunicação em que um produtor pode enviar uma mensagem por um consumidor de forma assíncrona. No entanto, o que acontece quando *muitos consumidores diferentes* estão interessados na mesma mensagem? Uma fila de mensagens dedicada para cada consumidor não pode ser bem dimensionada e seria difícil de gerenciar.
 
-Para resolver esse cenário, mudamos para o terceiro tipo de interação de mensagem, o *evento*. Um microserviço anuncia que uma ação ocorreu. Outros microserviços, se estiverem interessados, reagir à ação ou ao evento. 
+Para resolver esse cenário, mudamos para o terceiro tipo de interação de mensagem, o *evento*. Um microserviço anuncia que uma ação ocorreu. Outros microserviços, se estiverem interessados, reagir à ação ou ao evento.
 
 O evento é um processo de duas etapas. Para uma determinada alteração de estado, um microserviço publica um evento em um agente de mensagem, disponibilizando-o para qualquer outro microserviço interessado. O microserviço interessado é notificado pela assinatura do evento no agente de mensagens. Você usa o padrão de [publicação/assinatura](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) para implementar a [comunicação baseada em eventos](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
 
@@ -226,7 +226,7 @@ Os hubs de eventos implementam o streaming de mensagens por meio de um [modelo d
 
 **Figura 4-19**. Particionamento do hub de eventos
 
-Em vez de ler do mesmo recurso, cada grupo de consumidores lê em um subconjunto, ou partição, do fluxo de mensagens. 
+Em vez de ler do mesmo recurso, cada grupo de consumidores lê em um subconjunto, ou partição, do fluxo de mensagens.
 
 Para aplicativos nativos de nuvem que devem transmitir um grande número de eventos, o Hub de eventos do Azure pode ser uma solução robusta e acessível.
 

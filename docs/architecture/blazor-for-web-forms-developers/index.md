@@ -4,18 +4,18 @@ description: Saiba como criar aplicativos Web de pilha completa com o .NET usand
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696926"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088124"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor para desenvolvedores do ASP.NET Web Forms
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-![Captura de tela que mostra a capa do livro eletrônico Aplicativos sem servidor.](./media/index/blazor-for-web-forms-developers-cover.png)
+![Captura de tela que mostra a capa do livro eletrônico de aplicativos sem servidor.](./media/index/blazor-for-web-forms-developers-cover.png)
 
 > DOWNLOAD disponível em: <https://aka.ms/blazor-ebook>
 
@@ -25,7 +25,7 @@ Divisão de Desenvolvedores Microsoft, equipes dos produtos .NET e Visual Studio
 
 Uma divisão da Microsoft Corporation
 
-One Microsoft Way
+Uma maneira de Microsoft
 
 Redmond, Washington 98052-6399
 
@@ -75,7 +75,7 @@ Este livro é uma introdução ao mais grande, não um guia de migração abrang
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-Você pode encontrar a documentação e home page oficial em <https://blazor.net>.
+Você pode encontrar a documentação e home page oficial na <https://blazor.net>.
 
 ## <a name="send-your-feedback"></a>Envie seus comentários
 

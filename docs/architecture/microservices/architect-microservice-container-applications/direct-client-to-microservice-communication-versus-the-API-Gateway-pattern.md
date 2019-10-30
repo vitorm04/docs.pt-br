@@ -2,12 +2,12 @@
 title: Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 description: Entenda as diferenças e os usos do padrão de gateway de API e da comunicação direta de cliente com microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522952"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090129"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -132,7 +132,7 @@ O [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-manag
 
 **Figura 4-14**. Usando o Gerenciamento de API do Azure para o Gateway de API
 
-O gerenciamento de API do Azure resolve o gateway de API e as necessidades de gerenciamento, como log, segurança, medição, etc. Nesse caso, ao usar um produto como o gerenciamento de API do Azure, o fato de que você pode ter um único gateway de API não é tão arriscado porque esses tipos de gateways de API são "mais finos" C# , o que significa que você não implementa código personalizado que poderia evoluir para um componente monolítico. 
+O gerenciamento de API do Azure resolve o gateway de API e as necessidades de gerenciamento, como log, segurança, medição, etc. Nesse caso, ao usar um produto como o gerenciamento de API do Azure, o fato de que você pode ter um único gateway de API não é tão arriscado porque esses tipos de gateways de API são "mais finos" C# , o que significa que você não implementa código personalizado que poderia evoluir para um componente monolítico.
 
 Os produtos de Gateway de API costumam atuar como um proxy reverso para comunicação de entrada, em que você também pode filtrar as APIs dos microsserviços internos e aplicar a autorização para as APIs publicadas nessa camada única.
 
@@ -182,7 +182,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 - **Gerenciamento de API do Azure** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. @No__t_1 de composição orientada a serviço**
+- **Udi Dahan. \ de composição orientada a serviço**
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Grandes Clemenss. Mensagens e microserviços em GOTO 2016 (vídeo)**  \

@@ -4,12 +4,12 @@ description: Uma introdução ao mais alto e escrever aplicativos Web de pilha c
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087930"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Uma introdução ao mais incrivelmente para desenvolvedores de Web Forms ASP.NET
 
@@ -21,7 +21,7 @@ Ao longo dos anos, a Microsoft introduziu novas estruturas da Web baseadas em AS
 
 No momento da escrita, quase meio milhão de desenvolvedores da Web usam ASP.NET Web Forms todos os meses. O ASP.NET Web Forms Framework é estável até o ponto em que documentos, amostras, livros e postagens de blog de uma década atrás permanecem úteis e relevantes. Para muitos desenvolvedores da Web .NET, "ASP.NET" ainda é sinônimo de "ASP.NET Web Forms" como era quando o .NET foi concebido pela primeira vez. Os argumentos nos prós e contras do ASP.NET Web Forms em comparação com as outras novas estruturas .NET da Web podem ser levadas em diante. ASP.NET Web Forms continua sendo uma estrutura popular para a criação de aplicativos Web.
 
-Mesmo assim, as inovações no desenvolvimento de software não estão lentas. Todos os desenvolvedores de software precisam se manter atualizados de novas tecnologias e tendências. Duas tendências em particular valem a pena considerar: 
+Mesmo assim, as inovações no desenvolvimento de software não estão lentas. Todos os desenvolvedores de software precisam se manter atualizados de novas tecnologias e tendências. Duas tendências em particular valem a pena considerar:
 
 1. A mudança para software livre e para várias plataformas
 2. A mudança da lógica do aplicativo para o cliente

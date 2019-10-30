@@ -2,12 +2,12 @@
 title: Padrões de dados nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de dados nativos de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: 8fc5a09dca61e6644fdcaa692ff1a21f40ebf179
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087696"
 ---
 # <a name="cloud-native-data-patterns"></a>Padrões de dados nativos de nuvem
 
@@ -127,15 +127,15 @@ Os bancos de dados NoSQL são distribuídos e geralmente dimensionados em servid
 
 Essa é uma [consistência eventual](https://www.cloudcomputingpatterns.org/eventual_consistency/)conhecida, uma característica de sistemas de dados distribuídos em que não há suporte para transações ACID. É um breve atraso entre a atualização de um item de dados e o tempo necessário para propagar essa atualização para cada um dos nós de réplica. Se você atualizar um item de produto em um banco de dados NoSQL no Estados Unidos, mas, ao mesmo tempo, consultar o mesmo item de dado de um nó de réplica na Europa, você poderá recuperar as informações anteriores do produto-até que o nó Europeu tenha sido atualizado com a alteração do produto. A desvantagem é que, ao fornecer uma [consistência forte](https://en.wikipedia.org/wiki/Strong_consistency), aguardando a atualização de todos os nós de réplica antes de retornar um resultado da consulta, você pode oferecer suporte a enorme escala e volume de tráfego, mas com a possibilidade de apresentar dados mais antigos.
 
-Os bancos de dados NoSQL podem ser categorizados pelos quatro modelos a seguir: 
+Os bancos de dados NoSQL podem ser categorizados pelos quatro modelos a seguir:
 
-- *Repositório de documentos* (MongoDB, CouchDB, Couchbase): os dados (e metadados correspondentes) são armazenados de modo não relacional em documentos desnormalizados baseados em JSON dentro do banco de dados.
+- *Repositório de documentos* (MongoDB, CouchDB, Couchbase): os dados (e metadados correspondentes) são armazenados de forma não relacional em documentos desnormalizados baseados em JSON dentro do banco de dados.
 
 - *Repositório de chave/valor* (Redis, Riak, memcached): os dados são armazenados em pares chave-valor simples com operações do sistema executadas em uma chave de acesso exclusiva que é mapeada para um valor de dados do usuário.
 
-- *Armazenamento de coluna ampla* (HBase, Cassandra): os dados relacionados são armazenados em um formato de coluna como um conjunto de pares de chave/valor aninhados em uma única coluna com dados normalmente recuperados como uma única unidade sem a necessidade de unir várias tabelas.
+- *Repositório de coluna larga* (HBase, Cassandra): os dados relacionados são armazenados em um formato de coluna como um conjunto de pares de chave/valor aninhados em uma única coluna com dados normalmente recuperados como uma única unidade sem a necessidade de unir várias tabelas.
 
-- *Repositórios de grafo* (neo4j, Titan): os dados são armazenados como uma representação gráfica dentro de um nó junto com as bordas que especificam a relação entre os nós.
+- *Repositórios de grafo* (neo4j, Titan): os dados são armazenados como uma representação gráfica em um nó junto com as bordas que especificam a relação entre os nós.
 
 Os bancos de dados NoSQL podem ser otimizados para lidar com grandes escalas, especialmente quando os dados são relativamente simples. Considere um banco de dados NoSQL quando:
 

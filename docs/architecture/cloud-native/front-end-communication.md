@@ -1,16 +1,16 @@
 ---
-title: Comunicação de cliente de front-end
+title: Comunicação front-end de cliente
 description: Saiba como os clientes front-end se comunicam com sistemas nativos de nuvem
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 67410bf9b5c76acc472018197bb64aa7662dc439
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a488337b48e30b99bfcc9894a780350f32af864f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087452"
 ---
-# <a name="front-end-client-communication"></a>Comunicação de cliente de front-end
+# <a name="front-end-client-communication"></a>Comunicação front-end de cliente
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -39,7 +39,7 @@ Em vez disso, um padrão de design de nuvem amplamente aceito é implementar um 
 
 **Figura 4-3.** Padrão de gateway de API
 
-Na figura anterior, observe como o serviço de gateway de API abstrai os microserviços de núcleo de back-end. Implementada como uma API da Web, ela atua como um *proxy reverso*, roteando o tráfego de entrada para os microserviços internos. 
+Na figura anterior, observe como o serviço de gateway de API abstrai os microserviços de núcleo de back-end. Implementada como uma API da Web, ela atua como um *proxy reverso*, roteando o tráfego de entrada para os microserviços internos.
 
 O gateway isola o cliente do particionamento e refatoração de serviço interno. Se você alterar um serviço de back-end, você poderá acomodá-lo no gateway sem interromper o cliente. Também é sua primeira linha de defesa para preocupações abrangentes, como identidade, Caching, resiliência, medição e limitação. Muitas dessas preocupações abrangentes podem ser descarregadas dos serviços principais de back-end para o gateway, simplificando os serviços de back-end.
 
@@ -55,7 +55,7 @@ Para começar, você pode criar seu próprio serviço de gateway de API. Uma pes
 
 ## <a name="ocelot-gateway"></a>Gateway Ocelot
 
-Para aplicativos nativos .NET de nuvem simples, você pode considerar o [Gateway Ocelot](https://github.com/ThreeMammals/Ocelot). Ocelot é um gateway de API de software livre criado para os microserviços .NET que exigem um ponto de entrada unificado em seu sistema. É leve, rápido e escalonável. 
+Para aplicativos nativos .NET de nuvem simples, você pode considerar o [Gateway Ocelot](https://github.com/ThreeMammals/Ocelot). Ocelot é um gateway de API de software livre criado para os microserviços .NET que exigem um ponto de entrada unificado em seu sistema. É leve, rápido e escalonável.
 
 Como qualquer gateway de API, sua principal funcionalidade é encaminhar solicitações HTTP de entrada para serviços downstream. Além disso, ele dá suporte a uma ampla variedade de recursos que podem ser configurados em um pipeline de middleware do .NET Core. Seu conjunto de recursos é apresentado na tabela a seguir.
 
@@ -71,13 +71,13 @@ Como qualquer gateway de API, sua principal funcionalidade é encaminhar solicit
 
 Cada gateway Ocelot especifica os endereços upstream e downstream e os recursos configuráveis em um arquivo de configuração JSON. O cliente envia uma solicitação HTTP para o gateway Ocelot. Depois de recebido, Ocelot passa o objeto HttpRequest por meio de seu pipeline manipulando-o para o estado especificado por sua configuração. No final do pipeline, o Ocelot cria um novo HTTPResponseobject e o passa para o serviço downstream. Para a resposta, o Ocelot reverte o pipeline, enviando a resposta de volta para o cliente.
 
-Ocelot está disponível como um pacote NuGet. Ele se destina ao NET Standard 2,0, tornando-o compatível com o .NET Core 2.0 + e .NET Framework 4.6.1 + Runtimes. O Ocelot integra-se com qualquer coisa que fala HTTP e é executado nas plataformas às quais o .NET Core dá suporte: Linux, macOS e Windows. O Ocelot é extensível e dá suporte a muitas plataformas modernas, incluindo contêineres do Docker, serviços Kubernetess do Azure ou outras nuvens públicas.  O Ocelot integra-se com pacotes de software livre como [Consul](https://www.consul.io), [GraphQL](https://graphql.org)e [Eureka](https://github.com/Netflix/eureka)da Netflix. 
+Ocelot está disponível como um pacote NuGet. Ele se destina ao NET Standard 2,0, tornando-o compatível com o .NET Core 2.0 + e .NET Framework 4.6.1 + Runtimes. O Ocelot integra-se com qualquer coisa que fala HTTP e é executado nas plataformas às quais o .NET Core dá suporte: Linux, macOS e Windows. O Ocelot é extensível e dá suporte a muitas plataformas modernas, incluindo contêineres do Docker, serviços Kubernetess do Azure ou outras nuvens públicas.  O Ocelot integra-se com pacotes de software livre como [Consul](https://www.consul.io), [GraphQL](https://graphql.org)e [Eureka](https://github.com/Netflix/eureka)da Netflix.
 
 Considere o Ocelot para aplicativos nativos de nuvem simples que não exigem o rico conjunto de recursos de um gateway de API comercial.
 
 ## <a name="azure-application-gateway"></a>Aplicativo Azure gateway
 
-Para obter os requisitos de gateway simples, você pode considerar [aplicativo Azure gateway](https://docs.microsoft.com/azure/application-gateway/overview). Disponível como um [serviço de PaaS](https://azure.microsoft.com/overview/what-is-paas/)do Azure, ele inclui recursos básicos de gateway, como roteamento de URL, terminação de SSL e um firewall do aplicativo Web. O serviço oferece suporte a recursos [de balanceamento de carga de camada 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Com a camada 7, você pode rotear solicitações com base no conteúdo real de uma mensagem HTTP, não apenas em pacotes de rede TCP de nível baixo. 
+Para obter os requisitos de gateway simples, você pode considerar [aplicativo Azure gateway](https://docs.microsoft.com/azure/application-gateway/overview). Disponível como um [serviço de PaaS](https://azure.microsoft.com/overview/what-is-paas/)do Azure, ele inclui recursos básicos de gateway, como roteamento de URL, terminação de SSL e um firewall do aplicativo Web. O serviço oferece suporte a recursos [de balanceamento de carga de camada 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Com a camada 7, você pode rotear solicitações com base no conteúdo real de uma mensagem HTTP, não apenas em pacotes de rede TCP de nível baixo.
 
 Ao longo deste livro, evangelizarmos a hospedagem de sistemas nativos de nuvem no [kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html). Um orquestrador de contêineres, o kubernetes automatiza a implantação, o dimensionamento e as preocupações operacionais de cargas de trabalho em contêineres. Aplicativo Azure gateway pode ser configurado como um gateway de API para o cluster do [serviço kubernetes do Azure](https://azure.microsoft.com/services/kubernetes-service/) .
 
@@ -91,17 +91,17 @@ O kubernetes inclui um recurso interno que dá suporte ao balanceamento de carga
 
 ## <a name="azure-api-management"></a>Gerenciamento de API do Azure
 
-Para sistemas nativos de nuvem de médio a grande escala, você pode considerar o [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-management/). É um serviço baseado em nuvem que não só resolve suas necessidades de gateway de API, mas fornece uma experiência de desenvolvedor e administrativa completa. O gerenciamento de API é mostrado na Figura 4-6. 
+Para sistemas nativos de nuvem de médio a grande escala, você pode considerar o [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-management/). É um serviço baseado em nuvem que não só resolve suas necessidades de gateway de API, mas fornece uma experiência de desenvolvedor e administrativa completa. O gerenciamento de API é mostrado na Figura 4-6.
 
 ![Gerenciamento de API do Azure](./media/azure-api-management.png)
 
 **Figura 4-6.** Gerenciamento de API do Azure
 
-Para começar, o gerenciamento de API expõe um servidor gateway que permite o acesso controlado a serviços de back-end com base nas regras e políticas configuráveis. Esses serviços podem estar na nuvem do Azure, no local data center ou em outras nuvens públicas. As chaves de API e os tokens JWT determinam quem pode fazer o quê. Todo o tráfego é registrado para fins analíticos. 
+Para começar, o gerenciamento de API expõe um servidor gateway que permite o acesso controlado a serviços de back-end com base nas regras e políticas configuráveis. Esses serviços podem estar na nuvem do Azure, no local data center ou em outras nuvens públicas. As chaves de API e os tokens JWT determinam quem pode fazer o quê. Todo o tráfego é registrado para fins analíticos.
 
-Para desenvolvedores, o gerenciamento de API oferece um portal do desenvolvedor que fornece acesso a serviços, documentação e código de exemplo para chamá-los. Os desenvolvedores podem usar o Swagger/Open API para inspecionar pontos de extremidade de serviço e analisar seu uso. O serviço funciona nas principais plataformas de desenvolvimento: .NET, Java, Golang e muito mais. 
+Para desenvolvedores, o gerenciamento de API oferece um portal do desenvolvedor que fornece acesso a serviços, documentação e código de exemplo para chamá-los. Os desenvolvedores podem usar o Swagger/Open API para inspecionar pontos de extremidade de serviço e analisar seu uso. O serviço funciona nas principais plataformas de desenvolvimento: .NET, Java, Golang e muito mais.
 
-O portal do editor expõe um painel de gerenciamento em que os administradores expõem APIs e gerenciam seu comportamento. O acesso ao serviço pode ser concedido, integridade do serviço monitorado e telemetria de serviço coletada. Os administradores aplicam *políticas* a cada ponto de extremidade para afetar o comportamento. [As políticas](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) são instruções predefinidas que são executadas em sequência para cada chamada de serviço.  As políticas são configuradas para uma chamada de entrada, chamada de saída ou chamadas após um erro. As políticas podem ser aplicadas em diferentes escopos de serviço como para habilitar a ordenação determinística ao combinar políticas. O produto é fornecido com um grande número de [políticas](https://docs.microsoft.com/azure/api-management/api-management-policies)predefinidas. 
+O portal do editor expõe um painel de gerenciamento em que os administradores expõem APIs e gerenciam seu comportamento. O acesso ao serviço pode ser concedido, integridade do serviço monitorado e telemetria de serviço coletada. Os administradores aplicam *políticas* a cada ponto de extremidade para afetar o comportamento. [As políticas](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) são instruções predefinidas que são executadas em sequência para cada chamada de serviço.  As políticas são configuradas para uma chamada de entrada, chamada de saída ou chamadas após um erro. As políticas podem ser aplicadas em diferentes escopos de serviço como para habilitar a ordenação determinística ao combinar políticas. O produto é fornecido com um grande número de [políticas](https://docs.microsoft.com/azure/api-management/api-management-policies)predefinidas.
 
 Aqui estão exemplos de como as políticas podem afetar o comportamento de seus serviços nativos de nuvem:  
 
@@ -122,7 +122,7 @@ O gerenciamento de API do Azure está disponível em [quatro camadas diferentes]
 - Padrão
 - Premium
 
-A camada de desenvolvedor destina-se a cargas de trabalho e avaliação de não produção. As outras camadas oferecem progressivamente mais energia, recursos e SLAs (contratos de nível de serviço) mais altos. A camada Premium fornece [suporte a várias regiões e à](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region) [rede virtual do Azure](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) . Todas as camadas têm um preço fixo por hora. 
+A camada de desenvolvedor destina-se a cargas de trabalho e avaliação de não produção. As outras camadas oferecem progressivamente mais energia, recursos e SLAs (contratos de nível de serviço) mais altos. A camada Premium fornece [suporte a várias regiões e à](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region) [rede virtual do Azure](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) . Todas as camadas têm um preço fixo por hora.
 
 Recentemente, a Microsoft anunciou uma [camada sem servidor de gerenciamento de API](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) para o gerenciamento de API do Azure. Referido como o *tipo de preço de consumo*, o serviço é uma variante do gerenciamento de API projetado em relação ao modelo de computação sem servidor. Ao contrário dos tipos de preço "pré-alocados" mostrados anteriormente, o nível de consumo fornece provisionamento instantâneo e preços de pagamento por ação.
 
@@ -130,7 +130,7 @@ Ele habilita recursos de gateway de API para os seguintes casos de uso:
 
 - Os microserviços implementados usando tecnologias sem servidor, como [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) e [aplicativos lógicos do Azure](https://azure.microsoft.com/services/logic-apps/).
 - Recursos de serviço de backup do Azure, como filas e tópicos do barramento de serviço, armazenamento do Azure e outros.
-- Microserviços em que o tráfego tem picos ocasionais grandes, mas permanece com pouca maior parte do tempo. 
+- Microserviços em que o tráfego tem picos ocasionais grandes, mas permanece com pouca maior parte do tempo.
 
 O nível de consumo usa os mesmos componentes subjacentes de gerenciamento de API de serviço, mas emprega uma arquitetura totalmente diferente com base em recursos alocados dinamicamente. Ele se alinha perfeitamente com o modelo de computação sem servidor:
 
@@ -138,19 +138,19 @@ O nível de consumo usa os mesmos componentes subjacentes de gerenciamento de AP
 - Sem capacidade ociosa.
 - Alta disponibilidade.
 - Dimensionamento automático.
-- O custo é baseado no uso real. 
+- O custo é baseado no uso real.
   
-A nova camada de consumo é uma ótima opção para sistemas nativos de nuvem que expõem recursos sem servidor como APIs. 
+A nova camada de consumo é uma ótima opção para sistemas nativos de nuvem que expõem recursos sem servidor como APIs.
 
 > No momento da gravação, a camada de consumo está em versão prévia na nuvem do Azure.
 
 ## <a name="real-time-communication"></a>Comunicação em tempo real
 
-A comunicação em tempo real ou por push é outra opção para aplicativos de front-end que se comunicam com sistemas nativos de nuvem de back-end por HTTP. Os aplicativos, como os Tick-Financials, educação online, jogos e atualizações de andamento do trabalho, exigem respostas instantâneas e em tempo real do back-end. Com a comunicação HTTP normal, não há como o cliente saber quando novos dados estão disponíveis. O cliente deve *sondar* ou enviar continuamente solicitações para o servidor. Com a comunicação em *tempo real* , o servidor pode enviar novos dados para o cliente a qualquer momento. 
+A comunicação em tempo real ou por push é outra opção para aplicativos de front-end que se comunicam com sistemas nativos de nuvem de back-end por HTTP. Os aplicativos, como os Tick-Financials, educação online, jogos e atualizações de andamento do trabalho, exigem respostas instantâneas e em tempo real do back-end. Com a comunicação HTTP normal, não há como o cliente saber quando novos dados estão disponíveis. O cliente deve *sondar* ou enviar continuamente solicitações para o servidor. Com a comunicação em *tempo real* , o servidor pode enviar novos dados para o cliente a qualquer momento.
 
-Os sistemas em tempo real geralmente são caracterizados por fluxos de dados de alta frequência e por um grande número de conexões de cliente simultâneas. A implementação manual da conectividade em tempo real pode rapidamente se tornar complexa, exigindo uma infraestrutura não trivial para garantir a escalabilidade e o sistema de mensagens confiável aos clientes conectados. Você pode se encontrar gerenciando uma instância do cache Redis do Azure e um conjunto de balanceadores de carga configurados com sessões adesivas para afinidade de cliente. 
+Os sistemas em tempo real geralmente são caracterizados por fluxos de dados de alta frequência e por um grande número de conexões de cliente simultâneas. A implementação manual da conectividade em tempo real pode rapidamente se tornar complexa, exigindo uma infraestrutura não trivial para garantir a escalabilidade e o sistema de mensagens confiável aos clientes conectados. Você pode se encontrar gerenciando uma instância do cache Redis do Azure e um conjunto de balanceadores de carga configurados com sessões adesivas para afinidade de cliente.
 
-O [serviço de signaler do Azure](https://azure.microsoft.com/services/signalr-service/) é um serviço do Azure totalmente gerenciado que simplifica a comunicação em tempo real para seus aplicativos nativos de nuvem. Detalhes de implementação técnica, como provisionamento de capacidade, dimensionamento e conexões persistentes, são dissociados. Eles são tratados para você com um contrato de nível de serviço de 99,9%. Você se concentra nos recursos do aplicativo, não no direcionamento da infraestrutura. 
+O [serviço de signaler do Azure](https://azure.microsoft.com/services/signalr-service/) é um serviço do Azure totalmente gerenciado que simplifica a comunicação em tempo real para seus aplicativos nativos de nuvem. Detalhes de implementação técnica, como provisionamento de capacidade, dimensionamento e conexões persistentes, são dissociados. Eles são tratados para você com um contrato de nível de serviço de 99,9%. Você se concentra nos recursos do aplicativo, não no direcionamento da infraestrutura.
 
 Uma vez habilitado, um serviço HTTP baseado em nuvem pode enviar atualizações de conteúdo diretamente a clientes conectados, incluindo aplicativos de navegador, móveis e de área de trabalho. Os clientes são atualizados sem a necessidade de sondar o servidor. O Azure Signalr abstrai as tecnologias de transporte que criam conectividade em tempo real, incluindo WebSockets, eventos do lado do servidor e sondagem longa. Os desenvolvedores se concentram em enviar mensagens para todos ou subconjuntos específicos de clientes conectados.
 

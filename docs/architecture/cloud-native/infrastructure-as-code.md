@@ -2,12 +2,12 @@
 title: Infraestrutura como código
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Infraestrutura como código
 ms.date: 06/30/2019
-ms.openlocfilehash: e395db28bdeff785251b91ed643f9920873d26e8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3957da68ac28774f899f49fb181a29c2435902f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183010"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087244"
 ---
 # <a name="infrastructure-as-code"></a>Infraestrutura como código
 
@@ -37,7 +37,7 @@ Os modelos de Azure Resource Manager são uma linguagem baseada em JSON para def
 **Figura 11-10** -o esquema para um modelo do Resource Manager
 
 Nesse modelo, é possível definir um contêiner de armazenamento dentro da seção de recursos da seguinte forma:
- 
+
 ```json
 "resources": [
     {
@@ -66,7 +66,7 @@ Os modelos do Resource Manager podem ser executados de várias maneiras. Talvez 
 
 Uma desvantagem percebida dos modelos do Resource Manager é que eles são específicos para a nuvem do Azure. É incomum criar aplicativos que incluem recursos de mais de uma nuvem, mas nos casos em que a empresa depende de tempo de atividade espetacular, o custo de dar suporte a várias nuvens pode ser válido. Se houvesse uma linguagem de modelagem que pudesse ser usada em cada nuvem, ela também permitiria que as habilidades do desenvolvedor fossem muito mais portáveis.
 
-Existem várias tecnologias que fazem exatamente isso! A oferta mais madura nesse espaço é conhecida como [Terraform](https://www.terraform.io/). O Terraform dá suporte a todos os principais players de nuvem, como o Azure, Google Cloud Platform, AWS e o, além de dar suporte a dezenas de jogadores secundários, como Heroku e DigitalOcean. Em vez de usar JSON como a linguagem de definição de modelo, ele usa o YAML ligeiramente mais conciso. 
+Existem várias tecnologias que fazem exatamente isso! A oferta mais madura nesse espaço é conhecida como [Terraform](https://www.terraform.io/). O Terraform dá suporte a todos os principais players de nuvem, como o Azure, Google Cloud Platform, AWS e o, além de dar suporte a dezenas de jogadores secundários, como Heroku e DigitalOcean. Em vez de usar JSON como a linguagem de definição de modelo, ele usa o YAML ligeiramente mais conciso.
 
 Um arquivo Terraform de exemplo que faz o mesmo que o modelo do Resource Manager anterior (Figura 11-11) é mostrado na Figura 11-12:
 

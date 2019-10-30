@@ -2,18 +2,19 @@
 title: Como registrar em log com a pilha elástica
 description: Registro em log usando Stack elástico, Logstash e Kibana
 ms.date: 09/23/2019
-ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087064"
 ---
-# <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica 
+# <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Há muitas boas ferramentas de registro em log centralizadas e elas variam de acordo com as ferramentas gratuitas de software livre, até opções mais caras. Em muitos casos, as ferramentas gratuitas são tão boas ou melhores do que as ofertas pagas. Uma dessas ferramentas é uma combinação de três componentes de código-fonte aberto: pesquisa elástica, Logstash e Kibana. Coletivamente, essas ferramentas são conhecidas como pilha elástica ou pilha ELK.
+Há muitas boas ferramentas de registro em log centralizadas e elas variam de acordo com as ferramentas gratuitas de software livre, até opções mais caras. Em muitos casos, as ferramentas gratuitas são tão boas ou melhores do que as ofertas pagas. Uma dessas ferramentas é uma combinação de três componentes de código-fonte aberto: pesquisa elástica, Logstash e Kibana.
+Coletivamente, essas ferramentas são conhecidas como pilha elástica ou pilha ELK.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quais são as vantagens da pilha elástica?
 
@@ -21,19 +22,19 @@ A pilha elástica fornece registro em log centralizado de maneira econômica, es
 
 ## <a name="logstash"></a>Logstash
 
-O primeiro componente é [Logstash](https://www.elastic.co/products/logstash). Essa ferramenta é usada para coletar informações de log de uma grande variedade de fontes diferentes. Por exemplo, Logstash pode ler logs do disco e também receber mensagens de bibliotecas de log, como [Serilog](https://serilog.net/). O Logstash pode fazer alguma filtragem básica e expansão nos logs à medida que eles chegam. Por exemplo, se os logs contiverem endereços IP, Logstash poderá ser configurado para fazer uma pesquisa geográfica e obter um país ou até mesmo uma cidade de origem para essa mensagem. 
+O primeiro componente é [Logstash](https://www.elastic.co/products/logstash). Essa ferramenta é usada para coletar informações de log de uma grande variedade de fontes diferentes. Por exemplo, Logstash pode ler logs do disco e também receber mensagens de bibliotecas de log, como [Serilog](https://serilog.net/). O Logstash pode fazer alguma filtragem básica e expansão nos logs à medida que eles chegam. Por exemplo, se os logs contiverem endereços IP, Logstash poderá ser configurado para fazer uma pesquisa geográfica e obter um país ou até mesmo uma cidade de origem para essa mensagem.
 
 Serilog é uma biblioteca de registro em log para linguagens .NET, que permite o registro em log com parâmetros. Em vez de gerar uma mensagem de log textual que incorpore campos, os parâmetros são mantidos separados. Isso permite a filtragem e a pesquisa mais inteligentes. Uma configuração de Serilog de exemplo para gravação em Logstash aparece na Figura 7-2.
 
 ```csharp
-var log = new LoggerConfiguration()   
+var log = new LoggerConfiguration()
          .WriteTo.Http("http://localhost:8080")
          .CreateLogger();
 ```
 
 **Figura 7-2** Configuração de Serilog para gravar informações de log diretamente no logstash sobre HTTP
 
-Logstash usaria uma configuração como a mostrada na Figura 7-3. 
+Logstash usaria uma configuração como a mostrada na Figura 7-3.
 
 ```
 input {
@@ -59,7 +60,7 @@ Depois que os logs forem coletados pelo Logstash, ele precisará de algum lugar 
 
 ## <a name="elastic-search"></a>Pesquisa elástica
 
-A pesquisa elástica é um mecanismo de pesquisa poderoso que pode indexar logs à medida que eles chegam. Ele faz as consultas em execução nos logs rapidamente. A pesquisa elástica pode lidar com enormes quantidades de logs e, em casos extremos, pode ser dimensionada horizontalmente em vários nós. 
+A pesquisa elástica é um mecanismo de pesquisa poderoso que pode indexar logs à medida que eles chegam. Ele faz as consultas em execução nos logs rapidamente. A pesquisa elástica pode lidar com enormes quantidades de logs e, em casos extremos, pode ser dimensionada horizontalmente em vários nós.
 
 As mensagens de log que foram criadas para conter parâmetros ou que tiveram parâmetros divididos por meio deles por meio do processamento de Logstash podem ser consultadas diretamente à medida que Elasticsearch preserva essas informações.
 
@@ -85,11 +86,11 @@ Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Visualizando informações com painéis da Web do Kibana
 
-O componente final da pilha é Kibana. Essa ferramenta é usada para fornecer visualizações interativas em um painel da Web. Os painéis podem ser criados mesmo por usuários que não são técnicos. A maioria dos dados residentes no índice Elasticsearch pode ser incluída nos painéis do Kibana. Usuários individuais podem ter diferentes desejos de Dashboard e o Kibana permite essa personalização por meio da permissão de painéis específicos do usuário. 
+O componente final da pilha é Kibana. Essa ferramenta é usada para fornecer visualizações interativas em um painel da Web. Os painéis podem ser criados mesmo por usuários que não são técnicos. A maioria dos dados residentes no índice Elasticsearch pode ser incluída nos painéis do Kibana. Usuários individuais podem ter diferentes desejos de Dashboard e o Kibana permite essa personalização por meio da permissão de painéis específicos do usuário.
 
 ## <a name="installing-elastic-stack-on-azure"></a>Instalando a pilha elástica no Azure
 
-A pilha elástica pode ser instalada no Azure de várias maneiras. Como sempre, é possível [provisionar máquinas virtuais e instalar a pilha elástica diretamente](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)nelas. Essa opção é preferida por alguns usuários experientes, pois oferece o mais alto grau de personalização. A implantação na infraestrutura como um serviço introduz uma sobrecarga de gerenciamento significativa, forçando aqueles que tomam esse caminho para apropriar-se de todas as tarefas associadas à infraestrutura como um serviço, como proteger os computadores e manter-se atualizado com os patches. 
+A pilha elástica pode ser instalada no Azure de várias maneiras. Como sempre, é possível [provisionar máquinas virtuais e instalar a pilha elástica diretamente](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)nelas. Essa opção é preferida por alguns usuários experientes, pois oferece o mais alto grau de personalização. A implantação na infraestrutura como um serviço introduz uma sobrecarga de gerenciamento significativa, forçando aqueles que tomam esse caminho para apropriar-se de todas as tarefas associadas à infraestrutura como um serviço, como proteger os computadores e manter-se atualizado com os patches.
 
 Uma opção com menos sobrecarga é fazer uso de um dos muitos contêineres do Docker nos quais a pilha elástica já foi configurada. Esses contêineres podem ser descartados em um cluster kubernetes existente e executados junto com o código do aplicativo. O contêiner [sebp/Elk](https://elk-docker.readthedocs.io/) é um contêiner de pilha elástico bem documentado e testado.
 

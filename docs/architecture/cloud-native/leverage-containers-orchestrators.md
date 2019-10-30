@@ -2,12 +2,12 @@
 title: Como aproveitar contêineres e orquestradores
 description: Aproveitando contêineres do Docker e orquestradores kubernetes no Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7b136ed2760ea471f42ff82d20298ff8714c6dee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087230"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Como aproveitar contêineres e orquestradores
 
@@ -53,7 +53,7 @@ E mais, os contêineres são definidos por arquivos simples que podem ser verifi
 
 Os contêineres são imutáveis. Quando você tiver a definição de um contêiner, poderá recriar esse contêiner e ele será executado exatamente da mesma maneira. Essa imutabilidade se presta ao design baseado em componentes. Se algumas partes de um aplicativo não forem alteradas com frequência como outras, por que reimplantar todo o aplicativo quando você puder apenas implantar as partes que mudam com mais frequência? Diferentes recursos e preocupações abrangentes de um aplicativo podem ser divididos em unidades separadas. A Figura 3-2 mostra como um aplicativo monolítico pode aproveitar os contêineres e os microserviços delegando determinados recursos ou funcionalidades. A funcionalidade restante no aplicativo também foi contida em contêineres.
 
-![Breaking um aplicativo monolítico para usar os microserviços no back-end. ](./media/breaking-up-monolith-with-backend-microservices.png)
+![dividir um aplicativo monolítico para usar os microserviços no back-end.](./media/breaking-up-monolith-with-backend-microservices.png)
 **figura 3-2**. Dividir um aplicativo monolítico para usar os microserviços no back-end.
 
 Os aplicativos nativos de nuvem criados usando contêineres separados beneficiam-se da capacidade de implantar o máximo ou o mínimo de um aplicativo, conforme necessário. Serviços individuais podem ser hospedados em nós com recursos apropriados para cada serviço. O ambiente em que cada serviço é executado é imutável, pode ser compartilhado entre desenvolvimento, teste e produção e pode ser facilmente com controle de versão. O acoplamento entre diferentes áreas do aplicativo ocorre explicitamente como chamadas ou mensagens entre serviços, não as dependências de tempo de compilação dentro do monolítico. E qualquer parte do aplicativo geral pode escolher a tecnologia que faz mais sentido para esse recurso ou recurso sem a necessidade de alterações no restante do aplicativo.
@@ -62,7 +62,7 @@ Os aplicativos nativos de nuvem criados usando contêineres separados beneficiam
 
 Os serviços criados nos contêineres podem aproveitar os benefícios de dimensionamento fornecidos pelas ferramentas de orquestração como o kubernetes. Os contêineres de design só sabem sobre si mesmos. Depois de começar a ter vários contêineres que precisam trabalhar juntos, pode valer a pena organizá-los em um nível mais alto. Organizar grandes números de contêineres e suas dependências compartilhadas, como a configuração de rede, é onde as ferramentas de orquestração entram para economizar o dia! O kubernetes é uma plataforma de orquestração de contêiner projetada para automatizar a implantação, o dimensionamento e o gerenciamento de aplicativos em contêineres. Ele cria uma camada de abstração sobre grupos de contêineres e os organiza em *pods*. O pods é executado em computadores de trabalho conhecidos como *nós*. O grupo organizado inteiro é conhecido como um *cluster*. A Figura 3-3 mostra os diferentes componentes de um cluster kubernetes.
 
-![Kubernetes componentes de cluster. ](./media/kubernetes-cluster-components.png)
+![componentes do cluster kubernetes.](./media/kubernetes-cluster-components.png)
 **figura 3-3**. Componentes do cluster kubernetes.
 
 O kubernetes tem suporte interno para dimensionar clusters para atender à demanda. Combinado com micro-Services em contêineres, isso fornece aos aplicativos nativos de nuvem a capacidade de responder de forma rápida e eficiente a picos de demanda com recursos adicionais quando e onde eles são necessários.
@@ -117,7 +117,7 @@ As organizações que implantam e devem posteriormente manter um grande número 
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Quando você deve evitar o uso de contêineres e orquestradores?
 
-Se você não estiver implantando ou não puder criar seu aplicativo seguindo os princípios de aplicativo de doze fatores, provavelmente será melhor evitar contêineres e orquestradores. Nesses casos, pode ser melhor seguir adiante com uma plataforma de hospedagem baseada em VM ou possivelmente um sistema híbrido no qual você possa fazer a rotação de determinadas partes de funcionalidade em contêineres separados ou mesmo em funções sem servidor. 
+Se você não estiver implantando ou não puder criar seu aplicativo seguindo os princípios de aplicativo de doze fatores, provavelmente será melhor evitar contêineres e orquestradores. Nesses casos, pode ser melhor seguir adiante com uma plataforma de hospedagem baseada em VM ou possivelmente um sistema híbrido no qual você possa fazer a rotação de determinadas partes de funcionalidade em contêineres separados ou mesmo em funções sem servidor.
 
 ## <a name="development-resources"></a>Recursos de desenvolvimento
 

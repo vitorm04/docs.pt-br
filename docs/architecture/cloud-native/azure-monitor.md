@@ -2,20 +2,20 @@
 title: Azure Monitor
 description: Usar Azure Monitor para obter visibilidade do seu sistema está em execução.
 ms.date: 09/23/2019
-ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087690"
 ---
-# <a name="azure-monitor"></a>Azure Monitor 
+# <a name="azure-monitor"></a>Azure Monitor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Nenhum outro provedor de nuvem tem o mesmo que uma solução de monitoramento de aplicativo em nuvem, como foi encontrada no Azure. Azure Monitor é um nome abrangente para uma coleção de ferramentas projetadas para fornecer visibilidade do estado do seu sistema, informações sobre quaisquer problemas e otimização do seu aplicativo. 
+Nenhum outro provedor de nuvem tem o mesmo que uma solução de monitoramento de aplicativo em nuvem, como foi encontrada no Azure. Azure Monitor é um nome abrangente para uma coleção de ferramentas projetadas para fornecer visibilidade do estado do seu sistema, informações sobre quaisquer problemas e otimização do seu aplicativo.
 
-![Azure monitor, uma coleção de ferramentas para fornecer informações sobre como um aplicativo nativo de nuvem está funcionando. ](./media/azure-monitor.png)
+![Azure Monitor, uma coleção de ferramentas para fornecer informações sobre como um aplicativo nativo de nuvem está funcionando.](./media/azure-monitor.png)
 **figura 7-9**. Azure Monitor, uma coleção de ferramentas para fornecer informações sobre como um aplicativo nativo de nuvem está funcionando.
 
 ## <a name="gathering-logs-and-metrics"></a>Coletando logs e métricas
@@ -35,28 +35,28 @@ Nenhum aplicativo moderno estaria completo sem alguma inteligência artificial o
 Application Insights fornece uma linguagem de consulta avançada chamada Kusto que pode ser usada para localizar registros, resumir-los e até mesmo gráficos de plotagem. Por exemplo, essa consulta localizará todos os registros do mês de novembro de 2007, agrupando-os por Estado e plotará os 10 primeiros como um gráfico de pizza.
 
 ```
-StormEvents 
+StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State
 | top 10 by count_
-| render piechart 
+| render piechart
 ```
 
-![The resultado da consulta Application Insights ](./media/azure-monitor.png)
+![o resultado da consulta Application Insights](./media/azure-monitor.png)
 **figura 7-10**. O resultado da consulta de Application Insights.
 
 Há um [playground para experimentar consultas Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) , que é um lugar fantástico para gastar uma ou duas horas. A leitura de [consultas de exemplo](https://docs.microsoft.com/azure/kusto/query/samples) também pode ser instrutiva.
 
 ## <a name="dashboards"></a>Painéis
 
-Há várias tecnologias de painel diferentes que podem ser usadas para trazer as informações de Azure Monitor. Talvez a mais simples seja apenas executar consultas em Application Insights e [plotar os dados em um gráfico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards). 
+Há várias tecnologias de painel diferentes que podem ser usadas para trazer as informações de Azure Monitor. Talvez a mais simples seja apenas executar consultas em Application Insights e [plotar os dados em um gráfico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards).
 
-![An exemplo de gráficos de Application Insights inseridos no painel principal do Azure ](./media/azure-monitor.png)
+![um exemplo de gráficos de Application Insights inseridos no painel principal do Azure](./media/azure-monitor.png)
 **figura 7-11**. Um exemplo de gráficos de Application Insights incorporados no painel principal do Azure.
 
 Esses gráficos podem então ser inseridos no portal do Azure apropriado pelo uso do recurso de painel. Para os usuários com mais requisitos de ação, como a possibilidade de fazer uma busca detalhada em várias camadas de dados Azure Monitor dados estão disponíveis para [Power bi](https://powerbi.microsoft.com/). Power BI é uma ferramenta de classe empresarial, líder do setor, business intelligence que pode agregar dados de várias fontes de dados diferentes.
 
-![An exemplo Power BI painel ](./media/azure-monitor.png)
+![um painel de Power BI de exemplo](./media/azure-monitor.png)
 **figura 7-12**. Um exemplo Power BI Dashboard.
 
 ## <a name="alerts"></a>Alertas
@@ -71,9 +71,9 @@ Esses gráficos podem então ser inseridos no portal do Azure apropriado pelo us
 
 Quando disparado, os alertas podem executar uma ampla variedade de tarefas. No lado simples, os alertas podem apenas enviar uma notificação por email para uma lista de endereçamento ou uma mensagem de texto para um indivíduo. Alertas mais envolvidos podem disparar um fluxo de trabalho em uma ferramenta como PagerDuty, que reconhece quem está em chamada para um determinado aplicativo. Os alertas podem disparar ações no [Microsoft Flow](https://flow.microsoft.com/) desbloqueando possibilidades ilimitadas para fluxos de trabalho.
 
-Como as causas comuns dos alertas são identificadas, os alertas podem ser aprimorados com detalhes sobre as causas comuns dos alertas e as etapas a serem seguidas para resolvê-los. Implantações de aplicativos nativos de nuvem altamente maduras podem optar por disparar tarefas de auto-recuperação, que executam ações como remover nós com falha de um conjunto de dimensionamento ou disparar uma atividade de dimensionamento automático. Eventualmente, talvez não seja mais necessário ativar o pessoal de chamada em 2AM para resolver um problema de site ativo, pois o sistema poderá se ajustar para compensar ou pelo menos limp até que alguém chegue ao trabalho na manhã seguinte. 
+Como as causas comuns dos alertas são identificadas, os alertas podem ser aprimorados com detalhes sobre as causas comuns dos alertas e as etapas a serem seguidas para resolvê-los. Implantações de aplicativos nativos de nuvem altamente maduras podem optar por disparar tarefas de auto-recuperação, que executam ações como remover nós com falha de um conjunto de dimensionamento ou disparar uma atividade de dimensionamento automático. Eventualmente, talvez não seja mais necessário ativar o pessoal de chamada em 2AM para resolver um problema de site ativo, pois o sistema poderá se ajustar para compensar ou pelo menos limp até que alguém chegue ao trabalho na manhã seguinte.
 
-Azure Monitor aproveita automaticamente o aprendizado de máquina para entender os parâmetros operacionais normais dos aplicativos implantados. Isso permite que ele detecte serviços que estão operando fora de seus parâmetros normais. Por exemplo, o tráfego de dia da semana típico no site pode ser 10.000 solicitações por minuto. E, em seguida, em uma determinada semana, repentinamente, o número de solicitações atinge um 20.000 de solicitações altamente incomuns por minuto. A [detecção inteligente](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) notará esse desvio da norma e disparará um alerta. Ao mesmo tempo, a análise de tendência é inteligente o suficiente para evitar o acionamento de falsos positivos quando a carga de tráfego é esperada.  
+Azure Monitor aproveita automaticamente o aprendizado de máquina para entender os parâmetros operacionais normais dos aplicativos implantados. Isso permite que ele detecte serviços que estão operando fora de seus parâmetros normais. Por exemplo, o tráfego de dia da semana típico no site pode ser 10.000 solicitações por minuto. E, em seguida, em uma determinada semana, repentinamente, o número de solicitações atinge um 20.000 de solicitações altamente incomuns por minuto. A [detecção inteligente](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) notará esse desvio da norma e disparará um alerta. Ao mesmo tempo, a análise de tendência é inteligente o suficiente para evitar o acionamento de falsos positivos quando a carga de tráfego é esperada.
 
 >[!div class="step-by-step"]
 >[Anterior](monitoring-azure-kubernetes.md)

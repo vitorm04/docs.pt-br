@@ -2,12 +2,12 @@
 title: Diretrizes gerais
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Diretrizes gerais
 ms.date: 09/11/2018
-ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089645"
 ---
 # <a name="general-guidance"></a>Diretrizes gerais
 
@@ -37,10 +37,10 @@ Usar o .NET Framework no Docker pode melhorar suas experiências de implantaçã
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Livro eletrônico: Modernizar aplicativos .NET Framework existentes com o Azure e Contêineres do Windows**  
+- **Livro eletrônico: modernizar os aplicativos .NET Framework existentes com contêineres do Azure e do Windows**  
     https://aka.ms/liftandshiftwithcontainersebook
 
-- **Aplicativos de exemplo: Modernização de aplicativos Web ASP.NET herdados usando Contêineres do Windows**  
+- **Aplicativos de exemplo: modernização de aplicativos Web ASP.NET herdados usando Contêineres do Windows**  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]

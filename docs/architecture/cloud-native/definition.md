@@ -3,12 +3,12 @@ title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087539"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -18,7 +18,7 @@ Pare o que está fazendo e o texto 10 de seus colegas. Peça-lhes para definir o
 
 A nuvem nativa está prestes a mudar a maneira como pensamos em construir sistemas de negócios críticos.
 
-Os sistemas nativos de nuvem são projetados para adotar alteração rápida, grande escala e resiliência. 
+Os sistemas nativos de nuvem são projetados para adotar alteração rápida, grande escala e resiliência.
 
 A base de computação nativa da nuvem fornece uma [definição oficial](https://github.com/cncf/foundation/blob/master/charter.md):
 
@@ -28,14 +28,14 @@ A base de computação nativa da nuvem fornece uma [definição oficial](https:/
 
 Os aplicativos se tornaram cada vez mais complexos com os usuários exigindo mais e mais. Os usuários esperam uma rápida capacidade de resposta, recursos inovadores e zero tempo de inatividade. Problemas de desempenho, erros recorrentes e a incapacidade de mover rapidamente não são mais aceitáveis. Eles mudarão facilmente para o seu concorrente.
 
-A nuvem nativa é muito sobre *velocidade* e *agilidade*. Os sistemas de negócios estão evoluindo da habilitação de recursos de negócios a armas de transformação estratégica, acelerando a velocidade e o crescimento dos negócios. É imperativo obter ideias para o mercado imediatamente. 
+A nuvem nativa é muito sobre *velocidade* e *agilidade*. Os sistemas de negócios estão evoluindo da habilitação de recursos de negócios a armas de transformação estratégica, acelerando a velocidade e o crescimento dos negócios. É imperativo obter ideias para o mercado imediatamente.
 
 Aqui estão algumas empresas que implementaram essas técnicas. Pense na velocidade, na agilidade e na escalabilidade que eles atingiram.
 
-| Corporativa | Ocorrer | 
+| Corporativa | Ocorrer |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tem mais de 600 serviços em produção. Implanta uma centena de vezes por dia. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Tem mais de 1.000 serviços armazenados em produção. Implanta vários milhares de compilações por semana. | 
+| [Uber](https://eng.uber.com/micro-deploy/) | Tem mais de 1.000 serviços armazenados em produção. Implanta vários milhares de compilações por semana. |
 | [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tem mais de 300 serviços em produção. Faz quase 1.000 alterações por dia. |
 
 Como você pode ver, Netflix, Uber e WeChat expõem sistemas que consistem em centenas de microservices independentes. Esse estilo de arquitetura permite que eles respondam rapidamente às condições do mercado. Eles podem atualizar de forma instantânea áreas pequenas de um aplicativo dinâmico e complexo e dimensionar individualmente essas áreas conforme necessário.
@@ -132,6 +132,7 @@ Como seu serviço identificará quem está acessando e quais permissões eles t�
 A identidade é abordada no capítulo 8 de detalhes, *identidade*.
 
 ## <a name="microservices"></a>Microsserviços
+
 Os sistemas nativos de nuvem adotam os microserviços, um estilo de arquitetura popular para construir aplicativos modernos.
 
 Criado como um conjunto distribuído de serviços pequenos e independentes que interagem por meio de uma malha compartilhada, os microserviços compartilham as seguintes características:
@@ -160,7 +161,7 @@ Observe como os microserviços promovem o princípio "uma base de código, um ap
 
 Os microserviços fornecem agilidade.
 
-No início do capítulo, comparamos um aplicativo de comércio eletrônico criado como um monolítico para isso com os microservices. No exemplo, vimos alguns benefícios claros: 
+No início do capítulo, comparamos um aplicativo de comércio eletrônico criado como um monolítico para isso com os microservices. No exemplo, vimos alguns benefícios claros:
 
 - Cada Microservice tem um ciclo de vida autônomo e pode evoluir de forma independente e implantar com frequência. Você não precisa esperar por uma versão trimestral para implantar novos recursos ou atualizar. Você pode atualizar uma pequena área de um aplicativo complexo com menos risco de interromper todo o sistema.
 
@@ -174,9 +175,9 @@ Os microserviços podem ser criados com qualquer plataforma de desenvolvimento m
 
 A plataforma Microsoft .NET Core é uma excelente opção. Gratuito e de código aberto, ele tem muitos recursos internos para simplificar o desenvolvimento de microserviço. O .NET Core é uma plataforma cruzada. Os aplicativos podem ser criados e executados no Windows, no macOS e na maioria dos tipos de Linux.
 
-O .NET Core é altamente funcional e pontuado bem em comparação com o Node. js e outras plataformas concorrentes. Curiosamente, a [TechEmpower](https://www.techempower.com/) realizou um amplo conjunto de [benchmarks de desempenho](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) em várias plataformas e estruturas de aplicativos Web. .NET Core pontuado nos 10 principais-bem acima do node. js e outras plataformas concorrentes. 
+O .NET Core é altamente funcional e pontuado bem em comparação com o Node. js e outras plataformas concorrentes. Curiosamente, a [TechEmpower](https://www.techempower.com/) realizou um amplo conjunto de [benchmarks de desempenho](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) em várias plataformas e estruturas de aplicativos Web. .NET Core pontuado nos 10 principais-bem acima do node. js e outras plataformas concorrentes.
 
-O .NET Core é mantido pela Microsoft e pela Comunidade do .NET no GitHub. 
+O .NET Core é mantido pela Microsoft e pela Comunidade do .NET no GitHub.
 
 ## <a name="containers"></a>Contêineres
 
@@ -188,11 +189,11 @@ Quando necessário, você transforma a imagem em uma instância de contêiner em
 
 A Figura 1-5 mostra três microserviços diferentes, cada um em seu próprio contêiner, em execução em um único host.
 
-![Vários contêineres em execução em um host de contêiner](./media/hosting-mulitple-containers.png)  
+![Vários contêineres em execução em um host de contêiner](./media/hosting-mulitple-containers.png)
 
 **Figura 1-5**. Vários contêineres em execução em um host de contêiner
 
-Observe como cada contêiner mantém seu próprio conjunto de dependências e tempo de execução, que pode ser diferente. Aqui, vemos versões diferentes do microserviço de produto em execução no mesmo host. Cada contêiner compartilha uma fatia do sistema operacional do host subjacente, da memória e do processador, mas é isolado uns dos outros. 
+Observe como cada contêiner mantém seu próprio conjunto de dependências e tempo de execução, que pode ser diferente. Aqui, vemos versões diferentes do microserviço de produto em execução no mesmo host. Cada contêiner compartilha uma fatia do sistema operacional do host subjacente, da memória e do processador, mas é isolado uns dos outros.
 
 Observe como o modelo de contêiner adota o princípio de "dependências" do [aplicativo de doze fatores](https://12factor.net/).
 
@@ -204,7 +205,7 @@ Embora existam vários fornecedores de contêineres, o Docker capturou a partici
 
 ### <a name="why-containers"></a>Por que contêineres?
 
-Os contêineres fornecem portabilidade e garantem a consistência entre ambientes. Ao encapsular tudo em um único pacote, você *isola* o microserviço e suas dependências da infraestrutura subjacente. 
+Os contêineres fornecem portabilidade e garantem a consistência entre ambientes. Ao encapsular tudo em um único pacote, você *isola* o microserviço e suas dependências da infraestrutura subjacente.
 
 Você pode implantar esse mesmo contêiner em qualquer ambiente que tenha o mecanismo de tempo de execução do Docker. As cargas de trabalho em contêineres também eliminam a despesa de pré-configurar cada ambiente com estruturas, bibliotecas de software e mecanismos de tempo de execução.
 
@@ -212,7 +213,7 @@ Ao compartilhar o sistema operacional subjacente e os recursos do host, os cont�
 
 ### <a name="container-orchestration"></a>Orquestração de contêiner
 
-Embora ferramentas como o Docker criem imagens e executem contêineres, você também precisará de ferramentas para gerenciá-las. O gerenciamento de contêineres é feito com um programa de software especial chamado orquestrador de contêiner. Ao operar em escala, a orquestração de contêiner é essencial. 
+Embora ferramentas como o Docker criem imagens e executem contêineres, você também precisará de ferramentas para gerenciá-las. O gerenciamento de contêineres é feito com um programa de software especial chamado orquestrador de contêiner. Ao operar em escala, a orquestração de contêiner é essencial.
 
 A Figura 1-6 mostra as tarefas de gerenciamento que os orquestradores de contêiner fornecem.
 
@@ -239,7 +240,7 @@ Observe como os orquestradores adotam os princípios de Disposability e simultan
 
 > *O fator \#8 especifica que "os serviços se expandem por um grande número de pequenos processos idênticos (cópias) em oposição à expansão de uma única instância grande no computador mais potente disponível".*
 
-Embora existam vários orquestradores de contêiner, [kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) se tornou o padrão de fato para o mundo nativo da nuvem. É uma plataforma portátil, extensível e de software livre para gerenciar cargas de trabalho em contêineres. 
+Embora existam vários orquestradores de contêiner, [kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) se tornou o padrão de fato para o mundo nativo da nuvem. É uma plataforma portátil, extensível e de software livre para gerenciar cargas de trabalho em contêineres.
 
 Você pode hospedar sua própria instância do kubernetes, mas seria responsável por provisionar e gerenciar seus recursos, o que pode ser complexo. Os recursos de nuvem do Azure kubernetes como um serviço gerenciado, o [AKs (serviço kubernetes do Azure)](https://azure.microsoft.com/services/kubernetes-service/). Um serviço gerenciado permite que você aproveite totalmente seus recursos, sem precisar instalá-lo e mantê-lo.
 
@@ -287,7 +288,7 @@ Com o IaC, você automatiza o provisionamento de plataforma e a implantação de
 
 ### <a name="automating-infrastructure"></a>Automatizando a infraestrutura
 
-Ferramentas como [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform e o [CLI do Azure](https://docs.microsoft.com/cli/azure/), permitem que você declarate o script de infraestrutura de nuvem de forma declarativa. Nomes de recursos, locais, capacidades e segredos são parametrizados e dinâmicos. O script tem versão e fez check-in do controle do código-fonte como um artefato do seu projeto. Você invoca o script para provisionar uma infraestrutura consistente e reproduzível entre ambientes de sistema, como QA, preparo e produção. 
+Ferramentas como [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform e o [CLI do Azure](https://docs.microsoft.com/cli/azure/), permitem que você declarate o script de infraestrutura de nuvem de forma declarativa. Nomes de recursos, locais, capacidades e segredos são parametrizados e dinâmicos. O script tem versão e fez check-in do controle do código-fonte como um artefato do seu projeto. Você invoca o script para provisionar uma infraestrutura consistente e reproduzível entre ambientes de sistema, como QA, preparo e produção.
 
 Nos bastidores, IaC é idempotente, o que significa que você pode executar o mesmo script repetidamente sem efeitos colaterais. Se a equipe precisar fazer uma alteração, ela Editará e executará novamente o script. Somente os recursos atualizados são afetados.
 
@@ -299,7 +300,7 @@ O [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente, 
 
 > O *fator \#5* especifica que "cada versão deve impor uma separação estrita nos estágios de Build, versão e execução. Cada um deve ser marcado com uma ID exclusiva e dar suporte à capacidade de reverter. "
 
-Os sistemas de CI/CD modernos ajudam a atender a esse princípio. Eles fornecem etapas de implantação separadas e ajudam a garantir o código consistente e de qualidade que está prontamente disponível para os usuários. 
+Os sistemas de CI/CD modernos ajudam a atender a esse princípio. Eles fornecem etapas de implantação separadas e ajudam a garantir o código consistente e de qualidade que está prontamente disponível para os usuários.
 
 A Figura 1-8 mostra a separação entre o processo de implantação.
 
@@ -307,17 +308,17 @@ A Figura 1-8 mostra a separação entre o processo de implantação.
 
 **Figura 1-8**. Etapas de implantação em um pipeline de CI/CD
 
-Na figura anterior, preste atenção especial à separação de tarefas. 
+Na figura anterior, preste atenção especial à separação de tarefas.
 
-O desenvolvedor constrói um recurso em seu ambiente de desenvolvimento, Iterando por meio do que é chamado de "loop interno" de código, execução e depuração. Ao concluir, esse código é *enviado por push* para um repositório de código, como GitHub, Azure DevOps ou BitBucket. 
+O desenvolvedor constrói um recurso em seu ambiente de desenvolvimento, Iterando por meio do que é chamado de "loop interno" de código, execução e depuração. Ao concluir, esse código é *enviado por push* para um repositório de código, como GitHub, Azure DevOps ou BitBucket.
 
-O push dispara um estágio de compilação que transforma o código em um artefato binário. O trabalho é implementado com um pipeline de [CI (integração contínua)](https://martinfowler.com/articles/continuousIntegration.html) . Ele cria, testa e empacota automaticamente o aplicativo. 
+O push dispara um estágio de compilação que transforma o código em um artefato binário. O trabalho é implementado com um pipeline de [CI (integração contínua)](https://martinfowler.com/articles/continuousIntegration.html) . Ele cria, testa e empacota automaticamente o aplicativo.
 
 O estágio de lançamento pega o artefato binário, aplica informações de configuração de ambiente e aplicativo externo e produz uma versão imutável. A versão é implantada em um ambiente especificado. O trabalho é implementado com um pipeline de [entrega contínua (CD)](https://martinfowler.com/bliki/ContinuousDelivery.html) . Cada versão deve ser identificável. Você pode dizer "esta implantação está executando a versão 2.1.1 do aplicativo".
 
-Por fim, o recurso liberado é executado no ambiente de execução de destino. As versões são imutáveis, o que significa que qualquer alteração deve criar uma nova versão. 
+Por fim, o recurso liberado é executado no ambiente de execução de destino. As versões são imutáveis, o que significa que qualquer alteração deve criar uma nova versão.
 
-Aplicando essas práticas, as organizações evoluíram radicalmente como elas enviam software. Muitos foram movidos de versões trimestrais para atualizações sob demanda. O objetivo é capturar problemas no início do ciclo de desenvolvimento quando eles são menos caros de serem corrigidos. Quanto maior a duração entre as integrações, os problemas mais caros se tornarão resolvidos.  Com a consistência no processo de integração, as equipes podem confirmar as alterações de código com mais frequência, levando a uma melhor colaboração e qualidade de software.  
+Aplicando essas práticas, as organizações evoluíram radicalmente como elas enviam software. Muitos foram movidos de versões trimestrais para atualizações sob demanda. O objetivo é capturar problemas no início do ciclo de desenvolvimento quando eles são menos caros de serem corrigidos. Quanto maior a duração entre as integrações, os problemas mais caros se tornarão resolvidos.  Com a consistência no processo de integração, as equipes podem confirmar as alterações de código com mais frequência, levando a uma melhor colaboração e qualidade de software.
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 

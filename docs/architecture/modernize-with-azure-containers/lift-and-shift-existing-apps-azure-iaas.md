@@ -2,16 +2,16 @@
 title: Migrar e deslocar aplicativos .NET existentes para IaaS do Azure (pronto para infraestrutura de nuvem)
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089631"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrar e deslocar aplicativos .NET existentes para IaaS do Azure (pronto para infraestrutura de nuvem)
 
-> Visão: Como uma primeira etapa, para reduzir seu investimento local e o custo total de manutenção de hardware e rede, basta hospedar novamente os aplicativos existentes na nuvem.
+> Visão: como uma primeira etapa, para reduzir seu investimento local e o custo total de manutenção de hardware e rede, basta hospedar novamente os aplicativos existentes na nuvem.
 
 Antes de entrar em *como* migrar seus aplicativos existentes para a plataforma IaaS (infraestrutura como serviço) do Azure, é importante analisar os motivos pelos *quais* você desejaria migrar diretamente para o IaaS no Azure. O cenário nesse nível de maturidade de modernização essencialmente é começar a usar VMs na nuvem, em vez de continuar a usar sua infraestrutura local atual.
 
@@ -35,11 +35,11 @@ Também se tornou evidente que os aplicativos são mais fáceis de modernizar e 
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Quando migrar para IaaS em vez de para PaaS
 
-As seções a seguir discutem aplicativos otimizados para a nuvem que são basicamente baseados em plataformas e serviços de PaaS. Esses aplicativos oferecem a você a maior vantagem de migrar para a nuvem. 
+As seções a seguir discutem aplicativos otimizados para a nuvem que são basicamente baseados em plataformas e serviços de PaaS. Esses aplicativos oferecem a você a maior vantagem de migrar para a nuvem.
 
-Se sua meta é simplesmente mover os aplicativos existentes para a nuvem, primeiro, identifique os aplicativos existentes que não exigem modificação substancial para serem executados no serviço de Azure App. Esses aplicativos devem ser os primeiros candidatos para a otimização da nuvem. 
+Se sua meta é simplesmente mover os aplicativos existentes para a nuvem, primeiro, identifique os aplicativos existentes que não exigem modificação substancial para serem executados no serviço de Azure App. Esses aplicativos devem ser os primeiros candidatos para a otimização da nuvem.
 
-Em seguida, para os aplicativos que ainda não podem ser movidos para contêineres do Windows e PaaS, como serviço de aplicativo ou orquestradores como o serviço kubernetes do Azure, migre-os para VMs simples (IaaS). 
+Em seguida, para os aplicativos que ainda não podem ser movidos para contêineres do Windows e PaaS, como serviço de aplicativo ou orquestradores como o serviço kubernetes do Azure, migre-os para VMs simples (IaaS).
 
 Mas lembre-se de que configurar, proteger e manter corretamente as VMs requer muito mais tempo e experiência de ti em comparação com o uso de serviços de PaaS no Azure. Se você estiver considerando as máquinas virtuais do Azure, certifique-se de levar em conta o esforço de manutenção em andamento necessário para corrigir, atualizar e gerenciar seu ambiente de VM. As máquinas virtuais do Azure são IaaS.
 

@@ -2,12 +2,12 @@
 title: Implantar aplicativos .NET existentes como contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Implantar aplicativos .NET existentes como contêineres do Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089555"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -154,11 +154,11 @@ Os produtos nos contêineres de suporte do Azure que estão ao mesmo tempo posic
 
 - **Serviço de Aplicativo do Azure**
 - **Serviço kubernetes do Azure (AKS e ACS)**
-- **Lote do Azure** 
+- **Lote do Azure**
 
 Em seguida, o registro de contêiner do Azure é um registro de contêiner altamente escalonável hospedado no Azure que você pode usar de todos os produtos anteriores ao registrar e implantar suas imagens de contêiner personalizadas.
 
-Além disso, de seus contêineres, você pode consumir outros serviços gerenciados no Azure, como o banco de dados SQL do Azure, o cache Redis do Azure, o Azure Cosmos DB, etc. Além disso, há soluções/plataformas de terceiros disponíveis no Azure Marketplace, como Cloud Foundry e OpenShift, em que você também pode usar contêineres no Azure. 
+Além disso, de seus contêineres, você pode consumir outros serviços gerenciados no Azure, como o banco de dados SQL do Azure, o cache Redis do Azure, o Azure Cosmos DB, etc. Além disso, há soluções/plataformas de terceiros disponíveis no Azure Marketplace, como Cloud Foundry e OpenShift, em que você também pode usar contêineres no Azure.
 
 Nas próximas seções, você pode explorar as recomendações da Microsoft sobre quando usar cada um desses produtos e soluções do Azure especificamente ao direcionar contêineres do Windows.
 

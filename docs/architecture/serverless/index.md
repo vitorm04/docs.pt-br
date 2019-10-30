@@ -4,16 +4,16 @@ description: Guia para arquitetura sem servidor. Saiba quando, por que e como im
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093543"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicativos sem servidor: arquitetura, padrões e implementação no Azure
 
-![Captura de tela que mostra a capa do livro eletrônico Aplicativos sem servidor.](./media/index/serverless-apps-cover.jpg)
+![Captura de tela que mostra a capa do livro eletrônico de aplicativos sem servidor.](./media/index/serverless-apps-cover.jpg)
 
 > DOWNLOAD disponível em: <https://aka.ms/serverless-ebook>
 
@@ -43,17 +43,17 @@ Todas as outras marcas e logotipos são propriedade de seus respectivos propriet
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , Consultor de Desenvolvimento em Nuvem Sênior, APEX, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , defensora da nuvem sênior, Microsoft Corp.
 
 Colaborador:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , Consultor de Desenvolvimento em Nuvem II, APEX, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)** , defensora da nuvem sênior, Microsoft Corp.
 
 Editores:
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , Desenvolvedor de Conteúdo Sênior, APEX, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)** , desenvolvedor de conteúdo sênior, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , Desenvolvedora de Conteúdo Sênior, APEX, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)** , desenvolvedor de conteúdo sênior, Microsoft Corp.
 
 Participantes e revisores:
 

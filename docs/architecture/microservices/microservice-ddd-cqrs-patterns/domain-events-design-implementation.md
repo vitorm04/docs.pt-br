@@ -2,12 +2,12 @@
 title: Eventos de domínio. design e implementação
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Obtenha uma visão detalhada dos eventos de domínio, um conceito fundamental para estabelecer a comunicação entre agregações.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093962"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -130,7 +130,7 @@ Conforme observado anteriormente, uma característica importante de eventos é q
 
 A próxima pergunta é: como acionar um evento de domínio para que ele alcance os respectivos manipuladores de eventos? Você pode usar várias abordagens.
 
-Udi Dahan originalmente propôs (em várias postagens relacionadas, como, [Domain Events – Take 2 (Eventos de domínio – tomada 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) o uso de uma classe estática para gerenciar e acionar eventos. Isso incluiria uma classe estática chamada DomainEvents, que geraria eventos de domínio assim que fosse chamada, usando uma sintaxe como: `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escreveu uma postagem no blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) (Reforçando seu domínio: eventos de domínio)) que recomenda uma abordagem semelhante.
+Udi Dahan originalmente propôs (em várias postagens relacionadas, como, [Domain Events – Take 2 (Eventos de domínio – tomada 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) o uso de uma classe estática para gerenciar e acionar eventos. Isso incluiria uma classe estática chamada DomainEvents, que geraria eventos de domínio assim que fosse chamada, usando uma sintaxe como: `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escreveu uma postagem no blog ([Strengthening your domain: Domain Events (Fortalecendo seu domínio: eventos de domínio)](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) que recomenda uma abordagem semelhante.
 
 No entanto, quando a classe dos eventos de domínio é estática, ela também faz a expedição imediata aos manipuladores. Isso torna o teste e a depuração mais difíceis, pois os manipuladores de eventos com a lógica de efeitos colaterais são executados imediatamente após o evento ser acionado. Ao testar e depurar, você quer se concentrar somente no que está acontecendo nas classes de agregação atuais; você não deseja ser redirecionado repentinamente para outros manipuladores de eventos de efeitos colaterais relacionados a outras agregações ou lógica de aplicativo. É por isso as outras abordagens evoluíram, conforme explicado na próxima seção.
 
@@ -145,9 +145,9 @@ A abordagem adiada é que o eShopOnContainers usa. Primeiro, você adiciona os e
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ Com esse código, você expede os eventos de entidade aos respectivos manipulado
 
 O resultado geral é que você desacoplou o acionamento de um evento de domínio (uma simples adição a uma lista na memória) da expedição dele para um manipulador de eventos. Além disso, dependendo do tipo de dispatcher que você está usando, é possível expedir os eventos de forma síncrona ou assíncrona.
 
-Lembre-se que os limites transacionais desempenham funções significativas aqui. Se for possível sua unidade de trabalho e transação alcançar mais de uma agregação (como ao usar o EF Core e um banco de dados relacional), isso poderá funcionar bem. Mas se a transação não puder alcançar agregações, como ao usar um banco de dados NoSQL, como o Azure CosmosDB, você precisará implementar etapas adicionais para obter consistência. Essa é outra razão por que a ignorância de persistência não é universal; ela depende do sistema de armazenamento que é usado. 
+Lembre-se que os limites transacionais desempenham funções significativas aqui. Se for possível sua unidade de trabalho e transação alcançar mais de uma agregação (como ao usar o EF Core e um banco de dados relacional), isso poderá funcionar bem. Mas se a transação não puder alcançar agregações, como ao usar um banco de dados NoSQL, como o Azure CosmosDB, você precisará implementar etapas adicionais para obter consistência. Essa é outra razão por que a ignorância de persistência não é universal; ela depende do sistema de armazenamento que é usado.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Transação única entre agregações versus consistência eventual entre agregações
 
@@ -216,15 +216,15 @@ Executar uma única transação entre agregações em vez de depender de consist
 
 > Não é esperado que toda regra que abrange Agregações esteja atualizada em todos os momentos. Por meio de processamento de eventos, processamento em lote ou de outros mecanismos de atualização, outras dependências podem ser resolvidas dentro de um período específico. (página 128)
 
-Vaughn Vernon diz o seguinte no [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Design de agregação efetivo – parte 2: fazendo com que agregações trabalhem em conjunto):
+Vaughn Vernon diz o seguinte em [design agregado efetivo. Parte II: fazer com que as agregações funcionem juntas](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
-> Portanto, se a execução de um comando em uma instância de agregação exigir que as regras de negócio adicionais sejam executadas em uma ou mais agregações, use consistência eventual \[...\] Há uma maneira prática para dar suporte à consistência eventual em um modelo de DDD. Um método de agregação publica um evento de domínio que é entregue no momento exato a um ou mais assinantes assíncronos.
+> Portanto, se a execução de um comando em uma instância de agregação exigir que regras de negócios adicionais sejam executadas em uma ou mais agregações, use a consistência eventual \[...\] há uma maneira prática de dar suporte à consistência eventual em um modelo DDD. Um método de agregação publica um evento de domínio que é entregue no momento exato a um ou mais assinantes assíncronos.
 
 Essa lógica é baseada na adoção de transações refinadas em vez de transações que abrangem muitas agregações ou entidades. A ideia é que, no segundo caso, o número de bloqueios de banco de dados será significativo em aplicativos de larga escala com necessidades de alta escalabilidade. Aceitar o fato de que aplicativos altamente escalonáveis não precisam de consistência transacional instantânea entre várias agregações ajuda a aceitar o conceito de consistência eventual. Geralmente, as mudanças atômicas não são necessárias aos negócios e, em todo caso, é da responsabilidade dos especialistas de domínio dizer se operações específicas precisam ou não de transações atômicas. Se uma operação sempre precisar de uma transação atômica entre várias agregações, você poderá questionar se a agregação deveria ser maior ou se não foi corretamente projetada.
 
 No entanto, outros desenvolvedores e arquitetos, como Jimmy Bogard, estão de acordo com a abrangência de uma única transação entre várias agregações, mas somente quando essas agregações adicionais forem relacionadas a efeitos colaterais do mesmo comando original. Por exemplo, em [A better domain events pattern (Um padrão melhor de eventos de domínio)](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/), Bogard diz:
 
-> Normalmente, desejo que os efeitos colaterais de um evento de domínio ocorram dentro da mesma transação lógica, mas não necessariamente no mesmo escopo de acionamento do evento de domínio \[...\] Imediatamente antes de confirmarmos nossa transação, expedimos nossos eventos para seus respectivos manipuladores.
+> Normalmente, quero que os efeitos colaterais de um evento de domínio ocorram dentro da mesma transação lógica, mas não necessariamente no mesmo escopo de gerar o evento de domínio \[...\] pouco antes de confirmarmos nossa transação, despachamos nossos eventos para seus respectivos manipuladores.
 
 Se você expedir os eventos de domínio imediatamente *antes* da confirmação da transação original, será porque você deseja que os efeitos colaterais desses eventos sejam incluídos na mesma transação. Por exemplo, se o método SaveChanges do DbContext do EF falhar, a transação reverterá todas as alterações, incluindo o resultado de qualquer operação de efeito colateral implementada pelos manipuladores de eventos de domínio relacionados. Isso ocorre porque o escopo de vida do DbContext é, por padrão, definido como "com escopo". Portanto, o objeto DbContext é compartilhado entre vários objetos de repositório que estão sendo instanciados dentro do mesmo escopo ou objeto graph. Isso coincide com o escopo de HttpRequest ao desenvolver aplicativos da API Web ou do MVC.
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork
@@ -344,19 +344,19 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Greg Young. O que é um Evento de domínio?** \
+- **Greg Young. O que é um evento de domínio?** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg. Eventos de domínio e Consistência eventual** \
+- **Stenberg de Jan. Eventos de domínio e consistência eventual** \
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
 - **Jimmy Bogard. Um padrão de eventos de domínio melhor** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Design de agregação efetivo – parte 2: fazendo com que agregações trabalhem em conjunto** \
+- **Vaughn Vernon. Design de agregação efetivo parte II: fazer com que as agregações funcionem juntas** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Reforçando seu domínio: eventos de domínio** \
+- **Jimmy Bogard. Fortalecendo seu domínio: eventos de domínio** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong. Exemplo de padrão de eventos de domínio** \
@@ -365,16 +365,16 @@ Conforme mencionado, use eventos de domínio para implementar explicitamente os 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **Udi Dahan. Eventos de domínio – 2º ato** \
+- **Udi Dahan. Eventos de domínio – demore 2** \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **Udi Dahan. Eventos de domínio – salvação** \
+- **Udi Dahan. Eventos de domínio – Salvation** \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
-- **Jan Kronquist. Não publique eventos de domínio, devolva-os!** \
+- **Kronquist de Jan. Não publique eventos de domínio, retorne-os!** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de la Torre. Domain Events vs. Eventos de integração em DDD e arquiteturas de microsserviços** \
+- **Cesar de la Torre. Eventos de domínio vs. eventos de integração em arquiteturas de DDD e de microserviços** \
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]

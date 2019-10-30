@@ -2,12 +2,12 @@
 title: Resiliência e a alta disponibilidade em microsserviços
 description: Microsserviços precisam ser projetados para resistir a falhas de dependências e de rede transitória e precisam ser resilientes para alcançar alta disponibilidade.
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094221"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resiliência e a alta disponibilidade em microsserviços
 
@@ -31,8 +31,8 @@ Na seção [Implementação de verificações de integridade nos serviços ASP.N
 
 Você também tem a opção de usar uma excelente biblioteca de código-fonte aberto chamada Pulse vencer, disponível no [GitHub](https://github.com/Xabaril/BeatPulse) e como um [pacote do NuGet](https://www.nuget.org/packages/BeatPulse/). Essa biblioteca também faz verificações de integridade, mas com uma diferença, pois ela lida com dois tipos de verificação:
 
-- **Atividade**: verifica se o microsserviço está ativo, ou seja, se ele é capaz de aceitar solicitações e responder. 
-- **Preparação**: verifica se as dependências do microsserviço (banco de dados, serviços de fila, etc.) estão prontas, para que o microsserviço possa fazer o que deve ser feito. 
+- **Vivacidade**: verifica se o microsserviço está ativo, ou seja, se ele é capaz de aceitar solicitações e responder.
+- **Preparação**: verifica se as dependências do microsserviço (banco de dados, serviços de fila, etc.) estão prontas, de modo que o microsserviço pode fazer o que se espera.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Usando fluxos de eventos de logs e diagnóstico
 
@@ -56,7 +56,7 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **O aplicativo de doze fatores. XI. Logs: tratar logs como fluxos de eventos** \
+- **O app. XI de doze fatores. Logs: tratar logs como fluxos de eventos** \
   <https://12factor.net/logs>
 
 - Repositório do GitHub da **Biblioteca EventFlow de Diagnóstico da Microsoft**. \
@@ -68,7 +68,7 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 - **Conectar computadores Windows ao serviço do Azure Monitor** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Registrando em log aquilo que importa: usando o bloco de aplicativo de registro em log semântico** \
+- **Registrando o que você quer: usando o bloco de aplicativo de log de semântica** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Site oficial do **Splunk**. \

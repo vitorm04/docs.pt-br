@@ -4,12 +4,12 @@ description: Conheça as diferentes maneiras de hospedar um aplicativo mais novo
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 82628976bcb1f1cee3089aa25488396af44d0f1a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5bf55fa686691acc25508d3d9a6dfaf8aca321ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088051"
 ---
 # <a name="blazor-app-hosting-models"></a>Modelos de Hospedagem de aplicativos mais incrivelmente
 
@@ -18,13 +18,13 @@ ms.locfileid: "72520300"
 Os aplicativos mais simples podem ser hospedados no IIS, assim como ASP.NET Web Forms aplicativos. Os aplicativos mais incrivelmenteos também podem ser hospedados de uma das seguintes maneiras:
 
 - No lado do cliente no navegador no Webassembly.
-- No lado do servidor em um aplicativo ASP.NET Core. 
+- No lado do servidor em um aplicativo ASP.NET Core.
 
 ## <a name="blazor-webassembly-apps"></a>Aplicativos Webassembly mais incrivelmente
 
-Os aplicativos Webassembly mais incrivelmente executados diretamente no navegador em um tempo de execução .NET baseado em Webassembly. Os aplicativos Webassembly mais avançados funcionam de forma semelhante às estruturas JavaScript de front-end como angular ou reagir. No entanto, em vez de escrever C#o JavaScript que você escreve. O tempo de execução do .NET é baixado com o aplicativo junto com o assembly do aplicativo e as dependências necessárias. Não são necessários plug-ins ou extensões de navegador. 
+Os aplicativos Webassembly mais incrivelmente executados diretamente no navegador em um tempo de execução .NET baseado em Webassembly. Os aplicativos Webassembly mais avançados funcionam de forma semelhante às estruturas JavaScript de front-end como angular ou reagir. No entanto, em vez de escrever C#o JavaScript que você escreve. O tempo de execução do .NET é baixado com o aplicativo junto com o assembly do aplicativo e as dependências necessárias. Não são necessários plug-ins ou extensões de navegador.
 
-Os assemblies baixados são assemblies normais do .NET, como você usaria em qualquer outro aplicativo .NET. Como o tempo de execução dá suporte a .NET Standard, você pode usar bibliotecas de .NET Standard existentes com seu aplicativo Webassembly mais incrivelmente. No entanto, esses assemblies ainda serão executados na área restrita de segurança do navegador. Algumas funcionalidades podem gerar uma <xref:System.PlatformNotSupportedException>, como tentar acessar o sistema de arquivos ou abrir conexões de rede arbitrárias. 
+Os assemblies baixados são assemblies normais do .NET, como você usaria em qualquer outro aplicativo .NET. Como o tempo de execução dá suporte a .NET Standard, você pode usar bibliotecas de .NET Standard existentes com seu aplicativo Webassembly mais incrivelmente. No entanto, esses assemblies ainda serão executados na área restrita de segurança do navegador. Algumas funcionalidades podem gerar uma <xref:System.PlatformNotSupportedException>, como tentar acessar o sistema de arquivos ou abrir conexões de rede arbitrárias.
 
 Quando o aplicativo é carregado, o tempo de execução do .NET é iniciado e apontado para o assembly do aplicativo. A lógica de inicialização do aplicativo é executada e os componentes raiz são renderizados. O mais incrivelmente calcula as atualizações da interface do usuário com base na saída renderizada dos componentes. As atualizações do DOM são aplicadas.
 

@@ -2,12 +2,12 @@
 title: Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522918"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093627"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivos para modernizar aplicativos .NET existentes para aplicativos otimizados para a nuvem
 
@@ -19,7 +19,7 @@ A necessidade de inovação de negócios contínua envia as equipes de desenvolv
 
 O resultado final é que, quando uma organização cria e gerencia aplicativos que são otimizados para a nuvem, ele pode colocar soluções em mãos de clientes mais cedo e trazer novas ideias para o mercado quando forem relevantes.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Princípios e filosofias de aplicativos otimizados para nuvem 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Princípios e filosofias de aplicativos otimizados para nuvem
 
 Os aprimoramentos na nuvem estão principalmente concentrados em atender a dois objetivos: Reduza os custos e melhore o crescimento dos negócios, melhorando a agilidade. Essas metas são obtidas simplificando os processos e reduzindo o conflito quando você libera e envia aplicativos.
 

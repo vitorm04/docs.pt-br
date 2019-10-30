@@ -2,18 +2,18 @@
 title: Como aproveitar funções sem servidor
 description: Aproveitamento e Azure Functions sem servidor em aplicativos nativos de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 77ddef0eb8844ea1b55cd2fc5ec8aa12593c8631
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578921"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087117"
 ---
 # <a name="leveraging-serverless-functions"></a>Como aproveitar funções sem servidor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-No espectro de gerenciamento de computadores e sistemas operacionais completos para aproveitar os recursos de nuvem, as vidas sem servidor no fim extremo em que a única coisa que você é responsável é seu código, e você só paga quando seu código é executado. Azure Functions fornece uma maneira de criar recursos sem servidor em seus aplicativos. 
+No espectro de gerenciamento de computadores e sistemas operacionais completos para aproveitar os recursos de nuvem, as vidas sem servidor no fim extremo em que a única coisa que você é responsável é seu código, e você só paga quando seu código é executado. Azure Functions fornece uma maneira de criar recursos sem servidor em seus aplicativos.
 
 ## <a name="what-is-serverless"></a>O que é sem servidor?
 
@@ -47,7 +47,7 @@ Muitos aplicativos têm processos de execução longa como parte de seus fluxos 
 
 A computação sem servidor é melhor usada para tarefas que não bloqueiam a interface do usuário. Isso significa que eles não são ideais para hospedar aplicativos Web ou APIs Web diretamente. O principal motivo para isso é que as soluções sem servidor são provisionadas e dimensionadas sob demanda. Quando uma nova instância de uma função é necessária, chamada de inicialização a *frio*, leva tempo para provisionar. Esse tempo é normalmente de alguns segundos, mas pode ser mais demorado dependendo de uma variedade de fatores. Uma única instância pode, muitas vezes, ser mantida ativa indefinidamente (por exemplo, fazendo uma solicitação periodicamente), mas o problema de inicialização a frio permanece se o número de instâncias precisar ser escalado verticalmente.
 
-![Cold versus inicialização a quente ](./media/cold-start-warm-start.png)
+![a frio versus a inicialização a quente](./media/cold-start-warm-start.png)
 **figura 3-10**. Início frio versus início quente.
 
 Se você precisar evitar a inicialização a frio, poderá optar por alternar de um [plano de consumo para um plano dedicado](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). Você também pode [Configurar uma ou mais instâncias pré-configuradas](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) com o plano Premium para que, quando precisar adicionar outra instância, já esteja pronto e pronta para começar. Essas opções podem atenuar uma das principais preocupações associadas à computação sem servidor.

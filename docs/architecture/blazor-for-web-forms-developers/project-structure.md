@@ -4,12 +4,12 @@ description: Saiba como as estruturas de projeto dos projetos ASP.NET Web Forms 
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087859"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Estrutura do projeto para aplicativos mais Incrivelmenteos
 
@@ -145,7 +145,7 @@ Onde estão as páginas nos aplicativos mais incrivelmente? O mais incrivelmente
 @page "/counter"
 ```
 
-O roteamento no mais alto é tratado no lado do cliente, não no servidor. À medida que o usuário navega no navegador, o mais incrivelmente intercepta a navegação e, em seguida, renderiza o componente com a rota correspondente. 
+O roteamento no mais alto é tratado no lado do cliente, não no servidor. À medida que o usuário navega no navegador, o mais incrivelmente intercepta a navegação e, em seguida, renderiza o componente com a rota correspondente.
 
 As rotas de componentes não são inferidas no momento pelo local do arquivo do componente como estão com páginas *. aspx* . Esse recurso pode ser adicionado no futuro. Cada rota deve ser especificada explicitamente no componente. O armazenamento de componentes roteáveis em uma pasta de *páginas* não tem significado especial e é puramente uma convenção.
 

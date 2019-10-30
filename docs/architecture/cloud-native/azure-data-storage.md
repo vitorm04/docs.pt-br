@@ -2,12 +2,12 @@
 title: Armazenamento de dados no Azure
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Armazenamento de dados no Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 6834e47e11c4941735343e3f6bfbfe4cb642e0dd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521114"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087762"
 ---
 # <a name="data-storage-in-azure"></a>Armazenamento de dados no Azure
 
@@ -15,7 +15,7 @@ ms.locfileid: "72521114"
 
 Como vimos em todo este livro, a nuvem está mudando a maneira como os aplicativos são projetados, implantados e gerenciados. Ao mudar para a nuvem, uma pergunta crítica é como você move seus dados? Felizmente, a nuvem do Azure oferece muitas opções.
 
-Você poderia apenas provisionar uma máquina virtual do Azure e instalar seu banco de dados de sua escolha. Isso é conhecido como [IaaS (infraestrutura como serviço)](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas). Essa abordagem simplifica a movimentação de um banco de dados local para a nuvem, no estado em que se encontra, mas muda a carga de gerenciar a máquina virtual e o banco de dados para você.  
+Você poderia apenas provisionar uma máquina virtual do Azure e instalar seu banco de dados de sua escolha. Isso é conhecido como [IaaS (infraestrutura como serviço)](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas). Essa abordagem simplifica a movimentação de um banco de dados local para a nuvem, no estado em que se encontra, mas muda a carga de gerenciar a máquina virtual e o banco de dados para você.
 
 Em vez disso, um [DBaaS (banco de dados como serviço)](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/) totalmente gerenciado é uma opção melhor. Você obtém muitos recursos internos enquanto a hospedagem, a manutenção e o licenciamento são gerenciados pela Microsoft. O Azure apresenta diferentes tipos de opções de armazenamento de dados totalmente gerenciadas, cada uma com benefícios específicos. Todos eles dão suporte à capacidade just-in-time e a um modelo pago conforme o uso.
 
@@ -23,7 +23,7 @@ Em seguida, vamos examinar as opções de DBaaS disponíveis no Azure. Você ver
 
 ## <a name="azure-sql-database"></a>Banco de dados SQL do Azure
 
-O [banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/) é um DBaaS (banco de dados como serviço) de uso geral, repleto de recursos, com base no mecanismo de banco de dados do Microsoft SQL Server. Ele é totalmente gerenciado pela Microsoft e é um banco de dados de nuvem seguro, confiável e de alto desempenho. O serviço compartilha muitos dos recursos encontrados na versão local do SQL Server. 
+O [banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/) é um DBaaS (banco de dados como serviço) de uso geral, repleto de recursos, com base no mecanismo de banco de dados do Microsoft SQL Server. Ele é totalmente gerenciado pela Microsoft e é um banco de dados de nuvem seguro, confiável e de alto desempenho. O serviço compartilha muitos dos recursos encontrados na versão local do SQL Server.
 
 Você pode provisionar um servidor de banco de dados SQL e um banco de dados em minutos. Quando a demanda por seu aplicativo cresce de alguns clientes para milhões, o banco de dados SQL do Azure é dimensionado dinamicamente com tempo de inatividade mínimo. Você pode adicionar ou remover recursos dinamicamente, incluindo capacidade de CPU, memória, taxa de transferência de e/s e armazenamento alocado para seus bancos de dados.
 
@@ -47,7 +47,7 @@ O banco de dados SQL do Azure inclui recursos [internos de monitoramento e ajust
 
 O [banco de dados SQL do Azure sem servidor](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) (disponível para visualização no momento da gravação deste livro) é uma camada de computação para bancos de dados individuais que são dimensionados automaticamente com base na demanda de carga de trabalho e cobra pela quantidade de computação usada por segundo. A camada de computação sem servidor também pausa automaticamente os bancos de dados durante períodos inativos para que somente os encargos de armazenamento sejam cobrados. Ela é retomada automaticamente quando a atividade retorna.
 
-Por fim, há o novo tipo de preço de [hiperescala do banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) . Ele é alimentado por uma arquitetura de armazenamento altamente escalonável e permite que seu banco de dados cresça conforme necessário, eliminando a necessidade de pré-configurar os recursos de armazenamento. Você pode dimensionar os recursos de computação e armazenamento de forma independente, fornecendo a flexibilidade para otimizar o desempenho de cada carga de trabalho. A hiperescala do banco de dados SQL do Azure é otimizada para processamento [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) e cargas de trabalho analíticas de alta taxa de transferência com armazenamento de até 100 TB.  Com cargas de trabalho com uso intensivo de leitura, o hiperscale fornece expansão rápida ao provisionar réplicas de leitura adicionais conforme necessário para descarregar cargas de trabalho de leitura. 
+Por fim, há o novo tipo de preço de [hiperescala do banco de dados SQL do Azure](https://azure.microsoft.com/services/sql-database/) . Ele é alimentado por uma arquitetura de armazenamento altamente escalonável e permite que seu banco de dados cresça conforme necessário, eliminando a necessidade de pré-configurar os recursos de armazenamento. Você pode dimensionar os recursos de computação e armazenamento de forma independente, fornecendo a flexibilidade para otimizar o desempenho de cada carga de trabalho. A hiperescala do banco de dados SQL do Azure é otimizada para processamento [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) e cargas de trabalho analíticas de alta taxa de transferência com armazenamento de até 100 TB.  Com cargas de trabalho com uso intensivo de leitura, o hiperscale fornece expansão rápida ao provisionar réplicas de leitura adicionais conforme necessário para descarregar cargas de trabalho de leitura.
 
 Além da pilha de Microsoft SQL Server tradicional, o Azure também apresenta versões gerenciadas de vários bancos de dados de software livre populares.
 
@@ -59,7 +59,7 @@ O [banco de dados do Azure para MySQL](https://azure.microsoft.com/services/mysq
 
 - [Alta disponibilidade](https://docs.microsoft.com/azure/mysql/concepts-high-availability)interna.
 
-- Desempenho previsível, usando [preços de pagamento conforme o uso](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)inclusivo. 
+- Desempenho previsível, usando [preços de pagamento conforme o uso](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)inclusivo.
 
 - [Dimensione](https://docs.microsoft.com/azure/mysql/concepts-high-availability) conforme necessário em segundos.
 
@@ -69,7 +69,7 @@ O [banco de dados do Azure para MySQL](https://azure.microsoft.com/services/mysq
 
 - Segurança e conformidade de nível empresarial.
 
-Esses recursos internos de PaaS são importantes para organizações que têm centenas de bancos de dados "táticos" (não estratégicos) em seus data centers, mas não têm os recursos para executar patches, backup, segurança e monitoramento de desempenho. 
+Esses recursos internos de PaaS são importantes para organizações que têm centenas de bancos de dados "táticos" (não estratégicos) em seus data centers, mas não têm os recursos para executar patches, backup, segurança e monitoramento de desempenho.
 
 Além disso, o [serviço de migração de dados do Azure](https://azure.microsoft.com/services/database-migration/) pode migrar dados de várias fontes de banco de dados para plataformas do Azure data com tempo de inatividade mínimo. O serviço gera relatórios de avaliação e fornece recomendações para orientá-lo pelas alterações necessárias à execução de uma migração, pequena ou grande.
 
@@ -87,8 +87,8 @@ O [banco de dados do Azure para MariaDB](https://azure.microsoft.com/services/ma
 
 - [Alta disponibilidade](https://docs.microsoft.com/azure/mariadb/concepts-high-availability)interna.
 
-- Desempenho previsível, usando [preços de pagamento conforme o uso](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)inclusivo. 
- 
+- Desempenho previsível, usando [preços de pagamento conforme o uso](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)inclusivo.
+
 - [Dimensionamento](https://docs.microsoft.com/azure/mariadb/concepts-high-availability) conforme necessário em segundos.
 
 - Proteção protegida de dados confidenciais em repouso e em movimento.
@@ -97,7 +97,7 @@ O [banco de dados do Azure para MariaDB](https://azure.microsoft.com/services/ma
 
 - Segurança e conformidade de nível empresarial.
 
-## <a name="azure-database-for-postgresql"></a>Banco de dados do Azure para PostgreSQL 
+## <a name="azure-database-for-postgresql"></a>Banco de dados do Azure para PostgreSQL
 
 [PostgreSQL](https://www.postgresql.org/) é outro banco de dados relacional popular de código aberto com mais de 30 anos de desenvolvimento ativo. É uma finalidade geral e um sistema de gerenciamento de banco de dados relacional de objeto. Seu licenciamento é considerado "liberal" e o produto está livre para usar, modificar e distribuir em qualquer forma. Muitas empresas de grande porte, incluindo Apple, Red Hat e Fujitsu, têm produtos criados usando PostgreSQL.
 
@@ -163,7 +163,7 @@ Anteriormente, na seção *relacional versus NoSQL* , discutimos o assunto da *c
 
 A maioria dos bancos de dados distribuídos permite que os desenvolvedores escolham entre dois modelos de consistência: [consistência forte](https://en.wikipedia.org/wiki/Strong_consistency) e [consistência eventual](https://en.wikipedia.org/wiki/Eventual_consistency). A *consistência forte* é o padrão ouro de programação de dados. Ele garante que um resultado da consulta sempre retornará os dados mais atuais, mesmo que o sistema deva incorrer em latência aguardando que uma atualização seja replicada em todas as cópias de banco de dados. Por outro lado, um sistema configurado para *consistência eventual* retornará dados imediatamente, mesmo que os dados não sejam a cópia mais atual. Essa opção permite maior disponibilidade, maior escala e melhor desempenho.
 
-O Azure Cosmos DB oferece um espectro de [cinco modelos de consistência bem definidos](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) mostrados na Figura 5-16. Essas opções permitem que você faça opções precisas e compensações granulares em relação à disponibilidade e ao desempenho com base nas necessidades do seu aplicativo. Esses modelos são bem definidos, intuitivos e apoiados pelos SLAs (contratos de nível de serviço). 
+O Azure Cosmos DB oferece um espectro de [cinco modelos de consistência bem definidos](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) mostrados na Figura 5-16. Essas opções permitem que você faça opções precisas e compensações granulares em relação à disponibilidade e ao desempenho com base nas necessidades do seu aplicativo. Esses modelos são bem definidos, intuitivos e apoiados pelos SLAs (contratos de nível de serviço).
 
 ![Níveis de consistência do Cosmos DB](./media/cosmos-db-consistency-levels.png)
 
@@ -171,7 +171,7 @@ O Azure Cosmos DB oferece um espectro de [cinco modelos de consistência bem def
 
 ### <a name="partitioning"></a>Divisão
 
-O Azure Cosmos DB usa o [particionamento](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) automático para dimensionar o banco de dados para atender às necessidades de desempenho do seu aplicativo. 
+O Azure Cosmos DB usa o [particionamento](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) automático para dimensionar o banco de dados para atender às necessidades de desempenho do seu aplicativo.
 
 Você gerencia dados em Cosmos DB dados criando bancos de dados [, contêineres e itens](https://docs.microsoft.com/azure/cosmos-db/databases-containers-items), mostrados na Figura 5-17.
 
@@ -193,7 +193,7 @@ Internamente, Cosmos DB gerencia automaticamente o posicionamento de [partiçõe
 
 ## <a name="azure-redis-cache"></a>Cache Redis do Azure
 
-Os benefícios do armazenamento em cache para melhorar o desempenho e a escalabilidade são bem compreendidos. 
+Os benefícios do armazenamento em cache para melhorar o desempenho e a escalabilidade são bem compreendidos.
 
 Para um aplicativo nativo de nuvem, um local comum para adicionar o cache está dentro do gateway de API. O gateway serve como um front-end para todas as solicitações de entrada. Ao adicionar o cache, você pode aumentar o desempenho e a capacidade de resposta retornando dados armazenados em cache e evitando viagens de ida e volta para um banco de dados local ou um serviço downstream. A Figura 5-19 mostra uma arquitetura de cache para um aplicativo nativo de nuvem.
 

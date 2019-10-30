@@ -2,16 +2,16 @@
 title: Migrar seus bancos de dados relacionais para o Azure
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | migrar seus bancos de dados relacionais para o Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093621"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar seus bancos de dados relacionais para o Azure
 
-Visão: O Azure oferece a migração de banco de dados mais abrangente.
+Visão: o Azure oferece a migração de banco de dados mais abrangente.
 
 No Azure, você pode migrar seus servidores de banco de dados diretamente para VMs de IaaS (extração e deslocamento puro) ou pode migrar para o banco de dados SQL do Azure para obter benefícios adicionais. O banco de dados SQL do Azure oferece opções de instância gerenciada e DBaaS (banco de dados como serviço completo). A Figura 3-1 mostra os vários caminhos de migração de banco de dados relacional disponíveis no Azure.
 
@@ -90,7 +90,7 @@ Atualmente, Microsoft Azure dá suporte a até [331 servidores de banco de dados
 
 Pode haver alguns casos em que você ainda precisa migrar para SQL Server como uma VM regular. Um cenário de exemplo é se você precisar usar SQL Server Reporting Services. No entanto, na maioria dos casos, Instância Gerenciada do Banco de Dados SQL do Azure pode fornecer tudo o que você precisa para migrar de servidores SQL locais, de modo que a migração para uma VM SQL Server deve ser o último recurso a ser tentada.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Usar o serviço de migração de banco de dados do Azure para migrar seus bancos dados relacionais para o Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Usar o serviço de migração de banco de dados do Azure para migrar seus bancos dados relacionais para o Azure
 
 Você pode usar o serviço de migração de banco de dados do Azure para migrar bancos de dados relacionais como SQL Server, Oracle e MySQL para o Azure, se o banco de dados de destino é um banco de dados SQL do Azure, Instância Gerenciada do Banco de Dados SQL do Azure ou SQL Server em uma VM do Azure.
 
@@ -104,7 +104,7 @@ Para saber como migrar bancos de dados usando o Azure Database Migration Service
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Escolha uma opção de SQL Server de nuvem: Banco de dados SQL do Azure (PaaS) ou SQL Server na VM do Azure (IaaS)**
+- **Escolha uma opção de SQL Server de nuvem: banco de dados SQL do Azure (PaaS) ou SQL Server na VM do Azure (IaaS)**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 

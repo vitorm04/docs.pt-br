@@ -4,18 +4,18 @@ description: Saiba como criar formulários com a validação do lado do cliente 
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: 9062e0ab106b7e647646bf5d206106153d7d9009
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c30db5e06d36a6d15301835fe782b21058a80592
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088083"
 ---
 # <a name="forms-and-validation"></a>Formulários e validação
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-O ASP.NET Web Forms Framework inclui um conjunto de controles de servidor de validação que lidam com a validação da entrada`RequiredFieldValidator`do `CompareValidator`usuário `RangeValidator`inserida em um formulário (,, e assim por diante). O ASP.NET Web Forms Framework também dá suporte à associação de modelo e à validação do modelo com base`[Required]`em `[StringLength]`anotações `[Range]`de dados (,, e assim por diante). A lógica de validação pode ser imposta tanto no servidor quanto no cliente usando a validação não invasiva baseada em JavaScript. O `ValidationSummary` controle de servidor é usado para exibir um resumo dos erros de validação para o usuário.
+O ASP.NET Web Forms Framework inclui um conjunto de controles de servidor de validação que lidam com a validação da entrada do usuário inserida em um formulário (`RequiredFieldValidator`, `CompareValidator`, `RangeValidator`e assim por diante). O ASP.NET Web Forms Framework também dá suporte à vinculação de modelo e à validação do modelo com base nas anotações de dados (`[Required]`, `[StringLength]`, `[Range]`e assim por diante). A lógica de validação pode ser imposta tanto no servidor quanto no cliente usando a validação não invasiva baseada em JavaScript. O controle de servidor `ValidationSummary` é usado para exibir um resumo dos erros de validação para o usuário.
 
 O mais novo suporte ao compartilhamento de lógica de validação entre o cliente e o servidor. O ASP.NET fornece implementações de JavaScript predefinidas de muitas validações de servidor comuns. Em muitos casos, o desenvolvedor ainda precisa escrever JavaScript para implementar totalmente a lógica de validação específica do aplicativo. Os mesmos tipos de modelo, anotações de dados e lógica de validação podem ser usados no servidor e no cliente.
 
@@ -30,9 +30,9 @@ O mais claro fornece um conjunto de componentes de entrada. Os componentes de en
 |`InputText`    |`<input>`                |
 |`InputTextArea`|`<textarea>`             |
 
-O `EditForm` componente encapsula esses componentes de entrada e orquestra o processo de validação por meio `EditContext`de um. Ao criar um `EditForm`, especifique a instância de modelo a ser associada usando o `Model` parâmetro. Normalmente, a validação é feita usando as anotações de dados e é extensível. Para habilitar a validação baseada em anotação `DataAnnotationsValidator` `EditForm`de dados, adicione o componente como um filho do. O `EditForm` componente fornece um evento conveniente para lidar com envios válidos (`OnValidSubmit`)`OnInvalidSubmit`e inválidos (). Há também um evento mais genérico `OnSubmit` que permite disparar e lidar com a validação por conta própria.
+O componente `EditForm` encapsula esses componentes de entrada e orquestra o processo de validação por meio de um `EditContext`. Ao criar um `EditForm`, você especifica a instância de modelo a ser associada usando o parâmetro `Model`. Normalmente, a validação é feita usando as anotações de dados e é extensível. Para habilitar a validação baseada em anotação de dados, adicione o componente `DataAnnotationsValidator` como um filho do `EditForm`. O componente `EditForm` fornece um evento conveniente para lidar com envios válidos (`OnValidSubmit`) e inválidos (`OnInvalidSubmit`). Há também um evento de `OnSubmit` mais genérico que permite que você acione e manipule a validação por conta própria.
 
-Para exibir um resumo de erro de validação, `ValidationSummary` use o componente. Para exibir mensagens de validação para um campo de entrada específico, `ValidationMessage` use o componente, especificando uma expressão lambda `For` para o parâmetro que aponta para o membro de modelo apropriado.
+Para exibir um resumo de erro de validação, use o componente `ValidationSummary`. Para exibir mensagens de validação para um campo de entrada específico, use o componente `ValidationMessage`, especificando uma expressão lambda para o parâmetro `For` que aponta para o membro de modelo apropriado.
 
 O tipo de modelo a seguir define várias regras de validação usando anotações de dados:
 
@@ -43,7 +43,7 @@ using System.ComponentModel.DataAnnotations;
 public class Starship
 {
     [Required]
-    [StringLength(16, 
+    [StringLength(16,
         ErrorMessage = "Identifier too long (16 character limit).")]
     public string Identifier { get; set; }
 
@@ -52,12 +52,12 @@ public class Starship
     [Required]
     public string Classification { get; set; }
 
-    [Range(1, 100000, 
+    [Range(1, 100000,
         ErrorMessage = "Accommodation invalid (1-100000).")]
     public int MaximumAccommodation { get; set; }
 
     [Required]
-    [Range(typeof(bool), "true", "true", 
+    [Range(typeof(bool), "true", "true",
         ErrorMessage = "This form disallows unapproved ships.")]
     public bool IsValidatedDesign { get; set; }
 
@@ -66,7 +66,7 @@ public class Starship
 }
 ```
 
-O componente a seguir demonstra como criar um formulário com mais de alto `Starship` desempenho com base no tipo de modelo:
+O componente a seguir demonstra como criar um formulário com base no tipo de modelo de `Starship`:
 
 ```razor
 <h1>New Ship Entry Form</h1>

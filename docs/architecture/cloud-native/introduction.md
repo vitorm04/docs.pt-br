@@ -3,12 +3,12 @@ title: Introdução aos aplicativos nativos de nuvem
 description: Saiba mais sobre a computação nativa na nuvem
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: a99e4b5599efee8b171c48a5b17e75b9e6cd63ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1d3679c7f1ab940d7ab3e194c200483b63276883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087234"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Introdução aos aplicativos nativos de nuvem
 
@@ -18,7 +18,7 @@ Outro dia, no escritório, trabalhando em "a próxima grande coisa".
 
 Seus anéis de celular. É seu recrutador amigável-aquele que chama você duas vezes por dia sobre novos trabalhos.
 
-Mas, desta vez, ele é diferente: Inicialização, patrimônio e muita contribuição.
+Mas, desta vez, ele é diferente: inicialização, patrimônio e muita contribuição.
 
 A menção da tecnologia de nuvem e de ponta leva você pela borda.
 
@@ -38,7 +38,7 @@ Parabéns!  Você acabou de criar um aplicativo monolítico.
 
 Nem todos são ruins. Os monolíticos oferecem algumas vantagens distintas. Por exemplo, eles são diretos para...
 
-- build 
+- build
 - testar
 - Instalação
 - Solucionar problemas
@@ -76,7 +76,7 @@ Dentro de pouco tempo, a nuvem nativa tornou-se uma tendência de condução no 
 
 Ao contrário da atenção contínua que impulsiona nosso setor, a nuvem nativa é "*para o real*". Considere a CNCF ( [nuvem Native Computing Foundation](https://www.cncf.io/) ), um consórcio de mais de 300 grandes corporações com um compromisso de tornar a computação nativa em nuvem onipresente em várias pilhas de nuvem e tecnologia. Como um dos grupos de código-fonte aberto mais influentes, ele hospeda muitos dos projetos de software livre que mais crescem no GitHub. Eles incluem projetos como [kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)e [gRPC](https://grpc.io/).
 
-O CNCF promove um ecossistema de software livre e neutralidade de fornecedor. Após esse cliente potencial, apresentamos princípios, padrões e práticas recomendadas de nuvem nativas que são independentes de tecnologia. Ao mesmo tempo, discutiremos os serviços e a infraestrutura disponíveis no Microsoft Azure Cloud para construir sistemas nativos de nuvem. 
+O CNCF promove um ecossistema de software livre e neutralidade de fornecedor. Após esse cliente potencial, apresentamos princípios, padrões e práticas recomendadas de nuvem nativas que são independentes de tecnologia. Ao mesmo tempo, discutiremos os serviços e a infraestrutura disponíveis no Microsoft Azure Cloud para construir sistemas nativos de nuvem.
 
 Então, o que é exatamente a nuvem nativa? Volte, relaxe e deixe-nos ajudá-lo a explorar esse novo mundo.
 

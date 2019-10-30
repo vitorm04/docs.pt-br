@@ -2,12 +2,12 @@
 title: Dados distribuídos
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Dados distribuídos para aplicativos nativos de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: 92086c52b02360e90461aea9ad23a2068224e187
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b715ae5203264a023bc9f911aa74ee222afe3d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183129"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087446"
 ---
 # <a name="distributed-data-for-cloud-native-apps"></a>Dados distribuídos para aplicativos nativos de nuvem
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183129"
 
 Ao construir um sistema nativo de nuvem que consiste em muitos microservices independentes, a maneira de pensar sobre as alterações de armazenamento de dados.
 
-Os aplicativos monolíticos tradicionais favorecem um armazenamento de dados centralizado mostrado na Figura 5-1. 
+Os aplicativos monolíticos tradicionais favorecem um armazenamento de dados centralizado mostrado na Figura 5-1.
 
 ![Banco de dados monolítico único](./media/single-monolithic-database.png)
 
@@ -32,7 +32,7 @@ Os sistemas nativos de nuvem favorecem uma arquitetura de dados mostrada na Figu
 **Figura 5-2**. Vários bancos de dados em microserviços
 
 Observe como, na figura anterior, cada microserviço possui e encapsula o armazenamento de dados de ti e expõe apenas dados para o mundo exterior de sua API pública.
- 
+
 Esse modelo permite que cada microserviço evolua independentemente sem a necessidade de coordenar as alterações de esquema de dados com outros microserviços. Cada microserviço é gratuito para implementar o tipo de armazenamento de dados (banco de dados relacional, banco de dados de documentos, repositório de chave-valor) que melhor atenda às suas necessidades. Em tempo de execução, cada microserviço pode dimensionar seus dados de forma adequada. Isso é mostrado na Figura 5-3:
 
 ![Persistência de dados poliglota](./media/polyglot-data-persistence.png)

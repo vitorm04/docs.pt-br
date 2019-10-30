@@ -2,18 +2,18 @@
 title: Padrões de resiliência de aplicativo
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de resiliência do aplicativo
 ms.date: 06/30/2019
-ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315947"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087755"
 ---
 # <a name="application-resiliency-patterns"></a>Padrões de resiliência de aplicativo
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-A primeira linha de defesa é a resiliência de aplicativo habilitada para software. 
+A primeira linha de defesa é a resiliência de aplicativo habilitada para software.
 
 Embora você possa investir um tempo considerável escrevendo sua própria estrutura de resiliência, esses produtos já existem. Por exemplo, [Polly](http://www.thepollyproject.org/) é uma biblioteca abrangente de resiliência do .net e de tratamento de falhas transitórias que permite aos desenvolvedores expressar políticas de resiliência de uma maneira fluente e thread-safe. O Polly tem como alvo aplicativos criados com o .NET Framework completo ou o .NET Core. A Figura 6-2 mostra as políticas de resiliência (ou seja, a funcionalidade) disponíveis na biblioteca Polly. Essas políticas podem ser aplicadas individualmente ou combinadas em conjunto.
 

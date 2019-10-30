@@ -2,12 +2,12 @@
 title: Introdução ao aplicativo de referência do eShopOnContainers
 description: Apresentando o aplicativo de referência de microserviços nativos do eShopOnContainers Cloud para ASP.NET Core e o Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 20f9175ada2e5439be363781a2b187c10ba86d37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182856"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087250"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Introdução ao aplicativo de referência do eShopOnContainers
 
@@ -38,10 +38,10 @@ Vamos começar com uma análise dos recursos e requisitos do aplicativo. O aplic
 
 O aplicativo também tem os seguintes requisitos não funcionais:
 
-- Ele precisa ser altamente disponível e deve ser dimensionado automaticamente para atender ao maior tráfego (e reduzir verticalmente depois que o tráfego é sublado). 
-- Ele deve fornecer monitoramento fácil de usar de seus logs de integridade e diagnóstico para ajudar a solucionar quaisquer problemas encontrados. 
-- Ele deve dar suporte a um processo de desenvolvimento ágil, incluindo suporte para integração e implantação contínuas (CI/CD). 
-- Além dos dois front-ends da Web (aplicativo tradicional e de página única), o aplicativo também deve oferecer suporte a aplicativos cliente móveis que executam diferentes tipos de sistemas operacionais. 
+- Ele precisa ser altamente disponível e deve ser dimensionado automaticamente para atender ao maior tráfego (e reduzir verticalmente depois que o tráfego é sublado).
+- Ele deve fornecer monitoramento fácil de usar de seus logs de integridade e diagnóstico para ajudar a solucionar quaisquer problemas encontrados.
+- Ele deve dar suporte a um processo de desenvolvimento ágil, incluindo suporte para integração e implantação contínuas (CI/CD).
+- Além dos dois front-ends da Web (aplicativo tradicional e de página única), o aplicativo também deve oferecer suporte a aplicativos cliente móveis que executam diferentes tipos de sistemas operacionais.
 - Ele deve dar suporte a hospedagem de plataforma cruzada e desenvolvimento de plataforma cruzada.
 
 ![eShopOnContainers referência arquitetura de desenvolvimento de aplicativos.](./media/eshoponcontainers-development-architecture.png)
@@ -70,7 +70,7 @@ O código é organizado para dar suporte aos diferentes microserviços e, em cad
 
 ## <a name="understanding-microservices"></a>Compreendendo os microserviços
 
-Este livro se concentra em aplicativos nativos de nuvem criados usando a tecnologia do Azure. Para saber mais sobre as práticas recomendadas de microserviço e como arquitetar aplicativos baseados em microserviço, leia o livro [complementar, microservices .net: Arquitetura para aplicativos .NET em contêineres](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture). O livro está disponível online, em PDF ou em formatos eReader.
+Este livro se concentra em aplicativos nativos de nuvem criados usando a tecnologia do Azure. Para saber mais sobre as práticas recomendadas de microserviço e como arquitetar aplicativos baseados em microserviço, leia o livro complementar, [microservices .net: arquitetura para aplicativos .net em contêineres](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture). O livro está disponível online, em PDF ou em formatos eReader.
 
 >[!div class="step-by-step"]
 >[Anterior](candidate-apps.md)

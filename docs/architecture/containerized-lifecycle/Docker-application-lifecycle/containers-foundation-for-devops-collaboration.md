@@ -2,12 +2,12 @@
 title: Contêineres de base para colaboração de DevOps
 description: Entenda o papel fundamental dos contêineres para simplificar DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394810"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094496"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contêineres de base para colaboração de DevOps
 
@@ -51,7 +51,7 @@ Esses desafios criam demandas ao usar ferramentas de DevOps. Assim, será necess
 
 - Como usar ferramentas/plataformas open-source para contêineres no Microsoft Azure?
 
-Se você conseguir responder a todas essas perguntas, estará mais bem preparado para migrar seus aplicativos (existentes ou novos) para os contêineres do Docker. 
+Se você conseguir responder a todas essas perguntas, estará mais bem preparado para migrar seus aplicativos (existentes ou novos) para os contêineres do Docker.
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Introdução a um fluxo de trabalho genérico de ponta a ponta do ciclo de vida do aplicativo do Docker
 

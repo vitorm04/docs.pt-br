@@ -3,12 +3,12 @@ title: Malhas de serviço-gRPC para desenvolvedores do WCF
 description: Usar uma malha de serviço para rotear e balancear solicitações para serviços gRPC em um cluster kubernetes.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 18c12af787f32988bbf17b1561d4ba1fb4deaf41
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846045"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090179"
 ---
 # <a name="service-meshes"></a>Malhas de serviço
 
@@ -42,9 +42,9 @@ As malhas de serviço se aplicam somente ao tráfego em um cluster. Para cliente
 
 Há três implementações de malha de serviço de uso geral disponíveis atualmente para uso com kubernetes: İSTİO, Linkerd e Consul Connect. Todos os três fornecem roteamento/proxy de solicitação, criptografia de tráfego, resiliência, autenticação de host para host e controle de tráfego.
 
-Escolher uma malha de serviço depende de vários fatores: 
+Escolher uma malha de serviço depende de vários fatores:
 
-- Os requisitos específicos da organização em relação aos custos, conformidade, planos de suporte pagos e assim por diante. 
+- Os requisitos específicos da organização em relação aos custos, conformidade, planos de suporte pagos e assim por diante.
 - A natureza do cluster, seu tamanho, o número de serviços implantados e o volume de tráfego na rede de cluster.
 - Facilidade de implantar e gerenciar a malha e usá-la com serviços.
 
