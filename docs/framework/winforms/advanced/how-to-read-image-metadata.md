@@ -1,5 +1,5 @@
 ---
-title: 'Como: ler metadados de imagem'
+title: Como ler metadados de imagens
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,56 +8,63 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 8294bc6596c408160a50d9d7d5e6154f66025c73
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: cd3b636f8f0058d4a8eacc656f95d5f46b8967e2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988565"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040748"
 ---
-# <a name="how-to-read-image-metadata"></a>Como: ler metadados de imagem
-Alguns arquivos de imagem contêm metadados que você pode ler para determinar os recursos da imagem. Por exemplo, uma fotografia digital pode conter metadados que você pode ler para determinar a marca e modelo da câmera usada para capturar a imagem. Com o GDI+, você pode ler os metadados existentes e também pode gravar novos metadados em arquivos de imagem.  
+# <a name="how-to-read-image-metadata"></a>Como ler metadados de imagens
+
+Alguns arquivos de imagem contêm metadados que você pode ler para determinar os recursos da imagem. Por exemplo, uma fotografia digital pode conter metadados que você pode ler para determinar a marca e modelo da câmera usada para capturar a imagem. Com o GDI+, você pode ler os metadados existentes e também pode gravar novos metadados em arquivos de imagem.
+
+O GDI+ armazena uma parte individual dos metadados em um objeto <xref:System.Drawing.Imaging.PropertyItem>. Você pode ler a propriedade <xref:System.Drawing.Image.PropertyItems%2A> de um objeto <xref:System.Drawing.Image> para recuperar todos os metadados de um arquivo. A propriedade <xref:System.Drawing.Image.PropertyItems%2A> retorna uma matriz de objetos <xref:System.Drawing.Imaging.PropertyItem>.
+
+Um objeto <xref:System.Drawing.Imaging.PropertyItem> tem as quatro propriedades a seguir: `Id`, `Value`, `Len`e `Type`.
+
+## <a name="id"></a>Id
+
+Uma marca que identifica o item de metadados. Alguns valores que podem ser atribuídos a <xref:System.Drawing.Imaging.PropertyItem.Id%2A> são mostrados na tabela a seguir:
+
+|Valor hexadecimal|Descrição|
+|-----------------------|-----------------|
+|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Título da imagem<br /><br /> Fabricante do equipamento<br /><br /> Modelo do equipamento<br /><br /> ExifDTOriginal<br /><br /> Tempo de exposição de Exif<br /><br /> Tabela de luminância<br /><br /> Tabela de crominância|
+
+## <a name="value"></a>Valor
+
+Uma matriz de valores. O formato dos valores é determinado pela propriedade <xref:System.Drawing.Imaging.PropertyItem.Type%2A>.
+
+## <a name="len"></a>Len
+
+O comprimento (em bytes) da matriz de valores apontada pela propriedade <xref:System.Drawing.Imaging.PropertyItem.Value%2A>.
+
+## <a name="type"></a>Digite
+
+O tipo de dados dos valores na matriz aponta para a propriedade `Value`. Os formatos indicados pelo `Type` valores de propriedade são mostrados na tabela a seguir:
+
+|Valor numérico|Descrição|
+|-------------------|-----------------|
+|1|Um `Byte`|
+|2|Uma matriz de objetos `Byte` codificados como ASCII|
+|3|Um inteiro de 16 bits|
+|4|Um inteiro de 32 bits|
+|5|Uma matriz de dois objetos `Byte` que representam um número racional|
+|6|Não usado|
+|7|Indefinido|
+|8|Não usado|
+|9|`SLong`|
+|10|`SRational`|
+
+## <a name="example"></a>Exemplo
   
- O GDI+ armazena uma parte individual dos metadados em <xref:System.Drawing.Imaging.PropertyItem> um objeto. Você pode ler a <xref:System.Drawing.Image.PropertyItems%2A> propriedade de um <xref:System.Drawing.Image> objeto para recuperar todos os metadados de um arquivo. A <xref:System.Drawing.Image.PropertyItems%2A> propriedade retorna uma matriz de <xref:System.Drawing.Imaging.PropertyItem> objetos.  
-  
- Um <xref:System.Drawing.Imaging.PropertyItem> objeto tem as quatro propriedades a seguir `Id`: `Value`, `Len`, e `Type`.  
-  
-## <a name="id"></a>Id  
- Uma marca que identifica o item de metadados. Alguns valores que podem ser atribuídos <xref:System.Drawing.Imaging.PropertyItem.Id%2A> são mostrados na tabela a seguir.  
-  
-|Valor hexadecimal|Descrição|  
-|-----------------------|-----------------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Título da imagem<br /><br /> Fabricante do equipamento<br /><br /> Modelo do equipamento<br /><br /> ExifDTOriginal<br /><br /> Tempo de exposição de Exif<br /><br /> Tabela de luminância<br /><br /> Tabela de crominância|  
-  
-## <a name="value"></a>Valor  
- Uma matriz de valores. O formato dos valores é determinado pela <xref:System.Drawing.Imaging.PropertyItem.Type%2A> propriedade.  
-  
-## <a name="len"></a>Len  
- O comprimento (em bytes) da matriz de valores apontada pela <xref:System.Drawing.Imaging.PropertyItem.Value%2A> propriedade.  
-  
-## <a name="type"></a>Tipo  
- O tipo de dados dos valores na matriz aponta para a propriedade `Value`. Os formatos indicados pelos valores de propriedade `Type` são mostrados na tabela a seguir  
-  
-|Valor numérico|Descrição|  
-|-------------------|-----------------|  
-|1|Um `Byte`|  
-|2|Uma matriz de objetos `Byte` codificados como ASCII|  
-|3|Um inteiro de 16 bits|  
-|4|Um inteiro de 32 bits|  
-|5|Uma matriz de dois objetos `Byte` que representam um número racional|  
-|6|Não usado|  
-|7|Indefinido|  
-|8|Não usado|  
-|9|`SLong`|  
-|10|`SRational`|  
-  
-## <a name="example"></a>Exemplo  
-  
-### <a name="description"></a>Descrição  
- O exemplo de código a seguir lê e exibe as sete partes dos metadados no arquivo `FakePhoto.jpg`. O segundo item de propriedade (índice 1) na lista tem <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (fabricante do equipamento) <xref:System.Drawing.Imaging.PropertyItem.Type%2A> e 2 (matriz de bytes codificados em ASCII). O exemplo de código exibe o valor desse item de propriedade.  
-  
- O código produz uma saída semelhante à seguinte:  
- 
+O exemplo de código a seguir lê e exibe as sete partes dos metadados no arquivo `FakePhoto.jpg`. O segundo item de propriedade (índice 1) na lista tem <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (fabricante do equipamento) e <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (matriz de bytes codificados em ASCII). O exemplo de código exibe o valor desse item de propriedade.
+
+[!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
+[!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]
+
+O código produz uma saída semelhante à seguinte:
+
 ```output
  Property Item 0
   
@@ -117,14 +124,11 @@ Alguns arquivos de imagem contêm metadados que você pode ler para determinar o
   
  The equipment make is Northwind Camera.
  ```
-  
-### <a name="code"></a>Código  
- [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que <xref:System.Windows.Forms.Control.Paint> é um parâmetro do manipulador de eventos. Manipule o evento do <xref:System.Windows.Forms.Control.Paint> formulário e cole esse código no manipulador de eventos de pintura. Você deve substituir `FakePhoto.jpg` por um nome e caminho de imagem válidos no seu sistema e importar o namespace `System.Drawing.Imaging`.  
-  
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+O exemplo anterior foi projetado para uso com Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do manipulador de eventos de <xref:System.Windows.Forms.Control.Paint>. Manipule o evento de <xref:System.Windows.Forms.Control.Paint> do formulário e cole esse código no manipulador de eventos de pintura. Você deve substituir `FakePhoto.jpg` por um nome e caminho de imagem válidos no seu sistema e importar o namespace `System.Drawing.Imaging`.
+
 ## <a name="see-also"></a>Consulte também
 
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)

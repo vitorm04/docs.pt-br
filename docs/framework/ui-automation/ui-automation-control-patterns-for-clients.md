@@ -5,42 +5,42 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 320833bf147fa16889cd188c7c729cd4dc028843
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042519"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039454"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Padrões de Controle para Clientes de Automação de IU
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Esta visão geral apresenta padrões de controle para clientes de automação da interface do usuário. Ele inclui informações sobre como um cliente de automação de interface do usuário pode usar padrões de controle [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]para acessar informações sobre o.  
+ Esta visão geral apresenta padrões de controle para clientes de automação da interface do usuário. Ele inclui informações sobre como um cliente de automação de interface do usuário pode usar padrões de controle para acessar informações sobre o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
- Os padrões de controle fornecem uma maneira de categorizar e expor a funcionalidade de um controle independentemente do tipo de controle ou da aparência do controle. Os clientes de automação da interface <xref:System.Windows.Automation.AutomationElement> do usuário podem examinar um para determinar quais padrões de controle têm suporte e estar garantidos do comportamento do controle.  
+ Os padrões de controle fornecem uma maneira de categorizar e expor a funcionalidade de um controle independentemente do tipo de controle ou da aparência do controle. Os clientes de automação da interface do usuário podem examinar um <xref:System.Windows.Automation.AutomationElement> para determinar quais padrões de controle têm suporte e estar garantidos do comportamento do controle.  
   
  Para obter uma lista completa de padrões de controle, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
 <a name="uiautomation_getting_control_patterns"></a>   
 ## <a name="getting-control-patterns"></a>Obtendo padrões de controle  
- Os clientes recuperam um padrão de <xref:System.Windows.Automation.AutomationElement> controle de um <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> chamando <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>o ou o.  
+ Os clientes recuperam um padrão de controle de um <xref:System.Windows.Automation.AutomationElement> chamando <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.  
   
- Os clientes podem usar <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> o método ou uma `IsPatternAvailable` propriedade individual (por exemplo <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>,) para determinar se um padrão <xref:System.Windows.Automation.AutomationElement>ou grupo de padrões tem suporte no. No entanto, é mais eficiente tentar obter o padrão de controle e testar uma `null` referência do que verificar as propriedades com suporte e recuperar o padrão de controle, pois isso resulta em menos chamadas de processo cruzado.  
+ Os clientes podem usar o método <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> ou uma propriedade individual `IsPatternAvailable` (por exemplo, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) para determinar se há suporte para um padrão ou grupo de padrões no <xref:System.Windows.Automation.AutomationElement>. No entanto, é mais eficiente tentar obter o padrão de controle e testar uma referência de `null` do que verificar as propriedades com suporte e recuperar o padrão de controle, pois isso resulta em menos chamadas de processo cruzado.  
   
- O exemplo a seguir demonstra como obter um <xref:System.Windows.Automation.TextPattern> padrão de controle de <xref:System.Windows.Automation.AutomationElement>um.  
+ O exemplo a seguir demonstra como obter um padrão de controle de <xref:System.Windows.Automation.TextPattern> de um <xref:System.Windows.Automation.AutomationElement>.  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Recuperando propriedades em padrões de controle  
- Os clientes podem recuperar os valores de propriedade nos padrões de controle <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> chamando <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> ou e convertendo o objeto retornado para um tipo apropriado. Para obter mais informações [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sobre propriedades, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
+ Os clientes podem recuperar os valores de propriedade nos padrões de controle chamando <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ou <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> e converter o objeto retornado para um tipo apropriado. Para obter mais informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriedades, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
   
- Além dos `GetPropertyValue` métodos, os valores de propriedade podem ser recuperados por meio dos acessadores Common Language Runtime (CLR) [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para acessar as propriedades em um padrão.  
+ Além dos métodos de `GetPropertyValue`, os valores de propriedade podem ser recuperados por meio de acessadores de Common Language Runtime (CLR) para acessar as propriedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] em um padrão.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Controles com padrões de variáveis  
- Alguns tipos de controle dão suporte a padrões diferentes, dependendo do Estado ou da maneira como o controle está sendo usado. Exemplos de controles que podem ter padrões de variáveis são exibições de lista (miniaturas, blocos, ícones, lista, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] detalhes), gráficos (pizza, linha, barra, valor de célula com [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]uma fórmula), área do documento (normal, layout da Web, estrutura de tópicos, layout de impressão, impressão Visualização) e [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] capas.  
+ Alguns tipos de controle dão suporte a padrões diferentes, dependendo do Estado ou da maneira como o controle está sendo usado. Exemplos de controles que podem ter padrões de variáveis são exibições de lista (miniaturas, blocos, ícones, lista, detalhes), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] gráficos (pizza, linha, barra, valor da célula com uma fórmula), área do documento do [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](normal, layout da Web, estrutura de tópicos, layout de impressão, visualização de impressão) e Capas do Microsoft Windows Media Player.  
   
  Controles que implementam tipos de controle personalizados podem ter qualquer conjunto de padrões de controle que são necessários para representar sua funcionalidade.  
   

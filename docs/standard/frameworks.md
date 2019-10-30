@@ -1,19 +1,19 @@
 ---
-title: Frameworks de destino
+title: Estruturas de destino em projetos em estilo SDK-.NET
 description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216664"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040994"
 ---
-# <a name="target-frameworks"></a>Frameworks de destino
+# <a name="target-frameworks-in-sdk-style-projects"></a>Estruturas de destino em projetos no estilo SDK
 
 Ao destinar a uma estrutura em um aplicativo ou uma biblioteca, você está especificando o conjunto de APIs que deseja disponibilizar para o aplicativo ou a biblioteca. Você especifica a estrutura de destino em seu arquivo de projeto usando os TFMs (Monikers da Estrutura de Destino).
 
@@ -31,7 +31,7 @@ A tabela a seguir define as estruturas de destino mais comuns, como elas são re
 
 | Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard 2.1                 | N/D                                     |
+| .NET Standard         | 2.1                         | netstandard 2.1                 | N/A                                     |
 | .NET Core             | 3.0                         | netcoreapp 3.0                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-O sistema de build reconhece os símbolos de pré-processador que representam as estruturas de destino mostradas na tabela [Versões de estrutura de destino com suporte](#supported-target-framework-versions). Ao usar um símbolo que representa um TFM do .NET Standard ou .NET Core, substitua o ponto por um sublinhado e altere as letras minúsculas por maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4`).
+O sistema de compilação reconhece os símbolos de pré-processador que representam as estruturas de destino mostradas na tabela de [versões do Framework de destino com suporte](#supported-target-framework-versions) quando você está usando projetos em estilo SDK. Ao usar um símbolo que representa um TFM do .NET Standard ou .NET Core, substitua o ponto por um sublinhado e altere as letras minúsculas por maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4`).
 
 A lista completa de símbolos de pré-processador para estruturas de destino do .NET Core é:
 

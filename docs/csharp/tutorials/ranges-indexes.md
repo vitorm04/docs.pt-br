@@ -2,13 +2,14 @@
 title: Explore os intervalos de dados usando intervalos e índices
 description: Este tutorial avançado ensina você a explorar dados usando intervalos e índices para examinar fatias de um conjunto de dados sequencial.
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699933"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039665"
 ---
 # <a name="indices-and-ranges"></a>Índices e intervalos
 
@@ -27,9 +28,9 @@ Neste tutorial, você aprenderá a:
 Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
-- O índice do operador `^`end, que especifica que um índice é relativo ao final de uma sequência.
+- O índice do operador end `^`, que especifica que um índice é relativo ao final de uma sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador `..`Range, que especifica o início e o término de um intervalo como seus operandos.
+- O operador Range `..`, que especifica o início e o término de um intervalo como seus operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence[sequence.Length - n]`.
 
@@ -81,7 +82,7 @@ Se um tipo fornecer um [indexador](../programming-guide/indexers/index.md) com u
 
 Um tipo é **contável** se tiver uma propriedade chamada `Length` ou `Count` com um getter acessível e um tipo de retorno de `int`. Um tipo com contagem que não dá suporte explicitamente a índices ou intervalos pode fornecer um suporte implícito para eles. Para obter mais informações, consulte as seções [suporte ao índice implícito](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [suporte de intervalo implícito](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) da [Nota de proposta de recurso](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
-Por exemplo, os seguintes tipos .NET oferecem suporte a índices e intervalos: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> e <xref:System.ReadOnlySpan%601>. O <xref:System.Collections.Generic.List%601> dá suporte a índices, mas não dá suporte a intervalos.
+Por exemplo, os seguintes tipos .NET oferecem suporte a índices e intervalos: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>e <xref:System.ReadOnlySpan%601>. O <xref:System.Collections.Generic.List%601> dá suporte a índices, mas não dá suporte a intervalos.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Cenários para índices e intervalos
 

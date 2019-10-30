@@ -2,21 +2,21 @@
 title: Transações distribuídas do Oracle
 ms.date: 03/30/2017
 ms.assetid: c340ca81-ef79-402f-b204-c5156b890fe5
-ms.openlocfilehash: 6f910f1dbbe448352c0edd5d1b80df659ac453d4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: edd06b94ce4157e90d334ee7feac2a449f7ee74b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795153"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040473"
 ---
 # <a name="oracle-distributed-transactions"></a>Transações distribuídas do Oracle
-O <xref:System.Data.OracleClient.OracleConnection> objeto será automaticamente inscrito em uma transação distribuída existente se determinar que uma transação está ativa. A inscrição de transação automática ocorre quando a conexão é aberta ou recuperada do pool de conexões. Você pode desabilitar a inscrição automática em transações existentes especificando  
+O objeto <xref:System.Data.OracleClient.OracleConnection> será automaticamente inscrito em uma transação distribuída existente se determinar que uma transação está ativa. A inscrição de transação automática ocorre quando a conexão é aberta ou recuperada do pool de conexões. Você pode desabilitar a inscrição automática em transações existentes especificando  
   
-```  
+```csharp  
 Enlist=false  
 ```  
   
- como um parâmetro de cadeia de conexão <xref:System.Data.OracleClient.OracleConnection>para um.  
+ como um parâmetro de cadeia de conexão para um <xref:System.Data.OracleClient.OracleConnection>.  
   
 ## <a name="see-also"></a>Consulte também
 

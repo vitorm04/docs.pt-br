@@ -4,12 +4,12 @@ description: Entenda o processo de compatibilidade e descubra ferramentas que po
 author: cartermp
 ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798799"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038525"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>Visão geral do processo de portabilidade do .NET Framework para o .NET Core
 
@@ -46,7 +46,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
    Como a portabilidade para o .NET Core é uma mudança significativa para sua base de código, é altamente recomendável portar seus testes para poder realizar testes à medida que o código é portado. MSTest, xUnit e NUnit funcionam no .NET Core.
 
-Além disso, você pode tentar portar soluções menores ou projetos individuais para o formato de arquivo de projeto do .NET Core com a ferramenta [dotnet try-Convert](https://github.com/dotnet/try-convert) em uma única operação. Não há garantia de que o `dotnet try-convert` funcione para todos os seus projetos e pode causar alterações sutis no comportamento que você depende. Ele deve ser usado como um _ponto de partida_ que automatiza as coisas básicas que podem ser automatizadas. Não é uma solução garantida para migrar um projeto.
+Além disso, você pode tentar portar soluções menores ou projetos individuais para o formato de arquivo de projeto do .NET Core com a ferramenta [dotnet try-Convert](https://github.com/dotnet/try-convert) em uma única operação. Não há garantia de que o `dotnet try-convert` funcione para todos os seus projetos, e isso pode causar alterações sutis no comportamento que você já dependa. Ele deve ser usado como um _ponto de partida_ que automatiza as coisas básicas que podem ser automatizadas. Não é uma solução garantida para migrar um projeto.
 
 >[!div class="step-by-step"]
 >[Avançar](net-framework-tech-unavailable.md)

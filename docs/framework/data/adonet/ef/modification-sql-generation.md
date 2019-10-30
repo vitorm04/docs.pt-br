@@ -2,12 +2,12 @@
 title: Geração de alteração SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854298"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039891"
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 
@@ -29,7 +29,7 @@ Um DbModificationCommandTree é uma representação do modelo de objeto de uma o
 
 DbModificationCommandTree e suas implementações que são produzidas pelo Entity Framework sempre representam uma única operação de linha. Esta seção descreve esses tipos com as restrições no .NET Framework versão 3.5.
 
-![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Organograma](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree tem uma propriedade de destino que representa o destino definido para a operação de alteração. A propriedade da expressão de destino, que define o conjunto de entrada é sempre DbScanExpression.  Um DbScanExpression pode representar uma tabela ou uma exibição, ou um conjunto de dados definido com uma consulta se a propriedade de metadados "definindo consulta" de seu destino for não nula.
 
@@ -62,9 +62,7 @@ O valor retornando especifica uma projeção de resultados sejam retornados com 
 
 SetClauses especifica a lista de cláusulas conjunto de inserção ou de atualização que definem a inserção ou a operação de atualização.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+Os elementos da lista são especificados como tipo DbModificationClause, que especifica uma única cláusula em uma operação INSERT ou Update modification. DbSetClause herda de DbModificationClause e especifica a cláusula em uma operação de modificação que define o valor de uma propriedade. A partir da versão 3,5 do .NET Framework, todos os elementos em setcláusulas são do tipo setcláusula.
 
 A propriedade especifica a propriedade que deve ser atualizada. É sempre um DbPropertyExpression sobre um DbVariableReferenceExpression, que representa uma referência ao destino de DbModificationCommandTree correspondente.
 
@@ -94,7 +92,7 @@ O [provedor de exemplo Entity Framework](https://code.msdn.microsoft.com/windows
 
 O módulo de geração SQL de alteração do provedor de exemplo (localizado na geração SQL do arquivo DmlSqlGenerator.cs \) usa uma entrada DbModificationCommandTree e gerencia uma única instrução SQL de alteração seguida possivelmente por uma instrução select para retornar um leitor se especificado pelo DbModificationCommandTree. Observe que a forma de comandos gerados é afetada por base de dados SQL Server de destino.
 
-### <a name="helper-classes-expressiontranslator"></a>Classes auxiliares: ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>Classes auxiliar: ExpressionTranslator
 
 Serve de ExpressionTranslator como um tradutor leve comum para todas as propriedades da árvore de comando de alteração de tipo DbExpression. Oferece suporte à conversão de tipos somente da expressão às propriedades de árvore de comando de alteração são restritas e é compilado com as restrições específicos em mente.
 
@@ -116,7 +114,7 @@ Dado que a instância de DbPropertyExpression sempre representa a tabela de entr
 
 Para um DbInsertCommandTree determinado no provedor de exemplo, o comando gerado de inserção segue um dos dois modelos de inserção abaixo.
 
-O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento de predicado "\@ @ROWCOUNT > 0" será true se uma linha for inserida. O elemento predicado "keymemberi = &#124; SCOPE_IDENTITY ()" usa a forma "keymemberi = SCOPE_IDENTITY ()" somente se keymemberi for uma chave gerada pelo repositório, porque SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo armazenamento).
+O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento de predicado "\@@ROWCOUNT > 0" será true se uma linha tiver sido inserida. O elemento predicado "keymemberi = &#124; SCOPE_IDENTITY ()" usa a forma "keymemberi = SCOPE_IDENTITY ()" somente se keymemberi for uma chave gerada pelo repositório, porque SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo armazenamento).
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Esse código gerencia a seguir árvore de comando, que é passada para o provedor:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-A cláusula SET terá a cláusula SET falsa ("@i = 0") somente se nenhuma cláusula SET for especificada. Este é garantir que todas as colunas Store- computadas recalculados.
+A cláusula SET tem a cláusula SET falsa ("@i = 0") somente se nenhuma cláusula SET for especificada. Este é garantir que todas as colunas Store- computadas recalculados.
 
 Somente se a propriedade retornando não é nulo, uma instrução SELECT é gerada para retornar as propriedades especificadas na propriedade retornando.
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Esse código do usuário gerencia a seguir árvore de comando, que é passada para o provedor:
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Esse código do usuário gerencia a seguir árvore de comando, que é passada para o provedor.
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

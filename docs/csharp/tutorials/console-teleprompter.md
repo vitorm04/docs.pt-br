@@ -2,13 +2,14 @@
 title: Aplicativo do Console
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039261"
 ---
 # <a name="console-application"></a>Aplicativo do Console
 
@@ -24,10 +25,10 @@ Você compilará um aplicativo que lê um arquivo de texto e exibe o conteúdo d
 
 Há vários recursos neste tutorial. Vamos compilá-los individualmente.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) . Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
-Será necessário instalar o editor de código de sua preferência.
+Você precisará instalar o editor de código de sua preferência.
 
 ## <a name="create-the-application"></a>Criar o aplicativo
 

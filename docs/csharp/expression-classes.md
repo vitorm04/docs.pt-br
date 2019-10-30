@@ -2,13 +2,14 @@
 title: Tipos de Framework com suporte a árvores de expressão
 description: Saiba mais sobre tipos de estrutura com suporte a árvores de expressão, criando árvores de expressão e técnicas para trabalhar com APIs de árvore de expressão.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925963"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037612"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de Framework com suporte a árvores de expressão
 
@@ -18,7 +19,7 @@ Há uma grande lista de classes do .NET Core Framework que funcionam com árvore
 Veja a lista completa em <xref:System.Linq.Expressions>.
 Em vez de percorrer a lista completa, vamos entender como as classes de estrutura foram projetadas.
 
-No design de linguagem, uma expressão é um corpo de código que calcula e retorna um valor. As expressões podem ser muito simples: a expressão constante `1` retorna o valor constante de 1. Elas podem ser mais complicadas: a expressão `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` retorna uma raiz de uma equação quadrática (no caso em que a equação tem uma solução).  
+No design de linguagem, uma expressão é um corpo de código que calcula e retorna um valor. As expressões podem ser muito simples: a expressão constante `1` retorna o valor constante de 1. Elas podem ser mais complicados: a expressão `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` retorna uma raiz de uma equação quadrática (no caso em que a equação tem uma solução).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Tudo começa com System.Linq.Expression
 

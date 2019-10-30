@@ -2,15 +2,16 @@
 title: Criar com tipos de referência que permitem valor nulo
 description: Este tutorial avançado fornece uma introdução aos tipos de referência que permitem valor nulo. Você aprenderá a expressar sua intenção de design quando os valores de referência puderem ser nulos e ter o compilador obrigatório quando eles não puderem ser nulos.
 ms.date: 02/19/2019
+ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332326"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039681"
 ---
-# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrar o código existente com tipos de referência anuláveis
+# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: migrar código existente com tipos de referência anuláveis
 
 O C# 8 introduz **tipos de referência que permitem valor nulo** que complementam os tipos de referência da mesma maneira que os tipos de valor que permitem valor nulo complementam os tipos de valor. Para declarar que uma variável é um **tipo de referência que permite valor nulo**, anexe um `?` ao tipo. Por exemplo, `string?` representa uma `string` que permite valor nulo. Você pode usar esses novos tipos para expressar mais claramente sua intenção de design: algumas variáveis *devem sempre ter um valor*, outras *podem ter um valor* ausente. Quaisquer variáveis existentes de um tipo de referência seriam interpretadas como um tipo de referência não anulável. 
 
@@ -23,7 +24,7 @@ Neste tutorial, você aprenderá a:
 > - Gerenciar a interface entre contextos habilitados para anulável e desabilitados para anulável.
 > - Controlar contextos de anotação anuláveis.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download).
 
@@ -93,7 +94,7 @@ public class NewsStoryViewModel
 }
 ```
 
-A atribuição de `Title` e `Uri` a `default`, que é `null` para o tipo `string`, não altera o comportamento de tempo de execução do programa. O `NewsStoryViewModel` ainda é construído com valores nulos, mas agora o compilador não retorna avisos. O **operador que tolera valores nulos**, o caractere `!` logo após a expressão `default` informa ao compilador que a expressão anterior não é nula. Essa técnica pode ser conveniente quando outras alterações forçarem mudanças muito maiores em uma base de código, mas, neste aplicativo, há uma solução relativamente rápida e mais adequada: Torne o `NewsStoryViewModel` um tipo imutável, onde todas as propriedades são definidas no construtor. Faça estas alterações em `NewsStoryViewModel`:
+A atribuição de `Title` e `Uri` a `default`, que é `null` para o tipo `string`, não altera o comportamento de tempo de execução do programa. O `NewsStoryViewModel` ainda é construído com valores nulos, mas agora o compilador não retorna avisos. O **operador que tolera valores nulos**, o caractere `!` logo após a expressão `default` informa ao compilador que a expressão anterior não é nula. Essa técnica pode ser adequada quando outras alterações forçam alterações muito maiores em uma base de código, mas nesse aplicativo há uma solução relativamente rápida e melhor: tornar o `NewsStoryViewModel` um tipo imutável em que todas as propriedades são definidas no construtor. Faça estas alterações em `NewsStoryViewModel`:
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
@@ -125,7 +126,7 @@ Com frequência, a correção para um conjunto de avisos cria novos avisos no c�
 
 [!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-Adicione a diretiva `#nullable enable` e você verá dois avisos. Nem a propriedade `ErrorText`, ou a propriedade `NewsItems` é inicializada. Um exame dessa classe poderia levar você a acreditar que as duas propriedades devem ser tipos de referência anuláveis: Ambos têm setters privados. Exatamente um é atribuído no método `OnGet`. Antes de fazer alterações, examine os consumidores das duas propriedades. Na própria página, o `ErrorText` é verificado em relação ao valor nulo antes de gerar a marcação dos erros. A coleção `NewsItems` é verificada com relação a `null` e verificada para garantir que a coleção tenha itens. Uma correção rápida seria transformar as duas propriedades em tipos de referência anuláveis. Uma correção melhor seria transformar a coleção em um tipo de referência não anulável e adicionar itens à coleção existente ao recuperar notícias. A primeira correção é adicionar o `?` ao tipo `string` para o `ErrorText`:
+Adicione a diretiva `#nullable enable` e você verá dois avisos. Nem a propriedade `ErrorText`, ou a propriedade `NewsItems` é inicializada. Um exame dessa classe o levaria a acreditar que ambas as propriedades devem ser tipos de referência anuláveis: ambas têm setters privados. Exatamente um é atribuído no método `OnGet`. Antes de fazer alterações, examine os consumidores das duas propriedades. Na própria página, o `ErrorText` é verificado em relação ao valor nulo antes de gerar a marcação dos erros. A coleção `NewsItems` é verificada com relação a `null` e verificada para garantir que a coleção tenha itens. Uma correção rápida seria transformar as duas propriedades em tipos de referência anuláveis. Uma correção melhor seria transformar a coleção em um tipo de referência não anulável e adicionar itens à coleção existente ao recuperar notícias. A primeira correção é adicionar o `?` ao tipo `string` para o `ErrorText`:
 
 [!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 

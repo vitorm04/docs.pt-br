@@ -1,13 +1,13 @@
 ---
 title: Correspondência padrão
 description: Saiba como os padrões são usados F# no para comparar dados com estruturas lógicas, decompor dados em partes constituintes ou extrair informações de dados.
-ms.date: 05/16/2016
-ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 10/27/2019
+ms.openlocfilehash: 1acb795cbe5581898ae5e1439098f906a8a16b93
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216805"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041007"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -15,9 +15,9 @@ Padrões são regras para transformar dados de entrada. Eles são usados em toda
 
 ## <a name="remarks"></a>Comentários
 
-Padrões são usados em muitas construções de linguagem, como a `match` expressão. Eles são usados quando você está processando argumentos para funções `let` em associações, expressões lambda e nos manipuladores de exceção associados `try...with` à expressão. Para obter mais informações, consulte [corresponder expressões](match-expressions.md), [permitir associações](./functions/let-bindings.md), [expressões lambda: A `fun` palavra](./functions/lambda-expressions-the-fun-keyword.md)-chave [e as exceções: A `try...with` expressão](./exception-handling/the-try-with-expression.md).
+Padrões são usados em muitas construções de linguagem, como a expressão `match`. Eles são usados quando você está processando argumentos para funções em associações `let`, expressões lambda e nos manipuladores de exceção associados à expressão `try...with`. Para obter mais informações, consulte [corresponder expressões](match-expressions.md), [permitir associações](./functions/let-bindings.md), [expressões lambda: a palavra-chave `fun`](./functions/lambda-expressions-the-fun-keyword.md)e [exceções: a expressão `try...with`](./exception-handling/the-try-with-expression.md).
 
-Por exemplo, na `match` expressão, o *padrão* é o que segue o símbolo de pipe.
+Por exemplo, na expressão `match`, o *padrão* é o que segue o símbolo de pipe.
 
 ```fsharp
 match expression with
@@ -25,27 +25,27 @@ match expression with
 ...
 ```
 
-Cada padrão atua como uma regra para transformar a entrada de alguma maneira. `match` Na expressão, cada padrão é examinado, por sua vez, para ver se os dados de entrada são compatíveis com o padrão. Se uma correspondência for encontrada, a expressão de resultado será executada. Se uma correspondência não for encontrada, a próxima regra de padrão será testada. A parte de *condição* opcional quando é explicada em [expressões de correspondência](match-expressions.md).
+Cada padrão atua como uma regra para transformar a entrada de alguma maneira. Na expressão `match`, cada padrão é examinado, por sua vez, para ver se os dados de entrada são compatíveis com o padrão. Se uma correspondência for encontrada, a expressão de resultado será executada. Se uma correspondência não for encontrada, a próxima regra de padrão será testada. A parte de *condição* opcional quando é explicada em [expressões de correspondência](match-expressions.md).
 
 Os padrões com suporte são mostrados na tabela a seguir. Em tempo de execução, a entrada é testada em relação a cada um dos seguintes padrões na ordem listada na tabela, e os padrões são aplicados recursivamente, de primeiro até o último, conforme aparecem no seu código e da esquerda para a direita para os padrões em cada linha.
 
-|Nome|Descrição|Exemplo|
+|Name|Descrição|Exemplo|
 |----|-----------|-------|
 |Padrão de constante|Qualquer literal numérico, de caractere ou de cadeia de caracteres, uma constante de enumeração ou um identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
 |Padrão de identificador|Um valor de case de uma união discriminada, um rótulo de exceção ou um caso de padrão ativo|`Some(x)`<br /><br />`Failure(msg)`|
 |Padrão de variável|*identifier*|`a`|
-|`as`padrão|*padrão* como *identificador*|`(a, b) as tuple1`|
+|padrão de `as`|*padrão* como *identificador*|`(a, b) as tuple1`|
 |OU padrão|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |E padrão|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Padrão de contras|*identificador* :: *lista-identificador*|`h :: t`|
-|Padrão de lista|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
-|Padrão de matriz|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Padrão entre parênteses|( *pattern* )|`( a )`|
-|Padrão de tupla|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
-|Padrão de registro|{ *identifier1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
+|Padrão de lista|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
+|Padrão de matriz|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Padrão entre parênteses|( *padrão* )|`( a )`|
+|Padrão de tupla|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
+|Padrão de registro|{ *identifier1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |Padrão de curinga|_|`_`|
 |Padrão junto com a anotação de tipo|*padrão* : *tipo*|`a : int`|
-|Padrão de teste de tipo|:? *tipo* de [como *identificador* ]|`:? System.DateTime as dt`|
+|Padrão de teste de tipo|:? *tipo* [como *identificador* ]|`:? System.DateTime as dt`|
 |Padrão nulo|nulo|`null`|
 
 ## <a name="constant-patterns"></a>Padrões constantes
@@ -66,11 +66,11 @@ Se o padrão for uma cadeia de caracteres que forma um identificador válido, a 
 
 Os padrões de União discriminados podem ser casos nomeados simples ou podem ter um valor, ou uma tupla contendo vários valores. Se houver um valor, você deverá especificar um identificador para o valor. No caso de uma tupla, você deve fornecer um padrão de tupla com um identificador para cada elemento da tupla ou um identificador com um nome de campo para um ou mais campos de União nomeados. Consulte os exemplos de código nesta seção para obter exemplos.
 
-O `option` tipo é uma união discriminada que tem dois `Some` casos e `None`. Um case (`Some`) tem um valor, mas o outro (`None`) é apenas um caso nomeado. Portanto, `Some` o precisa ter uma variável para o valor associado `Some` ao caso, mas `None` deve aparecer por si só. No código a seguir, a variável `var1` recebe o valor obtido pela correspondência `Some` ao caso.
+O tipo de `option` é uma união discriminada que tem dois casos, `Some` e `None`. Um caso (`Some`) tem um valor, mas o outro (`None`) é apenas um caso nomeado. Portanto, `Some` precisa ter uma variável para o valor associado ao `Some` caso, mas `None` deve aparecer por si só. No código a seguir, a variável `var1` recebe o valor obtido pela correspondência ao `Some` caso.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-No exemplo a seguir, a `PersonName` união discriminada contém uma mistura de cadeias e caracteres que representam possíveis formas de nomes. Os casos da união discriminada são `FirstOnly`, `LastOnly`e `FirstLast`.
+No exemplo a seguir, a união discriminada do `PersonName` contém uma mistura de cadeias de caracteres e de personagens que representam possíveis formas de nomes. Os casos da união discriminada são `FirstOnly`, `LastOnly`e `FirstLast`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
@@ -91,7 +91,7 @@ let matchShape shape =
     | Circle(r) -> printfn "Circle with radius %f" r
 ```
 
-O uso do campo nomeado é opcional, portanto, no exemplo anterior, ambos `Circle(r)` e `Circle(radius = r)` têm o mesmo efeito.
+O uso do campo nomeado é opcional, portanto, no exemplo anterior, `Circle(r)` e `Circle(radius = r)` têm o mesmo efeito.
 
 Quando você especifica vários campos, use o ponto-e-vírgula (;) como um separador.
 
@@ -103,11 +103,11 @@ match shape with
 
 Os padrões ativos permitem definir correspondência de padrões personalizados mais complexos. Para obter mais informações sobre padrões ativos, consulte [padrões ativos](active-patterns.md).
 
-O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de [exceção, consulte exceções: A `try...with` expressão](./exception-handling/the-try-with-expression.md).
+O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de exceção, consulte [Exceptions: The `try...with` Expression](./exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Padrões de variáveis
 
-O padrão variável atribui o valor que está sendo correspondido a um nome de variável, que está disponível para uso na expressão de execução à direita do `->` símbolo. Um padrão variável sozinho corresponde A qualquer entrada, mas padrões de variáveis geralmente aparecem dentro de outros padrões, permitindo, portanto, estruturas mais complexas, como tuplas e matrizes a serem decompostas em variáveis.
+O padrão variável atribui o valor que está sendo correspondido a um nome de variável, que está disponível para uso na expressão de execução à direita do símbolo de `->`. Um padrão variável sozinho corresponde A qualquer entrada, mas padrões de variáveis geralmente aparecem dentro de outros padrões, permitindo, portanto, estruturas mais complexas, como tuplas e matrizes a serem decompostas em variáveis.
 
 O exemplo a seguir demonstra um padrão variável dentro de um padrão de tupla.
 
@@ -115,9 +115,9 @@ O exemplo a seguir demonstra um padrão variável dentro de um padrão de tupla.
 
 ## <a name="as-pattern"></a>como padrão
 
-O `as` padrão é um padrão que tem uma `as` cláusula acrescentada a ele. A `as` cláusula associa o valor correspondente a um nome que pode ser usado na expressão de execução de uma `match` expressão ou, no caso em que esse padrão é usado em uma `let` associação, o nome é adicionado como uma associação ao escopo local.
+O padrão de `as` é um padrão que tem uma cláusula `as` acrescentada a ele. A cláusula `as` associa o valor correspondente a um nome que pode ser usado na expressão de execução de uma expressão de `match` ou, no caso em que esse padrão é usado em uma associação de `let`, o nome é adicionado como uma associação ao escopo local.
 
-O exemplo a seguir usa `as` um padrão.
+O exemplo a seguir usa um padrão de `as`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
@@ -133,7 +133,7 @@ O exemplo a seguir demonstra o padrão ou.
 
 O padrão AND requer que a entrada corresponda a dois padrões. Os tipos de ambos os lados do padrão e devem ser compatíveis.
 
-O exemplo a seguir é `detectZeroTuple` como mostrado na seção [padrão de tupla](https://msdn.microsoft.com/library/#tuple) mais adiante neste tópico `var1` , mas aqui e `var2` são obtidos como valores usando o padrão e.
+O exemplo a seguir é como `detectZeroTuple` mostrado na seção [padrão de tupla](https://msdn.microsoft.com/library/#tuple) mais adiante neste tópico, mas aqui `var1` e `var2` são obtidos como valores usando o padrão e.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
@@ -177,7 +177,7 @@ O padrão de registro é usado para decompor registros para extrair os valores d
 
 ## <a name="wildcard-pattern"></a>Padrão de curinga
 
-O padrão de caractere curinga é representado pelo caractere de`_`sublinhado () e corresponde a qualquer entrada, assim como o padrão de variável, exceto que a entrada é descartada em vez de atribuída a uma variável. O padrão de caractere curinga geralmente é usado em outros padrões como um espaço reservado para valores que não são necessários na expressão à direita do `->` símbolo. O padrão curinga também é usado frequentemente no final de uma lista de padrões para corresponder a qualquer entrada sem correspondência. O padrão de curinga é demonstrado em muitos exemplos de código neste tópico. Consulte o código anterior para obter um exemplo.
+O padrão de caractere curinga é representado pelo caractere de sublinhado (`_`) e corresponde a qualquer entrada, assim como o padrão de variável, exceto que a entrada é descartada em vez de atribuída a uma variável. O padrão de caractere curinga geralmente é usado em outros padrões como um espaço reservado para valores que não são necessários na expressão à direita do símbolo de `->`. O padrão curinga também é usado frequentemente no final de uma lista de padrões para corresponder a qualquer entrada sem correspondência. O padrão de curinga é demonstrado em muitos exemplos de código neste tópico. Consulte o código anterior para obter um exemplo.
 
 ## <a name="patterns-that-have-type-annotations"></a>Padrões que têm anotações de tipo
 
@@ -193,9 +193,23 @@ O exemplo a seguir demonstra o tipo de padrão de teste.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
+Se você estiver verificando apenas se um identificador é de um tipo derivado específico, não precisará do `as identifier` parte do padrão, conforme mostrado no exemplo a seguir:
+
+```fsharp
+type A() = class end
+type B() = inherit A()
+type C() = inherit A()
+
+let m (a: A) =
+    match a with
+    | :? B -> printfn "It's a B"
+    | :? C -> printfn "It's a C"
+    | _ -> ()
+```
+
 ## <a name="null-pattern"></a>Padrão nulo
 
-O padrão nulo corresponde ao valor nulo que pode aparecer quando você está trabalhando com tipos que permitem um valor nulo. Padrões nulos são usados frequentemente quando interoperam com código .NET Framework. Por exemplo, o valor de retorno de uma API do .net pode ser a entrada `match` para uma expressão. Você pode controlar o fluxo do programa com base em se o valor de retorno é nulo e também em outras características do valor retornado. Você pode usar o padrão nulo para impedir que valores nulos se propaguem para o restante do seu programa.
+O padrão nulo corresponde ao valor nulo que pode aparecer quando você está trabalhando com tipos que permitem um valor nulo. Padrões nulos são usados frequentemente quando interoperam com código .NET Framework. Por exemplo, o valor de retorno de uma API do .NET pode ser a entrada para uma expressão de `match`. Você pode controlar o fluxo do programa com base em se o valor de retorno é nulo e também em outras características do valor retornado. Você pode usar o padrão nulo para impedir que valores nulos se propaguem para o restante do seu programa.
 
 O exemplo a seguir usa o padrão nulo e o padrão de variável.
 

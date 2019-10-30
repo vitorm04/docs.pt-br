@@ -2,13 +2,14 @@
 title: Escrever um código C# seguro e eficiente
 description: Aprimoramentos recentes na linguagem C# permitem escrever código seguro verificável que o desempenho associou anteriormente ao código não seguro.
 ms.date: 10/23/2018
+ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960835"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039637"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -229,7 +230,7 @@ O compilador gera um código mais eficiente quando você chama os membros de um 
 
 Você não deve passar um tipo de valor anulável como um argumento `in`. O tipo de <xref:System.Nullable%601> não é declarado como uma struct somente leitura. Isso significa que o compilador deve gerar cópias defensivas para qualquer argumento de tipo de valor anulável passado para um método usando o modificador `in` na declaração de parâmetro.
 
-É possível ver um programa de exemplo que demonstra as diferenças de desempenho que usam [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) em nosso [repositório de exemplos](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) no GitHub. Ele compara a passagem de um struct mutável por valor e por referência com a passagem de um struct imutável por valor e por referência. O uso do struct imutável e da passagem por referência é mais rápido.
+Você pode ver um programa de exemplo que demonstra as diferenças de desempenho usando o [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) em nosso [repositório de exemplos](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) no github. Ele compara a passagem de um struct mutável por valor e por referência com a passagem de um struct imutável por valor e por referência. O uso do struct imutável e da passagem por referência é mais rápido.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Use tipos `ref struct` para trabalhar com blocos ou memória em um único registro de ativação
 

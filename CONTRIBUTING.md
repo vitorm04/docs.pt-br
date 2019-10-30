@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315874"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035455"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -79,7 +79,7 @@ docs
 
 **Etapa 4:** Envie uma solicitação de pull (PR) de seu Branch para `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` ou `dotnet/samples/master`.
 
-A PR deve *sempre* ser direcionada ao branch mestre. Você *nunca* deve abrir uma PR direcionada ao branch dinâmico.
+Sua PR deve *sempre* direcionar a ramificação padrão do repositório (a menos que você esteja trabalhando em um Branch de lançamento). Para dotnet/docs, a ramificação mestre é a ramificação padrão. Para os repositórios localizados, o Live Branch é o padrão. Você *nunca* deve abrir uma PR que tenha como alvo a ramificação ao vivo em dotNet/docs.
 
 Cada PR normalmente deve lidar com uma questão por vez. A PR pode modificar um ou vários arquivos. Se você está abordando várias correções em diferentes arquivos, é preferível usar PRs separadas.
 
@@ -140,14 +140,14 @@ A experiência interativa em C# altera o modo como trabalhamos com amostras. Os 
 
 A lista a seguir mostra algumas regras de orientação que você deve considerar ao contribuir para a documentação do .NET:
 
-- **NÃO** nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso.
+- **NÃO** nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso. Para alterações em massa, divida o trabalho em PRs menores (até 100 arquivos).
 - **FAZER:** leia o [guia de estilo](./styleguide/template.md) e as diretrizes sobre [voz e tom](./styleguide/voice-tone.md).
 - **FAZER:** use o arquivo de [modelo](./styleguide/template.md) como o ponto de partida do seu trabalho.
 - **FAZER:** crie um branch separado em seu fork antes de trabalhar nos artigos.
 - **FAZER:** siga o [fluxo de trabalho do GitHub Flow](https://guides.github.com/introduction/flow/).
 - **FAZER:** faça postagem em blogs e no Twitter (ou em outros) sobre suas contribuições, com frequência.
 
-> Observação: você pode observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](./styleguide/template.md). Estamos trabalhando para atingir a consistência em todo o site. Verifique a lista de [problemas em aberto](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) que estamos acompanhando, no momento, para essa meta específica.
+> Observação: você pode observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](./styleguide/template.md). Estamos trabalhando para atingir a consistência em todo o site.
 
 ## <a name="contributor-license-agreement"></a>Contrato de licença do colaborador
 

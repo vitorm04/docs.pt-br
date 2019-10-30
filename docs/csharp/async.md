@@ -3,14 +3,15 @@ title: Programação assíncrona – C#
 description: Saiba mais sobre o modelo de programação assíncrona em nível linguagem do C# fornecido pelo .NET Core.
 author: cartermp
 ms.date: 06/20/2016
+ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 246046fb5ac9b0c03df7df71ef426dc2ac6f0617
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168809"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037681"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -30,7 +31,7 @@ Para o código vinculado à CPU, você `await` uma operação que é iniciada em
 
 Existem outras maneiras de abordar o código assíncrono, diferentes de `async` e `await`, como mencionado no artigo TAP no link acima, mas este documento se concentrará nos constructos de nível de linguagem daqui em diante.
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Exemplo vinculado à E/S: Baixando dados de um serviço Web
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Exemplo vinculado à E/S: baixar dados de um serviço Web
 
 Talvez você queira baixar alguns dados de um serviço Web quando um botão for pressionado, mas não deseja bloquear o thread da interface do usuário. Isso pode ser realizado simplesmente assim:
 
@@ -50,7 +51,7 @@ downloadButton.Clicked += async (o, e) =>
 
 E pronto! O código expressa a intenção (baixar alguns dados de forma assíncrona) sem enroscar na interação com objetos de tarefa.
 
-### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Exemplo vinculado à CPU: Executando um cálculo para um jogo
+### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Exemplo vinculado à CPU: executar um cálculo para um jogo
 
 Digamos que você está escrevendo um jogo para dispositivo móvel em que, ao pressionar um botão, poderá causar danos a muitos inimigos na tela.  A realização do cálculo de dano pode ser dispendiosa e fazê-lo no thread da interface do usuário faria com que o jogo parecesse pausar durante a realização do cálculo!
 

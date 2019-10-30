@@ -2,13 +2,14 @@
 title: System.Delegate e a palavra-chave `delegate`
 description: Aprenda sobre as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave “delegado”.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465770"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037446"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
@@ -67,7 +68,7 @@ int result = comparator(left, right);
 Na linha acima, o código *invoca* o método anexado ao delegado.
 Você trata a variável como um nome de método e a invoca usando a sintaxe de chamada de método normal.
 
-Essa linha de código faz uma suposição não segura: Não há nenhuma garantia de que um destino foi adicionado ao delegado. Se nenhum destino tiver sido anexado, a linha acima fará com que um `NullReferenceException` seja lançado. As expressões usadas para resolver esse problema são mais complicadas do que uma simples verificação de null e são abordadas posteriormente nesta [série](delegates-patterns.md).
+Essa linha de código faz uma suposição não segura: não há garantia de que um destino foi adicionado ao delegado. Se nenhum destino tiver sido anexado, a linha acima fará com que um `NullReferenceException` seja lançado. As expressões usadas para resolver esse problema são mais complicadas do que uma simples verificação de null e são abordadas posteriormente nesta [série](delegates-patterns.md).
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>Atribuindo, adicionando e remondo destinos de invocação
 

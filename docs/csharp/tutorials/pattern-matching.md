@@ -2,15 +2,16 @@
 title: Usar o recurso de correspondência de padrões para estender padrões de dados
 description: Este tutorial avançado demonstra como usar as técnicas de correspondência de padrões para criar a funcionalidade usando dados e algoritmos que são criados separadamente.
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332360"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039199"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usar os recursos de correspondência de padrões para estender tipo de dados
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: usando recursos de correspondência de padrões para estender tipos de dados
 
 O C#7 introduziu recursos básicos de correspondência de padrões. Esses recursos foram estendidos no C# 8 com novos padrões e expressões. É possível escrever uma funcionalidade que se comporte como se você tivesse estendido tipos que poderiam estar em outras bibliotecas. Outro uso dos padrões é criar a funcionalidade de que seu aplicativo precisa, mas que não é um recurso fundamental do tipo que está sendo estendido.
 
@@ -22,7 +23,7 @@ Neste tutorial, você aprenderá a:
 > - Usar expressões de correspondência de padrões para implementar o comportamento com base em tipos e valores de propriedade.
 > - Combinar a correspondência de padrões com outras técnicas para criar algoritmos completos.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download).
 
@@ -137,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-Esse código está incluído no projeto inicial, mas está comentado. Remova os comentários para poder testar o que acabou de escrever.
+Esse código é incluído no projeto inicial, mas é comentado. Remova os comentários e você pode testar o que escreveu.
 
 Você está começando a ver como os padrões podem ajudar a criar algoritmos em que o código e os dados estão separados. A expressão `switch` testa o tipo e produz valores diferentes com base nos resultados. Mas isso é somente o começo.
 
@@ -297,7 +298,7 @@ Você usará a correspondência de padrões para esse recurso, mas poderá integ
 
 A tabela a seguir mostra as combinações de valores de entrada e multiplicador de preços para os horários de pico:
 
-| Day        | Time         | Direction | Premium |
+| Dia        | Hora         | Direção | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Dia útil    | horário de pico da manhã | entrada   | x 2,00  |
 | Dia útil    | horário de pico da manhã | saída  | x 1,00  |

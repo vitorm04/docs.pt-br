@@ -2,13 +2,14 @@
 title: Correspondência de padrões – Guia de C#
 description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 04/10/2019
+ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 5ace3c4552184b848b90dee3516d549ca8fd5806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61652020"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039360"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -36,7 +37,7 @@ Antes do C# 7.0, você precisaria testar cada tipo de uma série de instruções
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-O código acima é uma expressão clássica do *padrão de tipo*: Você está testando uma variável para determinar seu tipo e adotando uma ação diferente com base nesse tipo.
+O código acima é uma expressão clássica do *padrão de tipo*: você está testando uma variável para determinar seu tipo e adotando uma ação diferente com base no tipo.
 
 Esse código se torna mais simples usando extensões para a expressão `is` para atribuir uma variável se o teste tiver êxito:
 
@@ -46,7 +47,7 @@ Nesta versão atualizadas, a expressão `is` testa a variável e a atribui a uma
 
 As regras da linguagem para expressões de correspondência de padrões ajudam a evitar usar incorretamente os resultados de uma expressão de correspondência. No exemplo acima, as variáveis `s`, `c` e `r` estão somente no escopo e são atribuídas definitivamente quando as expressões de correspondência de padrão têm resultados `true`. Se você tentar usar qualquer variável em outro local, seu código gerará erros de compilador.
 
-Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeAreaModernIs`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as variáveis declaradas na instrução `if` estão no mesmo escopo da instrução `if` (o método nesse caso). Esse comportamento não é específico para correspondência de padrões, mas é o comportamento definido para escopos de variável e instruções `if` e `else`.
+Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeAreaModernIs`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as variáveis declaradas na instrução `if` estão no mesmo escopo que a instrução `if` (o método nesse caso.) Esse comportamento não é específico da correspondência de padrões, mas é o comportamento definido para escopos de variáveis e instruções `if` e `else`.
 
 As variáveis `c` e `s` são atribuídas quando as respectivas instruções `if` são verdadeiras por causa do mecanismo atribuído definitivamente quando elas são verdadeiras.
 
@@ -111,7 +112,7 @@ O comportamento especial para o padrão `null` é interessante porque a constant
 
 A introdução de `var` como uma das expressões de correspondência introduz novas regras à correspondência de padrão.
 
-A primeira regra é que a declaração `var` segue as regras de inferência de tipos normais: O tipo é inferido para ser o tipo estático da expressão de troca. Com base nessa regra, o tipo sempre é correspondente.
+A primeira regra é de que a declaração `var` segue as regras de inferência de tipos normais: o tipo é inferido como tipo estático da expressão switch. Com base nessa regra, o tipo sempre é correspondente.
 
 A segunda regra é que uma declaração `var` não tem a verificação de nulos que outras expressões do tipo padrão incluem. Isso significa que a variável pode ser nula e uma verificação de nulos é necessária nesse caso.
 

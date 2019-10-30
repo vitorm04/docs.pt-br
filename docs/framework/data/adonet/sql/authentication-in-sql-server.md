@@ -2,12 +2,12 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794285"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040265"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
 O SQL Server dá suporte a dois modos de autenticação, modo de autenticação do Windows e modo misto.  
@@ -19,10 +19,10 @@ O SQL Server dá suporte a dois modos de autenticação, modo de autenticação 
 > [!IMPORTANT]
 > Recomendamos usar a autenticação do Windows sempre que for possível. A autenticação do Windows usa uma série de mensagens criptografadas para autenticar usuários no SQL Server. Quando são usados SQL Server logons, SQL Server nomes de logon e senhas criptografadas são transmitidos pela rede, o que os torna menos seguros.  
   
- Com a autenticação do Windows, os usuários já estão conectados no Windows e não precisam fazer logon separadamente para SQL Server. O seguinte `SqlConnection.ConnectionString` especifica a autenticação do Windows sem exigir que os usuários forneçam um nome de usuário ou senha.  
+ Com a autenticação do Windows, os usuários já estão conectados no Windows e não precisam fazer logon separadamente para SQL Server. O `SqlConnection.ConnectionString` a seguir especifica a autenticação do Windows sem exigir que os usuários forneçam um nome de usuário ou senha.  
   
-```  
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
+```csharp  
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
 ```  
   
 > [!NOTE]
@@ -64,9 +64,9 @@ O SQL Server dá suporte a dois modos de autenticação, modo de autenticação 
  Se você precisar usar a autenticação de modo misto, deverá criar SQL Server logons, que são armazenados em SQL Server. Em seguida, você precisa fornecer o nome de usuário e a senha do SQL Server em tempo de execução.  
   
 > [!IMPORTANT]
-> O SQL Server é instalado com um logon `sa` SQL Server chamado (uma abreviação de "administrador do sistema"). Atribua uma senha forte para o logon do `sa` e não use o logon do `sa` em seu aplicativo. O logon do `sa` mapeia para a função de servidor fixa `sysadmin`, que tem credenciais administrativas irrevogáveis no servidor inteiro. Não haverá limites para o dano potencial se um invasor obtiver acesso como administrador do sistema. Todos os membros do grupo `BUILTIN\Administrators` do Windows (o grupo do administrador local) são membros `sysadmin` da função por padrão, mas podem ser removidos dessa função.  
+> O SQL Server é instalado com um logon do SQL Server chamado `sa` (uma abreviação de "administrador do sistema"). Atribua uma senha forte para o logon do `sa` e não use o logon do `sa` em seu aplicativo. O logon do `sa` mapeia para a função de servidor fixa `sysadmin`, que tem credenciais administrativas irrevogáveis no servidor inteiro. Não haverá limites para o dano potencial se um invasor obtiver acesso como administrador do sistema. Todos os membros do grupo de `BUILTIN\Administrators` do Windows (o grupo do administrador local) são membros da função `sysadmin` por padrão, mas podem ser removidos dessa função.  
   
- SQL Server fornece mecanismos de política de senha do Windows para SQL Server logons quando ele [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] estiver em execução no ou em versões posteriores. As políticas de complexidade de senha foram criadas para intimidar ataques de força bruta aumentando o número de senhas possíveis. SQL Server pode aplicar as mesmas políticas de complexidade e expiração [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] usadas no para as senhas usadas no SQL Server.  
+ SQL Server fornece mecanismos de política de senha do Windows para SQL Server logons quando ele é executado no [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] ou em versões posteriores. As políticas de complexidade de senha foram criadas para intimidar ataques de força bruta aumentando o número de senhas possíveis. SQL Server pode aplicar a mesma complexidade e políticas de expiração usadas em [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] a senhas usadas dentro de SQL Server.  
   
 > [!IMPORTANT]
 > Concatenar cadeias de conexão de entrada do usuário pode deixá-lo vulnerável a um ataque de injeção de cadeia de conexão. Use o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar cadeias de conexão válidas sintaticamente em tempo de execução. Para obter mais informações, confira [Construtores de cadeias de conexão](../connection-string-builders.md).  

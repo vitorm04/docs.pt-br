@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854255"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039860"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve as considerações de segurança específicas para o desenvolvimento, implantação e execução de aplicativos Entity Framework. Você também deve seguir as recomendações para criar aplicativos de .NET Framework seguros. Para obter mais informações, consulte [visão geral de segurança](../security-overview.md).  
@@ -46,7 +46,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
   
 - Usar construtores de cadeias de conexão para criar conexões dinamicamente.  
   
-     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, confira [Como: Crie uma cadeia](how-to-build-an-entityconnection-connection-string.md)de conexão de EntityConnection. Além disso, use a classe do construtor de cadeia de caracteres apropriada para construir a cadeia de conexão da fonte de dados que faz parte da cadeia de conexão Entity Framework. Para obter informações sobre construtores de cadeia de conexão para provedores de ADO.NET, consulte [construtores de cadeia de conexão](../connection-string-builders.md).  
+     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, consulte [como: criar uma cadeia de conexão de EntityConnection](how-to-build-an-entityconnection-connection-string.md). Além disso, use a classe do construtor de cadeia de caracteres apropriada para construir a cadeia de conexão da fonte de dados que faz parte da cadeia de conexão Entity Framework. Para obter informações sobre construtores de cadeia de conexão para provedores de ADO.NET, consulte [construtores de cadeia de conexão](../connection-string-builders.md).  
   
  Para obter mais informações, consulte [Protegendo informações de conexão](../protecting-connection-information.md).  
   
@@ -73,7 +73,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
   
 - <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> para serializar exceções usando a interface <xref:System.Runtime.Serialization.ISerializable>.  
   
-- Permissão para abrir uma conexão de banco de dados e executar comandos no banco de <xref:System.Data.SqlClient.SqlClientPermission> dados, como para um banco de dados SQL Server.  
+- Permissão para abrir uma conexão de banco de dados e executar comandos no banco de dados, como <xref:System.Data.SqlClient.SqlClientPermission> para um banco de dados SQL Server.  
   
  Para obter mais informações, consulte [Segurança de acesso do código e ADO.NET](../code-access-security.md).  
   
@@ -81,9 +81,9 @@ Este tópico descreve as considerações de segurança específicas para o desen
  O Entity Framework não impõe nenhuma permissão de segurança e invocará qualquer código de objeto de dados fornecido pelo usuário em processo, independentemente de ser confiável ou não. Verifique se a autenticação e a autorização do cliente são executadas pelo repositório de dados e por seu aplicativo.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Restrinja o acesso a todos os arquivos de configuração.  
- Um administrador deve restringir o acesso de gravação a todos os arquivos que especificam a configuração de um aplicativo, incluindo o enterprisesec. config, Security. config, Machine. conf e \<o *aplicativo*de arquivo de configuração de aplicativo >. exe. config.  
+ Um administrador deve restringir o acesso de gravação a todos os arquivos que especificam a configuração de um aplicativo, incluindo para enterprisesec. config, Security. config, Machine. conf e o arquivo de configuração de aplicativo \<> de *aplicativo*. exe. config.  
   
- O nome invariável do provedor pode ser modificado no arquivo app.config. O aplicativo cliente deve assumir a responsabilidade de acessar o provedor subjacente por meio do modelo padrão de fábrica do provedor usando um nome forte.  
+ O nome invariável do provedor é modificável no app. config. O aplicativo cliente deve assumir a responsabilidade de acessar o provedor subjacente por meio do modelo de fábrica de provedor padrão usando um nome forte.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Restrinja permissões aos arquivos de modelo e de mapeamento.  
  Um administrador deve restringir o acesso para gravação nos arquivos de modelo e de mapeamento (.edmx, .csdl, .ssdl e .msl) somente aos usuários que alteram o modelo ou os mapeamentos. O Entity Framework requer apenas acesso de leitura a esses arquivos em tempo de execução. Um administrador também deve restringir o acesso à camada de objeto e à exibição pré-compilado de arquivos de código-fonte gerados pelas ferramentas de Modelo de Dados de Entidade.  
@@ -102,7 +102,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
   
 - LINQ to Entities ataques de injeção:  
   
-     Embora a composição de consulta seja possível em LINQ to Entities, ela é executada por meio da API de modelo de objeto. Ao [!INCLUDE[esql](../../../../../includes/esql-md.md)] contrário das consultas, LINQ to Entities consultas não são compostas usando a manipulação ou a concatenação de cadeia de caracteres e não são suscetíveis a ataques tradicionais de injeção de SQL.  
+     Embora a composição de consulta seja possível em LINQ to Entities, ela é executada por meio da API de modelo de objeto. Ao contrário das consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)], LINQ to Entities consultas não são compostas usando a manipulação ou a concatenação de cadeia de caracteres e não são suscetíveis a ataques tradicionais de injeção de SQL.  
   
 #### <a name="prevent-very-large-result-sets"></a>Evite conjuntos de resultados muito grandes.  
  Um conjunto de resultados muito grande pode fazer com que o sistema cliente seja desligado se o cliente estiver executando operações que consomem recursos proporcionais ao tamanho do conjunto de resultados. Conjuntos de resultados inesperadamente grandes podem ocorrer nas seguintes condições:  
@@ -113,18 +113,18 @@ Este tópico descreve as considerações de segurança específicas para o desen
   
 - Em consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aninhadas.  
   
- Ao aceitar a entrada do usuário, verifique se a entrada não pode fazer com que os conjuntos de resultados se tornem maiores do que o sistema pode manipular. Você também pode usar o <xref:System.Linq.Queryable.Take%2A> método em LINQ to Entities ou o operador [Limit](./language-reference/limit-entity-sql.md) no [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar o tamanho do conjunto de resultados.  
+ Ao aceitar a entrada do usuário, verifique se a entrada não pode fazer com que os conjuntos de resultados se tornem maiores do que o sistema pode manipular. Você também pode usar o método <xref:System.Linq.Queryable.Take%2A> em LINQ to Entities ou o operador de [limite](./language-reference/limit-entity-sql.md) no [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar o tamanho do conjunto de resultados.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Evite retornar resultados IQueryable ao expor métodos a chamadores potencialmente não confiáveis.  
  Evite retornar tipos <xref:System.Linq.IQueryable%601> de métodos expostos a chamadores potencialmente não confiáveis pelos seguintes motivos:  
   
 - Um consumidor de uma consulta que expõe um tipo <xref:System.Linq.IQueryable%601> pode chamar métodos no resultado que expõem dados seguros ou aumentam o tamanho do conjunto de resultados. Por exemplo, considere a seguinte assinatura de método:  
   
-    ```  
+    ```csharp  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     Um consumidor dessa consulta pode chamar `.Include("Orders")` em `IQueryable<Customer>` retornado para recuperar os dados que a consulta não pretende expor. Para evitar isso, é possível alterar o tipo de retorno do método para <xref:System.Collections.Generic.IEnumerable%601> e chamar um método (como `.ToList()`) que materialize os resultados.  
+    Um consumidor dessa consulta pode chamar `.Include("Orders")` em `IQueryable<Customer>` retornado para recuperar os dados que a consulta não pretende expor. Para evitar isso, é possível alterar o tipo de retorno do método para <xref:System.Collections.Generic.IEnumerable%601> e chamar um método (como `.ToList()`) que materialize os resultados.  
   
 - Como as consultas <xref:System.Linq.IQueryable%601> são executadas quando os resultados são iterados, um consumidor de uma consulta que expõe um tipo <xref:System.Linq.IQueryable%601> pode capturar exceções geradas. As exceções podem conter informações não dirigidas ao consumidor.  
   
@@ -145,13 +145,13 @@ Este tópico descreve as considerações de segurança específicas para o desen
 Você deve considerar o seguinte ao trabalhar com caminhos em aplicativos ASP.NET.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Confira se o host executa verificações de caminho.  
- Quando a `|DataDirectory|` cadeia de caracteres de substituição (incluída em símbolos de pipe) é usada, o ADO.NET verifica se há suporte para o caminho resolvido. Por exemplo, ".." não é permitido atrás de `DataDirectory`. A mesma verificação para resolver o operador raiz do aplicativo Web (`~`) é executada pelo processo que hospeda ASP.net. O IIS executa essa verificação; no entanto, os hosts que não sejam o IIS podem não verificar se há suporte para o caminho resolvido. Você deve saber o comportamento do host no qual você implanta um aplicativo Entity Framework.  
+ Quando a cadeia de caracteres de substituição de `|DataDirectory|` (incluído em símbolos de pipe) é usada, ADO.NET verifica se o caminho resolvido tem suporte. Por exemplo, ".." não é permitido atrás de `DataDirectory`. A mesma verificação para resolver o operador raiz do aplicativo Web (`~`) é executada pelo processo que hospeda o ASP.NET. O IIS executa essa verificação; no entanto, os hosts que não sejam o IIS podem não verificar se há suporte para o caminho resolvido. Você deve saber o comportamento do host no qual você implanta um aplicativo Entity Framework.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Não faça suposições sobre nomes de caminho resolvidos.  
- Embora os valores para os quais o operador raiz`~`() e `DataDirectory` a cadeia de caracteres de substituição resolvam permanecerem constantes durante o tempo de execução do aplicativo, o Entity Framework não restringe o host de modificar esses valores.  
+ Embora os valores aos quais o operador raiz (`~`) e a cadeia de caracteres de substituição `DataDirectory` resolvem devem permanecer constantes durante o tempo de execução do aplicativo, o Entity Framework não restringe o host de modificar esses valores.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Verifique o comprimento do caminho antes da implantação.  
- Antes de implantar um aplicativo Entity Framework, você deve garantir que os valores do operador raiz (~) e `DataDirectory` da cadeia de caracteres de substituição não excedam os limites do comprimento do caminho no sistema operacional. Os provedores de dados ADO.NET não garantem que o comprimento do caminho esteja dentro dos limites válidos.  
+ Antes de implantar um aplicativo Entity Framework, você deve garantir que os valores do operador raiz (~) e `DataDirectory` cadeia de substituição não excedam os limites do comprimento do caminho no sistema operacional. Os provedores de dados ADO.NET não garantem que o comprimento do caminho esteja dentro dos limites válidos.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Considerações de segurança para metadados ADO.NET  
  As considerações de segurança a seguir se aplicam ao gerar e trabalhar com arquivos de modelo e de mapeamento.  

@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38bdfc974a6942596e9778cabb87b275f1e51db8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049672"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039527"
 ---
-# <a name="impliestype-element-net-native"></a>\<Elemento de > implicatype (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<implica > elemento (.NET Native)
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -99,13 +99,13 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
- O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` genérico que uma determinada biblioteca acessará dinamicamente junto com os tipos e <xref:System.Array> associados <xref:System.Collections.Generic.List%601> . Isso pode ser expressado como:  
+ O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método genérico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` que uma determinada biblioteca acessará dinamicamente, juntamente com os tipos associados <xref:System.Collections.Generic.List%601> e <xref:System.Array>. Isso pode ser expressado como:  
   
 ```xml  
 <Type Name="MyType">  
     <Method Name="MakeEnumerable{T}" Signature="(System.String, T)" Dynamic="Included">  
         <ImpliesType Name="T[]" Dynamic="Public" />  
-        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public">  
+        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public" />  
     </Method>  
 </Type>  
 ```  

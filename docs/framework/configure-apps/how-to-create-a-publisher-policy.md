@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846833"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040188"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como criar uma política de editor
 
@@ -55,26 +55,28 @@ Use o [vinculador de assembly (al. exe)](../tools/al-exe-assembly-linker.md) par
 
 Digite o seguinte comando no prompt de comando:
 
-**Al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/Platform:** *ProcessorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 Neste comando:
 
-- O argumento *publisherPolicyFile* é o nome do arquivo de política do Publicador.
+- O argumento `publisherPolicyFile` é o nome do arquivo de política do Publicador.
 
-- O argumento *publisherPolicyAssemblyFile* é o nome do assembly de política do Publicador que resulta desse comando. O nome do arquivo de assembly deve seguir o formato:
+- O argumento `publisherPolicyAssemblyFile` é o nome do assembly de política do Publicador que resulta desse comando. O nome do arquivo de assembly deve seguir o formato:
 
-  **regras.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**
+  ' Policy. majorNumber. minorNumber. mainAssemblyName. dll '
 
-- O argumento *Keyparfile* é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly da política do Publicador com o mesmo par de chaves.
+- O argumento `keyPairFile` é o nome do arquivo que contém o par de chaves. Você deve assinar o assembly e o assembly da política do Publicador com o mesmo par de chaves.
 
-- O argumento *ProcessorArchitecture* identifica a plataforma de destino de um assembly específico do processador.
+- O argumento `processorArchitecture` identifica a plataforma de destino de um assembly específico do processador.
 
   > [!NOTE]
   > A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0.
 
 A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0. O comando a seguir cria um assembly de política do publicador chamado `policy.1.0.myAssembly` de um arquivo de política do publicador chamado `pub.config`, atribui um nome forte ao assembly usando o par de chaves no arquivo `sgKey.snk` e especifica que o assembly tem como alvo o processador x86 arquitectura.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ Use a [ferramenta global assembly cache (Gacutil. exe)](../tools/gacutil-exe-gac
 
 Digite o seguinte comando no prompt de comando:
 
-**Gacutil/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 O comando a seguir adiciona `policy.1.0.myAssembly.dll` ao cache de assembly global.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

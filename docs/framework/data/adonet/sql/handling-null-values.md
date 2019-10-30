@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352983"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040214"
 ---
 # <a name="handling-null-values"></a>Manipulando valores nulos
 Um valor nulo em um banco de dados relacional é usado quando o valor em uma coluna é desconhecido ou ausente. Um nulo não é uma cadeia de caracteres vazia (para os tipos de dados character ou datetime) nem um valor zero (para tipos de dados numéricos). A especificação ANSI SQL-92 indica que um valor nulo deve ser o mesmo para todos os tipos de dados, para que todos os nulos sejam tratados consistentemente. O namespace <xref:System.Data.SqlTypes> fornece uma semântica nula implementando a interface <xref:System.Data.SqlTypes.INullable>. Cada um dos tipos de dados no <xref:System.Data.SqlTypes> tem sua própria propriedade `IsNull` e um valor `Null` que pode ser atribuído a uma instância desse tipo de dados.  
@@ -21,7 +21,7 @@ Um valor nulo em um banco de dados relacional é usado quando o valor em uma col
 ## <a name="nulls-and-three-valued-logic"></a>Valores nulos e lógica de três valores  
  A permissão de valores nulos em definições de coluna incorpora a lógica de três valores no aplicativo. Uma comparação pode ser avaliada como uma das três condições:  
   
-- True  
+- verdadeiro  
   
 - False  
   
@@ -32,26 +32,26 @@ Um valor nulo em um banco de dados relacional é usado quando o valor em uma col
 ## <a name="nulls-and-sqlboolean"></a>Valores nulos e SqlBoolean  
  A comparação entre qualquer <xref:System.Data.SqlTypes> retornará <xref:System.Data.SqlTypes.SqlBoolean>. A função `IsNull` de cada `SqlType` retornará <xref:System.Data.SqlTypes.SqlBoolean> e poderá ser usada para verificar valores nulos. As seguintes tabelas da verdade mostram como os operadores AND, OR e NO funcionam na presença de um valor nulo. (T=verdadeiro, F=falso e U=desconhecido ou nulo.)  
   
- (./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11") de ![tabela verdadeira]  
+ ![Tabela da verdade](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Noções básicas sobre a opção ANSI_NULLS  
- <xref:System.Data.SqlTypes> fornece a mesma semântica do que a proporcionada quando a opção ANSI_NULLS é definida no SQL Server. Todos os operadores aritméticos (+,-, \*,/,%), operadores bits (~, &, \|) e a maioria das funções retornarão NULL se qualquer um dos operandos ou argumentos for nulo, exceto para a propriedade `IsNull`.  
+ <xref:System.Data.SqlTypes> fornece a mesma semântica do que a proporcionada quando a opção ANSI_NULLS é definida no SQL Server. Todos os operadores aritméticos (+,-, \*,/,%), operadores de bit (~, &, \|) e a maioria das funções retornarão nulo se qualquer um dos operandos ou argumentos for nulo, exceto para a `IsNull`de propriedades.  
   
  O padrão ANSI SQL-92 não oferece suporte a *ColumnName* = NULL em uma cláusula WHERE. No SQL Server, a opção ANSI_NULLS controla a nulidade padrão no banco de dados e a avaliação das comparações com valores nulos. Se ANSI_NULLS for ativado (o padrão), o operador IS NULL deverá ser usado nas expressões durante o teste de valores nulos. Por exemplo, a comparação a seguir sempre produzirá unknown quando ANSI_NULLS for ativado:  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  A comparação com uma variável contendo um valor nulo também produz unknown:  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  Use o predicado IS NULL ou IS NOT NULL para testar um valor nulo. Isso pode adicionar complexidade à cláusula WHERE. Por exemplo, a coluna TerritoryID na tabela Customer do AdventureWorks permite valores nulos. Se uma instrução SELECT for destinada a testar valores nulos além de outros, ela deverá incluir um predicado IS NULL:  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Além disso, as seguintes regras se aplicam a uma instância de atribuições nulas de `DataRow.["columnName"]`:  
   
-1. O valor *padrão* default é `DbNull.Value` para todos, exceto as colunas NULL com rigidez de tipos, em que é o valor NULL com rigidez de tipos apropriado.  
+1. O valor *padrão* default é `DbNull.Value` para todos, exceto para as colunas NULL com rigidez de tipos, em que é o valor NULL fortemente tipado apropriado.  
   
 2. Os valores nulos nunca são gravados durante a serialização para arquivos XML (como em “xsi:nil").  
   
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Esse exemplo exibe os seguintes resultados:  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  O código produz a seguinte saída:  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   

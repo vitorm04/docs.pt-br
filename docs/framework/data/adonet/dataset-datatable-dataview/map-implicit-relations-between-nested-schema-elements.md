@@ -2,12 +2,12 @@
 title: Mapear relações implícitas entre elementos de esquema aninhados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784439"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040383"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapear relações implícitas entre elementos de esquema aninhados
 Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexos aninhados dentro um do outro. Nesse caso, o processo de mapeamento aplica o mapeamento padrão e cria o seguinte no <xref:System.Data.DataSet>:  
@@ -16,7 +16,7 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
   
 - Se não existir nenhuma restrição exclusiva no pai, uma coluna de chave primária adicional por definição de tabela denominada *TableName*_Id, em que *TableName* é o nome da tabela pai.  
   
-- Uma restrição PRIMARY KEY na tabela pai que identifica a coluna adicional como a chave primária (definindo a propriedade **IsPrimaryKey** como **true**). A restrição é chamada de\# restrição \# , em que é 1, 2, 3 e assim por diante. Por exemplo, o nome padrão para a primeira restrição é Constraint1.  
+- Uma restrição PRIMARY KEY na tabela pai que identifica a coluna adicional como a chave primária (definindo a propriedade **IsPrimaryKey** como **true**). A restrição é chamada de restrição\# em que \# é 1, 2, 3 e assim por diante. Por exemplo, o nome padrão para a primeira restrição é Constraint1.  
   
 - Uma restrição FOREIGN KEY na tabela filho que identifica a coluna adicional como a chave estrangeira que faz referência à chave primária da tabela pai. A restrição é denominada *ParentTable_ChildTable* , em que *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.  
   
@@ -58,14 +58,14 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
   
 - Uma **ordem** e uma tabela **OrderDetail** .  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
 - Uma restrição UNIQUE na tabela de **pedidos** . Observe que a propriedade **IsPrimaryKey** está definida como **true**.  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -75,7 +75,7 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
   
 - Uma restrição FOREIGN KEY na tabela **OrderDetail** .  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -86,7 +86,7 @@ Um esquema XSD (linguagem de definição de esquema XML) pode ter tipos complexo
   
 - Uma relação entre as tabelas **Order** e **OrderDetail** . A propriedade **aninhada** para essa relação é definida como **true** porque os elementos **Order** e **OrderDetail** estão aninhados no esquema.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  

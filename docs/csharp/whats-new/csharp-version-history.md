@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002697"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039646"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -37,7 +37,7 @@ A versão 1.0 do C# parecia ter poucos recursos, em comparação com os dias de 
 Os principais recursos do C# 1.0 incluíam:
 
 - [Classes](../programming-guide/classes-and-structs/classes.md)
-- [Estruturas](../programming-guide/classes-and-structs/structs.md)
+- [Structs](../programming-guide/classes-and-structs/structs.md)
 - [Interfaces](../programming-guide/interfaces/index.md)
 - [Eventos](../events-overview.md)
 - [Propriedades](../properties.md)
@@ -124,7 +124,7 @@ C#a versão 5,0, lançada com o Visual Studio 2012, foi uma versão focada da li
 
 ### <a name="see-also"></a>Consulte também
 
-- [Projeto de código: Atributos de informações do chamador no C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Code Project: Atributos de informações do chamador em C# 5.0)
 
 O atributo de informações do chamador permite facilmente recuperar informações sobre o contexto no qual você está executando sem recorrer a uma infinidade de código de reflexão clichê. Ele tem muitos usos em diagnóstico e tarefas de registro em log.
 
@@ -132,7 +132,7 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 ## <a name="c-version-60"></a>C# versão 6.0
 
-Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Com a versão 6,0, lançada com Visual Studio 2013, ela desapareceria de um recurso de Killer dominante e, em vez disso, liberava muitos recursos menores que tornaram C# a programação mais produtiva. Aqui estão alguns deles:
+Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Com a versão 6,0, lançada com o Visual Studio 2015, ela desapareceria com um recurso de Killer dominante e, em vez disso, C# lançaria muitos recursos menores que tornaram a programação mais produtiva. Aqui estão alguns deles:
 
 - [Importações estáticas](./csharp-6.md#using-static)
 - [Filtros de exceção](./csharp-6.md#exception-filters)

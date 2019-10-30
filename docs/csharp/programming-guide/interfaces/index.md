@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053274"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039335"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
-Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../language-reference/keywords/class.md) ou um [struct](../../language-reference/keywords/struct.md) pode implementar.
+Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../language-reference/keywords/class.md) não abstrat ou uma [struct](../../language-reference/keywords/struct.md) deve implementar.
   
 Usando interfaces, você pode, por exemplo, incluir o comportamento de várias fontes em uma classe. Essa funcionalidade é importante em C# porque a linguagem não dá suporte a várias heranças de classes. Além disso, use uma interface se você deseja simular a herança para structs, pois eles não podem herdar de outro struct ou classe.  
   
@@ -62,17 +62,17 @@ Uma interface tem as propriedades a seguir:
 [Implementação de interface explícita](explicit-interface-implementation.md)  
  Explica como criar um membro da classe que é específico para uma interface.  
   
- [Como: implementar membros de interface de forma explícita](how-to-explicitly-implement-interface-members.md)  
+ [Como implementar membros de interface explicitamente](how-to-explicitly-implement-interface-members.md)  
  Fornece um exemplo de como implementar explicitamente membros de interfaces.  
   
- [Como: implementar membros de duas interfaces de forma explícita](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Como implementar membros de duas interfaces explicitamente](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Fornece um exemplo de como implementar explicitamente membros de interfaces com herança.  
   
 ## <a name="BKMK_RelatedSections"></a> Seções relacionadas
 
 - [Propriedades de interface](../classes-and-structs/interface-properties.md)  
 - [Indexadores em interfaces](../indexers/indexers-in-interfaces.md)  
-- [Como:  implementar eventos de interface](../events/how-to-implement-interface-events.md)  
+- [Como implementar eventos de interface](../events/how-to-implement-interface-events.md)  
 - [Classes e Structs](../classes-and-structs/index.md)  
 - [Herança](../classes-and-structs/inheritance.md)  
 - [Métodos](../classes-and-structs/methods.md)  
@@ -84,7 +84,7 @@ Uma interface tem as propriedades a seguir:
   
 ## <a name="featured-book-chapter"></a>capítulo do livro em destaque
 
-[Interfaces](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) em [Aprendizado de C# 3.0: domine os princípios básicos de C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
+[Interfaces](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) em [Learning C# 3.0: Master the Fundamentals of C# 3.0 (Aprendendo C# 3.0: dominando os conceitos básicos do C# 3.0)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
 ## <a name="see-also"></a>Consulte também
 

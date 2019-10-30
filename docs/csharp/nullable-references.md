@@ -1,13 +1,14 @@
 ---
 title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência anuláveis C# , adicionados em 8,0. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846756"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039774"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -66,6 +67,12 @@ O contexto de anotação anulável e o contexto de aviso anulável podem ser def
   - Variáveis de um tipo de referência, String, por exemplo, são não anuláveis. Todos os avisos de nulidade estão desabilitados.
 - `disable`: o contexto de anotação anulável está **desabilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
   - As variáveis de um tipo de referência são alheias, como as versões anteriores do C#. Todos os avisos de nulidade estão desabilitados.
+
+**Exemplo**:
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 Também é possível usar diretivas para definir esses mesmos contextos em qualquer lugar no seu projeto:
 

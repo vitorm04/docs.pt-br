@@ -2,13 +2,14 @@
 title: Expressões lambda tipadas implicitamente
 description: Saiba porque você não pode usar uma declaração de variável tipada implicitamente para declarar uma expressão lambda.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: 9b798f40676afaad2075806d6dc512f279bc7065
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: HT
+ms.openlocfilehash: c6b0f2666a5c67ce8c89222da5959304ecb8fb93
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126091"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039135"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>Expressões lambda tipadas implicitamente
 

@@ -2,13 +2,14 @@
 title: Resumo de árvores de expressão
 description: Recapitula como é possível usar as árvores de expressão para criar programas dinâmicos que interpretam o código como dados e criam uma nova funcionalidade com base nesse código.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148623"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036749"
 ---
 # <a name="expression-trees-summary"></a>Resumo de árvores de expressão
 

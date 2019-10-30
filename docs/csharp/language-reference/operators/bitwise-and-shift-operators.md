@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9336ff57722e575d3ecfdb3db2b99bf7bbb6b433
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771715"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039108"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operadores bit a bit e de deslocamento (referência do C#)
 
-Os operadores a seguir executam operações de deslocamento ou bit a bit com operandos de [tipos integrais](../builtin-types/integral-numeric-types.md):
+Os operadores a seguir executam operações de Shift ou or de bit com operandos dos [tipos numéricos inteiros](../builtin-types/integral-numeric-types.md) ou do tipo [Char](../keywords/char.md) :
 
 - Operador unário [`~` (complemento bit a bit)](#bitwise-complement-operator-)
 - Operadores binários [`<<` (deslocamento à esquerda)](#left-shift-operator-) e [`>>` (deslocamento à direita)](#right-shift-operator-)
@@ -46,7 +46,7 @@ Os operadores a seguir executam operações de deslocamento ou bit a bit com ope
 
 Esses operadores são definidos para os tipos `int`, `uint`, `long` e `ulong`. Quando ambos os operandos são de outros tipos integrais (`sbyte`, `byte`, `short`, `ushort` ou `char`), seus valores são convertidos no tipo `int`, que também é o tipo de resultado de uma operação. Quando os operandos são de tipos integrais diferentes, seus valores são convertidos no tipo integral mais próximo que o contém. Para saber mais, confira a seção [Promoções numéricas](~/_csharplang/spec/expressions.md#numeric-promotions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-Os operadores `&`, `|` e `^` também são definidos para os operandos do tipo `bool`. Para obter mais informações, veja [Operadores lógicos boolianos](boolean-logical-operators.md).
+Os operadores `&`, `|`e `^` também são definidos para operandos do tipo `bool`. Para obter mais informações, veja [Operadores lógicos boolianos](boolean-logical-operators.md).
 
 As operações de deslocamento e bit a bit nunca causam estouro e produzem os mesmos resultados nos contextos [marcados e desmarcados](../keywords/checked-and-unchecked.md).
 
@@ -82,11 +82,11 @@ A operação de deslocamento à direita descarta os bits de ordem inferior, como
 
 As posições vazias de bit de ordem superior são definidas com base no tipo do operando à esquerda da seguinte maneira:
 
-- Se o operando à esquerda for do tipo [int](../builtin-types/integral-numeric-types.md) ou [long](../builtin-types/integral-numeric-types.md), o operador de deslocamento à direita executará um deslocamento *aritmético*: o valor do bit mais significativo (o bit de sinal) do operando à esquerda é propagado para as posições vazias de bits de ordem superior. Ou seja, as posições vazias de bit de ordem superior são definidas como zero se o operando à esquerda for positivo e definidas como um se ele for negativo.
+- Se o operando esquerdo for do tipo `int` ou `long`, o operador right-shift executará um deslocamento *aritmético* : o valor do bit mais significativo (o bit de sinal) do operando esquerdo será propagado para as posições de bits vazias de ordem superior. Ou seja, as posições vazias de bit de ordem superior são definidas como zero se o operando à esquerda for positivo e definidas como um se ele for negativo.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Se o operando à esquerda for do tipo [uint](../builtin-types/integral-numeric-types.md) ou [ulong](../builtin-types/integral-numeric-types.md), o operador de deslocamento à direita executará um deslocamento *lógico*: as posições vazias de bit de ordem superior são sempre definidas como zero.
+- Se o operando esquerdo for do tipo `uint` ou `ulong`, o operador right-shift executará um deslocamento *lógico* : as posições de bit vazio de ordem superior são sempre definidas como zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
@@ -98,7 +98,7 @@ O operador `&` computa o AND lógico bit a bit de seus operandos:
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-Para os operandos do tipo `bool`, o operador `&` computa o [AND lógico](boolean-logical-operators.md#logical-and-operator-) de seus operandos. O operador `&` unário é o [operador address-of](pointer-related-operators.md#address-of-operator-).
+Para os operandos de `bool`, o operador `&` computa a [lógica e](boolean-logical-operators.md#logical-and-operator-) seus operandos. O operador `&` unário é o [operador address-of](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Operador OR exclusivo lógico ^
 
@@ -106,7 +106,7 @@ O operador `^` computa o OR exclusivo lógico bit a bit, também conhecido como 
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-Para os operandos do tipo `bool`, o operador `^` computa o [OR exclusivo lógico](boolean-logical-operators.md#logical-exclusive-or-operator-) de seus operandos.
+Para operandos `bool`, o operador `^` computa o [exclusivo lógico ou](boolean-logical-operators.md#logical-exclusive-or-operator-) de seus operandos.
 
 ## <a name="logical-or-operator-"></a>Operador OR lógico |
 
@@ -114,7 +114,7 @@ O operador `|` computa o OR lógico bit a bit de seus operandos:
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-Para os operandos do tipo `bool`, o operador `|` computa o [OR lógico](boolean-logical-operators.md#logical-or-operator-) de seus operandos.
+Para operandos `bool`, o operador `|` computa a [lógica ou](boolean-logical-operators.md#logical-or-operator-) seus operandos.
 
 ## <a name="compound-assignment"></a>Atribuição composta
 
@@ -154,17 +154,17 @@ Use parênteses, `()`, para alterar a ordem de avaliação imposta pela precedê
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Para obter a lista completa de operadores do C# ordenada pelo nível de precedência, confira [Operadores do C#](index.md).
+Para obter a lista completa C# de operadores ordenados por nível de precedência, consulte a seção [precedência de operador](index.md#operator-precedence) do artigo [ C# operadores](index.md) .
 
 ## <a name="shift-count-of-the-shift-operators"></a>Contagem de deslocamento dos operadores de deslocamento
 
-Para os operadores de deslocamento `<<` e `>>`, o tipo do operando à direita deve ser [int](../builtin-types/integral-numeric-types.md) ou um tipo que tenha uma [conversão numérica implícita predefinida](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) para `int`.
+Para os operadores de deslocamento `<<` e `>>`, o tipo do operando à direita deve ser `int` ou um tipo que tenha uma [conversão de numérico implícita predefinida](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) para `int`.
 
 Para as expressões `x << count` e `x >> count`, a contagem real de deslocamento depende do tipo de `x` da seguinte maneira:
 
-- Se o tipo de `x` for [int](../builtin-types/integral-numeric-types.md) ou [uint](../builtin-types/integral-numeric-types.md), a contagem de deslocamentos será definida pelos *cinco* bits de ordem inferior do operando à direita. Ou seja, a contagem de deslocamentos é calculada a partir de `count & 0x1F` (ou `count & 0b_1_1111`).
+- Se o tipo de `x` for `int` ou `uint`, a contagem de deslocamento será definida pelos *cinco* bits de ordem inferior do operando à direita. Ou seja, a contagem de deslocamentos é calculada a partir de `count & 0x1F` (ou `count & 0b_1_1111`).
 
-- Se o tipo de `x` for [long](../builtin-types/integral-numeric-types.md) ou [ulong](../builtin-types/integral-numeric-types.md), a contagem de deslocamentos será definida pelos *seis* bits de ordem inferior do operando à direita. Ou seja, a contagem de deslocamentos é calculada a partir de `count & 0x3F` (ou `count & 0b_11_1111`).
+- Se o tipo de `x` for `long` ou `ulong`, a contagem de deslocamento será definida pelos *seis* bits de ordem inferior do operando à direita. Ou seja, a contagem de deslocamentos é calculada a partir de `count & 0x3F` (ou `count & 0b_11_1111`).
 
 O exemplo a seguir demonstra esse comportamento:
 
@@ -172,7 +172,7 @@ O exemplo a seguir demonstra esse comportamento:
 
 ## <a name="enumeration-logical-operators"></a>Operadores lógicos de enumeração
 
-Os operadores `~`, `&`, `|` e `^` também são definidos para qualquer tipo de [enumeração](../keywords/enum.md). Para operandos do mesmo tipo de enumeração, uma operação lógica é executada nos valores correspondentes do tipo integral subjacente. Por exemplo, para qualquer `x` e `y` de um tipo de enumeração `T` com um tipo subjacente `U`, a expressão `x & y` produz o mesmo resultado que a expressão `(T)((U)x & (U)y)`.
+Os operadores `~`, `&`, `|`e `^` também têm suporte de qualquer tipo de [Enumeração](../keywords/enum.md) . Para operandos do mesmo tipo de enumeração, uma operação lógica é executada nos valores correspondentes do tipo integral subjacente. Por exemplo, para qualquer `x` e `y` de um tipo de enumeração `T` com um tipo subjacente `U`, a expressão `x & y` produz o mesmo resultado que a expressão `(T)((U)x & (U)y)`.
 
 Geralmente, você usa os operadores lógicos bit a bit com um tipo de enumeração definido com o atributo [sinalizadores](xref:System.FlagsAttribute). Para obter mais informações, veja a seção [Tipos de enumeração como sinalizadores de bit](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) do artigo [Tipos de enumeração](../../programming-guide/enumeration-types.md).
 

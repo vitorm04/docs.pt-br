@@ -2,12 +2,12 @@
 title: Gerando SQL das árvores de comando - práticas recomendadas
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855007"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039992"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Gerando SQL das árvores de comando - práticas recomendadas
 
@@ -31,7 +31,7 @@ Uma conversão possível de uma árvore de comando de consulta em uma instruçã
 
 Como exemplo, considere a seguinte árvore de comando de consulta
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ Um caso de agregar vários nós em uma única instrução SQL SELECT é agregar 
 
 A espinha esquerda, join (joins que aparece como um filho de outro esquerdo joins) pode ser mais facilmente aplainada em uma única instrução SQL SELECT. Por exemplo, considere a seguinte árvore de comando de consulta:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 No entanto, a espinha não esquerda join não pode ser facilmente aplainada, e você não deve tentar aplainá-los. Por exemplo, join na árvore de comando de consulta:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,7 +145,7 @@ As expressões podem ser reutilizadas na árvore de comando de consulta passada 
 
 ## <a name="mapping-primitive-types"></a>Tipos primitivos de mapeamento
 
-Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não podem ser usados para muitas operações, como tipos de blob `ntext` (por exemplo, em SQL Server).
+Quando mapear conceitual (EDM) tipos para tipos de provedor, você deve mapear para o tipo o maior (Int32) para que todos os possíveis valores caber. Além disso, evite mapear para tipos que não podem ser usados para muitas operações, como tipos de BLOB (por exemplo, `ntext` em SQL Server).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -1,13 +1,14 @@
 ---
 title: Atualizar APIs com atributos para definir expectativas nulas
 description: Este artigo explica as motivações e técnicas para adicionar atributos descritivos para descrever o estado nulo de argumentos e retornar valores de APIs
+ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319066"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039376"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualizar bibliotecas para usar tipos de referência anuláveis e comunicar regras anuláveis a chamadores
 

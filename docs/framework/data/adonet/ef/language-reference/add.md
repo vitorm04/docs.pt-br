@@ -2,19 +2,19 @@
 title: + (adicionar)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
-ms.openlocfilehash: 8c9a6b2c8168e4677c37cfdb0b401a93ee0040cf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 62bb4782f135309eed8efa7e182fd8b75f92e126
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251366"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040301"
 ---
 # <a name="-add"></a>+ (Adicionar)
 Adiciona dois números.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 expression + expression  
 ```  
   
@@ -31,7 +31,7 @@ expression + expression
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa operador + aritmético para adicionar dois números. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

@@ -2,12 +2,12 @@
 title: 'Passo a passo: Geração SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 09b5a3c2dea5cd0483d617ee8064b41dc19c3374
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2684acd39ae9651407023e8b5c73f02eadb97547
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248284"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040507"
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
 
@@ -24,7 +24,7 @@ INNER JOIN (SELECT OD.ProductId, OD.Order.ShipCountry as ShipCountry
 
 A consulta gerencia a seguir árvore de comando de saída que é passado para o provedor:
 
-```
+```output
 DbQueryCommandTree
 |_Parameters
 |_Query : Collection{Record['C1'=Edm.Int32, 'ProductID'=Edm.Int32, 'ProductName'=Edm.String, 'CategoryName'=Edm.String, 'ShipCountry'=Edm.String, 'ProductID1'=Edm.Int32]}
@@ -106,15 +106,15 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]
 ```
 
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primeira fase da geração de SQL: Visitando a árvore de expressão
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primeiro estágio de geração SQL: Visitar a árvore de expressão
 
 A figura a seguir ilustra o inicial vazio o estado do visitante.  Em todo este tópico, somente as propriedades relevantes da explicação passo a passo são mostradas.
 
-![Diagram](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
+![Organograma](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
 
 Quando o nó de projeto é visitado, VisitInputExpression é chamado sobre sua entrada (Join4), que causa a visitar de Join4 pelo método VisitJoinExpression. Porque este é um nível superior, se associa os retornos de IsParentAJoin e falsos um novo SqlSelectStatement (SelectStatement0) é criado e empurrado na pilha da declaração SELECT. Além disso, um novo escopo (scope0) é inserido na tabela de símbolo. Antes que a primeira entrada (deixada) do join foi visitada, “true” é empurrado na pilha de IsParentAJoin. Right before Join1, que é a entrada esquerda de Join4, é visitado, o estado do visitante é conforme mostrado na figura a seguir.
 
-![Diagrama](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
+![Organograma](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
 
 Quando o método de visita de associação é chamado sobre Join4, IsParentAJoin é true, então reutiliza a instrução select SelectStatement0 atuais. Um novo escopo é inserido (scope1). Antes de visitar seu filho esquerdo, Extent1, outro verdadeiro é empurrado na pilha de IsParentAJoin.
 
@@ -122,27 +122,27 @@ Quando Extent1 é visitado, porque IsParentAJoin retorna true, retorna um SqlBui
 
 Antes que a entrada direita de Join1 está visitada, “LEFT OUTER JOIN” é adicionado à cláusula de SelectStatement0. Porque a entrada direita é uma expressão de verificação, verdadeira é empurrado novamente para a pilha de IsParentAJoin. O estado antes de entrada visitar a direita conforme mostrado na figura a seguir.
 
-![Diagram](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
+![Organograma](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
 
 A entrada direita é processada da mesma forma como entrada esquerda. O estado após visitado entrada direita é mostrado na figura a seguir.
 
-![Diagram](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
+![Organograma](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
 “False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. Var (Extent1) é resolvido para \<symbol_Extent1 > após uma pesquisa na tabela de símbolos. Porque a instância é resolvida para um símbolo simples, como resultado do var de processamento (Extent1). CategoryID, um sqlcompileer com \<symbol1 >. " CategoryID "é retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.
 
 Com isso, Join1 foi processado completamente, e um escopo é aparecido da tabela de símbolo.
 
-O controle retorna a processar Join4, o pai de Join1. Como o filho reutilizou a instrução SELECT, as extensões Join1 são substituídas por um único símbolo \<de junção joinSymbol_Join1 >. Além disso, uma nova entrada é adicionada à tabela de símbolos para associar \<Join1 a joinSymbol_Join1 >.
+O controle retorna a processar Join4, o pai de Join1. Como o filho reutilizou a instrução SELECT, as extensões Join1 são substituídas por um único símbolo de junção \<joinSymbol_Join1 >. Além disso, uma nova entrada é adicionada à tabela de símbolos para associar Join1 a \<joinSymbol_Join1 >.
 
 O nó a seguir seja processado é Join3, como filhos de Join4. Porque é um filho à direita, “false” é empurrado para a pilha de IsParentAJoin. O estado do visitante é ilustrado nesse momento na figura a seguir.
 
-![Diagram](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
+![Organograma](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
 
-Para Join3, IsParentAJoin retorna false e precisa-o de iniciar um novo SqlSelectStatement (SelectStatement1) e de empurrá-lo na pilha. O processamento continua como fez com o anterior o anterior, se associa um novo escopo é empurrado na pilha e os filhos são processados. O filho esquerdo é uma extensão (Extent3) e o filho correto é uma junção (Join2) que também precisa iniciar um novo SqlSelectStatement: SelectStatement2. Os filhos em Join2 são extensões e também são agregados em SelectStatement2.
+Para Join3, IsParentAJoin retorna false e precisa-o de iniciar um novo SqlSelectStatement (SelectStatement1) e de empurrá-lo na pilha. O processamento continua como fez com o anterior o anterior, se associa um novo escopo é empurrado na pilha e os filhos são processados. O filho esquerdo é uma extensão (Extent3) e o filho adequado é uma união (Join2) que também precisa iniciar um novo SqlSelectStatement: SelectStatement2. Os filhos em Join2 são extensões e também são agregados em SelectStatement2.
 
 O estado do visitante right after Join2 está visitado, mas antes que o após processamento (ProcessJoinInputResult) é feito é mostrado na figura a seguir:
 
-![Diagram](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")
+![Organograma](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")
 
 Na figura anterior, SelectStatement2 é mostrado como flutuante livre porque foi aparecido fora da pilha, mas ainda não a postagem processada pelo pai. Precisa ser adicionado à parte do pai, mas não é uma instrução SQL concluída sem uma cláusula SELECT. Assim, neste ponto, as colunas padrão (todas as colunas geradas por suas entradas) são adicionados à lista select pelo método AddDefaultColumns. AddDefaultColumns itera através dos símbolos em FromExtents e cada símbolo adiciona todas as colunas trazidas no escopo. Para um símbolo simples, ele tem o tipo do símbolo para recuperar todas as suas propriedades sejam adicionadas. Também preenche o dicionário de AllColumnNames com os nomes de coluna. O SelectStatement2 concluído é acrescentado à cláusula de SelectStatement1.
 
@@ -152,15 +152,15 @@ A figura a seguir mostra o estado do visitante mesmo antes de DbPropertyExpressi
 
 Considere como “Var (Join2). Extent4.OrderID” é visitado. Primeiro, a propriedade “Var de instância (Join2). Extent4” é visitado, que é um outro DbPropertyExpression e está visitando seu instância Var Join2 (“”). No primeiro escopo na tabela de símbolos, "Join2" é resolvido para \<joinSymbol_join2 >. No método de visita para o processamento “Var de DbPropertyExpression (Join2). ” Aviso Extent4 que um símbolo do join foi retornada a visitar a instância e para ajuste é necessário.
 
-Como é uma junção aninhada, pesquisamos a propriedade "Extent4" no dicionário NameToExtent do símbolo de junção, a resolvemos para \<symbol_Extent4 > e retornam um novo SymbolPair (\<joinSymbol_join2 >, symbol_Extent4 \< >). Como um par de símbolos é retornado do processamento da instância de "var (Join2). Extent4. OrderID ", a propriedade" OrderID "é resolvida do ColumnPart desse par de símbolos (\<symbol_Extent4 >), que tem uma lista das colunas da extensão que ela representa. Então, "var (Join2). Extent4. OrderID "é resolvido para { \<joinSymbol_Join2 >,". ", \<symbol_OrderID >}.
+Como é uma junção aninhada, pesquisamos a propriedade "Extent4" no dicionário NameToExtent do símbolo de junção, a resolvemos para \<symbol_Extent4 > e retornam um novo SymbolPair (\<joinSymbol_join2 >, \<symbol_Extent4 >). Como um par de símbolos é retornado do processamento da instância de "var (Join2). Extent4. OrderID ", a propriedade" OrderID "é resolvida do ColumnPart desse par de símbolos (\<symbol_Extent4 >), que tem uma lista das colunas da extensão que ela representa. Então, "var (Join2). Extent4. OrderID "é resolvido para {\<joinSymbol_Join2 >,". ", \<symbol_OrderID >}.
 
 A condição de adição de Join4 é processada da mesma forma. O controle retorna para o método de VisitInputExpression que processou a parte superior a maioria de projeto. Examinando o FromExtents de SelectStatement0 retornado, a entrada é identificada como uma união, e remove as extensões originais e substituir-las com uma nova extensão com apenas o símbolo do join. A tabela de símbolo é atualizada e também a parte da projeção de Projeto é processada em seguida. Resolver propriedades e ajuste das extensões do join são como descrito anteriormente.
 
-![Diagram](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
+![Organograma](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40ae-accc-a10e18e28b81")
 
 Finalmente, o seguinte SqlSelectStatement é gerado:
 
-```
+```sql
 SELECT:
   "1", " AS ", "[C1]",
   <symbol_Extent1>, ".", "[ProductID]", " AS ", "[ProductID]",
@@ -194,11 +194,11 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>
 ```
 
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase da geração de SQL: Gerando o comando de cadeia de caracteres
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segundo fase de geração SQL: Gerando o comando de cadeia de caracteres
 
 A segunda etapa gerencie nomes reais dos símbolos, e nós centramo-nos apenas sobre os símbolos que representam as colunas chamadas “OrderID”, porque nesse caso um conflito precisa ser resolvido. Esses são realçadas no SqlSelectStatement. Observe que os sufixos usados na figura são enfatizar somente essas instâncias são diferentes, não para representar os novos nomes, porque seus nomes finais (possivelmente formulário diferente os nomes originais) não foram atribuídos nesse estágio ainda.
 
-O primeiro símbolo encontrado que precisa ser renomeado é \<symbol_OrderID >. O novo nome é atribuído como “OrderID1”, 1 é marcado como o último usou o sufixo” para “OrderID e o símbolo é marcado como não precisando renomear. Em seguida, o primeiro uso \<de > symbol_OrderID_2 é encontrado. É renomeado para usar o sufixo disponível a OrderID2 (“”) e marcado como novamente não precisando renomear, de modo que as próximas vezes onde ela é usado não pegue renomeado. Isso é feito para \<symbol_OrderID_3 > também.
+O primeiro símbolo encontrado que precisa ser renomeado é \<symbol_OrderID >. O novo nome é atribuído como “OrderID1”, 1 é marcado como o último usou o sufixo” para “OrderID e o símbolo é marcado como não precisando renomear. Em seguida, o primeiro uso de \<symbol_OrderID_2 > é encontrado. É renomeado para usar o sufixo disponível a OrderID2 (“”) e marcado como novamente não precisando renomear, de modo que as próximas vezes onde ela é usado não pegue renomeado. Isso é feito para \<symbol_OrderID_3 > também.
 
 No final da segunda etapa, a instrução SQL final é gerada.
 

@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833986"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040083"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Gerando DataSets fortemente tipados
-Dado um esquema XML que está em conformidade com o padrão XSD, você pode gerar um <xref:System.Data.DataSet> com rigidez de tipos usando a ferramenta XSD. exe fornecida com o SDK (Software Development Kit) do Windows.  
+Dado um esquema XML que está em conformidade com o padrão XSD, você pode gerar um <xref:System.Data.DataSet> fortemente tipado usando a ferramenta XSD. exe fornecida com o SDK (Software Development Kit) do Windows.  
   
  (Para criar um XSD a partir de tabelas de banco de dados, consulte <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [trabalhando com DataSets no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
  O código a seguir mostra a sintaxe para gerar um conjunto de um **DataSet** usando essa ferramenta.  
   
-```  
+```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- Nessa sintaxe, a diretiva `/d` informa a ferramenta para gerar um **conjunto**de uma e o `/l:` informa à ferramenta qual idioma usar (por exemplo, C# ou Visual Basic .net). A diretiva opcional `/eld` especifica que você pode usar LINQ to DataSet para consultar o conjunto de um **dataset gerado.** Essa opção é usada quando a opção `/d` também está especificada. Para obter mais informações, consulte [consultando conjuntos de dados tipados](../querying-typed-datasets.md). A diretiva opcional `/n:` informa à ferramenta para gerar também um namespace para o **conjunto** de espaço chamado **XSDSchema. namespace**. A saída do comando é XSDSchemaFileName.cs, o que pode ser compilado e usado em um aplicativo ADO.NET. O código gerado pode ser compilado como uma biblioteca ou um módulo.  
+ Nessa sintaxe, a diretiva `/d` informa a ferramenta para gerar um **conjunto**de um e o `/l:` informa à ferramenta qual idioma usar (por exemplo, C# ou Visual Basic .net). A diretiva opcional `/eld` especifica que você pode usar LINQ to DataSet para consultar o conjunto de um **dataset gerado.** Essa opção é usada quando a opção `/d` também está especificada. Para obter mais informações, consulte [consultando conjuntos de dados tipados](../querying-typed-datasets.md). A diretiva opcional `/n:` informa a ferramenta para gerar também um namespace para o **conjunto** de espaço chamado **XSDSchema. namespace**. A saída do comando é XSDSchemaFileName.cs, o que pode ser compilado e usado em um aplicativo ADO.NET. O código gerado pode ser compilado como uma biblioteca ou um módulo.  
   
  O código a seguir mostra a sintaxe para compilar o código gerado como uma biblioteca usando o compilador C# (csc.exe).  
   
-```  
+```console  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   

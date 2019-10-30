@@ -2,13 +2,14 @@
 title: Delegados Fortemente Tipados
 description: Saiba como usar tipos de delegado genérico para declarar tipos personalizados ao criar um recurso que exige delegados.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215158"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037353"
 ---
 # <a name="strongly-typed-delegates"></a>Delegados Fortemente Tipados
 
@@ -54,7 +55,8 @@ O tipo do resultado é sempre o último parâmetro de tipo em todas as declaraç
 
 Use um dos tipos `Func` para qualquer tipo de delegado que retorna um valor.
 
-Há também um tipo <xref:System.Predicate%601> especializado para um delegado que retorna um teste em um único valor:
+Também há um <xref:System.Predicate%601> especializado 
+tipo para um delegado que retorna um teste em um único valor:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);

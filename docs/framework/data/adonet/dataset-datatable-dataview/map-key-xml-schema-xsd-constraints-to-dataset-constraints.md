@@ -2,12 +2,12 @@
 title: Mapear restrições de esquema XML (XSD) chave para restrições de DataSet
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 8543f5b34ee2a80ff0154897cf7678b244a8d357
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 670c07dd83e880b79c1ccf0c5af00d253b83f827
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786096"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040074"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear restrições de esquema XML (XSD) chave para restrições de DataSet
 Em um esquema, você pode especificar uma restrição de chave em um elemento ou atributo usando o elemento de **chave** . O elemento ou atributo no qual uma restrição de chave é especificada deve ter valores exclusivos em qualquer instância de esquema e não pode ter valores nulos.  
@@ -18,10 +18,10 @@ Em um esquema, você pode especificar uma restrição de chave em um elemento ou
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Se esse atributo for especificado, seu valor será usado como o nome da restrição. Caso contrário, o atributo **Name** fornecerá o valor do nome da restrição.|  
-|**msdata:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, a propriedade **IsPrimaryKey** de restrição será definida como **true**, tornando-a uma chave primária. A propriedade de coluna **AllowDBNull** está definida como **false**, pois as chaves primárias não podem ter valores nulos.|  
+|**MSDATA: ConstraintName**|Se esse atributo for especificado, seu valor será usado como o nome da restrição. Caso contrário, o atributo **Name** fornecerá o valor do nome da restrição.|  
+|**MSDATA: PrimaryKey**|Se `PrimaryKey="true"` estiver presente, a propriedade **IsPrimaryKey** de restrição será definida como **true**, tornando-a uma chave primária. A propriedade de coluna **AllowDBNull** está definida como **false**, pois as chaves primárias não podem ter valores nulos.|  
   
- Na conversão do esquema no qual uma restrição de chave é especificada, o processo de mapeamento cria uma restrição UNIQUE na tabela com a propriedade de coluna **AllowDBNull** definida como **false** para cada coluna na restrição. A propriedade **IsPrimaryKey** da restrição UNIQUE também é definida como **false** , a menos que você `msdata:PrimaryKey="true"` tenha especificado no elemento **Key** . Isso é idêntico a uma restrição UNIQUE no esquema no qual `PrimaryKey="true"`.  
+ Na conversão do esquema no qual uma restrição de chave é especificada, o processo de mapeamento cria uma restrição UNIQUE na tabela com a propriedade de coluna **AllowDBNull** definida como **false** para cada coluna na restrição. A propriedade **IsPrimaryKey** da restrição UNIQUE também é definida como **false** , a menos que você tenha especificado `msdata:PrimaryKey="true"` no elemento **Key** . Isso é idêntico a uma restrição UNIQUE no esquema no qual `PrimaryKey="true"`.  
   
  No exemplo de esquema a seguir, o elemento **Key** especifica a restrição de chave no elemento **CustomerID** .  
   
@@ -56,13 +56,13 @@ Em um esquema, você pode especificar uma restrição de chave em um elemento ou
   
  O elemento **Key** especifica que os valores do elemento filho **CustomerID** do elemento **Customers** devem ter valores exclusivos e não podem ter valores nulos. Ao traduzir o esquema XSD (linguagem de definição de esquema XML), o processo de mapeamento cria a seguinte tabela:  
   
-```  
+```text  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- O mapeamento de esquema XML também cria um **UniqueConstraint** na coluna **CustomerID** , conforme mostrado a seguir <xref:System.Data.DataSet>. (Para simplificar, apenas as propriedades relevantes são mostradas.)  
+ O mapeamento de esquema XML também cria um **UniqueConstraint** na coluna **CustomerID** , conforme mostrado na <xref:System.Data.DataSet>a seguir. (Para simplificar, apenas as propriedades relevantes são mostradas.)  
   
-```  
+```text  
       DataSetName: MyDataSet  
 TableName: customers  
   ColumnName: CustomerID  

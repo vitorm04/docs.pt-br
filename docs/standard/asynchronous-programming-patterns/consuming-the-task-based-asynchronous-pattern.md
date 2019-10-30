@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73cf0c09ab41fa7b1e4ee974d62ff8cbee59653b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929016"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038125"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Consumindo o padrão assíncrono baseado em tarefa
 
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Você pode usar o método <xref:System.Threading.Tasks.Task.WhenAny%2A> para aguardar de forma assíncrona apenas uma de várias operações assíncronas que são representadas como tarefas.  Esse método tem quatro casos de uso principais:
 
-- Redundância:  executar uma operação várias vezes e selecionar aquela que termina primeiro (por exemplo, entrando em contato com vários serviços Web de cotação de ações que produzirão um único resultado e selecionar aquele que termina mais rápido).
+- Redundância: executar uma operação várias vezes e selecionar aquela que é concluída primeiro (por exemplo, entrando em contato com vários serviços Web de cotação de ações que produzirão um único resultado e selecionar aquele que termina mais rápido).
 
-- Intercalação:  iniciar várias operações e aguardar que todas elas sejam concluídas, mas processando-as conforme são concluídas.
+- Intercalação: iniciar várias operações e aguardar que todas eles sejam concluídas, mas processando-as conforme são concluídas.
 
-- Limitação:  permitir que operações adicionais comecem conforme outras forem concluídas.  Essa é uma extensão do cenário de intercalação.
+- Limitação: permitir que operações adicionais comecem conforme outras forem concluídas.  Essa é uma extensão do cenário de intercalação.
 
-- Esgotamento precoce:  por exemplo, uma operação representada pela tarefa t1 pode ser agrupada em uma tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> com outra tarefa t2. Você pode esperar a tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A>. A tarefa t2 pode representar um tempo limite, um cancelamento ou algum outro sinal que faça com que a tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> seja concluída antes de t1.
+- Saída precoce: por exemplo, uma operação representada pela tarefa t1 pode ser agrupada em uma tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> com outra tarefa t2 e você pode aguardar na tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A>. A tarefa t2 pode representar um tempo limite, um cancelamento ou algum outro sinal que faça com que a tarefa <xref:System.Threading.Tasks.Task.WhenAny%2A> seja concluída antes de t1.
 
 #### <a name="redundancy"></a>Redundância
  Considere um caso em que você deseja tomar uma decisão sobre a possibilidade de comprar uma ação.  Há diversos serviços Web de recomendação de compra de ações nos quais você confia, mas dependendo da carga diária, cada serviço pode acabar sendo lento em horários diferentes.  Você pode usar o método <xref:System.Threading.Tasks.Task.WhenAny%2A> para receber uma notificação quando qualquer operação for concluída:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Além disso, mesmo que uma primeira tarefa seja concluída com êxito, as tarefas subsequentes poderão falhar.  Neste ponto, você tem várias opções para lidar com exceções:  Você pode esperar até que todas as tarefas iniciadas sejam concluídas, caso em que você pode usar o método <xref:System.Threading.Tasks.Task.WhenAll%2A>, ou pode decidir que todas as exceções são importantes e devem ser registradas em log.  Para isso, você pode usar as continuações para receber uma notificação quando tarefas foram concluídas de forma assíncrona:
+ Além disso, mesmo que uma primeira tarefa seja concluída com êxito, as tarefas subsequentes poderão falhar.  Neste ponto, você tem várias opções para lidar com exceções: você pode esperar até que todas as tarefas iniciadas tenham sido concluídas, caso em que você pode usar o método <xref:System.Threading.Tasks.Task.WhenAll%2A>, ou você pode decidir que todas as exceções são importantes e devem estar conectadas.  Para isso, você pode usar as continuações para receber uma notificação quando tarefas foram concluídas de forma assíncrona:
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -633,7 +633,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operações intercaladas
- Há um problema de desempenho potencial com o uso do método <xref:System.Threading.Tasks.Task.WhenAny%2A> para dar suporte a um cenário de intercalação quando você está trabalhando com grandes conjuntos de tarefas.  Todas as chamadas para <xref:System.Threading.Tasks.Task.WhenAny%2A> fazem uma continuação ser registrada com cada tarefa. Para um número N de tarefas, isso resulta em O(N2) continuações criadas durante o tempo de vida da operação de intercalação.  Se você estiver trabalhando com um grande conjunto de tarefas, você poderá usar um combinador (`Interleaved` no exemplo a seguir) para solucionar o problema de desempenho:
+ Há um problema de desempenho potencial com o uso do método <xref:System.Threading.Tasks.Task.WhenAny%2A> para dar suporte a um cenário de intercalação quando você está trabalhando com grandes conjuntos de tarefas. Todas as chamadas para <xref:System.Threading.Tasks.Task.WhenAny%2A> fazem uma continuação ser registrada com cada tarefa. Para N número de tarefas, isso resulta em o (N<sup>2</sup>) de continuação criadas durante o tempo de vida da operação de intercalação. Se você estiver trabalhando com um grande conjunto de tarefas, poderá usar um combinador (`Interleaved` no exemplo a seguir) para resolver o problema de desempenho:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)

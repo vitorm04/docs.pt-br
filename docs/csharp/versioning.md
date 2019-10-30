@@ -2,13 +2,14 @@
 title: Controle de versão de C# – Guia de C#
 description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
+ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834053"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039664"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -38,11 +39,11 @@ Uma nova versão da biblioteca será compatível com a origem de uma versão ant
 
 Aqui estão algumas coisas a serem consideradas ao tentar manter a compatibilidade com versões mais antigas de sua biblioteca:
 
-- Métodos virtuais: Quando você transforma um método virtual em não virtual na nova versão, isso significa que os projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
-- Assinaturas de método: Ao atualizar um comportamento de método, é necessário alterar sua assinatura também, em vez disso, você deve criar uma sobrecarga para que o código que chama esse método ainda funcione.
+- Métodos virtuais: quando você torna um método em virtual não virtual na nova versão, significa que projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
+- Assinaturas de método: ao atualizar um comportamento de método exige que você altere sua assinatura também, em vez disso, você deve criar uma sobrecarga para que o código que chama esse método ainda funcione.
 Você sempre pode manipular a assinatura de método antiga para chamar a nova assinatura de método para que a implementação permaneça consistente.
-- [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Use esse atributo no código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
-- Argumentos de método opcionais: Quando você tornar argumentos de método que antes eram opcionais em obrigatórios ou alterar seu valor padrão, todo o código que não fornecer esses argumentos precisará ser atualizado.
+- [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): você pode usar esse atributo no seu código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
+- Argumentos de método opcionais: quando você tornar argumentos de método que antes eram opcionais em compulsórios ou alterar seu valor padrão, todo código que não fornece esses argumentos precisará ser atualizado.
 
 > [!NOTE]
 > Tornar os argumentos compulsórios opcionais deve ter muito pouco efeito, especialmente se ele não alterar o comportamento do método.
@@ -52,7 +53,7 @@ Quanto mais fácil for para os usuários atualizarem para a nova versão da sua 
 ### <a name="application-configuration-file"></a>Arquivo de Configuração do Aplicativo
 
 Como um desenvolvedor de .NET, há uma chance muito grande de você já ter encontrado o [arquivo o `app.config`](../framework/configure-apps/file-schema/index.md) na maioria dos tipos de projeto.
-Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Em geral, você deve criar suas bibliotecas de forma que as informações que provavelmente forem alteradas regularmente sejam armazenadas no arquivo `app.config`, dessa forma, quando essas informações forem atualizadas, o arquivo de configuração de versões mais antigas precisará ser substituído pelo novo sem o necessidade de recompilação da biblioteca.
+Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Em geral, você deve criar suas bibliotecas de forma que as informações que provavelmente forem alteradas regularmente sejam armazenadas no arquivo de `app.config`, dessa forma, quando essas informações forem atualizadas, o arquivo de configuração de versões mais antigas precisará ser substituído pelo novo sem a necessidade de recompilação da biblioteca.
 
 ## <a name="consuming-libraries"></a>Consumindo bibliotecas
 
@@ -62,7 +63,7 @@ Sorte para você, C# e o ecossistema .net vem com recursos e técnicas que nos p
 
 ### <a name="assembly-binding-redirection"></a>Redirecionamento de associação de assembly
 
-Você pode usar o arquivo *app. config* para atualizar a versão de uma biblioteca que seu aplicativo usa. Ao adicionar o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem precisar recompilar seu aplicativo. O exemplo a seguir mostra como você atualizaria o arquivo *app. config* do aplicativo para usar a versão de patch `1.0.1` do `ReferencedLibrary` em vez da versão `1.0.0` em que foi originalmente compilado.
+Você pode usar o arquivo *app. config* para atualizar a versão de uma biblioteca que seu aplicativo usa. Ao adicionar o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem precisar recompilar seu aplicativo. O exemplo a seguir mostra como você atualizaria o arquivo *app. config* do aplicativo para usar a versão `1.0.1` patch do `ReferencedLibrary` em vez da versão do `1.0.0` com a qual foi originalmente compilado.
 
 ```xml
 <dependentAssembly>

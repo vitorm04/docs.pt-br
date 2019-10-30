@@ -2,13 +2,14 @@
 title: Executar árvores de expressão
 description: Saiba mais sobre como executar árvores de expressão, convertendo-as em instruções de IL (linguagem intermediária) executáveis.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037108"
 ---
 # <a name="executing-expression-trees"></a>Executar árvores de expressão
 
@@ -19,7 +20,7 @@ Ela não é código compilado nem executável. Se você quiser executar o códig
 
 ## <a name="lambda-expressions-to-functions"></a>Expressões lambda para funções
 
-Você pode converter qualquer LambdaExpression ou qualquer tipo derivado de LambdaExpression em IL executável. Outros tipos de expressão não podem ser convertidos diretamente em código. Essa restrição tem pouco efeito na prática. As expressões lambda são os únicos tipos de expressões que você gostaria de executar convertendo em IL (linguagem intermediária) executável. (Pense no que significaria executar diretamente uma `ConstantExpression`. Significaria alguma coisa útil?) Qualquer árvore de expressão que é uma `LambdaExpression` ou um tipo derivado de `LambdaExpression`, pode ser convertido em IL.
+Você pode converter qualquer LambdaExpression ou qualquer tipo derivado de LambdaExpression em IL executável. Outros tipos de expressão não podem ser convertidos diretamente em código. Essa restrição tem pouco efeito na prática. As expressões lambda são os únicos tipos de expressões que você gostaria de executar convertendo em IL (linguagem intermediária) executável. (Pense no que significaria executar diretamente uma `ConstantExpression`. Isso significa que algo é útil?) Qualquer árvore de expressão que seja uma `LambdaExpression`ou um tipo derivado de `LambdaExpression` pode ser convertido em IL.
 O tipo de expressão `Expression<TDelegate>` é o único exemplo concreto nas bibliotecas do .NET Core. Ele é usado para representar uma expressão que mapeia para qualquer tipo delegado. Como esse tipo mapeia para um tipo delegado, o .NET pode examinar a expressão e gerar a IL para um delegado apropriado que corresponda à assinatura da expressão lambda. 
 
 Na maioria dos casos, isso cria um mapeamento simples entre uma expressão e o delegado correspondente. Por exemplo, uma árvore de expressão que é representada por `Expression<Func<int>>` seria convertida em um delegado do tipo `Func<int>`. Para uma expressão lambda com qualquer tipo de retorno e lista de argumentos, existe um tipo delegado que é o tipo de destino para o código executável representado por essa expressão lambda.

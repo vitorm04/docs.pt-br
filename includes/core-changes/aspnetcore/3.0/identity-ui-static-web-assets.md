@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d7942ef6c36c01a9ae7ae2a9739f26dfcda5813
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394082"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041653"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>Identidade: a interface do usuário usa o recurso de ativos da Web estáticos
 
@@ -23,11 +23,11 @@ Como resultado da interface do usuário de identidade adotando o recurso de ativ
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-A estrutura de interface do usuário padrão da interface do usuário de identidade foi a **inicialização 3**. A estrutura da interface do usuário pode ser configurada usando um parâmetro para a chamada do método `AddIdentityUI` em `Startup.ConfigureServices`.
+A estrutura de interface do usuário padrão da interface do usuário de identidade foi a **inicialização 3**. A estrutura da interface do usuário pode ser configurada usando um parâmetro para a chamada do método `AddDefaultUI` em `Startup.ConfigureServices`.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-A estrutura de interface do usuário padrão para identidade de interface do usuário é **Bootstrap 4**. A estrutura da interface do usuário deve ser configurada em seu arquivo de projeto, em vez de na chamada do método `AddIdentityUI`.
+A estrutura de interface do usuário padrão para identidade de interface do usuário é **Bootstrap 4**. A estrutura da interface do usuário deve ser configurada em seu arquivo de projeto, em vez de na chamada do método `AddDefaultUI`.
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
@@ -47,12 +47,12 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>
 
 <!-- 
 
 #### Affected APIs
 
-`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)`
+`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)`
 
 -->

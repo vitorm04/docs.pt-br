@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: HT
+ms.openlocfilehash: 9851fcd056eeee33b8f3d7e9d541f9fa43b36d29
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512349"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036158"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência do C#)
 
@@ -48,7 +48,7 @@ O operador unário `&` retorna o endereço de seu operando:
 
 [!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
-O operando do operador `&` deve ser uma variável fixa. Variáveis *fixas* são variáveis que residem em locais de armazenamento não afetados pela operação do [coletor de lixo](../../../standard/garbage-collection/index.md). No exemplo anterior, a variável local `number` é uma variável fixa, pois reside na pilha. Variáveis que residem em locais de armazenamento que podem ser afetados pelo coletor de lixo (por exemplo, realocado) são chamadas de variáveis *móveis*. Campos de objeto e elementos de matriz são exemplos de variáveis móveis. Você poderá obter o endereço de uma variável móvel se a "firmar" ou "fixar" com a instrução [fixed](../keywords/fixed-statement.md). O endereço obtido é válido somente pela duração do bloco de instrução `fixed`. O exemplo a seguir mostra como usar a instrução `fixed` e o operador `&`:
+O operando do operador `&` deve ser uma variável fixa. Variáveis *fixas* são variáveis que residem em locais de armazenamento não afetados pela operação do [coletor de lixo](../../../standard/garbage-collection/index.md). No exemplo anterior, a variável local `number` é uma variável fixa, pois reside na pilha. Variáveis que residem em locais de armazenamento que podem ser afetados pelo coletor de lixo (por exemplo, realocado) são chamadas de variáveis *móveis*. Campos de objeto e elementos de matriz são exemplos de variáveis móveis. Você pode obter o endereço de uma variável móvel se você "corrigir" ou "fixar", com uma [instrução`fixed`](../keywords/fixed-statement.md). O endereço obtido é válido somente dentro do bloco de uma instrução `fixed`. O exemplo a seguir mostra como usar uma instrução `fixed` e o operador `&`:
 
 [!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ O operador binário `*` computa o [produto](arithmetic-operators.md#multiplicati
 
 ## <a name="pointer-member-access-operator--"></a>Operador de acesso a membro do ponteiro ->
 
-O operador `->` combina [indireção do ponteiro](#pointer-indirection-operator-) e [acesso de membro](member-access-operators.md#member-access-operator-). Ou seja, se `x` for um ponteiro do tipo `T*` e `y` for um membro acessível de `T`, uma expressão do formulário
+O operador `->` combina [indireção do ponteiro](#pointer-indirection-operator-) e [acesso de membro](member-access-operators.md#member-access-operator-). Ou seja, se `x` for um ponteiro do tipo `T*` e `y` for um membro acessível do tipo `T`, uma expressão do formulário
 
 ```csharp
 x->y
@@ -166,7 +166,7 @@ A lista a seguir ordena operadores relacionados a ponteiro começando da preced�
 
 Use parênteses, `()`, para alterar a ordem de avaliação imposta pela precedência do operador.
 
-Para obter a lista completa de operadores do C# ordenada pelo nível de precedência, confira [Operadores do C#](index.md).
+Para obter a lista completa C# de operadores ordenados por nível de precedência, consulte a seção [precedência de operador](index.md#operator-precedence) do artigo [ C# operadores](index.md) .
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784795"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040393"
 ---
 # <a name="annotating-typed-datasets"></a>Anotando DataSets tipados
 As anotações permitem que você modifique os nomes dos elementos em seu <xref:System.Data.DataSet> tipado sem modificar o esquema subjacente. Modificar os nomes dos elementos em seu esquema subjacente faria com que o **conjunto** de dados digitado se refira a objetos que não existem na fonte de dado, além de perder uma referência aos objetos que existem na fonte de dados.  
   
- Usando anotações, você pode personalizar os nomes de objetos no **conjunto** de informações tipado com nomes mais significativos, tornando o código mais legível e o **conjunto** de informações tipado mais fácil para os clientes usarem, deixando o esquema subjacente intacto. Por exemplo, o seguinte elemento de esquema para a tabela **Customers** do banco de dados **Northwind** resultaria em um nome de objeto **DataRow** de **CustomersRow** e um <xref:System.Data.DataRowCollection> **Customers**.  
+ Usando anotações, você pode personalizar os nomes de objetos no **conjunto** de informações tipado com nomes mais significativos, tornando o código mais legível e o **conjunto** de informações tipado mais fácil para os clientes usarem, deixando o esquema subjacente intacto. Por exemplo, o elemento de esquema a seguir para a tabela **Customers** do banco de dados **Northwind** resultaria em um nome de objeto **DataRow** de **CustomersRow** e um <xref:System.Data.DataRowCollection> chamado **Customers**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -45,7 +45,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
   
 |Anotação|Descrição|  
 |----------------|-----------------|  
-|**typedName**|Nome do objeto.|  
+|**tipo digitado**|Nome do objeto.|  
 |**typedPlural**|Nome de uma coleção de objetos.|  
 |**typedParent**|Nome do objeto quando chamado em uma relação de pai.|  
 |**typedChildren**|Nome do método para retornar objetos de uma relação filho.|  
@@ -66,7 +66,7 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** Maneiras|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
-|**DataRowCollection**|TableName|typedPlural|  
+|**DataRowcollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
@@ -74,9 +74,9 @@ As anotações permitem que você modifique os nomes dos elementos em seu <xref:
 |**Pai** Essa|TableNameRow|typedParent|  
 |**Conjunto** de LostFocus|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Para usar anotações de **DataSet** tipado, você deve incluir a seguinte referência **xmlns** em seu esquema de linguagem de definição de esquema XML (XSD). Para criar um XSD a partir de tabelas de <xref:System.Data.DataSet.WriteXmlSchema%2A> banco de dados, consulte ou [trabalhando com DataSets no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Para usar anotações de **DataSet** tipado, você deve incluir a seguinte referência **xmlns** em seu esquema de linguagem de definição de esquema XML (XSD). Para criar um XSD a partir de tabelas de banco de dados, consulte <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [trabalhando com DataSets no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- O exemplo de código a seguir usa um **conjunto** de tipos fortemente tipado criado a partir do esquema de exemplo. Ele usa um <xref:System.Data.SqlClient.SqlDataAdapter> para popular a tabela **Customers** e <xref:System.Data.SqlClient.SqlDataAdapter> outra para popular a tabela **Orders** . O **DataSet** com rigidez de tipos define os **DataRelations**.  
+ O exemplo de código a seguir usa um **conjunto** de tipos fortemente tipado criado a partir do esquema de exemplo. Ele usa um <xref:System.Data.SqlClient.SqlDataAdapter> para popular a tabela **Customers** e outra <xref:System.Data.SqlClient.SqlDataAdapter> para popular a tabela **Orders** . O **DataSet** com rigidez de tipos define os **DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

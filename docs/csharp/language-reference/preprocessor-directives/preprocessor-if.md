@@ -1,18 +1,18 @@
 ---
 title: '#Diretiva de pré-processamento "if" – Referência de C#'
 ms.custom: seodec18
-ms.date: 06/30/2018
+ms.date: 10/27/2019
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: d0297094fbb8098b706cb8c6338fa123afc0753b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 561a628c60888a8d4f3c50c8413784e1ed210599
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605692"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036001"
 ---
 # <a name="if-c-reference"></a>#if (Referência de C#)
 
@@ -40,9 +40,12 @@ Um símbolo definido com `-define` ou com `#define` não entra em conflito com u
 
 O escopo de um símbolo criado com `#define` é o arquivo no qual ele foi definido.
 
-O sistema de build também está ciente dos símbolos de pré-processamento predefinidos que representam várias [estruturas de destino](../../../standard/frameworks.md). Eles são úteis ao criar aplicativos que podem direcionar mais de uma implementação ou versão do .NET.
+O sistema de compilação também reconhece os símbolos de pré-processador predefinidos que representam [estruturas de destino](../../../standard/frameworks.md) diferentes em projetos em estilo SDK. Eles são úteis ao criar aplicativos que podem direcionar mais de uma implementação ou versão do .NET.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+
+> [!NOTE]
+> Para projetos tradicionais de .NET Framework, você precisa configurar manualmente os símbolos de compilação condicional para as diferentes estruturas de destino no Visual Studio por meio das páginas de propriedades do projeto.
 
 As constantes TRACE e DEBUG são exemplos de outros símbolos predefinidos. Para substituir os valores definidos no projeto, use a diretiva `#define`. Por exemplo, o símbolo DEBUG é definido automaticamente, de acordo com as propriedades de configuração do build (Modo de Depuração ou Modo de Versão).
 
@@ -92,4 +95,4 @@ public class MyClass
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Diretivas do pré-processador do C#](index.md)
-- [Como: compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

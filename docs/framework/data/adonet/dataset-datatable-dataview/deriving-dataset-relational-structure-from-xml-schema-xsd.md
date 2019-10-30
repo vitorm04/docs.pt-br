@@ -2,19 +2,19 @@
 title: Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ef77030b4e847f91fea074b68e223ac622539048
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786339"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040099"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivando a estrutura relacional do DataSet do esquema XML (XSD)
-Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, uma tabela é gerada `DataSet`no. A estrutura da tabela é determinada pela definição do tipo complexo. As `DataSet` tabelas são criadas no para elementos de nível superior no esquema. No entanto, uma tabela é criada somente para um elemento `complexType` de nível superior `complexType` quando o elemento é aninhado dentro de outro `complexType` elemento; nesse `complexType` caso, o elemento aninhado é `DataSet`mapeado para um `DataTable` dentro do.  
+Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada elemento filho `complexType` de um elemento de esquema, uma tabela é gerada no `DataSet`. A estrutura da tabela é determinada pela definição do tipo complexo. As tabelas são criadas no `DataSet` para elementos de nível superior no esquema. No entanto, uma tabela é criada somente para um elemento de `complexType` de nível superior quando o elemento `complexType` é aninhado dentro de outro elemento `complexType`; nesse caso, o elemento de `complexType` aninhado é mapeado para um `DataTable` dentro do `DataSet`.  
   
- Para obter mais informações sobre o XSD, consulte o esquema XML World Wide Web Consortium [(W3C) parte 0: Recomendação](https://www.w3.org/TR/xmlschema-0/)do primer, [parte 1 do esquema XML: Recomendação](https://www.w3.org/TR/xmlschema-1/)de estruturas e o [esquema XML parte 2: recomendação de tipos de dados](https://www.w3.org/TR/xmlschema-2/).  
+ Para obter mais informações sobre o XSD, consulte o esquema XML do World Wide Web Consortium (W3C) [parte 0: recomendação do primer](https://www.w3.org/TR/xmlschema-0/), o [esquema XML parte 1: recomendação de estruturas](https://www.w3.org/TR/xmlschema-1/)e o [esquema XML parte 2: recomendação de tipos](https://www.w3.org/TR/xmlschema-2/)de dados.  
   
- O exemplo a seguir demonstra um esquema XML `customers` em que é o elemento filho `MyDataSet` do elemento, que é um elemento **DataSet** .  
+ O exemplo a seguir demonstra um esquema XML em que `customers` é o elemento filho do elemento `MyDataSet`, que é um elemento **DataSet** .  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -43,8 +43,8 @@ Esta seção fornece uma visão geral de como o esquema relacional de um `DataSe
   
  No exemplo anterior, o elemento `customers` é um elemento de tipo complexo. Portanto, o definição de tipo complexo é analisada, e o processo de mapeamento cria a tabela a seguir.  
   
-```  
-Customers (CustomerID , CompanyName, Phone)  
+```text  
+Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  O tipo de dados de cada coluna na tabela é derivado do tipo do Esquema XML do elemento ou atributo correspondente especificado.  
@@ -52,7 +52,7 @@ Customers (CustomerID , CompanyName, Phone)
 > [!NOTE]
 > Se o elemento `customers` for de um tipo de dados de esquema XML simples, como **Integer**, nenhuma tabela será gerada. As tabelas são criadas apenas para os elementos de nível superior que são tipos complexos.  
   
- No esquema XML a seguir, o elemento **Schema** tem dois elementos filho `InStateCustomers` e. `OutOfStateCustomers`  
+ No esquema XML a seguir, o elemento **Schema** tem dois elementos filho, `InStateCustomers` e `OutOfStateCustomers`.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -75,11 +75,11 @@ Customers (CustomerID , CompanyName, Phone)
  </xs:schema>  
 ```  
   
- Os elementos filho `InStateCustomers` e `OutOfStateCustomers` são ambos elementos de tipo complexo (`customerType`). Portanto, o processo de mapeamento gera as duas tabelas idênticas a `DataSet`seguir no.  
+ Os elementos filho `InStateCustomers` e `OutOfStateCustomers` são ambos elementos de tipo complexo (`customerType`). Portanto, o processo de mapeamento gera as duas tabelas idênticas a seguir no `DataSet`.  
   
-```  
-InStateCustomers (CustomerID , CompanyName, Phone)  
-OutOfStateCustomers (CustomerID , CompanyName, Phone)  
+```text  
+InStateCustomers (CustomerID, CompanyName, Phone)  
+OutOfStateCustomers (CustomerID, CompanyName, Phone)  
 ```  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -87,10 +87,10 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  Descreve os elementos de esquema XML usados para criar restrições de chave estrangeira e exclusivas em um `DataSet`.  
   
  [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
- Descreve os elementos de esquema XML usados para criar relações entre colunas de tabela `DataSet`em um.  
+ Descreve os elementos de esquema XML usados para criar relações entre colunas de tabela em um `DataSet`.  
   
  [Relações e restrições de esquema XML](xml-schema-constraints-and-relationships.md)  
- Descreve como as relações são criadas implicitamente ao usar elementos de esquema XML para criar restrições `DataSet`em um.  
+ Descreve como as relações são criadas implicitamente ao usar elementos de esquema XML para criar restrições em um `DataSet`.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usando XML em um DataSet)  

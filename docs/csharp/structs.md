@@ -2,17 +2,18 @@
 title: Structs – Guia de C#
 description: Saiba mais sobre os tipos de struct e como criá-los
 ms.date: 10/12/2016
+ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a7cdd84677cb84038aae89da9774c6e365275963
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396126"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039735"
 ---
 # <a name="structs"></a>Structs
 
-Um *struct* é um tipo de valor. Quando um struct é criado, a variável à qual o struct é atribuído contém os dados reais do struct. Quando o struct é atribuído a uma nova variável, ele é copiado. A nova variável e a variável original, portanto, contêm duas cópias separadas dos mesmos dados. As alterações feitas em uma cópia não afetam a outra cópia.
+Um *struct* é um tipo de valor. Quando um struct é criado, a variável à qual o struct está atribuído contém os dados reais do struct. Quando o struct é atribuído a uma nova variável, ele é copiado. A nova variável e a variável original, portanto, contêm duas cópias separadas dos mesmos dados. As alterações feitas em uma cópia não afetam a outra cópia.
 
 As variáveis de tipo de valor contêm diretamente seus valores, o que significa que a memória é alocada embutida em qualquer contexto em que a variável é declarada. Não há nenhuma alocação de heap separada ou sobrecarga de coleta de lixo para variáveis do tipo de valor.  
   
@@ -66,7 +67,7 @@ O segundo demonstra *literais binários*, que permitem especificar os padrões d
 
 ## <a name="nullable-value-types"></a>Tipos de valor anuláveis
 
-Os tipos comuns de valor não podem ter um valor [nulo](language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](./language-reference/keywords/null.md). Os tipos de valor anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos ou indefinidos. Para obter mais informações, consulte [tipos de valor anulável](programming-guide/nullable-types/index.md).
+Os tipos comuns de valor não podem ter um valor [nulo](language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](./language-reference/keywords/null.md). Os tipos de valores anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos ou indefinidos. Para obter mais informações, consulte [tipos de valor anulável](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Consulte também
 

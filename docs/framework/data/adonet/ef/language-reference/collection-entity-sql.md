@@ -2,20 +2,20 @@
 title: COLEÇÃO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-ms.openlocfilehash: 0e611add4ce3f20e42bb01b0bf0392bbe81ec548
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5a1af1aab8a084b19e48fbdbb159d7ddd8a8dd7c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251192"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039902"
 ---
 # <a name="collection-entity-sql"></a>COLEÇÃO (Entity SQL)
 A palavra-chave de COLEÇÃO é usado somente na definição de uma função in-line. Funções de coleção são as funções que operam em um conjunto de valores e gerenciar uma saída escalares.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-COLLECTION(type_definition)   
+```csharp  
+COLLECTION(type_definition)
 ```  
   
 ## <a name="arguments"></a>Arguments  

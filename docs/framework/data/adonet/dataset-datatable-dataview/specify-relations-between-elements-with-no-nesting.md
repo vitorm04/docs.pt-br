@@ -2,12 +2,12 @@
 title: Especificar relações entre elementos sem nenhum aninhamento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784285"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040045"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Especificar relações entre elementos sem nenhum aninhamento
 Quando os elementos não são aninhados, nenhuma relação implícita é criada. No entanto, você pode especificar explicitamente as relações entre os elementos que não são aninhados usando a anotação **MSDATA: relationship** .  
@@ -53,9 +53,9 @@ Quando os elementos não são aninhados, nenhuma relação implícita é criada.
 </xs:schema>  
 ```  
   
- O processo de mapeamento de esquema XSD (linguagem de definição de esquema <xref:System.Data.DataSet> XML) cria um com tabelas **Order** e **OrderDetail** e uma relação especificada entre essas duas tabelas, como mostrado abaixo.  
+ O processo de mapeamento de esquema XSD cria um <xref:System.Data.DataSet> com tabelas **Order** e **OrderDetail** e uma relação especificada entre essas duas tabelas, como mostrado abaixo.  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   

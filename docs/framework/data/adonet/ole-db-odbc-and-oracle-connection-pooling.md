@@ -2,12 +2,12 @@
 title: OLE DB, ODBC e pool de conexões Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794700"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039841"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC e pool de conexões Oracle
 O pooling de conexões pode melhorar significativamente o desempenho e a escalabilidade do aplicativo. Esta seção discute o pooling de conexões para provedores de dados .NET Framework para OLE DB, ODBC e Oracle.  
@@ -15,7 +15,7 @@ O pooling de conexões pode melhorar significativamente o desempenho e a escalab
 ## <a name="connection-pooling-for-oledb"></a>Pooling de conexões para OleDb  
  O Provedor de Dados do .NET Framework para OLE DB agrupa automaticamente conexões usando o pooling de sessão do OLE DB. Argumentos de cadeia de conexão podem ser usados para habilitar ou desabilitar os serviços do OLE DB que incluem pooling. Por exemplo, a cadeia de conexão a seguir desabilita o pooling de sessão do OLE DB e a inscrição automática de transação.  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  A tabela a seguir descreve os valores de <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> que você pode usar para ajustar o comportamento do pooling de conexões.  
   
-|Nome|Padrão|Descrição|  
+|Name|Padrão|Descrição|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|Quando uma conexão é retornada para o pool, seu tempo de criação é comparado com a hora atual e a conexão será destruída se esse intervalo de tempo (em segundos) exceder o valor especificado por `Connection Lifetime`. Isso é útil nas configurações clusterizadas para forçar o balanceamento de carga entre um servidor em execução e um servidor que acabou de ficar online.<br /><br /> Um valor de 0 (zero) fará as conexões com pool excederem o tempo limite máximo.|  
 |`Enlist`|'true'|Quando for `true`, o pooler automaticamente inserirá a conexão no contexto de transação atual do thread de criação se um contexto de transação existir.|  

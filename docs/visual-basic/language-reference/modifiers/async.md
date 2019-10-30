@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: fc0ae67c0ebc11a0428ffc18c8db103b619e27ec
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: aaf5a95edb9cba9726163be3925b006a7641597c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524799"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040854"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
@@ -43,7 +43,7 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-Normalmente, um método modificado pela palavra-chave `Async` contém pelo menos uma expressão ou instrução [Await](../../../visual-basic/language-reference/modifiers/async.md) . O método é executado de forma síncrona até atingir o primeiro `Await`, no ponto em que ele é suspenso até que a tarefa esperada seja concluída. Enquanto isso, o controle é retornado para o chamador do método. Se o método não contiver uma expressão `Await` ou instrução, o método não será suspenso e será executado como um método síncrono. Um aviso do compilador alerta você para quaisquer métodos assíncronos que não contenham `Await` porque essa situação pode indicar um erro. Para obter mais informações, consulte o [erro do compilador](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).
+Normalmente, um método modificado pela palavra-chave `Async` contém pelo menos uma expressão ou instrução [Await](../../../visual-basic/language-reference/modifiers/async.md) . O método é executado de forma síncrona até atingir o primeiro `Await`, no ponto em que ele é suspenso até que a tarefa esperada seja concluída. Enquanto isso, o controle é retornado para o chamador do método. Se o método não contiver uma expressão `Await` ou instrução, o método não será suspenso e será executado como um método síncrono. Um aviso do compilador alerta você para quaisquer métodos assíncronos que não contenham `Await` porque essa situação pode indicar um erro. Para obter mais informações, consulte o [erro do compilador](../error-messages/bc42358.md).
 
 A palavra-chave `Async` é uma palavra-chave não reservada. É uma palavra-chave quando modifica um método ou uma expressão lambda. Em todos os outros contextos, ele é interpretado como um identificador.
 

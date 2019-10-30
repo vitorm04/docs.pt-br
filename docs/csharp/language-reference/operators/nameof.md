@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - nameof operator [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 965b3e96a20906187df4c8693f050c550a747091
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
-ms.translationtype: HT
+ms.openlocfilehash: fa858db918cdaf04c757f2741265e359acb74f7b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331441"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036348"
 ---
 # <a name="nameof-operator-c-reference"></a>operador nameof (referência do C#)
 
@@ -23,7 +23,7 @@ O operador `nameof` obtém o nome de uma variável, tipo ou membro como uma cade
 
 Como mostra o exemplo anterior, no caso de um tipo e um namespace, o nome produzido geralmente não é [totalmente qualificado](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
-O operador `nameof` é avaliado no tempo de compilação e não tem efeitos no tempo de execução.
+O operador de `nameof` é avaliado em tempo de compilação e não tem nenhum efeito no tempo de execução.
 
 Você pode usar o operador `nameof` para tornar o código de verificação de argumentos mais passível de manutenção:
 

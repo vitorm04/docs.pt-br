@@ -3,12 +3,12 @@ title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523003"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038457"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -40,7 +40,7 @@ O MCR (Registro de Contêiner da Microsoft) é a fonte oficial de imagens de con
 
 ### <a name="dockerfile"></a>Dockerfile
 
-Um **Dockerfile** é um arquivo que define um conjunto de instruções que cria uma imagem. Cada instrução no **Dockerfile** cria uma camada na imagem. Geralmente, quando você recria a imagem, somente as camadas que foram alteradas são recriadas. O **Dockerfile** pode ser distribuído para outras pessoas e permite que elas recriem para criar uma nova imagem da mesma maneira como você a criou. Embora isso permita distribuir as *instruções* sobre a criação de uma imagem, a principal forma de distribuir sua imagem é publicando-a em um registro.
+Um **Dockerfile** é um arquivo que define um conjunto de instruções que cria uma imagem. Cada instrução no **Dockerfile** cria uma camada na imagem. Para a maior parte, quando você recria a imagem, somente as camadas que foram alteradas são recriadas. O **Dockerfile** pode ser distribuído para outras pessoas e permite recriar uma nova imagem da mesma maneira que você a criou. Embora isso permita distribuir as *instruções* sobre a criação de uma imagem, a principal forma de distribuir sua imagem é publicando-a em um registro.
 
 ## <a name="net-core-images"></a>Imagens do .NET Core
 

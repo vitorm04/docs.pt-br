@@ -2,13 +2,14 @@
 title: Indexadores
 description: Saiba mais sobre indexadores C# e como implementar propriedades indexadas, que são propriedades referenciadas usando um ou mais argumentos.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197594"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039115"
 ---
 # <a name="indexers"></a>Indexadores
 
@@ -326,4 +327,4 @@ Os desenvolvedores usam o tipo `DateTime`, mas usam a propriedade `Date` para ga
 ## <a name="summing-up"></a>Resumindo
 
 Você deve criar indexadores sempre que tiver um elemento semelhante a uma propriedade em sua classe, em que essa propriedade representa não um único valor, mas uma coleção de valores em que cada item individual é identificado por um conjunto de argumentos. Esses argumentos podem identificar exclusivamente qual item da coleção deve ser referenciado.
-Os indexadores ampliam o conceito de [propriedades](properties.md), em que um membro é tratado como um item de dados de fora da classe, mas como um método do lado de dentro. Os indexadores permitem que os argumentos localizem um único item em uma propriedade que representa um conjunto de itens.
+Os indexadores estendem o conceito de [Propriedades](properties.md), em que um membro é tratado como um item de dados de fora da classe, mas como um método no interior. Os indexadores permitem que os argumentos localizem um único item em uma propriedade que representa um conjunto de itens.

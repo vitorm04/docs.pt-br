@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920384"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040720"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
 Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam para fornecer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
@@ -31,17 +31,15 @@ Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviç
   
  O restante deste tópico aborda os recursos em cada uma dessas camadas que pertencem a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] especificamente.  
 
-<a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Segurança do sistema operacional  
 O núcleo do Windows fornece vários recursos de segurança que formam a base de segurança para todos os aplicativos do Windows, incluindo os criados com o WPF. Este tópico aborda a amplitude desses recursos de segurança que são importantes para o WPF, além de como o WPF se integra a eles para fornecer mais proteção aprofundada.  
   
-<a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>SP2 (Microsoft Windows XP Service Pack 2)  
  Além de uma revisão geral e o fortalecimento do Windows, há três recursos principais do [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] que discutiremos neste tópico:  
   
 - Compilação com /GS  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
+- Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>Compilação com /GS  
  o [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fornece proteção recompilando muitas bibliotecas principais do sistema, incluindo todas as dependências de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], como o CLR, para ajudar a mitigar estouros de buffer. Isso é feito pelo uso do parâmetro /GS com o compilador de linha de comando C/C++. Embora seja necessário evitar estouros de buffer explicitamente, a compilação com /GS fornece um exemplo de uma proteção extensa contra possíveis vulnerabilidades que são criadas de maneira inadvertida ou mal-intencionada por eles.  
@@ -52,10 +50,6 @@ O núcleo do Windows fornece vários recursos de segurança que formam a base de
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] é compilado com o sinalizador/GS para adicionar ainda outra camada de defesa para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos.  
   
-#### <a name="microsoft-windows-update-enhancements"></a>Melhorias do Microsoft Windows Update  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)] também foi aprimorada no [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] para simplificar o processo de download e instalação de atualizações. Essas alterações melhoram significativamente a segurança para os clientes [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], ajudando a garantir que seus sistemas estejam atualizados, particularmente em relação às atualizações de segurança.  
-  
-<a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
 Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segurança adicionais do sistema operacional, incluindo "acesso de usuário com privilégios mínimos", verificações de integridade de código e isolamento de privilégio.  
   
@@ -72,8 +66,7 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
 #### <a name="code-integrity-checks"></a>Verificações de integridade de código  
  O Windows Vista incorpora verificações de integridade de código mais profundas para ajudar a impedir que códigos mal-intencionados sejam injetados em arquivos do sistema ou no kernel em tempo de carga/execução. Isso vai além da proteção de arquivo do sistema.  
-  
-<a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
+   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Processos com direitos limitados para aplicativos hospedados pelo navegador  
  Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hospedados no navegador são executados na área restrita da zona da Internet. a integração do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] com o Microsoft Internet Explorer estende essa proteção com suporte adicional.  
   
@@ -81,11 +74,9 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  Consulte [usando uma conta de usuário com privilégios mínimos](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
-<a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>Segurança do Common Language Runtime  
  O Common Language Runtime (CLR) oferece vários benefícios-chave de segurança que incluem validação e verificação, CAS (segurança de acesso ao código) e a metodologia crítica de segurança.  
-  
-<a name="Validation_and_Verification"></a>   
+    
 ### <a name="validation-and-verification"></a>Validação e verificação  
  Para fornecer isolamento de assembly e integridade, o CLR usa um processo de validação. A validação do CLR garante que os assemblies sejam isolados validando seu formato de arquivo PE (executável portátil) para endereços que apontam para fora do assembly. A validação de CLR também valida a integridade dos metadados que são inseridos em um assembly.  
   
@@ -103,7 +94,6 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  A vantagem do código verificável é um motivo importante pelo qual [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se baseia na .NET Framework. Na medida em que um código verificável é usado, a possibilidade de exploração de possíveis vulnerabilidades é consideravelmente reduzida.  
   
-<a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>Segurança de acesso do código  
  Um computador cliente expõe uma grande variedade de recursos aos quais um aplicativo gerenciado pode ter acesso, incluindo o sistema de arquivos, o Registro, serviços de impressão, a interface do usuário, reflexão e variáveis de ambiente. Antes que um aplicativo gerenciado possa acessar qualquer um dos recursos em um computador cliente, ele deve ter .NET Framework permissão para fazer isso. Uma permissão no CAS é uma subclasse da <xref:System.Security.CodeAccessPermission>; O CAS implementa uma subclasse para cada recurso que os aplicativos gerenciados podem acessar.  
   
@@ -163,13 +153,11 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  Do ponto de vista da plataforma, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] é responsável por usar o **Assert** corretamente; um uso incorreto de **Assert** pode permitir que o código mal-intencionado eleve privilégios. Consequentemente, é importante chamar **Assert** apenas quando necessário e garantir que as restrições de área restrita permaneçam intactas. Por exemplo, um código em área restrita não tem permissão para abrir arquivos aleatórios, mas tem permissão para usar fontes. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] permite que os aplicativos em área restrita usem a funcionalidade de fonte chamando **Assert**e para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ler arquivos conhecidos por conter essas fontes em nome do aplicativo em área restrita.  
   
-<a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
  O ClickOnce é uma tecnologia de implantação abrangente que está incluída com o .NET Framework e se integra ao Visual Studio (consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) para obter informações detalhadas). Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos podem ser implantados usando o ClickOnce, enquanto aplicativos hospedados em navegador devem ser implantados com o ClickOnce.  
   
  Os aplicativos implantados usando o ClickOnce recebem uma camada de segurança adicional sobre a CAS (segurança de acesso ao código); essencialmente, os aplicativos implantados pelo ClickOnce solicitam as permissões necessárias. Eles recebem somente as permissões se eles não excedem o conjunto de permissões para a zona da qual o aplicativo é implantado. Ao reduzir o conjunto de permissões apenas para aqueles que são necessários, mesmo que eles sejam menores do que os fornecidos pelo conjunto de permissões da zona de inicialização, o número de recursos aos quais o aplicativo tem acesso é reduzido para um mínimo. Consequentemente, se o aplicativo for sequestrado, o potencial de danos ao computador cliente será reduzido.  
   
-<a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Metodologia Crítica para Segurança  
  O código de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] que usa permissões para habilitar a área restrita da zona da Internet para aplicativos XBAP deve ser mantido no nível mais alto possível de auditoria e controle de segurança. Para facilitar esse requisito, .NET Framework fornece novo suporte para o gerenciamento de código que eleva o privilégio. Especificamente, o CLR permite que você identifique o código que eleva o privilégio e marque-o com o <xref:System.Security.SecurityCriticalAttribute>; qualquer código não marcado com <xref:System.Security.SecurityCriticalAttribute> se torna *transparente* usando essa metodologia. Por outro lado, o código gerenciado que não está marcado com <xref:System.Security.SecurityCriticalAttribute> é impedido de elevar o privilégio.  
   
@@ -177,7 +165,6 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  Observe que .NET Framework permite que o código confiável estenda a área restrita da zona da Internet do XBAP, permitindo que os desenvolvedores gravem assemblies gerenciados marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e implantados no GAC (cache de assembly global) do usuário. Marcar um assembly com um APTCA é uma operação de segurança altamente confidencial, pois permite que qualquer código chame esse assembly, incluindo um código mal-intencionado da Internet. Deve-se ter extremo cuidado e usar as melhores práticas ao fazer isso e os usuários devem optar por confiar nesse software para que ele seja instalado.  
   
-<a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Segurança do Microsoft Internet Explorer  
  Além de reduzir os problemas de segurança e simplificar a configuração de segurança, o Microsoft Internet Explorer 6 (SP2) contém vários recursos que aprimoram a segurança para os usuários de [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. O foco desses recursos tenta permitir aos usuários um maior controle sobre sua experiência de navegação.  
   

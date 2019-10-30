@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254259"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035625"
 ---
 # <a name="printing-how-to-topics"></a>Tópicos explicativos de impressão
-Os tópicos nesta seção demonstram como usar os recursos de gerenciamento do sistema de impressão e impressão [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluídos no e no novo caminho de impressão do XPS (XML Paper Specification).  
+Os tópicos nesta seção demonstram como usar os recursos de gerenciamento do sistema de impressão e impressão incluídos com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bem como o novo caminho de impressão do XPS (XML Paper Specification).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Invocar uma caixa de diálogo Imprimir](how-to-invoke-a-print-dialog.md)  
- Instruções para marcação XAML para declarar um [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] objeto de caixa de diálogo de impressão e usar código para invocar a caixa de diálogo de dentro de um aplicativo Windows Presentation Foundation (WPF).  
+ Instruções para marcação XAML para declarar um objeto de caixa de diálogo de impressão do Microsoft Windows e usar código para invocar a caixa de diálogo de um aplicativo Windows Presentation Foundation (WPF).  
   
  [Clonar uma impressora](how-to-clone-a-printer.md)  
  Instruções sobre como instalar uma segunda fila de impressão com exatamente as mesmas propriedades de uma existente.  

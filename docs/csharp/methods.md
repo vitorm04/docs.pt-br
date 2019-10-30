@@ -2,15 +2,15 @@
 title: Métodos – Guia de C#
 description: Visão geral dos métodos, parâmetros de método e valores retornados de método
 author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: b25fad09b530967c9bbfc83412632fc876842dcc
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168509"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035803"
 ---
 # <a name="methods"></a>Métodos
 
@@ -18,22 +18,6 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
 
 > [!NOTE]
 > Este tópico aborda os métodos nomeados. Para obter informações sobre funções anônimas, consulte [Funções anônimas](programming-guide/statements-expressions-operators/anonymous-functions.md).
-
-Esse tópico contém as seguintes seções:
-
-- [Assinaturas de método](#signatures)
-- [Invocação de método](#invocation)
-- [Métodos herdados e substituídos](#inherited)
-- [Passando parâmetros](#passing)
-  - [Passando parâmetros por valor](#byval)
-  - [Passando parâmetros por referência](#byref)
-  - [Matrizes de parâmetros](#paramarray)
-- [Parâmetros e argumentos opcionais](#optional)
-- [Valores retornados](#return)
-- [Métodos de extensão](#extension)
-- [Métodos assíncronos](#async)
-- [Membros de expressão incorporada](#expr)
-- [Iteradores](#iterators)
 
 <a name="signatures"></a>
 
@@ -157,7 +141,7 @@ Uma definição de método pode especificar que os parâmetros são obrigatório
 O valor padrão do parâmetro deve ser atribuído por um dos tipos de expressões a seguir:
 
 - Uma constante, como um número ou uma cadeia de caracteres literal.
-- Uma expressão da forma `new ValType`, em que `ValType` é um tipo de valor. Isso invoca o construtor sem parâmetros implícito do tipo de valor, que não é de fato um membro do tipo.
+- Uma expressão da forma `new ValType()`, em que `ValType` é um tipo de valor. Isso invoca o construtor sem parâmetros implícito do tipo de valor, que não é de fato um membro do tipo.
 - Uma expressão da forma `default(ValType)`, em que `ValType` é um tipo de valor.
 
 Se um método inclui parâmetros obrigatórios e opcionais, os parâmetros opcionais são definidos no final da lista de parâmetros, após todos os parâmetros obrigatórios.

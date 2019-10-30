@@ -1,23 +1,23 @@
 ---
-title: 'Mitigação: Serviços WCF e autenticação de certificado'
+title: 'Mitigação: serviços WCF e autenticação de certificado'
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 14fafa68e55ae7c1f3b6672b150cd0b149a3ffcd
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789813"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039560"
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigação: Serviços WCF e autenticação de certificado
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigação: serviços WCF e autenticação de certificado
 
 O .NET Framework 4.6 adiciona o TLS 1.1 e o TLS 1.2 à lista padrão de protocolos SSL do WCF. Quando os computadores cliente e servidor têm o .NET Framework 4.6 ou posteriores instalados, o TLS 1.2 é usado para negociação.
 
 ## <a name="impact"></a>Impacto
 
-O TLS 1.2 não dá suporte à autenticação do certificado MD5. Consequentemente, se um cliente usar um certificado SSL que use MD5 para o algoritmo de hash, o cliente WCF falhará ao se conectar ao serviço WCF. Para obter mais informações, confira [Mitigação: Serviços WCF e autenticação de certificado](mitigation-wcf-services-and-certificate-authentication.md).
+O TLS 1.2 não dá suporte à autenticação do certificado MD5. Consequentemente, se um cliente usar um certificado SSL que use MD5 para o algoritmo de hash, o cliente WCF falhará ao se conectar ao serviço WCF. Para saber mais, confira [Mitigation: WCF Services and Certificate Authentication](mitigation-wcf-services-and-certificate-authentication.md) (Mitigação: serviços WCF e autenticação de certificado).
 
 ## <a name="mitigation"></a>Redução
 
@@ -47,7 +47,7 @@ Você pode contornar esse problema para que um cliente WCF possa se conectar a u
                   </binding>
               </netTcpBinding>
           </bindings>
-      </system.ServiceModel>
+      </system.serviceModel>
   </configuration>
   ```
 

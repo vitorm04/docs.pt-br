@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 988e868b1a1698d00a6d77fd715b2a76b1790132
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f8fe5c5e0afac071ce7e036ceccd0b66351b0e1d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321261"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040876"
 ---
 # <a name="securing-clients"></a>Protegendo clientes
 No Windows Communication Foundation (WCF), o serviço determina os requisitos de segurança para clientes. Ou seja, o serviço especifica o modo de segurança a ser usado e se o cliente deve ou não fornecer uma credencial. O processo de proteger um cliente, portanto, é simples: usar os metadados obtidos do serviço (se for publicado) e criar um cliente. Os metadados especificam como configurar o cliente. Se o serviço exigir que o cliente forneça uma credencial, você deverá obter uma credencial que atenda ao requisito. Este tópico discute o processo mais detalhadamente. Para obter mais informações sobre como criar um serviço seguro, consulte [protegendo serviços](securing-services.md).  
@@ -73,10 +73,10 @@ No Windows Communication Foundation (WCF), o serviço determina os requisitos de
   
 - Programando-o em seu código de cliente (usando o método `SetCertificate`).  
   
- Adicionando uma seção de [> de @no__t 1behaviors](../configure-apps/file-schema/wcf/behaviors.md) do arquivo de configuração para o cliente e usando o elemento `clientCredentials` (mostrado abaixo).  
+ Adicionando uma seção [\<comportamentos >](../configure-apps/file-schema/wcf/behaviors.md) do arquivo de configuração para o cliente e usando o elemento `clientCredentials` (mostrado abaixo).  
   
-#### <a name="setting-a-clientcredentials-value-in-code"></a>Definindo um valor de > de @no__t 0clientCredentials no código  
- Para definir um valor de [> \<clientCredentials](../configure-apps/file-schema/wcf/clientcredentials.md) no código, você deve acessar a propriedade <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> da classe <xref:System.ServiceModel.ClientBase%601>. A propriedade retorna um objeto <xref:System.ServiceModel.Description.ClientCredentials> que permite o acesso a vários tipos de credenciais, conforme mostrado na tabela a seguir.  
+#### <a name="setting-a-clientcredentials-value-in-code"></a>Definindo um \<clientCredentials > valor no código  
+ Para definir um [\<clientcredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) valor no código, você deve acessar a propriedade <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> da classe <xref:System.ServiceModel.ClientBase%601>. A propriedade retorna um objeto <xref:System.ServiceModel.Description.ClientCredentials> que permite o acesso a vários tipos de credenciais, conforme mostrado na tabela a seguir.  
   
 |Propriedade ClientCredential|Descrição|Anotações|  
 |-------------------------------|-----------------|-----------|  
@@ -95,14 +95,15 @@ No Windows Communication Foundation (WCF), o serviço determina os requisitos de
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
-      <endpointBehaviors>  
+      <endpointBehaviors>
         <behavior name="myEndpointBehavior">  
           <clientCredentials>  
             <clientCertificate findvalue="myMachineName"   
             storeLocation="Current" X509FindType="FindBySubjectName" />  
           </clientCredentials>  
-        </behavior>              
-    </behaviors>  
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
   </system.serviceModel>  
 </configuration>  
 ```  

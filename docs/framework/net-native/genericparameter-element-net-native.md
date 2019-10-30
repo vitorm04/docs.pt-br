@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf2b06b14252f152c1eece6f9c0d317482a24b27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049753"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039511"
 ---
-# <a name="genericparameter-element-net-native"></a>\<Elemento de > GenericParameter (.NET Native)
+# <a name="genericparameter-element-net-native"></a>\<elemento de > GenericParameter (.NET Native)
 Aplica a política ao tipo de parâmetro de um tipo ou método genérico.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -27,7 +27,7 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
                   XmlSerializer="policy_type"  
                   MarshalObject="policy_type"  
                   MarshalDelegate="policy_type"  
-                  MarshalStructure="policy_type"  
+                  MarshalStructure="policy_type" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -89,7 +89,7 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
 ## <a name="see-also"></a>Consulte também
 
 - [Elemento \<Method>](method-element-net-native.md)
-- [\<Elemento de > de tipo](type-element-net-native.md)
+- [Elemento de > de\<tipo](type-element-net-native.md)
 - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
 - [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)

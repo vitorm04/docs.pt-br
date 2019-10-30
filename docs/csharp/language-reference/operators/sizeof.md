@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: c455804923f4d0e7cc8f556bb9b9df34b6332d82
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
-ms.translationtype: HT
+ms.openlocfilehash: 32103043d4c3a8b38f4c8aad80282f6c0555719f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796522"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038932"
 ---
 # <a name="sizeof-operator-c-reference"></a>Operador sizeof (referência em C#)
 
@@ -56,3 +56,4 @@ Para obter mais informações, confira a seção [O operador sizeof](~/_csharpla
 - [Operadores relacionados a ponteiro](pointer-related-operators.md)
 - [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos relativos a memória e extensão](../../../standard/memory-and-spans/index.md)
+- [Genéricos no .NET](../../../standard/generics/index.md)

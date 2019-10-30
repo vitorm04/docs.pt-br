@@ -2,13 +2,14 @@
 title: Criando árvores de expressão
 description: Saiba mais sobre técnicas de criação de árvores de expressão.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
-ms.translationtype: HT
+ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207183"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037103"
 ---
 # <a name="building-expression-trees"></a>Criando árvores de expressão
 

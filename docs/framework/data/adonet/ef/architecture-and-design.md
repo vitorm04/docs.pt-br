@@ -2,24 +2,24 @@
 title: Arquitetura e design
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35fbc39db23a2b08ab926e122d2f1eb1806a369b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251711"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040019"
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 
 O módulo de geração SQL no [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) é implementado como um visitante na árvore de expressão que representa a árvore de comandos. A geração é feita em uma única passada sobre a árvore de expressão.
 
-Os nós de árvore são processados a partir de baixo. Primeiro, uma estrutura intermediária é produzida: SqlSelectStatement ou sqlbuildr, ambos implementando ISqlFragment. Em seguida, a instrução SQL de cadeia de caracteres é gerado dessa estrutura. Há dois motivos para a estrutura intermediário:
+Os nós de árvore são processados a partir de baixo. Primeiro, uma estrutura intermediária é gerada: SqlSelectStatement ou SqlBuilder, ambos que implementam ISqlFragment. Em seguida, a instrução SQL de cadeia de caracteres é gerado dessa estrutura. Há dois motivos para a estrutura intermediário:
 
 - Logicamente, uma instrução SQL SELECT está fora de serviço preenchido. Os nós que participam na cláusula são visitados antes que os nós que participam em WHERE GRUPO, PERTO, e a cláusula ORDER BY.
 
 - Para renomear alias, você deve identificar todas as aliases usadas para evitar colisões em renomear. Para adiar as opções renomeando em SqlBuilder, o símbolo de uso objetos para representar as colunas que são candidatos para renomear.
 
-![Diagrama](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4F7C-4d2d-ace5-afefc6d3cefa")
+![Organograma](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 Na primeira etapa, a visitar a árvore de expressão, as expressões são agrupadas em SqlSelectStatements, join são aplainadas, e ingressar em alias são aplainadas. Durante esta etapa, os objetos do símbolo representam colunas ou alias de entrada que podem ser renomeados.
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-SqlSelectStatement representa uma instrução SQL SELECT canônica da forma "SELECT... DE.. ONDE... AGRUPAR POR... ORDENAR POR ".
+SqlSelectStatement representa uma instrução SQL SELECT canônica da forma "SELECT... De.. ONDE... AGRUPAR POR... ORDENAR POR ".
 
 Cada uma das cláusulas SQL é representada por um StringBuilder. Além disso, controla se distinto foi especificado e se a instrução é o mais alto. Se a declaração não é mais alto, a cláusula ORDER BY for omitido a menos que a declaração também tem uma cláusula TOP.
 
@@ -229,13 +229,13 @@ Alias de entrada que redirecionem são realizadas com a tabela de símbolo.
 
 Para explicar o redirecionamento de alias de entrada, consulte o primeiro exemplo em [gerando SQL de árvores de comando – práticas recomendadas](generating-sql-from-command-trees-best-practices.md).  Existem “a” não precisava ser redirecionado para “b” na projeção.
 
-Quando um objeto de SqlSelectStatement é criado, a extensão é que a entrada ao nó é colocada na propriedade de SqlSelectStatement. Um símbolo (\<symbol_b >) é criado com base no nome da Associação de entrada ("b") para representar essa extensão e "como \<" + symbol_b > é acrescentado à cláusula FROM.  O símbolo também é adicionado à propriedade de FromExtents.
+Quando um objeto de SqlSelectStatement é criado, a extensão é que a entrada ao nó é colocada na propriedade de SqlSelectStatement. Um símbolo (\<symbol_b >) é criado com base no nome da Associação de entrada ("b") para representar essa extensão e "como" + \<symbol_b > é acrescentada à cláusula FROM.  O símbolo também é adicionado à propriedade de FromExtents.
 
-O símbolo também é adicionado à tabela de símbolos para vincular o nome de associação de entrada a ele ("b \<", symbol_b >).
+O símbolo também é adicionado à tabela de símbolos para vincular o nome de associação de entrada a ele ("b", \<symbol_b >).
 
-Se reutilização subsequentes de um nó que SqlSelectStatement, ele adiciona uma entrada à tabela de símbolo para vincular o nome de associação de entrada ao símbolo. Em nosso exemplo, o DbProjectExpression com o nome de associação de entrada "a" reutilizaria o SqlSelectStatement e adicionaria (" \< a", symbol_b >) à tabela.
+Se reutilização subsequentes de um nó que SqlSelectStatement, ele adiciona uma entrada à tabela de símbolo para vincular o nome de associação de entrada ao símbolo. Em nosso exemplo, o DbProjectExpression com o nome de associação de entrada "a" reutilizaria o SqlSelectStatement e adicionaria ("a", \< symbol_b >) à tabela.
 
-Quando as expressões no nome de associação de entrada do nó que estiver reutilizando o SqlSelectStatement, a referência é resolvida usando a tabela de símbolo redirecionado para o símbolo correto. Quando "a" de "a. x" é resolvido ao visitar o DbVariableReferenceExpression que representa "a", ele será resolvido para \<o símbolo symbol_b >.
+Quando as expressões no nome de associação de entrada do nó que estiver reutilizando o SqlSelectStatement, a referência é resolvida usando a tabela de símbolo redirecionado para o símbolo correto. Quando "a" de "a. x" é resolvido ao visitar o DbVariableReferenceExpression que representa "a", ele será resolvido para o símbolo \<symbol_b >.
 
 ### <a name="join-alias-flattening"></a>Adição a ajuste alias
 
@@ -243,9 +243,9 @@ Adição a ajuste alias é obtido quando visitar um DbPropertyExpression como de
 
 ### <a name="column-name-and-extent-alias-renaming"></a>Renomear alias o nome da coluna e de extensão
 
-O problema do nome da coluna e da renomeação do alias é resolvido com o uso de símbolos que só são substituídos por aliases na segunda fase da geração descrita na seção segunda fase da geração de SQL: Gerando o comando de cadeia de caracteres.
+A entrada de renomeação alias o nome da coluna e de extensão é abordada usando os símbolos que obtêm somente substituído com alias na segunda etapa de geração descrito na seção denominada segundo fase de geração SQL: Gerando o comando de cadeia de caracteres.
 
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Primeira fase da geração de SQL: Visitando a árvore de expressão
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Primeiro estágio de geração SQL: Visitar a árvore de expressão
 
 Esta seção descreve a primeira etapa de geração SQL, quando a expressão que representa a consulta é visitada e uma estrutura intermediária é gerada, um SqlSelectStatement ou um SqlBuilder.
 
@@ -345,7 +345,7 @@ As operações de conjunto DbUnionAllExpression, DbExceptExpression, e DbInterse
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-Onde \<leftSqlSelectStatement > e \<rightSqlSelectStatement > são SqlSelectStatements obtidos visitando cada uma das entradas e \<setOp > é a operação correspondente (Union All, por exemplo).
+Em que \<leftSqlSelectStatement > e \<> de rightSqlSelectStatement SqlSelectStatements são obtidos visitando cada uma das entradas e \<setOp > é a operação correspondente (UNION ALL, por exemplo).
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -375,9 +375,9 @@ Quando DbNewInstanceExpression tem um tipo de retorno da coleção, e define uma
 
 - Se DbNewInstanceExpression tem DbElementExpression como o argumento único, ele é convertido como segue:
 
-    ```
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
-    ```
+```sql
+NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+```
 
 Se DbNewInstanceExpression não tem nenhum argumento (representa uma tabela vazia), ele é convertido em DbNewInstanceExpression:
 
@@ -409,9 +409,9 @@ O método visita DbElementExpression que é chamado somente visitar um DbElement
 
 ### <a name="dbquantifierexpression"></a>DbQuantifierExpression
 
-Dependendo do tipo da expressão (alguns ou todos), DbQuantifierExpression é convertido como:
+Dependendo do tipo de expressão (any ou All), DbQuantifierExpression é traduzido como:
 
-```
+```sql
 Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))
 ```
@@ -420,7 +420,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 
 Em alguns casos é possível recolher a conversão de DbNotExpression com sua expressão de entrada. Por exemplo:
 
-```
+```sql
 Not(IsNull(a)) =>  "a IS NOT NULL"
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
 ```
@@ -431,11 +431,11 @@ A razão que o segundo recolher é executado é porque as incapacidades foram in
 
 DbIsEmptyExpression é convertido como:
 
-```
+```sql
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase da geração de SQL: Gerando o comando de cadeia de caracteres
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segundo fase de geração SQL: Gerando o comando de cadeia de caracteres
 
 Para gerar um comando SQL de cadeia de caracteres, o SqlSelectStatement gerencia alias reais dos símbolos, que tratam a introdução para renomear alias o nome da coluna e de extensão.
 
@@ -443,7 +443,7 @@ Renomear alias de extensão ocorre ao escrever o objeto de SqlSelectStatement em
 
 Renomear a coluna ocorre ao escrever um objeto do símbolo para uma cadeia de caracteres. AddDefaultColumns na primeira etapa determinar se um determinado símbolo da coluna tem que ser renomeado. Na segunda etapa somente renomear ocorre certificar-se de que o nome gerado não está em conflito com qualquer nome usado em AllColumnNames
 
-Para produzir nomes exclusivos tanto para aliases de extensão quanto para colunas, use \<existing_name > _n, em que n é o menor alias que ainda não foi usado. A lista global de todas as aliases aumenta a necessidade de se conectar renomear.
+Para produzir nomes exclusivos tanto para aliases de extensão quanto para colunas, use \<existing_name > _n em que n é o menor alias que ainda não foi usado. A lista global de todas as aliases aumenta a necessidade de se conectar renomear.
 
 ## <a name="see-also"></a>Consulte também
 

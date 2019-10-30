@@ -1,22 +1,26 @@
 ---
-title: '&amp;&amp;E (Entity SQL)'
+title: '&amp;&amp; (e) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: be6e7120e6c19714f151aa38a8b9a1355de29d1a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251308"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039963"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp;E (Entity SQL)
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (e) (Entity SQL)
 Retorna `true` se as duas expressões são `true`; caso contrário, `false` ou `NULL`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-boolean_expression AND boolean_expression  
-or  
+```csharp  
+boolean_expression AND boolean_expression
+```
+ 
+ou  
+
+```csharp
 boolean_expression && boolean_expression  
 ```  
   
@@ -38,7 +42,7 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity demonstra como usar o operador AND. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como: Executar uma consulta que retorna resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de estruturaistype.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

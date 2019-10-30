@@ -2,21 +2,21 @@
 title: Herança em C#
 description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 author: rpetrusha
-ms.author: ronpet
 ms.date: 07/05/2018
+ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f09eaaf397d148955a151d178566f2b5a0d935fd
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850994"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039234"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
 Este tutorial apresenta a herança em C#. Herança é um recurso das linguagens de programação orientadas a objeto que permite a definição de uma classe base que, por sua vez, fornece uma funcionalidade específica (dados e comportamento), e a definição de classes derivadas que herdam ou substituem essa funcionalidade.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Este tutorial pressupõe que você instalou o SDK do .NET Core. Visite a página de [downloads do .NET Core](https://dotnet.microsoft.com/download) para baixá-lo. Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
 
@@ -33,7 +33,7 @@ Para criar e executar os exemplos neste tutorial, use o utilitário [dotnet](../
 
 1. Insira o comando [dotnet run](../../core/tools/dotnet-run.md) para compilar e executar o exemplo.
 
-## <a name="background-what-is-inheritance"></a>Segundo plano: O que é a herança?
+## <a name="background-what-is-inheritance"></a>Informações: O que é a herança?
 
 *Herança* é um dos atributos fundamentais da programação orientada a objeto. Ela permite que você defina uma classe filha que reutiliza (herda), estende ou modifica o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de *classe base*. A classe que herda os membros da classe base é chamada de *classe derivada*.
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-A herança se aplica apenas a classes e interfaces. Outras categorias de tipo (structs, delegados e enumerações) não dão suporte à herança. Devido a essas regras, a tentativa de compilar o código como no exemplo a seguir gera o erro do compilador CS0527: “O tipo ‘ValueType’ na lista de interfaces não é uma interface”. A mensagem de erro indica que, embora você possa definir as interfaces implementadas por um struct, não há suporte para a herança.
+A herança se aplica apenas a classes e interfaces. Outras categorias de tipo (structs, delegados e enumerações) não dão suporte à herança. Devido a essas regras, a tentativa de compilar o código como no exemplo a seguir produz o erro do compilador CS0527: "O tipo 'ValueType' na lista de interfaces não é uma interface". A mensagem de erro indica que, embora você possa definir as interfaces implementadas por um struct, não há suporte para a herança.
 
 ```csharp
 using System;
@@ -166,7 +166,7 @@ Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Criação da classe base e das classes derivadas
 
-Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma classe base, a `Publication`, que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um diário, um artigo etc. Você também definirá uma classe `Book` derivada de `Publication`. É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
+Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma classe base, `Publication`, que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um diário, um artigo, etc. Você também definirá uma classe `Book` que deriva de `Publication`. É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>A classe base de Publicação
 
@@ -217,7 +217,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
   `Title` é uma propriedade <xref:System.String> somente leitura cujo valor é fornecido pela chamada do construtor `Publication`.
 
-  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. O lançamento deve ser de um número positivo ou de um <xref:System.ArgumentOutOfRangeException>.
+  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. Ele deve ser um número positivo, caso contrário, será gerada uma exceção do tipo <xref:System.ArgumentOutOfRangeException>.
 
 - Membros relacionados ao publicador
 

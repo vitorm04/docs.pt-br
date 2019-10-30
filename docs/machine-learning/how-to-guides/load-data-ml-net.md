@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 4008f38bf4a20113a3f5c865e38222e5b82f2acc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991357"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040796"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Carregar dados de arquivos e outras fontes
 
@@ -110,15 +110,16 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 > [!NOTE]
 > O DatabaseLoader está atualmente em versão prévia. Ele pode ser usado referenciando os pacotes NuGet [Microsoft. ml. experimental](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) e [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) .
 
-O ml.net dá suporte ao carregamento de dados de uma variedade de bancos de dado [`System.Data`](xref:System.Data) relacionais com suporte pelo que incluem SQL Server, banco de dados SQL do Azure, Oracle, SQLite, PostgreSQL, progresso, IBM DB2 e muito mais.
+O ML.NET dá suporte ao carregamento de dados de uma variedade de bancos de dado relacionais com suporte de [`System.Data`](xref:System.Data) que incluem SQL Server, banco de dados SQL do Azure, Oracle, SQLite, PostgreSQL, progresso, IBM DB2 e muitos outros.
 
-Dado um banco de dados com uma `House` tabela chamada e o esquema a seguir:
+Dado um banco de dados com uma tabela chamada `House` e o esquema a seguir:
 
 ```SQL
 CREATE TABLE [House] (
-    [HouseId] int NOT NULL IDENTITY,
-    [Size] real NOT NULL,
-    [Price] real NOT NULL
+    [HouseId] INT NOT NULL IDENTITY,
+    [Size] INT NOT NULL,
+    [NumBed] INT NOT NULL,
+    [Price] REAL NOT NULL
     CONSTRAINT [PK_House] PRIMARY KEY ([HouseId])
 );
 ```
@@ -129,12 +130,14 @@ Os dados podem ser modelados por uma classe como `HouseData`.
 public class HouseData
 {
     public float Size { get; set; }
+    
+    public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
 ```
 
-Em seguida, dentro do seu aplicativo, crie `DatabaseLoader`um.
+Em seguida, dentro do seu aplicativo, crie um `DatabaseLoader`.
 
 ```csharp
 MLContext mlContext = new MLContext();
@@ -142,17 +145,19 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Defina a cadeia de conexão, bem como o comando SQL a ser executado no banco de dados e `DatabaseSource` crie uma instância. Este exemplo usa um banco de dados SQL Server LocalDB com um caminho de arquivo. No entanto, o DatabaseLoader dá suporte a qualquer outra cadeia de conexão válida para bancos de dados locais e na nuvem.
+Defina a cadeia de conexão, bem como o comando SQL a ser executado no banco de dados e crie uma instância de `DatabaseSource`. Este exemplo usa um banco de dados SQL Server LocalDB com um caminho de arquivo. No entanto, o DatabaseLoader dá suporte a qualquer outra cadeia de conexão válida para bancos de dados locais e na nuvem.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
 
-string sqlCommand = "SELECT Size,Price FROM House";
+string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM House";
 
-DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance,connectionString,sqlCommand);
+DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-Por fim, use `Load` o método para carregar os dados em [`IDataView`](xref:Microsoft.ML.IDataView)um.
+Dados numéricos que não sejam do tipo [`Real`](xref:System.Data.SqlDbType) precisarão ser convertidos em [`Real`](xref:System.Data.SqlDbType). O tipo de [`Real`](xref:System.Data.SqlDbType) é representado como um valor de ponto flutuante de precisão simples ou [`Single`](xref:System.Single), o tipo de entrada esperado por algoritmos ml.net. Neste exemplo, a coluna `NumBed` é um número inteiro no banco de dados. Usando a função interna `CAST`, ela é convertida em [`Real`](xref:System.Data.SqlDbType). Como a propriedade `Price` já é do tipo [`Real`](xref:System.Data.SqlDbType) ela é carregada como está.
+
+Use o método `Load` para carregar os dados em um [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 IDataView data = loader.Load(dbSource);
@@ -205,3 +210,7 @@ MLContext mlContext = new MLContext();
 //Load Data
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
+
+## <a name="next-steps"></a>Próximas etapas
+
+Se você estiver usando o construtor de modelos para treinar o modelo de aprendizado de máquina, consulte [carregar dados de treinamento no construtor de modelos](load-data-model-builder.md).

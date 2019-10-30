@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: d983ee09704ff69fdedfa95a31942161162f73eb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970648"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037971"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca .NET Standard com o .NET Core no Visual Studio 2017
 
@@ -42,11 +42,11 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
    O código-fonte criado pelo modelo de teste de unidade faz o seguinte:
 
-   * Ele importa o namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contém os tipos usados para o teste de unidade.
+   - Ele importa o namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contém os tipos usados para o teste de unidade.
 
-   * Ele aplica o atributo<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] é executado automaticamente quando o teste de unidade é executado.
+   - Ele aplica o atributo<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] é executado automaticamente quando o teste de unidade é executado.
 
-   * Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
+   - Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto **StringLibraryTest** e selecione **Adicionar Referência** no menu de contexto.
 
@@ -73,11 +73,11 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
    O código-fonte criado pelo modelo de teste de unidade faz o seguinte:
 
-   * Ele importa o namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contém os tipos usados para o teste de unidade.
+   - Ele importa o namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contém os tipos usados para o teste de unidade.
 
-   * Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> é executado automaticamente quando o teste de unidade é executado.
+   - Ele aplica o atributo<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> é executado automaticamente quando o teste de unidade é executado.
 
-   * Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
+   - Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto **StringLibraryTest** e selecione **Adicionar Referência** no menu de contexto.
 
@@ -93,7 +93,7 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
 Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> em uma classe de teste de unidade, a classe à qual o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> é aplicado. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método têm êxito.
 
-Os testes mais comuns chamam membros da classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns de seus métodos chamados com mais frequência são mostrados na tabela abaixo.
+Os testes mais comuns chamam membros da classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns de seus métodos chamados com mais frequência são mostrados na tabela a seguir:
 
 Métodos assert | Função
 --- | ---
@@ -116,7 +116,7 @@ Para criar os métodos de teste:
 
 1. Na janela de código *UnitTest1.cs*, substitua o código pelo seguinte código:
 
-   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Observe que seu teste de caracteres maiúsculos no método `TestStartsWithUpper` inclui a letra maiúscula grega alfa (U+0391) e a letra maiúscula cirílica EM (U+041C) e o teste de caracteres minúsculos no método `TestDoesNotStartWithUpper` inclui a letra minúscula grega alfa (U+03B1) e a letra minúscula cirílica Ghe (U+0433).
 
@@ -128,7 +128,7 @@ Para criar os métodos de teste:
 
 1. Na janela de código *UnitTest1.vb*, substitua o código pelo seguinte código:
 
-    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Observe que seu teste de caracteres maiúsculos no método `TestStartsWithUpper` inclui a letra maiúscula grega alfa (U+0391) e a letra maiúscula cirílica EM (U+041C) e o teste de caracteres minúsculos no método `TestDoesNotStartWithUpper` inclui a letra minúscula grega alfa (U+03B1) e a letra minúscula cirílica Ghe (U+0433).
 
@@ -171,7 +171,7 @@ Sua execução de teste não apresentou falhas, mas altere-a um pouco para que u
 
    ![Janela Gerenciador de Testes com testes com falha](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Na seção **Testes com Falha**, selecione o teste com falha, `TestDoesNotStartWith`. A janela **Gerenciador de Testes** exibe a mensagem produzida pelo assert: "Falha em Assert.IsFalse. Esperado para 'Error': false, real: True". Devido à falha, todas as cadeias de caracteres na matriz após "Error" não foram testadas.
+1. Na seção **Testes com Falha**, selecione o teste com falha, `TestDoesNotStartWith`. A janela **Gerenciador de Testes** mostra a mensagem produzida pelo assert: "Assert.IsFalse falhou. Esperado para 'Error': false, real: True". Devido à falha, todas as cadeias de caracteres na matriz após "Error" não foram testadas.
 
    ![Janela Gerenciador de Testes mostrando a falha de asserção Is False](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
