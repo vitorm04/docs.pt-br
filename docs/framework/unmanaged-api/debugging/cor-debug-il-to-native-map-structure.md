@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132375"
 ---
-# <a name="cor_debug_il_to_native_map-structure"></a><span data-ttu-id="d121c-102">Estrutura COR_DEBUG_IL_TO_NATIVE_MAP</span><span class="sxs-lookup"><span data-stu-id="d121c-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
-<span data-ttu-id="d121c-103">Contém os deslocamentos que são usados ​​para mapear o código da MSIL (Microsoft intermediate language) para o código nativo.</span><span class="sxs-lookup"><span data-stu-id="d121c-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
+# <a name="cor_debug_il_to_native_map-structure"></a><span data-ttu-id="04950-102">Estrutura COR_DEBUG_IL_TO_NATIVE_MAP</span><span class="sxs-lookup"><span data-stu-id="04950-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
+<span data-ttu-id="04950-103">Contém os deslocamentos que são usados ​​para mapear o código da MSIL (Microsoft intermediate language) para o código nativo.</span><span class="sxs-lookup"><span data-stu-id="04950-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d121c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d121c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04950-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="04950-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
@@ -36,26 +34,26 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d121c-105">Membros</span><span class="sxs-lookup"><span data-stu-id="d121c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="04950-105">Membros</span><span class="sxs-lookup"><span data-stu-id="04950-105">Members</span></span>  
   
-|<span data-ttu-id="d121c-106">Membro</span><span class="sxs-lookup"><span data-stu-id="d121c-106">Member</span></span>|<span data-ttu-id="d121c-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="d121c-107">Description</span></span>|  
+|<span data-ttu-id="04950-106">Membro</span><span class="sxs-lookup"><span data-stu-id="04950-106">Member</span></span>|<span data-ttu-id="04950-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="04950-107">Description</span></span>|  
 |------------|-----------------|  
-|`ilOffset`|<span data-ttu-id="d121c-108">O deslocamento do código MSIL.</span><span class="sxs-lookup"><span data-stu-id="d121c-108">The offset of the MSIL code.</span></span>|  
-|`nativeStartOffset`|<span data-ttu-id="d121c-109">O deslocamento do início do código nativo.</span><span class="sxs-lookup"><span data-stu-id="d121c-109">The offset of the start of the native code.</span></span>|  
-|`nativeEndOffset`|<span data-ttu-id="d121c-110">O deslocamento do final do código nativo.</span><span class="sxs-lookup"><span data-stu-id="d121c-110">The offset of the end of the native code.</span></span>|  
+|`ilOffset`|<span data-ttu-id="04950-108">O deslocamento do código MSIL.</span><span class="sxs-lookup"><span data-stu-id="04950-108">The offset of the MSIL code.</span></span>|  
+|`nativeStartOffset`|<span data-ttu-id="04950-109">O deslocamento do início do código nativo.</span><span class="sxs-lookup"><span data-stu-id="04950-109">The offset of the start of the native code.</span></span>|  
+|`nativeEndOffset`|<span data-ttu-id="04950-110">O deslocamento do final do código nativo.</span><span class="sxs-lookup"><span data-stu-id="04950-110">The offset of the end of the native code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d121c-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d121c-111">Requirements</span></span>  
- <span data-ttu-id="d121c-112">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d121c-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04950-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="04950-111">Requirements</span></span>  
+ <span data-ttu-id="04950-112">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04950-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d121c-113">**Cabeçalho:** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="d121c-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
+ <span data-ttu-id="04950-113">**Cabeçalho:** CorProf. idl, CorDebug. idl</span><span class="sxs-lookup"><span data-stu-id="04950-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
   
- <span data-ttu-id="d121c-114">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d121c-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="04950-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04950-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d121c-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d121c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="04950-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04950-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d121c-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d121c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04950-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="04950-116">See also</span></span>
 
-- [<span data-ttu-id="d121c-117">Método GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="d121c-117">GetILToNativeMapping Method</span></span>](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [<span data-ttu-id="d121c-118">Método GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="d121c-118">GetILToNativeMapping Method</span></span>](icordebugcode-getiltonativemapping-method.md)
-- [<span data-ttu-id="d121c-119">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="d121c-119">Debugging Structures</span></span>](debugging-structures.md)
-- [<span data-ttu-id="d121c-120">Depuração</span><span class="sxs-lookup"><span data-stu-id="d121c-120">Debugging</span></span>](index.md)
+- [<span data-ttu-id="04950-117">Método GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="04950-117">GetILToNativeMapping Method</span></span>](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [<span data-ttu-id="04950-118">Método GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="04950-118">GetILToNativeMapping Method</span></span>](icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="04950-119">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="04950-119">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="04950-120">Depuração</span><span class="sxs-lookup"><span data-stu-id="04950-120">Debugging</span></span>](index.md)

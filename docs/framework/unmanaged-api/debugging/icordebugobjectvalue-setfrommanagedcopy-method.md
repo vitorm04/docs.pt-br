@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2cee9108-a58d-48a8-b7d4-6beb6da3f4bb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b35c0b7028a07e6b760c0e3142995599f30c4c1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 62f9c6d70b789b52dcfe667b581552bb190a0a1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766223"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129739"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="dd0e1-102">Método ICorDebugObjectValue::SetFromManagedCopy</span><span class="sxs-lookup"><span data-stu-id="dd0e1-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="dd0e1-103">`SetFromManagedCopy` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="dd0e1-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="dd0e1-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="dd0e1-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="334c2-102">Método ICorDebugObjectValue::SetFromManagedCopy</span><span class="sxs-lookup"><span data-stu-id="334c2-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+<span data-ttu-id="334c2-103">`SetFromManagedCopy` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="334c2-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="334c2-104">Não chame esse método.</span><span class="sxs-lookup"><span data-stu-id="334c2-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd0e1-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dd0e1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="334c2-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="334c2-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFromManagedCopy (  
@@ -35,7 +33,7 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dd0e1-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dd0e1-106">Requirements</span></span>  
- <span data-ttu-id="dd0e1-107">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dd0e1-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="334c2-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="334c2-106">Requirements</span></span>  
+ <span data-ttu-id="334c2-107">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="334c2-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd0e1-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dd0e1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="334c2-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="334c2-108">See also</span></span>

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089053"
 ---
-# <a name="icordebugappdomain2getfunctionpointertype-method"></a><span data-ttu-id="c76c2-102">Método ICorDebugAppDomain2::GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="c76c2-102">ICorDebugAppDomain2::GetFunctionPointerType Method</span></span>
-<span data-ttu-id="c76c2-103">Obtém um ponteiro para uma função que tem uma determinada assinatura.</span><span class="sxs-lookup"><span data-stu-id="c76c2-103">Gets a pointer to a function that has a given signature.</span></span>  
+# <a name="icordebugappdomain2getfunctionpointertype-method"></a><span data-ttu-id="da0aa-102">Método ICorDebugAppDomain2::GetFunctionPointerType</span><span class="sxs-lookup"><span data-stu-id="da0aa-102">ICorDebugAppDomain2::GetFunctionPointerType Method</span></span>
+<span data-ttu-id="da0aa-103">Obtém um ponteiro para uma função que tem uma determinada assinatura.</span><span class="sxs-lookup"><span data-stu-id="da0aa-103">Gets a pointer to a function that has a given signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c76c2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c76c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da0aa-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="da0aa-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionPointerType (  
@@ -37,21 +35,21 @@ HRESULT GetFunctionPointerType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c76c2-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c76c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da0aa-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="da0aa-105">Parameters</span></span>  
  `nTypeArgs`  
- <span data-ttu-id="c76c2-106">[in] O número de argumentos de tipo para a função.</span><span class="sxs-lookup"><span data-stu-id="c76c2-106">[in] The number of type arguments for the function.</span></span>  
+ <span data-ttu-id="da0aa-106">no O número de argumentos de tipo para a função.</span><span class="sxs-lookup"><span data-stu-id="da0aa-106">[in] The number of type arguments for the function.</span></span>  
   
  `ppTypeArgs`  
- <span data-ttu-id="c76c2-107">[in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugType que representa um argumento de tipo da função.</span><span class="sxs-lookup"><span data-stu-id="c76c2-107">[in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument of the function.</span></span> <span data-ttu-id="c76c2-108">O primeiro elemento é o tipo de retorno; cada um dos outros elementos é um tipo de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="c76c2-108">The first element is the return type; each of the other elements is a parameter type.</span></span>  
+ <span data-ttu-id="da0aa-107">no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugType que representa um argumento de tipo da função.</span><span class="sxs-lookup"><span data-stu-id="da0aa-107">[in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument of the function.</span></span> <span data-ttu-id="da0aa-108">O primeiro elemento é o tipo de retorno; cada um dos outros elementos é um tipo de parâmetro.</span><span class="sxs-lookup"><span data-stu-id="da0aa-108">The first element is the return type; each of the other elements is a parameter type.</span></span>  
   
  `ppType`  
- <span data-ttu-id="c76c2-109">[out] Um ponteiro para o endereço de um `ICorDebugType` objeto que representa o ponteiro para a função.</span><span class="sxs-lookup"><span data-stu-id="c76c2-109">[out] A pointer to the address of an `ICorDebugType` object that represents the pointer to the function.</span></span>  
+ <span data-ttu-id="da0aa-109">fora Um ponteiro para o endereço de um objeto de `ICorDebugType` que representa o ponteiro para a função.</span><span class="sxs-lookup"><span data-stu-id="da0aa-109">[out] A pointer to the address of an `ICorDebugType` object that represents the pointer to the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c76c2-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c76c2-110">Requirements</span></span>  
- <span data-ttu-id="c76c2-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c76c2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da0aa-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="da0aa-110">Requirements</span></span>  
+ <span data-ttu-id="da0aa-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da0aa-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c76c2-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c76c2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="da0aa-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da0aa-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c76c2-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c76c2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="da0aa-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da0aa-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c76c2-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c76c2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="da0aa-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da0aa-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

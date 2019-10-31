@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b331c3da4b09798c22efa2acfbf711e1f701d990
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fcef35bac71bab49e15eb85baed9c20b7ce5271
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130413"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="44454-102">Método ICorDebugEditAndContinueSnapshot::SetPEBytes</span><span class="sxs-lookup"><span data-stu-id="44454-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="44454-103">`SetPEBytes` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="44454-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="44454-104">Não chame este método.</span><span class="sxs-lookup"><span data-stu-id="44454-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="fe519-102">Método ICorDebugEditAndContinueSnapshot::SetPEBytes</span><span class="sxs-lookup"><span data-stu-id="fe519-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+<span data-ttu-id="fe519-103">`SetPEBytes` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="fe519-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="fe519-104">Não chame esse método.</span><span class="sxs-lookup"><span data-stu-id="fe519-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44454-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="44454-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe519-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fe519-105">See also</span></span>
 
-- [<span data-ttu-id="44454-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="44454-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="fe519-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="fe519-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
