@@ -4,7 +4,7 @@ description: Saiba como tratar falhas parciais normalmente. Um microsserviço po
 ms.date: 10/16/2018
 ms.openlocfilehash: a667ad2e1456db7b5846023de27d3797dad58731
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68674693"

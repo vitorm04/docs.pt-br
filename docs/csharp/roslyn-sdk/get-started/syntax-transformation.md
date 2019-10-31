@@ -5,7 +5,7 @@ ms.date: 06/01/2018
 ms.custom: mvc
 ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
 ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 06/21/2019
 ms.locfileid: "67306925"

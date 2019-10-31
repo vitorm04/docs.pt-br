@@ -5,7 +5,7 @@ ms.date: 04/12/2017
 ms.custom: seodec18
 ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
 ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/14/2019
 ms.locfileid: "69012979"

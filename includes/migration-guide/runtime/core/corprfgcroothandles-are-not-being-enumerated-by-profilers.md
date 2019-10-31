@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 8dc98b2d9c2c0b5f145ebce48cf8f5e054975c6e
 ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/11/2019
 ms.locfileid: "67858576"
 ---
-### <a name="corprfgcroothandles-are-not-being-enumerated-by-profilers"></a><span data-ttu-id="462f2-101">COR_PRF_GC_ROOT_HANDLEs não estão sendo enumerados por criadores de perfil</span><span class="sxs-lookup"><span data-stu-id="462f2-101">COR_PRF_GC_ROOT_HANDLEs are not being enumerated by profilers</span></span>
+### <a name="cor_prf_gc_root_handles-are-not-being-enumerated-by-profilers"></a><span data-ttu-id="462f2-101">COR_PRF_GC_ROOT_HANDLEs não estão sendo enumerados por criadores de perfil</span><span class="sxs-lookup"><span data-stu-id="462f2-101">COR_PRF_GC_ROOT_HANDLEs are not being enumerated by profilers</span></span>
 
 |   |   |
 |---|---|
