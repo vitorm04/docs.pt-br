@@ -6,14 +6,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4663c42b784334f66318c61d531ab4cee2f8b02e
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 618db9faff137e6ff0f878c928e3a889cff37838
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120932"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -47,13 +45,13 @@ O .NET Core e o .NET Framework (do .NET Framework 4.5.1 em diante) incluem a pro
 
 A Figura 1 ilustra um cenário em que o GC forma a geração 1 após o primeiro GC de geração 0, em que `Obj1` e `Obj3` estão mortos, e forma a geração 2 após o primeiro GC de geração 1, em que `Obj2` e `Obj5` estão mortos. Observe que isso e as figuras a seguir são apenas para fins de ilustração; elas contêm muito poucos objetos para mostrar melhor o que acontece no heap. Na verdade, muitos mais objetos normalmente estão envolvidos em um GC.
 
-![Figura 1: Um GC ger. 0 e um GC ger. 1](media/loh/loh-figure-1.jpg)\
-Figura 1: Um GC geração 0 e um GC geração 1.
+![Figura 1: um GC de geração 0 e um GC de geração 1](media/loh/loh-figure-1.jpg)\
+Figura 1: um GC de geração 0 e um GC de geração 1.
 
 A Figura 2 mostra que depois de um GC de geração 2 que observou que `Obj1` e `Obj2` estão mortos, o GC forma um espaço livre contíguo fora da memória que costumava ser ocupado por `Obj1` e `Obj2`, que foi então usado para atender a uma solicitação de alocação para `Obj4`. O espaço após o último objeto, `Obj3`, ao final do segmento também pode ser usado para atender a solicitações de alocação.
 
-![Figura 2: Depois de um GC ger. 2](media/loh/loh-figure-2.jpg)\
-Figura 2: Depois de um GC geração 2
+![Figura 2: após uma GC de geração 2](media/loh/loh-figure-2.jpg)\
+Figura 2: após um GC de geração 2
 
 Se não houver espaço livre suficiente para acomodar as solicitações de alocação de objeto grande, o GC primeiro tentará adquirir mais segmentos do sistema operacional. Se isso falhar, ele disparará um GC de geração 2 na esperança de liberar algum espaço.
 
@@ -61,8 +59,8 @@ Durante um GC de geração 1 ou 2, o coletor de lixo libera segmentos que não c
 
 Como o LOH é coletado apenas durante os GCs de geração 2, o segmento de LOH só pode ser liberado durante um desses GCs. A Figura 3 ilustra um cenário em que o coletor de lixo libera um segmento (segmento 2) novamente para o sistema operacional e anula a confirmação de mais espaço nos segmentos restantes. Se ele precisar usar o espaço com anulação de confirmação no final do segmento para atender a solicitações de alocação de objeto grande, ele confirmará a memória novamente. (Para obter uma explicação da confirmação/anulação de confirmação, confira a documentação do [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).)
 
-![Figura 3: LOH depois de um GC ger. 2](media/loh/loh-figure-3.jpg)\
-Figura 3: LOH depois de um GC geração 2
+![Figura 3: LOH após uma GC de geração 2](media/loh/loh-figure-3.jpg)\
+Figura 3: o LOH após um GC de geração 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quando um objeto grande é coletado?
 
@@ -157,7 +155,7 @@ Esses contadores de desempenho geralmente são uma boa primeira etapa na investi
 Uma maneira comum de examinar contadores de desempenho é com o Monitor de Desempenho (perfmon.exe). Use "Adicionar Contadores" para adicionar o contador interessante a processos de seu interesse. Você pode salvar os dados do contador de desempenho em um arquivo de log como mostra a Figura 4:
 
 ![Captura de tela que mostra a adição de contadores de desempenho.](media/large-object-heap/add-performance-counter.png)
-Figura 4: LOH depois de um GC geração 2
+Figura 4: o LOH após um GC de geração 2
 
 Os contadores de desempenho também podem ser consultados de forma programática. Várias pessoas os coletam dessa maneira como parte de seu processo de teste de rotina. Quando elas identificam contadores com valores fora do comum, elas usam outro meio de obter dados mais detalhados para ajudar na investigação.
 
@@ -185,7 +183,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 O resultado é semelhante a este:
 
 ![Captura de tela que mostra os eventos ETW no PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
-Figura 5: Eventos de ETW mostrados usando o PerfView
+Figura 5: Eventos ETW mostrados usando PerfView
 
 Como você pode ver, todos os GCs são GCs de geração 2 e são disparados por AllocLarge, o que significa que a alocação de um objeto grande disparou esse GC. Sabemos que essas alocações são temporárias porque a coluna **% da Taxa de Sobrevivência de LOH** indica 1%.
 
@@ -198,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 coleta um evento AllocationTick disparado aproximadamente a cada 100 mil alocações. Em outras palavras, um evento é disparado sempre que um objeto grande é alocado. Em seguida, você pode observar uma das exibições de Alocação de Heap de GC, que mostra as pilhas de chamadas que alocaram objetos grandes:
 
 ![Captura de tela que mostra a exibição de heap de um coletor de lixo.](media/large-object-heap/garbage-collector-heap.png)
-Figura 6: Uma exibição de alocação de heap de GC
+Figura 6: uma exibição de Alocação de Heap de GC
 
 Como você pode ver, esse é um teste muito simples que aloca apenas objetos grandes de seu método `Main`.
 
@@ -310,7 +308,7 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 Esse comando invade o depurador e mostra a pilha de chamadas somente se [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) é chamado com um tamanho de alocação maior que 8 MB (0x800000).
 
-O CLR 2.0 adicionou um recurso chamado *VM Hoarding*, que pode ser útil para cenários em que os segmentos (incluindo heaps de objeto grande e pequeno) são frequentemente adquiridos e liberados. Para especificar o VM Hoarding, você especifica um sinalizador de inicialização chamado `STARTUP_HOARD_GC_VM` pela API de hospedagem. Em vez de liberar segmentos vazios novamente para o sistema operacional, o CLR anula a confirmação da memória nesses segmentos e os coloca em uma lista de espera. (Observe que o CLR não faz isso para segmentos muito grandes.) Posteriormente, o CLR usa esses segmentos para atender a novas solicitações de segmento. Na próxima vez que seu aplicativo precisar de um novo segmento, o CLR usará um dessa lista de espera, caso consiga encontrar um que seja grande o suficiente.
+O CLR 2.0 adicionou um recurso chamado *VM Hoarding*, que pode ser útil para cenários em que os segmentos (incluindo heaps de objeto grande e pequeno) são frequentemente adquiridos e liberados. Para especificar o VM Hoarding, você especifica um sinalizador de inicialização chamado `STARTUP_HOARD_GC_VM` pela API de hospedagem. Em vez de liberar segmentos vazios novamente para o sistema operacional, o CLR anula a confirmação da memória nesses segmentos e os coloca em uma lista de espera. (Observe que o CLR não faz isso para segmentos muito grandes.) O CLR usa posteriormente esses segmentos para atender a novas solicitações de segmento. Na próxima vez que seu aplicativo precisar de um novo segmento, o CLR usará um dessa lista de espera, caso consiga encontrar um que seja grande o suficiente.
 
 O VM Hoarding também é útil para aplicativos que desejam manter os segmentos que eles já adquiriram, como alguns aplicativos para servidores que são os aplicativos dominantes em execução no sistema, para evitar exceções de memória insuficiente.
 

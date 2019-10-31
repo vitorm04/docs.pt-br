@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 610225708bf990850fce73d6d7ff66c556e24e5d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88270cb73515cc1a671bfb3fb5c479697ad7b359
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760598"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137539"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>Método ICorDebugStepper::SetRangeIL
-Define um valor que especifica se chamadas para [ICorDebugStepper:: Steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passar argumento código language (MSIL) do método que está sendo de nível intermediário de valores que são relativos ao código nativo ou em relação à Microsoft por meio do.  
+Define um valor que especifica se as chamadas para [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) passam valores de argumentos que são relativos ao código nativo ou em relação ao código MSIL (Microsoft Intermediate Language) do método que está sendo percorrido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT SetRangeIL (
   
 ## <a name="parameters"></a>Parâmetros  
  `bIL`  
- [in] Definido como `true` para especificar que os intervalos são em relação ao código MSIL. Definido como `false` para especificar que os intervalos são em relação ao código nativo. O valor padrão é `true`.  
+ no Defina como `true` para especificar que os intervalos são relativos ao código MSIL. Defina como `false` para especificar que os intervalos são relativos ao código nativo. O valor padrão é `true`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

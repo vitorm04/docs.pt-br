@@ -26,14 +26,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae38c8c2446ead128925e0e1d910ae12c8f220f
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 9c8d459195693e8eb084f7e87427a3ea37dd63ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736753"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129924"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 

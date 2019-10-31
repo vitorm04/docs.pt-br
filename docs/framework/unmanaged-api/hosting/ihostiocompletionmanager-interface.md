@@ -14,43 +14,41 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c3bebe8eabd4d5fd5faec21e0b0efc408353bc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51d79c398c94ec355528140325da2c25422cbad9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796806"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133854"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>Interface IHostIoCompletionManager
-Fornece métodos que permitem que o common language runtime (CLR) para interagir com as portas de conclusão de e/s fornecidas pelo host.  
+Fornece métodos que permitem que o Common Language Runtime (CLR) interaja com portas de conclusão de e/s fornecidas pelo host.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)|Associa um identificador para uma porta de conclusão de e/s.|  
+|[Método Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)|Associa um identificador a uma porta de conclusão de e/s.|  
 |[Método CloseIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-closeiocompletionport-method.md)|Fecha uma porta que foi criada por meio de uma chamada anterior para `CreateIoCompletionPort`.|  
-|[Método CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)|Solicita que o host, crie uma nova porta de conclusão de e/s.|  
-|[Método GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getavailablethreads-method.md)|Obtém o número de threads de conclusão de e/s que atualmente não estão processando solicitações.|  
-|[Método GetHostOverlappedSize](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)|Obtém o tamanho de qualquer host pretende anexar às solicitações de e/s de dados personalizados.|  
-|[Método GetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getmaxthreads-method.md)|Obtém o número máximo de threads que o host pode alocar para atender a solicitações de e/s.|  
-|[Método GetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getminthreads-method.md)|Obtém o número mínimo de threads que o host fornece para atender a solicitações de e/s.|  
-|[Método InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)|Fornece o host com uma oportunidade de inicializar quaisquer dados personalizados sobre uma solicitação de e/s.|  
-|[Método SetCLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|Fornece o host com um ponteiro de interface para um [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) instância implementada pelo CLR.|  
-|[Método SetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setmaxthreads-method.md)|Define o número máximo de threads que aloca o host para atender a solicitações de e/s.|  
-|[Método SetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setminthreads-method.md)|Define o número mínimo de threads que o host deve alocar até a conclusão de e/s.|  
+|[Método CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)|Solicita que o host crie uma nova porta de conclusão de e/s.|  
+|[Método GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getavailablethreads-method.md)|Obtém o número de threads de conclusão de e/s que não estão processando solicitações no momento.|  
+|[Método GetHostOverlappedSize](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)|Obtém o tamanho de qualquer dado personalizado que o host pretende acrescentar às solicitações de e/s.|  
+|[Método GetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getmaxthreads-method.md)|Obtém o número máximo de threads que o host pode alocar para solicitações de e/s de serviço.|  
+|[Método GetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-getminthreads-method.md)|Obtém o número mínimo de threads que o host fornece para atender solicitações de e/s.|  
+|[Método InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)|Fornece ao host uma oportunidade de inicializar quaisquer dados personalizados sobre uma solicitação de e/s.|  
+|[Método SetCLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|Fornece ao host um ponteiro de interface para uma instância [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) implementada pelo CLR.|  
+|[Método SetMaxThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setmaxthreads-method.md)|Define o número máximo de threads que o host aloca para atender às solicitações de e/s.|  
+|[Método SetMinThreads](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setminthreads-method.md)|Define o número mínimo de threads que o host deve alocar para a conclusão de e/s.|  
   
 ## <a name="remarks"></a>Comentários  
- `IHostIoCompletionManager` corresponde ao `ICLRIoCompletionManager` interface implementada pelo CLR. O CLR chama os métodos de `IHostIoCompletionManager` para associar identificadores para as portas que fornece o host e o host chama os métodos de `ICLRIoCompletionManager` para relatar a conclusão das solicitações de e/s.  
+ `IHostIoCompletionManager` corresponde à interface `ICLRIoCompletionManager` implementada pelo CLR. O CLR chama os métodos de `IHostIoCompletionManager` para associar identificadores às portas que o host fornece, e o host chama os métodos de `ICLRIoCompletionManager` para relatar a conclusão de solicitações de e/s.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

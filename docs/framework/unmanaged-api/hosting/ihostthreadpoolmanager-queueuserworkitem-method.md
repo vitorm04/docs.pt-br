@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39c35884d0fb53baefafbf86391a349e141418a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749153"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141318"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>Método IHostThreadPoolManager::QueueUserWorkItem
-Enfileira uma função para a execução e especifica um objeto que contém dados a serem usados por essa função. A função é executada quando um thread fique disponível.  
+Enfileira uma função para execução e especifica um objeto que contém os dados a serem usados por essa função. A função é executada quando um thread se torna disponível.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,34 +37,34 @@ HRESULT QueueUserWorkItem (
   
 ## <a name="parameters"></a>Parâmetros  
  `Function`  
- [in] Um ponteiro de função que representa a função a ser executada.  
+ no Um ponteiro de função que representa a função a ser executada.  
   
  `Context`  
- [in] Um objeto que contém dados a serem usados pelo `Function`.  
+ no Um objeto que contém dados a serem usados pelo `Function`.  
   
  `Flags`  
- [in] Um dos sinalizadores de valores, conforme definido para o Win32 `QueueUserWorkItem` método, que controlam a execução.  
+ no Um dos valores de flags, conforme definido para o método de `QueueUserWorkItem` do Win32, que controla a execução.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`QueueUserWorkItem` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `QueueUserWorkItem` Enfileira um item de trabalho para um thread de trabalho no pool de threads. Seus tipos de assinatura e de parâmetro são idênticos da função do Win32 correspondente, que tem o mesmo nome. Para obter mais informações, consulte a documentação da plataforma Windows.  
+ `QueueUserWorkItem` enfileira um item de trabalho para um thread de trabalho no pool de threads. Seus tipos de assinatura e parâmetro são idênticos aos da função Win32 correspondente, que tem o mesmo nome. Para obter mais informações, consulte a documentação da plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

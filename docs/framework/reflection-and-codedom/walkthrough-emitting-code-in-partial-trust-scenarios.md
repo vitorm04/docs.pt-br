@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Emitindo o código em cenários de confiança parcial'
+title: 'Instruções passo a passo: emitindo código em cenários de confiança parcial'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,16 +14,14 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045750"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129986"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Passo a passo: Emitindo o código em cenários de confiança parcial
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Instruções passo a passo: emitindo código em cenários de confiança parcial
 
 A emissão de reflexão usa a mesma API definida na confiança total ou parcial, porém alguns recursos exigem permissões especiais em código parcialmente confiável. Além disso, a emissão de reflexão tem um recurso, os métodos dinâmicos hospedados anonimamente, que é projetado para ser usado com confiança parcial e por assemblies transparentes de segurança.
 
@@ -35,7 +33,7 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 - [Configurando uma área restrita simples para testar código parcialmente confiável](#Setting_up).
 
   > [!IMPORTANT]
-  > Essa é uma maneira simples de experimentar o código em confiança parcial. Para executar o código que, na verdade, é proveniente de locais não confiáveis, confira [Como: Executar o código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+  > Essa é uma maneira simples de experimentar o código em confiança parcial. Para executar código que realmente vem de locais não confiáveis, consulte [Como executar código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 - [Executando código em domínios de aplicativo parcialmente confiável](#Running_code).
 
@@ -71,7 +69,7 @@ O procedimento a seguir cria um domínio do aplicativo em área restrita que exe
 2. Crie um objeto <xref:System.AppDomainSetup> para inicializar o domínio do aplicativo com um caminho de aplicativo.
 
     > [!IMPORTANT]
-    > Para simplificar, este exemplo de código usa a pasta atual. Para executar o código que, na verdade, é proveniente da Internet, use uma pasta separada para o código não confiável, conforme descrito em [Como: Executar o código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+    > Para simplificar, este exemplo de código usa a pasta atual. Para executar um código que realmente vem da Internet, use uma pasta separada para o código não confiável, conforme descrito em [Como executar código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -226,4 +224,4 @@ Essa comparação mostra como <xref:System.Security.Permissions.ReflectionPermis
 ## <a name="see-also"></a>Consulte também
 
 - [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)
-- [Como: Executar o código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Como executar código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

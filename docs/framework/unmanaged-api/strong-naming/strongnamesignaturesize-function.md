@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38f98b971e430a2c35a4c484f4f9c4bf387c640c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a8856790b655f071df704879a247169f456ae2f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798962"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130868"
 ---
 # <a name="strongnamesignaturesize-function"></a>Função StrongNameSignatureSize
-Retorna o tamanho da assinatura de nome forte. `StrongNameSignatureSize`normalmente é usado por compiladores para determinar a quantidade de espaço a ser reservada no arquivo ao criar um assembly com assinatura atrasada.  
+Retorna o tamanho da assinatura de nome forte. `StrongNameSignatureSize` normalmente é usado por compiladores para determinar a quantidade de espaço a ser reservada no arquivo ao criar um assembly com assinatura atrasada.  
   
  Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) .  
   
@@ -48,18 +46,18 @@ BOOLEAN StrongNameSignatureSize (
  `pcbSize`  
  no O número de bytes necessários para armazenar a assinatura de nome forte.  
   
-## <a name="return-value"></a>Valor de retorno  
- `true`após a conclusão bem-sucedida; caso contrário `false`,.  
+## <a name="return-value"></a>Valor retornado  
+ `true` após a conclusão bem-sucedida; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Se a `StrongNameSignatureSize` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
+ Se a função `StrongNameSignatureSize` não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** StrongName.h  
+ **Cabeçalho:** StrongName. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

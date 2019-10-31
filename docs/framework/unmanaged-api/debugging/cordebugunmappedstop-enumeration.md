@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739516"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132740"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>Enumeração CorDebugUnmappedStop
 Especifica o tipo de código não mapeado que pode disparar uma interrupção na execução do código pelo passador.  
@@ -44,19 +42,19 @@ typedef enum CorDebugUnmappedStop {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`STOP_NONE`|Não pare em qualquer tipo de código não mapeado.|  
-|`STOP_PROLOG`|Interrompa no código de prólogo.|  
-|`STOP_EPILOG`|Interrompa no código de epílogo.|  
-|`STOP_NO_MAPPING_INFO`|Interrompa no código que não tem nenhuma informação de mapeamento.|  
-|`STOP_OTHER_UNMAPPED`|Interrompa no código não mapeado que não se ajustam o prólogo, epílogo, nenhuma informação de mapeamento ou categoria não gerenciada.|  
-|`STOP_UNMANAGED`|Pare em código não gerenciado. Esse valor é válido somente com depuração interop.|  
-|`STOP_ALL`|Pare em todos os tipos de código não mapeado.|  
+|`STOP_NONE`|Não pare em nenhum tipo de código não mapeado.|  
+|`STOP_PROLOG`|Parar no código de prólogo.|  
+|`STOP_EPILOG`|Pare no código epílogo.|  
+|`STOP_NO_MAPPING_INFO`|Pare no código que não tem informações de mapeamento.|  
+|`STOP_OTHER_UNMAPPED`|Pare no código não mapeado que não caiba nas categorias prólogo, epílogo, no-Mapping-Information ou unmanaged.|  
+|`STOP_UNMANAGED`|Parar em código não gerenciado. Esse valor é válido somente com depuração de interoperabilidade.|  
+|`STOP_ALL`|Parar em todos os tipos de código não mapeado.|  
   
 ## <a name="remarks"></a>Comentários  
- Use o [ICorDebugStepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) método para definir os sinalizadores que especificam o código não mapeado no qual o escalonador será interrompida.  
+ Use o método [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) para definir os sinalizadores que especificam o código não mapeado no qual o stepper será interrompido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

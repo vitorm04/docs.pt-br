@@ -2,14 +2,12 @@
 title: APIs que dependem de reflexão
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049969"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128534"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs que dependem de reflexão
 Em alguns casos, o uso de reflexão no código não é óbvio e, portanto, a cadeia de ferramentas de .NET Native não preserva os metadados necessários no tempo de execução. Este tópico abrange algumas APIs ou padrões de programação comuns que não são consideradas como parte da API de reflexão, mas que dependem de reflexão para serem executados com êxito. Se você usá-los no código-fonte, poderá adicionar informações sobre eles no arquivo de diretivas de tempo de execução (.rd.xml), de modo que as chamadas a essas APIs não gerem uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md) ou outras exceções em tempo de execução.  
@@ -31,7 +29,7 @@ Em alguns casos, o uso de reflexão no código não é óbvio e, portanto, a cad
   
 Esta operação não pode ser executada porque os metadados para o seguinte tipo foram removidos por motivos de desempenho:  
   
-`App1.AppClass`1 < > System. Int32 '.  
+`App1.AppClass`1 < System. Int32 > '.  
   
  Você pode adicionar a seguinte diretiva de tempo de execução ao arquivo de diretivas de tempo de execução para adicionar metadados `Activate` à instanciação específica sobre `AppClass<T>` de <xref:System.Int32?displayProperty=nameWithType>:  
   

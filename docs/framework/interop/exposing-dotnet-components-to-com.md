@@ -6,14 +6,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123484"
 ---
 # <a name="exposing-net-components-to-com"></a>Como expor componentes .NET ao COM
 
@@ -54,4 +52,4 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 ## <a name="see-also"></a>Consulte também
 
 - [Interoperação com código não gerenciado](index.md)
-- [Amostra de interoperabilidade COM: Cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)
+- [Amostra de interoperabilidade COM: cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122397"
 ---
 # <a name="icordebugthreadenumnext-method"></a>Método ICorDebugThreadEnum::Next
-Obtém o número de instâncias especificadas de ICorDebugThread de enumeração, começando na posição atual.  
+Obtém o número de instâncias ICorDebugThread especificadas da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugThread` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugThread` a serem recuperadas.  
   
  `threads`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugThread` objeto que representa um thread.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugThread` que representa um thread.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de `ICorDebugThread` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de instâncias de `ICorDebugThread` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

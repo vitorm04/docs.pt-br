@@ -13,14 +13,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044803"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129869"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -54,10 +52,10 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/add**|Adiciona certificados, CTLs e CRLs a um repositório de certificados.|  
-|**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções **/add** ou **/del**. A opção **/all** não pode ser usada com **/put**.|  
-|**/c**|Adiciona certificados quando usados com **/add**. Exclui certificados quando usados com **/del**. Salva certificados quando usados com **/put**. Exibe certificados quando usados sem as opções **/add**, **/del** ou **/put**.|  
-|**/CRL**|Adiciona CRLs quando usadas com **/add**. Exclui CRLs quando usadas com **/del**. Salva CRLs quando usadas com **/put**. Exibe CRLs quando usadas sem a opção **/add**, **/del** ou **/put**.|  
-|**/CTL**|Adiciona CTLs quando usadas com **/add**. Exclui CTLs quando usadas com **/del**. Salva CTLs quando usadas com **/put**. Exibe CTLs quando usadas sem as opções **/add**, **/del** ou **/put**.|  
+|**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções **/Add** ou **/del** . A opção **/all** não pode ser usada com **/put**.|  
+|**/c**|Adiciona certificados quando usados com **/add**. Exclui certificados quando usados com **/del**. Salva certificados quando usados com **/Put**. Exibe certificados quando usados sem as opções **/add**, **/del** ou **/put**.|  
+|**/CRL**|Adiciona CRLs quando usadas com **/add**. Exclui as CRLs quando usadas com **/del**. Salva as CRLs quando usadas com **/Put**. Exibe CRLs quando usadas sem a opção **/add**, **/del** ou **/put**.|  
+|**/CTL**|Adiciona CTLs quando usadas com **/add**. Exclui as CTLs quando usadas com **/del**. Salva CTLs quando usada com **/Put**. Exibe CTLs quando usadas sem as opções **/add**, **/del** ou **/put**.|  
 |**/del**|Exclui certificados, CTLs e CRLs de um repositório de certificados.|  
 |**/e** *encodingType*|Especifica o tipo de codificação do certificado. O padrão é `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Especifica o sinalizador de repositório aberto. Esse é o parâmetro *dwFlags* passado para **CertOpenStore**. O valor padrão é CERT_SYSTEM_STORE_CURRENT_USER. Essa opção só será ignorada se a opção **/y** for usada.|  
@@ -83,7 +81,7 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
   
 - Salva um certificado X.509, uma CTL ou uma CRL de um repositório de certificados em um arquivo.  
   
- O Certmgr.exe funciona com dois tipos de repositórios de certificados: **StoreFile** e repositório do sistema. Não é necessário especificar o tipo do repositório de certificados; Certmgr.exe pode identificar o tipo de repositório e realizar as operações apropriadas.  
+ Certmgr.exe trabalha com dois tipos de repositórios de certificados: **StoreFile** e repositório do sistema. Não é necessário especificar o tipo do repositório de certificados; Certmgr.exe pode identificar o tipo de repositório e realizar as operações apropriadas.  
   
  A execução de Certmgr.exe sem especificar opções inicia o snap-in certmgr.msc, que tem uma GUI que ajuda nas tarefas de gerenciamento do certificado também disponíveis na linha de comando. A GUI fornece um assistente de importação, que copia certificados, CTLs e CRLs do disco para um repositório de certificados.  
   

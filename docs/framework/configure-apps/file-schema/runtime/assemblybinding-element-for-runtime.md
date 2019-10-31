@@ -8,21 +8,19 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252808"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118140"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<elemento de > assemblyBinding \<para tempo de execução >
+# <a name="assemblybinding-element-for-runtime"></a>\<o elemento > assembly para tempo de execução de \<
 Contém informações sobre o redirecionamento de versão e os locais dos assemblies.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblybinding >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +44,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Encapsula a política de associação e o local do assembly para um assembly. Use uma  **\<** marcação de > de dependentAssembly para cada assembly.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Encapsula a política de associação e o local do assembly para um assembly. Use uma marcação **\<dependentAssembly >** para cada assembly.|  
 |[\<probing>](probing-element.md)|Especifica subdiretórios que o Common Language Runtime pesquisa ao carregar assemblies.|  
 |[\<publisherPolicy>](publisherpolicy-element.md)|Especifica se o tempo de execução aplica a política do editor.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.|  

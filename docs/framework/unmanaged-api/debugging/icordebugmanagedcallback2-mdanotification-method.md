@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4011932af6f4b058906c19566e4c1abe96b409db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ab3819d5c33f090fda1ca9c3dccb5d08ab8f84cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762086"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131456"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Método ICorDebugManagedCallback2::MDANotification
-Fornece notificação de que a execução de código encontrou um Assistente para depuração gerenciada (MDA) no aplicativo que está sendo depurado.  
+Fornece uma notificação de que a execução de código encontrou um MDA (Assistente de depuração gerenciada) no aplicativo que está sendo depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,31 +37,31 @@ HRESULT MDANotification(
   
 ## <a name="parameters"></a>Parâmetros  
  `pController`  
- [in] Um ponteiro para um domínio de aplicativo no qual ocorreu o MDA ou de interface ICorDebugController que expõe o processo.  
+ no Um ponteiro para uma interface ICorDebugController que expõe o domínio do processo ou do aplicativo no qual o MDA ocorreu.  
   
- Um depurador não deve fazer suposições sobre se o controlador é um processo ou um domínio de aplicativo, embora ele sempre pode consultar a interface para a determinação.  
+ Um depurador não deve fazer suposições sobre se o controlador é um processo ou um domínio de aplicativo, embora ele sempre possa consultar a interface para fazer uma determinação.  
   
  `pThread`  
- [in] Um ponteiro para uma interface ICorDebugThread que expõe o thread gerenciado no qual ocorreu o evento de depuração.  
+ no Um ponteiro para uma interface ICorDebugThread que expõe o thread gerenciado no qual o evento de depuração ocorreu.  
   
- Se o MDA ocorreu em uma não gerenciado de thread, o valor de `pThread` será nulo.  
+ Se o MDA ocorreu em um thread não gerenciado, o valor de `pThread` será NULL.  
   
- Você deve obter a ID do thread de sistema operacional (SO) do objeto MDA em si.  
+ Você deve obter a ID do thread do sistema operacional (SO) do próprio objeto MDA.  
   
  `pMDA`  
- [in] Um ponteiro para um [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) interface que expõe as informações de MDA.  
+ no Um ponteiro para uma interface [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) que expõe as informações de MDA.  
   
 ## <a name="remarks"></a>Comentários  
- Um MDA é um aviso de heurística e não requer nenhuma ação explícita do depurador, exceto para chamar [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
+ Um MDA é um aviso heurístico e não requer nenhuma ação de depurador explícita, exceto para chamar [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
   
- O common language runtime (CLR) pode determinar qual MDAs são acionados e quais dados estão em qualquer determinado MDA a qualquer momento. Portanto, os depuradores não deverá criar qualquer funcionalidade que exigem os padrões MDA específicos.  
+ O Common Language Runtime (CLR) pode determinar quais MDAs são disparadas e quais dados estão em qualquer MDA determinado em qualquer ponto. Portanto, os depuradores não devem criar nenhuma funcionalidade que exija padrões de MDA específicos.  
   
- Os MDAs podem ser enfileirados e acionados logo depois que o MDA é encontrado. Isso pode acontecer se o tempo de execução precisa esperar até que ela atinja um ponto seguro para acionar o MDA, em vez de disparar o MDA quando ele encontra. Isso também significa que o tempo de execução pode disparar um número de MDAs em um único conjunto de retornos de chamada na fila (semelhantes a uma operação de evento "anexar").  
+ O MDAs pode ser enfileirado e disparado logo após o MDA ser encontrado. Isso pode acontecer se o tempo de execução precisar esperar até chegar a um ponto seguro para acionar o MDA, em vez de acionar o MDA quando ele encontrá-lo. Isso também significa que o tempo de execução pode disparar vários MDAs em um único conjunto de retornos de chamada em fila (semelhante a uma operação de evento "Attach").  
   
- Um depurador deve liberar a referência a um `ICorDebugMDA` instância imediatamente depois de retornar do `MDANotification` retorno de chamada, para permitir que o CLR reciclar a memória consumida por um MDA. Liberação da instância pode melhorar o desempenho se MDAs muitos estão disparando.  
+ Um depurador deve liberar a referência a uma instância de `ICorDebugMDA` imediatamente após retornar do `MDANotification` de retorno de chamada, para permitir que o CLR Recicle a memória consumida por um MDA. A liberação da instância pode melhorar o desempenho se muitas MDAs estiverem sendo acionadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

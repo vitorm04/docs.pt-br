@@ -7,14 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
-ms.translationtype: HT
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690480"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140600"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes do .NET Framework
 
@@ -39,7 +37,7 @@ Quando você atualiza e depois recompila o código existente, o uso de um tipo o
 
 - Altere seu código removendo o uso do tipo ou do membro, se possível.
 
-     - ou -
+     \- ou -
 
 - Examine a documentação dessa área de tecnologia para determinar como responder à substituição.
 

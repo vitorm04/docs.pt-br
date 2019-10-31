@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099463"
 ---
 # <a name="cor_array_layout-structure"></a>Estrutura COR_ARRAY_LAYOUT
 Fornece informações sobre o layout de um objeto matriz na memória.  
@@ -55,16 +53,16 @@ typedef struct COR_ARRAY_LAYOUT {
 |`rankOffset`|O deslocamento no qual as classificações começam.|  
   
 ## <a name="remarks"></a>Comentários  
- O `rankSize` campo especifica o tamanho de uma classificação em uma matriz multidimensional. Ele é preciso para matrizes unidimensionais também.  
+ O campo `rankSize` especifica o tamanho de uma classificação em uma matriz multidimensional. Ele é preciso para matrizes unidimensionais também.  
   
- O valor de `numRanks` é 1 para uma matriz unidimensional e `N` para uma matriz multidimensional de `N` dimensões.  
+ O valor de `numRanks` é 1 para uma matriz unidimensional e `N` para uma matriz multidimensional de dimensões `N`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

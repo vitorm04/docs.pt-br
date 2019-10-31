@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58f148eb4c3206ba12eed41df670846d7beab77a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d9c7393827b613d49e23972b4896bfe657a544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771628"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138985"
 ---
 # <a name="icordebugstepperenumnext-method"></a>Método ICorDebugStepperEnum::Next
-Obtém o número especificado de instâncias de ICorDebugStepper de enumeração, começando na posição atual.  
+Obtém o número especificado de instâncias de ICorDebugStepper da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugStepper` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugStepper` a serem recuperadas.  
   
  `steppers`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugStepper` objeto.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugStepper`.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de `ICorDebugStepper` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de instâncias de `ICorDebugStepper` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

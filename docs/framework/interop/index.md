@@ -10,14 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643108"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114234"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperação com código não gerenciado
 
@@ -39,7 +37,7 @@ Descreve como chamar funções de DLL não gerenciadas usando a invocação de p
 [Marshaling de interoperabilidade](interop-marshaling.md)  
 Descreve o marshaling para invocação de plataforma e interoperabilidade COM.
 
-[Como: Mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)  
+[Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)  
 Descreve o mapeamento entre exceções e HRESULTs.
 
 [Wrappers COM](com-wrappers.md)  
@@ -48,14 +46,14 @@ Descreve os wrappers fornecidos pela interoperabilidade COM.
 [Equivalência de tipos e tipos de interoperabilidade inseridos](type-equivalence-and-embedded-interop-types.md)  
 Descreve como as informações de tipo para tipos COM são inseridas em assemblies e como o Common Language Runtime determina a equivalência de tipos COM inseridos.
 
-[Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Descreve como gerar assemblies de interoperabilidade primários usando *Tlbimp.exe* (Importador da Biblioteca de Tipos).
 
-[Como: Registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)  
+[Como registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)  
 Descreve como registrar os assemblies de interoperabilidade primários antes de referenciá-los em seus projetos.
 
 [Interoperabilidade COM sem registro](registration-free-com-interop.md)  
 Descreve como a interoperabilidade COM pode ativar componentes sem usar o Registro do Windows.
 
-[Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)  
+[Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)  
 Descreve como criar um manifesto do aplicativo e como criar e inserir um manifesto do componente.

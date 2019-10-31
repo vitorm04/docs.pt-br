@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3802354bf52cd2aab2a4149d565993b9965e8312
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138294"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>Função CorBindToRuntimeByCfg
-Carrega o common language runtime (CLR) em um processo usando informações de versão que é lido de um arquivo XML.  
+Carrega o Common Language Runtime (CLR) em um processo usando informações de versão lidas de um arquivo XML.  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -43,32 +41,32 @@ HRESULT CorBindToRuntimeByCfg (
   
 ## <a name="parameters"></a>Parâmetros  
  `pCfgStream`  
- [in] Um ponteiro para um `IStream` objeto que lê o arquivo XML.  
+ no Um ponteiro para um objeto `IStream` que lê o arquivo XML.  
   
  `reserved`  
- [in] Reservado para uso futuro. Use 0 (zero) como valor.  
+ no Reservado para uso futuro. Use 0 (zero) como valor.  
   
  `startupFlags`  
- [in] Um valor igual a [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeração que especifica o comportamento de inicialização do CLR.  
+ no Um valor da enumeração [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) que especifica o comportamento de inicialização do CLR.  
   
  `rclsid`  
- [in] O `CLSID` da coclass que implementa o [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface. Valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
+ no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
   
  `riid`  
- [in] O `IID` de um a `ICorRuntimeHost` ou o `ICLRRuntimeHost` interface. Valores com suporte são IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
+ no A `IID` da interface `ICorRuntimeHost` ou `ICLRRuntimeHost`. Os valores com suporte são IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
   
  `ppv`  
- [out] Um ponteiro para o endereço da interface retornada.  
+ fora Um ponteiro para o endereço da interface retornada.  
   
 ## <a name="remarks"></a>Comentários  
- O formato do arquivo XML é modelado após o arquivo de configuração de aplicativo padrão. Para obter mais informações sobre os arquivos XML, consulte [esquema de arquivo de configuração](../../../../docs/framework/configure-apps/file-schema/index.md).  
+ O formato do arquivo XML é modelado após o arquivo de configuração de aplicativo padrão. Para obter mais informações sobre arquivos XML, consulte [esquema do arquivo de configuração](../../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

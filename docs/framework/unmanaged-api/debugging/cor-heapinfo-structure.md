@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274185"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132330"
 ---
 # <a name="cor_heapinfo-structure"></a>Estrutura COR_HEAPINFO
 Fornece informações gerais sobre o heap de coleta de lixo, incluindo se é enumerável.  
@@ -42,23 +40,23 @@ typedef struct _COR_HEAPINFO {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`Se as estruturas de coleta de lixo forem válidas e o heap puder ser enumerado; caso contrário `false`,.|  
+|`areGCStructuresValid`|`true` se as estruturas de coleta de lixo forem válidas e o heap puder ser enumerado; caso contrário, `false`.|  
 |`pointerSize`|O tamanho, em bytes, dos ponteiros na arquitetura de destino.|  
 |`numHeaps`|O número de heaps de coleta de lixo lógico no processo.|  
-|`concurrent`|`TRUE`se a coleta de lixo (em segundo plano) simultânea estiver habilitada; caso contrário `FALSE`,.|  
+|`concurrent`|`TRUE` se a coleta de lixo (em segundo plano) simultânea está habilitada; caso contrário, `FALSE`.|  
 |`gcType`|Um membro da enumeração [CorDebugGCType](cordebuggctype-enumeration.md) que indica se o coletor de lixo está em execução em uma estação de trabalho ou em um servidor.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma instância da `COR_HEAPINFO` estrutura é retornada chamando o método [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
+ Uma instância da estrutura de `COR_HEAPINFO` é retornada chamando o método [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Antes de enumerar objetos no heap de coleta de lixo, você sempre deve `areGCStructuresValid` verificar o campo para garantir que o heap esteja em um estado enumerável. Para obter mais informações, consulte o método [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
+ Antes de enumerar objetos no heap de coleta de lixo, você deve sempre verificar o campo `areGCStructuresValid` para garantir que o heap esteja em um estado enumerável. Para obter mais informações, consulte o método [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

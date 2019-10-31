@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c1b90390689e709ee131935bd6417fa6b273eb2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131350"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Método ICorDebugRegisterSet2::GetRegisters
-Obtém o valor de cada registro (para a plataforma na qual o código está sendo executado) que é especificado pela máscara de bits especificado.  
+Obtém o valor de cada registro (para a plataforma em que o código está em execução no momento) que é especificado pela máscara de bits fornecida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,28 +38,28 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parâmetros  
  `maskCount`  
- [in] O tamanho, em bytes, da `mask` matriz.  
+ no O tamanho, em bytes, da matriz de `mask`.  
   
  `mask`  
- [in] Uma matriz de bytes, cada bit que corresponde a um registro. Se o bit for 1, o valor do registro correspondentes será recuperado.  
+ no Uma matriz de bytes, cada bit corresponde a um registro. Se o bit for 1, o valor do registro correspondente será recuperado.  
   
  `regCount`  
- [in] O número de valores do registro a ser recuperado.  
+ no O número de valores de registro a serem recuperados.  
   
  `regBuffer`  
- [out] Uma matriz de `CORDB_REGISTER` objetos, cada um dos quais recebe o valor de um registro.  
+ fora Uma matriz de objetos `CORDB_REGISTER`, cada um deles recebe o valor de um registro.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetRegisters` método retorna uma matriz de valores dos registros que são especificados pela máscara. A matriz não contém valores de registradores cujo bit da máscara não está definida. Portanto, o tamanho do `regBuffer` matriz deve ser igual ao número de 1 na máscara. Se o valor de `regCount` é muito pequeno para o número de registros indicados pela máscara, os valores dos registros numerados mais alta será truncado do conjunto. Se `regCount` é muito grande, não usada `regBuffer` elementos serão não modificados.  
+ O método `GetRegisters` retorna uma matriz de valores dos registros que são especificados pela máscara. A matriz não contém valores de registros cujo bit de máscara não esteja definido. Assim, o tamanho da matriz de `regBuffer` deve ser igual ao número de 1 na máscara. Se o valor de `regCount` for muito pequeno para o número de registros indicado pela máscara, os valores dos registros numerados mais altos serão truncados do conjunto. Se `regCount` for muito grande, os elementos de `regBuffer` não utilizados não serão modificados.  
   
- Se um registro não está disponível é indicado pela máscara, um valor indeterminado será retornado para que se registram.  
+ Se um registro indisponível for indicado pela máscara, um valor indeterminado será retornado para esse registro.  
   
- O `ICorDebugRegisterSet2::GetRegisters` método é necessário para plataformas que têm mais de 64 registros. Por exemplo, IA64 tem 128 registros de uso geral e 128 registros de ponto flutuante, portanto, você precisará de mais de 64 bits na máscara de bits.  
+ O método `ICorDebugRegisterSet2::GetRegisters` é necessário para plataformas que têm mais de 64 registros. Por exemplo, IA64 tem 128 registros de uso geral e 128 registros de ponto flutuante, portanto, você precisa de mais de 64 bits na máscara de bits.  
   
- Se você não tiver mais de 64 registros, como é o caso em plataformas como x86, o `GetRegisters` método traduz, na verdade, apenas os bytes na `mask` matriz de bytes em uma `ULONG64` e, em seguida, chama o [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) método, que usa o `ULONG64` máscara.  
+ Se você não tiver mais de 64 registros, como é o caso em plataformas como o x86, o método `GetRegisters`, na verdade, converte os bytes na matriz de bytes de `mask` em um `ULONG64` e, em seguida, chama o método [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) , que usa a máscara de `ULONG64`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

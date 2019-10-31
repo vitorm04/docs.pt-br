@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab801ec7899403f568d953535fcd430a862a2fd8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062dc62dfe53af3bf5158cb1add0897eccc1df60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798584"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102608"
 ---
 # <a name="geterrorinfo-function"></a>Função GetErrorInfo
 Recupera informações de erro da chamada de função anterior.  
@@ -43,9 +41,9 @@ Um ponteiro para um objeto [IErrorInfo](https://docs.microsoft.com/previous-vers
 Essa função encapsula uma chamada para o método [IComThreadingInfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.def  
+ **Cabeçalho:** WMINet_Utils. def  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

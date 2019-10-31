@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798263"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120229"
 ---
 # <a name="qualifierset_put-function"></a>Função QualifierSet_Put
 
@@ -53,7 +51,7 @@ no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/w
 no O nome do qualificador a ser gravado.
 
 `pVal`\
-no Um ponteiro para um válido `VARIANT` que contém o qualificador para gravação. O parâmetro não pode ser `null`.
+no Um ponteiro para um `VARIANT` válido que contém o qualificador para gravação. O parâmetro não pode ser `null`.
 
 `lFlavor`\
 no Uma das constantes a seguir que define os tipos de qualificador desejado para este qualificador. O valor padrão é `WBEM_FLAVOR_OVERRIDABLE` (0).
@@ -74,8 +72,8 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Houve uma tentativa inválida de especificar o qualificador de **chave** em uma propriedade que não pode ser uma chave. As chaves são especificadas na definição de classe para um objeto e não podem ser alteradas por instância. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | O `pVal` parâmetro não é de um tipo de qualificador legal. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Não é possível chamar o `QualifierSet_Put` método no qualificador porque o objeto proprietário não permite substituições. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | O parâmetro `pVal` não é de um tipo de qualificador legal. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Não é possível chamar o método `QualifierSet_Put` no qualificador porque o objeto proprietário não permite substituições. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
 ## <a name="remarks"></a>Comentários
@@ -84,9 +82,9 @@ Essa função encapsula uma chamada para o método [IWbemQualifierSet::P UT](/wi
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

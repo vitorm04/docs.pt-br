@@ -2,14 +2,12 @@
 title: Método ICorDebugAssembly3::EnumerateContainedAssemblies
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9120119056fda3f16b4a0bf8bad839b74463d633
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 032f32a08efa92cea682b0e2fc974dc607a9dca4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133945"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>Método ICorDebugAssembly3::EnumerateContainedAssemblies
 Obtém um enumerador para os assemblies contidos neste assembly.  
@@ -26,7 +24,7 @@ HRESULT EnumerateContainedAssemblies(
  `ppAssemblies`  
  fora Um ponteiro para o endereço de um objeto de interface ICorDebugAssemblyEnum que é o enumerador.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  `S_OK` Se este objeto `ICorDebugAssembly3` for um contêiner; caso contrário, `S_FALSE`, e a enumeração está vazia.  
   
 ## <a name="remarks"></a>Comentários  
@@ -36,11 +34,11 @@ HRESULT EnumerateContainedAssemblies(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

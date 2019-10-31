@@ -8,14 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a460ac730db85dfa8d4a8ee6949a168bc228193d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123207"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW (Runtime Callable Wrapper)
 O common language runtime expõe objetos COM através de um proxy chamado RCW (Runtime Callable Wrapper). Embora o RCW pareça ser um objeto comum para clientes .NET, a função principal dele é realizar marshaling de chamadas entre um cliente .NET e um objeto COM.  
@@ -43,7 +41,7 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
   
  O RCW consome as interfaces listadas na tabela a seguir, as quais são expostas pelo objeto que ele encapsula.  
   
-|Interface|DESCRIÇÃO|  
+|Interface|Descrição|  
 |---------------|-----------------|  
 |**IDispatch**|Para associação tardia a objetos COM por meio de reflexão.|  
 |**IErrorInfo**|Fornece uma descrição textual do erro, sua origem, um arquivo de Ajuda, um contexto de Ajuda e o GUID da interface que definiu o erro (sempre **GUID_NULL** para classes do .NET).|  
@@ -52,7 +50,7 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
   
  O RCW, opcionalmente, consome as interfaces listadas na tabela a seguir, as quais são expostas pelo objeto que ele encapsula.  
   
-|Interface|DESCRIÇÃO|  
+|Interface|Descrição|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|O RCW converte objetos que expõem o estilo do evento de ponto de conexão para eventos com base em delegado.|  
 |**IDispatchEx** (somente .NET Framework) |Se a classe implementa **IDispatchEx**, o RCW implementa **IExpando**. A interface **IDispatchEx** é uma extensão da interface **IDispatch** que, ao contrário de **IDispatch**, permite a enumeração, adição, exclusão e chamada de membros que diferencia maiúsculas de minúsculas.|  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da57ecf0c153d902322798e1927c995a34cb93d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131445"
 ---
 # <a name="icordebugmdagetdescription-method"></a>Método ICorDebugMDA::GetDescription
-Obtém uma cadeia de caracteres que contém a descrição do Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtém uma cadeia de caracteres que contém a descrição do MDA (Assistente de depuração gerenciada) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ HRESULT GetDescription (
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O tamanho do buffer de cadeia de caracteres que armazenará a descrição.  
+ no O tamanho do buffer de cadeia de caracteres que armazenará a descrição.  
   
  `pcchName`  
- [out] Um ponteiro para o número de bytes retornados no buffer de cadeia de caracteres.  
+ fora Um ponteiro para o número de bytes retornados no buffer de cadeia de caracteres.  
   
  `szName`  
- [out] Um buffer de cadeia de caracteres que contém a descrição do que o MDA.  
+ fora Um buffer de cadeia de caracteres que contém a descrição do MDA.  
   
 ## <a name="remarks"></a>Comentários  
- A cadeia de caracteres pode ser zero em comprimento.  
+ A cadeia de caracteres pode ser de comprimento zero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

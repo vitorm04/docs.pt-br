@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4755569-85b8-4ff4-bf50-0e608e76429f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2377773b471b387376f0284522ebe29d6b003ae3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5a451218e0fdc32132a4e79d091ada8355d32fe7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122695"
 ---
 # <a name="icordebuginternalframe2-interface"></a>Interface ICorDebugInternalFrame2
 Fornece informações sobre quadros internos, incluindo o endereço de pilha e a posição em relação aos objetos ICorDebugFrame.  
@@ -31,7 +29,7 @@ Fornece informações sobre quadros internos, incluindo o endereço de pilha e a
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método GetFrameAddress](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Retorna o endereço da pilha do quadro interno.|  
-|[Método IsCloserToLeaf](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Verifica se o `this` quadro interno está mais próximo da folha do que o objeto ICorDebugFrame especificado.|  
+|[Método IsCloserToLeaf](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Verifica se o quadro interno `this` está mais próximo da folha do que o objeto ICorDebugFrame especificado.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa interface estende a interface ICorDebugInternalFrame.  
@@ -40,11 +38,11 @@ Fornece informações sobre quadros internos, incluindo o endereço de pilha e a
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

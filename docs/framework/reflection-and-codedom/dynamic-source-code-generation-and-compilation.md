@@ -10,14 +10,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a7e341bb5bfb5b4648a222409951275169a29b79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130248"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Geração e compilação de código-fonte dinâmico
 O .NET Framework inclui um mecanismo chamado CodeDOM (Modelo de Objeto do Documento de Código) que permite aos desenvolvedores de programas que emitem o código-fonte gerar o código-fonte em várias linguagens de programação no tempo de execução com base em um único modelo que representa o código a ser renderizado.  
@@ -37,10 +35,10 @@ O .NET Framework inclui um mecanismo chamado CodeDOM (Modelo de Objeto do Docume
  [Gerando e código-fonte e compilando um programa de um gráfico CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)  
  Descreve como gerar o código-fonte e compilar o código gerado com um compilador externo usando classes definidas no namespace `System.CodeDom.Compiler`.  
   
- [Como: Criar um arquivo de documentação XML usando o CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [Como criar um arquivo de documentação XML usando CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
  Descreve como usar CodeDOM para gerar código com comentários de documentação XML e compilar o código gerado para que ele cria a saída de documentação XML.  
   
- [Como: Criar uma classe usando o CodeDOM](how-to-create-a-class-using-codedom.md)  
+ [Como criar uma classe usando o CodeDOM](how-to-create-a-class-using-codedom.md)  
  Descreve como usar CodeDOM para gerar uma classe que contém campos, propriedades, um método, um construtor e um ponto de entrada.  
   
 ## <a name="reference"></a>Referência  

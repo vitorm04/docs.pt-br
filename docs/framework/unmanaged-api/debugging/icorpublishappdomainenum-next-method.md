@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38e4bd55a52cdbb3c242b8c3e5ff21f970b93ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140506"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>Método ICorPublishAppDomainEnum::Next
 Obtém o número especificado de domínios de aplicativo que existem atualmente no processo, começando na posição atual.  
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de elementos a serem recuperados.  
+ no O número de elementos a serem recuperados.  
   
  `objects`  
- [out] Um ponteiro para a matriz de recuperados [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) objetos, cada um deles representa um domínio de aplicativo.  
+ fora Um ponteiro para a matriz de objetos [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) recuperados, cada um representando um domínio de aplicativo.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de domínios de aplicativo, na verdade, é retornado. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de domínios de aplicativo realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

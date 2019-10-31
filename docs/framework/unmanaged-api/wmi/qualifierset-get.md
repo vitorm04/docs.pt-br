@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127270"
 ---
 # <a name="qualifierset_get-function"></a>Função QualifierSet_Get
 Obtém o qualificador nomeado especificado.  
@@ -56,10 +54,10 @@ no O nome do qualificador cujo valor é solicitado.
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `pVal`   
-fora Quando bem-sucedido, o tipo e o valor corretos para o qualificador. Se a função falhar, a `VARIANT` apontada para `pVal` by não será modificada. Se esse parâmetro for `null`, o parâmetro será ignorado.
+fora Quando bem-sucedido, o tipo e o valor corretos para o qualificador. Se a função falhar, o `VARIANT` apontado por `pVal` não será modificado. Se esse parâmetro for `null`, o parâmetro será ignorado.
 
 `plFlavor`   
-fora Um ponteiro para um longo que recebe os bits de tipo de qualificador para o qualificador solicitado. Se as informações do tipo não forem desejadas, `null`esse parâmetro poderá ser. 
+fora Um ponteiro para um longo que recebe os bits de tipo de qualificador para o qualificador solicitado. Se as informações do tipo não forem desejadas, esse parâmetro poderá ser `null`. 
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -76,9 +74,9 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 Essa função encapsula uma chamada para o método [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138057"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
 A partir do .NET Framework versão 2.0, o common language runtime permite que a maioria das exceções sem tratamento em threads prossiga naturalmente. Na maioria dos casos, isso significa que a exceção sem tratamento causa o encerramento do aplicativo.  

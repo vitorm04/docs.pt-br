@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127286"
 ---
 # <a name="qualifierset_endenumeration-function"></a>Função QualifierSet_EndEnumeration
 Encerra a enumeração iniciada com uma chamada para a função [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
@@ -61,9 +59,9 @@ Essa chamada é recomendada, mas não obrigatória. Ele libera imediatamente os 
 
 ## <a name="requirements"></a>Requisitos  
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
-**Cabeçalho:** WMINet_Utils.idl  
+**Cabeçalho:** WMINet_Utils. idl  
   
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

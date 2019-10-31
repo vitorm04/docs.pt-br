@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097968"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>Enumeração CorDebugJITCompilerFlags
 Contém valores que influenciam o comportamento do compilador just-in-time (JIT) gerenciado.  
@@ -42,12 +40,12 @@ typedef enum CorDebugJITCompilerFlags {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|Especifica que o compilador deve controlar dados de compilação e permite que otimizações.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Especifica que o compilador deve controlar dados de compilação, mas desabilita otimizações.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|Especifica que o compilador deve controlar dados de compilação, desabilita otimizações, e permite editar e continuar tecnologias.|  
+|`CORDEBUG_JIT_DEFAULT`|Especifica que o compilador deve controlar os dados de compilação e permite otimizações.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Especifica que o compilador deve controlar os dados de compilação, mas desabilita otimizações.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|Especifica que o compilador deve controlar os dados de compilação, desabilitar otimizações e habilitar as tecnologias editar e continuar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

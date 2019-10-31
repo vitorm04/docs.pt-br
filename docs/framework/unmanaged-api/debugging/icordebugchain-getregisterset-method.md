@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d6ee36ac4d4510637e5f8240c3b8930a9bec7970
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745274"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123838"
 ---
 # <a name="icordebugchaingetregisterset-method"></a>Método ICorDebugChain::GetRegisterSet
-Obtém o conjunto de registros de parte ativa dessa cadeia.  
+Obtém o conjunto de registros para a parte ativa desta cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppRegisters`  
- [out] Um ponteiro para o endereço de um [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) objeto que representa o registro definido para a parte do Active Directory dessa cadeia.  
+ fora Um ponteiro para o endereço de um objeto [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) que representa o conjunto de registros para a parte ativa desta cadeia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

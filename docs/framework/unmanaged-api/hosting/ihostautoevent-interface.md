@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb5fea403f8210ea93d240aa3aabd4325524b987
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b191243ea03adcfecaadbd3a5871e1773b28bb1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124457"
 ---
 # <a name="ihostautoevent-interface"></a>Interface IHostAutoEvent
 Fornece uma representação da implementação do host de um evento de redefinição automática.  
@@ -30,15 +28,15 @@ Fornece uma representação da implementação do host de um evento de redefini�
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Define o atual `IHostAutoEvent` instância para um estado sinalizado.|  
-|[Método Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Faz com que o atual `IHostAutoEvent` instância aguardar até que o evento é de propriedade ou uma quantidade especificada de tempo passa.|  
+|[Método Set](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Define a instância de `IHostAutoEvent` atual como um estado sinalizado.|  
+|[Método Wait](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Faz com que a instância atual de `IHostAutoEvent` aguarde até que o evento seja propriedade ou um período de tempo especificado decorre.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

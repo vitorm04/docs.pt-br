@@ -1,5 +1,5 @@
 ---
-title: 'Mitigação: Separador de caminho ZipArchiveEntry.FullName'
+title: 'Mitigação: separador de caminho ZipArchiveEntry.FullName'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application compatibility
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b97436ca2f81fea139689c7c2c2348718827b90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 495377403e2f0c0f5f4f166f51d738265c16ef7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126055"
 ---
-# <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: Separador de caminho ZipArchiveEntry.FullName
+# <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: separador de caminho ZipArchiveEntry.FullName
 Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de caminho usado na propriedade <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> foi alterado da barra invertida ("\\") usada nas versões anteriores do .NET Framework para uma barra ("/").   Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
   
 ## <a name="impact"></a>Impacto  

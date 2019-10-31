@@ -14,14 +14,12 @@ helpviewer_keywords:
 - NextMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee743a4499824bea723043d5a2c7d57d7cbd7106
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c20fe5b4a081bd41f51365a36ab5f8f8cfb71ed
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798428"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127370"
 ---
 # <a name="nextmethod-function"></a>Função NextMethod
 Recupera o próximo método em uma enumeração que começa com uma chamada para [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -56,10 +54,10 @@ no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wb
 fora Um ponteiro que aponta para `null` antes da chamada. Quando a função retorna, o endereço de um novo `BSTR` que contém o nome do método. 
 
 `ppSignatureIn`  
-fora Um ponteiro que recebe um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contém os `in` parâmetros para o método. 
+fora Um ponteiro que recebe um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contém os parâmetros de `in` para o método. 
 
 `ppSignatureOut`  
-fora Um ponteiro que recebe um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contém os `out` parâmetros para o método. 
+fora Um ponteiro que recebe um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contém os parâmetros de `out` para o método. 
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -67,7 +65,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Não havia nenhuma chamada para a [`BeginEnumeration`](beginenumeration.md) função. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Não havia nenhuma chamada para a função [`BeginEnumeration`](beginenumeration.md) . |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Não há mais propriedades na enumeração. |
   
@@ -75,16 +73,16 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) .
 
-O chamador começa a sequência de enumeração chamando a função [BeginMethodEnumeration](beginmethodenumeration.md) e, em seguida, chama a função [NextMethod] até que `WBEM_S_NO_MORE_DATA`a função retorne. Opcionalmente, o chamador conclui a sequência chamando [EndMethodEnumeration](endmethodenumeration.md). O chamador pode encerrar a enumeração antecipadamente chamando [EndMethodEnumeration](endmethodenumeration.md) a qualquer momento.
+O chamador começa a sequência de enumeração chamando a função [BeginMethodEnumeration](beginmethodenumeration.md) e, em seguida, chama a função [NextMethod] até que a função retorne `WBEM_S_NO_MORE_DATA`. Opcionalmente, o chamador conclui a sequência chamando [EndMethodEnumeration](endmethodenumeration.md). O chamador pode encerrar a enumeração antecipadamente chamando [EndMethodEnumeration](endmethodenumeration.md) a qualquer momento.
 
 ## <a name="example"></a>Exemplo
 
 Para obter C++ um exemplo, consulte o método [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) .
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

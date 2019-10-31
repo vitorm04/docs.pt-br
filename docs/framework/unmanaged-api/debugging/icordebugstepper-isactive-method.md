@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b35e7a9-b40e-40a9-8d8e-b82e823fc575
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dde27f74ac59d033b6e25fba1dbb8e52c4b91af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a242764710d92e81e8089bc2919734bfac4bcdb2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760679"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137572"
 ---
 # <a name="icordebugstepperisactive-method"></a>Método ICorDebugStepper::IsActive
-Obtém um valor que indica se este ICorDebugStepper está atualmente executando uma etapa.  
+Obtém um valor que indica se este ICorDebugStepper está executando uma etapa no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT IsActive (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbActive`  
- [out] Retorna `true` se o escalonador está em execução no momento uma etapa; caso contrário, retornará `false`.  
+ fora Retorna `true` se o stepper estiver executando uma etapa no momento; caso contrário, retorna `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Qualquer ação da etapa permanece ativa até que o depurador recebe uma [icordebugmanagedcallback:: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) chamar, que será desativada automaticamente passador. Um seletor também pode ser desativado prematuramente chamando [ICorDebugStepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) antes do retorno de chamada a condição for atingida.  
+ Qualquer ação de etapa permanece ativa até que o depurador receba uma chamada [ICorDebugManagedCallback:: StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) , que desativa automaticamente o stepper. Um stepper também pode ser desativado prematuramente chamando [ICorDebugStepper::D eactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) antes que a condição de retorno de chamada seja atingida.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

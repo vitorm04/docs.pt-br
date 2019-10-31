@@ -12,15 +12,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140527"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construtores de referência inversa em expressões regulares
 
@@ -95,7 +93,7 @@ Se *name* é a representação de cadeia de caracteres de um número e nenhum gr
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-No entanto, se *name* é a representação de cadeia de caracteres de um número e um nome numérico foi explicitamente atribuído a um grupo de captura nessa posição, o analisador de expressão regular não pode identificar o grupo de captura por sua posição ordinal. Em vez disso, ele <xref:System.ArgumentException>gera um. O único grupo de captura no exemplo a seguir é denominado "2". Já que o constructo `\k` é usado para definir uma referência inversa denominada "1", o analisador de expressão regular não pode identificar o primeiro grupo de captura e gera uma exceção.
+No entanto, se *name* é a representação de cadeia de caracteres de um número e um nome numérico foi explicitamente atribuído a um grupo de captura nessa posição, o analisador de expressão regular não pode identificar o grupo de captura por sua posição ordinal. Em vez disso, ele gera um <xref:System.ArgumentException>. O único grupo de captura no exemplo a seguir é denominado "2". Já que o constructo `\k` é usado para definir uma referência inversa denominada "1", o analisador de expressão regular não pode identificar o primeiro grupo de captura e gera uma exceção.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71ea170f-872d-4fc5-81b6-27da1dec9b19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dab5fe941fce3c23ba718906b29c80c6d257c2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ed0075da1429c70900750f3f28e8ce36a41fb28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134534"
 ---
 # <a name="iassemblycache-interface"></a>Interface IAssemblyCache
 Representa o cache de assembly global para uso pela tecnologia Fusion.  
@@ -37,7 +35,7 @@ Representa o cache de assembly global para uso pela tecnologia Fusion.
 |[Método UninstallAssembly](iassemblycache-uninstallassembly-method.md)|Desinstala o assembly especificado do cache de assembly global.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   

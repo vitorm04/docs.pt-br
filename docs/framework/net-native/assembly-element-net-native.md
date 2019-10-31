@@ -2,16 +2,14 @@
 title: <Assembly> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128506"
 ---
-# <a name="assembly-element-net-native"></a>\<Elemento de > de assembly (.NET Native)
+# <a name="assembly-element-net-native"></a>Elemento de > de assembly \<(.NET Native)
 Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.  
   
 ## <a name="syntax"></a>Sintaxe  

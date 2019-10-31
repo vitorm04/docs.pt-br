@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f801dae69f16f2848b4ffa30f458c084fe9750a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39175e338e4fd98dd4af1325138da732ed81c764
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137917"
 ---
 # <a name="icordebugframegetfunction-method"></a>Método ICorDebugFrame::GetFunction
-Obtém a função que contém o código associado a esse registro de ativação.  
+Obtém a função que contém o código associado a este quadro de pilhas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetFunction (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppFunction`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugFunction que representa a função que contém o código associado a esse registro de ativação.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugFunction que representa a função que contém o código associado a esse quadro de pilhas.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetFunction` método poderá falhar se o quadro não está associado a qualquer função específica.  
+ O método `GetFunction` poderá falhar se o quadro não estiver associado a nenhuma função específica.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

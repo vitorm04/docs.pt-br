@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107977"
 ---
 # <a name="identity_attribute-structure"></a>Estrutura IDENTITY_ATTRIBUTE
 Contém informações de atributo de metadados sobre uma instância de [IDefinitionIdentity](idefinitionidentity-interface.md) .  
@@ -45,12 +43,12 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszValue`|Um ponteiro para uma cadeia de caracteres de caractere terminada em nulo que contém o valor do atributo.|  
   
 ## <a name="remarks"></a>Comentários  
- A `IDENTITY_ATTRIBUTE` estrutura contém três ponteiros para cadeias de caracteres terminadas em nulo. Essas três cadeias de caracteres descrevem um atributo.  
+ A estrutura de `IDENTITY_ATTRIBUTE` contém três ponteiros para cadeias de caracteres terminadas em nulo. Essas três cadeias de caracteres descrevem um atributo.  
   
- Uma instância de uma `IDENTITY_ATTRIBUTE` estrutura é associada a uma instância de uma estrutura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . A `IDENTITY_ATTRIBUTE` estrutura contém as cadeias de caracteres reais e `IDENTITY_ATTRIBUTE_BLOB` a estrutura correspondente lista os deslocamentos para as `IDENTITY_ATTRIBUTE` três cadeias de caracteres listadas na estrutura.  
+ Uma instância de uma estrutura de `IDENTITY_ATTRIBUTE` é associada a uma instância de uma estrutura [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . A estrutura de `IDENTITY_ATTRIBUTE` contém as cadeias de caracteres reais e a estrutura de `IDENTITY_ATTRIBUTE_BLOB` correspondente lista os deslocamentos para as três cadeias de caracteres listadas na estrutura de `IDENTITY_ATTRIBUTE`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolamento. h  
   

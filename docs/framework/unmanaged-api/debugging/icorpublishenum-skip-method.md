@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb9e5bdf85c6d487fd82422522854076c03e2288
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140457"
 ---
 # <a name="icorpublishenumskip-method"></a>Método ICorPublishEnum::Skip
-Move o cursor para frente na enumeração pelo número especificado de itens.  
+Move o cursor para a frente na enumeração pelo número especificado de itens.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,12 +35,12 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de itens por qual mover o cursor para frente.  
+ no O número de itens pelos quais mover o cursor para a frente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

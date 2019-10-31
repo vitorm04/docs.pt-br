@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d881c71d4725e1a73d743aa098aecc053182947
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77de550cd3fb614e03f8028707c3cbf914734910
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918602"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141092"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>Método ICLRGCManager2::SetGCStartupLimitsEx
 Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo.  
@@ -47,11 +45,11 @@ HRESULT SetGCStartupLimitsEx (
   
  O tamanho mínimo de 0 de geração é 64 KB.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx`retornado com êxito.|  
+|S_OK|`SetGCStartupLimitsEx` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -59,16 +57,16 @@ HRESULT SetGCStartupLimitsEx (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Os valores que `SetGCStartupLimitsEx` conjuntos só podem ser especificados antes do host ser iniciado. As chamadas posteriores para `SetGCStartupLimitsEx` são ignoradas.  
+ Os valores que `SetGCStartupLimitsEx` conjuntos podem ser especificados somente antes do host ser iniciado. Chamadas posteriores para `SetGCStartupLimitsEx` são ignoradas.  
   
  Para definir qualquer parâmetro sem afetar o outro, especifique 0 (zero) para o parâmetro que você não deseja alterar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

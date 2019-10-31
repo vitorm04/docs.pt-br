@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123065"
 ---
 # <a name="isframeworkassembly-function"></a>Função IsFrameworkAssembly
 Obtém um valor que indica se o assembly especificado é gerenciado.  
@@ -51,14 +49,14 @@ HRESULT IsFrameworkAssembly (
  [in] O tamanho do `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Comentários  
- O `pwzAssemblyReference` parâmetro é um ponteiro para uma cadeia de caracteres que contém o nome de um assembly.  
+ O parâmetro `pwzAssemblyReference` é um ponteiro para uma cadeia de caracteres que contém o nome de um assembly.  
   
- Se esse assembly fizer parte do .NET Framework, o `pbIsFrameworkAssembly` parâmetro conterá um valor booliano de. `true`  
+ Se esse assembly fizer parte do .NET Framework, o parâmetro `pbIsFrameworkAssembly` conterá um valor booliano de `true`.  
   
- Se o assembly nomeado não fizer parte do .NET Framework, ou se o `pwzAssemblyReference` parâmetro não nomear um assembly, `pbIsFrameworkAssembly` conterá um valor booliano de `false`.  
+ Se o assembly nomeado não fizer parte do .NET Framework, ou se o parâmetro `pwzAssemblyReference` não nomear um assembly, `pbIsFrameworkAssembly` conterá um valor booliano de `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Consulte também
 

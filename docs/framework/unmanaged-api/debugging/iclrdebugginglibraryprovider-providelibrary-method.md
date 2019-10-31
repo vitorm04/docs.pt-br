@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111356"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>Método ICLRDebuggingLibraryProvider::ProvideLibrary
 
@@ -47,12 +45,12 @@ no O nome do módulo que está sendo solicitado.
 no O carimbo de data/hora armazenado no cabeçalho de arquivo COFF de arquivos PE.
 
 `pLibraryProvider` \
-no O `SizeOfImage` campo armazenado no cabeçalho de arquivo opcional COFF de arquivos PE.
+no O campo `SizeOfImage` armazenado no cabeçalho de arquivo opcional COFF de arquivos PE.
 
 `hModule` \
 fora O identificador para o módulo solicitado.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
 Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.
 
@@ -64,22 +62,22 @@ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRE
 
 ## <a name="remarks"></a>Comentários
 
-`ProvideLibrary`permite que o depurador forneça módulos que são necessários para depurar arquivos CLR específicos, como MSCorDbi. dll e Mscordacwks. dll. Os identificadores de módulo precisam permanecer válidos até que uma chamada para o método [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) indique que eles podem ser liberados. nesse ponto, é responsabilidade do chamador liberar os identificadores.
+`ProvideLibrary` permite que o depurador forneça módulos que são necessários para depurar arquivos CLR específicos, como MSCorDbi. dll e Mscordacwks. dll. Os identificadores de módulo precisam permanecer válidos até que uma chamada para o método [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) indique que eles podem ser liberados. nesse ponto, é responsabilidade do chamador liberar os identificadores.
 
 O depurador pode usar qualquer meio disponível para localizar ou adquirir o módulo de depuração.
 
 > [!IMPORTANT]
-> Esse recurso permite que o chamador da API forneça módulos que contêm um código executável e possivelmente mal-intencionado. Como uma precaução de segurança, o chamador não deve `ProvideLibrary` usar o para distribuir nenhum código que não esteja disposto a ser executado.
+> Esse recurso permite que o chamador da API forneça módulos que contêm um código executável e possivelmente mal-intencionado. Como uma precaução de segurança, o chamador não deve usar `ProvideLibrary` para distribuir qualquer código que não esteja disposto a ser executado.
 >
 > Se um problema de segurança sério for descoberto em uma biblioteca já liberada, como MSCorDbi. dll ou Mscordacwks. dll, o Shim poderá ser corrigido para reconhecer as versões inadequadas dos arquivos. O Shim pode emitir solicitações para as versões com patches dos arquivos e rejeitar as versões inadequadas se elas forem fornecidas em resposta a qualquer solicitação. Isso só poderá ocorrer se o usuário tiver corrigido o patch para uma nova versão do Shim. As versões sem patch continuarão vulneráveis.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** CorDebug.idl, CorDebug.h
 
-**Biblioteca** CorGuids.lib
+**Biblioteca:** CorGuids.lib
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 

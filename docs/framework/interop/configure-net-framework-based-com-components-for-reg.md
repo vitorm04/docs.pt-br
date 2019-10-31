@@ -1,5 +1,5 @@
 ---
-title: 'Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro'
+title: Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123663"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
   
 - Os aplicativos COM devem ter um manifesto do aplicativo no estilo Win32 para identificar o componente gerenciado.  
@@ -175,4 +173,4 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
 - [Interoperabilidade COM sem registro](registration-free-com-interop.md)
 - [Requisitos para interoperabilidade COM sem registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [Configurando componentes COM para ativação sem registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [Ativação sem registro de componentes baseados no .NET: Um passo a passo](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [Ativação sem registro de componentes baseados no .NET: um passo a passo](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

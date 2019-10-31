@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1465a667763c12593c4bc89148d70f85371fcc67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a03b06143c0bd92425c7bfc13af6e374dc629f10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140481"
 ---
 # <a name="icorpublishenumgetcount-method"></a>Método ICorPublishEnum::GetCount
 Obtém o número de itens na enumeração.  
@@ -37,12 +35,12 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parâmetros  
  `pcelt`  
- [out] Um ponteiro para o número de itens na enumeração.  
+ fora Um ponteiro para o número de itens na enumeração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

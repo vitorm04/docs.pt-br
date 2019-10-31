@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94d8fbf4d93bbfbaaeb7c1268004aada22b9b7df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d6caa02333229bcd49f4c6ccf8b93265181a0b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137090"
 ---
 # <a name="icordebugvaluegetsize-method"></a>Método ICorDebugValue::GetSize
-Obtém o tamanho, em bytes, do objeto "ICorDebugValue".  
+Obtém o tamanho, em bytes, deste objeto "ICorDebugValue".  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT GetSize (
   
 ## <a name="parameters"></a>Parâmetros  
  `pSize`  
- [out] O tamanho, em bytes, do objeto de valor.  
+ fora O tamanho, em bytes, deste objeto de valor.  
   
 ## <a name="remarks"></a>Comentários  
- Se o tipo de valor é um tipo de referência, esse método retorna o tamanho do ponteiro em vez do tamanho do objeto.  
+ Se o tipo do valor for um tipo de referência, esse método retornará o tamanho do ponteiro em vez do tamanho do objeto.  
   
- O `ICorDebugValue::GetSize` retorno do método `COR_E_OVERFLOW` para objetos que são maiores do que 4 GB em plataformas de 64 bits. Use o [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) método em vez disso, para objetos que são maiores do que 4 GB.  
+ O método `ICorDebugValue::GetSize` retorna `COR_E_OVERFLOW` para objetos com mais de 4 GB em plataformas de 64 bits. Use o método [ICorDebugValue3:: GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) em vez de objetos com mais de 4 GB.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

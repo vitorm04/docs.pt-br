@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8e4a09db3cedce7b0ae6049c7e550c0c3e21cc8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 255d88dcdd880c73a7535cddcad410dcfdcf1d70
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132653"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>Método ICorDebugEval::NewObjectNoConstructor
 Aloca uma nova instância de objeto do tipo especificado, sem tentar chamar um método de construtor.  
   
- Este método é obsoleto no .NET Framework versão 2.0. Use [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) em vez disso.  
+ Esse método é obsoleto no .NET Framework versão 2,0. Use [ICorDebugEval2:: NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,16 +37,16 @@ HRESULT NewObjectNoConstructor (
   
 ## <a name="parameters"></a>Parâmetros  
  `pClass`  
- [in] Ponteiro para um objeto de ICorDebugClass que representa o tipo de objeto a ser instanciado.  
+ no Ponteiro para um objeto ICorDebugClass que representa o tipo de objeto a ser instanciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 1.1, 1.0  
+ **Versões do .NET Framework:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Consulte também
 

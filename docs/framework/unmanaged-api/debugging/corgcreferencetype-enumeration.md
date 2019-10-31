@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3cbecd5be9b1ac7c08e6970933a48eeb95f01a22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eafae181c74d9f3842f7f0d547bcccbbb28c09e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132116"
 ---
 # <a name="corgcreferencetype-enumeration"></a>Enumeração CorGCReferenceType
 Identifica a fonte de um objeto para ser coletado do lixo.  
@@ -53,28 +51,28 @@ typedef enum {
 |Nome do membro|Descrição|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Uma alça para uma referência forte da tabela de identificador de objeto.|  
-|`CorHandleStrongPinning`|Um identificador para uma referência forte fixa da tabela de identificador de objeto.|  
-|`CorHandleWeakShort`|Um identificador para uma referência fraca da tabela de identificador de objeto.|  
-|`CorHandleWeakRefCount`|Um identificador para um objeto de contagem de referência fraco da tabela de identificador de objeto.|  
-|`CorHandleStrongRefCount`|Um identificador para um objeto contado por referência da tabela de identificador de objeto.|  
-|`CorHandleStrongDependent`|Um identificador para um objeto dependente da tabela de identificador de objeto.|  
+|`CorHandleStrongPinning`|Um identificador para uma referência forte fixada da tabela de identificadores de objeto.|  
+|`CorHandleWeakShort`|Um identificador para uma referência fraca da tabela de identificadores de objeto.|  
+|`CorHandleWeakRefCount`|Um identificador para um objeto de referência fraca contada da tabela de identificadores de objeto.|  
+|`CorHandleStrongRefCount`|Um identificador para um objeto de referência contado da tabela de identificadores de objeto.|  
+|`CorHandleStrongDependent`|Um identificador para um objeto dependente da tabela de identificadores de objeto.|  
 |`CorHandleStrongAsyncPinned`|Um objeto fixo assíncrono da tabela de identificador de objeto.|  
 |`CorHandleStrongSizedByref`|Uma alça forte que mantém um tamanho aproximado do fechamento coletivo de todos os objetos e raízes de objeto no momento da coleta de lixo.|  
 |`CorReferenceStack`|Uma referência da pilha gerenciada.|  
 |`CorReferenceFinalizer`|Uma referência da fila do finalizador.|  
-|CorHandleStrongOnly|Retorne apenas as referências fortes da tabela de identificador. Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.|  
-|`CorHandleWeakOnly`|Retorne apenas as referências fracas da tabela de identificador. Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.|  
-|`CorHandleAll`|Retorne todas as referências de tabela de identificador. Esse valor é usado o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) somente no método.|  
+|CorHandleStrongOnly|Retornar apenas referências fortes da tabela de identificadores. Esse valor é usado apenas pelo método [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
+|`CorHandleWeakOnly`|Retornar apenas referências fracas da tabela de identificadores. Esse valor é usado apenas pelo método [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
+|`CorHandleAll`|Retorna todas as referências da tabela de identificador. Esse valor é usado apenas pelo método [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) .|  
   
 ## <a name="remarks"></a>Comentários  
- O `CorGCReferenceType` enumeração é usada da seguinte maneira:  
+ A enumeração `CorGCReferenceType` é usada da seguinte maneira:  
   
-- Como o valor da `type` campo do [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) estrutura, ele indica que a fonte de uma referência ou um identificador.  
+- Como o valor do campo `type` da estrutura [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) , ele indica a origem de uma referência ou um identificador.  
   
-- Como o `types` argumento para o [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) método, ele especifica os tipos de identificadores para incluir na enumeração.  
+- Como o argumento `types` para o método [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) , ele especifica os tipos de identificadores a serem incluídos na enumeração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

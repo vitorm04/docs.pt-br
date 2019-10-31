@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db6f39119d143d27c0d3a80a9c65565d4dfd0d39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140680"
 ---
 # <a name="gethashfromfilew-function"></a>Função GetHashFromFileW
 Gera um hash sobre o conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.  
@@ -60,11 +58,11 @@ HRESULT GetHashFromFileW (
  Essa função é igual a [GetHashFromFile](gethashfromfile-function.md), exceto que a especificação de nome de arquivo é Unicode em vez de ANSI.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** StrongName.h  
+ **Cabeçalho:** StrongName. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31b8e65b-95e7-4748-ab93-8074cd5556b4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45c3bc7612d79dcf819f04994bc1121796d36a64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d64752ceeffe2e085974c44f675ee092391c384
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771175"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133577"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a>Método ICorDebugThread::ClearCurrentException
 Este método não está implementado. Não o use.  
@@ -34,7 +32,7 @@ HRESULT ClearCurrentException();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

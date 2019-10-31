@@ -2,14 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetStaticFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bd3442adf58250a423438666ec1092bab61958b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c4211a60786016e25cc3e3419804817b57ab64e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138799"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider:: GetStaticFieldSymbols
 Obtém os símbolos de campo estático que correspondem a uma assinatura de TypeSpec.  
@@ -28,10 +26,10 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parâmetros  
  `cbSignature`  
- no O número de bytes na `typeSig` matriz.  
+ no O número de bytes na matriz de `typeSig`.  
   
  `typeSig`  
- no Uma matriz de bytes que contém `typespec` a assinatura.  
+ no Uma matriz de bytes que contém a assinatura `typespec`.  
   
  `cRequestedSymbols`  
  no O número de símbolos solicitados.  
@@ -48,11 +46,11 @@ HRESULT GetStaticFieldSymbols(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

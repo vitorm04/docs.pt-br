@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4af3d73a4c45654d1d40ef2fbf44a0e2b3e1bf32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a55b43f3629cebb0ba1d3a7ac1802126874418d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122115"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>Método IHostTaskManager::SwitchToTask
 Notifica o host de que ele deve desativar a tarefa atual.  
@@ -39,11 +37,11 @@ HRESULT SwitchToTask (
  `option`  
  no Um dos valores de enumeração [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , indicando a ação que o host deve executar se a operação solicitada for bloqueada.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SwitchToTask`retornado com êxito.|  
+|S_OK|`SwitchToTask` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -54,14 +52,14 @@ HRESULT SwitchToTask (
  O host pode alternar em outra tarefa conforme desejado ou necessário.  
   
 > [!NOTE]
-> `SwitchToTask`não especifica a qual tarefa o host deve mudar; Ele especifica apenas a tarefa da qual ele deve mudar.  
+> `SwitchToTask` não especifica a qual tarefa o host deve mudar; Ele especifica apenas a tarefa da qual ele deve mudar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

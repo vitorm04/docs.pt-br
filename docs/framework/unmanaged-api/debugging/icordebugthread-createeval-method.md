@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41bd4c0bb4e84b6d6f267e24808baafa57f71882
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133614"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>Método ICorDebugThread::CreateEval
-Cria um objeto ICorDebugEval que coleta e expõe a funcionalidade deste ICorDebugThread.  
+Cria um objeto ICorDebugEval que coleta e expõe a funcionalidade desse ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppEval`  
- [out] Um ponteiro para o endereço de um `ICorDebugEval` objeto que coleta e expõe a funcionalidade desse thread.  
+ fora Um ponteiro para o endereço de um objeto `ICorDebugEval` que coleta e expõe a funcionalidade desse thread.  
   
 ## <a name="remarks"></a>Comentários  
- O objeto de avaliação enviará por push uma nova cadeia no thread antes de fazer sua computação. Isso interrompe a computação que está sendo executada atualmente no thread até que a avaliação for concluída.  
+ O objeto de avaliação enviará por push uma nova cadeia no thread antes de fazer seu cálculo. Isso interrompe a computação que está sendo executada atualmente no thread até que a avaliação seja concluída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

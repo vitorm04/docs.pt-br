@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096101"
 ---
 # <a name="icordebugobjectenumnext-method"></a>Método ICorDebugObjectEnum::Next
-Obtém os endereços virtuais (relacionados RVAs) do número especificado de objetos de enumeração, começando na posição atual.  
+Obtém os endereços virtuais relativos (RVAs) do número especificado de objetos da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de objetos a serem recuperados.  
+ no O número de objetos a serem recuperados.  
   
  `objects`  
- [out] Uma matriz de ponteiros, cada qual apontando para um objeto CORDB_ADDRESS.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto CORDB_ADDRESS.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de objetos, na verdade, é retornado. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de objetos realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

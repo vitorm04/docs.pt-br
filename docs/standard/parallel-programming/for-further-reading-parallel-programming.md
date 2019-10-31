@@ -5,20 +5,18 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d424c04f52e08b0fdb72e187bd8999ef16427080
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929287"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134213"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Para leitura adicional (programação paralela)
 
 Os recursos a seguir contêm informações adicionais sobre programação paralela no .NET:
 
-- O documento [Padrões para programação paralela: Compreendendo e aplicando padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) descreve padrões paralelos comuns e melhores práticas para o desenvolvimento de componentes paralelos utilizando esses padrões.
+- O documento [Padrões de programação paralela: compreendendo e aplicando padrões paralelos com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) descreve padrões paralelos comuns e melhores práticas para o desenvolvimento de componentes paralelos utilizando esses padrões.
 
 - O livro [Padrões de design para decomposição e coordenação em arquiteturas multicore](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) descreve padrões de programação paralela que usam o suporte de programação paralela introduzido no .NET Framework 4.
 

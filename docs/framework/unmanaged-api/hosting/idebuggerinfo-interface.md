@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9395a8a0-ffb9-475f-8da6-890999ae4bb6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bb52d499faa83bd05ac0e6c817582f229ae183c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133188"
 ---
 # <a name="idebuggerinfo-interface"></a>Interface IDebuggerInfo
 Fornece métodos para obter informações sobre o estado dos serviços de depuração.  
@@ -33,11 +31,11 @@ Fornece métodos para obter informações sobre o estado dos serviços de depura
 |[Método IsDebuggerAttached](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Obtém um valor que indica se um depurador gerenciado está anexado a esse processo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Método X509CertificateClaimSet.FindClaims'
+title: 'Mitigação: método X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffc03e6c88a2aabb967587d8b1ee7d0b784b4e7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5591ecebeb924f84cc0efdaf78f40f9d835d2d02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70778939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126080"
 ---
-# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: Método X509CertificateClaimSet.FindClaims
+# <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: método X509CertificateClaimSet.FindClaims
 Começando com aplicativos direcionados ao .NET Framework 4.6.1, o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> tentará corresponder o argumento `claimType` com todas as entradas DNS em seu campo SAN.  
   
 ## <a name="impact"></a>Impacto  

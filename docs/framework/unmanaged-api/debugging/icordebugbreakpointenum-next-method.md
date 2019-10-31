@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87249dae0eff4ea4899a63c0d13e79c266df453a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d29576c6f073f1d0e8e0aea417fc38c09a8327c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122741"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>Método ICorDebugBreakpointEnum::Next
-Obtém o número especificado de instâncias de ICorDebugBreakpoint de enumeração, começando na posição atual.  
+Obtém o número especificado de instâncias de ICorDebugBreakpoint da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugBreakpoint` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugBreakpoint` a serem recuperadas.  
   
  `breakpoints`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugBreakpoint` objeto que representa um ponto de interrupção.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugBreakpoint` que representa um ponto de interrupção.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `ICorDebugBreakpoint` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Um ponteiro para o número de instâncias de `ICorDebugBreakpoint` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

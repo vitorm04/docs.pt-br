@@ -2,14 +2,12 @@
 title: Método ICorDebugAssembly3::GetContainerAssembly
 ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4cda67145a0e624f87e93cf02ebdb6bc77c34d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39f8dd042ea785258dfe5c048ebc348852be6892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987604"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095388"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>Método ICorDebugAssembly3::GetContainerAssembly
 Retorna o assembly do contêiner desse objeto `ICorDebugAssembly3`.  
@@ -26,8 +24,8 @@ HRESULT GetContainerAssembly(
  `ppAssembly`  
  Um ponteiro para o endereço de um objeto ICorDebugAssembly que representa o assembly do contêiner ou **nulo** se a chamada do método falhar.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK`se a chamada do método for concluída com sucesso; caso contrário `S_FALSE`,, `ppAssembly` e será **nulo**.  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se a chamada do método for concluída com sucesso; caso contrário, `S_FALSE`e `ppAssembly` será **nulo**.  
   
 ## <a name="remarks"></a>Comentários  
  Se esse assembly foi mesclado com outros dentro de um assembly de contêiner único, esse método retorna o assembly do contêiner. Para obter mais informações e terminologia, consulte o tópico [ICorDebugProcess6:: EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) .  
@@ -36,11 +34,11 @@ HRESULT GetContainerAssembly(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6566437d899b768cda1bab74bb1310deb7aa74db
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116454"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<Elemento de > legacyCorruptedStateExceptionsPolicy
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<elemento de > legacyCorruptedStateExceptionsPolicy
 Especifica se o Common Language Runtime permite que o código gerenciado Capture violações de acesso e outras exceções de estado corrompidas.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,13 +54,13 @@ Especifica se o Common Language Runtime permite que o código gerenciado Capture
 ## <a name="remarks"></a>Comentários  
  No .NET Framework versão 3,5 e anteriores, o Common Language Runtime permitia código gerenciado para capturar exceções que foram geradas por Estados de processo corrompidos. Uma violação de acesso é um exemplo desse tipo de exceção.  
   
- A partir do .NET Framework 4, o código gerenciado não captura mais esses tipos de exceções em `catch` blocos. No entanto, você pode substituir essa alteração e manter a manipulação de exceções de estado corrompidas de duas maneiras:  
+ A partir do .NET Framework 4, o código gerenciado não captura mais esses tipos de exceções em blocos de `catch`. No entanto, você pode substituir essa alteração e manter a manipulação de exceções de estado corrompidas de duas maneiras:  
   
-- Defina o `<legacyCorruptedStateExceptionsPolicy>` atributo do `enabled` elemento como `true`. Essa configuração é aplicada processwide e afeta todos os métodos.  
+- Defina o atributo de `enabled` do elemento de `<legacyCorruptedStateExceptionsPolicy>` como `true`. Essa configuração é aplicada processwide e afeta todos os métodos.  
   
- - ou -  
+ \- ou -  
   
-- Aplique o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atributo ao método que contém o bloco de `catch` exceções.  
+- Aplique o atributo <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> ao método que contém as exceções `catch` bloco.  
   
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   

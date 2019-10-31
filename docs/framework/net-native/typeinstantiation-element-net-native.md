@@ -2,16 +2,14 @@
 title: <TypeInstantiation> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128674"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<Elemento de > TypeInstantiation (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<elemento de > TypeInstantiation (.NET Native)
 Aplica a política de reflexão de tempo de execução a um tipo genérico construído.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -99,11 +97,11 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
  Se um elemento `<TypeInstantiation>` for o filho de um elemento [\<Assembly>](assembly-element-net-native.md), [\<Namespace>](namespace-element-net-native.md) ou [\<Type>](type-element-net-native.md), ele substituirá as configurações de política definidas pelo elemento pai. Se um elemento [\<Type>](type-element-net-native.md) definir uma definição de tipo genérico correspondente, o elemento `<TypeInstantiation>` substituirá a política de reflexão em tempo de execução somente para instanciações do tipo genérico construído especificado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa uma reflexão para recuperar a definição de tipo genérico de um objeto <xref:System.Collections.Generic.Dictionary%602> construído. Ele também usa reflexão para exibir informações sobre objetos <xref:System.Type> que representam tipos genéricos construídos e definições de tipo genérico. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.  
+ O exemplo a seguir usa uma reflexão para recuperar a definição de tipo genérico de um objeto <xref:System.Collections.Generic.Dictionary%602> construído. Ele também usa reflexão para exibir informações sobre objetos <xref:System.Type> que representam tipos genéricos construídos e definições de tipo genérico. A variável `b` no exemplo é um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Após a compilação com a cadeia de ferramentas .net Native, o exemplo gera uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md) na linha que chama <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> o método. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<TypeInstantiation>` ao arquivo de diretivas de tempo de execução:  
+ Após a compilação com a cadeia de ferramentas .NET Native, o exemplo gera uma exceção [MissingMetadataException](missingmetadataexception-class-net-native.md) na linha que chama o método <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<TypeInstantiation>` ao arquivo de diretivas de tempo de execução:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

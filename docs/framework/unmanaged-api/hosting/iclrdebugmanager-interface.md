@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a408995793caf879f8d5624ab727102c4859195
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 008143c608cd19bee9dd115e97620906fb5b93b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129403"
 ---
 # <a name="iclrdebugmanager-interface"></a>Interface ICLRDebugManager
 Fornece métodos que permitem que um host associe um conjunto de tarefas a um identificador e um nome amigável.  
@@ -39,19 +37,19 @@ Fornece métodos que permitem que um host associe um conjunto de tarefas a um id
 |[Método SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Define a política para ler arquivos de banco de dados do programa (PDB). A política determina se as informações sobre números de linha e arquivos estão incluídas em pilhas de chamadas.|  
   
 ## <a name="remarks"></a>Comentários  
- Em cenários de depuração, um host pode querer agrupar tarefas de acordo com sua própria lógica de programação. Por exemplo, um agrupamento permitiria que um desenvolvedor vêsse apenas as tarefas exigidas pelas APIs do desenvolvedor, em vez de ver cada tarefa em execução no processo. `ICLRDebugManager`permite que o host implemente esse tipo de agrupamento.  
+ Em cenários de depuração, um host pode querer agrupar tarefas de acordo com sua própria lógica de programação. Por exemplo, um agrupamento permitiria que um desenvolvedor vêsse apenas as tarefas exigidas pelas APIs do desenvolvedor, em vez de ver cada tarefa em execução no processo. `ICLRDebugManager` permite que o host implemente esse tipo de agrupamento.  
   
 > [!IMPORTANT]
-> Três `ICLRDebugManager` métodos `BeginConnection` ,e`EndConnection`,dependem uns dos outros. `SetConnectionTasks` Eles devem ser chamados na ordem especificada para funcionar conforme o esperado.  
+> Três métodos `ICLRDebugManager`, `BeginConnection`, `SetConnectionTasks` e `EndConnection`, dependem uns dos outros. Eles devem ser chamados na ordem especificada para funcionar conforme o esperado.  
   
  O agrupamento e os identificadores e nomes amigáveis que o host atribui ao agrupamento não têm significado para o Common Language Runtime (CLR). O CLR simplesmente passa as informações ao depurador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

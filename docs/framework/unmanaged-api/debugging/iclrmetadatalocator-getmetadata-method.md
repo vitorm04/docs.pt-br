@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738364"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111242"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>Método ICLRMetadataLocator::GetMetadata
-Chamado pelo common language runtime (CLR) dados serviço de acesso para recuperar os metadados de uma imagem.  
+Chamado pelos serviços de acesso a dados do Common Language Runtime (CLR) para recuperar os metadados de uma imagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,39 +44,39 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>Parâmetros  
  `imagePath`  
- [in] Uma cadeia de caracteres que especifica o caminho do arquivo de imagem.  
+ no Uma cadeia de caracteres que especifica o caminho do arquivo de imagem.  
   
  `imageTimestamp`  
- [in] O carimbo de hora do arquivo de imagem.  
+ no O carimbo de data/hora do arquivo de imagem.  
   
  `imageSize`  
- [in] O tamanho do arquivo de imagem.  
+ no O tamanho do arquivo de imagem.  
   
  `mvid`  
- [in] O identificador global exclusivo da imagem.  
+ no O identificador global exclusivo da imagem.  
   
  `mdRva`  
- [in] O endereço virtual relativo (RVA) dos metadados. O endereço é relativo ao endereço de base de imagem.  
+ no O endereço virtual relativo (RVA) dos metadados. O endereço é relativo ao endereço base da imagem.  
   
  `flags`  
- [in] Reservado para uso futuro.  
+ no Reservado para uso futuro.  
   
  `bufferSize`  
- [in] O tamanho do buffer no qual colocar os metadados.  
+ no O tamanho do buffer no qual os metadados são colocados.  
   
  `buffer`  
- [out] O buffer no qual colocar os metadados.  
+ fora O buffer no qual os metadados são colocados.  
   
  `dataSize`  
- [out] O tamanho dos metadados que é retornado.  
+ fora O tamanho dos metadados retornados.  
   
 ## <a name="remarks"></a>Comentários  
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

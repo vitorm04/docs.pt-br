@@ -10,14 +10,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 048c2cd3d6b90dda951128a29a212928ee67c5a5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: fcbbc99c06e7c9666d58133bef20b84ef40c98d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971749"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104323"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  

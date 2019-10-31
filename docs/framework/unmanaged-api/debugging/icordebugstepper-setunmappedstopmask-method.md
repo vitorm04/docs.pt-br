@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1211981-e90c-4e05-8def-fa18d85ad9ab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0a273c54559e8e297e09740ba9c770ce12d72d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff393b119c349e34898b781c3185cc82f2dba11f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137560"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>Método ICorDebugStepper::SetUnmappedStopMask
 Define um valor que especifica o tipo de código não mapeado no qual a execução será interrompida.  
@@ -37,17 +35,17 @@ HRESULT SetUnmappedStopMask (
   
 ## <a name="parameters"></a>Parâmetros  
  `mask`  
- [in] Um valor de enumeração CorDebugUnmappedStop que especifica o tipo de código não mapeado no qual o depurador interromperá a execução.  
+ no Um valor da Enumeração CorDebugUnmappedStop que especifica o tipo de código não mapeado no qual o depurador irá parar a execução.  
   
- O valor padrão é STOP_OTHER_UNMAPPED. O valor STOP_UNMANAGED só é válido com a depuração de interoperabilidade.  
+ O valor padrão é STOP_OTHER_UNMAPPED. O valor STOP_UNMANAGED é válido somente com depuração de interoperabilidade.  
   
 ## <a name="remarks"></a>Comentários  
- Quando o depurador encontra uma just-in-time (compilação JIT) que não tem nenhum mapeamento correspondente para Microsoft intermediate language (MSIL), ele interromperá a execução se o sinalizador que especifica esse tipo de código não mapeado tiver sido definido; Caso contrário, depuração de modo transparente continua.  
+ Quando o depurador encontra uma compilação JIT (just-in-time) que não tem mapeamento correspondente à MSIL (Microsoft Intermediate Language), ele interrompe a execução se o sinalizador que especifica esse tipo de código não mapeado tiver sido definido; caso contrário, a etapa continuará de forma transparente.  
   
- Se o depurador não usa um seletor para inserir um método, em seguida, ele não necessariamente passar por código não mapeado.  
+ Se o depurador não usar um stepper para inserir um método, ele não irá necessariamente passar por código não mapeado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

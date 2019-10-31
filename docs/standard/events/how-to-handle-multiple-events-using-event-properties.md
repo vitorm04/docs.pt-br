@@ -1,5 +1,5 @@
 ---
-title: 'Como: Manipular vários eventos usando propriedades de evento'
+title: Como manipular vários eventos usando propriedades de evento
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666484"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124775"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Como: Manipular vários eventos usando propriedades de evento
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Como manipular vários eventos usando propriedades de evento
 Para usar as propriedades de evento, defina as propriedades de evento na classe que gera os eventos e, em seguida, defina os representantes das propriedades de evento nas classes que tratam dos eventos. Para implementar várias propriedades de evento em uma classe, a classe deve armazenar e manter internamente o representante definido para cada evento. Uma abordagem típica é implementar uma coleção de representantes indexada por uma chave de evento.  
   
  Para armazenar os representantes para cada evento, você pode usar a classe <xref:System.ComponentModel.EventHandlerList> ou implementar sua própria coleção. A classe da coleção deve fornecer métodos para configurar, acessar e recuperar o representante do manipulador de eventos com base na chave de evento. Por exemplo, você poderia usar uma classe <xref:System.Collections.Hashtable> ou derivar uma classe personalizada da classe <xref:System.Collections.DictionaryBase>. Os detalhes da implementação da coleção de representantes não precisam ser expostos fora de sua classe.  
@@ -52,4 +50,4 @@ Para usar as propriedades de evento, defina as propriedades de evento na classe 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Eventos](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
-- [Como: Declarar eventos personalizados para conservar a memória](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Como declarar eventos personalizados para conservar memória](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

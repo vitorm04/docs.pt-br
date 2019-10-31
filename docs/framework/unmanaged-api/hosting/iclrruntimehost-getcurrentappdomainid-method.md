@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 33800475-7815-4976-8aca-a1038761a2ef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f262c416a6998ed182d0c42d7f00ea7dcb3f898
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b7d321eec2bbc2beb47c5de034bb4ef5d534c9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768685"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120462"
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>Método ICLRRuntimeHost::GetCurrentAppDomainId
-Obtém o identificador numérico do <xref:System.AppDomain> que está sendo executado.  
+Obtém o identificador numérico do <xref:System.AppDomain> que está sendo executado no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,28 +35,28 @@ HRESULT GetCurrentAppDomainId(
   
 ## <a name="parameters"></a>Parâmetros  
  `pdwAppDomainId`  
- [out] O identificador numérico do <xref:System.AppDomain> que está sendo executado.  
+ fora O identificador numérico do <xref:System.AppDomain> que está sendo executado no momento.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`GetCurrentAppDomainId` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O `pdwAppDomainId` parâmetro é definido como o valor da <xref:System.AppDomain.Id%2A> propriedade do <xref:System.AppDomain> no qual o thread atual está sendo executado.  
+ O parâmetro `pdwAppDomainId` é definido como o valor da propriedade <xref:System.AppDomain.Id%2A> do <xref:System.AppDomain> no qual o thread atual está sendo executado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

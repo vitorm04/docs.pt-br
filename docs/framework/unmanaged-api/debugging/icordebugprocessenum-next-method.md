@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ac7077c-8d88-49c4-b360-b3af0c541c63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59efdb76c000a78007ec0321202793ed0dd50cfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0666becb5a34688d3f4cf5bddd1e2fa71785b38a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768281"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139795"
 ---
 # <a name="icordebugprocessenumnext-method"></a>Método ICorDebugProcessEnum::Next
-Obtém o número especificado de instâncias de ICorDebugProcess de enumeração, começando na posição atual.  
+Obtém o número especificado de instâncias de ICorDebugProcess da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugProcess` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugProcess` a serem recuperadas.  
   
  `processes`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugProcess` objeto que representa um processo.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugProcess` que representa um processo.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de `ICorDebugProcess` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de instâncias de `ICorDebugProcess` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

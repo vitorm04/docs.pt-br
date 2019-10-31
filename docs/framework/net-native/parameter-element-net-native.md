@@ -2,16 +2,14 @@
 title: <Parameter> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128194"
 ---
-# <a name="parameter-element-net-native"></a>\<Elemento de > de parâmetro (.NET Native)
+# <a name="parameter-element-net-native"></a>Elemento de > de parâmetro de \<(.NET Native)
 Aplica a política de tempo de reflexão ao tipo do argumento passado para um método.  
   
 ## <a name="syntax"></a>Sintaxe  

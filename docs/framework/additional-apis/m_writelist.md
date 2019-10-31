@@ -1,5 +1,5 @@
 ---
-title: Campo Connection.m_WriteList
+title: Campo Connection. m_WriteList
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d138e0490e849ff26f540077ec7d23ae42737606
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 9760e301e25bc6e69ab22b563894cb079a8d58bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120022"
 ---
-# <a name="connectionmwritelist-field"></a>Connection.m\_WriteList campo
+# <a name="connectionm_writelist-field"></a>Connection. m\_campo Writelist
 
-`Connection.m_WriteList` é um <xref:System.Collections.ArrayList> de <xref:System.Net.HttpWebRequest> objetos que são enfileirados para serem enviadas pelo HTTP.
+`Connection.m_WriteList` é uma <xref:System.Collections.ArrayList> de objetos <xref:System.Net.HttpWebRequest> que são enfileirados para serem enviados por HTTP.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -30,9 +30,9 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> O `Connection.m_WriteList` campo é privado e não se destina a ser usado diretamente em seu código.
+> O campo `Connection.m_WriteList` é privado e não deve ser usado diretamente no seu código.
 > 
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,4 +40,4 @@ private ArrayList m_WriteList
 
 **Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

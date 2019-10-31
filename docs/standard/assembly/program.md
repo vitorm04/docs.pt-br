@@ -1,20 +1,18 @@
 ---
-title: Programa com assemblies
+title: Programar com assemblies
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107062"
 ---
-# <a name="program-with-assemblies"></a>Programa com assemblies
+# <a name="program-with-assemblies"></a>Programar com assemblies
 Os assemblies são os blocos de construção do .NET Framework; eles formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança. Um assembly oferece ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Trata-se de uma coleção de tipos e recursos compilados para trabalharem juntos e formar uma unidade lógica de funcionalidade. Para o tempo de execução, um tipo não existe fora do contexto de um assembly.  
   
  Esta seção descreve como criar módulos, criar assemblies usando módulos, criar um par de chaves e assinar um assembly com um nome forte, bem como instalar um assembly no cache de assembly global. Além disso, esta seção descreve como usar o [Desmontador de MSIL (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) para exibir informações do manifesto do assembly.  
@@ -29,7 +27,7 @@ Os assemblies são os blocos de construção do .NET Framework; eles formam a un
  [Nomes de assembly](names.md)  
  Fornece uma visão geral da nomenclatura de assembly.  
   
- [Como: Determinar o nome totalmente qualificado de um assembly](find-fully-qualified-name.md)  
+ [Como determinar o nome totalmente qualificado de um assembly](find-fully-qualified-name.md)  
  Descreve como determinar o nome totalmente qualificado de um assembly.  
   
  [Executar aplicativos de intranet com confiança total](../../framework/app-domains/running-intranet-applications-in-full-trust.md)  
@@ -38,13 +36,13 @@ Os assemblies são os blocos de construção do .NET Framework; eles formam a un
  [Local do assembly](location.md)  
  Fornece uma visão geral de onde localizar assemblies.  
   
- [Como: Compilar um assembly de arquivo único](../../framework/app-domains/build-single-file-assembly.md)  
+ [Como criar um assembly de arquivo único](../../framework/app-domains/build-single-file-assembly.md)  
  Descreve como criar um assembly de arquivo único.  
   
  [Assemblies de multiarquivo](../../framework/app-domains/multifile-assemblies.md)  
  Descreve os motivos para a criação de assemblies de vários arquivos.  
   
- [Como: Compilar um assembly de multiarquivos](../../framework/app-domains/build-multifile-assembly.md)  
+ [Como compilar um assembly de multiarquivos](../../framework/app-domains/build-multifile-assembly.md)  
  Descreve como criar um assembly de vários arquivos.  
   
  [Definir atributos de assembly](set-attributes.md)  
@@ -59,7 +57,7 @@ Os assemblies são os blocos de construção do .NET Framework; eles formam a un
  [Trabalhar com assemblies e o cache de assembly global](../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
  Descreve como e por que adicionar assemblies ao cache de assembly global, além de incluir tópicos explicativos.  
   
- [Como: Exibir conteúdo do assembly](view-contents.md)  
+ [Como exibir o conteúdo do assembly](view-contents.md)  
  Descreve como usar o Desmontador de MSIL (Ildasm.exe) para exibir o conteúdo do assembly.  
   
  [Encaminhamento de tipo no Common Language Runtime](type-forwarding.md)  
@@ -70,7 +68,7 @@ Os assemblies são os blocos de construção do .NET Framework; eles formam a un
  A classe do .NET Framework que representa um assembly.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Como: Obter informações de tipo e membro de um assembly](../../framework/reflection-and-codedom/get-type-member-information.md)  
+ [Como obter informações de tipo e membro de um assembly](../../framework/reflection-and-codedom/get-type-member-information.md)  
  Descreve como obter de modo programático o tipo e outras informações de um assembly.  
   
  [Assemblies no .NET](index.md)  

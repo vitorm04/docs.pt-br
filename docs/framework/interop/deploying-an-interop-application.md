@@ -14,21 +14,19 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 080ef48ade496a55f414b64158a40fe0e551c2aa
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567293"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123559"
 ---
 # <a name="deploying-an-interop-application"></a>Implantando um aplicativo de interoperabilidade
 Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do .NET, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipos COM e um ou mais componentes COM registrados. O Visual Studio e o SDK do Windows fornecem ferramentas para importar e converter uma biblioteca de tipos em um assembly de interoperabilidade, conforme abordado em [Importar uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md). Há duas maneiras de implantar um aplicativo de interoperabilidade:  
   
-- Usando tipos de interoperabilidade inseridos: Do .NET Framework 4 em diante, é possível instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade ao seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.  
+- Usando tipos de interoperabilidade inseridos: começando com o .NET Framework 4, você pode instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade em seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.  
   
-- Implantando assemblies de interoperabilidade: Crie uma referência padrão a um assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo. Se você usar essa técnica e não estiver usando um componente COM particular, sempre referencie o PIA (assembly de interoperabilidade primário) publicado pelo autor do componente COM que você pretende incorporar no código gerenciado. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Implantando assemblies de interoperabilidade: é possível criar uma referência padrão a um assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo. Se você usar essa técnica e não estiver usando um componente COM particular, sempre referencie o PIA (assembly de interoperabilidade primário) publicado pelo autor do componente COM que você pretende incorporar no código gerenciado. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Se você usar tipos de interoperabilidade inseridos, a implantação será simples. Não há nada especial que precisa ser feito. O restante deste artigo descreve os cenários de implantação de assemblies de interoperabilidade com o aplicativo.  
   
@@ -38,7 +36,7 @@ Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do 
 ### <a name="private-assemblies"></a>Assemblies particulares  
  Para instalar um assembly a ser usado de forma particular, o executável do aplicativo e o assembly de interoperabilidade que contém tipos COM importados devem ser instalados na mesma estrutura de diretório. A ilustração a seguir mostra um assembly de interoperabilidade não assinado a ser usado de forma particular por Client1.exe e Client2.exe, que residem em diretórios de aplicativo separados. O assembly de interoperabilidade, que é chamado LOANLib.dll neste exemplo, é instalado duas vezes.  
   
- ![Estrutura do diretório e Registro do Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Estrutura do diretório e entradas do Registro de uma implantação particular")  
+ ![Estrutura de diretórios e registro do Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Estrutura do diretório e entradas do Registro de uma implantação particular")  
   
  Todos os componentes COM associados ao aplicativo devem ser instalados no Registro do Windows. Se Client1.exe e Client2.exe na ilustração forem instalados em computadores diferentes, você deverá registrar esses componentes COM em ambos os computadores.  
   
@@ -48,6 +46,6 @@ Um aplicativo de interoperabilidade geralmente inclui um assembly de cliente do 
 ## <a name="see-also"></a>Consulte também
 
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
-- [Importar uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
+- [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)

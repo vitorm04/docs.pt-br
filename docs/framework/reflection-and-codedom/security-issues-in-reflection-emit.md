@@ -11,14 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2bdaef52bbc4cac0abfcbf8724f3c5c602bc8f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130038"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -36,7 +34,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Assemblies Dinâmicos  
- Os assemblies dinâmicos são criados usando as sobrecargas do método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. A maioria das sobrecargas desse método foi preterida no .NET Framework 4 devido à eliminação da política de segurança de todo o computador. (Consulte [Alterações de segurança](../security/security-changes.md).) As sobrecargas restantes podem ser executadas por qualquer código, independentemente do nível de confiança. Essas sobrecargas se enquadram em dois grupos: aquelas que especificam uma lista de atributos a ser aplicada ao assembly dinâmico quando ele é criado e aquelas que não. Se você não especificar o modelo de transparência do assembly, aplicando o atributo <xref:System.Security.SecurityRulesAttribute> quando criá-lo, o modelo de transparência será herdado do assembly emissor.  
+ Os assemblies dinâmicos são criados usando as sobrecargas do método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. A maioria das sobrecargas desse método foi preterida no .NET Framework 4 devido à eliminação da política de segurança de todo o computador. (Consulte [alterações de segurança](../security/security-changes.md).) As sobrecargas restantes podem ser executadas por qualquer código, independentemente do nível de confiança. Essas sobrecargas se enquadram em dois grupos: aquelas que especificam uma lista de atributos a ser aplicada ao assembly dinâmico quando ele é criado e aquelas que não. Se você não especificar o modelo de transparência do assembly, aplicando o atributo <xref:System.Security.SecurityRulesAttribute> quando criá-lo, o modelo de transparência será herdado do assembly emissor.  
   
 > [!NOTE]
 > Os atributos aplicados ao assembly dinâmico após ele ser criado, usando o método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>, não entram em vigor até que o assembly tenha sido salvo no disco e carregado na memória novamente.  
@@ -68,7 +66,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
 > [!NOTE]
 > Conceitualmente, as demandas são feitas durante a construção do método. Ou seja, as demandas podem ser feitas conforme cada instrução MSIL é emitida. Na implementação atual, todas as solicitações são feitas quando o método <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> é chamado ou quando o compilador JIT (Just-In-Time) é invocado, se o método for invocado sem chamar <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
- Se o domínio do aplicativo permitir isso, os métodos dinâmicos hospedados anonimamente poderão ignorar as verificações de visibilidade JIT, sujeitos à seguinte restrição: Os tipos e membros não públicos acessados por um método dinâmico hospedado anonimamente precisam ser em assemblies cujos conjuntos de concessões sejam iguais ao conjunto de concessões da pilha de chamadas de emissão ou sejam subconjuntos dele. Essa capacidade restrita de ignorar as verificações de visibilidade JIT é habilitada se o domínio do aplicativo concede <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+ Se o domínio do aplicativo permitir isso, os métodos dinâmicos hospedados anonimamente podem ignorar as verificações de visibilidade JIT, sujeitos à seguinte restrição: os tipos e membros não públicos acessados por um método dinâmico hospedado anonimamente devem estar em assemblies cujos conjuntos de concessões sejam iguais ao, ou subconjuntos de, conjunto de concessões da pilha de chamadas emissora. Essa capacidade restrita de ignorar as verificações de visibilidade JIT é habilitada se o domínio do aplicativo concede <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
 - Se o método usar apenas membros e tipos públicos, não serão necessárias permissões durante a construção.  
   
@@ -155,5 +153,5 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
 ## <a name="see-also"></a>Consulte também
 
-- [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)
+- [Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)
 - [Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)

@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks and APM
 ms.assetid: 7add905b-ff60-4353-af79-5089038d9a08
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ae3449e37dd5b8ff19dd2f0116a3c2cfa051385
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: c1bb98222c5e2ba88f59565dc983f1612b520eee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139894"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>Usando TPL com outros padrões assíncronos
 A Biblioteca de paralelismo de tarefas pode ser usada com padrões tradicionais de programação assíncrona do .NET Framework de várias maneiras.  

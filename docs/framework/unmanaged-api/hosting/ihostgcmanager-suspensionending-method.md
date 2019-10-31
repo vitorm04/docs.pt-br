@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8849a1db-17f0-44b7-880a-bd36d431eb91
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f65f924b872195000f73bf29b267d1fc30b74f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6ef04799c0062c40f1671cbe6d897a148e1b93bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130468"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Método IHostGCManager::SuspensionEnding
 Notifica o host que o Common Language Runtime (CLR) está retomando a execução de tarefas em threads que foram suspensos para uma coleta de lixo.  
@@ -39,11 +37,11 @@ HRESULT SuspensionEnding (
  `generation`  
  no A geração de coleta de lixo que está acabando de ser concluída, da qual o thread está retomando.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SuspensionEnding`retornado com êxito.|  
+|S_OK|`SuspensionEnding` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -51,17 +49,17 @@ HRESULT SuspensionEnding (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR chama `SuspensionEnding` após executar uma coleta de lixo para informar ao host que o thread está retomando a execução.  
+ O CLR chama `SuspensionEnding` depois de executar uma coleta de lixo, para informar ao host que o thread está retomando a execução.  
   
 > [!IMPORTANT]
 > Não reagende o thread a partir do qual a chamada de método foi feita.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

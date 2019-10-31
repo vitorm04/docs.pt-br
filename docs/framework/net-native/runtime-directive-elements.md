@@ -2,14 +2,12 @@
 title: Elementos da diretiva de tempo de execução
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049265"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128166"
 ---
 # <a name="runtime-directive-elements"></a>Elementos da diretiva de tempo de execução
 O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução. Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.  

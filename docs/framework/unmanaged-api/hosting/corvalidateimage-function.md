@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 42da5bb761ba8ce388bd41d46e8fdc4561ad0290
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136878"
 ---
-# <a name="corvalidateimage-function"></a>Função _CorValidateImage
-Valida imagens de módulo gerenciado e notifica o carregador do sistema operacional, depois de eles terem sido carregados.  
+# <a name="_corvalidateimage-function"></a>Função _CorValidateImage
+Valida as imagens de módulo gerenciado e notifica o carregador do sistema operacional depois que elas tiverem sido carregadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,48 +35,48 @@ STDAPI _CorValidateImage (
   
 ## <a name="parameters"></a>Parâmetros  
  `ImageBase`  
- [in] Um ponteiro para o local inicial da imagem para validar que o código gerenciado. A imagem já deve ser carregada na memória.  
+ no Um ponteiro para o local inicial da imagem a ser validada como código gerenciado. A imagem já deve estar carregada na memória.  
   
  `FileName`  
- [in] O nome do arquivo da imagem.  
+ no O nome do arquivo da imagem.  
   
-## <a name="return-value"></a>Valor de retorno  
- Essa função retorna os valores padrão `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, e `E_FAIL`, bem como os valores a seguir.  
+## <a name="return-value"></a>Valor retornado  
+ Essa função retorna os valores padrão `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`e `E_FAIL`, bem como os valores a seguir.  
   
 |Valor retornado|Descrição|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|A imagem é inválida. Esse valor tem o 0xC000007BL HRESULT.|  
-|`STATUS_SUCCESS`|A imagem é válida. Esse valor tem o 0x00000000L HRESULT.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|A imagem é inválida. Esse valor tem o HRESULT 0xC000007BL.|  
+|`STATUS_SUCCESS`|A imagem é válida. Esse valor tem o HRESULT 0x00000000l.|  
   
 ## <a name="remarks"></a>Comentários  
- No Windows XP e versões posteriores, o carregador do sistema operacional verifica módulos gerenciados examinando o diretório de descritor COM bit no cabeçalho formato COFF. Um bit definido indica que um módulo gerenciado. Se o carregador detecta um módulo gerenciado, ele carrega mscoree. dll e chamadas `_CorValidateImage`, que executa as seguintes ações:  
+ No Windows XP e versões posteriores, o carregador do sistema operacional verifica módulos gerenciados examinando o bit do diretório do descritor COM no cabeçalho COFF (Common Object File Format). Um bit definido indica um módulo gerenciado. Se o carregador detectar um módulo gerenciado, ele carregará o MsCorEE. dll e chamará `_CorValidateImage`, que executará as seguintes ações:  
   
 - Confirma que a imagem é um módulo gerenciado válido.  
   
-- Altera o ponto de entrada na imagem para um ponto de entrada no common language runtime (CLR).  
+- Altera o ponto de entrada na imagem para um ponto de entrada no Common Language Runtime (CLR).  
   
-- Para versões de 64 bits do Windows, modifica a imagem que está na memória transformando-a do formato PE32 para o formato PE32 +.  
+- Para versões de 64 bits do Windows, o modifica a imagem que está na memória transformando-a de PE32 para PE32 + Format.  
   
-- Retorna o carregador quando as imagens de módulo gerenciado são carregadas.  
+- Retorna ao carregador quando as imagens de módulo gerenciado são carregadas.  
   
- Para imagens executáveis, o carregador do sistema operacional, em seguida, chama o [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) função, independentemente do ponto de entrada especificado no executável. Para imagens do assembly DLL, o carregador de chamadas a [cordllmain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) função.  
+ Para imagens executáveis, o carregador do sistema operacional chama a função [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) , independentemente do ponto de entrada especificado no executável. Para imagens de assembly de DLL, o carregador chama a função [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) .  
   
  `_CorExeMain` ou `_CorDllMain` executa as seguintes ações:  
   
 - Inicializa o CLR.  
   
-- Localiza o ponto de entrada gerenciado de cabeçalho CLR do assembly.  
+- Localiza o ponto de entrada gerenciado do cabeçalho CLR do assembly.  
   
 - Inicia a execução.  
   
- As chamadas de carregador a [CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funcionar quando gerenciado imagens de módulo serão descarregadas. No entanto, essa função não executa nenhuma ação; ele simplesmente retorna.  
+ O carregador chama a função [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) quando as imagens de módulo gerenciado são descarregadas. No entanto, essa função não executa nenhuma ação; Ele apenas retorna.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

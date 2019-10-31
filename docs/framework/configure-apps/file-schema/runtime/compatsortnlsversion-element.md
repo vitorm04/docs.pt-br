@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 575d44ad9ecf445ba5d4b7fbe47032127ccb33ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252727"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117676"
 ---
-# <a name="compatsortnlsversion-element"></a>\<Elemento de > CompatSortNLSVersion
+# <a name="compatsortnlsversion-element"></a>\<elemento de > CompatSortNLSVersion
 Especifica que o tempo de execução deve usar as ordens de classificação herdadas ao executar comparações de cadeias de caracteres.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +55,7 @@ Especifica que o tempo de execução deve usar as ordens de classificação herd
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Como as operações de comparação de cadeia de caracteres, classificação e <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> maiúsculas e minúsculas executadas pela classe no .NET Framework 4 estão em conformidade com o padrão Unicode 5,1, <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> os <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> resultados dos métodos de comparação de cadeia de caracteres, como e podem ser diferentes de versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar a comparação de cadeias de caracteres e as regras de classificação usadas no .NET Framework 3,5 `<CompatSortNLSVersion>` e versões anteriores, incluindo o elemento no arquivo de configuração do aplicativo.  
+ Como as operações de comparação de cadeia de caracteres, classificação e maiúsculas e minúsculas executadas pela classe <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> no .NET Framework 4 estão em conformidade com o padrão Unicode 5,1, os resultados de métodos de comparação de cadeia de caracteres como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> podem ser diferentes das versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar a comparação de cadeias de caracteres e as regras de classificação usadas no .NET Framework 3,5 e em versões anteriores, incluindo o elemento `<CompatSortNLSVersion>` no arquivo de configuração do aplicativo.  
   
 > [!IMPORTANT]
 > Restaurar a comparação e as regras de classificação de cadeia de caracteres herdadas também requer que a biblioteca de vínculo dinâmico do arquivo sort00001000.dll esteja disponível no sistema local.  

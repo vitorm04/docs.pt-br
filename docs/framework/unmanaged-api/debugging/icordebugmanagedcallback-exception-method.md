@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759626"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130821"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>Método ICorDebugManagedCallback::Exception
-Notifica o depurador que foi lançada uma exceção do código gerenciado.  
+Notifica o depurador de que uma exceção foi lançada do código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +37,19 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo no qual a exceção foi gerada.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual a exceção foi gerada.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual a exceção foi gerada.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread no qual a exceção foi gerada.  
   
  `unhandled`  
- [in] Se esse valor for `false`, a exceção ainda não tiver sido processada pelo aplicativo; caso contrário, a exceção é tratada e encerrará o processo.  
+ no Se esse valor for `false`, a exceção ainda não foi processada pelo aplicativo; caso contrário, a exceção será sem tratamento e encerrará o processo.  
   
 ## <a name="remarks"></a>Comentários  
  A exceção específica pode ser recuperada do objeto de thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

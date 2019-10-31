@@ -1,5 +1,5 @@
 ---
-title: 'Como: executar ações quando um bloco de fluxo de dados recebe dados'
+title: 'Como: Executar ações quando um bloco de fluxo de dados recebe dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124211"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: executar ações quando um bloco de fluxo de dados recebe dados
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: Executar ações quando um bloco de fluxo de dados recebe dados
 Os tipos de *Blocos de fluxo de dados de execução* chamam um representante fornecido pelo usuário ao receber dados. As classes <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> são tipos de blocos de fluxo de dados de execução. Você pode usar a palavra-chave `delegate` (`Sub` em Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> ou uma expressão lambda ao fornecer uma função de trabalho a um bloco de fluxo de dados de execução. Este documento descreve como usar <xref:System.Func%602> e as expressões lambda para executar a ação em blocos de execução.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

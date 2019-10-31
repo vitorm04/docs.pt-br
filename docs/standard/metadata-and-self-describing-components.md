@@ -15,14 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353899"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121942"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadados e componentes autodescritivos
 
@@ -159,7 +157,7 @@ O compilador JIT lê o MSIL para o método inteiro o analisa-o por completo, al�
 
 A tabela a seguir mostra parte da tabela **MethodDef** referenciada pelo token de metadados que descreve o método `Add`. Embora haja outras tabelas de metadados nesse assembly e elas tenham seus próprios valores exclusivos, somente essa tabela é examinada.
 
-|Linha|RVA (endereço virtual relativo)|ImplFlags|Sinalizadores|Nome<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
+|Linha|RVA (endereço virtual relativo)|ImplFlags|Sinalizadores|Name<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> Gerenciado|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
 |2|0x00002058|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|Cadeia de Caracteres|

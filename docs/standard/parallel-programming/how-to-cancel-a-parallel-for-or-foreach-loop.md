@@ -1,5 +1,5 @@
 ---
-title: 'Como: Cancelar um loop Parallel.For ou ForEach'
+title: Como cancelar um loop Parallel.For ou ForEach
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - parallel foreach loop, how to cancel
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cdb6e059fb1c7001bbe4da60e2936b1ad40cc1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 67f1f91f235cc88deaa97d412f368819ae0a8cda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134239"
 ---
-# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Como: Cancelar um loop Parallel.For ou ForEach
+# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Como cancelar um loop Parallel.For ou ForEach
 Os métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> oferecem suporte ao cancelamento por meio do uso de tokens de cancelamento. Para saber mais sobre cancelamento em geral, confira [Cancelamento](../../../docs/standard/threading/cancellation-in-managed-threads.md). Em um loop paralelo, você fornece <xref:System.Threading.CancellationToken> para o método no parâmetro <xref:System.Threading.Tasks.ParallelOptions> e, em seguida, coloca a chamada paralela em um bloco try-catch.  
   
 ## <a name="example"></a>Exemplo  

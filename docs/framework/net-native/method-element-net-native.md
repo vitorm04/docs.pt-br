@@ -2,16 +2,14 @@
 title: <Method> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d741f51abf02f4bfda2b007efd4c859027e54d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049583"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128344"
 ---
-# <a name="method-element-net-native"></a>\<Elemento de > de método (.NET Native)
+# <a name="method-element-net-native"></a>Elemento > do método de \<(.NET Native)
 Aplica a política de reflexão de tempo de execução a um construtor ou método.  
   
 ## <a name="syntax"></a>Sintaxe  

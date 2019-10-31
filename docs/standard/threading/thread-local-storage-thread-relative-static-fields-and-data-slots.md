@@ -1,5 +1,5 @@
 ---
-title: 'Armazenamento local de thread: Campos estáticos relativos a thread e slots de dados'
+title: 'Armazenamento local de thread: campos estáticos relativos a thread e slots de dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490911"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127516"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Armazenamento local de thread: Campos estáticos relativos a thread e slots de dados
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Armazenamento local de thread: campos estáticos relativos a thread e slots de dados
 Você pode usar o armazenamento local de thread (TLS) gerenciado para armazenar dados que são exclusivos de um domínio de aplicativo e thread. O .NET Framework oferece duas maneiras de usar o TLS gerenciado: campos estáticos relativos a thread e slots de dados.  
   
 - Use campos estáticos relativos a thread (campos `Shared` relativos a thread no Visual Basic) se você puder prever suas necessidades exatas em tempo de compilação. Campos estáticos relativos a thread fornecem o melhor desempenho. Eles também oferecem os benefícios da verificação do tipo de tempo de compilação.  

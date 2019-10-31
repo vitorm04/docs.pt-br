@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40a6376d4f4ffd09743441df1965d0a0f0d969b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764846"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103440"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>Método ICorPublishProcessEnum::Next
-Obtém o número de processos especificado da coleção, começando na posição atual do cursor.  
+Obtém o número especificado de processos da coleção, começando na posição atual do cursor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de processos a serem recuperados.  
+ no O número de processos a serem recuperados.  
   
  `objects`  
- [out] Um ponteiro para a matriz de recuperados [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objetos, cada um deles representa um processo.  
+ fora Um ponteiro para a matriz de objetos [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) recuperados, cada um deles representa um processo.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de processos, na verdade, é retornado. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de processos realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

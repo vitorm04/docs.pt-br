@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138198"
 ---
 # <a name="etasktype-enumeration"></a>Enumeração ETaskType
-Contém valores que indicam o tipo de tarefa que é representado por um [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou um [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.  
+Contém valores que indicam o tipo de tarefa que é representado por uma interface [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,23 +47,23 @@ typedef enum ETaskType {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|A interface representa uma tarefa de descarregamento de domínio de aplicativo.|  
-|`TT_DEBUGGERHELPER`|A interface representa uma tarefa de auxiliar do depurador.|  
-|`TT_FINALIZER`|A interface representa uma tarefa do finalizador.|  
+|`TT_DEBUGGERHELPER`|A interface representa uma tarefa auxiliar do depurador.|  
+|`TT_FINALIZER`|A interface representa uma tarefa Finalizadora.|  
 |`TT_GC`|A interface representa uma tarefa de coleta de lixo.|  
-|`TT_THREADPOOL_GATE`|A interface representa uma tarefa de thread de porta.|  
+|`TT_THREADPOOL_GATE`|A interface representa uma tarefa portão thread.|  
 |`TT_THREADPOOL_IOCOMPLETION`|A interface representa uma tarefa de thread de e/s ou uma tarefa de thread de porta de conclusão.|  
-|`TT_THREADPOOL_TIMER`|A interface representa uma tarefa de thread do temporizador.|  
+|`TT_THREADPOOL_TIMER`|A interface representa uma tarefa de thread de temporizador.|  
 |`TT_THREADPOOL_WAIT`|A interface representa uma tarefa de thread de espera.|  
 |`TT_THREADPOOL_WORKER`|A interface representa uma tarefa de thread de trabalho.|  
 |`TT_UNKNOWN`|A tarefa é desconhecida.|  
-|`TT_USER`|A interface representa uma tarefa do usuário.|  
+|`TT_USER`|A interface representa uma tarefa de usuário.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b996b09ed3973125d4d848d5e00c18ab02a6967
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139995"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Armadilhas em potencial com PLINQ
 
@@ -46,7 +44,7 @@ Nesse caso, é melhor paralelizar apenas a fonte de dados externa (clientes), a 
 
 - O sistema de destino tem processadores suficientes para lidar com o número de threads que serão produzidos paralelizando a consulta em `cust.Orders`.
 
-Em todos os casos, a melhor maneira de determinar a forma ideal da consulta é testar e medir. Para obter mais informações, confira [Como: Avaliar o desempenho da consulta PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
+Em todos os casos, a melhor maneira de determinar a forma ideal da consulta é testar e medir. Para saber mais, confira [Como avaliar o desempenho de consulta PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
 
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>Evite chamadas para métodos não thread-safe
 
@@ -79,11 +77,11 @@ Embora o PLINQ execute uma consulta em múltiplos threads, se você consumir os 
 
 A mesma questão se aplica a <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Em outras palavras, `source.AsParallel().Where().ForAll(...)` devem ser fortemente preferidos no lugar de
 
-`Parallel.ForEach(source.AsParallel().Where(), ...)`.
+`Parallel.ForEach(source.AsParallel().Where(), ...)`
 
 ## <a name="be-aware-of-thread-affinity-issues"></a>Esteja ciente de questões de afinidade de thread
 
-Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Se você tenta acessar o estado compartilhado de um controle Windows Forms em uma consulta PLINQ, uma exceção é gerada se você estiver executando no depurador. (Essa configuração pode ser desligada). No entanto, se sua consulta for consumada no thread da IU, você pode acessar o controle do loop `foreach` que enumera os resultados da consulta, pois esse código é executado em apenas um thread.
+Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Se você tenta acessar o estado compartilhado de um controle Windows Forms em uma consulta PLINQ, uma exceção é gerada se você estiver executando no depurador. (Essa configuração pode ser desativada.) No entanto, se a consulta for consumida no thread da interface do usuário, você poderá acessar o controle do loop de `foreach` que enumera os resultados da consulta porque esse código é executado em apenas um thread.
 
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Não suponha que iterações para ForEach, For e ForAll sempre sejam executadas em paralelo
 

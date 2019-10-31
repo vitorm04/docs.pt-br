@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c18f2fce23e979f27d9116e74b6c6b007cd33bf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 07331a512dd513a94a7d8c3a8d8b0754d998b94b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131010"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>Método ICorDebugILFrame::EnumerateLocalVariables
 Obtém um enumerador para as variáveis locais neste quadro.  
@@ -37,13 +35,13 @@ HRESULT EnumerateLocalVariables(
   
 ## <a name="parameters"></a>Parâmetros  
  `ppValueEnum`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugValueEnum que é o enumerador para as variáveis locais neste quadro.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugValueEnum que é o enumerador para as variáveis locais neste quadro.  
   
 ## <a name="remarks"></a>Comentários  
- `EnumerateLocalVariables` Obtém um enumerador que pode listar as variáveis locais disponíveis no quadro de chamada que é representado por esse objeto ICorDebugILFrame. A lista pode não incluir todas as variáveis locais na função em execução, porque alguns deles podem não estar ativas.  
+ `EnumerateLocalVariables` Obtém um enumerador que pode listar as variáveis locais disponíveis no quadro de chamada que é representado por esse objeto ICorDebugILFrame. A lista pode não incluir todas as variáveis locais na função em execução, pois algumas delas podem não estar ativas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

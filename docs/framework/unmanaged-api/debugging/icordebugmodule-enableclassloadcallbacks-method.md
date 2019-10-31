@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9b4867ad19f25e35ca31c007c0d238b949abab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c18ed781d44c873b4cd1957bf0102a4ce0cccad4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762218"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139213"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>Método ICorDebugModule::EnableClassLoadCallbacks
-Controles se o [icordebugmanagedcallback:: loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [icordebugmanagedcallback:: Unloadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) retornos de chamada são chamados para esse módulo.  
+Controla se os retornos de chamada [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [ICorDebugManagedCallback:: UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) são chamados para este módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT EnableClassLoadCallbacks(
   
 ## <a name="parameters"></a>Parâmetros  
  `bClassLoadCallbacks`  
- [in] Defina esse valor como `true` para habilitar o common language runtime (CLR) para chamar o `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` métodos quando ocorrem os eventos associados.  
+ no Defina esse valor como `true` para habilitar o Common Language Runtime (CLR) para chamar os métodos `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` quando seus eventos associados ocorrerem.  
   
- O valor padrão é `false` para os módulos não dinâmicos. O valor é sempre `true` para módulos dinâmicos e não pode ser alterado.  
+ O valor padrão é `false` para módulos não dinâmicos. O valor sempre é `true` para módulos dinâmicos e não pode ser alterado.  
   
 ## <a name="remarks"></a>Comentários  
- O `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` retornos de chamada estão sempre habilitados para módulos dinâmicos e não pode ser desabilitados.  
+ Os retornos de chamada `ICorDebugManagedCallback::LoadClass` e `ICorDebugManagedCallback::UnloadClass` estão sempre habilitados para módulos dinâmicos e não podem ser desabilitados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

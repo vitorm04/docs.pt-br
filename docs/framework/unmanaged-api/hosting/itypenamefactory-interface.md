@@ -14,26 +14,24 @@ helpviewer_keywords:
 ms.assetid: fa4247c4-f4f1-4855-9241-e04d737f5f73
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef9d623892f3ea55965772bd69fe878c6fc800f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f224ecc60822862d7c587d7094011d8232fb2b09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123322"
 ---
 # <a name="itypenamefactory-interface"></a>Interface ITypeNameFactory
-Fornece métodos para desconstruir um nome de tipo.  
+Fornece métodos para decompor um nome de tipo.  
   
  Essa interface oferece suporte a infraestrutura do .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

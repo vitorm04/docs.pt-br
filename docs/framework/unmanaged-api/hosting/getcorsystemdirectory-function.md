@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d30384ea8b9ff4eee41abd43ae39486f770039e7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 63fb505a92683fda21b6e71a6ca891ca35afba1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041422"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136406"
 ---
 # <a name="getcorsystemdirectory-function"></a>Função GetCORSystemDirectory
 Retorna o diretório de instalação do Common Language Runtime (CLR) que é carregado no processo. O diretório de instalação é totalmente qualificado, por exemplo, "c:\Windows\Microsoft.NET\Framework\v1.0.3705".  
@@ -55,11 +53,11 @@ HRESULT GetCORSystemDirectory (
 > Não use essa função em processos que estejam executando a versão 4 do CLR. Se uma versão anterior do CLR estiver instalada no computador, essa função retornará o diretório de instalação para essa versão.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

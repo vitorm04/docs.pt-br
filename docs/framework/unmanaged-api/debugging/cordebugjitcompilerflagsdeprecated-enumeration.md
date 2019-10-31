@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd0def06defa677ddde798106c299ed909cd4ce1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d731b12ddf195137ff38d32ab0ca52aa90f48d4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132780"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>Enumeração CorDebugJITCompilerFlagsDeprecated
-Esta enumeração é obsoleta. Use o `CORDEBUG_JIT_DEFAULT` membro a [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeração em vez disso.  
+Essa enumeração é obsoleta. Em vez disso, use o membro `CORDEBUG_JIT_DEFAULT` da enumeração [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,13 +39,13 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|Use `CORDEBUG_JIT_DEFAULT` em seu lugar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 1.0, 1.1  
+ **Versões do .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Consulte também
 

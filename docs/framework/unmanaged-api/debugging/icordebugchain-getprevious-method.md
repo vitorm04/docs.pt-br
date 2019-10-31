@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31c795c2fbbfdc45b6e1aac6684f730f55fc106a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746411"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124730"
 ---
 # <a name="icordebugchaingetprevious-method"></a>Método ICorDebugChain::GetPrevious
-Obtém a cadeia anterior de quadros do thread.  
+Obtém a cadeia de quadros anterior para o thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetPrevious (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppChain`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia anterior de quadros para este thread. Se essa cadeia é a primeira cadeia, `ppChain` é nulo.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia de quadros anterior para esse thread. Se essa cadeia for a primeira cadeia, `ppChain` será NULL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

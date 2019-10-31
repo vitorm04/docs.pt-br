@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: cd6a3982-6ed3-4909-808d-a66055e813e0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf6bc73683a6c37ceaaffc635a58803b71c3b6cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2902744b6af3c7b2bd4def73b04807ce3333a8a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782753"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131882"
 ---
 # <a name="icordebugruntimeunwindableframe-interface"></a>Interface ICorDebugRuntimeUnwindableFrame
 Fornece suporte para os métodos não gerenciados que exigem que o CLR (Common Language Runtime) desenrole um quadro.  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebugRuntimeUnwindableFrame` é uma versão especializada da interface ICorDebugFrame. Ele é usado por métodos não gerenciados que exigem o tempo de execução desenrole um quadro na pilha atual. Convenções de desenrolamento existentes não funcionam, porque eles não usam código compilado por JIT. Quando o depurador considera um quadro liberáveis, ele deve usar o [icordebugstackwalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) método desenrolar ele, mas ele deve executar a inspeção em si. Quando o depurador recebe uma `ICorDebugRuntimeUnwindableFrame`, ele chamará o [icordebugstackwalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) método para recuperar o contexto do quadro.  
+ `ICorDebugRuntimeUnwindableFrame` é uma versão especializada da interface ICorDebugFrame. Ele é usado por métodos não gerenciados que exigem o tempo de execução para desenrolar um quadro na pilha atual. As convenções de desenrolação existentes não funcionam, pois não usam código de compilação JIT. Quando o depurador vê um quadro não-envento, ele deve usar o método [ICorDebugStackWalk:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md) para desenrolar, mas deve executar a inspeção em si. Quando o depurador recebe uma `ICorDebugRuntimeUnwindableFrame`, ele pode chamar o método [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) para recuperar o contexto do quadro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

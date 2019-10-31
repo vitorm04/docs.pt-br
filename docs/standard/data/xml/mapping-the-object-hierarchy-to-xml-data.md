@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124257"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapeando a hierarquia do objeto para dados XML
 Quando um documento XML está na memória, a representação conceitual é uma árvore. Para programar, você tem uma hierarquia de objeto para acessar os nós da árvore. O exemplo a seguir mostra como o conteúdo XML torna-se nós.  
@@ -32,7 +30,7 @@ Quando um documento XML está na memória, a representação conceitual é uma �
   
  A entrada é representada na memória como a árvore de nó a seguir com a propriedade de tipo de nó atribuída:  
   
- ![árvore do nó de exemplo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![árvore de nós de exemplo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Representação da árvore do nó do livro e do título  
   
  O elemento `book` torna-se um objeto **XmlElement**, o elemento a seguir, `title`, também se torna **XmlElement**, enquanto o conteúdo do elemento se torna um objeto **XmlText**. Ao analisar os métodos e as propriedades **XmlElement**, eles são diferentes dos métodos e das propriedades disponíveis em um objeto **XmlText**. Portanto, saber qual tipo de nó a marcação XML se torna é vital, porque o tipo de nó determina as ações que podem ser executadas.  

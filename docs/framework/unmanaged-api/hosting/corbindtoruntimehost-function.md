@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1965917e8a1c5ae07cf119df3664b969a979be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a6d9708e7281a72c88ba28012006784f7b0ee9d9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124352"
 ---
 # <a name="corbindtoruntimehost-function"></a>Função CorBindToRuntimeHost
 Permite que os hosts carreguem uma versão especificada do Common Language Runtime (CLR) em um processo.  
@@ -47,16 +45,16 @@ HRESULT CorBindToRuntimeHost (
  `pwszVersion`  
  no Uma cadeia de caracteres que descreve a versão do CLR que você deseja carregar.  
   
- Um número de versão no .NET Framework consiste em quatro partes separadas por pontos: *Major. Minor. Build. Revision*. A cadeia de caracteres `pwszVersion` passada como deve começar com o caractere "v" seguido pelas três primeiras partes do número de versão (por exemplo, "v 1.0.1529").  
+ Um número de versão no .NET Framework consiste em quatro partes separadas por pontos: *Major. Minor. Build. Revision*. A cadeia de caracteres passada como `pwszVersion` deve começar com o caractere "v" seguido pelas três primeiras partes do número de versão (por exemplo, "v 1.0.1529").  
   
- Algumas versões do CLR são instaladas com uma declaração de política que especifica a compatibilidade com versões anteriores do CLR. Por padrão, o Shim de inicialização é `pwszVersion` avaliado em relação a instruções de política e carrega a versão mais recente do tempo de execução que é compatível com a versão que está sendo solicitada. Um host pode forçar o Shim a ignorar a avaliação da política e carregar a versão exata `pwszVersion` especificada no passando um valor de STARTUP_LOADER_SAFEMODE para `startupFlags` o parâmetro.  
+ Algumas versões do CLR são instaladas com uma declaração de política que especifica a compatibilidade com versões anteriores do CLR. Por padrão, o Shim de inicialização avalia `pwszVersion` em relação a instruções de política e carrega a versão mais recente do tempo de execução que é compatível com a versão que está sendo solicitada. Um host pode forçar a correção para ignorar a avaliação da política e carregar a versão exata especificada em `pwszVersion` passando um valor de STARTUP_LOADER_SAFEMODE para o parâmetro `startupFlags`.  
   
- Se `pwszVersion` for`null,` , o método não carregará nenhuma versão do CLR. Em vez disso, ele retorna CLR_E_SHIM_RUNTIMELOAD, que indica que houve falha ao carregar o tempo de execução.  
+ Se `pwszVersion` for `null,` o método não carregará nenhuma versão do CLR. Em vez disso, ele retorna CLR_E_SHIM_RUNTIMELOAD, que indica que houve falha ao carregar o tempo de execução.  
   
  `pwszBuildFlavor`  
  no Uma cadeia de caracteres que especifica se o servidor ou a compilação da estação de trabalho do CLR deve ser carregada. Os valores válidos são `svr` e `wks`. A compilação do servidor é otimizada para aproveitar vários processadores para coletas de lixo e a compilação da estação de trabalho é otimizada para aplicativos cliente em execução em um computador com um único processador.  
   
- Se `pwszBuildFlavor` é definido como NULL, a compilação da estação de trabalho é carregada. Durante a execução em um computador com um único processador, a compilação da estação de trabalho é `pwszBuildFlavor` sempre carregada, `svr`mesmo se estiver definida como. No entanto `pwszBuildFlavor` , se for `svr` definido como e a coleta de lixo simultânea for especificada ( `startupFlags` consulte a descrição do parâmetro), a compilação do servidor será carregada.  
+ Se `pwszBuildFlavor` for definido como NULL, a compilação da estação de trabalho será carregada. Durante a execução em um computador com um único processador, a compilação da estação de trabalho é sempre carregada, mesmo se `pwszBuildFlavor` estiver definida como `svr`. No entanto, se `pwszBuildFlavor` for definido como `svr` e a coleta de lixo simultânea for especificada (consulte a descrição do parâmetro `startupFlags`), a compilação do servidor será carregada.  
   
 > [!NOTE]
 > Não há suporte para a coleta de lixo simultânea em aplicativos que executam o emulador x86 WOW64 em sistemas de 64 bits que implementam a arquitetura Intel Itanium (anteriormente chamada IA-64). Para obter mais informações sobre como usar o WOW64 em sistemas Windows de 64 bits, consulte [executando aplicativos de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).  
@@ -68,7 +66,7 @@ HRESULT CorBindToRuntimeHost (
  no Reservado para extensibilidade futura.  
   
  `startupFlags`  
- no Um conjunto de sinalizadores que controla a coleta de lixo simultânea, o código neutro de domínio e o comportamento do `pwszVersion` parâmetro. O padrão é domínio único se nenhum sinalizador for definido. Para obter uma lista de valores com suporte, consulte a [enumeração STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+ no Um conjunto de sinalizadores que controla a coleta de lixo simultânea, o código neutro de domínio e o comportamento do parâmetro `pwszVersion`. O padrão é domínio único se nenhum sinalizador for definido. Para obter uma lista de valores com suporte, consulte a [enumeração STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
  `rclsid`  
  no O `CLSID` da coclass que implementa a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) . Os valores com suporte são CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
@@ -80,11 +78,11 @@ HRESULT CorBindToRuntimeHost (
  fora Um ponteiro de interface para a versão do tempo de execução que foi carregado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.idl  
+ **Cabeçalho:** MSCorEE. idl  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

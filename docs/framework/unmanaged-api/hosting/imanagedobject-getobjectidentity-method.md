@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749108"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141250"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Método IManagedObject::GetObjectIdentity
-Obtém a identidade do objeto gerenciado.  
+Obtém a identidade deste objeto gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +37,23 @@ HRESULT GetObjectIdentity (
   
 ## <a name="parameters"></a>Parâmetros  
  `pBSTRGUID`  
- [out] Um ponteiro para o GUID do processo no qual o objeto reside.  
+ fora Um ponteiro para o GUID do processo no qual o objeto reside.  
   
  `AppDomainID`  
- [out] Um ponteiro para a ID do objeto domínio do aplicativo.  
+ fora Um ponteiro para a ID do domínio do aplicativo do objeto.  
   
  `pCCW`  
- [out] Um ponteiro para o índice do objeto no COM clássico tabela v.  
+ fora Um ponteiro para o índice do objeto na tabela v clássica COM.  
   
 ## <a name="remarks"></a>Comentários  
- A identidade de um objeto gerenciado inclui o GUID do processo, ID de domínio do aplicativo e o índice do objeto no COM clássica tabela v.  
+ A identidade de um objeto gerenciado inclui GUID do processo, ID de domínio do aplicativo e o índice do objeto na tabela v clássica do COM.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da473ed176ab6c69ed974d5f28b22fc8eb30c6af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a845eed993914e02de34ec5c60ed232ccabc561e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762525"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133524"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>Método ICorDebugThread::GetAppDomain
 Obtém um ponteiro de interface para o domínio do aplicativo no qual este ICorDebugThread está em execução no momento.  
@@ -37,10 +35,10 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppAppDomain`  
- [out] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo no qual esse thread está em execução no momento.  
+ fora Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual esse thread está sendo executado no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

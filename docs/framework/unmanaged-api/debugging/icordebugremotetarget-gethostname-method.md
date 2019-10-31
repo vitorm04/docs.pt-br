@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744729"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131904"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>Método ICorDebugRemoteTarget::GetHostName
-Retorna o nome de domínio totalmente qualificado ou endereço IPv4 do computador de destino de depuração remota. Não há suporte para IPv6 neste momento.  
+Retorna o nome de domínio totalmente qualificado ou o endereço IPv4 do computador de destino de depuração remota. Não há suporte para IPV6 no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,32 +37,32 @@ HRESULT GetHostName (
   
 ## <a name="parameters"></a>Parâmetros  
  `cchHostName`  
- [in] O tamanho, em caracteres, da `szHostName` buffer. Se esse parâmetro for 0 (zero), `szHostName` deve ser nulo.  
+ no O tamanho, em caracteres, do buffer de `szHostName`. Se esse parâmetro for 0 (zero), `szHostName` deverá ser NULL.  
   
  `pcchHostName`  
- [out] O número de caracteres, incluindo um terminador nulo, o nome do host ou endereço IP. Este parâmetro pode ser nulo.  
+ fora O número de caracteres, incluindo um terminador nulo, no nome do host ou endereço IP. Este parâmetro pode ser nulo.  
   
  `szHostName`  
- [out] Buffer que contém o nome do host ou endereço IP.  
+ fora Buffer que contém o nome do host ou o endereço IP.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  S_OK  
- O nome do host ou endereço IP foi retornado com êxito.  
+ O nome do host ou o endereço IP foi retornado com êxito.  
   
- E_FAIL (ou outros códigos de retorno e _)  
- Não é possível retornar o nome do host ou endereço IP.  
+ E_FAIL (ou outros códigos de retorno de E_)  
+ Não é possível retornar o nome do host ou o endereço IP.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é implementado pelo gravador do depurador. Ele deve seguir o paradigma de várias chamadas: Na primeira chamada, o chamador passa nulo para ambos `cchHostName` e `szHostName`, e `pcchHostName` retorna o tamanho do buffer necessário. Na segunda chamada, o tamanho que foi retornado anteriormente é passado `cchHostName`, e um buffer adequadamente dimensionado é passado no `szHostName`.  
+ Esse método é implementado pelo gravador do depurador. Ele deve seguir o paradigma de chamada múltipla: na primeira chamada, o chamador passa nulo para `cchHostName` e `szHostName`e `pcchHostName` retorna o tamanho do buffer necessário. Na segunda chamada, o tamanho retornado anteriormente é passado em `cchHostName`e um buffer de tamanho apropriado é passado `szHostName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorDebug.idl  
+ **Cabeçalho:** CorDebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 3,5 SP1  
+ **Versões do .NET Framework:** 3,5 SP1  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 52a58f75ca7abd1bd1f871bcf4637bfd7eb7bdcd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b6bfd258f35f19719be5e5169a1edc22a358371c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300539"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123386"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>Método ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode
-[Com suporte no .NET Framework 4.6 e versões posteriores]  
+[Com suporte no .NET Framework 4,6 e versões posteriores]  
   
- Habilita ou desabilita determinados tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) retornos de chamada de exceção.  
+ Habilita ou desabilita determinados tipos de retornos de chamada de exceção [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,16 +29,16 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
  [in]  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor de `enableExceptionsOutsideOfJMC` é `false`:  
+ Se o valor de `enableExceptionsOutsideOfJMC` for `false`:  
   
 - Uma exceção DEBUG_EXCEPTION_FIRST_CHANCE não resultará em um retorno de chamada para o depurador.  
   
-- Uma exceção DEBUG_EXCEPTION_CATCH_HANDLER_FOUND não resultará em um retorno de chamada para o depurador se a exceção escapa nunca no código do usuário (ou seja, o caminho de uma origem da exceção para um manipulador de exceção não tem métodos marcados como JustMyCode ou JMC).  
+- Uma exceção DEBUG_EXCEPTION_CATCH_HANDLER_FOUND não resultará em um retorno de chamada para o depurador se a exceção nunca sair do código do usuário (ou seja, o caminho de uma origem de exceção para um manipulador de exceção não tem métodos marcados como JustMyCode ou JMC).  
   
  O valor padrão de `enableExceptionsOutsideOfJMC` é `true`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

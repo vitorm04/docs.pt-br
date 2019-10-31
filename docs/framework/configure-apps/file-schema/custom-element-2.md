@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 890269857aaa00ce62195ccb2f4cb184b363b61e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118538"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizado para NameValueSectionHandler e DictionarySectionHandler
 
-Define as configurações para seções de configuração personalizadas que <xref:System.Configuration.NameValueSectionHandler> usam <xref:System.Configuration.DictionarySectionHandler> as classes e.
+Define as configurações para seções de configuração personalizadas que usam as classes <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp; **\<sectionName>**
+&nbsp;&nbsp; **\<sectionname >**
 
 ## <a name="attributes"></a>Atributos
 
@@ -36,13 +36,13 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| Adicionar > para e [ **\<** ](add-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler>  | Adiciona configurações de aplicativo personalizadas. |
-| Remover > para e [ **\<** ](remove-element-for-custom-2.md) <xref:System.Configuration.NameValueSectionHandler><xref:System.Configuration.DictionarySectionHandler> | Remove uma configuração definida anteriormente. |
-| Desmarque <xref:System.Configuration.NameValueSectionHandler> > para e [ **\<** ](clear-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler> | Limpa todas as configurações definidas anteriormente em uma seção. |
+| [ **\<adicionar >** ](add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>  | Adiciona configurações de aplicativo personalizadas. |
+| [ **\<remover >** ](remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Remove uma configuração definida anteriormente. |
+| [ **\<limpar >** ](clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Limpa todas as configurações definidas anteriormente em uma seção. |
 
 ## <a name="remarks"></a>Comentários
 
-**\<**  **O\<elemento SectionName >** é um elemento personalizado definido por uma  **\<seção >** tag no elemento configSections >.
+O elemento **\<sectionname >** é um elemento personalizado definido por uma **seção\<** marca no elemento **\<configSections >** .
 
 A tabela a seguir mostra o tipo de objeto que o método ConfigurationSettings. GetConfig retorna para cada manipulador de seção de configuração:
 
@@ -53,9 +53,9 @@ A tabela a seguir mostra o tipo de objeto que o método ConfigurationSettings. G
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como declarar seções que usam as <xref:System.Configuration.DictionarySectionHandler> classes <xref:System.Configuration.NameValueSectionHandler> e.
+O exemplo a seguir mostra como declarar seções que usam as classes <xref:System.Configuration.DictionarySectionHandler> e <xref:System.Configuration.NameValueSectionHandler>.
 
-O primeiro elemento personalizado é  **\<dictionarySample >** , que contém <xref:System.Configuration.DictionarySectionHandler> as configurações lidas pela classe no `System.dll` assembly. O segundo elemento personalizado é  **\<myseção >** , que contém <xref:System.Configuration.NameValueSectionHandler> as configurações lidas pela classe no `System.dll` assembly.
+O primeiro elemento personalizado é **\<dictionarySample >** , que contém as configurações lidas pela classe <xref:System.Configuration.DictionarySectionHandler> no assembly `System.dll`. O segundo elemento personalizado é **\<> myseção**, que contém as configurações lidas pela classe <xref:System.Configuration.NameValueSectionHandler> no assembly `System.dll`.
 
 ```xml
 <configuration>

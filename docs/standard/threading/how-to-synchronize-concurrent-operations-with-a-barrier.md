@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
+ms.openlocfilehash: 33098878764c2f8a8c1f83a122028da40b984243
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025341"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137971"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Como sincronizar operações simultâneas com uma barreira
 O exemplo a seguir mostra como sincronizar tarefas simultâneas com uma <xref:System.Threading.Barrier>.  

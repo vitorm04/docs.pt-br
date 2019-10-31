@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122001"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
@@ -109,11 +107,11 @@ ms.locfileid: "70969023"
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral](../../docs/framework/get-started/overview.md)
+- [Visão Geral](../../docs/framework/get-started/overview.md)
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadados e componentes autodescritivos](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Segurança](../../docs/standard/security/index.md)
+- [Security](../../docs/standard/security/index.md)
 - [Interoperação com código não gerenciado](../../docs/framework/interop/index.md)
 - [Implantação](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblies no .NET](assembly/index.md)

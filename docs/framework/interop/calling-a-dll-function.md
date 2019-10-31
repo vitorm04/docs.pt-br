@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b842f44711d38a996b9d710dbe8bd369d30c5443
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123713"
 ---
 # <a name="calling-a-dll-function"></a>Chamando uma função de DLL
 Embora a chamada a funções de DLL não gerenciadas seja quase idêntica à chamada de outro código gerenciado, há diferenças que podem fazer com que as funções de DLL pareçam confusas a princípio. Esta seção apresenta tópicos que descrevem alguns dos problemas incomuns relacionados a chamadas.  
@@ -30,7 +28,7 @@ Embora a chamada a funções de DLL não gerenciadas seja quase idêntica à cha
  [Funções de retorno de chamada](callback-functions.md)  
  Fornece informações básicas sobre as funções de retorno de chamada.  
   
- [Como: Implementar funções de retorno de chamada](how-to-implement-callback-functions.md)  
+ [Como implementar funções de retorno de chamada](how-to-implement-callback-functions.md)  
  Descreve como implementar funções de retorno de chamada em um código gerenciado.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

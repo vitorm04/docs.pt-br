@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5a3d06f72ed7163a414ef12e9bec650d8b20783
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83afe121b6bf0de3c5542695e38b6605db7a8b6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121826"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>Interface ICoreClrDebugTarget
-Fornece métodos que controlam as contagens de referência, enumerar os processos e liberar a memória associada a um depurador anexado a um destino remoto do Silverlight do Macintosh.  
+Fornece métodos que controlam contagens de referência, enumeram processos e liberam a memória associada a um depurador que é anexado a um destino do Silverlight do Macintosh remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,21 +51,21 @@ class ICoreClrDebugTarget {
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Enumera os processos que estão em execução em um computador remoto.|  
-|[Método ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Enumera os tempos de execução de linguagem comum (CLRs) no processo especificado em um computador remoto.|  
-|[Método ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Libera a memória alocada pelos métodos de enumeração nessa classe.|  
+|[Método ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Enumera os processos que estão sendo executados em um computador remoto.|  
+|[Método ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Enumera os Common Language runtimes (CLRs) no processo especificado em um computador remoto.|  
+|[Método ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Libera a memória alocada pelos métodos de enumeração nesta classe.|  
   
 ## <a name="remarks"></a>Comentários  
- Atualmente, essa funcionalidade tem suporte somente para depuração de um destino de aplicativo baseado em Silverlight que está em execução em um computador remoto do Macintosh.  
+ Atualmente, essa funcionalidade tem suporte apenas para a depuração de um destino de aplicativo baseado no Silverlight que está sendo executado em um computador Macintosh remoto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h  
+ **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versões do .NET framework:** 3,5 SP1  
+ **Versões do .NET Framework:** 3,5 SP1  
   
 ## <a name="see-also"></a>Consulte também
 

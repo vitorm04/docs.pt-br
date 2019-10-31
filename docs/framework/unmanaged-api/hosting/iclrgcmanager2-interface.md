@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c54707d4c767fbb644ed892767be8351d2fd95b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 72ffd7b47795ee8e46f8fbff07559133843793e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966183"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141152"
 ---
 # <a name="iclrgcmanager2-interface"></a>Interface ICLRGCManager2
 Fornece métodos que permitem que um host interaja com o sistema de coleta de lixo do Common Language Runtime.  
@@ -30,19 +28,19 @@ Fornece métodos que permitem que um host interaja com o sistema de coleta de li
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo. Habilita a geração 0 e os tamanhos de `DWORD`segmento maiores que.|  
+|[Método SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Define o tamanho de um segmento de coleta de lixo e o tamanho máximo da geração 0 do sistema de coleta de lixo. Habilita a geração 0 e os tamanhos de segmento maiores que `DWORD`.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa interface herda da [interface ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md).  
   
- O Common Language Runtime (CLR) implementa seu mecanismo de coleta de lixo com <xref:System.GC> o tipo gerenciado. Para obter mais informações sobre o sistema de coleta de lixo, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).  
+ O Common Language Runtime (CLR) implementa seu mecanismo de coleta de lixo com o tipo de <xref:System.GC> gerenciado. Para obter mais informações sobre o sistema de coleta de lixo, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

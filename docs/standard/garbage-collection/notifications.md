@@ -9,17 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edf519621c2113843b89d96948243e9c095d2a57
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131542"
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
-Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema, especialmente com servidores que processam grandes volumes de solicitações. Nesse caso, uma coleta de lixo longa pode fazer com que o tempo limite de uma solicitação seja atingido. Para impedir que uma coleta completa ocorra durante um período crítico, você pode ser notificado que uma coleta de lixo completa está se aproximando e, em seguida, tomar medidas para redirecionar a carga de trabalho para outra instância do servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
+Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema particularmente com servidores que processam grandes volumes de solicitações; Nesse caso, uma longa coleta de lixo pode causar um tempo limite de solicitação. Para evitar que uma coleção completa ocorra durante um período crítico, você pode ser notificado de que uma coleta de lixo completa está se aproximando e, em seguida, tomará medidas para redirecionar a carga de trabalho para outra instância de servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
   
  O método <xref:System.GC.RegisterForFullGCNotification%2A> registra uma notificação para ser gerado quando o tempo de execução detectar que uma coleta de lixo completa está se aproximando. Essa notificação é composta por duas partes: quando a coleta de lixo completa está se aproximando e quando a coleta de lixo completa for concluída.  
   
@@ -54,7 +52,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
 ## <a name="notification-threshold-parameters"></a>Parâmetros de limite de notificação  
  O método <xref:System.GC.RegisterForFullGCNotification%2A> tem dois parâmetros para especificar os valores de limite do heap de objeto grande e dos objetos de geração 2. Quando esses valores forem atendidos, uma notificação de coleta de lixo deverá ser gerada. A tabela a seguir descreve esses parâmetros.  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos promovidos na geração 2.|  
 |`largeObjectHeapThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos alocados no heap de objetos grandes.|  
@@ -65,7 +63,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  No exemplo a seguir, um grupo de serviço de servidores controla as solicitações da Web recebidas. Para simular a carga de trabalho de processamento de solicitações, matrizes de bytes são adicionadas a uma coleta <xref:System.Collections.Generic.List%601>. Cada servidor registra uma notificação de coleta de lixo e, em seguida, inicia um thread no método de usuário `WaitForFullGCProc` para monitorar continuamente a enumeração <xref:System.GCNotificationStatus> que é retornada pelos métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  Os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> chamam seus respectivos métodos de usuário de manipulação de eventos quando uma notificação é gerada:  

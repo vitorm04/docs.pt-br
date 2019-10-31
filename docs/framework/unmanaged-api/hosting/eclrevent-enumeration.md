@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee749fd40f440e92f1d1b09c2ea5e7bdd51f1cbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769712"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131130"
 ---
 # <a name="eclrevent-enumeration"></a>Enumeração EClrEvent
-Descreve os eventos de runtime (CLR) de linguagem comum para o qual o host pode registrar retornos de chamada.  
+Descreve os eventos de Common Language Runtime (CLR) para os quais o host pode registrar retornos de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,24 +39,24 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|Especifica um erro fatal do CLR.|  
+|`Event_ClrDisabled`|Especifica um erro fatal de CLR.|  
 |`Event_DomainUnload`|Especifica o descarregamento de um determinado <xref:System.AppDomain>.|  
-|`Event_MDAFired`|Especifica que uma mensagem de Managed Debugging Assistant (MDA) foi gerada.|  
+|`Event_MDAFired`|Especifica que uma mensagem do MDA (Assistente de depuração gerenciada) foi gerada.|  
 |`Event_StackOverflow`|Especifica que ocorreu um erro de estouro de pilha.|  
   
 ## <a name="remarks"></a>Comentários  
- O host pode registrar retornos de chamada para qualquer um dos tipos de evento descritos por `EClrEvent` chamando métodos das [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface. O host obtém um ponteiro para essa interface por meio da chamada a [iclrcontrol:: Getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) método.  
+ O host pode registrar retornos de chamada para qualquer um dos tipos de evento descritos por `EClrEvent` chamando métodos da interface [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) . O host obtém um ponteiro para essa interface chamando o método [ICLRControl:: GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
   
- O `Event_CLRDisabled` e `Event_DomainUnload` eventos podem ser gerados, mais de uma vez e de diversos threads para sinalizar um descarregamento ou a desabilitação do CLR.  
+ Os eventos `Event_CLRDisabled` e `Event_DomainUnload` podem ser gerados mais de uma vez e de threads diferentes para sinalizar um descarregamento ou desabilitar o CLR.  
   
- O `Event_MDAFired` evento dispara a criação de um [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instância que contém os detalhes da mensagem MDA. Para obter mais informações sobre MDAs, consulte [diagnosticando erros com assistentes para depuração gerenciada](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ O evento `Event_MDAFired` gera a criação de uma instância [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) que contém os detalhes da mensagem do MDA. Para obter mais informações sobre MDAs, consulte [diagnosticando erros com assistentes de depuração gerenciada](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

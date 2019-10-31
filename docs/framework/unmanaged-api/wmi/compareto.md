@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798778"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128706"
 ---
 # <a name="compareto-function"></a>Função CompareTo
 
@@ -52,7 +50,7 @@ no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wb
 no Uma combinação de bits de bit que especifica as características do objeto a serem consideradas para a comparação. Consulte a seção [comentários](#remarks) para obter mais informações.
 
 `pCompareTo`\
-no O objeto para comparação. `pCompareTo`deve ser uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) válida; Não pode ser `null`.
+no O objeto para comparação. `pCompareTo` deve ser uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) válida; Não pode ser `null`.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -62,7 +60,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Ocorreu um erro não especificado. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro é inválido. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para. [`EndEnumeration`](endenumeration.md) |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para [`EndEnumeration`](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Os objetos são diferentes. |
 | `WBEM_S_SAME` | 0 | Os objetos são os mesmos com base nos sinalizadores de comparação. |
@@ -71,7 +69,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) .
 
-Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código. Você pode especificar as características individuais envolvidas na comparação, especificando uma combinação bit a bit dos seguintes sinalizadores:
+Os sinalizadores que podem ser passados como o argumento `lEnumFlags` são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código. Você pode especificar as características individuais envolvidas na comparação, especificando uma combinação bit a bit dos seguintes sinalizadores:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -90,9 +88,9 @@ Ou você pode especificar um único sinalizador composto da seguinte maneira:
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

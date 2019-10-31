@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9da168b-366b-4b2b-bdb9-330b6bad5a6b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e494bbbd08a77329b7b64816216e4bb2e1b724a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ed317a451e6e35aeac3bc1b83f78d1400ea5c07
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136434"
 ---
 # <a name="iclrhostbindingpolicymanager-interface"></a>Interface ICLRHostBindingPolicyManager
-Fornece métodos para o host avaliar a política de associação atual e se comunicar alterações de política para um assembly especificado.  
+Fornece métodos para o host avaliar a política de associação atual e comunicar as alterações de política para um assembly especificado.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -34,11 +32,11 @@ Fornece métodos para o host avaliar a política de associação atual e se comu
 |[Método ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|Modifica a política de associação para o assembly especificado e cria uma nova versão da política.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

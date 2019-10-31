@@ -1,17 +1,15 @@
 ---
-title: Método ICorDebugSymbolProvider2::GetGenericDictionaryInfo
+title: 'Método ICorDebugSymbolProvider2:: GetGenericDictionaryInfo'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662543"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133627"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Método ICorDebugSymbolProvider2::GetGenericDictionaryInfo
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Método ICorDebugSymbolProvider2:: GetGenericDictionaryInfo
 
 Recupera um mapa de dicionário genérico.
 
@@ -26,40 +24,40 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parâmetros
 
 `ppMemoryBuffer`\
-[out] Um ponteiro para o endereço de um [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) objeto que contém o mapa de dicionário genérico. Consulte a seção Comentários para obter mais informações.
+fora Um ponteiro para o endereço de um objeto [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) que contém o mapa de dicionário genérico. Consulte a seção Comentários para obter mais informações.
 
 ## <a name="remarks"></a>Comentários
 
 > [!NOTE]
-> Esse método só está disponível com o .NET Native.
+> Esse método está disponível somente com .NET Native.
 
 O mapa consiste em duas seções de nível superior:
 
-- Um [directory](#Directory) que contém os endereços de virtuais relativos (RVA) de todos os dicionários incluídos neste mapa.
+- Um [diretório](#Directory) que contém os endereços virtuais relativos (RVA) de todos os dicionários incluídos neste mapa.
 
-- Um byte alinhado [heap](#Heap) que contém informações de instanciação do objeto. Ele começa imediatamente após a última entrada de diretório.
+- Um [heap](#Heap) alinhado em byte que contém informações de instanciação de objeto. Ele começa imediatamente após a última entrada de diretório.
 
 <a name="Directory"></a>
 
 ## <a name="the-directory"></a>O diretório
 
-Cada entrada no diretório refere-se a um deslocamento dentro de heap; ou seja, é um deslocamento relativo ao início do heap. O valor de entradas individuais não é necessariamente exclusivo; é possível que várias entradas de diretório apontar para o mesmo deslocamento no heap.
+Cada entrada no diretório refere-se a um deslocamento dentro do heap; ou seja, é um deslocamento relativo ao início do heap. O valor de entradas individuais não é necessariamente exclusivo; é possível que várias entradas de diretório apontem para o mesmo deslocamento no heap.
 
-A parte do diretório do mapa do dicionário genérico tem a seguinte estrutura:
+A parte do diretório do mapa de dicionário genérico tem a seguinte estrutura:
 
-- Os primeiros 4 bytes contém o número de entradas de dicionário (ou seja, o número de endereços virtuais no dicionário). Vamos nos referir a esse valor como *N*. Se o bit alto for definido, as entradas são classificadas pelo endereço virtual relativo em ordem crescente.
+- Os quatro primeiros bytes contêm o número de entradas de dicionário (ou seja, o número de endereços virtuais relativos no dicionário). Iremos nos referir a esse valor como *N*. Se o bit alto for definido, as entradas serão classificadas por endereço virtual relativo em ordem crescente.
 
-- O *N* execute as entradas de diretório. Cada entrada consiste em 8 bytes, de dois segmentos de 4 bytes:
+- As entradas *N* diretório seguem. Cada entrada consiste em 8 bytes, em dois segmentos de 4 bytes:
 
-  - Bytes de 0 a 3: RVA; endereço virtual relativo do dicionário.
+  - Bytes 0-3: RVA; o endereço virtual relativo do dicionário.
 
-  - Bytes de 4 a 7: Deslocamento; um deslocamento relativo para o início do heap.
+  - Bytes 4-7: offset; um deslocamento relativo ao início do heap.
 
 <a name="Heap"></a>
 
-## <a name="the-heap"></a>O Heap
+## <a name="the-heap"></a>O heap
 
-Tamanho do heap pode ser calculado por um leitor de fluxo, subtraindo o tamanho do fluxo de tamanho de diretório + 4. Em outras palavras:
+O tamanho do heap pode ser calculado por um leitor de fluxo subtraindo o comprimento do fluxo do tamanho do diretório + 4. Em outras palavras:
 
 ```csharp
 Heap Size = Stream.Length – (Directory Size + 4)
@@ -67,19 +65,19 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 onde o tamanho do diretório é `N * 8`.
 
-O formato para cada item de informações de instanciação no heap é:
+O formato de cada item de informações de instanciação no heap é:
 
-- O comprimento deste item de informações de instanciação em bytes, no formato compactado de metadados ECMA. O valor exclui essas informações de comprimento.
+- O comprimento deste item de informações de instanciação em bytes no formato de metadados ECMA compactado. O valor exclui essas informações de comprimento.
 
-- O número de tipos de instanciação genérica, ou *T*, em formato compactado de metadados ECMA.
+- O número de tipos de instanciação genérica ou *T*, em formato de metadados ECMA compactado.
 
-- *T* tipos, cada uma representada em formato de assinatura de tipo ECMA.
+- Tipos *T* , cada um representado no formato de assinatura do tipo ECMA.
 
-A inclusão do comprimento de cada elemento de heap ativa a classificação simples da seção de diretório sem afetar o heap.
+A inclusão do comprimento de cada elemento de heap permite a classificação simples da seção de diretório sem afetar o heap.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** CorDebug.idl, CorDebug.h
 

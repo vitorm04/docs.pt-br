@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_GetNames function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bd0a67987dd8ffa825114726d066249aed40cf05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798299"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141698"
 ---
 # <a name="qualifierset_getnames-function"></a>Função QualifierSet_GetNames
 
@@ -54,8 +52,8 @@ no Um dos seguintes sinalizadores ou valores que especifica quais nomes incluir 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |  | 0 | Retornar os nomes de todos os qualificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retornar somente os nomes de qualificadores específicos para a propriedade ou objeto atual. <br/> Para uma propriedade: Retornar somente os qualificadores específicos para a propriedade (incluindo substituições) e não os qualificadores propagados da definição de classe. <br/> Para uma instância: Retornar apenas nomes de qualificador específicos da instância. <br/> Para uma classe: Retornar somente qualificadores específicos à classe que está sendo derivada.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: Retornar somente os qualificadores propagados para essa propriedade da definição de classe, e não os da própria propriedade. <br/> Para uma instância: Retornar somente os qualificadores propagados da definição de classe. <br/> Para uma classe: Retornar somente os nomes de qualificador herdados das classes pai. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retornar somente os nomes de qualificadores específicos para a propriedade ou objeto atual. <br/> Para uma propriedade: retornar somente os qualificadores específicos à propriedade (incluindo substituições), e não os qualificadores propagados da definição de classe. <br/> Para uma instância: retornar apenas nomes de qualificador específicos da instância. <br/> Para uma classe: retornar somente qualificadores específicos à classe que está sendo derivada.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: retornar somente os qualificadores propagados para essa propriedade da definição de classe, e não os da própria propriedade. <br/> Para uma instância: retornar somente os qualificadores propagados da definição de classe. <br/> Para uma classe: retorna somente os nomes de qualificador herdados das classes pai. |
 
 `pstrNames`\
 fora Um novo `SAFEARRAY` que contém os nomes solicitados. A matriz pode ter 0 elementos. Se ocorrer um erro, um novo `SAFEARRAY` não será retornado.
@@ -76,13 +74,13 @@ Essa função encapsula uma chamada para o método [IWbemQualifierSet:: GetNames
 
 Depois de recuperar os nomes de qualificador, você pode acessar cada qualificador por nome chamando a função [QualifierSet_Get](qualifierset-get.md) .
 
-Não é um erro para um determinado objeto ter zero qualificadores, portanto, o número de cadeias de `pstrNames` caracteres no retorno pode ser 0, mesmo que a função `WBEM_S_NO_ERROR`retorne.
+Não é um erro para um determinado objeto ter nenhum qualificador, portanto, o número de cadeias de caracteres em `pstrNames` no retorno pode ser 0, mesmo que a função retorne `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

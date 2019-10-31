@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5be25292-8357-445f-a09b-f997c0de761c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a20ab7a7ecb5d01351d0c912e08955f44b26d5f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4719f155957f04471d4ad2b8d71bec9c0f0d30c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096098"
 ---
 # <a name="icordebugobjectvaluegetclass-method"></a>Método ICorDebugObjectValue::GetClass
-Obtém a classe de valor desse objeto.  
+Obtém a classe desse valor de objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppClass`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugClass" que representa a classe do valor do objeto representado por esse objeto de "ICorDebugObjectValue".  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugClass" que representa a classe do valor do objeto representado por esse objeto "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Comentários  
- O `GetClass` e [icordebugvalue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) informações sobre o tipo de um valor de retorno de métodos cada; elas são substituídas pelo reconhecimento de genéricos [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).  
+ Os métodos `GetClass` e [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) retornam informações sobre o tipo de um valor; Eles são ambos substituídos pelo [ICorDebugValue2:: Getexatotype](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)com reconhecimento de genéricos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

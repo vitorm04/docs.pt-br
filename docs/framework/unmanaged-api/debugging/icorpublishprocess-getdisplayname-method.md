@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 354e1b0dad942534068d5fb07071ed4ac695fb49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2750f082ddc40bbeee121116c3e877d037da84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140423"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>Método ICorPublishProcess::GetDisplayName
 Obtém o caminho completo do executável para o processo referenciado por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).  
@@ -40,18 +38,18 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O tamanho do `szName` matriz.  
+ no O tamanho da matriz de `szName`.  
   
  `pcchName`  
- [out] O número de caracteres largos retornado no `szName` matriz.  
+ fora O número de caracteres largos retornados na matriz de `szName`.  
   
  `szName`  
- [out] Uma matriz para armazenar o nome, incluindo o caminho completo, do executável. O nome é terminada em nulo.  
+ fora Uma matriz para armazenar o nome, incluindo o caminho completo do executável. O nome é encerrado em nulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

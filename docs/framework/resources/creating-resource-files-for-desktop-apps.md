@@ -10,14 +10,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045678"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129973"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Criar arquivos de recurso para aplicativos .NET
 
@@ -94,7 +92,7 @@ CancelButton=Cancel
 
  Se o arquivo de texto contiver ocorrências duplicadas de *nome*, o [Gerador de Arquivo de Recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) exibe um aviso e ignora o segundo nome.
 
- O *valor* não pode conter caracteres de nova linha, mas você pode usar caracteres de escape seguindo o estilo da linguagem C como `\n` para representar uma nova linha e `\t` para representar uma tabulação. Também pode incluir um caractere de barra invertida se tiver um escape (por exemplo, "\\\\"). Além disso, é permitida uma cadeia de caracteres vazia.
+ o *valor* não pode conter novos caracteres de linha, mas você pode usar caracteres de escape em estilo de linguagem C, como `\n` para representar uma nova linha e `\t` para representar uma guia. Você também pode incluir um caractere de barra invertida se ele tiver escape (por exemplo, "\\\\"). Além disso, é permitida uma cadeia de caracteres vazia.
 
  Deve salvar os recursos em formato de arquivo de texto usando a codificação UTF-8 ou UTF-16 em qualquer ordem de bytes com término baixo ou alto. No entanto, o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), que converte um arquivo .txt em um arquivo .resources, por padrão trata-os como sendo UTF-8. Se quiser que o Resgen.exe reconheça um arquivo codificado com UTF-16, deve incluir uma marca de ordem de byte Unicode (U + FEFF) no início do arquivo.
 

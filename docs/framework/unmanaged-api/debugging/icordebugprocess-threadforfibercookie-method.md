@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: afe4e97f-bffc-47e1-adad-d6e842487f35
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f631be9462a569110e08fdb58d2609b0894f8d68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 70650f415c11353bcff897f53b8dcbf9b89e6183
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137273"
 ---
 # <a name="icordebugprocessthreadforfibercookie-method"></a>Método ICorDebugProcess::ThreadForFiberCookie
 Este método não está implementado.  
@@ -37,7 +35,7 @@ HRESULT ThreadForFiberCookie (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

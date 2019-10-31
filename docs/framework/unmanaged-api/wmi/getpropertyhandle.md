@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyHandle function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5af003f0295e0b403727f9af6b03ab81c4b8bccb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101864"
 ---
 # <a name="getpropertyhandle-function"></a>Função GetPropertyHandle
 
@@ -66,7 +64,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | O nome de propriedade especificado não foi encontrado. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
-|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | A propriedade solicitada é do tipo `CIM_OBJECT` is `CIM_ARRAY`ou. |
+|`WBEM_E_NOT_SUPPORTED` | 0x8004100c | A propriedade solicitada é do tipo `CIM_OBJECT` ou `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
 ## <a name="remarks"></a>Comentários
@@ -75,13 +73,13 @@ Essa função encapsula uma chamada para o método [IWbemClassObject:: GetProper
 
 Você pode usar esse identificador para identificar Propriedades ao usar métodos [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) para ler ou gravar valores de propriedade.
 
-Os identificadores podem ser recuperados para propriedades de todos os `CIM_OBJECT` tipos `CIM_ARRAY`de dados diferentes de e. Os identificadores retornados funcionam em todas as instâncias de uma classe.
+Os identificadores podem ser recuperados para propriedades de todos os tipos de dados que não sejam `CIM_OBJECT` e `CIM_ARRAY`. Os identificadores retornados funcionam em todas as instâncias de uma classe.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

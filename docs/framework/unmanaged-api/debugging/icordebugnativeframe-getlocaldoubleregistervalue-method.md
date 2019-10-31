@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed7436ff73fa9cc19790859581930875f39e499e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a45061b6a3105565fdbb36173731b3c3dfe5aa4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137293"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>Método ICorDebugNativeFrame::GetLocalDoubleRegisterValue
-Obtém o valor de um argumento ou uma variável local que é armazenado nos dois registradores especificados para este quadro nativo.  
+Obtém o valor de um argumento ou uma variável local que é armazenada nos dois registros especificados para esse quadro nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,25 +39,25 @@ HRESULT GetLocalDoubleRegisterValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `highWordReg`  
- [in] Um valor de enumeração "CorDebugRegister" que especifica o registro que contém a palavra alta do valor.  
+ no Um valor da enumeração "CorDebugRegister" que especifica o registro que contém a palavra alta do valor.  
   
  `lowWordReg`  
- [in] Um valor da `CorDebugRegister` enumeração que especifica o registro que contém a palavra inferior do valor.  
+ no Um valor da enumeração de `CorDebugRegister` que especifica o registro que contém a palavra inferior do valor.  
   
  `cbSigBlob`  
- [in] Um inteiro que especifica o tamanho da assinatura de metadados binária que é referenciado pelo `pvSigBlob` parâmetro.  
+ no Um inteiro que especifica o tamanho da assinatura de metadados binários que é referenciada pelo parâmetro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Um `PCCOR_SIGNATURE` valor que aponta para a assinatura binária metadados de tipo de valor.  
+ no Um valor `PCCOR_SIGNATURE` que aponta para a assinatura de metadados binários do tipo do valor.  
   
  `ppValue`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugValue" que representa o valor recuperado armazenado nos registradores especificados.  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugValue" que representa o valor recuperado que é armazenado nos registros especificados.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetLocalDoubleRegisterValue` método pode ser usado em um quadro nativo ou um just-in-time (JIT)-compilados do quadro.  
+ O método `GetLocalDoubleRegisterValue` pode ser usado em um quadro nativo ou em um quadro compilado JIT (just-in-time).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

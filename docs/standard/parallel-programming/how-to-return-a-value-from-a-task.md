@@ -1,5 +1,5 @@
 ---
-title: 'Como: Retornar um valor de uma tarefa'
+title: Como retornar um valor de uma tarefa
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df928ec6494da6da368b3cef1f1d25a84a692aa2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 495f68114bfe960b8182be4ab76b72043b2d0cc7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741776"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141665"
 ---
-# <a name="how-to-return-a-value-from-a-task"></a>Como: Retornar um valor de uma tarefa
+# <a name="how-to-return-a-value-from-a-task"></a>Como retornar um valor de uma tarefa
 Este exemplo mostra como usar o tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> para retornar um valor da propriedade <xref:System.Threading.Tasks.Task%601.Result%2A>. Isso requer que o diretório C:\Usuários\Público\Imagens\Imagens de Exemplo\ exista e contenha arquivos.  
   
 ## <a name="example"></a>Exemplo  

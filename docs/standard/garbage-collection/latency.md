@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120913"
 ---
 # <a name="latency-modes"></a>Modos de latência
 Para recuperar objetos, o coletor de lixo deve interromper todos os threads em execução em um aplicativo. Em algumas situações, como quando um aplicativo recupera dados ou exibe conteúdo, uma coleta de lixo completa pode ocorrer em um momento crítico e impedir o desempenho. Você pode ajustar a intrusão do coletor de lixo, definindo a propriedade <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> como um dos valores <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  

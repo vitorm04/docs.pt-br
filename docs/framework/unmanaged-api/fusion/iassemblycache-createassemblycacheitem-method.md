@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 017a7ba5-aaaf-44e2-9cbe-ceebef259df0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 215eb3a508a746230d36fdda3e8ba992287be62c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3e50538bde8fe3509b49e3dbcb031875e6863e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127115"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>Método IAssemblyCache::CreateAssemblyCacheItem
 Obtém uma referência a um novo objeto [IAssemblyCacheItem](iassemblycacheitem-interface.md) .  
@@ -47,16 +45,16 @@ HRESULT CreateAssemblyCacheItem (
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
- no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
   
  `ppAsmItem`  
- fora O ponteiro `IAssemblyCacheItem` retornado.  
+ fora O ponteiro de `IAssemblyCacheItem` retornado.  
   
  `pszAssemblyName`  
- [in, opcional] Pares não canônicos e separados por `name=value` vírgulas.  
+ [in, opcional] Pares de `name=value` não canônicos separados por vírgulas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   

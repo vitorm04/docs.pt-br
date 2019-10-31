@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125204"
 ---
 # <a name="strongnamekeyinstall-function"></a>Função StrongNameKeyInstall
 
@@ -42,7 +40,7 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Parâmetros
 
 `wszKeyContainer`\
-no O nome do contêiner de chave. `wszKeyContainer`deve ser uma cadeia de caracteres não vazia.
+no O nome do contêiner de chave. `wszKeyContainer` deve ser uma cadeia de caracteres não vazia.
 
 `pbKeyBlob`\
 no O par de chaves binárias.
@@ -50,23 +48,23 @@ no O par de chaves binárias.
 `cbKeyBlob`\
 no O tamanho, em bytes, de `pbKeyBlob`.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-`true`após a conclusão bem-sucedida; caso contrário `false`,.
+`true` após a conclusão bem-sucedida; caso contrário, `false`.
 
 ## <a name="remarks"></a>Comentários
 
 Use a função [StrongNameKeyDelete](strongnamekeydelete-function.md) para excluir o contêiner de chave.
 
-Se a `StrongNameKeyInstall` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.
+Se a função `StrongNameKeyInstall` não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** StrongName.h
+**Cabeçalho:** StrongName. h
 
-**Biblioteca** Incluído como um recurso em MsCorEE. dll
+**Biblioteca:** Incluído como um recurso em MsCorEE. dll
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

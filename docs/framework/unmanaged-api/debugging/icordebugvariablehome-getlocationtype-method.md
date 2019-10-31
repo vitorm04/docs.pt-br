@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugVariableHome::GetLocationType
+title: 'Método ICorDebugVariableHome:: getlocationtype'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLocationType
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b7b95c79b41737ade42e6a9a2741f9c43a41130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1dd4e9510831b4c878e9c1246dabe4add919130c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774474"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125106"
 ---
-# <a name="icordebugvariablehomegetlocationtype-method"></a>Método ICorDebugVariableHome::GetLocationType
-Obtém o tipo de local nativo da variável.  
+# <a name="icordebugvariablehomegetlocationtype-method"></a>Método ICorDebugVariableHome:: getlocationtype
+Obtém o tipo do local nativo da variável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetLocationType(
   
 ## <a name="parameters"></a>Parâmetros  
  `pLocationType`  
- [out] Um ponteiro para o tipo de local de nativo da variável.  Consulte a [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeração para obter mais informações.  
+ fora Um ponteiro para o tipo do local nativo da variável.  Consulte a enumeração [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) para obter mais informações.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

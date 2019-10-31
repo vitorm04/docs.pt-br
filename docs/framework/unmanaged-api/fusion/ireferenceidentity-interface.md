@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9180ac5a-7019-4716-9f83-8a91d157239a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8f6a117d1e2fe76c271b0b014e6079370c8b4fe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796364"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127063"
 ---
 # <a name="ireferenceidentity-interface"></a>Interface IReferenceIdentity
 Representa uma referência à assinatura exclusiva de um objeto de código.  
@@ -30,13 +28,13 @@ Representa uma referência à assinatura exclusiva de um objeto de código.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Obtém um ponteiro de interface para uma `IReferenceIdentity` nova instância que é idêntica a `IReferenceIdentity`isso, exceto para as alterações de atributo especificadas.|  
-|`IReferenceIdentity::EnumAttributes`|Obtém um ponteiro de interface para `IEnumIDENTITY_ATTRIBUTE` uma instância que contém os atributos associados a `IReferenceIdentity`isso.|  
+|`IReferenceIdentity::Clone`|Obtém um ponteiro de interface para uma nova instância `IReferenceIdentity` que é idêntica a este `IReferenceIdentity`, exceto para as alterações de atributo especificadas.|  
+|`IReferenceIdentity::EnumAttributes`|Obtém um ponteiro de interface para uma instância de `IEnumIDENTITY_ATTRIBUTE` que contém os atributos associados a este `IReferenceIdentity`.|  
 |`IReferenceIdentity::GetAttribute`|Obtém o valor do atributo no namespace especificado, com o nome especificado.|  
 |`IReferenceIdentity::SetAttribute`|Define o atributo que tem o namespace especificado e o nome especificado para o valor especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolamento. h  
   

@@ -24,14 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b125b3c6527da405deb600ba7334ef18220f1601
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922685"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132874"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversão de tipos no .NET Framework
 <a name="top"></a> Cada valor tem um tipo associado, o qual define atributos como a quantidade de espaço alocado para o valor, o intervalo de valores possíveis que ele pode assumir e os membros que ele disponibiliza. Muitos valores podem ser expressos por mais de um tipo. Por exemplo, o valor 4 pode ser expresso como um número inteiro ou como um valor de ponto flutuante. A conversão de tipo cria um valor em um novo tipo que é equivalente ao valor de um tipo antigo, mas que não necessariamente preserva a identidade (ou o valor exato) do objeto original.  
@@ -91,13 +89,13 @@ ms.locfileid: "69922685"
   
  Por exemplo, os tipos de dados <xref:System.UInt32>, <xref:System.Int64> e <xref:System.UInt64> possuem intervalos que excedem o do tipo de dados <xref:System.Int32>, conforme mostrado na tabela a seguir.  
   
-|Tipo|Comparação com intervalo de Int32|  
+|Digite|Comparação com intervalo de Int32|  
 |----------|------------------------------------|  
 |<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>, e <xref:System.Int64.MinValue?displayProperty=nameWithType> é menor que (possui um intervalo negativo maior que) <xref:System.Int32.MinValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> é maior que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Para tratar essas conversões redutoras, o .NET Framework permite que os tipos definam um operador `Explicit`. Os compiladores de linguagens individuais podem então implementar esse operador que usa sua própria sintaxe, ou um membro da classe <xref:System.Convert> pode ser chamado para executar a conversão. (Para obter mais informações sobre a classe <xref:System.Convert>, veja [A Classe Convert](#Convert) mais adiante neste tópico.) O exemplo a seguir ilustra o uso das funcionalidades de linguagem para lidar com a conversão explícita destes valores inteiros que podem estar fora do intervalo em valores <xref:System.Int32>.  
+ Para tratar essas conversões redutoras, o .NET Framework permite que os tipos definam um operador `Explicit`. Os compiladores de linguagens individuais podem então implementar esse operador que usa sua própria sintaxe, ou um membro da classe <xref:System.Convert> pode ser chamado para executar a conversão. (Para obter mais informações sobre a classe <xref:System.Convert>, consulte [a classe Convert](#Convert) mais adiante neste tópico.) O exemplo a seguir ilustra o uso de recursos de linguagem para manipular a conversão explícita desses valores inteiros potencialmente fora do intervalo para <xref:System.Int32> valores.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  

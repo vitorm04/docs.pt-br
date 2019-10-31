@@ -1,5 +1,5 @@
 ---
-title: 'Como: registrar retornos de chamada para solicitações de cancelamento'
+title: Como registrar retornos de chamada para solicitações de cancelamento
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to register callbacks
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 187d47f04761b85420f894c98d9495cd74c0c253
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 87ba1ab9ac095c733a53f766d00ebb7530a8d9c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137995"
 ---
-# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Como: registrar retornos de chamada para solicitações de cancelamento
+# <a name="how-to-register-callbacks-for-cancellation-requests"></a>Como registrar retornos de chamada para solicitações de cancelamento
 O exemplo a seguir mostra como registrar um delegado que será invocado quando uma propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> tornar-se verdadeira, devido a uma chamada para <xref:System.Threading.CancellationTokenSource.Cancel%2A> no objeto que criou o token. Use essa técnica para cancelar operações assíncronas que não dão suporte nativo à estrutura de cancelamento unificada e a métodos de desbloqueio que podem estar aguardando a conclusão de uma operação assíncrona.  
   
 > [!NOTE]

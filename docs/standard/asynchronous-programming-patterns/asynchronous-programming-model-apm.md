@@ -11,14 +11,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140146"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programação assíncrona (APM)
 Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncResult> é implementada como dois métodos chamados `BeginOperationName` e `EndOperationName` que começam e terminam a operação assíncrona *OperationName*, respectivamente. Por exemplo, a classe <xref:System.IO.FileStream> fornece os métodos <xref:System.IO.FileStream.BeginRead%2A> e <xref:System.IO.FileStream.EndRead%2A> para ler os bytes de um arquivo de forma assíncrona. Esses métodos implementam a versão assíncrona do método <xref:System.IO.FileStream.Read%2A>.  
@@ -31,7 +29,7 @@ Uma operação assíncrona que utiliza o padrão de design <xref:System.IAsyncRe
 ## <a name="beginning-an-asynchronous-operation"></a>Começando uma operação assíncrona  
  O método `BeginOperationName` inicia a operação assíncrona *OperationName* e retorna um objeto que implementa a interface <xref:System.IAsyncResult>. Os objetos <xref:System.IAsyncResult> armazenam as informações sobre uma operação assíncrona. A tabela a seguir mostra informações sobre uma operação assíncrona.  
   
-|Membro|DESCRIÇÃO|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Um objeto específico do aplicativo opcional que contém informações sobre a operação assíncrona.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Um <xref:System.Threading.WaitHandle> que pode ser usado para bloquear a execução do aplicativo até que a operação assíncrona seja concluída.|  

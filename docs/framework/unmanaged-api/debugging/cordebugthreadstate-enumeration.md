@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ff36e8ef6b7c02eea5b02bc22587bc3889df093
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739521"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133700"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>Enumeração CorDebugThreadState
 Especifica o estado de um thread para depuração.  
@@ -39,16 +37,16 @@ typedef enum CorDebugThreadState {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`THREAD_RUN`|O thread executa livremente, a menos que ocorra um evento de depuração.|  
-|`THREAD_SUSPEND`|O thread não pode ser executado.|  
+|`THREAD_RUN`|O thread é executado livremente, a menos que ocorra um evento de depuração.|  
+|`THREAD_SUSPEND`|Não é possível executar o thread.|  
   
 ## <a name="remarks"></a>Comentários  
- O depurador usa o `CorDebugThreadState` enumeração para controlar a execução do thread. O estado de um thread pode ser definido usando o [icordebugthread:: Setdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) ou [icordebugcontroller:: Setallthreadsdebugstate](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) método.  
+ O depurador usa a enumeração `CorDebugThreadState` para controlar a execução de um thread. O estado de um thread pode ser definido usando o método [ICorDebugThread:: SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) ou [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) .  
   
- Um retorno de chamada fornecido para o [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md) habilita o bombeamento de mensagens, portanto, não é necessário um estado interrompido.  
+ Um retorno de chamada fornecido à [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md) permite bombeamento de mensagens, portanto, um estado interrompido não é necessário.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

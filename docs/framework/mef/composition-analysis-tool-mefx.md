@@ -6,14 +6,12 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f3777627caec7fc0d383804f71d9b7d3f09756fd
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: bb2748b16a16d7d01b076402889829f5b31a1912
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894125"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126370"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Ferramenta de Análise de Composição (Mefx)
 A Ferramenta de Análise de Composição (Mefx) é um aplicativo de linha de comando que analisa arquivos de biblioteca (.dll) e de aplicativo (.exe) que contêm partes do MEF (Managed Extensibility Framework). A principal finalidade da Mefx é fornecer aos desenvolvedores uma maneira de diagnosticar falhas de composição em seus aplicativos MEF sem a necessidade de adicionar um código de rastreamento inconveniente ao próprio aplicativo. Ele também pode ser útil para ajudar a entender as partes de uma biblioteca fornecida por terceiros. Este tópico descreve como usar a Mefx e fornece uma referência para sua sintaxe.  

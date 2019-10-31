@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781158"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141502"
 ---
 # <a name="rundll32shimw-function"></a>Função RunDll32ShimW
 Executa o comando especificado.  
@@ -41,23 +39,23 @@ HRESULT RunDll32ShimW (
   
 ## <a name="parameters"></a>Parâmetros  
  `hwnd`  
- [in] Um identificador para uma janela na qual a saída do comando será exibida.  
+ no Um identificador para uma janela na qual a saída do comando será exibida.  
   
  `hinst`  
- [in] Um identificador para a biblioteca que contém o comando.  
+ no Um identificador para a biblioteca que contém o comando.  
   
  `lpszCmdLine`  
- [in] Uma cadeia de caracteres que especifica o comando a ser executado.  
+ no Uma cadeia de caracteres que especifica o comando a ser executado.  
   
  `nCmdShow`  
- [in] Um inteiro que especifica o modo de exibição da janela de saída.  
+ no Um inteiro que especifica o modo de exibição para a janela de saída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

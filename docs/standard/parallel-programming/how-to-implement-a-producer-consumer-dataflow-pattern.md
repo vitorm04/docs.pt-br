@@ -1,5 +1,5 @@
 ---
-title: 'Como: implementar um padrão de fluxo de dados de produtor-consumidor'
+title: 'Como: Implementar um padrão de fluxo de dados de produtor-consumidor'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6f57c0e2098cbd73edc34f34ba6e309bbf68fac9
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 2db8cfcfc26b001703e08a501c430be4313aca03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167928"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091484"
 ---
-# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Como: implementar um padrão de fluxo de dados de produtor-consumidor
+# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Como: Implementar um padrão de fluxo de dados de produtor-consumidor
 Este documento descreve como usar a Biblioteca de fluxo de dados TPL para implementar um padrão de produtor-consumidor. Nesse padrão, o *produtor* envia mensagens a um bloco de mensagens e o *consumidor* lê mensagens nesse bloco.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]

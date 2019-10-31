@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5268480e-280a-4931-b7a3-dc3ffdf7f78f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab00ccd85481f1c6d37e1132e0ecab5e0e86be90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7b6a4be94e526e7b464b336d221eff936808635a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768881"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120568"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>Método ICLRPolicyManager::SetUnhandledExceptionPolicy
-Especifica o comportamento do common language runtime (CLR) quando ocorre uma exceção sem tratamento.  
+Especifica o comportamento do Common Language Runtime (CLR) quando ocorre uma exceção sem tratamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,28 +35,28 @@ HRESULT SetUnhandledExceptionPolicy (
   
 ## <a name="parameters"></a>Parâmetros  
  `policy`  
- [in] Um dos [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) valores, que indica se o comportamento é definido por CLR ou o host.  
+ no Um dos valores de [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) , indicando se o comportamento é definido pelo CLR ou pelo host.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`SetUnhandledExceptionPolicy` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o CLR é o manipulador de final de todas as exceções sem tratamento e seu comportamento padrão é subdividir o processo. O host pode alterar esse comportamento, definindo o `policy` valor a eHostDeterminedPolicy. Esse valor permite que o host implementar seu próprio comportamento padrão, como nas versões anteriores do CLR.  
+ Por padrão, o CLR é o manipulador final para todas as exceções sem tratamento e seu comportamento padrão é subdividir o processo. O host pode alterar esse comportamento definindo o valor de `policy` como eHostDeterminedPolicy. Esse valor permite que o host implemente seu próprio comportamento padrão, como nas versões anteriores do CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

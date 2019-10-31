@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 608c2cea79c20a43d65fcbf37ba13242fa465100
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969317"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122790"
 ---
 # <a name="icordebugbreakpoint-interface"></a>Interface ICorDebugBreakpoint
 
@@ -32,22 +30,22 @@ Representa um ponto de interrupção em uma função ou um apontador em um valor
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Define o estado ativo deste `ICorDebugBreakpoint`.|  
-|[Método IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Obtém um valor que indica se ele `ICorDebugBreakpoint` está ativo.|  
+|[Método IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Obtém um valor que indica se este `ICorDebugBreakpoint` está ativo.|  
   
 ## <a name="remarks"></a>Comentários  
- Os pontos de interrupção não oferecem suporte direto a expressões condicionais. Se essa funcionalidade for desejada, um depurador deverá implementá-la sobre `ICorDebugBreakpoint`o.  
+ Os pontos de interrupção não oferecem suporte direto a expressões condicionais. Se essa funcionalidade for desejada, um depurador deverá implementá-la sobre o `ICorDebugBreakpoint`.  
   
- A interface ICorDebugFunctionBreakpoint se `ICorDebugBreakpoint` estende para dar suporte a pontos de interrupção dentro de funções.  
+ A interface ICorDebugFunctionBreakpoint estende `ICorDebugBreakpoint` para dar suporte a pontos de interrupção dentro de funções.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

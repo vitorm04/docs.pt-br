@@ -13,14 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127566"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analisando outras cadeias de caracteres no .NET
 Além das cadeias de caracteres numéricas e <xref:System.DateTime>, também é possível analisar cadeias de caracteres que representam os tipos <xref:System.Char> <xref:System.Boolean> e<xref:System.Enum> em tipos de dados.  
@@ -32,7 +30,7 @@ Além das cadeias de caracteres numéricas e <xref:System.DateTime>, também é 
  [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
-## <a name="boolean"></a>Boolean  
+## <a name="boolean"></a>Booleano  
  O tipo de dados **Booliano** contém um método **Parse** que pode ser usado para converter uma cadeia de caracteres que representa um valor Booliano em um tipo **Booliano** real. Esse método não diferencia maiúsculas de minúsculas e consegue analisar com êxito uma cadeia de caracteres que contém “True” ou “False”. O método **Parse** associado ao tipo **Booliano** também pode analisar cadeias de caracteres cercadas por espaços em branco. Se qualquer outra cadeia de caracteres for passada, um <xref:System.FormatException> será gerado.  
   
  O exemplo de código a seguir usa o método **Parse** para converter uma cadeia de caracteres em um valor Booliano.  

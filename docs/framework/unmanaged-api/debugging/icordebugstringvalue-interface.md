@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1d3a5eb6e0b24b40a35c13a99465dd3c7032a91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957422"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138950"
 ---
 # <a name="icordebugstringvalue-interface"></a>Interface ICorDebugStringValue
 Uma subclasse de ICorDebugHeapValue que se aplica a valores de cadeia de caracteres.  
@@ -30,8 +28,8 @@ Uma subclasse de ICorDebugHeapValue que se aplica a valores de cadeia de caracte
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetLength](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Obtém o número de caracteres na cadeia de caracteres referenciada `ICorDebugStringValue`por isso.|  
-|[Método GetString](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Obtém a cadeia de caracteres referenciada por isso `ICorDebugStringValue`.|  
+|[Método GetLength](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Obtém o número de caracteres na cadeia de caracteres referenciada por este `ICorDebugStringValue`.|  
+|[Método GetString](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Obtém a cadeia de caracteres referenciada por este `ICorDebugStringValue`.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -39,11 +37,11 @@ Uma subclasse de ICorDebugHeapValue que se aplica a valores de cadeia de caracte
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

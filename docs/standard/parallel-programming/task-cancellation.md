@@ -9,14 +9,12 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7fefbfd33788ea84a8daf9dfbab452802ffd50d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 17cabde95644dbc1584dd85b99e26ff7c5cb686d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650749"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139978"
 ---
 # <a name="task-cancellation"></a>Cancelamento da tarefa
 As classes <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> oferecem suporte ao cancelamento por meio do uso de tokens de cancelamento no .NET Framework. Para saber mais, confira [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md). Nas classes de tarefas, o cancelamento envolve a cooperação entre o delegado do usuário, que representa uma operação cancelável, e o código que solicitou o cancelamento.  Um cancelamento bem-sucedido envolve o código de solicitação chamar o método <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> e o delegado do usuário terminar a operação de forma breve. Você pode terminar a operação ao usar uma destas opções:  
@@ -30,7 +28,7 @@ As classes <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xr
  [!code-csharp[TPL_Cancellation#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/snippet02.cs#02)]
  [!code-vb[TPL_Cancellation#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/module1.vb#02)]  
   
- Para obter um exemplo mais completo, confira [Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Para obter um exemplo mais completo, confira [Como cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  Quando uma instância de tarefa observa uma <xref:System.OperationCanceledException> gerada pelo código de usuário, compara o token de exceção ao token associado (aquele que foi passado para a API que criou a tarefa). Se eles forem os mesmos e a propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token retornar verdadeiro, a tarefa interpretará isso como o cancelamento da confirmação e fará a transição para o estado cancelado. Se você não usar um método <xref:System.Threading.Tasks.Task.Wait%2A> ou <xref:System.Threading.Tasks.Task.WaitAll%2A> para aguardar a conclusão da tarefa, a tarefa apenas definirá seu status como <xref:System.Threading.Tasks.TaskStatus.Canceled>.  
   
@@ -43,4 +41,4 @@ As classes <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xr
 ## <a name="see-also"></a>Consulte também
 
 - [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md)
-- [Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+- [Como cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

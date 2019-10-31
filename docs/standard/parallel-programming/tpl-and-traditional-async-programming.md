@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64653921"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139942"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
 O .NET Framework fornece os dois padrões a seguir para executar operações assíncronas vinculadas a E/S e a computação:  
@@ -104,7 +102,7 @@ O .NET Framework fornece os dois padrões a seguir para executar operações ass
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Para um exemplo mais completo, que inclui a manipulação de exceções adicionais e mostra como chamar o método do código do cliente, confira [Como: encapsular padrões de EAP em uma tarefa](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Para um exemplo mais completo, que inclui a manipulação de exceções adicionais e mostra como chamar o método do código do cliente, confira [Como encapsular padrões de EAP em uma tarefa](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Lembre-se de que qualquer tarefa criada por um <xref:System.Threading.Tasks.TaskCompletionSource%601> será iniciada por TaskCompletionSource e, portanto, o código do usuário não deve chamar o método Start nessa tarefa.  
   

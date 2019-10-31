@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e5a57664c5d86ebf394ce026608be9a55872eb8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129917"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Trabalhar com arquivos .resx de forma programática
 Como arquivos de recurso XML (.resx) devem conter XML bem definido, incluindo um cabeçalho que deve seguir um esquema específico seguido por dados em pares nome/valor, você pode concluir que criar esses arquivo manualmente é algo propenso a erros. Como alternativa, você pode criar arquivos .resx com programação usando tipos e membros da biblioteca de classes .NET. Você também pode usar a biblioteca de classes .NET para recuperar os recursos que são armazenados em arquivos .resx. Este tópico explica como você pode usar os tipos e membros no namespace <xref:System.Resources> para trabalhar com arquivos .resx.

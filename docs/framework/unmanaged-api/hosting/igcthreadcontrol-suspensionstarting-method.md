@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0af312af-98e9-415e-b182-42e80a1aee51
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cb58593a30b855c9fabf55a6ca0a50886dc371f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e1d63ab28276f69e5b3a762520db8f8300d05bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134756"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>Método IGCThreadControl::SuspensionStarting
-Notifica o host que o tempo de execução está começando a uma suspensão de thread para uma coleta de lixo ou outro suspensão.  
+Notifica o host de que o tempo de execução está começando uma suspensão de thread para uma coleta de lixo ou outra suspensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,14 +32,14 @@ HRESULT SuspensionStarting ( );
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Não reagendar os threads durante o `SuspensionStarting` retorno de chamada.  
+ Não reagende nenhum thread durante o retorno de chamada `SuspensionStarting`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

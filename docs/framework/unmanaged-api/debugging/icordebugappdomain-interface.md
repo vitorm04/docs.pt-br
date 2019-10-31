@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugAppDomain
+title: Interface ICorDebugAppDomain
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12753ab65f9339e8f6c3049bb72755e87464eb1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9abcb765357a0f305ae5acae77a4a13b07a003a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963103"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134679"
 ---
-# <a name="icordebugappdomain-interface"></a>Método ICorDebugAppDomain
+# <a name="icordebugappdomain-interface"></a>Interface ICorDebugAppDomain
 
 Fornece métodos para depurar domínios de aplicativo. Essa interface é uma subclasse de ICorDebugController.  
   
@@ -48,11 +46,11 @@ Fornece métodos para depurar domínios de aplicativo. Essa interface é uma sub
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

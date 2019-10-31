@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139162"
 ---
-# <a name="pfnclrdatacreateinstance-function-pointer"></a>Ponteiro de função PFN_CLRDataCreateInstance
+# <a name="pfn_clrdatacreateinstance-function-pointer"></a>Ponteiro de função PFN_CLRDataCreateInstance
 Aponta para uma função que cria um objeto de interface para o item de destino especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,21 +36,21 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="parameters"></a>Parâmetros  
  `iid`  
- [in] O identificador da interface a ser instanciado.  
+ no O identificador da interface a ser instanciada.  
   
  `target`  
- [in] Um ponteiro para um usuário implementada [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) objeto que representa o item de destino para o qual criar o objeto de interface.  
+ no Um ponteiro para um objeto [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) implementado pelo usuário que representa o item de destino para o qual criar o objeto de interface.  
   
  `iface`  
- [out] Um ponteiro para o endereço do objeto de interface retornada.  
+ fora Um ponteiro para o endereço do objeto de interface retornado.  
   
 ## <a name="remarks"></a>Comentários  
- O `ICLRDataTarget` objeto é implementado pelo gravador do aplicativo de depuração. A implementação depende do tipo de item de destino que está sendo representado. O item de destino pode ser um processo, despejo de memória, computador remoto e assim por diante.  
+ O objeto `ICLRDataTarget` é implementado pelo gravador do aplicativo de depuração. A implementação depende do tipo de item de destino que está sendo representado. O item de destino pode ser um processo, despejo de memória, computador remoto e assim por diante.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl  
+ **Cabeçalho:** ClrData. idl  
   
  **Biblioteca:** CorGuids.lib  
   

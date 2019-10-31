@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e471ee99af57ef980850c0a5d3e4f5f2973967ac
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796609"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134345"
 ---
 # <a name="iassemblynamegetname-method"></a>Método IAssemblyName::GetName
 Obtém o nome simples e não criptografado do assembly referenciado por este objeto [IAssemblyName](iassemblyname-interface.md) .  
@@ -38,13 +36,13 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpcwBuffer`  
- [entrada, saída] O tamanho de `pwzName` , em caracteres largos, incluindo o caractere de terminador nulo.  
+ [entrada, saída] O tamanho de `pwzName` em caracteres largos, incluindo o caractere de terminador nulo.  
   
  `pwzName`  
  fora Um buffer para conter o nome do assembly referenciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   

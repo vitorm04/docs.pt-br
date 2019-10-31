@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955419"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130339"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Método ICorProfilerInfo7:: GetInMemorySymbolsLength
 [Com suporte no .NET Framework 4.6.1 e versões posteriores]  
@@ -37,12 +35,12 @@ HRESULT GetInMemorySymbolsLength(
  no O identificador do módulo que contém o fluxo na memória.  
   
  pCountSymbolBytes  
- fora Um ponteiro para um `DWORD` valor que, quando o método retorna, contém o comprimento do fluxo em bytes.  
+ fora Um ponteiro para um valor `DWORD` que, quando o método retorna, contém o comprimento do fluxo em bytes.  
   
-## <a name="return-value"></a>Valor de retorno  
- O método retorna `S_OK` se o comprimento do fluxo de memória pode ser determinado, mesmo se for zero (0).  
+## <a name="return-value"></a>Valor retornado  
+ O método retornará `S_OK` se o comprimento do fluxo de memória puder ser determinado, mesmo se for zero (0).  
   
- O método retorna `CORPROF_E_MODULE_IS_DYNAMIC` se o método foi criado usando <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ O método retornará `CORPROF_E_MODULE_IS_DYNAMIC` se o método tiver sido criado usando <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="remarks"></a>Comentários  
  Se o módulo tiver símbolos na memória, o comprimento do fluxo será colocado em `pCountSymbolBytes`. Se o módulo não tiver símbolos na memória, `*pCountSymbolBytes = 0`.  
@@ -51,11 +49,11 @@ HRESULT GetInMemorySymbolsLength(
 > A implementação atual não oferece suporte a Reflection. Emit. Se o módulo foi criado usando Reflection. Emit, o método retornará `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57ed64ad8a6ae8ef46f423471436c3fce29d6fe5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3ae474a73f4c8e4b98c4b2bc5d04e55bcae6874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128662"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>Método IHostMemoryManager::NeedsVirtualAddressSpace
-Notifica o host que o common language runtime (CLR) vai tentar usar a memória especificada.  
+Notifica o host de que o Common Language Runtime (CLR) tentará usar a memória especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,22 +36,22 @@ HRESULT NeedsVirtualAddressSpace (
   
 ## <a name="parameters"></a>Parâmetros  
  `startAddress`  
- [in] O endereço inicial da memória.  
+ no O endereço inicial da memória.  
   
  `size`  
- [in] O tamanho, em bytes, da memória.  
+ no O tamanho, em bytes, da memória.  
   
 ## <a name="remarks"></a>Comentários  
- O `NeedsVirtualAddressSpace` é um método de retorno de chamada de método e deve ser implementado pelo gravador do aplicativo host. Ele é chamado pelo CLR.  
+ O método `NeedsVirtualAddressSpace` é um método de retorno de chamada e deve ser implementado pelo gravador do aplicativo de hospedagem. Ele é chamado pelo CLR.  
   
- Se o host não quiser que o CLR para usar a memória especificada, ele poderá retornar um HRESULT E_OUTOFMEMORY.  
+ Se o host não quiser que o CLR use a memória especificada, ele poderá retornar um E_OUTOFMEMORY HRESULT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

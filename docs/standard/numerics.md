@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191138"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091599"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -28,7 +26,7 @@ O .NET fornece uma variedade de inteiros numéricos e primitivos de ponto flutua
 
 O .NET dá suporte a tipos inteiros tanto com sinal quanto sem sinal de 8, 16, 32 e 64 bits, que estão listados na tabela a seguir:
   
-|Tipo|Assinado/não assinado|Tamanho (em bytes)|Valor mínimo|Valor máximo|  
+|Digite|Assinado/não assinado|Tamanho (em bytes)|Valor mínimo|Valor máximo|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Não assinado|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Assinado|2|-32,768|32,767|  
@@ -54,7 +52,7 @@ A estrutura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> é um
 
 O .NET inclui três primitivos tipos de ponto flutuante, que estão listados na tabela a seguir:
   
-|Tipo|Tamanho (em bytes)|Intervalo aproximado|Precisão|  
+|Digite|Tamanho (em bytes)|Intervalo aproximado|Precisão|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|~6 a 9 dígitos|  
 |<xref:System.Double?displayProperty=nameWithType>|8|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|~15 a 17 dígitos|  

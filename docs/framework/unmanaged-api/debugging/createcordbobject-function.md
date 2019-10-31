@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ab86277956469e558d20cea81174a7fdcc0020b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d21e0d3d0370ec7c1b223be29099f6b99822463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132112"
 ---
 # <a name="createcordbobject-function"></a>Função CreateCordbObject
 Cria uma interface do depurador ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) que fornece funcionalidade para instanciar uma sessão de depuração gerenciada em um processo remoto.  
@@ -39,32 +37,32 @@ HRESULT CordbCreateObject (
   
 ## <a name="parameters"></a>Parâmetros  
  `iDebuggerVersion`  
- [in] Versão do depurador do processo de destino. Esse parâmetro deve ser CorDebugVersion_2_0 para depuração remota.  
+ no Versão do depurador do processo de destino. Esse parâmetro deve ser CorDebugVersion_2_0 para depuração remota.  
   
  `ppCordb`  
- [out] Ponteiro para um ponteiro para um objeto que será convertido em um [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) de interface e retornado.  
+ fora Ponteiro para um ponteiro para um objeto que será convertido em uma interface [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) e retornado.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  S_OK  
- O número de CLRs no processo com êxito foi determinado e o identificador correspondente e matrizes de caminho foram preenchidos corretamente.  
+ O número de CLRs no processo foi determinado com êxito e as matrizes de identificador e caminho correspondentes foram preenchidas corretamente.  
   
  E_INVALIDARG  
- `ppCordb` é nulo, ou `iDebuggerVersion` não é CorDebugVersion_2_0.  
+ `ppCordb` é nulo ou `iDebuggerVersion` não é CorDebugVersion_2_0.  
   
  E_OUTOFMEMORY  
  Não é possível alocar memória suficiente para `ppCordb`  
   
- E_FAIL (ou outros códigos de retorno e _)  
+ E_FAIL (ou outros códigos de retorno de E_)  
  Outras falhas.  
   
 ## <a name="remarks"></a>Comentários  
- O [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface que é retornado no `ppCordb` é a interface de depuração de nível superior para todos os gerenciados serviços de depuração.  
+ A interface [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) retornada em `ppCordb` é a interface de depuração de nível superior para todos os serviços de depuração gerenciados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h  
+ **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versões do .NET framework:** 3,5 SP1
+ **Versões do .NET Framework:** 3,5 SP1

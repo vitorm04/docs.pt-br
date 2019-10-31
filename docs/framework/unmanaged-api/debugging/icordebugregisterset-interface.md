@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6419a525a8a542295751defb97e67a83220730b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ea0274adc12f3a99df0422bfc0b5180f0ef5596
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131387"
 ---
 # <a name="icordebugregisterset-interface"></a>Interface ICorDebugRegisterSet
 Representa o conjunto de registros disponíveis no computador que está executando o código no momento.  
@@ -31,23 +29,23 @@ Representa o conjunto de registros disponíveis no computador que está executan
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)|Obtém o valor de cada registro (no computador que está executando o código) que é especificado pela máscara de bits.|  
-|[Método GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|Obtém uma máscara de bits que indica quais registros `ICorDebugRegisterSet` estão disponíveis no momento.|  
+|[Método GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)|Obtém uma máscara de bits que indica quais registros neste `ICorDebugRegisterSet` estão disponíveis no momento.|  
 |[Método GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getthreadcontext-method.md)|Obtém o contexto do thread atual.|  
 |[Método SetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setregisters-method.md)|Não implementado para a versão de .NET Framework 2,0.|  
 |[Método SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-setthreadcontext-method.md)|Não implementado para o .NET Framework 2,0.|  
   
 ## <a name="remarks"></a>Comentários  
- A `ICorDebugRegisterSet` interface dá suporte apenas a registros de 32 bits. Use a interface [ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md) em plataformas como IA-64 que exigem registros adicionais.  
+ A interface `ICorDebugRegisterSet` dá suporte apenas a registros de 32 bits. Use a interface [ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md) em plataformas como IA-64 que exigem registros adicionais.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

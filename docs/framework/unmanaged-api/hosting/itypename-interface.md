@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3be458bb-a519-4e22-b373-0b28f2c9cc3c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 113bf001fb714a01880fafe470e331eeefbc5071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 039a1214cca455d5ab83ae552544c5d682f2b73e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043531"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124882"
 ---
 # <a name="itypename-interface"></a>Interface ITypeName
 Fornece métodos para obter informações de nome de tipo.  
@@ -29,11 +27,11 @@ Fornece métodos para obter informações de nome de tipo.
  Essa interface oferece suporte a infraestrutura do .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

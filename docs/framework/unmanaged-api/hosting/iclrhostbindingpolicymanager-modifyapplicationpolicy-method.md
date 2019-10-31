@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5323538447e083a0c727e43261dd68337182b9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141084"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>Método ICLRHostBindingPolicyManager::ModifyApplicationPolicy
 Modifica a política de associação para o assembly especificado e cria uma nova versão da política.  
@@ -43,48 +41,48 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="parameters"></a>Parâmetros  
  `pwzSourceAssemblyIdentity`  
- [in] A identidade do assembly para modificar.  
+ no A identidade do assembly a ser modificada.  
   
  `pwzTargetAssemblyIdentity`  
- [in] A nova identidade do assembly modificado.  
+ no A nova identidade do assembly modificado.  
   
  `pbApplicationPolicy`  
- [in] Um ponteiro para um buffer que contém os dados de política de associação para o assembly modificar.  
+ no Um ponteiro para um buffer que contém os dados da política de associação para o assembly modificar.  
   
  `cbAppPolicySize`  
- [in] O tamanho da política de associação a ser substituído.  
+ no O tamanho da política de associação a ser substituída.  
   
  `dwPolicyModifyFlags`  
- [in] Uma combinação OR lógica de [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) valores, que indicam o controle de redirecionamento.  
+ no Uma combinação lógica ou de valores [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) , indicando o controle do redirecionamento.  
   
  `pbNewApplicationPolicy`  
- [out] Um ponteiro para um buffer que contém os novos dados de política de associação.  
+ fora Um ponteiro para um buffer que contém os novos dados de diretiva de associação.  
   
  `pcbNewAppPolicySize`  
- [no, out] Um ponteiro para o tamanho do buffer de nova política de associação.  
+ [entrada, saída] Um ponteiro para o tamanho do novo buffer de diretiva de associação.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A política foi modificada com êxito.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity` ou `pwzTargetAssemblyIdentity` era uma referência nula.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` ou `pwzTargetAssemblyIdentity` foi uma referência nula.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` é pequeno demais.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O `ModifyApplicationPolicy` método pode ser chamado duas vezes. A primeira chamada deve fornecer um valor nulo para o `pbNewApplicationPolicy` parâmetro. Essa chamada será retornada com o valor necessário para `pcbNewAppPolicySize`. A segunda chamada deve fornecer esse valor para `pcbNewAppPolicySize`e apontar para um buffer desse tamanho para `pbNewApplicationPolicy`.  
+ O método `ModifyApplicationPolicy` pode ser chamado duas vezes. A primeira chamada deve fornecer um valor nulo para o parâmetro `pbNewApplicationPolicy`. Essa chamada retornará com o valor necessário para `pcbNewAppPolicySize`. A segunda chamada deve fornecer esse valor para `pcbNewAppPolicySize`e apontar para um buffer desse tamanho para `pbNewApplicationPolicy`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

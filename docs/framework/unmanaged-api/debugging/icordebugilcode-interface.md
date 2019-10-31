@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 51c4de0c-3813-4142-be25-a85bb84efb90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8ca47f071288ce50cf6008aa28f66d0b7dbcbcf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175715"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138632"
 ---
 # <a name="icordebugilcode-interface"></a>Interface ICorDebugILCode
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -31,7 +29,7 @@ ms.locfileid: "59175715"
 |[Método GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|Retorna um ponteiro para uma lista de cláusulas de manipulação de exceção (EH) que são definidas para esse IL.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

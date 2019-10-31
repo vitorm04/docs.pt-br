@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122362"
 ---
 # <a name="icordebugtypegetclass-method"></a>Método ICorDebugType::GetClass
 Obtém um ponteiro de interface para um ICorDebugClass que representa o tipo genérico não instanciado.  
@@ -37,13 +35,13 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppClass`  
- [out] Um ponteiro para o endereço de um `ICorDebugClass` interface que representa o tipo genérico não instanciado.  
+ fora Um ponteiro para o endereço de uma interface de `ICorDebugClass` que representa o tipo genérico não instanciado.  
   
 ## <a name="remarks"></a>Comentários  
- `GetClass` pode ser chamado apenas sob determinadas condições. Chame [icordebugtype:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) antes de chamar `GetClass`. Se `ICorDebugType::GetType` retorna um valor de CorElementType ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE, `GetClass` pode ser chamado para obter o tipo não instanciado para um tipo genérico.  
+ `GetClass` pode ser chamado somente sob determinadas condições. Chame [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) antes de chamar `GetClass`. Se `ICorDebugType::GetType` retornar um valor de CorElementType que seja ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE, `GetClass` poderá ser chamado para obter o tipo não instanciado para um tipo genérico.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

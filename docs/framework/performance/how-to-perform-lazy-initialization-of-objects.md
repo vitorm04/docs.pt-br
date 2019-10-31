@@ -1,5 +1,5 @@
 ---
-title: 'Como: executar a inicialização lenta de objetos'
+title: Como executar a inicialização lenta de objetos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fba47c0ff6425a375715dcd4c08d62e0f7f598c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130333"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>Como: executar a inicialização lenta de objetos
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Como executar a inicialização lenta de objetos
 A classe <xref:System.Lazy%601?displayProperty=nameWithType> simplifica o trabalho de inicialização lenta e instanciação de objetos. Inicializando objetos de maneira lenta, você poderá evitar a necessidade de criá-los se eles nunca forem necessários ou você poderá adiar sua inicialização até que eles sejam acessados pela primeira vez. Para obter mais informações, veja [Inicialização lenta](lazy-initialization.md).  
   
 ## <a name="example"></a>Exemplo  

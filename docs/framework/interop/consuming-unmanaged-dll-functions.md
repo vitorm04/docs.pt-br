@@ -13,14 +13,12 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051840"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123658"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
 A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Windows. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  

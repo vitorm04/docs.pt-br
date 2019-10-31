@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768385"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090900"
 ---
-# <a name="lpoverlappedcompletionroutine-function-pointer"></a>Ponteiro de função LPOVERLAPPED_COMPLETION_ROUTINE
-Aponta para uma função que notifica o host quando um sobreposta (ou seja, assíncrona) e/s para um dispositivo foi concluída.  
+# <a name="lpoverlapped_completion_routine-function-pointer"></a>Ponteiro de função LPOVERLAPPED_COMPLETION_ROUTINE
+Aponta para uma função que notifica o host quando uma e/s sobreposta (ou seja, assíncrona) para um dispositivo for concluída.  
   
  Esse ponteiro de função foi preterido no .NET Framework 4.  
   
@@ -40,25 +38,25 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwErrorCode`  
- [in] Um valor que é um código de erro se o dispositivo foi fechado; Caso contrário, esse valor é zero.  
+ no Um valor que é um código de erro se o dispositivo tiver sido fechado; caso contrário, esse valor será zero.  
   
- Fechar um dispositivo faz com que todas as pendentes de e/s para o dispositivo para ser concluída imediatamente.  
+ Fechar um dispositivo faz com que todas as e/s pendentes para o dispositivo sejam concluídas imediatamente.  
   
  `dwNumberOfBytesTransfered`  
- [in] O número de bytes transferidos pela operação de e/s.  
+ no O número de bytes transferidos pela operação de e/s.  
   
  `lpOverlapped`  
- [in] Um ponteiro para uma estrutura que contém as informações a serem usadas para concluir a solicitação de e/s.  
+ no Um ponteiro para uma estrutura que contém informações a serem usadas para concluir a solicitação de e/s.  
   
 ## <a name="remarks"></a>Comentários  
- A função à qual `LPOVERLAPPED_COMPLETION_ROUTINE` pontos é uma função de retorno de chamada e devem ser implementados pelo gravador do aplicativo host. A função de retorno de chamada permite que o host processar a solicitação de e/s concluída.  
+ A função à qual os pontos de `LPOVERLAPPED_COMPLETION_ROUTINE` é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem. A função de retorno de chamada permite que o host processe a solicitação de e/s concluída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

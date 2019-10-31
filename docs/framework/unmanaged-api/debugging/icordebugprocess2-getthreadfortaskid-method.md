@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c85040a31966a92ead6ca4786f62852f17923056
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11acf997b2efd74bc8394d830f36d3acbd1eef56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137207"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>Método ICorDebugProcess2::GetThreadForTaskID
 Obtém o thread no qual a tarefa com o identificador especificado está em execução.  
@@ -38,16 +36,16 @@ HRESULT GetThreadForTaskID (
   
 ## <a name="parameters"></a>Parâmetros  
  `taskid`  
- [in] O identificador da tarefa.  
+ no O identificador da tarefa.  
   
  `ppThread`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugThread2 que representa o thread a ser recuperado.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugThread2 que representa o thread a ser recuperado.  
   
 ## <a name="remarks"></a>Comentários  
- O host pode definir o identificador de tarefa usando o [iclrtask:: Settaskidentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) método.  
+ O host pode definir o identificador de tarefa usando o método [ICLRTask:: SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

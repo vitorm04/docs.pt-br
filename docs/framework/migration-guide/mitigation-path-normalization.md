@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Normalização de caminho'
+title: 'Mitigação: normalização do caminho'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126220"
 ---
-# <a name="mitigation-path-normalization"></a>Mitigação: Normalização de caminho
+# <a name="mitigation-path-normalization"></a>Mitigação: normalização do caminho
 Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho no .NET Framework foi alterada.  
   
 ## <a name="what-is-path-normalization"></a>O que é normalização do caminho?  

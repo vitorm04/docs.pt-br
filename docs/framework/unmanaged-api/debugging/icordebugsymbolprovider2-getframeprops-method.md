@@ -2,14 +2,12 @@
 title: 'Método ICorDebugSymbolProvider2:: GetFrameProps'
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c22e9c58a203c13611298e1956a6951d8ca7e8b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133643"
 ---
 # <a name="icordebugsymbolprovider2getframeprops-method"></a>Método ICorDebugSymbolProvider2:: GetFrameProps
 Retorna o método iniciando o endereço virtual relativo de um método e o quadro pai, dado um endereço virtual relativo de código.  
@@ -40,11 +38,11 @@ HRESULT GetFrameProps(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

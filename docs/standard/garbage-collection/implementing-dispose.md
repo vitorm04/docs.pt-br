@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 8a29584dd5ed47ad1e8a336a7283cba9271f3abd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106885"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121205"
 ---
 # <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
 
@@ -168,5 +166,5 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Como: definir e consumir classes e estruturas (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
+- [Como definir e consumir classes e structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md)

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666311"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139988"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -44,7 +42,7 @@ O método <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWi
 > [!NOTE]
 > O número de instâncias de <xref:System.Threading.Tasks.Task> que são criadas em segundo plano por <xref:System.Threading.Tasks.Parallel.Invoke%2A> não é necessariamente igual ao número de delegados que são fornecidos. A TPL pode usar várias otimizações, principalmente com números grandes de delegados.
 
-Para obter mais informações, confira [Como: Usar Parallel.Invoke para executar operações paralelas](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Para obter mais informações, consulte [Como usar Parallel.Invoke para executar operações em paralelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 Para obter maior controle sobre a execução da tarefa ou para retornar um valor da tarefa, é necessário trabalhar com objetos <xref:System.Threading.Tasks.Task> de forma mais explícita.
 
@@ -72,7 +70,7 @@ Você também pode usar o método <xref:System.Threading.Tasks.TaskFactory.Start
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-Para obter mais informações, confira [Como: Retornar um valor de uma tarefa](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).
+Para obter mais informações, consulte [Como retornar um valor de uma tarefa](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).
 
 Ao usar uma expressão lambda para criar um delegado, você tem acesso a todas as variáveis que são visíveis nesse ponto em seu código-fonte. No entanto, em alguns casos, especialmente dentro de loops, um lambda não captura a variável conforme o esperado. Ele captura somente o valor final, e não o valor no qual ele se transforma após cada iteração. O exemplo a seguir ilustra o problema. Ele passa um contador de loops para uma expressão lambda que instancia um objeto `CustomData` e usa o contador de loops como o identificador do objeto. Conforme mostra a saída do exemplo, cada objeto `CustomData` possui um identificador idêntico.
 
@@ -97,7 +95,7 @@ Cada tarefa recebe um ID inteiro que a identifica exclusivamente em um domínio 
 
 A maioria das APIs que criam tarefas fornecem sobrecargas que aceitam um parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>. Ao especificar uma dessas opções, você informa o agendador de tarefas como agendar a tarefa no pool de threads. A tabela a seguir lista as várias opções de criação de tarefas.
 
-|Valor do parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>|DESCRIÇÃO|
+|Valor do parâmetro <xref:System.Threading.Tasks.TaskCreationOptions>|Descrição|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|O padrão quando nenhuma opção é especificada. O agendador usa sua heurística padrão para agendar a tarefa.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Especifica que a tarefa deve ser agendada de modo que as tarefas criadas antes sejam mais propensas a ser executadas mais cedo, e as tarefas criadas posteriormente sejam mais propensas a ser executadas mais tarde.|
@@ -216,7 +214,7 @@ O método <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithTyp
 
 ### <a name="tasktfromresult"></a>Task(T).FromResult
 
-Ao usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>, você pode criar um objeto <xref:System.Threading.Tasks.Task%601> com um resultado pré-calculado. Este método é útil quando você executa uma operação assíncrona que retorna um objeto <xref:System.Threading.Tasks.Task%601> e o resultado do objeto <xref:System.Threading.Tasks.Task%601> já está calculado. Para obter um exemplo que usa <xref:System.Threading.Tasks.Task.FromResult%2A> para recuperar os resultados de operações assíncronas de download armazenadas em um cache, confira [Como: Criar tarefas pré-computadas](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
+Ao usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>, você pode criar um objeto <xref:System.Threading.Tasks.Task%601> com um resultado pré-calculado. Este método é útil quando você executa uma operação assíncrona que retorna um objeto <xref:System.Threading.Tasks.Task%601> e o resultado do objeto <xref:System.Threading.Tasks.Task%601> já está calculado. Para obter um exemplo que use <xref:System.Threading.Tasks.Task.FromResult%2A> para recuperar os resultados de operações de download assíncronas mantidas em um cache, veja [Como criar tarefas pré-computadas](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
 
 ## <a name="handling-exceptions-in-tasks"></a>Tratando exceções em tarefas
 
@@ -240,7 +238,7 @@ A classe <xref:System.Threading.Tasks.Task> oferece suporte ao cancelamento coop
 
 Você pode criar o token e enviar a solicitação de cancelamento algum tempo depois usando a classe <xref:System.Threading.CancellationTokenSource>. Passe o token para <xref:System.Threading.Tasks.Task> como um argumento e também referencie o mesmo token em seu delegado de usuário, o qual faz o trabalho de responder a uma solicitação de cancelamento.
 
-Para obter mais informações, confira [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).
+Para obter mais informações, consulte [Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [Como cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).
 
 ## <a name="the-taskfactory-class"></a>A classe TaskFactory
 
@@ -274,18 +272,18 @@ Se for necessário herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|DESCRIÇÃO|
+|Título|Descrição|
 |-|-|
 |[Encadeando tarefas usando tarefas de continuação](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Descreve como as continuações funcionam.|
 |[Tarefas filho anexadas e desanexadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Descreve a diferença entre tarefas filhas anexadas e desanexadas.|
 |[Cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md)|Descreve o suporte a cancelamento interno do objeto <xref:System.Threading.Tasks.Task>.|
 |[Tratamento de Exceção](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Descreve como as exceções são manipuladas em threads simultâneos.|
-|[Como: Usar Parallel.Invoke para executar operações paralelas](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Descreve como usar o <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
-|[Como: Retornar um valor de uma tarefa](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Descreve como retornar valores de tarefas.|
-|[Como: Cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Descreve como cancelar tarefas.|
-|[Como: Criar tarefas pré-computadas](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Descreve como usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar os resultados das operações de download assíncronas armazenados em um cache.|
-|[Como: Percorrer uma árvore binária com tarefas paralelas](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Descreve como usar tarefas para percorrer uma árvore binária.|
-|[Como: Desencapsular uma tarefa aninhada](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Demonstra como usar o método de extensão <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|
+|[Como usar Parallel.Invoke para executar operações em paralelo](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Descreve como usar o <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Como retornar um valor de uma tarefa](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Descreve como retornar valores de tarefas.|
+|[Como cancelar uma tarefa e seus filhos](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Descreve como cancelar tarefas.|
+|[Como criar tarefas pré-computadas](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Descreve como usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar os resultados das operações de download assíncronas armazenados em um cache.|
+|[Como percorrer uma árvore binária com tarefas paralelas](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Descreve como usar tarefas para percorrer uma árvore binária.|
+|[Como desencapsular uma tarefa aninhada](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Demonstra como usar o método de extensão <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.|
 |[Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Descreve como usar <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> para criar loops paralelos sobre dados.|
 |[Programação paralela](../../../docs/standard/parallel-programming/index.md)|Nó de nível superior para a programação paralela do .NET Framework.|
 

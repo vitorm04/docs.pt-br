@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08f34822099468b8c52f1d7ea2c665205f1b6c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2579bed9ae432a2b9460c421c6ee5bdc40d1e149
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774423"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121831"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Método ICoreClrDebugTarget::EnumRuntimes
-Enumera os tempos de execução de linguagem comum (CLRs) no processo especificado que está em execução em um computador remoto.  
+Enumera os Common Language runtimes (CLRs) no processo especificado que está sendo executado em um computador remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,38 +39,38 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwInternalProcessID`  
- [in] A ID de processo interno do processo para o qual você deseja enumerar tempos de execução. Isso será `m_dwInternalID` de correspondente [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
+ no A ID do processo interno do processo para o qual você deseja enumerar os tempos de execução. Isso será `m_dwInternalID` do [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)correspondente.  
   
  `pcRuntimes`  
- [out] O número de tempos de execução retornados em `ppRuntimes`. Esse valor pode ser 0 (zero).  
+ fora O número de tempos de execução retornados em `ppRuntimes`. Esse valor pode ser 0 (zero).  
   
  `ppRuntimes`  
- [out] Uma matriz de [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) estruturas que representam os tempos de execução carregado no processo de destino remoto.  
+ fora Uma matriz de estruturas [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) que representam os tempos de execução carregados no processo de destino remoto.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  S_OK  
  Êxito.  
   
  S_FALSE  
- `dwInternalProcessID` não corresponde qualquer processo que está em execução no computador, provavelmente porque o processo foi encerrado. `pcRuntimes` e `ppRuntimes` será nulo.  
+ `dwInternalProcessID` não corresponde a nenhum processo em execução no computador, provavelmente porque o processo foi encerrado. `pcRuntimes` e `ppRuntimes` serão nulas.  
   
  E_OUTOFMEMORY  
  Não é possível alocar memória suficiente para `ppRuntimes`.  
   
- E_FAIL (ou outros códigos de retorno e _)  
+ E_FAIL (ou outros códigos de retorno de E_)  
  Outras falhas.  
   
 ## <a name="remarks"></a>Comentários  
- Para liberar a memória alocada por esse método, chame o [icoreclrdebugtarget:: freeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) método.  
+ Para liberar a memória que foi alocada por esse método, chame o método [ICoreClrDebugTarget:: freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h  
+ **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versões do .NET framework:** 3,5 SP1  
+ **Versões do .NET Framework:** 3,5 SP1  
   
 ## <a name="see-also"></a>Consulte também
 

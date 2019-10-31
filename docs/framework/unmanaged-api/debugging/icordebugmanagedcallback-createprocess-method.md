@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0eacb4b0a06fbe086935b59eba7d33135b6bef19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d773368c85fd42fd169109cf1c7e6635705ebb7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090221"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>Método ICorDebugManagedCallback::CreateProcess
 Notifica o depurador quando um processo foi anexado ou iniciado pela primeira vez.  
@@ -37,13 +35,13 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parâmetros  
  `pProcess`  
- [in] Um ponteiro para um objeto ICorDebugProcess que representa o processo que foi anexado ou iniciado.  
+ no Um ponteiro para um objeto ICorDebugProcess que representa o processo que foi anexado ou iniciado.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método não é chamado até que o common language runtime é inicializado. A maioria dos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) métodos retornarão CORDBG_E_NOTREADY antes do `CreateProcess` retorno de chamada.  
+ Esse método não é chamado até que o Common Language Runtime seja inicializado. A maioria dos métodos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) retornará CORDBG_E_NOTREADY antes do `CreateProcess` retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

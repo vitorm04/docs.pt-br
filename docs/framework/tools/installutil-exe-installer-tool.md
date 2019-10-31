@@ -13,14 +13,12 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044533"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105070"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Ferramenta de Instalação)
 
@@ -48,8 +46,8 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 |Opção|Descrição|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> - ou -<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|
-|`/help` *assembly*<br /><br /> - ou -<br /><br /> `/?` *assembly*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|
+|`/h[elp]`<br /><br /> \- ou -<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|
+|`/help` *assembly*<br /><br /> \- ou -<br /><br /> `/?` *assembly*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica o nome forte de um assembly, que deve ser registrado no cache de assembly global. O nome do assembly deve ser totalmente qualificado com a versão, a cultura e o token de chave pública do assembly. O nome totalmente qualificado deve estar entre aspas.<br /><br /> Por exemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" é um nome de assembly totalmente qualificado.|
 |`/InstallStateDir=[` *directoryName* `]`|Especifica o diretório do arquivo .InstallState que contém os dados usados para desinstalar o assembly. O padrão é o diretório que contém o assembly.|
 |`/LogFile=`[*filename*]|Especifica o nome do arquivo de log em que o andamento da instalação é registrado. Por padrão, se a opção `/LogFile` for omitida, um arquivo de log chamado *assemblyname*.InstallLog será criado. Se *filename* for omitido, nenhum arquivo de log será gerado.|

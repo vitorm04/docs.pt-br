@@ -17,14 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968544"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121688"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan padrão
 <a name="Top"></a> Uma cadeia de caracteres de formato padrão <xref:System.TimeSpan> usa um único especificador de formato para definir a representação de texto de um valor <xref:System.TimeSpan> que resulta de uma operação de formatação. Qualquer sequência de formato que contenha mais de um caractere, incluindo espaço em branco, é interpretada como uma sequência de formato <xref:System.TimeSpan> personalizada. Para saber mais, confira [Cadeias de caracteres de formato TimeSpan personalizadas](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -34,18 +32,18 @@ ms.locfileid: "69968544"
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- As sequências de formato <xref:System.TimeSpan> padrão são usadas também pelos métodos <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> para definir o formato necessário de sequências de caracteres de entrada para análise de operações. (A análise converte a representação de sequência de um valor para esse valor). O exemplo a seguir ilustra o uso de sequências de formato padrão em operações de análise.  
+ As sequências de formato <xref:System.TimeSpan> padrão são usadas também pelos métodos <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> para definir o formato necessário de sequências de caracteres de entrada para análise de operações. (A análise converte a representação de cadeia de caracteres de um valor para esse valor.) O exemplo a seguir ilustra o uso de cadeias de caracteres de formato padrão em operações de análise.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
 <a name="top"></a> A tabela a seguir lista os especificadores de formato de intervalo de tempo padrão.  
   
-|Especificador de formato|Nome|DESCRIÇÃO|Exemplos|  
+|Especificador de formato|Name|Descrição|Exemplos|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Formato de constante (invariável)|Esse especificador não é sensível à cultura. Ele assume o formato `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (As sequências de formato "t" e "T" produzem os mesmos resultados).<br /><br /> Para saber mais: [O especificador de formato de constante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Formato curto geral|Esse especificador gera apenas o que é necessário. Ele é sensível à cultura e assume o formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Para saber mais: [O especificador de formato curto geral ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Formato longo geral|Esse especificador sempre gera dias e sete dígitos de fração. Ele é sensível à cultura e assume o formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Para saber mais: [O especificador de formato longo geral ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+|"c"|Formato de constante (invariável)|Esse especificador não é sensível à cultura. Ele assume o formato `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (As sequências de formato "t" e "T" produzem os mesmos resultados).<br /><br /> Mais informações: [o especificador de formato de constante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Formato curto geral|Esse especificador gera apenas o que é necessário. Ele é sensível à cultura e assume o formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Mais informações: [o especificador de formato curto geral ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Formato longo geral|Esse especificador sempre gera dias e sete dígitos de fração. Ele é sensível à cultura e assume o formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Mais informações: [o especificador de formato longo geral ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>O especificador de formato de constante ("c")  
@@ -55,7 +53,7 @@ ms.locfileid: "69968544"
   
  Os elementos entre colchetes ([ e ]) são opcionais. O ponto (.) e os dois pontos (:) são símbolos literais. A tabela a seguir descreve os elementos restantes.  
   
-|Elemento|DESCRIÇÃO|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
 |*d*|O número opcional de dias, sem zeros à esquerda.|  
@@ -84,7 +82,7 @@ ms.locfileid: "69968544"
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
-|Elemento|DESCRIÇÃO|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
 |*d*|O número opcional de dias, sem zeros à esquerda.|  
@@ -111,7 +109,7 @@ ms.locfileid: "69968544"
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
-|Elemento|DESCRIÇÃO|  
+|Elemento|Descrição|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
 |*d*|O número de dias, sem zeros à esquerda.|  

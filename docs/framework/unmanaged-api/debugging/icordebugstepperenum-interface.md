@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7336f958019c2f696a9b1a26b075c076cfc84f5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: feaf5bd25e276bb93c076f200912965c612af453
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953013"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138998"
 ---
 # <a name="icordebugstepperenum-interface"></a>Interface ICorDebugStepperEnum
 Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugStepper.  
@@ -30,7 +28,7 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugStepper.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Obtém o número especificado de `ICorDebugStepper` instâncias da enumeração, começando na posição atual.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugStepper` da enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -38,11 +36,11 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugStepper.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

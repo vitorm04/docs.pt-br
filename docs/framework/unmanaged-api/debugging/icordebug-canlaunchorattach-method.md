@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134278"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>Método ICorDebug::CanLaunchOrAttach
-Retorna um HRESULT que indica se iniciando um novo processo ou anexar ao processo especificado existente é possível dentro do contexto da configuração da máquina e o tempo de execução atual.  
+Retorna um HRESULT que indica se é possível iniciar um novo processo ou anexar ao processo existente especificado no contexto da configuração atual do computador e do tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +36,13 @@ HRESULT CanLaunchOrAttach (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwProcessId`  
- [in] A ID de um processo existente.  
+ no A ID de um processo existente.  
   
  `win32DebuggingEnabled`  
- [in] Passe `true` se você planeja iniciar com depuração de Win32 habilitada, ou anexar Win32 depuração habilitada; caso contrário, passe `false`.  
+ no Passe `true` se você planeja iniciar com a depuração do Win32 habilitada ou para anexar com a depuração do Win32 habilitada; caso contrário, passe `false`.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se os serviços de depuração determinam que iniciar um novo processo ou anexando ao processo determinado é possível, considerando as informações sobre a configuração de máquina e o tempo de execução atual. Os valores HRESULT possíveis são:  
+## <a name="return-value"></a>Valor retornado  
+ S_OK se os serviços de depuração determinarem que a inicialização de um novo processo ou a anexação ao processo fornecido é possível, dadas as informações sobre o computador atual e a configuração de tempo de execução. Os possíveis valores HRESULT são:  
   
 - S_OK  
   
@@ -55,12 +53,12 @@ HRESULT CanLaunchOrAttach (
 - CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é meramente informativo. A interface não irá parar de iniciar ou anexar a um processo, independentemente do valor retornado por `CanLaunchOrAttach`.  
+ Esse método é puramente informativo. A interface não o impedirá de iniciar ou anexar a um processo, independentemente do valor retornado por `CanLaunchOrAttach`.  
   
- Se você planeja iniciar com depuração de Win32 habilitada ou anexar com Win32 depuração habilitada, passe `true` para `win32DebuggingEnabled`. O HRESULT retornado pela `CanLaunchOrAttach` podem ser diferentes se você usar essa opção.  
+ Se você planeja iniciar com a depuração do Win32 habilitada ou anexar com a depuração do Win32 habilitada, passe `true` para `win32DebuggingEnabled`. O HRESULT retornado por `CanLaunchOrAttach` pode ser diferente se você usar essa opção.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

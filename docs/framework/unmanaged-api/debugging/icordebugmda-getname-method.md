@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca5d96e51c3809c6652d1a1fd75b80efb0b34222
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128036"
 ---
 # <a name="icordebugmdagetname-method"></a>Método ICorDebugMDA::GetName
-Obtém uma cadeia de caracteres que contém o nome do Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtém uma cadeia de caracteres que contém o nome do MDA (Assistente de depuração gerenciada) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O tamanho do `szName` matriz.  
+ no O tamanho da matriz de `szName`.  
   
  `pcchName`  
- [out] Um ponteiro para o comprimento do nome.  
+ fora Um ponteiro para o comprimento do nome.  
   
  `szName`  
- [out] Uma matriz na qual armazenar o nome.  
+ fora Uma matriz na qual armazenar o nome.  
   
 ## <a name="remarks"></a>Comentários  
- Nomes MDA são valores exclusivos. O `GetName` método é uma alternativa conveniente de desempenho para obter o fluxo XML e extrair o nome do fluxo com base no esquema.  
+ Os nomes de MDA são valores exclusivos. O método `GetName` é uma alternativa de desempenho conveniente para obter o fluxo XML e extrair o nome do fluxo com base no esquema.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7795fa8d348a3053e6d999d007a558b418cafbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929125"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132523"
 ---
 # <a name="working-with-calendars"></a>Trabalhar com calendários
 
@@ -28,7 +26,7 @@ Embora um valor de data e hora representem um momento, sua representação de ca
 
 ## <a name="calendars-in-net"></a>Calendários no .NET
 
-Todos os calendários no .net derivam <xref:System.Globalization.Calendar?displayProperty=nameWithType> da classe, que fornece a implementação do calendário base. Uma das classes que herda da classe <xref:System.Globalization.Calendar> é a classe <xref:System.Globalization.EastAsianLunisolarCalendar>, a qual é a classe base para todos os calendários lunissolares. O .NET inclui as seguintes implementações de calendário:
+Todos os calendários no .NET derivam da classe <xref:System.Globalization.Calendar?displayProperty=nameWithType>, que fornece a implementação do calendário base. Uma das classes que herda da classe <xref:System.Globalization.Calendar> é a classe <xref:System.Globalization.EastAsianLunisolarCalendar>, a qual é a classe base para todos os calendários lunissolares. O .NET inclui as seguintes implementações de calendário:
 
 - <xref:System.Globalization.ChineseLunisolarCalendar>, que representa o calendário lunissolar chinês.
 
@@ -60,7 +58,7 @@ Todos os calendários no .net derivam <xref:System.Globalization.Calendar?displa
 
 Um calendário pode ser usado em uma de duas formas:
 
-- Como o calendário usado por uma cultura específica. Cada objeto <xref:System.Globalization.CultureInfo> contém um calendário atual, que é o calendário que o objeto está usando no momento. As representações de cadeia de caracteres de todos os valores de data e hora refletem automaticamente a cultura e seu calendário atual. Normalmente, o calendário atual é o calendário padrão da cultura. <xref:System.Globalization.CultureInfo>os objetos também têm calendários opcionais, que incluem calendários adicionais que a cultura pode usar.
+- Como o calendário usado por uma cultura específica. Cada objeto <xref:System.Globalization.CultureInfo> contém um calendário atual, que é o calendário que o objeto está usando no momento. As representações de cadeia de caracteres de todos os valores de data e hora refletem automaticamente a cultura e seu calendário atual. Normalmente, o calendário atual é o calendário padrão da cultura. <xref:System.Globalization.CultureInfo> objetos também têm calendários opcionais, que incluem calendários adicionais que a cultura pode usar.
 
 - Como calendário autônomo independente de uma cultura específica. Nesse caso, os métodos <xref:System.Globalization.Calendar> são usados para expressar datas como os valores que refletem o calendário.
 
@@ -135,20 +133,20 @@ Porém, há uma exceção importante. O valor padrão (não inicializado) de um 
 
 ## <a name="working-with-eras"></a>Trabalhando com apagar
 
-Os calendários normalmente dividem as datas em eras. No entanto <xref:System.Globalization.Calendar> , as classes no .net não oferecem suporte a toda era definida por um calendário, e <xref:System.Globalization.Calendar> a maioria das classes dá suporte apenas a uma única época. Somente as classes <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> oferecem suporte a várias eras.
+Os calendários normalmente dividem as datas em eras. No entanto, as classes de <xref:System.Globalization.Calendar> no .NET não dão suporte a toda era definida por um calendário, e a maioria das classes de <xref:System.Globalization.Calendar> dá suporte a apenas uma única época. Somente as classes <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> oferecem suporte a várias eras.
 
 > [!IMPORTANT]
-> A era Reiwa, uma nova era no <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar>, começa em 1º de maio de 2019. Essa alteração afeta todos os aplicativos que usam esses calendários. Consulte os seguintes artigos para obter mais informações:
+> A era Reiwa, uma nova era na <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar>, começa em 1º de maio de 2019. Essa alteração afeta todos os aplicativos que usam esses calendários. Consulte os seguintes artigos para obter mais informações:
 >
 > - [Tratar de uma nova era no calendário do japonês no .net](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), que documenta os recursos adicionados ao .net para dar suporte a calendários com vários apagar e discute as práticas recomendadas a serem usadas na manipulação de calendários de várias seleções.
 > - [Prepare seu aplicativo para a alteração de era japonesa](/windows/uwp/design/globalizing/japanese-era-change), que fornece informações sobre como testar seus aplicativos no Windows para garantir a prontidão da alteração de era.
 > - [Resumo de novas atualizações de era japonesas para .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), que lista .NET Framework atualizações para versões individuais do Windows relacionadas à nova era do calendário japonês, observa novos recursos de .NET Framework para suporte de várias versões e inclui coisas para Procure em testando seus aplicativos.
 
-Uma era na maioria dos calendários denota um período de tempo muito longo. No calendário gregoriano, por exemplo, a era atual se estende por mais de duas milênios. Para o <xref:System.Globalization.JapaneseLunisolarCalendar>e o, os dois calendários que dão suporte a vários apagar, esse não é o caso. <xref:System.Globalization.JapaneseCalendar> Uma era corresponde ao período do Reino de um imperador. O suporte para vários apagamentos, especialmente quando o limite superior da era atual é desconhecido, apresenta desafios especiais.
+Uma era na maioria dos calendários denota um período de tempo muito longo. No calendário gregoriano, por exemplo, a era atual se estende por mais de duas milênios. Para o <xref:System.Globalization.JapaneseCalendar> e o <xref:System.Globalization.JapaneseLunisolarCalendar>, os dois calendários que dão suporte a vários apagar, esse não é o caso. Uma era corresponde ao período do Reino de um imperador. O suporte para vários apagamentos, especialmente quando o limite superior da era atual é desconhecido, apresenta desafios especiais.
 
 ### <a name="eras-and-era-names"></a>Apagar e nomes de era
 
-No .net, os inteiros que representam o apagamento com suporte de uma implementação de calendário em particular são armazenados em ordem <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> inversa na matriz. A era atual (que é a era com o intervalo de tempo mais recente) está no índice zero e <xref:System.Globalization.Calendar> para classes que dão suporte a vários apagamentos, cada índice sucessivo reflete a era anterior. A propriedade estática <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> define o índice de era atual na matriz <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; ela é uma constante cujo valor é sempre zero. As classes <xref:System.Globalization.Calendar> individuais também incluem os campos estáticos que retornam o valor da era atual. Elas são listadas na tabela a seguir.
+No .NET, os inteiros que representam o apagamento com suporte de uma implementação de calendário em particular são armazenados em ordem inversa na matriz de <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>. A era atual (que é a era com o intervalo de tempo mais recente) está no índice zero e, para <xref:System.Globalization.Calendar> classes que dão suporte a vários apagamentos, cada índice sucessivo reflete a era anterior. A propriedade estática <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> define o índice de era atual na matriz <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; ela é uma constante cujo valor é sempre zero. As classes <xref:System.Globalization.Calendar> individuais também incluem os campos estáticos que retornam o valor da era atual. Elas são listadas na tabela a seguir.
 
 | Classe do calendário                                        | Campo de era atual                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -173,25 +171,25 @@ Além disso, a cadeia de caracteres de formato de data e hora personalizado "g" 
 
 ### <a name="instantiating-a-date-with-an-era"></a>Criando uma instância de uma data com uma era
 
-Para as duas <xref:System.Globalization.Calendar> classes que dão suporte a vários apagamentos, uma data que consiste em um determinado ano, mês e dia do valor do mês pode ser ambígua. Por exemplo, todos os apagados têm <xref:System.Globalization.JapaneseCalendar> suporte do que têm anos cujo número é 1. Normalmente, se uma era não é especificada, os métodos de data e hora e calendário assumem que os valores pertencem à era atual. Isso é <xref:System.DateTime.%23ctor%2A> verdadeiro nos construtores e <xref:System.DateTimeOffset.%23ctor%2A> que incluem parâmetros do tipo <xref:System.Globalization.Calendar>, bem como os métodos [JapaneseCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) e [JapaneseLunisolarCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) . O exemplo a seguir instancia uma data que representa 1 de Janeiro do segundo ano de uma era não especificada. Se você executar o exemplo quando a era Reiwa for a época atual, a data será interpretada como o segundo ano da era Reiwa. A era, 令和, precede o ano na cadeia de caracteres retornada pelo <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> método e corresponde a 1º de janeiro de 2020, no calendário gregoriano. (A era Reiwa começa no ano 2019 do calendário gregoriano.)
+Para as duas classes de <xref:System.Globalization.Calendar> que dão suporte a vários apagamentos, uma data que consiste em um ano, mês e dia específicos do valor do mês pode ser ambígua. Por exemplo, todos os apagamentos com suporte pelo <xref:System.Globalization.JapaneseCalendar> têm anos cujo número é 1. Normalmente, se uma era não é especificada, os métodos de data e hora e calendário assumem que os valores pertencem à era atual. Isso é verdadeiro para os construtores <xref:System.DateTime.%23ctor%2A> e <xref:System.DateTimeOffset.%23ctor%2A> que incluem parâmetros do tipo <xref:System.Globalization.Calendar>, bem como os métodos [JapaneseCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) e [JapaneseLunisolarCalendar. ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) . O exemplo a seguir instancia uma data que representa 1 de Janeiro do segundo ano de uma era não especificada. Se você executar o exemplo quando a era Reiwa for a época atual, a data será interpretada como o segundo ano da era Reiwa. A era, 令和, precede o ano na cadeia de caracteres retornada pelo método <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> e corresponde a 1º de janeiro de 2020, no calendário gregoriano. (A era Reiwa começa no ano 2019 do calendário gregoriano.)
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]
 
 No entanto, se a era for alterada, a intenção desse código se tornará ambígua. A data deve representar o segundo ano da era atual ou se pretende representar o segundo ano da era do Heisei? Há duas maneiras de evitar essa ambiguidade:
 
-- Crie uma instância do valor de data e hora <xref:System.Globalization.GregorianCalendar> usando a classe padrão. Você pode usar o calendário japonês ou o calendário lunisolar japonês para a representação de cadeia de caracteres de datas, como mostra o exemplo a seguir.
+- Instancie o valor de data e hora usando a classe de <xref:System.Globalization.GregorianCalendar> padrão. Você pode usar o calendário japonês ou o calendário lunisolar japonês para a representação de cadeia de caracteres de datas, como mostra o exemplo a seguir.
 
   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
-- Chame um método de data e hora que especifica explicitamente uma era. Entre elas estão os seguintes métodos:
+- Chame um método de data e hora que especifica explicitamente uma era. Isso inclui os seguintes métodos:
 
-  - O <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> método <xref:System.Globalization.JapaneseLunisolarCalendar> da classe ou. <xref:System.Globalization.JapaneseCalendar>
+  - O método <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> da classe <xref:System.Globalization.JapaneseCalendar> ou <xref:System.Globalization.JapaneseLunisolarCalendar>.
 
-  - <xref:System.DateTime> <xref:System.DateTime.Parse%2A> <xref:System.DateTime.TryParse%2A> <xref:System.Globalization.DateTimeStyles> Um método de análise<xref:System.DateTime.ParseExact%2A>,como,, ou<xref:System.DateTime.TryParseExact%2A>, que inclui a cadeia de caracteres a ser analisada e, opcionalmente, um argumento se a cultura atual for japonesa-Japão (" <xref:System.DateTimeOffset> ja-JP ") e o calendário da cultura é o <xref:System.Globalization.JapaneseCalendar>. A cadeia de caracteres a ser analisada deve incluir a era.
+  - Um método de análise <xref:System.DateTime> ou <xref:System.DateTimeOffset>, como <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>ou <xref:System.DateTime.TryParseExact%2A>, que inclui a cadeia de caracteres a ser analisada e, opcionalmente, um argumento de <xref:System.Globalization.DateTimeStyles> se a cultura atual for Japanese-Japão ("ja-JP") e o calendário da cultura for o <xref:System.Globalization.JapaneseCalendar>. A cadeia de caracteres a ser analisada deve incluir a era.
 
-  - Um <xref:System.DateTime> método <xref:System.DateTimeOffset> de análise ou que inclui um `provider` parâmetro do tipo <xref:System.IFormatProvider>. `provider`deve <xref:System.Globalization.CultureInfo> ser um objeto que representa a cultura japonesa-Japão ("ja-JP") cujo calendário atual é <xref:System.Globalization.DateTimeFormatInfo> <xref:System.Globalization.JapaneseCalendar> ou um objeto cuja <xref:System.Globalization.DateTimeFormatInfo.Calendar> propriedade é <xref:System.Globalization.JapaneseCalendar>. A cadeia de caracteres a ser analisada deve incluir a era.
+  - Um método de análise <xref:System.DateTime> ou <xref:System.DateTimeOffset> que inclui um parâmetro `provider` do tipo <xref:System.IFormatProvider>. `provider` deve ser um objeto <xref:System.Globalization.CultureInfo> que representa a cultura japonesa-Japão ("ja-JP") cujo calendário atual é <xref:System.Globalization.JapaneseCalendar> ou um objeto <xref:System.Globalization.DateTimeFormatInfo> cuja propriedade <xref:System.Globalization.DateTimeFormatInfo.Calendar> é <xref:System.Globalization.JapaneseCalendar>. A cadeia de caracteres a ser analisada deve incluir a era.
 
   O exemplo a seguir usa três desses métodos para criar uma instância de data e hora na era Meiji, que começou em 8 de setembro de 1868 e terminou em 29 de julho de 1912.
 
@@ -201,17 +199,17 @@ No entanto, se a era for alterada, a intenção desse código se tornará ambíg
 > [!TIP]
 > Ao trabalhar com calendários que dão suporte a vários apagamentos, *sempre* use a data gregoriana para criar uma instância de uma data ou especifique a era quando você criar uma instância de uma data e hora com base nesse calendário.
 
-Ao especificar uma era para o <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> método, você fornece o índice da era na Propriedade do <xref:System.Globalization.Calendar.Eras> calendário. No entanto, para calendários cujo apagamento está sujeito a alterações, esses índices não são valores constantes; a era atual está no índice 0 e a era mais antiga está no índice `Eras.Length - 1`. Quando uma nova era adicionada a um calendário, os índices do apagamento anterior são aumentados em um. Você pode fornecer o índice de era apropriado da seguinte maneira:
+Ao especificar uma era para o método <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)>, você fornece o índice da era na propriedade <xref:System.Globalization.Calendar.Eras> do calendário. No entanto, para calendários cujo apagamento está sujeito a alterações, esses índices não são valores constantes; a era atual está no índice 0 e a era mais antiga está no índice `Eras.Length - 1`. Quando uma nova era adicionada a um calendário, os índices do apagamento anterior são aumentados em um. Você pode fornecer o índice de era apropriado da seguinte maneira:
 
-- Para datas na era atual, sempre use a propriedade do <xref:System.Globalization.Calendar.CurrentEra> calendário.
+- Para datas na era atual, sempre use a propriedade <xref:System.Globalization.Calendar.CurrentEra> do calendário.
 
-- Para datas em uma era especificada, use o <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> método para recuperar o índice que corresponde a um nome de era especificado. Isso requer que <xref:System.Globalization.JapaneseCalendar> seja o calendário atual <xref:System.Globalization.CultureInfo> do objeto que representa a cultura ja-JP.  (Essa técnica também funciona para <xref:System.Globalization.JapaneseLunisolarCalendar> o, pois ela dá suporte ao mesmo apagamento que o <xref:System.Globalization.JapaneseCalendar>.) O exemplo anterior ilustra essa abordagem.
+- Para datas em uma era especificada, use o método <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> para recuperar o índice que corresponde a um nome de era especificado. Isso requer que o <xref:System.Globalization.JapaneseCalendar> seja o calendário atual do <xref:System.Globalization.CultureInfo> objeto que representa a cultura ja-JP.  (Essa técnica também funciona para o <xref:System.Globalization.JapaneseLunisolarCalendar>, pois ele dá suporte ao mesmo apagamento que o <xref:System.Globalization.JapaneseCalendar>.) O exemplo anterior ilustra essa abordagem.
 
-### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Calendários, apagar e intervalos de datas: Verificações de intervalo relaxadas
+### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Calendários, apagar e intervalos de datas: verificações de intervalo relaxadas
 
-Muito parecido com os calendários individuais têm suporte para intervalos de datas, <xref:System.Globalization.JapaneseCalendar> o <xref:System.Globalization.JapaneseLunisolarCalendar> apagamento nas classes e também tem intervalos com suporte. Anteriormente, o .NET usava verificações de intervalo de era estrito para garantir que uma data específica era dentro do intervalo dessa era. Ou seja, se uma data estiver fora do intervalo da era especificada, o método lançará um <xref:System.ArgumentOutOfRangeException>. Atualmente, o .NET usa a verificação de intervalo reduzida por padrão. As atualizações para todas as versões do .NET introduziram verificações de intervalo de era reduzida; a tentativa de criar uma instância de uma data específica que está fora do intervalo da era "estouros" de uma época especificada na seguinte era e nenhuma exceção é lançada.
+Muito parecido com os calendários individuais têm suporte a intervalos de datas, o apagamento nas classes <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> também tem intervalos com suporte. Anteriormente, o .NET usava verificações de intervalo de era estrito para garantir que uma data específica era dentro do intervalo dessa era. Ou seja, se uma data estiver fora do intervalo da era especificada, o método lançará um <xref:System.ArgumentOutOfRangeException>. Atualmente, o .NET usa a verificação de intervalo reduzida por padrão. As atualizações para todas as versões do .NET introduziram verificações de intervalo de era reduzida; a tentativa de criar uma instância de uma data específica que está fora do intervalo da era "estouros" de uma época especificada na seguinte era e nenhuma exceção é lançada.
 
-O exemplo a seguir tenta criar uma instância de uma data no ano 65th da era Showa, que começou em 25 de dezembro de 1926 e terminou em 7 de janeiro de 1989. Essa data corresponde a 9 de janeiro de 1990, que está fora do intervalo da era de Showa no <xref:System.Globalization.JapaneseCalendar>. Como a saída do exemplo ilustra, a data exibida pelo exemplo é 9 de janeiro de 1990, no segundo ano da era do Heisei.
+O exemplo a seguir tenta criar uma instância de uma data no ano 65th da era Showa, que começou em 25 de dezembro de 1926 e terminou em 7 de janeiro de 1989. Essa data corresponde a 9 de janeiro de 1990, que está fora do intervalo da era Showa no <xref:System.Globalization.JapaneseCalendar>. Como a saída do exemplo ilustra, a data exibida pelo exemplo é 9 de janeiro de 1990, no segundo ano da era do Heisei.
 
   [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
   [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
@@ -243,12 +241,12 @@ Se as verificações de intervalo relaxadas não forem indesejáveis, você pode
 
    |  |  |
    |--|--|
-   |Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\AppContext |
-   |Nome | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
-   |Tipo | REG_SZ |
+   |Chave | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppContext |
+   |Name | Switch. System. Globalization. EnforceJapaneseEraYearRanges |
+   |Digite | REG_SZ |
    |Valor | true |
 
-Com as verificações de intervalo estrita habilitadas, o exemplo <xref:System.ArgumentOutOfRangeException> anterior gera um e exibe a seguinte saída:
+Com as verificações de intervalo estrita habilitadas, o exemplo anterior gera um <xref:System.ArgumentOutOfRangeException> e exibe a seguinte saída:
 
 ```console
 Unhandled Exception: System.ArgumentOutOfRangeException: Valid values are between 1 and 64, inclusive.
@@ -266,7 +264,7 @@ Se um objeto <xref:System.Globalization.Calendar> oferece suporte a eras e é o 
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]
 
 > [!WARNING]
-> A <xref:System.Globalization.JapaneseCalendar> classe é a única classe Calendar no .NET que dá suporte a datas em mais de uma era e que pode ser o calendário atual de <xref:System.Globalization.CultureInfo> um objeto, especificamente, de <xref:System.Globalization.CultureInfo> um objeto que representa a cultura japonesa (Japão).
+> A classe <xref:System.Globalization.JapaneseCalendar> é a única classe Calendar no .NET que dá suporte a datas em mais de uma era e que pode ser o calendário atual de um objeto <xref:System.Globalization.CultureInfo>-especificamente, de um objeto <xref:System.Globalization.CultureInfo> que representa a cultura japonesa (Japão).
 
 Para todos os calendários, o especificador de formato personalizado “g” inclui a era na cadeia de caracteres de resultado. O exemplo a seguir usa a cadeia de caracteres de formato personalizado "MM-dd-aaaa g" para incluir a era na cadeia de caracteres de resultado quando o calendário atual é o calendário gregoriano.
 
@@ -278,7 +276,7 @@ Em casos em que a representação de cadeia de caracteres de uma data é express
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
 
-Nos calendários japoneses, o primeiro ano de uma era chamado de Gannen (元年). Por exemplo, em vez de Heisei 1, o primeiro ano da era Heisei pode ser descrito como Heisei Gannen. O .net adota essa convenção em operações de formatação para datas e horas formatadas com as seguintes cadeias de caracteres de formato de data e hora personalizadas ou <xref:System.Globalization.CultureInfo> padrão quando são usadas com um objeto que representa a cultura japonesa-Japão ("ja-JP") com o <xref:System.Globalization.JapaneseCalendar> classe:
+Nos calendários japoneses, o primeiro ano de uma era chamado de Gannen (元年). Por exemplo, em vez de Heisei 1, o primeiro ano da era Heisei pode ser descrito como Heisei Gannen. O .NET adota essa convenção em operações de formatação para datas e horas formatadas com as seguintes cadeias de caracteres de formato de data e hora personalizadas ou padrão quando são usadas com um objeto <xref:System.Globalization.CultureInfo> que representa a cultura japonesa-Japão ("ja-JP") com o <xref:System.Globalization.JapaneseCalendar> classes
 
 - [O padrão de data por extenso](../base-types/standard-date-and-time-format-strings.md#LongDate), indicado pela cadeia de caracteres de formato de data e hora padrão "D".
 - [O padrão de data por hora completa](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), indicado pela cadeia de caracteres de formato de data e hora padrão "F".
@@ -286,7 +284,7 @@ Nos calendários japoneses, o primeiro ano de uma era chamado de Gannen (元年)
 - [O padrão de ano/mês](../base-types/standard-date-and-time-format-strings.md#YearMonth), indicado pela cadeia de caracteres de formato de data e hora padrão Y "ou" y ".
 - [A [cadeia de caracteres de formato de data e hora personalizada](../base-types/custom-date-and-time-format-strings.md)do "GGY" 年 "ou" ggy年 ".
 
-Por exemplo, o exemplo a seguir exibe uma data no primeiro ano da era do Heisei no <xref:System.Globalization.JapaneseCalendar> .
+Por exemplo, o exemplo a seguir exibe uma data no primeiro ano da era do Heisei no <xref:System.Globalization.JapaneseCalendar>.
 
   [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
   [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
@@ -318,9 +316,9 @@ Se esse comportamento for indesejável em operações de formatação, você pod
 
    |  |  |
    |--|--|
-   |Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\AppContext |
-   |Nome | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
-   |Tipo | REG_SZ |
+   |Chave | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppContext |
+   |Name | Switch. System. Globalization. FormatJapaneseFirstYearAsANumber |
+   |Digite | REG_SZ |
    |Valor | true |
 
 Com o suporte do Gannen nas operações de formatação desabilitadas, o exemplo anterior exibe a seguinte saída:
@@ -356,13 +354,13 @@ O .NET também foi atualizado para que as operações de análise de data e hora
 
    |  |  |
    |--|--|  
-   |Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\AppContext |
-   |Nome | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
-   |Tipo | REG_SZ |
+   |Chave | HKEY_LOCAL_MACHINE\Software\Microsoft\.NETFramework\AppContext |
+   |Name | Switch. System. Globalization. EnforceLegacyJapaneseDateParsing |
+   |Digite | REG_SZ |
    |Valor | true | 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Exibir datas em calendários não gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [Exemplo: Utilitário de intervalo da semana do calendário](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Como: exibir datas em calendários não gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+- [Exemplo: utilitário de intervalo da semana do calendário](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
 - [Classe Calendar](xref:System.Globalization.Calendar)

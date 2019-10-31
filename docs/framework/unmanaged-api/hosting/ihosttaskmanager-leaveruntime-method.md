@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ac1c18d094deca50d461ef9ff0933a4f87176e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959037"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132989"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>Método IHostTaskManager::LeaveRuntime
 Notifica o host de que a tarefa em execução no momento está prestes a sair do Common Language Runtime (CLR) e inserir código não gerenciado.  
@@ -42,11 +40,11 @@ HRESULT LeaveRuntime (
  `target`  
  no O endereço dentro do arquivo executável portátil mapeado da função não gerenciada a ser chamada.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`retornado com êxito.|  
+|S_OK|`LeaveRuntime` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -55,7 +53,7 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|Não há memória suficiente disponível para concluir a alocação solicitada.|  
   
 ## <a name="remarks"></a>Comentários  
- Seqüências de chamadas de e para código não gerenciado podem ser aninhadas. Por exemplo, a lista a seguir descreve uma situação hipotética na qual a sequência de chamadas para `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)e `IHostTaskManager::EnterRuntime` permite que o host Identifique as camadas aninhadas.  
+ Seqüências de chamadas de e para código não gerenciado podem ser aninhadas. Por exemplo, a lista a seguir descreve uma situação hipotética na qual a sequência de chamadas para `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)e `IHostTaskManager::EnterRuntime` permite que o host identifique o camadas aninhadas.  
   
 |Ação|Chamada de método correspondente|  
 |------------|-------------------------------|  
@@ -67,11 +65,11 @@ HRESULT LeaveRuntime (
 |A primeira função não gerenciada retorna a execução para o programa de Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
