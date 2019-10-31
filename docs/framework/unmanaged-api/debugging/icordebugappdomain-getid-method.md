@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb8917fa401db9424cff168fe0b06ad84065827c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c43d6f05dffbf10ca1dd9253abfe893db9adf5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110476"
 ---
-# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="f6429-102">Método ICorDebugAppDomain::GetId</span><span class="sxs-lookup"><span data-stu-id="f6429-102">ICorDebugAppDomain::GetId Method</span></span>
-<span data-ttu-id="f6429-103">Obtém o identificador exclusivo do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f6429-103">Gets the unique identifier of the application domain.</span></span>  
+# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="e32a6-102">Método ICorDebugAppDomain::GetId</span><span class="sxs-lookup"><span data-stu-id="e32a6-102">ICorDebugAppDomain::GetId Method</span></span>
+<span data-ttu-id="e32a6-103">Obtém o identificador exclusivo do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e32a6-103">Gets the unique identifier of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f6429-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f6429-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e32a6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e32a6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetID (  
@@ -35,18 +33,18 @@ HRESULT GetID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f6429-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f6429-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e32a6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e32a6-105">Parameters</span></span>  
  `pId`  
- <span data-ttu-id="f6429-106">[out] O identificador exclusivo do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f6429-106">[out] The unique identifier of the application domain.</span></span>  
+ <span data-ttu-id="e32a6-106">fora O identificador exclusivo do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e32a6-106">[out] The unique identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f6429-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="f6429-107">Remarks</span></span>  
- <span data-ttu-id="f6429-108">O identificador para o domínio de aplicativo é exclusivo dentro do processo de recipiente.</span><span class="sxs-lookup"><span data-stu-id="f6429-108">The identifier for the application domain is unique within the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e32a6-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="e32a6-107">Remarks</span></span>  
+ <span data-ttu-id="e32a6-108">O identificador para o domínio do aplicativo é exclusivo dentro do processo que o contém.</span><span class="sxs-lookup"><span data-stu-id="e32a6-108">The identifier for the application domain is unique within the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f6429-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f6429-109">Requirements</span></span>  
- <span data-ttu-id="f6429-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6429-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e32a6-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e32a6-109">Requirements</span></span>  
+ <span data-ttu-id="e32a6-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e32a6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f6429-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6429-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e32a6-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e32a6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f6429-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f6429-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e32a6-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e32a6-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f6429-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6429-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e32a6-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e32a6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

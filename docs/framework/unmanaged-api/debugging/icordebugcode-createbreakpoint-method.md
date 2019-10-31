@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46842618-0fe4-480b-871c-82fba82d23d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ec7d615b99ac301948d7ea25318115713ce06ea
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b02fb0a18bfbc2e93ec204706ca1f17dde5d8c8a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125708"
 ---
-# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="f3636-102">Método ICorDebugCode::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="f3636-102">ICorDebugCode::CreateBreakpoint Method</span></span>
-<span data-ttu-id="f3636-103">Cria um ponto de interrupção neste segmento de código no deslocamento especificado.</span><span class="sxs-lookup"><span data-stu-id="f3636-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
+# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="e3120-102">Método ICorDebugCode::CreateBreakpoint</span><span class="sxs-lookup"><span data-stu-id="e3120-102">ICorDebugCode::CreateBreakpoint Method</span></span>
+<span data-ttu-id="e3120-103">Cria um ponto de interrupção neste segmento de código no deslocamento especificado.</span><span class="sxs-lookup"><span data-stu-id="e3120-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3636-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f3636-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3120-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e3120-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateBreakpoint (  
@@ -36,23 +34,23 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f3636-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f3636-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3120-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e3120-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="f3636-106">no O deslocamento no qual criar o ponto de interrupção.</span><span class="sxs-lookup"><span data-stu-id="f3636-106">[in] The offset at which to create the breakpoint.</span></span>  
+ <span data-ttu-id="e3120-106">no O deslocamento no qual criar o ponto de interrupção.</span><span class="sxs-lookup"><span data-stu-id="e3120-106">[in] The offset at which to create the breakpoint.</span></span>  
   
  `ppBreakpoint`  
- <span data-ttu-id="f3636-107">fora Um ponteiro para o endereço de um objeto "ICorDebugFunctionBreakpoint" que representa o ponto de interrupção.</span><span class="sxs-lookup"><span data-stu-id="f3636-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="e3120-107">fora Um ponteiro para o endereço de um objeto "ICorDebugFunctionBreakpoint" que representa o ponto de interrupção.</span><span class="sxs-lookup"><span data-stu-id="e3120-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f3636-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="f3636-108">Remarks</span></span>  
- <span data-ttu-id="f3636-109">Antes que o ponto de interrupção esteja ativo, ele deve ser adicionado ao objeto de processo.</span><span class="sxs-lookup"><span data-stu-id="f3636-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3120-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="e3120-108">Remarks</span></span>  
+ <span data-ttu-id="e3120-109">Antes que o ponto de interrupção esteja ativo, ele deve ser adicionado ao objeto de processo.</span><span class="sxs-lookup"><span data-stu-id="e3120-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
   
- <span data-ttu-id="f3636-110">Se esse código for um código MSIL (Microsoft Intermediate Language) e houver uma versão nativa compilada JIT (just-in-time) do código, o ponto de interrupção será aplicado também no código compilado por JIT.</span><span class="sxs-lookup"><span data-stu-id="f3636-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="f3636-111">(O mesmo será verdadeiro se o código for compilado em JIT posteriormente.)</span><span class="sxs-lookup"><span data-stu-id="f3636-111">(The same is true if the code is JIT-compiled later.)</span></span>  
+ <span data-ttu-id="e3120-110">Se esse código for um código MSIL (Microsoft Intermediate Language) e houver uma versão nativa compilada JIT (just-in-time) do código, o ponto de interrupção será aplicado também no código compilado por JIT.</span><span class="sxs-lookup"><span data-stu-id="e3120-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="e3120-111">(O mesmo será verdadeiro se o código for compilado em JIT posteriormente.)</span><span class="sxs-lookup"><span data-stu-id="e3120-111">(The same is true if the code is JIT-compiled later.)</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3636-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f3636-112">Requirements</span></span>  
- <span data-ttu-id="f3636-113">**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3636-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3120-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e3120-112">Requirements</span></span>  
+ <span data-ttu-id="e3120-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3120-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3636-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3636-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e3120-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e3120-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f3636-115">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3636-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3120-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3120-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3636-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3636-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e3120-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3120-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

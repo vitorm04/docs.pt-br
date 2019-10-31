@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 42230928-2c33-41fd-9519-d96efef6c7af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58919936bdc62d52437f429146f04c66d49294b2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c0a43dc1640bdaa0ae104832eb4d1f8eb15b0392
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796575"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134327"
 ---
-# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="720a3-102">Método IAssemblyName::GetVersion</span><span class="sxs-lookup"><span data-stu-id="720a3-102">IAssemblyName::GetVersion Method</span></span>
-<span data-ttu-id="720a3-103">Obtém as informações de versão para o assembly referenciado por este objeto [IAssemblyName](iassemblyname-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="720a3-103">Gets the version information for the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="1ffe1-102">Método IAssemblyName::GetVersion</span><span class="sxs-lookup"><span data-stu-id="1ffe1-102">IAssemblyName::GetVersion Method</span></span>
+<span data-ttu-id="1ffe1-103">Obtém as informações de versão para o assembly referenciado por este objeto [IAssemblyName](iassemblyname-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="1ffe1-103">Gets the version information for the assembly referenced by this [IAssemblyName](iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="720a3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="720a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ffe1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1ffe1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersion (  
@@ -36,20 +34,20 @@ HRESULT GetVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="720a3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="720a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ffe1-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1ffe1-105">Parameters</span></span>  
  `pdwVersionHi`  
- <span data-ttu-id="720a3-106">fora Os bits de 32 altos da versão.</span><span class="sxs-lookup"><span data-stu-id="720a3-106">[out] The high 32 bits of the version.</span></span>  
+ <span data-ttu-id="1ffe1-106">fora Os bits de 32 altos da versão.</span><span class="sxs-lookup"><span data-stu-id="1ffe1-106">[out] The high 32 bits of the version.</span></span>  
   
  `pdwVersionLow`  
- <span data-ttu-id="720a3-107">fora Os bits de 32 baixos da versão.</span><span class="sxs-lookup"><span data-stu-id="720a3-107">[out] The low 32 bits of the version.</span></span>  
+ <span data-ttu-id="1ffe1-107">fora Os bits de 32 baixos da versão.</span><span class="sxs-lookup"><span data-stu-id="1ffe1-107">[out] The low 32 bits of the version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="720a3-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="720a3-108">Requirements</span></span>  
- <span data-ttu-id="720a3-109">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="720a3-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ffe1-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1ffe1-108">Requirements</span></span>  
+ <span data-ttu-id="1ffe1-109">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe1-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="720a3-110">**Cabeçalho:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="720a3-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="1ffe1-110">**Cabeçalho:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="1ffe1-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="720a3-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="720a3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1ffe1-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ffe1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="720a3-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="720a3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ffe1-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1ffe1-112">See also</span></span>
 
-- [<span data-ttu-id="720a3-113">Interface IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="720a3-113">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="1ffe1-113">Interface IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="1ffe1-113">IAssemblyName Interface</span></span>](iassemblyname-interface.md)

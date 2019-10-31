@@ -15,48 +15,46 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129698"
 ---
-# <a name="icordebugprocess3setenablecustomnotification-method"></a><span data-ttu-id="4d5f7-102">Método ICorDebugProcess3::SetEnableCustomNotification</span><span class="sxs-lookup"><span data-stu-id="4d5f7-102">ICorDebugProcess3::SetEnableCustomNotification Method</span></span>
-<span data-ttu-id="4d5f7-103">Habilita e desabilita as notificações do depurador personalizados do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-103">Enables and disables custom debugger notifications of the specified type.</span></span>  
+# <a name="icordebugprocess3setenablecustomnotification-method"></a><span data-ttu-id="653ba-102">Método ICorDebugProcess3::SetEnableCustomNotification</span><span class="sxs-lookup"><span data-stu-id="653ba-102">ICorDebugProcess3::SetEnableCustomNotification Method</span></span>
+<span data-ttu-id="653ba-103">Habilita e desabilita as notificações do depurador personalizado do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="653ba-103">Enables and disables custom debugger notifications of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d5f7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4d5f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="653ba-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="653ba-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,  
                                     BOOL fEnable);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4d5f7-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4d5f7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="653ba-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="653ba-105">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="4d5f7-106">[in] O tipo que especifica as notificações do depurador personalizados.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-106">[in] The type that specifies custom debugger notifications.</span></span>  
+ <span data-ttu-id="653ba-106">no O tipo que especifica as notificações de depurador personalizadas.</span><span class="sxs-lookup"><span data-stu-id="653ba-106">[in] The type that specifies custom debugger notifications.</span></span>  
   
  `fEnable`  
- <span data-ttu-id="4d5f7-107">[in] `true` para habilitar as notificações do depurador personalizados; `false` desabilitar as notificações.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-107">[in] `true` to enable custom debugger notifications; `false` to disable notifications.</span></span> <span data-ttu-id="4d5f7-108">O valor padrão é `false`.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-108">The default value is `false`.</span></span>  
+ <span data-ttu-id="653ba-107">[in] `true` para habilitar notificações de depurador personalizadas; `false` desabilitar as notificações.</span><span class="sxs-lookup"><span data-stu-id="653ba-107">[in] `true` to enable custom debugger notifications; `false` to disable notifications.</span></span> <span data-ttu-id="653ba-108">O valor padrão é `false`.</span><span class="sxs-lookup"><span data-stu-id="653ba-108">The default value is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4d5f7-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="4d5f7-109">Remarks</span></span>  
- <span data-ttu-id="4d5f7-110">Quando `fEnable` é definido como `true`, chamadas para o <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> gatilho de método um [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-110">When `fEnable` is set to `true`, calls to the <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> method trigger an [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) callback.</span></span> <span data-ttu-id="4d5f7-111">As notificações estão desabilitadas por padrão. Portanto, o depurador deve especificar qualquer tipo de notificação, ele conhece e deseja tratar.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-111">Notifications are disabled by default; therefore, the debugger must specify any notification types it knows about and wants to handle.</span></span> <span data-ttu-id="4d5f7-112">Porque o [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) classe está no escopo por domínio de aplicativo, o depurador deve chamar `SetEnableCustomNotification` para cada domínio de aplicativo no processo de se desejam receber a notificação em todo o processo.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-112">Because the [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) class is scoped by application domain, the debugger must call `SetEnableCustomNotification` for every application domain in the process if it wants to receive the notification across the entire process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="653ba-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="653ba-109">Remarks</span></span>  
+ <span data-ttu-id="653ba-110">Quando `fEnable` é definido como `true`, as chamadas para o método <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> disparam um retorno de chamada [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) .</span><span class="sxs-lookup"><span data-stu-id="653ba-110">When `fEnable` is set to `true`, calls to the <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> method trigger an [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) callback.</span></span> <span data-ttu-id="653ba-111">As notificações são desabilitadas por padrão; Portanto, o depurador deve especificar os tipos de notificação que ele conhece e deseja manipular.</span><span class="sxs-lookup"><span data-stu-id="653ba-111">Notifications are disabled by default; therefore, the debugger must specify any notification types it knows about and wants to handle.</span></span> <span data-ttu-id="653ba-112">Como a classe [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) tem o escopo definido pelo domínio do aplicativo, o depurador deve chamar `SetEnableCustomNotification` para cada domínio de aplicativo no processo se desejar receber a notificação em todo o processo.</span><span class="sxs-lookup"><span data-stu-id="653ba-112">Because the [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) class is scoped by application domain, the debugger must call `SetEnableCustomNotification` for every application domain in the process if it wants to receive the notification across the entire process.</span></span>  
   
- <span data-ttu-id="4d5f7-113">A notificação com suporte somente a partir do .NET Framework 4, é uma notificação de dependência entre threads.</span><span class="sxs-lookup"><span data-stu-id="4d5f7-113">Starting with the .NET Framework 4, the only supported notification is a cross-thread dependency notification.</span></span>  
+ <span data-ttu-id="653ba-113">Começando com o .NET Framework 4, a única notificação com suporte é uma notificação de dependência entre threads.</span><span class="sxs-lookup"><span data-stu-id="653ba-113">Starting with the .NET Framework 4, the only supported notification is a cross-thread dependency notification.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4d5f7-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4d5f7-114">Requirements</span></span>  
- <span data-ttu-id="4d5f7-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d5f7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="653ba-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="653ba-114">Requirements</span></span>  
+ <span data-ttu-id="653ba-115">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="653ba-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d5f7-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d5f7-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="653ba-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="653ba-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4d5f7-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d5f7-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="653ba-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="653ba-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4d5f7-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d5f7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="653ba-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="653ba-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d5f7-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4d5f7-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="653ba-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="653ba-119">See also</span></span>
 
-- [<span data-ttu-id="4d5f7-120">Interface ICorDebugProcess3</span><span class="sxs-lookup"><span data-stu-id="4d5f7-120">ICorDebugProcess3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)
-- [<span data-ttu-id="4d5f7-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="4d5f7-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="4d5f7-122">Depuração</span><span class="sxs-lookup"><span data-stu-id="4d5f7-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="653ba-120">Interface ICorDebugProcess3</span><span class="sxs-lookup"><span data-stu-id="653ba-120">ICorDebugProcess3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)
+- [<span data-ttu-id="653ba-121">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="653ba-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="653ba-122">Depuração</span><span class="sxs-lookup"><span data-stu-id="653ba-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

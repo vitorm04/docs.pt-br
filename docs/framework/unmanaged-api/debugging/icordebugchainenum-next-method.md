@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125808"
 ---
-# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="46896-102">Método ICorDebugChainEnum::Next</span><span class="sxs-lookup"><span data-stu-id="46896-102">ICorDebugChainEnum::Next Method</span></span>
-<span data-ttu-id="46896-103">Obtém o número especificado de instâncias de ICorDebugChain de enumeração, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="46896-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugchainenumnext-method"></a><span data-ttu-id="2436a-102">Método ICorDebugChainEnum::Next</span><span class="sxs-lookup"><span data-stu-id="2436a-102">ICorDebugChainEnum::Next Method</span></span>
+<span data-ttu-id="2436a-103">Obtém o número especificado de instâncias de ICorDebugChain da enumeração, começando na posição atual.</span><span class="sxs-lookup"><span data-stu-id="2436a-103">Gets the specified number of ICorDebugChain instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46896-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="46896-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2436a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2436a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,21 +36,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="46896-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="46896-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2436a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="2436a-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="46896-106">[in] O número de `ICorDebugChain` instâncias a serem recuperados.</span><span class="sxs-lookup"><span data-stu-id="46896-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
+ <span data-ttu-id="2436a-106">no O número de instâncias de `ICorDebugChain` a serem recuperadas.</span><span class="sxs-lookup"><span data-stu-id="2436a-106">[in] The number of `ICorDebugChain` instances to be retrieved.</span></span>  
   
  `chains`  
- <span data-ttu-id="46896-107">[out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugChain` objeto que representa uma cadeia.</span><span class="sxs-lookup"><span data-stu-id="46896-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
+ <span data-ttu-id="2436a-107">fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugChain` que representa uma cadeia.</span><span class="sxs-lookup"><span data-stu-id="2436a-107">[out] An array of pointers, each of which points to an `ICorDebugChain` object that represents a chain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="46896-108">[out] Um ponteiro para o número de `ICorDebugChain` instâncias, na verdade, retornadas.</span><span class="sxs-lookup"><span data-stu-id="46896-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="46896-109">Esse valor pode ser nulo se `celt` é um.</span><span class="sxs-lookup"><span data-stu-id="46896-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="2436a-108">fora Um ponteiro para o número de instâncias de `ICorDebugChain` retornadas na verdade.</span><span class="sxs-lookup"><span data-stu-id="2436a-108">[out] A pointer to the number of `ICorDebugChain` instances actually returned.</span></span> <span data-ttu-id="2436a-109">Esse valor pode ser nulo se `celt` for um.</span><span class="sxs-lookup"><span data-stu-id="2436a-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46896-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="46896-110">Requirements</span></span>  
- <span data-ttu-id="46896-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46896-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2436a-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2436a-110">Requirements</span></span>  
+ <span data-ttu-id="2436a-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2436a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46896-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="46896-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2436a-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2436a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="46896-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46896-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2436a-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2436a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46896-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46896-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2436a-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2436a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

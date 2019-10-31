@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23f248625753c15a4798ea69a1eb3b377b79f95d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a862dd3f6a9c10c6b3a5a0bb41208d351c4ca9f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125698"
 ---
-# <a name="icordebugclass2setjmcstatus-method"></a><span data-ttu-id="69307-102">Método ICorDebugClass2::SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="69307-102">ICorDebugClass2::SetJMCStatus Method</span></span>
-<span data-ttu-id="69307-103">Para cada método da classe, define um valor que indica se o método é o código definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="69307-103">For each method of the class, sets a value that indicates whether the method is user-defined code.</span></span>  
+# <a name="icordebugclass2setjmcstatus-method"></a><span data-ttu-id="2ac1c-102">Método ICorDebugClass2::SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="2ac1c-102">ICorDebugClass2::SetJMCStatus Method</span></span>
+<span data-ttu-id="2ac1c-103">Para cada método da classe, define um valor que indica se o método é um código definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="2ac1c-103">For each method of the class, sets a value that indicates whether the method is user-defined code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69307-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="69307-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ac1c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2ac1c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetJMCStatus (  
@@ -35,20 +33,20 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69307-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="69307-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ac1c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="2ac1c-105">Parameters</span></span>  
  `bIsJustMyCode`  
- <span data-ttu-id="69307-106">[in] Definido como `true` para indicar que o método é definido pelo usuário de código; caso contrário, é definido como `false`.</span><span class="sxs-lookup"><span data-stu-id="69307-106">[in] Set to `true` to indicate that the method is user-defined code; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="2ac1c-106">no Defina como `true` para indicar que o método é um código definido pelo usuário; caso contrário, defina como `false`.</span><span class="sxs-lookup"><span data-stu-id="2ac1c-106">[in] Set to `true` to indicate that the method is user-defined code; otherwise, set to `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="69307-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="69307-107">Remarks</span></span>  
- <span data-ttu-id="69307-108">Um seletor do just my code (JMC) vai ignorar o código definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="69307-108">A just-my-code (JMC) stepper will skip non-user-defined code.</span></span> <span data-ttu-id="69307-109">Código definido pelo usuário deve ser um subconjunto de código depurável.</span><span class="sxs-lookup"><span data-stu-id="69307-109">User-defined code must be a subset of debuggable code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ac1c-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="2ac1c-107">Remarks</span></span>  
+ <span data-ttu-id="2ac1c-108">Um stepper JMC (Just-the-code) ignorará o código não definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="2ac1c-108">A just-my-code (JMC) stepper will skip non-user-defined code.</span></span> <span data-ttu-id="2ac1c-109">O código definido pelo usuário deve ser um subconjunto de código depurável.</span><span class="sxs-lookup"><span data-stu-id="2ac1c-109">User-defined code must be a subset of debuggable code.</span></span>  
   
- <span data-ttu-id="69307-110">`SetJMCStatus` Retorna um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo que define o valor para todos os outros métodos com êxito.</span><span class="sxs-lookup"><span data-stu-id="69307-110">`SetJMCStatus` returns an HRESULT value of S_FALSE if it fails to set the value for any method, even if it successfully sets the value for all other methods.</span></span>  
+ <span data-ttu-id="2ac1c-110">`SetJMCStatus` retornará um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo que ele defina o valor para todos os outros métodos com êxito.</span><span class="sxs-lookup"><span data-stu-id="2ac1c-110">`SetJMCStatus` returns an HRESULT value of S_FALSE if it fails to set the value for any method, even if it successfully sets the value for all other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69307-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="69307-111">Requirements</span></span>  
- <span data-ttu-id="69307-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69307-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ac1c-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2ac1c-111">Requirements</span></span>  
+ <span data-ttu-id="2ac1c-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ac1c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69307-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="69307-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ac1c-113">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ac1c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="69307-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="69307-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ac1c-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ac1c-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="69307-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69307-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="2ac1c-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ac1c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

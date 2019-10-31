@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7eafd9c3c9eeb14e53643bed09309ca8d3b5855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0ab16348abbaff00152f2b259ccafdd331174df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136359"
 ---
-# <a name="iclrruntimeinfoisloaded-method"></a><span data-ttu-id="c267c-102">Método ICLRRuntimeInfo::IsLoaded</span><span class="sxs-lookup"><span data-stu-id="c267c-102">ICLRRuntimeInfo::IsLoaded Method</span></span>
-<span data-ttu-id="c267c-103">Indica se o common language runtime (CLR) associada a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface é carregado em um processo.</span><span class="sxs-lookup"><span data-stu-id="c267c-103">Indicates whether the common language runtime (CLR) associated with the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface is loaded into a process.</span></span> <span data-ttu-id="c267c-104">Um tempo de execução pode ser carregado sem também ter sido iniciada.</span><span class="sxs-lookup"><span data-stu-id="c267c-104">A runtime can be loaded without also being started.</span></span>  
+# <a name="iclrruntimeinfoisloaded-method"></a><span data-ttu-id="38473-102">Método ICLRRuntimeInfo::IsLoaded</span><span class="sxs-lookup"><span data-stu-id="38473-102">ICLRRuntimeInfo::IsLoaded Method</span></span>
+<span data-ttu-id="38473-103">Indica se o Common Language Runtime (CLR) associado à interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) é carregado em um processo.</span><span class="sxs-lookup"><span data-stu-id="38473-103">Indicates whether the common language runtime (CLR) associated with the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface is loaded into a process.</span></span> <span data-ttu-id="38473-104">Um tempo de execução pode ser carregado sem também ser iniciado.</span><span class="sxs-lookup"><span data-stu-id="38473-104">A runtime can be loaded without also being started.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c267c-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c267c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38473-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="38473-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsLoaded(  
@@ -35,45 +33,45 @@ HRESULT IsLoaded(
 [out, retval] BOOL *pbLoaded);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c267c-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c267c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="38473-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="38473-106">Parameters</span></span>  
  `hndProcess`  
- <span data-ttu-id="c267c-107">[in] Um identificador para o processo.</span><span class="sxs-lookup"><span data-stu-id="c267c-107">[in] A handle to the process.</span></span>  
+ <span data-ttu-id="38473-107">no Um identificador para o processo.</span><span class="sxs-lookup"><span data-stu-id="38473-107">[in] A handle to the process.</span></span>  
   
  `pbLoaded`  
- <span data-ttu-id="c267c-108">[out] `true` se o CLR é carregado no processo; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="c267c-108">[out] `true` if the CLR is loaded into the process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="38473-108">[fora] `true` se o CLR for carregado no processo; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="38473-108">[out] `true` if the CLR is loaded into the process; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c267c-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="c267c-109">Return Value</span></span>  
- <span data-ttu-id="c267c-110">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="c267c-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="38473-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="38473-109">Return Value</span></span>  
+ <span data-ttu-id="38473-110">Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.</span><span class="sxs-lookup"><span data-stu-id="38473-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="c267c-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c267c-111">HRESULT</span></span>|<span data-ttu-id="c267c-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="c267c-112">Description</span></span>|  
+|<span data-ttu-id="38473-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="38473-111">HRESULT</span></span>|<span data-ttu-id="38473-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="38473-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c267c-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="c267c-113">S_OK</span></span>|<span data-ttu-id="c267c-114">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="c267c-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="c267c-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="c267c-115">E_POINTER</span></span>|<span data-ttu-id="c267c-116">`pbLoaded` é nulo.</span><span class="sxs-lookup"><span data-stu-id="c267c-116">`pbLoaded` is null.</span></span>|  
+|<span data-ttu-id="38473-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="38473-113">S_OK</span></span>|<span data-ttu-id="38473-114">O método foi concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="38473-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="38473-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="38473-115">E_POINTER</span></span>|<span data-ttu-id="38473-116">`pbLoaded` é nulo.</span><span class="sxs-lookup"><span data-stu-id="38473-116">`pbLoaded` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c267c-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="c267c-117">Remarks</span></span>  
- <span data-ttu-id="c267c-118">Esse método é compatível com as seguintes funções e interfaces:</span><span class="sxs-lookup"><span data-stu-id="c267c-118">This method is backward-compatible with the following functions and interfaces:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38473-117">Comentários</span><span class="sxs-lookup"><span data-stu-id="38473-117">Remarks</span></span>  
+ <span data-ttu-id="38473-118">Esse método é compatível com versões anteriores com as seguintes funções e interfaces:</span><span class="sxs-lookup"><span data-stu-id="38473-118">This method is backward-compatible with the following functions and interfaces:</span></span>  
   
-- <span data-ttu-id="c267c-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface (no .NET Framework versão 1 API de hospedagem).</span><span class="sxs-lookup"><span data-stu-id="c267c-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface (in the .NET Framework version 1 hosting API).</span></span>  
+- <span data-ttu-id="38473-119">Interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) (na API de hospedagem do .NET Framework versão 1).</span><span class="sxs-lookup"><span data-stu-id="38473-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface (in the .NET Framework version 1 hosting API).</span></span>  
   
-- <span data-ttu-id="c267c-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface (no .NET Framework 2.0 API de hospedagem).</span><span class="sxs-lookup"><span data-stu-id="c267c-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface (in the .NET Framework 2.0 hosting API).</span></span>  
+- <span data-ttu-id="38473-120">Interface [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) (na API de hospedagem .NET Framework 2,0).</span><span class="sxs-lookup"><span data-stu-id="38473-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface (in the .NET Framework 2.0 hosting API).</span></span>  
   
-- <span data-ttu-id="c267c-121">Preterido `CorBindTo*` funções (consulte [funções de hospedagem de CLR preterido](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) na API de hospedagem do .NET Framework 2.0).</span><span class="sxs-lookup"><span data-stu-id="c267c-121">Deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span>  
+- <span data-ttu-id="38473-121">Funções de `CorBindTo*` preteridas (consulte [funções de Hospedagem de CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) na API de hospedagem do .NET Framework 2,0).</span><span class="sxs-lookup"><span data-stu-id="38473-121">Deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span>  
   
- <span data-ttu-id="c267c-122">Um host pode chamar um dos preteridas `CorBindTo*` funções, como o [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) função, para criar uma instância de uma versão específica do CLR.</span><span class="sxs-lookup"><span data-stu-id="c267c-122">A host may call one of the deprecated `CorBindTo*` functions, such as the [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) function, to instantiate a specific version of the CLR.</span></span> <span data-ttu-id="c267c-123">O host pode então chamar o [iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) método e especificar o mesmo número de versão para obter uma [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="c267c-123">The host could then call the [ICLRMetaHost::GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) method and specify the same version number to obtain a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+ <span data-ttu-id="38473-122">Um host pode chamar uma das funções de `CorBindTo*` preteridas, como a função [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) , para instanciar uma versão específica do CLR.</span><span class="sxs-lookup"><span data-stu-id="38473-122">A host may call one of the deprecated `CorBindTo*` functions, such as the [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) function, to instantiate a specific version of the CLR.</span></span> <span data-ttu-id="38473-123">O host poderia então chamar o método [ICLRMetaHost:: GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) e especificar o mesmo número de versão para obter uma interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="38473-123">The host could then call the [ICLRMetaHost::GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) method and specify the same version number to obtain a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="c267c-124">Se o host, em seguida, chama o `IsLoaded` método no retornado [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` retorna `true`; caso contrário, ele retorna `false`.</span><span class="sxs-lookup"><span data-stu-id="c267c-124">If the host then calls the `IsLoaded` method on the returned [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` returns `true`; otherwise, it returns `false`.</span></span>  
+ <span data-ttu-id="38473-124">Se o host chamar o método `IsLoaded` na interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) retornada, `pbLoaded` retornará `true`; caso contrário, ele retornará `false`.</span><span class="sxs-lookup"><span data-stu-id="38473-124">If the host then calls the `IsLoaded` method on the returned [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` returns `true`; otherwise, it returns `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c267c-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c267c-125">Requirements</span></span>  
- <span data-ttu-id="c267c-126">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c267c-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38473-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="38473-125">Requirements</span></span>  
+ <span data-ttu-id="38473-126">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38473-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c267c-127">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c267c-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="38473-127">**Cabeçalho:** MetaHost. h</span><span class="sxs-lookup"><span data-stu-id="38473-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="c267c-128">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c267c-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="38473-128">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="38473-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c267c-129">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c267c-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="38473-129">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38473-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c267c-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c267c-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38473-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="38473-130">See also</span></span>
 
-- [<span data-ttu-id="c267c-131">Interface ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="c267c-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="c267c-132">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="c267c-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="c267c-133">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="c267c-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="38473-131">Interface ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="38473-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="38473-132">Hospedagem de Interfaces</span><span class="sxs-lookup"><span data-stu-id="38473-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="38473-133">Hospedagem</span><span class="sxs-lookup"><span data-stu-id="38473-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

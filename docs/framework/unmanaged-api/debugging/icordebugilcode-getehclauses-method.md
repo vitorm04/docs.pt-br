@@ -12,21 +12,19 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131092"
 ---
-# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="86b74-102">ICorDebugILCode::Método GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="86b74-102">ICorDebugILCode::GetEHClauses Method</span></span>
-<span data-ttu-id="86b74-103">[Com suporte no .NET Framework 4.5.2 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="86b74-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="78679-102">ICorDebugILCode::Método GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="78679-102">ICorDebugILCode::GetEHClauses Method</span></span>
+<span data-ttu-id="78679-103">[Com suporte no .NET Framework 4.5.2 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="78679-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="86b74-104">Retorna um ponteiro para uma lista de cláusulas de tratamento de exceção (EH) que estão definidas para esta linguagem intermediária (IL).</span><span class="sxs-lookup"><span data-stu-id="86b74-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
+ <span data-ttu-id="78679-104">Retorna um ponteiro para uma lista de cláusulas de tratamento de exceção (EH) que estão definidas para esta linguagem intermediária (IL).</span><span class="sxs-lookup"><span data-stu-id="78679-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86b74-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="86b74-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78679-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="78679-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetEHClauses(  
@@ -35,30 +33,30 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86b74-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="86b74-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="78679-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="78679-106">Parameters</span></span>  
  `cClauses`  
- <span data-ttu-id="86b74-107">[in] A capacidade de armazenamento da matriz de `clauses`.</span><span class="sxs-lookup"><span data-stu-id="86b74-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="86b74-108">Consulte a seção Comentários para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="86b74-108">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="78679-107">[in] A capacidade de armazenamento da matriz de `clauses`.</span><span class="sxs-lookup"><span data-stu-id="78679-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="78679-108">Consulte a seção Comentários para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="78679-108">See the Remarks section for more information.</span></span>  
   
  `pcClauses`  
- <span data-ttu-id="86b74-109">[out] O número de cláusulas sobre quais informações são gravadas na matriz `clauses`.</span><span class="sxs-lookup"><span data-stu-id="86b74-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
+ <span data-ttu-id="78679-109">[out] O número de cláusulas sobre quais informações são gravadas na matriz `clauses`.</span><span class="sxs-lookup"><span data-stu-id="78679-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
   
- <span data-ttu-id="86b74-110">cláusulas</span><span class="sxs-lookup"><span data-stu-id="86b74-110">clauses</span></span>  
- <span data-ttu-id="86b74-111">[out] Uma matriz de [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objetos que contêm informações sobre cláusulas definidas para esse IL de tratamento de exceção.</span><span class="sxs-lookup"><span data-stu-id="86b74-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
+ <span data-ttu-id="78679-110">cláusulas</span><span class="sxs-lookup"><span data-stu-id="78679-110">clauses</span></span>  
+ <span data-ttu-id="78679-111">fora Uma matriz de objetos [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) que contêm informações sobre cláusulas de tratamento de exceção definidas para esse Il.</span><span class="sxs-lookup"><span data-stu-id="78679-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="86b74-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="86b74-112">Remarks</span></span>  
- <span data-ttu-id="86b74-113">Se `cClauses` é 0 e `pcClauses` é não -**nulo**, `pcClauses` é definido como o número de cláusulas de tratamento de exceção disponível.</span><span class="sxs-lookup"><span data-stu-id="86b74-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="86b74-114">Se `cClauses` for não zero, representará a capacidade de armazenamento da matriz do `clauses`.</span><span class="sxs-lookup"><span data-stu-id="86b74-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="86b74-115">Quando o método retorna, `clauses` contém o máximo de itens `cClauses` e `pcClauses` estará definido como o número de cláusulas realmente gravadas na matriz `clauses`.</span><span class="sxs-lookup"><span data-stu-id="86b74-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78679-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="78679-112">Remarks</span></span>  
+ <span data-ttu-id="78679-113">Se `cClauses` for 0 e `pcClauses` for não**nulo**, `pcClauses` será definido como o número de cláusulas de tratamento de exceção disponíveis.</span><span class="sxs-lookup"><span data-stu-id="78679-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="78679-114">Se `cClauses` for não zero, representará a capacidade de armazenamento da matriz do `clauses`.</span><span class="sxs-lookup"><span data-stu-id="78679-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="78679-115">Quando o método retorna, `clauses` contém o máximo de itens `cClauses` e `pcClauses` estará definido como o número de cláusulas realmente gravadas na matriz `clauses`.</span><span class="sxs-lookup"><span data-stu-id="78679-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86b74-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="86b74-116">Requirements</span></span>  
- <span data-ttu-id="86b74-117">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86b74-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78679-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="78679-116">Requirements</span></span>  
+ <span data-ttu-id="78679-117">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="78679-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86b74-118">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="86b74-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="78679-118">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78679-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="86b74-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86b74-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="78679-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="78679-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="86b74-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86b74-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="78679-120">**Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78679-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86b74-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="86b74-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="78679-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="78679-121">See also</span></span>
 
-- [<span data-ttu-id="86b74-122">Interface ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="86b74-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [<span data-ttu-id="86b74-123">Estrutura CorDebugEHClause</span><span class="sxs-lookup"><span data-stu-id="86b74-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [<span data-ttu-id="86b74-124">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="86b74-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="78679-122">Interface ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="78679-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="78679-123">Estrutura CorDebugEHClause</span><span class="sxs-lookup"><span data-stu-id="78679-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
+- [<span data-ttu-id="78679-124">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="78679-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

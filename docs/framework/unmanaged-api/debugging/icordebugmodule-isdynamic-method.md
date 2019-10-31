@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db5d07d2b9a295a5cd21b4d4af954503b8bd7a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5774b40178ce0d7c2ef5d063a37b9011fc2630df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127944"
 ---
-# <a name="icordebugmoduleisdynamic-method"></a><span data-ttu-id="5e06d-102">Método ICorDebugModule::IsDynamic</span><span class="sxs-lookup"><span data-stu-id="5e06d-102">ICorDebugModule::IsDynamic Method</span></span>
-<span data-ttu-id="5e06d-103">Obtém um valor que indica se esse módulo é dinâmico.</span><span class="sxs-lookup"><span data-stu-id="5e06d-103">Gets a value that indicates whether this module is dynamic.</span></span>  
+# <a name="icordebugmoduleisdynamic-method"></a><span data-ttu-id="debd0-102">Método ICorDebugModule::IsDynamic</span><span class="sxs-lookup"><span data-stu-id="debd0-102">ICorDebugModule::IsDynamic Method</span></span>
+<span data-ttu-id="debd0-103">Obtém um valor que indica se este módulo é dinâmico.</span><span class="sxs-lookup"><span data-stu-id="debd0-103">Gets a value that indicates whether this module is dynamic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e06d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5e06d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="debd0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="debd0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsDynamic(  
@@ -35,18 +33,18 @@ HRESULT IsDynamic(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5e06d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5e06d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="debd0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="debd0-105">Parameters</span></span>  
  `pDynamic`  
- <span data-ttu-id="5e06d-106">[out] `true` se esse módulo é dinâmico; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="5e06d-106">[out] `true` if this module is dynamic; otherwise, `false`.</span></span>  
+ <span data-ttu-id="debd0-106">[fora] `true` se este módulo for dinâmico; caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="debd0-106">[out] `true` if this module is dynamic; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5e06d-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="5e06d-107">Remarks</span></span>  
- <span data-ttu-id="5e06d-108">Um módulo dinâmico pode adicionar novas classes e excluir as classes existentes, mesmo depois que o módulo foi carregado.</span><span class="sxs-lookup"><span data-stu-id="5e06d-108">A dynamic module can add new classes and delete existing classes even after the module has been loaded.</span></span> <span data-ttu-id="5e06d-109">O [icordebugmanagedcallback:: loadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [icordebugmanagedcallback:: Unloadclass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) retornos de chamada para informar o depurador quando uma classe foi adicionada ou excluída.</span><span class="sxs-lookup"><span data-stu-id="5e06d-109">The [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) and [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) callbacks inform the debugger when a class has been added or deleted.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="debd0-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="debd0-107">Remarks</span></span>  
+ <span data-ttu-id="debd0-108">Um módulo dinâmico pode adicionar novas classes e excluir classes existentes mesmo depois que o módulo tiver sido carregado.</span><span class="sxs-lookup"><span data-stu-id="debd0-108">A dynamic module can add new classes and delete existing classes even after the module has been loaded.</span></span> <span data-ttu-id="debd0-109">Os retornos de chamada [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) e [ICorDebugManagedCallback:: UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) informam ao depurador quando uma classe foi adicionada ou excluída.</span><span class="sxs-lookup"><span data-stu-id="debd0-109">The [ICorDebugManagedCallback::LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) and [ICorDebugManagedCallback::UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) callbacks inform the debugger when a class has been added or deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5e06d-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5e06d-110">Requirements</span></span>  
- <span data-ttu-id="5e06d-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e06d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="debd0-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="debd0-110">Requirements</span></span>  
+ <span data-ttu-id="debd0-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="debd0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e06d-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5e06d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="debd0-112">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="debd0-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5e06d-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e06d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="debd0-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="debd0-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5e06d-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e06d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="debd0-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="debd0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
