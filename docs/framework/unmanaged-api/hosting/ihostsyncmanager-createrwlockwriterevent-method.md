@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 70e488c2-cf53-4dc0-ba52-74372d215c41
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 533f7244dc47bc26b59cb9de6289ce011387bf68
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 13eb23c530a4fe1b491f41cc65cc94dacc9d34f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753396"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192006"
 ---
-# <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a><span data-ttu-id="76f84-102">Método IHostSyncManager::CreateRWLockWriterEvent</span><span class="sxs-lookup"><span data-stu-id="76f84-102">IHostSyncManager::CreateRWLockWriterEvent Method</span></span>
-<span data-ttu-id="76f84-103">Cria um objeto de evento de redefinição automática para a implementação de um bloqueio de gravador.</span><span class="sxs-lookup"><span data-stu-id="76f84-103">Creates an auto-reset event object for the implementation of a writer lock.</span></span>  
+# <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a><span data-ttu-id="d0443-102">Método IHostSyncManager::CreateRWLockWriterEvent</span><span class="sxs-lookup"><span data-stu-id="d0443-102">IHostSyncManager::CreateRWLockWriterEvent Method</span></span>
+<span data-ttu-id="d0443-103">Cria um objeto de evento de redefinição automática para a implementação de um bloqueio de gravador.</span><span class="sxs-lookup"><span data-stu-id="d0443-103">Creates an auto-reset event object for the implementation of a writer lock.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76f84-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="76f84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0443-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d0443-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateRWLockWriterEvent (  
@@ -36,40 +34,40 @@ HRESULT CreateRWLockWriterEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="76f84-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="76f84-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0443-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d0443-105">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="76f84-106">[in] Um cookie para associar o evento de redefinição automática.</span><span class="sxs-lookup"><span data-stu-id="76f84-106">[in] A cookie to associate with the auto-reset event.</span></span>  
+ <span data-ttu-id="d0443-106">no Um cookie a ser associado ao evento de redefinição automática.</span><span class="sxs-lookup"><span data-stu-id="d0443-106">[in] A cookie to associate with the auto-reset event.</span></span>  
   
  `ppEvent`  
- <span data-ttu-id="76f84-107">[out] Um ponteiro para o endereço de um [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) da instância ou nulo se não foi possível criar o objeto de evento.</span><span class="sxs-lookup"><span data-stu-id="76f84-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
+ <span data-ttu-id="d0443-107">fora Um ponteiro para o endereço de uma instância de [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) ou NULL se o objeto de evento não pôde ser criado.</span><span class="sxs-lookup"><span data-stu-id="d0443-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="76f84-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="76f84-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d0443-108">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="d0443-108">Return Value</span></span>  
   
-|<span data-ttu-id="76f84-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="76f84-109">HRESULT</span></span>|<span data-ttu-id="76f84-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="76f84-110">Description</span></span>|  
+|<span data-ttu-id="d0443-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d0443-109">HRESULT</span></span>|<span data-ttu-id="d0443-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="d0443-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="76f84-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="76f84-111">S_OK</span></span>|<span data-ttu-id="76f84-112">`CreateRWLockWriterEvent` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="76f84-112">`CreateRWLockWriterEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="76f84-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="76f84-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="76f84-114">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="76f84-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="76f84-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="76f84-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="76f84-116">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="76f84-116">The call timed out.</span></span>|  
-|<span data-ttu-id="76f84-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="76f84-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="76f84-118">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="76f84-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="76f84-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="76f84-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="76f84-120">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="76f84-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="76f84-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="76f84-121">E_FAIL</span></span>|<span data-ttu-id="76f84-122">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="76f84-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="76f84-123">Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="76f84-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="76f84-124">As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="76f84-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="76f84-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="76f84-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="76f84-126">Não havia memória suficiente disponível para criar o objeto de evento solicitado.</span><span class="sxs-lookup"><span data-stu-id="76f84-126">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="d0443-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d0443-111">S_OK</span></span>|<span data-ttu-id="d0443-112">`CreateRWLockWriterEvent` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="d0443-112">`CreateRWLockWriterEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="d0443-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d0443-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d0443-114">O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="d0443-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="d0443-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d0443-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d0443-116">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="d0443-116">The call timed out.</span></span>|  
+|<span data-ttu-id="d0443-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d0443-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d0443-118">O chamador não possui o bloqueio.</span><span class="sxs-lookup"><span data-stu-id="d0443-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="d0443-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d0443-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d0443-120">Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.</span><span class="sxs-lookup"><span data-stu-id="d0443-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="d0443-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d0443-121">E_FAIL</span></span>|<span data-ttu-id="d0443-122">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="d0443-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d0443-123">Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="d0443-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d0443-124">As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="d0443-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="d0443-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="d0443-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="d0443-126">Não havia memória suficiente disponível para criar o objeto de evento solicitado.</span><span class="sxs-lookup"><span data-stu-id="d0443-126">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="76f84-127">Comentários</span><span class="sxs-lookup"><span data-stu-id="76f84-127">Remarks</span></span>  
- <span data-ttu-id="76f84-128">O CLR chama o `CreateRWLockWriterEvent` método para obter uma referência a um `IHostAutoEvent` instância a ser usada em sua implementação de um bloqueio de gravador.</span><span class="sxs-lookup"><span data-stu-id="76f84-128">The CLR calls the `CreateRWLockWriterEvent` method to get a reference to an `IHostAutoEvent` instance to use in its implementation of a writer lock.</span></span> <span data-ttu-id="76f84-129">O host pode usar o cookie especificado para determinar quais tarefas estão aguardando o bloqueio chamando os métodos de iteração do [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="76f84-129">The host can use the specified cookie to determine which tasks are waiting on the lock by calling the iteration methods of the [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0443-127">Comentários</span><span class="sxs-lookup"><span data-stu-id="d0443-127">Remarks</span></span>  
+ <span data-ttu-id="d0443-128">O CLR chama o método `CreateRWLockWriterEvent` para obter uma referência a uma instância `IHostAutoEvent` a ser usada em sua implementação de um bloqueio de gravador.</span><span class="sxs-lookup"><span data-stu-id="d0443-128">The CLR calls the `CreateRWLockWriterEvent` method to get a reference to an `IHostAutoEvent` instance to use in its implementation of a writer lock.</span></span> <span data-ttu-id="d0443-129">O host pode usar o cookie especificado para determinar quais tarefas estão aguardando no bloqueio chamando os métodos de iteração da interface [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="d0443-129">The host can use the specified cookie to determine which tasks are waiting on the lock by calling the iteration methods of the [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md) interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="76f84-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="76f84-130">Requirements</span></span>  
- <span data-ttu-id="76f84-131">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76f84-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0443-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d0443-130">Requirements</span></span>  
+ <span data-ttu-id="d0443-131">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0443-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76f84-132">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="76f84-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d0443-132">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="d0443-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="76f84-133">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="76f84-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d0443-133">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="d0443-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="76f84-134">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76f84-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d0443-134">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0443-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76f84-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="76f84-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0443-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d0443-135">See also</span></span>
 
-- [<span data-ttu-id="76f84-136">Interface ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="76f84-136">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="76f84-137">Interface IHostAutoEvent</span><span class="sxs-lookup"><span data-stu-id="76f84-137">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="76f84-138">Interface IHostManualEvent</span><span class="sxs-lookup"><span data-stu-id="76f84-138">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [<span data-ttu-id="76f84-139">Interface IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="76f84-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="d0443-136">Interface ICLRSyncManager</span><span class="sxs-lookup"><span data-stu-id="d0443-136">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="d0443-137">Interface IHostAutoEvent</span><span class="sxs-lookup"><span data-stu-id="d0443-137">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="d0443-138">Interface IHostManualEvent</span><span class="sxs-lookup"><span data-stu-id="d0443-138">IHostManualEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [<span data-ttu-id="d0443-139">Interface IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="d0443-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
