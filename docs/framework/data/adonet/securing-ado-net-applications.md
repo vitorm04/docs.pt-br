@@ -2,12 +2,12 @@
 title: Protegendo aplicativos ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795062"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196723"
 ---
 # <a name="securing-adonet-applications"></a>Protegendo aplicativos ADO.NET
 Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas comuns de codificação como não validar a entrada do usuário. Um aplicativo que acessa dados tem vários pontos possíveis de falha que um invasor pode explorar para recuperar, manipular ou destruir dados confidenciais. Portanto, é importante compreender todos os aspectos de segurança, do processo de modelagem de ameaças durante a fase de projeto do aplicativo até a sua eventual implantação e manutenção contínua.  
@@ -39,7 +39,7 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  [Considerações sobre segurança](./ef/security-considerations.md)  
  Descreve a segurança para aplicativos do Entity Framework.  
   
- [Segurança](../../../standard/security/index.md)  
+ [Security](../../../standard/security/index.md)  
  Contém links para tópicos que descrevem todos os aspectos de segurança no .NET.  
   
  [Ferramentas de segurança](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
@@ -48,7 +48,7 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  [Recursos para criar aplicativos seguros](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Fornece links para tópicos para criar aplicativos seguros.  
   
- [Bibliografia de segurança](/visualstudio/ide/security-bibliography)  
+ [Bibliografia de segurança](/visualstudio/ide/securing-applications)  
  Fornece links para recursos externos disponíveis online e em cópia impressa.  
   
 ## <a name="see-also"></a>Consulte também

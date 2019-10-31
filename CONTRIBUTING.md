@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035455"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191689"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -15,9 +15,9 @@ Agradecemos seu interesse em contribuir com a documentação do .NET.
 
 O documento aborda o processo para contribuir para os artigos e exemplos de código hospedados no [site de documentação do .NET](https://docs.microsoft.com/dotnet). As contribuições podem ser tão simples quanto correções de erro de digitação ou tão complexas quanto novos artigos.
 
+- [O que FAZER e o que NÃO FAZER](#dos-and-donts)
 - [Processo de contribuição](#process-for-contributing)
 - [A experiência interativa em C#](#the-c-interactive-experience)
-- [O que FAZER e o que NÃO FAZER](#dos-and-donts)
 - [Contrato de Licença do Colaborador](#contributor-license-agreement)
 
 Esse repositório contém a documentação conceitual do .NET. O site de documentação do .NET foi criado com base em vários repositórios, além desse:
@@ -28,6 +28,24 @@ Esse repositório contém a documentação conceitual do .NET. O site de documen
     Os problemas e as tarefas deste repositório são acompanhados em [dotnet/dotnet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
 - [Referência do SDK do .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
     Problemas e demora para este repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+
+## <a name="dos-and-donts"></a>O que FAZER e o que NÃO FAZER
+
+A lista a seguir mostra algumas regras de orientação que você deve considerar ao contribuir para a documentação do .NET:
+
+- **NÃO** nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso. Para alterações em massa, divida o trabalho em PRs menores (até 100 arquivos). Essa diretriz é altamente recomendável se sua PR não seguir as diretrizes a seguir.
+- **Examine o** atual [para obter](https://github.com/dotnet/docs/labels/up-for-grabs) problemas de sugestões de tarefas.
+- **Crie uma** PR para cada tarefa. PRs que incluem várias alterações não relacionadas são muito mais difíceis de examinar. Isso atrasa as revisões e a mesclagem de PRs. Essa diretriz também se aplica a revisões: Nós tentamos não sugerir alterações não relacionadas em revisões; Pedimos que as revisões da Comunidade sigam essa orientação.
+- **Forneça uma** descrição clara do trabalho em sua pr. Diga-nos o que mudou e por quê. A descrição padrão de "Update article.md" não é útil para revisores.
+- **Não** envie PRS para alterações somente de estilo sem discussão anterior. Esses PRs levam mais tempo para revisar a precisão e mesclá-los geralmente causa conflitos de mesclagem com outras atualizações importantes. Estamos trabalhando para seguir um estilo consistente, mas estamos balanceando esse trabalho com outras tarefas. Os artigos são levados em conformidade com o estilo quando fazemos atualizações importantes por outros motivos. 
+- **FAZER:** leia o [guia de estilo](./styleguide/template.md) e as diretrizes sobre [voz e tom](./styleguide/voice-tone.md). Novas adições devem seguir estas diretrizes.
+- **FAZER:** crie um branch separado em seu fork antes de trabalhar nos artigos.
+- **FAZER:** siga o [fluxo de trabalho do GitHub Flow](https://guides.github.com/introduction/flow/).
+- **FAZER:** faça postagem em blogs e no Twitter (ou em outros) sobre suas contribuições, com frequência.
+
+Essas diretrizes nos ajudam a respeitar o tempo de todos. Muitas pessoas contribuem para esses repositórios. Seguir essas diretrizes facilita a análise e a mesclagem de sua PR em tempo hábil. Essas práticas minimizam conflitos com o PRs de outros membros da Comunidade e nossa equipe. Como PRs que não seguem essas diretrizes geralmente causam trabalho extra para nós e membros da Comunidade, esses PRs podem ser rejeitados. Se você quiser uma exceção, comece criando um problema.
+
+> Observação: você pode observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](./styleguide/template.md). Estamos trabalhando para atingir a consistência em todo o site.
 
 ## <a name="process-for-contributing"></a>Processo de contribuição
 
@@ -135,19 +153,6 @@ A experiência interativa em C# altera o modo como trabalhamos com amostras. Os 
 
 - Artigos em que a amostra gera uma saída maior não devem incluí-la nos comentários. Isso obscurece o código após a execução da amostra.
 - Artigos em que a amostra demonstra um tópico, mas a saída não é fundamental para entendê-lo. Por exemplo, um código que executa uma consulta LINQ para explicar a sintaxe de consulta e, em seguida, exibir cada item da coleção de saída.
-
-## <a name="dos-and-donts"></a>O que FAZER e o que NÃO FAZER
-
-A lista a seguir mostra algumas regras de orientação que você deve considerar ao contribuir para a documentação do .NET:
-
-- **NÃO** nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso. Para alterações em massa, divida o trabalho em PRs menores (até 100 arquivos).
-- **FAZER:** leia o [guia de estilo](./styleguide/template.md) e as diretrizes sobre [voz e tom](./styleguide/voice-tone.md).
-- **FAZER:** use o arquivo de [modelo](./styleguide/template.md) como o ponto de partida do seu trabalho.
-- **FAZER:** crie um branch separado em seu fork antes de trabalhar nos artigos.
-- **FAZER:** siga o [fluxo de trabalho do GitHub Flow](https://guides.github.com/introduction/flow/).
-- **FAZER:** faça postagem em blogs e no Twitter (ou em outros) sobre suas contribuições, com frequência.
-
-> Observação: você pode observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](./styleguide/template.md). Estamos trabalhando para atingir a consistência em todo o site.
 
 ## <a name="contributor-license-agreement"></a>Contrato de licença do colaborador
 

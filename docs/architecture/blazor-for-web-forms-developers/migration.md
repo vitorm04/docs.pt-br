@@ -4,12 +4,12 @@ description: Saiba como abordar a migração de um aplicativo ASP.NET Web Forms 
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087917"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191939"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrar do ASP.NET Web Forms para o mais incrivelmente
 
@@ -84,7 +84,7 @@ O projeto mais incrivelmente lista as dependências que você precisa dentro de 
 </ItemGroup>
 ```
 
-Um pacote NuGet que simplifica a vida de Web Forms desenvolvedores é o [pacote de compatibilidade do Windows](/dotnet/core/porting/windows-compat-pack). Embora o .NET Core seja uma plataforma cruzada, alguns recursos estão disponíveis apenas no Windows. Os recursos específicos do Windows são disponibilizados pela instalação do Compatibility Pack. Exemplos de tais recursos incluem o registro, o WMI e os serviços de diretório. O pacote acrescenta cerca de 20.000 APIs e ativa muitos serviços com os quais você já deve estar familiarizado. O projeto eShop não requer o Compatibility Pack; Mas se seus projetos usarem recursos específicos do Windows, o pacote facilitará os esforços de migração.
+Um pacote NuGet que simplifica a vida de Web Forms desenvolvedores é o [pacote de compatibilidade do Windows](../../core/porting/windows-compat-pack.md). Embora o .NET Core seja uma plataforma cruzada, alguns recursos estão disponíveis apenas no Windows. Os recursos específicos do Windows são disponibilizados pela instalação do Compatibility Pack. Exemplos de tais recursos incluem o registro, o WMI e os serviços de diretório. O pacote acrescenta cerca de 20.000 APIs e ativa muitos serviços com os quais você já deve estar familiarizado. O projeto eShop não requer o Compatibility Pack; Mas se seus projetos usarem recursos específicos do Windows, o pacote facilitará os esforços de migração.
 
 ## <a name="enable-startup-process"></a>Habilitar processo de inicialização
 

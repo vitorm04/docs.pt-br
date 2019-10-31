@@ -2,12 +2,12 @@
 title: Modelos do Visual Studio do WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320483"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197198"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 Os modelos do Windows Communication Foundation (WCF) do Visual Studio são modelos de projeto e item predefinidos que você pode usar no Visual Studio para criar rapidamente serviços WCF e aplicativos adjacentes.  
@@ -59,7 +59,7 @@ Os modelos do Windows Communication Foundation (WCF) do Visual Studio são model
  Um arquivo de host de serviço (Service1. svc) também será criado se o projeto existente for um projeto Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modelo de item e projeto de serviço WCF WF.  
- Esses modelos criam serviços WCF que hospedam um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço Web. Existem modelos separados para modelos de programação XAML ou imperativos. Usando os modelos, você pode criar um fluxo de trabalho Sequencial ou de máquina de estado. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [como: criar um fluxo de trabalho](../windows-workflow-foundation/how-to-create-a-workflow.md). Para obter mais informações sobre como criar projetos de fluxo de trabalho, consulte [criando projetos de fluxo de trabalho herdados](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Esses modelos criam serviços WCF que hospedam um serviço de fluxo de trabalho, que é um fluxo de trabalho que pode ser acessado como um serviço Web. Existem modelos separados para modelos de programação XAML ou imperativos. Usando os modelos, você pode criar um fluxo de trabalho Sequencial ou de máquina de estado. Para obter mais informações sobre esses tipos de fluxo de trabalho, consulte [como: criar um fluxo de trabalho](../windows-workflow-foundation/how-to-create-a-workflow.md). Para obter mais informações sobre como criar projetos de fluxo de trabalho, consulte [criando projetos de fluxo de trabalho herdados](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer).  
   
  O Visual Studio designer é mais responsivo quando os fluxos de trabalho do tipo XOML são usados em vez de códigos baseados em código. Fluxo de trabalho de XOML é o tipo de fluxo de trabalho padrão a ser criado.  
   

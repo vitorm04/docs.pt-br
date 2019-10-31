@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: e339767b981cea80b1b804db7360961dc42f2102
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 748b5ea2b14abe2da0b84430461eb68a70ae268d
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126317"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195224"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
@@ -32,7 +32,7 @@ O .NET Framework consiste em dois componentes principais, que têm o controle de
 > Há uma diferença entre a versão do .NET Framework e a versão do CLR:
 >
 > - A versão do .NET Framework baseia-se no conjunto de assemblies que forma a biblioteca de classes .NET Framework. Por exemplo, versões do .NET Framework incluem 4.5, 4.6.1 e 4.7.2.
-> - A versão do CLR baseia-se no runtime no qual os aplicativos .NET Framework são executados. Uma única versão do CLR geralmente dá suporte a várias versões do .NET Framework. Por exemplo, o CLR versão 4.0.30319.*xxxxx* dá suporte ao .NET Framework versões 4 a 4.5.2, em que *xxxxx* é menor que 42000; o CLR versão 4.0.30319.42000 dá suporte a versões do .NET Framework a partir do .NET Framework 4.6.
+> - A versão do CLR baseia-se no tempo de execução no qual os aplicativos .NET Framework são executados. Uma única versão do CLR geralmente dá suporte a várias versões do .NET Framework. Por exemplo, o CLR versão 4.0.30319.*xxxxx* dá suporte ao .NET Framework versões 4 a 4.5.2, em que *xxxxx* é menor que 42000; o CLR versão 4.0.30319.42000 dá suporte a versões do .NET Framework a partir do .NET Framework 4.6.
 >
 > Para obter mais informações sobre as versões, confira [Versões e dependências do .NET Framework](versions-and-dependencies.md).
 
@@ -95,7 +95,7 @@ Use esses valores da seguinte maneira:
 
 - Para determinar se uma versão específica do .NET Framework está instalada em uma versão específica do sistema operacional Windows, teste se o valor de **Release** DWORD é *igual ao* valor listado na tabela. Por exemplo, para determinar se o .NET Framework 4.6 está presente em um sistema Windows 10, teste o valor de **Release** que é *igual a* 393295.
 
-- Para determinar se uma versão mínima do .NET Framework está presente, use o menor valor de **RELEASE** DWORD para essa versão. Por exemplo, se seu aplicativo for executado no .NET Framework 4.6 ou em uma versão posterior, teste um valor de **RELEASE** DWORD que seja *maior ou igual a* 393295. Para uma tabela que lista apenas o valor mínimo de **RELEASE** DWORD para cada versão do .NET Framework, confira [Os valores mínimos da Versão DWORD para .NET Framework 4.5 e versões posteriores](minimum-release-dword.md).
+- Para determinar se uma versão mínima do .NET Framework está presente, use o menor valor de **RELEASE** DWORD para essa versão. Por exemplo, se seu aplicativo for executado em .NET Framework 4,8 ou em uma versão posterior, teste um valor DWORD de versão *maior ou igual a* 528040. Para uma tabela que lista apenas o valor mínimo de **RELEASE** DWORD para cada versão do .NET Framework, confira [Os valores mínimos da Versão DWORD para .NET Framework 4.5 e versões posteriores](minimum-release-dword.md).
 
 - Para testar várias versões, comece testando um valor que seja *maior ou igual ao* menor valor de DWORD da versão mais recente do .NET Framework e compare o valor com o menor valor de DWORD para cada versão anterior. Por exemplo, se seu aplicativo exigir o .NET Framework 4.7 ou posterior e você quiser determinar a versão específica atual do .NET Framework, comece testando um valor de **RELEASE** DWORD que seja *maior ou igual a* 461808 (o menor valor de DWORD para o .NET Framework 4.7.2). Em seguida, compare o valor de **RELEASE** DWORD com o menor valor para cada versão posterior do .NET Framework. Para uma tabela que lista apenas o valor mínimo de **RELEASE** DWORD para cada versão do .NET Framework, confira [Os valores mínimos da Versão DWORD para .NET Framework 4.5 e versões posteriores](minimum-release-dword.md).
 
@@ -195,7 +195,7 @@ Use a [ferramenta de Versão do CLR (Clrver.exe)](../tools/clrver-exe-clr-versio
 
 1. Consulte a propriedade <xref:System.Environment.Version?displayProperty=nameWithType> para recuperar um objeto <xref:System.Version>.
 
-    O objeto `System.Version` retornado identifica a versão do tempo de execução que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
+    O objeto `System.Version` retornado identifica a versão do tempo de execução que está executando o código. Ele não retorna versões de assembly nem outras versões do tempo de execução que possam ter sido instaladas no computador.
 
     Nas versões 4, 4.5, 4.5.1 e 4.5.2 do .NET Framework, a representação de cadeia de caracteres do objeto <xref:System.Version> retornado tem o formato 4.0.30319.*xxxxx*, em que *xxxxx* é menor que 42000. Para o .NET Framework 4.6 e versões posteriores, ele tem o formato 4.0.30319.42000.
 
@@ -205,7 +205,7 @@ Use a [ferramenta de Versão do CLR (Clrver.exe)](../tools/clrver-exe-clr-versio
 
    - Para o identificador de versão secundária (por exemplo, *0* para a versão 4.0), use a propriedade <xref:System.Version.Minor%2A?displayProperty=nameWithType>.
 
-   - Para a cadeia de caracteres de versão inteira (por exemplo, *4.0.30319.18010*), use o método <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Esse método retorna um único valor que reflete a versão do runtime que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
+   - Para a cadeia de caracteres de versão inteira (por exemplo, *4.0.30319.18010*), use o método <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Esse método retorna um único valor que reflete a versão do tempo de execução que está executando o código. Ele não retorna versões de assembly nem outras versões do tempo de execução que possam ter sido instaladas no computador.
 
 O seguinte exemplo usa a propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType> para recuperar informações de versão do CLR:
 

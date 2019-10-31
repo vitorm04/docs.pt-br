@@ -1,25 +1,25 @@
 ---
-title: Este sistema não há suporte para a localidade especificada
+title: Este sistema não contém suporte para a localidade especificada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LocalNotSupported
 ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
-ms.openlocfilehash: 6a8a41a06dda243b724a1c37e74f3f38abf69898
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a1e1b963a502f382ce8f09722a514206831a0a
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942565"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198107"
 ---
-# <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>Este sistema não há suporte para a localidade especificada
-Você está tentando usar o `VbStrConv` enumeração, mas seu sistema não dá suporte para a localidade especificada.  
+# <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>Este sistema não contém suporte para a localidade especificada
+Você está tentando usar a enumeração `VbStrConv`, mas o sistema não oferece suporte à localidade especificada.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Atualize a máquina para oferecer suporte à localidade, ou executar o aplicativo em um computador que dá suporte a ele.  
+1. Atualize o computador para dar suporte à localidade ou execute o aplicativo em um computador que ofereça suporte a ele.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Globalization>
 
-- [Introdução a aplicativos internacionais com base no .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Desenvolver aplicativos globalizados e localizados](/visualstudio/ide/globalizing-and-localizing-applications)

@@ -1,79 +1,69 @@
 ---
-title: Compatibilidade de aplicativos no .NET Framework
-ms.date: 05/19/2017
+title: Tempo de execução e redirecionamento de alterações-.NET Framework
+ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-ms.openlocfilehash: cf0d556dd5df773958e24ff1efcefbc3d8a8d3a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126326"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196702"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
-## <a name="introduction"></a>Introdução
-A compatibilidade é uma meta muito importante de cada versão do .NET. A compatibilidade garante que cada versão é aditiva e, portanto, as versões anteriores ainda funcionarão. Por outro lado, as alterações na funcionalidade anterior (para melhorar o desempenho, resolver problemas de segurança ou corrigir bugs) podem causar problemas de compatibilidade no código ou nos aplicativos existentes que são executados em uma versão posterior. O .NET Framework reconhece as alterações de redirecionamento e de runtime. As alterações de redirecionamento afetam os aplicativos que se destinam a uma versão específica do .NET Framework, mas que são executados em uma versão posterior. As alterações de runtime afetam todos os aplicativos executados em uma versão específica.
+A compatibilidade é uma meta importante de cada versão do .NET. A compatibilidade garante que cada versão seja aditiva, para que as versões anteriores continuem a funcionar. Por outro lado, as alterações na funcionalidade anterior (por exemplo, para melhorar o desempenho, solucionar problemas de segurança ou corrigir bugs) podem causar problemas de compatibilidade no código existente ou em aplicativos existentes que são executados em uma versão posterior.
 
-Cada aplicativo se destina a uma versão específica do .NET Framework, que pode ser especificada por meio da:
+Cada aplicativo tem como alvo uma versão específica do .NET Framework:
 
 - Definição de uma estrutura de destino no Visual Studio.
 - Especificação da estrutura de destino em um arquivo de projeto.
 - Aplicação de um <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ao código-fonte.
 
-Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade. A versão do .NET Framework para a qual um aplicativo é direcionado é determinada pela versão de destino do assembly de entrada para o domínio do aplicativo no qual o código está em execução. Todos os assemblies adicionais carregados nesse domínio do aplicativo são direcionados a essa versão do .NET Framework. Por exemplo, no caso de um executável, a estrutura à qual o executável é direcionado é o modo de compatibilidade no qual todos os assemblies desse AppDomain serão executados.
+Ao migrar de uma versão do .NET Framework para outra, há dois tipos de alterações a serem consideradas:
 
-## <a name="runtime-changes"></a>Alterações em runtime
+- [Alterações no tempo de execução](#runtime-changes)
+- [Alterações de redirecionamento](#retargeting-changes)
 
-Problemas de runtime são aqueles que surgem quando um novo runtime é colocado em um computador e os mesmos binários são executados, mas um comportamento diferente é observado. Se um binário foi compilado para o .NET Framework 4.0, ele será executado no modo de compatibilidade do .NET Framework 4.0 na versão 4.5 ou em versões posteriores. Muitas das alterações que afetam a versão 4.5 não afetarão um binário compilado para a versão 4.0. Isso é específico a um AppDomain e depende das configurações do assembly de entrada.
+## <a name="runtime-changes"></a>Alterações em tempo de execução
+
+Problemas de tempo de execução são aqueles que surgem quando um novo tempo de execução é colocado em um computador e o comportamento de um aplicativo é alterado. Ao executar em uma versão mais recente do que a que foi direcionada, o .NET Framework usa o comportamento *peculiar* para imitar a versão mais antiga de destino. O aplicativo é executado na versão mais recente, mas age como se ele fosse executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade. Por exemplo, se um binário tiver sido compilado para .NET Framework 4,0, mas for executado em um computador com .NET Framework 4,5 ou posterior, ele será executado no modo de compatibilidade .NET Framework 4,0. Isso significa que muitas das alterações na versão posterior não afetam o binário.
+
+A versão do .NET Framework que um aplicativo se destina é determinada pela versão de destino do assembly de entrada para o domínio do aplicativo no qual o código é executado. Todos os assemblies adicionais carregados nesse domínio de aplicativo são direcionados a essa versão. Por exemplo, no caso de um executável, a versão que o executável tem como destino é o modo de compatibilidade em que todos os assemblies são executados no domínio de aplicativo.
+
+Para ver uma lista de alterações de tempo de execução que se aplicam ao seu ambiente, selecione a versão .NET Framework que você está direcionando atualmente e, em seguida, a versão para a qual você deseja migrar:
+
+[!INCLUDE[versionselector](../../../includes/migration-guide/runtime/versionselector.md)]
 
 ## <a name="retargeting-changes"></a>Alterações de redirecionamento
 
-Problemas de redirecionamento são aqueles que surgem quando um assembly que era destinado à versão 4.0 agora está definido para ter a versão 4.5 como destino. Agora o assembly aceita os novos recursos, bem como os possíveis problemas de compatibilidade dos recursos antigos. Novamente, isso é determinado pelo assembly de entrada e, portanto, o aplicativo de console que usa o assembly ou o site que referencia o assembly.
+As alterações de redirecionamento são aquelas que surgem quando um assembly é recompilado para ter como destino uma versão mais recente. Direcionar uma versão mais recente significa que o assembly incorpora os novos recursos, bem como possíveis problemas de compatibilidade para recursos antigos.
 
-## <a name="net-compatibility-diagnostics"></a>Diagnóstico de Compatibilidade do .NET
+Para ver uma lista de alterações de redirecionamento que se aplicam ao seu ambiente, selecione a versão .NET Framework que você está direcionando atualmente e, em seguida, a versão para a qual você deseja migrar:
 
-O Diagnóstico de Compatibilidade do .NET são analisadores capacitados pelo Roslyn que ajudam a identificar problemas de compatibilidade de aplicativos entre versões do .NET Framework. Esta lista contém todos os analisadores disponíveis, embora apenas um subconjunto seja aplicado a qualquer migração específica. Os analisadores determinarão quais problemas se aplicam à migração planejada e os trará à tona.
+[!INCLUDE[versionselector](../../../includes/migration-guide/retargeting/versionselector.md)]
 
-Cada problema inclui as seguintes informações:
+## <a name="impact-classification"></a>Classificação de impacto
 
-- A descrição do que mudou em relação a uma versão anterior.
+Nos tópicos que descrevem o tempo de execução e redirecionando as alterações, por exemplo, [redirecionando as alterações para migrar do 4.7.2 para o 4,8](retargeting/4.7.2-4.8.md), os itens individuais são classificados pelo impacto esperado da seguinte maneira:
 
-- Como a alteração afeta os clientes e se alguma solução alternativa está disponível para preservar a compatibilidade entre versões.
+**Principal**\
+Uma alteração significativa que afeta um grande número de aplicativos ou que exige a modificação significativa do código.
 
-- Uma avaliação da importância da alteração. O problema de compatibilidade de aplicativos é categorizado como se segue:
+**Secundária**\
+Uma alteração que afeta um pequeno número de aplicativos ou que exige modificação secundária do código.
 
-    |   |   |
-    |---|---|
-    |Principal|Uma alteração significativa que afeta um grande número de aplicativos ou que exige a modificação significativa do código.|
-    |Secundário|Uma alteração que afeta um pequeno número de aplicativos ou que exige modificação secundária do código.|
-    |Caso de borda|Uma alteração que afeta aplicativos em cenários muito específicos que não são comuns.|
-    |Transparente|Uma alteração que não afeta visivelmente o desenvolvedor nem o usuário do aplicativo.|
+\ de **caso de borda**
+Uma alteração que afeta aplicativos em cenários muito específicos que não são comuns.
 
-- A versão indica quando a alteração aparece pela primeira vez na estrutura. Algumas alterações são introduzidas em uma versão específica e revertidas em uma versão posterior; isso também é indicado.
-
-- O tipo de alteração:
-
-    |   |   |
-    |---|---|
-    |Redirecionando|A alteração afeta aplicativos que são recompilados para uma nova versão do .NET Framework.|
-    |Runtime|A alteração afeta um aplicativo existente que se destina a uma versão anterior do .NET Framework, mas é executado em uma versão posterior.|
-
-- As APIs afetadas, se houver.
-
-- As IDs do diagnóstico disponível
-
-## <a name="usage"></a>Uso
-Para começar, selecione o tipo de alteração de compatibilidade abaixo:
-
-- [Alterações de redirecionamento](./retargeting/index.md)
-- [Alterações no tempo de execução](./runtime/index.md)
+\ **transparente**
+Uma alteração que não tem efeito visível para o desenvolvedor ou o usuário do aplicativo. O aplicativo não deve exigir modificação por conta dessa alteração.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Versões e dependências](versions-and-dependencies.md)
-- [Novidades](../whats-new/index.md)
-- [O que está obsoleto na Biblioteca de Classes](../whats-new/whats-obsolete.md)
+- [O que há de novo](../whats-new/index.md)
+- [O que é obsoleto](../whats-new/whats-obsolete.md)

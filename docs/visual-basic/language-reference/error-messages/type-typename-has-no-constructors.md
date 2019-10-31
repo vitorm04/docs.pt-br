@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031142"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198151"
 ---
-# <a name="type-typename-has-no-constructors"></a>Tipo de '\<typename >' não tem construtores
+# <a name="type-typename-has-no-constructors"></a>O tipo '\<TypeName > ' não tem construtores
 Um tipo não suporta uma chamada para `Sub New()`. Uma possível causa é um compilador corrompido ou arquivo binário.  
   
  **ID do erro:** BC30251  
@@ -25,11 +25,11 @@ Um tipo não suporta uma chamada para `Sub New()`. Uma possível causa é um com
   
 2. Se o tipo estiver no mesmo projeto, recompile o assembly que contém o tipo.  
   
-3. Se o erro persistir, reinstale o compilador do Visual Basic.  
+3. Se o erro se repetir, reinstale o compilador Visual Basic.  
   
 4. Se o erro persistir, reúna informações sobre as circunstâncias e notifique o Microsoft Product Support Services.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Fale conosco](/visualstudio/ide/talk-to-us)
+- [Fale conosco](/visualstudio/ide/feedback-options)

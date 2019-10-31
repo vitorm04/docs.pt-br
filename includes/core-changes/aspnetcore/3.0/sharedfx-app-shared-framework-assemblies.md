@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: a4bf8cff59ffe01b7465e227c0b1d1e7d93f16e7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8344fdedcff34f102b73f977b688abc15563bd4c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394182"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198342"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Estrutura compartilhada: assemblies removidos do Microsoft. AspNetCore. app
 
-A partir do ASP.NET Core 3,0, a estrutura compartilhada ASP.NET Core (`Microsoft.AspNetCore.App`) contém apenas assemblies de terceiros que são totalmente desenvolvidos, com suporte e podem ser atendidos pela Microsoft. 
+A partir do ASP.NET Core 3,0, a estrutura compartilhada ASP.NET Core (`Microsoft.AspNetCore.App`) contém apenas assemblies de terceiros que são totalmente desenvolvidos, com suporte e podem ser atendidos pela Microsoft.
 
 #### <a name="change-description"></a>Alterar descrição
 

@@ -2,12 +2,12 @@
 title: Associação de dados do WPF com LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139805"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197383"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Visão geral da Associação de dados do WPF com LINQ to XML
 
@@ -36,7 +36,7 @@ A vinculação de dados do WPF permite que um elemento de interface de usuário 
 |Fonte de associação|O objeto de origem para um ou mais valores que são fornecidos para o elemento da interface de usuário para apresentação. O WPF oferece suporte automático aos seguintes tipos como fontes de associação: objetos CLR, objetos de dados ADO.NET, dados XML (de consultas XPath ou LINQ to XML) ou outro <xref:System.Windows.DependencyObject>.|
 |Caminho de origem|A propriedade da fonte de associação que resolve para o valor ou conjunto de valores que devem ser associados.|
 
-Uma propriedade de dependência é um conceito específico do WPF que representa uma propriedade dinamicamente computada de um elemento de interface do usuário. Por exemplo, as propriedades de dependência geralmente têm valores padrão ou valores que são fornecidos por um elemento pai. Essas propriedades especiais têm o suporte de instâncias da classe <xref:System.Windows.DependencyProperty> (e não de campos com propriedades padrão). Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+Uma propriedade de dependência é um conceito específico do WPF que representa uma propriedade dinamicamente computada de um elemento de interface do usuário. Por exemplo, as propriedades de dependência geralmente têm valores padrão ou valores que são fornecidos por um elemento pai. Essas propriedades especiais têm o suporte de instâncias da classe <xref:System.Windows.DependencyProperty> (e não de campos com propriedades padrão). Para obter mais informações, consulte [Visão geral sobre propriedades de dependência](../advanced/dependency-properties-overview.md).
 
 ### <a name="dynamic-data-binding-in-wpf"></a>Vinculação de dados dinâmicas no WPF
 
@@ -89,6 +89,6 @@ Para implementar a associação dinâmica de WPF, as propriedades dinâmicas ser
 
 - [Vinculação de dados de WPF com LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Propriedades dinâmicas LINQ to XML](linq-to-xml-dynamic-properties.md)
-- [XAML no WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [XAML no WPF](../advanced/xaml-in-wpf.md)
 - [Associação de dados (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
 - [Usando a marcação de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkId=98685)

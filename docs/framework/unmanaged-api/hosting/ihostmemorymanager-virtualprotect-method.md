@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1aa4ab44fc8ef1033dcef1a9b36d7487da86cd58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39ad45e143026f40ffcf1339e923837f9e812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779360"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195855"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Método IHostMemoryManager::VirtualProtect
 Serve como um wrapper lógico para a função Win32 correspondente. A implementação do Win32 de `VirtualProtect` altera a proteção em uma região de páginas confirmadas no espaço de endereço virtual do processo de chamada.  
@@ -40,37 +38,37 @@ HRESULT VirtualProtect (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpAddress`  
- [in] Um ponteiro para o endereço básico da memória virtual cujos atributos de proteção devem ser alteradas.  
+ no Um ponteiro para o endereço base da memória virtual cujos atributos de proteção devem ser alterados.  
   
  `dwSize`  
- [in] O tamanho, em bytes, da região de páginas de memória a ser alterado.  
+ no O tamanho, em bytes, da região das páginas de memória a ser alterada.  
   
  `flNewProtect`  
- [in] O tipo de proteção de memória a ser aplicado.  
+ no O tipo de proteção de memória a ser aplicado.  
   
  `pflOldProtect`  
- [out] Um ponteiro para o valor anterior de proteção de memória.  
+ fora Um ponteiro para o valor de proteção de memória anterior.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`VirtualProtect` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa implementação do `VirtualProtect` retorna um valor HRESULT, embora a implementação de Win32 retorna um valor diferente de zero para indicar êxito e um valor zero para indicar falha. Para obter mais informações, consulte a documentação da plataforma Windows.  
+ Essa implementação de `VirtualProtect` retorna um valor HRESULT, enquanto a implementação do Win32 retorna um valor diferente de zero para indicar êxito e um valor zero para indicar falha. Para obter mais informações, consulte a documentação da plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

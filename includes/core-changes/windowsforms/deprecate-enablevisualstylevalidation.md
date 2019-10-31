@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: e6bb1d53cbe1883b8faef75bd22942bd4f65a5e6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71181709"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198328"
 ---
 ### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Não há suporte para a opção de compatibilidade switch. System. Windows. Forms. EnableVisualStyleValidation
 
-Não `Switch.System.Windows.Forms.EnableVisualStyleValidation` há suporte para a opção de compatibilidade em Windows Forms no .NET Core 3,0.
+Não há suporte para a opção de compatibilidade `Switch.System.Windows.Forms.EnableVisualStyleValidation` no Windows Forms no .NET Core 3,0.
 
 #### <a name="change-description"></a>Alterar descrição
 
-No .NET Framework, a `Switch.System.Windows.Forms.EnableVisualStyleValidation` opção de compatibilidade permitia que um aplicativo recusasse a validação de estilos visuais fornecidos em um formato numérico. 
+No .NET Framework, a opção de compatibilidade de `Switch.System.Windows.Forms.EnableVisualStyleValidation` permitiu que um aplicativo recusasse a validação de estilos visuais fornecidos em um formato numérico.
 
-No .NET Core, não `Switch.System.Windows.Forms.EnableVisualStyleValidation` há suporte para a opção.
+No .NET Core, não há suporte para a opção `Switch.System.Windows.Forms.EnableVisualStyleValidation`.
 
 #### <a name="version-introduced"></a>Versão introduzida
 

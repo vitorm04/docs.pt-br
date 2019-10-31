@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 0e1248cc7fd29324810f164b4f0623c141439df2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 2f9d1c7835c95c904104a165a556b8d527343c30
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091938"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197779"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -185,13 +185,13 @@ Para habilitar o suporte para ajuste de Alto DPI no Modo Misto, você pode defin
 
 #### <a name="common-language-runtime"></a>Common Language Runtime
 
-O runtime no .NET Framework 4.8 inclui as seguintes mudanças e melhorias:
+O tempo de execução no .NET Framework 4.8 inclui as seguintes mudanças e melhorias:
 
 **Melhorias no compilador JIT**. O compilador JIT (Just-in-time) no .NET Framework 4.8 baseia-se no compilador JIT do .NET Core 2.1. Muitas das otimizações e todas as correções de bugs feitas no compilador JIT do .NET Core 2.1 estão inclusas no compilador JIT do .NET Framework 4.8.
 
 **Aprimoramentos do NGEN**. O tempo de execução melhorou o gerenciamento de memória para imagens NGEN ([Gerador de Imagem Nativa](../tools/ngen-exe-native-image-generator.md)) para que os dados mapeados das imagens NGEN não residam na memória. Isso reduz a área de superfície disponível para ataques que tentam executar código arbitrário modificando a memória a ser executada.
 
-**Verificação antimalware em todos os assemblies**. Em versões anteriores do .NET Framework, o runtime examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o tempo de execução dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
+**Verificação antimalware em todos os assemblies**. Em versões anteriores do .NET Framework, o tempo de execução examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o tempo de execução dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 
@@ -1848,7 +1848,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
   - Você pode incluir XAML (Windows.UI.XAML types) em bibliotecas portáteis quando o destino for Windows 8.1 ou Windows Phone 8.1. Os seguintes modelos XAML são compatíveis: Blank Page, Resource Dictionary, Templated Control e User Control.
 
-  - Você pode criar um componente do Windows Runtime portátil (.winmd file) para uso em Store apps cujo destino seja Windows 8.1 e Windows Phone 8.1.
+  - Você pode criar um componente de Tempo de Execução do Windows portátil (.winmd file) para uso em Store apps cujo destino seja Windows 8.1 e Windows Phone 8.1.
 
   - É possível redirecionar uma biblioteca de classes Windows Store ou Windows Phone Store novamente como uma Biblioteca de Classes Portátil.
 
@@ -1892,7 +1892,7 @@ Entre os aperfeiçoamentos durante a depuração de seus aplicativos do .NET Fra
 
 - Depuração async-aware. Para facilitar a depuração de aplicativos assíncronos no Visual Studio 2013, a pilha de chamadas oculta o código de infraestrutura fornecido por compiladores para dar suporte à programação assíncrona e também as cadeias em quadros pai lógicos para que você possa acompanhar a execução lógica do programa com mais clareza. Uma janela Tarefas substitui a janela Tarefas Paralelas e exibe tarefas relacionadas a um ponto de interrupção específico e também exibe outras tarefas que estão ativas ou agendadas no aplicativo. Leia sobre esse recurso na seção "Depuração async-aware" do [Comunicado do .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-- Melhor suporte à exceção para componentes do Windows Runtime. No [!INCLUDE[win81](../../../includes/win81-md.md)], as exceções surgidas de aplicativos da Windows Store preservam as informações sobre o erro que causou a exceção, mesmo entre os limites de linguagem. Leia sobre esse recurso na seção "Desenvolvimento de aplicativos para a Windows Store" do [Comunicado do .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Melhor suporte à exceção para componentes do Tempo de Execução do Windows. No [!INCLUDE[win81](../../../includes/win81-md.md)], as exceções surgidas de aplicativos da Windows Store preservam as informações sobre o erro que causou a exceção, mesmo entre os limites de linguagem. Leia sobre esse recurso na seção "Desenvolvimento de aplicativos para a Windows Store" do [Comunicado do .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
 A partir do Visual Studio 2013, você pode usar a [Ferramenta de Otimização Orientada de Perfil Gerenciado (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) para otimizar aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], bem como aplicativos da área de trabalho.
 
@@ -2128,6 +2128,6 @@ O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões p
 
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Novidades na acessibilidade do .NET Framework](whats-new-in-accessibility.md)
-- [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
+- [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
 - [Novidades no Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ae4113505ca63df9b20e6e71aa0b418da4ef924
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935259"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197354"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valor de soma de verificação incorreto, dígitos não hexadecimais ou número ímpar de dígitos hexadecimais
 Um valor de soma de verificação contém dígitos hexadecimais inválidos ou um número ímpar de dígitos.  
@@ -34,4 +34,4 @@ Um valor de soma de verificação contém dígitos hexadecimais inválidos ou um
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral do ASP.NET](/aspnet/overview)
-- [Fale conosco](/visualstudio/ide/talk-to-us)
+- [Fale conosco](/visualstudio/ide/feedback-options)

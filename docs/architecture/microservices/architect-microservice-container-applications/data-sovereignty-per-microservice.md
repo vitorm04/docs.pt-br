@@ -2,12 +2,12 @@
 title: Soberania de dados por microsserviço
 description: Soberania de dados por microsserviço é um dos pontos principais dos microsserviços. Cada microsserviço deve ser o proprietário único de seu banco de dados, compartilhando-o com ninguém mais. É claro que todas as instâncias de um microsserviço conectam-se ao mesmo banco de dados de alta disponibilidade.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834462"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191914"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 
@@ -25,9 +25,11 @@ Por outro lado, a abordagem tradicional (dados monolíticos) usada em diversos a
 
 Na abordagem tradicional, há um único banco de dados individual entre todos os serviços, normalmente em uma arquitetura em camadas. Na abordagem de microserviços, cada microserviço possui seu modelo/dados. A abordagem de banco de dados centralizado aparenta ser mais simples inicialmente e parece permitir a reutilização de entidades em subsistemas diferentes para tornar tudo consistente. Mas a realidade é que você acaba com uma quantidade enorme de tabelas que servem para muitos subsistemas diferentes e incluem atributos e colunas que não são necessárias na maioria dos casos. É como tentar usar o mesmo mapa físico para uma caminhada em uma trilha pequena, uma viagem de carro de um dia e para aprender geografia.
 
-Um aplicativo monolítico com normalmente um único banco de dados relacional tem dois benefícios importantes: [Transações ACID](https://en.wikipedia.org/wiki/ACID) e a linguagem SQL, ambas funcionando em todas as tabelas e dados relacionados ao aplicativo. Essa abordagem é uma maneira fácil de gravar consultas que combinam dados de diversas tabelas.
+Um aplicativo monolítico com um banco de dados relacional único conta com duas vantagens: [transações ACID](https://en.wikipedia.org/wiki/ACID) e a linguagem SQL, ambas em funcionamento em todas as tabelas e dados relacionados ao aplicativo. Essa abordagem é uma maneira fácil de gravar consultas que combinam dados de diversas tabelas.
 
-No entanto, o acesso a dados se torna muito mais complexo ao migrar para uma arquitetura de microsserviços. Porém, mesmo quando as transações ACID podem ou devem ser usadas no âmbito de um microsserviço ou Contexto Delimitado, os dados de propriedade de cada microsserviço são privados e só podem ser acessados por meio de suas APIs. Encapsular os dados garante que os microsserviços sejam acoplados de forma flexível e evoluam de modo independente. Se vários serviços acessarem os mesmos dados, as atualizações de esquema exigirão atualizações coordenadas de todos os serviços. Isso interrompe a autonomia do ciclo de vida do microsserviço. Entretanto, as estruturas de dados distribuídos impedem você de realizar transações ACID nos microsserviços. Por sua vez, isso significa que é necessário utilizar consistência eventual quando um processo de negócios abrange vários microsserviços. Isso é muito mais difícil de implementar do que junções SQL, porque você não pode criar restrições de integridade nem usar transações distribuídas entre bancos de dados separados, conforme explicaremos mais adiante. Da mesma forma, muitos outros recursos do banco de dados relacional não estão disponíveis em vários microsserviços.
+No entanto, o acesso aos dados torna-se muito mais complicado quando você muda para uma arquitetura de microserviços. Mesmo ao usar transações ACID em um subserviço ou contexto limitado, é crucial considerar que os dados de propriedade de cada microserviço são privados para esse microserviço e só devem ser acessados de forma síncrona por meio de seus pontos de extremidade de API (REST, gRPC, SOAP, etc) ou assincronamente via mensagens (AMQP ou similar).
+
+Encapsular os dados garante que os microsserviços sejam acoplados de forma flexível e evoluam de modo independente. Se vários serviços acessarem os mesmos dados, as atualizações de esquema exigirão atualizações coordenadas de todos os serviços. Isso interrompe a autonomia do ciclo de vida do microsserviço. Entretanto, as estruturas de dados distribuídos impedem você de realizar transações ACID nos microsserviços. Por sua vez, isso significa que é necessário utilizar consistência eventual quando um processo de negócios abrange vários microsserviços. Isso é muito mais difícil de implementar do que junções SQL, porque você não pode criar restrições de integridade nem usar transações distribuídas entre bancos de dados separados, conforme explicaremos mais adiante. Da mesma forma, muitos outros recursos do banco de dados relacional não estão disponíveis em vários microsserviços.
 
 Além disso, microsserviços diferentes geralmente usam *tipos* diferentes de bancos de dados. Aplicativos modernos armazenam e processam tipos de dados diversificados e um banco de dados relacional nem sempre é a melhor opção. Em alguns casos de uso, um banco de dados NoSQL como o Azure CosmosDB ou o MongoDB podem ter um modelo de dados mais conveniente e oferecer desempenho e escalabilidade melhores que um banco de dados SQL como o SQL Server ou o Banco de Dados SQL do Azure. Em outros casos, um banco de dados relacional ainda é a melhor abordagem. Portanto, aplicativos baseados em microsserviço geralmente usam uma combinação de bancos de dados SQL e NoSQL, chamada às vezes de abordagem de [persistência poliglota](https://martinfowler.com/bliki/PolyglotPersistence.html).
 
@@ -47,16 +49,16 @@ A DDD se beneficia dos microsserviços ao obter limites reais na forma de micros
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão:  banco de dados por serviço** \
+- **Chris Richardson. Padrão: banco de dados por serviço** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
-- **Martin Fowler. BoundedContext** \
+- **Martin Fowler. \ BoundedContext**
   <https://martinfowler.com/bliki/BoundedContext.html>
 
-- **Martin Fowler. PolyglotPersistence** \
+- **Martin Fowler. \ PolyglotPersistence**
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Design controlado por domínio estratégico com mapeamento de contexto** \
+- **Alberto Brandolini. Design estratégico orientado a domínio com mapeamento de contexto** \
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]

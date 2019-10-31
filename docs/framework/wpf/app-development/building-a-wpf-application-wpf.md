@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958715"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197793"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 
@@ -28,7 +28,7 @@ Um aplicativo WPF pode ser compilado das seguintes maneiras:
 
 - MSBuild (Microsoft Build Engine). Além do código e de arquivos XAML, o aplicativo deve conter um arquivo de projeto do MSBuild. Para mais informações, consulte "MSBuild".
 
-- Visual Studio. O Visual Studio é um ambiente de desenvolvimento integrado que compila aplicativos WPF com o MSBuild e inclui um designer visual para a criação da interface do usuário. Para obter mais informações, consulte [escrever e gerenciar código usando o Visual Studio](/visualstudio/ide/index-writing-code) e [criar XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).
+- Visual Studio. O Visual Studio é um ambiente de desenvolvimento integrado que compila aplicativos WPF com o MSBuild e inclui um designer visual para a criação da interface do usuário. Para obter mais informações, consulte [escrever e gerenciar código usando o Visual Studio](/visualstudio/ide/index-writing-code) e [criar XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
@@ -36,7 +36,7 @@ Um aplicativo WPF pode ser compilado das seguintes maneiras:
 
 Quando um projeto do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é compilado, a combinação de destinos específicos a um idioma e específicos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são invocados. O processo de execução desses destinos denomina-se pipeline de build, e as principais etapas estão ilustradas na figura a seguir.
 
-![Processo de build do WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
+![Processo de compilação do WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
 <a name="Pre_Build_Initializations"></a>
 
@@ -52,13 +52,13 @@ Antes de Compilar, o MSBuild determina o local de ferramentas e bibliotecas impo
 
 - A propriedade para os caminhos de pesquisa de assembly.
 
-O primeiro local em que o MSBuild pesquisa por assemblies é o diretório de assembly de\\referência (%programfiles%\Reference Assemblies\Microsoft\Framework\v3.0). Durante essa etapa, o processo de build também inicializa as várias propriedades e grupos de itens e realiza qualquer trabalho necessário de limpeza.
+O primeiro local em que o MSBuild pesquisa por assemblies é o diretório do assembly de referência (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). Durante essa etapa, o processo de build também inicializa as várias propriedades e grupos de itens e realiza qualquer trabalho necessário de limpeza.
 
 <a name="Resolving_references"></a>
 
 ### <a name="resolving-references"></a>Resolvendo referências
 
-O processo de build localiza e associa os assemblies necessários para compilar o projeto de aplicativo. Essa lógica está contida na tarefa `ResolveAssemblyReference`. Todos os assemblies declarados como `Reference` no arquivo de projeto são fornecidos para a tarefa, junto com as informações sobre os caminhos de pesquisa e metadados sobre os assemblies já instalados no sistema. A tarefa procura assemblies e usa os metadados do assembly instalado para filtrar os principais assemblies do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que não precisam aparecer nos manifestos de saída. Isso é feito para evitar informações redundantes nos manifestos do ClickOnce. Por exemplo, uma vez que PresentationFramework. dll pode ser considerado representativo de um aplicativo criado e [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para o e mais [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , já que todos os assemblies existem no mesmo local em cada computador que tem o .NET Framework instalado, não é necessário incluir todas as informações em todos os .NET Framework assemblies de referência nos manifestos.
+O processo de build localiza e associa os assemblies necessários para compilar o projeto de aplicativo. Essa lógica está contida na tarefa `ResolveAssemblyReference`. Todos os assemblies declarados como `Reference` no arquivo de projeto são fornecidos para a tarefa, junto com as informações sobre os caminhos de pesquisa e metadados sobre os assemblies já instalados no sistema. A tarefa procura assemblies e usa os metadados do assembly instalado para filtrar os principais assemblies do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que não precisam aparecer nos manifestos de saída. Isso é feito para evitar informações redundantes nos manifestos do ClickOnce. Por exemplo, como PresentationFramework. dll pode ser considerado representativo de um aplicativo criado e para o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e além do que ocorre porque todos os assemblies de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] existem no mesmo local em todos os computadores que têm o .NET Framework instalado, há Não é necessário incluir todas as informações em todos os .NET Framework assemblies de referência nos manifestos.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -74,9 +74,9 @@ Durante esta etapa, as seguintes atividades ocorrem para cada arquivo [!INCLUDE[
 
 3. Uma representação CodeDOM de uma nova classe parcial é criada e copiada para a pasta obj\Release.
 
-Além disso, um arquivo de código específico a um idioma é gerado para cada arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Por exemplo, para uma página página1. XAML em um projeto Visual Basic, um página1. g. vb é gerado; para uma página página1. XAML em um C# projeto, um Page1.g.cs é gerado. O ".g" no nome de arquivo indica que o arquivo é um código gerado que tem uma declaração de classe parcial para o elemento de nível superior do arquivo de marcação (como `Page` ou `Window`). A classe é declarada `partial` com o C# modificador em (`Extends` em Visual Basic) para indicar que há outra declaração para a classe em outro lugar, geralmente no arquivo code-behind Page1.XAML.cs.
+Além disso, um arquivo de código específico a um idioma é gerado para cada arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Por exemplo, para uma página página1. XAML em um projeto Visual Basic, um página1. g. vb é gerado; para uma página página1. XAML em um C# projeto, um Page1.g.cs é gerado. O ".g" no nome de arquivo indica que o arquivo é um código gerado que tem uma declaração de classe parcial para o elemento de nível superior do arquivo de marcação (como `Page` ou `Window`). A classe é declarada com o modificador de `partial` em C# (`Extends` em Visual Basic) para indicar que há outra declaração para a classe em outro lugar, geralmente no arquivo code-behind Page1.XAML.cs.
 
-A classe parcial se estende da classe base apropriada (por exemplo <xref:System.Windows.Controls.Page> , para uma página) e implementa <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> a interface. A <xref:System.Windows.Markup.IComponentConnector> interface tem métodos para inicializar um componente e conectar nomes e eventos em elementos em seu conteúdo. Consequentemente, o arquivo de código gerado tem uma implementação de método semelhante à seguinte:
+A classe parcial se estende da classe base apropriada (como <xref:System.Windows.Controls.Page> para uma página) e implementa a interface <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>. A interface <xref:System.Windows.Markup.IComponentConnector> tem métodos para inicializar um componente e conectar nomes e eventos em elementos em seu conteúdo. Consequentemente, o arquivo de código gerado tem uma implementação de método semelhante à seguinte:
 
 ```csharp
 public void InitializeComponent() {
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-Por padrão, a compilação de marcação é executada <xref:System.AppDomain> na mesma forma que o mecanismo do MSBuild. Isso proporciona ganhos significativos de desempenho. Esse comportamento pode ser alternado com a propriedade `AlwaysCompileMarkupFilesInSeparateDomain`. Isso tem a vantagem de descarregar todos os assemblies de referência descarregando o separado <xref:System.AppDomain>.
+Por padrão, a compilação de marcação é executada na mesma <xref:System.AppDomain> que o mecanismo do MSBuild. Isso proporciona ganhos significativos de desempenho. Esse comportamento pode ser alternado com a propriedade `AlwaysCompileMarkupFilesInSeparateDomain`. Isso tem a vantagem de descarregar todos os assemblies de referência descarregando o <xref:System.AppDomain>separado.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 
@@ -142,7 +142,7 @@ O manifesto do aplicativo (um arquivo de manifesto .exe) descreve os assemblies 
 
 Esses arquivos de manifesto são sempre criados para o [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Para aplicativos instalados, eles não são criados, a menos que a propriedade `GenerateManifests` seja especificada no arquivo de projeto com o valor `true`.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Obtenha duas permissões adicionais acima e acima dessas permissões atribuídas a aplicativos de zona da <xref:System.Security.Permissions.WebBrowserPermission> Internet <xref:System.Security.Permissions.MediaPermission>típicos: e. O sistema de build do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] declara essas permissões no manifesto do aplicativo.
+[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] obter duas permissões adicionais acima e acima dessas permissões atribuídas a aplicativos de zona da Internet típicos: <xref:System.Security.Permissions.WebBrowserPermission> e <xref:System.Security.Permissions.MediaPermission>. O sistema de build do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] declara essas permissões no manifesto do aplicativo.
 
 <a name="Incremental_Build_Support"></a>
 
@@ -168,7 +168,7 @@ Abaixo está um conjunto de regras que rege o build incremental:
 
   - Se o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é declarado como `Page` no projeto: se o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não tem referências de tipo definidas localmente, recompilar aquele [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mais todas as páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] com referências locais. Se o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem referências locais, recompilar todas as páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] com referências locais.
 
-  - Se [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é declarado como `ApplicationDefinition` no projeto: Recompile todas as [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] páginas (motivo: cada [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uma tem referência a <xref:System.Windows.Application> um tipo que pode ter sido alterado).
+  - Se [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] for declarada como `ApplicationDefinition` no projeto: Recompile todas as páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (motivo: cada [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem referência a um tipo de <xref:System.Windows.Application> que pode ter sido alterado).
 
 - Se o arquivo de projeto declara um arquivo de código como definição de aplicativo em vez de um arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:
 

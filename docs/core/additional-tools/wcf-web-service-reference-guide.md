@@ -1,15 +1,15 @@
 ---
 title: Adicionar WCF Web Service Reference
 description: Uma visão geral da ferramenta Microsoft WCF Web Service Reference Provider que adiciona funcionalidade a projetos do .NET Core e ASP.NET Core, semelhante à ferramenta Adicionar Referência de Serviço para projetos do .NET Framework.
-author: mlacouture
-ms.date: 04/19/2018
+author: dasetser
+ms.date: 10/29/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 28eaae4a83d918f8a9e5376eb3c8d42843ffa027
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: HT
+ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773953"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191902"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usar a ferramenta WCF Web Service Reference Provider
 
@@ -60,7 +60,7 @@ Ao usar o modelo de projeto **Aplicativo Web ASP.NET Core** como um exemplo, est
     ![Guia Opções de tipo de dados do Visual Studio para .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
     > [!NOTE]
-    > A opção da caixa de seleção **Usar novamente os tipos em assemblies consultados** é útil quando os tipos de dados necessários para a geração de código da referência de serviço são definidos em um dos assemblies referenciados do seu projeto.  É importante reutilizar esses tipos de dados existentes para evitar problemas de conflito de tipo de tempo de compilação ou problemas de runtime.
+    > A opção da caixa de seleção **Usar novamente os tipos em assemblies consultados** é útil quando os tipos de dados necessários para a geração de código da referência de serviço são definidos em um dos assemblies referenciados do seu projeto.  É importante reutilizar esses tipos de dados existentes para evitar problemas de conflito de tipo de tempo de compilação ou problemas de tempo de execução.
 
     Pode haver um atraso enquanto as informações de tipo são carregadas, dependendo do número de dependências do projeto e de outros fatores de desempenho do sistema. O botão **Concluir** será desabilitado durante o carregamento, a menos que a caixa de seleção **Usar novamente os tipos em assemblies consultados** esteja desmarcada.
 
@@ -76,12 +76,16 @@ Enquanto exibe o andamento, a ferramenta:
 
 Quando esses processos forem concluídos, você poderá criar uma instância do tipo de cliente do WCF gerado e invocar as operações de serviço.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="see-also"></a>Consulte também
 
-### <a name="feedback--questions"></a>Perguntas e comentários
+- [Introdução aos aplicativos Windows Communication Foundation](../../framework/wcf/getting-started-tutorial.md)
+- [Serviços de Windows Communication Foundation e WCF Data Services no Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
+- [Recursos com suporte do WCF no .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
 
-Se tiver perguntas ou comentários, [abra um problema no GitHub](https://github.com/dotnet/wcf/issues/new). Você também pode examinar as perguntas ou os problemas existentes [no repositório do WCF no GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
+## <a name="feedback--questions"></a>Perguntas e comentários
 
-### <a name="release-notes"></a>Notas de Versão
+Se você tiver dúvidas ou comentários, denuncie-o na [comunidade de desenvolvedores](https://developercommunity.visualstudio.com/) usando o [relatório uma ferramenta problemática](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) .
+
+## <a name="release-notes"></a>Notas de Versão
 
 - Consulte as [Notas de versão](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) para obter informações de versão atualizadas, incluindo problemas conhecidos.

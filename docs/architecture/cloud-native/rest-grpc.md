@@ -3,12 +3,12 @@ title: REST e gRPC
 description: Saiba mais sobre o gRPC, sua função em aplicativos nativos de nuvem e como ele difere do HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: ba15bb1c5ee7c2cd48d75867512539190c80b0e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4baccccf12bcd76366a4a934bb39a41d76ac11e0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094539"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191996"
 ---
 # <a name="rest-and-grpc"></a>REST e gRPC
 
@@ -52,7 +52,7 @@ A Figura 4-21 mostra a estrutura de um serviço gRPC no Visual Studio 2019. Obse
 
 **Figura 4-21**. projeto gRPC no Visual Studio 2019
 
-## <a name="gprc-usage"></a>Uso de gPRC
+## <a name="grpc-usage"></a>Uso de gRPC
 
 o gRPC é bem adequado para os seguintes cenários:
 

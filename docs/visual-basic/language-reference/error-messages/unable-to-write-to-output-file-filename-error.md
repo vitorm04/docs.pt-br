@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e0a00c4f57e45d65ff46fb9487a603a67d5a9e5c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620594"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198197"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>Não é possível gravar no arquivo de saída '\<filename >': \<erro >
+# <a name="unable-to-write-to-output-file-filename-error"></a>Não é possível gravar no arquivo de saída '\<filename > ': erro \<
 Ocorreu um problema na criação do arquivo.  
   
  Não foi possível abrir um arquivo de saída para gravação. O arquivo (ou a pasta que contém o arquivo) pode estar aberto para uso exclusivo por outro processo ou pode ter seu atributo definido como somente leitura.  
@@ -33,11 +33,11 @@ Ocorreu um problema na criação do arquivo.
   
 1. Compile o programa novamente para verificar se o erro persiste.  
   
-2. Se o erro persistir, salve seu trabalho e reinicie o Visual Studio.  
+2. Se o erro continuar, salve seu trabalho e reinicie o Visual Studio.  
   
 3. Se o erro persistir, reinicie o computador.  
   
-4. Se o erro persistir, reinstale o Visual Basic.  
+4. Se o erro se repetir, reinstale Visual Basic.  
   
 5. Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
   
@@ -45,18 +45,18 @@ Ocorreu um problema na criação do arquivo.
   
 1. Abra a pasta que lhe interessa.  
   
-2. Clique o **modos de exibição** ícone e escolha **detalhes**.  
+2. Clique no ícone **exibições** e escolha **detalhes**.  
   
-3. Clique com botão direito no cabeçalho da coluna e, em seguida, escolha **atributos** na lista suspensa.  
+3. Clique com o botão direito do mouse no cabeçalho da coluna e escolha **atributos** na lista suspensa.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Para alterar os atributos de um arquivo ou pasta  
   
-1. Na **Explorador de arquivos**, clique com botão direito no arquivo ou pasta e escolha **propriedades**.  
+1. No **Explorador de arquivos**, clique com o botão direito do mouse no arquivo ou pasta e escolha **Propriedades**.  
   
-2. No **atributos** seção o **gerais** guia, desmarque o **somente leitura** caixa.  
+2. Na seção **atributos** da guia **geral** , desmarque a caixa **somente leitura** .  
   
 3. Pressione **OK**.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fale conosco](/visualstudio/ide/talk-to-us)
+- [Fale conosco](/visualstudio/ide/feedback-options)

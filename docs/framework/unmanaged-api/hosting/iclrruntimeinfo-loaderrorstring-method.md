@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e6638f731b335ba7552379cdc77fa912a1def4d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195938"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>Método ICLRRuntimeInfo::LoadErrorString
-Converte um valor HRESULT em uma mensagem de erro apropriada para a cultura especificada.  
+Traduz um valor HRESULT em uma mensagem de erro apropriada para a cultura especificada.  
   
  Esse método substitui as seguintes funções:  
   
@@ -45,19 +43,19 @@ HRESULT LoadErrorString(
   
 ## <a name="parameters"></a>Parâmetros  
  `iResourceID`  
- [in] O HRESULT para traduzir.  
+ no O HRESULT a ser traduzido.  
   
  `pwzBuffer`  
- [out] A cadeia de caracteres de mensagem associada com o HRESULT fornecido.  
+ fora A cadeia de caracteres da mensagem associada ao HRESULT fornecido.  
   
  `pcchBuffer`  
- [no, out] O tamanho de `pwzbuffer` para evitar estouros de buffer. Se `pwzbuffer` for nulo, `pcchBuffer` fornece o tamanho esperado do `pwzbuffer` para permitir a pré-alocação.  
+ [entrada, saída] O tamanho de `pwzbuffer` para evitar estouros de buffer. Se `pwzbuffer` for NULL, `pcchBuffer` fornecerá o tamanho esperado de `pwzbuffer` para permitir a prealocação.  
   
  `iLocaleID`  
- [in] O identificador de cultura. Para usar a cultura padrão, você deverá especificar -1.  
+ no O identificador de cultura. Para usar a cultura padrão, você deve especificar-1.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -66,11 +64,11 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` é nulo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

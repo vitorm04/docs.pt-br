@@ -14,14 +14,14 @@ ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2e0b98107ac5f43c80aad6cb5ea61e6f4e1e28d3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5d3aa715590a10391bafa08a85265842ee8cedfb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015707"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197109"
 ---
-# <a name="troubleshoot-control-and-component-authoring"></a>Solucionar problemas de controle e criação de componentes
+# <a name="troubleshoot-control-and-component-authoring"></a>Solucionar problemas de criação de controle e de componente
 
 Este tópico lista os seguintes problemas comuns que surgem ao desenvolver componentes e controles:
 
@@ -31,7 +31,7 @@ Este tópico lista os seguintes problemas comuns que surgem ao desenvolver compo
 
 - O evento é gerado duas vezes no componente ou no controle herdado
 
-- Erro de tempo de design: "Falha ao criar o componente '*nome do componente*'"
+- Erro de tempo de design: "Falha em criar o componente '*Nome do Componente*'"
 
 - STAThreadAttribute
 
@@ -39,7 +39,7 @@ Este tópico lista os seguintes problemas comuns que surgem ao desenvolver compo
 
 ## <a name="cannot-add-control-to-toolbox"></a>Não é possível adicionar o controle à caixa de ferramentas
 
-Se você quiser adicionar um controle personalizado criado em outro projeto ou um controle de terceiros à **Caixa de Ferramentas**, faça isso manualmente. Se o projeto atual contiver seu controle ou componente, ele deverá aparecer na **Caixa de Ferramentas** automaticamente. Para obter mais informações, confira [Passo a passo: Populando automaticamente a caixa de](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)ferramentas com componentes personalizados.
+Se você quiser adicionar um controle personalizado criado em outro projeto ou um controle de terceiros à **Caixa de Ferramentas**, faça isso manualmente. Se o projeto atual contiver seu controle ou componente, ele deverá aparecer na **Caixa de Ferramentas** automaticamente. Para mais informações, consulte [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 ### <a name="to-add-a-control-to-the-toolbox"></a>Para adicionar um controle à Caixa de Ferramentas
 
@@ -73,7 +73,7 @@ Se você quiser adicionar um controle personalizado criado em outro projeto ou u
 
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Não é possível depurar o componente nem o controle de usuário do Windows Forms
 
-Se o seu controle derivar da <xref:System.Windows.Forms.UserControl> classe, você poderá depurar seu comportamento de tempo de execução com o contêiner de teste. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
+Se o seu controle derivar da classe <xref:System.Windows.Forms.UserControl>, você poderá depurar seu comportamento de tempo de execução com o contêiner de teste. Para obter mais informações, consulte [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md) (Como testar o comportamento de tempo de execução de um UserControl).
 
 Outros controles e componentes personalizados não são projetos autônomos. Eles devem ser hospedados por um aplicativo como um projeto do Windows Forms. Para depurar um controle ou um componente, adicione-o a um projeto do Windows Forms.
 
@@ -99,27 +99,27 @@ Outros controles e componentes personalizados não são projetos autônomos. Ele
 
    Agora você pode depurar seu componente ou controle como de costume.
 
-Para obter mais informações sobre depuração, consulte [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) e [Walkthrough: Depuração de controles de Windows Forms personalizados em](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)tempo de design.
+Para obter mais informações sobre depuração, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugger-feature-tour) e [Passo a passo: depurando personalizar controles personalizados do Windows Forms no tempo de design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
 
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>O evento é gerado duas vezes no componente ou no controle herdado
 
 Isso provavelmente é devido a uma cláusula `Handles` duplicada. Para obter mais informações, consulte [Solução de problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Erro de tempo de design: "Falha ao criar o componente ' nome do componente '"
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Erro de tempo de design: "Falha em criar o componente 'Nome do Componente'"
 
 Seu componente ou controle deve fornecer um construtor sem parâmetros com nenhum parâmetro. Quando o ambiente de design cria uma instância do seu componente ou controle, ele não tenta fornecer nenhum parâmetro para as sobrecargas do construtor que aceitam parâmetros.
 
 ## <a name="stathreadattribute"></a>STAThreadAttribute
 
-O <xref:System.STAThreadAttribute> informa o Common Language Runtime (CLR) que Windows Forms usa o modelo de apartamento de thread único. Você poderá perceber um comportamento não intencional se não aplicar esse atributo ao método `Main` do aplicativo do Windows Forms. Por exemplo, imagens de plano de fundo podem não aparecer <xref:System.Windows.Forms.ListView>para controles como. Alguns controles também podem exigir esse atributo para um comportamento correto de Preenchimento Automático e do tipo "arrastar e soltar".
+O <xref:System.STAThreadAttribute> informa o Common Language Runtime (CLR) que Windows Forms usa o modelo de apartamento de thread único. Você poderá perceber um comportamento não intencional se não aplicar esse atributo ao método `Main` do aplicativo do Windows Forms. Por exemplo, imagens de plano de fundo podem não aparecer para controles como <xref:System.Windows.Forms.ListView>. Alguns controles também podem exigir esse atributo para um comportamento correto de Preenchimento Automático e do tipo "arrastar e soltar".
 
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>O ícone do componente não aparece na caixa de ferramentas
 
-Quando você usa <xref:System.Drawing.ToolboxBitmapAttribute> o para associar um ícone ao seu componente personalizado, o bitmap não aparece na caixa de ferramentas para componentes gerados automaticamente. Para ver o bitmap, recarregue o controle usando a caixa de diálogo **Escolher Itens da Caixa de Ferramentas**. Para obter mais informações, confira [Como: Forneça um bitmap de caixa de ferramentas](how-to-provide-a-toolbox-bitmap-for-a-control.md)para um controle.
+Quando você usa <xref:System.Drawing.ToolboxBitmapAttribute> para associar um ícone ao seu componente personalizado, o bitmap não aparece na caixa de ferramentas para componentes gerados automaticamente. Para ver o bitmap, recarregue o controle usando a caixa de diálogo **Escolher Itens da Caixa de Ferramentas**. Para obter mais informações, consulte [Como fornecer um bitmap da caixa de ferramentas para um controle](how-to-provide-a-toolbox-bitmap-for-a-control.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)
-- [Passo a passo: Populando automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Passo a passo: Depuração de controles personalizados do Windows Forms em tempo de design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Como testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Passo a passo: depurando controles personalizados dos Windows Forms em tempo de Design](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)

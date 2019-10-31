@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052208"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195183"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com o .NET Framework 4 e versões anteriores e era otimizado para aplicativos clientes. O .NET Framework é uma plataforma de desenvolvimento para Windows, Windows Phone e Microsoft Azure e fornece um ambiente gerenciado de execução de aplicativos e a biblioteca de classes do .NET Framework. O .NET Framework 4 e as versões anteriores forneciam duas opções de implantação: o .NET Framework completo e o Client Profile. O Client Profile permitia uma implantação mais rápida e pacotes de instalação de aplicativos menores que os do .NET Framework completo.  
@@ -32,4 +32,4 @@ O .NET Client Profile é um subconjunto do .NET Framework que era fornecido com 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visão Geral do Visual Studio Multiplataforma](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Solução de problemas com erros de direcionamento do .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Como: Definir uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Como definir uma versão do .NET Framework como destino](/visualstudio/ide/visual-studio-multi-targeting-overview)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745014"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196332"
 ---
 # <a name="icordebugchaingetcallee-method"></a>Método ICorDebugChain::GetCallee
 Obtém a cadeia que foi chamada por essa cadeia.  
@@ -37,13 +35,13 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppChain`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugChain que representa a cadeia de chamada. Se esta cadeia está sendo executado (ou seja, se essa cadeia não está aguardando uma cadeia de chamada retornar), `ppChain` será nulo.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia chamada. Se essa cadeia estiver em execução no momento (ou seja, se essa cadeia não estiver esperando uma cadeia chamada retornar), `ppChain` será NULL.  
   
 ## <a name="remarks"></a>Comentários  
- Esta cadeia aguardará para a cadeia de chamada retornar antes de retomar a execução. A cadeia de chamada pode ser em outro thread no caso de chamadas de com marshaling entre threads.  
+ Essa cadeia aguardará que a cadeia chamada seja retornada antes de retomar a execução. A cadeia chamada pode estar em outro thread no caso de chamadas empacotadas entre threads.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

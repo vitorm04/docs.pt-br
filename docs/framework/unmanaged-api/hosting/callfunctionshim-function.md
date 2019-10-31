@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773768"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192101"
 ---
 # <a name="callfunctionshim-function"></a>Função CallFunctionShim
-Faz uma chamada para a função que tem o nome especificado e os parâmetros na biblioteca especificada.  
+Faz uma chamada para a função que tem o nome e os parâmetros especificados na biblioteca especificada.  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -43,29 +41,29 @@ HRESULT CallFunctionShim (
   
 ## <a name="parameters"></a>Parâmetros  
  `szDllName`  
- [in] O nome da biblioteca que contém a função.  
+ no O nome da biblioteca que contém a função.  
   
  `szFunctionName`  
- [in] O nome da função.  
+ no O nome da função.  
   
  `lpvArgument1`  
- [in] O primeiro argumento para passar para a função.  
+ no O primeiro argumento a ser passado para a função.  
   
  `lpvArgument2`  
- [in] O segundo argumento para passar para a função.  
+ no O segundo argumento a ser passado para a função.  
   
  `szVersion`  
- [in] A versão da biblioteca que contém a função.  
+ no A versão da biblioteca que contém a função.  
   
  `pvReserved`  
- [in] Reservado para uso futuro. Transmitir zero nesse parâmetro.  
+ no Reservado para uso futuro. Passe zero neste parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

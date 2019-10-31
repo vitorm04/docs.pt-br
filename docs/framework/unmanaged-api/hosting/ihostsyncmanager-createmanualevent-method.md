@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68661fbd-09cf-46dc-890b-e694f8a3880a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cfb57ba6f07437abfc8576ca4d5ff9cd0131d8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 13679b4d40e660dfdd18e6fbafe19226b2ffda37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753439"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195863"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>Método IHostSyncManager::CreateManualEvent
 Cria um objeto de evento de redefinição manual.  
@@ -38,32 +36,32 @@ HRESULT CreateManualEvent (
   
 ## <a name="parameters"></a>Parâmetros  
  `bInitialState`  
- [in] `true`, se o objeto é sinalizado; caso contrário, `false`.  
+ [in] `true`, se o objeto for sinalizado; caso contrário, `false`.  
   
  `ppEvent`  
- [out] Um ponteiro para o endereço de um [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) da instância ou nulo se o evento não pôde ser criado.  
+ fora Um ponteiro para o endereço de uma instância de [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) ou NULL se o evento não pôde ser criado.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`CreateManualEvent` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para criar o objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CreateManualEvent` cria uma `IHostManualEvent`, um objeto de evento de redefinição manual que requer uma chamada para o [ihostmanualevent:: Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) método configurá-lo para um estado não sinalizado. `CreateManualEvent` espelha o Win32 `CreateEvent` função com um valor de `true` especificado para o `bManualReset` parâmetro.  
+ `CreateManualEvent` cria um `IHostManualEvent`, um objeto de evento de redefinição manual que requer uma chamada para o método [IHostManualEvent:: Reset](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md) para defini-lo como um estado não sinalizado. `CreateManualEvent` espelha a função de `CreateEvent` do Win32 com um valor de `true` especificado para o parâmetro `bManualReset`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

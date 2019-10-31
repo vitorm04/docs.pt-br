@@ -7,18 +7,18 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 3bf90636bf1fc4b20b23c61fdd90033b3da35ddd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141189"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197498"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
 Você pode usar o Visual Studio para criar aplicativos baseados no Windows que dão suporte a idiomas bidirecionais (da direita para a esquerda), como árabe e Hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles com os quais você pode trabalhar nesses formulários — ou seja, todos os objetos no namespace <xref:System.Windows.Forms.Control>.
 
 ## <a name="culture-support"></a>Suporte a cultura
- Configurações de cultura e da interface do usuário determinam como um aplicativo funciona com datas, horas, moeda e outras informações. Suporte para a cultura e cultura da interface do usuário é o mesmo para idiomas bidirecionais, assim como para outros idiomas. Para obter mais informações, consulte [classes específicas de cultura para formulários globais e formulários da Web do Windows](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms).
+ Configurações de cultura e da interface do usuário determinam como um aplicativo funciona com datas, horas, moeda e outras informações. Suporte para a cultura e cultura da interface do usuário é o mesmo para idiomas bidirecionais, assim como para outros idiomas. Para obter mais informações, consulte [classes específicas de cultura para formulários globais e formulários da Web do Windows](/visualstudio/ide/globalizing-and-localizing-applications).
 
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Propriedades RightToLeft e RightToLeftLayout
  A classe base <xref:System.Windows.Forms.Control>, da qual os formulários derivam, inclui uma propriedade <xref:System.Windows.Forms.Control.RightToLeft%2A> que você pode definir para alterar a ordem de leitura de um formulário e seus controles. Se você definir a propriedade <xref:System.Windows.Forms.Control.RightToLeft%2A> do formulário, os controles padrão no formulário herdarão essa configuração. No entanto, você também pode definir a propriedade <xref:System.Windows.Forms.Control.RightToLeft%2A> individualmente na maioria dos controles. Também consultar [Como exibir texto da direita para a esquerda nos Windows Forms para globalização](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100)).

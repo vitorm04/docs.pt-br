@@ -4,12 +4,12 @@ description: Recomendações de melhores práticas para dar um nome forte a bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968978"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196977"
 ---
 # <a name="strong-naming"></a>Nomenclatura forte
 
@@ -45,7 +45,7 @@ Os benefícios da nomenclatura forte são:
 Você deve dar um nome forte às suas bibliotecas do .NET de software livre. Dar um nome forte a um assembly garante que a maioria das pessoas possa usá-lo e o carregamento estrito do assembly afeta apenas o .NET Framework.
 
 > [!NOTE]
-> Essa orientação é específica para bibliotecas .NET distribuídas publicamente, como bibliotecas .NET publicadas em NuGet.org. Nomenclatura forte não é exigida pela maioria dos aplicativos .NET e não deve ser feita por padrão.
+> Essas diretrizes são específicas para bibliotecas .NET distribuídas publicamente, como bibliotecas .NET publicadas em NuGet.org. A nomeação forte não é exigida pela maioria dos aplicativos .NET e não deve ser feita por padrão.
 
 **✔️ CONSIDERE** dar um nome forte aos assemblies da sua biblioteca.
 
@@ -53,7 +53,7 @@ Você deve dar um nome forte às suas bibliotecas do .NET de software livre. Dar
 
 > Uma chave disponível publicamente permite aos desenvolvedores modificar e recompilar o código-fonte da biblioteca com a mesma chave.
 > 
-> Você não deverá tornar pública a chave de nome forte se ela tiver sido usada anteriormente para conceder permissões especiais em [cenários de confiança parcial](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). Caso contrário, você poderá comprometer ambientes existentes.
+> Você não deverá tornar pública a chave de nome forte se ela tiver sido usada anteriormente para conceder permissões especiais em [cenários de confiança parcial](../../framework/misc/using-libraries-from-partially-trusted-code.md). Caso contrário, você poderá comprometer ambientes existentes.
 
 > [!IMPORTANT]
 > Quando a identidade do editor do código for desejada, [Authenticode](/windows-hardware/drivers/install/authenticode) e [Assinatura de Pacote do NuGet](/nuget/create-packages/sign-a-package) são recomendados. CAS (Segurança de Acesso do Código) não deve ser usada como uma mitigação de segurança.
@@ -62,11 +62,11 @@ Você deve dar um nome forte às suas bibliotecas do .NET de software livre. Dar
 
 > Leia mais sobre [controle de versão e versão do assembly](./versioning.md#assembly-version).
 
-**❌ NÃO** adicione, remova nem altere a chave de nome forte.
+**❌ não** adicionar, remover ou alterar a chave de nomenclatura forte.
 
 > Modificar a chave de nome forte do assembly muda a identidade do assembly e interrompe o código compilado que a utiliza. Para obter mais informações, veja [alteração da falha de binário](./breaking-changes.md#binary-breaking-change).
 
-**❌ NÃO FAZER** a publicação de versões de nome forte e sem nome forte da biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+**❌ não** publique versões de nome forte e não forte da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 > Publicar dois pacotes bifurca o ecossistema do desenvolvedor. Além disso, se um aplicativo acabar dependendo de ambos os pacotes, o desenvolvedor poderá encontrar conflitos de nome de tipo. No que diz respeito ao .NET, há diferentes tipos em diferentes assemblies.
 

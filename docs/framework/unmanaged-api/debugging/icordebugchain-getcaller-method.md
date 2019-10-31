@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744976"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192131"
 ---
 # <a name="icordebugchaingetcaller-method"></a>Método ICorDebugChain::GetCaller
-Obtém a cadeia que chamou esta cadeia.  
+Obtém a cadeia que chamou essa cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppChain`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugChain que representa a cadeia de chamada.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia de chamada.  
   
- Se esta cadeia espontaneamente foi chamada (como seria o caso se esta cadeia ou o depurador inicializado a pilha de chamadas), `ppChain` será nulo.  
+ Se essa cadeia fosse chamada espontaneamente (como seria o caso, se essa cadeia ou o depurador inicializasse a pilha de chamadas), `ppChain` será NULL.  
   
 ## <a name="remarks"></a>Comentários  
- A cadeia de chamada pode estar em um thread diferente, se a chamada passou por marshalling entre threads.  
+ A cadeia de chamada pode estar em um thread diferente, se a chamada tiver sido empacotada entre threads.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

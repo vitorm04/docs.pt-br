@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96fee259b31938ddec5820bc1b8d72a96b50c8d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80623bdec939b0ae5fc13008c1c4001c613ac435
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773886"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73195955"
 ---
 # <a name="bucketparameters-structure"></a>Estrutura BucketParameters
-Armazena o nome do tipo de um evento e os parâmetros para a exceção atual que está associado com o evento.  
+Armazena o nome de tipo de um evento e os parâmetros para a exceção atual associada ao evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,14 +38,14 @@ typedef struct _BucketParameters {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`fInited`|`true`, se o restante dessa estrutura é válido. Caso contrário, `false`.|  
+|`fInited`|`true`, se o restante desta estrutura for válido; caso contrário, `false`.|  
 |`pszEventTypeName`|Nome do tipo de evento.|  
-|`pszParams`|Uma matriz de cadeias de caracteres, cada um deles especifica um parâmetro para a exceção atual associado ao evento.|  
+|`pszParams`|Uma matriz de cadeias de caracteres, cada uma delas especifica um parâmetro para a exceção atual associada ao evento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.idl  
+ **Cabeçalho:** MSCorEE. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

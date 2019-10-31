@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 6c48806e54f11bce930d03a53b010c337e6658f8
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960848"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191864"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
@@ -27,7 +27,7 @@ A palavra-chave `readonly` é um modificador que pode ser usado em quatro contex
   - Como os tipos de referência contêm uma referência a seus dados, um campo que é um tipo de referência `readonly` deve sempre se referir ao mesmo objeto. Esse objeto não é imutável. O modificador `readonly` impede que o campo seja substituído por uma instância diferente do tipo de referência. No entanto, o modificador não impede que os dados da instância do campo sejam modificados por meio do campo somente leitura.
 
   > [!WARNING]
-  > Um tipo visível externamente que contém um campo somente leitura visível externamente, que é um tipo de referência mutável, pode ser uma vulnerabilidade de segurança e pode disparar o aviso [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types) : "Não declare tipos de referência mutáveis somente leitura".
+  > Um tipo visível externamente que contém um campo somente leitura visível externamente, que é um tipo de referência mutável, pode ser uma vulnerabilidade de segurança e pode disparar o aviso [CA2104](/visualstudio/code-quality/ca2104) : "Não declare tipos de referência mutáveis somente leitura".
 
 - Em uma [definição `readonly struct`](#readonly-struct-example), `readonly` indica que o `struct` é imutável.
 - Em uma [definição de membro`readonly`](#readonly-member-examples), `readonly` indica que um membro de um `struct` não modifica o estado interno da estrutura.

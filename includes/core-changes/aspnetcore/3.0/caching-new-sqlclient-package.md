@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 32c7f4e9e4736145f9275b74f34c04404e7c770a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394011"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198338"
 ---
 ### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Caching: o Microsoft. Extensions. Caching. SqlServer usa o novo pacote SqlClient
 
@@ -28,7 +28,7 @@ O pacote `Microsoft.Extensions.Caching.SqlServer` usou o pacote `System.Data.Sql
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Os clientes não devem precisar se preocupar com essa alteração significativa, a menos que estejam usando tipos retornados pelo pacote `Microsoft.Extensions.Caching.SqlServer` e convertendo-os em tipos `System.Data.SqlClient`. Por exemplo, se alguém estivesse convertendo um `DbConnection` para o [tipo SqlConnection antigo](xref:System.Data.SqlClient.SqlConnection), ele precisaria alterar a conversão para o novo tipo de @no__t 2. 
+Os clientes não devem precisar se preocupar com essa alteração significativa, a menos que estejam usando tipos retornados pelo pacote `Microsoft.Extensions.Caching.SqlServer` e convertendo-os em tipos `System.Data.SqlClient`. Por exemplo, se alguém estivesse convertendo um `DbConnection` para o [tipo SqlConnection antigo](xref:System.Data.SqlClient.SqlConnection), ele precisaria alterar a conversão para o novo tipo de `Microsoft.Data.SqlClient.SqlConnection`.
 
 #### <a name="category"></a>Categoria
 

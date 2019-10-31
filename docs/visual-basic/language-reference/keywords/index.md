@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 66eb6984bb6bb93dc7015a9da8c3099637bc2722
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039395"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197515"
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
 
@@ -53,37 +53,39 @@ As seguintes palavras-chave são *reservadas*, o que significa que elas não pod
 |[IsNot](../operators/isnot-operator.md)|[Let](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
 |[Long](../data-types/long-data-type.md)|[Loop](../statements/do-loop-statement.md)|[Me](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Mod](../operators/mod-operator.md)|  
 |[Módulo](../modifiers/module-keyword.md)|[Instrução Module](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../statements/namespace-statement.md)|[Narrowing](../modifiers/narrowing.md)|  
-|[Restrição New](../statements/type-list.md)|[Operador New](../operators/new-operator.md)|[Avançar](../statements/for-next-statement.md)|[Próximo (em Retomar)](../statements/resume-statement.md)|  
-|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|[NotOverridable](../modifiers/notoverridable.md)|  
-|[Object](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operador](../statements/operator-statement.md)|  
-|[Opção](../statements/option-keyword-statement.md)|[Opcional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|[OrElse](../operators/orelse-operator.md)|  
-|[Out (Modificador Genérico)](../modifiers/out-generic-modifier.md)|[Sobrecargas](../modifiers/overloads.md)|[Substituível](../modifiers/overridable.md)|[Substituições](../modifiers/overrides.md)|  
-|[ParamArray](../modifiers/paramarray.md)|[Parcial](../modifiers/partial.md)|[Privado](../modifiers/private.md)|[Property](../statements/property-statement.md)|  
-|[Protegido](../modifiers/protected.md)|[Público](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|[ReadOnly](../modifiers/readonly.md)|  
-|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|[Resume](../statements/resume-statement.md)|  
-|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[Selecionar](../statements/select-case-statement.md)|[Set](../statements/set-statement.md)|  
-|[Sombras](../modifiers/shadows.md)|[Compartilhado](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|[Simples](../data-types/single-data-type.md)|  
-|[Estático](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|[Cadeia de caracteres](../data-types/string-data-type.md)|  
-|[Restrição de estrutura](../statements/type-list.md)|[Instrução Structure](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|[SyncLock](../statements/synclock-statement.md)|  
-|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[To](../statements/for-next-statement.md)|[True](../data-types/boolean-data-type.md)|  
-|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf… Is](../operators/typeof-operator.md)|[UInteger](../data-types/uinteger-data-type.md)|  
-|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|`Variant`|  
-|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|[Ampliação](../modifiers/widening.md)|  
-|[With](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|[Xor](../operators/xor-operator.md)|  
-|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|[#End](../directives/if-then-else-directives.md)|  
-|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|[&=](../operators/and-assignment-operator.md)|  
-|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|[/=](../operators/floating-point-division-assignment-operator.md)|  
-|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|[^=](../operators/exponentiation-assignment-operator.md)|  
-|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|[-=](../operators/subtraction-assignment-operator.md)|  
-|[Operador >>](../operators/right-shift-operator.md)|[Operador >>=](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|[<\<=](../operators/left-shift-assignment-operator.md)|  
-  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
+|[Narrowing](../modifiers/narrowing.md)|[Restrição New](../statements/type-list.md)|[Operador New](../operators/new-operator.md)|[Avançar](../statements/for-next-statement.md)|
+|[Próximo (em Retomar)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
+|[NotOverridable](../modifiers/notoverridable.md)|[Object](../data-types/object-data-type.md)|[Of](../statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|
+|[Operador](../statements/operator-statement.md)|[Opção](../statements/option-keyword-statement.md)|[Opcional](../modifiers/optional.md)|[Or](../operators/or-operator.md)|
+|[OrElse](../operators/orelse-operator.md)|[Out (Modificador Genérico)](../modifiers/out-generic-modifier.md)|[Sobrecargas](../modifiers/overloads.md)|[Substituível](../modifiers/overridable.md)|
+|[Substituições](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Parcial](../modifiers/partial.md)|[Privado](../modifiers/private.md)|
+|[Property](../statements/property-statement.md)|[Protegido](../modifiers/protected.md)|[Público](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
+|[ReadOnly](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[REM](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
+|[Resume](../statements/resume-statement.md)|[Return](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[Selecionar](../statements/select-case-statement.md)|
+[Set](../statements/set-statement.md)|[Sombras](../modifiers/shadows.md)|[Compartilhado](../modifiers/shared.md)|[Short](../data-types/short-data-type.md)|
+|[Simples](../data-types/single-data-type.md)|[Estático](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|
+|[Cadeia de caracteres](../data-types/string-data-type.md)|[Restrição de estrutura](../statements/type-list.md)|[Instrução Structure](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
+|[SyncLock](../statements/synclock-statement.md)|[Then](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[To](../statements/for-next-statement.md)|
+|[True](../data-types/boolean-data-type.md)|[Try](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf… Is](../operators/typeof-operator.md)|
+|[UInteger](../data-types/uinteger-data-type.md)|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Using](../statements/using-statement.md)|
+|`Variant`|`Wend`|[When](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|
+[Ampliação](../modifiers/widening.md)|[With](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|
+[Xor](../operators/xor-operator.md)|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|
+|[#End](../directives/if-then-else-directives.md)|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|
+|[&=](../operators/and-assignment-operator.md)|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|
+[/=](../operators/floating-point-division-assignment-operator.md)|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|
+|[^=](../operators/exponentiation-assignment-operator.md)|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|
+|[-=](../operators/subtraction-assignment-operator.md)|[Operador >>](../operators/right-shift-operator.md)|[Operador >>=](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
+|[<\<=](../operators/left-shift-assignment-operator.md)|
+
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`e `Wend` são retidos como palavras-chave reservadas, embora não sejam mais usadas em Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../queries/let-clause.md).  
-  
-## <a name="unreserved-keywords"></a>Palavras-chave não reservadas  
- As seguintes palavras-chave não são reservadas, o que significa que elas podem ser usadas como nomes de elementos de programação. No entanto, isso não é recomendado, pois pode tornar o código difícil de ler e pode levar a erros sutis que podem ser difíceis de encontrar.  
-  
+> `EndIf`, `GoSub`, `Variant`e `Wend` são retidos como palavras-chave reservadas, embora não sejam mais usadas em Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../queries/let-clause.md).
+
+## <a name="unreserved-keywords"></a>Palavras-chave não reservadas
+
+As seguintes palavras-chave não são reservadas, o que significa que elas podem ser usadas como nomes de elementos de programação. No entanto, isso não é recomendado, pois pode tornar o código difícil de ler e pode levar a erros sutis que podem ser difíceis de encontrar.
+
 |||||  
 |---|---|---|---|  
 |[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
@@ -118,7 +120,7 @@ As seguintes palavras-chave são *reservadas*, o que significa que elas não pod
 |[Resumo de Operadores](operators-summary.md)|Lista as atribuições e expressões de comparação e outros operadores.|  
 |[Resumo do Registro](registry-summary.md)|Lista as funções que são usadas para ler, salvar e excluir configurações de programa.|  
 |[Resumo de Manipulação da Cadeia de Caracteres](string-manipulation-summary.md)|Lista as funções que são usadas para manipular cadeias de caracteres.|  
-  
+
 ## <a name="see-also"></a>Consulte também
 
 - [Membros da Biblioteca em Tempo de Execução do Visual Basic](../runtime-library-members.md)

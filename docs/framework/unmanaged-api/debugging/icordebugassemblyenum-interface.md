@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6c557df3c69b9d18b95ebf33815b92dcb9097f4e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987542"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192168"
 ---
 # <a name="icordebugassemblyenum-interface"></a>Interface ICorDebugAssemblyEnum
 
@@ -31,7 +29,7 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugAssembly.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Obtém o número especificado de `ICorDebugAssembly` instâncias na enumeração, começando da posição atual.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugAssembly` na enumeração, começando da posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -39,11 +37,11 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugAssembly.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

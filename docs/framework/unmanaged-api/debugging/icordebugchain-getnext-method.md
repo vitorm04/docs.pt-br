@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745702"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192121"
 ---
 # <a name="icordebugchaingetnext-method"></a>Método ICorDebugChain::GetNext
-Obtém a próxima cadeia de quadros do thread.  
+Obtém a próxima cadeia de quadros para o thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppChain`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugChain que representa a próxima cadeia de quadros do thread. Se essa cadeia é a última cadeia, `ppChain` é nulo.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a próxima cadeia de quadros para o thread. Se essa cadeia for a última cadeia, `ppChain` será NULL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
