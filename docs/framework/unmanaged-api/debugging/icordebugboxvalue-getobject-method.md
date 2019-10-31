@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a867a5b-bf94-493f-a4f5-b28685cf5325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30038d383e78c23715b844df0bee7c1124885a69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 475cc6c688262f318aa7f844b975ad69fa80bbe9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122815"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>Método ICorDebugBoxValue::GetObject
-Obtém o valor Demarcado.  
+Obtém o valor em caixa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppObject`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugObjectValue que representa o valor Demarcado.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugObjectValue que representa o valor boxed.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

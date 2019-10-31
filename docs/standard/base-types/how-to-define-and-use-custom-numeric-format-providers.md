@@ -1,5 +1,5 @@
 ---
-title: 'Como: definir e usar provedores de formatos numéricos personalizados'
+title: Como definir e usar provedores de formatos numéricos personalizados
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140068"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Como: definir e usar provedores de formatos numéricos personalizados
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Como definir e usar provedores de formatos numéricos personalizados
 O .NET Framework oferece controle abrangente sobre a representação de cadeias de caracteres de valores numéricos. Ele dá suporte aos seguintes recursos para personalizar o formato de valores numéricos:  
   
 - Cadeias de caracteres de formato numérico padrão, que fornecem um conjunto predefinido de formatos para converter números para suas representações de cadeia de caracteres. Você pode usá-las com qualquer método de formatação numérica, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tem um parâmetro `format`. Para obter detalhes, confira [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -51,7 +49,7 @@ O .NET Framework oferece controle abrangente sobre a representação de cadeias 
   
     1. Opcionalmente, verifique se o método é legitimamente destinado a fornecer serviços de formatação examinando o parâmetro `provider`. Para formatar objetos que implementam <xref:System.IFormatProvider> e <xref:System.ICustomFormatter>, isso envolve testar o parâmetro `provider` para igualdade com o objeto de formatação atual.  
   
-    2. Determine se o objeto de formatação deve dar suporte a especificadores de formato personalizado. (Por exemplo, um especificador de formato "N" pode indicar que um número de telefone dos EUA deve ser gerado no formato NANP e um "I" pode indicar a saída no formato E. 123 da Recomendação ITU-T.) Se especificadores de formato forem usados, o método deve tratar o especificador de formato específico. Ele é passado para o método no parâmetro `format`. Se nenhum especificador estiver presente, o valor do parâmetro `format` será <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Determine se o objeto de formatação deve dar suporte a especificadores de formato personalizado. (Por exemplo, um especificador de formato "N" pode indicar que um número de telefone dos EUA deve ser de saída no formato NANP e um "I" pode indicar a saída no formato de recomendação E. 123 do ITU-T.) Se os especificadores de formato forem usados, o método deve lidar com o especificador de formato específico. Ele é passado para o método no parâmetro `format`. Se nenhum especificador estiver presente, o valor do parâmetro `format` será <xref:System.String.Empty?displayProperty=nameWithType>.  
   
     3. Recupere o valor numérico passado para o método como o parâmetro `arg`. Execute as manipulações que forem necessárias para convertê-lo em sua representação de cadeia de caracteres.  
   

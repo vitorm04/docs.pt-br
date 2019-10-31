@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b8737577bdb5f61f1061cb217620fae03ebd0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139377"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>Método ICorDebugProcess::ModifyLogSwitch
-Define o nível de severidade da opção de log especificado.  
+Define o nível de severidade da opção de log especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +35,16 @@ HRESULT ModifyLogSwitch(
   
 ## <a name="parameters"></a>Parâmetros  
  `pLogSwitchName`  
- [in] Um ponteiro para uma cadeia de caracteres que especifica o nome do comutador de log.  
+ no Um ponteiro para uma cadeia de caracteres que especifica o nome do comutador de log.  
   
  `lLevel`  
- [in] O nível de severidade a ser definido para a opção de log especificado.  
+ no O nível de severidade a ser definido para o comutador de log especificado.  
   
 ## <a name="remarks"></a>Comentários  
- Este método é válido somente após o [icordebugmanagedcallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) retorno de chamada tenha ocorrido.  
+ Este método é válido somente depois que o retorno de chamada [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) ocorreu.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

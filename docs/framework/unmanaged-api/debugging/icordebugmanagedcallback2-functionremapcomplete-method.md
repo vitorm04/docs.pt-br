@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9920627ed193e9741d65fddfc54f325cb1d3758c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e048d03e54d4f97cd45935906ea4e4744468db9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131524"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>Método ICorDebugManagedCallback2::FunctionRemapComplete
-Notifica o depurador para que a execução de código mudou para uma nova versão de uma função editada.  
+Notifica o depurador de que a execução de código mudou para uma nova versão de uma função editada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +37,19 @@ HRESULT FunctionRemapComplete (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém a função editada.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém a função editada.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual o remapeamento de ponto de interrupção foi encontrado.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread no qual o ponto de interrupção do remapeamento foi encontrado.  
   
  `pFunction`  
- [in] Um ponteiro para um objeto ICorDebugFunction que representa a versão da função atualmente em execução no thread.  
+ no Um ponteiro para um objeto ICorDebugFunction que representa a versão da função em execução no momento no thread.  
   
 ## <a name="remarks"></a>Comentários  
- Esse retorno de chamada o depurador uma oportunidade para recriar qualquer steppers que existia anteriormente.  
+ Esse retorno de chamada dá ao depurador uma oportunidade de recriar todos os apresentadores que existiam anteriormente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1db72c44b53b5abff9aee35094abc1e0e577fad4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e54027806cef07fad4740c3bf5226fd26c72570
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108770"
 ---
 # <a name="createassemblyenum-function"></a>Função CreateAssemblyEnum
 Obtém um ponteiro para uma instância de [IAssemblyEnum](iassemblyenum-interface.md) que pode enumerar os objetos no assembly com o [IAssemblyName](iassemblyname-interface.md)especificado.  
@@ -42,10 +40,10 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>Parâmetros  
  `pEnum`  
- fora Ponteiro para um local de memória que contém o `IAssemblyEnum` ponteiro solicitado.  
+ fora Ponteiro para um local de memória que contém o ponteiro de `IAssemblyEnum` solicitado.  
   
  `pUnkReserved`  
- no Reservado para extensibilidade futura. `pUnkReserved`deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pUnkReserved` deve ser uma referência nula.  
   
  `pName`  
  no O `IAssemblyName` do assembly solicitado. Esse nome é usado para filtrar a enumeração. Pode ser NULL para enumerar todos os assemblies no cache de assembly global.  
@@ -54,17 +52,17 @@ HRESULT CreateAssemblyEnum (
  no Sinalizadores para modificar o comportamento do enumerador. Esse parâmetro contém exatamente um bit da enumeração [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) .  
   
  `pvReserved`  
- no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
   
 ## <a name="remarks"></a>Comentários  
- O `dwFlags` parâmetro contém exatamente um bit `ASM_CACHE_FLAGS` da enumeração.  
+ O parâmetro `dwFlags` contém exatamente um bit da enumeração `ASM_CACHE_FLAGS`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

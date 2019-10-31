@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136976"
 ---
-# <a name="cordllmain-function"></a>\_Função CorDllMain
+# <a name="_cordllmain-function"></a>\_função CorDllMain
 
-Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly da DLL e inicia a execução.  
+Inicializa o Common Language Runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho CLR do assembly de DLL e começa a execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +37,33 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>Parâmetros  
  `hInst`  
- [in] O identificador da instância do módulo carregado.  
+ no O identificador de instância do módulo carregado.  
   
  `dwReason`  
- [in] Indica por que a função de ponto de entrada DLL está sendo chamada. Esse parâmetro pode ser um dos seguintes valores: DLL\_PROCESS_ATTACH, DLL\_THREAD\_ATTACH, DLL\_THREAD\_ANEXAR ou DLL\_processo\_DESANEXAR. Para obter descrições desses valores, consulte o `DllMain` documentação no SDK da plataforma.  
+ no Indica por que a função de ponto de entrada de DLL está sendo chamada. Esse parâmetro pode ser um dos seguintes valores: DLL\_PROCESS_ATTACH, DLL\_THREAD\_anexar, DLL\_THREAD\_ATTACH ou DLL\_processo\_desanexar. Para obter descrições desses valores, consulte a documentação do `DllMain` no Platform SDK.  
   
  `lpReserved`  
- [in] Não utilizado.  
+ no Não utilizado.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retornará `true` para o sucesso e `false` se ocorrer um erro.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna `true` para êxito e `false` se ocorrer um erro.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é chamada pelo carregador do sistema operacional para os assemblies DLL. Para assemblies executáveis, o carregador de chamadas a [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function em vez disso.  
+ Essa função é chamada pelo carregador do sistema operacional para assemblies DLL. Para assemblies executáveis, o carregador chama a função [\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) em vez disso.  
   
- Carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de DLL.  
+ O carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo DLL.  
   
-O `_CorDllMain` função é chamada diretamente pelo carregador do sistema operacional.
+A função `_CorDllMain` é chamada diretamente pelo carregador do sistema operacional.
   
- Para obter mais informações, consulte a seção comentários a [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tópico.  
+ Para obter informações adicionais, consulte a seção comentários no tópico [\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
 
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

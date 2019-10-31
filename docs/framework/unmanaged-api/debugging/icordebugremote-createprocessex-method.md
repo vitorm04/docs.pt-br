@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05384af8201fae8cf81650d38c99a5c44e6bd16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744780"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131287"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Método ICorDebugRemote::CreateProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -49,62 +47,62 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `pRemoteTarget`  
- [in] Ponteiro para um [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Usado para determinar o computador remoto no qual o processo será iniciado.  
+ no Ponteiro para uma [interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Usado para determinar o computador remoto no qual o processo será iniciado.  
   
  `lpApplicationName`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado, o processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
+ no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado pelo processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
   
  `lpCommandLine`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executado, o processo iniciado.  
+ no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executada pelo processo iniciado.  
   
  `lpProcessAttributes`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `lpThreadAttributes`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `bInheritHandles`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `dwCreationFlags`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `lpEnvironment`  
- [in] Ponteiro para um bloco de ambiente para o novo processo.  
+ no Ponteiro para um bloco de ambiente para o novo processo.  
   
  `lpCurrentDirectory`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for nulo, o novo processo terá a mesma unidade atual e o diretório como o processo de chamada.  
+ no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for nulo, o novo processo terá a mesma unidade e diretório atuais que o processo de chamada.  
   
  `lpStartupInfo`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `lpProcessInformation`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `debuggingFlags`  
- [in] Não utilizado para a depuração remota.  
+ no Não usado para depuração remota.  
   
  `ppProcess`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugProcess Interface" que representa o processo.  
+ fora Um ponteiro para o endereço de um objeto "interface ICorDebugProcess" que representa o processo.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  S_OK  
- Iniciado com êxito o processo no computador remoto e retornado uma "Interface ICorDebugProcess" para depuração.  
+ O processo foi iniciado com êxito no computador remoto e retornou uma "interface ICorDebugProcess" para depuração.  
   
- E_FAIL (ou outros códigos de retorno e _)  
- Não é possível iniciar o processo no computador remoto e retornar uma "ICorDebugProcess Interface" para depuração.  
+ E_FAIL (ou outros códigos de retorno de E_)  
+ Não é possível iniciar o processo no computador remoto e retornar uma "interface ICorDebugProcess" para depuração.  
   
 ## <a name="remarks"></a>Comentários  
  Não há suporte para a depuração de modo misto no Silverlight.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorDebug.idl  
+ **Cabeçalho:** CorDebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 4.5, 4, 3.5 SP1  
+ **Versões do .NET Framework:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Consulte também
 
