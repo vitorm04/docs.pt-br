@@ -35,13 +35,13 @@ Em particular, os métodos com variáveis de tipo genérico podem lentamente alo
 
 Esse MDA só deve ser ativado em tempo de compilação JIT e não quando há uma instanciação exata.
 
-Quando esse MDA é ativado, os sintomas prováveis são que as CERs não estejam funcionando para as instanciações incorretas. Na verdade, o tempo de execução não tentou implementar uma CER sob as circunstâncias que causaram a ativação do MDA. Portanto, se o desenvolvedor usa uma instanciação compartilhada do CER, então os erros de compilação JIT, erros de carregamento de tipo genéricos ou anulações do thread dentro da região da CER pretendida não são detectados.
+Quando esse MDA é ativado, os sintomas prováveis são que as CERs não estejam funcionando para as instanciações incorretas. Na verdade, o runtime não tentou implementar uma CER sob as circunstâncias que causaram a ativação do MDA. Portanto, se o desenvolvedor usa uma instanciação compartilhada do CER, então os erros de compilação JIT, erros de carregamento de tipo genéricos ou anulações do thread dentro da região da CER pretendida não são detectados.
 
 ## <a name="resolution"></a>Resolução
 
 Não use variáveis de tipo genérico do tipo de referência de objeto para métodos que podem conter uma CER.
 
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime
 
 Esse MDA não tem efeito sobre o CLR.
 

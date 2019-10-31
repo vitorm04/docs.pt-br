@@ -11,7 +11,7 @@ ms.locfileid: "73091848"
 ---
 # <a name="type-element-net-native"></a>Elemento de > de tipo de \<(.NET Native)
 
-Aplica a política de tempo de execução a um tipo específico, como uma classe ou estrutura.
+Aplica a política de runtime a um tipo específico, como uma classe ou estrutura.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,14 +38,14 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |Atributo|Tipo de atributo|Descrição|
 |---------------|--------------------|-----------------|
 |`Name`|Geral|Atributo obrigatório. Especifica o nome do tipo.|
-|`Activate`|Reflexão|Atributo opcional. Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.|
-|`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.|
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|
-|`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|
+|`Activate`|Reflexão|Atributo opcional. Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.|
+|`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de runtime.|
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|
+|`Serialize`|Serialização|Atributo opcional. Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|
 |`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|
 |`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|
 |`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|
-|`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|
+|`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Windows Runtime e COM.|
 |`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|
 |`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de marshaling de tipos de valor para código nativo.|
 
@@ -65,7 +65,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[\<AttributeImplies>](attributeimplies-element-net-native.md)|Se o tipo recipiente for um atributo, ele define a política de tempo de execução para elementos de código à qual o atributo é aplicado.|
+|[\<AttributeImplies>](attributeimplies-element-net-native.md)|Se o tipo recipiente for um atributo, ele define a política de runtime para elementos de código à qual o atributo é aplicado.|
 |[\<Event>](event-element-net-native.md)|Aplica a política de reflexão a um evento pertencente a esse tipo.|
 |[\<Field>](field-element-net-native.md)|Aplica a política de reflexão a um campo pertencente a esse tipo.|
 |[\<GenericParameter>](genericparameter-element-net-native.md)|Aplica a política ao tipo de parâmetro de um tipo genérico.|
@@ -73,7 +73,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |[\<Method>](method-element-net-native.md)|Aplica a política de reflexão a um método pertencente a esse tipo.|
 |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|Aplica a política de reflexão a um método construído genérico pertencente a esse tipo.|
 |[\<Property>](property-element-net-native.md)|Aplica a política de reflexão a uma propriedade pertencente a esse tipo.|
-|[\<Subtypes>](subtypes-element-net-native.md)|Aplica a política de tempo de execução a todas as classes herdadas do tipo recipiente.|
+|[\<Subtypes>](subtypes-element-net-native.md)|Aplica a política de runtime a todas as classes herdadas do tipo recipiente.|
 |`<Type>`|Aplica a política de reflexão a um tipo aninhado.|
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|
 

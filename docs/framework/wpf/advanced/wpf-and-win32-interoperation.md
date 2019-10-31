@@ -110,7 +110,7 @@ A chave para hospedar uma janela de [!INCLUDE[TLA2#tla_win32](../../../../includ
 
 4. Substitua os métodos de <xref:System.Windows.Interop.HwndHost> <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A>. A intenção aqui é processar a limpeza e remover as referências ao conteúdo hospedado, principalmente se você tiver criado referências a objetos não gerenciados.
 
-5. No seu arquivo code-behind, crie uma instância da classe que hospeda controles e torne-a filha do elemento de reserva. Normalmente, você usaria um manipulador de eventos, como <xref:System.Windows.FrameworkElement.Loaded>, ou usar o construtor de classe parcial. Mas você também pode adicionar o conteúdo de interoperação por meio de um comportamento de tempo de execução.
+5. No seu arquivo code-behind, crie uma instância da classe que hospeda controles e torne-a filha do elemento de reserva. Normalmente, você usaria um manipulador de eventos, como <xref:System.Windows.FrameworkElement.Loaded>, ou usar o construtor de classe parcial. Mas você também pode adicionar o conteúdo de interoperação por meio de um comportamento de runtime.
 
 6. Processe mensagens de janela selecionadas, como notificações de controle. Há duas abordagens. Ambos fornecem acesso idêntico ao fluxo de mensagens, portanto sua escolha é principalmente uma questão de conveniência de programação.
 

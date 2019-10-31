@@ -57,7 +57,7 @@ Esta operação não pode ser executada porque os metadados para o seguinte tipo
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
- As seguintes diretivas de tempo de execução garantem que todos os metadados estão disponíveis:  
+ As seguintes diretivas de runtime garantem que todos os metadados estão disponíveis:  
   
 ```xml  
 <Type Name="App1.Class1" Browse="Required PublicAndInternal">  

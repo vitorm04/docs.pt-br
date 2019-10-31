@@ -15,7 +15,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73092022"
 ---
 # <a name="unmanaged-api-reference"></a>Referência de API não gerenciada
-Esta seção inclui informações sobre APIs não gerenciadas que podem ser usadas por aplicativos relacionados a código gerenciado, como hosts de tempo de execução, compiladores, desmontadores, ofuscadores, depuradores e criadores de perfis.  
+Esta seção inclui informações sobre APIs não gerenciadas que podem ser usadas por aplicativos relacionados a código gerenciado, como hosts de runtime, compiladores, desmontadores, ofuscadores, depuradores e criadores de perfis.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Tipos de dados comuns](common-data-types-unmanaged-api-reference.md)  
@@ -34,13 +34,13 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  Descreve os atributos de interface personalizada do COM (Component Object Model).  
   
  [Depuração](./debugging/index.md)  
- Descreve a API de depuração, que permite a um depurador depurar código que é executado no ambiente de tempo de execução de linguagem comum (CLR).  
+ Descreve a API de depuração, que permite a um depurador depurar código que é executado no ambiente de Common Language runtime (CLR).  
   
  [Repositório de símbolos de diagnóstico](./diagnostics/index.md)  
  Descreve a API de armazenamento de código de diagnóstico, que permite a um compilador gerar informações de símbolo para uso por um depurador.  
   
  [Fusão](./fusion/index.md)  
- Descreve a API de fusão, que permite a um host de tempo de execução acessar as propriedades dos recursos de um aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
+ Descreve a API de fusão, que permite a um host de runtime acessar as propriedades dos recursos de um aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
   
  [Hospedagem](./hosting/index.md)  
  Descreve a API de hospedagem, que permite a hosts não gerenciados integrar o CLR em seus aplicativos.  

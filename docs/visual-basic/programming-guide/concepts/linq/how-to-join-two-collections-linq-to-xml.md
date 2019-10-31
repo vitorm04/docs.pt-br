@@ -16,7 +16,7 @@ Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referênc
   
  Com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode tirar proveito dessa relação usando a cláusula `Join`.  
   
- Observe que como não existe nenhum índice disponível, essa junção terá um desempenho inadequado em tempo de execução.  
+ Observe que como não existe nenhum índice disponível, essa junção terá um desempenho inadequado em runtime.  
   
  Para obter informações mais detalhadas sobre `Join`, consulte [operações de junção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   

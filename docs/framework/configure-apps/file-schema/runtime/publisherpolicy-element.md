@@ -18,7 +18,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73115844"
 ---
 # <a name="publisherpolicy-element"></a>\<elemento de > publisherPolicy Apply
-Especifica se o tempo de execução aplica a política do editor.  
+Especifica se o runtime aplica a política do editor.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \

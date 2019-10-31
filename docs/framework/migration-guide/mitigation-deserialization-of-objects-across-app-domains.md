@@ -23,7 +23,7 @@ Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo c
   
 4. Para ler de um arquivo de configuração ou desserializar o objeto, um objeto <xref:System.Xml.XmlReader> tenta acessar o sistema de configuração.  
   
-5. Se o sistema de configuração ainda não tiver sido inicializado, ele deverá concluir sua inicialização. Isso significa, entre outras coisas, que o tempo de execução precisa criar um caminho estável para um sistema de configuração, que faz o seguinte:  
+5. Se o sistema de configuração ainda não tiver sido inicializado, ele deverá concluir sua inicialização. Isso significa, entre outras coisas, que o runtime precisa criar um caminho estável para um sistema de configuração, que faz o seguinte:  
   
     1. Ele procura a evidência do domínio de aplicativo não padrão.  
   

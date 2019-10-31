@@ -33,7 +33,7 @@ Há várias maneiras de carregar um assembly em um domínio de aplicativo. A man
 - O método <xref:System.AppDomain.Load%2A> da classe <xref:System.AppDomain?displayProperty=nameWithType> pode carregar assemblies, mas ele é usado principalmente para a interoperabilidade COM. Ele não deve ser usado para carregar assemblies em um domínio do aplicativo diferente do domínio do aplicativo do qual ele foi chamado.  
   
 > [!NOTE]
-> A partir do .NET Framework versão 2.0, o tempo de execução não carregará um assembly que foi compilado com uma versão do .NET Framework que tenha um número de versão mais alto do que o tempo de execução atualmente carregado. Isso vale para a combinação dos componentes principal e secundário do número de versão.  
+> A partir do .NET Framework versão 2.0, o runtime não carregará um assembly que foi compilado com uma versão do .NET Framework que tenha um número de versão mais alto do que o runtime atualmente carregado. Isso vale para a combinação dos componentes principal e secundário do número de versão.  
   
  Você pode especificar a maneira como o JIT (Just-In-Time) compilou o código dos assemblies carregados é compartilhado entre os domínios do aplicativo. Para obter mais informações, confira [Domínios do aplicativo e assemblies](application-domains.md#application-domains-and-assemblies).  
   

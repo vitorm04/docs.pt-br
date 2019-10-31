@@ -30,7 +30,7 @@ O MDA (assistente para depuração gerenciada) `virtualCERCall` é ativado como 
 ## <a name="resolution"></a>Resolução  
  Chame <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> para o método virtual.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  

@@ -46,10 +46,10 @@ O tempo de vida de um assembly de coleção é controlado pela existência de re
 
 - Um representante de um método estático definido em um módulo do assembly.
 
-Se houver um único item dessa lista para apenas um tipo ou um método no assembly, o tempo de execução não poderá descarregar o assembly.
+Se houver um único item dessa lista para apenas um tipo ou um método no assembly, o runtime não poderá descarregar o assembly.
 
 > [!NOTE]
-> Na verdade, o tempo de execução não descarrega o assembly até que os finalizadores tenham sido executados para todos os itens da lista.
+> Na verdade, o runtime não descarrega o assembly até que os finalizadores tenham sido executados para todos os itens da lista.
 
 Para fins de acompanhamento do tempo de vida, um tipo genérico construído, como `List<int>` (no C#) ou `List(Of Integer)` (no Visual Basic), que é criado e usado na geração de um assembly de coleção é considerado como tendo sido definido no assembly que contém a definição de tipo genérico ou em um assembly que contém a definição de um de seus argumentos de tipo. O assembly exato usado é um detalhe de implementação e está sujeito a alterações.
  

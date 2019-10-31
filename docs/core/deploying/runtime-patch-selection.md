@@ -1,5 +1,5 @@
 ---
-title: Efetuar roll forward de tempo de execução para implantações autocontidas do .NET Core.
+title: Efetuar roll forward de runtime para implantações autocontidas do .NET Core.
 description: Saiba mais as alterações de dotnet publish em implantações autossuficientes.
 author: KathleenDollard
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72522093"
 ---
-# <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward de tempo de execução de implantação autossuficiente
+# <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward de runtime de implantação autossuficiente
 
 As [implantações de aplicativo autossuficientes](index.md) do .NET Core incluem as bibliotecas e o tempo de execução do .NET Core. A partir do SDK do .NET Core 2.1 (.NET Core 2.1.300), uma implantação de aplicativo autocontida [publica o tempo de execução de patch mais recente no computador](https://github.com/dotnet/designs/pull/36). Por padrão, [`dotnet publish`](../tools/dotnet-publish.md) para uma implantação autossuficiente seleciona a última versão instalada como parte do SDK no computador de publicação. Isso permite que o aplicativo implantado seja executado com correções de segurança (e outras correções) disponíveis durante `publish`. O aplicativo precisa ser publicado novamente para obter um novo patch. Os aplicativos autocontidos são criados pela especificação de `-r <RID>` no comando `dotnet publish`, pela especificação do [RID (identificador de tempo de execução)](../rid-catalog.md) no arquivo de projeto (csproj/vbproj) ou na linha de comando.
 

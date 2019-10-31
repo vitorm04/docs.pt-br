@@ -21,7 +21,7 @@ ms.locfileid: "73119978"
 ---
 # <a name="application-domains"></a>Domínios de aplicativo
 
-Sistemas operacionais e ambientes em tempo de execução normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  
+Sistemas operacionais e ambientes em runtime normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  
   
  Domínios de aplicativos oferecem um limite de isolamento para segurança, confiabilidade e controle de versão, além de descarregar assemblies. Domínios de aplicativos normalmente são criados por hosts de tempo de execução, que são responsáveis pela inicialização do Common Language Runtime antes de um aplicativo ser executado.  
   
@@ -62,7 +62,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
 - Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo no qual ele for carregado. No entanto, o assembly pode ser descarregado do processo descarregando-se todos os domínios de aplicativo em que ele está carregado.  
   
- O host de tempo de execução decidirá se é necessário carregar os assemblies como neutros com relação ao domínio quando ele carregar o tempo de execução em um processo. Para aplicativos gerenciados, aplique o atributo <xref:System.LoaderOptimizationAttribute> ao método de ponto de entrada do processo e especifique um valor da enumeração <xref:System.LoaderOptimization> associada. Para aplicativos não gerenciados que hospedam o Common Language Runtime, especifique o sinalizador apropriado ao chamar o método [CorBindToRuntimeEx Function](../unmanaged-api/hosting/corbindtoruntimeex-function.md).  
+ O host de runtime decidirá se é necessário carregar os assemblies como neutros com relação ao domínio quando ele carregar o runtime em um processo. Para aplicativos gerenciados, aplique o atributo <xref:System.LoaderOptimizationAttribute> ao método de ponto de entrada do processo e especifique um valor da enumeração <xref:System.LoaderOptimization> associada. Para aplicativos não gerenciados que hospedam o Common Language Runtime, especifique o sinalizador apropriado ao chamar o método [CorBindToRuntimeEx Function](../unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
  Existem três opções para carregar assemblies de domínio neutro:  
   
@@ -82,7 +82,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  Ao decidir se deve carregar assemblies como neutros em relação ao domínio, você deve fazer uma escolha entre reduzir o uso de memória e outros fatores de desempenho.  
   
-- O acesso a dados e métodos estáticos é mais lento para assemblies neutros em relação ao domínio devido à necessidade de isolamento dos assemblies. Cada domínio do aplicativo que acessa o assembly deve ter uma cópia separada dos dados estáticos, para evitar que referências a objetos em campos estáticos cruzem os limites do domínio. Como resultado, o tempo de execução contém a lógica adicional para direcionar um chamador para a cópia apropriada de dados estáticos ou método. Essa lógica extra retarda a chamada.  
+- O acesso a dados e métodos estáticos é mais lento para assemblies neutros em relação ao domínio devido à necessidade de isolamento dos assemblies. Cada domínio do aplicativo que acessa o assembly deve ter uma cópia separada dos dados estáticos, para evitar que referências a objetos em campos estáticos cruzem os limites do domínio. Como resultado, o runtime contém a lógica adicional para direcionar um chamador para a cópia apropriada de dados estáticos ou método. Essa lógica extra retarda a chamada.  
   
 - Todas as dependências de um assembly deverão estar localizadas e carregadas quando o assembly for carregado como neutro em relação ao domínio, porque uma dependência que não puder ser carregada como neutra em relação ao domínio impedirá que o assembly seja carregado como neutro em relação ao domínio.  
   
@@ -92,7 +92,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  Não há uma correlação um-para-um entre domínios de aplicativo e threads. Vários threads podem ser executados em um único domínio de aplicativo a qualquer momento e um determinado thread não está confinado a um único domínio de aplicativo. Ou seja, threads são livres para atravessar limites de domínio de aplicativo; um novo thread não é criado para cada domínio de aplicativo.  
   
- A qualquer momento, cada thread é executado em um domínio de aplicativo. Zero, um ou vários threads podem estar em execução em um determinado domínio de aplicativo. O tempo de execução acompanha quais threads estão em execução em quais domínios do aplicativo. Você pode localizar o domínio no qual um thread está em execução a qualquer momento chamando o método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
+ A qualquer momento, cada thread é executado em um domínio de aplicativo. Zero, um ou vários threads podem estar em execução em um determinado domínio de aplicativo. O runtime acompanha quais threads estão em execução em quais domínios do aplicativo. Você pode localizar o domínio no qual um thread está em execução a qualquer momento chamando o método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
 
 ### <a name="application-domains-and-cultures"></a>Domínios do aplicativo e culturas
 
@@ -104,7 +104,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
 ## <a name="programming-with-application-domains"></a>Programação com domínios do aplicativo
 
- Domínios de aplicativo costumam ser criados e manipulados programaticamente por hosts de tempo de execução. Entretanto, às vezes, um aplicativo também pode preferir trabalhar com domínios de aplicativo. Por exemplo, um programa de aplicativo pode carregar um componente do aplicativo em um domínio para poder descarregar o domínio (e o componente) sem precisar interromper o aplicativo inteiro.  
+ Domínios de aplicativo costumam ser criados e manipulados programaticamente por hosts de runtime. Entretanto, às vezes, um aplicativo também pode preferir trabalhar com domínios de aplicativo. Por exemplo, um programa de aplicativo pode carregar um componente do aplicativo em um domínio para poder descarregar o domínio (e o componente) sem precisar interromper o aplicativo inteiro.  
   
  O <xref:System.AppDomain> é a interface programática para domínios de aplicativo. Essa classe inclui métodos para criar e descarregar domínios, para criar instâncias de tipos em domínios e registrar várias notificações como o descarregamento de domínio do aplicativo. A tabela a seguir lista os métodos <xref:System.AppDomain> mais usados.  
   
@@ -118,7 +118,7 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
 > [!NOTE]
 > Como o Common Language Runtime não dá suporte à serialização de métodos globais, representantes não podem ser usados para executar métodos globais em outros domínios de aplicativo.  
   
- As interfaces não gerenciadas descritas na Especificação Hospedando Interfaces do Common Language Runtime também dão acesso a domínios de aplicativo. Hosts em tempo de execução podem usar interfaces do código não gerenciado para criar e obter acesso aos domínios de aplicativo dentro de um processo.  
+ As interfaces não gerenciadas descritas na Especificação Hospedando Interfaces do Common Language Runtime também dão acesso a domínios de aplicativo. Hosts de runtime podem usar interfaces do código não gerenciado para criar e obter acesso aos domínios de aplicativo dentro de um processo.  
   
 ## <a name="the-complus_loaderoptimization-environment-variable"></a>A variável de ambiente COMPLUS_LoaderOptimization
 
@@ -140,7 +140,7 @@ COMPLUS_LoaderOptimization = 1
   
 - Se um assembly não for carregado em domínio neutro, ele deverá ser compilado por JIT em cada domínio de aplicativo em que for carregado e o carregador não deverá compartilhar recursos internos entre domínios de aplicativo.  
   
- Quando definido como 1, o sinalizador de ambiente COMPLUS_LoaderOptimization força o host do tempo de execução a carregar todos os assemblies de maneira de domínio não neutro, conhecido como SingleDomain. SingleDomain não carrega assemblies como neutros em relação ao domínio, exceto Mscorlib, que é sempre carregado como neutro em relação ao domínio. Essa configuração é chamada de domínio único, porque ela normalmente é usada quando o host está executando apenas um único aplicativo no processo.  
+ Quando definido como 1, o sinalizador de ambiente COMPLUS_LoaderOptimization força o host de runtime a carregar todos os assemblies de maneira de domínio não neutro, conhecido como SingleDomain. SingleDomain não carrega assemblies como neutros em relação ao domínio, exceto Mscorlib, que é sempre carregado como neutro em relação ao domínio. Essa configuração é chamada de domínio único, porque ela normalmente é usada quando o host está executando apenas um único aplicativo no processo.  
   
 > [!CAUTION]
 > O sinalizador de ambiente COMPLUS_LoaderOptimization foi projetado para ser usado em cenários de diagnóstico e de teste. Ter o sinalizador ativado pode causar uma grave lentidão e aumentar o uso de memória.  

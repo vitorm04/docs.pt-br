@@ -22,7 +22,7 @@ ms.locfileid: "73130390"
 # <a name="icorprofilerinfo5seteventmask2-method"></a>ICorProfilerInfo5::Método SetEventMask2
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
   
- Define um valor que especifica os tipos de eventos para os quais o criador de perfil deseja receber notificações de evento do tempo de execução de linguagem comum (CLR). Ele fornece mais funcionalidade do que o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) .  
+ Define um valor que especifica os tipos de eventos para os quais o criador de perfil deseja receber notificações de evento do CLR (Common Language runtime). Ele fornece mais funcionalidade do que o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   

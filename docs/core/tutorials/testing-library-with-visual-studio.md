@@ -144,7 +144,7 @@ Para criar os métodos de teste:
 
    ![Caixa de diálogo Opções Avançadas de Salvamento do Visual Studio](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
-   Se você não salvar seu código-fonte como um arquivo codificado em UTF8, o Visual Studio poderá salvá-lo como um arquivo ASCII. Quando isso acontecer, o tempo de execução não decodificará de forma precisa os caracteres UTF8 fora do intervalo ASCII e os resultados de teste não serão precisos.
+   Se você não salvar seu código-fonte como um arquivo codificado em UTF8, o Visual Studio poderá salvá-lo como um arquivo ASCII. Quando isso acontecer, o runtime não decodificará de forma precisa os caracteres UTF8 fora do intervalo ASCII e os resultados de teste não serão precisos.
 
 1. Na barra de menus, selecione **Testar** > **Executar** > **Todos os Testes**. A janela **Gerenciador de Testes** é aberta e mostra que os testes foram executados com êxito. Os três testes estão listados na seção **Testes Aprovados**, e a seção **Resumo** relata o resultado da execução de teste.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Escrever um loop Parallel.For simples'
+title: Como escrever um loop Parallel.For simples
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574918"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139661"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>Como: Escrever um loop Parallel.For simples
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>Como escrever um loop Parallel.For simples
 
 Este tópico contém dois exemplos que ilustram o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. O primeiro usa a sobrecarga do método <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> e o segundo usa a sobrecarga <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, as duas sobrecargas mais simples do método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Você pode usar essas duas sobrecargas do método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando não for preciso cancelar o loop, dividir as iterações do loop ou manter qualquer estado local do thread.
 
@@ -50,7 +48,7 @@ O terceiro parâmetro dessa sobrecarga de <xref:System.Threading.Tasks.Parallel.
 
 ## <a name="the-iteration-value"></a>O valor da iteração
 
-O representante usa um único parâmetro de entrada cujo valor é a iteração atual. Esse valor da iteração é fornecido pelo tempo de execução e seu valor inicial é o índice do primeiro elemento no segmento (partição) da origem que está sendo processada no thread atual.
+O representante usa um único parâmetro de entrada cujo valor é a iteração atual. Esse valor da iteração é fornecido pelo runtime e seu valor inicial é o índice do primeiro elemento no segmento (partição) da origem que está sendo processada no thread atual.
 
 Se você precisar de mais controle sobre o nível de simultaneidade, use uma das sobrecargas que usa um parâmetro de entrada <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType>, como: <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>.
 

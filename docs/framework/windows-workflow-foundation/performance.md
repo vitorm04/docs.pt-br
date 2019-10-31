@@ -11,7 +11,7 @@ ms.locfileid: "70989575"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 
- O Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] inclui uma revisão importante do Windows Workflow Foundation (WF) com investimentos pesados em desempenho.  Essa nova revisão introduz alterações de design significativas de versões anteriores de [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornecidos como parte do .NET Framework 3.0 e de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Foi re bem - principal do modelo, em tempo de execução, e o trabalho feito com ferramentas de programação melhorar bastante o desempenho e a usabilidade. Este tópico mostra as características de desempenho importantes dessas revisões e compara-as com essas de versão anterior.
+ O Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] inclui uma revisão importante do Windows Workflow Foundation (WF) com investimentos pesados em desempenho.  Essa nova revisão introduz alterações de design significativas de versões anteriores de [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornecidos como parte do .NET Framework 3.0 e de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Foi re bem - principal do modelo, em runtime, e o trabalho feito com ferramentas de programação melhorar bastante o desempenho e a usabilidade. Este tópico mostra as características de desempenho importantes dessas revisões e compara-as com essas de versão anterior.
 
  O desempenho componente de fluxo de trabalho individual disparou por pedidos de magnitude entre WF3 e WF4.  Isso deixa a lacuna entre os serviços de Windows Communication Foundation em código (WCF) e os serviços de fluxo de trabalho do WCF serem bem pequenos.  A latência de fluxo de trabalho foi reduzida significativamente em WF4.  O desempenho de persistência gerado por um fator de 2,5 - 3,0.  Monitoramento da integridade por meio de acompanhamento de fluxo de trabalho tem significativamente menos sobrecarga.  Essas são razões de migrar ou peso a adotar WF4 em seus aplicativos.
 
@@ -28,10 +28,10 @@ ms.locfileid: "70989575"
 ## <a name="overview-of-wf4-performance-enhancements"></a>Visão geral dos aprimoramentos de desempenho WF4
  WF4 cuidadosamente foi criado e implementado com alto desempenho e escalabilidade que são descritas nas seções.
 
-### <a name="wf-runtime"></a>Tempo de execução de WF
+### <a name="wf-runtime"></a>Runtime de WF
  O núcleo de tempo de execução de [!INCLUDE[wf1](../../../includes/wf1-md.md)] é um agendador assíncrono que resulta a execução das atividades em um fluxo de trabalho. Fornece um ambiente performant, previsível de execução para atividades. O ambiente tem um contrato bem definido para execução, a seguir, a conclusão, cancelamento, as exceções, e um modelo de threads previsível.
 
- Em comparação com WF3, o tempo de execução WF4 tem um agendador mais eficiente. Ele aproveita o mesmo pool de threads de e/s usado para o WCF, que é muito eficiente na execução de itens de trabalho em lote. A fila de agendador interna de item de trabalho é otimizado para a maioria de padrões comuns de uso. O tempo de execução do WF4 também gerencia os Estados de execução de forma muito leve com a lógica mínima de manipulação de eventos e de sincronização, enquanto o WF3 depende do registro e da invocação de eventos pesados para executar uma sincronização complexa para transições de estado.
+ Em comparação com WF3, o runtime WF4 tem um agendador mais eficiente. Ele aproveita o mesmo pool de threads de e/s usado para o WCF, que é muito eficiente na execução de itens de trabalho em lote. A fila de agendador interna de item de trabalho é otimizado para a maioria de padrões comuns de uso. O tempo de execução do WF4 também gerencia os Estados de execução de forma muito leve com a lógica mínima de manipulação de eventos e de sincronização, enquanto o WF3 depende do registro e da invocação de eventos pesados para executar uma sincronização complexa para transições de estado.
 
 ### <a name="data-storage-and-flow"></a>Armazenamento de dados e fluxo
  Em WF3, os dados associados com uma atividade são modelados através das propriedades de dependência implementadas pelo tipo <xref:System.Windows.DependencyProperty>. O padrão de propriedade de dependência foi introduzido no Windows Presentation Foundation (WPF). Normalmente, esse padrão é muito flexível dar suporte à associação fácil de dados e outros recursos de interface do usuário. No entanto, o padrão requer as propriedades ser definido como campos estáticos na definição de fluxo de trabalho. Sempre que o tempo de execução de [!INCLUDE[wf1](../../../includes/wf1-md.md)] obtém ou define os valores de propriedade, envolve a lógica pesado- tornada mais pesada de consulta.
@@ -46,7 +46,7 @@ ms.locfileid: "70989575"
  WF4 manipula esse bem diferente. Leva o modelo de atividade, cria um novo objeto de ActivityInstance, e adicioná-lo a fila de agendador. Todo esse processo envolve apenas a criação explícita de objetos e é muito leve.
 
 ### <a name="asynchronous-programming"></a>Programação assíncrona
- Os aplicativos geralmente têm um melhor desempenho e escalabilidade com programação assíncrona para operações longas de bloqueio como E/S ou operações distribuídos de computação. WF4 fornece suporte assíncrono por tipos de base <xref:System.Activities.AsyncCodeActivity>de atividade, <xref:System.Activities.AsyncCodeActivity%601>. O tempo de execução entende nativo que as atividades assíncronos e portanto podem automaticamente colocar a instância em uma zona sem persistir quando o trabalho assíncrono está excelente. As atividades personalizados podem derivar desses tipos para executar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente.
+ Os aplicativos geralmente têm um melhor desempenho e escalabilidade com programação assíncrona para operações longas de bloqueio como E/S ou operações distribuídos de computação. WF4 fornece suporte assíncrono por tipos de base <xref:System.Activities.AsyncCodeActivity>de atividade, <xref:System.Activities.AsyncCodeActivity%601>. O runtime entende nativo que as atividades assíncronos e portanto podem automaticamente colocar a instância em uma zona sem persistir quando o trabalho assíncrono está excelente. As atividades personalizados podem derivar desses tipos para executar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente.
 
 ### <a name="messaging"></a>Mensagens
  Inicialmente WF3 tinha muito suporte limitado de mensagem com as chamadas de eventos externos ou serviços da Web. No .NET 3,5, os fluxos de trabalho podem ser implementados como clientes WCF ou expostos como serviços WCF por meio de <xref:System.Workflow.Activities.SendActivity> e <xref:System.Workflow.Activities.ReceiveActivity>. No WF4, o conceito de programação de mensagens baseada em fluxo de trabalho foi ainda mais reforçado por meio da forte integração da lógica de mensagens do WCF ao WF.
@@ -238,7 +238,7 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
  Este gráfico a seguir mostra um decréscimo de desempenho como o número de chaves usadas em correlação conteudo base aumenta.  A semelhança em curvas entre o TCP e o HTTP indica a sobrecarga associada com esses protocolos.
 
 #### <a name="correlation-with-persistence"></a>Correlação com persistência
- Com um fluxo de trabalho persistente, pressão CPU de conteudo correlação desloca com base em tempo de execução do fluxo de trabalho a base de dados SQL.  Os procedimentos armazenados no provedor de persistência do SQL faça o trabalho de combinar as chaves para localizar o fluxo de trabalho apropriado.
+ Com um fluxo de trabalho persistente, pressão CPU de conteudo correlação desloca com base em runtime de fluxo de trabalho a base de dados SQL.  Os procedimentos armazenados no provedor de persistência do SQL faça o trabalho de combinar as chaves para localizar o fluxo de trabalho apropriado.
 
  ![Gráfico de linhas mostrando os resultados de correlação e persistência](./media/performance/correlation-persistence-graph.gif)
 
@@ -321,7 +321,7 @@ A imagem a seguir mostra um fluxo de trabalho do WF3 com ReceiveActivity e um fl
 
  A hospedagem de definições de fluxo de trabalho no IIS consome muito mais memória devido ao <xref:System.ServiceModel.WorkflowServiceHost>, aos artefatos de serviço WCF detalhados e à lógica de processamento de mensagens associada ao host.
 
- Para o console que hospeda em WF3 fluxos de trabalho foram implementados no código em vez de XOML.  Em WF4 a opção é usar XAML.  O XAML livre é armazenado como um recurso inserido no assembly compilado e durante o tempo de execução para fornecer a implementação de fluxo de trabalho.  Há uma sobrecarga associada a este processo.  Para fazer uma comparação entre justa WF3 e WF4, os fluxos de trabalho codificados foram usados em vez de XAML.  Um exemplo de um dos fluxos de trabalho WF4 é mostrado abaixo:
+ Para o console que hospeda em WF3 fluxos de trabalho foram implementados no código em vez de XOML.  Em WF4 a opção é usar XAML.  O XAML livre é armazenado como um recurso inserido no assembly compilado e durante o runtime para fornecer a implementação de fluxo de trabalho.  Há uma sobrecarga associada a este processo.  Para fazer uma comparação entre justa WF3 e WF4, os fluxos de trabalho codificados foram usados em vez de XAML.  Um exemplo de um dos fluxos de trabalho WF4 é mostrado abaixo:
 
 ```csharp
 public class Workflow1 : Activity
@@ -350,7 +350,7 @@ public class Workflow1 : Activity
 
  Há muitos outros fatores que podem afetar o consumo de memória. Conselhos o mesmo para todos os programas gerenciados ainda se aplica.  A configuração em ambientes hospedados, o objeto de <xref:System.ServiceModel.WorkflowServiceHost> criado para uma definição de fluxo de trabalho permanece na memória até que o pool de aplicativos é reciclado.  Isso deve ser mantido em mente ao escrever extensões.  Além disso, é melhor evitar variáveis "globais" (variáveis com escopo para todo o fluxo de trabalho) e limitar o escopo de variáveis sempre que possível.
 
-## <a name="workflow-runtime-services"></a>Serviços de fluxo de trabalho
+## <a name="workflow-runtime-services"></a>Serviços de runtime de fluxo de trabalho
 
 ### <a name="persistence"></a>Persistência
  WF3 e WF4 ambos são fornecidas com um provedor de persistência SQL.  O provedor de persistência WF3 SQL é uma implementação simples que serialize a instância de fluxo de trabalho e o armazena em uma operação.  Por esse motivo, o desempenho desse provedor intensamente depende do tamanho de instância de fluxo de trabalho.  Em WF3, o tamanho da instância pode aumentar por muitas razões, como é discutido anteriormente neste documento.  Vários clientes escolha para não usar o provedor de persistência padrão de SQL como armazenar uma instância serializado em uma base de dados não fornece nenhuma visibilidade no estado de fluxo de trabalho.  Para localizar um trabalho específicos sem conhecer a identificação de trabalho, uma teria que desserializar cada instância armazenado e examinar o conteúdo.  Muitos desenvolvedores preferem escrever seus próprios provedores de persistência para superar essa obstáculo.
@@ -370,7 +370,7 @@ public class Workflow1 : Activity
 ### <a name="test-results"></a>Resultados do teste
  ![Gráfico de colunas mostrando persistência de produtividade](./media/performance/throughput-persistence-graph.gif)
 
- Quando o transporte entre o cliente e a camada intermediária é HTTP, a persistência em WF4 mostra uma melhoria de 2,6 vezes.  O transporte TCP aumenta o fator a 3,0 vezes.  Em todos os casos, a utilização da CPU na camada intermediária é 98% ou maior.  A razão para a produção WF4 é maior realiza-se devido ao tempo de execução mais rápida de fluxo de trabalho.  O tamanho da instância é serializado baixo para ambos os casos e não é um elemento de contribuição principal nesta situação.
+ Quando o transporte entre o cliente e a camada intermediária é HTTP, a persistência em WF4 mostra uma melhoria de 2,6 vezes.  O transporte TCP aumenta o fator a 3,0 vezes.  Em todos os casos, a utilização da CPU na camada intermediária é 98% ou maior.  A razão para a produção WF4 é maior realiza-se devido ao runtime mais rápido de fluxo de trabalho.  O tamanho da instância é serializado baixo para ambos os casos e não é um elemento de contribuição principal nesta situação.
 
  WF3 e fluxos de trabalho WF4 neste teste usam uma atividade para indicar explicitamente quando a persistência deve ocorrer.  Isso tem a vantagem de persistir o fluxo de trabalho sem descarregá-lo.  Em WF3, também é possível persistir usando o recurso de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> , mas este descarrega a instância de fluxo de trabalho de memória.  Se um desenvolvedor que usa WF3 deseja verificar se um fluxo de trabalho persiste em determinados pontos, tem que alterar a definição de fluxo de trabalho ou pagar o custo descarregar e recarregar a instância de fluxo de trabalho.  Um novo recurso em WF4 possibilita persistir sem descarregar: <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>.  Esse recurso permite que a instância de fluxo de trabalho está armazenado em ociosa mas é na memória até que o limite de <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> está localizado ou a execução é continuada.
 
@@ -444,8 +444,8 @@ A tabela a seguir mostra os resultados da execução de um fluxo de trabalho que
 
 |Teste|Produção (fluxos de trabalho/s)|
 |----------|-----------------------------------|
-|Sequência WF3 em tempo de execução WF3|1\.576|
-|Sequência WF3 em tempo de execução WF4 usando Interoperabilidade|2\.745|
+|Sequência WF3 em runtime WF3|1\.576|
+|Sequência WF3 em runtime WF4 usando Interoperabilidade|2\.745|
 |Sequência WF4|153.582|
 
  Há um aumento notável de desempenho ao uso de Interoperabilidade sobre WF3 reto.  No entanto, quando comparado com as atividades WF4, increase é irrisória.

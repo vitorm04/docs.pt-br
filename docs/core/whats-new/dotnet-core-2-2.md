@@ -26,9 +26,9 @@ Esse novo modo de implantação tem a vantagem distinta da criar um executável 
 
 **Manipulação de eventos nos serviços de tempo de execução**
 
-Muitas vezes, convém monitorar o uso dos serviços de tempo de execução do seu aplicativo, como o GC, o JIT e o ThreadPool, para entender como eles afetam seu aplicativo. Em sistemas Windows, isso é comumente feito monitorando os eventos ETW do processo atual. Embora isso continue funcionando bem, nem sempre é possível usar o ETW se você estiver executando em um ambiente de baixo privilégio ou no Linux ou no macOS. 
+Muitas vezes, convém monitorar o uso dos serviços de runtime do seu aplicativo, como o GC, o JIT e o ThreadPool, para entender como eles afetam seu aplicativo. Em sistemas Windows, isso é comumente feito monitorando os eventos ETW do processo atual. Embora isso continue funcionando bem, nem sempre é possível usar o ETW se você estiver executando em um ambiente de baixo privilégio ou no Linux ou no macOS. 
 
-A partir do .NET Core 2.2, os eventos de CoreCLR podem ser consumidos usando a classe <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Esses eventos descrevem o comportamento desses serviços de tempo de execução como GC, JIT, ThreadPool e interoperabilidade. Esses são os mesmos eventos são expostos como parte do provedor ETW CoreCLR.  Isso permite que os aplicativos consumam esses eventos ou usem um mecanismo de transporte para enviá-los a um serviço de agregação de telemetria. Veja como assinar eventos no exemplo de código a seguir:
+A partir do .NET Core 2.2, os eventos de CoreCLR podem ser consumidos usando a classe <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Esses eventos descrevem o comportamento desses serviços de runtime como GC, JIT, ThreadPool e interoperabilidade. Esses são os mesmos eventos são expostos como parte do provedor ETW CoreCLR.  Isso permite que os aplicativos consumam esses eventos ou usem um mecanismo de transporte para enviá-los a um serviço de agregação de telemetria. Veja como assinar eventos no exemplo de código a seguir:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -74,7 +74,7 @@ A partir do .NET Core 2.2, um token de acesso emitido pelo Azure Active Director
 
 **A compilação em camadas permanece um recurso ativado mediante consentimento**
 
-No .NET Core 2.1, o compilador JIT implementou uma nova tecnologia compiladora, a *compilação hierárquica*, como um recurso ativado mediante consentimento. O objetivo da compilação em camadas é melhorar o desempenho. Uma das tarefas importantes executadas pelo compilador JIT é otimizar a execução de código. No entanto, para caminhos de código pouco usados, o compilador pode gastar mais tempo otimizando o código do que o tempo de execução gasta executando código não otimizado. A compilação em camadas introduz dois estágios na compilação JIT:
+No .NET Core 2.1, o compilador JIT implementou uma nova tecnologia compiladora, a *compilação hierárquica*, como um recurso ativado mediante consentimento. O objetivo da compilação em camadas é melhorar o desempenho. Uma das tarefas importantes executadas pelo compilador JIT é otimizar a execução de código. No entanto, para caminhos de código pouco usados, o compilador pode gastar mais tempo otimizando o código do que o runtime gasta executando código não otimizado. A compilação em camadas introduz dois estágios na compilação JIT:
 
 - Uma **primeira camada**, que gera código o mais rápido possível.
 
@@ -84,7 +84,7 @@ Para saber mais sobre melhoria de desempenho que pode resultar da compilação e
 
 No .NET Core 2.2 Versão prévia 2, a compilação em camadas está habilitada por padrão. No entanto, decidimos que ainda não estamos prontos para habilitar a compilação em camadas por padrão. Portanto, no .NET Core 2.2, a compilação em camadas continua a ser um recurso ativado mediante consentimento. Para saber mais sobre o consentimento com a compilação em camadas, confira [Aprimoramentos do compilador Jit](dotnet-core-2-1.md#jit-compiler-improvements) em [O que há de novo no .NET Core 2.1](dotnet-core-2-1.md).
 
-## <a name="runtime"></a>Tempo de execução
+## <a name="runtime"></a>Runtime
 
 **Injeção de código antes de executar o método Main**
 

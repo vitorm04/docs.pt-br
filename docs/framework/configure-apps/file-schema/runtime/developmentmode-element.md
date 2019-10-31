@@ -17,7 +17,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73117626"
 ---
 # <a name="developmentmode-element"></a>Elemento de > de desenvolvimento do \<
-Especifica se o tempo de execução pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
+Especifica se o runtime pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
@@ -36,7 +36,7 @@ Especifica se o tempo de execução pesquisa por assemblies em diretórios espec
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**developerInstallation**|Especifica se o tempo de execução pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.|  
+|**developerInstallation**|Especifica se o runtime pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.|  
   
 ## <a name="developerinstallation-attribute"></a>Atributo developerInstallation  
   

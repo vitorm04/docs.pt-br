@@ -15,17 +15,17 @@ ms.locfileid: "73122230"
 
 A execução lado a lado é a capacidade de executar várias versões de um aplicativo ou componente no mesmo computador. Você pode ter várias versões do Common Language Runtime e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo.  
   
-A ilustração a seguir mostra vários aplicativos usando duas versões diferentes do tempo de execução no mesmo computador. Os aplicativos A, B e C usam a versão 1.0 do tempo de execução e o aplicativo D usa a versão 1.1 do tempo de execução.  
+A ilustração a seguir mostra vários aplicativos usando duas versões diferentes do runtime no mesmo computador. Os aplicativos A, B e C usam a versão 1.0 do runtime e o aplicativo D usa a versão 1.1 do runtime.  
   
-![Execução lado a lado de versões de tempo de execução diferentes](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
+![Execução lado a lado de versões de runtime diferentes](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
-O .NET Framework consiste no Common Language Runtime e uma coleção de assemblies que contêm os tipos de API. Versões são atribuídas ao tempo de execução e aos assemblies do .NET Framework separadamente. Por exemplo, a versão 4.0 do tempo de execução é realmente a versão 4.0.319, enquanto que a versão 1.0 dos assemblies do .NET Framework é a versão 1.0.3300.0.  
+O .NET Framework consiste no Common Language Runtime e uma coleção de assemblies que contêm os tipos de API. Versões são atribuídas ao runtime e aos assemblies do .NET Framework separadamente. Por exemplo, a versão 4.0 do runtime é realmente a versão 4.0.319, enquanto que a versão 1.0 dos assemblies do .NET Framework é a versão 1.0.3300.0.  
   
 A ilustração a seguir mostra vários aplicativos usando duas versões diferentes de um componente no mesmo computador. Os aplicativos A e B usam a versão 1.0 do componente enquanto o aplicativo C usa a versão 2.0 do mesmo componente.  
   
 ![Diagrama que mostra a execução lado a lado de um componente.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
-A execução lado a lado confere mais controle sobre a quais versões de um componente um aplicativo está associado e mais controle sobre qual versão do tempo de execução um aplicativo usa.  
+A execução lado a lado confere mais controle sobre a quais versões de um componente um aplicativo está associado e mais controle sobre qual versão do runtime um aplicativo usa.  
   
 ## <a name="benefits-of-side-by-side-execution"></a>Benefícios da execução lado a lado  
  
@@ -49,49 +49,49 @@ A execução lado a lado e o .NET Framework fornecem os seguintes recursos para 
 
 As versões 1.0 e 1.1 do .NET Framework são projetadas para serem compatíveis entre si. Um aplicativo criado com o .NET Framework versão 1.0 deve ser executado na versão 1.1 e um aplicativo criado com o .NET Framework versão 1.1 deve ser executado na versão 1.0. Observe, entretanto, que os recursos da API adicionados na versão 1.1 do .NET Framework não funcionarão com a versão 1.0 do .NET Framework. Aplicativos criados com a versão 2.0 serão executados somente na versão 2.0. Aplicativos da versão 2.0 não serão executados na versão 1.1 ou anterior.  
   
-As versões do .NET Framework são tratadas como uma unidade que consiste no tempo de execução e em seus assemblies do .NET Framework associados (um conceito conhecido como unificação de assemblies). Você pode redirecionar a associação de assembly para incluir outras versões dos assemblies do .NET Framework, mas substituir a associação padrão do assembly pode ser arriscado e deve ser rigorosamente testado antes da implantação.  
+As versões do .NET Framework são tratadas como uma unidade que consiste no runtime e em seus assemblies do .NET Framework associados (um conceito conhecido como unificação de assemblies). Você pode redirecionar a associação de assembly para incluir outras versões dos assemblies do .NET Framework, mas substituir a associação padrão do assembly pode ser arriscado e deve ser rigorosamente testado antes da implantação.  
   
-## <a name="locating-runtime-version-information"></a>Localizando informações da versão do tempo de execução  
+## <a name="locating-runtime-version-information"></a>Localizando informações da versão do runtime  
 
-Informações sobre em qual versão do tempo de execução um aplicativo ou componente foi compilado e quais versões do tempo de execução são necessárias para executar o aplicativo são armazenadas em dois locais. Quando um aplicativo ou componente é compilado, as informações sobre a versão de tempo de execução usada para compilá-lo são armazenadas no executável gerenciado. Informações sobre as versões de tempo de execução que exigem que o aplicativo ou componente sejam armazenados no arquivo de configuração de aplicativo.  
+Informações sobre em qual versão do runtime um aplicativo ou componente foi compilado e quais versões do runtime são necessárias para executar o aplicativo são armazenadas em dois locais. Quando um aplicativo ou componente é compilado, as informações sobre a versão de runtime usada para compilá-lo são armazenadas no executável gerenciado. Informações sobre as versões de runtime que exigem que o aplicativo ou componente sejam armazenados no arquivo de configuração de aplicativo.  
   
-### <a name="runtime-version-information-in-the-managed-executable"></a>Informações da versão de tempo de execução no executável gerenciado  
+### <a name="runtime-version-information-in-the-managed-executable"></a>Informações da versão de runtime no executável gerenciado  
 
-O cabeçalho do arquivo PE (executável portátil) de cada aplicativo gerenciado e componente contém informações sobre a versão de tempo de execução com a qual ele foi compilado. O Common Language Runtime usa essas informações para determinar a versão mais provável do tempo de execução em que o aplicativo precisa ser executado.  
+O cabeçalho do arquivo PE (executável portátil) de cada aplicativo gerenciado e componente contém informações sobre a versão de runtime com a qual ele foi compilado. O Common Language Runtime usa essas informações para determinar a versão mais provável do tempo de execução em que o aplicativo precisa ser executado.  
   
-### <a name="runtime-version-information-in-the-application-configuration-file"></a>Informações de versão de tempo de execução estão no arquivo de configuração de aplicativo  
+### <a name="runtime-version-information-in-the-application-configuration-file"></a>Informações de versão de runtime estão no arquivo de configuração de aplicativo  
 
-Além das informações no cabeçalho do arquivo PE, um aplicativo pode ser implantado com um arquivo de configuração de aplicativo que fornece informações de versão do tempo de execução. O arquivo de configuração de aplicativo é um arquivo baseado em XML que é criado pelo desenvolvedor do aplicativo e que é fornecido com ele. O elemento [\<requiredRuntime >](../configure-apps/file-schema/startup/requiredruntime-element.md) da seção [\<startup>](../configure-apps/file-schema/startup/startup-element.md), se existir neste arquivo, especifica quais versões do tempo de execução e quais versões de um componente o aplicativo dá suporte. Você também pode usar esse arquivo para testar a compatibilidade do aplicativo com diferentes versões do tempo de execução.  
+Além das informações no cabeçalho do arquivo PE, um aplicativo pode ser implantado com um arquivo de configuração de aplicativo que fornece informações de versão do runtime. O arquivo de configuração de aplicativo é um arquivo baseado em XML que é criado pelo desenvolvedor do aplicativo e que é fornecido com ele. O elemento [\<requiredRuntime >](../configure-apps/file-schema/startup/requiredruntime-element.md) da seção [\<startup>](../configure-apps/file-schema/startup/startup-element.md), se existir neste arquivo, especifica quais versões do tempo de execução e quais versões de um componente o aplicativo dá suporte. Você também pode usar esse arquivo para testar a compatibilidade do aplicativo com diferentes versões do runtime.  
   
-Código não gerenciado, inclusive aplicativos COM e COM+, podem ter arquivos de configuração de aplicativo que o tempo de execução usa para interagir com código gerenciado. O arquivo de configuração de aplicativo afeta qualquer código gerenciado que você ativar usando COM. O arquivo pode especificar quais versões de tempo de execução têm suporte, bem como redirecionamentos de assembly. Por padrão, aplicativos de interoperabilidade COM que efetuam chamadas para código gerenciado usam a versão mais recente do tempo de execução instalada no computador.  
+Código não gerenciado, inclusive aplicativos COM e COM+, podem ter arquivos de configuração de aplicativo que o runtime usa para interagir com código gerenciado. O arquivo de configuração de aplicativo afeta qualquer código gerenciado que você ativar usando COM. O arquivo pode especificar quais versões de runtime têm suporte, bem como redirecionamentos de assembly. Por padrão, aplicativos de interoperabilidade COM que efetuam chamadas para código gerenciado usam a versão mais recente do runtime instalada no computador.  
   
  Para obter mais informações sobre arquivos de configuração de aplicativo, consulte [Configurando aplicativos](../configure-apps/index.md).  
   
-## <a name="determining-which-version-of-the-runtime-to-load"></a>Determinando a versão do tempo de execução a ser carregada  
+## <a name="determining-which-version-of-the-runtime-to-load"></a>Determinando a versão do runtime a ser carregada  
 
 O Common Language Runtime usa as informações a seguir para determinar qual versão do tempo de execução deve ser carregada para um aplicativo:  
   
-- As versões de tempo de execução que estão disponíveis.  
+- As versões de runtime que estão disponíveis.  
   
-- As versões de tempo de execução com suporte em um aplicativo.  
+- As versões de runtime com suporte em um aplicativo.  
   
-### <a name="supported-runtime-versions"></a>Versões do tempo de execução com suporte  
+### <a name="supported-runtime-versions"></a>Versões do runtime com suporte  
 
-O tempo de execução usa o arquivo de configuração de aplicativo e o cabeçalho do arquivo PE (executável portátil) para determinar a qual versão do tempo de execução um aplicativo dá suporte. Se nenhum arquivo de configuração de aplicativo existir, o tempo de execução carregará a versão de tempo de execução especificada no cabeçalho do arquivo PE do aplicativo, se essa versão estiver disponível.  
+O runtime usa o arquivo de configuração de aplicativo e o cabeçalho do arquivo PE (executável portátil) para determinar a qual versão do runtime um aplicativo dá suporte. Se nenhum arquivo de configuração de aplicativo existir, o runtime carregará a versão de runtime especificada no cabeçalho do arquivo PE do aplicativo, se essa versão estiver disponível.  
   
-Se houver um arquivo de configuração de aplicativo, o tempo de execução determinará a versão do tempo de execução apropriada a ser carregada com base nos resultados do processo a seguir:  
+Se houver um arquivo de configuração de aplicativo, o runtime determinará a versão do runtime apropriada a ser carregada com base nos resultados do processo a seguir:  
   
-1. O tempo de execução examina o elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) no arquivo de configuração de aplicativo. Se uma ou mais das versões com suporte no tempo de execução especificadas no elementos **\<supportedRuntime>** existirem, o tempo de execução carrega a versão de tempo de execução especificada pelo primeiro elementos **\<supportedRuntime>** . Se essa versão não estiver disponível, o tempo de execução examina o próximo elemento  **\<supportedRuntime>** e tenta carregar a versão de tempo de execução especificada nele. Se esta versão do tempo de execução não estiver disponível, os elementos **\<supportedRuntime>** subsequentes serão examinados. Se nenhuma das versões com suporte no tempo de execução estiver disponível, ele não poderá carregar uma versão de tempo de execução e exibirá uma mensagem para o usuário (consulte a etapa 3).  
+1. O tempo de execução examina o elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) no arquivo de configuração de aplicativo. Se uma ou mais das versões com suporte no tempo de execução especificadas no elementos **\<supportedRuntime>** existirem, o tempo de execução carrega a versão de tempo de execução especificada pelo primeiro elementos **\<supportedRuntime>** . Se essa versão não estiver disponível, o tempo de execução examina o próximo elemento  **\<supportedRuntime>** e tenta carregar a versão de tempo de execução especificada nele. Se esta versão do tempo de execução não estiver disponível, os elementos **\<supportedRuntime>** subsequentes serão examinados. Se nenhuma das versões com suporte no runtime estiver disponível, ele não poderá carregar uma versão de runtime e exibirá uma mensagem para o usuário (consulte a etapa 3).  
   
-2. O tempo de execução lê o cabeçalho do arquivo PE do arquivo executável do aplicativo. Se a versão do tempo de execução especificada pelo cabeçalho do arquivo PE estiver disponível, o tempo de execução carregará a versão. Se a versão de tempo de execução especificada não estiver disponível, o tempo de execução procurará por uma versão de tempo de execução determinada pela Microsoft como compatível com a versão de tempo de execução no cabeçalho PE. Se tal versão não for encontrada, o processo continua na etapa 3.  
+2. O runtime lê o cabeçalho do arquivo PE do arquivo executável do aplicativo. Se a versão do runtime especificada pelo cabeçalho do arquivo PE estiver disponível, o runtime carregará a versão. Se a versão de runtime especificada não estiver disponível, o runtime procurará por uma versão de runtime determinada pela Microsoft como compatível com a versão de runtime no cabeçalho PE. Se tal versão não for encontrada, o processo continua na etapa 3.  
   
-3. O tempo de execução exibe uma mensagem informando que a versão de tempo de execução com suporte no aplicativo está indisponível. O tempo de execução não está carregado.  
+3. O runtime exibe uma mensagem informando que a versão de runtime com suporte no aplicativo está indisponível. O runtime não está carregado.  
   
     > [!NOTE]
-    > Você pode suprimir a exibição dessa mensagem usando o valor de NoGuiFromShim na chave do Registro HKLM\Software\Microsoft\\.NETFramework ou usando a variável de ambiente COMPLUS_NoGuiFromShim. Por exemplo, você pode suprimir a mensagem para aplicativos que normalmente não interagem com o usuário, como instalações autônomas ou serviços do Windows. Quando a exibição dessa mensagem é suprimida, o tempo de execução grava uma mensagem no log de eventos.  Defina o valor do Registro NoGuiFromShim como 1 para suprimir esta mensagem para todos os aplicativos em um computador. Outra opção é definir a variável de ambiente COMPLUS_NoGuiFromShim como 1 para suprimir a mensagem para aplicativos executados em um contexto de usuário específico.  
+    > Você pode suprimir a exibição dessa mensagem usando o valor de NoGuiFromShim na chave do Registro HKLM\Software\Microsoft\\.NETFramework ou usando a variável de ambiente COMPLUS_NoGuiFromShim. Por exemplo, você pode suprimir a mensagem para aplicativos que normalmente não interagem com o usuário, como instalações autônomas ou serviços do Windows. Quando a exibição dessa mensagem é suprimida, o runtime grava uma mensagem no log de eventos.  Defina o valor do Registro NoGuiFromShim como 1 para suprimir esta mensagem para todos os aplicativos em um computador. Outra opção é definir a variável de ambiente COMPLUS_NoGuiFromShim como 1 para suprimir a mensagem para aplicativos executados em um contexto de usuário específico.  
   
 > [!NOTE]
-> Depois que uma versão de tempo de execução é carregada, os redirecionamentos de associação de assembly pode especificar que uma versão diferente de um assembly do .NET Framework individual será carregada. Tais redirecionamentos de associação afetam somente o assembly específico que é redirecionado.  
+> Depois que uma versão de runtime é carregada, os redirecionamentos de associação de assembly pode especificar que uma versão diferente de um assembly do .NET Framework individual será carregada. Tais redirecionamentos de associação afetam somente o assembly específico que é redirecionado.  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>Nomes parcialmente qualificados e execução lado a lado do assembly  
 
@@ -122,7 +122,7 @@ publicKeyToken=...,
 |-----------|-----------------|  
 |[Como habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
 |[Configurando o redirecionamento de associação de assembly](configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
-|[Execução lado a lado em processo](in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de tempo de execução lado a lado em processo para executar várias versões do CLR em um único processo.|  
+|[Execução lado a lado em processo](in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de runtime lado a lado em processo para executar várias versões do CLR em um único processo.|  
 |[Assemblies no .NET](../../standard/assembly/index.md)|Fornece uma visão geral conceitual de assemblies.|  
 |[Domínios do aplicativo](../app-domains/application-domains.md)|Fornece uma visão geral conceitual de domínios de aplicativos.|  
   

@@ -85,12 +85,12 @@ O IL Assembler ajuda fornecedores da ferramentas na criação e na implementaç�
 
 Semelhante a outros compiladores que têm o tempo de execução como destino, por exemplo, C# e Visual Basic, o *Ilasm.exe* não produz arquivos de objeto intermediários e não exige um estágio de vinculação para formar um arquivo PE.
 
-O IL Assembler pode expressar todos os metadados existentes e recursos IL das linguagens de programação com o tempo de execução como destino. Isso permite que o código gerenciado escrito em qualquer uma das linguagens de programação seja expresso adequadamente no IL Assembler e compilado com *Ilasm.exe*.
+O IL Assembler pode expressar todos os metadados existentes e recursos IL das linguagens de programação com o runtime como destino. Isso permite que o código gerenciado escrito em qualquer uma das linguagens de programação seja expresso adequadamente no IL Assembler e compilado com *Ilasm.exe*.
 
 > [!NOTE]
 > A compilação poderá falhar se a última linha do código no arquivo de origem .il não tiver espaço em branco à direita ou um caractere de final de linha.
 
-Você pode usar *Ilasm.exe* junto com sua ferramenta complementar, o [*Ildasm.exe*](ildasm-exe-il-disassembler.md). O *Ildasm.exe* usa um arquivo PE que contém o código IL e cria um arquivo de texto adequado como entrada para *Ilasm.exe*. Isso é útil, por exemplo, durante a compilação do código em uma linguagem de programação que não dá suporte a todos os atributos de metadados do tempo de execução. Depois de compilar o código e executar a saída por meio do *Ildasm.exe*, o arquivo de texto IL resultante poderá ser editado manualmente para adicionar os atributos ausentes. Em seguida, é possível executar esse arquivo de texto por meio do *Ilasm.exe* para produzir um arquivo executável final.
+Você pode usar *Ilasm.exe* junto com sua ferramenta complementar, o [*Ildasm.exe*](ildasm-exe-il-disassembler.md). O *Ildasm.exe* usa um arquivo PE que contém o código IL e cria um arquivo de texto adequado como entrada para *Ilasm.exe*. Isso é útil, por exemplo, durante a compilação do código em uma linguagem de programação que não dá suporte a todos os atributos de metadados do runtime. Depois de compilar o código e executar a saída por meio do *Ildasm.exe*, o arquivo de texto IL resultante poderá ser editado manualmente para adicionar os atributos ausentes. Em seguida, é possível executar esse arquivo de texto por meio do *Ilasm.exe* para produzir um arquivo executável final.
 
 Também é possível usar essa técnica para produzir um único arquivo PE com base em vários arquivos PE gerados originalmente por compiladores diferentes.
 

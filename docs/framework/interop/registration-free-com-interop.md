@@ -45,12 +45,12 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
   
 1. Para um componente COM participar da ativação sem registro, ele deve ser implantado como um assembly lado a lado. Assemblies de lado a lado são não gerenciados.  Para obter mais informações, confira [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies) (Usando assemblies lado a lado).  
   
-     Para usar os assemblies com lado a lado COM, um desenvolvedor de aplicativos baseados em .NET em sua empresa deve fornecer um manifesto de aplicativo contendo as informações de associação e a ativação. O suporte para assemblies lado a lado não gerenciados é criado no sistema operacional Windows XP. O tempo de execução de COM, com suporte pelo sistema operacional, verifica um manifesto de aplicativo para obter informações de ativação quando o componente está sendo ativado não está no Registro.  
+     Para usar os assemblies com lado a lado COM, um desenvolvedor de aplicativos baseados em .NET em sua empresa deve fornecer um manifesto de aplicativo contendo as informações de associação e a ativação. O suporte para assemblies lado a lado não gerenciados é criado no sistema operacional Windows XP. O runtime de COM, com suporte pelo sistema operacional, verifica um manifesto de aplicativo para obter informações de ativação quando o componente está sendo ativado não está no Registro.  
   
      Ativação sem registro é opcional para componentes COM instalados no Windows XP. Para obter instruções detalhadas de como adicionar um assembly lado a lado a um aplicativo, confira [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies) (Usando assemblies lado a lado).  
   
     > [!NOTE]
-    > A execução lado a lado é um recurso do .NET que habilita várias versões do tempo de execução e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador, ao mesmo tempo. Execução lado a lado e assemblies lado a lado são mecanismos diferentes para fornecer funcionalidade de lado a lado.  
+    > A execução lado a lado é um recurso do .NET que habilita várias versões do runtime e várias versões de aplicativos e componentes que usam uma versão do runtime no mesmo computador, ao mesmo tempo. Execução lado a lado e assemblies lado a lado são mecanismos diferentes para fornecer funcionalidade de lado a lado.  
   
 ## <a name="see-also"></a>Consulte também
 

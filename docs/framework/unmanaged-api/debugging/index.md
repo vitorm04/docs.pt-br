@@ -14,7 +14,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73103306"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Depuração (referência de API não gerenciada)
-A API de depuração permite a um depurador depurar código que é executado no ambiente de tempo de execução de linguagem comum (CLR). O código a ser depurado pode ser qualquer tipo de código suportado pelo CLR.  
+A API de depuração permite a um depurador depurar código que é executado no ambiente de Common Language runtime (CLR). O código a ser depurado pode ser qualquer tipo de código suportado pelo CLR.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Depurando coclasses](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

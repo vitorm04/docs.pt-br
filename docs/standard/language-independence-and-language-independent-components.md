@@ -191,7 +191,7 @@ Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS
 |Tipo não compatível|Descrição|Alternativa compatível com CLS|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Tipo de dados inteiro com sinal de 8 bits|<xref:System.Int16>|
-|<xref:System.TypedReference>|Ponteiro para um objeto e seu tipo de tempo de execução|Nenhum|
+|<xref:System.TypedReference>|Ponteiro para um objeto e seu tipo de runtime|Nenhum|
 |<xref:System.UInt16>|Inteiro sem sinal de 16 bits|<xref:System.Int32>|
 |<xref:System.UInt32>|Inteiro sem sinal de 32 bits|<xref:System.Int64>|
 |<xref:System.UInt64>|Inteiro sem sinal de 64 bits|<xref:System.Int64> (pode estourar), <xref:System.Numerics.BigInteger> ou <xref:System.Double>|

@@ -29,7 +29,7 @@ Se você pretende expor os tipos em um assembly para aplicativos COM, considere 
   
      Somente os tipos públicos em um assembly são registrados e exportados para a biblioteca de tipos. Como resultado, somente os tipos públicos são visíveis para COM.  
   
-     Tipos gerenciados expõem recursos para outro código gerenciado que pode não ser exposto a COM. Por exemplo, campos de constantes, construtores com parâmetros e métodos estáticos não são expostos a clientes COM. Além disso, como o tempo de execução realiza marshaling de dados dentro e fora de um tipo, os dados podem ser copiados ou transformados.  
+     Tipos gerenciados expõem recursos para outro código gerenciado que pode não ser exposto a COM. Por exemplo, campos de constantes, construtores com parâmetros e métodos estáticos não são expostos a clientes COM. Além disso, como o runtime realiza marshaling de dados dentro e fora de um tipo, os dados podem ser copiados ou transformados.  
   
 - Propriedades, métodos, campos e eventos devem ser públicos.  
   

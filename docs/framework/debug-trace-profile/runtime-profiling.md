@@ -1,5 +1,5 @@
 ---
-title: Criação de perfil do tempo de execução
+title: Criação de perfil do runtime
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters
@@ -18,7 +18,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73121558"
 ---
-# <a name="runtime-profiling"></a>Criação de perfil do tempo de execução
+# <a name="runtime-profiling"></a>Criação de perfil do runtime
 Criação de perfil é um método de coleta de dados de desempenho em qualquer cenário de desenvolvimento ou de implantação. Esta seção é para desenvolvedores e administradores de sistema que desejam coletar informações sobre o desempenho do aplicativo.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Acompanhamento de desempenho usando o Monitor de Desempenho (Perfmon.exe)  
@@ -44,7 +44,7 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
   
      Na caixa de listagem **Instâncias do objeto selecionado**, clique em um nome do aplicativo para monitorar o contador de desempenho para esse aplicativo.  
   
-     Para diferenciar as várias versões do tempo de execução ou para desfazer a ambiguidade entre vários aplicativos com o mesmo nome, você também deve modificar uma chave do Registro. Para obter mais informações, consulte [Contadores de desempenho e aplicativos lado a lado em processo](performance-counters-and-in-process-side-by-side-applications.md).  
+     Para diferenciar as várias versões do runtime ou para desfazer a ambiguidade entre vários aplicativos com o mesmo nome, você também deve modificar uma chave do Registro. Para obter mais informações, consulte [Contadores de desempenho e aplicativos lado a lado em processo](performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
 > Quando novos contadores de desempenho são instalados enquanto o console de desempenho está em execução, pare e reinicie o console de desempenho para tornar os novos contadores visíveis.  

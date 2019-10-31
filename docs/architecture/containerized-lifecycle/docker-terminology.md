@@ -4,7 +4,7 @@ description: Aprenda a terminologia básica usada todos os dias ao trabalhar com
 ms.date: 02/15/2019
 ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68673533"

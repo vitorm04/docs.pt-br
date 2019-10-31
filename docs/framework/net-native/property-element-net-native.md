@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128204"
 ---
 # <a name="property-element-net-native"></a>Elemento de > de propriedade \<(.NET Native)
-Aplica a política de reflexão de tempo de execução a uma propriedade.  
+Aplica a política de reflexão de runtime a uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,8 +30,8 @@ Aplica a política de reflexão de tempo de execução a uma propriedade.
 |---------------|--------------------|-----------------|  
 |`Name`|Geral|Atributo obrigatório. Especifica o nome da propriedade.|  
 |`Browse`|Reflexão|Atributo opcional. Controla consultas para obter informações sobre a propriedade ou para enumerá-la, mas não permite qualquer acesso dinâmico no tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do tempo de execução à propriedade para habilitar programação dinâmica. Essa política garante que uma propriedade pode ser definida ou recuperada dinamicamente no tempo de execução.|  
-|`Serialize`|Serialização|Atributo opcional. Controla o acesso do tempo de execução a uma propriedade para habilitar as instâncias de tipo a serem serializadas por bibliotecas como o serializador Newtonsoft JSON ou a ser usado para a associação de dados.|  
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do runtime à propriedade para habilitar programação dinâmica. Essa política garante que uma propriedade pode ser definida ou recuperada dinamicamente no tempo de execução.|  
+|`Serialize`|Serialização|Atributo opcional. Controla o acesso do runtime a uma propriedade para habilitar as instâncias de tipo a serem serializadas por bibliotecas como o serializador Newtonsoft JSON ou a ser usado para a associação de dados.|  
   
 ## <a name="name-attribute"></a>Atributo de nome  
   
@@ -56,7 +56,7 @@ Aplica a política de reflexão de tempo de execução a uma propriedade.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
- Se a política da propriedade não for definida explicitamente, ela herdará a política de tempo de execução do seu elemento pai.  
+ Se a política da propriedade não for definida explicitamente, ela herdará a política de runtime do seu elemento pai.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa reflexão para instanciar um objeto `Book` e exibir seus valores de propriedade. O arquivo default.rd.xml original para o projeto aparece da seguinte maneira:  

@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128498"
 ---
 # <a name="event-element-net-native"></a>Elemento de > de evento \<(.NET Native)
-Aplica a política de reflexão de tempo de execução a um evento.  
+Aplica a política de reflexão de runtime a um evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,7 +29,7 @@ Aplica a política de reflexão de tempo de execução a um evento.
 |---------------|--------------------|-----------------|  
 |`Name`|Geral|Atributo obrigatório. Especifica o nome do evento.|  
 |`Browse`|Reflexão|Atributo opcional. Controla consultas para obter informações sobre o evento ou para enumerá-lo, mas não permite qualquer acesso dinâmico no tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do tempo de execução ao evento para habilitar programação dinâmica. Essa política garante que um evento pode ser tratado dinamicamente no tempo de execução.|  
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do runtime ao evento para habilitar programação dinâmica. Essa política garante que um evento pode ser tratado dinamicamente no tempo de execução.|  
   
 ## <a name="name-attribute"></a>Atributo de nome  
   
@@ -54,7 +54,7 @@ Aplica a política de reflexão de tempo de execução a um evento.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
- Se uma política do evento não for definida explicitamente, ele herdará a política de tempo de execução do seu elemento pai.  
+ Se uma política do evento não for definida explicitamente, ele herdará a política de runtime do seu elemento pai.  
   
 ## <a name="see-also"></a>Consulte também
 

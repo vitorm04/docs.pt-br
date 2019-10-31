@@ -53,7 +53,7 @@ Determina se o Common Language Runtime calcula códigos de hash para cadeias de 
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
+|`runtime`|Contém informações sobre opções de inicialização do runtime.|  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, a classe <xref:System.StringComparer> e o método <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> usam um único algoritmo de hash que produz um código hash consistente entre domínios de aplicativo. Isso é equivalente a definir o atributo `enabled` do elemento `<UseRandomizedStringHashAlgorithm>` como `0`. Esse é o algoritmo de hash usado no .NET Framework 4.  

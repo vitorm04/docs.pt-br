@@ -27,7 +27,7 @@ Veja a seguir as alterações em detalhes:
 
 ### <a name="handling-the-product-versioning-changes"></a>Como lidar com as alterações de controle de versão de produto
 
-Em geral, os aplicativos devem depender das técnicas recomendadas para detecção de itens como a versão de tempo de execução do .NET Framework e o diretório de instalação:
+Em geral, os aplicativos devem depender das técnicas recomendadas para detecção de itens como a versão de runtime do .NET Framework e o diretório de instalação:
 
 - Para detectar a versão de tempo de execução do .NET Framework, confira [How to: Determine Which .NET Framework Versions Are Installed](how-to-determine-which-versions-are-installed.md) (Como determinar quais versões do .NET Framework estão instaladas).
 

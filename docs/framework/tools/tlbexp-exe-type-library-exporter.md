@@ -58,7 +58,7 @@ tlbexp assemblyName [options]
  Tlbexp.exe gera uma biblioteca de tipos que contém definições dos tipos definidos no assembly. Aplicativos como o Visual Basic 6.0 podem usar a biblioteca de tipos gerada na associação com os tipos do .NET definidos no assembly.  
   
 > [!IMPORTANT]
-> Não é possível usar Tlbexp.exe para exportar arquivos de metadados do Windows (.winmd). Não há suporte para a exportação de assemblies do Tempo de Execução do Windows.  
+> Não é possível usar Tlbexp.exe para exportar arquivos de metadados do Windows (.winmd). Não há suporte para a exportação de assemblies do Windows Runtime.  
   
  Todo o assembly é convertido de uma só vez. Não é possível usar Tlbexp.exe para gerar informações de tipo para um subconjunto dos tipos definidos em um assembly.  
   

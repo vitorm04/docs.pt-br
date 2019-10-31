@@ -7,7 +7,7 @@ ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
 ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
 ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69660483"

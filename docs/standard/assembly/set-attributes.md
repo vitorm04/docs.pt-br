@@ -85,7 +85,7 @@ Também é possível usar atributos de manifesto do assembly para fornecer infor
 
 |Atributo de manifesto do assembly|Descrição|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyConfigurationAttribute>|O valor de cadeia de caracteres que indica a configuração do assembly, como Retail ou Depuração. O tempo de execução não usa esse valor.|
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|O valor de cadeia de caracteres que indica a configuração do assembly, como Retail ou Depuração. O runtime não usa esse valor.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|O valor de cadeia de caracteres que especifica um alias padrão a ser usado ao fazer referências de assemblies. Esse valor fornece um nome amigável quando o nome do assembly em si não o for (como um valor GUID). Esse valor também pode ser usado como uma forma abreviada do nome completo do assembly.|
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|O valor de cadeia de caracteres que especifica uma breve descrição que resume a natureza e o objetivo do assembly.|
 |<xref:System.Reflection.AssemblyTitleAttribute>|O valor de cadeia de caracteres que especifica um nome amigável para o assembly. Por exemplo, um assembly chamado *comdlg* pode ter o título controle de caixa de diálogo comum da Microsoft.|

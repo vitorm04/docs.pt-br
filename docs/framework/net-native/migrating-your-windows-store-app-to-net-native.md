@@ -25,13 +25,13 @@ ms.locfileid: "73128318"
 
 <a name="Runtime"></a>
 
-## <a name="general-runtime-differences"></a>Diferenças de tempo de execução geral
+## <a name="general-runtime-differences"></a>Diferenças de runtime geral
 
 - Exceções, como <xref:System.TypeLoadException>, que são lançadas pelo compilador JIT quando um aplicativo é executado no Common Language Runtime (CLR) geralmente resultam em erros de tempo de compilação quando processadas pelo .NET Native.
 
 - Não chame o método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> de um thread de interface do usuário do aplicativo. Isso pode resultar em um deadlock no .NET Native.
 
-- Não conte com ordenação de invocação do construtor de classe estática. Em .NET Native, a ordem de invocação é diferente da ordem no tempo de execução padrão. (Mesmo com o tempo de execução padrão, você não deve confiar na ordem de execução de construtores de classe estáticos.)
+- Não conte com ordenação de invocação do construtor de classe estática. Em .NET Native, a ordem de invocação é diferente da ordem no tempo de execução padrão. (Mesmo com o runtime padrão, você não deve confiar na ordem de execução de construtores de classe estáticos.)
 
 - Loops infinitos sem fazer uma chamada (por exemplo, `while(true);`) em qualquer thread interromper o aplicativo. Da mesma forma, esperas grandes ou infinitas podem interromper o aplicativo.
 
@@ -62,10 +62,10 @@ A configuração padrão para .NET Native é suficiente para a maioria dos desen
 
 - Algumas construções <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> e <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> não podem ser determinadas estaticamente.
 
-- Como o compilador não pode determinar as instanciações, um tipo genérico sobre o qual você deseja refletir deverá ser especificado por diretivas de tempo de execução. Isso não é apenas porque todo o código deve ser incluído, mas sim porque a reflexão em tipos genéricos pode formar um ciclo infinito (por exemplo, quando um método genérico é invocado em um tipo genérico).
+- Como o compilador não pode determinar as instanciações, um tipo genérico sobre o qual você deseja refletir deverá ser especificado por diretivas de runtime. Isso não é apenas porque todo o código deve ser incluído, mas sim porque a reflexão em tipos genéricos pode formar um ciclo infinito (por exemplo, quando um método genérico é invocado em um tipo genérico).
 
 > [!NOTE]
-> Diretivas de tempo de execução são definidas em um arquivo de diretivas de tempo de execução (.rd.xml). Para obter mais informações sobre como usar essa arquivo, consulte [Introdução](getting-started-with-net-native.md). Para obter informações sobre as diretivas de tempo de execução, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
+> Diretivas de runtime são definidas em um arquivo de diretivas de runtime (.rd.xml). Para obter mais informações sobre como usar essa arquivo, consulte [Introdução](getting-started-with-net-native.md). Para obter informações sobre as diretivas de tempo de execução, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native também inclui ferramentas de criação de perfil que ajudam o desenvolvedor a determinar quais tipos fora do conjunto padrão devem dar suporte à reflexão.
 
@@ -270,7 +270,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
 
  **Invocação de plataforma e compatibilidade de interoperabilidade COM**
 
- A maioria dos cenários de invocação de plataforma e de interoperabilidade COM ainda tem suporte no .NET Native. Em especial, toda a interoperabilidade com APIs do Tempo de Execução do Windows (WinRT) APIs e todo o marshaling necessário para o Tempo de Execução do Windows são suportados. Isso inclui suporte a marshaling para:
+ A maioria dos cenários de invocação de plataforma e de interoperabilidade COM ainda tem suporte no .NET Native. Em especial, toda a interoperabilidade com APIs do Windows Runtime (WinRT) APIs e todo o marshaling necessário para o Windows Runtime são suportados. Isso inclui suporte a marshaling para:
 
 - Matrizes (incluindo <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)
 

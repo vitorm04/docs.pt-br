@@ -14,7 +14,7 @@ ms.locfileid: "73116246"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<elemento de > NetFx40_LegacySecurityPolicy
 
-Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.
+Especifica se o runtime usa a política de CAS (Segurança de Acesso do Código) herdada.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
@@ -53,7 +53,7 @@ nenhuma.
 |Elemento|Descrição|
 |-------------|-----------------|
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|
+|`runtime`|Contém informações sobre opções de inicialização do runtime.|
 
 ## <a name="remarks"></a>Comentários
 

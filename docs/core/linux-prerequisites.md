@@ -19,7 +19,7 @@ Este artigo mostra as dependências necessárias para desenvolver aplicativos .N
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
-> O pacote do SDK do .NET Core não é necessário para servidores/ambientes de produção. Apenas o pacote de tempo de execução do .NET Core é necessário para aplicativos implantados em ambientes de produção. O tempo de execução do .NET Core é implantado com aplicativos como parte de uma implantação independente. No entanto, ele deve ser implantado para aplicativos implantados dependentes da estrutura separadamente. Para obter mais informações sobre os tipos de implantação independentes e dependentes da estrutura, consulte [Implantação de aplicativos .NET Core](./deploying/index.md). Consulte também [Aplicativos Linux independentes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) para obter diretrizes específicas.
+> O pacote do SDK do .NET Core não é necessário para servidores/ambientes de produção. Apenas o pacote de runtime do .NET Core é necessário para aplicativos implantados em ambientes de produção. O runtime do .NET Core é implantado com aplicativos como parte de uma implantação independente. No entanto, ele deve ser implantado para aplicativos implantados dependentes da estrutura separadamente. Para obter mais informações sobre os tipos de implantação independentes e dependentes da estrutura, consulte [Implantação de aplicativos .NET Core](./deploying/index.md). Consulte também [Aplicativos Linux independentes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) para obter diretrizes específicas.
 
 ## <a name="supported-linux-versions"></a>Versões do Linux com suporte
 

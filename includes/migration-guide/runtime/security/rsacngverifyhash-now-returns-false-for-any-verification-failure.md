@@ -14,5 +14,5 @@ ms.locfileid: "72887722"
 |Sugestão|Qualquer código cuja execução dependa da identificação de <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> deverá ser executado se a validação falhar e o método retornar **False**.|
 |Escopo|Secundário|
 |Version|4.6.2|
-|Digite|Tempo de execução|
+|Digite|Runtime|
 |APIs afetadas|<ul><li><xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|

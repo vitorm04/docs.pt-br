@@ -135,15 +135,15 @@ Um único repositório pode conter variantes de plataforma, como uma imagem do L
 Ao especificar uma marcação, você direciona a uma plataforma que é explícita, como nos seguintes casos:
 
 - `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
-  Destinos: .NET Core 2.2 somente em tempo de execução no Linux
+  Destinos: .NET Core 2.2 somente em runtime no Linux
 
 - `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
-  Destinos: .NET Core 2.2 somente em tempo de execução no Windows Nano Server
+  Destinos: .NET Core 2.2 somente em runtime no Windows Nano Server
 
 Mas, se você especificar o mesmo nome de imagem, mesmo com a mesma marca, as imagens para várias arquiteturas (como a imagem `aspnetcore`) usarão a versão do Linux ou do Windows, dependendo do sistema operacional do host do Docker em que você esteja implantando, conforme mostrado no exemplo a seguir:
 
 - `microsoft/dotnet:2.2-aspnetcore-runtime` \
-  Várias arquiteturas: .NET Core 2.2 somente em tempo de execução no Linux ou no Windows Nano Server, dependendo do sistema operacional do host do Docker
+  Várias arquiteturas: .NET Core 2.2 somente em runtime no Linux ou no Windows Nano Server, dependendo do sistema operacional do host do Docker
 
 Dessa forma, ao efetuar pull de uma imagem de um host do Windows, será efetuado o pull da variante do Windows e, ao efetuar pull do mesmo nome de imagem de um host do Linux, será efetuado pull da variante do Linux.
 
@@ -165,7 +165,7 @@ Resumindo, os builds de vários estágios permitem dividir a criação em "fases
 
 1. usar uma imagem base do SDK (não importa quão grande), com todos os componentes necessários para criar e publicar o aplicativo em uma pasta e, em seguida,
 
-2. usar uma imagem base pequena, somente em tempo de execução e copiar a pasta de publicação do estágio anterior para produzir uma pequena imagem final.
+2. usar uma imagem base pequena, somente em runtime e copiar a pasta de publicação do estágio anterior para produzir uma pequena imagem final.
 
 Provavelmente a melhor maneira de entender os vários estágios é percorrer um Dockerfile detalhadamente, linha por linha, então, vamos começar com o Dockerfile inicial criado pelo Visual Studio ao adicionar o suporte ao Docker a um projeto e entraremos em algumas otimizações mais tarde.
 

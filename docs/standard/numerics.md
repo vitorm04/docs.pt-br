@@ -91,7 +91,7 @@ Os tipos habilitados para SIMD do .NET incluem o seguinte:
   > [!NOTE]
   > O tipo <xref:System.Numerics.Vector%601> não está incluído no .NET Framework. Você deve instalar o pacote [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) do NuGet para obter acesso a esse tipo.
   
-Os tipos habilitados para SIMD são implementados de modo que possam ser usados com hardware não habilitados para SIMD ou compiladores JIT. Para aproveitar instruções SIMD, seus aplicativos de 64 bits devem ser executados pelo tempo de execução que usa o compilador RyuJIT, que está incluído no .NET Core e no .NET Framework 4.6 e versões posteriores. Ele adiciona suporte a SIMD quando tem processadores de 64 bits como destino.
+Os tipos habilitados para SIMD são implementados de modo que possam ser usados com hardware não habilitados para SIMD ou compiladores JIT. Para aproveitar instruções SIMD, seus aplicativos de 64 bits devem ser executados pelo runtime que usa o compilador RyuJIT, que está incluído no .NET Core e no .NET Framework 4.6 e versões posteriores. Ele adiciona suporte a SIMD quando tem processadores de 64 bits como destino.
 
 ## <a name="see-also"></a>Consulte também
 

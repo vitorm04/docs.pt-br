@@ -33,7 +33,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
  Os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A> são projetados para trabalhar juntos. Usar um sem o outro pode produzir resultados indeterminados.  
   
 ## <a name="full-garbage-collection"></a>Coleta de lixo completa  
- O tempo de execução resultará em uma coleta de lixo completa quando qualquer um dos cenários a seguir for verdadeiro:  
+ O runtime resultará em uma coleta de lixo completa quando qualquer um dos cenários a seguir for verdadeiro:  
   
 - Foi promovida memória suficiente para a geração 2 para gerar a próxima coleta de geração 2.  
   
@@ -43,7 +43,7 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
   
  Os limites que você especificar no método <xref:System.GC.RegisterForFullGCNotification%2A> serão aplicados aos primeiros dois cenários. No entanto, no primeiro cenário, você nem sempre receberá a notificação no momento proporcional aos valores de limite que você especificar por dois motivos:  
   
-- O tempo de execução não verifica todas as alocações de objeto pequeno (por motivos de desempenho).  
+- O runtime não verifica todas as alocações de objeto pequeno (por motivos de desempenho).  
   
 - Somente as coletas da geração 1 promovem a memória na geração 2.  
   
@@ -57,9 +57,9 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
 |`maxGenerationThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos promovidos na geração 2.|  
 |`largeObjectHeapThreshold`|Um número entre 1 e 99 que especifica quando a notificação deve ser gerada com base nos objetos alocados no heap de objetos grandes.|  
   
- Se você especificar um valor muito alto, a probabilidade de receber uma notificação será muito elevada. No entanto, pode demorar muito até que o tempo de execução gere uma coleta. Se você mesmo induzir uma coleta, poderá recuperar mais objetos que seriam recuperados se o tempo de execução gerasse a coleta.  
+ Se você especificar um valor muito alto, a probabilidade de receber uma notificação será muito elevada. No entanto, pode demorar muito até que o runtime gere uma coleta. Se você mesmo induzir uma coleta, poderá recuperar mais objetos que seriam recuperados se o runtime gerasse a coleta.  
   
- Se você especificar um valor muito baixo, o tempo de execução poderá gerar a coleta antes de você ter tido tempo suficiente para ser notificado.  
+ Se você especificar um valor muito baixo, o runtime poderá gerar a coleta antes de você ter tido tempo suficiente para ser notificado.  
   
 ## <a name="example"></a>Exemplo  
   

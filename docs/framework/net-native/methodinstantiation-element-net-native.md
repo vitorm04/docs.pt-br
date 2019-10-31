@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128321"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<elemento de > MethodInstantiation (.NET Native)
-Aplica a política de reflexão de tempo de execução a um método genérico construído.  
+Aplica a política de reflexão de runtime a um método genérico construído.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,7 +33,7 @@ Aplica a política de reflexão de tempo de execução a um método genérico co
 |`Signature`|Geral|Atributo opcional. Especifica os parâmetros nomeados do método. Vários parâmetros nomeados são separados por vírgulas. O atributo `Signature` é usado para diferenciar métodos sobrecarregados.|  
 |`Arguments`|Geral|Atributo obrigatório. Especifica os argumentos de tipo genérico. Se houver vários parâmetros, eles são separados por vírgulas.|  
 |`Browse`|Reflexão|Atributo opcional. Controla consultas para obter informações sobre o método ou para enumerá-lo, mas não permite qualquer invocação dinâmica no tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do tempo de execução a um construtor ou método para habilitar a programação dinâmica. Essa política garante que um membro pode ser invocado dinamicamente no tempo de execução.|  
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do runtime a um construtor ou método para habilitar a programação dinâmica. Essa política garante que um membro pode ser invocado dinamicamente no tempo de execução.|  
   
 ## <a name="name-attribute"></a>Atributo de nome  
   

@@ -109,7 +109,7 @@ O número de limites de processo entre o chamador e o receptor é irrelevante; a
 
 ### <a name="managed-remoting"></a>Comunicação remota gerenciada
 
-O tempo de execução também fornece comunicação remota gerenciada, que pode ser usada para estabelecer um canal de comunicação entre os objetos gerenciados entre limites de processo e de host. A comunicação remota gerenciada pode acomodar um firewall entre os componentes de comunicação, como mostra a ilustração a seguir:
+O runtime também fornece comunicação remota gerenciada, que pode ser usada para estabelecer um canal de comunicação entre os objetos gerenciados entre limites de processo e de host. A comunicação remota gerenciada pode acomodar um firewall entre os componentes de comunicação, como mostra a ilustração a seguir:
 
 ![SOAP ou TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Chamadas remotas através de firewalls usando SOAP ou a classe TcpChannel") Chamadas remotas entre firewalls usando SOAP ou a classe TcpChannel
 

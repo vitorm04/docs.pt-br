@@ -77,7 +77,7 @@ As ferramentas do .NET Core são [aplicativos dependentes da estrutura](../deplo
 
 * Um aplicativo efetua roll forward até a versão de patch mais recente da versão principal e secundária especificadas.
 * Se não houver nenhum tempo de execução correspondente com um número de versão principal e secundária correspondente, a próxima versão secundária mais alta será usada.
-* O roll forward não ocorre entre versões prévias do tempo de execução ou entre versões prévias e versões de lançamento. Portanto, as ferramentas do .NET Core criadas usando versões prévias devem ser recriadas e republicadas pelo autor e reinstaladas.
+* O roll forward não ocorre entre versões prévias do runtime ou entre versões prévias e versões de lançamento. Portanto, as ferramentas do .NET Core criadas usando versões prévias devem ser recriadas e republicadas pelo autor e reinstaladas.
 
 O roll-forward não ocorrerá por padrão em dois cenários comuns:
 

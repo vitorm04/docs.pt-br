@@ -30,7 +30,7 @@ ms.locfileid: "73039154"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de arquivos de configuração para o .NET Framework
 
-Arquivos de configuração são arquivos XML padrão que você pode usar para alterar as configurações e definir diretivas para seus aplicativos. O esquema de configuração do .NET Framework consiste em elementos que você pode usar em arquivos de configuração para controlar o comportamento de seus aplicativos. O sumário desta seção reflete a hierarquia de esquema para inicialização, tempo de execução, rede e outros tipos de configuração.
+Arquivos de configuração são arquivos XML padrão que você pode usar para alterar as configurações e definir diretivas para seus aplicativos. O esquema de configuração do .NET Framework consiste em elementos que você pode usar em arquivos de configuração para controlar o comportamento de seus aplicativos. O sumário desta seção reflete a hierarquia de esquema para inicialização, runtime, rede e outros tipos de configuração.
 
 Para obter informações sobre os tipos, o formato e o local dos arquivos de configuração, consulte [configurar aplicativos](../index.md). Familiarize-se com XML para editar os arquivos de configuração diretamente.
 

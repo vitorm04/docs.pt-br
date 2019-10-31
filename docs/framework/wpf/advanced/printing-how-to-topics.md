@@ -32,7 +32,7 @@ Os tópicos nesta seção demonstram como usar os recursos de gerenciamento do s
  Instruções para gerar uma lista de impressoras que contém certas características.  
   
  [Obter propriedades do objeto do sistema de impressão sem reflexão](how-to-get-print-system-object-properties-without-reflection.md)  
- Instruções sobre como descobrir as propriedades do objeto do sistema de impressão no tempo de execução e seus tipos.  
+ Instruções sobre como descobrir as propriedades do objeto do sistema de impressão no runtime e seus tipos.  
   
  [Imprimir arquivos XPS com programação](how-to-programmatically-print-xps-files.md)  
  Instruções para impressão rápida de arquivos XPS (XML Paper Specification) sem a necessidade de um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  

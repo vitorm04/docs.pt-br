@@ -46,7 +46,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 |-------------|-----------------|  
 |[\<dependentAssembly>](dependentassembly-element.md)|Encapsula a política de associação e o local do assembly para um assembly. Use uma marcação **\<dependentAssembly >** para cada assembly.|  
 |[\<probing>](probing-element.md)|Especifica subdiretórios que o Common Language Runtime pesquisa ao carregar assemblies.|  
-|[\<publisherPolicy>](publisherpolicy-element.md)|Especifica se o tempo de execução aplica a política do editor.|  
+|[\<publisherPolicy>](publisherpolicy-element.md)|Especifica se o runtime aplica a política do editor.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

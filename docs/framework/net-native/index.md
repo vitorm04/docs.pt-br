@@ -52,10 +52,10 @@ Mas .NET Native envolve mais do que uma compilação para código nativo. Ele tr
 
 ||.NET Nativo|C++|
 |-|----------------------------------------------------------------|-----------|
-|Libraries|O .NET Framework + Tempo de Execução do Windows|Win32 + Tempo de Execução do Windows|
+|Libraries|O .NET Framework + Windows Runtime|Win32 + Windows Runtime|
 |Compilador|Compilador de otimização de UTC|Compilador de otimização de UTC|
 |Implantado|Binários prontos para execução|Binários prontos para execução (ASM)|
-|Tempo de execução|MRT.dll (tempo de execução de CLR mínimo)|CRT.dll (tempo de execução C)|
+|Runtime|MRT.dll (runtime de CLR mínimo)|CRT.dll (runtime C)|
 
 Para aplicativos do Windows para Windows 10, carregue os binários de compilação de código do .NET Native nos pacotes do aplicativo (arquivos .appx) para a Windows Store.
 

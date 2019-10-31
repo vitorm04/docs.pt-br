@@ -126,7 +126,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 Nesse caso, a imagem é baseada na versão 2.2 da imagem oficial do Docker do ASP.NET Core (com várias arquiteturas para Linux e Windows), de acordo com a linha `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Para obter mais informações sobre esse tópico, confira a página [Imagem do Docker do ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) e a página [Imagem do Docker do .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)).
 
-No DockerFile, você também pode instruir o Docker a escutar na porta TCP que usará em tempo de execução (como a porta 80).
+No DockerFile, você também pode instruir o Docker a escutar na porta TCP que usará em runtime (como a porta 80).
 
 Você pode especificar mais definições de configurações no Dockerfile, dependendo da linguagem e da estrutura usadas. Por exemplo, a linha `ENTRYPOINT` com `["dotnet", "MySingleContainerWebApp.dll"]` instrui o Docker a executar um aplicativo do .NET Core. Se você estiver usando o SDK e a CLI do .NET Core (`dotnet CLI`) para criar e executar o aplicativo do .NET, essa configuração será diferente. O essencial aqui é que a linha ENTRYPOINT e outras configurações dependem da linguagem e da plataforma que você escolher para seu aplicativo.
 

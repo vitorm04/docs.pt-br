@@ -18,13 +18,13 @@ ms.locfileid: "73123207"
 # <a name="runtime-callable-wrapper"></a>RCW (Runtime Callable Wrapper)
 O common language runtime expõe objetos COM através de um proxy chamado RCW (Runtime Callable Wrapper). Embora o RCW pareça ser um objeto comum para clientes .NET, a função principal dele é realizar marshaling de chamadas entre um cliente .NET e um objeto COM.  
   
- O tempo de execução cria exatamente um RCW para cada objeto COM, independentemente do número de referências que existem nesse objeto. O tempo de execução mantém um único RCW por processo para cada objeto.  Se você criar um RCW em um domínio de aplicativo ou apartment e, em seguida, passar uma referência a outro domínio de aplicativo ou apartment, um proxy para o primeiro objeto será usado.  Conforme mostra a ilustração a seguir, qualquer número de clientes pode conter uma referência a objetos COM que expõem interfaces INew e INewer.  
+ O runtime cria exatamente um RCW para cada objeto COM, independentemente do número de referências que existem nesse objeto. O runtime mantém um único RCW por processo para cada objeto.  Se você criar um RCW em um domínio de aplicativo ou apartment e, em seguida, passar uma referência a outro domínio de aplicativo ou apartment, um proxy para o primeiro objeto será usado.  Conforme mostra a ilustração a seguir, qualquer número de clientes pode conter uma referência a objetos COM que expõem interfaces INew e INewer.  
 
 A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Runtime Callable Wrapper):
 
  ![Processo para acessar objetos COM por meio do RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
 
- Usando metadados derivados de uma biblioteca de tipos, o tempo de execução cria o objeto COM que está sendo chamado e um wrapper para esse objeto. Cada RCW mantém um cache de ponteiros de interface no objeto COM que ele encapsula e, além disso, libera sua referência no objeto COM quando o RCW não é mais necessário. O tempo de execução executa a coleta de lixo no RCW.  
+ Usando metadados derivados de uma biblioteca de tipos, o runtime cria o objeto COM que está sendo chamado e um wrapper para esse objeto. Cada RCW mantém um cache de ponteiros de interface no objeto COM que ele encapsula e, além disso, libera sua referência no objeto COM quando o RCW não é mais necessário. O runtime executa a coleta de lixo no RCW.  
   
  Entre outras atividades, o RCW realiza marshaling de dados entre código gerenciado e não gerenciado, em nome do objeto encapsulado. Especificamente, o RCW fornece marshaling para argumentos de método e valores retornados do método sempre que o cliente e o servidor têm representações diferentes dos dados transmitidos entre eles.  
   

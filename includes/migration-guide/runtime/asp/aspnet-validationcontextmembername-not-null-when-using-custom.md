@@ -1,7 +1,7 @@
 ---
 ms.openlocfilehash: 3b94c88809513e31a5f226bcfce39abbfa4de378
 ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/24/2019
 ms.locfileid: "70017366"

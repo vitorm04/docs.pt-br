@@ -113,7 +113,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     |`runtimeVersion`|Especifica a versão do CLR (Common Language Runtime) a ser usada. Se você não especificar esse atributo e o CLR ainda não estiver carregado, o componente será carregado com o último CLR instalado anterior ao CLR versão 4. Se você especificar v1.0.3705, v1.1.4322 ou v2.0.50727, a versão efetuará roll forward automaticamente até a última versão instalada do CLR anterior ao CLR versão 4 (geralmente, v2.0.50727). Se outra versão do CLR já estiver carregada e a versão especificada puder ser carregada lado a lado no processo, a versão especificada será carregada; caso contrário, o CLR carregado será usado. Isso poderá causar uma falha de carregamento.|Não|  
     |`tlbid`|O identificador da biblioteca de tipos que contém informações sobre a classe.|Não|  
   
-     Todas as marcações de atributo diferenciam maiúsculas de minúsculas. É possível obter CLSIDs, ProgIDs, modelos de threading e a versão de tempo de execução exibindo a biblioteca de tipos exportada para o assembly com o ObjectViewer OLE/COM (Oleview.exe).  
+     Todas as marcações de atributo diferenciam maiúsculas de minúsculas. É possível obter CLSIDs, ProgIDs, modelos de threading e a versão de runtime exibindo a biblioteca de tipos exportada para o assembly com o ObjectViewer OLE/COM (Oleview.exe).  
   
      O manifesto do componente a seguir identifica duas classes, `testClass1` e `testClass2`.  
   

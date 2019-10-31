@@ -139,7 +139,7 @@ Há um amplo espectro de opções disponíveis para arquitetura, incluindo uma a
 |         |IaaS     |PaaS     |Contêiner|Sem servidor|
 |---------|---------|---------|---------|----------|
 |**Ajustar Escala**|VM       |Instância |Aplicação      |Função  |
-|**Abstrai**|Hardware|Plataforma|Host do sistema operacional|Tempo de execução   |
+|**Abstrai**|Hardware|Plataforma|Host do sistema operacional|Runtime   |
 |**Unidade** |VM       |Projeto  |Image    |Código      |
 |**Tempo de Vida**|Meses|Dias para meses|Minutos a dias|Milissegundos a minutos|
 |**Responsabilidade**|Aplicativos, dependências, tempo de execução e sistema operacional|Aplicativos e dependências|Aplicativos, dependências e tempo de execução|Função

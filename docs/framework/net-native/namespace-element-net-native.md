@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128261"
 ---
 # <a name="namespace-element-net-native"></a>Elemento > do namespace de \<(.NET Native)
-Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace especificado.  
+Aplica a política de reflexão de runtime a todos os tipos em um namespace especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,14 +36,14 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um na
 |Atributo|Tipo de atributo|Descrição|  
 |---------------|--------------------|-----------------|  
 |`Name`|Geral|Atributo obrigatório. Especifica o nome do namespace.|  
-|`Activate`|Reflexão|Atributo opcional. Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.|  
-|`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
-|`Serialize`|Serialização|Atributo opcional. Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
+|`Activate`|Reflexão|Atributo opcional. Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.|  
+|`Browse`|Reflexão|Atributo opcional. Controla a consulta para obter informações sobre elementos do programa, mas não permite qualquer acesso de runtime.|  
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.|  
+|`Serialize`|Serialização|Atributo opcional. Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização e desserialização das instâncias por bibliotecas como o serializador Newtonsoft JSON.|  
 |`DataContractSerializer`|Serialização|Atributo opcional. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
 |`DataContractJsonSerializer`|Serialização|Atributo opcional. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
 |`XmlSerializer`|Serialização|Atributo opcional. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
-|`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Tempo de Execução do Windows e COM.|  
+|`MarshalObject`|Interoperabilidade|Atributo opcional. Política de controles de marshaling de tipos de referência para o Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilidade|Atributo opcional. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.|  
 |`MarshalStructure`|Interoperabilidade|Atributo opcional. Controla a política de estruturas de marshaling para código nativo.|  
   
@@ -63,7 +63,7 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um na
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
+|`<Namespace>`|Aplica a política de reflexão de runtime a todos os tipos em um namespace pai.|  
 |[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído.|  
   
@@ -72,7 +72,7 @@ Aplica a política de reflexão de tempo de execução a todos os tipos em um na
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|Serve como um contêiner para os tipos amplos de aplicativos cujos metadados estão disponíveis para reflexão no tempo de execução. O elemento [\<Application>](application-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](assembly-element-net-native.md).|  
-|[\<Assembly>](assembly-element-net-native.md)|Aplica a política de reflexão de tempo de execução a todos os tipos em um assembly especificado.|  
+|[\<Assembly>](assembly-element-net-native.md)|Aplica a política de reflexão de runtime a todos os tipos em um assembly especificado.|  
 |[\<Library>](library-element-net-native.md)|Define o assembly que contém tipos e membros de tipo cujos metadados estão disponíveis para reflexão em tempo de execução. O elemento [\<Library>](library-element-net-native.md) pode ter zero, um ou mais elementos [\<Assembly>](assembly-element-net-native.md).|  
 |`<Namespace>`|Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace pai.|  
   

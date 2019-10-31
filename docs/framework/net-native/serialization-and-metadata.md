@@ -11,9 +11,9 @@ ms.locfileid: "73128119"
 ---
 # <a name="serialization-and-metadata"></a>Serialização e metadados
 
-Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adicionar entradas aos seus arquivos de diretivas de tempo de execução (.rd.xml) para garantir que os metadados necessários estejam presentes no tempo de execução. Há duas categorias de serializadores e cada uma necessita de um tratamento diferente no arquivo de diretivas de tempo de execução:  
+Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adicionar entradas aos seus arquivos de diretivas de runtime (.rd.xml) para garantir que os metadados necessários estejam presentes no runtime. Há duas categorias de serializadores e cada uma necessita de um tratamento diferente no arquivo de diretivas de runtime:  
   
-- Serializadores de terceiros baseados em reflexão. Eles necessitam de modificações no arquivo de diretivas de tempo de execução e são discutidos na próxima seção.  
+- Serializadores de terceiros baseados em reflexão. Eles necessitam de modificações no arquivo de diretivas de runtime e são discutidos na próxima seção.  
   
 - Serializadores não baseados em reflexão localizados na Biblioteca de Classes do .NET Framework. Eles podem necessitar de modificações no arquivo de diretivas de tempo de execução e são discutidos na seção [Serializadores da Microsoft](#Microsoft).  
   
@@ -49,7 +49,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
- Nesse caso, você deve especificar o tipo do arquivo de diretivas de tempo de execução adicionando uma entrada como esta:  
+ Nesse caso, você deve especificar o tipo do arquivo de diretivas de runtime adicionando uma entrada como esta:  
   
 ```xml  
 <Type Name="DataSet" Browse="Required Public" />  
@@ -59,7 +59,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Você deve adicionar entradas como mostrado a seguir para cada tipo para o arquivo de diretivas de tempo de execução:  
+ Você deve adicionar entradas como mostrado a seguir para cada tipo para o arquivo de diretivas de runtime:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  

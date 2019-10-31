@@ -98,7 +98,7 @@ Embora o método `WriteInt32ToBuffer` seja destinado a gravar um valor no buffer
 
 [!code-csharp[ownerless-memory](~/samples/snippets/standard/buffers/memory-t/ownerless/ownerless.cs)]
 
-O método que inicialmente cria a instância de <xref:System.Memory%601> é o proprietário implícito do buffer. Não é possível transferir a propriedade para nenhum outro componente porque não há instâncias de <xref:System.Buffers.IMemoryOwner%601> para facilitar a transferência. Como alternativa, imagine que o coletor de lixo do tempo de execução possui o buffer, e que todos os métodos apenas o consomem.
+O método que inicialmente cria a instância de <xref:System.Memory%601> é o proprietário implícito do buffer. Não é possível transferir a propriedade para nenhum outro componente porque não há instâncias de <xref:System.Buffers.IMemoryOwner%601> para facilitar a transferência. Como alternativa, imagine que o coletor de lixo do runtime possui o buffer, e que todos os métodos apenas o consomem.
 
 ## <a name="usage-guidelines"></a>Diretrizes de uso
 

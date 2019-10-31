@@ -56,7 +56,7 @@ Após você localizar a biblioteca de tipos que contém a implementação do seu
 
 - Wrappers personalizados
 
-  Quando uma biblioteca de tipos não está disponível ou é incorreta, uma opção é criar uma definição duplicada da classe ou interface em código-fonte gerenciado. Em seguida, você compilar o código-fonte com um compilador que tem como alvo o tempo de execução para produzir os metadados em um assembly.
+  Quando uma biblioteca de tipos não está disponível ou é incorreta, uma opção é criar uma definição duplicada da classe ou interface em código-fonte gerenciado. Em seguida, você compilar o código-fonte com um compilador que tem como alvo o runtime para produzir os metadados em um assembly.
 
   Para definir tipos COM manualmente, você deve ter acesso aos seguintes itens:
 

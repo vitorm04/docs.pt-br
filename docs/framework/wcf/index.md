@@ -40,7 +40,7 @@ Esta seção da documentação fornece informações sobre o Windows Communicati
  Mostra tópicos que permitem que você escolha qual recurso ou recursos do WCF você precisa empregar.
 
  [Estendendo o WCF](./extending/index.md)\
- Descreve como modificar e estender os componentes de tempo de execução do WCF
+ Descreve como modificar e estender os componentes de runtime do WCF
 
  [Diretrizes e práticas recomendadas](guidelines-and-best-practices.md)\
  Fornece diretrizes para criar aplicativos do Windows Communication Foundation (WCF).

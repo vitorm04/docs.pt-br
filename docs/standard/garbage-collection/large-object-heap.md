@@ -22,7 +22,7 @@ O GC (Coletor de Lixo) do .NET divide os objetos em objetos pequenos e grandes. 
 
 ## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Como um objeto termina no heap de objeto grande e ele é manipulado pelo GC
 
-Se um objeto for maior que ou igual a 85.000 bytes, ele será considerado um objeto grande. Esse número foi determinado por ajuste de desempenho. Quando uma solicitação de alocação de objeto for de 85.000 ou mais bytes, o tempo de execução a alocará no heap de objeto grande.
+Se um objeto for maior que ou igual a 85.000 bytes, ele será considerado um objeto grande. Esse número foi determinado por ajuste de desempenho. Quando uma solicitação de alocação de objeto for de 85.000 ou mais bytes, o runtime a alocará no heap de objeto grande.
 
 Para entender o que isso significa, é útil examinar alguns conceitos básicos sobre o GC do .NET.
 
@@ -240,7 +240,7 @@ Total 133 objects
 
 O tamanho do heap de LOH é (16.754.224 + 16.699.288 + 16.284.504) = 49.738.016 bytes. Entre os endereços 023e1000 e 033db630, 8.008.736 bytes são ocupados por uma matriz de <xref:System.Object?displayProperty=nameWithType> objetos, 6.663.696 bytes são ocupados por uma matriz de <xref:System.Byte?displayProperty=nameWithType> objetos e 2.081.792 bytes são ocupados por espaço livre.
 
-Às vezes, o depurador mostra que o tamanho total do LOH é menor que 85.000 bytes. Isso ocorre porque o próprio tempo de execução usa o LOH para alocar alguns objetos menores que um objeto grande.
+Às vezes, o depurador mostra que o tamanho total do LOH é menor que 85.000 bytes. Isso ocorre porque o próprio runtime usa o LOH para alocar alguns objetos menores que um objeto grande.
 
 Como o LOH não é compactado, às vezes ele é considerado uma fonte de fragmentação. Fragmentação significa:
 

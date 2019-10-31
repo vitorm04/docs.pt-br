@@ -11,7 +11,7 @@ ms.locfileid: "73115406"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<elemento de > Thread_UseAllCpuGroups
 
-Especifica se o tempo de execução distribui threads gerenciados entre todos os grupos de CPU.
+Especifica se o runtime distribui threads gerenciados entre todos os grupos de CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
@@ -32,7 +32,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução distribui threads gerenciados entre todos os grupos de CPU.|
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o runtime distribui threads gerenciados entre todos os grupos de CPU.|
 
 ## <a name="enabled-attribute"></a>Atributo habilitado
 

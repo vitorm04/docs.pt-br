@@ -26,8 +26,8 @@ Neste tutorial, você:
 
 1. Crie um assembly de nome forte com uma interface pública contendo informações de tipo que podem ser inseridas.
 1. Crie um assembly de tempo de execução de nome forte que implemente a interface pública.
-1. Criará um programa cliente que insere as informações de tipo da interface pública e criará uma instância da classe do assembly de tempo de execução.
-1. Modificará e recompilará o assembly de tempo de execução.
+1. Criará um programa cliente que insere as informações de tipo da interface pública e criará uma instância da classe do assembly de runtime.
+1. Modificará e recompilará o assembly de runtime.
 1. Execute o programa cliente para ver que ele usa a nova versão do assembly de tempo de execução sem precisar ser recompilado.
 
 [!INCLUDE[note_settings_general](../../../includes/note-settings-general-md.md)]

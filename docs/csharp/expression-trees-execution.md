@@ -112,7 +112,7 @@ O delegado retornado desse método fechou sobre o objeto `constant`, que foi des
 
 Agora, ao executar o delegado retornado desse método, uma `ObjectDisposedException` será lançada no ponto de execução.
 
-Parece realmente estranho ter um erro de tempo de execução que representa um constructo de tempo de compilação, mas esse é o mundo em que entramos quando trabalhamos com árvores de expressão.
+Parece realmente estranho ter um erro de runtime que representa um constructo de tempo de compilação, mas esse é o mundo em que entramos quando trabalhamos com árvores de expressão.
 
 Há muitas permutações desse problema, portanto é difícil oferecer diretrizes gerais para evitá-lo. Tenha cuidado ao acessar variáveis locais quando estiver definindo expressões e tenha cuidado ao acessar o estado no objeto atual (representado por `this`) quando estiver criando uma árvore de expressão que pode ser retornada por uma API pública.
 

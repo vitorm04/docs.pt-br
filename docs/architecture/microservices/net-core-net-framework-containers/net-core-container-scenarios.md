@@ -4,7 +4,7 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 ms.date: 09/11/2018
 ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
 ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/30/2019
 ms.locfileid: "68675723"

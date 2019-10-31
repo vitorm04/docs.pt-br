@@ -27,11 +27,11 @@ A API de hospedagem permite que hosts não gerenciados integrem o CLR (Common La
  Descreve as funções estáticas globais não gerenciadas que a API de hospedagem usa.  
   
  [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- Descreve as interfaces não gerenciadas que permitem que um host de tempo de execução para integrar o CLR em um aplicativo não gerenciado.  
+ Descreve as interfaces não gerenciadas que permitem que um host de runtime integre o CLR em um aplicativo não gerenciado.  
   
  [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  Descreve as estruturas não gerenciadas que a API de hospedagem usa.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Hosts de Tempo de Execução](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
- Descreve os hosts de tempo de execução incluídos no .NET Framework.
+ Descreve os hosts de runtime incluídos no .NET Framework.

@@ -71,7 +71,7 @@ Do .NET Framework 4 em diante, o Common Language Runtime determina o nível de t
 |Crítico para segurança|`true`|`true`|`false`|
 |Transparente|`false`|`false`|`true`|
 
-Usar essas propriedade é muito mais simples que examinar as anotações de segurança de um assembly e seus tipos, verificando o nível de confiança atual e tentando duplicar as regras do tempo de execução. Por exemplo, o mesmo tipo pode ser crítico para segurança quando é executado da linha de comando ou transparente de segurança quando é executado em um domínio do aplicativo em área restrita.
+Usar essas propriedade é muito mais simples que examinar as anotações de segurança de um assembly e seus tipos, verificando o nível de confiança atual e tentando duplicar as regras do runtime. Por exemplo, o mesmo tipo pode ser crítico para segurança quando é executado da linha de comando ou transparente de segurança quando é executado em um domínio do aplicativo em área restrita.
 
 Há propriedades semelhantes nas classes <xref:System.Reflection.MethodBase>, <xref:System.Reflection.FieldInfo>, <xref:System.Reflection.Emit.TypeBuilder>, <xref:System.Reflection.Emit.MethodBuilder> e <xref:System.Reflection.Emit.DynamicMethod>. (Para outras reflexão e abstrações de emissão de reflexão, os atributos de segurança são aplicados aos métodos associados; por exemplo, no caso de propriedades que são aplicadas aos acessadores de propriedade).
 

@@ -93,7 +93,7 @@ As opções a seguir são válidas para arquivos *.lib* apenas para saída de ar
 
 *Ildasm.exe* funciona apenas em arquivos PE no disco. Ele não funciona em arquivos instalados no cache de assembly global.
 
-O arquivo de texto produzido por *Ildasm.exe* pode ser usado como entrada para o IL Assembler (*Ilasm.exe*). Isso é útil, por exemplo, durante a compilação do código em uma linguagem de programação que não dá suporte a todos os atributos de metadados do tempo de execução. Depois de compilar o código e executar sua saída por meio de *Ildasm.exe*, o arquivo de texto IL resultante poderá ser editado manualmente para adicionar os atributos ausentes. Em seguida, é possível executar esse arquivo de texto por meio do IL Assembler para produzir um arquivo executável final.
+O arquivo de texto produzido por *Ildasm.exe* pode ser usado como entrada para o IL Assembler (*Ilasm.exe*). Isso é útil, por exemplo, durante a compilação do código em uma linguagem de programação que não dá suporte a todos os atributos de metadados do runtime. Depois de compilar o código e executar sua saída por meio de *Ildasm.exe*, o arquivo de texto IL resultante poderá ser editado manualmente para adicionar os atributos ausentes. Em seguida, é possível executar esse arquivo de texto por meio do IL Assembler para produzir um arquivo executável final.
 
 > [!NOTE]
 > Atualmente, não é possível usar essa técnica com arquivos PE que contenham código nativo inserido (por exemplo, arquivos PE produzidos por Visual C++).  

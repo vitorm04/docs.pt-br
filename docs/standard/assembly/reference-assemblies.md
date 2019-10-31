@@ -63,7 +63,7 @@ Os metadados em assemblies de referência continuam a reter informações sobre 
 - Propriedades e eventos implementados explicitamente, pois seus acessadores são virtuais.
 - Todos os campos de estruturas. 
 
-Os assemblies de referência incluem um atributo [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) no nível do assembly. Esse atributo pode ser especificado na origem; em seguida, o compilador não precisará resumir. Por causa desse atributo, os tempos de execução se recusarão a carregar assemblies de referência para execução (mas ainda podem ser carregados em modo somente reflexão).
+Os assemblies de referência incluem um atributo [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) no nível do assembly. Esse atributo pode ser especificado na origem; em seguida, o compilador não precisará resumir. Por causa desse atributo, os runtimes se recusarão a carregar assemblies de referência para execução (mas ainda podem ser carregados em modo somente reflexão).
 
 Os detalhes da estrutura do assembly de referência exata dependem da versão do compilador. As versões mais recentes podem optar por excluir mais metadados se ele for determinado como não afetando a superfície da API pública.
 

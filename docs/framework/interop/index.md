@@ -21,7 +21,7 @@ ms.locfileid: "73114234"
 
 O .NET Framework promove a interação com componentes COM, serviços COM+, bibliotecas de tipos externas e muitos serviços do sistema operacional. Tipos de dados, assinaturas de método e mecanismos de tratamento de erros variam entre modelos de objetos gerenciados e não gerenciados. Para simplificar a interoperação entre componentes do .NET Framework e o código não gerenciado e para facilitar o caminho de migração, o Common Language Runtime oculta de clientes e servidores as diferenças entre esses modelos de objeto.
 
-O código que é executado sob o controle de tempo de execução é chamado de código gerenciado. Em contraste, o código executado fora do tempo de execução é chamado de código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Windows são exemplos de código não gerenciado.
+O código que é executado sob o controle de runtime é chamado de código gerenciado. Em contraste, o código executado fora do runtime é chamado de código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Windows são exemplos de código não gerenciado.
 
 ## <a name="in-this-section"></a>Nesta seção
 

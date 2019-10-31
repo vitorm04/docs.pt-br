@@ -32,7 +32,7 @@ Use o processo a seguir para aplicar um atributo a um elemento do código.
   
  O atributo é emitido em metadados quando você compila o código e está disponível para o Common Language Runtime e todas as ferramentas ou aplicativos personalizados por meio dos serviços de reflexão do tempo de execução.  
   
- Por convenção, todos os nomes de atributos terminam com o sufixo Attribute. No entanto, várias linguagens que têm como destino o tempo de execução, como Visual Basic e C#, não exigem que você especifique o nome completo de um atributo. Por exemplo, se quiser inicializar <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, você só precisa fazer referência a ele como **Obsoleto**.  
+ Por convenção, todos os nomes de atributos terminam com o sufixo Attribute. No entanto, várias linguagens que têm como destino o runtime, como Visual Basic e C#, não exigem que você especifique o nome completo de um atributo. Por exemplo, se quiser inicializar <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, você só precisa fazer referência a ele como **Obsoleto**.  
   
 ## <a name="applying-an-attribute-to-a-method"></a>Aplicar um atributo a um método  
  O exemplo de código a seguir mostra como declarar **System.ObsoleteAttribute**, que marca o código como obsoleto. A cadeia de caracteres `"Will be removed in next version"` é passada para o atributo. Esse atributo faz com que o compilador que exibe a cadeia de caracteres transmitida emita um aviso quando o código que descreve o atributo for chamado.  

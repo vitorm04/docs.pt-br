@@ -13,7 +13,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73118248"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<elemento de > appDomainResourceMonitoring
-Instrui o tempo de execução a coletar estatísticas sobre todos os domínios de aplicativos no processo durante toda a vida do processo.  
+Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativos no processo durante toda a vida do processo.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \

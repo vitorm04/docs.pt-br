@@ -32,7 +32,7 @@ O .NET Framework consiste em dois componentes principais, que têm o controle de
 > Há uma diferença entre a versão do .NET Framework e a versão do CLR:
 >
 > - A versão do .NET Framework baseia-se no conjunto de assemblies que forma a biblioteca de classes .NET Framework. Por exemplo, versões do .NET Framework incluem 4.5, 4.6.1 e 4.7.2.
-> - A versão do CLR baseia-se no tempo de execução no qual os aplicativos .NET Framework são executados. Uma única versão do CLR geralmente dá suporte a várias versões do .NET Framework. Por exemplo, o CLR versão 4.0.30319.*xxxxx* dá suporte ao .NET Framework versões 4 a 4.5.2, em que *xxxxx* é menor que 42000; o CLR versão 4.0.30319.42000 dá suporte a versões do .NET Framework a partir do .NET Framework 4.6.
+> - A versão do CLR baseia-se no runtime no qual os aplicativos .NET Framework são executados. Uma única versão do CLR geralmente dá suporte a várias versões do .NET Framework. Por exemplo, o CLR versão 4.0.30319.*xxxxx* dá suporte ao .NET Framework versões 4 a 4.5.2, em que *xxxxx* é menor que 42000; o CLR versão 4.0.30319.42000 dá suporte a versões do .NET Framework a partir do .NET Framework 4.6.
 >
 > Para obter mais informações sobre as versões, confira [Versões e dependências do .NET Framework](versions-and-dependencies.md).
 
@@ -195,7 +195,7 @@ Use a [ferramenta de Versão do CLR (Clrver.exe)](../tools/clrver-exe-clr-versio
 
 1. Consulte a propriedade <xref:System.Environment.Version?displayProperty=nameWithType> para recuperar um objeto <xref:System.Version>.
 
-    O objeto `System.Version` retornado identifica a versão do tempo de execução que está executando o código. Ele não retorna versões de assembly nem outras versões do tempo de execução que possam ter sido instaladas no computador.
+    O objeto `System.Version` retornado identifica a versão do tempo de execução que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
 
     Nas versões 4, 4.5, 4.5.1 e 4.5.2 do .NET Framework, a representação de cadeia de caracteres do objeto <xref:System.Version> retornado tem o formato 4.0.30319.*xxxxx*, em que *xxxxx* é menor que 42000. Para o .NET Framework 4.6 e versões posteriores, ele tem o formato 4.0.30319.42000.
 
@@ -205,7 +205,7 @@ Use a [ferramenta de Versão do CLR (Clrver.exe)](../tools/clrver-exe-clr-versio
 
    - Para o identificador de versão secundária (por exemplo, *0* para a versão 4.0), use a propriedade <xref:System.Version.Minor%2A?displayProperty=nameWithType>.
 
-   - Para a cadeia de caracteres de versão inteira (por exemplo, *4.0.30319.18010*), use o método <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Esse método retorna um único valor que reflete a versão do tempo de execução que está executando o código. Ele não retorna versões de assembly nem outras versões do tempo de execução que possam ter sido instaladas no computador.
+   - Para a cadeia de caracteres de versão inteira (por exemplo, *4.0.30319.18010*), use o método <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Esse método retorna um único valor que reflete a versão do runtime que está executando o código. Ele não retorna versões de assembly nem outras versões do runtime que possam ter sido instaladas no computador.
 
 O seguinte exemplo usa a propriedade <xref:System.Environment.Version%2A?displayProperty=nameWithType> para recuperar informações de versão do CLR:
 

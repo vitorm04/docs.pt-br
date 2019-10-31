@@ -105,7 +105,7 @@ Namespace: <xref:System>, <xref:System.Runtime.ExceptionServices>; assembly: msc
 | Recurso | Diferenças de 3.5 SP1 | Alterações recomendadas |
 | ------- | ------------------------ | ------------------- |
 | **Exceções do estado de processo corrompido** | O CLR não oferece mais exceções do estado de processo corrompido a manipuladores de exceção no código gerenciado. | Essas exceções indicam que o estado de um processo foi corrompido. Não é recomendável executar o aplicativo nesse estado.<br><br>Para obter mais informações, consulte o <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> e a entrada [Handling Corrupted State Exceptions](https://go.microsoft.com/fwlink/?LinkID=179681) (Tratamento de exceções de estado corrompido) no blog CLR Inside Out. |
-| **Exceções do mecanismo de execução** | Agora o <xref:System.ExecutionEngineException> é obsoleto, porque uma exceção capturável permitirá que um processo instável continue sendo executado. Essa alteração melhora a confiabilidade e a previsibilidade no tempo de execução. | Use um <xref:System.InvalidOperationException> para indicar a condição. |
+| **Exceções do mecanismo de execução** | Agora o <xref:System.ExecutionEngineException> é obsoleto, porque uma exceção capturável permitirá que um processo instável continue sendo executado. Essa alteração melhora a confiabilidade e a previsibilidade no runtime. | Use um <xref:System.InvalidOperationException> para indicar a condição. |
 
 ### <a name="reflection"></a>Reflexão
 

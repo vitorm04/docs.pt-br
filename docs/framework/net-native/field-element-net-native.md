@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128416"
 ---
 # <a name="field-element-net-native"></a>Elemento de > de campo de \<(.NET Native)
-Aplica a política de reflexão do tempo de execução a um campo.  
+Aplica a política de reflexão do runtime a um campo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,8 +30,8 @@ Aplica a política de reflexão do tempo de execução a um campo.
 |---------------|--------------------|-----------------|  
 |`Name`|Geral|Atributo obrigatório. Especifica o nome do campo.|  
 |`Browse`|Reflexão|Atributo opcional. Controla consultas para obter informações sobre o campo ou para enumerá-lo, mas não permite qualquer acesso dinâmico no tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do tempo de execução ao campo para habilitar programação dinâmica. Essa política garante que um campo pode ser definido ou recuperado dinamicamente no tempo de execução.|  
-|`Serialize`|Serialização|Atributo opcional. Controla o acesso do tempo de execução a um campo para habilitar as instâncias de tipo a serem serializadas por bibliotecas como o serializador Newtonsoft JSON ou a ser usado para a associação de dados.|  
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do runtime ao campo para habilitar programação dinâmica. Essa política garante que um campo pode ser definido ou recuperado dinamicamente no tempo de execução.|  
+|`Serialize`|Serialização|Atributo opcional. Controla o acesso do runtime a um campo para habilitar as instâncias de tipo a serem serializadas por bibliotecas como o serializador Newtonsoft JSON ou a ser usado para a associação de dados.|  
   
 ## <a name="name-attribute"></a>Atributo de nome  
   
@@ -56,7 +56,7 @@ Aplica a política de reflexão do tempo de execução a um campo.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
- Se a política do campo não for definida explicitamente, ele herdará a política de tempo de execução do seu elemento pai.  
+ Se a política do campo não for definida explicitamente, ele herdará a política de runtime do seu elemento pai.  
   
 ## <a name="see-also"></a>Consulte também
 

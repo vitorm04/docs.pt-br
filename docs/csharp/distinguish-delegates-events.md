@@ -17,7 +17,7 @@ ms.locfileid: "73037313"
 
 Desenvolvedores que são novos na plataforma .NET Core geralmente têm dificuldades para decidir entre um design baseado em `delegates` e um design baseado em `events`. Este é um conceito difícil, porque os recursos das duas linguagens são muito semelhantes. De fato, os eventos são criados usando o suporte de linguagem para delegados. 
 
-Ambas oferecem um cenário de associação tardia: elas permitem cenários em que um componente se comunica chamando um método que é conhecido somente em tempo de execução. Ambas dão suporte a métodos de assinante único e vários assinantes. Você pode ver esse suporte ser chamado de singlecast e multicast. Ambas dão suporte a uma sintaxe semelhante para adicionar e remover manipuladores. Por fim, acionar um evento e chamar um delegado usam exatamente a mesma sintaxe de chamada de método. As duas até mesmo dão suporte à mesma sintaxe de método `Invoke()` para uso com o operador `?.`.
+Ambas oferecem um cenário de associação tardia: elas permitem cenários em que um componente se comunica chamando um método que é conhecido somente em runtime. Ambas dão suporte a métodos de assinante único e vários assinantes. Você pode ver esse suporte ser chamado de singlecast e multicast. Ambas dão suporte a uma sintaxe semelhante para adicionar e remover manipuladores. Por fim, acionar um evento e chamar um delegado usam exatamente a mesma sintaxe de chamada de método. As duas até mesmo dão suporte à mesma sintaxe de método `Invoke()` para uso com o operador `?.`.
 
 Com todas essas semelhanças, é fácil de ter problemas para determinar quando usar qual.
 

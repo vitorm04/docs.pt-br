@@ -27,7 +27,7 @@ ms.locfileid: "73085204"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 
-O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho de aplicativos gerenciados. Ngen.exe cria imagens nativas, que são arquivos que contém o código de máquina específico do processamento compilado e as instala no cache de imagem nativa do computador local. O tempo de execução pode usar imagens nativas do cache em vez de usar o compilador JIT (Just-In-Time) para compilar o assembly original.
+O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho de aplicativos gerenciados. Ngen.exe cria imagens nativas, que são arquivos que contém o código de máquina específico do processamento compilado e as instala no cache de imagem nativa do computador local. O runtime pode usar imagens nativas do cache em vez de usar o compilador JIT (Just-In-Time) para compilar o assembly original.
 
 > [!NOTE]
 > Ngen.exe compila imagens nativas para assemblies que visam somente o .NET Framework. O gerador de imagem nativa equivalente para o .NET Core é [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
@@ -200,9 +200,9 @@ Nesta seção Observações:
 
 ## <a name="generating-images-for-----different-scenarios"></a>Gerar imagens para cenários diferentes
 
-Depois que você tiver gerado uma imagem nativa para um assembly, o tempo de execução tenta localizar e usar automaticamente essa imagem nativa sempre que executa o assembly. Várias imagens podem ser geradas, dependendo dos cenários de uso.
+Depois que você tiver gerado uma imagem nativa para um assembly, o runtime tenta localizar e usar automaticamente essa imagem nativa sempre que executa o assembly. Várias imagens podem ser geradas, dependendo dos cenários de uso.
 
-Por exemplo, se você executar um assembly em um cenário de depuração ou de criação de perfil, o tempo de execução procurará uma imagem nativa gerada com as opções `/Debug` ou `/Profile`. Caso ele não consiga encontrar uma imagem nativa correspondente, o tempo de execução é revertido para a compilação JIT padrão. A única maneira de depurar imagens nativas é criando uma imagem nativa com a opção `/Debug`.
+Por exemplo, se você executar um assembly em um cenário de depuração ou de criação de perfil, o tempo de execução procurará uma imagem nativa gerada com as opções `/Debug` ou `/Profile`. Caso ele não consiga encontrar uma imagem nativa correspondente, o runtime é revertido para a compilação JIT padrão. A única maneira de depurar imagens nativas é criando uma imagem nativa com a opção `/Debug`.
 
 Como a ação `uninstall` também reconhece cenários, é possível desinstalar todos os cenários ou apenas os cenários selecionados.
 
@@ -348,7 +348,7 @@ A geração de imagens nativas para um aplicativo muito grande pode demorar um t
 
 ## <a name="native-images-and-jit-compilation"></a>Imagens nativas e compilação JIT
 
-Se encontrar algum método em um assembly que não puder gerar, Ngen.exe os excluirá da imagem nativa. Ao executar esse assembly, o tempo de execução o reverte para compilação JIT dos métodos que não foram incluídos na imagem nativa.
+Se encontrar algum método em um assembly que não puder gerar, Ngen.exe os excluirá da imagem nativa. Ao executar esse assembly, o runtime o reverte para compilação JIT dos métodos que não foram incluídos na imagem nativa.
 
 Além disso, as imagens nativas não serão usadas se o assembly tiver sido atualizado, ou se a imagem tiver sido invalidada por qualquer motivo.
 
@@ -368,7 +368,7 @@ Quando você usa Ngen.exe para criar uma imagem nativa de um assembly, a saída 
 
 - Fatores de segurança.
 
-Ngen.exe registra essas informações ao gerar uma imagem nativa. Quando você executa um assembly, o tempo de execução procura a imagem nativa gerada com opções e configurações correspondentes ao ambiente atual do computador. O tempo de execução será revertido para a compilação JIT de um assembly se não conseguir encontrar uma imagem nativa correspondente. As seguintes alterações feitas nas configurações e no ambiente de um computador invalidam imagens nativas:
+Ngen.exe registra essas informações ao gerar uma imagem nativa. Quando você executa um assembly, o runtime procura a imagem nativa gerada com opções e configurações correspondentes ao ambiente atual do computador. O runtime será revertido para a compilação JIT de um assembly se não conseguir encontrar uma imagem nativa correspondente. As seguintes alterações feitas nas configurações e no ambiente de um computador invalidam imagens nativas:
 
 - A versão do .NET Framework.
 

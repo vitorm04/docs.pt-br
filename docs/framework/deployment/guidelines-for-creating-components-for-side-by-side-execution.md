@@ -17,11 +17,11 @@ Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes p
   
 - Associe a identidade de tipo a uma versão específica de um arquivo.  
   
-     O Common Language Runtime vincula a identidade de tipo a uma versão de arquivo específica usando assemblies de nome forte. Para criar um aplicativo ou componente para execução lado a lado, você deve atribuir um nome forte a todos os assemblies. Isso cria a identidade de tipo preciso e garante que a resolução de qualquer tipo seja direcionada para o arquivo correto. Um assembly de nome forte contém a versão, a cultura e as informações do publicador que o tempo de execução usa para localizar o arquivo correto para atender a uma solicitação de associação.  
+     O Common Language Runtime vincula a identidade de tipo a uma versão de arquivo específica usando assemblies de nome forte. Para criar um aplicativo ou componente para execução lado a lado, você deve atribuir um nome forte a todos os assemblies. Isso cria a identidade de tipo preciso e garante que a resolução de qualquer tipo seja direcionada para o arquivo correto. Um assembly de nome forte contém a versão, a cultura e as informações do publicador que o runtime usa para localizar o arquivo correto para atender a uma solicitação de associação.  
   
 - Use o armazenamento com reconhecimento de versão.  
   
-     O tempo de execução usa cache de assembly global para fornecer o armazenamento com reconhecimento de versão. O cache de assembly global é uma estrutura de diretórios com reconhecimento de versão instalada em todos os computadores que usam o .NET Framework. Os assemblies instalados no cache de assembly global não são substituídos quando uma nova versão do assembly é instalada.  
+     O runtime usa cache de assembly global para fornecer o armazenamento com reconhecimento de versão. O cache de assembly global é uma estrutura de diretórios com reconhecimento de versão instalada em todos os computadores que usam o .NET Framework. Os assemblies instalados no cache de assembly global não são substituídos quando uma nova versão do assembly é instalada.  
   
 - Crie um aplicativo ou componente que é executado isoladamente.  
   
@@ -54,9 +54,9 @@ Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes p
 - Não adicione nada ao Registro que contenha um caminho sem versão.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Número de versão do arquivo e número de versão do Assembly  
- A versão do arquivo é um recurso de versão do Win32 que não é usado pelo tempo de execução. Em geral, você atualiza a versão do arquivo até mesmo para uma atualização in-loco. Dois arquivos idênticos podem ter informações de versão de arquivo diferentes e dois arquivos diferentes podem ter as mesmas informações de versão do arquivo.  
+ A versão do arquivo é um recurso de versão do Win32 que não é usado pelo runtime. Em geral, você atualiza a versão do arquivo até mesmo para uma atualização in-loco. Dois arquivos idênticos podem ter informações de versão de arquivo diferentes e dois arquivos diferentes podem ter as mesmas informações de versão do arquivo.  
   
- A versão do assembly é usada pelo tempo de execução para a associação do assembly. Dois assemblies idênticos com números de versão diferentes são tratados como dois assemblies diferentes pelo tempo de execução.  
+ A versão do assembly é usada pelo runtime para a associação do assembly. Dois assemblies idênticos com números de versão diferentes são tratados como dois assemblies diferentes pelo runtime.  
   
  A [ferramenta Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) permite que você substitua um assembly quando apenas o número de versão do arquivo é mais recente. O instalador geralmente não instala em um assembly, a menos que o número de versão do assembly seja maior.  
   

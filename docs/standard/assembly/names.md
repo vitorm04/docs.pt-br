@@ -15,7 +15,7 @@ ms.locfileid: "73107123"
 # <a name="assembly-names"></a>Nomes de assembly
 Um nome de assembly é armazenado em metadados e tem um impacto significativo no escopo e uso do assembly por um aplicativo. Um assembly de nome forte tem um nome totalmente qualificado que inclui o nome, a cultura, a chave pública e o número de versão do assembly. Isso muitas vezes é chamado de nome de exibição, e para os assemblies carregados pode ser obtido usando a propriedade <xref:System.Reflection.Assembly.FullName%2A>.  
   
- O tempo de execução usa essas informações para localizar o assembly e diferenciá-lo de outros assemblies com o mesmo nome. Por exemplo, um assembly de nome forte chamado `myTypes` poderia ter o seguinte nome totalmente qualificado:  
+ O runtime usa essas informações para localizar o assembly e diferenciá-lo de outros assemblies com o mesmo nome. Por exemplo, um assembly de nome forte chamado `myTypes` poderia ter o seguinte nome totalmente qualificado:  
   
 ```  
 myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, ProcessorArchitecture=msil  
@@ -43,10 +43,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
-> O tempo de execução trata nomes de assembly sem diferenciar maiúsculas de minúsculas ao associar a um assembly, mas preserva qualquer caso usado em um nome de assembly. Várias ferramentas no SDK do Windows lidam com nomes de assembly diferenciando maiúsculas de minúsculas. Para obter melhores resultados, gerencie nomes de assembly como se diferenciassem maiúsculas de minúsculas.  
+> O runtime trata nomes de assembly sem diferenciar maiúsculas de minúsculas ao associar a um assembly, mas preserva qualquer caso usado em um nome de assembly. Várias ferramentas no SDK do Windows lidam com nomes de assembly diferenciando maiúsculas de minúsculas. Para obter melhores resultados, gerencie nomes de assembly como se diferenciassem maiúsculas de minúsculas.  
   
 ## <a name="name-application-components"></a>Nomear componentes de aplicativos  
- O tempo de execução não considera o nome do arquivo ao determinar a identidade de um assembly. A identidade do assembly, composta pelo nome, versão, cultura e nome forte do assembly, deve ficar clara para o tempo de execução.  
+ O runtime não considera o nome do arquivo ao determinar a identidade de um assembly. A identidade do assembly, composta pelo nome, versão, cultura e nome forte do assembly, deve ficar clara para o runtime.  
   
  Por exemplo, se você tiver um assembly chamado *myAssembly. exe* que faz referência a um assembly chamado *myAssembly. dll*, a vinculação ocorrerá corretamente se você executar *myAssembly. exe*. No entanto, se outro aplicativo executar o *myAssembly. exe* usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, o tempo de execução determinará que `myAssembly` já está carregado quando *myAssembly. exe* solicitará a associação a `myAssembly`. Nesse caso, *myAssembly. dll* nunca é carregado. Como o *myAssembly. exe* não contém o tipo solicitado, ocorre um <xref:System.TypeLoadException>.  
   

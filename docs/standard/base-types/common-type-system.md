@@ -69,7 +69,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="classes"></a>Classes  
  Uma classe é um tipo de referência que pode ser derivada diretamente de outra classe e que é derivada implicitamente de <xref:System.Object?displayProperty=nameWithType>. A classe define as operações que um objeto (que é uma instância da classe) pode executar (métodos, eventos ou propriedades) e os dados que o objeto contém (campos). Embora uma classe geralmente inclua a definição e a implementação (diferente de interfaces, por exemplo, que contêm somente a definição sem implementação), ela pode ter um ou mais membros que não têm implementação.  
   
- A tabela a seguir descreve algumas das características que uma classe pode ter. Cada linguagem que dá suporte ao tempo de execução fornece uma maneira para indicar que uma classe ou um membro da classe tem uma ou mais dessas características. No entanto, as linguagens de programação individuais que segmentam o .NET não podem disponibilizar todas essas características.  
+ A tabela a seguir descreve algumas das características que uma classe pode ter. Cada linguagem que dá suporte ao runtime fornece uma maneira para indicar que uma classe ou um membro da classe tem uma ou mais dessas características. No entanto, as linguagens de programação individuais que segmentam o .NET não podem disponibilizar todas essas características.  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
@@ -82,7 +82,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 > [!NOTE]
 > Uma classe também pode ser aninhada em uma classe ou estrutura pai. Classes aninhadas também têm características de membro. Para obter mais informações, consulte [Tipos aninhados](#NestedTypes).  
   
- Membros da classe que não tenham implementação são membros abstratos. Uma classe que tenha um ou mais membros abstratos é ela própria abstrata. Não é possível criar novas instâncias dessa classe. Algumas linguagens que segmentam o tempo de execução permitem marcar uma classe como abstrata mesmo que nenhum de seus membros seja abstrato. É possível usar uma classe abstrata quando você deseja encapsular um conjunto básico de funcionalidades que as classes derivadas podem herdar ou substituir quando apropriado. Classes que não são abstratas são chamadas de classes concretas.  
+ Membros da classe que não tenham implementação são membros abstratos. Uma classe que tenha um ou mais membros abstratos é ela própria abstrata. Não é possível criar novas instâncias dessa classe. Algumas linguagens que segmentam o runtime permitem marcar uma classe como abstrata mesmo que nenhum de seus membros seja abstrato. É possível usar uma classe abstrata quando você deseja encapsular um conjunto básico de funcionalidades que as classes derivadas podem herdar ou substituir quando apropriado. Classes que não são abstratas são chamadas de classes concretas.  
   
  Uma classe pode implementar qualquer número de interfaces, mas pode herdar apenas de uma classe base além de <xref:System.Object?displayProperty=nameWithType>, de que todas as classes herdam implicitamente. Todas as classes devem ter pelo menos um construtor, que inicializa novas instâncias da classe. Se você não definir explicitamente um construtor, a maioria dos compiladores fornecerá automaticamente um construtor sem parâmetros.  
   
@@ -100,7 +100,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="enumerations"></a>Enumerações  
  Uma enumeração (enum) é um tipo de valor que é herdado diretamente de <xref:System.Enum?displayProperty=nameWithType> e que fornece nomes alternativos para valores de um tipo primitivo subjacente. Um tipo de enumeração tem um nome, um tipo subjacente que deve ser um dos tipos inteiros com ou sem sinal internos (como <xref:System.Byte>, <xref:System.Int32> ou <xref:System.UInt64>) e um conjunto de campos. Os campos são campos literais estáticos, cada um deles representa uma constante. O mesmo valor pode ser atribuído a vários campos. Quando isso ocorre, você deve marcar um dos valores como o valor de enumeração primário para reflexão e conversão da cadeia de caracteres.  
   
- Você pode atribuir um valor de tipo subjacente a uma enumeração e vice-versa (nenhuma conversão é exigida pelo tempo de execução). É possível criar uma instância de uma enumeração e chamar os métodos de <xref:System.Enum?displayProperty=nameWithType>, assim como qualquer método definido no tipo subjacente da enumeração. No entanto, algumas linguagens talvez não deixem passar uma enumeração como um parâmetro quando uma instância do tipo subjacente é necessária (ou vice-versa).  
+ Você pode atribuir um valor de tipo subjacente a uma enumeração e vice-versa (nenhuma conversão é exigida pelo runtime). É possível criar uma instância de uma enumeração e chamar os métodos de <xref:System.Enum?displayProperty=nameWithType>, assim como qualquer método definido no tipo subjacente da enumeração. No entanto, algumas linguagens talvez não deixem passar uma enumeração como um parâmetro quando uma instância do tipo subjacente é necessária (ou vice-versa).  
   
  As seguintes restrições adicionais se aplicam a enumerações:  
   
@@ -115,7 +115,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
     > [!NOTE]
     > Tipos aninhados (incluindo enumerações) criados com o Visual Basic, C# e C++ incluem os parâmetros de tipo de todos os tipos genéricos e, portanto, serão genéricos mesmo se não tiverem parâmetros de tipo próprios. Para obter mais informações, consulte "Tipos Aninhados" no tópico de referência <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
   
- O atributo <xref:System.FlagsAttribute> denota um tipo especial de enumeração chamado campo de bits. O próprio tempo de execução não faz distinção entre enumerações tradicionais e campos de bits, mas a linguagem pode fazer isso. Quando é feita essa distinção, operadores bit a bit podem ser usados em campos de bits, mas não em enumerações, para gerar valores sem nome. Enumerações geralmente são usadas para listas de elementos exclusivos, como dias da semana, país ou nomes de região etc. Os campos de bits são geralmente usados para listas de qualidades ou quantidades que possam ocorrer em combinação, como `Red And Big And Fast`.  
+ O atributo <xref:System.FlagsAttribute> denota um tipo especial de enumeração chamado campo de bits. O próprio runtime não faz distinção entre enumerações tradicionais e campos de bits, mas a linguagem pode fazer isso. Quando é feita essa distinção, operadores bit a bit podem ser usados em campos de bits, mas não em enumerações, para gerar valores sem nome. Enumerações geralmente são usadas para listas de elementos exclusivos, como dias da semana, país ou nomes de região etc. Os campos de bits são geralmente usados para listas de qualidades ou quantidades que possam ocorrer em combinação, como `Red And Big And Fast`.  
   
  O exemplo a seguir mostra como usar campos de bit e enumerações tradicionais.  
   
@@ -186,7 +186,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Os atributos são as próprias classe herdadas de <xref:System.Attribute?displayProperty=nameWithType>. Linguagens que dão suporte ao uso de atributos têm sua própria sintaxe para aplicar atributos a um elemento de linguagem. Os atributos podem ser aplicados a praticamente qualquer elemento de linguagem; os elementos específicos para os quais um atributo pode ser aplicado são definidos pelo <xref:System.AttributeUsageAttribute> aplicado à classe de atributo.  
   
 ### <a name="type-accessibility"></a>Acessibilidade de tipo  
- Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o tempo de execução dá suporte.  
+ Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o runtime dá suporte.  
   
 |Acessibilidade|Descrição|  
 |-------------------|-----------------|  
@@ -225,7 +225,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Membros de tipo  
- O tempo de execução permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo. Os membros de tipo incluem o seguinte:  
+ O runtime permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo. Os membros de tipo incluem o seguinte:  
   
 - [Campos](#Fields)  
   
@@ -241,7 +241,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Campos  
- Um campo descreve e contém parte do estado do tipo. Campos podem ser de qualquer tipo com suporte pelo tempo de execução. Geralmente, os campos são `private` ou `protected`, de forma que são acessíveis somente de dentro da classe ou de uma classe derivada. Se o valor de um campo puder ser modificado fora de seu tipo, um acessador do conjunto de propriedades normalmente será usado. Os campos expostos publicamente geralmente são somente leitura e podem ser de dois tipos:  
+ Um campo descreve e contém parte do estado do tipo. Campos podem ser de qualquer tipo com suporte pelo runtime. Geralmente, os campos são `private` ou `protected`, de forma que são acessíveis somente de dentro da classe ou de uma classe derivada. Se o valor de um campo puder ser modificado fora de seu tipo, um acessador do conjunto de propriedades normalmente será usado. Os campos expostos publicamente geralmente são somente leitura e podem ser de dois tipos:  
   
 - Constantes, cujo valor é atribuído no tempo de design. Esses são membros estáticos de uma classe, embora eles não sejam definidos usando a palavra-chave `static` (`Shared` no Visual Basic).  
   

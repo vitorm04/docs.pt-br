@@ -14,10 +14,10 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73126239"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigação: novo compilador JIT de 64 bits
-A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador JIT de 64 bits para compilação just-in-time. Essa alteração não afeta a compilação com o compilador JIT de 32 bits.  
+A partir do .NET Framework 4.6, o runtime inclui um novo compilador JIT de 64 bits para compilação just-in-time. Essa alteração não afeta a compilação com o compilador JIT de 32 bits.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Comportamento ou exceções inesperadas  
- Em alguns casos, a compilação com o novo compilador JIT de 64 bits resulta em uma exceção de tempo de execução ou em um comportamento não observado durante a execução do código compilado pelo compilador JIT de 64 bits mais antigo. Os diferenças conhecidas incluem o seguinte:  
+ Em alguns casos, a compilação com o novo compilador JIT de 64 bits resulta em uma exceção de runtime ou em um comportamento não observado durante a execução do código compilado pelo compilador JIT de 64 bits mais antigo. Os diferenças conhecidas incluem o seguinte:  
   
 > [!IMPORTANT]
 > Todos esses problemas conhecidos foram resolvidos no novo compilador de 64 bits lançado com o .NET Framework 4.6.2. A maioria também foi resolvida nas versões de serviço do .NET Framework 4.6 e 4.6.1, incluídos com o Windows Update. Você pode eliminar esses problemas garantindo que sua versão do Windows esteja atualizada, ou atualizando para o .NET Framework 4.6.2.  

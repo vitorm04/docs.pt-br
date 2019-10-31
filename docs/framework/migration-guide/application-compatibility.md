@@ -16,7 +16,7 @@ ms.locfileid: "73126326"
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
 ## <a name="introduction"></a>Introdução
-A compatibilidade é uma meta muito importante de cada versão do .NET. A compatibilidade garante que cada versão é aditiva e, portanto, as versões anteriores ainda funcionarão. Por outro lado, as alterações na funcionalidade anterior (para melhorar o desempenho, resolver problemas de segurança ou corrigir bugs) podem causar problemas de compatibilidade no código ou nos aplicativos existentes que são executados em uma versão posterior. O .NET Framework reconhece as alterações de redirecionamento e de tempo de execução. As alterações de redirecionamento afetam os aplicativos que se destinam a uma versão específica do .NET Framework, mas que são executados em uma versão posterior. As alterações de tempo de execução afetam todos os aplicativos executados em uma versão específica.
+A compatibilidade é uma meta muito importante de cada versão do .NET. A compatibilidade garante que cada versão é aditiva e, portanto, as versões anteriores ainda funcionarão. Por outro lado, as alterações na funcionalidade anterior (para melhorar o desempenho, resolver problemas de segurança ou corrigir bugs) podem causar problemas de compatibilidade no código ou nos aplicativos existentes que são executados em uma versão posterior. O .NET Framework reconhece as alterações de redirecionamento e de runtime. As alterações de redirecionamento afetam os aplicativos que se destinam a uma versão específica do .NET Framework, mas que são executados em uma versão posterior. As alterações de runtime afetam todos os aplicativos executados em uma versão específica.
 
 Cada aplicativo se destina a uma versão específica do .NET Framework, que pode ser especificada por meio da:
 
@@ -26,9 +26,9 @@ Cada aplicativo se destina a uma versão específica do .NET Framework, que pode
 
 Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade. A versão do .NET Framework para a qual um aplicativo é direcionado é determinada pela versão de destino do assembly de entrada para o domínio do aplicativo no qual o código está em execução. Todos os assemblies adicionais carregados nesse domínio do aplicativo são direcionados a essa versão do .NET Framework. Por exemplo, no caso de um executável, a estrutura à qual o executável é direcionado é o modo de compatibilidade no qual todos os assemblies desse AppDomain serão executados.
 
-## <a name="runtime-changes"></a>Alterações em tempo de execução
+## <a name="runtime-changes"></a>Alterações em runtime
 
-Problemas de tempo de execução são aqueles que surgem quando um novo tempo de execução é colocado em um computador e os mesmos binários são executados, mas um comportamento diferente é observado. Se um binário foi compilado para o .NET Framework 4.0, ele será executado no modo de compatibilidade do .NET Framework 4.0 na versão 4.5 ou em versões posteriores. Muitas das alterações que afetam a versão 4.5 não afetarão um binário compilado para a versão 4.0. Isso é específico a um AppDomain e depende das configurações do assembly de entrada.
+Problemas de runtime são aqueles que surgem quando um novo runtime é colocado em um computador e os mesmos binários são executados, mas um comportamento diferente é observado. Se um binário foi compilado para o .NET Framework 4.0, ele será executado no modo de compatibilidade do .NET Framework 4.0 na versão 4.5 ou em versões posteriores. Muitas das alterações que afetam a versão 4.5 não afetarão um binário compilado para a versão 4.0. Isso é específico a um AppDomain e depende das configurações do assembly de entrada.
 
 ## <a name="retargeting-changes"></a>Alterações de redirecionamento
 
@@ -60,7 +60,7 @@ Cada problema inclui as seguintes informações:
     |   |   |
     |---|---|
     |Redirecionando|A alteração afeta aplicativos que são recompilados para uma nova versão do .NET Framework.|
-    |Tempo de execução|A alteração afeta um aplicativo existente que se destina a uma versão anterior do .NET Framework, mas é executado em uma versão posterior.|
+    |Runtime|A alteração afeta um aplicativo existente que se destina a uma versão anterior do .NET Framework, mas é executado em uma versão posterior.|
 
 - As APIs afetadas, se houver.
 

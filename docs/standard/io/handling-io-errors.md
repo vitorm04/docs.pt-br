@@ -65,7 +65,7 @@ Como a classe base para exceções no namespace <xref:System.IO>, a <xref:System
 > [!IMPORTANT]
 > Como <xref:System.IO.IOException> é a classe base dos outros tipos de exceção no namespace <xref:System.IO>, você deve tratar em um bloco `catch` depois de lidar com as outras exceções relacionadas a E/S.
 
-Além disso, do .NET Core 2.1 em diante, as verificações de validação da exatidão do caminho (por exemplo, para garantir que os caracteres inválidos não estejam presentes em um caminho) foram removidas, e o tempo de execução gera uma exceção mapeada de um código de erro do sistema operacional, em vez do seu próprio código de validação. A exceção com maior probabilidade de ser gerada nesse caso é uma <xref:System.IO.IOException>, embora também possa ser gerado qualquer outro tipo de exceção.
+Além disso, do .NET Core 2.1 em diante, as verificações de validação da exatidão do caminho (por exemplo, para garantir que os caracteres inválidos não estejam presentes em um caminho) foram removidas, e o runtime gera uma exceção mapeada de um código de erro do sistema operacional, em vez do seu próprio código de validação. A exceção com maior probabilidade de ser gerada nesse caso é uma <xref:System.IO.IOException>, embora também possa ser gerado qualquer outro tipo de exceção.
 
 Observe que, no seu código de tratamento de exceções, você deve sempre tratar a <xref:System.IO.IOException> por último. Caso contrário, como ela é a classe base de todas as outras exceções de E/S, os blocos catch de classes derivadas não serão avaliados.
 

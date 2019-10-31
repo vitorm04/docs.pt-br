@@ -86,7 +86,7 @@ O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.App
 ## <a name="example"></a>Exemplo
  O exemplo a seguir cria um domínio do aplicativo chamado `AD1` e adiciona o manipulador de eventos ao evento <xref:System.AppDomain.FirstChanceException> do domínio do aplicativo. O exemplo cria uma instância da classe `Worker` no domínio do aplicativo e chama um método chamado `Thrower`, que gera uma <xref:System.ArgumentException>. Dependendo do valor do argumento, o método captura a exceção ou não consegue lidar com ela.
 
- Cada vez que o método `Thrower` gera uma exceção no `AD1`, o evento <xref:System.AppDomain.FirstChanceException> é gerado no `AD1` e o manipulador de eventos exibe uma mensagem. Em seguida, o tempo de execução procura um manipulador de exceção. No primeiro caso, o manipulador de exceção é encontrado em `AD1`. No segundo caso, a exceção é tratada no `AD1` e, em vez disso, é capturada no domínio do aplicativo padrão.
+ Cada vez que o método `Thrower` gera uma exceção no `AD1`, o evento <xref:System.AppDomain.FirstChanceException> é gerado no `AD1` e o manipulador de eventos exibe uma mensagem. Em seguida, o runtime procura um manipulador de exceção. No primeiro caso, o manipulador de exceção é encontrado em `AD1`. No segundo caso, a exceção é tratada no `AD1` e, em vez disso, é capturada no domínio do aplicativo padrão.
 
 > [!NOTE]
 > O nome do domínio do aplicativo padrão é igual ao nome do executável.

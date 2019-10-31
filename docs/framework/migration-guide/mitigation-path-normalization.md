@@ -32,7 +32,7 @@ Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normaliza�
   
 - Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.  
   
-- O tempo de execução não valida caminhos de sintaxe do dispositivo.  
+- O runtime não valida caminhos de sintaxe do dispositivo.  
   
 - Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.  
   

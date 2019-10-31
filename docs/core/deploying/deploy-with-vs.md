@@ -146,7 +146,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As definições de configuração do perfil são mostradas na seção **Resumo** da guia. o **tempo de execução de destino** identifica qual tempo de execução foi publicado e o local de **destino** identifica onde os arquivos da implantação autônoma foram pré-gravados.
 
-      1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada tempo de execução de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
+      1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada runtime de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 
          1. Selecione **Criar novo perfil** na caixa de diálogo **Publicar**.
 

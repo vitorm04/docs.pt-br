@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123455"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>Método ICorDebugProcess6::GetExportStepInfo
-Fornece informações sobre funções exportadas de tempo de execução para ajudar a percorrer o código gerenciado.  
+Fornece informações sobre funções exportadas de runtime para ajudar a percorrer o código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -23,7 +23,7 @@ HRESULT GetExportStepInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  pszExportName  
- [in] O nome de uma função de exportação de tempo de execução gravada na tabela de exportação PE.  
+ [in] O nome de uma função de exportação de runtime gravada na tabela de exportação PE.  
   
  invokeKind  
  fora Um ponteiro para um membro da enumeração [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md) que descreve como a função exportada invocará o código gerenciado.  

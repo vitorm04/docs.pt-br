@@ -181,7 +181,7 @@ No terminal, navegue em um diretório acima até a pasta de trabalho criada no i
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
-O comando `FROM` instrui o Docker a extrair a imagem marcada **2.2** do repositório **mcr.microsoft.com/dotnet/core/runtime**. Certifique-se de executar o tempo de execução do .NET Core que corresponda ao tempo de execução direcionado pelo seu SDK. Por exemplo, o aplicativo criado na seção anterior usou o SDK do .NET Core 2.2 e criou um aplicativo destinado ao .NET Core 2.2. Portanto, a imagem de base mencionada no *Dockerfile* é marcada com **2.2**.
+O comando `FROM` instrui o Docker a extrair a imagem marcada **2.2** do repositório **mcr.microsoft.com/dotnet/core/runtime**. Certifique-se de executar o runtime do .NET Core que corresponda ao runtime direcionado pelo seu SDK. Por exemplo, o aplicativo criado na seção anterior usou o SDK do .NET Core 2.2 e criou um aplicativo destinado ao .NET Core 2.2. Portanto, a imagem de base mencionada no *Dockerfile* é marcada com **2.2**.
 
 Salve o arquivo *Dockerfile*. A estrutura de diretório da pasta de trabalho deve ser semelhante à mostrada a seguir. Algumas das pastas e arquivos de nível mais profundo foram eliminados para economizar espaço no artigo:
 
@@ -452,7 +452,7 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 Use o comando `docker images` para ver uma lista de imagens instaladas.
 
 > [!NOTE]
-> Arquivos de imagem podem ser grandes. Normalmente, você removeria contêineres temporários criados durante o teste e o desenvolvimento de seu aplicativo. Em geral, mantenha as imagens de base com o tempo de execução instalado se você planeja construir outras imagens com base nesse tempo de execução.
+> Arquivos de imagem podem ser grandes. Normalmente, você removeria contêineres temporários criados durante o teste e o desenvolvimento de seu aplicativo. Em geral, mantenha as imagens de base com o runtime instalado se você planeja construir outras imagens com base nesse runtime.
 
 ## <a name="next-steps"></a>Próximas etapas
 

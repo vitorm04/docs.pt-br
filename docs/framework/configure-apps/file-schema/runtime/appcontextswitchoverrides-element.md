@@ -51,7 +51,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
+|`runtime`|Contém informações sobre opções de inicialização do runtime.|  
   
 ## <a name="remarks"></a>Comentários  
  Começando com o .NET Framework 4,6, o elemento `<AppContextSwitchOverrides>` em um arquivo de configuração permite que os chamadores de uma API determinem se seu aplicativo pode aproveitar a nova funcionalidade ou preservar a compatibilidade com versões anteriores de uma biblioteca. Por exemplo, se o comportamento de uma API tiver sido alterado entre duas versões de uma biblioteca, o elemento `<AppContextSwitchOverrides>` permitirá que os chamadores dessa API recusem o novo comportamento nas versões da biblioteca que dão suporte à nova funcionalidade. Para aplicativos que chamam APIs no .NET Framework, o elemento `<AppContextSwitchOverrides>` também pode permitir chamadores cujos aplicativos se destinam a uma versão anterior do .NET Framework para aceitar novas funcionalidades se seu aplicativo estiver em execução em uma versão do .NET Framework que inclui essa função.  

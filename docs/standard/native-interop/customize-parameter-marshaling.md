@@ -6,7 +6,7 @@ ms.author: jekoritz
 ms.date: 01/18/2019
 ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
 ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/06/2019
 ms.locfileid: "65065969"

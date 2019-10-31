@@ -39,7 +39,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução executa a coleta de lixo simultaneamente.|
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o runtime executa a coleta de lixo simultaneamente.|
 
 ## <a name="enabled-attribute"></a>atributo habilitado
 

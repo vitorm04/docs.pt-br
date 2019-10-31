@@ -36,7 +36,7 @@ As formas mais comuns para sincronizar as atividades de threads são segmentos d
   
 ## <a name="interrupting-threads"></a>Interrompendo threads
 
- Você pode interromper um thread em espera chamando o método <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> no thread bloqueado para lançar um <xref:System.Threading.ThreadInterruptedException>, o que remove o thread da chamada de bloqueio. O thread deve capturar o <xref:System.Threading.ThreadInterruptedException> e fazer o que for apropriado para continuar funcionando. Se o thread ignorar a exceção, o tempo de execução capturará a exceção e interromperá o thread.  
+ Você pode interromper um thread em espera chamando o método <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> no thread bloqueado para lançar um <xref:System.Threading.ThreadInterruptedException>, o que remove o thread da chamada de bloqueio. O thread deve capturar o <xref:System.Threading.ThreadInterruptedException> e fazer o que for apropriado para continuar funcionando. Se o thread ignorar a exceção, o runtime capturará a exceção e interromperá o thread.  
   
 > [!NOTE]
 > Se o thread de destino não for bloqueado quando <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> for chamado, o thread não será interrompido até ser bloqueado. Se o thread nunca for bloqueado, ele poderá ser concluído sem nunca ser interrompido.  

@@ -6,7 +6,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59235051"
 ---
-### <a name="sqlvariant-data-uses-sqlvariant-collation-rather-than-database-collation"></a>Os dados do Sql_variant usam a ordenação sql_variant em vez da ordenação de banco de dados
+### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>Os dados do Sql_variant usam a ordenação sql_variant em vez da ordenação de banco de dados
 
 |   |   |
 |---|---|

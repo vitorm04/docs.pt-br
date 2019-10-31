@@ -15,7 +15,7 @@ ms.locfileid: "73037103"
 
 [Anterior – Interpretando expressões](expression-trees-interpreting.md)
 
-Todas as árvores de expressão que você viu até agora foram criadas pelo compilador C#. Tudo que eu tive que fazer foi criar uma expressão lambda que foi atribuída a uma variável tipada como um `Expression<Func<T>>` ou algum tipo semelhante. Essa não é a única maneira de criar uma árvore de expressão. Para muitos cenários, você pode descobrir que precisa criar uma expressão na memória em tempo de execução. 
+Todas as árvores de expressão que você viu até agora foram criadas pelo compilador C#. Tudo que eu tive que fazer foi criar uma expressão lambda que foi atribuída a uma variável tipada como um `Expression<Func<T>>` ou algum tipo semelhante. Essa não é a única maneira de criar uma árvore de expressão. Para muitos cenários, você pode descobrir que precisa criar uma expressão na memória em runtime. 
 
 Criar árvores de expressão é complicado pelo fato de que essas árvores de expressão são imutáveis. Ser imutável significa que você precisa criar a árvore de folhas até a raiz. As APIs que você usará para criar as árvores de expressão refletem esse fato: os métodos que você usará para criar um nó usam todos os seus filhos como argumentos. Vejamos alguns exemplos para mostrar as técnicas a você.
 
@@ -168,7 +168,7 @@ Para esta seção, também atualizei o código de visitante para visitar cada n�
 
 ## <a name="examining-the-apis"></a>Examinando as APIs
 
-As APIs de árvore de expressão são algumas das mais difíceis de navegar no .NET Core, mas não tem problema. Sua finalidade é uma tarefa bastante complexa: escrever código que gera código em tempo de execução. Eles são necessariamente complicadas para fornecer um equilíbrio entre dar suporte a todas as estruturas de controle disponíveis na linguagem C# e manter a área de superfície das APIs tão pequena quanto for razoável. Esse equilíbrio significa que muitas estruturas de controle são representadas não por seus constructos em C#, mas por constructos que representam a lógica subjacente que o compilador gera desses constructos de nível superior. 
+As APIs de árvore de expressão são algumas das mais difíceis de navegar no .NET Core, mas não tem problema. Sua finalidade é uma tarefa bastante complexa: escrever código que gera código em runtime. Eles são necessariamente complicadas para fornecer um equilíbrio entre dar suporte a todas as estruturas de controle disponíveis na linguagem C# e manter a área de superfície das APIs tão pequena quanto for razoável. Esse equilíbrio significa que muitas estruturas de controle são representadas não por seus constructos em C#, mas por constructos que representam a lógica subjacente que o compilador gera desses constructos de nível superior. 
 
 Além disso, no momento, há expressões de C# que não podem ser criadas diretamente usando os métodos de classe `Expression`. Em geral, esses serão os operadores e expressões mais novos adicionadas no C# 5 e no C# 6. (Por exemplo, expressões `async` não podem ser criadas e o novo operador `?.` não pode ser criado diretamente.)
 

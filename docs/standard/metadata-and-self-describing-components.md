@@ -26,7 +26,7 @@ ms.locfileid: "73121942"
 
 No passado, um componente de software (.exe ou .dll) escrito em uma linguagem não podia usar facilmente um componente de software escrito em outra linguagem. COM foi um passo para a solução desse problema. O .NET Framework facilita ainda mais a interoperação entre componentes permitindo que compiladores emitam informações declarativas adicionais sobre todos os módulos e assemblies. Essas informações, chamadas de metadados, ajudam os componentes a interagirem perfeitamente.
 
- Metadados são informações binárias que descrevem o seu programa, armazenadas em um arquivo PE (Portable Executable) do Common Language Runtime ou na memória. Quando você compila seu código em um arquivo PE, os metadados são inseridos em uma parte do arquivo, e o código é convertido em MSIL (Microsoft Intermediate Language) e inserido em outra parte do arquivo. Cada tipo e membro definido e referenciado em um módulo ou assembly é descrito em metadados. Quando o código é executado, o tempo de execução carrega os metadados na memória e os referencia para descobrir informações sobre suas classes de código, membros, herança etc.
+ Metadados são informações binárias que descrevem o seu programa, armazenadas em um arquivo PE (Portable Executable) do Common Language Runtime ou na memória. Quando você compila seu código em um arquivo PE, os metadados são inseridos em uma parte do arquivo, e o código é convertido em MSIL (Microsoft Intermediate Language) e inserido em outra parte do arquivo. Cada tipo e membro definido e referenciado em um módulo ou assembly é descrito em metadados. Quando o código é executado, o runtime carrega os metadados na memória e os referencia para descobrir informações sobre suas classes de código, membros, herança etc.
 
  Os metadados descrevem cada tipo e membro definido no seu código de maneira neutra em relação à linguagem. Os metadados armazenam as seguintes informações:
 
@@ -56,7 +56,7 @@ Os metadados são a chave para um modelo de programação mais simples e elimina
 
 - Arquivos autodescritivos.
 
-  Módulos e assemblies do Common Language Runtime são autodescritivos. Os metadados de um módulo contêm tudo de que ele precisa para interagir com outro módulo. Como os metadados fornecem automaticamente a funcionalidade de IDL em COM, você pode usar um arquivo para definição e implementação. Módulos e assemblies do tempo de execução sequer exigem o registro no sistema operacional. Como resultado, as descrições usadas pelo tempo de execução sempre refletem o código real no arquivo compilado, o que aumenta a confiabilidade do aplicativo.
+  Módulos e assemblies do Common Language Runtime são autodescritivos. Os metadados de um módulo contêm tudo de que ele precisa para interagir com outro módulo. Como os metadados fornecem automaticamente a funcionalidade de IDL em COM, você pode usar um arquivo para definição e implementação. Módulos e assemblies do runtime sequer exigem o registro no sistema operacional. Como resultado, as descrições usadas pelo runtime sempre refletem o código real no arquivo compilado, o que aumenta a confiabilidade do aplicativo.
 
 - Interoperabilidade de linguagem e facilidade de design com base em componentes.
 
@@ -94,7 +94,7 @@ Quando um programa é compilado para o Common Language Runtime, ele é convertid
 |----------------|----------------------------|
 |Cabeçalho PE|O índice das seções principais do arquivo PE e o endereço do ponto de entrada.<br /><br /> O ambiente de execução usa essas informações para identificar o arquivo como um arquivo PE e determinar onde a execução começa ao carregar o programa na memória.|
 |Instruções MSIL|As instruções MSIL que compõem o seu código. Muitas instruções MSIL são acompanhadas de tokens de metadados.|
-|Metadados|Tabelas e heaps de metadados. O tempo de execução usa esta seção para registrar informações todos os tipos e membros em seu código. Esta seção também inclui atributos personalizados e informações de segurança.|
+|Metadados|Tabelas e heaps de metadados. O runtime usa esta seção para registrar informações todos os tipos e membros em seu código. Esta seção também inclui atributos personalizados e informações de segurança.|
 
 ## <a name="run-time-use-of-metadata"></a>Uso de metadados em tempo de execução
 
@@ -132,7 +132,7 @@ public class MyApp
 }
 ```
 
-Quando o código é executado, o tempo de execução carrega o módulo na memória e consulta os metadados dessa classe. Quando carregado, o tempo de execução executa uma análise abrangente do fluxo MSIL (Microsoft Intermediate Language) do método para convertê-lo em instruções de máquina rápidas nativas. O tempo de execução usa um compilador JIT (just-in-time) para converter as instruções MSIL em código de máquina nativo, um método por vez, conforme necessário.
+Quando o código é executado, o runtime carrega o módulo na memória e consulta os metadados dessa classe. Quando carregado, o runtime executa uma análise abrangente do fluxo MSIL (Microsoft Intermediate Language) do método para convertê-lo em instruções de máquina rápidas nativas. O runtime usa um compilador JIT (just-in-time) para converter as instruções MSIL em código de máquina nativo, um método por vez, conforme necessário.
 
 O exemplo a seguir mostra parte do MSIL produzido a partir da função `Main` do código anterior. Você pode exibir o MSIL e os metadados de qualquer aplicativo .NET Framework usando o [MSIL Disassembler (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md).
 
@@ -167,7 +167,7 @@ Cada coluna da tabela contém informações importantes sobre seu código. A col
 
 O tempo de execução calcula o endereço de deslocamento desejado com base na coluna **RVA** na terceira linha e retorna esse endereço para o compilador JIT, que depois passa para o novo endereço. O compilador JIT continua processando o MSIL no novo endereço até encontrar outro token de metadados, e o processo é repetido.
 
-Usando metadados, o ambiente de tempo de execução tem acesso a todas as informações necessárias para carregar seu código e processá-lo em instruções de máquina nativas. Dessa maneira, os metadados permitem arquivos autodescritivos e, com o CTS, a herança entre linguagens.
+Usando metadados, o ambiente de runtime tem acesso a todas as informações necessárias para carregar seu código e processá-lo em instruções de máquina nativas. Dessa maneira, os metadados permitem arquivos autodescritivos e, com o CTS, a herança entre linguagens.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

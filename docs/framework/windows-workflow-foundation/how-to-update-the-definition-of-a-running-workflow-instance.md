@@ -45,7 +45,7 @@ A atualização dinâmica fornece um mecanismo para que os desenvolvedores de ap
 
 1. Clique com botão direito **WF45GettingStartedTutorial** na **Gerenciador de soluções** e escolha **Add**, **novo projeto**.
 
-2. No **Installed** nó, selecione **Visual c#**, **Windows** (ou **Visual Basic**, **Windows**).
+2. No **Installed** nó, selecione **Visual c#** , **Windows** (ou **Visual Basic**, **Windows**).
 
     > [!NOTE]
     > Dependendo da linguagem de programação configurada como linguagem primária no Visual Studio, o **Visual c#** ou **Visual Basic** nó pode estar abaixo de **outros idiomas** nó de **instalado** nó.
@@ -1068,7 +1068,7 @@ A atualização dinâmica fornece um mecanismo para que os desenvolvedores de ap
 
 1. Clique com botão direito **WF45GettingStartedTutorial** na **Gerenciador de soluções** e escolha **Add**, **novo projeto**.
 
-2. No **Installed** nó, selecione **Visual c#**, **Windows** (ou **Visual Basic**, **Windows**).
+2. No **Installed** nó, selecione **Visual c#** , **Windows** (ou **Visual Basic**, **Windows**).
 
     > [!NOTE]
     > Dependendo da linguagem de programação configurada como linguagem primária no Visual Studio, o **Visual c#** ou **Visual Basic** nó pode estar abaixo de **outros idiomas** nó de **instalado** nó.
@@ -1455,22 +1455,22 @@ A atualização dinâmica fornece um mecanismo para que os desenvolvedores de ap
 5. Faça uma anotação da `InstanceId` e insira palpites até que o fluxo de trabalho seja concluído. A janela de status exibe informações sobre o conteúdo do palpite porque as atividades `WriteLine` foram atualizadas pela atualização dinâmica.
 
     **Insira um número entre 1 e 10**\
-    **Sua estimativa é muito baixa.**\
+    **Sua estimativa é muito baixa.** \
     **Insira um número entre 1 e 10**\
-    **5 é muito baixo.**\
+    **5 é muito baixo.** \
     **Insira um número entre 1 e 10**\
-    **7 é muito alta.**\
+    **7 é muito alta.** \
     **Insira um número entre 1 e 10**\
     **Parabéns, você já entendeu o número em 4 sequências.**
 
 6. Abra o Windows Explorer e navegue até a **NumberGuessWorkflowHost\bin\debug** pasta (ou **bin\release** dependendo de suas configurações de projeto) e abra o arquivo de rastreamento usando o bloco de notas que corresponde o fluxo de trabalho concluído. Se você não fez uma anotação do `InstanceId` talvez você possa identificar o arquivo de controle correto usando a **data modificada** informações no Windows Explorer. A última linha das informações de rastreamento contém a saída de atividade recém-adicionada `WriteLine`.
 
     **Insira um número entre 1 e 10**\
-    **Sua estimativa é muito baixa.**\
+    **Sua estimativa é muito baixa.** \
     **Insira um número entre 1 e 10**\
-    **5 é muito baixo.**\
+    **5 é muito baixo.** \
     **Insira um número entre 1 e 10**\
-    **7 é muito alta.**\
+    **7 é muito alta.** \
     **Insira um número entre 1 e 10**\
     **6 está correta. Você acertou o Palpite em 4 sequências.**
 

@@ -13,7 +13,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73117451"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<elemento de > disableFusionUpdatesFromADManager
-Especifica se o comportamento padrão, que é permitir que o host de tempo de execução substitua as definições de configuração de um domínio de aplicativo, está desabilitado.  
+Especifica se o comportamento padrão, que é permitir que o host de runtime substitua as definições de configuração de um domínio de aplicativo, está desabilitado.  
   
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \

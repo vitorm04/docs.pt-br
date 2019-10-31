@@ -81,7 +81,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 |Digite|Mensagem|
 |----------|-------------|
-|<xref:System.ExecutionEngineException?displayProperty=nameWithType>|Esse tipo indicava um erro fatal não especificado no tempo de execução. Como o tempo de execução não aciona mais essa exceção, esse tipo está obsoleto.|
+|<xref:System.ExecutionEngineException?displayProperty=nameWithType>|Esse tipo indicava um erro fatal não especificado no runtime. Como o runtime não aciona mais essa exceção, esse tipo está obsoleto.|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|Use <xref:System.StringComparer?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Use <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|A classe <xref:System.Configuration.Assemblies.AssemblyHash> foi substituída.|

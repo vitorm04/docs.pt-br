@@ -69,7 +69,7 @@ Exemplos de linguagens desenvolvidos usando o DLR incluem:
  Os objetos e bibliotecas implementados em uma linguagem podem ser usadas por outras. O DLR também proporciona interoperabilidade entre linguagens dinâmicas e com tipo estático. Por exemplo, C# pode declarar um objeto dinâmico que usa uma biblioteca que é escrita em uma linguagem dinâmica. Ao mesmo tempo, linguagens dinâmicas podem usar bibliotecas do .NET Framework.
 
 ### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>Fornece invocação e expedição dinâmica rápidas
- O DLR fornece a rápida execução das operações dinâmicas dando suporte a cache polimórfico avançado. O DLR cria regras para associar operações que usam objetos para as implementações de tempo de execução necessárias e, em seguida, armazena essas regras para evitar o esgotamento de recursos de computações de associação durante execuções sucessivas do mesmo código nos mesmos tipos de objetos.
+ O DLR fornece a rápida execução das operações dinâmicas dando suporte a cache polimórfico avançado. O DLR cria regras para associar operações que usam objetos para as implementações de runtime necessárias e, em seguida, armazena essas regras para evitar o esgotamento de recursos de computações de associação durante execuções sucessivas do mesmo código nos mesmos tipos de objetos.
 
 ## <a name="dlr-architecture"></a>Arquitetura do DLR
  A ilustração a seguir mostra a arquitetura do dynamic language runtime.

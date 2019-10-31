@@ -60,7 +60,7 @@ A reflexão também pode ser usada para criar aplicativos chamados navegadores d
   
 Há outros usos para reflexão. Os compiladores de linguagens como o JScript usam reflexão para criar tabelas de símbolos. As classes no namespace <xref:System.Runtime.Serialization> usam reflexão para acessar dados e para determinar quais campos persistir. As classes do namespace <xref:System.Runtime.Remoting> usa a reflexão indiretamente por meio da serialização.  
   
-## <a name="runtime-types-in-reflection"></a>Tipos do tempo de execução na reflexão  
+## <a name="runtime-types-in-reflection"></a>Tipos do runtime na reflexão  
 A reflexão fornece classes, como <xref:System.Type> e <xref:System.Reflection.MethodInfo>, para representar tipos, membros, parâmetros e outras entidades de código. No entanto, ao usar a reflexão, você não trabalha diretamente com essas classes, a maioria das quais é abstrata (`MustInherit` no Visual Basic). Em vez disso, você trabalha com tipos fornecidos pelo CLR (Common Language Runtime).  
   
 Por exemplo, quando você usa o operador `typeof` C# (`GetType` no Visual Basic) para obter um objeto <xref:System.Type>, o objeto é na verdade um `RuntimeType`. `RuntimeType` deriva de <xref:System.Type> e fornece implementações de todos os métodos abstratos.  

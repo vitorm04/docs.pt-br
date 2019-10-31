@@ -5,7 +5,7 @@ ms.date: 07/31/2019
 ms.technology: dotnet-cli
 ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
 ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/17/2019
 ms.locfileid: "69566246"

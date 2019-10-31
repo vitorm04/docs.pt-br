@@ -18,9 +18,9 @@ ms.locfileid: "73127550"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 
-O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O tempo de execução monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) e da invocação de plataforma.  
+O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O runtime monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) e da invocação de plataforma.  
   
- Quando um thread não gerenciado, por exemplo, um COM Callable Wrapper, ingressa no tempo de execução, o sistema verifica o repositório de threads locais do thread em questão para procurar um objeto <xref:System.Threading.Thread> interno gerenciado. Caso o sistema encontre um thread desse tipo, o tempo de execução fica ciente sobre ele. Caso contrário, o tempo de execução compila um novo objeto <xref:System.Threading.Thread> e o instala no repositório de threads locais do thread em questão.  
+ Quando um thread não gerenciado, por exemplo, um COM Callable Wrapper, ingressa no tempo de execução, o sistema verifica o repositório de threads locais do thread em questão para procurar um objeto <xref:System.Threading.Thread> interno gerenciado. Caso o sistema encontre um thread desse tipo, o runtime fica ciente sobre ele. Caso contrário, o tempo de execução compila um novo objeto <xref:System.Threading.Thread> e o instala no repositório de threads locais do thread em questão.  
   
  No threading gerenciado, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> é a identificação estável do thread gerenciado. Durante seu tempo de vida, o thread não colidirá com os valores de outros threads, independente do domínio do aplicativo para o qual você obtém esse valor.  
   
@@ -29,7 +29,7 @@ O gerenciamento de todos os threads, inclusive de threads criados pelo Common La
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Mapeando do threading do Win32 para o threading gerenciado
 
- A tabela a seguir mapeia os elementos do threading do Win32 com seu equivalente aproximado no tempo de execução. Esse mapeamento não representa uma funcionalidade idêntica. Por exemplo, **TerminateThread** não executa cláusulas **finally** nem libera recursos, e não é possível evitá-lo. No entanto, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> executa todo o código de reversão, recupera todos os recursos e pode ser negado com <xref:System.Threading.Thread.ResetAbort%2A>. Leia a documentação com atenção e não faça deduções sobre a funcionalidade.  
+ A tabela a seguir mapeia os elementos do threading do Win32 com seu equivalente aproximado no runtime. Esse mapeamento não representa uma funcionalidade idêntica. Por exemplo, **TerminateThread** não executa cláusulas **finally** nem libera recursos, e não é possível evitá-lo. No entanto, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> executa todo o código de reversão, recupera todos os recursos e pode ser negado com <xref:System.Threading.Thread.ResetAbort%2A>. Leia a documentação com atenção e não faça deduções sobre a funcionalidade.  
   
 |No Win32|No Common Language Runtime|  
 |--------------|------------------------------------|  
@@ -69,7 +69,7 @@ Se um thread fizer uma chamada não gerenciada no sistema operacional que bloque
 
 ## <a name="threads-and-fibers"></a>Threads e fibras
 
-Modelo de threading do .NET não é compatível com [fibras](/windows/desktop/procthread/fibers). Você não deve chamar nenhuma função não gerenciada implementada usando fibras. Essas chamadas podem resultar em uma falha de tempo de execução do .NET.
+Modelo de threading do .NET não é compatível com [fibras](/windows/desktop/procthread/fibers). Você não deve chamar nenhuma função não gerenciada implementada usando fibras. Essas chamadas podem resultar em uma falha de runtime do .NET.
 
 ## <a name="see-also"></a>Consulte também
 

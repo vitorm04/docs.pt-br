@@ -14,7 +14,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73131647"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (referência de API não gerenciada)
-A API de fusão permite a um host de tempo de execução acessar as propriedades dos recursos de um aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
+A API de fusão permite a um host de runtime acessar as propriedades dos recursos de um aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interfaces de fusão](fusion-interfaces.md)  

@@ -73,12 +73,12 @@ Você pode examinar os nós em uma árvore de sintaxe de duas maneiras. Você po
 Você pode ver o código concluído para essa amostra no [nosso repositório do GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
-> Os tipos de árvore de sintaxe usam a herança para descrever os elementos de sintaxe diferentes que são válidos em locais diferentes no programa. Usar essas APIs geralmente significa converter propriedades ou membros da coleção em tipos derivados específicos. Nos exemplos a seguir, a atribuição e as conversões são instruções separadas, usando variáveis explicitamente tipadas. Você pode ler o código para ver os tipos de retorno da API e o tipo de tempo de execução dos objetos retornados. Na prática, é mais comum usar variáveis implicitamente tipadas e depender de nomes de API para descrever o tipo de objeto que está sendo examinado.
+> Os tipos de árvore de sintaxe usam a herança para descrever os elementos de sintaxe diferentes que são válidos em locais diferentes no programa. Usar essas APIs geralmente significa converter propriedades ou membros da coleção em tipos derivados específicos. Nos exemplos a seguir, a atribuição e as conversões são instruções separadas, usando variáveis explicitamente tipadas. Você pode ler o código para ver os tipos de retorno da API e o tipo de runtime dos objetos retornados. Na prática, é mais comum usar variáveis implicitamente tipadas e depender de nomes de API para descrever o tipo de objeto que está sendo examinado.
 
 Criar um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#:
 
 * No Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** para exibir a caixa de diálogo Novo Projeto.
-* Em **Visual C#** > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**.
+* Em **Visual C#**  > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**.
 * Nomeie o projeto "**SyntaxTreeManualTraversal**" e clique em OK.
 
 Você analisará o programa "Olá, Mundo!" básico mostrado anteriormente.

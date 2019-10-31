@@ -10,7 +10,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128344"
 ---
 # <a name="method-element-net-native"></a>Elemento > do método de \<(.NET Native)
-Aplica a política de reflexão de tempo de execução a um construtor ou método.  
+Aplica a política de reflexão de runtime a um construtor ou método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,9 +29,9 @@ Aplica a política de reflexão de tempo de execução a um construtor ou métod
 |Atributo|Tipo de atributo|Descrição|  
 |---------------|--------------------|-----------------|  
 |`Name`|Geral|Atributo obrigatório. Especifica o nome do método.|  
-|`Signature`|Geral|Atributo opcional. Especifica a assinatura do método. Se vários parâmetros estiverem presentes, eles são separados por vírgulas. Por exemplo, o elemento `<Method>` a seguir define a política para o método <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29>.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Se o atributo estiver ausente, a diretiva de tempo de execução se aplica a todas as sobrecargas do método.|  
+|`Signature`|Geral|Atributo opcional. Especifica a assinatura do método. Se vários parâmetros estiverem presentes, eles são separados por vírgulas. Por exemplo, o elemento `<Method>` a seguir define a política para o método <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29>.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Se o atributo estiver ausente, a diretiva de runtime se aplica a todas as sobrecargas do método.|  
 |`Browse`|Reflexão|Atributo opcional. Controla consultas para obter informações sobre o método ou para enumerá-lo, mas não permite qualquer invocação dinâmica no tempo de execução.|  
-|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do tempo de execução a um construtor ou método para habilitar a programação dinâmica. Essa política garante que um membro pode ser invocado dinamicamente no tempo de execução.|  
+|`Dynamic`|Reflexão|Atributo opcional. Controla o acesso do runtime a um construtor ou método para habilitar a programação dinâmica. Essa política garante que um membro pode ser invocado dinamicamente no tempo de execução.|  
   
 ## <a name="name-attribute"></a>Atributo de nome  
   

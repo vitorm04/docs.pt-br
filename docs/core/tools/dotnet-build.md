@@ -116,7 +116,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica o tempo de execução de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
+  Especifica o runtime de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -140,7 +140,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
   dotnet build --configuration Release
   ```
 
-- Compile um projeto e suas dependências para um tempo de execução específico (no exemplo, Ubuntu 18.04):
+- Compile um projeto e suas dependências para um runtime específico (no exemplo, Ubuntu 18.04):
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64

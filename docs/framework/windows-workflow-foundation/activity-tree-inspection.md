@@ -28,7 +28,7 @@ A inspeção da árvore de atividade é usada por autores de aplicativo de fluxo
 **List Item 3**   
 **List Item 4**   
 **List Item 5**   
-**Itens adicionados à coleção.**   
+**Itens adicionados à coleção.**    
 **Sequência**   
  **Literal < lista\<cadeia de caracteres >>**  
  **While**  

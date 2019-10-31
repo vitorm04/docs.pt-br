@@ -26,7 +26,7 @@ Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de re
 |LIBID|Identificador de biblioteca|HKEY_CLASSES_ROOT\TypeLib\\{000…000}|  
 |ProgID|Identificador programático|HKEY_CLASSES_ROOT\000…000|  
   
- Sob a chave HKCR\CLSID\\{0000... 0000}, o valor padrão é definido como o ProgID da classe e dois novos valores nomeados, Class e Assembly, são adicionados. O tempo de execução lê o valor de Assembly do registro e a passa para o resolvedor de assembly de tempo de execução. O resolvedor de assembly tenta localizar o assembly, com base em informações de assembly como o número de versão e o nome. Para ser localizado por um resolvedor de assembly, o assembly deve estar em um dos seguintes locais:  
+ Sob a chave HKCR\CLSID\\{0000... 0000}, o valor padrão é definido como o ProgID da classe e dois novos valores nomeados, Class e Assembly, são adicionados. O runtime lê o valor de Assembly do registro e a passa para o resolvedor de assembly de runtime. O resolvedor de assembly tenta localizar o assembly, com base em informações de assembly como o número de versão e o nome. Para ser localizado por um resolvedor de assembly, o assembly deve estar em um dos seguintes locais:  
   
 - O cache de assembly global (deve ser um assembly de nome forte).  
   

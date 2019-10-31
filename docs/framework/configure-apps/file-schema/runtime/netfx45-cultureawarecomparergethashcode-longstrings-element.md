@@ -54,7 +54,7 @@ nenhuma.
 |Elemento|Descrição|
 |-------------|-----------------|
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|
+|`runtime`|Contém informações sobre opções de inicialização do runtime.|
 
 ## <a name="remarks"></a>Comentários
 

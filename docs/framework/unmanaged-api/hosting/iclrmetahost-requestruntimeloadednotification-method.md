@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140896"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Método ICLRMetaHost::RequestRuntimeLoadedNotification
 Fornece uma função de retorno de chamada que tem a garantia de ser chamada quando uma versão Common Language Runtime (CLR) é carregada pela primeira vez, mas ainda não foi iniciada. Esse método substitui a função [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
@@ -38,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
  `pCallbackFunction`  
  no A função de retorno de chamada que é invocada quando um novo tempo de execução é carregado.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -78,23 +76,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Se o host pretende carregar ou fazer com que outro tempo de execução seja carregado de maneira reentrante, os `pfnCallbackThreadSet` parâmetros e `pfnCallbackThreadUnset` fornecidos na função de retorno de chamada devem ser usados da seguinte maneira:  
+ Se o host pretende carregar ou fazer com que outro tempo de execução seja carregado de maneira reentrante, os parâmetros `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` fornecidos na função de retorno de chamada devem ser usados da seguinte maneira:  
   
-- `pfnCallbackThreadSet`deve ser chamado pelo thread que pode causar uma carga de tempo de execução antes que essa carga seja tentada.  
+- `pfnCallbackThreadSet` deve ser chamado pelo thread que pode causar uma carga de tempo de execução antes da tentativa desse tipo de carga.  
   
-- `pfnCallbackThreadUnset`deve ser chamado quando o thread não causar mais tal carga de tempo de execução (e antes de retornar do retorno de chamada inicial).  
+- `pfnCallbackThreadUnset` deve ser chamado quando o thread não causar mais tal carga de tempo de execução (e antes de retornar do retorno de chamada inicial).  
   
-- `pfnCallbackThreadSet`e `pfnCallbackThreadUnset` que não são reentrante.  
+- `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` são não reentrante.  
   
 > [!NOTE]
-> Os aplicativos host não devem `pfnCallbackThreadSet` chamar `pfnCallbackThreadUnset` e `pCallbackFunction` fora do escopo do parâmetro.  
+> Os aplicativos host não devem chamar `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` fora do escopo do parâmetro `pCallbackFunction`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

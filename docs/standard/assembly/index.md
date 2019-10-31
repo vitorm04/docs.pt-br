@@ -39,7 +39,7 @@ Os assemblies têm as seguintes propriedades:
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>Assemblies no Common Language Runtime
 
-Os assemblies fornecem o Common Language Runtime com as informações de que ele precisa para estar ciente das implementações de tipo. Para o tempo de execução, um tipo não existe fora do contexto de um assembly. 
+Os assemblies fornecem o Common Language Runtime com as informações de que ele precisa para estar ciente das implementações de tipo. Para o runtime, um tipo não existe fora do contexto de um assembly. 
 
 Um assembly define as seguintes informações:  
   

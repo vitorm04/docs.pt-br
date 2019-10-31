@@ -377,7 +377,7 @@ A caixa de diálogo de localização fornece duas opções adicionais:
 
 ### <a name="navigating-traces"></a>Navegando em rastreamentos
 
-Como os rastreamentos são registrados passo a passo durante o tempo de execução do aplicativo, a navegação em rastreamentos pode ajudá-lo a depurar seu aplicativo. O Visualizador de Rastreamento de Serviço fornece várias maneiras de navegar em rastreamentos.
+Como os rastreamentos são registrados passo a passo durante o runtime do aplicativo, a navegação em rastreamentos pode ajudá-lo a depurar seu aplicativo. O Visualizador de Rastreamento de Serviço fornece várias maneiras de navegar em rastreamentos.
 
 #### <a name="step-forward-or-backward"></a>Avançar ou retroceder
 

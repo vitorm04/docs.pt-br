@@ -90,7 +90,7 @@ Na página de download do pacote de desenvolvedor, escolha **Download**. Depois,
 
    ![O Instalador do Visual Studio com a carga de trabalho de desenvolvimento de área de trabalho .NET instalada](./media/visual-studio-installer.jpg)
 
-Quando você se destina a uma versão específica do .NET Framework, seu aplicativo é criado usando os assemblies de referência que estão incluídos no pacote do desenvolvedor desta versão. Em tempo de execução, os assemblies são resolvidos do cache de assembly global e os assemblies de referência não são usados.
+Quando você se destina a uma versão específica do .NET Framework, seu aplicativo é criado usando os assemblies de referência que estão incluídos no pacote do desenvolvedor desta versão. Em runtime, os assemblies são resolvidos do cache de assembly global e os assemblies de referência não são usados.
 
 Ao criar um aplicativo com o Visual Studio, ou usando o MSBuild na linha de comando, o MSBuild poderá exibir o erro MSB3644, "Os assemblies de referência para o framework "*versão do framework*"não foram encontrados." Para resolver o erro, baixe o pacote do desenvolvedor ou o pacote de direcionamento para essa versão do .NET Framework.
 

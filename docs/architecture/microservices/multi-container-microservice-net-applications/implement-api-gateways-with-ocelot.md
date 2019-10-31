@@ -142,7 +142,7 @@ No entanto, a comunicação de acesso direto com o microsserviço, nesse caso, p
 
 O Ocelot é basicamente um conjunto de middleware que você pode aplicar em uma ordem específica.
 
-O Ocelot foi projetado para funcionar apenas com o ASP.NET Core. Ele é direcionado ao netstandard2.0, portanto, pode ser usado em qualquer local com suporte para o .NET Standard 2.0, incluindo o tempo de execução do .NET Core 2.0 e o tempo de execução do .NET Framework 4.6.1 e superiores.
+O Ocelot foi projetado para funcionar apenas com o ASP.NET Core. Ele é direcionado ao netstandard2.0, portanto, pode ser usado em qualquer local com suporte para o .NET Standard 2.0, incluindo o runtime do .NET Core 2.0 e o runtime do .NET Framework 4.6.1 e superiores.
 
 Instale o Ocelot e suas dependências no projeto ASP.NET Core com o [pacote NuGet do Ocelot](https://www.nuget.org/packages/Ocelot/), por meio do Visual Studio.
 
@@ -312,7 +312,7 @@ No eShopOnContainers, a "imagem genérica do Docker do Gateway de API" é criada
       dockerfile: src/ApiGateways/ApiGw-Base/Dockerfile
 ```
 
-Além disso, como você pode ver no arquivo docker-compose.override.yml a seguir, a única diferença entre esses contêineres de Gateway de API é o arquivo de configuração do Ocelot, que é diferente para cada contêiner de serviço e é especificado em tempo de execução por meio de um volume do Docker.
+Além disso, como você pode ver no arquivo docker-compose.override.yml a seguir, a única diferença entre esses contêineres de Gateway de API é o arquivo de configuração do Ocelot, que é diferente para cada contêiner de serviço e é especificado em runtime por meio de um volume do Docker.
 
 ```yml
 mobileshoppingapigw:

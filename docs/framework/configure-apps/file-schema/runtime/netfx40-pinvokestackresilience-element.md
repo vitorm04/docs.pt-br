@@ -14,7 +14,7 @@ ms.locfileid: "73116155"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<elemento de > NetFx40_PInvokeStackResilience
 
-Especifica se o tempo de execução corrige automaticamente declarações de invocação de plataforma incorretas em tempo de execução, às custas de transições mais lentas entre o código gerenciado e não gerenciado.
+Especifica se o runtime corrige automaticamente declarações de invocação de plataforma incorretas em runtime, às custas de transições mais lentas entre o código gerenciado e não gerenciado.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
@@ -52,7 +52,7 @@ nenhuma.
 |Elemento|Descrição|
 |-------------|-----------------|
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|
+|`runtime`|Contém informações sobre opções de inicialização do runtime.|
 
 ## <a name="remarks"></a>Comentários
 
