@@ -9,14 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127530"
 ---
 # <a name="the-managed-thread-pool"></a>O pool de threads gerenciados
 
@@ -91,7 +89,7 @@ Há várias situações nas quais é apropriado criar e gerenciar seus próprios
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [TPL (Biblioteca de Paralelismo de Tarefas)](../parallel-programming/task-parallel-library-tpl.md)
-- [Como: Retornar um valor de uma tarefa](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [Como retornar um valor de uma tarefa](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [Objetos e recursos de threading](threading-objects-and-features.md)
 - [Threads e threading](threads-and-threading.md)
 - [E/S de arquivo assíncrona](../io/asynchronous-file-i-o.md)

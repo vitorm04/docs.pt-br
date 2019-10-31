@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b052aac7a71308486676aa688fd5ad655c2015f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765286"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096923"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>Método ICorDebugModuleEnum::Next
-Obtém o número de instâncias de "ICorDebugModule" especificado pelo `celt` de enumeração, começando na posição atual.  
+Obtém o número de instâncias "ICorDebugModule" especificadas por `celt` da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugModule` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugModule` a serem recuperadas.  
   
  `modules`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugModule` objeto.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugModule`.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de `ICorDebugModule` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de instâncias de `ICorDebugModule` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

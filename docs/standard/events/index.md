@@ -14,14 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770403"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131627"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 
@@ -86,16 +84,16 @@ O .NET permite que os assinantes se registrem para receber notificações de eve
 ## <a name="raising-multiple-events"></a>Acionando vários eventos  
  Se sua classe acionar vários eventos, o compilador vai gerar um campo por instância de representante de evento. Se o número de eventos for grande, o custo de armazenamento de um campo por representante pode não ser aceitável. Para esses casos, o .NET fornece propriedades de evento que você pode usar com outra estrutura de dados de sua escolha para armazenar representantes de eventos.  
   
- As propriedades de evento consistem em declarações de evento acompanhadas por acessadores de evento. Os acessadores de evento são métodos que você define para adicionar ou remover instâncias de representante de evento da estrutura de dados de armazenamento. Observe que as propriedades de evento são mais lentas que os campos de evento, pois cada representante de evento deve ser recuperado para que possa ser invocado. A compensação está entre a memória e a velocidade. Se sua classe define muitos eventos que raramente são acionados, você desejará implementar as propriedades de evento. Para obter mais informações, confira [Como: manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md).  
+ As propriedades de evento consistem em declarações de evento acompanhadas por acessadores de evento. Os acessadores de evento são métodos que você define para adicionar ou remover instâncias de representante de evento da estrutura de dados de armazenamento. Observe que as propriedades de evento são mais lentas que os campos de evento, pois cada representante de evento deve ser recuperado para que possa ser invocado. A compensação está entre a memória e a velocidade. Se sua classe define muitos eventos que raramente são acionados, você desejará implementar as propriedades de evento. Para saber mais, confira [Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Como: acionar e consumir eventos](how-to-raise-and-consume-events.md)|Contém exemplos de como acionar e consumir eventos.|  
-|[Como: manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  
+|[Como acionar e consumir eventos](how-to-raise-and-consume-events.md)|Contém exemplos de como acionar e consumir eventos.|  
+|[Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  
 |[Padrão de design do observador](observer-design-pattern.md)|Descreve o padrão de design que permite a um assinante se registrar em um provedor e receber notificações dele.|  
-|[Como: consumir eventos em um aplicativo do Web Forms](how-to-consume-events-in-a-web-forms-application.md)|Mostra como manipular um evento acionado por um controle do Web Forms.|  
+|[Como consumir eventos em um aplicativo Web Forms](how-to-consume-events-in-a-web-forms-application.md)|Mostra como manipular um evento acionado por um controle do Web Forms.|  
   
 ## <a name="see-also"></a>Consulte também
 

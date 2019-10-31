@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 061baf262342034299c47c22b2f2691f3a61b958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773973"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104224"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
 A Ferramenta de Exportação dos Metadados Windows Runtime (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados do Windows Runtime. Embora os assemblies do .NET Framework e os arquivos de metadados do Windows Runtime usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes do Tempo de Execução do Windows. O processo de transformar um módulo do .NET Framework em um componente do Tempo de Execução do Windows é conhecido como *exportação*. No .NET Framework 4.5 e no .NET Framework 4.5.1, o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  

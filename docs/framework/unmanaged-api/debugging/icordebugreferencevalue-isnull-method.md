@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99e8c8d7-a1c0-47c8-9dbd-03e0b2bcb4d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed37e6eae3ec4f6e69215be6a42afe7fe86ff393
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d5047b1d44f836d10b659f18cf885eba3b0e973
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139824"
 ---
 # <a name="icordebugreferencevalueisnull-method"></a>Método ICorDebugReferenceValue::IsNull
-Obtém um valor que indica se este ICorDebugReferenceValue é um valor nulo, caso em que o `ICorDebugReferenceValue` não aponta para um objeto.  
+Obtém um valor que indica se este ICorDebugReferenceValue é um valor nulo; nesse caso, o `ICorDebugReferenceValue` não aponta para um objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT IsNull (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbNull`  
- [out] Um ponteiro para um valor booliano que será `true` se esse `ICorDebugReferenceValue` objeto é nulo; caso contrário, `pbNull` é `false`.  
+ fora Um ponteiro para um valor booliano `true` se esse objeto `ICorDebugReferenceValue` for nulo; caso contrário, `pbNull` será `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

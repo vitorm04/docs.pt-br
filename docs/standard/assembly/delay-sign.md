@@ -8,18 +8,16 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e7679520e246ab3eda03e6f0e0d092c7d09f1845
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084334"
 ---
 # <a name="delay-sign-an-assembly"></a>Assinar um assembly com atraso
 
@@ -76,7 +74,7 @@ Para assinar um assembly com atraso:
    > Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.
 
    > [!NOTE]
-   > Se você usar o atraso de assinatura durante o desenvolvimento com o Visual Studio em um computador de 64 bits e compilar um assembly para **Qualquer CPU**, talvez seja necessário aplicar a opção **-Vr** duas vezes. (No Visual Studio, **Qualquer CPU** é um valor da propriedade de build **Destino de Plataforma**, quando você compila da linha de comando, esse é o padrão.) Para executar o aplicativo na linha de comando ou no explorador de arquivos, use a versão de 64 bits do [sn. exe (Strong Name Tool)](../../framework/tools/sn-exe-strong-name-tool.md) para aplicar a opção **-VR** ao assembly. Para carregar o assembly no Visual Studio no tempo de design (por exemplo, se o assembly contiver componentes que são usados por outros assemblies em seu aplicativo), use a versão de 32 bits da ferramenta de nome forte. Isso ocorre porque o compilador JIT (Just-in-time) compila o assembly para código nativo de 64 bits quando o assembly é executado da linha de comando e para código nativo de 32 bits quando o assembly é carregado no ambiente de tempo de design.
+   > Se você usar o atraso de assinatura durante o desenvolvimento com o Visual Studio em um computador de 64 bits e compilar um assembly para **Qualquer CPU**, talvez seja necessário aplicar a opção **-Vr** duas vezes. (No Visual Studio, **qualquer CPU** é um valor da propriedade de compilação de **destino de plataforma** ; quando você compila a partir da linha de comando, é o padrão.) Para executar o aplicativo na linha de comando ou no explorador de arquivos, use a versão de 64 bits do [sn. exe (Strong Name Tool)](../../framework/tools/sn-exe-strong-name-tool.md) para aplicar a opção **-VR** ao assembly. Para carregar o assembly no Visual Studio no tempo de design (por exemplo, se o assembly contiver componentes que são usados por outros assemblies em seu aplicativo), use a versão de 32 bits da ferramenta de nome forte. Isso ocorre porque o compilador JIT (Just-in-time) compila o assembly para código nativo de 64 bits quando o assembly é executado da linha de comando e para código nativo de 32 bits quando o assembly é carregado no ambiente de tempo de design.
 
 5. Posteriormente, normalmente imediatamente antes do envio, você envia o assembly para a autoridade de assinatura da sua organização para a assinatura de nome forte real usando a opção **–R** com a ferramenta Nome Forte.
 
@@ -89,6 +87,6 @@ Para assinar um assembly com atraso:
 ## <a name="see-also"></a>Consulte também
 
 - [Criar assemblies](create.md)
-- [Como: Criar um par de chaves pública/privada](create-public-private-key-pair.md)
+- [Como criar um par de chaves pública/privada](create-public-private-key-pair.md)
 - [Sn. exe (ferramenta Strong Name)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Programa com assemblies](program.md)

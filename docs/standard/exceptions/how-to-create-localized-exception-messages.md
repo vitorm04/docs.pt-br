@@ -2,14 +2,13 @@
 title: Como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 description: Saiba como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696709"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141529"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 
@@ -22,7 +21,7 @@ O .NET contém muitas exceções diferentes que você pode usar. No entanto, em 
 Vamos supor que você deseja criar um `StudentNotFoundException` que contenha uma propriedade `StudentName`.
 Para criar uma exceção personalizada, siga estas etapas:
 
-1. Crie uma classe serializável que herde de <xref:System.Exception>. O nome da classe deve terminar em "Exception":
+1. Crie uma classe serializável que herda de <xref:System.Exception>. O nome da classe deve terminar em "Exception":
 
     ```csharp
     [Serializable]

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739865"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097948"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumeração CorDebugInternalFrameType
-Identifica o tipo de quadro de pilha. Essa enumeração é usada pelo [icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) método.  
+Identifica o tipo de quadro de pilha. Essa enumeração é usada pelo método [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,20 +47,20 @@ typedef enum CorDebugInternalFrameType {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Um valor nulo. O `ICorDebugInternalFrame::GetFrameType` método nunca retornará esse valor.|  
-|`STUBFRAME_M2U`|Um quadro de stub para gerenciado.|  
-|`STUBFRAME_U2M`|Um quadro de stub não gerenciado para gerenciado.|  
+|`STUBFRAME_NONE`|Um valor nulo. O método `ICorDebugInternalFrame::GetFrameType` nunca retorna esse valor.|  
+|`STUBFRAME_M2U`|Um quadro de stub gerenciado para não gerenciado.|  
+|`STUBFRAME_U2M`|Um quadro de stub não gerenciado para gerenciamento.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Uma transição entre domínios de aplicativo.|  
 |`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Uma chamada de método leve.|  
-|`STUBFRAME_FUNC_EVAL`|O início da função de avaliação.|  
-|`STUBFRAME_INTERNALCALL`|Uma chamada interna para o common language runtime.|  
-|`STUBFRAME_CLASS_INIT`|O início de uma classe de inicialização.|  
-|`STUBFRAME_EXCEPTION`|Uma exceção é lançada.|  
-|`STUBFRAME_SECURITY`|Um quadro usado para a segurança de acesso do código.|  
-|`STUBFRAME_JIT_COMPILATION`|O tempo de execução é um método com compilação JIT.|  
+|`STUBFRAME_FUNC_EVAL`|O início da avaliação da função.|  
+|`STUBFRAME_INTERNALCALL`|Uma chamada interna para o Common Language Runtime.|  
+|`STUBFRAME_CLASS_INIT`|O início de uma inicialização de classe.|  
+|`STUBFRAME_EXCEPTION`|Uma exceção que é lançada.|  
+|`STUBFRAME_SECURITY`|Um quadro usado para segurança de acesso ao código.|  
+|`STUBFRAME_JIT_COMPILATION`|O tempo de execução é a compilação JIT de um método.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

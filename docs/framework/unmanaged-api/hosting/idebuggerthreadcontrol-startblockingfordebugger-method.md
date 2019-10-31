@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8f11b4-35d3-4c39-9bbd-58b896ba5ba6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1cb314f2afce0cbbf1c5fb185f516a30ad8313af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 72f7bee79e74c69acff90861ceada8a91afe2157
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134914"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>Método IDebuggerThreadControl::StartBlockingForDebugger
-Notifica o host que os serviços de depuração estão prestes a começar a bloquear todos os threads.  
+Notifica o host de que os serviços de depuração estão prestes a começar a bloquear todos os threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +35,17 @@ HRESULT StartBlockingForDebugger (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwUnused`  
- [in] Reservado para uso futuro.  
+ no Reservado para uso futuro.  
   
 ## <a name="remarks"></a>Comentários  
- O `StartBlockingForDebugger` método poderia ser chamado em um segmento de tempo de execução.  
+ O método `StartBlockingForDebugger` pode ser chamado em um thread de tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

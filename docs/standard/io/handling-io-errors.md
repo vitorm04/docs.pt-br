@@ -8,29 +8,27 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120736"
 ---
 # <a name="handling-io-errors-in-net"></a>Tratamento de erros de E/S no .NET
 
 Além das exceções que podem ser geradas em qualquer chamada de método (como um <xref:System.OutOfMemoryException> quando um sistema sofre estresse ou um <xref:System.NullReferenceException> devido a um erro do programador), os métodos do sistema de arquivos do .NET podem gerar as seguintes exceções:
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, a classe base de todos os tipos de exceção <xref:System.IO>. Ela é gerada para erros cujos códigos retornados do sistema operacional não mapeiam diretamente para outro tipo de exceção.
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>
 - <xref:System.ArgumentException?displayProperty=nameWithType>, gerada para caracteres de caminho inválido no .NET Framework e no .NET Core 2.0 e versões anteriores.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, gerada para dois-pontos inválidos no .NET Framework.
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>, gerada para aplicativos em execução em confiança limitada que não têm as permissões necessárias somente no .NET Framework. (Confiança total é o padrão no .NET Framework.)

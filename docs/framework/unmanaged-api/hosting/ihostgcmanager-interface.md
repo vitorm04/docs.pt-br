@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 820330a4-244c-4f67-ab5e-f24b0b3c2080
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 238b054d240437df64a83a9c4daad34d4bd5d36a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f7158bcac7ad22647104e2041da959285d2be8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130490"
 ---
 # <a name="ihostgcmanager-interface"></a>Interface IHostGCManager
-Fornece métodos que notificar o host de eventos no mecanismo de coleta de lixo implementado pelo common language runtime (CLR).  
+Fornece métodos que notificam o host de eventos no mecanismo de coleta de lixo implementado pelo Common Language Runtime (CLR).  
   
 ## <a name="members"></a>Membros  
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|[Método SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)|Notifica o host que o CLR está continuando a execução de tarefas em threads que tinham sido suspensos para uma coleta de lixo.|  
-|[Método SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)|Notifica o host que o CLR é suspendendo a execução de tarefas para executar uma coleta de lixo.|  
-|[Método ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md)|Notifica o host que o thread do qual a chamada de método foi feita está prestes a bloquear uma coleta de lixo.|  
+|[Método SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)|Notifica o host de que o CLR está retomando a execução de tarefas em threads que foram suspensos para uma coleta de lixo.|  
+|[Método SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)|Notifica o host de que o CLR está suspendendo a execução de tarefas, para executar uma coleta de lixo.|  
+|[Método ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md)|Notifica o host de que o thread do qual a chamada de método foi feita está prestes a ser bloqueado para uma coleta de lixo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

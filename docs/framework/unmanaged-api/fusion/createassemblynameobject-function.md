@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795362"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108708"
 ---
 # <a name="createassemblynameobject-function"></a>Função CreateAssemblyNameObject
 Obtém um ponteiro de interface para uma instância de [IAssemblyName](iassemblyname-interface.md) que representa a identidade exclusiva do assembly com o nome especificado.  
@@ -41,23 +39,23 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppAssemblyNameObj`  
- fora O retornado `IAssemblyName`.  
+ fora O `IAssemblyName`retornado.  
   
  `szAssemblyName`  
- no O nome do assembly para o qual criar a nova `IAssemblyName` instância.  
+ no O nome do assembly para o qual criar a nova instância de `IAssemblyName`.  
   
  `dwFlags`  
  no Sinalizadores a serem passados para o construtor de objeto.  
   
  `pvReserved`  
- no Reservado para extensibilidade futura. `pvReserved`deve ser uma referência nula.  
+ no Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

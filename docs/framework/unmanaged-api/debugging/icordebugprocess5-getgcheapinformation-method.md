@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9538ceb-230a-4079-9cb2-903dbf5c1848
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e94034fcdcd8d86f34c61af30a7729a80c913fac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3aa9fe884b16a239f5105dd262edeb8fc3e4abaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767340"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084400"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>Método ICorDebugProcess5::GetGCHeapInformation
-Fornece informações gerais sobre o heap de coleta de lixo, incluindo se ele está atualmente enumerável.  
+Fornece informações gerais sobre o heap de coleta de lixo, incluindo se ele é enumerável no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetGCHeapInformation(
   
 ## <a name="parameters"></a>Parâmetros  
  `pHeapInfo`  
- [out] Um ponteiro para um [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) valor que fornece informações gerais sobre o heap de coleta de lixo.  
+ fora Um ponteiro para um valor de [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) que fornece informações gerais sobre o heap de coleta de lixo.  
   
 ## <a name="remarks"></a>Comentários  
- O `ICorDebugProcess5::GetGCHeapInformation` método deve ser chamado antes de enumerar o heap ou regiões de heap individuais para garantir que a coleta de lixo de estruturas no processo serão válidos no momento. O heap da coleta de lixo não pode ser percorrido durante uma coleta está em andamento. Caso contrário, a enumeração pode capturar as estruturas de coleta de lixo que são inválidas.  
+ O método de `ICorDebugProcess5::GetGCHeapInformation` deve ser chamado antes de enumerar o heap ou regiões de heap individuais para garantir que as estruturas de coleta de lixo no processo sejam válidas no momento. O heap de coleta de lixo não pode ser movimentado enquanto uma coleção está em andamento. Caso contrário, a enumeração poderá capturar as estruturas de coleta de lixo que são inválidas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
-ms.translationtype: HT
+ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139911"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Noções básicas sobre agilização em PLINQ
 O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to Objects executando os delegados da consulta em paralelo em computadores com vários núcleos. O PLINQ funciona melhor quando o processamento de cada elemento em uma coleção de origem é independente, sem nenhum estado compartilhado envolvido entre os delegados individuais. Tais operações são comuns em LINQ to Objects e PLINQ, e muitas vezes são chamadas de "*fantasticamente paralelas*", pois elas se prestam facilmente ao agendamento em múltiplos segmentos. No entanto, nem todas as consultas consistem por completo em operações fantasticamente paralelas; na maioria dos casos, uma consulta envolve alguns operadores que não podem ser paralelizados ou que retardam a execução paralela. E mesmo com consultas que são fantasticamente paralelas por completo, o PLINQ ainda deve particionar a fonte de dados e agendar o trabalho nos threads e, normalmente, mesclar os resultados quando a consulta for concluída. Todas essas operações aumentam o custo computacional da paralelização; esses custos de adição de paralelização são chamados de *sobrecarga*. Para obter o melhor desempenho em uma consulta PLINQ, o objetivo é maximizar as partes que são fantasticamente paralelas e minimizar as partes que exigem sobrecarga. Este artigo fornece informações que ajudarão você a gravar consultas PLINQ que sejam tão eficientes quanto possível, enquanto ainda produzem resultados corretos.  
@@ -70,7 +68,7 @@ O principal objetivo do PLINQ é acelerar a execução das consultas do LINQ to 
 ## <a name="when-plinq-chooses-sequential-mode"></a>Quando o PLINQ escolhe o modo sequencial  
  PLINQ sempre tentará executar uma consulta pelo menos tão rápido quanto a consulta seria executada sequencialmente. Embora o PLINQ não observe o quanto delegados de usuário são computacionalmente caros, ou quanto a fonte de entrada é grande, ele procura determinadas "formas" de consulta. Especificamente, ele busca operadores de consulta ou combinações de operadores que geralmente fazem com que uma consulta seja executada mais lentamente em modo paralelo. Quando encontradas essas formas, o PLINQ por padrão voltará ao modo sequencial.  
   
- No entanto, depois de medir o desempenho de uma consulta específica, você pode determinar que ele realmente é executado mais rápido no modo paralelo. Nesses casos, você pode usar o sinalizador <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> através do método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> para instruir o PLINQ para paralelizar a consulta. Para obter mais informações, confira [Como: Especificar o modo de execução em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ No entanto, depois de medir o desempenho de uma consulta específica, você pode determinar que ele realmente é executado mais rápido no modo paralelo. Nesses casos, você pode usar o sinalizador <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> através do método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> para instruir o PLINQ para paralelizar a consulta. Para saber mais, veja [Como especificar o modo de execução em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
  A lista a seguir descreve as formas de consulta que o PLINQ executará, por padrão, no modo sequencial:  
   

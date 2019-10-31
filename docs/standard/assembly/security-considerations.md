@@ -1,5 +1,5 @@
 ---
-title: Considerações de segurança do assembly
+title: Considerações sobre a segurança do assembly
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], security
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8cf99e766e3ea66440a30b4b616a1d90ec937e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138617"
 ---
-# <a name="assembly-security-considerations"></a>Considerações de segurança do assembly
+# <a name="assembly-security-considerations"></a>Considerações sobre a segurança do assembly
 <a name="top"></a> Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
   
  Existem duas formas distintas de usar a evidência:  

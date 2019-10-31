@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4df98cc-4e4e-407b-b8f4-e0076afef3a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0288c9912125e20cfb9f9aaaac5003ae9e0b51e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8643c54950486b6374045ff83928c8c7fb568a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779783"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140943"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>Método ICLRMetaHost::ExitProcess
-Tenta desligar normalmente o carregados todos os tempos de execução e, em seguida, encerra o processo. Substitui o [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) função.  
+Tenta desligar todos os tempos de execução carregados normalmente e, em seguida, encerra o processo. Substitui a função [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,19 +34,19 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Parâmetros  
  `iExitCode`  
- [in] O código de saída para o processo.  
+ no O código de saída do processo.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método nunca retorna, portanto, seu valor de retorno será indefinido.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método nunca retorna, portanto, seu valor de retorno é indefinido.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -2,18 +2,16 @@
 title: Método ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 103fe1b6845edfe0a364db979557db63511f6ee3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130380"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>Método ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
 
-Retorna um enumerador para todos os métodos que são definidos em um determinado módulo do NGen e embutida de um determinado método.
+Retorna um enumerador para todos os métodos que são definidos em um determinado módulo NGen e embutidos em um determinado método.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,23 +28,23 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 ## <a name="parameters"></a>Parâmetros
 
 `inlinersModuleId`\
-[in] O identificador de um módulo do NGen.
+no O identificador de um módulo NGen.
 
 `inlineeModuleId`\
-[in] O identificador de um módulo que define `inlineeMethodId`. Consulte a seção Comentários para obter mais informações.
+no O identificador de um módulo que define `inlineeMethodId`. Consulte a seção Comentários para obter mais informações.
 
 `inlineeMethodId`\
-[in] O identificador de um método embutido. Consulte a seção Comentários para obter mais informações.
+no O identificador de um método embutido. Consulte a seção Comentários para obter mais informações.
 
 `incompleteData`\
-[out] Um sinalizador que indica se `ppEnum` contém todos os métodos de embutidos um determinado método.  Consulte a seção Comentários para obter mais informações.
+fora Um sinalizador que indica se `ppEnum` contém todos os métodos inalinhando um determinado método.  Consulte a seção Comentários para obter mais informações.
 
 `ppEnum`\
-[out] Um ponteiro para o endereço de um enumerador
+fora Um ponteiro para o endereço de um enumerador
 
 ## <a name="remarks"></a>Comentários
 
-`inlineeModuleId` e `inlineeMethodId` juntos, formam o identificador completo para o método que pode ser embutido. Por exemplo, suponha que o módulo `A` define um método `Simple.Add`:
+`inlineeModuleId` e `inlineeMethodId` em conjunto formam o identificador completo do método que pode ser embutido. Por exemplo, suponha que o módulo `A` defina um método `Simple.Add`:
 
 ```csharp
 Simple.Add(int a, int b)
@@ -60,24 +58,24 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-Vamos supor também que `Fancy.AddTwice` inlines a chamada para `SimpleAdd`. Um criador de perfil pode usar este enumerador para localizar todos os métodos definidos no módulo B qual embutido `Simple.Add`, e o resultado seria enumerar `AddTwice`.  `inlineeModuleId` é o identificador do módulo `A`, e `inlineeMethodId` é o identificador do `Simple.Add(int a, int b)`.
+Vamos supor também que `Fancy.AddTwice` embutirá a chamada para `SimpleAdd`. Um criador de perfil pode usar esse enumerador para localizar todos os métodos definidos no módulo B que embutiram `Simple.Add`e o resultado enumeraria `AddTwice`.  `inlineeModuleId` é o identificador do módulo `A`e `inlineeMethodId` é o identificador de `Simple.Add(int a, int b)`.
 
-Se `incompleteData` é verdadeiro após a função retornar, o enumerador não contém todos os métodos de embutidos um determinado método. Isso pode acontecer quando um ou mais dependências diretas ou indiretas do módulo inliners ainda não foi carregadas ainda. Se um criador de perfil precisa dados precisos, ele deve novamente mais tarde quando mais módulos são carregados, preferencialmente na carga de cada módulo.
+Se `incompleteData` for true após a função retornar, o enumerador não conterá todos os métodos inalinhando um determinado método. Isso pode acontecer quando uma ou mais dependências diretas ou indiretas do módulo inlineers ainda não foram carregadas. Se um criador de perfil precisar de dados precisos, ele deverá tentar novamente mais tarde quando mais módulos forem carregados, preferencialmente em cada carregamento de módulo.
 
-O `EnumNgenModuleMethodsInliningThisMethod` método pode ser usado para contornar limitações em inlining para ReJIT. Permite que um criador de perfil do ReJIT alterar a implementação de um método e, em seguida, crie o novo código para ele em tempo real. Por exemplo, podemos pode alterar `Simple.Add` da seguinte maneira:
+O método `EnumNgenModuleMethodsInliningThisMethod` pode ser usado para solucionar limitações de inalinhamento para ReJIT. O ReJIT permite que um criador de perfil altere a implementação de um método e, em seguida, crie um novo código para ele em tempo real. Por exemplo, poderíamos alterar `Simple.Add` da seguinte maneira:
 
 ```csharp
 Simple.Add(int a, int b)
 { return 42; }
 ```
 
-No entanto porque `Fancy.AddTwice` tem já embutida `Simple.Add`, ele continua a ter o mesmo comportamento como antes. Para contornar essa limitação, o chamador tenha que pesquisar todos os métodos em todos os módulos isso de forma embutida `Simple.Add` e use `ICorProfilerInfo5::RequestRejit` em cada um desses métodos. Quando os métodos são compilados novamente, eles terão o novo comportamento da `Simple.Add` em vez do comportamento antigo.
+No entanto, como `Fancy.AddTwice` já tiver embutido `Simple.Add`, ele continuará tendo o mesmo comportamento que antes. Para contornar essa limitação, o chamador precisa pesquisar todos os métodos em todos os módulos que embutiram `Simple.Add` e usar `ICorProfilerInfo5::RequestRejit` em cada um desses métodos. Quando os métodos forem compilados novamente, eles terão o novo comportamento de `Simple.Add` em vez do comportamento antigo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Cabeçalho:** CorProf.idl, CorProf.h
+**Cabeçalho:** CorProf. idl, CorProf. h
 
 **Biblioteca:** CorGuids.lib
 

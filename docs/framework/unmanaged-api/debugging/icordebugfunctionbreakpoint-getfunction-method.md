@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a62dae5-dd8a-4696-b817-0e1e586c24a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4f9ea741e545cc424dff450325c3f8d271c8554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b53c80157bfd99a766eb691e8a8a2e6b9659a95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755581"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137756"
 ---
 # <a name="icordebugfunctionbreakpointgetfunction-method"></a>Método ICorDebugFunctionBreakpoint::GetFunction
-Obtém um ponteiro de interface para um ICorDebugFunction que faz referência à função na qual o ponto de interrupção é definido.  
+Obtém um ponteiro de interface para um ICorDebugFunction que faz referência à função na qual o ponto de interrupção está definido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetFunction (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppFunction`  
- [out] Um ponteiro para o endereço da função na qual o ponto de interrupção é definido.  
+ fora Um ponteiro para o endereço da função na qual o ponto de interrupção está definido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

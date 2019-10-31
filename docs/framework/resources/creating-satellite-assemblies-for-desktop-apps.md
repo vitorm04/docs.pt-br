@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045694"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129969"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Criando assemblies satélite para aplicativos de área de trabalho
 
@@ -88,7 +86,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Para obter uma lista completa das opções disponíveis com Al.exe, consulte [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
   
-## <a name="satellite-assemblies-an-example"></a>Assemblies satélite: Um Exemplo  
+## <a name="satellite-assemblies-an-example"></a>Assemblies satélites: um exemplo  
  Este é um exemplo simples "Olá, Mundo", que exibe uma caixa de mensagem com uma saudação localizada. O exemplo inclui recursos para as culturas inglesas (Estados Unidos), francesas (França) e russas (Rússia), e sua cultura de fallback é o inglês. Para criar o exemplo, faça o seguinte:  
   
 1. Crie um arquivo de recurso chamado Greeting.resx ou Greeting.txt para conter o recurso para a cultura padrão. Armazene uma única cadeia de caracteres denominada `HelloString`, cujo valor é "Hello world!" neste arquivo.
@@ -198,7 +196,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Instalação de assemblies satélite no Cache de Assembly Global (GAC)
 
-Quando o tempo de execução procura recursos no processo de fallback de recursos, ele examina o [cache de assembly global](../app-domains/gac.md) primeiro. (Para obter mais informações, consulte a seção "Processo de fallback de recurso" do tópico [Empacotamento e implantação de recursos](packaging-and-deploying-resources-in-desktop-apps.md).) Assim que um assembly satélite é assinado com um nome forte, ele pode ser instalado no cache de assembly global usando a [ferramenta Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md).
+Quando o tempo de execução procura recursos no processo de fallback de recursos, ele examina o [cache de assembly global](../app-domains/gac.md) primeiro. (Para obter mais informações, consulte a seção "processo de fallback de recursos" do tópico [empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md) .) Assim que um assembly satélite é assinado com um nome forte, ele pode ser instalado no cache de assembly global usando o [ferramenta de cache de assembly global (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md).
 
 O comando a seguir Gacutil.exe instala o StringLibrary.resources.dll no cache de assembly global:
 
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 A opção **/i** especifica que Gacutil.exe deve instalar o assembly especificado no cache de assembly global. Após o satélite assembly ser instalado no cache, os recursos que ele contém ficam disponíveis para todos os aplicativos que são projetados para usar o assembly satélite.
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Recursos no cache de assembly global: Um Exemplo
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Recursos no Cache de Assembly Global: um exemplo
 
 O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework para extrair e retornar uma saudação localizada de um arquivo de recurso. A biblioteca e seus recursos são registrados no cache de assembly global. O exemplo do inclui recursos para as culturas inglesa (Estados Unidos), francesa (França), russa (Rússia) e inglesas. Inglês é a cultura padrão; seus recursos são armazenados no assembly principal. O exemplo inicialmente atrasa a assinatura da biblioteca e seus assemblies satélites com uma chave pública. Em seguida, assina-os novamente com um par de chaves públicas/privadas. Para criar o exemplo, faça o seguinte:
 
@@ -324,5 +322,5 @@ O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework pa
 - [Assinar um assembly com atraso](../../standard/assembly/delay-sign.md)
 - [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
 - [Sn.exe (Ferramenta Nome Forte)](../tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
 - [Recursos em aplicativos de área de trabalho](index.md)

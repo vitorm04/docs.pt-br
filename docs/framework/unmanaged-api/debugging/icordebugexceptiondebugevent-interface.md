@@ -2,14 +2,12 @@
 title: Interface ICorDebugExceptionDebugEvent
 ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 522bccb4a424da620063995d02ae15d09ecbf2fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 985edaa14510b7ca03399ae17cf1d89f28fd04c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084647"
 ---
 # <a name="icordebugexceptiondebugevent-interface"></a>Interface ICorDebugExceptionDebugEvent
 Estende a interface [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) para dar suporte a eventos de exceção.  
@@ -23,7 +21,7 @@ Estende a interface [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-a
 |[Método GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md)|Obtém o ponteiro de pilha para este evento de depuração de exceção.|  
   
 ## <a name="remarks"></a>Comentários  
- A `ICorDebugExceptionDebugEvent` interface é implementada pelos seguintes tipos de evento:  
+ A interface `ICorDebugExceptionDebugEvent` é implementada pelos seguintes tipos de evento:  
   
 - [MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
   
@@ -34,14 +32,14 @@ Estende a interface [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-a
 - [MANAGED_EXCEPTION_UNHANDLED](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
   
 > [!NOTE]
-> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface `E_NOINTERFACE` retorna para cenários ICorDebug fora do .net Native.  
+> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários ICorDebug fora do .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

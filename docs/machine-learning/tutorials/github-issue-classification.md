@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: categorizar problemas de suporte-classificação multiclasse'
 description: Descubra como usar o ML.NET em um cenário de classificação multiclasse para classificar os problemas do GitHub a fim de atribuí-los a uma determinada área.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1cd213653c23c4d713e03d53394885f1f3ebb6f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094584"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: categorizar problemas de suporte usando classificação multiclasse com ML .NET
 
@@ -272,13 +272,13 @@ Observe o uso do método [Transform()](xref:Microsoft.ML.ITransformer.Transform%
 
 As métricas a seguir são avaliadas para classificação multiclasse:
 
-* Microprecisão – todo par de classe/exemplo contribui igualmente para a métrica de precisão.  Convém que a Microprecisão seja tão próxima de 1 quanto possível.
+* Microprecisão – todo par de classe/exemplo contribui igualmente para a métrica de precisão.  Você deseja que o micro exatidão seja o mais próximo possível.
 
-* Macroprecisão – toda classe contribui igualmente para a métrica de precisão. Classes minoritárias recebem o mesmo peso que as classes maiores. Convém que a Macroprecisão seja tão próxima de 1 quanto possível.
+* Macroprecisão – toda classe contribui igualmente para a métrica de precisão. Classes minoritárias recebem o mesmo peso que as classes maiores. Você deseja que a precisão da macro seja o mais próximo possível.
 
 * Perda de log – consulte [Perda de log](../resources/glossary.md#log-loss). Convém que a Perda de log seja tão próxima de zero quanto possível.
 
-* Redução de perda de log – varia de [-inf, 100], em que 100 é composto pelas previsões perfeitas e 0 indica previsões de média. Convém que a redução de perda de log seja tão próxima de zero quanto possível.
+* Redução de perda de log – intervalos de [-inf, 1, 0], em que 1, 0 são previsões perfeitas e 0 indica previsões médias. Você deseja que a redução da perda de log seja o mais próximo possível.
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Exibir as métricas para validação de modelo
 

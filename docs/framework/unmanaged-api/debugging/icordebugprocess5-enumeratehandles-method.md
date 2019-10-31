@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 229717ba1d7f004dc1ed020eddb2929079aa9285
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767582"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129673"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>Método ICorDebugProcess5::EnumerateHandles
-Obtém um enumerador para os identificadores de objeto em um processo.  
+Obtém um enumerador para identificadores de objeto em um processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,24 +34,24 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>Parâmetros  
  `types`  
- [in] Uma combinação bit a bit de [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) valores que especifica o tipo de identificadores para incluir na coleção.  
+ no Uma combinação bits de valores [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) que especifica o tipo de identificadores a serem incluídos na coleção.  
   
  `ppENum`  
- [out] Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a ser coletado como lixo.  
+ fora Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a serem coletados como lixo.  
   
 ## <a name="remarks"></a>Comentários  
- `EnumerateHandles` é uma função auxiliar que dá suporte a inspeção da tabela de identificador. É semelhante ao [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) método, exceto que, em vez de preencher uma [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) coleção com todos os objetos a ser coletado como lixo, ele inclui apenas os objetos que têm identificadores da tabela de identificador.  
+ `EnumerateHandles` é uma função auxiliar que dá suporte à inspeção da tabela de identificadores. Ele é semelhante ao método [ICorDebugProcess5:: EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) , exceto que, em vez de preencher uma coleção [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) com todos os objetos a serem coletados pelo lixo, ele inclui somente objetos que têm identificadores de a tabela de identificadores.  
   
- O `types` parâmetro especifica os tipos de identificador para incluir na coleção. `types` pode ser qualquer um dos seguintes três membros do [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeração:  
+ O parâmetro `types` especifica os tipos de identificador a serem incluídos na coleção. `types` pode ser qualquer um dos três seguintes membros da enumeração [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) :  
   
-- `CorHandleStrongOnly` (as alças para apenas referências fortes).  
+- `CorHandleStrongOnly` (trata apenas de referências fortes).  
   
-- `CorHandleWeakOnly` (as alças para referências fracas apenas).  
+- `CorHandleWeakOnly` (trata apenas de referências fracas).  
   
 - `CorHandleAll` (todos os identificadores).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

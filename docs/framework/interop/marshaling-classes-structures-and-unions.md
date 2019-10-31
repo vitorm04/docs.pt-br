@@ -18,21 +18,19 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 669e147f9c7b4ba901ade38f1ab8b41163c4f125
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114023"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
 Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos, propriedades e eventos. Elas também podem ter métodos estáticos e não estáticos. Uma diferença importante é que estruturas são tipos de valor e classes são tipos de referência.  
   
  A tabela a seguir lista as opções de marshaling de classes, estruturas e uniões, descreve o uso delas e fornece um link para a amostra de invocação de plataforma correspondente.  
   
-|Tipo|Descrição|Amostra|  
+|Digite|Descrição|Amostra|  
 |----------|-----------------|------------|  
 |Classe por valor.|Passa uma classe com membros de inteiro como um parâmetro In/Out, como no caso gerenciado.|Exemplo SysTime|  
 |Estrutura por valor.|Passa estruturas como parâmetros In.|Amostra de estruturas|  
@@ -68,7 +66,7 @@ Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos,
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) é uma biblioteca personalizada não gerenciada que contém implementações para as funções listadas anteriormente e quatro estruturas: **MYPERSON**, **MYPERSON2**, **MYPERSON3** e **MYARRAYSTRUCT**. Essas estruturas contêm os seguintes elementos:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) é uma biblioteca personalizada não gerenciada que contém implementações para as funções listadas anteriormente e quatro estruturas: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, and **MYARRAYSTRUCT**. Essas estruturas contêm os seguintes elementos:  
   
 ```cpp  
 typedef struct _MYPERSON  

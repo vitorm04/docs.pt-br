@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757214"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138397"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>Método ICorDebugHeapValue::IsValid
 Obtém um valor que indica se o objeto representado por este ICorDebugHeapValue é válido.  
   
- Esse método foi preterido no .NET Framework versão 2.0.  
+ Esse método foi preterido no .NET Framework versão 2,0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,15 +37,15 @@ HRESULT IsValid (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbValid`  
- [out] Um ponteiro para um valor booliano que indica se esse valor no heap é válido.  
+ fora Um ponteiro para um valor booliano que indica se esse valor no heap é válido.  
   
 ## <a name="remarks"></a>Comentários  
- O valor será inválido se ele foi recuperado pelo coletor de lixo.  
+ O valor será inválido se tiver sido recuperado pelo coletor de lixo.  
   
- Esse método foi substituído. No .NET Framework 2.0, todos os valores são válidos até [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado, no qual os valores são invalidados.  
+ Esse método foi substituído. No .NET Framework 2,0, todos os valores são válidos até que [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) seja chamado e, nesse momento, os valores são invalidados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc91ff0676fcec5d614f9d6fa4850eb2c81086b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d8efccde56d8d37a75b1d9bbec706411c6b1f45
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134792"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>Método IGCThreadControl::SuspensionEnding
-Notifica o host que o tempo de execução está retomando threads após uma coleta de lixo ou outro suspensão.  
+Notifica o host de que o tempo de execução está retomando threads após uma coleta de lixo ou outra suspensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +35,17 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>Parâmetros  
  `Generation`  
- [in] A geração no qual uma coleta de lixo foi executada.  
+ no A geração na qual uma coleta de lixo foi executada.  
   
 ## <a name="remarks"></a>Comentários  
- Não reagendar os threads durante o `SuspensionEnding` retorno de chamada.  
+ Não reagende nenhum thread durante o retorno de chamada `SuspensionEnding`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

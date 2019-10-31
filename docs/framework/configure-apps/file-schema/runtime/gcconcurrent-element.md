@@ -9,22 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116804"
 ---
-# <a name="gcconcurrent-element"></a>\<Elemento de > gcConcurrent
+# <a name="gcconcurrent-element"></a>\<elemento de > gcConcurrent
 
 Especifica se o Common Language Runtime executa a coleta de lixo em um thread separado.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent >**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -63,14 +61,14 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Antes do .NET Framework 4, a coleta de lixo da estação de trabalho oferecia suporte à coleta de lixo simultânea, que realizou a coleta de lixo em segundo plano em um thread separado. No .NET Framework 4, a coleta de lixo simultânea foi substituída pelo GC em segundo plano, que também executa a coleta de lixo em segundo plano em um thread separado. A partir do .NET Framework 4,5, a coleção em segundo plano tornou-se disponível na coleta de lixo do servidor. O `<gcConcurrent>` elemento controla se o tempo de execução executa uma coleta de lixo simultânea ou em segundo plano, se estiver disponível, ou se ele executará a coleta de lixo em primeiro plano.
+Antes do .NET Framework 4, a coleta de lixo da estação de trabalho oferecia suporte à coleta de lixo simultânea, que realizou a coleta de lixo em segundo plano em um thread separado. No .NET Framework 4, a coleta de lixo simultânea foi substituída pelo GC em segundo plano, que também executa a coleta de lixo em segundo plano em um thread separado. A partir do .NET Framework 4,5, a coleção em segundo plano tornou-se disponível na coleta de lixo do servidor. O elemento `<gcConcurrent>` controla se o tempo de execução executa uma coleta de lixo simultânea ou em segundo plano, se estiver disponível, ou se ele executará a coleta de lixo em primeiro plano.
 
 ### <a name="to-disable-background-garbage-collection"></a>Para desabilitar a coleta de lixo em segundo plano
 
 > [!WARNING]
-> A partir do .NET Framework 4, a coleta de lixo simultânea é substituída pela coleta de lixo em segundo plano. Os termos *simultâneos* e de *plano de fundo* são usados de maneira intercambiável na documentação do .NET Framework. Para desabilitar a coleta de lixo em segundo `<gcConcurrent>` plano, use o elemento, conforme discutido neste artigo.
+> A partir do .NET Framework 4, a coleta de lixo simultânea é substituída pela coleta de lixo em segundo plano. Os termos *simultâneos* e de *plano de fundo* são usados de maneira intercambiável na documentação do .NET Framework. Para desabilitar a coleta de lixo em segundo plano, use o elemento `<gcConcurrent>`, conforme discutido neste artigo.
 
-Por padrão, o tempo de execução usa a coleta de lixo simultânea ou em segundo plano, que é otimizada para latência. Se seu aplicativo envolver uma interação pesada do usuário, deixe a coleta de lixo simultânea habilitada para minimizar o tempo de pausa do aplicativo para executar a coleta de lixo. Se você definir o `enabled` atributo `<gcConcurrent>` do elemento como `false`, o tempo de execução usará a coleta de lixo não simultânea, que é otimizada para taxa de transferência. O arquivo de configuração a seguir desabilita a coleta de lixo em segundo plano.
+Por padrão, o tempo de execução usa a coleta de lixo simultânea ou em segundo plano, que é otimizada para latência. Se seu aplicativo envolver uma interação pesada do usuário, deixe a coleta de lixo simultânea habilitada para minimizar o tempo de pausa do aplicativo para executar a coleta de lixo. Se você definir o atributo `enabled` do elemento `<gcConcurrent>` como `false`, o tempo de execução usará a coleta de lixo não simultânea, que é otimizada para taxa de transferência. O arquivo de configuração a seguir desabilita a coleta de lixo em segundo plano.
 
 ```xml
 <configuration>
@@ -80,7 +78,7 @@ Por padrão, o tempo de execução usa a coleta de lixo simultânea ou em segund
 </configuration>
 ```
 
- Se houver uma `<gcConcurrentSetting>` configuração no arquivo de configuração de computador, ele definirá o valor padrão para todos os aplicativos de .NET Framework. A configuração do arquivo de configuração do computador substitui a configuração do arquivo de configuração do aplicativo.
+ Se houver uma configuração de `<gcConcurrentSetting>` no arquivo de configuração de computador, ele definirá o valor padrão para todos os aplicativos de .NET Framework. A configuração do arquivo de configuração do computador substitui a configuração do arquivo de configuração do aplicativo.
 
  Para obter mais informações sobre a coleta de lixo simultânea e em segundo plano, consulte a seção de [coleta de lixo simultânea](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) no artigo [conceitos básicos do coletor de lixo](../../../../standard/garbage-collection/fundamentals.md) .
 

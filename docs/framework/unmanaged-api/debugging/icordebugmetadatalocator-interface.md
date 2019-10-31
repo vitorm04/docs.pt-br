@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 287f5ecd-863f-4090-a615-077859f0257b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64cf11ec294486fdc14d424e731eac8e4745d892
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1116945ae1a886f1b9491e0baf183e20c4fff177
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136624"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>Interface ICorDebugMetaDataLocator
 Fornece informações de metadados ao depurador.  
@@ -38,11 +36,11 @@ Fornece informações de metadados ao depurador.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

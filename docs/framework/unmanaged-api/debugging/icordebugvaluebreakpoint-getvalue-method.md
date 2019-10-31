@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52a73654-bc47-48b6-b2b1-a4456b10140c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 639b34093e79933b4daaa0e3ae5223f1a1a51bf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5924a3914c7fe04413b4a6744bce263b56165d78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140221"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>Método ICorDebugValueBreakpoint::GetValue
-Obtém um ponteiro de interface para um objeto de "ICorDebugValue" que representa o valor do objeto em que o ponto de interrupção está definido.  
+Obtém um ponteiro de interface para um objeto "ICorDebugValue" que representa o valor do objeto no qual o ponto de interrupção está definido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppValue`  
- [out] Um ponteiro para o endereço de um `ICorDebugValue` objeto.  
+ fora Um ponteiro para o endereço de um objeto de `ICorDebugValue`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

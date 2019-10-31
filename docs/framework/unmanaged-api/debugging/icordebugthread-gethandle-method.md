@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133460"
 ---
 # <a name="icordebugthreadgethandle-method"></a>Método ICorDebugThread::GetHandle
-Obtém o identificador atual para a parte ativa deste ICorDebugThread.  
+Obtém o identificador atual da parte ativa deste ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>Parâmetros  
  `phThreadHandle`  
- [out] Um ponteiro para um HTHREAD que é o identificador de parte ativa desse thread.  
+ fora Um ponteiro para um HTHREAD que é o identificador da parte ativa deste thread.  
   
 ## <a name="remarks"></a>Comentários  
- O identificador pode mudar, pois o processo é executado e pode ser diferente para diferentes partes do thread.  
+ O identificador pode ser alterado conforme o processo é executado e pode ser diferente para partes diferentes do thread.  
   
- Esse identificador pertence a API de depuração. O depurador deve duplicá-lo antes de usá-lo.  
+ Esse identificador é de propriedade da API de depuração. O depurador deve duplicá-lo antes de usá-lo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

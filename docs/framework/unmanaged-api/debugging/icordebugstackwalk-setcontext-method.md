@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131808"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>Método ICorDebugStackWalk::SetContext
-Define o [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) o contexto atual de objeto para um contexto válido para o thread.  
+Define o contexto atual do objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) como um contexto válido para o thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,21 +35,21 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Parâmetros  
  `flag`  
- [in] Um [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) sinalizador que indica se o contexto é do quadro ativo na pilha ou um contexto obtido pelo desenrolamento de pilha.  
+ no Um sinalizador [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) que indica se o contexto é do quadro ativo na pilha ou um contexto obtido com o desenrolamento da pilha.  
   
  `contextSize`  
- [in] O tamanho alocado do `CONTEXT` buffer.  
+ no O tamanho alocado do buffer de `CONTEXT`.  
   
  `context`  
- [in] O `CONTEXT` buffer.  
+ no O buffer de `CONTEXT`.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O `ICorDebugStackWalk` contexto de objeto foi definido com êxito.|  
-|E_FAIL|O `ICorDebugStackWalk` contexto de objeto não foi definido.|  
+|S_OK|O contexto do objeto de `ICorDebugStackWalk` foi definido com êxito.|  
+|E_FAIL|O contexto do objeto de `ICorDebugStackWalk` não foi definido.|  
 |E_INVALIDARG|O contexto é nulo.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|O buffer de contexto é muito pequeno.|  
   
@@ -60,12 +58,12 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ## <a name="remarks"></a>Comentários  
  Esse método não altera o contexto atual do thread.  
   
- Definir o contexto atual para um contexto inválido pode causar resultados imprevisíveis de movimentador de pilhas.  
+ A definição do contexto atual como um contexto inválido pode causar resultados imprevisíveis do Stack Walker.  
   
- Você pode recuperar uma cópia bit a bit exata deste contexto imediatamente chamando o [icordebugstackwalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) método.  
+ Você pode recuperar uma cópia de bit exata desse contexto chamando imediatamente o método [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

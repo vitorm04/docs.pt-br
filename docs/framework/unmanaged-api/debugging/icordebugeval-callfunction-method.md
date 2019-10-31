@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085168"
 ---
 # <a name="icordebugevalcallfunction-method"></a>Método ICorDebugEval::CallFunction
 
 Define uma chamada para a função especificada.
 
-Este método é obsoleto no .NET Framework versão 2.0. Use [ICorDebugEval2::CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) em vez disso.
+Esse método é obsoleto no .NET Framework versão 2,0. Use [ICorDebugEval2:: CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,27 +41,27 @@ HRESULT CallFunction (
 ## <a name="parameters"></a>Parâmetros
 
 `pFunction`\
-[in] Ponteiro para um objeto de ICorDebugFunction que especifica a função a ser chamado.
+no Ponteiro para um objeto ICorDebugFunction que especifica a função a ser chamada.
 
 `nArgs`\
-[in] O número de argumentos da função.
+no O número de argumentos para a função.
 
 `ppArgs`\
-[in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugValue que especifica um argumento a ser passado para a função.
+no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugValue que especifica um argumento a ser passado para a função.
 
 ## <a name="remarks"></a>Comentários
 
-Se a função é virtual, `CallFunction` executará a expedição virtual. Se a função está em um domínio de aplicativo diferente, uma transição ocorrerá desde que todos os argumentos também estão no domínio do aplicativo.
+Se a função for virtual, `CallFunction` executará o despacho virtual. Se a função estiver em um domínio de aplicativo diferente, uma transição ocorrerá contanto que todos os argumentos também estejam nesse domínio de aplicativo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** CorDebug.idl, CorDebug.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versões do .NET framework:** 1.1, 1.0
+**Versões do .NET Framework:** 1,1, 1,0
 
 ## <a name="see-also"></a>Consulte também
 

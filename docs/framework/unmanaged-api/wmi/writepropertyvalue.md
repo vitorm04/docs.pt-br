@@ -14,14 +14,12 @@ helpviewer_keywords:
 - WritePropertyValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f02fb3877d55e9f47384b281573202712c29c606
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798173"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107296"
 ---
 # <a name="writepropertyvalue-function"></a>Função WritePropertyValue
 Grava um número especificado de bytes em uma propriedade identificada por um identificador de propriedade.
@@ -71,14 +69,14 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Use essa função para definir a cadeia de caracteres e todos`DWORD` os outros`QWORD` dados não ou não.
+Use essa função para definir cadeia de caracteres e todos os outros dados não`DWORD` ou não`QWORD`.
 
-Para valores de propriedade que não `lNumBytes` são de cadeia de caracteres, deve ser o tamanho de dados correto do tipo de propriedade especificado. Para valores de propriedade de `lNumBytes` cadeia de caracteres, deve ser o comprimento da cadeia de caracteres especificada em bytes, e a cadeia de caracteres deve ser de um comprimento par em bytes e ser seguida de um caractere de terminação nula.
+Para valores de propriedade que não são de cadeia de caracteres, `lNumBytes` deve ser o tamanho de dados correto do tipo de propriedade especificado. Para valores de propriedade de cadeia de caracteres, `lNumBytes` deve ser o comprimento da cadeia de caracteres especificada em bytes, e a cadeia de caracteres deve ser de um comprimento par em bytes e ser seguida de um caractere de terminação nula.
 
 ## <a name="requirements"></a>Requisitos  
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5097cfe43ae785461a1e2af1217bcbd5e8c4b79c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798633"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120282"
 ---
 # <a name="formatfromrawvalue-function"></a>Função FormatFromRawValue
 Converte um valor de dados de desempenho brutos para o formato especificado, ou dois valores de dados de desempenho brutos se a conversão de formato é baseada em tempo. 
@@ -44,7 +42,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parâmetros
 
 `dwCounterType`\
-no O tipo de contador. Para obter uma lista de tipos de contadores, consulte [tipos de contador de desempenho WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`pode ser qualquer tipo de contador, `PERF_LARGE_RAW_FRACTION` exceto `PERF_LARGE_RAW_BASE`para e. 
+no O tipo de contador. Para obter uma lista de tipos de contadores, consulte [tipos de contador de desempenho WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` pode ser qualquer tipo de contador, exceto `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`\
 no O formato para o qual converter os dados de desempenho brutos. Pode ser um dos seguintes valores:
@@ -65,13 +63,13 @@ Um dos valores anteriores pode ser vinculada com um dos seguintes sinalizadores 
 `pTimeBase`\
 no Um ponteiro para a base de tempo, se necessário para a conversão de formato. Se as informações de base de tempo não forem necessárias para a conversão de formato, o valor desse parâmetro será ignorado.
 
-`pRawValue1`\ [in] um ponteiro para uma [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) estrutura que representa um valor de desempenho bruto.
+`pRawValue1`\ [in] um ponteiro para uma estrutura de [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) que representa um valor de desempenho bruto.
 
 `pRawValue2`\
-no Um ponteiro para uma [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) estrutura que representa um segundo valor de desempenho bruto. Se um segundo valor de desempenho bruto não for necessário, esse parâmetro deverá `null`ser.
+no Um ponteiro para uma estrutura de [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) que representa um segundo valor de desempenho bruto. Se um segundo valor de desempenho bruto não for necessário, esse parâmetro deverá ser `null`.
 
 `pFmtValue`\
-fora Um ponteiro para uma [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) estrutura que recebe o valor de desempenho formatado.
+fora Um ponteiro para uma estrutura de [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) que recebe o valor de desempenho formatado.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -89,9 +87,9 @@ Essa função encapsula uma chamada para a função [FormatFromRawValue](https:/
 
 ## <a name="requirements"></a>Requisitos
 
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
- **Biblioteca** PerfCounter. dll
+ **Biblioteca:** PerfCounter. dll
 
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

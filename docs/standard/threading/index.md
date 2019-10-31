@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 763646bfb358b8e5faf13a14f2facb98f855b5c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d6b8a0a4e16aa3169888958fa1376bfa61526dbd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137937"
 ---
 # <a name="managed-threading"></a>Threading gerenciado
 Quer você esteja desenvolvendo para computadores com um processador, quer para com vários, é conveniente que seu aplicativo forneça uma interação mais dinâmica com o usuário, mesmo se o aplicativo, no momento, estiver realizando outro trabalho. Usar vários threads de execução é uma das maneiras mais eficazes de manter seu aplicativo responsivo ao usuário e, ao mesmo tempo, usar o processador entre ou, até mesmo, durante os eventos do usuário. Embora esta seção introduza os conceitos básicos de threading, ele se concentra nos conceitos de threading gerenciado e em como usá-lo.  

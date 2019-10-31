@@ -1,5 +1,5 @@
 ---
-title: 'Como: gravar mensagens em um bloco de fluxo de dados e ler mensagens dele'
+title: 'Como: Escrever mensagens em um bloco de fluxo de dados e ler mensagens de um bloco de fluxo de dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22d0f8abd1481bfd75a0d08f49b28cebf78bb4cb
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 58927803b741acf6c1964b35f6603e6901f9cbf1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139281"
 ---
-# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Como: gravar mensagens em um bloco de fluxo de dados e ler mensagens dele
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Como: Escrever mensagens em um bloco de fluxo de dados e ler mensagens de um bloco de fluxo de dados
 Este documento descreve como usar a Biblioteca de fluxo de dados TPL para gravar mensagens e ler mensagens de um bloco de fluxo de dados. A Biblioteca de fluxo de dados TPL fornece métodos síncronos e assíncronos para escrever mensagens e ler mensagens de um bloco de fluxo de dados. Este documento usa a classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. A classe <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> armazenas as memórias e se comporta como uma fonte de mensagem e como um alvo de mensagem.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -52,7 +50,7 @@ Este documento descreve como usar a Biblioteca de fluxo de dados TPL para gravar
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="next-steps"></a>Próximas etapas  
- Esse exemplo mostra como ler e gravar diretamente para um bloco de mensagens. Você também pode conectar blocos de fluxo de dados para formar *pipelines*, que são sequências lineares de blocos de fluxo de dados, ou então *redes*, que são gráficos de blocos de fluxo de dados. Em uma rede ou pipeline, origens propagam dados assincronamente para destinos assim que os dados ficam disponíveis. Para obter um exemplo que cria um pipeline de fluxo de dados básico, confira [Passo a passo: criando um pipeline de fluxo de dados](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Para obter um exemplo que cria uma rede de fluxo de dados mais complexa, confira [Passo a passo: usando um fluxo de dados em um aplicativo do Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Esse exemplo mostra como ler e gravar diretamente para um bloco de mensagens. Você também pode conectar blocos de fluxo de dados para formar *pipelines*, que são sequências lineares de blocos de fluxo de dados, ou então *redes*, que são gráficos de blocos de fluxo de dados. Em uma rede ou pipeline, origens propagam dados assincronamente para destinos assim que os dados ficam disponíveis. Para um exemplo que cria um pipeline de fluxo de dados, confira [Passo a passo: criar um pipeline de fluxo de dados](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Para ver um exemplo que cria uma rede de fluxo de dados mais complexa, confira [Passo a passo: usar o fluxo de dados em um aplicativo do Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Consulte também
 

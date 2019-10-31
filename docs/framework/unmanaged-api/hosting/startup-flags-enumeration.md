@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916226"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141459"
 ---
 # <a name="startup_flags-enumeration"></a>Enumeração STARTUP_FLAGS
 Contém valores que indicam o comportamento de inicialização do Common Language Runtime (CLR). Por padrão, a coleta de lixo não é simultânea e somente a biblioteca de classes base é carregada na área de domínio neutro.  
@@ -72,14 +70,14 @@ typedef enum {
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Especifica que as impessoas gerenciadas e as impessoas obtidas por meio da invocação de plataforma fluirão entre pontos assíncronos. Por padrão, somente as impessoas gerenciadas serão fluidas entre pontos assíncronos.|  
 |`STARTUP_TRIM_GC_COMMIT`|Especifica que a coleta de lixo usará menos espaço confirmado quando a memória do sistema estiver baixa. Consulte `gcTrimCommitOnLowMemory` em [otimização para hospedagem na Web compartilhada](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
 |`STARTUP_ETW`|Especifica que o ETW (rastreamento de eventos para Windows) está habilitado para eventos de Common Language Runtime. A partir do Windows Vista, o rastreamento de eventos está sempre habilitado, portanto, esse sinalizador não tem nenhum efeito. Consulte [controlando o log de .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Especifica que o monitoramento de recursos de domínio de aplicativo está habilitado. Consulte a <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> Propriedade e [ \<appDomainResourceMonitoring > elemento](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ARM`|Especifica que o monitoramento de recursos de domínio de aplicativo está habilitado. Consulte a propriedade <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> e [\<elemento de > appDomainResourceMonitoring](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

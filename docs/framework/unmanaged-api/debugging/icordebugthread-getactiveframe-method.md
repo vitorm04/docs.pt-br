@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390a2c64508bf407296d318a47bfd2972b7ef9d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d623893bd77e46832b0bd823ed60c23e4eee29ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133534"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>Método ICorDebugThread::GetActiveFrame
 Obtém um ponteiro de interface para o quadro ativo (mais recente) neste objeto ICorDebugThread.  
@@ -37,13 +35,13 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppFrame`  
- [out] Um ponteiro para o endereço de um objeto de interface ICorDebugFrame que representa um quadro.  
+ fora Um ponteiro para o endereço de um objeto de interface ICorDebugFrame que representa um quadro.  
   
 ## <a name="remarks"></a>Comentários  
- O `ppFrame` parâmetro será nulo se nenhum quadro estiver ativo no momento.  
+ O parâmetro `ppFrame` será nulo se nenhum quadro estiver ativo no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

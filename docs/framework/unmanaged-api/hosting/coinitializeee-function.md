@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131935"
 ---
 # <a name="coinitializeee-function"></a>Função CoInitializeEE
-Garante que o mecanismo de execução do common language runtime é carregado em um processo. Essa função foi preterida no .NET Framework 4. Use o [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.  
+Garante que o mecanismo de execução de Common Language Runtime seja carregado em um processo. Essa função foi preterida no .NET Framework 4. Em vez disso, use o método [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT CoInitializeEE (
   
 ## <a name="parameters"></a>Parâmetros  
  `fFlags`  
- [in] Um dos [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) constantes de enumeração.  
+ no Uma das constantes de enumeração [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) .  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro padrão COM conforme definido em Winerror. h e os valores na tabela a seguir.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna códigos de erro COM padrão, conforme definido em Winerror. h, e os valores na tabela a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
@@ -49,14 +47,14 @@ HRESULT CoInitializeEE (
 |E_FAIL|Não foi possível carregar o mecanismo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse método carrega o mecanismo de execução, se ele não foi carregado anteriormente.  
+ Esse método carregará o mecanismo de execução se ele não tiver sido carregado anteriormente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

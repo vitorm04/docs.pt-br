@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084776"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>Método ICorDebugEval2::NewStringWithLength
-Cria uma cadeia de caracteres de comprimento especificado, com o conteúdo especificado.  
+Cria uma cadeia de caracteres do comprimento especificado, com o conteúdo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT NewStringWithLength (
   
 ## <a name="parameters"></a>Parâmetros  
  `string`  
- [in] Um ponteiro para o valor de cadeia de caracteres.  
+ no Um ponteiro para o valor da cadeia de caracteres.  
   
  `uiLength`  
- [in] Comprimento da cadeia de caracteres.  
+ no Comprimento da cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
- Se a cadeia de caracteres da direita caractere nulo deve estar em uma cadeia de caracteres gerenciada, o chamador do `NewStringWithLength` método deve garantir que o comprimento da cadeia de caracteres inclui o caractere nulo à direita.  
+ Se espera-se que o caractere nulo à direita da cadeia de caracteres esteja na cadeia de caracteres gerenciada, o chamador do método `NewStringWithLength` deve garantir que o comprimento da cadeia de caracteres inclua o caractere nulo à direita.  
   
- A cadeia de caracteres sempre é criada no domínio do aplicativo no qual o thread está em execução no momento.  
+ A cadeia de caracteres é sempre criada no domínio do aplicativo no qual o thread está sendo executado no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

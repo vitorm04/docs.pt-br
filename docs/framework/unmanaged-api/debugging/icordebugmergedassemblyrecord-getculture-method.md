@@ -2,14 +2,12 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: getculture'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f39a1f17c80d27a38c0f2a8a516405f72c79bbcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131422"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>Método ICorDebugMergedAssemblyRecord:: getculture
 Obtém a cadeia de caracteres do nome da cultura do assembly.  
@@ -26,10 +24,10 @@ HRESULT GetCulture(
   
 ## <a name="parameters"></a>Parâmetros  
  `cchCulture`  
- no O número de caracteres no `szCulture` buffer.  
+ no O número de caracteres no buffer de `szCulture`.  
   
  `pcchCulture`  
- fora O número de caracteres realmente gravados `szCulture` no buffer.  
+ fora O número de caracteres realmente gravados no buffer de `szCulture`.  
   
  `szCulture`  
  fora Uma matriz de caracteres que contém o nome da cultura.  
@@ -41,11 +39,11 @@ HRESULT GetCulture(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

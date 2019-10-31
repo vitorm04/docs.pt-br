@@ -1,16 +1,14 @@
 ---
 title: Implantação do .NET Core Application
 description: Conheça maneiras de implantar um aplicativo .NET Core.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613358"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089188"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -48,7 +46,7 @@ Contudo, também há algumas desvantagens:
 
 No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. A criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) de várias plataformas, por isso elas devem estar presentes antes de executar o aplicativo. Para saber mais sobre associação de versão em tempo de execução, confira o artigo sobre [associação de versão no .NET Core](../versions/selection.md).
 
-Começando com o SDK do .NET Core 2.1 (versão 2.1.300), o .NET Core é compatível com *roll forward da versão de patch*. Ao criar uma implantação autocontida, as ferramentas do .NET Core incluem automaticamente o tempo de execução de manutenção mais recente da versão do .NET Core que seu aplicativo utiliza. (O tempo de execução de manutenção mais recente inclui patches de segurança e outras correções de bug.) O tempo de execução de manutenção não precisa estar presente em seu sistema de compilação; ele é baixado automaticamente do NuGet.org. Para saber mais, incluindo instruções sobre como recusar o roll-forward da versão de patch, confira [Roll forward de tempo de execução de implantação autocontida](runtime-patch-selection.md).
+Começando com o SDK do .NET Core 2.1 (versão 2.1.300), o .NET Core é compatível com *roll forward da versão de patch*. Ao criar uma implantação autocontida, as ferramentas do .NET Core incluem automaticamente o tempo de execução de manutenção mais recente da versão do .NET Core que seu aplicativo utiliza. (O tempo de execução de serviço mais recente inclui patches de segurança e outras correções de bugs.) O tempo de execução de serviço não precisa estar presente em seu sistema de compilação; Ele é baixado automaticamente de NuGet.org. Para obter mais informações, incluindo instruções sobre como recusar o roll-out da versão do patch, consulte [roll forward do tempo de execução de implantação autocontido](runtime-patch-selection.md).
 
 Implantações FDD e SCD usam executáveis de host separadas, para que você possa assinar um executável de host para um SCD com sua assinatura do publicador.
 

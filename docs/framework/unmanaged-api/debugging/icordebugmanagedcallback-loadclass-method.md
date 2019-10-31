@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5619dea17b9a7140238fd559d2f6b1a5d190ac33
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130736"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>Método ICorDebugManagedCallback::LoadClass
-Notifica o depurador que uma classe foi carregada.  
+Notifica o depurador de que uma classe foi carregada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT LoadClass (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo no qual a classe foi carregada.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual a classe foi carregada.  
   
  `c`  
- [in] Um ponteiro para um objeto ICorDebugClass que representa a classe.  
+ no Um ponteiro para um objeto ICorDebugClass que representa a classe.  
   
 ## <a name="remarks"></a>Comentários  
- Esse retorno de chamada ocorre apenas se o carregamento de classe tiver sido habilitado para o módulo que contém a classe. Carregamento de classe está sempre habilitado para módulos dinâmicos.  
+ Esse retorno de chamada ocorrerá somente se o carregamento da classe tiver sido habilitado para o módulo que contém a classe. O carregamento de classe é sempre habilitado para módulos dinâmicos.  
   
- O `LoadClass` retorno de chamada fornece um tempo apropriado para associar os pontos de interrupção para classes geradas recentemente em módulos dinâmicos.  
+ O retorno de chamada `LoadClass` fornece um tempo apropriado para associar pontos de interrupção a classes recém-criadas em módulos dinâmicos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

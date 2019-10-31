@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir um método genérico com a emissão de reflexão'
+title: Como definir um método genérico com a emissão de reflexão
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046055"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130172"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Como: Definir um método genérico com a emissão de reflexão
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Como definir um método genérico com a emissão de reflexão
 
 O primeiro procedimento mostra como criar um método genérico simples com dois parâmetros de tipo e como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo.
 
@@ -27,7 +25,7 @@ O segundo procedimento mostra como emitir o corpo do método e como usar os par�
 O terceiro procedimento mostra como invocar o método genérico.
 
 > [!IMPORTANT]
-> Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. Um método genérico pode aparecer em um tipo não genérico, como neste exemplo. Para obter um exemplo de um método não genérico em um tipo genérico, confira [Como: definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md).
+> Um método não é genérico apenas porque pertence a um tipo genérico e usa os parâmetros de tipo desse tipo. Um método será genérico somente se ele tiver sua própria lista de parâmetros de tipo. Um método genérico pode aparecer em um tipo não genérico, como neste exemplo. Para obter um exemplo de um método não genérico em um tipo genérico, consulte [Como definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md).
 
 ### <a name="to-define-a-generic-method"></a>Para definir um método genérico
 
@@ -119,7 +117,7 @@ O terceiro procedimento mostra como invocar o método genérico.
 
 6. Emita o código para o loop. A primeira etapa é marcar a parte superior do loop, chamando <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> com o rótulo `loopAgain`. Instruções de branch que usam o rótulo agora farão o branch para esse ponto no código. A próxima etapa é enviar por push o objeto `TOutput`, convertido em `ICollection(Of TInput)`, para a pilha. Ele não é necessário imediatamente, mas precisa estar na posição para chamar o método `Add`. Em seguida a matriz de entrada é enviada por push para a pilha e, em seguida, a variável `index` que contém o índice atual para a matriz. O opcode <xref:System.Reflection.Emit.OpCodes.Ldelem> retira o índice e a matriz da pilha e envia por push o elemento de matriz indexado para a pilha. A pilha agora está pronta para a chamada para o método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>, que retira a coleção e o novo elemento da pilha e adiciona o elemento à coleção.
 
-    O restante do código no loop incrementa o índice e testa para ver se o loop é concluído: O índice e um inteiro 1 de 32 bits são enviados por push para a pilha e adicionados, deixando a soma na pilha; a soma é armazenada em `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> é chamado para definir esse ponto como o ponto de entrada para o loop. O índice é carregado novamente. A matriz de entrada é enviada por push na pilha e <xref:System.Reflection.Emit.OpCodes.Ldlen> é emitido para obter seu comprimento. O índice e o comprimento agora estão na pilha e <xref:System.Reflection.Emit.OpCodes.Clt> é emitido para compará-los. Se o índice for menor que o comprimento, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> realiza o branch de volta para o início do loop.
+    O restante do código no loop incrementa o índice e testa para ver se o loop é concluído: o índice e um inteiro 1 de 32 bits são enviados por push para a pilha e adicionados, deixando a soma na pilha, a soma é armazenada no `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> é chamado para definir esse ponto como o ponto de entrada para o loop. O índice é carregado novamente. A matriz de entrada é enviada por push na pilha e <xref:System.Reflection.Emit.OpCodes.Ldlen> é emitido para obter seu comprimento. O índice e o comprimento agora estão na pilha e <xref:System.Reflection.Emit.OpCodes.Clt> é emitido para compará-los. Se o índice for menor que o comprimento, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> realiza o branch de volta para o início do loop.
 
     [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
     [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]
@@ -169,4 +167,4 @@ O exemplo de código inclui o código-fonte que é equivalente ao método emitid
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Como: Definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)
+- [Como definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)

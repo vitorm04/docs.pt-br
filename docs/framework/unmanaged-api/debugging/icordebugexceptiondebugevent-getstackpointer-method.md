@@ -2,14 +2,12 @@
 title: 'Método ICorDebugExceptionDebugEvent:: GetStackPointer'
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 47f60b151166804d612292fb32b7ff154e417342
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 688f5aec457298a43d95a35fdbc6e04e29a306a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084684"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>Método ICorDebugExceptionDebugEvent:: GetStackPointer
 Obtém o ponteiro de pilha para este evento de depuração de exceção.  
@@ -29,7 +27,7 @@ HRESULT GetStackPointer(
 ## <a name="remarks"></a>Comentários  
  O significado desse ponteiro de pilha depende do tipo de evento, conforme mostrado na tabela a seguir.  
   
-|Tipo de evento|Significado do `pStackPointer` valor|  
+|Tipo de evento|Significado do valor de `pStackPointer`|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|O ponteiro de pilha para o quadro que gerou a exceção.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|O ponteiro de pilha para o quadro de código do usuário mais próximo do ponto da exceção gerada.|  
@@ -42,11 +40,11 @@ HRESULT GetStackPointer(
  O tipo de evento está disponível no método [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

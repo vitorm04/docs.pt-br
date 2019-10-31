@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87cdf61cfcd0aee661edf9e7d0c053c858f9d854
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 798bb0585bfe4cc29afba2fbefae818301704613
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748188"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135187"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>Método ICLRStrongName::GetHashFromFile
 Gera um hash sobre o conteúdo do arquivo especificado.  
@@ -41,32 +39,32 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>Parâmetros  
  `szFilePath`  
- [in] O nome do arquivo para hash.  
+ no O nome do arquivo para hash.  
   
  `piHashAlg`  
- [no, out] O algoritmo a ser usado ao gerar o hash. Algoritmos válidos são aquelas definidas por CryptoAPI Win32. Se `piHashAlg` é definido como 0, o algoritmo padrão CALG_SHA-1 é usado.  
+ [entrada, saída] O algoritmo a ser usado ao gerar o hash. Os algoritmos válidos são aqueles definidos pelo CryptoAPI do Win32. Se `piHashAlg` for definido como 0, o algoritmo padrão CALG_SHA-1 será usado.  
   
  `pbHash`  
- [out] Uma matriz de bytes que contém o hash gerado.  
+ fora Uma matriz de bytes que contém o hash gerado.  
   
  `cchHash`  
- [in] O tamanho máximo do buffer que `pbHash` aponta.  
+ no O tamanho máximo do buffer ao qual `pbHash` aponta.  
   
  `pchHash`  
- [out] O tamanho, em bytes, do retornado `pbHash`.  
+ fora O tamanho, em bytes, do `pbHash`retornado.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é igual a [iclrstrongname:: Gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) , exceto que o nome do arquivo especificação é ANSI em vez de Unicode.  
+ Esse método é o mesmo que o método [ICLRStrongName:: GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) , exceto que a especificação de nome de arquivo é ANSI em vez de Unicode.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

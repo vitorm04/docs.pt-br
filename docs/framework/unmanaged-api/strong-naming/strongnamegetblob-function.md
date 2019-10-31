@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e99346ecca651346b46c220a5e427cbc7f4c4697
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799105"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095008"
 ---
 # <a name="strongnamegetblob-function"></a>Função StrongNameGetBlob
 Preenche o buffer especificado com a representação binária do arquivo executável no endereço especificado.  
@@ -48,18 +46,18 @@ BOOLEAN StrongNameGetBlob (
  `pcbBlob`  
  [entrada, saída] O tamanho máximo solicitado, em bytes, de `pbBlob`. No retorno, o tamanho real, em bytes, de `pbBlob`.  
   
-## <a name="return-value"></a>Valor de retorno  
- `true`após a conclusão bem-sucedida; caso contrário `false`,.  
+## <a name="return-value"></a>Valor retornado  
+ `true` após a conclusão bem-sucedida; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Se a `StrongNameGetBlob` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
+ Se a função `StrongNameGetBlob` não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** StrongName.h  
+ **Cabeçalho:** StrongName. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

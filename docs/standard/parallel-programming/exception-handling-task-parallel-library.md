@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3e602057bfd2dea15887daee9058b12f26992f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134260"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de paralelismo de tarefas)
 

@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64bf667c5c9bc20db14f08f18fa6f4f84fa12a24
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252246"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115208"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<Elemento de > TimeSpan_LegacyFormatMode
+# <a name="timespan_legacyformatmode-element"></a>\<elemento de > TimeSpan_LegacyFormatMode
 
-Determina se o tempo de execução preserva o comportamento herdado nas operações <xref:System.TimeSpan?displayProperty=nameWithType> de formatação com valores.
+Determina se o tempo de execução preserva o comportamento herdado nas operações de formatação com <xref:System.TimeSpan?displayProperty=nameWithType> valores.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> TimeSpan_LegacyFormatMode**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +38,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução usa comportamento de <xref:System.TimeSpan?displayProperty=nameWithType> formatação herdado com valores.|
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução usa comportamento de formatação herdado com <xref:System.TimeSpan?displayProperty=nameWithType> valores.|
 
 ## <a name="enabled-attribute"></a>Atributo habilitado
 
@@ -62,15 +60,15 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Começando com o .NET Framework 4, a <xref:System.TimeSpan?displayProperty=nameWithType> estrutura implementa a <xref:System.IFormattable> interface e dá suporte a operações de formatação com cadeias de caracteres de formato padrão e personalizadas. Se um método de análise encontrar um especificador de formato sem suporte ou uma cadeia de caracteres de <xref:System.FormatException>formato, ele lançará um.
+Começando com o .NET Framework 4, a estrutura de <xref:System.TimeSpan?displayProperty=nameWithType> implementa a interface <xref:System.IFormattable> e dá suporte a operações de formatação com cadeias de caracteres de formato padrão e personalizadas. Se um método de análise encontrar um especificador de formato sem suporte ou uma cadeia de caracteres de formato, ele lançará um <xref:System.FormatException>.
 
-Nas versões anteriores do .NET Framework, a estrutura <xref:System.TimeSpan> não implementou <xref:System.IFormattable> e não oferecia suporte a cadeias de caracteres de formato. No entanto, muitos desenvolvedores assumiram erroneamente <xref:System.TimeSpan> que davam suporte a um conjunto de cadeias de caracteres de formato e os usaram em <xref:System.String.Format%2A?displayProperty=nameWithType> [operações de formatação composta](../../../../standard/base-types/composite-formatting.md) com métodos como. Normalmente, se um tipo implementa <xref:System.IFormattable> e dá suporte a cadeias de caracteres de formato, as chamadas para métodos de formatação com <xref:System.FormatException>cadeias de caracteres de formato sem suporte geralmente lançam um. No entanto <xref:System.TimeSpan> , como o <xref:System.IFormattable>não foi implementado, o Runtime ignorou a cadeia de <xref:System.TimeSpan.ToString?displayProperty=nameWithType> caracteres de formato e, em vez disso, chamou o método. Isso significa que, embora as cadeias de caracteres de formato não tenham efeito sobre a operação de formatação, sua presença <xref:System.FormatException>não resultou em um.
+Nas versões anteriores do .NET Framework, a estrutura de <xref:System.TimeSpan> não implementou <xref:System.IFormattable> e não oferecia suporte a cadeias de caracteres de formato. No entanto, muitos desenvolvedores assumiram erroneamente que <xref:System.TimeSpan> davam suporte a um conjunto de cadeias de caracteres de formato e os usaram em [operações de formatação composta](../../../../standard/base-types/composite-formatting.md) com métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>. Normalmente, se um tipo implementa <xref:System.IFormattable> e dá suporte a cadeias de caracteres de formato, as chamadas para métodos de formatação com cadeias de caracteres de formato sem suporte geralmente geram um <xref:System.FormatException>. No entanto, como <xref:System.TimeSpan> não implementou <xref:System.IFormattable>, o tempo de execução ignorou a cadeia de caracteres de formato e, em vez disso, chamou o método <xref:System.TimeSpan.ToString?displayProperty=nameWithType>. Isso significa que, embora as cadeias de caracteres de formato não tenham efeito sobre a operação de formatação, sua presença não resultou em um <xref:System.FormatException>.
 
-Para casos em que o código herdado passa um método de formatação composto e uma cadeia de caracteres de formato inválida, e esse código não pode ser `<TimeSpan_LegacyFormatMode>` recompilado, você pode <xref:System.TimeSpan> usar o elemento para restaurar o comportamento herdado. Quando você define o `enabled` atributo desse elemento como `true`, o método de formatação composta resulta em uma chamada para <xref:System.TimeSpan.ToString?displayProperty=nameWithType> em vez <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>de e um <xref:System.FormatException> não é gerado.
+Para casos em que o código herdado passa um método de formatação composto e uma cadeia de caracteres de formato inválida, e esse código não pode ser recompilado, você pode usar o elemento `<TimeSpan_LegacyFormatMode>` para restaurar o comportamento de <xref:System.TimeSpan> herdado. Quando você define o atributo `enabled` desse elemento como `true`, o método de formatação composta resulta em uma chamada para <xref:System.TimeSpan.ToString?displayProperty=nameWithType> em vez de <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>e uma <xref:System.FormatException> não é gerada.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir instancia um <xref:System.TimeSpan> objeto e tenta formatá-lo com <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> o método usando uma cadeia de caracteres de formato padrão sem suporte.
+O exemplo a seguir instancia um objeto <xref:System.TimeSpan> e tenta formatá-lo com o método <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> usando uma cadeia de caracteres de formato padrão sem suporte.
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]

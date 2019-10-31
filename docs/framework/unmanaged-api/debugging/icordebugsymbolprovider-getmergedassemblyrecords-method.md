@@ -2,14 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetMergedAssemblyRecords'
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f7859b095d80edb5592af1386457ad72b85bc48
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6faf8960c06488c8fff5a076aae375529e1d0260
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138867"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>Método ICorDebugSymbolProvider:: GetMergedAssemblyRecords
 Obtém os registros de símbolo de todos os assemblies mesclados.  
@@ -40,11 +38,11 @@ HRESULT GetMergedAssemblyRecords(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

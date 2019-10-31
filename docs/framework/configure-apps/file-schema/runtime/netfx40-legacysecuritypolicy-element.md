@@ -5,22 +5,20 @@ helpviewer_keywords:
 - <NetFx40_LegacySecurityPolicy> element
 - NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d5192eb56bb8b640544bdc52a0bb9d8a5277efef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116246"
 ---
-# <a name="netfx40_legacysecuritypolicy-element"></a>\<Elemento de > NetFx40_LegacySecurityPolicy
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<elemento de > NetFx40_LegacySecurityPolicy
 
 Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> NetFx40_LegacySecurityPolicy**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_LegacySecurityPolicy >**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -63,13 +61,13 @@ No .NET Framework versão 3,5 e versões anteriores, a política de CAS está se
 
 A política de CAS é específica da versão. As políticas de CAS personalizadas que existem em versões anteriores do .NET Framework devem ser reespecificadas no .NET Framework 4.
 
-Aplicar o `<NetFx40_LegacySecurityPolicy>` elemento a um assembly .NET Framework 4 não afeta o [código de segurança transparente](../../../misc/security-transparent-code.md); as regras de transparência ainda se aplicam.
+Aplicar o elemento `<NetFx40_LegacySecurityPolicy>` a um assembly .NET Framework 4 não afeta o [código de segurança transparente](../../../misc/security-transparent-code.md); as regras de transparência ainda se aplicam.
 
 > [!IMPORTANT]
-> A aplicação `<NetFx40_LegacySecurityPolicy>` do elemento pode resultar em penalidades de desempenho significativas para assemblies de imagem nativa criados pelo [gerador de imagem nativa (NGen. exe)](../../../tools/ngen-exe-native-image-generator.md) que não estão instalados no [cache de assembly global](../../../app-domains/gac.md). A degradação do desempenho é causada pela incapacidade do tempo de execução de carregar os assemblies como imagens nativas quando o atributo é aplicado, resultando no carregamento de assemblies just-in-time.
+> A aplicação do elemento `<NetFx40_LegacySecurityPolicy>` pode resultar em penalidades de desempenho significativas para assemblies de imagem nativa criados pelo [gerador de imagem nativa (NGen. exe)](../../../tools/ngen-exe-native-image-generator.md) que não estão instalados no [cache de assembly global](../../../app-domains/gac.md). A degradação do desempenho é causada pela incapacidade do tempo de execução de carregar os assemblies como imagens nativas quando o atributo é aplicado, resultando no carregamento de assemblies just-in-time.
 
 > [!NOTE]
-> Se você especificar uma versão de .NET Framework de destino que seja anterior à .NET Framework 4 nas configurações do projeto para seu projeto do Visual Studio, a política de CAS será habilitada, incluindo as políticas CAS personalizadas especificadas para essa versão. No entanto, você não poderá usar novos .NET Framework 4 tipos e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<elemento supportedRuntime >](../startup/supportedruntime-element.md) no esquema de configurações de inicialização no arquivo de [configuração do aplicativo](../../index.md).
+> Se você especificar uma versão de .NET Framework de destino que seja anterior à .NET Framework 4 nas configurações do projeto para seu projeto do Visual Studio, a política de CAS será habilitada, incluindo as políticas CAS personalizadas especificadas para essa versão. No entanto, você não poderá usar novos .NET Framework 4 tipos e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [elemento\<supportedRuntime >](../startup/supportedruntime-element.md) no esquema de configurações de inicialização no arquivo de [configuração do aplicativo](../../index.md).
 
 > [!NOTE]
 > A sintaxe do arquivo de configuração diferencia maiúsculas de minúsculas. Você deve usar a sintaxe conforme fornecido nas seções sintaxe e exemplo.

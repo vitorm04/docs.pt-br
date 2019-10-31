@@ -6,21 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e36e2ed96a0748a69f2bd9ee32432901f0bf0898
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252285"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115512"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<Elemento System. Runtime. Caching > (configurações de cache)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<o elemento System. Runtime. Caching > (configurações de cache)
 
-Fornece a configuração para a implementação padrão na <xref:System.Runtime.Caching.ObjectCache> memória por meio `memoryCache` da entrada no arquivo de configuração.  
+Fornece a configuração para a implementação de <xref:System.Runtime.Caching.ObjectCache> na memória padrão por meio da entrada de `memoryCache` no arquivo de configuração.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<sistema. Runtime. Caching >**  
+&nbsp;&nbsp; **\<System. Runtime. caching >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,16 +50,16 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
   
 ## <a name="remarks"></a>Comentários
 
-As classes nesse namespace fornecem uma maneira de usar recursos de caching como aqueles em ASP.net, mas sem uma dependência no `System.Web` assembly. Para obter mais informações, consulte [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
+As classes nesse namespace fornecem uma maneira de usar recursos de caching como aqueles em ASP.NET, mas sem uma dependência no assembly `System.Web`. Para obter mais informações, consulte [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
-> A funcionalidade e os tipos de cache de <xref:System.Runtime.Caching> saída no namespace são novos no .NET Framework 4.  
+> A funcionalidade e os tipos de cache de saída no namespace <xref:System.Runtime.Caching> são novos no .NET Framework 4.  
   
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como configurar um cache baseado na <xref:System.Runtime.Caching.MemoryCache> classe. O exemplo mostra como configurar uma instância da entrada para `namedCaches` o cache de memória. O nome do cache é definido como o nome da entrada de cache padrão, definindo `name` o atributo como "padrão".  
+O exemplo a seguir mostra como configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O exemplo mostra como configurar uma instância da entrada de `namedCaches` para o cache de memória. O nome do cache é definido como o nome da entrada de cache padrão, definindo o atributo `name` como "padrão".  
   
-O `cacheMemoryLimitMegabytes` atributo e o `physicalMemoryPercentage` atributo são definidos como zero. Definir esses atributos como zero significa que a <xref:System.Runtime.Caching.MemoryCache> heurística de dimensionamento automático é usada por padrão. A implementação de cache deve comparar a carga de memória atual com os limites de memória absolutos e baseados em porcentagem a cada dois minutos.  
+O atributo `cacheMemoryLimitMegabytes` e o atributo `physicalMemoryPercentage` são definidos como zero. Definir esses atributos como zero significa que a heurística de dimensionamento automático de <xref:System.Runtime.Caching.MemoryCache> é usada por padrão. A implementação de cache deve comparar a carga de memória atual com os limites de memória absolutos e baseados em porcentagem a cada dois minutos.  
   
 ```xml  
 <configuration>  
@@ -80,4 +78,4 @@ O `cacheMemoryLimitMegabytes` atributo e o `physicalMemoryPercentage` atributo s
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<Elemento de > memoryCache (configurações de cache)](memorycache-element-cache-settings.md)
+- [\<elemento de > memoryCache (configurações de cache)](memorycache-element-cache-settings.md)

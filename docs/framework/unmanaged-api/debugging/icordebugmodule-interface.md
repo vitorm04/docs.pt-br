@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dce4f5859568c1288610e171286a5919dc8b19b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 971d6a6a2157c48dcb9105e9f523b1f077098479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962424"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129481"
 ---
 # <a name="icordebugmodule-interface"></a>Interface ICorDebugModule
 
@@ -55,11 +53,11 @@ Representa um módulo Common Language Runtime (CLR), que é um arquivo executáv
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

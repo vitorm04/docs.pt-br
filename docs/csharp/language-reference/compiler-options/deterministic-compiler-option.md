@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 2f0f9680668d67867d4bd7b60cb54d48ed7c4776
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202928"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73086904"
 ---
 # <a name="-deterministic"></a>-deterministic
 

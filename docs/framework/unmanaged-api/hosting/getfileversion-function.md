@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136329"
 ---
 # <a name="getfileversion-function"></a>Função GetFileVersion
-Obtém as informações de versão de runtime (CLR) de linguagem comum do arquivo especificado, usando o buffer especificado.  
+Obtém as informações de versão do Common Language Runtime (CLR) do arquivo especificado, usando o buffer especificado.  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -41,21 +39,21 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parâmetros  
  `szFilename`  
- [in] O caminho do arquivo a ser examinado.  
+ no O caminho do arquivo a ser examinado.  
   
  `szBuffer`  
- [no, out] O buffer alocado para as informações de versão que são retornadas.  
+ [entrada, saída] O buffer alocado para as informações de versão que são retornadas.  
   
  `cchBuffer`  
- [in] O tamanho, em caracteres largos, de `szBuffer`.  
+ no O tamanho, em caracteres largos, de `szBuffer`.  
   
  `dwLength`  
- [out] O tamanho, em bytes, do retornado `szBuffer`.  
+ fora O tamanho, em bytes, do `szBuffer`retornado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

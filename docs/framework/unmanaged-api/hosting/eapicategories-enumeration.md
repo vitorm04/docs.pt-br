@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131208"
 ---
 # <a name="eapicategories-enumeration"></a>Enumeração EApiCategories
-Descreve as categorias de recursos que o host pode bloquear seja executado no código parcialmente confiável.  
+Descreve as categorias de recursos que o host pode bloquear de ser executado em código parcialmente confiável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,29 +46,29 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`eAll`|Especifica que todos os gerenciados classes e membros que são cobertos por outros `EApiCategories` campos impedido de ser executado em código parcialmente confiável.|  
-|`eExternalProcessMgmt`|Especifica que classes gerenciadas e membros que permitem a criação, a manipulação e a destruição de processos externos impedido de ser executado em código parcialmente confiável.|  
-|`eExternalThreading`|Especifica que classes gerenciadas e membros que permitem a criação, a manipulação e a destruição de threads externos impedido de ser executado em código parcialmente confiável.|  
-|`eMayLeakOnAbort`|Especifica que tipos gerenciados e membros que poderia potencialmente vazar memória no abortar a execução bloqueada em código parcialmente confiável.|  
-|`eNoCategory`|Especifica que nenhuma categoria de código gerenciado impedido de ser executado em código parcialmente confiável.|  
-|`eSecurityInfrastructure`|Especifica que a infraestrutura de segurança do common language runtime (CLR) ser impedido de que está sendo usado pelo código parcialmente confiável.|  
-|`eSelfAffectingProcessMgmt`|Especifica que classes gerenciadas e membros cujos recursos podem afetar o processo hospedado impedido de ser executado em código parcialmente confiável.|  
-|`eSelfAffectingThreading`|Especifica que classes gerenciadas e membros cujos recursos podem afetar os threads no processo hospedado impedido de ser executado em código parcialmente confiável.|  
-|`eSharedState`|Especifica que classes gerenciadas e membros que expõem o estado compartilhado impedido de ser executado em código parcialmente confiável.|  
-|`eSynchronization`|Especifica que as classes de tempo de execução de linguagem e membros que permitem que o código do usuário manter bloqueios comuns impedido de ser executado em código parcialmente confiável.|  
-|`eUI`|Especifica que classes gerenciadas e membros que permitem ou exigem interação humana impedido de ser executado em código parcialmente confiável.|  
+|`eAll`|Especifica que todas as classes e membros gerenciados que são cobertos por outros `EApiCategories` campos sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eExternalProcessMgmt`|Especifica que classes e membros gerenciados que permitem a criação, manipulação e destruição de processos externos sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eExternalThreading`|Especifica que classes e membros gerenciados que permitem a criação, manipulação e destruição de threads externos sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eMayLeakOnAbort`|Especifica que os tipos gerenciados e membros que poderiam vazar memória em anulação sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eNoCategory`|Especifica que nenhuma categoria de código gerenciado será impedida de ser executada em código parcialmente confiável.|  
+|`eSecurityInfrastructure`|Especifica que a infraestrutura de segurança Common Language Runtime (CLR) seja impedida de ser usada pelo código parcialmente confiável.|  
+|`eSelfAffectingProcessMgmt`|Especifica que classes e membros gerenciados cujos recursos podem afetar o processo hospedado sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eSelfAffectingThreading`|Especifica que classes e membros gerenciados cujos recursos podem afetar threads no processo hospedado serão impedidos de serem executados em código parcialmente confiável.|  
+|`eSharedState`|Especifica que classes e membros gerenciados que expõem o estado compartilhado sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eSynchronization`|Especifica que Common Language Runtime classes e membros que permitem que o código do usuário mantenha bloqueios sejam impedidos de serem executados em código parcialmente confiável.|  
+|`eUI`|Especifica que classes e membros gerenciados que permitem ou exigem interação humana são impedidos de serem executados em código parcialmente confiável.|  
   
 ## <a name="remarks"></a>Comentários  
- O [iclrhostprotectionmanager:: Setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) método utiliza um parâmetro de tipo `EApiCategories`.  
+ O método [ICLRHostProtectionManager:: SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) usa um parâmetro do tipo `EApiCategories`.  
   
- O `EApiCategories` enumeração e a `SetProtectedCategories` método estão diretamente relacionados para o gerenciado <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> classe. A classe gerenciada é usada com o <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> enumeração, cujos valores correspondem diretamente para o `EApiCategories` valores, para marcar tipos gerenciados e membros que expõem funcionalidades correspondentes às categorias descritas pelo `EApiCategories`.  
+ A enumeração `EApiCategories` e o método `SetProtectedCategories` estão diretamente relacionados à classe <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> gerenciada. A classe gerenciada é usada com a enumeração <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>, cujos valores correspondem diretamente aos valores de `EApiCategories`, para marcar tipos gerenciados e membros que expõem recursos correspondentes às categorias descritas por `EApiCategories`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

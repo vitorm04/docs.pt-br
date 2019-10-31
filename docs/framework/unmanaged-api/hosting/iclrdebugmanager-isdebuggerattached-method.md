@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30159748c1103cbc8efaf8929387052bbe5c3ec7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a58fcb6c1fa2aad96cdd29194a21eaf590536cdd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129390"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>Método ICLRDebugManager::IsDebuggerAttached
 Obtém um valor que indica se um depurador está anexado ao processo.  
@@ -37,28 +35,28 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbAttached`  
- [out] `true` se um depurador estiver anexado ao processo; caso contrário, `false`.  
+ [fora] `true` se um depurador estiver anexado ao processo; caso contrário, `false`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`IsDebuggerAttached` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `IsDebuggerAttached` permite que o host do CLR para determinar se um depurador está anexado ao processo de consulta.  
+ `IsDebuggerAttached` permite que o host consulte o CLR para determinar se um depurador está anexado ao processo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

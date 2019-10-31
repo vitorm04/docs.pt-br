@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b600b3a2-9908-42d8-8093-ab6f39e9a2c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a8e5a1813a81a84eac612a53964d39b48f0c536
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cee095003c136142052b8f946fa8227927c80ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096874"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>Método ICorDebugNativeFrame::GetLocalMemoryValue
-Obtém o valor de um argumento ou uma variável local que é armazenado no local de memória especificado para este quadro nativo.  
+Obtém o valor de um argumento ou uma variável local que é armazenada no local de memória especificado para esse quadro nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ HRESULT GetLocalMemoryValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `address`  
- [in] Um `CORDB_ADDRESS` valor que especifica o local da memória que contém o valor.  
+ no Um valor `CORDB_ADDRESS` que especifica o local da memória que contém o valor.  
   
  `cbSigBlob`  
- [in] Um inteiro que especifica o tamanho da assinatura de metadados binária que é referenciado pelo `pvSigBlob` parâmetro.  
+ no Um inteiro que especifica o tamanho da assinatura de metadados binários que é referenciada pelo parâmetro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Um `PCCOR_SIGNATURE` valor que aponta para a assinatura binária metadados de tipo de valor.  
+ no Um valor `PCCOR_SIGNATURE` que aponta para a assinatura de metadados binários do tipo do valor.  
   
  `ppValue`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugValue" que representa o valor recuperado armazenado no local da memória especificado.  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugValue" que representa o valor recuperado que é armazenado no local da memória especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

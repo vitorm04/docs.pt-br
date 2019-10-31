@@ -9,30 +9,28 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81477010b22edee71098edfc1b8557db08b6038f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8c2fb544cf9fd6642bd0581211e0e4e49633221
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049694"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139766"
 ---
 # <a name="icorprofilercallback7-interface"></a>Interface ICorProfilerCallback7
 [Com suporte no .NET Framework 4.6.1 e versões posteriores]  
   
- Uma subclasse de [ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md) que fornece um método de retorno de chamada que o common language runtime usa para notificar o criador de perfil que o fluxo de símbolo associado a um módulo na memória é atualizado.  
+ Uma subclasse de [ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md) que fornece um método de retorno de chamada que o Common Language Runtime usa para notificar o criador de perfil de que o fluxo de símbolos associado a um módulo na memória é atualizado.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Notifica o criador de perfil que o fluxo de símbolo associado a um módulo na memória é atualizado.|  
+|[Método ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Notifica o criador de perfil de que o fluxo de símbolos associado a um módulo na memória é atualizado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

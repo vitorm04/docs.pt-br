@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa76b88d89e83c400b3f372d846c1a31add255
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6d77ff1393bc0ba4884dfa34810fee5316e33ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130741"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Método ICorDebugManagedCallback::LoadAssembly
-Notifica o depurador que um assembly do common language runtime (CLR) foi carregado com êxito.  
+Notifica o depurador de que um assembly Common Language Runtime (CLR) foi carregado com êxito.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +36,13 @@ HRESULT LoadAssembly (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo no qual o assembly foi carregado.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo no qual o assembly foi carregado.  
   
  `pAssembly`  
- [in] Um ponteiro para um objeto ICorDebugAssembly que representa o assembly.  
+ no Um ponteiro para um objeto ICorDebugAssembly que representa o assembly.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

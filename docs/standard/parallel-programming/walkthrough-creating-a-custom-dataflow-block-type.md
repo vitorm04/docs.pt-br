@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: criando um tipo de bloco de fluxo de dados personalizado'
+title: 'Explicação passo a passo: Criando um tipo de bloco de fluxo de dados personalizado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,19 +10,17 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62e2a25e48ead730112a37af451d64c6ccc2e141
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: cb953952bbed90edd2db799e92d44ec9f062babf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593440"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139888"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Passo a passo: criando um tipo de bloco de fluxo de dados personalizado
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Explicação passo a passo: Criando um tipo de bloco de fluxo de dados personalizado
 Embora a biblioteca de fluxo de dados TPL forneça vários tipos de bloco de fluxo de dados que permitem uma gama de funcionalidades, também é possível criar tipos de blocos personalizados. Este documento mostra como criar um tipo de bloco de fluxo de dados que implanta comportamentos personalizados.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Leia primeiro sobre o [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de ler este documento.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -47,7 +45,7 @@ Embora a biblioteca de fluxo de dados TPL forneça vários tipos de bloco de flu
  [!code-vb[TPLDataflow_SlidingWindowBlock#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#2)]  
   
 ## <a name="the-complete-example"></a>O Exemplo Completo  
- O exemplo a seguir mostra o código completo para este passo a passo. Ele também demonstra como usar os dois blocos de janela deslizante em um método que grava o bloco, lê a partir dele e imprime os resultados para o console.  
+ O exemplo a seguir mostra o código completo dessa explicação passo a passo. Ele também demonstra como usar os dois blocos de janela deslizante em um método que grava o bloco, lê a partir dele e imprime os resultados para o console.  
   
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  

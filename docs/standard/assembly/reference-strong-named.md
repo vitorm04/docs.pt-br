@@ -1,5 +1,5 @@
 ---
-title: 'Como: Referenciar um assembly de nome forte'
+title: Como referenciar um assembly de nome forte
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 324cd42a2781202f19e7e1cb5055d571f0c58cf5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973127"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127640"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Como: Referenciar um assembly de nome forte
+# <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
   
 Uma referência de tempo de compilação ocorre quando você indica ao compilador que o assembly a ser compilado explicitamente referencia outro assembly. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.
@@ -44,7 +42,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
 
 ## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>Fazer uma referência de tempo de execução para um assembly de nome forte  
   
-Quando você faz uma referência de tempo de execução para um assembly de nome forte, por exemplo, usando <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> método ou, você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
+Quando você faz uma referência de tempo de execução para um assembly de nome forte, por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
 
 \<*nome do assembly*> **,** \<*número da versão*> **,** \<*cultura*> **,** \<*token de chave pública*>  
 

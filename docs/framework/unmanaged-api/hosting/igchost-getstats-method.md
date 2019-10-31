@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e374c03ca90c904cd4ef8a4585cb35ccf43cb43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c86786a34ff236fb57a1ea6bc4d00b9cd5c4a717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134890"
 ---
 # <a name="igchostgetstats-method"></a>Método IGCHost::GetStats
-Obtém as estatísticas para o estado atual do sistema de coleta de lixo.  
+Obtém as estatísticas do estado atual do sistema de coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +35,17 @@ HRESULT GetStats (
   
 ## <a name="parameters"></a>Parâmetros  
  `pStats`  
- [no, out] Um ponteiro para um [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estrutura que contém as estatísticas para o estado atual do sistema de coleta de lixo.  
+ [entrada, saída] Um ponteiro para uma estrutura [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) que contém as estatísticas para o estado atual do sistema de coleta de lixo.  
   
 ## <a name="remarks"></a>Comentários  
- As estatísticas podem ser usadas por um sistema inteligente de alocação para ajudar o sistema de coleta de lixo funcionar. Por exemplo, o sistema de alocação pode determinar, depois de revisar as estatísticas, o que ele precisa adicionar mais memória ou forçar uma coleta.  
+ As estatísticas podem ser usadas por um sistema de alocação inteligente para ajudar o sistema de coleta de lixo a funcionar. Por exemplo, o sistema de alocação pode determinar, depois de revisar as estatísticas, que precisa adicionar mais memória ou forçar uma coleta.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost.idl, GCHost.h  
+ **Cabeçalho:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

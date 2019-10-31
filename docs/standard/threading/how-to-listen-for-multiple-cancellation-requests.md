@@ -1,5 +1,5 @@
 ---
-title: 'Como: Como ouvir várias solicitações de cancelamento'
+title: Como ouvir várias solicitações de cancelamento
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2684f0fd43f84573933fc0a7107ce4f9035bc092
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913315"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138005"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Como: Como ouvir várias solicitações de cancelamento
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Como ouvir várias solicitações de cancelamento
 Este exemplo mostra como detectar dois tokens de cancelamento simultaneamente para que você possa cancelar uma operação se um dos tokens assim o solicitar.  
   
 > [!NOTE]

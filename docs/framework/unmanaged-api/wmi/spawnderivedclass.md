@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798234"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120185"
 ---
 # <a name="spawnderivedclass-function"></a>Função SpawnDerivedClass
 Cria um objeto de classe derivada recentemente por meio de um objeto especificado.    
@@ -50,7 +48,7 @@ no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wb
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `ppNewClass`  
-fora Recebe o ponteiro para o novo objeto de definição de classe. Se ocorrer um erro, um novo objeto não será retornado e `ppNewClass` permanecerá não modificado. Seu valor não pode `null`ser.
+fora Recebe o ponteiro para o novo objeto de definição de classe. Se ocorrer um erro, um novo objeto não será retornado e `ppNewClass` será deixado como não modificado. Seu valor não pode ser `null`.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -69,14 +67,14 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) .
 
-`ptr`deve ser uma definição de classe que se torna a classe pai do objeto gerado. O objeto retornado se torna uma subclasse do objeto atual.
+`ptr` deve ser uma definição de classe que se torna a classe pai do objeto gerado. O objeto retornado se torna uma subclasse do objeto atual.
 
-O novo objeto retornado em `ppNewClass` torna-se automaticamente uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
+O novo objeto retornado em `ppNewClass` se torna automaticamente uma subclasse do objeto atual. Esse comportamento não pode ser substituído. Não há nenhum outro método pelo qual as subclasses (classes derivadas) podem ser criadas.
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -2,16 +2,14 @@
 title: <MethodInstantiation> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2c0354853e4725ba3e673fb9142c4a7a85d2121
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f19bd3c20088431bcbbafac298398b82a664bee9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128321"
 ---
-# <a name="methodinstantiation-element-net-native"></a>\<Elemento de > MethodInstantiation (.NET Native)
+# <a name="methodinstantiation-element-net-native"></a>\<elemento de > MethodInstantiation (.NET Native)
 Aplica a política de reflexão de tempo de execução a um método genérico construído.  
   
 ## <a name="syntax"></a>Sintaxe  

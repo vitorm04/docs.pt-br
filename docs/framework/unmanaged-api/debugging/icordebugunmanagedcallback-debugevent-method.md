@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1c75e1844fca4e592faa924a55432dd42fa7355
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d865f837d38894e8449af671e2d12e7676dd040
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772626"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129130"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>Método ICorDebugUnmanagedCallback::DebugEvent
-Notifica o depurador que um evento nativo foi disparado.  
+Notifica o depurador de que um evento nativo foi acionado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,22 +36,22 @@ HRESULT DebugEvent (
   
 ## <a name="parameters"></a>Parâmetros  
  `pDebugEvent`  
- [in] Um ponteiro para o evento nativo.  
+ no Um ponteiro para o evento nativo.  
   
  `fOutOfBand`  
- [in] `true`, se a interação com o estado do processo gerenciado é impossível quando ocorre um evento de não gerenciado, até que as chamadas do depurador [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); caso contrário, `false`.  
+ [in] `true`, se a interação com o estado do processo gerenciado for impossível depois que um evento não gerenciado ocorrer, até que o depurador chame [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md); caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Se o thread que está sendo depurado é um thread do Win32, não use nenhum membro do Win32 na interface de depuração. Você pode chamar `ICorDebugController::Continue` somente em um thread do Win32 e somente quando continuar após um evento de fora da banda.  
+ Se o thread que está sendo depurado for um Thread Win32, não use nenhum membro da interface de depuração do Win32. Você pode chamar `ICorDebugController::Continue` apenas em um Thread Win32 e apenas quando estiver continuando um evento fora de banda.  
   
- O `DebugEvent` retorno de chamada não segue as regras padrão para retornos de chamada. Quando você chama `DebugEvent`, o processo estará em bruto, o estado de parado de depuração do sistema operacional. O processo não será sincronizado. Entrará automaticamente o estado sincronizado quando necessário para atender a solicitações para obter informações sobre o código gerenciado, que pode resultar em outros aninhados `DebugEvent` retornos de chamada.  
+ O retorno de chamada `DebugEvent` não segue as regras padrão para retornos de chamada. Quando você chama `DebugEvent`, o processo estará no estado RAW, de depuração do sistema operacional interrompido. O processo não será sincronizado. Ele inserirá automaticamente o estado SYNCHRONIZED quando necessário para atender a solicitações de informações sobre código gerenciado, o que pode resultar em outros retornos de chamada de `DebugEvent` aninhados.  
   
- Chame [icordebugprocess:: Clearcurrentexception](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) sobre o processo de ignorar um evento de exceção antes de continuar o processo. Chamar esse método envia a solicitação para continuar DBG_CONTINUE em vez de DBG_EXCEPTION_NOT_HANDLED e limpa automaticamente os pontos de interrupção de out-of-band e exceções do passo a passo. Eventos fora de banda podem vir a qualquer momento, mesmo quando o aplicativo que está sendo depurado aparece interrompido e quando um evento em banda pendente já existe.  
+ Chame [ICorDebugProcess:: ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) no processo para ignorar um evento de exceção antes de continuar o processo. Chamar esse método envia DBG_CONTINUE em vez de DBG_EXCEPTION_NOT_HANDLED na solicitação de continuação e limpa automaticamente os pontos de interrupção fora de banda e as exceções de etapa única. Eventos fora de banda podem vir a qualquer momento, mesmo quando o aplicativo que está sendo depurado aparece parado e quando um evento em banda pendente já existe.  
   
- No .NET Framework versão 2.0, o depurador imediatamente deve continuar após um evento de ponto de interrupção de out-of-band. O depurador deve estar usando o [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) e [ICorDebugProcess2::ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) métodos para adicionar e remover pontos de interrupção. Esses métodos ignorará qualquer ponto de interrupção de out-of-band automaticamente. Assim, os pontos de interrupção somente out-of-band expedidos devem ser brutos pontos de interrupção que já estão no fluxo de instruções, como uma chamada para o Win32 `DebugBreak` função. Não tente usar `ICorDebugProcess::ClearCurrentException`, [icordebugprocess:: Getthreadcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [icordebugprocess:: Setthreadcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md), ou qualquer outro membro do [API de depuração](../../../../docs/framework/unmanaged-api/debugging/index.md).  
+ No .NET Framework versão 2,0, o depurador deve continuar imediatamente após um evento de ponto de interrupção fora de banda. O depurador deve usar os métodos [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) e [ICorDebugProcess2:: ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) para adicionar e remover pontos de interrupção. Esses métodos ignorarão todos os pontos de interrupção fora de banda automaticamente. Portanto, os únicos pontos de interrupção fora de banda que são expedidos devem ser pontos de interrupção brutos que já estão no fluxo de instrução, como uma chamada para a função de `DebugBreak` do Win32. Não tente usar `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess:: GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess:: SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)ou qualquer outro membro da [API de depuração](../../../../docs/framework/unmanaged-api/debugging/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

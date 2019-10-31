@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb4e41f62f5f55969dadd47e80efc56e1c92c94f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768273"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141404"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>Método StrongNameSignatureVerificationEx2
-Verifica a assinatura de um assembly de nome forte e fornece um mapeamento da chave do ECMA para uma chave real.  
+Verifica a assinatura de um assembly com nome forte e fornece um mapeamento da chave ECMA para uma chave real.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,29 +38,29 @@ HRESULT StrongNameSignatureVerificationEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
- [in] O caminho para o arquivo executável portátil (.exe ou. dll) para o assembly a ser verificado.  
+ no O caminho para o arquivo executável portátil (. exe ou. dll) para o assembly a ser verificado.  
   
  `fForceVerification`  
  [in] `true` para executar a verificação, mesmo se for necessário substituir as configurações do registro; caso contrário, `false`.  
   
  `pbEcmaPublicKey`  
- [in] Um ponteiro para o mapeamento da chave pública do ECMA para a chave real usado para verificação.  
+ no Um ponteiro para o mapeamento da chave pública ECMA para a chave real usada para verificação.  
   
  `cbEcmaPublicKey`  
- [in] O comprimento da chave pública real do ECMA.  
+ no O comprimento da chave pública ECMA real.  
   
  `pfWasVerified`  
- [out] `true` se a assinatura de nome forte foi verificado; caso contrário, `false`. Esse parâmetro também é definido como `false` se a verificação for bem-sucedida devido a configurações de registro.  
+ [fora] `true` se a assinatura de nome forte foi verificada; caso contrário, `false`. Esse parâmetro também é definido como `false` se a verificação foi bem-sucedida devido a configurações do registro.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se a verificação for bem-sucedida; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se a verificação foi bem-sucedida; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

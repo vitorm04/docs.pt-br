@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6e0c02af93b9df726202f397bbb2afc306f3b3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090874"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a>Ponteiro de função LPTHREAD_START_ROUTINE
-Aponta para uma função que notifica o host que um thread começou a executar.  
+# <a name="lpthread_start_routine-function-pointer"></a>Ponteiro de função LPTHREAD_START_ROUTINE
+Aponta para uma função que notifica o host que um thread começou a ser executado.  
   
  Esse ponteiro de função foi preterido no .NET Framework 4.  
   
@@ -38,17 +36,17 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpThreadParameter`  
- [in] Um ponteiro para o código que iniciou a execução.  
+ no Um ponteiro para o código que iniciou a execução.  
   
 ## <a name="remarks"></a>Comentários  
- A função à qual `LPTHREAD_START_ROUTINE` pontos é uma função de retorno de chamada e devem ser implementados pelo gravador do aplicativo host.  
+ A função à qual os pontos de `LPTHREAD_START_ROUTINE` é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

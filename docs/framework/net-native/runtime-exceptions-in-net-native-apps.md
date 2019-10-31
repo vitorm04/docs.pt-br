@@ -2,14 +2,12 @@
 title: Exceções em tempo de execução em aplicativos do .NET Native
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 27a2e0906343d115c47230c726efb74cd51d4c93
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3132e2c9502c91cbfa0b120f664fd0c6f99a2663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128138"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Exceções em tempo de execução em aplicativos do .NET Native
 É importante testar os builds de versão do seu aplicativo da Plataforma Universal do Windows nas respectivas plataformas de destino, porque as configurações de depuração e de lançamento são completamente diferentes. Por padrão, a configuração de depuração usa o tempo de execução do .Net Core para compilar seu aplicativo, mas a configuração de lançamento usa .NET Native para compilar seu aplicativo em código nativo.  
@@ -28,7 +26,7 @@ ms.locfileid: "71049168"
   
 - O tamanho de seu executável é reduzido tanto quanto possível. Uma das maneiras pelas quais o .NET Native reduz o tamanho de um executável é cortando significativamente as mensagens de exceção de tempo de execução, um tópico discutido em maiores detalhes na seção [Mensagens de exceção de tempo de execução](#Messages).  
   
-- Seu código é altamente otimizado. Isso significa que inlining é usado sempre que possível. (O inlining move código de rotinas externas para a rotina chamadora.)   O fato de que o .NET Native fornece um tempo de execução especializado e implementa inlining agressivo afeta a pilha de chamadas que é exibida durante a depuração.  Para obter mais informações, consulte a seção [Pilha de chamadas de tempo de execução](#CallStack).  
+- Seu código é altamente otimizado. Isso significa que inlining é usado sempre que possível. (O inline move o código de rotinas externas para a rotina de chamada.)   O fato de que .NET Native fornece um tempo de execução especializado e implementa o inalinhamento agressivo afeta a pilha de chamadas que é exibida durante a depuração.  Para obter mais informações, consulte a seção [Pilha de chamadas de tempo de execução](#CallStack).  
   
 > [!NOTE]
 > Você pode controlar se os builds de depuração e de versão são compilados com a cadeia de ferramentas do .NET Native, marcando ou desmarcando a caixa **Compilar com cadeia de ferramentas do .NET Native**.   No entanto, observe que a Windows Store sempre compilará a versão de produção do seu aplicativo com a cadeia de ferramentas do .NET Native.  

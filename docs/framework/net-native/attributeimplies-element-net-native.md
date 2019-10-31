@@ -2,16 +2,14 @@
 title: <AttributeImplies> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049909"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128478"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<Elemento de > AttributeImplies (.NET Native)
+# <a name="attributeimplies-element-net-native"></a>\<elemento de > AttributeImplies (.NET Native)
 Define a política para os elementos de código ao qual o atributo recipiente é aplicado.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -69,7 +67,7 @@ Define a política para os elementos de código ao qual o atributo recipiente é
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<Elemento de > de tipo](type-element-net-native.md)
+- [Elemento de > de\<tipo](type-element-net-native.md)
 - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)

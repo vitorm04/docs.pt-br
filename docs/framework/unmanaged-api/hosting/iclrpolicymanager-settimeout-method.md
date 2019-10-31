@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9c2ebb2bc9c1137a4e3716d98387278959f77d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 516ba1325404e757af8e38de239864b21b1640f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757325"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140751"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>Método ICLRPolicyManager::SetTimeout
 Define um valor de tempo limite para a operação especificada.  
@@ -38,7 +36,7 @@ HRESULT SetTimeout (
   
 ## <a name="parameters"></a>Parâmetros  
  `operation`  
- [in] Um dos [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) valores, indicando que a operação de runtime (CLR) de linguagem comum para o qual definir um tempo limite. Há suporte para os seguintes valores:  
+ no Um dos valores de [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) , que indica a operação Common Language Runtime (CLR) para a qual definir um tempo limite. Há suporte para os seguintes valores:  
   
 - OPR_AppDomainUnload  
   
@@ -49,26 +47,26 @@ HRESULT SetTimeout (
 - OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- [in] O novo valor de tempo limite, em milissegundos. Um valor infinito faz com que a operação de nunca atingir o tempo limite.  
+ no O novo valor de tempo limite, em milissegundos. Um valor infinito faz com que a operação nunca expire.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`SetTimeout` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|E_INVALIDARG|Não é possível definir um tempo limite especificado `operation`, ou um valor inválido foi fornecido para `operation`.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|E_INVALIDARG|Não é possível definir um tempo limite para o `operation`especificado ou um valor inválido foi fornecido para `operation`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

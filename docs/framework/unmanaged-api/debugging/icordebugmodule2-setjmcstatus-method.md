@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d438123dcefb901098954845596c210e5b76cea6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a0b70078dee88b270d8361aa9bddcb7d80df1db1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764110"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129467"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>Método ICorDebugModule2::SetJMCStatus
-Define o status de apenas My Code (JMC) de todos os métodos de todas as classes nesse ICorDebugModule2 ao valor especificado, exceto aqueles no `pTokens` matriz, que define como o valor oposto.  
+Define o status de Apenas Meu Código (JMC) de todos os métodos de todas as classes nesse ICorDebugModule2 para o valor especificado, exceto aqueles na matriz `pTokens`, que ele define para o valor oposto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +37,23 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parâmetros  
  `bIsJustMycode`  
- [in] Definido como `true` se o código deve ser depurado; caso contrário, definido como `false`.  
+ no Defina como `true` se o código deve ser depurado; caso contrário, defina como `false`.  
   
  `cTokens`  
- [in] O tamanho do `pTokens` matriz.  
+ no O tamanho da matriz de `pTokens`.  
   
  `pTokens`  
- [in] Uma matriz de `mdToken` valores, cada um deles se refere a um método que terá o status JMC definido como!`bIsJustMycode`.  
+ no Uma matriz de valores `mdToken`, cada um dos quais se refere a um método que terá seu status JMC definido como!`bIsJustMycode`.  
   
 ## <a name="remarks"></a>Comentários  
- O status JMC de cada método que é especificado na `pTokens` matriz é definida como o oposto do `bIsJustMycode` valor. O status de todos os outros métodos neste módulo é definido como o `bIsJustMycode` valor.  
+ O status de JMC de cada método especificado na matriz de `pTokens` é definido como o oposto do valor de `bIsJustMycode`. O status de todos os outros métodos neste módulo é definido como o valor `bIsJustMycode`.  
   
- O `SetJMCStatus` método apaga todas as configurações anteriores de JMC neste módulo.  
+ O método `SetJMCStatus` apaga todas as configurações de JMC anteriores neste módulo.  
   
- O `SetJMCStatus` método retornará um S_OK HRESULT se todas as funções foram definidas com êxito. Ele retorna um HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE se algumas funções que são marcados `true` não são depurável.  
+ O método `SetJMCStatus` retorna um erro S_OK HRESULT se todas as funções foram definidas com êxito. Ele retornará um HRESULT CORDBG_E_FUNCTION_NOT_DEBUGGABLE se algumas funções marcadas `true` não forem depurável.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

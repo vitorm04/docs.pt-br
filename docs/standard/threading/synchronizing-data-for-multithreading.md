@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968423"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128973"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 
@@ -35,7 +33,7 @@ O .NET fornece várias estratégias para sincronizar o acesso à instância e ao
 |Categoria|Campos globais|Campos estáticos|Métodos estáticos|Campos de instância|Métodos de instância|Blocos de código específico|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |Sem sincronização|Não|Não|Não|Não|Não|Não|  
-|Contexto sincronizado|Não|Não|Não|sim|sim|Não|  
+|Contexto sincronizado|Não|Não|Não|Sim|Sim|Não|  
 |Regiões de código sincronizadas|Não|Não|Somente se marcado|Não|Somente se marcado|Somente se marcado|  
 |Sincronização manual|Manual|Manual|Manual|Manual|Manual|Manual|  
   

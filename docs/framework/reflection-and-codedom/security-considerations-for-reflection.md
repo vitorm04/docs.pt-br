@@ -10,14 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130062"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 
@@ -59,7 +57,7 @@ Um membro é crítico para segurança se ele tiver o <xref:System.Security.Secur
 
 Essas regras são as mesmas se um membro crítico para segurança for acessado diretamente pelo código compilado ou por meio de reflexão.
 
-Código de aplicativo que é executado da linha de comando é executado com confiança total. Desde que não esteja marcado como transparente, ele pode usar reflexão para acessar membros críticos para segurança. Quando o mesmo código é executado com confiança parcial (por exemplo, em um domínio do aplicativo em área restrita), o nível de confiança do assembly determina se ele pode acessar o código crítico para segurança: Se o assembly tem um nome forte e está instalado no cache de assembly global, ele é um assembly confiável e pode chamar membros críticos para segurança. Se não for confiável, ele se tornará transparente mesmo se não for marcado como transparente e não poderá acessar membros críticos para segurança.
+Código de aplicativo que é executado da linha de comando é executado com confiança total. Desde que não esteja marcado como transparente, ele pode usar reflexão para acessar membros críticos para segurança. Quando o mesmo código é executado com confiança parcial (por exemplo, em um domínio do aplicativo em área restrita), o nível de confiança do assembly determina se ele pode acessar o código crítico para segurança: se o assembly tiver um nome forte e estiver instalado no cache de assembly global, ele é um assembly confiável e pode chamar membros crítico de segurança. Se não for confiável, ele se tornará transparente mesmo se não for marcado como transparente e não poderá acessar membros críticos para segurança.
 
 Para obter mais informações sobre o modelo de segurança no .NET Framework 4, consulte [Alterações de Segurança](../security/security-changes.md).
 
@@ -69,7 +67,7 @@ Do .NET Framework 4 em diante, o Common Language Runtime determina o nível de t
 
 |Nível de segurança|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Crítica|`true`|`false`|`false`|
+|Crítico|`true`|`false`|`false`|
 |Crítico para segurança|`true`|`true`|`false`|
 |Transparente|`false`|`false`|`true`|
 
@@ -88,7 +86,7 @@ Para usar a reflexão para invocar os membros que podem ser acessados de acordo 
   > [!NOTE]
   > Por padrão, a política de segurança nega essa permissão para código originado da Internet. Essa permissão nunca deve ser concedida o código originado da Internet.
 
-- Para permitir que o código invoque qualquer membro não público, desde que o conjunto de concessões do assembly que contém o membro invocado seja o mesmo ou um subconjunto do conjunto de concessões do assembly que contém o código de invocação: O código precisa receber <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
+- Para permitir que o código invoque qualquer membro não público, desde que o conjunto de concessões do assembly que contém o membro chamado seja o mesmo ou um subconjunto do conjunto de concessões do assembly que contém a invocação de código: seu código deve receber a concessão de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.
 
 Por exemplo, suponha que você concedeu permissões da Internet a um domínio do aplicativo mais <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> e, em seguida, executou um aplicativo da Internet com dois assemblies, A e B.
 

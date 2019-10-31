@@ -10,20 +10,18 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b8eafa4f3f8a3fd81772c4521f26323019d012c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130299"
 ---
 # <a name="accessing-custom-attributes"></a>Acessando atributos personalizados
 Depois que os atributos tiverem sido associados aos elementos do programa, a reflexão poderá ser usada para consultar sua existência e seus valores. No .NET Framework versão 1.0 e 1.1, os atributos personalizados são examinados no contexto de execução. O .NET Framework versão 2.0 fornece um novo contexto de carregamento, o contexto somente para reflexão, que pode ser usado para examinar o código que não pode ser carregado para execução.  
   
 ## <a name="the-reflection-only-context"></a>O contexto somente para reflexão  
- O código carregado no contexto somente para reflexão não pode ser executado. Isso significa que instâncias de atributos personalizados não podem ser criadas porque isso exigiria a execução de seus construtores. Para carregar e examinar os atributos personalizados no contexto somente para reflexão, use a classe <xref:System.Reflection.CustomAttributeData>. Você pode obter as instâncias dessa classe usando a sobrecarga apropriada do método <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> estático. Confira [Como carregar assemblies no contexto somente de reflexão](how-to-load-assemblies-into-the-reflection-only-context.md).  
+ O código carregado no contexto somente para reflexão não pode ser executado. Isso significa que instâncias de atributos personalizados não podem ser criadas porque isso exigiria a execução de seus construtores. Para carregar e examinar os atributos personalizados no contexto somente para reflexão, use a classe <xref:System.Reflection.CustomAttributeData>. Você pode obter as instâncias dessa classe usando a sobrecarga apropriada do método <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> estático. Consulte [Como carregar assemblies no contexto de somente reflexão](how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>O contexto de execução  
  Os principais métodos de reflexão para consultar atributos no contexto de execução são <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> e <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
@@ -77,4 +75,4 @@ public class LocalizationExtenderProvider
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Exibindo informações de tipo](viewing-type-information.md)
-- [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)
+- [Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)

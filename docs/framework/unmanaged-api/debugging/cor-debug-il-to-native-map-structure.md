@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132375"
 ---
 # <a name="cor_debug_il_to_native_map-structure"></a>Estrutura COR_DEBUG_IL_TO_NATIVE_MAP
 Contém os deslocamentos que são usados ​​para mapear o código da MSIL (Microsoft intermediate language) para o código nativo.  
@@ -45,11 +43,11 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |`nativeEndOffset`|O deslocamento do final do código nativo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorDebug.idl  
+ **Cabeçalho:** CorProf. idl, CorDebug. idl  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 18b7310b2d04b81330c68de59adf5f18ba9c8675
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 879e20be20ca2eaa8533bd8b8fd6c59304fb70a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769745"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131178"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>Enumeração ECLRAssemblyIdentityFlags
 Indica o tipo de identidade de um assembly.  
@@ -38,12 +36,12 @@ typedef enum _CLRAssemblyIdentityFlags {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|A identidade é padronizada.|  
+|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|A identidade é canônica.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

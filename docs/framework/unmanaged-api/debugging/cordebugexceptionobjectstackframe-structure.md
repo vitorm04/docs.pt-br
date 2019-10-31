@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132172"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>Estrutura CorDebugExceptionObjectStackFrame
 Representa informações de quadro de pilha de um objeto de exceção.  
@@ -43,14 +41,14 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |------------|-----------------|  
 |`pModule`|Um ponteiro para o objeto ICorDebugModule para o quadro atual.|  
 |`ip`|O valor do ponteiro de instrução (EIP/RIP) para o quadro atual.|  
-|`methodDef`|O token de método para o quadro atual.|  
-|`isLastForeignExceptionFrame`|Um valor que indica se o quadro é o último quadro em uma exceção externa.|  
+|`methodDef`|O token do método para o quadro atual.|  
+|`isLastForeignExceptionFrame`|Um valor que indica se o quadro é o último quadro em uma exceção estrangeira.|  
   
 ## <a name="remarks"></a>Comentários  
- O chamador deve liberar o ponteiro para o objeto ICorDebugModule depois que ele não está mais em uso.  
+ O chamador deve liberar o ponteiro para o objeto ICorDebugModule depois que ele não estiver mais em uso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

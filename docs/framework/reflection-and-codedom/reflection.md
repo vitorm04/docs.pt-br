@@ -21,14 +21,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045873"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130058"
 ---
 # <a name="reflection-in-net"></a>Reflexão no .NET
 
@@ -77,12 +75,12 @@ Essas classes de tempo de execução são `internal` (`Friend` no Visual Basic).
 |-----------|-----------------|  
 |[Exibindo informações de tipo](viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|  
 |[Reflexão e tipos genéricos](reflection-and-generic-types.md)|Explica como a reflexão trata os parâmetros de tipo e argumentos de tipo de tipos genéricos e métodos genéricos.|  
-|[Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)|Descreve as regras que determinam até que nível a reflexão pode ser usada para descobrir informações de tipo e tipos de acesso.|  
+|[Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)|Descreve as regras que determinam até que nível a reflexão pode ser usada para descobrir informações de tipo e tipos de acesso.|  
 |[Dynamically Loading and Using Types](dynamically-loading-and-using-types.md) (Carregando e usando tipos dinamicamente)|Descreve a interface de associação personalizada de reflexão que dá suporte à associação tardia.|  
-|[Como: Carregar assemblies no contexto somente de reflexão](how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
+|[Como carregar assemblies no contexto somente reflexão](how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
 |[Acessando atributos personalizados](accessing-custom-attributes.md)|Demonstra o uso de reflexão para consultar a existência do atributo e os valores.|  
 |[Especificando nomes de tipo totalmente qualificados](specifying-fully-qualified-type-names.md)|Descreve o formato dos nomes de tipo totalmente qualificados nos termos da BNF (forma de Backus-Naur) e a sintaxe necessária para especificar os caracteres especiais, os nomes de assembly, os ponteiros, as referências e as matrizes.|  
-|[Como: Conectar um delegado usando a reflexão](how-to-hook-up-a-delegate-using-reflection.md)|Explica como criar um delegado para um método e conectar o delegado a um evento. Explica como criar um método de manipulação de eventos em tempo de execução usando <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Como conectar um delegado usando a reflexão](how-to-hook-up-a-delegate-using-reflection.md)|Explica como criar um delegado para um método e conectar o delegado a um evento. Explica como criar um método de manipulação de eventos em tempo de execução usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)|Explica como gerar métodos dinâmicos e assemblies dinâmicos.|  
   
 ## <a name="reference"></a>Referência  

@@ -2,16 +2,14 @@
 title: <Property> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128204"
 ---
-# <a name="property-element-net-native"></a>\<Elemento de > de propriedade (.NET Native)
+# <a name="property-element-net-native"></a>Elemento de > de propriedade \<(.NET Native)
 Aplica a política de reflexão de tempo de execução a uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -75,7 +73,7 @@ Aplica a política de reflexão de tempo de execução a uma propriedade.
   
  O arquivo se aplica ao valor `All` para a política `Activate` da classe `Book`, que permite acesso aos construtores de classe por meio de reflexão. A política `Browse` para a classe `Book` é herdada do seu namespace pai. Isso é definido para `Required Public`, que disponibiliza metadados no tempo de execução.  
   
- Este é o código-fonte para o exemplo. A `outputBlock` variável representa um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.  
+ Este é o código-fonte para o exemplo. A variável `outputBlock` representa um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

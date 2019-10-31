@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13d89a4a-5d9d-4a79-9600-5e2a98c3d166
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b08937182797c8e94048d734d65473fad21b85cc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0682c0786182422587adb976ff6bc2455b9e5cdc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128943"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>Método ICorDebugObjectValue::IsValueClass
-Obtém um valor que indica se o valor desse objeto é um tipo de valor.  
+Obtém um valor que indica se esse valor de objeto é um tipo de valor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT IsValueClass (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbIsValueClass`  
- [out] Um ponteiro para um valor booliano que será `true` se o valor do objeto representado por esse "ICorDebugObjectValue", é um tipo de valor em vez de um tipo de referência; caso contrário, `pbIsValueClass` é `false`.  
+ fora Um ponteiro para um valor booliano que é `true` se o valor do objeto, representado por esse "ICorDebugObjectValue", é um tipo de valor em vez de um tipo de referência; caso contrário, `pbIsValueClass` será `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

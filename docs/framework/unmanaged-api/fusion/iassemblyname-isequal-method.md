@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 23bc251053dd27a7c5accb48ab4759ecdb79fe09
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134302"
 ---
 # <a name="iassemblynameisequal-method"></a>Método IAssemblyName::IsEqual
 Determina se um objeto [IAssemblyName](iassemblyname-interface.md) especificado é igual a este `IAssemblyName`, com base nos sinalizadores de comparação especificados.  
@@ -38,13 +36,13 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>Parâmetros  
  `pName`  
- no O `IAssemblyName` objeto para o qual `IAssemblyName`comparar.  
+ no O objeto `IAssemblyName` para o qual comparar esse `IAssemblyName`.  
   
  `dwCmpFlags`  
  no Uma combinação de bits de valores [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) que influencia a comparação.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar um arquivo de documentação XML usando o CodeDOM'
+title: Como criar um arquivo de documentação XML usando CodeDOM
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 283fc91762bc4065bd9bd09efaa2bc0061451ef9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130183"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como: Criar um arquivo de documentação XML usando o CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como criar um arquivo de documentação XML usando CodeDOM
 O CodeDOM pode ser usado para criar o código que gera a documentação XML. O processo envolve a criação do grafo CodeDOM que contém os comentários de documentação XML, a geração do código e a compilação do código gerado com a opção do compilador que cria a saída de documentação XML.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Para criar um grafo CodeDOM que contém comentários de documentação XML  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29fc1b491aa4e340c3d8ad6f761d0d6d901649ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85f06b49aab1f1d1745bd7e359ed311c2ba1e44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130974"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>Método ICorDebugILFrame::GetLocalVariable
-Obtém o valor da variável local especificada neste quadro de pilha Microsoft intermediate language (MSIL).  
+Obtém o valor da variável local especificada neste quadro de ativação da MSIL (Microsoft Intermediate Language).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT GetLocalVariable (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwIndex`  
- [in] O índice da variável local neste quadro de pilha MSIL.  
+ no O índice da variável local neste quadro da pilha MSIL.  
   
  `ppValue`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor recuperado.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor recuperado.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetLocalVariable` método pode ser usado em um quadro de pilha MSIL ou em um quadro de compilado just-in-time (JIT).  
+ O método `GetLocalVariable` pode ser usado em um quadro de pilha MSIL ou em um quadro compilado JIT (just-in-time).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

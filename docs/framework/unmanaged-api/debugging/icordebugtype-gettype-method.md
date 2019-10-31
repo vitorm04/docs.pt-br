@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78f2733584e07433171c91d6a2674d3a67c8e283
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f3010cccc584288608b3f6ba95efbeb95f271fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772523"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132054"
 ---
 # <a name="icordebugtypegettype-method"></a>Método ICorDebugType::GetType
-Obtém um valor de CorElementType que descreve o tipo nativo do common language runtime (CLR) <xref:System.Type> representado por este ICorDebugType.  
+Obtém um valor de CorElementType que descreve o tipo nativo do Common Language Runtime (CLR) <xref:System.Type> representado por esse ICorDebugType.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Parâmetros  
  `ty`  
- [out] Um ponteiro para um valor igual a `CorElementType` enumeração que indica o CLR <xref:System.Type> que este `ICorDebugType` representa.  
+ fora Um ponteiro para um valor da enumeração `CorElementType` que indica o CLR <xref:System.Type> que esse `ICorDebugType` representa.  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor de `ty` é ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE, o [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) método pode ser chamado para obter o tipo não instanciado para um tipo genérico; caso contrário, não chame `ICorDebugType::GetClass`.  
+ Se o valor de `ty` for ELEMENT_TYPE_CLASS ou ELEMENT_TYPE_VALUETYPE, o método [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) poderá ser chamado para obter o tipo não instanciado para um tipo genérico; caso contrário, não chame `ICorDebugType::GetClass`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

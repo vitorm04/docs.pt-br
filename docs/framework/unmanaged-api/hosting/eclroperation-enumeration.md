@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6becc44b061ff2baac63437b6a72375d1c3735b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767883"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131157"
 ---
 # <a name="eclroperation-enumeration"></a>Enumeração EClrOperation
-Descreve o conjunto de operações para o qual um host pode aplicar ações de política.  
+Descreve o conjunto de operações para as quais um host pode aplicar ações de política.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,29 +42,29 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|O host pode especificar ações de política a ser tomada quando um <xref:System.AppDomain> é descarregada de forma não-amigável (rude).|  
-|`OPR_AppDomainUnload`|O host pode especificar ações de política a ser tomada quando um <xref:System.AppDomain> é descarregado.|  
-|`OPR_FinalizerRun`|O host pode especificar ações de política a ser tomada quando a execução de finalizadores.|  
-|`OPR_ProcessExit`|O host pode especificar ações de política a ser tomada quando o processo é encerrado.|  
-|`OPR_ThreadAbort`|O host pode especificar ações de política a ser tomada quando um thread é anulado.|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|O host pode especificar ações de política a ser tomada quando uma anulação de thread rude ocorre em uma região crítica de código.|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|O host pode especificar ações de política para ser executada quando uma anulação de thread rude ocorre em uma região não-críticas do código.|  
+|`OPR_AppDomainRudeUnload`|O host pode especificar ações de política a serem executadas quando um <xref:System.AppDomain> for descarregado em uma maneira não normal (rude).|  
+|`OPR_AppDomainUnload`|O host pode especificar ações de política a serem executadas quando um <xref:System.AppDomain> for descarregado.|  
+|`OPR_FinalizerRun`|O host pode especificar ações de política a serem executadas quando os finalizadores forem executados.|  
+|`OPR_ProcessExit`|O host pode especificar ações de política a serem executadas quando o processo for encerrado.|  
+|`OPR_ThreadAbort`|O host pode especificar ações de política a serem executadas quando um thread for anulado.|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|O host pode especificar ações de política a serem executadas quando uma anulação de thread rude ocorrer em uma região crítica de código.|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|O host pode especificar ações de política a serem executadas quando uma anulação de thread rude ocorrer em uma região não crítica de código.|  
   
 ## <a name="remarks"></a>Comentários  
- A infraestrutura de confiabilidade do common language runtime (CLR) faz distinção entre recursos e anulações de falhas de alocação que ocorrem em regiões críticas de código e aqueles que ocorrem em regiões de não-críticas do código. Essa distinção é projetada para permitir que os hosts definir diretivas diferentes, dependendo de onde ocorre uma falha no código.  
+ A infraestrutura de confiabilidade do Common Language Runtime (CLR) distingue entre anulações e falhas de alocação de recursos que ocorrem em regiões críticas de código e aquelas que ocorrem em regiões não críticas de código. Essa distinção foi projetada para permitir que os hosts definam políticas diferentes dependendo de onde ocorrer uma falha no código.  
   
- Um *região crítica de código* é qualquer espaço em que o CLR não garante que anular uma tarefa ou uma falha ao concluir uma solicitação para recursos afetará apenas a tarefa atual. Por exemplo, se uma tarefa está mantendo um bloqueio e recebe um HRESULT que indica falha depois de fazer uma solicitação de alocação de memória, é suficiente simplesmente para anular essa tarefa para garantir a estabilidade do <xref:System.AppDomain>, pois o <xref:System.AppDomain> pode conter outros tarefas aguardando o mesmo bloqueio. Para abandonar atual tarefa pode fazer com que essas outras tarefas pare de responder. Nesse caso, o host precisa da capacidade de descarregar todo o <xref:System.AppDomain> em vez de instabilidade de potencial de risco.  
+ Uma *região crítica de código* é qualquer espaço em que o CLR não possa garantir que a anulação de uma tarefa ou a falha de concluir uma solicitação de recursos afetará apenas a tarefa atual. Por exemplo, se uma tarefa estiver mantendo um bloqueio e receber um HRESULT que indica falha ao fazer uma solicitação de alocação de memória, é insuficiente simplesmente anular essa tarefa para garantir a estabilidade do <xref:System.AppDomain>, porque a <xref:System.AppDomain> pode conter outras tarefas aguardando o mesmo bloqueio. Para abandonar, a tarefa atual pode fazer com que essas outras tarefas parem de responder. Nesse caso, o host precisa da capacidade de descarregar todo o <xref:System.AppDomain> em vez de arriscar a potencial instabilidade.  
   
- Um *região não-críticas do código*, por outro lado, é uma região em que o CLR pode garantir uma anulação ou uma falha afeta apenas a tarefa na qual o erro ocorre.  
+ Uma *região não-crítica de código*, por outro lado, é uma região em que o CLR pode garantir que uma anulação ou uma falha afete apenas a tarefa sobre a qual o erro ocorre.  
   
- O CLR também faz distinção entre anulações (rudes) normais e não normal. Em geral, uma anulação normal ou normal todos os esforços para executar rotinas de manipulação de exceção e finalizadores antes de cancelar uma tarefa, enquanto uma anulação rude não faz com que nenhuma dessas garantias.  
+ O CLR também distingue entre anulações normais e não normais (rudes). Em geral, uma anulação normal ou regular faz cada esforço para executar rotinas de manipulação de exceção e finalizadores antes de abortar uma tarefa, enquanto uma anulação rude não faz nenhuma garantia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

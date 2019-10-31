@@ -7,14 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 84d674f7ae8e80d7a5e6a40539e3330fcfa9b563
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053112"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119814"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programação com domínios do aplicativo e assemblies
 
@@ -27,7 +25,7 @@ No entanto, se estiver criando um aplicativo que hospedará o Common Language Ru
 [Tópicos explicativos sobre domínios do aplicativo e assemblies](application-domains-and-assemblies-how-to-topics.md)  
 Fornece links a todos os Tópicos explicativos encontrados na documentação conceitual para programação com domínios do aplicativo e assemblies.  
   
-[Usando domínios do aplicativo](use.md)  
+[Uso de domínios do aplicativo](use.md)  
 Fornece exemplos de como criar, configurar e usar domínios do aplicativo.  
   
 [Programação com assemblies](../../standard/assembly/program.md)  

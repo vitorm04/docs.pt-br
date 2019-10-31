@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: afbf480d69e97662b5963706bb8c192aec0325a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6bcbc9f3377735ed289d52afddb6efa755b16d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966289"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134069"
 ---
 # <a name="icordebug-interface"></a>Interface ICorDebug
 Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambiente Common Language Runtime (CLR).  
@@ -41,22 +39,22 @@ Fornece métodos que permitem aos desenvolvedores depurar aplicativos no ambient
 |[Método Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inicializa o objeto `ICorDebug`.|  
 |[Método SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Especifica o objeto manipulador de eventos para eventos gerenciados.|  
 |[Método SetUnmanagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Especifica o objeto do manipulador de eventos para eventos não gerenciados.|  
-|[Método Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Encerra o `ICorDebug` objeto.|  
+|[Método Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Encerra o objeto `ICorDebug`.|  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebug`representa um loop de processamento de eventos para um processo do depurador. O depurador deve aguardar o retorno de chamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) de todos os processos que estão sendo depurados antes de liberar essa interface.  
+ `ICorDebug` representa um loop de processamento de eventos para um processo do depurador. O depurador deve aguardar o retorno de chamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) de todos os processos que estão sendo depurados antes de liberar essa interface.  
   
- O `ICorDebug` objeto é o objeto inicial para controlar toda a depuração gerenciada adicional. No .NET Framework versões 1,0 e 1,1, esse objeto era um objeto `CoClass` criado a partir de com. No .NET Framework versão 2,0, esse objeto não é mais um `CoClass` objeto. Ele deve ser criado pela função [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) , que tem mais reconhecimento de versão. Essa nova função de criação permite que os clientes obtenham uma `ICorDebug`implementação específica do, que também emula uma versão específica da API de depuração.  
+ O objeto `ICorDebug` é o objeto inicial para controlar toda a depuração gerenciada adicional. No .NET Framework versões 1,0 e 1,1, esse objeto era um objeto `CoClass` criado a partir de COM. No .NET Framework versão 2,0, esse objeto não é mais um objeto `CoClass`. Ele deve ser criado pela função [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) , que tem mais reconhecimento de versão. Essa nova função de criação permite que os clientes obtenham uma implementação específica do `ICorDebug`, que também emula uma versão específica da API de depuração.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

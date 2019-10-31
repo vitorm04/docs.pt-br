@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 71836108dbd0ce01a64b4d9ac773c28d385dfd7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099681"
 ---
 # <a name="clrdatacreateinstance-function"></a>Função CLRDataCreateInstance
 Cria um objeto de interface para o item de destino especificado.  
@@ -48,14 +46,14 @@ HRESULT CLRDataCreateInstance (
  fora Um ponteiro para o endereço do objeto de interface retornado.  
   
 ## <a name="remarks"></a>Comentários  
- O `ICLRDataTarget` objeto é implementado pelo gravador do aplicativo de depuração. A implementação depende do tipo de item de destino que está sendo representado. O item de destino pode ser um processo, despejo de memória, computador remoto e assim por diante.  
+ O objeto `ICLRDataTarget` é implementado pelo gravador do aplicativo de depuração. A implementação depende do tipo de item de destino que está sendo representado. O item de destino pode ser um processo, despejo de memória, computador remoto e assim por diante.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl  
+ **Cabeçalho:** ClrData. idl  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

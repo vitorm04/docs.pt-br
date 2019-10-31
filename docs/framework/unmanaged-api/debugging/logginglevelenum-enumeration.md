@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752592"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139211"
 ---
 # <a name="logginglevelenum-enumeration"></a>Enumeração LoggingLevelEnum
 Indica o nível de severidade de uma mensagem descritiva que é escrita no log de eventos quando um thread gerenciado registrar um evento.  
@@ -50,7 +48,7 @@ typedef enum LoggingLevelEnum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`LTraceLevel0`|A mensagem é um nível de rastreamento, 0.|  
+|`LTraceLevel0`|A mensagem é um nível de rastreamento 0.|  
 |`LTraceLevel1`|A mensagem é um nível de rastreamento 1.|  
 |`LTraceLevel2`|A mensagem é um nível de rastreamento 2.|  
 |`LTraceLevel3`|A mensagem é um nível de rastreamento 3.|  
@@ -62,13 +60,13 @@ typedef enum LoggingLevelEnum {
 |`LStatusLevel4`|A mensagem é um nível de status 4.|  
 |`LWarningLevel`|A mensagem é um nível de aviso.|  
 |`LErrorLevel`|A mensagem é um nível de erro.|  
-|`LPanicLevel`|A mensagem é um nível de pânico.|  
+|`LPanicLevel`|A mensagem é um nível de pane.|  
   
 ## <a name="remarks"></a>Comentários  
- O common language runtime (CLR) chama o [icordebugmanagedcallback:: Logmessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) método para notificar o depurador que um thread gerenciado fez um evento. O CLR passa o valor de `LoggingLevelEnum` enumeração para indicar o nível de severidade da mensagem que o thread gerenciado gravou o log de eventos.  
+ O Common Language Runtime (CLR) chama o método [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) para notificar o depurador de que um thread gerenciado registrou um evento. O CLR passa um valor da enumeração `LoggingLevelEnum` para indicar o nível de severidade da mensagem que o thread gerenciado gravou no log de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

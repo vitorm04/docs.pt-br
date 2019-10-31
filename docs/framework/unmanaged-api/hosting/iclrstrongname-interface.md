@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f774915cdbb12b13fa334db37c8e0fa2a7e5829
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771469"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135139"
 ---
 # <a name="iclrstrongname-interface"></a>Interface ICLRStrongName
-Fornece funções estáticas globais de básicas para assinar assemblies com nomes fortes. Todos os `ICLRStrongName` métodos retornam HRESULTs de COM padrão.  
+Fornece funções estáticas globais básicas para assinar assemblies com nomes fortes. Todos os métodos de `ICLRStrongName` retornam HRESULTs padrão COM.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -37,7 +35,7 @@ Fornece funções estáticas globais de básicas para assinar assemblies com nom
 |[Método GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)|Gera um hash sobre o conteúdo do arquivo especificado por uma cadeia de caracteres Unicode.|  
 |[Método GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)|Gera um hash sobre o conteúdo do arquivo com o identificador de arquivo especificado, usando o algoritmo de hash especificado.|  
 |[Método StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)|Determina se dois assemblies diferem somente por suas assinaturas de nome forte.|  
-|[Método StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Libera a memória que foi alocada com uma chamada anterior a um método de nome forte, como [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md), ou [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).|  
+|[Método StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|Libera a memória que foi alocada com uma chamada anterior para um método de nome forte, como [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)ou [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md).|  
 |[Método StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)|Preenche o buffer especificado com a representação binária do arquivo executável no endereço especificado.|  
 |[Método StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)|Obtém uma representação binária da imagem do assembly no endereço de memória especificado.|  
 |[Método StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)|Obtém a chave pública de um par de chaves pública/privada.|  
@@ -57,14 +55,14 @@ Fornece funções estáticas globais de básicas para assinar assemblies com nom
 |[Método StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)|Obtém um token que representa uma chave pública.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode obter uma instância de `ICLRStrongName` chamando o [iclrruntimeinfo:: Getinterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) usando o método `CLSID_CLRStrongName` e `IID_ICLRStrongName` como parâmetros.  
+ Você pode obter uma instância do `ICLRStrongName` chamando o método [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) usando `CLSID_CLRStrongName` e `IID_ICLRStrongName` como parâmetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

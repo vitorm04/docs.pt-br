@@ -1,24 +1,22 @@
 ---
 title: Aplicativo Olá, Mundo do .NET Core com Visual Basic no Visual Studio 2017
 description: Saiba como compilar um aplicativo de console simples do .NET Core com o Visual Basic usando o Visual Studio 2017.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039610"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100883"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Criar um aplicativo Olá, Mundo em Visual Basic com o SDK do .NET Core no Visual Studio 2017
 
 Este tópico fornece uma introdução passo a passo para compilação, depuração e publicação de um aplicativo de console simples do .NET Core usando Visual Basic no Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tenha como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. Você pode desenvolver seu aplicativo com o .NET Core 2,1 ou versões posteriores.
 

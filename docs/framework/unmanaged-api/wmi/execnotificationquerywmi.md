@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130449"
 ---
 # <a name="execnotificationquerywmi-function"></a>Função ExecNotificationQueryWmi
 
@@ -98,7 +96,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | A consulta especifica uma classe que não existe. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Foi solicitada muita precisão na entrega de eventos. Uma tolerância de sondagem maior deve ser especificada. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | A consulta solicita mais informações do que o gerenciamento do Windows pode fornecer. Isso `HRESULT` é retornado quando uma consulta de evento resulta em uma solicitação para sondar todos os objetos em um namespace. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | A consulta solicita mais informações do que o gerenciamento do Windows pode fornecer. Esse `HRESULT` é retornado quando uma consulta de evento resulta em uma solicitação para sondar todos os objetos em um namespace. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | A consulta tinha um erro de sintaxe. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | O idioma de consulta solicitado não tem suporte. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | A consulta é muito complexa. |
@@ -112,17 +110,17 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) .
 
-Depois que a função retorna, o chamador passa periodicamente `ppEnum` o objeto retornado para a [próxima](next.md) função para ver se há algum evento disponível.
+Depois que a função retorna, o chamador passa periodicamente o objeto de `ppEnum` retornado para a [próxima](next.md) função para ver se há algum evento disponível.
 
-Há limites para o número de `AND` palavras-chave e `OR` que podem ser usadas em consultas WQL. Grandes números de palavras-chave WQL usadas em uma consulta complexa podem fazer com que o WMI `WBEM_E_QUOTA_VIOLATION` retorne o código de erro (ou `HRESULT` 0x8004106c) como um valor. O limite de palavras-chave WQL depende da complexidade da consulta.
+Há limites para o número de `AND` e `OR` palavras-chave que podem ser usadas em consultas WQL. Grandes números de palavras-chave WQL usadas em uma consulta complexa podem fazer com que o WMI retorne o código de erro `WBEM_E_QUOTA_VIOLATION` (ou 0x8004106c) como um valor de `HRESULT`. O limite de palavras-chave WQL depende da complexidade da consulta.
 
 Se a chamada de função falhar, você poderá obter informações adicionais sobre o erro chamando a função [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

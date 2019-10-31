@@ -2,19 +2,17 @@
 title: Método ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8305d0a562fd90e3fae32e372b663ca3942d2a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59e3a95a4d2573263600da60b4f852caa361138e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129195"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>Método ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo
-Definir um grupo de async await operações no método atual.  
+Defina um grupo de operações assíncronas Await no método atual.  
   
- Cada deslocamento yield corresponde à instrução de retorno de uma expressão await, identificando um potencial yield. Cada `breakpointMethod` / `breakpointOffset` par nos informa onde a operação assíncrona será retomada que pode estar em um método diferente.  
+ Cada deslocamento de rendimento corresponde a uma instrução de retorno de Await, identificando um possível rendimento. Cada `breakpointMethod`/par `breakpointOffset` nos informa onde a operação assíncrona retomará, o que pode estar em um método diferente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,11 +29,11 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
 |`breakpointOffset`||  
 |`breakpointMethod`||  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna `HRESULT`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

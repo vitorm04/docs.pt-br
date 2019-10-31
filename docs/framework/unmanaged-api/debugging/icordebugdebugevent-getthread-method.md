@@ -2,14 +2,12 @@
 title: Método ICorDebugDebugEvent::GetThread
 ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f85dccd5b59610c52adcf685828984c9344fd49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66b4abc4bebfbbde2e6a6b25d2bc0e88839a363f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136643"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>Método ICorDebugDebugEvent::GetThread
 Obtém o thread no qual o evento ocorreu.  
@@ -32,11 +30,11 @@ HRESULT GetThread(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

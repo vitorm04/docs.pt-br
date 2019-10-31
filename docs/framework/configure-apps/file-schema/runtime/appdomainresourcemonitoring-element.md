@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252816"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118248"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<Elemento de > appDomainResourceMonitoring
+# <a name="appdomainresourcemonitoring-element"></a>\<elemento de > appDomainResourceMonitoring
 Instrui o tempo de execução a coletar estatísticas sobre todos os domínios de aplicativos no processo durante toda a vida do processo.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,7 +55,7 @@ Instrui o tempo de execução a coletar estatísticas sobre todos os domínios d
 ## <a name="remarks"></a>Comentários  
  O monitoramento de recursos de domínio de aplicativo está disponível por meio da classe de domínio do aplicativo gerenciado, da interface [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) de hospedagem e do ETW (rastreamento de eventos para Windows). Quando o monitoramento está habilitado, as estatísticas são coletadas para todos os domínios de aplicativo no processo durante a vida útil do processo.  
   
- Para habilitar o monitoramento do código gerenciado, use <xref:System.AppDomain.MonitoringIsEnabled%2A> a propriedade.  
+ Para habilitar o monitoramento do código gerenciado, use a propriedade <xref:System.AppDomain.MonitoringIsEnabled%2A>.  
   
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   

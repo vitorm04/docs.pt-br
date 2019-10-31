@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c3676cb32ceaf6f241672751f0feafbd3cb83e05
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b238a953fa5cd57c8b7af9a0643bfc36ee1032e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088857"
 ---
 # <a name="icordebugappdomain3-interface"></a>Interface ICorDebugAppDomain3
 Fornece métodos para recuperar informações sobre as representações gerenciadas dos tipos de Windows Runtime atualmente carregados em um domínio de aplicativo. Essa interface é uma extensão das interfaces ICorDebugAppDomain e ICorDebugAppDomain2.  
@@ -42,11 +40,11 @@ Fornece métodos para recuperar informações sobre as representações gerencia
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Tempo de Execução do Windows  
+ **Plataformas:** Windows Runtime  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

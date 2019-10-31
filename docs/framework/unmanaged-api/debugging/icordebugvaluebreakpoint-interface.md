@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f77268e069d322d0f491f78b154cf63b691e3e38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966823"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140195"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>Interface ICorDebugValueBreakpoint
 Estende a interface ICorDebugBreakpoint para fornecer acesso a valores específicos.  
@@ -38,11 +36,11 @@ Estende a interface ICorDebugBreakpoint para fornecer acesso a valores específi
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

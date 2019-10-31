@@ -1,15 +1,13 @@
 ---
 title: Novidades do .NET Core 2.0
 description: Conheça os novos recursos encontrados no .NET Core.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100834"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novidades do .NET Core 2.0
 
@@ -112,7 +110,7 @@ O .NET Standard 2.0 inclui 20.000 APIs a mais do que havia disponível no .NET S
 
 As bibliotecas de classe .NET Standard 2.0 também podem fazer referência às bibliotecas de classe do .NET Framework, desde que elas chamem APIs que estão presentes no .NET Standard 2.0. Nenhuma recompilação das bibliotecas do .NET Framework é necessária.
 
-Para obter uma lista com as APIs que foram adicionadas ao .NET Standard desde a última versão, o .NET Standard 1.6, confira [.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Para obter uma lista das APIs que foram adicionadas ao .NET Standard desde sua última versão, o .NET Standard 1,6, consulte [.NET Standard 2,0 vs. 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Área de superfície expandida
 

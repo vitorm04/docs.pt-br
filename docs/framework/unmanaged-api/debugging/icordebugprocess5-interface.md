@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31ecea4857dabc55e8acd3c22a025895a686efcd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64fb60abf4f5730dbc15204dbc034b08cacefab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931086"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121244"
 ---
 # <a name="icordebugprocess5-interface"></a>Interface ICorDebugProcess5
 Estende a interface ICorDebugProcess para dar suporte ao acesso ao heap gerenciado, para fornecer informações sobre a coleta de lixo de objetos gerenciados e para determinar se um depurador carrega imagens do cache de imagem nativa local do aplicativo.  
@@ -50,11 +48,11 @@ Estende a interface ICorDebugProcess para dar suporte ao acesso ao heap gerencia
 > Esta interface não dá suporte a chamadas remotas de outro computador ou de outro processo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

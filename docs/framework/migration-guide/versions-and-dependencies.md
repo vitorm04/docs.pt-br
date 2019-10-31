@@ -5,14 +5,12 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e2b039ba9f8183de481db09c028f8c3672f43c36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085355"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versões e dependências do .NET Framework
 Cada versão do .NET Framework contém o CLR (Common Language Runtime), as bibliotecas de classes base e outras bibliotecas gerenciadas. Esse tópico descreve os principais recursos do .NET Framework por versão, fornece informações sobre as versões do CLR subjacentes e os ambientes de desenvolvimento associados e identifica as versões instaladas pelo sistema operacional Windows.  
@@ -24,7 +22,7 @@ Cada versão do .NET Framework contém o CLR (Common Language Runtime), as bibli
   
  Cada nova versão do .NET Framework retém recursos de versões anteriores e adiciona novos recursos. O CLR é identificado pelo seu próprio número de versão. O número de versão do .NET Framework é incrementado em cada versão, embora a versão do CLR nem sempre seja incrementada. Por exemplo, o .NET Framework 4, 4.5 e lançamentos posteriores incluem o CLR 4, mas o .NET Framework 2.0, 3.0 e 3.5 incluem o CLR 2.0. (Não houve versão 3 do CLR.)  
   
- Confira os [requisitos de sistema](../get-started/system-requirements.md) para obter uma lista completa dos sistemas operacionais compatíveis. Para obter informações sobre downloads, consulte [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md). Para determinar quais versões do .NET Framework estão instaladas em um computador, confira [Como: Determinar quais versões do .NET Framework estão instaladas](how-to-determine-which-versions-are-installed.md).  
+ Confira os [requisitos de sistema](../get-started/system-requirements.md) para obter uma lista completa dos sistemas operacionais compatíveis. Para obter informações sobre downloads, consulte [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md). Para determinar quais versões do .NET Framework estão instaladas em um computador, confira [Como determinar quais versões do .NET Framework estão instaladas](how-to-determine-which-versions-are-installed.md).  
   
  Na tabela, as versões do .NET Framework que estão instaladas em versões do sistema operacional marcadas com ✓ nas colunas **Incluída no/Pode ser instalada no Windows** e **Incluída no/Pode ser instalada no Windows Server** devem ser [habilitadas no Painel de Controle](../install/dotnet-35-windows-10.md) (para Windows) ou habilitadas por meio do Gerenciador do Servidor (para Windows Server).  
 
@@ -80,7 +78,7 @@ As versões 2.0, 3.0 e 3.5 do .NET Framework são integradas com a mesma versão
   
 - Para saber mais sobre como migrar seu aplicativo do .NET Framework 4 para o .NET Framework 4.5 e suas versões pontuais, confira o [guia de migração](index.md).  
   
-- Para obter informações sobre como determinar quais versões ou atualizações estão instaladas em um computador, confira [Como: Determinar quais versões do .NET Framework estão instaladas](how-to-determine-which-versions-are-installed.md) e [Como: Determinar quais atualizações do .NET Framework estão instaladas](how-to-determine-which-net-framework-updates-are-installed.md).  
+- Para saber mais sobre como determinar quais versões ou atualizações estão instaladas em um computador, confira [How to: Determine Which .NET Framework Versions Are Installed](how-to-determine-which-versions-are-installed.md) (Como determinar quais versões do .NET Framework estão instaladas) e [How to: Determine Which .NET Framework Updates Are Installed](how-to-determine-which-net-framework-updates-are-installed.md) (Como determinar quais atualizações do .NET Framework estão instaladas).  
   
 ## <a name="see-also"></a>Consulte também
 

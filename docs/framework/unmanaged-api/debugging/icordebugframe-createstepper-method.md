@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd105a5cbdb857aaa902e60968ff1d94473259b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea2b24d37f56a5cb9e6b3dea0d666c8acc719dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754246"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091038"
 ---
 # <a name="icordebugframecreatestepper-method"></a>Método ICorDebugFrame::CreateStepper
-Obtém um seletor que permite que o depurador executar operações de passo a passo em relação a esse ICorDebugFrame.  
+Obtém um stepper que permite que o depurador execute operações de depuração relativas a esse ICorDebugFrame.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppStepper`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugStepper que permite que o depurador executar operações de passo a passo em relação ao quadro atual.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugStepper que permite que o depurador execute operações de depuração relativas ao quadro atual.  
   
 ## <a name="remarks"></a>Comentários  
- Se o quadro não estiver ativo, o objeto escalonador normalmente terá que retornar para o quadro antes que a etapa for concluída.  
+ Se o quadro não estiver ativo, o objeto stepper normalmente precisará retornar ao quadro antes da conclusão da etapa.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

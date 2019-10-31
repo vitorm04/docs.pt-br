@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137329"
 ---
 # <a name="icordebugnativeframegetip-method"></a>Método ICorDebugNativeFrame::GetIP
-Obtém o código nativo de deslocamento local ao qual o ponteiro de instrução está definido atualmente.  
+Obtém o local de deslocamento de código nativo para o qual o ponteiro de instrução está definido no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parâmetros  
  `pnOffset`  
- [out] Um ponteiro para o local de deslocamento no código nativo.  
+ fora Um ponteiro para o local de deslocamento no código nativo.  
   
 ## <a name="remarks"></a>Comentários  
- Se o registro de ativação que é representado por esse "ICorDebugNativeFrame" estiver ativo, o deslocamento é o endereço da próxima instrução a ser executada. Se este registro de ativação não estiver ativo, o deslocamento é o endereço da próxima instrução a ser executado quando o quadro de pilha for reativado.  
+ Se o registro de ativação representado por esse "ICorDebugNativeFrame" estiver ativo, o deslocamento será o endereço da próxima instrução a ser executada. Se esse quadro de pilhas não estiver ativo, o deslocamento será o endereço da próxima instrução a ser executada quando o registro de ativação for reativado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

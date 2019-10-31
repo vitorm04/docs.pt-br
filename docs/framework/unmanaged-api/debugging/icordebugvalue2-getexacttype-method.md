@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c28ff84b08802246d587bfa130ae5915177932ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764296"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140259"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>Método ICorDebugValue2::GetExactType
-Obtém um ponteiro de interface para um objeto de "ICorDebugType" que representa o <xref:System.Type> desse valor.  
+Obtém um ponteiro de interface para um objeto "ICorDebugType" que representa a <xref:System.Type> desse valor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetExactType (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppType`  
- [out] Um ponteiro para o endereço de um `ICorDebugType` objeto que representa o <xref:System.Type> do valor representado por esse objeto de "ICorDebugValue2".  
+ fora Um ponteiro para o endereço de um objeto de `ICorDebugType` que representa a <xref:System.Type> do valor representado por esse objeto "ICorDebugValue2".  
   
 ## <a name="remarks"></a>Comentários  
- O reconhecimento de genéricos `GetExactType` método substitui ambos o [icordebugobjectvalue:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) e o [icordebugvalue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) métodos, cada um dos quais retornar informações sobre o tipo de um valor .  
+ O método `GetExactType` com reconhecimento de genéricos substitui os métodos [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) e [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) , cada um deles retorna informações sobre o tipo de um valor.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

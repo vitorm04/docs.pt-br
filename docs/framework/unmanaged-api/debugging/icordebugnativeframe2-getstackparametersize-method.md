@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dd9760c347bbc23f3e8225c1ff748c6b7b8bfe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096535"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>Método ICorDebugNativeFrame2::GetStackParameterSize
 Retorna o tamanho cumulativo dos parâmetros na pilha em sistemas operacionais x86.  
@@ -35,25 +33,25 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
 ## <a name="parameters"></a>Parâmetros  
  `pSize`  
- [out] Um ponteiro para o tamanho cumulativo dos parâmetros na pilha.  
+ fora Um ponteiro para o tamanho cumulativo dos parâmetros na pilha.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O tamanho da pilha foi retornado com êxito.|  
 |S_FALSE|`GetStackParameterSize` foi chamado em uma plataforma não x86.|  
-|E_FAIL|`The size of the parameters could not be returned`.|  
-|E_INVALIDARG|`pSize` é `null`.|  
+|E_FAIL|`The size of the parameters could not be returned`|  
+|E_INVALIDARG|`pSize` `null`.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- O [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) métodos não ajustar o ponteiro de pilha para os parâmetros que são enviados por push na pilha. Em vez disso, você pode usar o valor retornado por `GetStackParameterSize` para ajustar o ponteiro de pilha para propagar um desenrolador nativo, ajustá-lo para os parâmetros.  
+ Os métodos [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) não ajustam o ponteiro de pilha para parâmetros que são enviados por push na pilha. Em vez disso, você pode usar o valor retornado por `GetStackParameterSize` para ajustar o ponteiro de pilha para propagar um desenrolador nativo, que ajusta os parâmetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

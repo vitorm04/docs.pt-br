@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039461"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131509"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "73039461"
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Usado para controles que podem ser encaixados em um contêiner de encaixe. Por exemplo, barras de ferramentas ou paletas de ferramentas.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Usado para controles que podem ser expandidos ou recolhidos. Por exemplo, itens de menu em um aplicativo, como o menu **arquivo** .|  
 |<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Usado para controles que dão suporte à funcionalidade de grade, como dimensionar e mover para uma célula especificada. Por exemplo, o modo de exibição de ícones grandes no Windows Explorer ou tabelas simples sem cabeçalhos no [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Usado para controles que têm células dentro de grades. As células individuais devem dar suporte ao padrão GridItem. Por exemplo, cada célula na exibição [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] detalhe.|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Usado para controles que têm células dentro de grades. As células individuais devem dar suporte ao padrão GridItem. Por exemplo, cada célula no modo de exibição de detalhes do Microsoft Windows Explorer.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Usado para controles que podem ser invocados, como um botão.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Usado para controles que podem alternar entre as várias representações do mesmo conjunto de informações, dados ou filhos. Por exemplo, um controle de exibição de lista onde os dados estão disponíveis nas exibições de miniatura, bloco, ícone, lista ou detalhes.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Usado para controles que têm um intervalo de valores que podem ser aplicados ao controle. Por exemplo, um controle giratório contendo anos pode ter um intervalo de 1900 a 2010, enquanto outro controle giratório apresentando meses teria um intervalo de 1 a 12.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73039461"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Usado para controles em que o estado pode ser alternado. Por exemplo, caixas de seleção e itens de menu verificável.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Usado para controles que podem ser redimensionados, movidos e girados. Usos típicos para o padrão de controle transformar são em designers, formulários, editores gráficos e aplicativos de desenho.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Permite que os clientes obtenham ou definam um valor em controles que não dão suporte a um intervalo de valores. Por exemplo, um seletor de data e hora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expõe informações específicas ao Windows, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas são janelas de aplicativo de nível superior ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]e assim por diante), janelas filho MDI (interface de vários documentos) e caixas de diálogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expõe informações específicas ao Windows, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas são janelas de aplicativo de nível superior ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Microsoft Windows Explorer e assim por diante), janelas filho MDI (interface de vários documentos) e caixas de diálogo.|  
   
 ## <a name="see-also"></a>Consulte também
 

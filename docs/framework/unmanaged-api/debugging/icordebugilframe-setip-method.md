@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 23f38dc1-85e4-4263-9235-2d05bbb6a833
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af3f58fa7714b3c2b0ba387b1da650f0638dd6c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 60273d7cf91be04c5fc3041260e4bb146ce9a45e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758781"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095426"
 ---
 # <a name="icordebugilframesetip-method"></a>Método ICorDebugILFrame::SetIP
-Define o ponteiro de instrução para o local de deslocamento especificado no código Microsoft intermediate language (MSIL).  
+Define o ponteiro de instrução para o local de deslocamento especificado no código MSIL (Microsoft Intermediate Language).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +35,17 @@ HRESULT SetIP (
   
 ## <a name="parameters"></a>Parâmetros  
  `nOffset`  
- O deslocamento local no código MSIL.  
+ O local de deslocamento no código MSIL.  
   
 ## <a name="remarks"></a>Comentários  
- Chamadas para `SetIP` invalidar imediatamente todos os quadros e cadeias para o thread atual. Se o depurador precisa de informações de quadro após uma chamada para `SetIP`, ele deve executar um novo rastreamento de pilha.  
+ As chamadas para `SetIP` invalidam imediatamente todos os quadros e cadeias para o thread atual. Se o depurador precisar de informações de quadro após uma chamada para `SetIP`, ele deverá executar um novo rastreamento de pilha.  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) tentará manter o quadro de pilha em um estado válido. No entanto, mesmo se o quadro está em um estado válido, ainda pode haver problemas, como variáveis locais não inicializadas. O chamador é responsável por garantir a coerência do programa em execução.  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) tentará manter o quadro de pilha em um estado válido. No entanto, mesmo que o quadro esteja em um estado válido, ainda pode haver problemas como variáveis locais não inicializadas. O chamador é responsável por garantir a coerência do programa em execução.  
   
- Em plataformas de 64 bits, o ponteiro de instrução não pode ser movido de um `catch` ou `finally` bloco. Se `SetIP` é chamado para fazer uma movimentação desse tipo em uma plataforma de 64 bits, ele retornará um HRESULT indicando uma falha.  
+ Em plataformas de 64 bits, o ponteiro de instrução não pode ser movido para fora de um `catch` ou de um bloco de `finally`. Se `SetIP` for chamado para fazer essa movimentação em uma plataforma de 64 bits, ele retornará um HRESULT indicando falha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

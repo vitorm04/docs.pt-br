@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d7432771a7d8eee9cea10f883dd3bd91f5ffb74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761395"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130689"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>Método ICorDebugManagedCallback::LogSwitch
-Notifica o depurador um thread de runtime (CLR) gerenciado de linguagem comum chamou um método no <xref:System.Diagnostics.Switch> classe para criar, modificar ou excluir um comutador de depuração/rastreamento.  
+Notifica o depurador de que um thread gerenciado Common Language Runtime (CLR) chamou um método na classe <xref:System.Diagnostics.Switch> para criar, modificar ou excluir uma opção de depuração/rastreamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,25 +39,25 @@ HRESULT LogSwitch (
   
 ## <a name="parameters"></a>Parâmetros  
  `PAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o thread gerenciado que criados, modificados ou excluídos de um comutador de depuração/rastreamento.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread gerenciado que criou, modificou ou excluiu uma opção de depuração/rastreamento.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread gerenciado.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread gerenciado.  
   
  `lLevel`  
- [in] Um valor que indica o nível de severidade da mensagem descritiva que foi gravado no log de eventos.  
+ no Um valor que indica o nível de severidade da mensagem descritiva que foi gravada no log de eventos.  
   
  `ulReason`  
- [in] Um valor igual a [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) a enumeração que indica a operação realizada no comutador/rastreamento de depuração.  
+ no Um valor da enumeração [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) que indica a operação executada na opção de depuração/rastreamento.  
   
  `pLogSwitchName`  
- [in] Um ponteiro para o nome do comutador/rastreamento de depuração.  
+ no Um ponteiro para o nome da opção de depuração/rastreamento.  
   
  `pParentName`  
- [in] Um ponteiro para o nome do pai do comutador/rastreamento de depuração.  
+ no Um ponteiro para o nome do pai da opção de depuração/rastreamento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

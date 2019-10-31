@@ -1,5 +1,5 @@
 ---
-title: 'Como: Tratar exceções em loops paralelos'
+title: Como manipular exceções em loops paralelos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ffc522b2ab13ae2098c01e6716e00aef5bef8e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae2fadd68cb211285e31e4ee990b6fb288056091
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091549"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Como: Tratar exceções em loops paralelos
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Como manipular exceções em loops paralelos
 As sobrecargas <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> não têm nenhum mecanismo especial para lidar com exceções que podem ocorrer. Nesse sentido, elas se assemelham aos loops `for` e `foreach` regulares (`For` e `For Each` no Visual Basic); uma exceção sem tratamento causa o encerramento imediato do loop.  
   
  Quando você adiciona sua própria lógica de tratamento de exceção a loops paralelos, trate o caso em que exceções semelhantes podem ser geradas em vários threads ao mesmo tempo e o caso em que uma exceção lançada em um thread faz com que outra exceção seja lançada em outro thread. Você pode manipular ambos os casos encapsulando todas as exceções do loop em um <xref:System.AggregateException?displayProperty=nameWithType>. O exemplo a seguir mostra uma abordagem possível.  

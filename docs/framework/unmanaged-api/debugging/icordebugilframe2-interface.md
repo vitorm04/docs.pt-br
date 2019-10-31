@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917011"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095086"
 ---
 # <a name="icordebugilframe2-interface"></a>Interface ICorDebugILFrame2
 
@@ -31,7 +29,7 @@ Uma extensão lógica da interface ICorDebugILFrame.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Obtém um objeto ICorDebugTypeEnum que contém os <xref:System.Type> parâmetros neste quadro.|  
+|[Método EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Obtém um objeto ICorDebugTypeEnum que contém os parâmetros de <xref:System.Type> neste quadro.|  
 |[Método RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Remapeia uma função editada especificando o novo deslocamento MSIL.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -40,11 +38,11 @@ Uma extensão lógica da interface ICorDebugILFrame.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

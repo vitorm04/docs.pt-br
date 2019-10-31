@@ -2,14 +2,12 @@
 title: Interface ICorDebugModuleDebugEvent
 ms.date: 03/30/2017
 ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 706f392652c5cb868e09d4ee9fcb69c6d3d92d2a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cca181c6af6db9f35ff7913e045a30e37e07a5e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110243"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>Interface ICorDebugModuleDebugEvent
 Estende a interface [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) para dar suporte a eventos no nível do módulo.  
@@ -24,14 +22,14 @@ Estende a interface [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-a
  Os tipos de evento [MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) e [MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) implementam essa interface.  
   
 > [!NOTE]
-> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface `E_NOINTERFACE` retorna para cenários ICorDebug fora do .net Native.  
+> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários ICorDebug fora do .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

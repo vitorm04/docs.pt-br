@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129805"
 ---
 # <a name="icordebugmdagetxml-method"></a>Método ICorDebugMDA::GetXML
-Obtém o fluxo XML completo associado com o Assistente para depuração gerenciada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Obtém o fluxo XML completo associado ao MDA (Assistente de depuração gerenciada) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ HRESULT GetXML (
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O tamanho do `szName` matriz.  
+ no O tamanho da matriz de `szName`.  
   
  `pcchName`  
- [out] Um ponteiro para o comprimento do fluxo XML.  
+ fora Um ponteiro para o comprimento do fluxo XML.  
   
  `szName`  
- [out] Uma matriz na qual armazenar o fluxo XML. A matriz pode estar vazia.  
+ fora Uma matriz na qual armazenar o fluxo XML. A matriz pode estar vazia.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetXML` método potencialmente pode afetar o desempenho, dependendo do tamanho do fluxo de XML associado.  
+ O método `GetXML` pode potencialmente afetar o desempenho, dependendo do tamanho do fluxo XML associado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

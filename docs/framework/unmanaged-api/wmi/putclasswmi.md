@@ -14,14 +14,12 @@ helpviewer_keywords:
 - PutClassWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7fcf879705135e0093868b48580a37f9d46aa594
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95a5e1f6339bde9dfe5c5ad9f989fc06e10fa7f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798385"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101784"
 ---
 # <a name="putclasswmi-function"></a>Função PutClassWmi
 
@@ -55,7 +53,7 @@ no Uma combinação de sinalizadores que afetam o comportamento dessa função. 
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Atualize a classe. A classe deve existir para que a chamada seja bem-sucedida. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Crie a classe. A chamada falhará se a classe já existir. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador causa uma chamada de semisynchronous. |
-| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | Os provedores de push devem especificar esse sinalizador `PutClassWmi` ao chamar para indicar que essa classe foi alterada. |
+| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | Os provedores de push devem especificar esse sinalizador ao chamar `PutClassWmi` para indicar que essa classe foi alterada. |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Permite que uma classe seja atualizada se não houver classes derivadas e nenhuma instância dessa classe. Ele também permitirá atualizações em todos os casos se a alteração for apenas para qualificadores não importantes, como o qualificador de descrição. Se a classe tiver instâncias ou alterações para qualificadores importantes, a atualização falhará. |
 | `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | Permite atualizações de classes, mesmo se houver classes filhas, desde que a alteração não cause conflitos com classes filhas. Por exemplo, esse sinalizador permite que uma nova propriedade seja adicionada à classe base que não foi mencionada anteriormente em nenhuma das classes filhas. Se a classe tiver instâncias, a atualização falhará. |
 | `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | força atualizações de classes quando existem classes filhas conflitantes. Por exemplo, esse sinalizador força uma atualização se um qualificador de classe é definido em uma classe filho e a classe base tenta adicionar o mesmo qualificador que está em conflito com o existente. No modo de força, o conflito tis é resolvido com a exclusão do qualificador conflitante na classe filho. |
@@ -64,7 +62,7 @@ no Uma combinação de sinalizadores que afetam o comportamento dessa função. 
 no Normalmente, esse valor é `null`. Caso contrário, é um ponteiro para uma instância de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que pode ser usada pelo provedor que está fornecendo as classes solicitadas.
 
 `ppCallResult`\
-fora Se `null`, esse parâmetro não será usado. Se `lFlags` contiver `WBEM_FLAG_RETURN_IMMEDIATELY`, a função retornará imediatamente `WBEM_S_NO_ERROR`com. O `ppCallResult` parâmetro recebe um ponteiro para um novo objeto [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) .
+fora Se `null`, esse parâmetro não será usado. Se `lFlags` contiver `WBEM_FLAG_RETURN_IMMEDIATELY`, a função retornará imediatamente com `WBEM_S_NO_ERROR`. O parâmetro `ppCallResult` recebe um ponteiro para um novo objeto [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) .
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -78,8 +76,8 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | O nome de classe especificado não é válido. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Foi feita uma tentativa de fazer uma alteração que invalidaria uma subclasse. |
-| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | O `WBEM_FLAG_CREATE_ONLY` sinalizador foi especificado, mas a classe já existe. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`foi especificado em `lFlags`e a classe não foi encontrada. |
+| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | O sinalizador de `WBEM_FLAG_CREATE_ONLY` foi especificado, mas a classe já existe. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` foi especificado em `lFlags`e a classe não foi encontrada. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | As propriedades obrigatórias para classes não foram definidas. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | O WMI provavelmente foi interrompido e reiniciado. Chame [ConnectServerWmi](connectserverwmi.md) novamente. |
@@ -96,9 +94,9 @@ Se a chamada de função falhar, você poderá obter informações adicionais so
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

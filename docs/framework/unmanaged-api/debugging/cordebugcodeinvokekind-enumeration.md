@@ -10,14 +10,12 @@ api_type:
 ms.assetid: e795e6a2-1008-4a81-af88-d777888e942e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22eeb8aba318d53efbc699d4492a86b2667bcfff
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cc839e9b2a28dc428ae7cc87c9d080c4b7612a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274128"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098878"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>Enumeração CorDebugCodeInvokeKind
 Descreve como uma função exportada invoca código gerenciado.  
@@ -48,11 +46,11 @@ typedef enum CorDebugCodeInvokeKind
 > Essa enumeração destina-se ao uso em cenários de depuração .NET Native apenas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

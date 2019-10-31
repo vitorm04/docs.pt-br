@@ -2,19 +2,17 @@
 title: Método ISymUnmanagedAsyncMethod::IsAsyncMethod
 ms.date: 03/30/2017
 ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5cddf34f1a6277e966901c9692bff63e26a3b8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea4c21e9e6a49d7bbbad5e1853598c440cd6410
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129205"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>Método ISymUnmanagedAsyncMethod::IsAsyncMethod
-Verifica se o método tem informações de async ou não.  
+Verifica se o método tem informações assíncronas ou não.  
   
- Se esse método retornar `FALSE` é inválido chamar quaisquer outros métodos nessa interface. Eles serão retornam todos os `E_UNEXPECTED` nesse caso.  
+ Se esse método retornar `FALSE`, ele não será válido para chamar outros métodos nesta interface. Eles serão retornados `E_UNEXPECTED` nesse caso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,11 +26,11 @@ HRESULT IsAsyncMethod(    [out, retval] BOOL* pRetVal);
 |---------------|-----------------|  
 |`pRetVal`||  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Retorna `HRESULT`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

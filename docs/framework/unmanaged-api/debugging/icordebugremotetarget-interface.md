@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e2e6a4624403dcab30bdb7b6d3af0226204cac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744650"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131879"
 ---
 # <a name="icordebugremotetarget-interface"></a>Interface ICorDebugRemoteTarget
-Fornece métodos que permitem que desenvolvedores depurem aplicativos baseados no Silverlight no ambiente do common language runtime (CLR).  
+Fornece métodos que permitem aos desenvolvedores depurar aplicativos baseados no Silverlight no ambiente Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,16 +46,16 @@ interface ICorDebugRemoteTarget  : IUnknown
 |[Método ICorDebugRemoteTarget::GetHostName](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Retorna o nome do host ou o endereço IP de um computador remoto.|  
   
 ## <a name="remarks"></a>Comentários  
- Não há suporte para a depuração mista (ou seja, código gerenciado e nativo) no Windows 95, Windows 98 ou Windows ME ou em plataformas não x86 (como IA-64 e AMD64).  
+ A depuração de modo misto (ou seja, código gerenciado e nativo) não tem suporte no Windows 95, Windows 98 ou Windows ME, ou em plataformas não x86 (como IA-64 e AMD64).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorDebug.idl  
+ **Cabeçalho:** CorDebug. idl  
   
- **Biblioteca:** : CorGuids.lib  
+ **Biblioteca:** : CorGuids. lib  
   
- **Versões do .NET framework:** 3,5 SP1  
+ **Versões do .NET Framework:** 3,5 SP1  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,5 +1,5 @@
 ---
-title: Campo ConnectionGroup.m_ConnectionList
+title: Campo Connection. m_ConnectionList
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301400"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120011"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList campo
+# <a name="connectiongroupm_connectionlist-field"></a>Conjunto de conexões. m\_campo Connectionlist
 
-`ConnectionGroup.m_ConnectionList` é um <xref:System.Collections.ArrayList> de objetos de conexão que serve o mesmo URI e compartilhamento os mesmos valores para algumas outras propriedades, como autenticação e expiração.
+`ConnectionGroup.m_ConnectionList` é uma <xref:System.Collections.ArrayList> de objetos de conexão que atendem ao mesmo URI e compartilham os mesmos valores para algumas outras propriedades, como expiração e autenticação.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -30,9 +30,9 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> O `ConnectionGroup.m_ConnectionList` campo é privado e não se destina a ser usado diretamente em seu código.
+> O campo `ConnectionGroup.m_ConnectionList` é privado e não deve ser usado diretamente no seu código.
 > 
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,4 +40,4 @@ private ArrayList m_ConnectionList
 
 **Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

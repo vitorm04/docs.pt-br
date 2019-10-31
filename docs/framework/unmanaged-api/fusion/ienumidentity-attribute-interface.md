@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2ec2748-e9ae-4e1b-80db-6fcec5cb81a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7e6bc57fb470a5c12549bb5f9445ecf1551425a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796460"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107835"
 ---
 # <a name="ienumidentity_attribute-interface"></a>Interface IEnumIDENTITY_ATTRIBUTE
 Serve como um enumerador para os atributos do objeto de código no escopo atual.  
@@ -30,14 +28,14 @@ Serve como um enumerador para os atributos do objeto de código no escopo atual.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|Obtém um ponteiro de interface para um `IEnumIDENTITY_ATTRIBUTE` novo que contém os mesmos membros que `IEnumIDENTITY_ATTRIBUTE`isso.|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Grava os dados contidos nos elementos `IEnumIDENTITY_ATTRIBUTE` deste para o buffer de dados especificado.|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|Obtém um ponteiro de interface para um novo `IEnumIDENTITY_ATTRIBUTE` que contém os mesmos membros que este `IEnumIDENTITY_ATTRIBUTE`.|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|Grava os dados contidos nos elementos dessa `IEnumIDENTITY_ATTRIBUTE` para o buffer de dados especificado.|  
 |`IEnumIDENTITY_ATTRIBUTE::Next`|Obtém o número especificado de atributos, começando na posição atual.|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|Move o ponteiro de instrução para o início dele `IEnumIDENTITY_ATTRIBUTE`.|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|Move o ponteiro de instrução para o início deste `IEnumIDENTITY_ATTRIBUTE`.|  
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|Move o ponteiro de instrução para frente pelo número especificado de elementos, começando na posição atual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolamento. h  
   

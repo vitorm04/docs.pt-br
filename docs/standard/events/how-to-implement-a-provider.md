@@ -1,5 +1,5 @@
 ---
-title: 'Como: Implementar um provedor'
+title: Como implementar um provedor
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,15 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f5bb3cda0caa39ba3fd094b80e0b769a4bfc1f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141549"
 ---
-# <a name="how-to-implement-a-provider"></a>Como: Implementar um provedor
-O padrão de design do observador requer uma divisão entre um provedor, que monitora os dados e envia notificações e um ou mais observadores, que recebem notificações (retornos de chamada) do provedor. Este tópico discute como criar um provedor. Um tópico relacionado, [Como: Implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md), descreve como criar um observador.  
+# <a name="how-to-implement-a-provider"></a>Como implementar um provedor
+O padrão de design do observador requer uma divisão entre um provedor, que monitora os dados e envia notificações e um ou mais observadores, que recebem notificações (retornos de chamada) do provedor. Este tópico discute como criar um provedor. Um tópico relacionado, [Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md), descreve como criar um observador.  
   
 ### <a name="to-create-a-provider"></a>Para criar um provedor  
   
@@ -64,5 +62,5 @@ O padrão de design do observador requer uma divisão entre um provedor, que mon
 
 - <xref:System.IObservable%601>
 - [Padrão de design do observador](../../../docs/standard/events/observer-design-pattern.md)
-- [Como: Implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)
+- [Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Práticas recomendadas para o padrão de design do observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)

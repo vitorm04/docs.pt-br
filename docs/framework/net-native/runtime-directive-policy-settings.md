@@ -2,14 +2,12 @@
 title: Configurações da política da diretiva de tempo de execução
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128157"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configurações da política da diretiva de tempo de execução
 

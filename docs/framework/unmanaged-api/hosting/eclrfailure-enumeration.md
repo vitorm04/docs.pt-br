@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131120"
 ---
 # <a name="eclrfailure-enumeration"></a>Enumeração EClrFailure
-Descreve o conjunto de falhas para o qual um host pode definir ações de política.  
+Descreve o conjunto de falhas para as quais um host pode definir ações de política.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,23 +42,23 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Ocorreu uma falha durante uma tentativa de alocar um recurso (por exemplo, um thread, um bloco de memória ou um bloqueio) em uma região não-críticas do código.|  
-|`FAIL_CriticalResource`|Ocorreu uma falha durante uma tentativa de alocar um recurso (por exemplo, um thread, um bloco de memória ou um bloqueio) em uma região crítica de código.|  
-|`FAIL_FatalRuntime`|O common language runtime (CLR) não é mais capaz de executar código gerenciado no processo. Daqui em diante, chamadas para hospedagem todas as funções retornam um valor HRESULT HOST_E_CLRNOTAVAILABLE.|  
-|`FAIL_OrphanedLock`|Um thread falhou ao liberar um bloqueio após o retorno de um <xref:System.AppDomain> objeto. O host não é possível definir essa falha para fazer com que um thread anular.|  
+|`FAIL_NonCriticalResource`|Ocorreu uma falha durante uma tentativa de alocar um recurso (como um thread, um bloco de memória ou um bloqueio) em uma região não crítica de código.|  
+|`FAIL_CriticalResource`|Ocorreu uma falha durante uma tentativa de alocar um recurso (como um thread, um bloco de memória ou um bloqueio) em uma região crítica de código.|  
+|`FAIL_FatalRuntime`|O Common Language Runtime (CLR) não é mais capaz de executar código gerenciado no processo. Daqui em diante, chamadas para qualquer função de hospedagem retornam um valor HRESULT de HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_OrphanedLock`|Um thread não pôde liberar um bloqueio ao retornar de um objeto <xref:System.AppDomain>. O host não pode definir essa falha para fazer com que um thread seja anulado.|  
 |`FAIL_StackOverflow`|Ocorreu um estouro de pilha.|  
-|`FAIL_AccessViolation`|Foi feita uma tentativa para ler ou gravar memória protegida. Não tem suporte no .NET Framework 4.|  
-|`FAIL_CodeContract`|Ocorreu uma falha de contrato de código. Ver [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_AccessViolation`|Foi feita uma tentativa de ler ou gravar na memória protegida. Sem suporte no .NET Framework 4.|  
+|`FAIL_CodeContract`|Ocorreu uma falha de contrato de código. Consulte [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Consulte a [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) método para obter uma lista de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valores host pode ser usados para especificar as ações de política para condições de falha. Para obter mais informações sobre as regiões críticas e não-críticas do código, consulte [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Consulte o método [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) para obter uma lista de valores [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) que o host pode usar para especificar as ações de política para condições de falha. Para obter mais informações sobre regiões críticas e não críticas de código, consulte [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

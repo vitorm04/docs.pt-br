@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131923"
 ---
 # <a name="comcallunmarshal-coclass"></a>Coclass ComCallUnmarshal
 Fornece interfaces para gerenciar o marshaling de ponteiros de interface.  
@@ -41,11 +39,11 @@ coclass ComCallUnmarshal {
 |`IMarshal`|Fornece métodos para criar, inicializar e gerenciar um proxy em um processo de cliente.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.idl  
+ **Cabeçalho:** MSCorEE. idl  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

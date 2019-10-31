@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098165"
 ---
 # <a name="cordebughandletype-enumeration"></a>Enumeração CorDebugHandleType
 Indica o tipo de manipulação.  
@@ -39,11 +37,11 @@ typedef enum CorDebugHandleType {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|O identificador será forte, o que impede que um objeto seja recuperada pela coleta de lixo.|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|O identificador é fraco, que não impede que um objeto seja recuperada pela coleta de lixo.<br /><br /> O identificador se torna inválido quando o objeto seja coletado.|  
+|`HANDLE_STRONG`|O identificador é forte, o que impede que um objeto seja recuperado pela coleta de lixo.|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|O identificador é fraco, o que não impede que um objeto seja recuperado pela coleta de lixo.<br /><br /> O identificador torna-se inválido quando o objeto é coletado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

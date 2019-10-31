@@ -15,14 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f9b8b93fe2b15ca6b4544547f3934f51ffed4df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4605c7361705ba37091eb2e34d8425810854973e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774186"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104902"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Gerador de Arquivo de Recurso)
 O Gerador de Arquivos de Recurso (Resgen.exe) converte arquivos de texto (.txt ou .restext) e arquivos de recurso com base em XML (.resx) em arquivos binários do Common Language Runtime (.resources) que podem ser inseridos em um executável binário do tempo de execução ou em um assembly satélite. (Consulte [Criando arquivos de recurso](../resources/creating-resource-files-for-desktop-apps.md).)  

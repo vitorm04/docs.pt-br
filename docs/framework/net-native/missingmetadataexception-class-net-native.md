@@ -2,14 +2,12 @@
 title: Classe MissingMetadataException (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 251d63fe8e025fe73b148c7deb368ab95ca3b1f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d73d66529bc30358c946eb0a7072f0cb8910b19a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049477"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128283"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Classe MissingMetadataException (.NET Nativo)
 
@@ -20,7 +18,7 @@ A exceção que é acionada quando reflexão é usada para recuperar metadados n
 **Namespace:** System.Reflection
 
 > [!IMPORTANT]
-> A `MissingMetadataException` classe é destinada exclusivamente ao uso interno da cadeia de ferramentas .net Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.
+> A classe `MissingMetadataException` é destinada exclusivamente ao uso interno da cadeia de ferramentas de .NET Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,9 +35,9 @@ A classe `MissingMetadataException` tem os seguintes membros:
 |`public MissingMetadataException()`|Inicializa uma nova instância da classe `MissingMetadataException` usando uma mensagem fornecida pelo sistema que descreve o erro.<br /><br /> Este construtor é para uso interno somente pela cadeia de ferramentas .NET Native.|
 |`public MissingMetadataException(String message)`|Inicializa uma nova instância da classe `MissingMetadataException` com uma mensagem de erro especificada.<br /><br /> Este construtor é para uso interno somente pela cadeia de ferramentas .NET Native.|
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>Propriedades
 
-|Propriedade|Descrição|
+|propriedade|Descrição|
 |--------------|-----------------|
 |`public IDictionary Data { get; }`|Obtém uma coleção de pares de chave/valor que fornecem informações adicionais definidas pelo usuário sobre a exceção. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|
 |`public string HelpLink { get; set; }`|Obtém ou define um link para o arquivo de ajuda associado a essa exceção. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|
@@ -64,7 +62,7 @@ A classe `MissingMetadataException` tem os seguintes membros:
 |`protected Object MemberwiseClone()`|Cria uma cópia superficial do objeto atual. (Herdado de <xref:System.Object>.)|
 |`public string ToString()`|Retorna a representação de cadeia de caracteres de exceção atual. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 |evento|Descrição|
 |-----------|-----------------|
@@ -74,7 +72,7 @@ A classe `MissingMetadataException` tem os seguintes membros:
 
 A exceção `MissingMetadataException` é acionada quando a reflexão é usada para acessar os metadados não disponíveis em um assembly.
 
-Os metadados disponíveis para um aplicativo em tempo de execução são definidos pelo arquivo de diretivas de tempo de execução (configuração XML \*),. Rd. xml. Para impedir que o seu aplicativo acione esta exceção, você deve modificar o \*.rd.xml para definir os metadados que devem estar presentes no tempo de execução. Para obter informações sobre o formato do arquivo \*.rd.xml, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
+Os metadados disponíveis para um aplicativo em tempo de execução são definidos pelo arquivo de diretivas de tempo de execução (configuração XML), \*. Rd. xml. Para impedir que o seu aplicativo acione esta exceção, você deve modificar o \*.rd.xml para definir os metadados que devem estar presentes no tempo de execução. Para obter informações sobre o formato do arquivo \*.rd.xml, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 > [!IMPORTANT]
 > Como essa exceção indica que os metadados exigidos pelo seu aplicativo não estão disponíveis no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la usando um arquivo de diretivas de tempo de execução. Para obter a entrada que você pode adicionar ao seu arquivo de diretivas de tempo de execução e que elimina a exceção, você pode usar uma das duas soluções de problemas:

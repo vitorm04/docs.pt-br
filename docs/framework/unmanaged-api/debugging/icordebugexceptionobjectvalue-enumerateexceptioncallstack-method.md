@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a58a62dbcd69d1847ab5a0b0109fe4eea53a4f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f54fdfe16bc24394503ba6f5a9b906a32ec2c8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754231"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091097"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>Método ICorDebugExceptionObjectValue::EnumerateExceptionCallStack
-Obtém um enumerador para a pilha de chamadas inserida em um objeto de exceção.  
+Obtém um enumerador para a pilha de chamadas inserido em um objeto de exceção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="parameters"></a>Parâmetros  
  ppCallStackEnum  
- [out] Um ponteiro para o endereço de um [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) objeto de interface que é um enumerador de rastreamento de pilha para um objeto de exceção gerenciada.  
+ fora Um ponteiro para o endereço de um objeto de interface [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) que é um enumerador de rastreamento de pilha para um objeto de exceção gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
- Se nenhuma informação de pilha de chamada está disponível, o método retornará `S_OK`, e [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) é um enumerador válido com um comprimento de 0. Se o método for não é possível recuperar informações de rastreamento de pilha, o valor retornado é `E_FAIL` e nenhum enumerador é retornado.  
+ Se nenhuma informação da pilha de chamadas estiver disponível, o método retornará `S_OK`e [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) será um enumerador válido com um comprimento de 0. Se o método não puder recuperar informações de rastreamento de pilha, o valor de retorno será `E_FAIL` e nenhum enumerador será retornado.  
   
- O [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) objeto é responsável pela decodificação de dados de rastreamento de pilha do `_stackTrace` campo do objeto de exceção.  
+ O objeto [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) é responsável por decodificar os dados de rastreamento de pilha do campo `_stackTrace` do objeto de exceção.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

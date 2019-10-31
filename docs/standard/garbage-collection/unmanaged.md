@@ -12,14 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141356"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
 

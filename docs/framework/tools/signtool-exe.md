@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044203"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104640"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  
@@ -129,7 +127,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica um algoritmo de hash opcional a ser usado durante a procura de um arquivo em um catálogo.|  
 |`/kp`|Especifica se a verificação deve ser realizada com a política de assinatura do driver do modo kernel.|  
 |`/ms`|Usa várias semânticas de verificação. Esse é o comportamento padrão de uma chamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) no [!INCLUDE[win8](../../../includes/win8-md.md)] e superior.|  
-|`/o` *Version*|Verifica o arquivo pela versão do sistema operacional. A *Versão* tem a seguinte forma: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa o valor subjacente de um membro de enumeração <xref:System.PlatformID>. **Importante:**  O uso da opção `/o` é recomendado. Se `/o` não for especificado, SignTool.exe poderá retornar resultados inesperados. Por exemplo, se você não incluir a opção `/o`, os catálogos do sistema validados corretamente em um sistema operacional anterior poderá não ser validado corretamente em um sistema operacional mais novo.|  
+|`/o` *Version*|Verifica o arquivo pela versão do sistema operacional. *Version* tem o seguinte formato: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa o valor subjacente de um membro de enumeração <xref:System.PlatformID>. **Importante:** o uso da opção `/o` é recomendado. Se `/o` não for especificado, SignTool.exe poderá retornar resultados inesperados. Por exemplo, se você não incluir a opção `/o`, os catálogos do sistema validados corretamente em um sistema operacional anterior poderá não ser validado corretamente em um sistema operacional mais novo.|  
 |`/p7`|Verifica arquivos PKCS #7. Nenhuma política existente é usada na validação de PKCS #7. A assinatura é verificada e uma cadeia é compilada para o certificado de assinatura.|  
 |`/pa`|Especifica se a Política de Verificação de Authenticode Padrão deve ser usada. Se a opção `/pa` não for especificada, a Ferramenta de Assinatura usará a Política de Verificação de Driver do Windows. Essa opção não pode ser usada com as opções `catdb`.|  
 |`/pg` *PolicyGUID*|Especifica uma política de verificação por GUID. O *PolicyGUID* corresponde à ActionID da política de verificação. Essa opção não pode ser usada com as opções `catdb`.|  
@@ -139,7 +137,7 @@ signtool [command] [options] [file_name | ...]
   
  Para obter exemplos de uso, consulte [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature) (Usando SignTool para verificar a assinatura de um arquivo).  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  A Ferramenta de Assinatura retorna um dos códigos de saída a seguir quando é encerrada.  
   
 |Código de saída|Descrição|  
