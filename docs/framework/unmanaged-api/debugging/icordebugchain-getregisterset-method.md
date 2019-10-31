@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d6ee36ac4d4510637e5f8240c3b8930a9bec7970
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745274"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123838"
 ---
-# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="d5c99-102">Método ICorDebugChain::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="d5c99-102">ICorDebugChain::GetRegisterSet Method</span></span>
-<span data-ttu-id="d5c99-103">Obtém o conjunto de registros de parte ativa dessa cadeia.</span><span class="sxs-lookup"><span data-stu-id="d5c99-103">Gets the register set for the active part of this chain.</span></span>  
+# <a name="icordebugchaingetregisterset-method"></a><span data-ttu-id="d00a5-102">Método ICorDebugChain::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="d00a5-102">ICorDebugChain::GetRegisterSet Method</span></span>
+<span data-ttu-id="d00a5-103">Obtém o conjunto de registros para a parte ativa desta cadeia.</span><span class="sxs-lookup"><span data-stu-id="d00a5-103">Gets the register set for the active part of this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5c99-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d5c99-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d00a5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d00a5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRegisterSet (  
@@ -35,15 +33,15 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d5c99-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d5c99-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d00a5-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d00a5-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="d5c99-106">[out] Um ponteiro para o endereço de um [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) objeto que representa o registro definido para a parte do Active Directory dessa cadeia.</span><span class="sxs-lookup"><span data-stu-id="d5c99-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
+ <span data-ttu-id="d00a5-106">fora Um ponteiro para o endereço de um objeto [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) que representa o conjunto de registros para a parte ativa desta cadeia.</span><span class="sxs-lookup"><span data-stu-id="d00a5-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for the active part of this chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5c99-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d5c99-107">Requirements</span></span>  
- <span data-ttu-id="d5c99-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5c99-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d00a5-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d00a5-107">Requirements</span></span>  
+ <span data-ttu-id="d00a5-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d00a5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5c99-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5c99-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d00a5-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d00a5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5c99-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5c99-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d00a5-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d00a5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5c99-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5c99-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d00a5-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d00a5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

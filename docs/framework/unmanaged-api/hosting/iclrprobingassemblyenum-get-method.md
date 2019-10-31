@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: fdb67a77-782f-44cf-a8a1-b75999b0f3c8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3225e42df44e719ecde31c26fae70f26731fa157
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ff1f9428a92d091a51a4cca12d69d98da0ecba2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761588"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120530"
 ---
-# <a name="iclrprobingassemblyenumget-method"></a><span data-ttu-id="51bfd-102">Método ICLRProbingAssemblyEnum::Get</span><span class="sxs-lookup"><span data-stu-id="51bfd-102">ICLRProbingAssemblyEnum::Get Method</span></span>
-<span data-ttu-id="51bfd-103">Obtém a identidade do assembly no índice especificado.</span><span class="sxs-lookup"><span data-stu-id="51bfd-103">Gets the assembly identity at the specified index.</span></span>  
+# <a name="iclrprobingassemblyenumget-method"></a><span data-ttu-id="f4ca1-102">Método ICLRProbingAssemblyEnum::Get</span><span class="sxs-lookup"><span data-stu-id="f4ca1-102">ICLRProbingAssemblyEnum::Get Method</span></span>
+<span data-ttu-id="f4ca1-103">Obtém a identidade do assembly no índice especificado.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-103">Gets the assembly identity at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51bfd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="51bfd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4ca1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f4ca1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Get (  
@@ -37,44 +35,44 @@ HRESULT Get (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="51bfd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="51bfd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f4ca1-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f4ca1-105">Parameters</span></span>  
  `dwIndex`  
- <span data-ttu-id="51bfd-106">[in] O índice baseado em zero da identidade do assembly para retornar.</span><span class="sxs-lookup"><span data-stu-id="51bfd-106">[in] The zero-based index of the assembly identity to return.</span></span>  
+ <span data-ttu-id="f4ca1-106">no O índice de base zero da identidade do assembly a ser retornado.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-106">[in] The zero-based index of the assembly identity to return.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="51bfd-107">[out] Um buffer que contém os dados de identidade do assembly.</span><span class="sxs-lookup"><span data-stu-id="51bfd-107">[out] A buffer containing the assembly identity data.</span></span>  
+ <span data-ttu-id="f4ca1-107">fora Um buffer que contém os dados de identidade do assembly.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-107">[out] A buffer containing the assembly identity data.</span></span>  
   
  `pcchBufferSize`  
- <span data-ttu-id="51bfd-108">[no, out] O tamanho do `pwzBuffer` buffer.</span><span class="sxs-lookup"><span data-stu-id="51bfd-108">[in, out] The size of the `pwzBuffer` buffer.</span></span>  
+ <span data-ttu-id="f4ca1-108">[entrada, saída] O tamanho do buffer de `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-108">[in, out] The size of the `pwzBuffer` buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51bfd-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="51bfd-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f4ca1-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="f4ca1-109">Return Value</span></span>  
   
-|<span data-ttu-id="51bfd-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="51bfd-110">HRESULT</span></span>|<span data-ttu-id="51bfd-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="51bfd-111">Description</span></span>|  
+|<span data-ttu-id="f4ca1-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f4ca1-110">HRESULT</span></span>|<span data-ttu-id="f4ca1-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="f4ca1-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="51bfd-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="51bfd-112">S_OK</span></span>|<span data-ttu-id="51bfd-113">`Get` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="51bfd-113">`Get` returned successfully.</span></span>|  
-|<span data-ttu-id="51bfd-114">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="51bfd-114">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="51bfd-115">`pwzBuffer` é pequeno demais.</span><span class="sxs-lookup"><span data-stu-id="51bfd-115">`pwzBuffer` is too small.</span></span>|  
-|<span data-ttu-id="51bfd-116">ERROR_NO_MORE_ITEMS</span><span class="sxs-lookup"><span data-stu-id="51bfd-116">ERROR_NO_MORE_ITEMS</span></span>|<span data-ttu-id="51bfd-117">A enumeração não contém mais itens.</span><span class="sxs-lookup"><span data-stu-id="51bfd-117">The enumeration contains no more items.</span></span>|  
-|<span data-ttu-id="51bfd-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="51bfd-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="51bfd-119">O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="51bfd-119">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="51bfd-120">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="51bfd-120">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="51bfd-121">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="51bfd-121">The call timed out.</span></span>|  
-|<span data-ttu-id="51bfd-122">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="51bfd-122">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="51bfd-123">O chamador não é proprietário do bloqueio.</span><span class="sxs-lookup"><span data-stu-id="51bfd-123">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="51bfd-124">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="51bfd-124">HOST_E_ABANDONED</span></span>|<span data-ttu-id="51bfd-125">Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.</span><span class="sxs-lookup"><span data-stu-id="51bfd-125">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="51bfd-126">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="51bfd-126">E_FAIL</span></span>|<span data-ttu-id="51bfd-127">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="51bfd-127">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="51bfd-128">Se um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo.</span><span class="sxs-lookup"><span data-stu-id="51bfd-128">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="51bfd-129">As chamadas subsequentes para todos os métodos hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="51bfd-129">Subsequent calls to any hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f4ca1-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="f4ca1-112">S_OK</span></span>|<span data-ttu-id="f4ca1-113">`Get` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-113">`Get` returned successfully.</span></span>|  
+|<span data-ttu-id="f4ca1-114">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="f4ca1-114">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="f4ca1-115">`pwzBuffer` é pequeno demais.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-115">`pwzBuffer` is too small.</span></span>|  
+|<span data-ttu-id="f4ca1-116">ERROR_NO_MORE_ITEMS</span><span class="sxs-lookup"><span data-stu-id="f4ca1-116">ERROR_NO_MORE_ITEMS</span></span>|<span data-ttu-id="f4ca1-117">A enumeração não contém mais itens.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-117">The enumeration contains no more items.</span></span>|  
+|<span data-ttu-id="f4ca1-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f4ca1-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f4ca1-119">O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-119">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f4ca1-120">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f4ca1-120">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f4ca1-121">A chamada atingiu o tempo limite.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-121">The call timed out.</span></span>|  
+|<span data-ttu-id="f4ca1-122">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f4ca1-122">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f4ca1-123">O chamador não possui o bloqueio.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-123">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f4ca1-124">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f4ca1-124">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f4ca1-125">Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-125">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f4ca1-126">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f4ca1-126">E_FAIL</span></span>|<span data-ttu-id="f4ca1-127">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-127">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f4ca1-128">Se um método retornar E_FAIL, o CLR não poderá mais ser usado no processo.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-128">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f4ca1-129">As chamadas subsequentes para quaisquer métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-129">Subsequent calls to any hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51bfd-130">Comentários</span><span class="sxs-lookup"><span data-stu-id="51bfd-130">Remarks</span></span>  
- <span data-ttu-id="51bfd-131">A identidade no índice 0 é a identidade específica da arquitetura do processador.</span><span class="sxs-lookup"><span data-stu-id="51bfd-131">The identity at index 0 is the identity specific to the processor architecture.</span></span> <span data-ttu-id="51bfd-132">A identidade no índice 1 é o assembly de arquitetura neutra para Microsoft intermediate language (MSIL).</span><span class="sxs-lookup"><span data-stu-id="51bfd-132">The identity at index 1 is the architecture-neutral assembly for Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="51bfd-133">A identidade no índice 2 não contém nenhuma informação de arquitetura.</span><span class="sxs-lookup"><span data-stu-id="51bfd-133">The identity at index 2 contains no architecture information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f4ca1-130">Comentários</span><span class="sxs-lookup"><span data-stu-id="f4ca1-130">Remarks</span></span>  
+ <span data-ttu-id="f4ca1-131">A identidade no índice 0 é a identidade específica para a arquitetura do processador.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-131">The identity at index 0 is the identity specific to the processor architecture.</span></span> <span data-ttu-id="f4ca1-132">A identidade no índice 1 é o assembly de arquitetura neutra para MSIL (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="f4ca1-132">The identity at index 1 is the architecture-neutral assembly for Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="f4ca1-133">A identidade no índice 2 não contém informações de arquitetura.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-133">The identity at index 2 contains no architecture information.</span></span>  
   
- <span data-ttu-id="51bfd-134">`Get` normalmente é chamado duas vezes.</span><span class="sxs-lookup"><span data-stu-id="51bfd-134">`Get` is typically called twice.</span></span> <span data-ttu-id="51bfd-135">A primeira chamada fornece um valor nulo para `pwzBuffer`e define `pcchBufferSize` para o tamanho apropriado para `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="51bfd-135">The first call supplies a null value for `pwzBuffer`, and sets `pcchBufferSize` to the size appropriate for `pwzBuffer`.</span></span> <span data-ttu-id="51bfd-136">A segunda chamada fornece um tamanho apropriado `pwzBuffer`e contém os dados de identidade do assembly canônico após a conclusão.</span><span class="sxs-lookup"><span data-stu-id="51bfd-136">The second call supplies an appropriately sized `pwzBuffer`, and contains the canonical assembly identity data upon completion.</span></span>  
+ <span data-ttu-id="f4ca1-134">`Get` normalmente é chamado duas vezes.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-134">`Get` is typically called twice.</span></span> <span data-ttu-id="f4ca1-135">A primeira chamada fornece um valor nulo para `pwzBuffer`e define `pcchBufferSize` como o tamanho apropriado para `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-135">The first call supplies a null value for `pwzBuffer`, and sets `pcchBufferSize` to the size appropriate for `pwzBuffer`.</span></span> <span data-ttu-id="f4ca1-136">A segunda chamada fornece um `pwzBuffer`de tamanho adequado e contém os dados de identidade do assembly canônico após a conclusão.</span><span class="sxs-lookup"><span data-stu-id="f4ca1-136">The second call supplies an appropriately sized `pwzBuffer`, and contains the canonical assembly identity data upon completion.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51bfd-137">Requisitos</span><span class="sxs-lookup"><span data-stu-id="51bfd-137">Requirements</span></span>  
- <span data-ttu-id="51bfd-138">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51bfd-138">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4ca1-137">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f4ca1-137">Requirements</span></span>  
+ <span data-ttu-id="f4ca1-138">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4ca1-138">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="51bfd-139">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="51bfd-139">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f4ca1-139">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="f4ca1-139">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="51bfd-140">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="51bfd-140">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f4ca1-140">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="f4ca1-140">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="51bfd-141">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51bfd-141">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f4ca1-141">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4ca1-141">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51bfd-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="51bfd-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4ca1-142">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f4ca1-142">See also</span></span>
 
-- [<span data-ttu-id="51bfd-143">Interface ICLRProbingAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="51bfd-143">ICLRProbingAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)
-- [<span data-ttu-id="51bfd-144">Interface ICLRAssemblyIdentityManager</span><span class="sxs-lookup"><span data-stu-id="51bfd-144">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="f4ca1-143">Interface ICLRProbingAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="f4ca1-143">ICLRProbingAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)
+- [<span data-ttu-id="f4ca1-144">Interface ICLRAssemblyIdentityManager</span><span class="sxs-lookup"><span data-stu-id="f4ca1-144">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

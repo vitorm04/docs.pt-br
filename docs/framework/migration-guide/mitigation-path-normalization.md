@@ -1,51 +1,49 @@
 ---
-title: 'Mitigação: Normalização de caminho'
+title: 'Mitigação: normalização do caminho'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779336"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126220"
 ---
-# <a name="mitigation-path-normalization"></a><span data-ttu-id="5dd2e-102">Mitigação: Normalização de caminho</span><span class="sxs-lookup"><span data-stu-id="5dd2e-102">Mitigation: Path Normalization</span></span>
-<span data-ttu-id="5dd2e-103">Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho no .NET Framework foi alterada.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-103">Starting with apps the target  the .NET Framework 4.6.2, path normalization in the .NET Framework has changed.</span></span>  
+# <a name="mitigation-path-normalization"></a><span data-ttu-id="6e4fe-102">Mitigação: normalização do caminho</span><span class="sxs-lookup"><span data-stu-id="6e4fe-102">Mitigation: Path Normalization</span></span>
+<span data-ttu-id="6e4fe-103">Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho no .NET Framework foi alterada.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-103">Starting with apps the target  the .NET Framework 4.6.2, path normalization in the .NET Framework has changed.</span></span>  
   
-## <a name="what-is-path-normalization"></a><span data-ttu-id="5dd2e-104">O que é normalização do caminho?</span><span class="sxs-lookup"><span data-stu-id="5dd2e-104">What is path normalization?</span></span>  
- <span data-ttu-id="5dd2e-105">Normalizar um caminho envolve modificar a cadeia de caracteres que identifica um caminho ou arquivo para que ele esteja em conformidade com um caminho válido no sistema operacional de destino.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="5dd2e-106">Normalmente, a normalização envolve:</span><span class="sxs-lookup"><span data-stu-id="5dd2e-106">Normalization typically involves:</span></span>  
+## <a name="what-is-path-normalization"></a><span data-ttu-id="6e4fe-104">O que é normalização do caminho?</span><span class="sxs-lookup"><span data-stu-id="6e4fe-104">What is path normalization?</span></span>  
+ <span data-ttu-id="6e4fe-105">Normalizar um caminho envolve modificar a cadeia de caracteres que identifica um caminho ou arquivo para que ele esteja em conformidade com um caminho válido no sistema operacional de destino.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="6e4fe-106">Normalmente, a normalização envolve:</span><span class="sxs-lookup"><span data-stu-id="6e4fe-106">Normalization typically involves:</span></span>  
   
-- <span data-ttu-id="5dd2e-107">Padronização de separadores de diretório e componente.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-107">Canonicalizing component and directory separators.</span></span>  
+- <span data-ttu-id="6e4fe-107">Padronização de separadores de diretório e componente.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-107">Canonicalizing component and directory separators.</span></span>  
   
-- <span data-ttu-id="5dd2e-108">Aplicação do diretório atual a um caminho relativo.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-108">Applying the current directory to a relative path.</span></span>  
+- <span data-ttu-id="6e4fe-108">Aplicação do diretório atual a um caminho relativo.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-108">Applying the current directory to a relative path.</span></span>  
   
-- <span data-ttu-id="5dd2e-109">Avaliação do diretório relativo (`.`) ou do diretório pai (`..`) em um caminho.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
+- <span data-ttu-id="6e4fe-109">Avaliação do diretório relativo (`.`) ou do diretório pai (`..`) em um caminho.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
   
-- <span data-ttu-id="5dd2e-110">Remoção de determinados caracteres.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-110">Trimming specified characters.</span></span>  
+- <span data-ttu-id="6e4fe-110">Remoção de determinados caracteres.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-110">Trimming specified characters.</span></span>  
   
-## <a name="the-changes"></a><span data-ttu-id="5dd2e-111">As alterações</span><span class="sxs-lookup"><span data-stu-id="5dd2e-111">The changes</span></span>  
- <span data-ttu-id="5dd2e-112">Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho foi alterada nos seguintes aspectos:</span><span class="sxs-lookup"><span data-stu-id="5dd2e-112">Starting with apps that target the .NET Framework 4.6.2, path normalization has changed in the following ways:</span></span>  
+## <a name="the-changes"></a><span data-ttu-id="6e4fe-111">As alterações</span><span class="sxs-lookup"><span data-stu-id="6e4fe-111">The changes</span></span>  
+ <span data-ttu-id="6e4fe-112">Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho foi alterada nos seguintes aspectos:</span><span class="sxs-lookup"><span data-stu-id="6e4fe-112">Starting with apps that target the .NET Framework 4.6.2, path normalization has changed in the following ways:</span></span>  
   
-- <span data-ttu-id="5dd2e-113">O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-113">The runtime defers to the operating system's [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) function to normalize paths.</span></span>  
+- <span data-ttu-id="6e4fe-113">O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-113">The runtime defers to the operating system's [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) function to normalize paths.</span></span>  
   
-- <span data-ttu-id="5dd2e-114">A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).</span><span class="sxs-lookup"><span data-stu-id="5dd2e-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
+- <span data-ttu-id="6e4fe-114">A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).</span><span class="sxs-lookup"><span data-stu-id="6e4fe-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
   
-- <span data-ttu-id="5dd2e-115">Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
+- <span data-ttu-id="6e4fe-115">Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
   
-- <span data-ttu-id="5dd2e-116">O tempo de execução não valida caminhos de sintaxe do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-116">The runtime does not validate device syntax paths.</span></span>  
+- <span data-ttu-id="6e4fe-116">O tempo de execução não valida caminhos de sintaxe do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-116">The runtime does not validate device syntax paths.</span></span>  
   
-- <span data-ttu-id="5dd2e-117">Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-117">The use of device syntax to access alternate data streams is supported.</span></span>  
+- <span data-ttu-id="6e4fe-117">Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-117">The use of device syntax to access alternate data streams is supported.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="5dd2e-118">Impacto</span><span class="sxs-lookup"><span data-stu-id="5dd2e-118">Impact</span></span>  
+## <a name="impact"></a><span data-ttu-id="6e4fe-118">Impacto</span><span class="sxs-lookup"><span data-stu-id="6e4fe-118">Impact</span></span>  
 
-<span data-ttu-id="5dd2e-119">Para os aplicativos direcionados ao .NET Framework 4.6.2 ou posterior, essas alterações estão ativadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-119">For apps that target the .NET Framework 4.6.2 or later, these changes are on  by default.</span></span> <span data-ttu-id="5dd2e-120">Elas devem melhorar o desempenho e ao mesmo tempo permitir que os métodos acessem caminhos anteriormente inacessíveis.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
+<span data-ttu-id="6e4fe-119">Para os aplicativos direcionados ao .NET Framework 4.6.2 ou posterior, essas alterações estão ativadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-119">For apps that target the .NET Framework 4.6.2 or later, these changes are on  by default.</span></span> <span data-ttu-id="6e4fe-120">Elas devem melhorar o desempenho e ao mesmo tempo permitir que os métodos acessem caminhos anteriormente inacessíveis.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
   
-<span data-ttu-id="5dd2e-121">Os aplicativos direcionados ao .NET Framework 4.6.1 e versões anteriores, mas que são executados no .NET Framework 4.6.2 ou posteriores, não são afetados por essa alteração.</span><span class="sxs-lookup"><span data-stu-id="5dd2e-121">Apps that target the .NET Framework 4.6.1 and earlier versions but are running under the .NET Framework 4.6.2 or later are unaffected by this change.</span></span>  
+<span data-ttu-id="6e4fe-121">Os aplicativos direcionados ao .NET Framework 4.6.1 e versões anteriores, mas que são executados no .NET Framework 4.6.2 ou posteriores, não são afetados por essa alteração.</span><span class="sxs-lookup"><span data-stu-id="6e4fe-121">Apps that target the .NET Framework 4.6.1 and earlier versions but are running under the .NET Framework 4.6.2 or later are unaffected by this change.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="5dd2e-122">Redução</span><span class="sxs-lookup"><span data-stu-id="5dd2e-122">Mitigation</span></span>  
- <span data-ttu-id="5dd2e-123">Aplicativos destinados ao .NET Framework 4.6.2 ou posteriores podem recusar essa alteração e usar a normalização herdada adicionando o seguinte à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="5dd2e-123">Apps that target the .NET Framework 4.6.2 or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="6e4fe-122">Redução</span><span class="sxs-lookup"><span data-stu-id="6e4fe-122">Mitigation</span></span>  
+ <span data-ttu-id="6e4fe-123">Aplicativos destinados ao .NET Framework 4.6.2 ou posteriores podem recusar essa alteração e usar a normalização herdada adicionando o seguinte à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="6e4fe-123">Apps that target the .NET Framework 4.6.2 or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -53,7 +51,7 @@ ms.locfileid: "70779336"
 </runtime>  
 ```  
   
-<span data-ttu-id="5dd2e-124">Aplicativos destinados ao .NET Framework 4.6.1 ou anteriores, mas que são executados no .NET Framework 4.6.2 ou posteriores podem habilitar as alterações na normalização de caminho adicionando a seguinte linha à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="5dd2e-124">Apps that target the .NET Framework 4.6.1 or earlier but are running on the .NET Framework 4.6.2 or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
+<span data-ttu-id="6e4fe-124">Aplicativos destinados ao .NET Framework 4.6.1 ou anteriores, mas que são executados no .NET Framework 4.6.2 ou posteriores podem habilitar as alterações na normalização de caminho adicionando a seguinte linha à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="6e4fe-124">Apps that target the .NET Framework 4.6.1 or earlier but are running on the .NET Framework 4.6.2 or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -61,6 +59,6 @@ ms.locfileid: "70779336"
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5dd2e-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5dd2e-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e4fe-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6e4fe-125">See also</span></span>
 
-- [<span data-ttu-id="5dd2e-126">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="5dd2e-126">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [<span data-ttu-id="6e4fe-126">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="6e4fe-126">Retargeting Changes</span></span>](retargeting-changes-in-the-net-framework-4-6-2.md)

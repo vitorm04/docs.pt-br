@@ -15,32 +15,30 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131761"
 ---
-# <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="a6aba-102">Método ICorDebugStepper::Deactivate</span><span class="sxs-lookup"><span data-stu-id="a6aba-102">ICorDebugStepper::Deactivate Method</span></span>
-<span data-ttu-id="a6aba-103">Faz com que esse ICorDebugStepper cancelar o último comando etapa que ele recebeu.</span><span class="sxs-lookup"><span data-stu-id="a6aba-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  
+# <a name="icordebugstepperdeactivate-method"></a><span data-ttu-id="a6c1b-102">Método ICorDebugStepper::Deactivate</span><span class="sxs-lookup"><span data-stu-id="a6c1b-102">ICorDebugStepper::Deactivate Method</span></span>
+<span data-ttu-id="a6c1b-103">Faz com que esse ICorDebugStepper cancele o comando da última etapa que ele recebeu.</span><span class="sxs-lookup"><span data-stu-id="a6c1b-103">Causes this ICorDebugStepper to cancel the last step command that it received.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6aba-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a6aba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6c1b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a6c1b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Deactivate ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="a6aba-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="a6aba-105">Remarks</span></span>  
- <span data-ttu-id="a6aba-106">Um novo comando passo a passo pode ser emitido após o comando de etapa recebido recentemente foi cancelado.</span><span class="sxs-lookup"><span data-stu-id="a6aba-106">A new stepping command may be issued after the most recently received step command has been canceled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a6c1b-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="a6c1b-105">Remarks</span></span>  
+ <span data-ttu-id="a6c1b-106">Um novo comando de revisão pode ser emitido depois que o comando de etapa recebido mais recentemente tiver sido cancelado.</span><span class="sxs-lookup"><span data-stu-id="a6c1b-106">A new stepping command may be issued after the most recently received step command has been canceled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a6aba-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a6aba-107">Requirements</span></span>  
- <span data-ttu-id="a6aba-108">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6aba-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6c1b-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a6c1b-107">Requirements</span></span>  
+ <span data-ttu-id="a6c1b-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6c1b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a6aba-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a6aba-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a6c1b-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a6c1b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a6aba-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a6aba-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a6c1b-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a6c1b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a6aba-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6aba-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a6c1b-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6c1b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

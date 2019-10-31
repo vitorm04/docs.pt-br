@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: e08308d2-7397-4616-b7a6-f81b7686fed6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 633ff0f787b33d45a247f7a3f890a58973c87479
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 528a385657721298772693809dd696531c6a4e8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134397"
 ---
-# <a name="iassemblyenumreset-method"></a><span data-ttu-id="ca59d-102">Método IAssemblyEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="ca59d-102">IAssemblyEnum::Reset Method</span></span>
-<span data-ttu-id="ca59d-103">Redefine este objeto [IAssemblyEnum](iassemblyenum-interface.md) para sua posição inicial.</span><span class="sxs-lookup"><span data-stu-id="ca59d-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
+# <a name="iassemblyenumreset-method"></a><span data-ttu-id="11763-102">Método IAssemblyEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="11763-102">IAssemblyEnum::Reset Method</span></span>
+<span data-ttu-id="11763-103">Redefine este objeto [IAssemblyEnum](iassemblyenum-interface.md) para sua posição inicial.</span><span class="sxs-lookup"><span data-stu-id="11763-103">Resets this [IAssemblyEnum](iassemblyenum-interface.md) object to its starting position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca59d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ca59d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11763-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="11763-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Reset (  
@@ -35,13 +33,13 @@ HRESULT Reset (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ca59d-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ca59d-105">Requirements</span></span>  
- <span data-ttu-id="ca59d-106">**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca59d-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11763-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="11763-105">Requirements</span></span>  
+ <span data-ttu-id="11763-106">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11763-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca59d-107">**Cabeçalho:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="ca59d-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="11763-107">**Cabeçalho:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="11763-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="ca59d-108">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca59d-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="11763-108">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11763-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca59d-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca59d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11763-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="11763-109">See also</span></span>
 
-- [<span data-ttu-id="ca59d-110">Interface IAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="ca59d-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)
+- [<span data-ttu-id="11763-110">Interface IAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="11763-110">IAssemblyEnum Interface</span></span>](iassemblyenum-interface.md)

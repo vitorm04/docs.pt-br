@@ -10,34 +10,34 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1064c15fc6fc1416f9c2b3a7aac51ef30d78ca7a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5a9041ab75836b4239d492987e94c9104133e9bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120042"
 ---
-# <a name="connectiongroup-class"></a><span data-ttu-id="fd91f-102">Classe ConnectionGroup</span><span class="sxs-lookup"><span data-stu-id="fd91f-102">ConnectionGroup Class</span></span>
+# <a name="connectiongroup-class"></a><span data-ttu-id="ccafe-102">Classe ConnectionGroup</span><span class="sxs-lookup"><span data-stu-id="ccafe-102">ConnectionGroup Class</span></span>
 
-<span data-ttu-id="fd91f-103">O `ConnectionGroup` uma lista de conexões dentro de grupos de classe a <xref:System.Net.ServicePoint> contexto e é usado para manter o contexto para os recursos de rede (por exemplo, proxies e clientes separados).</span><span class="sxs-lookup"><span data-stu-id="fd91f-103">The `ConnectionGroup` class groups a list of connections within the <xref:System.Net.ServicePoint> context and is used to maintain context for network resources (for example, proxies and separate clients).</span></span>
+<span data-ttu-id="ccafe-103">A classe `ConnectionGroup` agrupa uma lista de conexões dentro do contexto de <xref:System.Net.ServicePoint> e é usada para manter o contexto de recursos de rede (por exemplo, proxies e clientes separados).</span><span class="sxs-lookup"><span data-stu-id="ccafe-103">The `ConnectionGroup` class groups a list of connections within the <xref:System.Net.ServicePoint> context and is used to maintain context for network resources (for example, proxies and separate clients).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="fd91f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fd91f-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="ccafe-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ccafe-104">Syntax</span></span>
   
 ```csharp  
 internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> <span data-ttu-id="fd91f-105">O `ConnectionGroup` classe é interno e não se destina a ser usado diretamente em seu código.</span><span class="sxs-lookup"><span data-stu-id="fd91f-105">The `ConnectionGroup` class is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="ccafe-105">A classe `ConnectionGroup` é interna e não deve ser usada diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="ccafe-105">The `ConnectionGroup` class is internal and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="fd91f-106">Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="fd91f-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="ccafe-106">A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="ccafe-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="fd91f-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fd91f-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="ccafe-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ccafe-107">Requirements</span></span>
 
-<span data-ttu-id="fd91f-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="fd91f-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="ccafe-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="ccafe-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="fd91f-109">**Assembly:** Sistema (em System. dll)</span><span class="sxs-lookup"><span data-stu-id="fd91f-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="ccafe-109">**Assembly:** Sistema (em System. dll)</span><span class="sxs-lookup"><span data-stu-id="ccafe-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="fd91f-110">**Versões do .NET framework:** Disponível desde o 2.0.</span><span class="sxs-lookup"><span data-stu-id="fd91f-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="ccafe-110">**.NET Framework versões:** Disponível desde 2,0.</span><span class="sxs-lookup"><span data-stu-id="ccafe-110">**.NET Framework versions:** Available since 2.0.</span></span>
