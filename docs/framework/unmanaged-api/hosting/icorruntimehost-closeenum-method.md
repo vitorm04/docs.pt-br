@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f7ce7e8c-0a3e-4587-a180-063e2b85940e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bfddd1d8f6fed105224cb2294d68f3f0bc016403
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2eddfab68e5c9e2ebffe2c96c9348f3cd799c7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127760"
 ---
-# <a name="icorruntimehostcloseenum-method"></a><span data-ttu-id="38791-102">Método ICorRuntimeHost::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="38791-102">ICorRuntimeHost::CloseEnum Method</span></span>
-<span data-ttu-id="38791-103">Redefine o enumerador de um domínio voltar ao início da lista de domínios.</span><span class="sxs-lookup"><span data-stu-id="38791-103">Resets a domain enumerator back to the beginning of the domain list.</span></span>  
+# <a name="icorruntimehostcloseenum-method"></a><span data-ttu-id="efcba-102">Método ICorRuntimeHost::CloseEnum</span><span class="sxs-lookup"><span data-stu-id="efcba-102">ICorRuntimeHost::CloseEnum Method</span></span>
+<span data-ttu-id="efcba-103">Redefine um enumerador de domínio de volta para o início da lista de domínios.</span><span class="sxs-lookup"><span data-stu-id="efcba-103">Resets a domain enumerator back to the beginning of the domain list.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38791-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="38791-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efcba-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="efcba-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum (  
@@ -35,29 +33,29 @@ HRESULT CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="38791-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="38791-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="efcba-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="efcba-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="38791-106">[in] O enumerador para redefinir.</span><span class="sxs-lookup"><span data-stu-id="38791-106">[in] The enumerator to reset.</span></span>  
+ <span data-ttu-id="efcba-106">no O enumerador a ser redefinido.</span><span class="sxs-lookup"><span data-stu-id="efcba-106">[in] The enumerator to reset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="38791-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="38791-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="efcba-107">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="efcba-107">Return Value</span></span>  
   
-|<span data-ttu-id="38791-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="38791-108">HRESULT</span></span>|<span data-ttu-id="38791-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="38791-109">Description</span></span>|  
+|<span data-ttu-id="efcba-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="efcba-108">HRESULT</span></span>|<span data-ttu-id="efcba-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="efcba-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="38791-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="38791-110">S_OK</span></span>|<span data-ttu-id="38791-111">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="38791-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="38791-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="38791-112">S_FALSE</span></span>|<span data-ttu-id="38791-113">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="38791-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="38791-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="38791-114">E_FAIL</span></span>|<span data-ttu-id="38791-115">Ocorreu uma falha catastrófica, desconhecida.</span><span class="sxs-lookup"><span data-stu-id="38791-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="38791-116">Se um método retornar E_FAIL, o common language runtime (CLR) não é mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="38791-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="38791-117">As chamadas subsequentes para todas as APIs de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="38791-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="38791-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="38791-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="38791-119">O CLR não tenha sido carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="38791-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="efcba-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="efcba-110">S_OK</span></span>|<span data-ttu-id="efcba-111">A operação foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="efcba-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="efcba-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="efcba-112">S_FALSE</span></span>|<span data-ttu-id="efcba-113">Falha ao concluir a operação.</span><span class="sxs-lookup"><span data-stu-id="efcba-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="efcba-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="efcba-114">E_FAIL</span></span>|<span data-ttu-id="efcba-115">Ocorreu uma falha catastrófica desconhecida.</span><span class="sxs-lookup"><span data-stu-id="efcba-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="efcba-116">Se um método retornar E_FAIL, o Common Language Runtime (CLR) não será mais utilizável no processo.</span><span class="sxs-lookup"><span data-stu-id="efcba-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="efcba-117">As chamadas subsequentes para qualquer API de hospedagem retornam HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="efcba-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="efcba-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="efcba-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="efcba-119">O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.</span><span class="sxs-lookup"><span data-stu-id="efcba-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="38791-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="38791-120">Requirements</span></span>  
- <span data-ttu-id="38791-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38791-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efcba-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="efcba-120">Requirements</span></span>  
+ <span data-ttu-id="efcba-121">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efcba-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38791-122">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="38791-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="efcba-122">**Cabeçalho:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="efcba-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="38791-123">**Biblioteca:** Incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="38791-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="efcba-123">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="efcba-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="38791-124">**Versões do .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="38791-124">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="efcba-124">**Versões do .NET Framework:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="efcba-124">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38791-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="38791-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efcba-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="efcba-125">See also</span></span>
 
-- [<span data-ttu-id="38791-126">Função CorBindToRuntimeEx</span><span class="sxs-lookup"><span data-stu-id="38791-126">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [<span data-ttu-id="38791-127">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="38791-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="efcba-126">Função CorBindToRuntimeEx</span><span class="sxs-lookup"><span data-stu-id="efcba-126">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
+- [<span data-ttu-id="efcba-127">Interface ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="efcba-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
