@@ -16,14 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216716"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121749"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
@@ -53,18 +51,18 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 
 <a name="table"></a> A tabela a seguir descreve os especificadores de formato numérico padrão e exibe exemplos de saídas produzidas por cada especificador de formato. Consulte a seção [Notas](#NotesStandardFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico padrão e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
 
-|Especificador de formato|Nome|Descrição|Exemplos|
+|Especificador de formato|Name|Descrição|Exemplos|
 |----------------------|----------|-----------------|--------------|
-|"C" ou "c"|Moeda|Resultado: Um valor de moeda.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número de dígitos decimais.<br /><br /> Especificador de precisão padrão: Definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [O especificador de formato de moeda ("C")](#CFormatString).|123,456 ("C", en-US)-> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
-|"D" ou "d"|Decimal|Resultado: Dígitos inteiros com sinal negativo opcional.<br /><br /> Compatível com: Somente tipos integrais.<br /><br /> Especificador de precisão: Número mínimo de dígitos.<br /><br /> Especificador de precisão padrão: Número mínimo de dígitos necessários.<br /><br /> Para saber mais: [O especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
-|"E" ou "e"|Exponencial (científica)|Resultado: Notação exponencial.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número de dígitos decimais.<br /><br /> Especificador de precisão padrão: 6.<br /><br /> Para saber mais: [O especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
-|"F" ou "f"|Ponto fixo|Resultado: Dígitos integrais e decimais com sinal negativo opcional.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número de dígitos decimais.<br /><br /> Especificador de precisão padrão: Definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [O especificador de formato de ponto fixo ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
-|"G" ou "g"|Geral|Resultado: A mais compacta entre notação de ponto fixo ou científica.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número de dígitos significativos.<br /><br /> Especificador de precisão padrão: Depende do tipo numérico.<br /><br /> Para saber mais: [O especificador de formato geral ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
-|"N" ou "n"|Número|Resultado: Dígitos integrais e decimais, separadores de grupo e um separador decimal com sinal negativo opcional.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número desejado de casas decimais.<br /><br /> Especificador de precisão padrão: Definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [O especificador de formato numérico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
-|"P" ou "p"|Porcentagem|Resultado: Número multiplicado por 100 e exibido com um sinal de porcentagem.<br /><br /> Compatível com: Todos os tipos numéricos.<br /><br /> Especificador de precisão: Número desejado de casas decimais.<br /><br /> Especificador de precisão padrão: Definido por <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [O especificador de formato de porcentagem ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
-|"R" ou "r"|Ida e volta|Resultado: Uma cadeia de caracteres que pode ir e voltar para um número idêntico.<br /><br /> Compatível com: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Observação: Recomendado apenas para o tipo <xref:System.Numerics.BigInteger>. Para os tipos <xref:System.Double>, use "G17"; para os tipos <xref:System.Single>, use "G9". <br> Especificador de precisão: Ignorado.<br /><br /> Para saber mais: [O especificador de formato de viagem de ida e volta ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
-|"X" ou "x"|Hexadecimal|Resultado: Uma cadeia de caracteres hexadecimal.<br /><br /> Compatível com: Somente tipos integrais.<br /><br /> Especificador de precisão: Número de dígitos na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [O especificador de formato hexadecimal ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
-|Qualquer outro caractere único|Especificador desconhecido|Resultado: Gera uma <xref:System.FormatException> em tempo de execução.||
+|"C" ou "c"|Moeda|Resultado: um valor de moeda.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de moeda ("C")](#CFormatString).|123,456 ("C", en-US)-> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123,456 ("C3", en-US)-> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"D" ou "d"|Decimal|Resultado: dígitos inteiros com sinal negativo opcional.<br /><br /> Compatível com: somente tipos integrais.<br /><br /> Especificador de precisão: número mínimo de dígitos.<br /><br /> Especificador de precisão padrão: número mínimo de dígitos necessários.<br /><br /> Para saber mais: [especificador de formato decimal ("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
+|"E" ou "e"|Exponencial (científica)|Resultado: notação Exponencial.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: 6.<br /><br /> Para saber mais: [especificador de formato exponencial ("E")](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
+|"F" ou "f"|Ponto fixo|Resultado: dígitos integrais e decimais com sinal negativo opcional.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de ponto fixo ("F")](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
+|"G" ou "g"|Geral|Resultado: a mais compacta entre notação de ponto fixo ou científica.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de dígitos significativos.<br /><br /> Especificador de precisão padrão: depende do tipo numérico.<br /><br /> Para saber mais: [especificador de formato geral ("G")](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
+|"N" ou "n"|Número|Resultado: dígitos integrais e decimais, separadores de grupo e um separador decimal com sinal negativo opcional.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais desejadas.<br /><br /> Especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato numérico ("N")](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
+|"P" ou "p"|Porcentagem|Resultado: número multiplicado por 100 e exibido com um sinal de porcentagem.<br /><br /> Compatível com: todos os tipos numéricos.<br /><br /> Especificador de precisão: número de casas decimais desejadas.<br /><br /> especificador de precisão padrão: definido por <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Para saber mais: [especificador de formato de porcentagem ("P")](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
+|"R" ou "r"|Ida e volta|Resultado: uma cadeia de caracteres que pode ir e voltar para um número idêntico.<br /><br /> Compatível com: <xref:System.Single>, <xref:System.Double> e <xref:System.Numerics.BigInteger>.<br /><br /> Observação: recomendado apenas para o tipo <xref:System.Numerics.BigInteger>. Para os tipos <xref:System.Double>, use "G17"; para os tipos <xref:System.Single>, use "G9". <br> Especificador de precisão: ignorado.<br /><br /> Para saber mais: [especificador de formato de ida e volta ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
+|"X" ou "x"|Hexadecimal|Resultado: uma cadeia de caracteres hexadecimal.<br /><br /> Compatível com: somente tipos integrais.<br /><br /> Especificador de precisão: número de dígitos na cadeia de caracteres de resultado.<br /><br /> Para saber mais: [especificador de formato hexadecimal ("X")](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
+|Qualquer outro caractere único|Especificador desconhecido|Resultado: gera uma <xref:System.FormatException> em tempo de execução.||
 
 <a name="Using"></a>
 
@@ -117,7 +115,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Define a cadeia de caracteres que separa grupos de números integrais.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Define o número de dígitos inteiros que aparecem em um grupo.|
 
-O exemplo a seguir formata <xref:System.Double> um valor com o especificador de formato de moeda:
+O exemplo a seguir formata um valor <xref:System.Double> com o especificador de formato de moeda:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
 [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
@@ -165,7 +163,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa o dígito integral dos dígitos decimais no coeficiente.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Define a cadeia de caracteres que indica que um expoente é positivo.|
 
-O exemplo a seguir formata <xref:System.Double> um valor com o especificador de formato exponencial:
+O exemplo a seguir formata um valor <xref:System.Double> com o especificador de formato exponencial:
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
 [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
@@ -189,7 +187,7 @@ A cadeia de caracteres de resultado é afetada pelas informações de formataç�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Define a cadeia de caracteres que separa dígitos integrais de dígitos decimais.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Define o número padrão de dígitos decimais. Esse valor pode ser substituído usando-se o especificador de precisão.|
 
-O exemplo a seguir formata <xref:System.Double> um e <xref:System.Int32> um valor com o especificador de formato de ponto fixo:
+O exemplo a seguir formata um <xref:System.Double> e um valor <xref:System.Int32> com o especificador de formato de ponto fixo:
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
 [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
@@ -324,7 +322,7 @@ O exemplo a seguir formata um valor <xref:System.Numerics.BigInteger> com o espe
 > [!IMPORTANT]
 > Em alguns casos, os valores <xref:System.Double> formatados com a cadeia de caracteres de formato numérico padrão "R" não realizam a viagem de ida e volta se forem compilados usando as opções `/platform:x64` ou `/platform:anycpu` e executados em sistemas de 64 bits. Para saber mais, consulte o seguinte parágrafo.
 
-Para solucionar o problema de valores <xref:System.Double> formatados com a cadeia de caracteres no formato numérico padrão "R" que não conseguem realizar a viagem de ida e volta se forem compilados usando as opções `/platform:x64` ou `/platform:anycpu` e executados em sistemas de 64 bits, formate os valores <xref:System.Double> usando a cadeia de caracteres de formato numérico padrão "G17". O exemplo a seguir usa a cadeia de caracteres de formato " <xref:System.Double> R" com um valor que não faz a viagem de ida e volta com êxito e também usa a cadeia de caracteres de formato "G17" para fazer uma viagem de ida e volta com êxito ao valor original:
+Para solucionar o problema de valores <xref:System.Double> formatados com a cadeia de caracteres no formato numérico padrão "R" que não conseguem realizar a viagem de ida e volta se forem compilados usando as opções `/platform:x64` ou `/platform:anycpu` e executados em sistemas de 64 bits, formate os valores <xref:System.Double> usando a cadeia de caracteres de formato numérico padrão "G17". O exemplo a seguir usa a cadeia de caracteres de formato "R" com um valor <xref:System.Double> que não faz a viagem de ida e volta com êxito e também usa a cadeia de caracteres de formato "G17" para fazer uma viagem de ida e volta com êxito ao valor original:
 
 [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
@@ -351,7 +349,7 @@ O exemplo a seguir formata valores <xref:System.Int32> com o especificador de fo
 
 <a name="NotesStandardFormatting"></a>
 
-## <a name="notes"></a>Observações
+## <a name="notes"></a>Anotações
 
 ### <a name="control-panel-settings"></a>Configurações do Painel de Controle
 
@@ -388,7 +386,7 @@ O exemplo a seguir formata um inteiro e um valor numérico de ponto flutuante us
 - <xref:System.Globalization.NumberFormatInfo>
 - [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Como: Preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Como preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

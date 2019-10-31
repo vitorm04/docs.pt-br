@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugVariableHome::GetCode
+title: 'Método ICorDebugVariableHome:: GetCode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetCode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef002890-4a7b-4a5d-abbf-16c60083f794
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c0cae29cceb3f23c7d09cf096937c99641d5a87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4770eb3e93104dd3862eb2163faf1dc7fe9008ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125131"
 ---
-# <a name="icordebugvariablehomegetcode-method"></a>Método ICorDebugVariableHome::GetCode
-Obtém a instância de "ICorDebugCode" que contém este [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto.  
+# <a name="icordebugvariablehomegetcode-method"></a>Método ICorDebugVariableHome:: GetCode
+Obtém a instância "ICorDebugCode" que contém este objeto [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>Parâmetros  
  `ppCode`  
- [out] Um ponteiro para o endereço da instância "ICorDebugCode" que contém este [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto.  
+ fora Um ponteiro para o endereço da instância "ICorDebugCode" que contém este objeto [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

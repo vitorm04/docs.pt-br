@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3b75c51ebddd78e447fed57b22a96c2d5c35004e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 79edbd876fc9992f088b9adb159e005c735a72cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127319"
 ---
 # <a name="qualifierset_beginenumeration-function"></a>Função QualifierSet_BeginEnumeration
 
@@ -57,7 +55,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | O parâmetro `lFlags` não é válido. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `QualifierSet_BeginEnumeration` foi feita sem uma chamada intermediária para. [`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md) |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `QualifierSet_BeginEnumeration` foi feita sem uma chamada intermediária para [`QualifierSet_EndEnumeration`](qualifierset-endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente disponível para iniciar uma nova enumeração. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
 
@@ -67,19 +65,19 @@ Essa função encapsula uma chamada para o método [IWbemQualifierSet:: BeginEnu
 
 Para enumerar todos os qualificadores em um objeto, esse método deve ser chamado antes da primeira chamada para [QualifierSet_Next](qualifierset-next.md). A ordem na qual os qualificadores são enumerados é garantida para ser invariável para uma determinada enumeração.
 
-Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código.
+Os sinalizadores que podem ser passados como o argumento `lEnumFlags` são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código.
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |  | 0 | Retornar os nomes de todos os qualificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retornar somente os nomes de qualificadores específicos para a propriedade ou objeto atual. <br/> Para uma propriedade: Retornar somente os qualificadores específicos para a propriedade (incluindo substituições) e não os qualificadores propagados da definição de classe. <br/> Para uma instância: Retornar apenas nomes de qualificador específicos da instância. <br/> Para uma classe: Retornar somente qualificadores específicos à classe que está sendo derivada.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: Retornar somente os qualificadores propagados para essa propriedade da definição de classe, e não os da própria propriedade. <br/> Para uma instância: Retornar somente os qualificadores propagados da definição de classe. <br/> Para uma classe: Retornar somente os nomes de qualificador herdados das classes pai. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retornar somente os nomes de qualificadores específicos para a propriedade ou objeto atual. <br/> Para uma propriedade: retornar somente os qualificadores específicos à propriedade (incluindo substituições), e não os qualificadores propagados da definição de classe. <br/> Para uma instância: retornar apenas nomes de qualificador específicos da instância. <br/> Para uma classe: retornar somente qualificadores específicos à classe que está sendo derivada.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Retornar apenas os nomes dos qualificadores propagados de outro objeto. <br/> Para uma propriedade: retornar somente os qualificadores propagados para essa propriedade da definição de classe, e não os da própria propriedade. <br/> Para uma instância: retornar somente os qualificadores propagados da definição de classe. <br/> Para uma classe: retorna somente os nomes de qualificador herdados das classes pai. |
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

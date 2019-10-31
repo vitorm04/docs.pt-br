@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760053"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122721"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>Método ICorDebugInternalFrame::GetFrameType
 Obtém o tipo deste quadro interno.  
@@ -37,13 +35,13 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Parâmetros  
  `pType`  
- [out] Um ponteiro para um valor que indica o tipo de quadro interno representado por esta enumeração CorDebugInternalFrameType `ICorDebugInternalFrame` objeto.  
+ fora Um ponteiro para um valor da enumeração CorDebugInternalFrameType que indica o tipo de quadro interno representado por esse objeto de `ICorDebugInternalFrame`.  
   
 ## <a name="remarks"></a>Comentários  
- O tipo de quadro interno nunca serão STUBFRAME_NONE. Depuradores normalmente devem ignorar os tipos de quadro interno não reconhecido.  
+ O tipo de quadro interno nunca será STUBFRAME_NONE. Os depuradores devem ignorar normalmente os tipos de quadro internos não reconhecidos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

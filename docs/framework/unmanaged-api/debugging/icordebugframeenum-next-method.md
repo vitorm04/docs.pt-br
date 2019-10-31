@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be126e45d8428d8786e9aadf2195133d1957440
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff74a9849b74b8a8e6b8c03f1fc4e7c7eee1ec14
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754828"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124056"
 ---
 # <a name="icordebugframeenumnext-method"></a>Método ICorDebugFrameEnum::Next
 Obtém o número especificado de instâncias de ICorDebugFrame, começando na posição atual.  
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugFrame` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugFrame` a serem recuperadas.  
   
  `frames`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugFrame` objeto.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugFrame`.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `ICorDebugFrame` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Um ponteiro para o número de instâncias de `ICorDebugFrame` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

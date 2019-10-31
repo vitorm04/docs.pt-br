@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 728b9fd287a23fd1933032906ff6a47b35285b4b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6f9d8cd79ac4107817d19fc0632aeaee287d253a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764046"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097008"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>Método ICorDebugModuleBreakpoint::GetModule
-Obtém um ponteiro de interface para um "ICorDebugModule" que faz referência ao módulo no qual este ponto de interrupção está definido.  
+Obtém um ponteiro de interface para um "ICorDebugModule" que faz referência ao módulo no qual esse ponto de interrupção está definido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetModule (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppModule`  
- [out] Um ponteiro para o endereço de um `ICorDebugModule` interface que faz referência ao módulo no qual o ponto de interrupção está definido.  
+ fora Um ponteiro para o endereço de uma interface de `ICorDebugModule` que faz referência ao módulo no qual o ponto de interrupção está definido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

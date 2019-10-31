@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 348c7c8c-8578-46ae-97cf-480d6015c3c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c855d6f85c3cbfa6d81a1fbce3ef5b83abb3f583
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ef100680328e9ad6261bb9188d7509efa9ab479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108862"
 ---
 # <a name="createassemblycache-function"></a>Função CreateAssemblyCache
 Obtém um ponteiro para uma nova instância [IAssemblyCache](iassemblycache-interface.md) que representa o cache de assembly global.  
@@ -39,17 +37,17 @@ HRESULT CreateAssemblyCache (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppAsmCache`  
- fora O ponteiro `IAssemblyCache` retornado.  
+ fora O ponteiro de `IAssemblyCache` retornado.  
   
  `dwReserved`  
- no Reservado para extensibilidade futura. `dwReserved`deve ser 0 (zero).  
+ no Reservado para extensibilidade futura. `dwReserved` deve ser 0 (zero).  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

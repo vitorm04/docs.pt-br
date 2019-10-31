@@ -17,14 +17,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853838"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123610"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
 Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  

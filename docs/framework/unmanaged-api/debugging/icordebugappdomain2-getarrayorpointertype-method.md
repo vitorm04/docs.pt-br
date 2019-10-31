@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737810"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089111"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Método ICorDebugAppDomain2::GetArrayOrPointerType
-Obtém uma matriz do tipo especificado, ou um ponteiro ou referência ao tipo especificado.  
+Obtém uma matriz do tipo especificado ou um ponteiro ou uma referência para o tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ HRESULT GetArrayOrPointerType (
   
 ## <a name="parameters"></a>Parâmetros  
  `elementType`  
- [in] Um valor de enumeração CorElementType que especifica o tipo nativo subjacente (uma matriz, ponteiro ou referência) a ser criado.  
+ no Um valor da enumeração CorElementType que especifica o tipo nativo subjacente (uma matriz, um ponteiro ou uma referência) a ser criado.  
   
  `nRank`  
- [in] A classificação (ou seja, o número de dimensões) da matriz. Esse valor deve ser 0 se `elementType` Especifica um tipo de ponteiro ou referência.  
+ no A classificação (ou seja, o número de dimensões) da matriz. Esse valor deve ser 0 se `elementType` especifica um ponteiro ou tipo de referência.  
   
  `pTypeArg`  
- [in] Um ponteiro para um objeto ICorDebugType que representa o tipo de matriz, ponteiro ou referência a ser criado.  
+ no Um ponteiro para um objeto ICorDebugType que representa o tipo de matriz, ponteiro ou referência a ser criado.  
   
  `ppType`  
- [out] Um ponteiro para o endereço de um `ICorDebugType` tipo de objeto que representa a matriz construído, tipo de ponteiro ou referência.  
+ fora Um ponteiro para o endereço de um objeto `ICorDebugType` que representa a matriz construída, o tipo de ponteiro ou o tipo de referência.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de *elementType* deve ser um dos seguintes:  
+ O valor de *ElementType* deve ser um dos seguintes:  
   
 - ELEMENT_TYPE_PTR  
   
@@ -60,10 +58,10 @@ HRESULT GetArrayOrPointerType (
   
 - ELEMENT_TYPE_ARRAY ou ELEMENT_TYPE_SZARRAY  
   
- Se o valor de *elementType* é ELEMENT_TYPE_PTR ou ELEMENT_TYPE_BYREF, *nRank* deve ser zero.  
+ Se o valor de *ElementType* for ELEMENT_TYPE_PTR ou ELEMENT_TYPE_BYREF, *nRank* deverá ser zero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

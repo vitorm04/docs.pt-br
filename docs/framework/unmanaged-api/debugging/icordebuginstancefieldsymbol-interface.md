@@ -2,14 +2,12 @@
 title: Interface ICorDebugInstanceFieldSymbol
 ms.date: 03/30/2017
 ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e5f63df9354df6a4d142c2f6ae12f9a0d5600fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ed1d70f554ca0a4a49639fe53a2ddbb0497c0a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122727"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>Interface ICorDebugInstanceFieldSymbol
 Representa as informações de símbolo de depuração de um campo de instância.  
@@ -23,17 +21,17 @@ Representa as informações de símbolo de depuração de um campo de instância
 |[Método GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getsize-method.md)|Obtém o tamanho em bytes do campo de instância.|  
   
 ## <a name="remarks"></a>Comentários  
- A `ICorDebugInstanceFieldSymbol` interface é usada para recuperar as informações de símbolo de depuração para um campo de instância.  
+ A interface `ICorDebugInstanceFieldSymbol` é usada para recuperar as informações de símbolo de depuração para um campo de instância.  
   
 > [!NOTE]
 > Essa interface está disponível somente com .NET Native. Se você implementar essa interface para cenários ICorDebug fora do .NET Native, o Common Language Runtime ignorará essa interface.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

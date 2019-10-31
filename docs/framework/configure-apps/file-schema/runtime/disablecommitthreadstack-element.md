@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2fa32d64f3ce440981c5f26d731051a118ed9254
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8aefb8a20d6a95c5b8062d0c03dcb28a3557ca3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117470"
 ---
-# <a name="disablecommitthreadstack-element"></a>\<Elemento de > disableCommitThreadStack
+# <a name="disablecommitthreadstack-element"></a>\<elemento de > disableCommitThreadStack
 Especifica se a pilha de threads completa é confirmada quando um thread é iniciado.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +35,7 @@ Especifica se a pilha de threads completa é confirmada quando um thread é inic
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|enabled|Atributo obrigatório.<br /><br /> Especifica se a confirmação da pilha de threads completa na inicialização do thread (o comportamento padrão) está desabilitada.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se a confirmação da pilha de threads completa na inicialização do thread (o comportamento padrão) está desabilitada.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
@@ -60,7 +58,7 @@ Especifica se a pilha de threads completa é confirmada quando um thread é inic
  O comportamento padrão da Common Language Runtime é confirmar a pilha de threads completa quando um thread é iniciado. Se um grande número de threads precisar ser criado em um servidor com memória limitada e a maioria desses threads usarem muito pouco espaço de pilha, o servidor poderá executar melhor se o Common Language Runtime não confirmar a pilha de thread completa imediatamente quando um thread for St iniciado.  
   
 > [!NOTE]
-> Os hosts não gerenciados podem `STARTUP_DISABLE_COMMITTHREADSTACK` usar o sinalizador de inicialização na enumeração [STARTUP_FLAGS](../../../unmanaged-api/hosting/startup-flags-enumeration.md) para realizar o mesmo resultado.  
+> Os hosts não gerenciados podem usar o sinalizador de inicialização `STARTUP_DISABLE_COMMITTHREADSTACK` na enumeração [STARTUP_FLAGS](../../../unmanaged-api/hosting/startup-flags-enumeration.md) para realizar o mesmo resultado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como desabilitar o comportamento padrão do Common Language Runtime, que é confirmar a pilha de threads completa na inicialização do thread.  

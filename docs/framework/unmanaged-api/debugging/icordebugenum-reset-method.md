@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab03dcb8-ceed-4f7a-abf8-9d31604bf90c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e809cad8098ccb80685545c9e7f9deea2f73540
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdf7ce97d45dc54d711389af822f2ca7d1ea67a5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752245"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090631"
 ---
 # <a name="icordebugenumreset-method"></a>Método ICorDebugEnum::Reset
 Move o cursor para o início da enumeração.  
@@ -34,7 +32,7 @@ HRESULT Reset ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

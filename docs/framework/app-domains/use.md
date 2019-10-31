@@ -6,14 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11774620dba03cc980ec3e2e2d3bd1a855dc6295
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119732"
 ---
 # <a name="using-application-domains"></a>Usando domínios do aplicativo
 
@@ -23,28 +21,28 @@ Para a maioria dos aplicativos, você não precisará criar seu próprio domíni
   
 ## <a name="in-this-section"></a>Nesta seção  
 
-[Como: Criar um domínio do aplicativo](how-to-create-an-application-domain.md)  
+[Como criar um domínio do aplicativo](how-to-create-an-application-domain.md)  
 Descreve como criar um domínio do aplicativo com programação.  
   
-[Como: Descarregar um domínio do aplicativo](how-to-unload-an-application-domain.md)  
+[Como descarregar um domínio do aplicativo](how-to-unload-an-application-domain.md)  
 Descreve como descarregar um domínio do aplicativo com programação.  
   
-[Como: Configurar um domínio do aplicativo](how-to-configure-an-application-domain.md)  
+[Como configurar um domínio do aplicativo](how-to-configure-an-application-domain.md)  
 Fornece uma introdução à configuração de um domínio do aplicativo.  
   
 [Recuperação de informações de instalação de um domínio do aplicativo](retrieve-setup-information.md)  
 Descreve como recuperar informações de configuração de um domínio do aplicativo.  
   
-[Como: Carregar assemblies em um domínio do aplicativo](how-to-load-assemblies-into-an-application-domain.md)  
+[Como carregar assemblies em um domínio do aplicativo](how-to-load-assemblies-into-an-application-domain.md)  
 Descreve como carregar um assembly em um domínio do aplicativo.  
   
-[Como: Obter as informações de tipo e membro de um assembly](../reflection-and-codedom/get-type-member-information.md)  
+[Como obter as informações de tipo e membro de um assembly](../reflection-and-codedom/get-type-member-information.md)  
 Descreve como recuperar informações sobre um assembly.  
   
 [Cópias de sombra de assemblies](shadow-copy-assemblies.md)  
 Descreve como a cópia de sombra permite realizar atualizações nos assemblies enquanto eles estão em uso e como configurar cópias de sombra.  
   
-[Como: Receber notificações de exceção de primeira tentativa](how-to-receive-first-chance-exception-notifications.md)  
+[Como receber notificações de exceção de primeira tentativa](how-to-receive-first-chance-exception-notifications.md)  
 Explica como você pode receber uma notificação de que uma exceção foi gerada, antes do Common Language Runtime começar a procurar por manipuladores de exceção.  
   
 [Como resolver carregamentos de assembly](../../standard/assembly/resolve-loads.md)  

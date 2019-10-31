@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e467234a45ae702a5b77a5f0fa8b75d4ff03c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124140"
 ---
 # <a name="beginenumeration-function"></a>Função BeginEnumeration
 Redefine um enumerador de volta para o início da enumeração.  
@@ -56,7 +54,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | A combinação de sinalizadores no `lEnumFlags` é inválida ou um argumento inválido foi especificado. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para. [`EndEnumeration`](endenumeration.md) |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Uma segunda chamada para `BeginEnumeration` foi feita sem uma chamada intermediária para [`EndEnumeration`](endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória suficiente disponível para iniciar uma nova enumeração. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
   
@@ -64,7 +62,7 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Os sinalizadores que podem ser passados como o `lEnumFlags` argumento são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de qualquer outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
+Os sinalizadores que podem ser passados como o argumento `lEnumFlags` são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código.  Você pode combinar um sinalizador de cada grupo com qualquer sinalizador de qualquer outro grupo. No entanto, os sinalizadores do mesmo grupo são mutuamente exclusivos. 
 
 **Grupo 1**
 
@@ -86,7 +84,7 @@ Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Limite a enumeração às propriedades substituídas na definição de classe. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Limitar a enumeração às propriedades substituídas na definição de classe atual e às novas propriedades definidas na classe. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Uma máscara (em vez de um sinalizador) a ser aplicada `lEnumFlags` a um valor para verificar `WBEM_FLAG_CLASS_OVERRIDES_ONLY` se `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` ou está definido. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Uma máscara (em vez de um sinalizador) a ser aplicada a um valor `lEnumFlags` para verificar se `WBEM_FLAG_CLASS_OVERRIDES_ONLY` ou `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` está definido. |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limite a enumeração a propriedades que são definidas ou modificadas na própria classe. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração a propriedades que são herdadas de classes base. |
 
@@ -98,9 +96,9 @@ Constante  |Valor  |Descrição  |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limite a enumeração a propriedades que são herdadas de classes base. |
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

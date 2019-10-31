@@ -1,5 +1,5 @@
 ---
-title: 'Como: Carregar assemblies em um domínio do aplicativo'
+title: Como carregar assemblies em um domínio de aplicativo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,19 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86b66d0a88864188d67aab19de67aaa857a06eaa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119901"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Como: Carregar assemblies em um domínio do aplicativo
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Como carregar assemblies em um domínio de aplicativo
 Há várias maneiras de carregar um assembly em um domínio de aplicativo. A maneira recomendada é usar o método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` no Visual Basic) da classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Outras maneiras que os assemblies podem ser carregados incluem:  
   
 - O método <xref:System.Reflection.Assembly.LoadFrom%2A> da classe <xref:System.Reflection.Assembly> carrega um assembly dado seu local do arquivo. O carregamento de assemblies com esse método usa um contexto de carga diferente.  
   
-- Os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> carregam um assembly no contexto de somente reflexão. Os assemblies carregados neste contexto podem ser examinados, mas não executados, permitindo o exame dos assemblies que visam outras plataformas. Confira [Como carregar assemblies no contexto somente de reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> carregam um assembly no contexto de somente reflexão. Os assemblies carregados neste contexto podem ser examinados, mas não executados, permitindo o exame dos assemblies que visam outras plataformas. Consulte [Como carregar assemblies no contexto de somente reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 > O contexto de somente reflexão é uma novidade no .NET Framework versão 2.0.  
@@ -51,6 +49,6 @@ Há várias maneiras de carregar um assembly em um domínio de aplicativo. A man
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Reflexão](../reflection-and-codedom/reflection.md)
-- [Usar domínios do aplicativo](use.md)
-- [Como: Carregar assemblies no contexto somente de reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Uso de domínios do aplicativo](use.md)
+- [Como carregar assemblies no contexto somente reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domínios do aplicativo e assemblies](application-domains.md#application-domains-and-assemblies)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6db1990df2ed6b29d548c147ed40b5bc98254d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123859"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Método ICorDebugChain::GetStackRange
-Obtém o intervalo de endereços do segmento de pilha para essa cadeia.  
+Obtém o intervalo de endereços do segmento da pilha para esta cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parâmetros  
  `pStart`  
- [out] Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço inicial do segmento de pilha.  
+ fora Um ponteiro para um valor `CORDB_ADDRESS` que é o endereço inicial do segmento de pilha.  
   
  `pEnd`  
- [out] Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço final do segmento de pilha.  
+ fora Um ponteiro para um valor `CORDB_ADDRESS` que é o endereço final do segmento da pilha.  
   
 ## <a name="remarks"></a>Comentários  
- O intervalo numérico é significativo apenas para comparação dos locais de quadro de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
+ O intervalo numérico é significativo apenas para comparação de locais de quadros de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

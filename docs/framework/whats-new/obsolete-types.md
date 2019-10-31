@@ -6,14 +6,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 748045c6e9d84ec71faa69ccfb9861472eb306e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124124"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos no .NET Framework
 
@@ -81,14 +79,14 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.ExecutionEngineException?displayProperty=nameWithType>|Esse tipo indicava um erro fatal não especificado no tempo de execução. Como o tempo de execução não aciona mais essa exceção, esse tipo está obsoleto.|
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=nameWithType>|Use <xref:System.StringComparer?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Use <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|A classe <xref:System.Configuration.Assemblies.AssemblyHash> foi substituída.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5. Em vez disso, use a classe <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> no namespace System.Runtime.CompilerServices.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Uma API alternativa está disponível: Emita o atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> em seu lugar.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Uma API alternativa está disponível: emita o atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Use <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> em seu lugar.|
@@ -147,7 +145,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|O uso desse tipo gera um erro do compilador.<br /><br /> Não use esse tipo.|
 
@@ -157,7 +155,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> foi preterido.|
 |<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> foi preterido.|
@@ -170,7 +168,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> foi preterido.|
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> foi preterido.|
@@ -187,7 +185,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=nameWithType>|Essa classe foi substituída. Use <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=nameWithType> em seu lugar.|
 |<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=nameWithType>|O uso desse tipo não é recomendado porque a edição de DataBindings é iniciada por meio de <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=nameWithType> em vez da grade de propriedade.|
@@ -210,7 +208,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemdll"></a>Assembly: System.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Essa interface foi substituída. Adicione um <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> ao tipo de identificador <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> em vez disso.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Use <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> em seu lugar para trabalhar com o novo modelo de configurações.|
@@ -226,7 +224,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|A classe <xref:System.EnterpriseServices.RegistrationHelperTx> foi substituída.|
 
@@ -236,7 +234,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Net.INetworkProgress?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O uso desse tipo gera um erro do compilador.<br /><br /> Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.|
 |<xref:System.Net.IUnsafeWebRequestCreate?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O uso desse tipo gera um erro do compilador.<br /><br /> Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.|
@@ -254,7 +252,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O recurso de canal par está obsoleto e será removido no futuro.|
 |<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Esse tipo está obsoleto. Para habilitar HTTP <xref:System.Net.CookieContainer>, use a propriedade `AllowCookies` na associação HTTP ou no <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.|
@@ -271,7 +269,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|Esse tipo está obsoleto. O produto de autenticação Passport não é mais compatível e foi substituído pela [Conta da Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413)|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|A alternativa recomendada é <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>.|
@@ -293,7 +291,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Web.Mobile.CookielessData?displayProperty=nameWithType>|O assembly System.Web.Mobile.dll foi substituído e não deve ser mais usado. Para saber mais sobre como desenvolver aplicativos móveis ASP.NET, confira [ASP.NET for Mobiles](https://go.microsoft.com/fwlink/?LinkId=157231) (ASP.NET para mobilidade).|
 |<xref:System.Web.Mobile.DeviceFilterElement?displayProperty=nameWithType>|O assembly System.Web.Mobile.dll foi substituído e não deve ser mais usado. Para saber mais sobre como desenvolver aplicativos móveis ASP.NET, confira [ASP.NET for Mobiles](https://go.microsoft.com/fwlink/?LinkId=157231) (ASP.NET para mobilidade).|
@@ -494,7 +492,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |Todos os tipos no namespace <xref:System.Workflow.Activities?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|
 |<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|
@@ -508,7 +506,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |Todos os tipos no namespace <xref:System.Workflow.ComponentModel>, exceto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|
 |Todos os tipos no namespace <xref:System.Workflow.ComponentModel.Compiler>, exceto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos System.Workflow.\* são preteridos. Em vez de isso, use os novos tipos de <xref:System.Activities>\*.|
@@ -527,7 +525,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|
 |<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br />Os tipos Workflow Foundation 3.0 foram preteridos. Em vez disso, use os tipos do Workflow 4.0 de <xref:System.Activities>\*.|
@@ -543,7 +541,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|
 |<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> Os tipos WF 3 foram substituídos. Em vez de isso, use os novos tipos do WF 4 de <xref:System.Activities>\*.|
@@ -573,7 +571,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Ele não é usado pelo analisador XAML. Observe <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 
@@ -583,7 +581,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=nameWithType>|Substituído primeiramente no .NET Framework 4.5.<br /><br /> O uso desse tipo gera um erro do compilador.<br /><br /> Essa API dá suporte à infraestrutura do .NET Framework e não deve ser usada diretamente no código.|
 |<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=nameWithType>|Use <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> na compilação e na validação do esquema.|
@@ -597,7 +595,7 @@ As tabelas a seguir listam os tipos que foram declarados obsoletos em assemblies
 
 ### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> foi preterido. Essa interface não é mais usada.|
 
@@ -621,7 +619,7 @@ Os assemblies IEHost.dll e IEExec.exe foram removidos do .NET Framework. Todos o
 
 ### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Essa classe foi substituída. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> do assembly *Microsoft.Build* em seu lugar.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Essa classe foi substituída. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> do assembly *Microsoft.Build* em seu lugar.|
@@ -632,7 +630,7 @@ Os assemblies IEHost.dll e IEExec.exe foram removidos do .NET Framework. Todos o
 
 ### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=nameWithType>|Esse tipo foi preterido no Visual Studio 2005; não há nenhuma substituição para esse recurso. Consulte a documentação de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> para obter ajuda adicional.|
 |<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=nameWithType>|Esse tipo foi preterido no Visual Studio 2005; não há nenhuma substituição para esse recurso. Consulte a documentação de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> para obter ajuda adicional.|
@@ -661,7 +659,7 @@ Os assemblies IEHost.dll e IEExec.exe foram removidos do .NET Framework. Todos o
 
 Para obter informações sobre a migração do Visual Basic 6, consulte [Centro de Recursos do Visual Basic 6.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Este membro está obsoleto.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseOcxArray?displayProperty=nameWithType>|Este membro está obsoleto.|
@@ -737,7 +735,7 @@ Para obter informações sobre a migração do Visual Basic 6, consulte [Centro 
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly: Microsoft.VisualBasic.Compatibility.Data.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC?displayProperty=nameWithType>|Este membro está obsoleto.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ADODC.BOFActionEnum?displayProperty=nameWithType>|Este membro está obsoleto.|
@@ -795,7 +793,7 @@ Para obter informações sobre a migração do Visual Basic 6, consulte [Centro 
 
 ### <a name="assembly-microsoftvisualcdll"></a>Assembly: Microsoft.VisualC.dll
 
-|Tipo|Mensagem|
+|Digite|Mensagem|
 |----------|-------------|
 |<xref:Microsoft.VisualC.DebugInfoInPDBAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll é um assembly obsoleto e existe somente para compatibilidade com versões anteriores.|
 |<xref:Microsoft.VisualC.DecoratedNameAttribute?displayProperty=nameWithType>|Microsoft.VisualC.dll é um assembly obsoleto e existe somente para compatibilidade com versões anteriores.|

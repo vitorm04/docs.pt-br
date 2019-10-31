@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738333"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111004"
 ---
 # <a name="icordebugcreateprocess-method"></a>Método ICorDebug::CreateProcess
-Inicia um processo e thread primário, sob o controle do depurador.  
+Inicia um processo e seu thread principal sob o controle do depurador.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,52 +46,52 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpApplicationName`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado, o processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
+ no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado pelo processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
   
  `lpCommandLine`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executado, o processo iniciado. O nome do aplicativo (por exemplo, "SomeApp.exe") deve ser o primeiro argumento.  
+ no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executada pelo processo iniciado. O nome do aplicativo (por exemplo, "SomeApp. exe") deve ser o primeiro argumento.  
   
  `lpProcessAttributes`  
- [in] Ponteiro para um Win32 `SECURITY_ATTRIBUTES` estrutura que especifica o descritor de segurança para o processo. Se `lpProcessAttributes` é nulo, o processo obtém um descritor de segurança padrão.  
+ no Ponteiro para uma estrutura de `SECURITY_ATTRIBUTES` Win32 que especifica o descritor de segurança para o processo. Se `lpProcessAttributes` for NULL, o processo obterá um descritor de segurança padrão.  
   
  `lpThreadAttributes`  
- [in] Ponteiro para um Win32 `SECURITY_ATTRIBUTES` estrutura que especifica o descritor de segurança para o thread principal do processo. Se `lpThreadAttributes` é null, o thread obtém um descritor de segurança padrão.  
+ no Ponteiro para uma estrutura de `SECURITY_ATTRIBUTES` Win32 que especifica o descritor de segurança para o thread principal do processo. Se `lpThreadAttributes` for NULL, o thread obterá um descritor de segurança padrão.  
   
  `bInheritHandles`  
- [in] Definido como `true` para indicar que cada identificador herdável no processo de chamada é herdada pelo processo iniciado, ou `false` para indicar que os identificadores não são herdados. Os identificadores de herdados têm os mesmos direitos de acesso e o valor que as alças originais.  
+ no Defina como `true` para indicar que cada identificador herdável no processo de chamada é herdado pelo processo iniciado ou `false` para indicar que os identificadores não são herdados. Os identificadores herdados têm o mesmo valor e direitos de acesso que os identificadores originais.  
   
  `dwCreationFlags`  
- [in] Uma combinação bit a bit do [sinalizadores de criação do processo Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlam a classe de prioridade e o comportamento do processo iniciado.  
+ no Uma combinação de bits de bit que indica os [sinalizadores de criação de processos do Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlam a classe de prioridade e o comportamento do processo iniciado.  
   
  `lpEnvironment`  
- [in] Ponteiro para um bloco de ambiente para o novo processo.  
+ no Ponteiro para um bloco de ambiente para o novo processo.  
   
  `lpCurrentDirectory`  
- [in] Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for nulo, o novo processo terá a mesma unidade atual e o diretório como o processo de chamada.  
+ no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for nulo, o novo processo terá a mesma unidade e diretório atuais que o processo de chamada.  
   
  `lpStartupInfo`  
- [in] Ponteiro para um Win32 `STARTUPINFOW` estrutura que especifica a estação de janela, área de trabalho, os identificadores padrão e aparência da janela principal para o processo iniciado.  
+ no Ponteiro para uma estrutura de `STARTUPINFOW` Win32 que especifica a estação de janela, a área de trabalho, os identificadores padrão e a aparência da janela principal para o processo iniciado.  
   
  `lpProcessInformation`  
- [in] Ponteiro para um Win32 `PROCESS_INFORMATION` estrutura que especifica as informações de identificação sobre o processo a ser iniciado.  
+ no Ponteiro para uma estrutura de `PROCESS_INFORMATION` Win32 que especifica as informações de identificação sobre o processo a ser iniciado.  
   
  `debuggingFlags`  
- [in] Um valor de enumeração CorDebugCreateProcessFlags que especifica as opções de depuração.  
+ no Um valor da Enumeração CorDebugCreateProcessFlags que especifica as opções de depuração.  
   
  `ppProcess`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugProcess que representa o processo.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugProcess que representa o processo.  
   
 ## <a name="remarks"></a>Comentários  
- Os parâmetros desse método são iguais do Win32 `CreateProcess` método.  
+ Os parâmetros desse método são os mesmos do método de `CreateProcess` do Win32.  
   
- Para habilitar a depuração não gerenciada de modo misto, defina `dwCreationFlags` para DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se você quiser usar a depuração somente gerenciado, não defina esses sinalizadores.  
+ Para habilitar a depuração de modo misto não gerenciado, defina `dwCreationFlags` como DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se você quiser usar apenas a depuração gerenciada, não defina esses sinalizadores.  
   
- Se o depurador e o processo a ser depurado (o processo anexado) compartilham um único console, e se depuração interop for usado, é possível que o processo anexado manter bloqueios de console e parar em um evento de depuração. O depurador, em seguida, irá bloquear qualquer tentativa de usar o console. Para evitar esse problema, defina o sinalizador CREATE_NEW_CONSOLE `dwCreationFlags` parâmetro.  
+ Se o depurador e o processo a serem depurados (o processo anexado) compartilharem um único console e se a depuração de interoperabilidade for usada, é possível que o processo anexado Mantenha os bloqueios do console e pare em um evento de depuração. O depurador bloqueará qualquer tentativa de usar o console. Para evitar esse problema, defina o sinalizador CREATE_NEW_CONSOLE no parâmetro `dwCreationFlags`.  
   
- Não há suporte para depuração Interop em plataformas Win9x e não x86 como plataformas baseadas em IA-64 e com base em AMD64.  
+ Não há suporte para depuração de interoperabilidade em plataformas Win9x e não x86, como plataformas baseadas em IA-64 e AMD64.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

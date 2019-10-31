@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e1605eede55360e72d65da6744bc1dcce4f107f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130987"
 ---
 # <a name="icordebugilframegetip-method"></a>Método ICorDebugILFrame::GetIP
-Obtém o valor do ponteiro de instrução e um valor de combinação bit a bit que descreve como o valor do ponteiro de instrução foi obtido.  
+Obtém o valor do ponteiro de instrução e um valor de combinação de bits que descreve como o valor do ponteiro de instrução foi obtido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parâmetros  
  `pnOffset`  
- [out] O valor do ponteiro de instrução.  
+ fora O valor do ponteiro de instrução.  
   
  `pMappingResult`  
- [out] Um ponteiro para uma combinação bit a bit dos valores de enumeração CorDebugMappingResult que descrevem como o valor do ponteiro de instrução foi obtido.  
+ fora Um ponteiro para uma combinação de bits de bit que descreve os valores de enumeração CorDebugMappingResult que descrevem como o valor do ponteiro de instrução foi obtido.  
   
 ## <a name="remarks"></a>Comentários  
- O valor do ponteiro de instrução é o deslocamento do quadro de pilha no código da função Microsoft intermediate language (MSIL). Se o quadro de pilhas estiver ativo, esse endereço é a próxima instrução a executar. Se o quadro de pilha não estiver ativo, esse endereço é a próxima instrução a ser executado quando o quadro de pilha for reativado.  
+ O valor do ponteiro de instrução é o deslocamento do registro de ativação no código MSIL (Microsoft Intermediate Language) da função. Se o registro de ativação estiver ativo, esse endereço será a próxima instrução a ser executada. Se o registro de ativação não estiver ativo, esse endereço será a próxima instrução a ser executada quando o quadro de pilha for reativado.  
   
- Se este quadro é um quadro compilado do just-in-time (JIT), o valor do ponteiro de instrução será determinado pelo mapeamento com versões anteriores do ponteiro de instrução de nativa real, portanto, o valor pode ser apenas aproximado.  
+ Se esse quadro for um quadro compilado JIT (just-in-time), o valor do ponteiro de instrução será determinado pelo mapeamento retroativo do ponteiro de instrução nativa real, de modo que o valor pode ser apenas aproximado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

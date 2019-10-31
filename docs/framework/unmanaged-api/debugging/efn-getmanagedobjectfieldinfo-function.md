@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739007"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123013"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo função
-Obtém o deslocamento do início de um objeto para um campo e o valor do campo, usando o ponteiro de objeto fornecido e o nome do campo.  
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>Função \_EFN\_GetManagedObjectFieldInfo
+Obtém o deslocamento do início de um objeto para um campo e o valor do campo, usando o ponteiro do objeto fornecido e o nome do campo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `Client`  
- [in] Um ponteiro para o cliente de depuração.  
+ no Um ponteiro para o cliente de depuração.  
   
  `objAddr`  
- [in] Um ponteiro de objeto gerenciado.  
+ no Um ponteiro de objeto gerenciado.  
   
  szFieldName  
- [in] Um ponteiro de objeto gerenciado para o nome do campo.  
+ no Um ponteiro de objeto gerenciado para o nome do campo.  
   
  `pValue`  
- [out] O valor do campo. Este parâmetro pode ser nulo.  
+ fora O valor do campo. Este parâmetro pode ser nulo.  
   
  `pOffset`  
- [out] O deslocamento do `objAddr` ao campo. Este parâmetro pode ser nulo.  
+ fora O deslocamento de `objAddr` para o campo. Este parâmetro pode ser nulo.  
   
 ## <a name="remarks"></a>Comentários  
- Se o deslocamento for 0, nenhum deslocamento é gravado.  
+ Se o deslocamento for 0, nenhum deslocamento será gravado.  
   
- Não se houver nenhum código gerenciado no thread atualmente no contexto, a função retornará o HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0xa0 e um código de erro de 0x1000.  
+ Se não houver nenhum código gerenciado no thread atualmente no contexto, a função retornará HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0XA0 e um código de erro de 0x1000.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** SOS_Stacktrace.h  
+ **Cabeçalho:** SOS_Stacktrace. h  
   
- **Versão do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versão do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 

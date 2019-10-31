@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133718"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Enumeração CorDebugStateChange
 
@@ -42,11 +40,11 @@ typedef enum CorDebugStateChange
 
 ## <a name="remarks"></a>Comentários
 
- Um membro do `CorDebugStateChange` enumeração é fornecida como um argumento quando o depurador chama o `ProcessStateChanged` método com [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) ou [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ Um membro da enumeração `CorDebugStateChange` é fornecido como um argumento quando o depurador chama o método `ProcessStateChanged` com [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) ou [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
  **Cabeçalho:** CorDebug.idl, CorDebug.h
 

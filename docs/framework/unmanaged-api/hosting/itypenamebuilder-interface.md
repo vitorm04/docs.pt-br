@@ -14,26 +14,24 @@ helpviewer_keywords:
 ms.assetid: 1f88e62e-2762-44d1-83b1-095f8734c0bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb47fa8122a1c209d49d2928edea0e03b27a8480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 917dfe19d6d25f3fcc9dc8c2898c1a2f6e7b382f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125238"
 ---
 # <a name="itypenamebuilder-interface"></a>Interface ITypeNameBuilder
-Fornece métodos para a criação de um nome de tipo.  
+Fornece métodos para criar um nome de tipo.  
   
  Essa interface oferece suporte a infraestrutura do .NET Framework e não se destina a ser usada diretamente do seu código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

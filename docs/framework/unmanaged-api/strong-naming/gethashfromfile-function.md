@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e79c1d89d767832022d487681e0515e5e92a7f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ffa25b1ec6fda80099f333c1d0a4cf57b76379e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799221"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140683"
 ---
 # <a name="gethashfromfile-function"></a>Função GetHashFromFile
 Gera um hash sobre o conteúdo do arquivo especificado.  
@@ -51,20 +49,20 @@ HRESULT GetHashFromFile (
  fora Uma matriz de bytes que contém o hash gerado.  
   
  `cchHash`  
- no O tamanho máximo do buffer que `pbHash` aponta para.  
+ no O tamanho máximo do buffer ao qual `pbHash` aponta.  
   
  `pchHash`  
- fora O tamanho, em bytes, do retornado `pbHash`.  
+ fora O tamanho, em bytes, do `pbHash`retornado.  
   
 ## <a name="remarks"></a>Comentários  
  Essa função é a mesma que [GetHashFromFileW](gethashfromfilew-function.md), exceto que a especificação de nome de arquivo é ANSI em vez de Unicode.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** StrongName.h  
+ **Cabeçalho:** StrongName. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -2,14 +2,12 @@
 title: Reflexão e .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17b567fe0f476e689a9775c5c73ebf068424e840
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128180"
 ---
 # <a name="reflection-and-net-native"></a>Reflexão e .NET Nativo
 No .NET Framework, o desenvolvimento gerenciado oferece suporte à metaprogramação por meio da API de reflexão. A reflexão permite inspecionar objetos em um aplicativo, chamar métodos em objetos descobertos por meio de inspeção, gerar novos tipos no tempo de execução e oferece suporte a muitos outros cenários de código dinâmico. Ele também oferece suporte à serialização e desserialização, o que permite que os valores do campo do objeto sejam mantidos e restaurados posteriormente. Todos esses cenários exigem o compilador do .NET Framework JIT (just-in-time) para gerar código nativo com base em metadados disponíveis.  

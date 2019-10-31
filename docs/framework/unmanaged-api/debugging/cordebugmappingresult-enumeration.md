@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739756"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097931"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Enumeração CorDebugMappingResult
 Fornece os detalhes sobre como o valor do ponteiro de instrução (IP) foi obtido.  
@@ -46,15 +44,15 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_PROLOG`|O código nativo está no prólogo, portanto, o valor do IP é 0.|  
 |`MAPPING_EPILOG`|O código nativo está em um epílogo, portanto, o valor do IP é o endereço da última instrução do método.|  
 |`MAPPING_NO_INFO`|Nenhuma informação de mapeamento está disponível para o método, portanto, o valor do IP é 0.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Embora haja informações de mapeamento para o método, o endereço atual não pode ser mapeado para o código Microsoft intermediate language (MSIL). O valor do IP é 0.|  
-|`MAPPING_EXACT`|O método mapeia exatamente para o código MSIL ou o quadro foi interpretado, portanto, o valor do IP é preciso.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Embora haja informações de mapeamento para o método, o endereço atual não pode ser mapeado para o código MSIL (Microsoft Intermediate Language). O valor do IP é 0.|  
+|`MAPPING_EXACT`|O método é mapeado exatamente para o código MSIL ou o quadro foi interpretado, portanto, o valor do IP é preciso.|  
 |`MAPPING_APPROXIMATE`|O método foi mapeado com êxito, mas o valor do IP pode ser aproximado.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar o [icordebugilframe:: Getip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) método para obter o valor do ponteiro de instrução.  
+ Você pode usar o método [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) para obter o valor do ponteiro de instrução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

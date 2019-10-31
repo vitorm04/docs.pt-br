@@ -7,14 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2dda45cca182d75bc77916cdf862ada9faead9ec
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8a00784e6aa2d663c738339367b4076e79ed9c95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122493"
 ---
 # <a name="create-assemblies"></a>Criar assemblies
 
@@ -50,7 +48,7 @@ Há considerações especiais ao tornar Common Language Runtime assemblies dispo
 
 - [Programa com assemblies](program.md)
 - [Controle de versão do assembly](versioning.md)
-- [Como: Compilar um assembly de arquivo único](../../framework/app-domains/build-single-file-assembly.md)
-- [Como: Compilar um assembly de multiarquivos](../../framework/app-domains/build-multifile-assembly.md)
+- [Como criar um assembly de arquivo único](../../framework/app-domains/build-single-file-assembly.md)
+- [Como compilar um assembly de multiarquivos](../../framework/app-domains/build-multifile-assembly.md)
 - [Como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblies de multiarquivo](../../framework/app-domains/multifile-assemblies.md)

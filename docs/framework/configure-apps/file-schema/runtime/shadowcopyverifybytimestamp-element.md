@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79d44ff255b1fc12efc6e8488eeab231b9276b90
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 160f14c856735e1ceac8635506aea52454faea43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115735"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<Elemento shadowCopyVerifyByTimestamp>
 Especifica se a cópia de sombra usa o comportamento de inicialização padrão introduzido no .NET Framework 4 ou reverte para o comportamento de inicialização de versões anteriores do .NET Framework.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> shadowCopyVerifyByTimestamp**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<shadowCopyVerifyByTimestamp >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +32,7 @@ Especifica se a cópia de sombra usa o comportamento de inicialização padrão 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|enabled|Atributo obrigatório.<br /><br /> Especifica se os domínios de aplicativo que usam a cópia de sombra comparam carimbos de data/hora ao iniciar, para determinar se um assembly foi atualizado antes de copiar a sombra do assembly.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se os domínios de aplicativo que usam a cópia de sombra comparam carimbos de data/hora ao iniciar, para determinar se um assembly foi atualizado antes de copiar a sombra do assembly.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d287305934c7884d5474935e50de3d26e225975
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132e0868426670ba61d8ee12ba7007be1a8a52de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746155"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139402"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>Método ICorDebugNativeFrame::GetLocalRegisterValue
-Obtém o valor de um argumento ou uma variável local que é armazenado no registrador especificado para este quadro nativo.  
+Obtém o valor de um argumento ou uma variável local que é armazenada no registro especificado para esse quadro nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,22 +38,22 @@ HRESULT GetLocalRegisterValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `reg`  
- [in] Um valor de enumeração "CorDebugRegister" que especifica o registro que contém o valor.  
+ no Um valor da enumeração "CorDebugRegister" que especifica o registro que contém o valor.  
   
  `cbSigBlob`  
- [in] Um inteiro que especifica o tamanho da assinatura de metadados binária que é referenciado pelo `pvSigBlob` parâmetro.  
+ no Um inteiro que especifica o tamanho da assinatura de metadados binários que é referenciada pelo parâmetro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Um `PCCOR_SIGNATURE` valor que aponta para a assinatura binária metadados de tipo de valor.  
+ no Um valor `PCCOR_SIGNATURE` que aponta para a assinatura de metadados binários do tipo do valor.  
   
  `ppValue`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugValue" que representa o valor recuperado armazenado no registrador especificado.  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugValue" que representa o valor recuperado que é armazenado no registro especificado.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetLocalRegisterValue` método pode ser usado em um quadro nativo ou um just-in-time (JIT)-compilados do quadro.  
+ O método `GetLocalRegisterValue` pode ser usado em um quadro nativo ou em um quadro compilado JIT (just-in-time).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

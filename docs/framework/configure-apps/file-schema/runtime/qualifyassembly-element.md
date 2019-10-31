@@ -9,22 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 581b19cf74dcb5c2d5c4a549847629503fe0b6ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252365"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115778"
 ---
-# <a name="qualifyassembly-element"></a>\<Elemento de > qualifyAssembly
+# <a name="qualifyassembly-element"></a>\<elemento de > qualifyAssembly
 Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -56,12 +54,12 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> método usando nomes de assembly parciais faz com que o Common Language Runtime procure o assembly somente no diretório base do aplicativo. Use o  **\<elemento qualifyAssembly >** no arquivo de configuração do aplicativo para fornecer as informações completas do assembly (nome, versão, token de chave pública e cultura) e faça com que a Common Language Runtime procure o assembly no cache de assembly global.  
+ Chamar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> usando nomes de assembly parciais faz com que a Common Language Runtime procure o assembly somente no diretório base do aplicativo. Use o elemento **\<qualifyAssembly >** no arquivo de configuração do aplicativo para fornecer as informações completas do assembly (nome, versão, token de chave pública e cultura) e fazer com que a Common Language Runtime procure o assembly no global cache de assembly.  
   
- O atributo **FullName** deve incluir os quatro campos da identidade do assembly: nome, versão, token de chave pública e cultura. O atributo partialName deve fazer referência parcial a um assembly. Você deve especificar pelo menos o nome de texto do assembly (o caso mais comum), mas também pode incluir a versão, o token de chave pública ou a cultura (ou qualquer combinação dos quatro, mas não todos os quatro). O **partialName** deve corresponder ao nome especificado em sua chamada. Por exemplo, você não pode `"math"` especificar como o atributo **partialName** no arquivo de configuração e `Assembly.Load("math, Version=3.3.3.3")` chamar seu código.  
+ O atributo **FullName** deve incluir os quatro campos da identidade do assembly: nome, versão, token de chave pública e cultura. O atributo **partialName** deve fazer referência parcial a um assembly. Você deve especificar pelo menos o nome de texto do assembly (o caso mais comum), mas também pode incluir a versão, o token de chave pública ou a cultura (ou qualquer combinação dos quatro, mas não todos os quatro). O **partialName** deve corresponder ao nome especificado em sua chamada. Por exemplo, você não pode especificar `"math"` como o atributo **partialName** no arquivo de configuração e chamar `Assembly.Load("math, Version=3.3.3.3")` em seu código.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir transforma logicamente a `Assembly.Load("math")` chamada `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`em.  
+ O exemplo a seguir transforma logicamente a chamada `Assembly.Load("math")` em `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
   
 ```xml  
 <configuration>  

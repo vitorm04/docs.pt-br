@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131844"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>Método ICorDebugStackWalk::GetContext
-Retorna o contexto para o quadro atual na [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
+Retorna o contexto para o quadro atual no objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +36,34 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>Parâmetros  
  `contextFlags`  
- [in] Sinalizadores que indicam o conteúdo solicitado do buffer de contexto (definidos em Winnt. H).  
+ no Sinalizadores que indicam o conteúdo solicitado do buffer de contexto (definido em WinNT. h).  
   
  `contextBufSize`  
- [in] O tamanho alocado do buffer de contexto.  
+ no O tamanho alocado do buffer de contexto.  
   
  `contextSize`  
- [out] O tamanho real do contexto. Esse valor deve ser menor ou igual ao tamanho do buffer de contexto.  
+ fora O tamanho real do contexto. Esse valor deve ser menor ou igual ao tamanho do buffer de contexto.  
   
  `contextBuf`  
- [out] O buffer de contexto.  
+ fora O buffer de contexto.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O contexto para o quadro atual foi retornado com êxito.|  
-|E_FAIL|O contexto não pôde ser retornado.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|O buffer de contexto é muito pequeno.|  
-|CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, não há quadros adicionais podem ser acessados.|  
+|S_OK|O contexto do quadro atual foi retornado com êxito.|  
+|E_FAIL|Não foi possível retornar o contexto.|  
+|HRESULT_FROM_WIN32 (BUFFER ERROR_INSUFFICIENT)|O buffer de contexto é muito pequeno.|  
+|CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, nenhum quadro adicional pode ser acessado.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Porque o desenrolamento restaura apenas um subconjunto de registros, como registros não voláteis, o contexto pode não coincidir com o estado de registro no momento da chamada.  
+ Como o desenrolamento restaura apenas um subconjunto dos registros, como registros não-voláteis, o contexto pode não corresponder exatamente ao estado de registro no momento da chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

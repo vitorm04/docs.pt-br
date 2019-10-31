@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 610e792d-98ef-411f-90b0-5b9a3813f547
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15c421471704ffc085da2af6ac74350bd099fdb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134356"
 ---
 # <a name="iassemblynamefinalize-method"></a>Método IAssemblyName::Finalize
 Permite que esse objeto [IAssemblyName](iassemblyname-interface.md) libere recursos e execute outras operações de limpeza antes que seu destruidor seja chamado.  
@@ -34,7 +32,7 @@ HRESULT Finalize ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   

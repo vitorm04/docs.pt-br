@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 698fb8c8efcbe347c0e833b0dba01fffd3030de6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109151"
 ---
 # <a name="asm_name-enumeration"></a>Enumeração ASM_NAME
 Indica a versão, a compilação, a cultura, a assinatura e assim por diante, do assembly cujas propriedades serão recuperadas ou definidas pelos métodos [IAssemblyName](iassemblyname-interface.md) .  
@@ -65,11 +63,11 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugVariableHome::GetSlotIndex
+title: 'Método ICorDebugVariableHome:: GetSlotIndex'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121047"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>Método ICorDebugVariableHome::GetSlotIndex
+# <a name="icordebugvariablehomegetslotindex-method"></a>Método ICorDebugVariableHome:: GetSlotIndex
 Obtém o índice de slot gerenciado de uma variável local.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,21 +35,21 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>Parâmetros  
  `pSlotIndex`  
- [out] Um ponteiro para o slot de índice de uma variável local.  
+ fora Um ponteiro para o índice de slot de uma variável local.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O método retorna os valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`S_OK`|A chamada de método retornou um valor de índice de slot no `pSlotIndex`.|  
-|`E_FAIL`|O atual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instância representa um argumento de função.|  
+|`S_OK`|A chamada de método retornou um valor de índice de slot em `pSlotIndex`.|  
+|`E_FAIL`|A instância [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) atual representa um argumento de função.|  
   
 ## <a name="remarks"></a>Comentários  
- O índice de slot pode ser usado para recuperar os metadados para essa variável local.  
+ O slot-index pode ser usado para recuperar os metadados para essa variável local.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

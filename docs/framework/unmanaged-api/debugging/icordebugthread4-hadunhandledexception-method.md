@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f0eff35dbe0058398d2d1c851ef85effa9cd28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122416"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>Método ICorDebugThread4::HadUnhandledException
-Indica se o thread nunca teve uma exceção sem tratamento.  
+Indica se o thread já teve uma exceção sem tratamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppBlockingObjectEnum`  
- [out] Um ponteiro para o endereço de uma enumeração ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estruturas.  
+ fora Um ponteiro para o endereço de uma enumeração ordenada de estruturas [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -48,10 +46,10 @@ HRESULT GetBlockingObjects (
 |S_FALSE|O thread nunca teve uma exceção sem tratamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Este método indica se o thread nunca teve uma exceção sem tratamento. No momento, o retorno de chamada de exceção sem tratamento é acionado ou nativo de anexação JIT é iniciada, esse método é garantido para retornar S_OK. Não há nenhuma garantia de que o [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método retornará a exceção sem tratamento; no entanto, ele se o processo não ainda foi continuado depois de obter o retorno de chamada de exceção sem tratamento ou após nativo de anexação JIT. Além disso, é possível (embora improvável) ter mais de um thread com uma exceção sem tratamento ao tempo nativo de anexação JIT é disparado. Nesse caso, não há nenhuma maneira de determinar qual exceção disparou a anexação JIT.  
+ Esse método indica se o thread já teve uma exceção sem tratamento. No momento em que o retorno de chamada de exceção sem tratamento é acionado ou a anexação JIT nativa é iniciada, esse método é garantido para retornar S_OK. Não há nenhuma garantia de que o método [ICorDebugThread. GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) retornará a exceção sem tratamento; no entanto, ele será se o processo ainda não tiver sido continuado depois de obter o retorno de chamada de exceção sem tratamento ou após a anexação JIT nativa. Além disso, é possível (embora improvável) ter mais de um thread com uma exceção sem tratamento no momento em que a anexação JIT nativa é disparada. Nesse caso, não há como determinar qual exceção disparou a anexação JIT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

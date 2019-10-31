@@ -14,28 +14,26 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134428"
 ---
 # <a name="iassemblyenum-interface"></a>Interface IAssemblyEnum
-Representa um enumerador para uma matriz `IAssemblyName` de objetos.  
+Representa um enumerador para uma matriz de objetos `IAssemblyName`.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Clone](iassemblyenum-clone-method.md)|Cria uma cópia superficial desse `IAssemblyEnum` objeto.|  
-|[Método GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Obtém um ponteiro para o próximo `IAssemblyName` contido `IAssemblyEnum` neste objeto.|  
-|[Método Reset](iassemblyenum-reset-method.md)|Redefine esse `IAssemblyEnum` objeto para sua posição inicial.|  
+|[Método Clone](iassemblyenum-clone-method.md)|Cria uma cópia superficial deste `IAssemblyEnum` objeto.|  
+|[Método GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Obtém um ponteiro para a próxima `IAssemblyName` contida neste objeto `IAssemblyEnum`.|  
+|[Método Reset](iassemblyenum-reset-method.md)|Redefine este `IAssemblyEnum` objeto para sua posição inicial.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   

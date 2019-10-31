@@ -11,13 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5f0388d90119455833eb6dba6ac808cdc8517865
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101651"
 ---
 # <a name="---string-interpolation-c-reference"></a>interpolação de $-C# String (referência)
 
@@ -41,7 +40,7 @@ Os elementos entre colchetes são opcionais. A seguinte tabela descreve cada ele
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|`interpolationExpression`|A expressão que produz um resultado a ser formatado. A representação da `null` cadeia <xref:System.String.Empty?displayProperty=nameWithType>de caracteres é.|
+|`interpolationExpression`|A expressão que produz um resultado a ser formatado. A representação de cadeia de caracteres de `null` é <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|A expressão constante cujo valor define o número mínimo de caracteres na representação de cadeia de caracteres do resultado da expressão. Se for positiva, a representação de cadeia de caracteres será alinhada à direita; se for negativa, será alinhada à esquerda. Para obter mais informações, consulte [Componente de alinhamento](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Uma cadeia de caracteres de formato compatível com o tipo do resultado da expressão. Para obter mais informações, consulte [Componente da cadeia de caracteres de formato](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
@@ -59,16 +58,16 @@ O seguinte exemplo mostra como incluir uma chave em uma cadeia de caracteres de 
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Uma cadeia de `@` caracteres textual interpolada começa `$` com o caractere seguido pelo caractere. Para obter mais informações sobre cadeias de caracteres textuais, confira os tópicos [cadeia de caracteres](../keywords/string.md) e [identificador textual](verbatim.md).
+Uma cadeia de caracteres textual interpolada começa com o caractere de `$` seguido pelo caractere de `@`. Para obter mais informações sobre cadeias de caracteres textuais, confira os tópicos [cadeia de caracteres](../keywords/string.md) e [identificador textual](verbatim.md).
 
 > [!NOTE]
-> A partir C# do 8,0, você pode usar `$` os `@` tokens e em qualquer ordem `$@"..."` : `@$"..."` e são cadeias de caracteres idênticas interpoladas válidas. Em versões C# anteriores, o `$` token deve aparecer antes do `@` token.
+> A partir C# do 8,0, você pode usar os tokens de`$`e`@`em qualquer ordem: `$@"..."`e`@$"..."`são cadeias de caracteres textuais interpoladas válidas. Em versões C# anteriores, o token de `$` deve aparecer antes do token de `@`.
 
-## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversões implícitas e como especificar `IFormatProvider` a implementação
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Conversões implícitas e como especificar `IFormatProvider` implementação
 
 Há três conversões implícitas de uma cadeia de caracteres interpolada:
 
-1. Conversão de uma cadeia de caracteres interpolada uma instância <xref:System.String>, que é a resolução da cadeia de caracteres interpolada com os itens da expressão de interpolação que estão sendo substituídos pelas representações de seus resultados da cadeia de caracteres corretamente formatada. Essa conversão usa o <xref:System.Globalization.CultureInfo.CurrentCulture> para formatar os resultados da expressão.
+1. Conversão de uma cadeia de caracteres interpolada uma instância <xref:System.String>, que é a resolução da cadeia de caracteres interpolada com os itens da expressão de interpolação que estão sendo substituídos pelas representações de seus resultados da cadeia de caracteres corretamente formatada. Essa conversão usa o <xref:System.Globalization.CultureInfo.CurrentCulture> para formatar resultados de expressão.
 
 1. Conversão de uma cadeia de caracteres interpolada em uma instância de <xref:System.FormattableString>, que representa uma cadeia de caracteres de formato composto, juntamente com os resultados da expressão a ser formatada. Isso permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura com base em uma única instância <xref:System.FormattableString>. Para fazer isso, chame um dos seguintes métodos:
 

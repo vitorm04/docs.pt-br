@@ -10,14 +10,12 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET Framework], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79e8488a21295f52e0c53cf24f4cb7e15f72f34c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: ff9cefc73adfe1ece1bf7545c75ccb6cc618e89f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623676"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123971"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Sondando o status de uma operação assíncrona
 Os aplicativos que podem executar outras tarefas enquanto aguardam os resultados de uma operação assíncrona não devem bloquear a espera até que a operação seja concluída. Use uma das opções a seguir para continuar a execução das instruções ao aguardar a conclusão de uma operação assíncrona:  

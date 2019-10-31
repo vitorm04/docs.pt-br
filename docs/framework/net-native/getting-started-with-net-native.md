@@ -2,14 +2,12 @@
 title: Guia de Introdução ao .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de887f73a5cc3968dda7e0e4dd14493883485d2b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128405"
 ---
 # <a name="getting-started-with-net-native"></a>Guia de Introdução ao .NET Nativo
 
@@ -28,7 +26,7 @@ Se você estiver escrevendo um novo aplicativo do Windows para o Windows 10 ou m
 
 <a name="Step1"></a>
 
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Etapa 1: Desenvolver e testar compilações de depuração de seu aplicativo UWP
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Etapa 1: Desenvolver e testar builds de depuração do aplicativo UWP
 
 Se você estiver desenvolvendo um novo aplicativo ou migrando um existente, siga o mesmo processo de qualquer aplicativo do Windows.
 
@@ -45,7 +43,7 @@ Por padrão, as compilações de depuração são compiladas por JIT para habili
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Etapa 2: Manipular o uso adicional e a serialização
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Etapa 2: Lidar com o uso de reflexão e serialização adicionais
 
 Um arquivo de diretivas de tempo de execução, Default.rd.xml, é adicionado automaticamente ao projeto quando ele é criado. Se você desenvolvê-lo no C#, ele será encontrado na pasta **Propriedades** do projeto. Se você desenvolvê-lo no Visual Basic, ele será encontrado na pasta **Meu Projeto** do projeto.
 
@@ -60,7 +58,7 @@ Há duas categorias de serializadores e ambas podem necessitar de entradas adici
 
 - Serializadores não baseado em reflexão. Os serializadores encontrados na biblioteca de classes do .NET Framework, como as classes <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>, não dependem de reflexão. No entanto, eles necessitam que o código seja gerado com base no objeto a ser serializado ou desserializado.  Para obter mais informações, consulte a seção “Serializadores da Microsoft” em [Serialização e metadados](serialization-and-metadata.md).
 
-- Serializadores de terceiros. As bibliotecas de serialização de terceiros, a mais comum do que é o serializador JSON Newtonsoft, geralmente são baseadas em reflexão e exigem entradas \*no arquivo. Rd. xml para dar suporte à serialização e desserialização de objetos. Para obter mais informações, consulte a seção “Serializadores de Terceiros” em [Serialização e metadados](serialization-and-metadata.md).
+- Serializadores de terceiros. As bibliotecas de serialização de terceiros, a mais comum do que é o serializador JSON Newtonsoft, geralmente são baseadas em reflexão e exigem entradas no arquivo \*. Rd. xml para dar suporte à serialização e desserialização de objetos. Para obter mais informações, consulte a seção “Serializadores de Terceiros” em [Serialização e metadados](serialization-and-metadata.md).
 
 **Métodos que dependem de reflexão**
 
@@ -79,11 +77,11 @@ Para obter mais informações, consulte [APIs que dependem de reflexão](apis-th
 
 <a name="Step3"></a>
 
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Etapa 3: Implantar e testar as compilações de versão do seu aplicativo
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Etapa 3: Implantar e testar os builds de versão do aplicativo
 
-Depois de atualizar o arquivo de diretivas de tempo de execução, você poderá recompilar e implantar builds de versão do aplicativo. Os binários do .NET Native são colocados no subdiretório ILC.out do diretório especificado na caixa de texto **Caminho de saída do build** da caixa de diálogo **Propriedades** do projeto, guia **Compilar**. Binários que não estão nessa pasta não foram compilados com .NET Nativo. Teste o aplicativo por completo e todos os cenários, incluindo cenários de falha, em cada uma de suas plataformas de destino.
+Depois de atualizar o arquivo de diretivas de tempo de execução, você poderá recompilar e implantar builds de versão do aplicativo. .NET Native binários são colocados no subdiretório ILC. out do diretório especificado na caixa de texto **caminho de saída da compilação** da caixa de diálogo **Propriedades** do projeto, **compile** Tab. os binários que não estão nesta pasta não foram compilados com .NET Native. Teste o aplicativo por completo e todos os cenários, incluindo cenários de falha, em cada uma de suas plataformas de destino.
 
-Se seu aplicativo não funcionar corretamente (particularmente em casos em que ele lança exceções [MissingMetadataException](missingmetadataexception-class-net-native.md) ou [MissingInteropDataException](missinginteropdataexception-class-net-native.md) em tempo de execução), siga as instruções na próxima seção [, etapa 4: Resolva manualmente os metadados](#Step4)ausentes. Ativar exceções de primeira chance pode ajudá-lo a encontrar esses bugs.
+Se o aplicativo não funcionar corretamente (especialmente nos casos em que ele gera as exceções [MissingMetadataException](missingmetadataexception-class-net-native.md) ou [MissingInteropDataException](missinginteropdataexception-class-net-native.md) em tempo de execução), siga as instruções da próxima seção, [Etapa 4: Resolver manualmente os metadados ausentes](#Step4). Ativar exceções de primeira chance pode ajudá-lo a encontrar esses bugs.
 
 Quando você tiver testado e depurado as compilações de depuração do seu aplicativo e tiver certeza de que eliminou as exceções de [MissingMetadataException](missingmetadataexception-class-net-native.md) e [MissingInteropDataException](missinginteropdataexception-class-net-native.md) , deverá testar seu aplicativo como um aplicativo de .net Native otimizado. Para fazer isso, altere as configurações do projeto ativo de **Depuração** para **Versão**.
 
@@ -117,9 +115,9 @@ Ao lidar com uma exceção de metadados ausentes, considere esses problemas:
 
 Para ver alguns exemplos específicos de como lidar com exceções e outros problemas que ocorrem ao testar seu aplicativo, consulte:
 
-- [Exemplo: Tratamento de exceções ao associar dados](example-handling-exceptions-when-binding-data.md)
+- [Exemplo: tratando exceções ao associar dados](example-handling-exceptions-when-binding-data.md)
 
-- [Exemplo: Solucionando problemas de programação dinâmica](example-troubleshooting-dynamic-programming.md)
+- [Exemplo: solução de problemas de programação dinâmica](example-troubleshooting-dynamic-programming.md)
 
 - [Exceções em tempo de execução em aplicativos do .NET Native](runtime-exceptions-in-net-native-apps.md)
 

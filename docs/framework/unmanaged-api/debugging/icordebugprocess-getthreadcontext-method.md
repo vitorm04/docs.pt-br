@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c137a10d5da94d04509385fc97d71535d33fae93
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6def272ecc7bd2b6e946e2c9623f0b60587d317
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758742"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128806"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>Método ICorDebugProcess::GetThreadContext
-Obtém o contexto para o thread determinado nesse processo.  
+Obtém o contexto para o thread determinado neste processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +37,23 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parâmetros  
  `threadID`  
- [in] A ID do thread para o qual recuperar o contexto.  
+ no A ID do thread para o qual recuperar o contexto.  
   
  `contextSize`  
- [in] O tamanho do `context` matriz.  
+ no O tamanho da matriz de `context`.  
   
  `context`  
- [no, out] Uma matriz de bytes que descrevem o contexto do thread.  
+ [entrada, saída] Uma matriz de bytes que descreve o contexto do thread.  
   
- O contexto Especifica a arquitetura do processador no qual o thread está em execução.  
+ O contexto especifica a arquitetura do processador no qual o thread está sendo executado.  
   
 ## <a name="remarks"></a>Comentários  
- O depurador deve chamar esse método em vez de Win32 `GetThreadContext` método, porque o thread pode ficar em um estado "sequestrado", em que seu contexto foi alterado temporariamente. Esse método deve ser usado somente quando um thread está no código nativo. Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) para threads em código gerenciado.  
+ O depurador deve chamar esse método em vez do método Win32 `GetThreadContext`, pois o thread pode realmente estar em um estado "seqüestrado", no qual seu contexto foi alterado temporariamente. Esse método deve ser usado somente quando um thread estiver em código nativo. Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) para threads em código gerenciado.  
   
- Os dados retornados são uma estrutura de contexto para a plataforma atual. Assim como ocorre com o Win32 `GetThreadContext` método, o chamador deve inicializar o `context` parâmetro antes de chamar esse método.  
+ Os dados retornados são uma estrutura de contexto para a plataforma atual. Assim como ocorre com o método de `GetThreadContext` do Win32, o chamador deve inicializar o parâmetro `context` antes de chamar esse método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5da07f99-6c70-46ec-b997-5ab6fb7106cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5542cf5895bc60c5880f2f082a9c14d722e02478
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a2288eb84bd51795995032954e41525c2ce605a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744917"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137722"
 ---
 # <a name="icordebugreferencevaluegetvalue-method"></a>Método ICorDebugReferenceValue::GetValue
 Obtém o endereço de memória atual do objeto referenciado.  
@@ -37,10 +35,10 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `pValue`  
- [out] Um ponteiro para um `CORDB_ADDRESS` valor que especifica o endereço do objeto para o qual este objeto ICorDebugReferenceValue aponta.  
+ fora Um ponteiro para um valor `CORDB_ADDRESS` que especifica o endereço do objeto ao qual esse objeto ICorDebugReferenceValue aponta.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

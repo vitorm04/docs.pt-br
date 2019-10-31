@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65ac35e254368b53ac2751e84be7dfe052fa0b53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a55ae265230c4da3cc0a19b06a7597be8661beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103256"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>Método IManagedObject::GetSerializedBuffer
-Obtém a representação de cadeia de caracteres desse objeto gerenciado.  
+Obtém a representação da cadeia de caracteres deste objeto gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +35,17 @@ HRESULT GetSerializedBuffer (
   
 ## <a name="parameters"></a>Parâmetros  
  `pBSTR`  
- [out] Um ponteiro para uma cadeia de caracteres que é o objeto serializado.  
+ fora Um ponteiro para uma cadeia de caracteres que é o objeto serializado.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetSerializedBuffer` método serializa o objeto para que ele pode ser empacotado para o cliente.  
+ O método `GetSerializedBuffer` serializa o objeto para que ele possa ser empacotado para o cliente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

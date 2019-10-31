@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129698"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>Método ICorDebugProcess3::SetEnableCustomNotification
-Habilita e desabilita as notificações do depurador personalizados do tipo especificado.  
+Habilita e desabilita as notificações do depurador personalizado do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,18 +34,18 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 ## <a name="parameters"></a>Parâmetros  
  `pClass`  
- [in] O tipo que especifica as notificações do depurador personalizados.  
+ no O tipo que especifica as notificações de depurador personalizadas.  
   
  `fEnable`  
- [in] `true` para habilitar as notificações do depurador personalizados; `false` desabilitar as notificações. O valor padrão é `false`.  
+ [in] `true` para habilitar notificações de depurador personalizadas; `false` desabilitar as notificações. O valor padrão é `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Quando `fEnable` é definido como `true`, chamadas para o <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> gatilho de método um [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) retorno de chamada. As notificações estão desabilitadas por padrão. Portanto, o depurador deve especificar qualquer tipo de notificação, ele conhece e deseja tratar. Porque o [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) classe está no escopo por domínio de aplicativo, o depurador deve chamar `SetEnableCustomNotification` para cada domínio de aplicativo no processo de se desejam receber a notificação em todo o processo.  
+ Quando `fEnable` é definido como `true`, as chamadas para o método <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> disparam um retorno de chamada [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) . As notificações são desabilitadas por padrão; Portanto, o depurador deve especificar os tipos de notificação que ele conhece e deseja manipular. Como a classe [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) tem o escopo definido pelo domínio do aplicativo, o depurador deve chamar `SetEnableCustomNotification` para cada domínio de aplicativo no processo se desejar receber a notificação em todo o processo.  
   
- A notificação com suporte somente a partir do .NET Framework 4, é uma notificação de dependência entre threads.  
+ Começando com o .NET Framework 4, a única notificação com suporte é uma notificação de dependência entre threads.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

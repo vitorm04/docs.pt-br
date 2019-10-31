@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bca6bd79-e288-475a-aa46-6bf81541d966
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a23c2793dce5be459b3aa0f183179c584592c115
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a32fb0480e76f47495590a29c329f54722e2dee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779870"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127776"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>Método ICorConfiguration::SetGCHostControl
-Define a interface de retorno de chamada a ser usado pelo coletor de lixo para solicitar o host para alterar os limites de memória virtual.  
+Define a interface de retorno de chamada a ser usada pelo coletor de lixo para solicitar que o host altere os limites de memória virtual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,14 +35,14 @@ HRESULT SetGCHostControl (
   
 ## <a name="parameters"></a>Parâmetros  
  `pGCHostControl`  
- [in] Um ponteiro para um [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) objeto que permite que o coletor de lixo solicitar o host para alterar os limites de memória virtual.  
+ no Um ponteiro para um objeto [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) que permite que o coletor de lixo solicite o host para alterar os limites de memória virtual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

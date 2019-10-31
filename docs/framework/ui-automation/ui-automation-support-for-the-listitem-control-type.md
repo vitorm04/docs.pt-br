@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123076"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ListItem
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039431"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Dependem|Se o item puder ser manipulado para mostrar ou ocultar informações, esse padrão de controle deverá ser implementado.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Se o item puder ser editado, esse padrão de controle deverá ser implementado. As alterações no controle de item de lista causarão alterações nos valores de <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>e <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Dependem|Se houver suporte para a navegação espacial de item para item no contêiner de lista e o contêiner for organizado em linhas e colunas, o padrão de controle de item de grade deverá ser implementado.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Dependem|Se o item tiver um comando que possa ser executado nele, separado da seleção, esse padrão deverá ser implementado. Normalmente, essa é uma ação associada ao clique duplo no controle de item de lista. Os exemplos devem iniciar um documento a partir de [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]ou reproduzir um arquivo de música no Microsoft Windows Media Player.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Dependem|Se o item tiver um comando que possa ser executado nele, separado da seleção, esse padrão deverá ser implementado. Normalmente, essa é uma ação associada ao clique duplo no controle de item de lista. Os exemplos devem iniciar um documento no Microsoft Windows Explorer ou reproduzir um arquivo de música no Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  

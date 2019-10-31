@@ -1,21 +1,19 @@
 ---
-title: 'Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe'
+title: Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123917"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe
 
 Há duas maneiras de gerar um assembly de interoperabilidade primário:
 
@@ -47,7 +45,7 @@ Assemblies de interoperabilidade primários podem referenciar somente outros ass
 
 Um assembly de interoperabilidade primário dependente com um número de versão diferente daquele da biblioteca de tipos original não pode ser descoberto quando instalado no diretório atual. Você deverá registrar o assembly de interoperabilidade primário dependente no Registro do Windows ou usar a opção **/Reference** para certificar-se de que Tlbimp.exe localizará a DLL dependente.
 
-Você também pode encapsular várias versões de uma biblioteca de tipos. Para obter instruções, veja [Como: Encapsular várias versões de bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
+Você também pode encapsular várias versões de uma biblioteca de tipos. Para obter instruções, consulte [Como encapsular várias versões de bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
 
 ## <a name="example"></a>Exemplo
 
@@ -71,4 +69,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)
+- [Como registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)

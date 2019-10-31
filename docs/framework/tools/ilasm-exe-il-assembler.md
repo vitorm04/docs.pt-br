@@ -11,18 +11,16 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105102"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Assembler)
 
-O IL Assembler gera um arquivo PE (Portable Executable) com base em IL (Intermediate Language). (Para obter mais informações sobre IL, consulte [Processo de execução gerenciada](../../standard/managed-execution-process.md).) É possível executar o executável resultante, que contém IL e os metadados obrigatórios, para determinar se a IL é executada conforme esperado.
+O IL Assembler gera um arquivo PE (Portable Executable) com base em IL (Intermediate Language). (Para obter mais informações sobre IL, consulte [processo de execução gerenciada](../../standard/managed-execution-process.md).) Você pode executar o executável resultante, que contém IL e os metadados necessários, para determinar se o IL é executado conforme o esperado.
 
 Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
@@ -38,7 +36,7 @@ ilasm [options] filename [[options]filename...]
 
 | Argumento | Descrição |
 | -------- | ----------- |
-|`filename`|O nome do arquivo de origem .il. Esse arquivo consiste em diretivas de declaração de metadados e instruções de IL simbólicas. Vários argumentos do arquivo de origem podem ser fornecidos para produzir um único arquivo PE com *Ilasm.exe*. **Observação:** Verifique se a última linha do código no arquivo de origem .il tem espaço em branco à direita ou um caractere de final de linha.|
+|`filename`|O nome do arquivo de origem .il. Esse arquivo consiste em diretivas de declaração de metadados e instruções de IL simbólicas. Vários argumentos do arquivo de origem podem ser fornecidos para produzir um único arquivo PE com *Ilasm.exe*. **Observação:** verifique se a última linha de código no arquivo de origem .il tem um espaço em branco à direita ou um caractere de final de linha.|
 
 | Opção | Descrição |
 | ------ | ----------- |
@@ -47,7 +45,7 @@ ilasm [options] filename [[options]filename...]
 |**/appcontainer**|Produz um arquivo *.dll* ou *.exe* que é executado no contêiner do aplicativo do Windows, como saída.|
 |**/arm**|Especifica o ARM (Advanced RISC Machine) como o processador de destino.<br /><br /> Se nenhum número de bit da imagem for especificado, o padrão será **/32bitpreferred**.|
 |**/base:** `integer`|Define ImageBase como o valor especificado por `integer` no cabeçalho Opcional do NT. Se a diretiva IL .imagebase for especificada no arquivo, essa opção a substituirá.|
-|**/clock**|Mede e relata os seguintes tempos de compilação em milissegundos para o arquivo de origem .il especificado:<br /><br /> **Total de execução**: o tempo total gasto na realização de todas as operações específicas que seguem.<br /><br /> **Inicialização**: carregar e abrir o arquivo.<br /><br /> **Emitir MD**: emitir metadados.<br /><br /> **Resolução de referência para definição**: resolver referências para definições no arquivo.<br /><br /> **Geração do arquivo CEE**: gerar a imagem do arquivo na memória.<br /><br /> **Gravação do arquivo PE**: gravação da imagem em um arquivo PE.|
+|**/clock**|Mede e relata os seguintes tempos de compilação em milissegundos para o arquivo de origem .il especificado:<br /><br /> **Total Run**: o tempo total gasto na realização de todas as operações específicas que seguem.<br /><br /> **Startup**: carregando e abrindo o arquivo.<br /><br /> **Emitting MD**: emitindo metadados.<br /><br /> **Ref to Def Resolution**: resolvendo referências para definições no arquivo.<br /><br /> **CEE File Generation**: gerando a imagem do arquivo na memória.<br /><br /> **PE File Writing**: gravando a imagem em um arquivo PE.|
 |**/debug**[:**IMPL**&#124;**OPT**]|Inclui informações de depuração (variável local e nomes de argumento, além de números da linha). Cria um arquivo PDB.<br /><br /> **/debug** sem valor adicional desabilita a otimização JIT e usa pontos de sequência do arquivo PDB.<br /><br /> **IMPL** desabilita a otimização JIT e usa pontos de sequência implícitos.<br /><br /> **OPT** habilita a otimização JIT e usa pontos de sequência implícitos.|
 |**/dll**|Produz um arquivo *.dll* como saída.|
 |**/enc:** `file`|Cria deltas Editar e Continuar com base no arquivo de origem especificado.<br /><br /> Este argumento se destina apenas ao uso acadêmico e não é compatível com uso comercial.|
@@ -79,7 +77,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
 
 > [!NOTE]
-> Todas as opções para *Ilasm.exe* não diferenciam maiúsculas de minúsculas e são reconhecidas pelas três primeiras letras. Por exemplo, **/lis** equivale a **/listing** e **/res**:myresfile.res equivale a **/resource**:myresfile.res. As opções que especificam argumentos aceitam dois-pontos (:) ou um sinal de igualdade (=) como o separador entre a opção e o argumento. Por exemplo, **/output**:*file.ext* é equivalente a **/output**=*file.ext*.
+> Todas as opções para *Ilasm.exe* não diferenciam maiúsculas de minúsculas e são reconhecidas pelas três primeiras letras. Por exemplo, **/Lis** é equivalente a **/Listing** e **/res**: myresfile. res é equivalente a **/Resource**: myresfile. res. Opções que especificam argumentos aceitam dois-pontos (:) ou um sinal de igual (=) como o separador entre a opção e o argumento. Por exemplo, **/output**:*file.ext* é equivalente a **/output**=*file.ext*.
 
 ## <a name="remarks"></a>Comentários
 

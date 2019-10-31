@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e32ce10b708afa5741d83cbd05f14accb4b2014f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137908"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>Método ICorDebugFunction::GetILCode
-Obtém a instância de ICorDebugCode que representa o código do Microsoft intermediate language (MSIL) associado a este objeto ICorDebugFunction.  
+Obtém a instância ICorDebugCode que representa o código MSIL (Microsoft Intermediate Language) associado a este objeto ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppCode`  
- [out] Um ponteiro para o `ICorDebugCode` da instância ou nulo, se a função não foi compilada em MSIL.  
+ fora Um ponteiro para a instância de `ICorDebugCode`, ou NULL, se a função não foi compilada em MSIL.  
   
 ## <a name="remarks"></a>Comentários  
- Se editar e continuar foi permitido nesta função, o `GetILCode` método obterá o código MSIL correspondente à versão editada dessa função do código no common language runtime (CLR).  
+ Se editar e continuar tiver sido permitido nessa função, o método `GetILCode` obterá o código MSIL correspondente à versão editada da função do código no Common Language Runtime (CLR).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

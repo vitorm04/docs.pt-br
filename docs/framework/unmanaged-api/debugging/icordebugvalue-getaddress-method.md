@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137096"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Método ICorDebugValue::GetAddress
-Obtém o endereço do objeto "ICorDebugValue", que está no processo que está sendo depurado.  
+Obtém o endereço desse objeto "ICorDebugValue", que está no processo de ser depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [out] Ponteiro para um `CORDB_ADDRESS` objeto que especifica o endereço desse objeto de valor.  
+ fora Ponteiro para um objeto `CORDB_ADDRESS` que especifica o endereço desse objeto de valor.  
   
 ## <a name="remarks"></a>Comentários  
- Se o valor não estiver disponível, 0 (zero) será retornado. Isso pode ocorrer se o valor for pelo menos parcialmente em registros ou armazenados em um identificador do coletor de lixo (`GCHandle`).  
+ Se o valor não estiver disponível, será retornado 0 (zero). Isso pode acontecer se o valor for pelo menos parcialmente em registros ou armazenado em um identificador de coletor de lixo (`GCHandle`).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

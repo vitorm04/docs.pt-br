@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0ba8453-fa7e-4c14-93e5-335409cd4a47
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ebdf0dd2457cd10e31ff71c32b1c09d0e014431
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae0c23e3d48df6add8951a6d90029185a99bb323
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128836"
 ---
 # <a name="icordebugprocessgetid-method"></a>Método ICorDebugProcess::GetID
 Obtém a ID do sistema operacional (SO) do processo.  
@@ -35,10 +33,10 @@ HRESULT GetID([out] DWORD *pdwProcessId);
   
 ## <a name="parameters"></a>Parâmetros  
  `pdwProcessId`  
- [out] A ID exclusiva do processo.  
+ fora A ID exclusiva do processo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

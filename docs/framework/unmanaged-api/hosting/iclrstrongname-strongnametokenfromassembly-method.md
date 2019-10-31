@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc725afb-b66b-4015-aa44-1c0d1304197f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb399b9fee5ea3e094aa9e1842a493b10eb39def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e7e49fae24ff7e12c5a8d9cac5e814f7a7ae813
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759195"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092587"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>Método ICLRStrongName::StrongNameTokenFromAssembly
 Cria um token de nome forte do arquivo do assembly especificado.  
@@ -39,28 +37,28 @@ HRESULT StrongNameTokenFromAssembly (
   
 ## <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
- [in] O caminho para o arquivo executável portátil (PE) para o assembly.  
+ no O caminho para o arquivo executável portátil (PE) para o assembly.  
   
  `ppbStrongNameToken`  
- [out] O token de nome forte retornado.  
+ fora O token de nome forte retornado.  
   
  `pcbStrongNameToken`  
- [out] O tamanho, em bytes, do token de nome forte.  
+ fora O tamanho, em bytes, do token de nome forte.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
- Um token de nome forte é a forma abreviada de uma chave pública. O token é um hash de 64 bits que é criado a partir da chave pública usada para assinar o assembly. O token é uma parte do nome forte para o assembly e os metadados do assembly pode ser lido.  
+ Um token de nome forte é a forma abreviada de uma chave pública. O token é um hash de 64 bits que é criado a partir da chave pública usada para assinar o assembly. O token é uma parte do nome forte para o assembly e pode ser lido nos metadados do assembly.  
   
- Depois que o token é criado, você deve chamar o [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método para liberar a memória alocada.  
+ Depois que o token é criado, você deve chamar o método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) para liberar a memória alocada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

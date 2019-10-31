@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de37bb34aee9b6536ff892ac30855761bcc69445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 78838e9002cb3f5263395af9de255c54de47b6ae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963136"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134024"
 ---
 # <a name="icordebugterminate-method"></a>Método ICorDebug::Terminate
-Encerra o `ICorDebug` objeto.  
+Encerra o objeto `ICorDebug`.  
   
 > [!NOTE]
-> `Terminate`Não deve ser chamado até que um retorno de chamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) tenha sido recebido para todos os processos sendo depurados.  
+> `Terminate` não deve ser chamado até que um retorno de chamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) tenha sido recebido para todos os processos sendo depurados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,14 +35,14 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `Terminate`deve ser chamado quando o `ICorDebug` objeto não for mais necessário.  
+ `Terminate` deve ser chamado quando o objeto de `ICorDebug` não for mais necessário.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

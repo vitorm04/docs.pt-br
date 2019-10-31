@@ -7,14 +7,12 @@ helpviewer_keywords:
 - base types
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051189"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103542"
 ---
 # <a name="working-with-base-types-in-net"></a>Trabalhando com tipos base no .NET
 Esta seção descreve as operações de tipo base .NET, incluindo formatação, conversão e operações comuns.  

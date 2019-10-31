@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7962ce88-7e86-4a6f-8298-621b01ffc3c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17947526513bd1fbe3cb093e8ecaa7ed67983a7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f37cd6ef85985784303aeb976776b03fbc74dec3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759171"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092528"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>Método ICLRStrongName::StrongNameTokenFromPublicKey
 Obtém um token que representa uma chave pública. Um token de nome forte é a forma abreviada de uma chave pública.  
@@ -40,27 +38,27 @@ HRESULT StrongNameTokenFromPublicKey (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbPublicKeyBlob`  
- [in] Uma estrutura do tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contém a parte pública do par de chaves usado para gerar a assinatura de nome forte.  
+ no Uma estrutura do tipo [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) que contém a parte pública do par de chaves usado para gerar a assinatura de nome forte.  
   
  `cbPublicKeyBlob`  
- [in] O tamanho, em bytes, do `pbPublicKeyBlob`.  
+ no O tamanho, em bytes, de `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] O token de nome forte correspondente à chave passada `pbPublicKeyBlob`. O common language runtime aloca a memória no qual retornar o token. O chamador deve liberar essa memória usando o [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método.  
+ fora O token de nome forte correspondente à chave passada em `pbPublicKeyBlob`. O Common Language Runtime aloca a memória na qual retornar o token. O chamador deve liberar essa memória usando o método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbStrongNameToken`  
- [out] O tamanho, em bytes, do token de nome forte retornado.  
+ fora O tamanho, em bytes, do token de nome forte retornado.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
- Um token de nome forte é a forma abreviada de uma chave pública que é usada para economizar espaço ao armazenar informações de chave nos metadados. Especificamente, os tokens de nome forte são usados nas referências de assembly para fazer referência ao assembly dependente.  
+ Um token de nome forte é a forma abreviada de uma chave pública que é usada para economizar espaço ao armazenar informações de chave em metadados. Especificamente, tokens de nome forte são usados em referências de assembly para fazer referência ao assembly dependente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
  **Biblioteca:** Incluído como um recurso em mscoree. dll  
   

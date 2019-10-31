@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798328"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127294"
 ---
 # <a name="qualifierset_delete-function"></a>Função QualifierSet_Delete
 Exclui um qualificador especificado por nome.  
@@ -65,12 +63,12 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemQualifierSet::D xcluir](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-Devido a regras de propagação de qualificador, um qualificador específico pode ter sido herdado de outro objeto e meramente substituído na classe ou instância atual. Nesse caso, o `QualifierSet_Delete` método redefine o qualificador para seu valor herdado original. A função, nesse caso, retorna o código `WBEM_S_RESET_TO_DEFAULT`de status.
+Devido a regras de propagação de qualificador, um qualificador específico pode ter sido herdado de outro objeto e meramente substituído na classe ou instância atual. Nesse caso, o método `QualifierSet_Delete` redefine o qualificador para seu valor herdado original. Nesse caso, a função retorna o código de status `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: b297e3b0-20f9-478f-b707-5e2eecb2b5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f516bf1f19e4d4a77e2d6af834a1c3d4e34c327
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a732e59d539c330f91e8665e81dc4771b40e2d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123295"
 ---
 # <a name="ivalidator-interface"></a>Interface IValidator
-Fornece métodos para validar as imagens portáteis executáveis (PE) e relatando erros de validação.  
+Fornece métodos para validar imagens executáveis portáteis (PE) e relatar erros de validação.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|Validar|Valida o arquivo especificado de MSIL (linguagem intermediária) de PE ou o Microsoft.|  
+|Validar|Valida o PE especificado ou o arquivo da MSIL (Microsoft Intermediate Language).|  
 |FormatEventInfo|Obtém a mensagem de erro correspondente ao erro de validação especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** IValidator.idl, IValidator.h  
+ **Cabeçalho:** IValidator. idl, IValidator. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

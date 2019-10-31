@@ -7,14 +7,12 @@ helpviewer_keywords:
 - serviced components, global assembly cache
 - global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4edc675e0348f06114b8162022f1d9420e0cec52
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99627cb14088f037c58bfa1eec72bd4f88d06011
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053060"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119763"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Usando componentes atendidos com o cache de assemblies global
 Componentes atendidos (componentes COM+ com código gerenciado) devem ser colocados no Cache de Assembly Global. Em alguns cenários, o Common Language Runtime e os Serviços COM+ podem manipular componentes atendidos que não estão no Cache de Assembly Global; em outros cenários, eles não podem. Os seguintes cenários ilustram isso:  
@@ -28,4 +26,4 @@ Componentes atendidos (componentes COM+ com código gerenciado) devem ser coloca
 ## <a name="see-also"></a>Consulte também
 
 - [Como trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)

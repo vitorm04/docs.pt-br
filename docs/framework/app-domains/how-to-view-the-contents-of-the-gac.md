@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir o conteúdo do cache de assembly global'
+title: Como exibir o conteúdo do cache de assemblies global
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c319c5f7c9bb808b2ce7ee10178722287e456339
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119832"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Como: Exibir o conteúdo do cache de assembly global
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Como exibir o conteúdo do cache de assembly global
 
 Use a [Ferramenta de Cache de Assembly Global (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para exibir o conteúdo do GAC (cache de assembly global).
 
@@ -32,7 +30,7 @@ Para exibir uma lista de assemblies no cache de assembly global, abra o [Prompt 
 gacutil -l
 ```
 
-- ou -
+\- ou -
 
 ```shell
 gacutil /l
@@ -44,4 +42,4 @@ gacutil /l
 ## <a name="see-also"></a>Consulte também
 
 - [Como trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)

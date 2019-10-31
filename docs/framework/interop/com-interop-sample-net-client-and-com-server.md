@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 721e94c0f7a83de8a70942272e7c31374f7004a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123689"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Exemplo de interoperabilidade COM: cliente .NET e servidor COM
 Esta amostra apresenta como um [cliente .NET](#cpconcominteropsamplenetclientcomserveranchor1), criado para acessar um [servidor COM](#cpconcominteropsamplenetclientcomserveranchor2), cria uma instância de uma coclass COM e chama os membros da classe para executar cálculos de hipoteca.  

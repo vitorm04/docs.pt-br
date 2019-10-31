@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761173"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130582"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>Método ICorDebugManagedCallback2::CreateConnection
-Notifica o depurador que foi criada uma nova conexão.  
+Notifica o depurador de que uma nova conexão foi criada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +37,23 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>Parâmetros  
  `pProcess`  
- [in] Um ponteiro para um objeto de "ICorDebugProcess" que representa o processo no qual a conexão foi criada  
+ no Um ponteiro para um objeto "ICorDebugProcess" que representa o processo no qual a conexão foi criada  
   
  `dwConnectionId`  
- [in] A ID da nova conexão.  
+ no A ID da nova conexão.  
   
  `pConnName`  
- [in] Um ponteiro para o nome da nova conexão.  
+ no Um ponteiro para o nome da nova conexão.  
   
 ## <a name="remarks"></a>Comentários  
- Um `CreateConnection` retorno de chamada será acionado em qualquer um dos seguintes casos:  
+ Um retorno de chamada `CreateConnection` será acionado em um dos seguintes casos:  
   
-- Quando um depurador é anexado a um processo que contém as conexões. Nesse caso, o tempo de execução gerará e expedir uma `CreateConnection` evento e uma [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) evento para cada conexão no processo.  
+- Quando um depurador é anexado a um processo que contém conexões. Nesse caso, o tempo de execução irá gerar e distribuir um evento de `CreateConnection` e um evento [ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) para cada conexão no processo.  
   
-- Quando um host chama [iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) na [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Quando um host chama [ICLRDebugManager:: BeginConnect](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) na API de [hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

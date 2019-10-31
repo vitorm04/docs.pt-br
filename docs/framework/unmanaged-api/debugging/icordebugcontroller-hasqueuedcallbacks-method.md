@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125395"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>Método ICorDebugController::HasQueuedCallbacks
-Obtém um valor que indica se qualquer retorno de chamada gerenciado atualmente na fila para o thread especificado.  
+Obtém um valor que indica se qualquer retorno de chamada gerenciado está na fila no momento para o thread especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +36,20 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>Parâmetros  
  `pThread`  
- [in] Um ponteiro para um objeto de "ICorDebugThread" que representa o thread.  
+ no Um ponteiro para um objeto "ICorDebugThread" que representa o thread.  
   
  `pbQueued`  
- [out] Um ponteiro para um valor que é `true` se qualquer retorno de chamada gerenciado está atualmente na fila para o segmento especificado; caso contrário, `false`.  
+ fora Um ponteiro para um valor `true` se algum retorno de chamada gerenciado estiver na fila no momento para o thread especificado; caso contrário, `false`.  
   
- Se null for especificado para o `pThread` parâmetro, `HasQueuedCallbacks` retornará `true` se não houver gerenciados retornos de chamada na fila para qualquer thread.  
+ Se NULL for especificado para o parâmetro `pThread`, `HasQueuedCallbacks` retornará `true` se houver retornos de chamada atualmente gerenciados na fila para qualquer thread.  
   
 ## <a name="remarks"></a>Comentários  
- Retornos de chamada será expedido um por vez, cada vez [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) é chamado. O depurador pode verificar esse sinalizador se deseja relatar vários eventos de depuração que ocorrem ao mesmo tempo.  
+ Os retornos de chamada serão expedidos um de cada vez, sempre que [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) for chamado. O depurador pode verificar esse sinalizador se desejar relatar vários eventos de depuração que ocorrem simultaneamente.  
   
- Quando eventos de depuração são enfileirados, eles já ocorreram, portanto, o depurador deve drenar a fila inteira para ter certeza do estado do elemento a ser depurado. (Chamar `ICorDebugController::Continue` para diminuir a fila.) Por exemplo, se a fila contém dois eventos de depuração no thread *X*, e o depurador suspende o thread *X* após o primeiro evento de depuração e, em seguida, chama `ICorDebugController::Continue`, o segundo evento de depuração para thread *X* será expedido, embora o thread foi suspenso.  
+ Quando os eventos de depuração são enfileirados, eles já ocorreram, portanto, o depurador deve drenar toda a fila para ter certeza do estado do depurado. (Chame `ICorDebugController::Continue` para drenar a fila.) Por exemplo, se a fila contiver dois eventos de depuração no thread *x*, e o depurador suspender o thread *x* após o primeiro evento de depuração e, em seguida, chamar `ICorDebugController::Continue`, o segundo evento de depuração para o thread *x* será expedido, embora o o thread foi suspenso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a637cebb9e1aef20c600353eb14fe900ad7513c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 843399b7e3de522e2c4574963897430aa60a5a50
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114788"
 ---
 # <a name="icordebugframegetcaller-method"></a>Método ICorDebugFrame::GetCaller
-Obtém um ponteiro para o objeto ICorDebugFrame da atual cadeia que chamou esse quadro.  
+Obtém um ponteiro para o objeto ICorDebugFrame na cadeia atual que chamou esse quadro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppFrame`  
- [out] Um ponteiro para o endereço de um `ICorDebugFrame` objeto que representa o quadro de chamada. Esse valor será nulo se o quadro de chamada é o quadro mais externo da cadeia atual.  
+ fora Um ponteiro para o endereço de um objeto de `ICorDebugFrame` que representa o quadro de chamada. Esse valor será nulo se o quadro chamado for o quadro mais externo na cadeia atual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

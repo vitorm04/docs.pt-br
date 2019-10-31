@@ -1,5 +1,5 @@
 ---
-title: 'Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos'
+title: Como gerar assemblies de interoperabilidade a partir de bibliotecas de tipos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fcdff732afce90f725f4730f0054296e389ada1b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7cca21630bd1dbd6896f882d058f288f603e95df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123903"
 ---
-# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Como gerar assemblies de interoperabilidade a partir de bibliotecas de tipos
 O [Importador da Biblioteca de Tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) é uma ferramenta de linha de comando que converte as classes e interfaces contidas em uma biblioteca de tipos COM em metadados. Essa ferramenta cria automaticamente um assembly de interoperabilidade e o namespace para as informações de tipo. Depois que os metadados de uma classe estiverem disponíveis, os clientes gerenciados podem criar instâncias do tipo COM e chamar os métodos dele, como se fosse uma instância do .NET. O Tlbimp.exe converte uma biblioteca de tipos inteira em metadados de uma só vez e não é capaz de gerar informações de tipo para um subconjunto dos tipos definidos em uma biblioteca de tipos.  
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>Para gerar um assembly de interoperabilidade de uma biblioteca de tipos  

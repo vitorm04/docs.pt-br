@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127164"
 ---
 # <a name="icordebugassemblygetname-method"></a>Método ICorDebugAssembly::GetName
-Obtém o nome do assembly que isso `ICorDebugAssembly` instância representa.  
+Obtém o nome do assembly que essa instância de `ICorDebugAssembly` representa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +37,19 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [in] O tamanho do `szName` matriz.  
+ no O tamanho da matriz de `szName`.  
   
  `pcchName`  
- [out] Um ponteiro para um inteiro que especifica o comprimento real do nome.  
+ fora Um ponteiro para um inteiro que especifica o comprimento real do nome.  
   
  `szName`  
- [out] Uma matriz que armazena o nome.  
+ fora Uma matriz que armazena o nome.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetName` método retorna o nome de arquivo e caminho completo do assembly.  
+ O método `GetName` retorna o caminho completo e o nome do arquivo do assembly.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

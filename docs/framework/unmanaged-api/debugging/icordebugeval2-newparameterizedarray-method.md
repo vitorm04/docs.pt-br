@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753656"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084831"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Método ICorDebugEval2::NewParameterizedArray
-Aloca uma nova matriz do tipo de elemento especificado e dimensões.  
+Aloca uma nova matriz do tipo e das dimensões do elemento especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,22 +38,22 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>Parâmetros  
  `pElementType`  
- [in] Um ponteiro para um objeto ICorDebugType que representa o tipo de elemento armazenado na matriz.  
+ no Um ponteiro para um objeto ICorDebugType que representa o tipo de elemento armazenado na matriz.  
   
  `rank`  
- [in] O número de dimensões da matriz. No .NET Framework versão 2.0, esse valor deve ser 1.  
+ no O número de dimensões da matriz. No .NET Framework versão 2,0, esse valor deve ser 1.  
   
  `dims`  
- [in] O tamanho, em bytes, de cada dimensão da matriz.  
+ no O tamanho, em bytes, de cada dimensão da matriz.  
   
  `lowBounds`  
  [in] Opcional. O limite inferior de cada dimensão da matriz. Se esse valor for omitido, um limite inferior de zero será assumido para cada dimensão.  
   
 ## <a name="remarks"></a>Comentários  
- Os elementos da matriz podem ser instâncias de um tipo genérico. A matriz é sempre criada no domínio do aplicativo no qual o thread está em execução. No .NET Framework 2.0, o valor de `rank` deve ser 1.  
+ Os elementos da matriz podem ser instâncias de um tipo genérico. A matriz é sempre criada no domínio do aplicativo no qual o thread está em execução no momento. No .NET Framework 2,0, o valor de `rank` deve ser 1.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

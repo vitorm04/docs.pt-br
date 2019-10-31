@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117590"
 ---
-# <a name="dependentassembly-element"></a>\<Elemento de > dependentAssembly
-Encapsula local do assembly e política de associação para cada assembly. Use um `dependentAssembly` elemento para cada assembly.  
+# <a name="dependentassembly-element"></a>Elemento \<dependentAssembly >
+Encapsula local do assembly e política de associação para cada assembly. Use um elemento `dependentAssembly` para cada assembly.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +41,7 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Contém informações de identificação sobre o assembly. Esse elemento deve ser incluído em cada `dependentAssembly` elemento.|  
+|`assemblyIdentity`|Contém informações de identificação sobre o assembly. Esse elemento deve ser incluído em cada elemento `dependentAssembly`.|  
 |`codeBase`|Especifica onde o tempo de execução pode encontrar um assembly compartilhado se ele não estiver instalado no computador.|  
 |`bindingRedirect`|Redireciona uma versão do assembly para outra.|  
 |`publisherPolicy`|Especifica se o tempo de execução aplica a política de Publicador para este assembly.|  

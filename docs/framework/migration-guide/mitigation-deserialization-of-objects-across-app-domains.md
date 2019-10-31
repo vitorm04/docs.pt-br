@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Desserialização de objetos em domínios do aplicativo'
+title: 'Mitigação: desserialização de objetos em domínios de aplicativos'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de2456a1365a1fb48b3e9f126e090b8da77728cc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 43a1a045560b54cc831e69f9e1d4dba76a8569e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894120"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126251"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigação: Desserialização de objetos em domínios do aplicativo
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigação: desserialização de objetos em domínios de aplicativos
 Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes, a tentativa de desserializar objetos no contexto da chamada lógica nos domínios de aplicativo aciona uma exceção.  
   
 ## <a name="diagnosing-the-issue"></a>Diagnosticar o problema  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ecfb551b55551e5f6cc7e7e9ffb55e5a96259ee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776515"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141509"
 ---
-# <a name="waitoption-enumeration"></a>Enumeração WAIT_OPTION
-Contém valores que indicam que a ação um host deve executar se uma operação solicitada pelos blocos de runtime (CLR) de linguagem comum.  
+# <a name="wait_option-enumeration"></a>Enumeração WAIT_OPTION
+Contém valores que indicam a ação que um host deve executar se uma operação solicitada pelos blocos de Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|Notifica o host que a tarefa deve ser ativada se o CLR chama o [ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) método.|  
-|`WAIT_MSGPUMP`|Notifica o host que ele deve bomba de mensagens no thread atual do sistema operacional se o thread fica bloqueado. O tempo de execução especifica esse valor somente em um <xref:System.Threading.ApartmentState.STA> thread.|  
-|`WAIT_NOTINDEADLOCK`|Notifica o host que a solicitação de sincronização especificado não pode ser dividida por um host. Ou seja, o host não é possível retornar `HOST_E_DEADLOCK`.|  
+|`WAIT_ALERTABLE`|Notifica o host de que a tarefa deve ser despertada se o CLR chama o método [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) .|  
+|`WAIT_MSGPUMP`|Notifica o host de que ele deve bombear mensagens no thread do sistema operacional atual se o thread for bloqueado. O tempo de execução especifica esse valor somente em um thread de <xref:System.Threading.ApartmentState.STA>.|  
+|`WAIT_NOTINDEADLOCK`|Notifica o host que a solicitação de sincronização especificada não pode ser quebrada por um host. Ou seja, o host não pode retornar `HOST_E_DEADLOCK`.|  
   
 ## <a name="remarks"></a>Comentários  
- O [ihosttaskmanager:: sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) ambos os métodos usam um parâmetro desse tipo.  
+ Os métodos [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) e [IHostTaskManager:: SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) usam um parâmetro desse tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Controlar a ordem em uma consulta PLINQ'
+title: Como controlar a ordem em uma consulta PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: d38c039fa99433d9476d62c1e96dff7e306fd766
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988189"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123115"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>Como: Controlar a ordem em uma consulta PLINQ
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>Como controlar a ordem em uma consulta PLINQ
 Estes exemplos mostram como controlar a ordem em uma consulta PLINQ usando o método de extensão <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
 > [!WARNING]

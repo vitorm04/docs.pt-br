@@ -2,16 +2,14 @@
 title: <Namespace> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049423"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128261"
 ---
-# <a name="namespace-element-net-native"></a>\<Elemento de > de namespace (.NET Native)
+# <a name="namespace-element-net-native"></a>Elemento > do namespace de \<(.NET Native)
 Aplica a política de reflexão de tempo de execução a todos os tipos em um namespace especificado.  
   
 ## <a name="syntax"></a>Sintaxe  

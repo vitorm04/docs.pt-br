@@ -9,14 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913235"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127550"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 
@@ -50,7 +48,7 @@ O gerenciamento de todos os threads, inclusive de threads criados pelo Common La
   
 ## <a name="managed-threads-and-com-apartments"></a>Threads gerenciados e apartments COM
 
-Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](/windows/desktop/com/single-threaded-apartments) ou um [multithread apartament](/windows/desktop/com/multithreaded-apartments). (Para obter mais informações sobre a arquitetura de threading COM, confira [Processos, Threads e Apartments](/windows/desktop/com/processes--threads--and-apartments).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartment de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](/windows/desktop/com/single-threaded-apartments) ou um [multithread apartament](/windows/desktop/com/multithreaded-apartments). (Para obter mais informações sobre a arquitetura de Threading COM, consulte [Processes, threads e Apartments](/windows/desktop/com/processes--threads--and-apartments).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartamento de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Você só pode definir uma propriedade quando o thread estiver no estado <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType>; ela só pode ser definida uma vez por thread.  
   

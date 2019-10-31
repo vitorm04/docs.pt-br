@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b18742b0-d8c4-401c-ae89-e6eccdaa81d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bc996973a98f3b8596b449e1524d5c93b4456e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fe93a3bab267ccca941974b734c86329ad0f4d03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121343"
 ---
 # <a name="ihosttaskstart-method"></a>Método IHostTask::Start
-Solicitações que o host de move a tarefa representada por atual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instância de um suspenso para um estado ativo, no qual o código pode ser executado.  
+Solicita que o host mova a tarefa representada pela instância [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) atual de uma suspensa para um estado ativo, na qual o código pode ser executado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,22 +31,22 @@ Solicitações que o host de move a tarefa representada por atual [IHostTask](..
 HRESULT Start ();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|Iniciar retornado com êxito.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o common language runtime (CLR) não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|Início retornado com êxito.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o Common Language Runtime (CLR) não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- `Start` sempre retorna um valor HRESULT de S_OK, exceto em casos em que ocorreu uma falha catastrófica.  
+ `Start` sempre retorna um valor HRESULT de S_OK, exceto nos casos em que ocorreu uma falha catastrófica.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

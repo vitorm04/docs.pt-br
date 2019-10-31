@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe94203d315c32b62a191adf294a9c1310fe28e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b988b110100cd159b8e262573df409847d635c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134120"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>Método ICorDebug::DebugActiveProcess
 Anexa o depurador a um processo existente.  
@@ -39,19 +37,19 @@ HRESULT DebugActiveProcess (
   
 ## <a name="parameters"></a>Parâmetros  
  `id`  
- [in] A ID do processo ao qual o depurador deve ser anexado.  
+ no A ID do processo ao qual o depurador deve ser anexado.  
   
  `win32Attach`  
- [in] Valor booliano que é definido como `true` se o depurador deve se comportar como o depurador do Win32 para o processo e expedir os retornos de chamada não gerenciados; caso contrário, `false`.  
+ no Valor booliano definido como `true` se o depurador deve se comportar como o depurador Win32 para o processo e expedir os retornos de chamada não gerenciados; caso contrário, `false`.  
   
  `ppProcess`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugProcess" que representa o processo ao qual o depurador foi anexado.  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugProcess" que representa o processo ao qual o depurador foi anexado.  
   
 ## <a name="remarks"></a>Comentários  
- Não há suporte para depuração Interop em plataformas Win9x e não x86, como plataformas baseadas em IA-64 e com base em AMD64.  
+ Não há suporte para depuração de interoperabilidade em plataformas Win9x e não x86, como plataformas baseadas em IA-64 e AMD64.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

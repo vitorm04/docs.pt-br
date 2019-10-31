@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a984e8645bec0f58d8a31965b762e0a3a190ba59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63275aaa7ed1f63c4f100845d2cbe9e93fcd0bcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131249"
 ---
-# <a name="corgcthreadstatstypes-enumeration"></a>Enumeração COR_GC_THREAD_STATS_TYPES
+# <a name="cor_gc_thread_stats_types-enumeration"></a>Enumeração COR_GC_THREAD_STATS_TYPES
 Indica as estatísticas de coleta de lixo para um thread.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -38,12 +36,12 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|O thread tiver de bytes que foram promovidos na coleta de lixo a mais recente.|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|O thread tem bytes que foram promovidos na coleta de lixo mais recente.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost.idl, GCHost.h  
+ **Cabeçalho:** GCHost. idl, GCHost. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

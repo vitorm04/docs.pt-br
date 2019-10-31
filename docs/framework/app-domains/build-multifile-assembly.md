@@ -1,5 +1,5 @@
 ---
-title: 'Como: Compilar um assembly de multiarquivos'
+title: Como compilar um assembly de multiarquivos
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,16 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b95d686529da83a5a52edb80219874530212dcc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991253"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119933"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Como: Compilar um assembly de multiarquivos
+# <a name="how-to-build-a-multifile-assembly"></a>Como compilar um assembly de multiarquivos
 
 Este artigo explica como criar um assembly de vários arquivos e fornece código que ilustra cada etapa no procedimento.
 
@@ -103,7 +101,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
 3. Compile todos os outros módulos, usando as opções do compilador necessárias para indicar os outros módulos que são referenciados no código. Esta etapa usa a opção do compilador **/addmodule**.
 
-   No exemplo a seguir, um módulo de código chamado *cliente* tem um método `Main` de ponto de entrada que faz referência a um método no módulo *Stringer. dll* criado na etapa 1.
+   No exemplo a seguir, um módulo de código chamado *cliente* tem um ponto de entrada `Main` método que faz referência a um método no módulo *Stringer. dll* criado na etapa 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -218,7 +216,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
     Neste comando, os argumentos *nome do módulo* especificam o nome de cada módulo a ser incluído no assembly. A opção **/main:** especifica o nome do método que é o ponto de entrada do assembly. A opção **/out:** especifica o nome do arquivo de saída, que contém metadados do assembly. A opção **/target:** especifica que o assembly é um arquivo executável do aplicativo de console ( *. exe*), um arquivo executável do Windows ( *. Win*) ou um arquivo de biblioteca ( *. lib*).
 
-    No exemplo a seguir, *al. exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly. exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly. exe*, que contém apenas metadados do assembly. O ponto de entrada do assembly é o `Main` método na classe `MainClientApp`, que está localizado em *Client. dll*.
+    No exemplo a seguir, *al. exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly. exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly. exe*, que contém apenas metadados do assembly. O ponto de entrada do assembly é o método `Main` na classe `MainClientApp`, que está localizada em *Client. dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -229,6 +227,6 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 ## <a name="see-also"></a>Consulte também
 
 - [Criar assemblies](../../standard/assembly/create.md)
-- [Como: Exibir conteúdo do assembly](../../standard/assembly/view-contents.md)
+- [Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)
 - [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblies de multiarquivo](multifile-assemblies.md)

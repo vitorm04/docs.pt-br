@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b411a51a5640a924d3eeae5d52102a842966d3fa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134992"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Método ICLRStrongName::StrongNameSignatureGenerationEx
 Gera uma assinatura de nome forte para o assembly especificado, de acordo com os sinalizadores especificados.  
@@ -48,20 +46,20 @@ HRESULT StrongNameSignatureGenerationEx (
  `wszKeyContainer`  
  no O nome do contêiner de chave que contém o par de chaves pública/privada.  
   
- Se `pbKeyBlob` for NULL, `wszKeyContainer` deve especificar um contêiner válido no CSP (provedor de serviços de criptografia). Nesse caso, o par de chaves armazenado no contêiner é usado para assinar o arquivo.  
+ Se `pbKeyBlob` for NULL, `wszKeyContainer` deverá especificar um contêiner válido no CSP (provedor de serviços de criptografia). Nesse caso, o par de chaves armazenado no contêiner é usado para assinar o arquivo.  
   
  Se `pbKeyBlob` não for NULL, o par de chaves será considerado contido no BLOB (objeto binário grande) de chave.  
   
  `pbKeyBlob`  
- no Um ponteiro para o par de chaves pública/privada. Esse par está no formato criado pela função do Win32 `CryptExportKey` . Se `pbKeyBlob` for NULL, o contêiner de chave especificado `wszKeyContainer` por será considerado para conter o par de chaves.  
+ no Um ponteiro para o par de chaves pública/privada. Esse par está no formato criado pela função de `CryptExportKey` do Win32. Se `pbKeyBlob` for NULL, o contêiner de chave especificado por `wszKeyContainer` será considerado para conter o par de chaves.  
   
  `cbKeyBlob`  
  no O tamanho, em bytes, de `pbKeyBlob`.  
   
  `ppbSignatureBlob`  
- fora Um ponteiro para o local no qual o Common Language Runtime retorna a assinatura. Se `ppbSignatureBlob` for NULL, o tempo de execução armazenará a assinatura no arquivo `wszFilePath`especificado por.  
+ fora Um ponteiro para o local no qual o Common Language Runtime retorna a assinatura. Se `ppbSignatureBlob` for NULL, o tempo de execução armazenará a assinatura no arquivo especificado por `wszFilePath`.  
   
- Se `ppbSignatureBlob` não for NULL, o common language runtime aloca espaço para retornar a assinatura. O chamador deve liberar esse espaço usando o método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
+ Se `ppbSignatureBlob` não for NULL, a Common Language Runtime alocará espaço para retornar a assinatura. O chamador deve liberar esse espaço usando o método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) .  
   
  `pcbSignatureBlob`  
  fora O tamanho, em bytes, da assinatura retornada.  
@@ -69,28 +67,28 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  no Um ou mais dos seguintes valores:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001) – recomputar todos os hashes para módulos vinculados.  
+- `SN_SIGN_ALL_FILES` (0x00000001) – Recomputa todos os hashes para módulos vinculados.  
   
-- `SN_TEST_SIGN`(0x00000002)-testar o assembly.  
+- `SN_TEST_SIGN` (0x00000002)-testar o assembly.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK`Se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
- Especifique NULL para `wszFilePath` para calcular o tamanho da assinatura sem criar a assinatura.  
+ Especifique NULL para `wszFilePath` calcular o tamanho da assinatura sem criar a assinatura.  
   
  A assinatura pode ser armazenada diretamente no arquivo ou retornada ao chamador.  
   
- Se `SN_SIGN_ALL_FILES` for especificado, mas uma chave pública não estiver incluída `pbKeyBlob` (e `wszFilePath` forem nulas), os hashes para módulos vinculados serão recalculados, mas o assembly não será assinado novamente.  
+ Se `SN_SIGN_ALL_FILES` for especificado, mas uma chave pública não estiver incluída (`pbKeyBlob` e `wszFilePath` forem nulas), os hashes para módulos vinculados serão recalculados, mas o assembly não será assinado novamente.  
   
- Se `SN_TEST_SIGN` for especificado, o cabeçalho de Common Language Runtime não será modificado para indicar que o assembly é assinado com um nome forte.  
+ Se `SN_TEST_SIGN` for especificado, o cabeçalho Common Language Runtime não será modificado para indicar que o assembly é assinado com um nome forte.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

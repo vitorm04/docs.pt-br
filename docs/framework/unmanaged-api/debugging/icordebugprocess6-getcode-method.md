@@ -2,14 +2,12 @@
 title: Método ICorDebugProcess6::GetCode
 ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d896cc4316c2de6fa1cb0bacc9ff8b1f3713129
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fc7fecc3f523d7992bd57e2f7d485648caa6df8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123476"
 ---
 # <a name="icordebugprocess6getcode-method"></a>Método ICorDebugProcess6::GetCode
 Obtém informações sobre o código gerenciado em um endereço de código em particular.  
@@ -35,11 +33,11 @@ HRESULT GetCode(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

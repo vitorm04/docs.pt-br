@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7d3325c8aee44849ff1fb7a6cc06a0ed7c2c6f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f3511ff5ee9b9221037c64a5e17d61f6bf52e5f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133404"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>Método ICorDebugThread::GetUserState
-Obtém o estado do usuário atual deste ICorDebugThread.  
+Obtém o estado atual do usuário deste ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetUserState (
   
 ## <a name="parameters"></a>Parâmetros  
  `pState`  
- [out] Um ponteiro para uma combinação bit a bit dos valores de enumeração CorDebugUserState que descrevem o estado do usuário atual deste thread.  
+ fora Um ponteiro para uma combinação de bits de valor de enumeração CorDebugUserState que descreve o estado atual do usuário desse thread.  
   
 ## <a name="remarks"></a>Comentários  
- O estado do usuário do thread é o estado do thread quando ele é examinado pelo programa que está sendo depurado. Um thread pode ter vários bits de estado definido.  
+ O estado do usuário do thread é o estado do thread quando ele é examinado pelo programa que está sendo depurado. Um thread pode ter vários bits de estado definidos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

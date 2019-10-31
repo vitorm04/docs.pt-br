@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f88f2035fb27567e56792cae8289140129e9c557
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129017"
 ---
 # <a name="merge-options-in-plinq"></a>Opções de mesclagem em PLINQ
 Quando uma consulta está sendo executada como paralela, o PLINQ faz a partição da sequência de origem para que várias threads possam funcionar em diferentes partes simultaneamente, normalmente em threads separados. Se os resultados forem consumidos em um thread, por exemplo, em um loop `foreach` (`For Each` em Visual Basic), os resultados de cada thread precisarão ser mesclados novamente em uma sequência. O tipo de mesclagem executado pelo PLINQ depende dos operadores que estão presentes na consulta. Por exemplo, os operadores que impõem uma nova ordem aos resultados devem armazenar em buffer todos os elementos em todos os threads. Do ponto de vista do thread de consumo (que também é o thread do usuário do aplicativo), uma consulta totalmente armazenada em buffer pode ser executada por um período significativo de tempo antes de produzir seu primeiro resultado. Por padrão, outros operadores são parcialmente armazenados em buffer e geram seus resultados em lotes. Um operador <xref:System.Linq.ParallelEnumerable.ForAll%2A> não é armazenado em buffer por padrão. Ele gera todos os elementos de todos os threads imediatamente.  
@@ -25,7 +23,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Para obter o exemplo completo, confira [Como: Especificar opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Para ver o exemplo completo, confira [Como especificar opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Se a consulta em questão não oferecer suporte à opção solicitada, a opção será ignorada. Na maioria dos casos, você não precisa especificar uma opção de mesclagem para uma consulta PLINQ. No entanto, em alguns casos você pode achar, ao testar e medir, que uma consulta terá uma melhor execução em um modo diferente do padrão. Uma forma comum de usar essa opção é forçando um operador de mesclagem de blocos a transmitir os resultados para fornecer uma interface de usuário mais ágil na resposta.  
   
@@ -68,4 +66,4 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
 ## <a name="see-also"></a>Consulte também
 
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-- [Como: Especificar opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [Como especificar opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

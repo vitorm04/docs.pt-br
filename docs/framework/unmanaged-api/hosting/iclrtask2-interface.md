@@ -14,42 +14,40 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 518248651de6d8afdf25692c5f48da52b11eb0f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47c6dd9045636bcfbe07c909fec3fda515d28ee8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763393"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124519"
 ---
 # <a name="iclrtask2-interface"></a>Interface ICLRTask2
-Fornece a funcionalidade dos [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interface; Além disso, fornece métodos que permitem que as anulações de thread para ser atrasado no thread atual.  
+Fornece toda a funcionalidade da interface [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ; Além disso, o fornece métodos que permitem que as anulações de thread sejam atrasadas no thread atual.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método BeginPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Novo thread de atrasos de anulação de solicitações no thread atual.|  
-|[Método EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Permite que novos ou thread anulação solicitações pendentes para resultar em thread anula no thread atual.|  
+|[Método BeginPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Atrasa novas solicitações de anulação de thread no thread atual.|  
+|[Método EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Permite solicitações de anulação de thread novas ou pendentes para resultar em anulações de thread no thread atual.|  
   
 ## <a name="remarks"></a>Comentários  
- O `ICLRTask2` interface herda o `ICLRTask` de interface e adiciona métodos que permitem que o host atrasar as anulações de thread, para proteger uma região de código que não deve falhar. Chamando `BeginPreventAsyncAbort` incrementa o contador de anulação de thread de atraso para o thread atual e chamar `EndPreventAsyncAbort` diminui-lo. Chamadas para `BeginPreventAsyncAbort` e `EndPreventAsyncAbort` podem ser aninhados. Desde que o contador for maior que zero, as anulações de thread para o thread atual são atrasadas.  
+ A interface `ICLRTask2` herda a interface `ICLRTask` e adiciona métodos que permitem ao host atrasar anulações de thread, proteger uma região de código que não deve falhar. Chamar `BeginPreventAsyncAbort` incrementa o contador atraso-thread-anulação para o thread atual e chamar `EndPreventAsyncAbort` decrementa-lo. As chamadas para `BeginPreventAsyncAbort` e `EndPreventAsyncAbort` podem ser aninhadas. Desde que o contador seja maior que zero, as anulações de thread para o thread atual serão atrasadas.  
   
- Se chamadas para `BeginPreventAsyncAbort` e `EndPreventAsyncAbort` não são emparelhadas, é possível atingir um estado no qual thread anulações não podem ser entregues ao thread atual.  
+ Se as chamadas para `BeginPreventAsyncAbort` e `EndPreventAsyncAbort` não forem emparelhadas, é possível alcançar um estado no qual as anulações de thread não podem ser entregues ao thread atual.  
   
- O atraso é respeitado para um thread que anula a mesmo.  
+ O atraso não é respeitado para um thread que se anula.  
   
- A funcionalidade que é exposta por esse recurso é usada internamente pela máquina virtual (VM). Uso indevido desses métodos pode causar comportamento não especificado na VM. Por exemplo, chamar `EndPreventAsyncAbort` sem primeiro chamar `BeginPreventAsyncAbort` foi possível definir o contador como zero quando a VM é incrementado anteriormente. Da mesma forma, o contador interno não é verificado para estouro. Se ele exceder seu limite de integral porque ele é incrementado pelo host e a VM, o comportamento resultante é especificado.  
+ A funcionalidade exposta por esse recurso é usada internamente pela VM (máquina virtual). O uso indevido desses métodos pode causar um comportamento não especificado na VM. Por exemplo, chamar `EndPreventAsyncAbort` sem primeiro chamar `BeginPreventAsyncAbort` pode definir o contador como zero quando a VM o incrementaa anteriormente. Da mesma forma, o contador interno não é verificado quanto ao estouro. Se ele exceder seu limite integral porque é incrementado pelo host e pela VM, o comportamento resultante não é especificado.  
   
- Para obter informações sobre membros herdada de `ICLRTask` e sobre outros usos dessa interface, consulte a [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) interface.  
+ Para obter informações sobre membros herdados de `ICLRTask` e sobre outros usos dessa interface, consulte a interface [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

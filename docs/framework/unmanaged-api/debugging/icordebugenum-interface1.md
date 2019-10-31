@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085261"
 ---
 # <a name="icordebugenum-interface"></a>Interface ICorDebugEnum
 
@@ -37,7 +35,7 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 |[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Move o cursor para a frente na enumeração pelo número especificado de itens.|  
   
 ## <a name="remarks"></a>Comentários  
- Os seguintes enumeradores derivam `ICorDebugEnum`de:  
+ Os seguintes enumeradores derivam de `ICorDebugEnum`:  
   
 - "ICorDebugAppDomainEnum"  
   
@@ -85,11 +83,11 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252690"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117626"
 ---
-# <a name="developmentmode-element"></a>\<Elemento de > developmentmode
+# <a name="developmentmode-element"></a>Elemento de > de desenvolvimento do \<
 Especifica se o tempo de execução pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentmode >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,4 +73,4 @@ Especifica se o tempo de execução pesquisa por assemblies em diretórios espec
 
 - [Esquema de configurações do tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como: Localizar assemblies usando DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Como localizar assemblies usando DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 2eb56ea9-8b7e-452b-a209-3d2be719fca6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 050b515e91517efe5b4dc4e391ace4fba5876727
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8e4f65c9a7b183ef5031726b8398926f16b8526
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761592"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134830"
 ---
 # <a name="igchostcontrol-interface"></a>Interface IGCHostControl
-Fornece um método que permite que o coletor de lixo solicitar o host para alterar os limites de memória virtual.  
+Fornece um método que permite que o coletor de lixo solicite o host para alterar os limites de memória virtual.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método RequestVirtualMemLimit](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Solicitações de host para alterar os limites de memória virtual.|  
+|[Método RequestVirtualMemLimit](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Solicita que o host altere os limites de memória virtual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

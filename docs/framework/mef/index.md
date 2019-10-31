@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6fc66837dc31dc1697bcb4ad6dddfb57bfb99bd4
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: da73200513d451ee391fb6dd9c214a5b8ca771c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126343"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -62,7 +60,7 @@ A Managed Extensibility Framework ou MEF é uma biblioteca para criar aplicativo
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: Um aplicativo de exemplo
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: um aplicativo de exemplo
 
 A maneira mais simples de ver o que o MEF é criar um aplicativo MEF simples. Neste exemplo, você criará uma calculadora muito simples chamada SimpleCalculator. A meta da SimpleCalculator é criar um aplicativo de console que aceite comandos aritméticos básicos, no formato "5+3" ou "6-2" e retorne as respostas corretas. Usando MEF, você poderá adicionar novos operadores sem alterar o código do aplicativo.
 
@@ -432,7 +430,7 @@ class Subtract : IOperation
 
  Adicione um novo diretório chamado `Extensions` ao projeto da SimpleCalculator. Certifique-se de adicioná-lo no nível do projeto e não no nível da solução. Em seguida, adicione um novo projeto de Biblioteca de Classes à solução, chamado `ExtendedOperations`. O novo projeto será compilado em um assembly separado.
 
- Abra o Designer de Propriedades de Projeto para o projeto ExtendedOperations e clique na guia **Compilar** ou **Criar**. Alterar o **Caminho de saída do build** ou o **Caminho de saída** para apontar para o diretório Extensions no diretório do projeto da SimpleCalculator (..\SimpleCalculator\Extensions\\).
+ Abra o designer de propriedades do projeto para o projeto ExtendedOperations e clique na guia **Compilar** ou **Compilar** . Altere o caminho de **saída da compilação** ou o caminho de **saída** para apontar para o diretório de extensões no projeto SimpleCalculator diretório (.. \SimpleCalculator\Extensions\\).
 
  No Module1.vb ou Program.cs, adicione a seguinte linha ao construtor `Program`:
 
@@ -444,7 +442,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- Substitua o caminho de exemplo pelo caminho para o diretório de Extensions. (Esse caminho absoluto destina-se apenas a fins de depuração. Em um aplicativo de produção, você deve usar um caminho relativo.) O <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> agora adicionará as peças encontradas a quaisquer assemblies do diretório Extensions ao contêiner de composição.
+ Substitua o caminho de exemplo pelo caminho para o diretório de Extensions. (Esse caminho absoluto destina-se apenas a fins de depuração. Em um aplicativo de produção, você usaria um caminho relativo.) Agora, a <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> adicionará todas as partes encontradas em quaisquer assemblies no diretório de extensões ao contêiner de composição.
 
  No projeto ExtendedOperations, adicione referências à SimpleCalculator e ao System.ComponentModel.Composition. No arquivo de classe ExtendedOperations, adicione um `Imports` ou uma instrução `using` para o System.ComponentModel.Composition. No Visual Basic, adicione também uma instrução `Imports` para a SimpleCalculator. Em seguida, adicione a seguinte classe ao arquivo da classe ExtendedOperations:
 

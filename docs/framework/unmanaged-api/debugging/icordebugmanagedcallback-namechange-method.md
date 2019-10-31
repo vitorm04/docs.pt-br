@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: abbfd21736d220f1cba029235c71a85bf3048ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 456a79ec290964df8e9f74fc6ca19ef9aabe1230
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761607"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130685"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>Método ICorDebugManagedCallback::NameChange
-Notifica o depurador que o nome de um domínio de aplicativo ou um thread foi alterado.  
+Notifica o depurador de que o nome de um domínio de aplicativo ou de um thread foi alterado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +36,13 @@ HRESULT NameChange (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto de ICorDebugAppDomain que representa o domínio do aplicativo que teve uma alteração de nome ou que contém o segmento que tiveram uma alteração de nome.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que tinha um nome alterado ou que contém o thread que tinha um nome alterado.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread que tiveram uma alteração de nome.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread que tinha um nome alterado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae64edd8a3a628100d4c51d0b78be1bc8d49fc17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765962"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138279"
 ---
 # <a name="customdumpitem-structure"></a>Estrutura CustomDumpItem
 Descreve um item a ser adicionado a um despejo personalizado no relatório de erros.  
@@ -41,18 +39,18 @@ struct {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`itemKind`|Uma [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica o tipo de item a ser adicionado.|  
-|`pReserved`|Não usado no momento. Quaisquer itens adicionados à união devem ser maiores do que o tamanho do ponteiro. Se um `struct` é obrigatório, você deve alocá-lo separadamente e apontar para ele.|  
+|`itemKind`|Um valor [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) que indica o tipo de item a ser adicionado.|  
+|`pReserved`|Não usado no momento. Os itens adicionados à União não devem ser maiores do que o tamanho do ponteiro. Se um `struct` for necessário, você deverá alocá-lo separadamente e apontar para ele.|  
   
 ## <a name="remarks"></a>Comentários  
- [ICLRErrorReportingManager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) assume um parâmetro do tipo `CustomDumpItem`.  
+ [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) usa um parâmetro do tipo `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.idl  
+ **Cabeçalho:** MSCorEE. idl  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

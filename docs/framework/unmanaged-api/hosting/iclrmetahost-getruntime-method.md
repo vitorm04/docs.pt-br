@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b796942df153bf2c6ab703d748449331c9a0b1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eb305aaa18fcb8dc63e3090297aabc8defc3a401
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140935"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>Método ICLRMetaHost::GetRuntime
 Obtém a interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) que corresponde a uma versão específica do Common Language Runtime (CLR). Esse método substitui a função [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) usada com o sinalizador [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .  
@@ -39,7 +37,7 @@ HRESULT GetRuntime (
   
 ## <a name="parameters"></a>Parâmetros  
  `pwzVersion`  
- no A versão de compilação .NET Framework armazenada nos metadados, no formato "v*A*. *B* [. *X*] ". *A*, *B*e *X* são números decimais que correspondem à versão principal, à versão secundária e ao número da compilação.  
+ no A versão de compilação .NET Framework armazenada nos metadados, no formato "v*A*. *B*[. *X*] ". *A*, *B*e *X* são números decimais que correspondem à versão principal, à versão secundária e ao número da compilação.  
   
 > [!NOTE]
 > Esse parâmetro deve corresponder ao nome do diretório para a versão .NET Framework, pois ele aparece em C:\Windows\Microsoft.NET\Framework ou C:\Windows\Microsoft.NET\Framework64.  
@@ -52,7 +50,7 @@ HRESULT GetRuntime (
  `ppRuntime`  
  fora Um ponteiro para a interface [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) que corresponde ao tempo de execução solicitado.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -61,14 +59,14 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` ou `ppRuntime` é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse método interage consistentemente com interfaces herdadas, como a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) e funções herdadas, como as `CorBindTo*` funções preteridas (consulte [funções de Hospedagem de CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) preteridas na hospedagem .NET Framework 2,0 API). Ou seja, os tempos de execução que são carregados com a API herdada são visíveis para a nova API, e os tempos de execução que são carregados com a nova API são visíveis para a API herdada.  
+ Esse método interage consistentemente com interfaces herdadas, como a interface [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) e funções herdadas, como as funções preteridas de `CorBindTo*` (consulte [funções de Hospedagem de CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) na API de hospedagem do .NET Framework 2,0). Ou seja, os tempos de execução que são carregados com a API herdada são visíveis para a nova API, e os tempos de execução que são carregados com a nova API são visíveis para a API herdada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

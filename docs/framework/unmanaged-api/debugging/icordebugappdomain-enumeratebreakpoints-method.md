@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a683f1531ed28fbd8ef085414bb7cb365762ffde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3611684a17d51fc4fdba31dd4049540039b43e8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110514"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>Método ICorDebugAppDomain::EnumerateBreakpoints
 Obtém um enumerador para todos os pontos de interrupção ativos no domínio do aplicativo.  
@@ -37,13 +35,13 @@ HRESULT EnumerateBreakpoints (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppBreakpoints`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugBreakpointEnum que é o enumerador para todos os pontos de interrupção ativos no domínio do aplicativo.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugBreakpointEnum que é o enumerador para todos os pontos de interrupção ativos no domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
  O enumerador inclui todos os tipos de pontos de interrupção, incluindo pontos de interrupção de função e pontos de interrupção de dados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051718"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107593"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importando uma biblioteca de tipos como um assembly
 
@@ -30,9 +28,9 @@ Definições de tipo COM geralmente residem em uma biblioteca de tipos. Por outr
 
 Há duas maneiras de disponibilizar essas informações de tipo para seu aplicativo:
 
-- Usando assemblies de interoperabilidade somente em tempo de design: Do .NET Framework 4 em diante, é possível instruir o compilador a inserir informações de tipo do assembly de interoperabilidade ao seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.
+- Usando assemblies de interoperabilidade somente de tempo de design: começando com o .NET Framework 4, você pode instruir o compilador a inserir informações de tipo do assembly de interoperabilidade em seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.
 
-- Implantando assemblies de interoperabilidade: Crie uma referência padrão para o assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo. Se você usar essa técnica e não estiver usando um componente COM particular, sempre referencie o PIA (assembly de interoperabilidade primário) publicado pelo autor do componente COM que você pretende incorporar no código gerenciado. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+- Implantando assemblies de interoperabilidade: é possível criar uma referência padrão ao assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo. Se você usar essa técnica e não estiver usando um componente COM particular, sempre referencie o PIA (assembly de interoperabilidade primário) publicado pelo autor do componente COM que você pretende incorporar no código gerenciado. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
 Quando você usar assemblies de interoperabilidade somente em tempo de design, você pode inserir informações de tipo do assembly de interoperabilidade primário publicado pelo autor do componente COM. No entanto, não é necessário implantar o assembly de interoperabilidade primário com o aplicativo.
 
@@ -46,11 +44,11 @@ Após você localizar a biblioteca de tipos que contém a implementação do seu
 
 - Visual Studio
 
-  O Visual Studio converte automaticamente os tipos COM em uma biblioteca de tipos para metadados em um assembly. Para obter instruções, veja [Como: adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md).
+  O Visual Studio converte automaticamente os tipos COM em uma biblioteca de tipos para metadados em um assembly. Para obter instruções, consulte [como: adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md).
 
 - [Importador de Biblioteca de Tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
-  O importador da biblioteca de tipos fornece opções de linha de comando para ajustar os metadados no arquivo de interoperabilidade resultante, importa tipos de uma biblioteca de tipos existente e gera um assembly de interoperabilidade e um namespace. Para obter instruções, veja [Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).
+  O importador da biblioteca de tipos fornece opções de linha de comando para ajustar os metadados no arquivo de interoperabilidade resultante, importa tipos de uma biblioteca de tipos existente e gera um assembly de interoperabilidade e um namespace. Para obter instruções, consulte [Como gerar assemblies de interoperabilidade com base em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - Classe <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>
 
@@ -82,5 +80,5 @@ Após você localizar a biblioteca de tipos que contém a implementação do seu
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)
 - [Implantação de um aplicativo de interoperabilidade](deploying-an-interop-application.md)
-- [Como: Adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)
-- [Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Como adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)
+- [Como gerar assemblies de interoperabilidade com base em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)

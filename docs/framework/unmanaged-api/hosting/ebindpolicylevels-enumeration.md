@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136557"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>Enumeração EBindPolicyLevels
-Fornece sinalizadores para especificar o nível no qual aplicar ou modificar a diretiva de assembly.  
+Fornece sinalizadores para especificar o nível no qual aplicar ou modificar a política de assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,21 +46,21 @@ typedef enum {
 |`ePolicyLevelAdmin`|Especifica que a política deve ser aplicada no nível de administrador.|  
 |`ePolicyLevelApp`|Especifica que a política deve ser aplicada no nível do aplicativo.|  
 |`ePolicyLevelHost`|Especifica que a política deve ser aplicada no nível do host.|  
-|`ePolicyLevelNone`|Não especifica que nenhum sinalizador de nível de política.|  
-|`ePolicyLevelPublisher`|Especifica que a política deve ser aplicada no nível do publicador.|  
-|`ePolicyLevelRetargetable`|Especifica que política deve ser aplicável em níveis de variável.|  
-|`ePolicyPortability`|Especifica que a política deve oferecer suporte a portabilidade entre implementações de um assembly do .NET Framework. Consulte a [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) elemento do arquivo de configuração.|  
-|`ePolicyUnifiedToCLR`|Especifica que política deve ser unificada do common language runtime (CLR).|  
+|`ePolicyLevelNone`|Especifica nenhum sinalizador de nível de política.|  
+|`ePolicyLevelPublisher`|Especifica que a política deve ser aplicada no nível do Publicador.|  
+|`ePolicyLevelRetargetable`|Especifica que a política deve ser aplicável em níveis de variável.|  
+|`ePolicyPortability`|Especifica que a política deve dar suporte à portabilidade entre as implementações de um assembly .NET Framework. Consulte o elemento arquivo de configuração [\<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) .|  
+|`ePolicyUnifiedToCLR`|Especifica que a política deve ser unificada para a do Common Language Runtime (CLR).|  
   
 ## <a name="remarks"></a>Comentários  
- Essa enumeração é passada para métodos do [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface para especificar as alterações na política de aplicativo.  
+ Essa enumeração é passada para métodos da interface [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) para especificar alterações na política de aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

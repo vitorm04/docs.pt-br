@@ -1,20 +1,18 @@
 ---
-title: 'Como: iterar diretórios de arquivos com PLINQ'
+title: 'Como: Fazer iterações de diretórios de arquivos com PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091375"
 ---
-# <a name="how-to-iterate-file-directories-with-plinq"></a>Como: iterar diretórios de arquivos com PLINQ
+# <a name="how-to-iterate-file-directories-with-plinq"></a>Como: Fazer iterações de diretórios de arquivos com PLINQ
 Este exemplo mostra duas maneiras simples de paralelizar operações em diretórios de arquivos. A primeira consulta usa o método <xref:System.IO.Directory.GetFiles%2A> para preencher uma matriz de nomes de arquivo em um diretório e em todos os subdiretórios. Este método não retorna até que toda a matriz esteja preenchida e, portanto, pode apresentar latência no início da operação. No entanto, após o preenchimento da matriz, PLINQ pode processá-la em paralelo rapidamente.  
   
  A segunda consulta usa métodos <xref:System.IO.Directory.EnumerateDirectories%2A> e <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> estáticos que começam a retornar os resultados imediatamente. Essa abordagem pode ser mais rápida quando você estiver iterando em árvores de diretório grandes, embora o tempo de processamento em comparação o primeiro exemplo possa depender de vários fatores.  

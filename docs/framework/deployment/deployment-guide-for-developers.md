@@ -6,21 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbb196b5beb2fc04ff85f2924356699fd83f3ea6
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1f13053ea23e45b66b4767295af28a758f474ab5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121547"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
 
 Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#redistributable-packages). Também é possível baixar os pacotes redistribuíveis e os pacotes de idiomas das seguintes páginas do Centro de Download da Microsoft:
 
-- .NET Framework 4.8 para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=2085155) ou [instalador offline](https://go.microsoft.com/fwlink/?linkid=2088631))
+- .NET Framework 4.8 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=2085155) ou [instalador offline](https://go.microsoft.com/fwlink/?linkid=2088631))
 
 - .NET Framework 4.7.2 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=863262) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -242,7 +240,7 @@ Caso tenha um pacote de instalação personalizado, você pode lançar e monitor
 
 - [Detecte](#detecting-the-language-packs) se os pacotes de idiomas já estão instalados no computador do usuário.
 
-- Caso deseje controlar a implantação, inicie e acompanhe silenciosamente o processo de instalação do .NET Framework (confira [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)).
+- Se quiser controlar a implantação, inicialize e monitore silenciosamente o processo de instalação do .NET Framework (consulte [Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Se estiver implantando o instalador offline, [encadeie os pacotes de idiomas separadamente](#chain_langpack).
 
@@ -254,14 +252,14 @@ Caso tenha um pacote de instalação personalizado, você pode lançar e monitor
 
 ### <a name="detecting-the-net-framework"></a>Detectando o .NET Framework
 
-O instalador do .NET Framework grava chaves do Registro quando a instalação é bem-sucedida. Você pode testar se o .NET Framework 4.5 ou posterior está instalado verificando a pasta `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` no registro quanto a um valor `DWORD` chamado `Release`. (Observe que "Instalação do .NET Framework" não começa com um ponto.) A existência dessa chave indica que o .NET Framework 4.5 ou uma versão mais recente foi instalada nesse computador. O valor de `Release` indica qual versão do .NET Framework está instalada.
+O instalador do .NET Framework grava chaves do Registro quando a instalação é bem-sucedida. Você pode testar se o .NET Framework 4.5 ou posterior está instalado verificando a pasta `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` no registro quanto a um valor `DWORD` chamado `Release`. (Observe que "configuração do .NET Framework" não começa com um ponto.) A existência dessa chave indica que .NET Framework 4,5 ou uma versão posterior foi instalada nesse computador. O valor de `Release` indica qual versão do .NET Framework está instalada.
 
 > [!IMPORTANT]
 > Verifique se há um valor **maior que ou igual ao** valor de palavra-chave de versão ao tentar detectar se uma versão específica está presente.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|Versão|Valor da liberação de DWORD|
+|Version|Valor da liberação de DWORD|
 |-------------|--------------------------------|
 |.NET Framework 4.8 instalado na Atualização de maio de 2019 para Windows 10|528040|
 |.NET Framework 4.8 instalado em todas as versões do sistema operacional diferentes da Atualização de maio de 2019 para Windows 10|528049|
@@ -280,19 +278,19 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 |.NET Framework 4.5.2|379893|
 |.NET Framework 4.5.1 instalado com [!INCLUDE[win81](../../../includes/win81-md.md)] ou Windows Server 2012 R2|378675|
 |.NET Framework 4.5.1 instalado no [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
-|.NET Framework 4.5|378389|
+|.NET Framework 4,5|378389|
 
 ### <a name="detecting-the-language-packs"></a>Detectando os pacotes de idiomas
 
-Você pode testar se um pacote de idiomas específico está instalado verificando a pasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* no Registro quanto a um valor DWORD chamado `Release`. (Observe que "Instalação do .NET Framework" não começa com um ponto.) *LCID* especifica um identificador localidade, consulte [idiomas com suporte](#supported-languages) para obter uma lista de idiomas.
+Você pode testar se um pacote de idiomas específico está instalado verificando a pasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* no Registro quanto a um valor DWORD chamado `Release`. (Observe que "configuração do .NET Framework" não começa com um ponto.) *LCID* especifica um identificador de localidade; consulte [idiomas com suporte](#supported-languages) para obter uma lista desses.
 
 Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041) está instalado, recupere o seguinte valor nomeado do registro:
 
 | | |
 |-|-|
 | Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Nome | Versão |
-| type | DWORD |
+| Name | Versão |
+| Digite | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
 
@@ -385,7 +383,7 @@ A tabela a seguir lista opções que podem ser incluídas ao encadear o redistri
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
 |**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"** . Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|
-|**/LCID** `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:**  Use essa opção somente com o instalador da Web.|
+|**/LCID** `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:** use essa opção somente com o instalador da Web.|
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se essa opção for usada, o aplicativo de encadeamento precisa capturar o código de retorno e lidar com a reinicialização (consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN).|
@@ -418,7 +416,7 @@ A tabela a seguir lista os pacotes de idiomas do .NET Framework disponíveis par
 |1040|Italiano – Itália|it|
 |1041|Japonês|ja|
 |1042|Coreano|ko|
-|1043|Holandês – Holanda|nl|
+|1043|Holandês – Países Baixos|nl|
 |1044|Norueguês (Bokmål)|no|
 |1045|Polonês|pl|
 |1046|Português – Brasil|pt-BR|
@@ -436,4 +434,4 @@ A tabela a seguir lista os pacotes de idiomas do .NET Framework disponíveis par
 - [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](reducing-system-restarts.md)
-- [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)
+- [Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)

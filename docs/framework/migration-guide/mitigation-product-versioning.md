@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Controle de versão do produto'
+title: 'Mitigação: Controle de versão de produto'
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 63075136b7de4aeaa4f94c092996ae1829b449a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126162"
 ---
-# <a name="mitigation-product-versioning"></a>Mitigação: Controle de versão do produto
+# <a name="mitigation-product-versioning"></a>Mitigação: Controle de versão de produto
 
 Na .NET Framework 4.6 e posterior, o controle de versão do produto foi alterado em relação às versões anteriores do .NET Framework (o .NET Framework 4, 4,5, 4.5.1 e 4.5.2).
 
@@ -31,7 +29,7 @@ Veja a seguir as alterações em detalhes:
 
 Em geral, os aplicativos devem depender das técnicas recomendadas para detecção de itens como a versão de tempo de execução do .NET Framework e o diretório de instalação:
 
-- Para detectar a versão de tempo de execução do .NET Framework, confira [Como: Determinar quais versões do .NET Framework estão instaladas](how-to-determine-which-versions-are-installed.md).
+- Para detectar a versão de tempo de execução do .NET Framework, confira [How to: Determine Which .NET Framework Versions Are Installed](how-to-determine-which-versions-are-installed.md) (Como determinar quais versões do .NET Framework estão instaladas).
 
 - Para determinar o caminho de instalação do .NET Framework, use o valor da entrada `InstallPath` na chave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.
 

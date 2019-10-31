@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f55057e40a251be49898b9b1b7862bd243b2a70c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913177"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139237"
 ---
 # <a name="managed-threading-basics"></a>Noções básicas de threading gerenciado
 
@@ -43,7 +41,7 @@ Os cinco primeiros tópicos desta seção destinam-se a ajudá-lo a determinar q
  [Threading gerenciado e não gerenciado no Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  É discutido o relacionamento entre o threading gerenciado e não gerenciado, são listados os equivalentes gerenciados para APIs de threading do Windows e é discutida a interação de apartments COM e threads gerenciados.  
   
- [Armazenamento local de thread: Campos estáticos relativos a thread e slots de dados](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [Armazenamento local de thread: campos estáticos relativos a thread e slots de dados](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  São descritos os mecanismos de armazenamento relativos a threads.  
   
 ## <a name="reference"></a>Referência

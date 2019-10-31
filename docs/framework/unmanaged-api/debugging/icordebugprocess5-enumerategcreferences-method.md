@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129665"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>Método ICorDebugProcess5::EnumerateGCReferences
-Obtém um enumerador para todos os objetos que precisam estar em um processo de coleta de lixo.  
+Obtém um enumerador para todos os objetos que devem ser coletados pelo lixo em um processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>Parâmetros  
  `enumerateWeakReferences`  
- [in] Um valor booliano que indica se as referências fracas são também a serem enumerados. Se `enumerateWeakReferences` está `true`, o `ppEnum` enumerador inclui referências fortes e referências fracas. Se `enumerateWeakReferences` é `false`, o enumerador inclui apenas as referências fortes.  
+ no Um valor booliano que indica se referências fracas também devem ser enumeradas. Se `enumerateWeakReferences` for `true`, o enumerador `ppEnum` incluirá referências fortes e referências fracas. Se `enumerateWeakReferences` for `false`, o enumerador incluirá apenas referências fortes.  
   
  `ppEnum`  
- [out] Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a ser coletado como lixo.  
+ fora Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a serem coletados como lixo.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método fornece uma maneira de determinar a cadeia completa de raiz para qualquer objeto gerenciado em um processo e pode ser usado para determinar por que um objeto ainda está ativo.  
+ Esse método fornece uma maneira de determinar a cadeia de raiz completa para qualquer objeto gerenciado em um processo e pode ser usado para determinar por que um objeto ainda está ativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40e64bdb35cff4e6ad6132c0806cfddd2767443c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760003"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122683"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>Método ICorDebugInternalFrame2::GetFrameAddress
-Retorna o endereço de pilha do quadro interno.  
+Retorna o endereço da pilha do quadro interno.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +33,10 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="parameters"></a>Parâmetros  
  `pAddress`  
- [out] Ponteiro para o `CORDB_ADDRESS` para o quadro interno.  
+ fora Ponteiro para a `CORDB_ADDRESS` do quadro interno.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -47,10 +45,10 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |E_INVALIDARG|`pAddress` é `null`.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor retornado na `pAddress` pode ser usado para determinar o local do quadro interno em relação a outros quadros na pilha. Mesmo em computadores baseados em IA-64, o quadro interno reside na pilha apenas e não há nenhum ponteiro correspondente para um armazenamento de backup.  
+ O valor retornado em `pAddress` pode ser usado para determinar o local do quadro interno em relação a outros quadros na pilha. Mesmo em computadores baseados em IA-64, o quadro interno reside somente na pilha e não há nenhum ponteiro correspondente para um repositório de backup.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291417"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140392"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 
@@ -114,7 +112,7 @@ Em geral, os aplicativos da Windows Store só têm permissão para acessar um co
 
 ### <a name="startup-load"></a>Carga de inicialização
 
-Normalmente, em um aplicativo de área de trabalho, sua interface do usuário do profiler solicita uma carga de inicialização de sua DLL do criador de perfil inicializando um bloco de ambiente que contém as variáveis de ambiente de API de criação de perfil do CLR necessárias (ou seja, `COR_PROFILER`, `COR_ENABLE_PROFILING` e `COR_PROFILER_PATH`) e, em seguida, criar um novo processar com esse bloco de ambiente. O mesmo se aplica a aplicativos da Windows Store, mas os mecanismos são diferentes.
+Normalmente, em um aplicativo de área de trabalho, sua interface do usuário do profiler solicita uma carga de inicialização de sua DLL do criador de perfil inicializando um bloco de ambiente que contém as variáveis de ambiente de API de criação de perfil do CLR necessárias (ou seja, `COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH`) e, em seguida, criar um novo processar com esse bloco de ambiente. O mesmo se aplica a aplicativos da Windows Store, mas os mecanismos são diferentes.
 
 **Não executar com privilégios elevados**
 
@@ -137,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Especificando o bloco de ambiente personalizado**
 
-Uma nova interface COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), permite que você personalize o comportamento de execução de um aplicativo da Windows Store para facilitar ainda mais as formas de diagnóstico. Um dos seus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), permite que você passe um bloco de ambiente para o aplicativo da Windows Store quando ele é iniciado, juntamente com outros efeitos úteis, como desabilitar a suspensão automática de processos. O bloco de ambiente é importante porque é onde você precisa especificar as variáveis de ambiente (`COR_PROFILER`, `COR_ENABLE_PROFILING` e `COR_PROFILER_PATH)`) usadas pelo CLR para carregar a DLL do criador de perfil.
+Uma nova interface COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), permite que você personalize o comportamento de execução de um aplicativo da Windows Store para facilitar ainda mais as formas de diagnóstico. Um dos seus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), permite que você passe um bloco de ambiente para o aplicativo da Windows Store quando ele é iniciado, juntamente com outros efeitos úteis, como desabilitar a suspensão automática de processos. O bloco de ambiente é importante porque é onde você precisa especificar as variáveis de ambiente (`COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH)`) usadas pelo CLR para carregar a DLL do criador de perfil.
 
 Considere o snippet de código a seguir:
 
@@ -149,7 +147,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Há alguns itens que você precisará obter, certo:
 
-- `packageFullName` pode ser determinado durante a iteração dos pacotes e a captura de `package.Id.FullName`.
+- `packageFullName` pode ser determinado durante a iteração nos pacotes e na captura de `package.Id.FullName`.
 
 - `debuggerCommandLine` é um pouco mais interessante. Para passar o bloco de ambiente personalizado para o aplicativo da Windows Store, você precisa escrever seu próprio depurador fictício e simplista. O Windows gera o aplicativo da Windows Store suspenso e, em seguida, anexa o depurador iniciando o depurador com uma linha de comando como neste exemplo:
 
@@ -157,7 +155,7 @@ Há alguns itens que você precisará obter, certo:
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     onde `-p 1336` significa que o aplicativo da Windows Store tem a ID de processo 1336 e `-tid 1424` significa que a ID de thread 1424 é o thread suspenso. O depurador fictício analisaria o ThreadID da linha de comando, retomaria esse thread e, em seguida, sairá.
+     onde `-p 1336` significa que o aplicativo da Windows Store tem a ID de processo 1336 e `-tid 1424` significa que a ID de thread 1424 é o thread que está suspenso. O depurador fictício analisaria o ThreadID da linha de comando, retomaria esse thread e, em seguida, sairá.
 
      Aqui está um exemplo C++ de código para fazer isso (certifique-se de adicionar verificação de erro!):
 
@@ -253,7 +251,7 @@ Portanto, o aplicativo da Windows Store, por fim, carregou a DLL do criador de p
 
 Ao navegar pela API do Windows, você observará que cada API está documentada como aplicável a aplicativos de área de trabalho, aplicativos da Windows Store ou ambos. Por exemplo, a seção **requisitos** da documentação para a função [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) indica que a função se aplica somente a aplicativos da área de trabalho. Por outro lado, a função [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) está disponível para aplicativos da área de trabalho e para aplicativos da Windows Store.
 
-Ao desenvolver sua DLL do criador de perfil, trate-a como se fosse um aplicativo da Windows Store e use apenas as APIs que estão documentadas como disponíveis para aplicativos da Windows Store. Analise suas dependências (por exemplo, você pode executar `link /dump /imports` em sua DLL do criador de perfil para auditoria) e, em seguida, pesquise os documentos para ver quais das suas dependências estão ok e quais não são. Na maioria dos casos, suas violações podem ser corrigidas simplesmente substituindo-as por uma forma mais recente da API que está documentada como segura (por exemplo, substituindo [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) por [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+Ao desenvolver sua DLL do criador de perfil, trate-a como se fosse um aplicativo da Windows Store e use apenas as APIs que estão documentadas como disponíveis para aplicativos da Windows Store. Analise suas dependências (por exemplo, você pode executar `link /dump /imports` em relação à DLL do criador de perfil para auditoria) e, em seguida, Pesquisar os documentos para ver quais das suas dependências estão ok e quais não são. Na maioria dos casos, suas violações podem ser corrigidas simplesmente substituindo-as por uma forma mais recente da API que está documentada como segura (por exemplo, substituindo [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) por [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
 
 Você pode observar que a DLL do criador de perfil chama algumas APIs que se aplicam apenas a aplicativos da área de trabalho e, ainda assim, eles parecem funcionar mesmo quando a DLL do criador de perfil é carregada dentro de um aplicativo da Windows Store. Lembre-se de que é arriscado usar qualquer API não documentada para uso com aplicativos da Windows Store em sua DLL do criador de perfil quando carregada em um processo de aplicativo da Windows Store:
 
@@ -287,7 +285,7 @@ Mas, é claro, os arquivos ainda estão em, embora de maneira mais limitada. Os 
 
 A maioria dos seus dados provavelmente passará entre a DLL do criador de perfil e a interface do usuário do profiler via arquivos. A chave é escolher um local de arquivo que a DLL do criador de perfil (no contexto de um aplicativo da Windows Store) e a interface do usuário do profiler tenham acesso de leitura e gravação ao. Por exemplo, o caminho da pasta temporária é um local que a DLL do criador de perfil e a interface do usuário do profiler podem acessar, mas nenhum outro pacote de aplicativo da Windows Store pode acessar (protegendo assim qualquer informação que você registrar de outros pacotes de aplicativos da Windows Store).
 
-A interface do usuário do Profiler e a DLL do criador de perfil podem determinar esse caminho independentemente. Sua interface do usuário do Profiler, quando itera através de todos os pacotes instalados para o usuário atual (consulte o código de exemplo anterior), obtém acesso à classe `PackageId`, da qual o caminho da pasta temporária pode ser derivado com um código semelhante a este trecho. (Como sempre, a verificação de erros é omitida para fins de brevidade.)
+A interface do usuário do Profiler e a DLL do criador de perfil podem determinar esse caminho independentemente. Sua interface do usuário do Profiler, quando itera por meio de todos os pacotes instalados para a usuária atual (consulte o código de exemplo anterior), obtém acesso à classe `PackageId`, da qual o caminho da pasta temporária pode ser derivado com um código semelhante a este trecho (Como sempre, a verificação de erros é omitida para fins de brevidade.)
 
 ```csharp
 // C# code for the Profiler UI.
@@ -354,7 +352,7 @@ As informações a seguir se aplicam a WinMDs gerenciados, que contêm metadados
 
 No que diz respeito ao CLR, todos os arquivos WinMD são módulos. A API de criação de perfil do CLR, portanto, informa à DLL do criador de perfil quando os arquivos WinMD são carregados e quais são seus ModuleIDs, da mesma maneira que para outros módulos gerenciados.
 
-A DLL do criador de perfil pode distinguir arquivos WinMD de outros módulos chamando o método [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) e inspecionando o parâmetro de saída `pdwModuleFlags` para o sinalizador [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Ela é definida se e somente se ModuleID representar um WinMD.)
+A DLL do criador de perfil pode distinguir arquivos WinMD de outros módulos chamando o método [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) e inspecionando o `pdwModuleFlags` parâmetro de saída para o sinalizador [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) . (Ela é definida se e somente se ModuleID representar um WinMD.)
 
 ### <a name="reading-metadata-from-winmds"></a>Lendo metadados do WinMDs
 
@@ -384,7 +382,7 @@ Para entender as consequências disso, é importante entender as diferenças ent
 
 O ponto relevante é que as chamadas feitas em threads criados por seu criador de perfil são sempre consideradas síncronas, mesmo que essas chamadas sejam feitas de fora de uma implementação de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil. Pelo menos, isso costumava ser o caso. Agora que o CLR transformou o thread do criador de perfil em um thread gerenciado devido à sua chamada para o [método ForceGC](icorprofilerinfo-forcegc-method.md), esse thread não é mais considerado o thread do criador de perfil. Assim, o CLR impõe uma definição mais estrita do que é qualificado como síncrono para esse thread – ou seja, uma chamada deve se originar de dentro de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil para se qualificar como síncrona.
 
-O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas . Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem do blog @no__t 0Profiler Stack Walking: Noções básicas e além de @ no__t-0 para obter mais informações.)
+O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas . Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem de blog [pilha do criador de perfil: Noções básicas e além](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) de mais informações.)
 
 Portanto, é recomendável que qualquer thread que sua DLL do criador de perfil crie para chamar o [método ForceGC](icorprofilerinfo-forcegc-method.md) deve ser usado *apenas* com a finalidade de disparar GCS e, em seguida, responder aos retornos de chamada do GC. Ele não deve chamar a API de criação de perfil para executar outras tarefas, como amostragem de pilha ou desanexação.
 

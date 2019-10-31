@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7581d68f5c2b575403ddc84d06147f012e7ab39e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70cf2d76c7c5d1c3431506685f8506e44ab9ec4a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121764"
 ---
 # <a name="icorpublish-interface"></a>Interface ICorPublish
-Serve como a interface geral para a publicação de informações sobre os processos e informações sobre os domínios de aplicativo desses processos.  
+O serve como interface geral para publicar informações sobre processos e informações sobre os domínios de aplicativo nesses processos.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)|Obtém uma [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) instância que contém os processos gerenciados em execução neste computador.|  
-|[Método GetProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublish-getprocess-method.md)|Obtém uma [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instância que representa o processo com o identificador especificado.|  
+|[Método EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)|Obtém uma instância de [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) que contém os processos gerenciados em execução neste computador.|  
+|[Método GetProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublish-getprocess-method.md)|Obtém uma instância de [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) que representa o processo com o identificador especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

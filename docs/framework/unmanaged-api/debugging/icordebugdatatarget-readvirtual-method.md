@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122166"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Método ICorDebugDataTarget::ReadVirtual
-Obtém um bloco de memória contígua, iniciando no endereço especificado e retorna-o no buffer fornecido.  
+Obtém um bloco de memória contígua a partir do endereço especificado e a retorna no buffer fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,22 +38,22 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>Parâmetros  
  `address`  
- [in] O endereço inicial de memória solicitada.  
+ no O endereço inicial da memória solicitada.  
   
  `pbuffer`  
- [out] O buffer onde a memória será armazenada.  
+ fora O buffer em que a memória será armazenada.  
   
  `bytesRequested`  
- [in] O número de bytes para obter o endereço de destino.  
+ no O número de bytes a serem obtidos do endereço de destino.  
   
  `pBytesRead`  
- [out] O número de bytes realmente lidos do endereço de destino. Isso pode ser menos de `bytesRequested`.  
+ fora O número de bytes realmente lidos do endereço de destino. Isso pode ser menor que `bytesRequested`.  
   
 ## <a name="remarks"></a>Comentários  
- Se o primeiro byte (no endereço inicial especificado) pode ser lidos, a chamada deve retornar êxito (para dar suporte à leitura eficiente de estruturas de dados com autodescritivos comprimento, como cadeias de caracteres terminada em nulo).  
+ Se o primeiro byte (no endereço inicial especificado) puder ser lido, a chamada deverá retornar êxito (para dar suporte à leitura eficiente de estruturas de dados com comprimento autodescritivo, como cadeias de caracteres terminadas em nulo).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

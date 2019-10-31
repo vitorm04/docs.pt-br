@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739963"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132821"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>Enumeração CorDebugIlToNativeMappingTypes
-Indica se um determinado intervalo de instruções nativas, representada por uma instância da estrutura COR_DEBUG_IL_TO_NATIVE_MAP, corresponde a uma região de código especial.  
+Indica se um intervalo específico de instruções nativas, representado por uma instância da estrutura COR_DEBUG_IL_TO_NATIVE_MAP, corresponde a uma região de código especial.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,12 +38,12 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`NO_MAPPING`|O intervalo de instruções nativas corresponde a qualquer região de código especial.|  
-|`PROLOG`|O intervalo de instruções nativas corresponde a prólogo.|  
-|`EPILOG`|O intervalo de instruções nativas corresponde a epílogo.|  
+|`NO_MAPPING`|O intervalo de instruções nativas não corresponde a nenhuma região de código especial.|  
+|`PROLOG`|O intervalo de instruções nativas corresponde ao prólogo.|  
+|`EPILOG`|O intervalo de instruções nativas corresponde ao epílogo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

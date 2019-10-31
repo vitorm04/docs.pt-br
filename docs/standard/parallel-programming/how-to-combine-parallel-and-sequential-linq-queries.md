@@ -1,5 +1,5 @@
 ---
-title: 'Como: combinar consultas LINQ paralelas e sequenciais'
+title: Como combinar consultas LINQ paralelas e sequenciais
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 026c7d2be678c4b6aeed4e2e6f9eb43283cd04c1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 4c04afb23a168a9cff60962bd5a75a65e3ebca4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988456"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134188"
 ---
-# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Como: combinar consultas LINQ paralelas e sequenciais
+# <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Como combinar consultas LINQ paralelas e sequenciais
 Este exemplo mostra como usar o método <xref:System.Linq.ParallelEnumerable.AsSequential%2A> para instruir o PLINQ para processar todos os operadores subsequentes na consulta em sequência. Embora o processamento sequencial seja geralmente mais lento que o paralelo, às vezes, ele é necessário para gerar resultados corretos.  
   
 > [!WARNING]

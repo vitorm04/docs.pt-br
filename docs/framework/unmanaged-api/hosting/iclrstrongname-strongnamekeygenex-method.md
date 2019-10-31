@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: acbf401ac2abb5ded151a48017a8a977cd0f4b71
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135017"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>Método ICLRStrongName::StrongNameKeyGenEx
-Gera um novo par de chaves pública/privada com o tamanho da chave especificado, para uso de nome forte.  
+Gera um novo par de chaves pública/privada com o tamanho de chave especificado, para uso de nome forte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,38 +39,38 @@ HRESULT StrongNameKeyGenEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `wszKeyContainer`  
- [in] O nome do contêiner de chave solicitado. `wszKeyContainer` deve ser uma cadeia de caracteres não vazia ou null para gerar um nome temporário.  
+ no O nome do contêiner de chave solicitado. `wszKeyContainer` deve ser uma cadeia de caracteres não vazia ou nula para gerar um nome temporário.  
   
  `dwFlags`  
- [in] Um valor que especifica se é necessário deixar a chave registrado. Há suporte para os seguintes valores:  
+ no Um valor que especifica se a chave deve ser desregistrada. Há suporte para os seguintes valores:  
   
-- 0x00000000 - usado quando `wszKeyContainer` é nula para gerar um nome de contêiner de chave temporária.  
+- 0x00000000-usado quando `wszKeyContainer` é nulo para gerar um nome de contêiner de chave temporário.  
   
-- 0x00000001 (`SN_LEAVE_KEY`)-Especifica que a chave deve ser registrada para a esquerda.  
+- 0x00000001 (`SN_LEAVE_KEY`) – especifica que a chave deve ser registrada.  
   
  `dwKeySize`  
- [in] O tamanho solicitado da chave, em bits.  
+ no O tamanho solicitado da chave, em bits.  
   
  `ppbKeyBlob`  
- [out] O par de chaves pública/privada retornado.  
+ fora O par de chaves pública/privada retornado.  
   
  `pcbKeyBlob`  
- [out] O tamanho, em bytes, do `ppbKeyBlob`.  
+ fora O tamanho, em bytes, de `ppbKeyBlob`.  
   
-## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+## <a name="return-value"></a>Valor retornado  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
- As versões do .NET Framework 1.0 e 1.1 requerem um `dwKeySize` de 1024 bits para assinar um assembly com um nome forte; a versão 2.0 adiciona suporte para chaves de 2048 bits.  
+ As versões 1,0 e 1,1 do .NET Framework exigem uma `dwKeySize` de 1024 bits para assinar um assembly com um nome forte; a versão 2,0 adiciona suporte para chaves de 2048 bits.  
   
- Após a chave de recuperação, você deve chamar o [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) método para liberar a memória alocada.  
+ Depois que a chave for recuperada, você deverá chamar o método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) para liberar a memória alocada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

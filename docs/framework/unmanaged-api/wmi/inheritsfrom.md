@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127424"
 ---
 # <a name="inheritsfrom-function"></a>Função InheritsFrom
 Determina se a classe ou instância atual é derivada de uma classe pai especificada.
@@ -47,7 +45,7 @@ no Este parâmetro não é usado.
 no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszAncestor`  
-no O nome da classe. `wszAncestor`deve apontar para um válido `LPCWSTR`.
+no O nome da classe. `wszAncestor` deve apontar para uma `LPCWSTR`válida.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -64,9 +62,9 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 Essa função encapsula uma chamada para o método [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

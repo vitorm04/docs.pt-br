@@ -7,21 +7,19 @@ helpviewer_keywords:
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f90abf9f6c2bc0aed2cf01558b2c0cca4e967e81
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0d6dd291a24928487a040c0427f058dee80bf836
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252641"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117382"
 ---
-# <a name="enforcefipspolicy-element"></a>\<Elemento de > enforceFIPSPolicy
+# <a name="enforcefipspolicy-element"></a>\<elemento de > enforceFIPSPolicy
 Especifica se deve-se impor um requisito de configuração do computador em que os algoritmos de criptografia devem estar em conformidade com o FIPS (padrão norte-americano de processamento de informações).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +34,13 @@ Especifica se deve-se impor um requisito de configuração do computador em que 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|enabled|Atributo obrigatório.<br /><br /> Especifica se é necessário habilitar a imposição de um requisito de configuração de computador que os algoritmos criptográficos devem ser compatíveis com o FIPS.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se é necessário habilitar a imposição de um requisito de configuração de computador que os algoritmos criptográficos devem ser compatíveis com o FIPS.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`true`|Se o computador estiver configurado para exigir que os algoritmos criptográficos sejam compatíveis com FIPS, esse requisito será imposto. Se uma classe implementa um algoritmo que não está em conformidade com o FIPS, os construtores `Create` ou métodos dessa classe lançam exceções quando são executados nesse computador. Esse é o padrão.|  
+|`true`|Se o computador estiver configurado para exigir que os algoritmos criptográficos sejam compatíveis com FIPS, esse requisito será imposto. Se uma classe implementa um algoritmo que não está em conformidade com o FIPS, os construtores ou os métodos de `Create` para essa classe geram exceções quando são executados nesse computador. Esse é o padrão.|  
 |`false`|Os algoritmos de criptografia usados pelo aplicativo não precisam ser compatíveis com o FIPS, independentemente da configuração do computador.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -56,7 +54,7 @@ Especifica se deve-se impor um requisito de configuração do computador em que 
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- A partir do .NET Framework 2,0, a criação de classes que implementam algoritmos de criptografia é controlada pela configuração do computador. Se o computador estiver configurado para exigir que os algoritmos sejam compatíveis com o FIPS e uma classe implementar um algoritmo que não seja compatível com o FIPS, qualquer tentativa de criar uma instância dessa classe gerará uma exceção. Os construtores geram <xref:System.InvalidOperationException> uma exceção e `Create` os métodos geram uma <xref:System.Reflection.TargetInvocationException> exceção com <xref:System.InvalidOperationException> uma exceção interna.  
+ A partir do .NET Framework 2,0, a criação de classes que implementam algoritmos de criptografia é controlada pela configuração do computador. Se o computador estiver configurado para exigir que os algoritmos sejam compatíveis com o FIPS e uma classe implementar um algoritmo que não seja compatível com o FIPS, qualquer tentativa de criar uma instância dessa classe gerará uma exceção. Os construtores lançam uma exceção de <xref:System.InvalidOperationException> e `Create` métodos lançam uma exceção <xref:System.Reflection.TargetInvocationException> com uma exceção de <xref:System.InvalidOperationException> interna.  
   
  Se seu aplicativo for executado em computadores cujas configurações exigem conformidade com o FIPS e seu aplicativo usa um algoritmo que não é compatível com o FIPS, você pode usar esse elemento em seu arquivo de configuração para impedir que o Common Language Runtime (CLR) imposição de conformidade com FIPS. Esse elemento foi introduzido no .NET Framework 2,0 Service Pack 1.  
   

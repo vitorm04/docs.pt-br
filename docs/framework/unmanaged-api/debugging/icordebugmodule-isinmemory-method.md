@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 223989d883c421be228fb3d6a608643a5246c060
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1384acff4ea3d1aa820b065cd2c56f649f0cbdbb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127918"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>Método ICorDebugModule::IsInMemory
-Obtém um valor que indica se este módulo existe apenas na memória.  
+Obtém um valor que indica se esse módulo existe apenas na memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT IsInMemory(
   
 ## <a name="parameters"></a>Parâmetros  
  `pInMemory`  
- [out] `true` se esse módulo existe apenas na memória; caso contrário, `false`.  
+ [fora] `true` se esse módulo existir apenas na memória; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- O common language runtime (CLR) dá suporte o carregamento de módulos de brutos fluxos de bytes. Esses módulos são chamados *módulos de memória* e não existem no disco.  
+ O Common Language Runtime (CLR) dá suporte ao carregamento de módulos de fluxos brutos de bytes. Esses módulos são chamados *de módulos na memória* e não existem no disco.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

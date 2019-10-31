@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101847"
 ---
 # <a name="getpropertyorigin-function"></a>Função GetPropertyOrigin
 
@@ -72,13 +70,13 @@ Essa função encapsula uma chamada para o método [IWbemClassObject:: GetProper
 
 Como uma classe pode herdar propriedades de uma ou mais classes base, os desenvolvedores geralmente desejam determinar a propriedade na qual um determinado método é definido.
 
-O `pstrClassName` parâmetro não deve apontar para um válido `BSTR` antes que a função seja chamada porque esse é `out` um parâmetro; esse ponteiro não é desalocado depois que a função retorna.
+O parâmetro `pstrClassName` não deve apontar para um `BSTR` válido antes que a função seja chamada porque este é um parâmetro `out`; Esse ponteiro não é desalocado depois que a função retorna.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

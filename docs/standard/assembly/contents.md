@@ -1,5 +1,5 @@
 ---
-title: Conteúdo do assembly
+title: Conteúdos do assembly
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - single-file assemblies
 - multifile assemblies [.NET Framework]
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d9268b0ec1ea919730a2ebcd209507692284cc6
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9ca12ee4bd993db3dd200a3b340c220ce5188796
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122530"
 ---
-# <a name="assembly-contents"></a>Conteúdo do assembly
+# <a name="assembly-contents"></a>Conteúdos do assembly
 Em geral, um assembly estático pode consistir em quatro elementos:
 
 - O [manifesto do assembly](manifest.md), que contém metadados do assembly.

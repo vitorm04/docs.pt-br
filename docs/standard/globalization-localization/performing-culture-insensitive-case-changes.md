@@ -15,14 +15,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 04601ac0e6b1bc3289be36ce3e1a144ce57ccefb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: b5289074724e3afd7356599738eeba648f25ca06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120841"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Executando alterações de maiúsculas e minúsculas que não levam em conta a cultura
 Os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> fornecem sobrecargas que não aceitam quaisquer parâmetros. Por padrão, essas sobrecargas sem parâmetros executam alterações de maiúsculas e minúsculas com base no valor do <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Isso produz resultados sensíveis a maiúsculas e minúsculas que podem variar de acordo com a cultura. Para deixar claro se você deseja que as mudanças de maiúsculas e minúsculas sejam sensíveis à cultura ou não sejam insensíveis à cultura, você deve usar as sobrecargas desses métodos que exigem que você especifique explicitamente um parâmetro `culture`. Para mudanças de maiúsculas e minúsculas sensíveis à cultura, especifique `CultureInfo.CurrentCulture` para o parâmetro `culture`. Para mudanças de maiúsculas e minúsculas insensíveis à cultura, especifique `CultureInfo.InvariantCulture` para o parâmetro `culture`.  

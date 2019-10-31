@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a1adb79e5081fc909d0cd180d8161eccea7e58e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a486935d5d53a6fc7d862160ed1186c5774814c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084793"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>Método ICorDebugEval2::RudeAbort
-Anula o cálculo que este `ICorDebugEval2` está executando no momento.  
+Anula a computação que esse `ICorDebugEval2` está executando no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +32,10 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `RudeAbort` não libera todos os bloqueios que mantém o avaliador, portanto, ele deixa a sessão de depuração em um estado não seguro. Chame esse método com muito cuidado.  
+ `RudeAbort` não libera os bloqueios que o avaliador mantém, portanto, deixa a sessão de depuração em um estado não seguro. Chame esse método com extrema cautela.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

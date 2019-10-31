@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3064a5793c6158ead85a9ff6d9b09f077d0bd603
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7dae98d1f2dc2448bd3a5df2d6143b7be0bb734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966234"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129267"
 ---
 # <a name="iclrgcmanagercollect-method"></a>Método ICLRGCManager::Collect
 Força uma coleta de lixo para a geração especificada.  
@@ -39,11 +37,11 @@ HRESULT Collect (
  `Generation`  
  no A geração a ser coletada. Um valor de-1 força uma coleção de todas as gerações.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`Collect`retornado com êxito.|  
+|S_OK|`Collect` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -51,14 +49,14 @@ HRESULT Collect (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O `Collect` método força o coletor de lixo do CLR a executar uma coleção, independentemente de seu estado atual.  
+ O método `Collect` força o coletor de lixo do CLR a executar uma coleção, independentemente de seu estado atual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

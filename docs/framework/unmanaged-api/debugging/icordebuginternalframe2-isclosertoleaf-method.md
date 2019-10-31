@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0e72d15ab4ca9b4468efb2a671022f30bfb3cc6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759950"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122661"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Método ICorDebugInternalFrame2::IsCloserToLeaf
-Verifica se o `this` quadro interno está mais próximo da folha que o objeto ICorDebugFrame especificado.  
+Verifica se o quadro interno `this` está mais próximo da folha do que o objeto ICorDebugFrame especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,25 +34,25 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>Parâmetros  
  `pFrameToCompare`  
- [in] Um ponteiro para a comparação `ICorDebugFrame` objeto.  
+ no Um ponteiro para a comparação `ICorDebugFrame` objeto.  
   
  `pIsCloser`  
- [out] `true` se o `this` quadro interno está mais próximo da folha que o quadro especificado por `pFrameToCompare`; caso contrário, `false`.  
+ [fora] `true` se o quadro interno `this` está mais próximo da folha do que o quadro especificado por `pFrameToCompare`; caso contrário, `false`.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|A comparação foi realizada com êxito.|  
-|E_FAIL|A comparação não pôde ser executada.|  
+|S_OK|A comparação foi executada com êxito.|  
+|E_FAIL|Não foi possível executar a comparação.|  
 |E_INVALIDARG|`pFrameToCompare` ou `pIsCloser` é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
- `IsCloserToLeaf` pode ser usado para implementar uma política de intercalação quadros internos com outros quadros na pilha.  
+ `IsCloserToLeaf` pode ser usado para implementar uma política para intercalar quadros internos com outros quadros na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

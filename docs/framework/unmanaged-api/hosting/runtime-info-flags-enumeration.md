@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781153"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106246"
 ---
-# <a name="runtimeinfoflags-enumeration"></a>Enumeração RUNTIME_INFO_FLAGS
-Contém valores que indicam quais informações sobre o common language runtime (CLR) devem ser retornadas.  
+# <a name="runtime_info_flags-enumeration"></a>Enumeração RUNTIME_INFO_FLAGS
+Contém valores que indicam quais informações sobre o Common Language Runtime (CLR) devem ser retornadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,15 +47,15 @@ typedef enum {
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Indica que as informações de diretório não devem ser incluídas.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Indica que as informações de versão não devem ser incluídas.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Indica que uma caixa de diálogo de erro não deve ser mostrada em caso de falha.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Indica que os efeitos da chamada a [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) função com o sinalizador SEM_FAILCRITICALERRORS deve ser substituída. Ou seja, uma caixa de diálogo de instalação deve ser mostrada em caso de falha, em vez de ser suprimida.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Indica uma solicitação para obter informações sobre uma versão compatível com 64 AMD de tempo de execução.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Indica uma solicitação para obter informações sobre uma versão compatível do IA-64 do tempo de execução.|  
-|`RUNTIME_INFO_REQUEST_X86`|Indica uma solicitação para obter informações sobre uma versão compatível com x86 do tempo de execução.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Indica que uma caixa de diálogo de erro não deve ser exibida após a falha.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Indica que os efeitos da chamada da função [SetError](https://go.microsoft.com/fwlink/p/?LinkId=255242) com o sinalizador SEM_FAILCRITICALERRORS devem ser substituídos. Ou seja, uma caixa de diálogo de instalação deve ser mostrada após a falha, em vez de ser suprimida.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Indica uma solicitação de informações sobre uma versão compatível com AMD-64 do tempo de execução.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Indica uma solicitação de informações sobre uma versão compatível com IA-64 do tempo de execução.|  
+|`RUNTIME_INFO_REQUEST_X86`|Indica uma solicitação de informações sobre uma versão compatível com x86 do tempo de execução.|  
 |`RUNTIME_INFO_UPGRADE_VERSION`|Indica que as informações de atualização de versão devem ser incluídas.|  
   
 ## <a name="remarks"></a>Comentários  
- Os seguintes sinalizadores de arquitetura de plataforma podem ser especificado apenas um por vez e não podem ser combinados:  
+ Os seguintes sinalizadores de arquitetura de plataforma podem ser especificados apenas um de cada vez e não podem ser combinados:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,11 +64,11 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

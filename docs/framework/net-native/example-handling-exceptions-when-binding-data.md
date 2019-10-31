@@ -1,17 +1,15 @@
 ---
-title: 'Exemplo: lidar com exceções ao associar dados'
+title: 'Exemplo: lidando com exceções ao associar dados'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ab5477257bd6d32d901ad01518f7a75081d2a10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049887"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128452"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Exemplo: lidar com exceções ao associar dados
+# <a name="example-handling-exceptions-when-binding-data"></a>Exemplo: lidando com exceções ao associar dados
 > [!NOTE]
 > Este tópico refere-se ao Developer Preview do .NET Nativo, que é um software em pré-lançamento. Você pode baixar a versão prévia do [site Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (registro obrigatório).  
   
@@ -39,7 +37,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>O que o aplicativo estava fazendo?  
- Na base da pilha, os quadros do <xref:Windows.UI.Xaml?displayProperty=nameWithType> namespace indicam que o mecanismo de renderização XAML estava em execução.   O uso do método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica uma pesquisa de reflexão do valor da propriedade no tipo cujos metadados foi removido.  
+ Na base da pilha, os quadros do namespace <xref:Windows.UI.Xaml?displayProperty=nameWithType> indicam que o mecanismo de renderização XAML estava em execução.   O uso do método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica uma pesquisa de reflexão do valor da propriedade no tipo cujos metadados foi removido.  
   
  A primeira etapa no fornecimento de uma diretiva de metadados seria adicionar metadados `serialize` ao tipo de forma que suas propriedades estejam acessíveis:  
   
@@ -57,9 +55,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>O código pode ser reconfigurado para não usar reflexão?  
  Como associação de dados possui reflexão intensa, alterar o código para evitar reflexão não é viável.  
   
- No entanto, existem maneiras para especificar o `ViewModel` para a página XAML para que a cadeia de ferramentas possa associar propriedades de vinculação com o tipo correto no tempo de compilação e manter os metadados sem usar uma diretiva de tempo de execução.  Por exemplo, você pode aplicar o <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atributo em Propriedades. Isso faz com que o compilador XAML gere informações de pesquisa necessárias e evita que necessitem de uma diretiva de tempo de execução no arquivo Default.rd.xml.  
+ No entanto, existem maneiras para especificar o `ViewModel` para a página XAML para que a cadeia de ferramentas possa associar propriedades de vinculação com o tipo correto no tempo de compilação e manter os metadados sem usar uma diretiva de tempo de execução.  Por exemplo, você pode aplicar o atributo <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> em Propriedades. Isso faz com que o compilador XAML gere informações de pesquisa necessárias e evita que necessitem de uma diretiva de tempo de execução no arquivo Default.rd.xml.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Introdução](getting-started-with-net-native.md)
-- [Exemplo: Solucionando problemas de programação dinâmica](example-troubleshooting-dynamic-programming.md)
+- [Exemplo: solução de problemas de programação dinâmica](example-troubleshooting-dynamic-programming.md)

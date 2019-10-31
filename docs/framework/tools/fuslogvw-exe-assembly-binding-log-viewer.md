@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044674"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129841"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizador do Log de Associações de Assembly)
 
@@ -42,7 +40,7 @@ O visualizador exibe uma entrada para cada associação do assembly com falha. P
 2. Selecione o botão de opção **Personalizar** para exibir falhas de associação em um diretório personalizado especificado. Você deve especificar o local personalizado no qual deseja que o tempo de execução armazene os logs definindo o local de log personalizado na caixa de diálogo **Configurações de Log** como um nome de diretório válido. Esse diretório deve estar limpo e conter apenas arquivos gerados pelo tempo de execução. Se ele contiver um executável que gere uma falha a ser registrada em log, a falha não será registrada em log porque a ferramenta tenta criar um diretório com o mesmo nome do executável. Além disso, haverá falha em uma tentativa de executar um executável com base no local do log.
 
     > [!NOTE]
-    > O local de associação padrão é preferível ao local de associação personalizado. O tempo de execução armazena o local de associação padrão no cache de wininet e, assim, o limpa automaticamente. Se especificar um local de associação personalizado, você será responsável por limpá-lo.
+    > O local de associação padrão é preferível ao local de associação personalizado. O tempo de execução armazena o local de ligação padrão no cache do WinInet e, portanto, o limpa automaticamente. Se você especificar um local de ligação personalizado, será responsável por limpá-lo.
 
 ### <a name="to-view-details-about-a-specific-failure"></a>Para exibir detalhes sobre uma falha específica
 
@@ -218,7 +216,7 @@ Discarding native image.
 2. Digite o caminho na caixa de texto **Caminho de log personalizado**.
 
 > [!NOTE]
-> O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários na caixa de diálogo Opções da Internet do IE.
+> O [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) usa o cache do IE (Internet Explorer) para armazenar seu log de associação. Devido a um dano ocasional no cache do IE, o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) às vezes pode parar de mostrar os novos logs de associação na janela de exibição. Por conta desse dano, a infraestrutura de associação do .NET (fusão) não pode gravar no ou ler do log de associação. (Esse problema não será encontrado se você usar um caminho de log personalizado.)  Para corrigir o dano e permitir que a fusão mostre logs de associação novamente, limpe o cache do IE excluindo arquivos de Internet temporários de dentro da caixa de diálogo Opções da Internet do IE.
 >
 > Se o aplicativo não gerenciado hospedar o Common Language Runtime implementando as interfaces `IHostAssemblyManager` e `IHostAssemblyStore`, as entradas de log não poderão ser armazenadas no cache de wininet.  Para exibir entradas de log para hosts personalizadas que implementam essas interfaces, você deve especificar um caminho de log alternativo.
 

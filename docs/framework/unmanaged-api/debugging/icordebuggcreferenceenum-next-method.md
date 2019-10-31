@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ef4ced1abd5b37af204ab3511a7cf8259303e8c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43408486fec9cd50222eed08ec2d3397bc11bc18
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134618"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>Método ICorDebugGCReferenceEnum::Next
-Obtém o número especificado de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instâncias que contêm informações sobre os objetos que serão coletados pelo lixo.  
+Obtém o número especificado de instâncias [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) que contêm informações sobre objetos que serão coletados como lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parâmetros  
  celt  
- [in] O número de raízes a ser recuperado.  
+ no O número de raízes a serem recuperadas.  
   
- raízes  
- [out] Uma matriz de ponteiros, cada qual apontando para um [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objeto que representa a raiz de um objeto a ser coletado como lixo.  
+ raiz  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) que representa a raiz de um objeto a ser coletado pelo lixo.  
   
  pceltFetched  
- [out] Um ponteiro para o número de [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objetos, na verdade, são retornados em `roots`. Esse valor pode ser `null` se `celt` é 1.  
+ fora Um ponteiro para o número de objetos [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) realmente retornados em `roots`. Esse valor pode ser `null` se `celt` for 1.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

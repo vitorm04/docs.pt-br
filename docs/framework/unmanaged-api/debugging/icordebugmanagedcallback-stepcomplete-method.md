@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c3ced50457519d62be44712386bdabce176c44e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e044b1a2ad777868e33cd64bc8d09a9b76d547aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761315"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130661"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>Método ICorDebugManagedCallback::StepComplete
-Notifica o depurador que uma etapa foi concluída.  
+Notifica o depurador de que uma etapa foi concluída.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,22 +38,22 @@ HRESULT StepComplete (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o segmento em que a etapa foi concluída.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread no qual a etapa foi concluída.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual a etapa foi concluída.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread no qual a etapa foi concluída.  
   
  `pStepper`  
- [in] Um ponteiro para um objeto de ICorDebugStepper que representa a etapa na execução do código.  
+ no Um ponteiro para um objeto ICorDebugStepper que representa a etapa na execução de código.  
   
  `reason`  
- [in] Um valor de enumeração CorDebugStepReason que indica o resultado de uma etapa individual.  
+ no Um valor da enumeração CorDebugStepReason que indica o resultado de uma etapa individual.  
   
 ## <a name="remarks"></a>Comentários  
- O seletor pode ser usado para continuar a depuração se desejado, a menos que a depuração é encerrada.  
+ O stepper pode ser usado para continuar a depuração, se desejado, a menos que a depuração seja encerrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

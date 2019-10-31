@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c381f524-94cf-4fa2-9298-50f847a03431
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3e808c7ed03d7b4cc9dfe77389df6b2eff491f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bf1b830f55110c00356527bc9caa41dfd94ae377
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937718"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130462"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>Método IHostGCManager::SuspensionStarting
 Notifica o host que o Common Language Runtime (CLR) está suspendendo a execução de tarefas, para executar uma coleta de lixo.  
@@ -33,11 +31,11 @@ Notifica o host que o Common Language Runtime (CLR) está suspendendo a execuç�
 HRESULT SuspensionStarting ();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`SuspensionStarting`retornado com êxito.|  
+|S_OK|`SuspensionStarting` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -51,11 +49,11 @@ HRESULT SuspensionStarting ();
 > Não reagende esta tarefa. O host deve reagendar uma tarefa quando [ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md) é chamado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

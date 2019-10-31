@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127023"
 ---
-# <a name="hosttype-enumeration"></a>Enumeração HOST_TYPE
+# <a name="host_type-enumeration"></a>Enumeração HOST_TYPE
 Contém valores que especificam o tipo de host que está iniciando um aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -40,16 +38,16 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Inicie o aplicativo de AppLaunch.exe.<br /><br /> Use esse valor para os aplicativos parcialmente confiáveis.|  
-|`HOST_TYPE_CORFLAG`|Inicie o aplicativo diretamente. Ou seja, inicie o aplicativo de seu próprio arquivo .exe.<br /><br /> Use esse valor para os aplicativos totalmente confiáveis.|  
-|`HOST_TYPE_DEFAULT`|Mesmo que HOST_TYPE_APPLAUNCH.|  
+|`HOST_TYPE_APPLAUNCH`|Inicie o aplicativo em AppLaunch. exe.<br /><br /> Use esse valor para aplicativos parcialmente confiáveis.|  
+|`HOST_TYPE_CORFLAG`|Inicie o aplicativo diretamente. Ou seja, inicie o aplicativo a partir de seu próprio arquivo. exe.<br /><br /> Use esse valor para aplicativos totalmente confiáveis.|  
+|`HOST_TYPE_DEFAULT`|O mesmo que HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

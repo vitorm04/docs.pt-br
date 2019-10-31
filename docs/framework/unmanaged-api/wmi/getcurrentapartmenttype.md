@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetCurrentApartmentType function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6ecd2b49d6850a8fae25ddca54f855fdda2ccabb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798621"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120349"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Função GetCurrentApartmentType
 Recupera o tipo de apartment no qual o chamador está sendo executado.   
@@ -61,9 +59,9 @@ fora Um ponteiro para um valor de enumeração [APTTYPE](/windows/win32/api/obji
 Essa função encapsula uma chamada para o método [IComThreadingInfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

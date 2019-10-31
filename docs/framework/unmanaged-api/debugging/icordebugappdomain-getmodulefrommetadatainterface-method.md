@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737896"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110352"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>Método ICorDebugAppDomain::GetModuleFromMetaDataInterface
-Obtém o módulo que corresponda à interface de metadados especificado.  
+Obtém o módulo que corresponde à interface de metadados fornecida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +36,13 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>Parâmetros  
  `pIMetaData`  
- [in] Um ponteiro para um objeto que é um dos [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ no Um ponteiro para um objeto que é uma das [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
   
  `ppModule`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugModule que representa o módulo correspondente para a interface de metadados especificado.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugModule que representa o módulo correspondente à interface de metadados fornecida.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: fazer iterações de diretórios de arquivos com a Classe Paralela'
+title: 'Como: Fazer iterações de diretórios de arquivos com a Classe Paralela'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: fda8443666d1c90b31cf02c2f925d1c89243a8e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091323"
 ---
-# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Como: fazer iterações de diretórios de arquivos com a Classe Paralela
-Em muitos casos, a iteração de arquivo é uma operação que pode ser facilmente paralelizada. O tópico [Como: fazer iterações de diretórios de arquivos com o PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) mostra a maneira mais fácil de executar essa tarefa para muitos cenários. No entanto, podem surgir complicações quando seu código precisa lidar com vários tipos de exceções ao acessar o sistema de arquivos. O exemplo a seguir mostra uma abordagem para o problema. Ele usa uma iteração baseada em pilha para transportar todos os arquivos e pastas para um diretório especificado, e permite que seu código capture e trate várias exceções. É claro que a forma como você manipula as exceções fica a seu critério.  
+# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Como: Fazer iterações de diretórios de arquivos com a Classe Paralela
+Em muitos casos, a iteração de arquivo é uma operação que pode ser facilmente paralelizada. O tópico [Como iterar diretórios de arquivos com o PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) mostra a maneira mais fácil de executar essa tarefa para muitos cenários. No entanto, podem surgir complicações quando seu código precisa lidar com vários tipos de exceções ao acessar o sistema de arquivos. O exemplo a seguir mostra uma abordagem para o problema. Ele usa uma iteração baseada em pilha para transportar todos os arquivos e pastas para um diretório especificado, e permite que seu código capture e trate várias exceções. É claro que a forma como você manipula as exceções fica a seu critério.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir itera os diretórios sequencialmente, mas processa os arquivos em paralelo. Essa é provavelmente a melhor abordagem quando você tem uma proporção de arquivo para diretório grande. Também é possível paralelizar a iteração de diretórios e acessar cada arquivo em sequência. Provavelmente, não é eficiente paralelizar os dois loops, a menos que você esteja direcionando especificamente a uma máquina com muitos processadores. No entanto, como em todos os casos, você deve testar cuidadosamente seu aplicativo para determinar a melhor abordagem.  
@@ -30,7 +28,7 @@ Em muitos casos, a iteração de arquivo é uma operação que pode ser facilmen
   
  O exemplo usa a variável local `fileCount` para manter uma contagem do número total de arquivos processados. Como a variável pode ser acessada simultaneamente por várias tarefas, o acesso a ela é sincronizado chamando o método <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.  
   
- Observe que se uma exceção for lançada no thread principal, os threads iniciados pelo método <xref:System.Threading.Tasks.Parallel.ForEach%2A> poderão continuar a executar. Para interromper esses threads, você pode definir uma variável booliana em seus manipuladores de exceção, e verificar seu valor em cada iteração do loop paralelo. Se o valor indica que uma exceção foi lançada, use a variável <xref:System.Threading.Tasks.ParallelLoopState> para interromper ou sair do loop. Para obter mais informações, confira [Como: parar ou interromper um loop Parallel.For](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
+ Observe que se uma exceção for lançada no thread principal, os threads iniciados pelo método <xref:System.Threading.Tasks.Parallel.ForEach%2A> poderão continuar a executar. Para interromper esses threads, você pode definir uma variável booliana em seus manipuladores de exceção, e verificar seu valor em cada iteração do loop paralelo. Se o valor indica que uma exceção foi lançada, use a variável <xref:System.Threading.Tasks.ParallelLoopState> para interromper ou sair do loop. Para saber mais, confira [Como parar ou sair de um loop Parallel.For](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte também
 

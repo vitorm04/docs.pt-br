@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b712ee0bb8e67f448b7ea2bee3c092367181abad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740218"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132237"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>Enumeração CorDebugExceptionCallbackType
-Indica o tipo de retorno de chamada é feito de um [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) eventos.  
+Indica o tipo de retorno de chamada que é feito de um evento [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,12 +40,12 @@ typedef enum CorDebugExceptionCallbackType {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Uma exceção foi lançada.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|O processo de exceção windup inseriu o código de usuário.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|O processo de windup exceção encontrado uma `catch` bloquear no código do usuário.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|O processo de windup de exceção inseriu o código do usuário.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|O processo de windup de exceção encontrou um bloco de `catch` no código do usuário.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|A exceção não foi tratada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

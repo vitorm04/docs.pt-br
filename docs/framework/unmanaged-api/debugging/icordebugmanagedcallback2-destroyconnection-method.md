@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 350a3505345aa88d93f551309eb896ff52cc683d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a64df9f821021547efd08045e9f67fee25173e5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137432"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>Método ICorDebugManagedCallback2::DestroyConnection
-Notifica o depurador para que a conexão especificada foi encerrada.  
+Notifica o depurador de que a conexão especificada foi encerrada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT DestroyConnection (
   
 ## <a name="parameters"></a>Parâmetros  
  `pProcess`  
- [in] Um ponteiro para um objeto ICorDebugProcess que representa o processo que contém a conexão que foi destruído.  
+ no Um ponteiro para um objeto ICorDebugProcess que representa o processo que contém a conexão que foi destruída.  
   
  `dwConnectionId`  
- [in] A ID da conexão que foi destruído.  
+ no A ID da conexão que foi destruída.  
   
 ## <a name="remarks"></a>Comentários  
- Um `DestroyConnection` retorno de chamada será acionado quando um host chama [iclrdebugmanager:: Endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) no [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+ Um retorno de chamada `DestroyConnection` será acionado quando um host chamar [ICLRDebugManager:: EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) na [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

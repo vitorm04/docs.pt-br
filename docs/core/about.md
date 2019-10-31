@@ -2,12 +2,12 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093436"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -113,7 +113,7 @@ Como o .NET Core é compatível com a instalação lado a lado, e seu tempo de e
 
 ### <a name="comparison-with-mono"></a>Comparação com Mono
 
-O [mono](https://www.mono-project.com/) é a plataforma cruzada original do .net. Ele começou [como uma alternativa de software](https://github.com/mono/mono)livre) para .NET Framework e transicionado para direcionar dispositivos móveis, já que dispositivos IOS e Android se tornaram populares. Ele pode ser considerado um clone de comunidade do .NET Framework. A equipe do projeto mono dependia dos [padrões .net](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abertos (notavelmente ECMA 335) publicados pela Microsoft para fornecer uma implementação compatível.
+O [mono](https://www.mono-project.com/) é a implementação original de plataforma cruzada do .net. Ele começou [como uma alternativa de software](https://github.com/mono/mono) livre para .NET Framework e transicionado para direcionar dispositivos móveis, já que dispositivos IOS e Android se tornaram populares. Ele pode ser considerado um clone de comunidade do .NET Framework. A equipe do projeto mono dependia dos [padrões .net](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abertos (notavelmente ECMA 335) publicados pela Microsoft para fornecer uma implementação compatível.
 
 Principais diferenças entre o .NET Core e o Mono:
 

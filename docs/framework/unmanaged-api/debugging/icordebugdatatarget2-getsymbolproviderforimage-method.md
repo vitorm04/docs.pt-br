@@ -2,14 +2,12 @@
 title: Método ICorDebugDataTarget2::GetSymbolProviderForImage
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e5a6e70d5148756a5ed8d17c56577da920d1b69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64a35f65bc3c31e091e2d94260efb84f20abb795
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911444"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122102"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>Método ICorDebugDataTarget2::GetSymbolProviderForImage
 Retorna o provedor de símbolo para um módulo do endereço base do módulo.  
@@ -36,11 +34,11 @@ HRESULT GetSymbolProviderForImage(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

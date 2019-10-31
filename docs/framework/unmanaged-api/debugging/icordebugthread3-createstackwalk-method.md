@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b21bf047acf306fb41a7e6a8f8e73c698ea5b619
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ca5db8c8570cedd9b0412b71058d453112a1831c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140132"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>Método ICorDebugThread3::CreateStackWalk
-Cria uma [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o thread cuja pilha que você deseja de desenrolamento.  
+Cria um objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) para o thread cuja pilha você deseja desenrolar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,23 +33,23 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 ## <a name="parameters"></a>Parâmetros  
  `ppStackWalk`  
- [out] Um ponteiro para o endereço do [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o thread cuja pilha que você deseja de desenrolamento.  
+ fora Um ponteiro para o endereço do objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) para o thread cuja pilha você deseja desenrolar.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O `ICorDebugStackWalk` objeto foi criado com êxito.|  
-|E_FAIL|O `ICorDebugStackWalk` objeto não foi criado.|  
+|S_OK|O objeto `ICorDebugStackWalk` foi criado com êxito.|  
+|E_FAIL|O objeto `ICorDebugStackWalk` não foi criado.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Se o `CreateStackWalk` método for bem-sucedido, retornado `ICorDebugStackWalk` contexto de objeto é definido como o contexto do thread atual.  
+ Se o método `CreateStackWalk` for executado com sucesso, o contexto do objeto de `ICorDebugStackWalk` retornado será definido como o contexto atual do thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

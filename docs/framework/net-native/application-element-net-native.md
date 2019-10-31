@@ -2,16 +2,14 @@
 title: <Application> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049928"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128526"
 ---
-# <a name="application-element-net-native"></a>\<Elemento de > de aplicativo (.NET Native)
+# <a name="application-element-net-native"></a>Elemento de > de aplicativo \<(.NET Native)
 Serve como um contêiner para tipos em todo o aplicativo e membros de tipo cujos metadados estão disponível para reflexão no tempo de execução e aplica-se à política de reflexão no tempo de execução a todos os elementos de programa em um aplicativo.  
   
  Elemento \<Directives>  
@@ -87,7 +85,7 @@ Elemento \<Application> (rd.xml)
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<Elemento de > de biblioteca](library-element-net-native.md)
-- [\<Elemento > de diretivas](directives-element-net-native.md)
+- [Elemento de > de biblioteca de \<](library-element-net-native.md)
+- [Elemento de > de diretivas de \<](directives-element-net-native.md)
 - [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
 - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90ed12862c4cadc45777150deb1b9f91f111bf41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750512"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123634"
 ---
 # <a name="copying-and-pinning"></a>Copiando e fixando
 
@@ -33,7 +31,7 @@ A anexação temporária bloqueia os dados em seu local atual de memória, imped
 As classes [blittable](blittable-and-non-blittable-types.md) formatadas têm o layout fixo (formatado) e uma representação de dados comum na memória gerenciada e não gerenciada. Quando esses tipos exigem o marshaling, um ponteiro para o objeto no heap é passado diretamente para o receptor. O receptor pode alterar o conteúdo do local de memória que está sendo referenciado pelo ponteiro.
 
 > [!NOTE]
-> O receptor pode alterar o conteúdo da memória se o parâmetro estiver marcado como Saída ou Entrada/Saída. Por outro lado, o receptor deve evitar alterar o conteúdo quando o parâmetro é definido para ter o marshaling realizado como Entrada, que é o padrão para tipos blittable formatados. A modificação de um objeto de Entrada gera problemas quando a mesma classe é exportada para uma biblioteca de tipos e usada para fazer chamadas entre apartments.
+> O receptor pode alterar o conteúdo da memória se o parâmetro estiver marcado como out ou in/out. Por outro lado, o receptor deve evitar alterar o conteúdo quando o parâmetro é definido como marshaling como em, que é o padrão para tipos de blittable formatados. A modificação de um objeto de Entrada gera problemas quando a mesma classe é exportada para uma biblioteca de tipos e usada para fazer chamadas entre apartments.
 
 ## <a name="formatted-non-blittable-classes"></a>Classes não blittable formatadas
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119014"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > elemento para \<a configuração >
+# <a name="configsections-element-for-configuration"></a>\<configSections > elemento para \<configuração >
 
 Contém as declarações de namespace e seção de configuração.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+&nbsp;&nbsp; **\<configsections >**
 
 ## <a name="attributes"></a>Atributos
 
@@ -37,14 +37,14 @@ Nenhum
 
 |     | Descrição |
 | --- | ----------- |
-| [ **\<> da seção**](section-element.md) | Contém uma declaração de seção de configuração. |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
+| [ **\<seção >** ](section-element.md) | Contém uma declaração de seção de configuração. |
+| [ **\<> de seção**](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Remove uma seção ou um grupo de seções predefinido. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Limpa todas as seções e grupos de seções definidos anteriormente. |
 
 ## <a name="remarks"></a>Comentários
 
-Se esse elemento estiver em um arquivo de configuração, ele deverá ser o primeiro elemento filho do  **\<elemento Configuration >** .
+Se esse elemento estiver em um arquivo de configuração, ele deverá ser o primeiro elemento filho do elemento **\<configuration >** .
 
 ## <a name="example"></a>Exemplo
 

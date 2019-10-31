@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137788"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Método ICorDebugFunction2::SetJMCStatus
-Marca a função representada por essa ICorDebugFunction2 para apenas meu código passo a passo.  
+Marca a função representada por este ICorDebugFunction2 para Apenas Meu Código stepping.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +35,20 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parâmetros  
  `bIsJustMyCode`  
- [in] Definido como `true` para marcar a função como um código de usuário; caso contrário, defina como `false`.  
+ no Defina como `true` para marcar a função como código de usuário; caso contrário, defina como `false`.  
   
 ## <a name="return-values"></a>Valores de Retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |`S_OK`|A função foi marcada com êxito.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|A função não pode ser marcada como código de usuário porque ele não pode ser depurado.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|A função não pôde ser marcada como código de usuário porque não pode ser depurada.|  
   
 ## <a name="remarks"></a>Comentários  
- Um seletor de apenas meu código vai ignorar o código de não usuário. Código de usuário deve ser um subconjunto de código depurável.  
+ Um Apenas Meu Código stepper ignorará o código que não é do usuário. O código do usuário deve ser um subconjunto de código depurável.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

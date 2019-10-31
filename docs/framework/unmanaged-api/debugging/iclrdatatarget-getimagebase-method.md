@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738760"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122869"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>Método ICLRDataTarget::GetImageBase
-Obtém o endereço de memória de base da imagem especificada.  
+Obtém o endereço de memória base da imagem especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT GetImageBase (
   
 ## <a name="parameters"></a>Parâmetros  
  `imagePath`  
- [in] O nome do arquivo de imagem, incluindo seu caminho.  
+ no O nome do arquivo da imagem, incluindo seu caminho.  
   
  `baseAddress`  
- [out] Um ponteiro para um CLRDATA_ADDRESS que armazena o endereço básico da imagem.  
+ fora Um ponteiro para um CLRDATA_ADDRESS que armazena o endereço base da imagem.  
   
 ## <a name="remarks"></a>Comentários  
- O nome do arquivo de imagem pode ou não ter um caminho. Se um caminho for especificado, a correspondência é feita no caminho inteiro; Caso contrário, a correspondência é feita apenas no nome do arquivo.  
+ O nome do arquivo de imagem pode ou não ter um caminho. Se um caminho for especificado, a correspondência será feita no caminho inteiro; caso contrário, a correspondência será feita apenas no nome do arquivo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

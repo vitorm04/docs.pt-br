@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especificar opções de mesclagem em PLINQ'
+title: Como especificar opções de mesclagem em PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 947f3cb15b7eb372d20884ece73374114c48f472
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139272"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a>Como: Especificar opções de mesclagem em PLINQ
+# <a name="how-to-specify-merge-options-in-plinq"></a>Como especificar opções de mesclagem em PLINQ
 Este exemplo mostra como especificar as opções de mesclagem que se aplicarão a todos os operadores subsequentes em uma consulta PLINQ. Você não precisa definir as opções de mesclagem explicitamente, mas fazer isso pode melhorar o desempenho. Para saber mais sobre opções de mesclagem, veja [Opções de mesclagem no PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 > [!WARNING]

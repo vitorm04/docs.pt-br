@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9677fd14f50cf93eac7eeaef784082d45e8884c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137681"
 ---
 # <a name="icordebugframegetchain-method"></a>Método ICorDebugFrame::GetChain
-Obtém um ponteiro para a cadeia que esse quadro é uma parte do.  
+Obtém um ponteiro para a cadeia em que este quadro faz parte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetChain (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppChain`  
- [out] Um ponteiro para o endereço de um objeto de ICorDebugChain que representa a cadeia que contém este quadro.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia que contém esse quadro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

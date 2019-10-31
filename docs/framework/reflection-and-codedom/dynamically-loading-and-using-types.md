@@ -12,14 +12,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046101"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130260"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Carregando e usando tipos dinamicamente
 A reflexão fornece a infraestrutura usada pelos compiladores de linguagem para implementar a associação tardia implícita. Associação é o processo de localizar a declaração (ou seja, a implementação) que corresponde a um tipo especificado exclusivamente. Quando esse processo ocorre no tempo de execução em vez do tempo de compilação, ele é chamado de associação tardia. O Visual Basic permite que você use associação tardia implícita em seu código. O compilador do Visual Basic chama um método auxiliar que usa a reflexão para obter o tipo de objeto. Os argumentos passados para o método auxiliar fazem com que o método apropriado seja invocado no tempo de execução. Esses argumentos são a instância (um objeto) na qual o método será invocado, o nome do método invocado (uma cadeia de caracteres) e os argumentos passados para o método invocado (uma matriz de objetos).  
@@ -70,7 +68,7 @@ End Module
   
  O conjunto de membros disponíveis aqueles definidos no tipo ou em qualquer tipo base. Se <xref:System.Reflection.BindingFlags> for especificado, membros de qualquer acessibilidade serão retornados ao conjunto. Se **BindingFlags.NonPublic** não for especificado, o associador deverá impor regras de acessibilidade. Ao especificar o sinalizador de associação **Public** ou **NonPublic**, você deverá especificar também o sinalizador de associação **Instance** ou **Static** ou nenhum membro será retornado.  
   
- Se houver somente um membro do nome fornecido, nenhum retorno de chamada é necessário e a associação é realizada nesse método. O caso 1 do exemplo de código ilustra este ponto: Somente um método **PrintBob** está disponível e, portanto, nenhum retorno de chamada é necessário.  
+ Se houver somente um membro do nome fornecido, nenhum retorno de chamada é necessário e a associação é realizada nesse método. O caso 1 do exemplo de código ilustra este ponto: apenas um método **PrintBob** está disponível e, portanto, nenhum retorno de chamada é necessário.  
   
  Se houver mais de um membro do conjunto disponível, todos esses métodos são passados para **BindToMethod**, que seleciona o método apropriado e o retorna. No caso 2 do exemplo de código, há dois métodos chamados **PrintValue**. O método apropriado é selecionado pela chamada para **BindToMethod**.  
   

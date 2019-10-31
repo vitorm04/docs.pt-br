@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768443"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122042"
 ---
 # <a name="loadstringrcex-function"></a>Função LoadStringRCEx
-Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.  
+Traduz um valor HRESULT para uma mensagem de erro apropriada para a cultura especificada.  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -43,40 +41,40 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `lcid`  
- [in] Um identificador de cultura. Passe -1 `lcid` para usar a cultura padrão.  
+ no Um identificador de cultura. Pass-1 para `lcid` usar a cultura padrão.  
   
  `iResourceID`  
- [in] Um HRESULT.  
+ no Um HRESULT.  
   
  `szBuffer`  
- [out] Um buffer que contém a mensagem de erro após a conclusão bem-sucedida.  
+ fora Um buffer que contém a mensagem de erro após a conclusão bem-sucedida.  
   
  `iMax`  
- [in] O tamanho do buffer de mensagem de erro.  
+ no O tamanho do buffer de mensagens de erro.  
   
  `bQuiet`  
- [in] Ignorado.  
+ no Aceita.  
   
  `pcwchUsed`  
- [out] Um ponteiro para o comprimento da mensagem de erro.  
+ fora Um ponteiro para o comprimento da mensagem de erro.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro COM padrão, conforme definido em Winerror. H, além dos valores a seguir.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna códigos de erro COM padrão, conforme definido no WinError. h, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|E_INVALIDARG|`szBuffer` é nulo, ou `iMax` é zero (0).|  
+|E_INVALIDARG|`szBuffer` é nulo ou `iMax` é zero (0).|  
   
 ## <a name="remarks"></a>Comentários  
- Se o método não for concluída com êxito, `szBuffer` contém uma cadeia de caracteres vazia.  
+ Se o método não for concluído com êxito, `szBuffer` conterá uma cadeia de caracteres vazia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

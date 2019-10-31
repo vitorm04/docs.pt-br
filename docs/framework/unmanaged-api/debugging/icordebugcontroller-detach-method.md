@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fae364-f2c6-4a50-aa7e-3da9f2684dc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f687e48413cb227ad715720e24bd645065309553
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b98077914d680c908587649fdd517aca9c8dcd40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125438"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>Método ICorDebugController::Detach
-Desanexa o depurador do domínio de aplicativo ou processo.  
+Desanexa o depurador do domínio do processo ou do aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,12 +32,12 @@ HRESULT Detach ();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O domínio de aplicativo ou processo continua normalmente, a execução, mas o objeto "ICorDebugProcess" ou "ICorDebugAppDomain" não é mais válido e mais nenhum retorno de chamada será feita.  
+ O processo ou o domínio do aplicativo continua a execução normalmente, mas o objeto "ICorDebugProcess" ou "ICorDebugAppDomain" não é mais válido e não ocorrerão nenhum retorno de chamada adicional.  
   
- No .NET Framework versão 2.0, se a depuração não gerenciada está habilitada, esse método irá falhar devido a limitações de sistema operacional.  
+ No .NET Framework versão 2,0, se a depuração não gerenciada estiver habilitada, esse método falhará devido a limitações do sistema operacional.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

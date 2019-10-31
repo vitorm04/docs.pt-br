@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738822"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122941"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>Método ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion
-Chamado pelo [iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) para relatar ao depurador o resultado de uma tentativa de enumerar uma região especificada de memória.  
+Chamado por [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) para relatar ao depurador o resultado de uma tentativa de enumerar uma região especificada de memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +36,20 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>Parâmetros  
  `address`  
- [in] O endereço inicial da região de memória que foi a serem enumerados.  
+ no O endereço inicial da região de memória que deve ser enumerada.  
   
  `size`  
- [in] O tamanho, em bytes, da região de memória.  
+ no O tamanho, em bytes, da região de memória.  
   
 ## <a name="remarks"></a>Comentários  
- O `ICLRDataEnumMemoryRegions::EnumMemoryRegions` método irá chamar esse método de retorno de chamada após cada tentativa de enumerar uma região de memória. A enumeração continuará mesmo se esse método retorna um HRESULT indicando uma falha.  
+ O método `ICLRDataEnumMemoryRegions::EnumMemoryRegions` chamará esse método de retorno de chamada após cada tentativa de enumerar uma região de memória. A enumeração continuará mesmo se esse método retornar um HRESULT indicando falha.  
   
- Regiões relatados por esse retorno de chamada podem ser duplicatas ou regiões sobrepostas.  
+ As regiões relatadas por esse retorno de chamada podem ser duplicatas ou sobrepostas regiões.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

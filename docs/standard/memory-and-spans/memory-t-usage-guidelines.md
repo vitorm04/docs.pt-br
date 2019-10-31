@@ -4,14 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121967"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Diretrizes de uso de Memory\<T> e Span\<T>
 
@@ -88,7 +86,7 @@ Neste código:
 
 - Os métodos `WriteInt32ToBuffer` e `DisplayBufferToConsole` aceitam <xref:System.Memory%601> como uma API pública. Portanto, eles são consumidores do buffer, e o consomem somente um de cada vez.
 
-Embora o método `WriteInt32ToBuffer` seja destinado a gravar um valor no buffer, isso não se aplica ao método `DisplayBufferToConsole`. Para refletir isso, ele poderia aceitar um argumento de tipo <xref:System.ReadOnlyMemory%601>. Para saber mais sobre <xref:System.ReadOnlyMemory%601>, confira a [Regra 2: usar ReadOnlySpan\<T> ou ReadOnlyMemory\<T>, se o buffer for somente leitura](#rule-2).
+Embora o método `WriteInt32ToBuffer` seja destinado a gravar um valor no buffer, isso não se aplica ao método `DisplayBufferToConsole`. Para refletir isso, ele poderia aceitar um argumento de tipo <xref:System.ReadOnlyMemory%601>. Para obter informações adicionais sobre <xref:System.ReadOnlyMemory%601>, consulte [#2 de regra: Use ReadOnlySpan\<t > ou ReadOnlyMemory\<t > se o buffer deve ser somente leitura](#rule-2).
 
 ### <a name="ownerless-memoryt-instances"></a>Instâncias de Memory\<T> "sem proprietário"
 
@@ -114,7 +112,7 @@ Como um bloco de memória pertence, mas se destina a ser passado para vários co
 
 A seguir estão nossas recomendações para usar com êxito o <xref:System.Memory%601> e os tipos relacionados. A orientação que se aplica a <xref:System.Memory%601> e a <xref:System.Span%601> também se aplica a <xref:System.ReadOnlyMemory%601> e a <xref:System.ReadOnlySpan%601>, a menos que seja explicitamente definido de outra forma.
 
-**Regra 1: no caso de uma API síncrona, usar Span\<T> em vez de Memory\<T> como parâmetro, sempre que possível.**
+**#1 de regra: para uma API síncrona, use\<T > de span em vez de memória\<T > como um parâmetro, se possível.**
 
 <xref:System.Span%601> é mais versátil do que <xref:System.Memory%601> e pode representar uma variedade maior de buffers de memória contíguos. <xref:System.Span%601> também oferece um melhor desempenho que <xref:System.Memory%601>. Por fim, é possível usar a propriedade <xref:System.Memory%601.Span?displayProperty=nameWithType> para converter uma instância de <xref:System.Memory%601> em <xref:System.Span%601>, embora a conversão de Span\<T> em Memory\<T> seja inviável. Portanto, se os chamadores tiverem uma instância de <xref:System.Memory%601>, eles poderão chamar seus métodos com os parâmetros <xref:System.Span%601> de qualquer maneira.
 
@@ -124,7 +122,7 @@ Usando um parâmetro de tipo <xref:System.Span%601> em vez de o tipo <xref:Syste
 
 <a name="rule-2" />
 
-**Regra 2: usar ReadOnlySpan\<T> ou ReadOnlyMemory\<T>, se o buffer for somente leitura.**
+**#2 de regra: Use ReadOnlySpan\<T > ou ReadOnlyMemory\<T > se o buffer deve ser somente leitura.**
 
 Nos exemplos anteriores, o método `DisplayBufferToConsole` apenas lê no buffer, sem modificar o respectivo conteúdo. A assinatura do método deve ser alterada para a seguinte.
 
@@ -140,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 
 O método `DisplayBufferToConsole` agora funciona praticamente com todos os tipos de buffer possíveis: `T[]`, armazenamento alocado com [stackalloc](../../csharp/language-reference/operators/stackalloc.md), e assim por diante. Você pode, inclusive, passar um <xref:System.String> diretamente nele!
 
-**Regra 3: se o método aceitar o Memory\<T> e retornar `void`, não usar a instância de Memory\<T>, quando o método for retornado.**
+**#3 de regra: se o método aceitar memória\<T > e retornar `void`, você não deverá usar a instância de\<de memória > T depois que o método retornar.**
 
 Isso está relacionado ao conceito de "concessão" mencionado anteriormente. A concessão de um retorno de void do método na instância de <xref:System.Memory%601> começa quando o método é inserido e termina quando o método é encerrado. Considere o exemplo a seguir, que chama `Log` em um loop com base na entrada do console.
 
@@ -174,7 +172,7 @@ Há várias maneiras de resolver isso:
 
    [!code-csharp[defensive-copy](~/samples/snippets/standard/buffers/memory-t/task-returning/task-returning.cs#1)]
 
-**Regra 4: se o método aceitar o Memory\<T> e retornar uma classe Task, não usar a instância de Memory\<T> quando a classe Task passar para um estado terminal.**
+**#4 de regra: se o seu método aceitar uma memória\<T > e retornar uma tarefa, você não deverá usar a instância da memória\<T > depois que a tarefa for transferida para um estado terminal.**
 
 Esta é apenas a variante assíncrona da Regra 3. O método `Log` do exemplo anterior pode ser escrito da seguinte forma para cumprir esta regra:
 
@@ -184,7 +182,7 @@ Nesse caso, "estado terminal" significa que a tarefa passa para um estado conclu
 
 Essa orientação se aplica a métodos que retornam <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask%601> ou outros tipos semelhantes.
 
-**Regra 5: se o construtor aceitar o Memory\<T> como parâmetro, os métodos da instância no objeto construído serão considerados consumidores da instância de Memory\<T>.**
+**#5 de regra: se o Construtor aceitar memória\<T > como um parâmetro, os métodos de instância no objeto construído serão considerados consumidores da instância de memória\<T >.**
 
 Considere o exemplo a seguir:
 
@@ -207,7 +205,7 @@ void PrintAllOddValues(ReadOnlyMemory<int> input)
 
 Nesse caso, o construtor `OddValueExtractor` aceita um `ReadOnlyMemory<int>` como parâmetro, para que o próprio construtor seja um consumidor da instância de `ReadOnlyMemory<int>`, e todos os métodos da instância no valor retornado também sejam consumidores da instância original de `ReadOnlyMemory<int>`. Isso significa que `TryReadNextOddValue` consome a instância de `ReadOnlyMemory<int>`, mesmo que a instância não seja passada diretamente para o método `TryReadNextOddValue`.
 
-**Regra 6: quando há uma propriedade tipada configurável de Memory\<T> (ou um método de instância equivalente) no tipo, presume-se que os métodos da instância nesse objeto sejam consumidores da instância de Memory\<T>.**
+**#6 de regra: se você tiver uma propriedade de tipo de memória\<T > tipada (ou um método de instância equivalente) em seus tipos, os métodos de instância nesse objeto serão considerados consumidores da instância de > de memória\<T.**
 
 Na verdade, esta é apenas uma variante da Regra 5. Esta regra existe porque presume-se que os setters de propriedade ou métodos equivalentes devam capturar e persistir as respectivas entradas, de modo que os métodos da instância no mesmo objeto possam usar o estado capturado.
 
@@ -227,7 +225,7 @@ class Person
 }
 ```
 
-**Regra 7: quando há uma referência de IMemoryOwner\<T>, é necessário descartá-la ou transferir a propriedade (mas não ambos), em algum momento.**
+**#7 de regra: se você tiver uma referência de > IMemoryOwner\<T, você deverá, em algum momento, descartar ou transferir sua propriedade (mas não ambas).**
 
 Como uma instância de <xref:System.Memory%601> pode ter suporte de memória gerenciada e não gerenciada, o proprietário deve chamar <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> quando concluir o trabalho realizado na instância de <xref:System.Memory%601>. Como alternativa, o proprietário pode transferir a propriedade da instância de <xref:System.Buffers.IMemoryOwner%601> para um componente diferente, até que o componente receptor se torne responsável por chamar <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> no tempo adequado (saiba mais sobre isso a seguir).
 
@@ -235,7 +233,7 @@ Uma falha ao chamar o método <xref:System.Buffers.MemoryPool%601.Dispose%2A> po
 
 Esta regra também se aplica ao código que chama métodos de fábrica, como <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType>. O chamador se torna proprietário do <xref:System.Buffers.IMemoryOwner%601> retornado e fica responsável pelo descarte da instância após concluída.
 
-**Regra 8: se tiver um parâmetro IMemoryOwner\<T> na superfície da API, então você estará aceitando a propriedade dessa instância.**
+**Regra #8: se você tiver um parâmetro IMemoryOwner\<T > na superfície da API, você estará aceitando a propriedade dessa instância.**
 
 Aceitar uma instância desse tipo indica que o componente pretende se apropriar dessa instância. O componente se torna responsável pelo descarte adequado de acordo com a Regra 7.
 
@@ -244,7 +242,7 @@ Os componentes que transferem a propriedade da instância de <xref:System.Buffer
 > [!IMPORTANT]
 > Se o construtor aceitar <xref:System.Buffers.IMemoryOwner%601> como parâmetro, o respectivo tipo deverá implementar <xref:System.IDisposable>, e o método <xref:System.IDisposable.Dispose%2A> deverá chamar <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>.
 
-**Regra 9: se estiver encapsulando um método de P/Invoke síncrono, a API deverá aceitar Span\<T> como parâmetro.**
+**#9 de regra: se você estiver encapsulando um método p/invoke síncrono, sua API deverá aceitar a extensão\<T > como um parâmetro.**
 
 De acordo com a Regra 1, <xref:System.Span%601> geralmente é o tipo correto a ser usado para APIs síncronas. Você pode fixar instâncias do <xref:System.Span%601> por meio da palavra-chave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md), como no exemplo a seguir.
 
@@ -284,7 +282,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 }
 ```
 
-**Regra 10: se estiver encapsulando um método de P/Invoke assíncrono, a API deverá aceitar Memory\<T> como parâmetro.**
+**Regra #10: se você estiver encapsulando um método p/invoke assíncrono, sua API deverá aceitar memória\<T > como um parâmetro.**
 
 Como não é possível usar a palavra-chave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) em operações assíncronas, use o método <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> para fixar instâncias de <xref:System.Memory%601>, independentemente do tipo de memória contígua que a instância representar. O exemplo a seguir mostra como usar esta API para executar uma chamada de P/Invoke assíncrona.
 

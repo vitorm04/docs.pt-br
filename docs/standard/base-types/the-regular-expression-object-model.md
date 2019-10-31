@@ -35,14 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124807"
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
 <a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seguintes seções:  
@@ -284,7 +282,7 @@ ms.locfileid: "64664668"
 |`:`|Corresponder a dois pontos.|  
 |`(?<value>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `value`.|  
   
- As propriedades da classe <xref:System.Text.RegularExpressions.Group> oferecem informações sobre o grupo capturado: A propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado, e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
+ As propriedades da classe <xref:System.Text.RegularExpressions.Group> fornecem informações sobre o grupo capturado: a propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
   
  Aplicar quantificadores a um grupo (para obter mais informações, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) modifica a relação de uma captura por grupo de captura de duas formas:  
   
@@ -301,7 +299,7 @@ ms.locfileid: "64664668"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
-- Os quantificadores podem corresponder a diversas ocorrências de um padrão que é definido por um grupo de captura. Nesse caso, as propriedades `Value` e `Length` de um objeto <xref:System.Text.RegularExpressions.Group> contêm informações somente sobre a última subcadeia de caracteres capturada. Por exemplo, a seguinte expressão regular corresponde a uma única sentença que termina com um ponto. Utiliza dois constructos de agrupamento: O primeiro captura palavras individuais, juntamente com um caractere de espaço em branco; o segundo captura palavras individuais. Como a saída do exemplo mostra, embora a expressão regular tenha sucesso ao capturar uma sequência inteira, o segundo grupo de captura só captura a última palavra.  
+- Os quantificadores podem corresponder a diversas ocorrências de um padrão que é definido por um grupo de captura. Nesse caso, as propriedades `Value` e `Length` de um objeto <xref:System.Text.RegularExpressions.Group> contêm informações somente sobre a última subcadeia de caracteres capturada. Por exemplo, a seguinte expressão regular corresponde a uma única sentença que termina com um ponto. Ela utiliza dois constructos de agrupamento: o primeiro captura palavras individuais, juntamente com um caractere de espaço em branco; o segundo captura palavras individuais. Como a saída do exemplo mostra, embora a expressão regular tenha sucesso ao capturar uma sequência inteira, o segundo grupo de captura só captura a última palavra.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c24d6e9c42a091eafbe6d4bdee2bb4e055fd8852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772038"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122339"
 ---
 # <a name="icordebugtypegetbase-method"></a>Método ICorDebugType::GetBase
-Obtém um ponteiro de interface para um que representa o tipo base, se houver, do tipo representado por este ICorDebugType `ICorDebugType`.  
+Obtém um ponteiro de interface para um ICorDebugType que representa o tipo base, se houver um, do tipo representado por esse `ICorDebugType`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>Parâmetros  
  `pBase`  
- [out] Um ponteiro para o endereço de um `ICorDebugType` objeto que representa o tipo base.  
+ fora Um ponteiro para o endereço de um objeto de `ICorDebugType` que representa o tipo base.  
   
 ## <a name="remarks"></a>Comentários  
- Procurar o tipo base para um tipo é útil para implementar a funcionalidade comum do depurador, como a impressão de todos os campos de um objeto ou suas classes pai.  
+ Pesquisar o tipo base de um tipo é útil para implementar a funcionalidade comum do depurador, como imprimir todos os campos de um objeto ou suas classes pai.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

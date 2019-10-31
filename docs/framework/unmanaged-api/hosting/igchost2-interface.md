@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21ce9cbd007858c0f39e12622eff819154ab83f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43c16415c91521194e0d88be84dd176c3fdadad1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134845"
 ---
 # <a name="igchost2-interface"></a>Interface IGCHost2
 Fornece métodos para obter informações sobre o sistema de coleta de lixo e para controlar alguns aspectos da coleta de lixo.  
@@ -33,14 +31,14 @@ Fornece métodos para obter informações sobre o sistema de coleta de lixo e pa
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Define o tamanho do segmento e o tamanho máximo para a geração 0. Habilita a geração 0 e os tamanhos de `DWORD`segmento maiores que.|  
+|[Método SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Define o tamanho do segmento e o tamanho máximo para a geração 0. Habilita a geração 0 e os tamanhos de segmento maiores que `DWORD`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost.idl, GCHost.h  
+ **Cabeçalho:** GCHost. idl, GCHost. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

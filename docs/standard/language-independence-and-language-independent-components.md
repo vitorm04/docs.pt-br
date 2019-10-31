@@ -13,14 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ecb2c2e6a80f36ea1426b6145fd89b869a77f1b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120750"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 
@@ -75,7 +73,7 @@ Neste artigo:
 
 ## <a name="cls-compliance-rules"></a>Regras de conformidade com CLS
 
-Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, confira a Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, consulte Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > A Common Language Specification aborda cada regra de conformidade com CLS à medida que se aplica a consumidores (desenvolvedores que estão acessando programaticamente um componente compatível com CLS), estruturas (desenvolvedores que estão usando um compilador de linguagem para criar bibliotecas compatíveis com CLS) e extensores (desenvolvedores que estão criando uma ferramenta, como um compilador de linguagem ou um analisador de código que cria componentes compatíveis com CLS). Este artigo enfoca as regras que se aplicam às estruturas. Entretanto, algumas das regras que se aplicam a extensores também podem ser aplicadas a assemblies criados usando-se Reflection.Emit.
@@ -103,7 +101,7 @@ A interface pública de uma biblioteca consiste no seguinte:
 
 - Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.
 
-As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.
+As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras é tirado literalmente do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.
 
 |Categoria|Consulte|Regra|Número da regra|
 |--------------|---------|----------|-----------------|
@@ -174,7 +172,7 @@ Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno d
 
 O [Common Type System](../../docs/standard/base-types/common-type-system.md) do .NET Framework inclui vários tipos internos que têm suporte direto do Common Language Runtime e são codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir são compatíveis com CLS.
 
-|Tipo compatível com CLS|DESCRIÇÃO|
+|Tipo compatível com CLS|Descrição|
 |-------------------------|-----------------|
 |<xref:System.Byte>|Inteiro sem sinal de 8 bits|
 |<xref:System.Int16>|Inteiro com sinal de 16 bits|
@@ -190,7 +188,7 @@ O [Common Type System](../../docs/standard/base-types/common-type-system.md) do 
 
 Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.
 
-|Tipo não compatível|DESCRIÇÃO|Alternativa compatível com CLS|
+|Tipo não compatível|Descrição|Alternativa compatível com CLS|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|Tipo de dados inteiro com sinal de 8 bits|<xref:System.Int16>|
 |<xref:System.TypedReference>|Ponteiro para um objeto e seu tipo de tempo de execução|Nenhum|

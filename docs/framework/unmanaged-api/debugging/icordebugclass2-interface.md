@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f6a8b0ead430ffdd0e4e30cacae54d68fa9d730
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2ab28824d209dd1eed627600e30e9ddb0d7c7a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969256"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125717"
 ---
 # <a name="icordebugclass2-interface"></a>Interface ICorDebugClass2
 
@@ -40,11 +38,11 @@ Representa uma classe genérica ou uma classe com um parâmetro do método do ti
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855966"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138774"
 ---
 # <a name="blessiwbemservices-function"></a>Função BlessIWbemServices
 Indica se as credenciais do usuário permitem o acesso à classe [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) especificada.   
@@ -50,7 +48,7 @@ no Um ponteiro para o objeto [IWbemServices](/windows/desktop/api/wbemcli/nn-wbe
 no O nome de usuário.
 
 `strPassword`\
-no A senha associada `strUser`a.
+no A senha associada a `strUser`.
 
 `strAuthority`\
 no O nome de domínio do usuário. Consulte a função [ConnectServerWmi](connectserverwmi.md) para obter mais informações.
@@ -75,9 +73,9 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 ## <a name="requirements"></a>Requisitos  
 
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

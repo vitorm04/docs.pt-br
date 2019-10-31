@@ -16,14 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620052"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121674"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso da classe StringBuilder no .NET
 O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na classe <xref:System.String?displayProperty=nameWithType>, você cria um novo objeto de cadeia de caracteres na memória, o que requer uma nova alocação de espaço para esse novo objeto. Em situações em que você precisa realizar repetidas modificações em uma cadeia de caracteres, a sobrecarga associada à criação de um novo objeto <xref:System.String> pode ser dispendiosa. A classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> pode ser usada quando você deseja modificar uma cadeia de caracteres sem criar um novo objeto. Por exemplo, o uso da classe <xref:System.Text.StringBuilder> pode melhorar o desempenho ao concatenar várias cadeias de caracteres em um loop.  
@@ -78,7 +76,7 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- O método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> adiciona texto ao final do objeto <xref:System.Text.StringBuilder>. Ele dá suporte ao recurso de formatação de composição (para obter mais informações, confira [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)) chamando a implementação <xref:System.IFormattable> do objeto ou objetos a serem formatados. Portanto, aceita as cadeias de caracteres de formato padrão para valores numéricos, data e hora e enumeração, cadeias de caracteres de formato personalizado para valores numéricos e de data e hora e cadeias de caracteres de formato definidas para tipos personalizados. (Para obter informações sobre a formatação, consulte [Formatando tipos](../../../docs/standard/base-types/formatting-types.md).) Você pode usar esse método para personalizar o formato de variáveis e acrescentar esses valores a um <xref:System.Text.StringBuilder>. O exemplo a seguir usa o método <xref:System.Text.StringBuilder.AppendFormat%2A> para colocar um valor inteiro, formatado como um valor de moeda, no final de um objeto <xref:System.Text.StringBuilder>.  
+ O método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> adiciona texto ao final do objeto <xref:System.Text.StringBuilder>. Ele dá suporte ao recurso de formatação de composição (para obter mais informações, confira [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)) chamando a implementação <xref:System.IFormattable> do objeto ou objetos a serem formatados. Portanto, aceita as cadeias de caracteres de formato padrão para valores numéricos, data e hora e enumeração, cadeias de caracteres de formato personalizado para valores numéricos e de data e hora e cadeias de caracteres de formato definidas para tipos personalizados. (Para obter informações sobre formatação, consulte [tipos de formatação](../../../docs/standard/base-types/formatting-types.md).) Você pode usar esse método para personalizar o formato de variáveis e acrescentar esses valores a um <xref:System.Text.StringBuilder>. O exemplo a seguir usa o método <xref:System.Text.StringBuilder.AppendFormat%2A> para colocar um valor inteiro, formatado como um valor de moeda, no final de um objeto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]

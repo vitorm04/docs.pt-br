@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2dcdaed34044122dd2a61c9e0b5bb02f8cc0d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9d28243e9907fcc6320b2e09a49312bf35a70b4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121782"
 ---
 # <a name="icorpublishgetprocess-method"></a>Método ICorPublish::GetProcess
-Obtém uma [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instância que representa o processo com o identificador especificado.  
+Obtém uma instância de [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) que representa o processo com o identificador especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>Parâmetros  
  `pid`  
- [in] O identificador do processo.  
+ no O identificador do processo.  
   
  `ppProcess`  
- [out] Um ponteiro para o endereço de um `ICorPublishProcess` instância que representa o processo.  
+ fora Um ponteiro para o endereço de uma instância de `ICorPublishProcess` que representa o processo.  
   
 ## <a name="remarks"></a>Comentários  
- `GetProcess` falhará se o processo não existe ou não é um processo gerenciado que pode ser depurado com o usuário atual.  
+ `GetProcess` falhará se o processo não existir ou não for um processo gerenciado que possa ser depurado pelo usuário atual.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

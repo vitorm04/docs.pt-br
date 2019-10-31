@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138213"
 ---
 # <a name="order-preservation-in-plinq"></a>Preservação da ordem em PLINQ
 Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consulta deve ser executada o mais rápido possível, mas ainda produzir os resultados corretos. Em alguns casos, a exatidão requer que a ordem da sequência de origem seja preservada. No entanto, a ordenação pode ser dispendiosa. Portanto, por padrão, o PLINQ não preserva a ordem da sequência de origem. Nesse sentido, o PLINQ assemelha-se a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], mas é diferente do LINQ to Objects que preserva a ordenação.  

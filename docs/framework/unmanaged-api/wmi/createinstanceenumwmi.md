@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateInstanceEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7709d9c50a494013ece2f91b3acc213278f0e57
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ffa718be0e8b67471fdf8cb277df201388d2840
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798912"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130412"
 ---
 # <a name="createinstanceenumwmi-function"></a>Função CreateInstanceEnumWmi
 
@@ -63,7 +61,7 @@ no Uma combinação de sinalizadores que afetam o comportamento dessa função. 
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador somente encaminhamento. Normalmente, enumeradores somente de encaminhamento são mais rápidos e usam menos memória do que enumeradores convencionais, mas não permitem que as chamadas [clonem](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | O WMI retém ponteiros para objetos na enumeração até que sejam liberados. |
 
-Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para obter o melhor desempenho.
+Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para melhor desempenho.
 
 `pCtx`\
 no Normalmente, esse valor é `null`. Caso contrário, é um ponteiro para uma instância de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que pode ser usada pelo provedor que está fornecendo as instâncias solicitadas.
@@ -114,9 +112,9 @@ Se a chamada de função falhar, você poderá obter informações adicionais so
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

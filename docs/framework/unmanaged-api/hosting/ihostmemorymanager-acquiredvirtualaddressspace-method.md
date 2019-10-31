@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef2f83c2-127e-4c38-8385-306c03cd2167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 423fbfc2bda9d3544a5c32b6cd650643209f0e86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b70454cd1e2d6d38e6ca4d0ea0bd8974963c201c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767235"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136735"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Método IHostMemoryManager::AcquiredVirtualAddressSpace
-Notifica o host que o common language runtime (CLR) adquiriu a memória especificada do sistema operacional.  
+Notifica o host de que o Common Language Runtime (CLR) adquiriu a memória especificada do sistema operacional.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +36,20 @@ HRESULT AcquiredVirtualAddressSpace(
   
 ## <a name="parameters"></a>Parâmetros  
  `startAddress`  
- [in] O endereço inicial da memória.  
+ no O endereço inicial da memória.  
   
  `size`  
- [in] O tamanho, em bytes, da memória.  
+ no O tamanho, em bytes, da memória.  
   
 ## <a name="remarks"></a>Comentários  
- O `AcquiredVirtualAddressSpace` é um método de retorno de chamada de método e deve ser implementado pelo gravador do aplicativo host. Ele é chamado pelo CLR.  
+ O método `AcquiredVirtualAddressSpace` é um método de retorno de chamada e deve ser implementado pelo gravador do aplicativo de hospedagem. Ele é chamado pelo CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

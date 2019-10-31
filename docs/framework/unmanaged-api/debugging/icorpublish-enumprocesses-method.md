@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f0dd814ad5adfa1b0dd7199530a3f993634a548
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121791"
 ---
 # <a name="icorpublishenumprocesses-method"></a>Método ICorPublish::EnumProcesses
 Obtém um enumerador para os processos gerenciados em execução neste computador.  
@@ -38,20 +36,20 @@ HRESULT EnumProcesses (
   
 ## <a name="parameters"></a>Parâmetros  
  `Type`  
- Um valor igual a [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) enumeração que especifica o tipo de processo a ser recuperado. Na versão atual, COR_PUB_MANAGEDONLY só é válido.  
+ Um valor da enumeração [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) que especifica o tipo de processo a ser recuperado. Na versão atual, somente COR_PUB_MANAGEDONLY é válido.  
   
  `ppIEnum`  
- Um ponteiro para o endereço de um [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) instância que é o enumerador dos processos.  
+ Um ponteiro para o endereço de uma instância de [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) que é o enumerador dos processos.  
   
 ## <a name="remarks"></a>Comentários  
- Coleção do enumerador de processos se baseia em um instantâneo dos processos que estão em execução quando o `EnumProcesses` método é chamado. O enumerador não incluirá todos os processos que terminar antes ou iniciarem após `EnumProcesses` é chamado.  
+ A coleção de processos do enumerador é baseada em um instantâneo dos processos que estão em execução quando o método de `EnumProcesses` é chamado. O enumerador não incluirá nenhum processo que seja encerrado antes ou iniciado depois que `EnumProcesses` for chamado.  
   
- O `EnumProcesses` método pode ser chamado mais de uma vez neste [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) instância para criar uma nova coleção atualizada de processos. Coleções existentes não serão afetadas por chamadas subsequentes do `EnumProcesses` método.  
+ O método `EnumProcesses` pode ser chamado mais de uma vez nesta instância de [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) para criar uma nova coleção atualizada de processos. As coleções existentes não serão afetadas pelas chamadas subsequentes do método `EnumProcesses`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

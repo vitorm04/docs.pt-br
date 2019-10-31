@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08dfa3ddbfd9cffdb0cb88d0325e5703a854668a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04f6a088c5bbe96e3909ba600aa8ffab937abe2d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140405"
 ---
 # <a name="icorpublishprocess-interface"></a>Interface ICorPublishProcess
-Fornece métodos que acessam informações a serem exibidos sobre um processo.  
+Fornece métodos que acessam informações a serem exibidas sobre um processo.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método EnumAppDomains](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|Obtém uma [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instância que contém os domínios de aplicativo no processo de referenciada por este `ICorPublishProcess`.|  
+|[Método EnumAppDomains](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|Obtém uma instância de [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) que contém os domínios de aplicativo no processo referenciado por este `ICorPublishProcess`.|  
 |[Método GetDisplayName](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|Obtém o caminho completo do executável para o processo referenciado por este `ICorPublishProcess`.|  
-|[Método GetProcessID](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|Obtém o identificador de sistema operacional para o processo referenciado por este `ICorPublishProcess`.|  
-|[Método IsManaged](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|Obtém um valor que indica se o processo é referenciada por este `ICorPublishProcess` é conhecido por estar em execução para código gerenciado.|  
+|[Método GetProcessID](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|Obtém o identificador do sistema operacional para o processo referenciado por este `ICorPublishProcess`.|  
+|[Método IsManaged](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|Obtém um valor que indica se o processo referenciado por essa `ICorPublishProcess` é conhecido por estar executando código gerenciado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub.idl, CorPub.h  
+ **Cabeçalho:** CorPub. idl, CorPub. h  
   
  **Biblioteca:** CorGuids.lib  
   

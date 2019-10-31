@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9a7393b9-9735-43c6-8616-afb103c432fd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1afb87e063a18bd05bedf856f8b7ebdf0e47e91
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a415c8f3124c08984f8101e1f4dbcae6bf96fbf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767425"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129617"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>Método ICorDebugProcess5::GetArrayLayout
-Fornece informações sobre o layout dos tipos de matriz.  
+Fornece informações sobre o layout de tipos de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +33,15 @@ HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayo
   
 ## <a name="parameters"></a>Parâmetros  
  `id`  
- [in] Um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token que especifica a matriz cujo layout é desejado.  
+ no Um token [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) que especifica a matriz cujo layout é desejado.  
   
  `pLayout`  
- [out] Um ponteiro para um [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) estrutura que contém informações sobre o layout da matriz na memória.  
+ fora Um ponteiro para uma estrutura [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) que contém informações sobre o layout da matriz na memória.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

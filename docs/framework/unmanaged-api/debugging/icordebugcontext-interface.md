@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9907b98-4253-4cb6-a296-37ae9977c81a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1000e24d9952f13aa41ff2b85339dd64c14d175e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25c7894fef13b1cca96e9a1d0acaf70001630e30
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125470"
 ---
 # <a name="icordebugcontext-interface"></a>Interface ICorDebugContext
 
@@ -33,11 +31,11 @@ Representa um objeto de contexto. Essa interface ainda não foi implementada.
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

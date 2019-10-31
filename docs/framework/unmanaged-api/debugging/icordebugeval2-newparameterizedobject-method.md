@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753591"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084852"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>Método ICorDebugEval2::NewParameterizedObject
-Cria uma instância de um novo objeto de tipo parametrizado e chama o método de construtor do objeto.  
+Cria uma instância de um novo objeto de tipo com parâmetros e chama o método de construtor do objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,25 +39,25 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>Parâmetros  
  `pConstructor`  
- [in] Um ponteiro para um objeto ICorDebugFunction que representa o construtor do objeto a ser instanciado.  
+ no Um ponteiro para um objeto ICorDebugFunction que representa o construtor do objeto a ser instanciado.  
   
  `nTypeArgs`  
- [in] O número de argumentos de tipo passado.  
+ no O número de argumentos de tipo passado.  
   
  `ppTypeArgs`  
- [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugType que representa um argumento de tipo para o objeto de instância está sendo criado.  
+ no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugType que representa um argumento de tipo para o objeto que está sendo instanciado.  
   
  `nArgs`  
- [in] O número de argumentos passados para o construtor.  
+ no O número de argumentos passados para o construtor.  
   
  `ppArgs`  
- [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugValue que representa um valor de argumento que é passado para o construtor.  
+ no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugValue que representa um valor de argumento que é passado para o construtor.  
   
 ## <a name="remarks"></a>Comentários  
- O construtor do objeto pode demorar <xref:System.Type> parâmetros.  
+ O construtor do objeto pode ter <xref:System.Type> parâmetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

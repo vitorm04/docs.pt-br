@@ -12,14 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131092"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::Método GetEHClauses
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -43,13 +41,13 @@ HRESULT GetEHClauses(
  [out] O número de cláusulas sobre quais informações são gravadas na matriz `clauses`.  
   
  cláusulas  
- [out] Uma matriz de [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objetos que contêm informações sobre cláusulas definidas para esse IL de tratamento de exceção.  
+ fora Uma matriz de objetos [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) que contêm informações sobre cláusulas de tratamento de exceção definidas para esse Il.  
   
 ## <a name="remarks"></a>Comentários  
- Se `cClauses` é 0 e `pcClauses` é não -**nulo**, `pcClauses` é definido como o número de cláusulas de tratamento de exceção disponível. Se `cClauses` for não zero, representará a capacidade de armazenamento da matriz do `clauses`. Quando o método retorna, `clauses` contém o máximo de itens `cClauses` e `pcClauses` estará definido como o número de cláusulas realmente gravadas na matriz `clauses`.  
+ Se `cClauses` for 0 e `pcClauses` for não**nulo**, `pcClauses` será definido como o número de cláusulas de tratamento de exceção disponíveis. Se `cClauses` for não zero, representará a capacidade de armazenamento da matriz do `clauses`. Quando o método retorna, `clauses` contém o máximo de itens `cClauses` e `pcClauses` estará definido como o número de cláusulas realmente gravadas na matriz `clauses`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

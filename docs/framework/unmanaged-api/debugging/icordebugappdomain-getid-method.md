@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb8917fa401db9424cff168fe0b06ad84065827c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c43d6f05dffbf10ca1dd9253abfe893db9adf5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110476"
 ---
 # <a name="icordebugappdomaingetid-method"></a>Método ICorDebugAppDomain::GetId
 Obtém o identificador exclusivo do domínio do aplicativo.  
@@ -37,13 +35,13 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>Parâmetros  
  `pId`  
- [out] O identificador exclusivo do domínio do aplicativo.  
+ fora O identificador exclusivo do domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- O identificador para o domínio de aplicativo é exclusivo dentro do processo de recipiente.  
+ O identificador para o domínio do aplicativo é exclusivo dentro do processo que o contém.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

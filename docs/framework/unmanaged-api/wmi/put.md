@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5aa629c2d07fb25db035cd80aba3c74413070e6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f1bb8aa09a269e3b8fd23f393d63a275d308a77c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798403"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127399"
 ---
 # <a name="put-function"></a>Função put
 
@@ -57,7 +55,7 @@ no O nome da propriedade. O parâmetro não pode ser `null`.
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `pVal`\
-no Um ponteiro para um válido `VARIANT` que se torna o novo valor da propriedade. Se `pVal` `VARIANT` for `null` ou apontar para um de tipo `VT_NULL`, a propriedade será definida como `null`.
+no Um ponteiro para um `VARIANT` válido que se torna o novo valor da propriedade. Se `pVal` for `null` ou apontar para um `VARIANT` do tipo `VT_NULL`, a propriedade será definida como `null`.
 
 `vtType`\
 no O tipo de `VARIANT` apontado por `pVal`. Consulte a seção [comentários](#remarks) para obter mais informações.
@@ -72,22 +70,22 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | O tipo de propriedade não é reconhecido. Esse valor é retornado ao criar instâncias de classe se a classe já existir. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Para instâncias: Indica que `pVal` aponta para um `VARIANT` tipo incorreto para a propriedade. <br/> Para definições de classe: A propriedade já existe na classe pai e o novo tipo COM é diferente do tipo COM antigo. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Para instâncias: indica que `pVal` aponta para uma `VARIANT` de um tipo incorreto para a propriedade. <br/> Para definições de classe: a propriedade já existe na classe pai e o novo tipo COM é diferente do tipo COM antigo. |
 |`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida. |
 
 ## <a name="remarks"></a>Comentários
 
 Essa função encapsula uma chamada para o método [IWbemClassObject::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) .
 
-Essa função sempre substitui o valor da propriedade atual por um novo. Se o [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) apontar para uma definição de classe `Put` , criará ou atualizará o valor da propriedade. Quando [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) aponta para uma instância CIM, `Put` o atualiza somente o valor da propriedade; `Put` não é possível criar um valor de propriedade.
+Essa função sempre substitui o valor da propriedade atual por um novo. Se o [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) apontar para uma definição de classe, `Put` criar ou atualizar o valor da propriedade. Quando [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) aponta para uma instância CIM, `Put` atualiza somente o valor da propriedade; `Put` não pode criar um valor de propriedade.
 
-A `__CLASS` Propriedade do sistema só é gravável durante a criação da classe, quando não pode ser deixada em branco. Todas as outras propriedades do sistema são somente leitura.
+O `__CLASS` Propriedade do sistema só é gravável durante a criação da classe, quando não pode ser deixado em branco. Todas as outras propriedades do sistema são somente leitura.
 
 Um usuário não pode criar propriedades com nomes que comecem ou terminem com um sublinhado ("_"). Isso é reservado para classes e propriedades do sistema.
 
-Se a propriedade definida pela `Put` função existir na classe pai, o valor padrão da propriedade será alterado, a menos que o tipo de propriedade não corresponda ao tipo de classe pai. Se a propriedade não existir e não for uma incompatibilidade de tipos, a propriedade será criada.
+Se a propriedade definida pela função `Put` existir na classe pai, o valor padrão da propriedade será alterado, a menos que o tipo de propriedade não corresponda ao tipo de classe pai. Se a propriedade não existir e não for uma incompatibilidade de tipos, a propriedade será criada.
 
-Use o `vtType` parâmetro somente ao criar novas propriedades em uma definição de classe CIM `pVal` e `null` é ou aponta para `VARIANT` um de `VT_NULL`tipo. Nesse caso, o `vType` parâmetro especifica o tipo CIM da propriedade. Em todos os outros casos `vtType` , deve ser 0. `vtType`também deverá ser 0 se o objeto subjacente for uma instância (mesmo se `Val` for `null`) porque o tipo da propriedade é fixo e não pode ser alterado.
+Use o parâmetro `vtType` somente ao criar novas propriedades em uma definição de classe CIM e `pVal` é `null` ou aponta para um `VARIANT` do tipo `VT_NULL`. Nesse caso, o parâmetro `vType` especifica o tipo CIM da propriedade. Em todos os outros casos, `vtType` deve ser 0. `vtType` também deverá ser 0 se o objeto subjacente for uma instância (mesmo se `Val` for `null`) porque o tipo da propriedade é fixo e não pode ser alterado.
 
 ## <a name="example"></a>Exemplo
 
@@ -95,9 +93,9 @@ Para obter um exemplo, consulte o método [IWbemClassObject::P UT](/windows/desk
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

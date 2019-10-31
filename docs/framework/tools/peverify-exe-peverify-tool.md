@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044328"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104975"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
 A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermediate Language) (como gravadores de compiladores, desenvolvedores de mecanismos de script etc.) a determinar se o código MSIL e os metadados associados atendem aos requisitos de segurança de tipo. Alguns compiladores só gerarão código fortemente tipado verificável se você evitar usar determinados constructos de linguagem. Se, como desenvolvedor, estiver usando um compilador assim, você talvez queira verificar se não comprometeu a segurança de tipo do código. Nessa situação, é possível executar a ferramenta PEVerify nos arquivos para verificar MSIL e metadados.  

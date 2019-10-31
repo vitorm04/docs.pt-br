@@ -1,5 +1,5 @@
 ---
-title: 'Mitigação: Suporte para toque e caneta baseado em ponteiro'
+title: 'Mitigação: suporte a toque e caneta com base em ponteiro'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 41a587b343e4774a27e9ddc39080de6939839d93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779231"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126196"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigação: Suporte para toque e caneta baseado em ponteiro
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigação: suporte a toque e caneta com base em ponteiro
 
 Os aplicativos do WPF que se destinam ao .NET Framework 4.7 e estão em execução em sistemas Windows a partir da Atualização do Windows 10 para Criadores podem habilitar uma pilha opcional de toque/caneta do WPF com base em `WM_POINTER`.
 

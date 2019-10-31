@@ -5,21 +5,19 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515ea076c5eaead50b41e45e415725d0439914bc
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114920"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<Elemento de > UseSmallInternalThreadStacks
+# <a name="usesmallinternalthreadstacks-element"></a>\<elemento de > UseSmallInternalThreadStacks
 Solicita que o Common Language Runtime (CLR) reduza o uso de memória especificando tamanhos de pilha explícitos ao criar determinados threads que ele usa internamente, em vez de usar o tamanho de pilha padrão para esses threads.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +32,7 @@ Solicita que o Common Language Runtime (CLR) reduza o uso de memória especifica
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|enabled|Atributo obrigatório.<br /><br /> Especifica se deve-se solicitar que o CLR use tamanhos de pilha explícitos em vez do tamanho de pilha padrão quando ele cria determinados threads que ele usa internamente. Os tamanhos de pilha explícitos são menores do que o tamanho de pilha padrão de 1 MB.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se deve-se solicitar que o CLR use tamanhos de pilha explícitos em vez do tamanho de pilha padrão quando ele cria determinados threads que ele usa internamente. Os tamanhos de pilha explícitos são menores do que o tamanho de pilha padrão de 1 MB.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   

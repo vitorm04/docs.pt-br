@@ -10,14 +10,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e3f9ff82bdc4f35232c4ea1162050e216a9cc21
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f274802c84ff8f3dd2588db8b83a0d0de36d2d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353422"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101769"
 ---
 # <a name="throw-c-reference"></a>throw (Referência de C#)
 
@@ -74,4 +72,4 @@ Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como 
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
 - [Palavras-chave do C#](index.md)
-- [Como: Gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

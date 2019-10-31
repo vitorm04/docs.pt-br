@@ -13,14 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393127"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120900"
 ---
 # <a name="globalization"></a>Globalização
 
@@ -40,7 +38,7 @@ Por padrão, o .NET usa cadeias de caracteres Unicode. Uma cadeia de caracteres 
 
 Muitos aplicativos e sistemas operacionais, incluindo o sistema operacional Windows, também podem usar as páginas de código para representar conjuntos de caracteres. Páginas de código geralmente contêm valores ASCII padrão de 0x00 a 0x7F e mapeiam outros caracteres para os valores restantes de 0x80 a 0xFF. A interpretação dos valores de 0x80 a 0xFF depende da página de código específica. Por isso, se possível, evite usar as páginas de código em um aplicativo globalizado.
 
-O exemplo a seguir ilustra os perigos da interpretação de dados de página de código quando a página de código padrão em um sistema é diferente da página de código no qual os dados foram salvos. (Para simular esse cenário, o exemplo especifica explicitamente páginas de código diferentes.) Primeiro, o exemplo define uma matriz que consiste dos caracteres em maiúsculas do alfabeto grego. Ele os codifica em uma matriz de bytes usando a página de código 737 (também conhecida como MS-DOS grego) e salva a matriz de bytes em um arquivo. Se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 737, os caracteres originais são restaurados. No entanto, se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 1252 (ou Windows-1252, que representa os caracteres do alfabeto latino), os caracteres originais são perdidos.
+O exemplo a seguir ilustra os perigos da interpretação de dados de página de código quando a página de código padrão em um sistema é diferente da página de código no qual os dados foram salvos. (Para simular esse cenário, o exemplo especifica explicitamente páginas de código diferentes.) Primeiro, o exemplo define uma matriz que consiste nos caracteres maiúsculos do alfabeto grego. Ele os codifica em uma matriz de bytes usando a página de código 737 (também conhecida como MS-DOS grego) e salva a matriz de bytes em um arquivo. Se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 737, os caracteres originais são restaurados. No entanto, se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 1252 (ou Windows-1252, que representa os caracteres do alfabeto latino), os caracteres originais são perdidos.
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -174,7 +172,7 @@ O exemplo a seguir ilustra a última abordagem. Ele usa as convenções de forma
 
 ### <a name="serialization-and-time-zone-awareness"></a>Reconhecimento de serialização e de fuso horário
 
-Um valor de data/hora pode ter várias interpretações, variando de uma hora geral ("As lojas abrem em 2 de janeiro de 2013, às 9:00") a um momento específico no tempo ("Data de nascimento: 2 de janeiro de 2013 6h32min00s"). Quando um valor temporal representa um ponto específico no tempo e você o restaura de um valor serializado, você deve certificar-se de que ele representa o mesmo ponto no tempo, independentemente da localização geográfica ou do fuso horário do usuário.
+Um valor de data/hora pode ter várias interpretações, variando de uma hora geral ("As lojas abrem em 2 de janeiro de 2013, às 9h") para um ponto específico no tempo ("Data de nascimento: 2 de janeiro de 2013, 6h32"). Quando um valor temporal representa um ponto específico no tempo e você o restaura de um valor serializado, você deve certificar-se de que ele representa o mesmo ponto no tempo, independentemente da localização geográfica ou do fuso horário do usuário.
 
 O exemplo a seguir ilustra esse problema. Ele salva um único valor de data/hora local como uma cadeia de caracteres em três [formatos padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" para data geral com tempo em formato longo, "s" para data/hora classificável e "o" para data/hora de ida e volta), bem como no formato binário.
 

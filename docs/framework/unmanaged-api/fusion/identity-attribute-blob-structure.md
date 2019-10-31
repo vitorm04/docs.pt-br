@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796496"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108005"
 ---
 # <a name="identity_attribute_blob-structure"></a>Estrutura IDENTITY_ATTRIBUTE_BLOB
-Contém informações sobre um único atributo em um assembly e consiste em três `DWORD`s. Cada `DWORD` um é um deslocamento em um buffer de caracteres produzido `CurrentIntoBuffer` pelo método da interface [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+Contém informações sobre um único atributo em um assembly e consiste em três `DWORD`s. Cada `DWORD` é um deslocamento em um buffer de caracteres produzido pelo método `CurrentIntoBuffer` da interface [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|O terceiro deslocamento no buffer de caracteres. Esse local marca o início do valor do atributo.|  
   
 ## <a name="sample"></a>Amostra  
- O exemplo a seguir ilustra várias etapas básicas, que eventualmente resultam em `IDENTITY_ATTRIBUTE_BLOB` uma estrutura populada:  
+ O exemplo a seguir ilustra várias etapas básicas, que eventualmente resultam em uma estrutura de `IDENTITY_ATTRIBUTE_BLOB` populada:  
   
 1. Obtenha um [IReferenceIdentity](ireferenceidentity-interface.md) para o assembly.  
   
-2. Chame o `IReferenceIdentity::EnumAttributes` método e obtenha um [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
+2. Chame o método `IReferenceIdentity::EnumAttributes` e obtenha um [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Crie um buffer de caracteres e converta-o `IDENTITY_ATTRIBUTE_BLOB` como uma estrutura.  
+3. Crie um buffer de caracteres e converta-o como uma estrutura de `IDENTITY_ATTRIBUTE_BLOB`.  
   
-4. Chame o `CurrentIntoBuffer` método `IEnumIDENTITY_ATTRIBUTE` da interface. Esse método copia os atributos `Namespace`, `Name`e `Value` para o buffer de caracteres. Os três deslocamentos para essas cadeias de caracteres ficarão `IDENTITY_ATTRIBUTE_BLOB` disponíveis na estrutura.  
+4. Chame o método `CurrentIntoBuffer` da interface `IEnumIDENTITY_ATTRIBUTE`. Esse método copia os atributos `Namespace`, `Name`e `Value` no buffer de caracteres. Os três deslocamentos para essas cadeias de caracteres ficarão disponíveis na estrutura de `IDENTITY_ATTRIBUTE_BLOB`.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,7 +220,7 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Para executar a amostra  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Saída de exemplo  
  Cultura = neutro  
@@ -236,7 +234,7 @@ Exit:
  Versão = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolamento. h  
   

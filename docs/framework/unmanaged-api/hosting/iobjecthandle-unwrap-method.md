@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc5bed553ac54eb708beae23f5c29cbedcb2b4e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be488ebe663169cabc5b569335dfc784fdf30556
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102687"
 ---
 # <a name="iobjecthandleunwrap-method"></a>Método IObjectHandle::Unwrap
-Desencapsula um objeto de marshaling por valor de uma indireção.  
+Desenvolve um objeto Marshal-by-Value de indireção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT Unwrap (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppv`  
- [out] Um ponteiro para o objeto a ser descodificada.  
+ fora Um ponteiro para o objeto a ser desencapsulado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

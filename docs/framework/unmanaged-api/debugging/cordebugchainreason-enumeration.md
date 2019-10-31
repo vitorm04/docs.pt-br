@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273985"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132275"
 ---
 # <a name="cordebugchainreason-enumeration"></a>Enumeração CorDebugChainReason
 Indica o motivo ou os motivos para o início de uma cadeia de chamadas.  
@@ -68,11 +66,11 @@ typedef enum CorDebugChainReason {
  Use o método [ICorDebugChain:: GetReason](icordebugchain-getreason-method.md) para determinar os motivos para a inicialização de uma cadeia de chamadas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

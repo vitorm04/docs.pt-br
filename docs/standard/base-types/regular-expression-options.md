@@ -12,14 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 4cc62696cb6589151e3abc59bbea64b693e8b3a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957350"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121727"
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 
@@ -35,7 +33,7 @@ ms.locfileid: "71957350"
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Não disponível|Compile a expressão regular para um assembly. Para obter mais informações, consulte [Expressões regulares compiladas](#Compiled).|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Exclua um espaço em branco sem escape do padrão e habilite comentários após uma tecla de cerquilha (`#`). Para obter mais informações, confira [Ignorar espaço em branco](#Whitespace).|
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Não disponível|Altera a direção da pesquisa. A pesquisa se move da direita para a esquerda, em vez de da esquerda para a direita. Para obter mais informações, consulte [Modo da direita para a esquerda](#RightToLeft).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Não disponível|Habilite o comportamento compatível com ECMAScript para a expressão. Para obter mais informações, consulte [Comportamento de correspondência de ECMAScript](#ECMAScript).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Não disponível|Habilite o comportamento em conformidade com ECMAScript para a expressão. Para obter mais informações, consulte [Comportamento de correspondência de ECMAScript](#ECMAScript).|
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Não disponível|Ignorar diferenças culturais no idioma. Para obter mais informações, consulte [Comparação usando cultura invariável](#Invariant).|
 
 ## <a name="specifying-the-options"></a>Especificando as opções
@@ -58,7 +56,7 @@ ms.locfileid: "71957350"
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- Aplicando opções embutidas em um constructo de agrupamento em particular em um padrão de expressão regular com a sintaxe `(?imnsx-imnsx:`*subexpressão*`)`. Nenhum sinal antes de um conjunto de opções ativa o conjunto; um sinal de subtração antes de um conjunto de opções desativa o conjunto. (`?` é uma parte fixa da sintaxe do constructo do idioma exigida com as opções habilitadas ou desabilitadas). A opção se aplica apenas àquele grupo. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+- Aplicando opções embutidas em um constructo de agrupamento em particular em um padrão de expressão regular com a sintaxe `(?imnsx-imnsx:`*subexpressão*`)`. Nenhum sinal antes de um conjunto de opções ativa o conjunto; um sinal de subtração antes de um conjunto de opções desativa o conjunto. (`?` é uma parte fixa da sintaxe da construção de linguagem que é necessária se as opções estão habilitadas ou desabilitadas.) A opção se aplica somente a esse grupo. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
   O exemplo a seguir fornece uma ilustração. Ele usa opções embutidas em um constructo de agrupamento para habilitar a correspondência sem diferenciação entre maiúsculas e minúsculas e ignorar espaço em branco do padrão ao identificar palavras que começam com a letra “d”.
 
@@ -161,7 +159,7 @@ O exemplo a seguir modifica o padrão da expressão regular do exemplo anterior 
 
 ## <a name="multiline-mode"></a>Modo multilinha
 
-A opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ou a opção embutida `m` habilita o mecanismo de expressão regular para processar uma cadeia de caracteres de entrada que consiste em várias linhas. Ele altera a interpretação dos elementos de linguagem `^` e `$` para que correspondem com o início e o fim de uma linha, em vez do início e fim da cadeia de caracteres de entrada.
+A opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ou a opção embutida `m` habilita o mecanismo de expressão regular para processar uma cadeia de caracteres de entrada que consiste em várias linhas. Ele altera a interpretação dos elementos de linguagem `^` e `$` para que correspondem com o início e o fim de uma linha, em vez de o início e o fim da cadeia de caracteres de entrada.
 
 Por padrão, `$` corresponde apenas com o final da cadeia de caracteres de entrada. Se você especificar a opção <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, ela corresponde com o caractere newline (`\n`) ou com o fim da cadeia de caracteres de entrada. Porém, não corresponde à combinação de caractere de retorno de carro/avanço de linha. Para uma correspondência bem-sucedida, use a subexpressão `\r?$` em vez de apenas `$`.
 
@@ -172,7 +170,7 @@ O exemplo a seguir extrai nomes e pontuações de jogadores de boliche e os adic
 
 O padrão de expressão regular `^(\w+)\s(\d+)\r*$` é definido conforme mostrado na tabela a seguir.
 
-|Pattern|Descrição|
+|Padrão|Descrição|
 |-------------|-----------------|
 |`^`|Começar no início da linha.|
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|
@@ -227,7 +225,7 @@ O exemplo a seguir exibe informações sobre as correspondências retornadas pel
 
 O padrão de expressão regular`\b\(?((?>\w+),?\s?)+[\.!?]\)?` é definido como mostra a tabela a seguir.
 
-|Pattern|Descrição|
+|Padrão|Descrição|
 |-------------|-----------------|
 |`\b`|Começar em um limite de palavra.|
 |`\(?`|Corresponder zero ou uma ocorrência do parêntese de abertura (“(“).|
@@ -337,7 +335,7 @@ Observe também que a asserção lookahead (o elemento de linguagem `(?=`*subexp
 
 O padrão de expressão regular é definido como mostra a tabela a seguir.
 
-|Pattern|Descrição|
+|Padrão|Descrição|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|O início da correspondência deve ser antecedido por um ou dois dígitos decimais seguidos por um espaço.|
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|
@@ -374,7 +372,7 @@ O comportamento das expressões regulares ECMAScript e canônicas difere em trê
 
   A expressão regular é definida como mostrado na tabela a seguir.
 
-  |Pattern|Descrição|
+  |Padrão|Descrição|
   |-------------|-----------------|
   |(a+)|Corresponda a letra "a" uma ou mais vezes. Este é o segundo grupo de captura.|
   |(\1)|Corresponda a subcadeia de caracteres capturada pelo primeiro grupo de captura. Este é o terceiro grupo de captura.|

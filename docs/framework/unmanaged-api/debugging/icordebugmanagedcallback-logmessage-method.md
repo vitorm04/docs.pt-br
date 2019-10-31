@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14b10b94f66a6b5434befeac1cd9562cb8a0f27f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761560"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130701"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>Método ICorDebugManagedCallback::LogMessage
-Notifica o depurador um thread de runtime (CLR) gerenciado de linguagem comum chamou um método no <xref:System.Diagnostics.EventLog> classe para registrar um evento.  
+Notifica o depurador de que um thread gerenciado Common Language Runtime (CLR) chamou um método na classe <xref:System.Diagnostics.EventLog> para registrar um evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,22 +39,22 @@ HRESULT LogMessage (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o thread gerenciado que registrou o evento.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread gerenciado que registrou o evento.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread gerenciado.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread gerenciado.  
   
  `lLevel`  
- [in] Um valor igual a [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeração que indica o nível de severidade da mensagem descritiva que foi gravado no log de eventos.  
+ no Um valor da enumeração [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) que indica o nível de severidade da mensagem descritiva que foi gravada no log de eventos.  
   
  `pLogSwitchName`  
- [in] Um ponteiro para o nome da opção de rastreamento.  
+ no Um ponteiro para o nome da opção de rastreamento.  
   
  `pMessage`  
- [in] Um ponteiro para a mensagem que foi gravado no log de eventos.  
+ no Um ponteiro para a mensagem que foi gravada no log de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

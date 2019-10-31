@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23f248625753c15a4798ea69a1eb3b377b79f95d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a862dd3f6a9c10c6b3a5a0bb41208d351c4ca9f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747757"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125698"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>Método ICorDebugClass2::SetJMCStatus
-Para cada método da classe, define um valor que indica se o método é o código definido pelo usuário.  
+Para cada método da classe, define um valor que indica se o método é um código definido pelo usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parâmetros  
  `bIsJustMyCode`  
- [in] Definido como `true` para indicar que o método é definido pelo usuário de código; caso contrário, é definido como `false`.  
+ no Defina como `true` para indicar que o método é um código definido pelo usuário; caso contrário, defina como `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Um seletor do just my code (JMC) vai ignorar o código definido pelo usuário. Código definido pelo usuário deve ser um subconjunto de código depurável.  
+ Um stepper JMC (Just-the-code) ignorará o código não definido pelo usuário. O código definido pelo usuário deve ser um subconjunto de código depurável.  
   
- `SetJMCStatus` Retorna um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo que define o valor para todos os outros métodos com êxito.  
+ `SetJMCStatus` retornará um valor HRESULT de S_FALSE se ele falhar ao definir o valor de qualquer método, mesmo que ele defina o valor para todos os outros métodos com êxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761081"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137451"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Método ICorDebugManagedCallback2::Exception
-Notifica o depurador que uma pesquisa por um manipulador de exceção foi iniciada.  
+Notifica o depurador de que uma pesquisa de um manipulador de exceção foi iniciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,39 +40,39 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o segmento em que a exceção foi lançada.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread no qual a exceção foi gerada.  
   
  `pThread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread no qual a exceção foi lançada.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread no qual a exceção foi gerada.  
   
  `pFrame`  
- [in] Um ponteiro para um objeto ICorDebugFrame que representa um quadro, conforme determinado pelo `dwEventType` parâmetro. Para obter mais informações, consulte a tabela na seção comentários.  
+ no Um ponteiro para um objeto ICorDebugFrame que representa um quadro, conforme determinado pelo parâmetro `dwEventType`. Para obter mais informações, consulte a tabela na seção comentários.  
   
  `nOffset`  
- [in] Um inteiro que especifica um deslocamento, conforme determinado pelo `dwEventType` parâmetro. Para obter mais informações, consulte a tabela na seção comentários.  
+ no Um inteiro que especifica um deslocamento, conforme determinado pelo parâmetro `dwEventType`. Para obter mais informações, consulte a tabela na seção comentários.  
   
  `dwEventType`  
- [in] Um valor de enumeração CorDebugExceptionCallbackType que especifica o tipo de retorno de chamada essa exceção.  
+ no Um valor da enumeração CorDebugExceptionCallbackType que especifica o tipo deste retorno de chamada de exceção.  
   
  `dwFlags`  
- [in] Um valor igual a [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) enumeração que especifica informações adicionais sobre a exceção  
+ no Um valor da enumeração [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) que especifica informações adicionais sobre a exceção  
   
 ## <a name="remarks"></a>Comentários  
- O `Exception` retorno de chamada é chamado em vários pontos durante a fase de pesquisa do processo de manipulação de exceção. Ou seja, ele pode ser chamado mais de uma vez durante o desenrolamento de uma exceção.  
+ O retorno de chamada `Exception` é chamado em vários pontos durante a fase de pesquisa do processo de tratamento de exceção. Ou seja, ele pode ser chamado mais de uma vez ao desenrolar uma exceção.  
   
- A exceção que está sendo processada pode ser recuperada do objeto ICorDebugThread referenciado pelo `pThread` parâmetro.  
+ A exceção que está sendo processada pode ser recuperada do objeto ICorDebugThread referenciado pelo parâmetro `pThread`.  
   
- O quadro em particular e o deslocamento são determinados pelo `dwEventType` parâmetro da seguinte maneira:  
+ O quadro e o deslocamento específicos são determinados pelo parâmetro `dwEventType` da seguinte maneira:  
   
 |Valor de `dwEventType`|Valor de `pFrame`|Valor de `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|O quadro que gerou a exceção.|O ponteiro de instrução no quadro.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|O quadro de código do usuário mais próximo ao ponto da exceção lançada.|O ponteiro de instrução no quadro.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|O quadro que contém o manipulador catch.|O deslocamento de Microsoft intermediate language (MSIL) de início do manipulador catch.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|O quadro de código do usuário mais próximo do ponto da exceção gerada.|O ponteiro de instrução no quadro.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|O quadro que contém o manipulador catch.|O deslocamento da MSIL (Microsoft Intermediate Language) do início do manipulador catch.|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Indefinido.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

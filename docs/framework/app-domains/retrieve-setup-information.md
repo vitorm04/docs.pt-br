@@ -10,14 +10,12 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 719ea15de135d8bbeb7bb88ea3d5b5874e30b5d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4d06a8a3ccfa35af283323478ee44a7da63d896d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119742"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Recuperando informações de instalação de um domínio de aplicativo
 Cada instância de um domínio do aplicativo consiste em propriedades e informações de <xref:System.AppDomainSetup>. Você pode recuperar as informações de configuração de um domínio de aplicativo usando a classe <xref:System.AppDomain?displayProperty=nameWithType>. Essa classe fornece vários membros que recuperam informações de configuração sobre um domínio do aplicativo.  
@@ -39,4 +37,4 @@ Cada instância de um domínio do aplicativo consiste em propriedades e informa�
 ## <a name="see-also"></a>Consulte também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
-- [Usar domínios do aplicativo](use.md)
+- [Uso de domínios do aplicativo](use.md)

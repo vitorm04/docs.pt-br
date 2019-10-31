@@ -8,21 +8,19 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 99eef6b8c264e21df7f4ecf9fc79dc607d484a0a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252260"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115415"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<Elemento de > ThrowUnobservedTaskExceptions
+# <a name="throwunobservedtaskexceptions-element"></a>\<elemento de > ThrowUnobservedTaskExceptions
 Especifica se as exceções de tarefas sem tratamento devem encerrar um processo em execução.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,19 +57,19 @@ Especifica se as exceções de tarefas sem tratamento devem encerrar um processo
 |||  
   
 ## <a name="remarks"></a>Comentários  
- Se uma exceção associada a um <xref:System.Threading.Tasks.Task> não tiver sido observada, não há nenhuma <xref:System.Threading.Tasks.Task.Wait%2A> operação, o pai não está anexado e a <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propriedade não foi lida, a exceção da tarefa é considerada não observada.  
+ Se uma exceção associada a um <xref:System.Threading.Tasks.Task> não tiver sido observada, não há nenhuma operação de <xref:System.Threading.Tasks.Task.Wait%2A>, o pai não está anexado e a propriedade <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> não foi lida, a exceção da tarefa é considerada não observada.  
   
- No .NET Framework 4, por padrão, se um <xref:System.Threading.Tasks.Task> que tem uma exceção não observada for lixo coletado, o finalizador lançará uma exceção e encerrará o processo. O encerramento do processo é determinado pelo tempo de coleta e finalização de lixo.  
+ No .NET Framework 4, por padrão, se um <xref:System.Threading.Tasks.Task> que tenha uma exceção não observada for lixo coletado, o finalizador lançará uma exceção e encerrará o processo. O encerramento do processo é determinado pelo tempo de coleta e finalização de lixo.  
   
- Para facilitar para os desenvolvedores a gravação de código assíncrono com base nas tarefas, o .NET Framework 4,5 altera esse comportamento padrão para exceções não observadas. Exceções não observadas ainda fazem com <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> que o evento seja gerado, mas por padrão, o processo não é encerrado. Em vez disso, a exceção é ignorada depois que o evento é gerado, independentemente se um manipulador de eventos observa a exceção.  
+ Para facilitar para os desenvolvedores a gravação de código assíncrono com base nas tarefas, o .NET Framework 4,5 altera esse comportamento padrão para exceções não observadas. Exceções não observadas ainda fazem com que o evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> seja gerado, mas por padrão, o processo não é encerrado. Em vez disso, a exceção é ignorada depois que o evento é gerado, independentemente se um manipulador de eventos observa a exceção.  
   
- No .NET Framework 4,5, você pode usar o [ \<elemento ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md) em um arquivo de configuração de aplicativo para habilitar o comportamento .NET Framework 4 de gerar uma exceção.  
+ No .NET Framework 4,5, você pode usar o [elemento\<ThrowUnobservedTaskExceptions >](throwunobservedtaskexceptions-element.md) em um arquivo de configuração de aplicativo para habilitar o comportamento .NET Framework 4 de gerar uma exceção.  
   
  Você também pode especificar o comportamento da exceção de uma das seguintes maneiras:  
   
-- Definindo a variável `COMPlus_ThrowUnobservedTaskExceptions` de ambiente (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Definindo a variável de ambiente `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
-- Definindo o valor DWORD do registro ThrowUnobservedTaskExceptions = 1 no HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Chave NETFramework.  
+- Definindo o valor DWORD do registro ThrowUnobservedTaskExceptions = 1 no\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft. Chave NETFramework.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como habilitar o lançamento de exceções em tarefas usando um arquivo de configuração de aplicativo.  

@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128277"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Classe MissingInteropDataException (.NET Nativo)
 **.NET para aplicativos do Windows para Windows 10, somente .NET Native**  
@@ -22,7 +20,7 @@ ms.locfileid: "71049541"
  **Namespace:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> A `MissingInteropDataException` classe é destinada exclusivamente ao uso interno da cadeia de ferramentas .net Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.  
+> A classe `MissingInteropDataException` é destinada exclusivamente ao uso interno da cadeia de ferramentas de .NET Native. Ela não é destinado para uso em código de terceiros e você também não deve tratar a exceção no seu código do aplicativo. Em vez disso, elimine a exceção adicionando entradas ao seu [arquivo de diretivas de tempo de execução](runtime-directives-rd-xml-configuration-file-reference.md). Para obter mais informações, consulte a seção Comentários.  
   
 ## <a name="syntax"></a>Sintaxe  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -36,9 +34,9 @@ ms.locfileid: "71049541"
 |-----------------|-----------------|  
 |`public MissingInteropDataException(String resourceId, Type pertinentType)`|Inicializa uma nova instância da classe `MissingInteropDataException` usando a ID de uma mensagem fornecida pelo sistema que descreve o erro e o tipo cujos dados estão ausentes. Este construtor é para uso interno somente pela cadeia de ferramentas .NET Native.|  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriedades  
   
-|Propriedade|Descrição|  
+|propriedade|Descrição|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|Obtém uma coleção de pares de chave/valor que fornecem informações adicionais definidas pelo usuário sobre a exceção. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public string HelpLink { get; set; }`|Obtém ou define um link para o arquivo de ajuda associado a essa exceção. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|  
@@ -63,7 +61,7 @@ ms.locfileid: "71049541"
 |`protected Object MemberwiseClone()`|Cria uma cópia superficial do objeto atual. (Herdado de <xref:System.Object>.)|  
 |`public string ToString()`|Retorna a representação de cadeia de caracteres de exceção atual. (Herdado de <xref:System.Exception?displayProperty=nameWithType>.)|  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
   
 |evento|Descrição|  
 |-----------|-----------------|  
@@ -72,7 +70,7 @@ ms.locfileid: "71049541"
 ## <a name="usage-details"></a>Detalhes de uso  
  A exceção `MissingInteropDataException` é acionada quando uma chamada de método para um componente COM ou do Tempo de Execução do Windows não pode ser concluída com êxito porque as informações de tipo não estão disponíveis.  
   
- Os metadados disponíveis para um aplicativo em tempo de execução são definidos pelo arquivo de diretivas de tempo de execução (configuração XML \*),. Rd. xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar este arquivo para definir os metadados que devem estar presentes no tempo de execução. Geralmente, esse erro é tratado adicionando um atributo `MarshalObject`, `MarshalDelegate` ou `MarshalStructure` a um elemento de programa apropriado no arquivo de diretivas de tempo de execução. Para obter informações sobre o formato desse arquivo, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
+ Os metadados disponíveis para um aplicativo em tempo de execução são definidos pelo arquivo de diretivas de tempo de execução (configuração XML), \*. Rd. xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar este arquivo para definir os metadados que devem estar presentes no tempo de execução. Geralmente, esse erro é tratado adicionando um atributo `MarshalObject`, `MarshalDelegate` ou `MarshalStructure` a um elemento de programa apropriado no arquivo de diretivas de tempo de execução. Para obter informações sobre o formato desse arquivo, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Como essa exceção indica que os metadados exigidos pelo seu aplicativo não estão disponíveis no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la adicionando a entrada apropriada a um arquivo de diretivas de tempo de execução.  

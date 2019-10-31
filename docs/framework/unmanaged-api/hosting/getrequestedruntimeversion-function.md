@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779583"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136350"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Função GetRequestedRuntimeVersion
-Obtém o número de versão do common language runtime (CLR) solicitado pelo aplicativo especificado. Se essa versão não estiver instalado, obtém a versão mais recente instalado antes da versão solicitada.  
+Obtém o número de versão do Common Language Runtime (CLR) solicitado pelo aplicativo especificado. Se essa versão não estiver instalada, o obterá a versão mais recente instalada antes da versão solicitada.  
   
  Essa função foi preterida no .NET Framework 4.  
   
@@ -42,19 +40,19 @@ HRESULT GetRequestedRuntimeVersion (
   
 ## <a name="parameters"></a>Parâmetros  
  `pExe`  
- [in] O nome do aplicativo.  
+ no O nome do aplicativo.  
   
  `pVersion`  
- [out] Um buffer que contém a cadeia de caracteres de número de versão após a conclusão bem-sucedida.  
+ fora Um buffer que contém a cadeia de caracteres de número de versão após a conclusão bem-sucedida.  
   
  `cchBuffer`  
- [in] O comprimento do buffer de versão.  
+ no O comprimento do buffer de versão.  
   
  `pdwLength`  
- [out] Um ponteiro para o comprimento da sequência de números de versão.  
+ fora Um ponteiro para o comprimento da cadeia de caracteres do número de versão.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro padrão (COM Component Object Model), conforme definido em Winerror. H, além dos valores a seguir.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna códigos de erro padrão de Component Object Model (COM), conforme definido no WinError. h, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
@@ -63,11 +61,11 @@ HRESULT GetRequestedRuntimeVersion (
 |E_POINTER|`pdwLength` é nulo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

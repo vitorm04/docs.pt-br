@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8ea7df9396e9199d04ad5609daa9d2b01761f36
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e64a0512e05965b3da2e7486e986ee34ca8a20d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104299"
 ---
 # <a name="gettypelibinfo-function"></a>Função GetTypeLibInfo
 Retorna informações sobre a biblioteca de tipos especificada examinando sua estrutura [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
@@ -59,16 +57,16 @@ HRESULT GetTypeLibInfo(
  fora O número de versão secundária da biblioteca de tipos. Por exemplo, para a versão *x. y*, o número de versão secundária é *y*.  
   
 ## <a name="remarks"></a>Comentários  
- A `GetTypeLibInfo` função é chamada pelo [Tlbexp. exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md). Essa ferramenta gera uma biblioteca de tipos que descreve os tipos em um assembly Common Language Runtime (CLR).  
+ A função `GetTypeLibInfo` é chamada pelo [Tlbexp. exe (tipo de exportador da biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md). Essa ferramenta gera uma biblioteca de tipos que descreve os tipos em um assembly Common Language Runtime (CLR).  
   
- Se qualquer parâmetro for nulo, a função retornará um `HRESULT` de `E_POINTER`. Caso contrário, retornará `S_OK`.  
+ Se qualquer parâmetro for nulo, a função retornará uma `HRESULT` de `E_POINTER`. Caso contrário, retornará `S_OK`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** TlbRef.h  
+ **Cabeçalho:** TlbRef. h  
   
- **Biblioteca** TlbRef.lib  
+ **Biblioteca:** TlbRef. lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

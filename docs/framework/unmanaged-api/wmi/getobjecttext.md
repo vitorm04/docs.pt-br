@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102461"
 ---
 # <a name="getobjecttext-function"></a>Função GetObjectText
 Retorna uma renderização textual do objeto na sintaxe Managed Object Format (MOF).
@@ -51,7 +49,7 @@ no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wb
 no Normalmente 0. Se `WBEM_FLAG_NO_FLAVORS` (ou 0x1) for especificado, os qualificadores serão incluídos sem informações de propagação ou de tipo.
 
 `pstrObjectText`   
-fora Um ponteiro para uma `null` entrada on. No retorno, um alocado `BSTR` recentemente que contém uma renderização de sintaxe do MOF do objeto.  
+fora Um ponteiro para um `null` na entrada. No retorno, uma `BSTR` alocada recentemente que contém uma renderização de sintaxe do MOF do objeto.  
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -75,12 +73,12 @@ O algoritmo a seguir é usado para reconstruir o texto dos parâmetros de um mé
 1. Os parâmetros são resequenciados na ordem de seus valores de identificador.
 1. Parâmetros que são especificados como `[in]` e `[out]` são combinados em um único parâmetro.
  
-`pstrObjectText`deve ser um ponteiro para um `null` quando a função é chamada; ele não deve apontar para uma cadeia de caracteres que seja válida antes da chamada de método, pois o ponteiro não será desalocado.
+`pstrObjectText` deve ser um ponteiro para um `null` quando a função é chamada; Ele não deve apontar para uma cadeia de caracteres que seja válida antes da chamada do método, pois o ponteiro não será desalocado.
 
 ## <a name="requirements"></a>Requisitos  
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

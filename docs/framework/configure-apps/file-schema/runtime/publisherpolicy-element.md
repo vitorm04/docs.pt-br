@@ -10,23 +10,21 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115844"
 ---
-# <a name="publisherpolicy-element"></a>\<Elemento de > publisherPolicy Apply
+# <a name="publisherpolicy-element"></a>\<elemento de > publisherPolicy Apply
 Especifica se o tempo de execução aplica a política do editor.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> publisherPolicy Apply**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherpolicy apply >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,18 +58,18 @@ nenhuma.
 |-------------|-----------------|  
 |`assemblyBinding`|Contém informações sobre o redirecionamento de versão e os locais dos assemblies.|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`dependentAssembly`|Encapsula local do assembly e política de associação para cada assembly. Use um `<dependentAssembly>` elemento para cada assembly.|  
+|`dependentAssembly`|Encapsula local do assembly e política de associação para cada assembly. Use um elemento `<dependentAssembly>` para cada assembly.|  
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando um fornecedor de componentes libera uma nova versão de um assembly, o fornecedor pode incluir uma política de editor para que os aplicativos que usam a versão antiga agora usem a nova versão. Para especificar se a política de editor deve ser aplicada a um determinado assembly, coloque o  **\<elemento publisherPolicy Apply >** no  **\<elemento dependentAssembly >** .  
+ Quando um fornecedor de componentes libera uma nova versão de um assembly, o fornecedor pode incluir uma política de editor para que os aplicativos que usam a versão antiga agora usem a nova versão. Para especificar se a política de editor deve ser aplicada a um determinado assembly, coloque o elemento **\<publisherpolicy apply >** no elemento **\<dependentAssembly >** .  
   
  A configuração padrão para o atributo **aplicar** é **Sim**. A definição do atributo **aplicar** como **não** substitui as configurações **Sim** anteriores para um assembly.  
   
- A permissão é necessária para que um aplicativo ignore explicitamente a política do Publicador usando o [ \<elemento publisherPolicy Apply Apply = "no"/>](publisherpolicy-element.md) no arquivo de configuração do aplicativo. A permissão é concedida definindo o <xref:System.Security.Permissions.SecurityPermissionFlag> sinalizador <xref:System.Security.Permissions.SecurityPermission>no. Para obter mais informações, consulte permissão de segurança de redirecionamento de [Associação de assembly](../../assembly-binding-redirection-security-permission.md).  
+ A permissão é necessária para que um aplicativo ignore explicitamente a política do Publicador usando o elemento [\<publisherPolicy Apply Apply = "no"/>](publisherpolicy-element.md) no arquivo de configuração do aplicativo. A permissão é concedida pela definição do sinalizador de <xref:System.Security.Permissions.SecurityPermissionFlag> no <xref:System.Security.Permissions.SecurityPermission>. Para obter mais informações, consulte [permissão de segurança de redirecionamento de associação de assembly](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir desativa a política do Publicador para `myAssembly`o assembly,.  
+ O exemplo a seguir desativa a política do Publicador para o assembly, `myAssembly`.  
   
 ```xml  
 <configuration>  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a46925b3-3bf8-404f-9f30-a86ae41032c1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f50e5fcee3705e05aeed820cf736613c12b00e50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e7821022e6966dbdea90d57b6899f09b2ed1964e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090520"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>Método ICorDebugFrame::GetFunctionToken
-Obtém o token de metadados para a função que contém o código associado a esse registro de ativação.  
+Obtém o token de metadados para a função que contém o código associado a esse quadro de pilha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetFunctionToken (
   
 ## <a name="parameters"></a>Parâmetros  
  `pToken`  
- [out] Um ponteiro para um `mdMethodDef` token que faz referência o metadados para a função.  
+ fora Um ponteiro para um `mdMethodDef` token que faz referência aos metadados da função.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

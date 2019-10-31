@@ -11,14 +11,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
-ms.translationtype: HT
+ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127595"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Análise de cadeias de caracteres numéricas no .NET
 Todos os tipos numéricos têm dois métodos de análise estáticos, `Parse` e `TryParse`, que podem ser usados para converter a representação de cadeia de caracteres de um número em um tipo numérico. Esses métodos permitem analisar cadeias de caracteres que foram produzidas usando as cadeias de caracteres de formato documentadas em [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md) e [Cadeias de caracteres de formato numérico personalizadas](../../../docs/standard/base-types/custom-numeric-format-strings.md). Por padrão, os métodos `Parse` e `TryParse` conseguem converter cadeias de caracteres que contêm dígitos decimais integrais somente em valores inteiros. Podem converter cadeias de caracteres que contêm dígitos decimais integrais e dígitos fracionários, separadores de grupo e um separador decimal em valores de ponto flutuante. O método `Parse` lança uma exceção se a operação falhar, enquanto o método `TryParse` retorna `false`.  

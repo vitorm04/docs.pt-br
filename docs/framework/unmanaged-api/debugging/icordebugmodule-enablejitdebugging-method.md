@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aeb6ed448539db2720fee0d42cfcc344fd3bbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da532ee1b5909a68bedbb9e6f6c96333e88002a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762767"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109720"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>Método ICorDebugModule::EnableJITDebugging
-Controla se o compilador just-in-time (JIT) preserva informações de depuração para métodos neste módulo.  
+Controla se o compilador JIT (just-in-time) preserva informações de depuração para métodos dentro deste módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT EnableJITDebugging(
   
 ## <a name="parameters"></a>Parâmetros  
  `bTrackJITInfo`  
- [in] Defina esse valor como `true` para habilitar o compilador JIT preservar as informações de mapeamento entre a versão do Microsoft intermediate language (MSIL) e a versão de cada método neste módulo compilado por JIT.  
+ no Defina esse valor como `true` para permitir que o compilador JIT preserve informações de mapeamento entre a versão da Microsoft Intermediate Language (MSIL) e a versão compilada em JIT de cada método neste módulo.  
   
  `bAllowJitOpts`  
- [in] Defina esse valor como `true` para habilitar o compilador JIT gerar código com determinadas otimizações JIT específicas para a depuração.  
+ no Defina esse valor como `true` para permitir que o compilador JIT gere código com determinadas otimizações específicas de JIT para depuração.  
   
 ## <a name="remarks"></a>Comentários  
- Depuração JIT é habilitada por padrão para todos os módulos que são carregados quando o depurador está ativo. Programaticamente habilitando ou desabilitando as configurações de substituições de configurações globais.  
+ A depuração JIT é habilitada por padrão para todos os módulos que são carregados quando o depurador está ativo. Habilitar ou desabilitar programaticamente as configurações substitui as configurações globais.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

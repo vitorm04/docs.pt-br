@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f8a8f84d3dfd8f1e64197078d7e20d2aebef2323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761215"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130604"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>Método ICorDebugManagedCallback2::ChangeConnection
-Notifica o depurador que o conjunto de tarefas associadas com a conexão especificada foi alterado.  
+Notifica o depurador de que o conjunto de tarefas associado à conexão especificada foi alterado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,22 +36,22 @@ HRESULT ChangeConnection (
   
 ## <a name="parameters"></a>Parâmetros  
  `pProcess`  
- [in] Um ponteiro para um objeto de "ICorDebugProcess" que representa o processo que contém a conexão que foi alterada.  
+ no Um ponteiro para um objeto "ICorDebugProcess" que representa o processo que contém a conexão que foi alterada.  
   
  `dwConnectionId`  
- [in] A ID da conexão que foi alterada.  
+ no A ID da conexão que foi alterada.  
   
 ## <a name="remarks"></a>Comentários  
- Um `ChangeConnection` retorno de chamada será acionado em qualquer um dos seguintes casos:  
+ Um retorno de chamada `ChangeConnection` será acionado em um dos seguintes casos:  
   
-- Quando um depurador é anexado a um processo que contém as conexões. Nesse caso, o tempo de execução gerará e expedir uma [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) eventos e um `ChangeConnection` evento para cada conexão no processo. Um `ChangeConnection` evento é gerado para cada conexão existente, independentemente se o conjunto dessa conexão de tarefas foi alterado desde sua criação.  
+- Quando um depurador é anexado a um processo que contém conexões. Nesse caso, o tempo de execução irá gerar e distribuir um evento [ICorDebugManagedCallback2:: CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) e um `ChangeConnection` para cada conexão no processo. Um evento `ChangeConnection` é gerado para cada conexão existente, independentemente de o conjunto de tarefas dessa conexão ter sido alterado desde sua criação.  
   
-- Quando um host chama [iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) na [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Quando um host chama [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) na [API de hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
- O depurador deve verificar todos os threads do processo para acompanhar as alterações de novo.  
+ O depurador deve verificar todos os threads no processo para selecionar as novas alterações.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

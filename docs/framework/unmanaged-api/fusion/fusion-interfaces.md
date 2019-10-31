@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605605f8510f7ccf5f0bbf2f3f6b09050a16025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108188"
 ---
 # <a name="fusion-interfaces"></a>Interfaces de fusão
 Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa para acessar as propriedades dos recursos de um aplicativo e localizar as versões corretas desses recursos para o aplicativo.  
@@ -29,7 +27,7 @@ Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa par
  Representa um único assembly no cache de assembly global.  
   
  [Interface IAssemblyEnum](iassemblyenum-interface.md)  
- Representa um enumerador para uma matriz `IAssemblyName` de objetos.  
+ Representa um enumerador para uma matriz de objetos `IAssemblyName`.  
   
  [Interface IAssemblyName](iassemblyname-interface.md)  
  Fornece métodos para descrever e trabalhar com a identidade exclusiva de um assembly.  
@@ -41,13 +39,13 @@ Esta seção descreve as interfaces não gerenciadas que a API do Fusion usa par
  Representa a assinatura exclusiva do código que define o aplicativo no escopo atual.  
   
  [Interface IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md)  
- Serve como o enumerador para uma coleção `IDefinitionIdentity` de objetos.  
+ Serve como o enumerador para uma coleção de objetos `IDefinitionIdentity`.  
   
  [Interface IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
  Serve como um enumerador para os atributos do objeto de código no escopo atual.  
   
  [Interface IEnumReferenceIdentity](ienumreferenceidentity-interface.md)  
- Serve como um enumerador para uma coleção `IReferenceIdentity` de objetos.  
+ Serve como um enumerador para uma coleção de objetos `IReferenceIdentity`.  
   
  [Interface IIdentityAuthority](iidentityauthority-interface.md)  
  Gerencia chaves de identidade para objetos de código.  

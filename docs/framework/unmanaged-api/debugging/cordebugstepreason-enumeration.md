@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133683"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Enumeração CorDebugStepReason
 Indica o resultado de uma etapa individual.  
@@ -44,16 +42,16 @@ typedef enum CorDebugStepReason {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Passo a passo concluída normalmente, dentro da mesma função.|  
-|`STEP_RETURN`|Passo a passo continuação normalmente, depois que a função é retornado.|  
-|`STEP_CALL`|Passo a passo continuação normalmente, no início de uma função chamada recentemente.|  
+|`STEP_NORMAL`|A etapa foi concluída normalmente, dentro da mesma função.|  
+|`STEP_RETURN`|A depuração continua normalmente, depois que a função é retornada.|  
+|`STEP_CALL`|A etapa continuou normalmente, no início de uma função chamada recentemente.|  
 |`STEP_EXCEPTION_FILTER`|Uma exceção foi gerada e o controle foi passado para um filtro de exceção.|  
 |`STEP_EXCEPTION_HANDLER`|Uma exceção foi gerada e o controle foi passado para um manipulador de exceção.|  
-|`STEP_INTERCEPT`|Controle foi passado para um interceptador.|  
-|`STEP_EXIT`|O thread foi encerrado antes que a etapa foi concluída.|  
+|`STEP_INTERCEPT`|O controle foi passado para um interceptor.|  
+|`STEP_EXIT`|O thread saiu antes da conclusão da etapa.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

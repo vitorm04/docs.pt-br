@@ -2,14 +2,12 @@
 title: Interface ICorDebugProcess6
 ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d180d57431e34d872ff077e6bc597175029688e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac26402903ecf437fa9654e91cef8b44ff033358
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123445"
 ---
 # <a name="icordebugprocess6-interface"></a>Interface ICorDebugProcess6
 Estende logicamente a interface ICorDebugProcess para habilitar recursos como decodificação de eventos de depuração gerenciados que são codificados em eventos de depuração de exceção nativa e divisão de módulo virtual.  
@@ -28,14 +26,14 @@ Estende logicamente a interface ICorDebugProcess para habilitar recursos como de
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface `E_NOINTERFACE` retorna para cenários ICorDebug fora do .net Native.  
+> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários ICorDebug fora do .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

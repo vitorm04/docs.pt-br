@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760240"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138177"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>Ponteiro de função FExecuteInAppDomainCallback
-Aponta para uma função que é chamado pelo common language runtime (CLR) para executar código gerenciado.  
+Aponta para uma função que é chamada pelo Common Language Runtime (CLR) para executar código gerenciado.  
   
  Esse ponteiro de função foi preterido no .NET Framework 4.  
   
@@ -38,16 +36,16 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>Parâmetros  
  `cookie`  
- [in] Um ponteiro para a memória alocada pelo chamador opaco que contém o código gerenciado a ser executado.  
+ no Um ponteiro para uma memória opaca alocada pelo chamador que contém o código gerenciado a ser executado.  
   
- A alocação e o tempo de vida da memória são controlados pelo chamador (ou seja, o CLR). Isso não é a memória de heap gerenciado do CLR.  
+ A alocação e o tempo de vida dessa memória são controlados pelo chamador (ou seja, o CLR). Essa não é uma memória de heap gerenciada pelo CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

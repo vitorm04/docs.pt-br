@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Prever os preços usando regressão com o Construtor de Modelo'
+title: 'Tutorial: prever os preços usando a regressão com o construtor de modelos'
 description: Este tutorial mostra como criar um modelo de regressão usando o Construtor de Modelo do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 314b637b4a43725f6daeefa6097544567dcaabc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180277"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124304"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Prever os preços usando regressão com o Construtor de Modelo
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: prever os preços usando a regressão com o construtor de modelos
 
 Saiba como usar o ML.NET Model Builder para criar um modelo de regressão para prever os preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
 
@@ -60,13 +60,13 @@ Cada linha no conjunto de dados `taxi-fare-train.csv` contém os detalhes de cor
 
     O conjunto de dados fornecido contém as seguintes colunas:
 
-    - **vendor_id:** A ID do taxista é um recurso.
-    - **rate_code:** O tipo de tarifa da corrida de táxi é um recurso.
-    - **passenger_count:** O número de passageiros na corrida é um recurso.
-    - **trip_time_in_secs:** O tempo que levou a corrida. Você deseja prever a tarifa da viagem antes de sua conclusão. No momento, você não sabe a duração da viagem. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
-    - **trip_distance:** A distância da corrida é um recurso.
-    - **payment_type:** A forma de pagamento (dinheiro ou cartão de crédito) é um recurso.
-    - **fare_amount:** A tarifa total de táxi paga é o rótulo.
+    - **vendor_id:** o ID do taxista é um recurso.
+    - **rate_code:** o tipo de tarifa da viagem de táxi é um recurso.
+    - **passenger_count:** o número de passageiros na viagem é um recurso.
+    - **trip_time_in_secs:** a quantidade de tempo que a viagem levou. Você deseja prever a tarifa da viagem antes de sua conclusão. No momento, você não sabe a duração da viagem. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
+    - **trip_distance:** a distância da viagem é um recurso.
+    - **payment_type:** o método de pagamento (dinheiro ou cartão de crédito) é um recurso.
+    - **fare_amount:** a tarifa total de táxi paga é o rótulo.
 
 O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regressão, o objetivo é prever um valor numérico. Nesse cenário de previsão de preço, o custo de uma corrida de táxi está sendo previsto. Portanto, o **fare_amount** é o rótulo. Os `features` identificados são as entradas que você atribui ao modelo para prever o `label`. Nesse caso, o restante das colunas com a exceção de **trip_time_in_secs** são usadas como recursos ou entradas para prever o valor da tarifa.
 
@@ -83,8 +83,8 @@ O Construtor de Modelo aceita dados de duas fontes: um banco de dados do SQL Ser
 
 1. Na etapa de dados da ferramenta do Construtor de Modelo, selecione *Arquivo* na lista suspensa da fonte de dados.
 1. Selecione o botão ao lado da caixa de texto *Selecionar um arquivo* e use o Explorador de Arquivos para procurar e selecionar o *taxi-fare-test.csv* no diretório de *Dados*
-1. Escolha *fare_amount* na *coluna para prever (rótulo)* DropDown e navegue até a etapa treinar da ferramenta Construtor de modelos.
-1. Expanda a lista suspensa *colunas de entrada (recursos)* e desmarque a coluna *trip_time_in_secs* para excluí-la como um recurso durante o treinamento.
+1. Escolha *fare_amount* na *coluna para prever (rótulo)* DropDown.
+1. Expanda a lista suspensa *colunas de entrada (recursos)* e desmarque a coluna *trip_time_in_secs* para excluí-la como um recurso durante o treinamento.  Navegue até a etapa treinar da ferramenta Construtor de modelos.
 
 ## <a name="train-the-model"></a>Treinar o modelo
 
@@ -114,8 +114,8 @@ Se você não estiver satisfeito com suas métricas de precisão, algumas maneir
 
 Dois projetos serão criados como resultado do processo de treinamento.
 
-- TaxiFarePredictionML.ConsoleApp: Um aplicativo de console .NET Core que contém o treinamento do modelo e o código de consumo de exemplo.
-- TaxiFarePredictionML.Model: Um .NET Standard biblioteca de classes que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, a versão salva do modelo de melhor desempenho durante o treinamento e uma classe auxiliar chamada `ConsumeModel` para fazer previsões.
+- TaxiFarePredictionML. ConsoleApp: um aplicativo de console do .NET Core que contém o treinamento do modelo e o código de consumo de exemplo.
+- TaxiFarePredictionML. Model: um .NET Standard biblioteca de classes que contém os modelos de dados que definem o esquema dos dados de modelo de entrada e saída, a versão salva do modelo de melhor desempenho durante o treinamento e uma classe auxiliar chamada `ConsumeModel` para fazer previsões.
 
 1. Na etapa de código da ferramenta do Construtor de Modelo, escolha **Adicionar Projetos** para adicionar os projetos gerados automaticamente à solução.
 1. Abra o arquivo *Program.cs* no projeto *TaxiFarePrediction*.

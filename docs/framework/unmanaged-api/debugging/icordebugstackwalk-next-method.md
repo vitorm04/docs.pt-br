@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760899"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131822"
 ---
 # <a name="icordebugstackwalknext-method"></a>Método ICorDebugStackWalk::Next
-Move o [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para o próximo quadro.  
+Move o objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) para o próximo quadro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,23 +31,23 @@ Move o [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/i
 HRESULT Next();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O tempo de execução retornou com êxito para o próximo quadro (consulte comentários).|  
-|E_FAIL|O `ICorDebugStackWalk` objeto não pôde ser avançado.|  
-|CORDBG_S_AT_END_OF_STACK|O final da pilha foi atingido devido essa desenrolamento.|  
-|CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, não há quadros adicionais podem ser acessados.|  
+|S_OK|O tempo de execução rebobinado com êxito para o próximo quadro (consulte comentários).|  
+|E_FAIL|O objeto `ICorDebugStackWalk` não pôde ser avançado.|  
+|CORDBG_S_AT_END_OF_STACK|O fim da pilha foi atingido como resultado desse desenrolamento.|  
+|CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, nenhum quadro adicional pode ser acessado.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- O `Next` avanços de método a `ICorDebugStackWalk` somente se o tempo de execução poderá desenrolar o quadro atual do objeto para o quadro de chamada. Caso contrário, o objeto avança para o próximo quadro que o tempo de execução é capaz de desenrolamento.  
+ O método `Next` avança o objeto `ICorDebugStackWalk` para o quadro de chamada somente se o tempo de execução puder desenrolar o quadro atual. Caso contrário, o objeto avança para o próximo quadro que o tempo de execução é capaz de desenrolar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

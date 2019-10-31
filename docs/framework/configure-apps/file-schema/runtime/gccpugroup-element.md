@@ -5,22 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ff646f13c5619b0bfca1b61c86013a981c274e3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252556"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116839"
 ---
-# <a name="gccpugroup-element"></a>\<Elemento de > GCCpuGroup
+# <a name="gccpugroup-element"></a>\<elemento de > GCCpuGroup
 
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,10 +57,10 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-Quando um computador tem vários grupos de CPU e a coleta de lixo do servidor está habilitada (consulte o elemento [ \<gcServer >](gcserver-element.md) ), a habilitação desse elemento estende a coleta de lixo em todos os grupos de CPU e leva todos os núcleos em conta ao criar e balanceamento de heaps.
+Quando um computador tem vários grupos de CPU e a coleta de lixo do servidor está habilitada (consulte o elemento [\<gcServer >](gcserver-element.md) ), a habilitação desse elemento estende a coleta de lixo em todos os grupos de CPU e leva todos os núcleos em conta ao criar e balanceamento de heaps.
 
 > [!NOTE]
-> Este elemento aplica-se somente a threads de coleta de lixo. Para habilitar o tempo de execução para distribuir threads de usuário em todos os grupos de CPU, você também deve habilitar o elemento de [ \<> Thread_UseAllCpuGroups](thread-useallcpugroups-element.md) .
+> Este elemento aplica-se somente a threads de coleta de lixo. Para habilitar o tempo de execução para distribuir threads de usuário em todos os grupos de CPU, você também deve habilitar o elemento [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Exemplo
 

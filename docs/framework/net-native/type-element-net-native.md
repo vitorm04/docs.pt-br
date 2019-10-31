@@ -2,16 +2,14 @@
 title: <Type> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ffe37540fe089bfd1e0eca1958498e725eb9b5b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091848"
 ---
-# <a name="type-element-net-native"></a>\<Elemento de > de tipo (.NET Native)
+# <a name="type-element-net-native"></a>Elemento de > de tipo de \<(.NET Native)
 
 Aplica a política de tempo de execução a um tipo específico, como uma classe ou estrutura.
 
@@ -102,11 +100,11 @@ Se o tipo for um tipo genérico, seu nome é decorado por um símbolo de acento 
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir usa a reflexão para exibir informações sobre os campos, propriedades e métodos da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle. Como o exemplo simplesmente recupera informações sobre o tipo, a disponibilidade de metadados é controlada pela configuração da política `Browse`.
+O exemplo a seguir usa a reflexão para exibir informações sobre os campos, propriedades e métodos da classe <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. A variável `b` no exemplo é um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>. Como o exemplo simplesmente recupera informações sobre o tipo, a disponibilidade de metadados é controlada pela configuração da política `Browse`.
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- Como os metadados <xref:System.Collections.Generic.List%601> da classe não são incluídos automaticamente pela cadeia de ferramentas .net Native, o exemplo não exibe as informações de membro solicitadas em tempo de execução. Para fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução. Observe que, como fornecemos um elemento [<Namespace\>](namespace-element-net-native.md) pai, não precisamos fornecer um nome do tipo totalmente qualificado no elemento `<Type>`.
+ Como os metadados para a classe <xref:System.Collections.Generic.List%601> não são incluídos automaticamente pela cadeia de ferramentas de .NET Native, o exemplo não exibe as informações de membro solicitadas em tempo de execução. Para fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução. Observe que, como fornecemos um elemento [<Namespace\>](namespace-element-net-native.md) pai, não precisamos fornecer um nome do tipo totalmente qualificado no elemento `<Type>`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -120,11 +118,11 @@ O exemplo a seguir usa a reflexão para exibir informações sobre os campos, pr
 ```
 
 ## <a name="example"></a>Exemplo
- O exemplo a seguir usa reflexão para recuperar um objeto <xref:System.Reflection.PropertyInfo> que representa a propriedade <xref:System.String.Chars%2A?displayProperty=nameWithType>. Ele usa o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar o valor do sétimo caractere de uma cadeia de caracteres e exibir todos os caracteres na cadeia de caracteres. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.
+ O exemplo a seguir usa reflexão para recuperar um objeto <xref:System.Reflection.PropertyInfo> que representa a propriedade <xref:System.String.Chars%2A?displayProperty=nameWithType>. Ele usa o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar o valor do sétimo caractere de uma cadeia de caracteres e exibir todos os caracteres na cadeia de caracteres. A variável `b` no exemplo é um controle de <xref:Windows.UI.Xaml.Controls.TextBlock>.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- Como os metadados do <xref:System.String> objeto não estão disponíveis, a chamada para <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o método gera <xref:System.NullReferenceException> uma exceção em tempo de execução quando compilada com a cadeia de ferramentas de .net Native. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução:
+ Como os metadados para o objeto <xref:System.String> não estão disponíveis, a chamada para o método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> gera uma exceção <xref:System.NullReferenceException> em tempo de execução quando compilada com a cadeia de ferramentas .NET Native. Para eliminar a exceção e fornecer os metadados necessários, adicione o seguinte elemento `<Type>` ao arquivo de diretivas de tempo de execução:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

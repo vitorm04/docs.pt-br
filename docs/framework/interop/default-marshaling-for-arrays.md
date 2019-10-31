@@ -8,14 +8,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96300808ba3024a138678494200b10ef722c6fd9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8505f4c742fb002be249ab069708f7f768c672df
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123571"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshaling padrão para matrizes
 Em um aplicativo que consiste inteiramente em um código gerenciado, o Common Language Runtime passa tipos de matriz como parâmetros de Entrada/Saída. Por outro lado, o marshaler de interoperabilidade passa uma matriz como parâmetros de Entrada, por padrão.  

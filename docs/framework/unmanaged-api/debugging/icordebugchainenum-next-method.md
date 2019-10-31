@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125808"
 ---
 # <a name="icordebugchainenumnext-method"></a>Método ICorDebugChainEnum::Next
-Obtém o número especificado de instâncias de ICorDebugChain de enumeração, começando na posição atual.  
+Obtém o número especificado de instâncias de ICorDebugChain da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugChain` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugChain` a serem recuperadas.  
   
  `chains`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugChain` objeto que representa uma cadeia.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugChain` que representa uma cadeia.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `ICorDebugChain` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Um ponteiro para o número de instâncias de `ICorDebugChain` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

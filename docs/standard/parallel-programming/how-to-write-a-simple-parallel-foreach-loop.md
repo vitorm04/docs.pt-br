@@ -9,16 +9,14 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134170"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Como: escrever um loop Parallel.ForEach simples
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Como: gravar um loop Parallel. ForEach simples
 
 Este exemplo mostra como usar um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para permitir o paralelismo de dados em relação a qualquer fonte de dados <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.
 
@@ -34,7 +32,7 @@ Este exemplo considera que você tenha vários arquivos .jpg em uma pasta *C:\Us
 
 Um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> funciona como um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. O loop particiona a coleção de origem e agenda o trabalho em vários threads com base no ambiente do sistema. Quanto mais processadores houver no sistema, mais rápido o método paralelo será executado. Para algumas coleções de origem, um loop sequencial pode ser mais rápido, dependendo do tamanho da origem e do tipo de trabalho que o loop executa. Para obter mais informações sobre o desempenho, consulte [possíveis armadilhas em dados e paralelismo de tarefas](potential-pitfalls-in-data-and-task-parallelism.md).
 
-Para obter mais informações sobre loops paralelos, confira [Como escrever um loop Parallel.For simples](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
+Para obter mais informações sobre loops paralelos, consulte [como: gravar um loop Parallel. for simples](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 
 Para usar <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> com uma coleção não genérica, você pode usar o método de extensão <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> para converter a coleção em uma coleção genérica, conforme mostra o exemplo a seguir:
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9290fd70b17b5a6456d85cb4b037ebbc62e028f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eed09a8149a21140ad61133f29391f86cb0fb929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124468"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>Método IHostAssemblyStore::ProvideModule
-Resolve um arquivo de recurso de módulo dentro de um assembly ou um vinculados (mas não inserida).  
+Resolve um módulo dentro de um assembly ou um arquivo de recurso vinculado (mas não um inserido).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,39 +38,39 @@ HRESULT ProvideModule (
   
 ## <a name="parameters"></a>Parâmetros  
  `pBindInfo`  
- [in] Um ponteiro para um [ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) instância que descreve o módulo solicitado <xref:System.AppDomain>, assembly e o nome do módulo.  
+ no Um ponteiro para uma instância [ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) que descreve o <xref:System.AppDomain>, o assembly e o nome do módulo solicitados do módulo.  
   
  `pdwModuleId`  
- [out] Um ponteiro para um identificador exclusivo para o `IStream` que contém o módulo carregado.  
+ fora Um ponteiro para um identificador exclusivo para o `IStream` que contém o módulo carregado.  
   
  `ppStmModuleImage`  
- [out] Um ponteiro para o endereço de um `IStream` do objeto, que contém a imagem PE (executável portátil) a ser carregado, ou nulo se o módulo não pôde ser encontrado.  
+ fora Um ponteiro para o endereço de um objeto `IStream`, que contém a imagem executável portátil (PE) a ser carregada, ou NULL se o módulo não foi encontrado.  
   
  `ppStmPDB`  
- [out] Um ponteiro para o endereço de um `IStream` de objeto, que contém as informações de depuração (PDB) do programa para o módulo solicitada ou null se não foi possível encontrar o arquivo. PDB.  
+ fora Um ponteiro para o endereço de um objeto `IStream`, que contém as informações de depuração do programa (PDB) para o módulo solicitado, ou NULL se não foi possível encontrar o arquivo. pdb.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`ProvideModule` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|COR_E_FILENOTFOUND (0x80070002)|O assembly solicitado ou recurso vinculado não foi localizado.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|COR_E_FILENOTFOUND (0x80070002)|Não foi possível localizar o assembly ou recurso vinculado solicitado.|  
 |E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` não é grande o suficiente para conter o identificador que o host deseja retornar.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor de identidade é retornado para `pdwModuleId` é especificado pelo host. Identificadores devem ser exclusivos dentro do tempo de vida de um processo. O CLR usa esse valor como o identificador exclusivo para o fluxo associado. Ele verifica que cada valor em relação os valores para `pAssemblyId` retornados por chamadas para [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) contra os valores para `pdwModuleId` retornado por outras chamadas para `ProvideModule`. Se o host retorna o mesmo valor de identificador para o outro `IStream`, o CLR verifica se o conteúdo de fluxo já foi mapeado. Nesse caso, o CLR carrega a cópia existente da imagem em vez de mapeamento de um novo. Portanto, o identificador também não deve sobrepor os identificadores de assembly retornados de `ProvideAssembly`.  
+ O valor de identidade retornado para `pdwModuleId` é especificado pelo host. Os identificadores devem ser exclusivos dentro do tempo de vida de um processo. O CLR usa esse valor como o identificador exclusivo para o fluxo associado. Ele verifica cada valor em relação aos valores de `pAssemblyId` retornados por chamadas para [ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) e em relação aos valores de `pdwModuleId` retornados por outras chamadas para `ProvideModule`. Se o host retornar o mesmo valor de identificador para outra `IStream`, o CLR verificará se o conteúdo desse fluxo já foi mapeado. Nesse caso, o CLR carrega a cópia existente da imagem em vez de mapear uma nova. Portanto, o identificador também não deve se sobrepor aos identificadores de assembly retornados de `ProvideAssembly`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

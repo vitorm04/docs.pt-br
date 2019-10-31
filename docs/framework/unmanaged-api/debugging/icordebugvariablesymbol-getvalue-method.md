@@ -2,14 +2,12 @@
 title: 'Método ICorDebugVariableSymbol:: GetValue'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120961"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>Método ICorDebugVariableSymbol:: GetValue
 Obtém o valor de uma variável como uma matriz de bytes.  
@@ -32,16 +30,16 @@ HRESULT GetValue(
  no O deslocamento inicial na variável a partir da qual o valor deve ser lido. Esse parâmetro é usado ao ler campos de membro em um objeto.  
   
  `cbContext`  
- no O tamanho em bytes do `context` argumento.  
+ no O tamanho em bytes do argumento `context`.  
   
  `context`  
  no O contexto de thread usado para ler o valor.  
   
  `cbValue`  
- no O tamanho em bytes do `pValue` buffer.  
+ no O tamanho em bytes do buffer de `pValue`.  
   
  `pcbValue`  
- fora O número de bytes realmente gravados `pValue` no buffer.  
+ fora O número de bytes realmente gravados no buffer de `pValue`.  
   
  `pValue`  
  fora Uma matriz de bytes que contém o valor da variável.  
@@ -52,11 +50,11 @@ HRESULT GetValue(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112320"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>Método ICLRDataTarget2::FreeVirtual
-Chamado pelo serviço common language runtime (CLR) data access para liberar memória que foi alocado anteriormente no espaço de endereço do processo de destino.  
+Chamado pelos serviços de acesso a dados do Common Language Runtime (CLR) para liberar memória que foi alocada anteriormente no espaço de endereço do processo de destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +37,23 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>Parâmetros  
  `addr`  
- [in] Um `CLRDATA_ADDRESS` valor que especifica o endereço inicial da memória a ser liberado.  
+ no Um valor `CLRDATA_ADDRESS` que especifica o endereço inicial da memória a ser liberada.  
   
  `size`  
- [in] O tamanho, em bytes, da memória a ser liberado.  
+ no O tamanho, em bytes, da memória a ser liberada.  
   
  `typeFlags`  
- [in] Sinalizadores que controlam a liberação de memória. Consulte o Win32 `VirtualFree` função.  
+ no Sinalizadores que controlam a liberação de memória. Consulte a função de `VirtualFree` do Win32.  
   
 ## <a name="remarks"></a>Comentários  
- O `FreeVirtual` método serve como um wrapper de lógico do Win32 `VirtualFree` função.  
+ O método `FreeVirtual` serve como um wrapper lógico para a função de `VirtualFree` do Win32.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

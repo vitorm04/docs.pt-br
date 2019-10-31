@@ -12,14 +12,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4197b018ea85402762a8591b40f3503c02af3974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dede4e5af702f1b86b430450db4a669c326c062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673116"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131072"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::Método GetInstrumentedILMap
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -41,20 +39,20 @@ HRESULT GetInstrumentedILMap(
  [in] A capacidade de armazenamento da matriz de `map`. Consulte a seção Comentários para obter mais informações.  
   
  pcMap  
- [out] O número de valores COR_IL_MAP gravados na matriz de mapa.  
+ fora O número de valores de COR_IL_MAP gravados na matriz de mapa.  
   
  map  
- [out] Uma matriz de valores COR_IL_MAP que fornecem informações sobre mapeamentos da IL instrumentada pelo criador de perfil para a IL do método original.  
+ fora Uma matriz de valores COR_IL_MAP que fornece informações sobre mapeamentos de IL instrumentado por Profiler para o IL do método original.  
   
 ## <a name="remarks"></a>Comentários  
- Se o criador de perfil define o mapeamento chamando o [ICorProfilerInfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) método, o depurador pode chamar esse método para recuperar o mapeamento e use o mapeamento internamente ao calcular deslocamentos da IL para a pilha os rastreamentos e tempos de vida.  
+ Se o criador de perfil definir o mapeamento chamando o método [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , o depurador poderá chamar esse método para recuperar o mapeamento e usar o mapeamento internamente ao calcular deslocamentos Il para rastreamentos de pilha e variável vida.  
   
- Se `cMap` é 0 e `pcMap` é não -**nulo**, `pcMap` é definido como o número de valores COR_IL_MAP disponíveis. Se `cMap` for não zero, representará a capacidade de armazenamento da matriz do `map`. Quando o método retorna, `map` contém no máximo `cMap` itens, e `pcMap` é definido como o número de valores COR_IL_MAP realmente gravados a `map` matriz.  
+ Se `cMap` for 0 e `pcMap` for não**nulo**, `pcMap` será definido como o número de valores de COR_IL_MAP disponíveis. Se `cMap` for não zero, representará a capacidade de armazenamento da matriz do `map`. Quando o método retorna, `map` contém um máximo de `cMap` itens e `pcMap` é definido como o número de valores de COR_IL_MAP gravados na matriz de `map`.  
   
  Se a IL não tiver sido instrumentada ou o mapeamento não tiver sido fornecido por um criador de perfil, esse método retorna `S_OK` e define `pcMap` para 0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

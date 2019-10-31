@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6abc4893ac99c5ce93a409a8120f090250be57c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137369"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Método ICorDebugManagedCallback::DebuggerError
-Notifica o depurador que ocorreu um erro durante a tentativa de manipular um evento do common language runtime (CLR).  
+Notifica o depurador de que ocorreu um erro ao tentar lidar com um evento do Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,21 +37,21 @@ HRESULT DebuggerError (
   
 ## <a name="parameters"></a>Parâmetros  
  `pProcess`  
- [in] Um ponteiro para um objeto de "ICorDebugProcess" que representa o processo no qual o evento ocorreu.  
+ no Um ponteiro para um objeto "ICorDebugProcess" que representa o processo no qual o evento ocorreu.  
   
  `errorHR`  
- [in] O valor HRESULT retornado pelo manipulador de eventos.  
+ no O valor HRESULT que foi retornado do manipulador de eventos.  
   
  `errorCode`  
- [in] Um inteiro que especifica o erro CLR.  
+ no Um inteiro que especifica o erro CLR.  
   
 ## <a name="remarks"></a>Comentários  
- O processo pode ser colocado no modo de passagem, dependendo da natureza do erro.  
+ O processo pode ser colocado em modo de passagem, dependendo da natureza do erro.  
   
- O `DebugError` retorno de chamada indica que serviços de depuração foram desabilitados devido a um erro, portanto, os depuradores devem disponibilizar a mensagem de erro para o usuário. [Icordebugprocess:: GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) estarão seguros para a chamada, mas todos os outros métodos, incluindo [icordebug:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), não deve ser chamado. O depurador deve usar os recursos de sistema operacional para encerrar processos.  
+ O retorno de chamada `DebugError` indica que os serviços de depuração foram desabilitados devido a um erro, de modo que os depuradores devem disponibilizar a mensagem de erro para o usuário. [ICorDebugProcess:: GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) será seguro chamar, mas todos os outros métodos, incluindo [ICorDebug:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), não devem ser chamados. O depurador deve usar recursos do sistema operacional para encerrar processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

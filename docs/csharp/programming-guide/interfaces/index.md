@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039335"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120152"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
-Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../language-reference/keywords/class.md) não abstrat ou uma [struct](../../language-reference/keywords/struct.md) deve implementar.
+Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../language-reference/keywords/class.md) não abstrata ou uma [struct](../../language-reference/keywords/struct.md) deve implementar.
   
 Usando interfaces, você pode, por exemplo, incluir o comportamento de várias fontes em uma classe. Essa funcionalidade é importante em C# porque a linguagem não dá suporte a várias heranças de classes. Além disso, use uma interface se você deseja simular a herança para structs, pois eles não podem herdar de outro struct ou classe.  
   

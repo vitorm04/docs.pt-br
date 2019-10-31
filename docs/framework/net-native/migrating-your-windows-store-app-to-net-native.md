@@ -2,14 +2,12 @@
 title: Migrando seu aplicativo da Windows Store para .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdff7aa92e4c1c357c83b625a6daadbf0a8d556b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049509"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128318"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
 
@@ -29,7 +27,7 @@ ms.locfileid: "71049509"
 
 ## <a name="general-runtime-differences"></a>Diferenças de tempo de execução geral
 
-- Exceções, <xref:System.TypeLoadException>como, que são geradas pelo compilador JIT quando um aplicativo é executado no Common Language Runtime (CLR) geralmente resultam em erros de tempo de compilação quando processados pelo .net Native.
+- Exceções, como <xref:System.TypeLoadException>, que são lançadas pelo compilador JIT quando um aplicativo é executado no Common Language Runtime (CLR) geralmente resultam em erros de tempo de compilação quando processadas pelo .NET Native.
 
 - Não chame o método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> de um thread de interface do usuário do aplicativo. Isso pode resultar em um deadlock no .NET Native.
 
@@ -55,7 +53,7 @@ ms.locfileid: "71049509"
 
 Por exemplo, a associação de dados necessita de um aplicativo para conseguir mapear nomes de propriedade às funções. Nos aplicativos .NET para Windows Store, o Common Language Runtime usa reflexão automaticamente para fornecer esse recurso para tipos nativos gerenciados e disponíveis publicamente. No .NET Native, o compilador inclui automaticamente metadados para os tipos aos quais você associa dados.
 
-O compilador de .net Native também pode manipular tipos genéricos comumente usados, <xref:System.Collections.Generic.List%601> como <xref:System.Collections.Generic.Dictionary%602>e, que funcionam sem a necessidade de nenhuma dica ou diretivas. A palavra-chave [dynamic](../../csharp/language-reference/keywords/dynamic.md) também tem suporte dentro de certos limites.
+O compilador de .NET Native também pode manipular tipos genéricos comumente usados, como <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602>, que funcionam sem a necessidade de dicas ou diretivas. A palavra-chave [dynamic](../../csharp/language-reference/keywords/dynamic.md) também tem suporte dentro de certos limites.
 
 > [!NOTE]
 > Você deve testar completamente todos os caminhos de código dinâmico ao portar seu aplicativo para .NET Native.
@@ -93,7 +91,7 @@ Em .NET Native:
 
 - Você não pode usar reflexão para obter ou definir um campo de ponteiro.
 
-- Quando a contagem de argumentos está errada e o tipo de um dos argumentos está incorreto, .net Native gera <xref:System.ArgumentException> um em vez <xref:System.Reflection.TargetParameterCountException>de um.
+- Quando a contagem de argumentos está errada e o tipo de um dos argumentos está incorreto, .NET Native gera uma <xref:System.ArgumentException> em vez de uma <xref:System.Reflection.TargetParameterCountException>.
 
 - A serialização binária de exceções geralmente não é suportada. Como resultado, objetos não serializáveis não podem ser adicionados ao dicionário <xref:System.Exception.Data%2A?displayProperty=nameWithType>.
 
@@ -159,35 +157,35 @@ O uso de recursos localizados com a classe <xref:System.Diagnostics.Tracing.Even
 
 **APIs diversas**
 
-- A propriedade [typeInfo. GUID](xref:System.Type.GUID) gera uma <xref:System.PlatformNotSupportedException> exceção se um <xref:System.Runtime.InteropServices.GuidAttribute> atributo não é aplicado ao tipo. O GUID é usado principalmente para suporte a COM.
+- A propriedade [typeInfo. GUID](xref:System.Type.GUID) gera uma exceção <xref:System.PlatformNotSupportedException> se um atributo <xref:System.Runtime.InteropServices.GuidAttribute> não é aplicado ao tipo. O GUID é usado principalmente para suporte a COM.
 
-- O <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> método analisa corretamente as cadeias de caracteres que contêm datas curtas em .net Native. Contudo, ele não mantém a compatibilidade com as alterações na análise de data e hora descritas no artigos da Base de Dados de Conhecimento Microsoft [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).
+- O método <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> analisa corretamente as cadeias de caracteres que contêm datas curtas em .NET Native. Contudo, ele não mantém a compatibilidade com as alterações na análise de data e hora descritas no artigos da Base de Dados de Conhecimento Microsoft [KB2803771](https://support.microsoft.com/kb/2803771) e [KB2803755](https://support.microsoft.com/kb/2803755).
 
-- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")` é arredondado corretamente em .net Native. Em algumas versões do CLR, a cadeia de caracteres de resultado é truncada em vez de arredondada.
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` é arredondado corretamente no .NET Native. Em algumas versões do CLR, a cadeia de caracteres de resultado é truncada em vez de arredondada.
 
 <a name="HttpClient"></a>
 
 ### <a name="httpclient-differences"></a>Diferenças do HttpClient
 
-Em .net Native, a <xref:System.Net.Http.HttpClientHandler> classe internamente usa o WinInet (por <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> meio da <xref:System.Net.WebRequest> classe) em vez <xref:System.Net.WebResponse> das classes e usadas no .NET padrão para aplicativos da Windows Store.  O WinINet não oferece suporte a todas as opções de configuração que a classe <xref:System.Net.Http.HttpClientHandler> suporta.  Portanto:
+Em .NET Native, a classe <xref:System.Net.Http.HttpClientHandler> usa o WinINet internamente (por meio da classe <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter>) em vez das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> usadas no .NET padrão para aplicativos da Windows Store.  O WinINet não oferece suporte a todas as opções de configuração que a classe <xref:System.Net.Http.HttpClientHandler> suporta.  Portanto:
 
-- Algumas das propriedades de funcionalidade no <xref:System.Net.Http.HttpClientHandler> retorno `false` no .net Native, enquanto elas retornam `true` no .NET padrão para aplicativos da Windows Store.
+- Algumas das propriedades de funcionalidade em <xref:System.Net.Http.HttpClientHandler> retornam `false` no .NET Native, enquanto elas retornam `true` no .NET para aplicativos da Windows Store padrão.
 
-- Alguns acessadores de `get` propriedade de configuração sempre retornam um valor fixo em .net Native que é diferente do valor padrão configurável no .net para aplicativos da Windows Store.
+- Alguns dos acessadores de propriedade de configuração `get` sempre retornam um valor fixo em .NET Native que é diferente do valor padrão configurável no .NET para aplicativos da Windows Store.
 
 Algumas diferenças comportamentais adicionais são abrangidas nas subseções a seguir.
 
 **Proxy**
 
-A <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> classe não dá suporte à configuração ou substituição do proxy por solicitação.  Isso significa que todas as solicitações em .net Native usam o servidor proxy configurado pelo sistema ou nenhum servidor proxy, dependendo do valor da <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> propriedade.  Em aplicativos .NET para Windows Store, o servidor proxy é definido pela propriedade <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>.  Em .net Native, a configuração <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> de para um valor diferente `null` de gera <xref:System.PlatformNotSupportedException> uma exceção.  A <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> propriedade retorna `false` em .net Native, enquanto retorna `true` na .NET Framework padrão para aplicativos da Windows Store.
+A classe <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> não dá suporte à configuração ou substituição do proxy por solicitação.  Isso significa que todas as solicitações em .NET Native usam o servidor proxy configurado pelo sistema ou nenhum servidor proxy, dependendo do valor da propriedade <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>.  Em aplicativos .NET para Windows Store, o servidor proxy é definido pela propriedade <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>.  Em .NET Native, definir o <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> com um valor diferente de `null` gera uma exceção de <xref:System.PlatformNotSupportedException>.  A propriedade <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> retorna `false` no .NET Native, enquanto ela retorna `true` no .NET Framework padrão para aplicativos da Windows Store.
 
 **Redirecionamento automático**
 
-A <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> classe não permite que o número máximo de redirecionamentos automáticos seja configurado.  O valor da propriedade <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> é 50 por padrão nos aplicativos .NET para Windows Store e pode ser modificada. Em .net Native, o valor dessa propriedade é 10 e tentar modificá-la gera uma <xref:System.PlatformNotSupportedException> exceção.  A <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> propriedade retorna `false` em .net Native, enquanto ela retorna `true` no .net para aplicativos da Windows Store.
+A classe <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> não permite que o número máximo de redirecionamentos automáticos seja configurado.  O valor da propriedade <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> é 50 por padrão nos aplicativos .NET para Windows Store e pode ser modificada. Em .NET Native, o valor dessa propriedade é 10 e tentar modificá-la gera uma exceção de <xref:System.PlatformNotSupportedException>.  A propriedade <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> retorna `false` no .NET Native, enquanto ela retorna `true` no .NET para aplicativos da Windows Store.
 
 **Descompactação automática**
 
-Aplicativos .NET para Windows Store permitem definir a propriedade <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> para <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, ambas <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>, ou <xref:System.Net.DecompressionMethods.None>.  .Net Native só dá <xref:System.Net.DecompressionMethods.Deflate> suporte ao <xref:System.Net.DecompressionMethods.GZip>, ou <xref:System.Net.DecompressionMethods.None>.  Tentar definir a propriedade <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> para <xref:System.Net.DecompressionMethods.Deflate> ou <xref:System.Net.DecompressionMethods.GZip> sozinho silenciosamente define-a para <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>.
+Aplicativos .NET para Windows Store permitem definir a propriedade <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> para <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, ambas <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>, ou <xref:System.Net.DecompressionMethods.None>.  .NET Native só dá suporte a <xref:System.Net.DecompressionMethods.Deflate> junto com <xref:System.Net.DecompressionMethods.GZip>ou <xref:System.Net.DecompressionMethods.None>.  Tentar definir a propriedade <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> para <xref:System.Net.DecompressionMethods.Deflate> ou <xref:System.Net.DecompressionMethods.GZip> sozinho silenciosamente define-a para <xref:System.Net.DecompressionMethods.Deflate> e <xref:System.Net.DecompressionMethods.GZip>.
 
 **Cookies**
 
@@ -195,7 +193,7 @@ A manipulação de cookies é executada simultaneamente por <xref:System.Net.Htt
 
 **Credenciais**
 
-Em aplicativos .NET para Windows Store, as propriedades <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> funcionam de forma independente.  Além disso, a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A> aceita qualquer objeto que implemente a interface <xref:System.Net.ICredentials>.  Em .net Native, definir a <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> Propriedade como `true` faz com <xref:System.Net.Http.HttpClientHandler.Credentials%2A> que a propriedade `null`se torne.  Além disso, a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A> pode ser definida somente para `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A> ou um objeto do tipo <xref:System.Net.NetworkCredential>.  Atribuir de qualquer outro objeto <xref:System.Net.ICredentials>, sendo o mais popular o <xref:System.Net.CredentialCache>, para a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A>, gera uma <xref:System.PlatformNotSupportedException>.
+Em aplicativos .NET para Windows Store, as propriedades <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> funcionam de forma independente.  Além disso, a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A> aceita qualquer objeto que implemente a interface <xref:System.Net.ICredentials>.  Em .NET Native, a definição da propriedade <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> como `true` faz com que a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A> se torne `null`.  Além disso, a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A> pode ser definida somente para `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A> ou um objeto do tipo <xref:System.Net.NetworkCredential>.  Atribuir de qualquer outro objeto <xref:System.Net.ICredentials>, sendo o mais popular o <xref:System.Net.CredentialCache>, para a propriedade <xref:System.Net.Http.HttpClientHandler.Credentials%2A>, gera uma <xref:System.PlatformNotSupportedException>.
 
 **Outros recursos sem suporte ou não configuráveis**
 
@@ -213,9 +211,9 @@ Em .NET Native:
 ### <a name="interop-differences"></a>Diferenças de interoperabilidade
  **APIs preteridas**
 
- Várias APIs pouco usadas para a interoperabilidade com código gerenciado foram preteridas. Quando usado com .net Native, essas APIs podem gerar uma <xref:System.NotImplementedException> exceção <xref:System.PlatformNotSupportedException> ou, ou resultar em um erro do compilador. Em aplicativos .NET para Windows Store, essas APIs são marcadas como obsoletas, embora chamá-las gere um aviso do compilador em vez de um erro do compilador.
+ Várias APIs pouco usadas para a interoperabilidade com código gerenciado foram preteridas. Quando usado com .NET Native, essas APIs podem gerar uma <xref:System.NotImplementedException> ou <xref:System.PlatformNotSupportedException> exceção ou resultar em um erro do compilador. Em aplicativos .NET para Windows Store, essas APIs são marcadas como obsoletas, embora chamá-las gere um aviso do compilador em vez de um erro do compilador.
 
- As APIs preteridas para `VARIANT` o marshaling incluem:
+ As APIs preteridas para o marshaling de `VARIANT` incluem:
 
 - <xref:System.Runtime.InteropServices.BStrWrapper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>
@@ -240,17 +238,17 @@ APIs preteridas para eventos COM clássicos incluem:
 - <xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>
 
-APIs preteridas na <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interface, que não têm suporte no .net Native, incluem:
+APIs preteridas na interface <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>, que não tem suporte no .NET Native, incluem:
 
-- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>(todos os membros)
-- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType>(todos os membros)
-- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType>(todos os membros)
+- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (todos os membros)
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (todos os membros)
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (todos os membros)
 - <xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=fullName>
 
 Outros recursos de interoperabilidade sem suporte incluem:
 
-- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType>(todos os membros)
-- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType>(todos os membros)
+- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (todos os membros)
+- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (todos os membros)
 - <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr?displayProperty=fullName>
@@ -338,7 +336,7 @@ Esta seção lista as APIs restantes que não têm suporte no .NET Native. O mai
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
-Os tipos nos <xref:System.ComponentModel.DataAnnotations> namespaces <xref:System.ComponentModel.DataAnnotations.Schema> e não têm suporte no .net Native. Isso inclui os seguintes tipos que estão presentes no .NET para aplicativos da Windows Store para Windows 8:
+Os tipos nos namespaces <xref:System.ComponentModel.DataAnnotations> e <xref:System.ComponentModel.DataAnnotations.Schema> não têm suporte no .NET Native. Isso inclui os seguintes tipos que estão presentes no .NET para aplicativos da Windows Store para Windows 8:
 
 - <xref:System.ComponentModel.DataAnnotations.AssociationAttribute?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute?displayProperty=nameWithType>
@@ -368,7 +366,7 @@ Os tipos nos <xref:System.ComponentModel.DataAnnotations> namespaces <xref:Syste
 
  **Visual Basic**
 
-Atualmente, não há suporte para Visual Basic no .NET Native. Os seguintes tipos nos <xref:Microsoft.VisualBasic> namespaces e <xref:Microsoft.VisualBasic.CompilerServices> não estão disponíveis no .net Native:
+Atualmente, não há suporte para Visual Basic no .NET Native. Os seguintes tipos nos namespaces <xref:Microsoft.VisualBasic> e <xref:Microsoft.VisualBasic.CompilerServices> não estão disponíveis no .NET Native:
 
 - <xref:Microsoft.VisualBasic.CallType?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Constants?displayProperty=nameWithType>
@@ -390,11 +388,11 @@ Atualmente, não há suporte para Visual Basic no .NET Native. Os seguintes tipo
 
 **Contexto de reflexão (namespace System.Reflection.Context)**
 
-A <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> classe não tem suporte no .net Native.
+A classe <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> não tem suporte no .NET Native.
 
 **RTC (System.Net.Http.Rtc)**
 
-A `System.Net.Http.RtcRequestFactory` classe não tem suporte no .net Native.
+A classe `System.Net.Http.RtcRequestFactory` não tem suporte no .NET Native.
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
@@ -583,7 +581,7 @@ Os tipos nos [namespaces System. ServiceModel. *](xref:System.ServiceModel) não
 
 As seguintes diferenças envolvem serialização e desserialização com e classes <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Xml.Serialization.XmlSerializer>:
 
-- Em .net Native, <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> falha ao serializar ou desserializar uma classe derivada que tem um membro de classe base cujo tipo não é um tipo de serialização raiz. Por exemplo, no código a seguir, tentar serializar ou desserializar `Y` resulta em um erro:
+- Em .NET Native, <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> falha ao serializar ou desserializar uma classe derivada que tem um membro de classe base cujo tipo não é um tipo de serialização raiz. Por exemplo, no código a seguir, tentar serializar ou desserializar `Y` resulta em um erro:
 
   [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]
 
@@ -633,7 +631,7 @@ As seguintes diferenças envolvem serialização e desserialização com e class
 
 - O <xref:System.Xml.Serialization.XmlSerializer> não aceita a interface de serialização personalizada <xref:System.Xml.Serialization.IXmlSerializable>. Se você tiver uma classe que implementa essa interface, <xref:System.Xml.Serialization.XmlSerializer> considera o tipo como um objeto CLR (POCO) antigo simples, serializando apenas suas propriedades públicas.
 
-- A serialização de <xref:System.Exception> um objeto sem formatação não <xref:System.Runtime.Serialization.DataContractSerializer> funciona <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>bem com o e o.
+- A serialização de um objeto <xref:System.Exception> simples não funciona bem com <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
 <a name="VS"></a>
 

@@ -2,14 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetInstanceFieldSymbols'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ad8ddd78d963681c0b2f69bf0f211ad464dc7b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138863"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Método ICorDebugSymbolProvider:: GetInstanceFieldSymbols
 Obtém os símbolos de campo de instância que correspondem a uma assinatura de TypeSpec.  
@@ -28,10 +26,10 @@ HRESULT GetInstanceFieldSymbols(
   
 ## <a name="parameters"></a>Parâmetros  
  `cbSignature`  
- no O número de bytes na `typeSig` matriz.  
+ no O número de bytes na matriz de `typeSig`.  
   
  `typeSig`  
- no Uma matriz de bytes que contém `typespec` a assinatura.  
+ no Uma matriz de bytes que contém a assinatura `typespec`.  
   
  `cRequestedSymbols`  
  no O número de símbolos solicitados.  
@@ -48,11 +46,11 @@ HRESULT GetInstanceFieldSymbols(
 > Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

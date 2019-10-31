@@ -13,14 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
+ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839518"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084190"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Exemplo de expressão regular: Alterando formatos de data
 O exemplo de código a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para substituir datas com o formato *mm*/*dd*/*aa* por datas com o formato *dd*-*mm*-*aa*.  

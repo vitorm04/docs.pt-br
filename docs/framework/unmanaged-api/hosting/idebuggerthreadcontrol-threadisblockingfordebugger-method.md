@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9324e1596913fdafb13239dbefd631cbe3c6ffe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134947"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>Método IDebuggerThreadControl::ThreadIsBlockingForDebugger
-Notifica o host que o thread que está enviando esse retorno de chamada é sobre como bloquear dentro dos serviços de depuração.  
+Notifica o host que o thread que está enviando esse retorno de chamada está prestes a ser bloqueado nos serviços de depuração.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,16 +32,16 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `ThreadIsBlockingForDebugger` método sempre será chamado em um segmento de tempo de execução.  
+ O método `ThreadIsBlockingForDebugger` sempre será chamado em um thread de tempo de execução.  
   
- O `ThreadIsBlockingForDebugger` método host uma oportunidade para realizar outra ação enquanto os blocos de thread.  
+ O método `ThreadIsBlockingForDebugger` dá ao host uma oportunidade de executar outra ação enquanto o thread é bloqueado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

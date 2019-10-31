@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108263"
 ---
 # <a name="fusion-global-static-functions"></a>Funções estáticas globais de fusão
 Esta seção descreve as funções estáticas globais não gerenciadas que a API do Fusion usa.  
@@ -47,7 +45,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas que a API
  Obtém um ponteiro para uma instância de [IAppIdAuthority](iappidauthority-interface.md) que gerencia chaves para identidades e referências de aplicativo.  
   
  [Função GetAssemblyIdentityFromFile](getassemblyidentityfromfile-function.md)  
- Obtém um ponteiro para um `IUnknown` objeto com o especificado `IID` no assembly no caminho do arquivo especificado.  
+ Obtém um ponteiro para um objeto `IUnknown` com o `IID` especificado no assembly no caminho de arquivo especificado.  
   
  [Função GetCachePath](getcachepath-function.md)  
  Obtém o caminho para o assembly armazenado em cache, usando os sinalizadores especificados.  

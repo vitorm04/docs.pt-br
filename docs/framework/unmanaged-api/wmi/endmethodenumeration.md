@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 174cf76d4b0ddf07e67e02bff20a983dca08819a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132014"
 ---
 # <a name="endmethodenumeration-function"></a>Função EndMethodEnumeration
 Encerra uma sequência de enumeração iniciada com uma chamada para a [função BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -58,12 +56,12 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) .
 
-O chamador começa a sequência de enumeração usando a [função BeginMethodEnumeration](beginmethodenumeration.md)e, em seguida, chama a [função NextMethod](nextmethod.md )até que o método retorne `WBEM_S_NO_MORE_DATA`. O chamador, opcionalmente, conclui a sequência `EndMethodEnumeration`chamando. O chamador pode encerrar a enumeração antecipadamente chamando `EndMethodEnumeration` a qualquer momento.
+O chamador começa a sequência de enumeração usando a [função BeginMethodEnumeration](beginmethodenumeration.md)e, em seguida, chama a [função NextMethod](nextmethod.md )até que o método retorne `WBEM_S_NO_MORE_DATA`. O chamador, opcionalmente, conclui a sequência chamando `EndMethodEnumeration`. O chamador pode encerrar a enumeração antecipadamente chamando `EndMethodEnumeration` a qualquer momento.
 
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

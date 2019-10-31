@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75754c2f-38c7-4707-85fe-559db4542729
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23ead080823ace1b091568108af8866dcbca14ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67841bbcd796e41b3b81f922020fe6c3677730c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124562"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>Método ICLRTask2::BeginPreventAsyncAbort
-Novo thread de atrasos de anulação de solicitações de resultando em anulações de thread no thread atual.  
+Atrasa novas solicitações de anulação de threads resultando em anulações de thread no thread atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,8 +31,8 @@ Novo thread de atrasos de anulação de solicitações de resultando em anulaç�
 HRESULT BeginPreventAsyncAbort();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -42,20 +40,20 @@ HRESULT BeginPreventAsyncAbort();
 |HOST_E_INVALIDOPERATION|O método foi chamado em um thread que não é o thread atual.|  
   
 ## <a name="remarks"></a>Comentários  
- Chamar esse método incrementa o contador de anulação de thread de atraso para o thread atual em um.  
+ Chamar esse método incrementa o contador atraso-thread-anulação para o thread atual por um.  
   
- Chamadas para `BeginPreventAsyncAbort` e [ICLRTask2::EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) podem ser aninhados. Desde que o contador for maior que zero, as anulações de thread para o thread atual são atrasadas. Se essa chamada não está emparelhada com uma chamada para o `EndPreventAsyncAbort` método, é possível atingir um estado no qual thread anulações não podem ser entregues ao thread atual.  
+ Chamadas para `BeginPreventAsyncAbort` e [ICLRTask2:: EndPreventAsyncAbort](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md) podem ser aninhadas. Desde que o contador seja maior que zero, as anulações de thread para o thread atual serão atrasadas. Se essa chamada não for emparelhada com uma chamada para o método `EndPreventAsyncAbort`, é possível alcançar um estado no qual as anulações de thread não podem ser entregues ao thread atual.  
   
- O atraso é respeitado para um thread que anula a mesmo.  
+ O atraso não é respeitado para um thread que se anula.  
   
- A funcionalidade que é exposta por esse recurso é usada internamente pela máquina virtual (VM). Uso indevido desses métodos pode causar comportamento não especificado na VM. Por exemplo, chamar `EndPreventAsyncAbort` sem primeiro chamar `BeginPreventAsyncAbort` foi possível definir o contador como zero quando a VM é incrementado anteriormente. Da mesma forma, o contador interno não é verificado para estouro. Se ele exceder seu limite de integral porque ele é incrementado pelo host e a VM, o comportamento resultante é especificado.  
+ A funcionalidade exposta por esse recurso é usada internamente pela VM (máquina virtual). O uso indevido desses métodos pode causar um comportamento não especificado na VM. Por exemplo, chamar `EndPreventAsyncAbort` sem primeiro chamar `BeginPreventAsyncAbort` pode definir o contador como zero quando a VM o incrementaa anteriormente. Da mesma forma, o contador interno não é verificado quanto ao estouro. Se ele exceder seu limite integral porque é incrementado pelo host e pela VM, o comportamento resultante não é especificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

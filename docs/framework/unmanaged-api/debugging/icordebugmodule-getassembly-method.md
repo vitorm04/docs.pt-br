@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ee602c85a2f591365d40984184780f70e8532bf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29c9d9dde4776ef729c0bbae7b644171a265e3ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762705"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137461"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>Método ICorDebugModule::GetAssembly
-Obtém o assembly que contém esse módulo.  
+Obtém o assembly recipiente para este módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetAssembly(
   
 ## <a name="parameters"></a>Parâmetros  
  `ppAssembly`  
- [out] Um ponteiro para um objeto de ICorDebugAssembly que representa o assembly que contém esse módulo.  
+ fora Um ponteiro para um objeto ICorDebugAssembly que representa o assembly que contém este módulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 965ce04b02a0eb1ca30aba065b3e372332e08b55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ec769c343ad055132c6d84e64600fc459357a85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752297"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124706"
 ---
 # <a name="icordebugenumclone-method"></a>Método ICorDebugEnum::Clone
 Cria uma cópia deste objeto ICorDebugEnum.  
@@ -37,10 +35,10 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppEnum`  
- [out] Um ponteiro para o endereço de um `ICorDebugEnum` que é uma cópia deste objeto `ICorDebugEnum` objeto.  
+ fora Um ponteiro para o endereço de um objeto de `ICorDebugEnum` que é uma cópia desse objeto `ICorDebugEnum`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

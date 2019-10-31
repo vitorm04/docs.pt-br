@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Implementações personalizadas de IMessageFilter.PreFilterMessage'
+title: 'Mitigação: implementações personalizadas de IMessageFilter.PreFilterMessage'
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5174c67e4204c2e20e5730ab7c092ccbb0aeda1a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126271"
 ---
-# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigação: Implementações personalizadas de IMessageFilter.PreFilterMessage
+# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mitigação: implementações personalizadas de IMessageFilter.PreFilterMessage
 
 Em aplicativos do Windows Forms direcionados a versões do .NET Framework começando com o .NET Framework 4.6.1, uma implementação de <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> personalizada pode filtrar mensagens quando o método <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> for chamado se a implementação <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>:
 

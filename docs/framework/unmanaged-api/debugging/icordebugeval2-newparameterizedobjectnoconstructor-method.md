@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4434f5d0eaa45c9cfcbadb20b29564f0643a2dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754440"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084802"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>Método ICorDebugEval2::NewParameterizedObjectNoConstructor
-Cria uma instância de um novo objeto de tipo parametrizado da classe especificada sem tentar chamar um método de construtor.  
+Cria uma instância de um novo objeto de tipo com parâmetros da classe especificada sem tentar chamar um método de construtor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +37,19 @@ HRESULT NewParameterizedObjectNoConstructor (
   
 ## <a name="parameters"></a>Parâmetros  
  `pClass`  
- [in] Um ponteiro para um objeto ICorDebugClass que representa a classe do objeto a ser instanciado.  
+ no Um ponteiro para um objeto ICorDebugClass que representa a classe do objeto a ser instanciado.  
   
  `nTypeArgs`  
- [in] O número de argumentos de tipo passado.  
+ no O número de argumentos de tipo passado.  
   
  `ppTypeArgs`  
- [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugType que representa um argumento de tipo para o objeto de instância está sendo criado.  
+ no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugType que representa um argumento de tipo para o objeto que está sendo instanciado.  
   
 ## <a name="remarks"></a>Comentários  
- O `NewParameterizedObjectNoConstructor` método irá falhar se um número incorreto de argumentos de tipo ou os tipos de errado de argumentos de tipo são passados.  
+ O método `NewParameterizedObjectNoConstructor` falhará se um número incorreto de argumentos de tipo ou os tipos incorretos de argumentos de tipo forem passados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

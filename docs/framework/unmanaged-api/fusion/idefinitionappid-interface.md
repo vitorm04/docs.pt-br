@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e72f2550-bdec-4a20-a2f4-2e14847266c1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 929909a7f2c4fa1799c8fed94787b8f853c7eac2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5114f74e80da925c7a153b9e481c54067152eaec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796512"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108207"
 ---
 # <a name="idefinitionappid-interface"></a>Interface IDefinitionAppId
 Representa um identificador exclusivo para o código que define o aplicativo no escopo atual.  
@@ -30,15 +28,15 @@ Representa um identificador exclusivo para o código que define o aplicativo no 
   
 |Método|Descrição|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Obtém uma cadeia de caracteres formatada que representa o código `IDefinitionAppId` neste objeto.|  
-|`IDefinitionAppId::put_Codebase`|Define o código desse `IDefinitionAppId` objeto como o valor de cadeia de caracteres formatado especificado.|  
+|`IDefinitionAppId::get_Codebase`|Obtém uma cadeia de caracteres formatada que representa o código neste `IDefinitionAppId` objeto.|  
+|`IDefinitionAppId::put_Codebase`|Define o código desse `IDefinitionAppId` objeto como o valor da cadeia de caracteres formatada especificada.|  
 |`IDefinitionAppId::EnumAppPath`|Obtém um ponteiro de interface para um objeto [IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md) que contém os assemblies no caminho do aplicativo atual.|  
 |`IDefinitionAppId::SetAppPath`|Define o caminho do aplicativo para o assembly no escopo atual como o valor referenciado pelo objeto [IDefinitionIdentity](idefinitionidentity-interface.md) especificado.|  
-|`IDefinitionAppId::get_SubscriptionId`|Obtém um ponteiro para uma representação de cadeia de caracteres do identificador de token para uma `IDefinitionAppId` assinatura para este objeto.|  
-|`IDefinitionAppId::put_SubscriptionId`|Define o identificador de token de uma assinatura para `IDefinitionAppId` esse objeto para o valor de cadeia de caracteres especificado.|  
+|`IDefinitionAppId::get_SubscriptionId`|Obtém um ponteiro para uma representação de cadeia de caracteres do identificador de token para uma assinatura para este `IDefinitionAppId` objeto.|  
+|`IDefinitionAppId::put_SubscriptionId`|Define o identificador de token para uma assinatura para este `IDefinitionAppId` objeto para o valor da cadeia de caracteres especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolamento. h  
   

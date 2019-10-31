@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7e7c2d0-e58c-4650-b40c-47b2be2cda45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c43c2259d5b899f05e42437aa121dde57ce4b0c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c060e4883335a8318970b5fbd74bf72c9e13f5bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134870"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>Método IGCHost::SetVirtualMemLimit
-Define o tamanho máximo de memória de virtual do tempo de execução.  
+Define o tamanho máximo da memória virtual do tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +35,17 @@ HRESULT SetVirtualMemLimit (
   
 ## <a name="parameters"></a>Parâmetros  
  `sztMaxVirtualMemMB`  
- [in] O tamanho máximo, em megabytes, da memória virtual do tempo de execução.  
+ no O tamanho máximo, em megabytes, da memória virtual do tempo de execução.  
   
 ## <a name="remarks"></a>Comentários  
- O tamanho máximo de memória de virtual do tempo de execução pode ser alterado dinamicamente.  
+ O tamanho máximo da memória virtual do tempo de execução pode ser alterado dinamicamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost.idl, GCHost.h  
+ **Cabeçalho:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

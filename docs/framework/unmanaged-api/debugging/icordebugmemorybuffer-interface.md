@@ -2,14 +2,12 @@
 title: Interface ICorDebugMemoryBuffer
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 77fa6b1a8c7a559b9d88c0173e389ec11a75ec8b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e43f9a2297eb56755c7a6bba73e994441cbfeaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127971"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>Interface ICorDebugMemoryBuffer
 Representa um buffer na memória.  
@@ -27,11 +25,11 @@ Representa um buffer na memória.
 > Essa interface está disponível somente com .NET Native. Se você implementar essa interface para cenários ICorDebug fora do .NET Native, o Common Language Runtime ignorará essa interface.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

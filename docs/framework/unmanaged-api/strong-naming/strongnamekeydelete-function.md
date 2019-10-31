@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d37f990241ae704abef55d863da0f40a31284837
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141592"
 ---
 # <a name="strongnamekeydelete-function"></a>Função StrongNameKeyDelete
 
@@ -42,23 +40,23 @@ BOOLEAN StrongNameKeyDelete (
 `wszKeyContainer`\
 no O nome do contêiner de chave a ser excluído.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor retornado
 
-`true`após a conclusão bem-sucedida; caso contrário `false`,.
+`true` após a conclusão bem-sucedida; caso contrário, `false`.
 
 ## <a name="remarks"></a>Comentários
 
 Use a função [StrongNameKeyInstall](strongnamekeyinstall-function.md) para importar um par de chaves pública/privada para um contêiner.
 
-Se a `StrongNameKeyDelete` função não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.
+Se a função `StrongNameKeyDelete` não for concluída com êxito, chame a função [StrongNameErrorInfo](strongnameerrorinfo-function.md) para recuperar o último erro gerado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** StrongName.h
+**Cabeçalho:** StrongName. h
 
-**Biblioteca** Incluído como um recurso em MsCorEE. dll
+**Biblioteca:** Incluído como um recurso em MsCorEE. dll
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

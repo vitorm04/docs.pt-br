@@ -1,5 +1,5 @@
 ---
-title: 'Como: evitar que uma tarefa filha se anexe ao pai dela'
+title: 'Como: Evitar que uma tarefa filho se anexe ao seu pai'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55b9c6c7175d8c7c33d8bfa03330c8e4b8816531
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139257"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Como: evitar que uma tarefa filha se anexe ao pai dela
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Como: Evitar que uma tarefa filho se anexe ao seu pai
 Este documento demonstra como evitar que uma tarefa filho se anexe à tarefa principal. Impedir que uma tarefa filho seja anexada à tarefa pai é útil quando você chama um componente que é gravado por um terceiro e que também usa tarefas. Por exemplo, um componente de terceiros que usa a opção <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> para criar um objeto <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> pode causar problemas em seu código se ele for de longa duração ou lançar uma exceção não controlada.  
   
 ## <a name="example"></a>Exemplo  

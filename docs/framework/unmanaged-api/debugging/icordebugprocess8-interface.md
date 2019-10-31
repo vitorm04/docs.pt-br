@@ -2,30 +2,28 @@
 title: Interface ICorDebugProcess8
 ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6db1bc7e87750a36415439707777fed99e358ea
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: dc7de361386b9ee21d6cf05c36a7f63c3e1c25f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300525"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123364"
 ---
 # <a name="icordebugprocess8-interface"></a>Interface ICorDebugProcess8
-[Com suporte no .NET Framework 4.6 e versões posteriores]  
+[Com suporte no .NET Framework 4,6 e versões posteriores]  
   
- Estende logicamente a interface ICorDebugProcess para habilitar ou desabilitar determinados tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) retornos de chamada de exceção.  
+ Estende logicamente a interface ICorDebugProcess para habilitar ou desabilitar determinados tipos de retornos de chamada de exceção [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método EnableExceptionCallbacksOutsideOfMyCode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Habilita ou desabilita determinados tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) retornos de chamada de exceção.|  
+|[Método EnableExceptionCallbacksOutsideOfMyCode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|Habilita ou desabilita determinados tipos de retornos de chamada de exceção [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) .|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

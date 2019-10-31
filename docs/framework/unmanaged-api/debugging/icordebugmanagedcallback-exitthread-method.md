@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755771"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130764"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>Método ICorDebugManagedCallback::ExitThread
-Notifica o depurador que um thread que estava executando código gerenciado foi encerrado.  
+Notifica o depurador de que um thread que estava executando código gerenciado foi encerrado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT ExitThread (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o thread gerenciado.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread gerenciado.  
   
  `thread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread gerenciado.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread gerenciado.  
   
 ## <a name="remarks"></a>Comentários  
- Uma vez o `ExitThread` retorno de chamada é acionado, o thread não aparecerá mais em enumerações de thread.  
+ Depois que o retorno de chamada `ExitThread` for disparado, o thread não aparecerá mais nas enumerações de thread.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

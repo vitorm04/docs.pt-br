@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0766e29-e573-4f9a-a928-167d1de5aa7e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b42cb2bff677963c44bfc04f8bdd6c60497e4731
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a0482ff451b05ec50c199a75a3c3fabd68c28e21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909895"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133989"
 ---
 # <a name="icordebugassembly2-interface"></a>Interface ICorDebugAssembly2
 
@@ -39,11 +37,11 @@ Representa um assembly. Essa interface é uma extensão da interface ICorDebugAs
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

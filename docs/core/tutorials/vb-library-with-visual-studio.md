@@ -1,18 +1,16 @@
 ---
 title: Criar uma biblioteca de classes .NET Standard em Visual Basic no Visual Studio 2017
 description: Saiba como criar uma biblioteca de classes .NET Standard escrita em Visual Basic usando o Visual Studio 2017
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1daab377abe3b6b89f73ed48eafadeae4d7eee77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100860"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Criar uma biblioteca .NET Standard com o Visual Basic e o SDK do .NET Core no Visual Studio 2017
 
@@ -39,7 +37,7 @@ Crie seu projeto de biblioteca de classes:
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo da solução **ClassLibraryProjects** e, no menu de contexto, selecione **Adicionar** > **Novo Projeto**.
 
-1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Standard** seguido pelo modelo de projeto **Biblioteca de classes (.NET Standard)**. Na caixa de texto **Nome**, digite "StringLibrary" como o nome do projeto. Selecione **OK** para criar o projeto de biblioteca de classes.
+1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Standard** seguido pelo modelo de projeto **Biblioteca de classes (.NET Standard)** . Na caixa de texto **Nome**, digite "StringLibrary" como o nome do projeto. Selecione **OK** para criar o projeto de biblioteca de classes.
 
    ![Caixa de diálogo Adicionar novo projeto de biblioteca do Visual Studio](./media/vb-library-with-visual-studio/create-new-library-project.png)
 

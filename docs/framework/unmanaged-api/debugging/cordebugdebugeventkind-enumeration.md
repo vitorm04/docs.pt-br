@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 6075a6cd-97e6-4472-a090-0dd14860d1f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d2e01a5cf2b2aa25e91ebf0f8e3927858b12bea3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de4ac1f39ea9cfb4b616bd4e2c85e5de530dbb0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132224"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>Enumeração CorDebugDebugEventKind
 Indica o tipo de evento cujas informações são decodificadas pelo método [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) .  
@@ -47,17 +45,17 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|Uma exceção não manipulada.|  
   
 ## <a name="remarks"></a>Comentários  
- Um membro da `CorDebugDebugEventKind` enumeração é retornado chamando o método [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
+ Um membro da enumeração `CorDebugDebugEventKind` é retornado chamando o método [ICorDebugDebugEvent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) .  
   
 > [!NOTE]
 > Essa enumeração destina-se ao uso em cenários de depuração .NET Native apenas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

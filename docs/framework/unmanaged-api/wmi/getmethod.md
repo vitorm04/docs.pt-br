@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9cc185bf8cccb8ed3c24e28954afd86464602d7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48986f5ff1cbbb45840ec1a059aa86711848d717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102584"
 ---
 # <a name="getmethod-function"></a>Função GetMethod
 
@@ -51,7 +49,7 @@ no Este parâmetro não é usado.
 no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-no O nome do método. Esse parâmetro não pode `null` ser e deve apontar para um `LPCWSTR`válido.
+no O nome do método. Esse parâmetro não pode ser `null` e deve apontar para um `LPCWSTR`válido.
 
 `lFlags`\
 [in] Reservado. Esse parâmetro deve ser 0.
@@ -76,15 +74,15 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
 
-O gerenciamento do Windows pode definir o ponteiro [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) como `null` se o método não tiver parâmetros in.
+O gerenciamento do Windows pode definir o ponteiro [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) para `null` se o método não tiver parâmetros in.
 
-Em `ppInSignature` `IWbemClassObject` e `ppOutSignature` descreva os parâmetros in e out, respectivamente, como propriedades em uma instância da classe System [_Parameters](/windows/desktop/WmiSdk/--parameters). As propriedades no `ppInSignature` são chamadas `Param` *n*, em que *n* é a posição do parâmetro na assinatura do método ( `Param1`como, `Param2`etc.). As propriedades no `ppOutSignature` também são chamadas `Param` *n*, e o valor de retorno é `ReturnValue`nomeado. Para obter mais informações e um exemplo, consulte [método IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+Em `ppInSignature` e `ppOutSignature` descrevem os parâmetros in e out, respectivamente, como propriedades em uma instância `IWbemClassObject` da classe System [_Parameters](/windows/desktop/WmiSdk/--parameters). As propriedades em `ppInSignature` são nomeadas `Param`*n*, em que *n* é a posição do parâmetro na assinatura do método (como `Param1`, `Param2`, etc.). As propriedades em `ppOutSignature` também são nomeadas `Param`*n*e o valor de retorno é nomeado `ReturnValue`. Para obter mais informações e um exemplo, consulte [método IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

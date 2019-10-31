@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798598"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120321"
 ---
 # <a name="get-function"></a>Função Get
 
@@ -58,7 +56,7 @@ no O nome da propriedade.
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `pVal`\
-fora Se a função retornar com êxito, conterá o valor da `wszName` propriedade. O `pval` argumento recebe o tipo e o valor corretos para o qualificador.
+fora Se a função retornar com êxito, conterá o valor da propriedade `wszName`. O argumento `pval` é atribuído ao tipo e valor corretos para o qualificador.
 
 `pvtType`\
 fora Se a função retornar com êxito, conterá uma [constante do tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica o tipo de propriedade. Seu valor também pode ser `null`. 
@@ -69,8 +67,8 @@ fora Se a função retornar com êxito, o receberá informações sobre a origem
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | A propriedade é uma propriedade padrão do sistema. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para uma classe: A propriedade é herdada da classe pai. <br> Para uma instância: A propriedade, embora herdada da classe pai, não foi modificada pela instância.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para uma classe: A propriedade pertence à classe derivada. <br> Para uma instância: A propriedade é modificada pela instância; ou seja, um valor foi fornecido ou um qualificador foi adicionado ou modificado. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para uma classe: a propriedade é herdada da classe pai. <br> Para uma instância: a propriedade, embora herdada da classe pai, não foi modificada pela instância.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para uma classe: a propriedade pertence à classe derivada. <br> Para uma instância: a propriedade é modificada pela instância; ou seja, um valor foi fornecido ou um qualificador foi adicionado ou modificado. |
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -88,15 +86,15 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) .
 
-A `Get` função também pode retornar propriedades do sistema.
+A função `Get` também pode retornar propriedades do sistema.
 
-O argumento recebe o tipo e o valor corretos para o qualificador e a função [VariantInit com](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) `pVal`
+O argumento `pVal` é atribuído ao tipo e valor corretos para o qualificador e a função [VARIANTINIT](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) com
 
 ## <a name="requirements"></a>Requisitos
 
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
- **Cabeçalho:** WMINet_Utils.idl
+ **Cabeçalho:** WMINet_Utils. idl
 
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

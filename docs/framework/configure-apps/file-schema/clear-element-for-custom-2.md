@@ -1,5 +1,5 @@
 ---
-title: <clear>elemento para NameValueSectionHandler e DictionarySectionHandler
+title: elemento <clear> para NameValueSectionHandler e DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e27bb7e21baf2eb4990d0107db4aae1b5f9a7d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119070"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<limpar > elemento para NameValueSectionHandler e DictionarySectionHandler
 
 Limpa todas as configurações definidas anteriormente em uma seção.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<desmarque >**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,7 +38,7 @@ Nenhum
 
 |     | Descrição |
 | --- | ------------|
-| [elemento >name  **\<** ](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que <xref:System.Configuration.NameValueSectionHandler> usam <xref:System.Configuration.DictionarySectionHandler> as classes e. |
+| [ **\<sectionname >** Elementos](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam as classes <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>. |
 
 ## <a name="child-elements"></a>Elementos filho
 
@@ -46,13 +46,13 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar o  **\<elemento Clear >** para remover todas as configurações do seu aplicativo que foram definidas em um nível mais alto na hierarquia do arquivo de configuração.
+Você pode usar o elemento **\<clear >** para remover todas as configurações do seu aplicativo que foram definidas em um nível mais alto na hierarquia do arquivo de configuração.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo define um arquivo de configuração de computador e um arquivo de configuração de aplicativo e mostra como usar o  **\<elemento Clear >** em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente na configuração do computador Grupo.
+Este exemplo define um arquivo de configuração de computador e um arquivo de configuração de aplicativo e mostra como usar o **\<apagar >** elemento em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente no arquivo de configuração de computador.
 
-O código do arquivo de configuração de computador a seguir declara a seção  **\<myseção >** :
+O código do arquivo de configuração do computador a seguir declara a seção **\<myseção >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ O código do arquivo de configuração de computador a seguir declara a seção 
 </configuration>
 ```
 
-O código do arquivo de configuração de aplicativo a seguir remove todas as configurações de  **\<myseção >** . O aplicativo não pode recuperar nenhuma das configurações que foram declaradas na seção  **\<** na seção > do arquivo de configuração do computador.
+O código do arquivo de configuração de aplicativo a seguir remove todas as configurações de **\<myseção >** . O aplicativo não pode recuperar nenhuma das configurações que foram declaradas no na seção **\<myseção >** do arquivo de configuração do computador.
 
 ```xml
 <!-- Application configuration file -->

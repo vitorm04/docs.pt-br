@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12787382686cc056c157ed7a6e8e4984ab93588f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 55e331ff4e6ada73dc92bb2e880f555887639714
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737618"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088785"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>Método ICorDebugAppDomainEnum::Next
-Obtém o número de domínios de aplicativo especificado da coleção, começando na posição atual do cursor.  
+Obtém o número especificado de domínios de aplicativo da coleção, começando na posição atual do cursor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de domínios de aplicativo a ser recuperado.  
+ no O número de domínios de aplicativo a serem recuperados.  
   
  `values`  
- [out] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugAppDomain que representa um domínio de aplicativo.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugAppDomain que representa um domínio de aplicativo.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de domínios de aplicativo, na verdade, é retornado. Esse valor pode ser nulo se `celt` é um.  
+ fora Um ponteiro para o número de domínios de aplicativo realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

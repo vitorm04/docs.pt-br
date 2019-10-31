@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bef51fe9df0f85659603c637f11ed4e856c8e01a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133961"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>Método ICorDebugAssembly2::IsFullyTrusted
-Obtém um valor que indica se o assembly foi concedido confiança total pelo sistema de segurança de tempo de execução.  
+Obtém um valor que indica se o assembly recebeu confiança total pelo sistema de segurança de tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT IsFullyTrusted(
   
 ## <a name="parameters"></a>Parâmetros  
  `pbFullyTrusted`  
- [out] `true` se o assembly tiver sido concedido confiança total pelo sistema de segurança de tempo de execução; caso contrário, `false`.  
+ [fora] `true` se o assembly recebeu confiança total pelo sistema de segurança de tempo de execução; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método retorna um HRESULT de CORDBG_E_NOTREADY se a política de segurança para o assembly ainda não foi resolvida, ou seja, se não houver código no assembly foi executada ainda.  
+ Esse método retornará um HRESULT de CORDBG_E_NOTREADY se a política de segurança para o assembly ainda não tiver sido resolvida, ou seja, se nenhum código no assembly tiver sido executado ainda.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

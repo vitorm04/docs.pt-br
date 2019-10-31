@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d600b4687b86f5872f94a60ad3422be764cf5307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747209"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137696"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>Método ICorDebugRegisterSet::GetRegistersAvailable
-Obtém um pouco máscara que indica que registra desta [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) estão disponíveis no momento.  
+Obtém uma máscara de bits que indica quais registros neste [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) estão disponíveis no momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAvailable`  
- [out] Uma máscara de bits que indica quais registros estão disponíveis no momento.  
+ fora Uma máscara de bits que indica quais registros estão disponíveis no momento.  
   
 ## <a name="remarks"></a>Comentários  
- Um registro pode estar indisponível se seu valor não pode ser determinado para a determinada situação.  
+ Um registro pode não estar disponível se seu valor não puder ser determinado para a situação especificada.  
   
- A máscara retornada contém um bit para cada registro (1 << o índice do registro). O valor de bit for 1, se o registro estiver disponível, ou 0 se não estiver disponível.  
+ A máscara retornada contém um bit para cada registro (1 < < índice de registro). O valor de bit será 1 se o registro estiver disponível ou 0 se não estiver disponível.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

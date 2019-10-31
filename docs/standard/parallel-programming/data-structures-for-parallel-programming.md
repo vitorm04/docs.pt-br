@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123145"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estruturas de dados para programação paralela
 O .NET Framework versão 4 apresenta vários tipos novos que são úteis em programação paralela, incluindo um conjunto de classes de coleção simultâneas, primitivos de sincronização leve e tipos para inicialização lenta. Você pode usar esses tipos com qualquer código de aplicativo multithread, incluindo PLINQ e biblioteca de paralelismo de tarefas.  
@@ -22,7 +20,7 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
   
  A tabela a seguir lista as novas classes de coleção simultâneas:  
   
-|Tipo|Descrição|  
+|Digite|Descrição|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Fornece funcionalidades de bloqueio e delimitação para coleções thread-safe que implementam <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>. Os threads de produtor são bloqueados se nenhum slot estiver disponível, ou se a coleção estiver cheia. Threads de consumidor são bloqueados se a coleção estiver vazia. Esse tipo também oferece suporte ao acesso sem bloqueio de produtores e consumidores. <xref:System.Collections.Concurrent.BlockingCollection%601> pode ser usado como uma classe base ou repositório de backup para fornecer bloqueio e limitação a qualquer classe de coleção que ofereça suporte a <xref:System.Collections.Generic.IEnumerable%601>.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Uma implementação de recipiente thread-safe que fornece operações de adição e get escalonáveis.|  
@@ -37,7 +35,7 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
   
  A tabela a seguir lista os novos tipos de sincronização:  
   
-|Tipo|Descrição|  
+|Digite|Descrição|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permite que vários threads funcionem em um algoritmo em paralelo fornecendo um ponto em que cada tarefa pode sinalizar sua chegada e, depois, gerar um bloqueio até que algumas ou todas as tarefas tenham chegado. Para saber mais, consulte [Barreira](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica cenários de bifurcação e junção fornecendo um mecanismo fácil de encontro. Para saber mais, confira [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -48,16 +46,16 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
   
  Para obter mais informações, consulte:  
   
-- [Como: Usar SpinLock para sincronização de baixo nível](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Como usar SpinLock para sincronização de baixo nível](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [Como: Sincronizar operações simultâneas com uma barreira](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Como sincronizar operações simultâneas com uma barreira](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Classes de inicialização lenta  
  Com a inicialização lenta, a memória de um objeto não é alocada até que seja necessário. A inicialização lenta pode melhorar o desempenho distribuindo as alocações de objeto uniformemente entre o tempo de vida de um programa. Você pode habilitar a inicialização lenta para qualquer tipo personalizado encapsulando o tipo <xref:System.Lazy%601>.  
   
  A tabela a seguir lista os tipos de inicialização lenta:  
   
-|Tipo|Descrição|  
+|Digite|Descrição|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Fornece inicialização lenta, leve e thread-safe.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Fornece um valor com inicialização lenta em uma base por thread, com cada thread invocando lentamente a função de inicialização.|  
@@ -66,7 +64,7 @@ O .NET Framework versão 4 apresenta vários tipos novos que são úteis em prog
  Para obter mais informações, veja [Inicialização lenta](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Agregar exceções  
- O tipo <xref:System.AggregateException?displayProperty=nameWithType> pode ser usado para capturar várias exceções lançadas simultaneamente em threads separados e retorná-las para o thread associado como uma única exceção. Os tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e o PLINQ usam <xref:System.AggregateException> extensivamente para essa finalidade. Para obter mais informações, confira [Tratamento de exceção](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [Como: Tratar exceções em uma consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ O tipo <xref:System.AggregateException?displayProperty=nameWithType> pode ser usado para capturar várias exceções lançadas simultaneamente em threads separados e retorná-las para o thread associado como uma única exceção. Os tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> e o PLINQ usam <xref:System.AggregateException> extensivamente para essa finalidade. Para saber mais, veja [Tratamento de exceções](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) e [Como tratar exceções em uma consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Consulte também
 

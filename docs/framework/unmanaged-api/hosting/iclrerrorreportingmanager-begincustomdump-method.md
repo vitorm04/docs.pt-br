@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7153ac214ab99228ac9c59032aa8248d06d14c3b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966274"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129307"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>Método ICLRErrorReportingManager::BeginCustomDump
 Especifica a configuração de despejos de heap personalizados para o relatório de erros.  
@@ -43,15 +41,15 @@ HRESULT BeginCustomDump (
  no Um valor [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) que indica o tipo de despejo de heap no qual Compilar o despejo de heap personalizado.  
   
  `dwNumItems`  
- no O comprimento da `items` matriz. Se `dwFlavor` não for DUMP_FLAVOR_Mini, `dwNumItems` deverá ser zero.  
+ no O comprimento da matriz de `items`. Se `dwFlavor` não for DUMP_FLAVOR_Mini, `dwNumItems` deverá ser zero.  
   
  `items`  
- no Uma matriz de instâncias de [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , especificando os itens a serem adicionados ao mini-despejo. Se `dwFlavor` não for DUMP_FLAVOR_Mini, `items` deverá ser NULL.  
+ no Uma matriz de instâncias de [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , especificando os itens a serem adicionados ao mini-despejo. Se `dwFlavor` não for DUMP_FLAVOR_Mini, `items` deverá ser nulo.  
   
  `dwReserved`  
  no Reservado para uso futuro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -63,17 +61,17 @@ HRESULT BeginCustomDump (
 |E_FAIL|Ocorreu uma falha catastrófica desconhecida. Depois que um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
- O `BeginCustomDump` método define a configuração de despejo de heap personalizado. O método [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) limpa a configuração de despejo de heap personalizada e libera qualquer estado associado. Ele deve ser chamado após a conclusão do despejo de heap personalizado.  
+ O método `BeginCustomDump` define a configuração de despejo de heap personalizado. O método [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) limpa a configuração de despejo de heap personalizada e libera qualquer estado associado. Ele deve ser chamado após a conclusão do despejo de heap personalizado.  
   
 > [!IMPORTANT]
-> Falha ao chamar `EndCustomDump` faz com que a memória seja vazada.  
+> Falha ao chamar `EndCustomDump` causa vazamento de memória.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

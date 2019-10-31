@@ -7,14 +7,12 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132861"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilando aplicativos de console no .NET Framework
 Os aplicativos do .NET Framework podem usar a classe <xref:System.Console?displayProperty=nameWithType> para ler e gravar caracteres no console. Os dados do console são lidos a partir do fluxo de entrada padrão, os dados para o console são gravados no fluxo de saída padrão e os dados de erro do console são gravados no fluxo de saída de erro padrão. Esses fluxos são automaticamente associados ao console quando o aplicativo é iniciado e são apresentados como as propriedades <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> e <xref:System.Console.Error%2A>, respectivamente.  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274149"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132376"
 ---
 # <a name="cor_active_function-structure"></a>Estrutura COR_ACTIVE_FUNCTION
 Contém informações sobre as funções que estão atualmente ativas nos quadros de um thread. Essa estrutura é usada pelo método [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) .  
@@ -42,18 +40,18 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`pAppDomain`|Ponteiro para o proprietário do `ilOffset` campo do domínio do aplicativo.|  
-|`pModule`|Ponteiro para o proprietário do módulo do `ilOffset` campo.|  
-|`pFunction`|Ponteiro para o proprietário da função do `ilOffset` campo.|  
+|`pAppDomain`|Ponteiro para o proprietário do domínio de aplicativo do campo `ilOffset`.|  
+|`pModule`|Ponteiro para o proprietário do módulo do campo `ilOffset`.|  
+|`pFunction`|Ponteiro para o proprietário da função do campo `ilOffset`.|  
 |`ilOffset`|O deslocamento da MSIL (Microsoft Intermediate Language) do quadro.|  
 |`flags`|Reservado para extensibilidade futura.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CorDebug.idl  
+ **Cabeçalho:** CorDebug. idl  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

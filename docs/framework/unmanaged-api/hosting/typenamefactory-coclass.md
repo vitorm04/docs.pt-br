@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14266f02dd402e81928b72d155f224e10e910592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c0f236bf6b4d9280945270ada36545cbf0c8a5dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781239"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141441"
 ---
 # <a name="typenamefactory-coclass"></a>Coclass TypeNameFactory
 Fornece uma interface para gerenciar a desconstrução de um nome de tipo.  
@@ -41,11 +39,11 @@ coclass TypeNameFactory {
 |[Interface ITypeNameFactory](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Essa interface oferece suporte a infraestrutura do .NET Framework e não se destina a ser usada diretamente do seu código.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.idl  
+ **Cabeçalho:** MSCorEE. idl  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

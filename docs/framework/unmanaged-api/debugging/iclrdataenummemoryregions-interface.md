@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37278ecf7d7b97a1a4b2b7bfeb0a645495e6eee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122921"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>Interface ICLRDataEnumMemoryRegions
 Fornece um método para enumerar as regiões da memória que são especificadas por chamadores.  
@@ -30,12 +28,12 @@ Fornece um método para enumerar as regiões da memória que são especificadas 
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera as áreas especificadas da memória.|  
+|[Método EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera áreas especificadas de memória.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

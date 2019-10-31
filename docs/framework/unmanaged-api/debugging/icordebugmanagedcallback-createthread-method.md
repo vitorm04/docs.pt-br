@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2192b5d3b240211c8982eab7539896ea3626a072
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401cb41d8231e78b8657513e1a755a50814e463b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759674"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137398"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>Método ICorDebugManagedCallback::CreateThread
-Notifica o depurador que um thread foi iniciado executando código gerenciado.  
+Notifica o depurador de que um thread iniciou a execução de código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT CreateThread (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAppDomain`  
- [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém o segmento.  
+ no Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio do aplicativo que contém o thread.  
   
  `thread`  
- [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread.  
+ no Um ponteiro para um objeto ICorDebugThread que representa o thread.  
   
 ## <a name="remarks"></a>Comentários  
- O thread será posicionado na primeira instrução de código gerenciado a ser executado.  
+ O thread será posicionado na primeira instrução de código gerenciado a ser executada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

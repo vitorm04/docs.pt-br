@@ -2,16 +2,14 @@
 title: <Subtypes> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2af1acc02b18c5b97ef66ccae9b70c1f5327bff4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049120"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128105"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtipos > elemento (.NET Native)
+# <a name="subtypes-element-net-native"></a>subtipos de \<> elemento (.NET Native)
 Aplica a política de tempo de execução a todas as classes herdadas do tipo recipiente.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -91,7 +89,7 @@ Aplica a política de tempo de execução a todas as classes herdadas do tipo re
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<Elemento de > de tipo](type-element-net-native.md)
+- [Elemento de > de\<tipo](type-element-net-native.md)
 - [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
 - [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)

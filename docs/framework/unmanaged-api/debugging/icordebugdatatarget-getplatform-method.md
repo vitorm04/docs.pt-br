@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750382"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125312"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>Método ICorDebugDataTarget::GetPlatform
-Fornece informações sobre a plataforma, incluindo a arquitetura do processador e sistema operacional, que está executando o processo de destino.  
+Fornece informações sobre a plataforma, incluindo arquitetura do processador e sistema operacional, em que o processo de destino está em execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,21 +33,21 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>Parâmetros  
  `pTargetPlatform`  
- [out] Um ponteiro para um [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeração que descreve a plataforma de destino.  
+ fora Um ponteiro para uma enumeração [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) que descreve a plataforma de destino.  
   
 ## <a name="remarks"></a>Comentários  
- O `CorDebugPlatformEnum` valor de retorno de enumeração é usado pelas [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface para determinar os detalhes do processo de destino, como seu tamanho do ponteiro, layout do espaço de endereço, o conjunto de registro, o formato de instrução, layout de contexto, e convenções de chamada.  
+ O valor de retorno de enumeração de `CorDebugPlatformEnum` é usado pela interface [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) para determinar os detalhes do processo de destino, como o tamanho do ponteiro, o layout do espaço de endereço, o conjunto de registros, o formato de instrução, o layout do contexto e as convenções de chamada.  
   
- O `pTargetPlatform` valor pode se referir a uma plataforma que está sendo emulada para o destino em vez de especificar o hardware real em uso. Por exemplo, um processo que esteja executando o Windows no ambiente do Windows (WOW) em uma edição de 64 bits do sistema operacional Windows deve usar o `CORDB_PLATFORM_WINDOWS_X86` valor de [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeração.  
+ O valor `pTargetPlatform` pode se referir a uma plataforma que está sendo emulada para o destino em vez de especificar o hardware real em uso. Por exemplo, um processo em execução no ambiente do Windows no Windows (WOW) em uma edição de 64 bits do sistema operacional Windows deve usar o valor `CORDB_PLATFORM_WINDOWS_X86` da enumeração [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) .  
   
- Esse método deve ter êxito. Se ele falhar, a plataforma de destino é inutilizável. O método pode falhar pelos seguintes motivos:  
+ Esse método deve ter sucesso. Se falhar, a plataforma de destino será inutilizável. O método pode falhar pelos seguintes motivos:  
   
 - A plataforma que está sendo emulada para o destino é inutilizável.  
   
-- O hardware real na plataforma de destino pode ser usado.  
+- O hardware real na plataforma de destino é inutilizável.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -11,19 +11,17 @@ api_type:
 ms.assetid: edc420b7-96d1-4dec-ace0-36d907f644bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8fda98c20b42355b9f52595929bbf5b980b5b857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0009d935e2e3b2abf590aca270113717ceb7e2d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127476"
 ---
 # <a name="icorprofilercallback6-interface"></a>Interface ICorProfilerCallback6
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
   
- Uma subclasse de [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) que fornece um método de retorno de chamada que o common language runtime usa para notificar um criador de perfil um assembly está carregando.  
+ Uma subclasse de [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) que fornece um método de retorno de chamada que o Common Language Runtime usa para notificar um criador de perfil que um assembly está carregando.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -34,9 +32,9 @@ ms.locfileid: "62041532"
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   

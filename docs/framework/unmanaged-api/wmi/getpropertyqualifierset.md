@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7bce241d10051e4c6be94cdfa40de23773fb0bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4133145c7bea1fb3c018d809b9fea3de38270619
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798476"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127451"
 ---
 # <a name="getpropertyqualifierset-function"></a>Função GetPropertyQualifierSet
 
@@ -49,7 +47,7 @@ no Este parâmetro não é usado.
 no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethod`\
-no O nome da propriedade. `wszProperty`deve apontar para um válido `LPCWSTR`.
+no O nome da propriedade. `wszProperty` deve apontar para uma `LPCWSTR`válida.
 
 `ppQualSet`\
 fora Recebe o ponteiro de interface que permite o acesso aos qualificadores da propriedade. `ppQualSet` não pode ser `null`. Se ocorrer um erro, um novo objeto não será retornado e o ponteiro será definido para apontar para `null`.
@@ -75,13 +73,13 @@ Uma chamada para essa função só terá suporte se o objeto atual for uma defin
 
 Como cada método pode ter seus próprios qualificadores, o [ponteiro IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite que o chamador adicione, edite ou exclua esses qualificadores.
 
-Como as propriedades do sistema não têm nenhum qualificador, `WBEM_E_SYSTEM_PROPERTY` a função retorna se você tentar obter um ponteiro [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) para uma propriedade do sistema.
+Como as propriedades do sistema não têm nenhum qualificador, a função retorna `WBEM_E_SYSTEM_PROPERTY` se você tentar obter um ponteiro [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) para uma propriedade do sistema.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

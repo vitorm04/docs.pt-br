@@ -9,14 +9,12 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e2289b3c12c7c83a39f1ad8d5a1365349ca6442
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: c71c89e5797745144a2baed2d4846e3d9f9f26be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151802"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114011"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Realizando marshaling de um delegado como um método de retorno de chamada
 Este exemplo demonstra como passar delegados para uma função não gerenciada esperando ponteiros de função. Um delegado é uma classe que pode conter uma referência a um método e é equivalente a um ponteiro de função fortemente tipada ou a uma função de retorno de chamada.

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739098"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134137"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack função
-Dado um endereço do objeto de exceção gerenciada, retorna uma versão de cadeia de caracteres de rastreamento de pilha contida dentro do.  
+# <a name="_efn_getmanagedexcepstack-function"></a>Função \_EFN\_GetManagedExcepStack
+Dado um endereço de objeto de exceção gerenciado, retorna uma versão de cadeia de caracteres do rastreamento de pilha contido dentro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>Parâmetros  
  `Client`  
- [in] O cliente que está sendo depurado.  
+ no O cliente que está sendo depurado.  
   
  `StackObjAddr`  
- [in] Um ponteiro de objeto gerenciado, derivado de <xref:System.Exception>.  
+ no Um ponteiro de objeto gerenciado, derivado de <xref:System.Exception>.  
   
  szStackString  
- [out] Cadeia de caracteres retornada.  
+ fora A cadeia de caracteres retornada.  
   
  `cbString`  
- [out] O número de caracteres disponíveis no buffer de cadeia de caracteres.  
+ fora O número de caracteres disponíveis no buffer de cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
- Não se houver nenhum código gerenciado no thread atualmente no contexto, a função retornará o HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0xa0 e um código de erro de 0x1000.  
+ Se não houver nenhum código gerenciado no thread atualmente no contexto, a função retornará HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0XA0 e um código de erro de 0x1000.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** SOS_Stacktrace.h  
+ **Cabeçalho:** SOS_Stacktrace. h  
   
- **Versão do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versão do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 

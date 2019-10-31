@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ae50fb3ff15097f9a6ca5839f3832bcfc58d3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928670"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134848"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>Método IGCHost::SetGCStartupLimits
 Define o tamanho do segmento e o tamanho máximo para a geração 0.  
   
 > [!IMPORTANT]
-> A partir do .NET Framework 4,5, você pode definir o tamanho do segmento e o tamanho máximo de geração 0 `DWORD` para valores maiores do que usar o método [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
+> A partir do .NET Framework 4,5, você pode definir o tamanho do segmento e o tamanho máximo de geração 0 para valores maiores que `DWORD` usando o método [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,14 +45,14 @@ HRESULT SetGCStartupLimits (
  no O tamanho máximo para a geração 0.  
   
 ## <a name="remarks"></a>Comentários  
- O `SetGCStartupLimits` método pode ser chamado apenas uma vez. Esses valores não podem ser alterados posteriormente.  
+ O método `SetGCStartupLimits` pode ser chamado apenas uma vez. Esses valores não podem ser alterados posteriormente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost.idl, GCHost.h  
+ **Cabeçalho:** GCHost. idl, GCHost. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

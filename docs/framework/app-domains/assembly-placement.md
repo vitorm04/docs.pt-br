@@ -7,14 +7,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], placement
 - assemblies [.NET Framework], location
 ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6281a0f68fa0ce81b4763d8d0e8f17b47771d2ff
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5eb7b5c35bb40d5a58390ccbd4619cbed4e06c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053211"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119967"
 ---
 # <a name="assembly-placement"></a>Posicionamento dos assemblies
 Para a maioria dos aplicativos .NET Framework, você localiza assemblies que compõem um aplicativo no diretório do aplicativo, em um subdiretório do diretório do aplicativo ou no cache de assembly global (se o assembly for compartilhado). Você pode substituir onde o Common Language Runtime procura um assembly usando o [\<elemento codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) em um arquivo de configuração. Se o assembly não tiver um nome forte, o local especificado usando o [\<elemento codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) estará restrito ao diretório ou ao subdiretório do aplicativo. Se o assembly tiver um nome forte, o [\<elemento codeBase>](../configure-apps/file-schema/runtime/codebase-element.md) poderá especificar qualquer local no computador ou em uma rede.  

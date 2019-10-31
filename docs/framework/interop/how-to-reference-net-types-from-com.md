@@ -1,5 +1,5 @@
 ---
-title: 'Como: Referenciar tipos .NET por meio do COM'
+title: Como referenciar tipos do .NET com base no COM
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124167"
 ---
-# <a name="how-to-reference-net-types-from-com"></a>Como: Referenciar tipos .NET por meio do COM
+# <a name="how-to-reference-net-types-from-com"></a>Como referenciar tipos do .NET com base no COM
 Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET Framework e o COM são bastante invisíveis. Os clientes do Microsoft Visual Basic podem exibir um objeto .NET no Pesquisador de Objetos, que expõe os métodos de objeto e a sintaxe, propriedades e campos exatamente como se fosse qualquer outro objeto COM.  
   
  O processo de importação de uma biblioteca de tipos é um pouco mais complicado para clientes do C++, embora você use as mesmas ferramentas para exportar metadados para uma biblioteca de tipos COM. Para referenciar membros do objeto .NET de um cliente C++ não gerenciado, referencie o arquivo TLB (produzido com Tlbexp.exe) com a diretiva **#import**. Ao referenciar uma biblioteca de tipos C++, você deve especificar a opção **raw_interfaces_only** ou importar as definições na biblioteca de classes base, Mscorlib.tlb.  
@@ -34,7 +32,7 @@ Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET 
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     - ou -  
+     \- ou -  
   
 - Inclua uma diretiva #import para Mscorlib.tlb. Por exemplo:  
   

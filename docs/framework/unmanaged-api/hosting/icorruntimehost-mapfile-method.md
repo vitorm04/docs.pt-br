@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139511"
 ---
 # <a name="icorruntimehostmapfile-method"></a>Método ICorRuntimeHost::MapFile
 Mapeia o arquivo especificado na memória. Esse método é obsoleto.  
@@ -38,19 +36,19 @@ HRESULT MapFile(
   
 ## <a name="parameters"></a>Parâmetros  
  `hFile`  
- [in] O identificador do arquivo a ser mapeado.  
+ no O identificador do arquivo a ser mapeado.  
   
  `hMapAddress`  
- [out] O endereço de memória inicial no qual iniciar o arquivo de mapeamento.  
+ fora O endereço de memória inicial no qual começar a mapear o arquivo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
- **Versão do .NET framework:** 1.0, 1.1  
+ **Versão do .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Consulte também
 

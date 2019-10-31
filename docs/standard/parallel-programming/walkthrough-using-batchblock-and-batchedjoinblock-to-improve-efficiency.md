@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência'
+title: 'Explicação passo a passo: Usando BatchBlock e BatchedJoinBlock para aumentar a eficiência'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,22 +9,20 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 32255c988397853c4b38e4ab723c7261a8999899
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091356"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Passo a passo: usando BatchBlock e BatchedJoinBlock para melhorar a eficiência
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Explicação passo a passo: Usando BatchBlock e BatchedJoinBlock para aumentar a eficiência
 
 A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para que você possa receber e armazenar em buffer os dados de uma ou mais fontes e, depois, propagar esses dados armazenados em buffer como uma coleção. Este mecanismo de envio em lote é útil quando você coleta dados de uma ou mais fontes e, em seguida, processa vários elementos de dados como um lote. Por exemplo, considere um aplicativo que usa o fluxo de dados para inserir registros em um banco de dados. Essa operação pode ser mais eficiente se vários itens forem inseridos ao mesmo tempo, em vez de um de cada vez sequencialmente. Este documento descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para melhorar a eficiência dessas operações de inserção de banco de dados. Também descreve como usar a classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar os resultados e todas as exceções que ocorrem quando o programa lê de um banco de dados.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 1. Leia a seção Blocos de ingresso no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de começar este passo a passo.
 

@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779532"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122474"
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -50,7 +48,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Compilação de aplicativos com o .NET Native](./net-native/index.md)  
  Explica como usar a tecnologia de pré-compilação do .NET Native para compilar e implantar aplicativos da Windows Store. O .NET Native compila aplicativos que são escritos em código gerenciado (C#) e que destinam o .NET Framework para código nativo.  
   
- [Segurança](../standard/security/index.md)  
+ [Security](../standard/security/index.md)  
  Fornece informações sobre as classes e serviços no .NET Framework que facilitam o desenvolvimento de aplicativos seguros.  
   
  [Depuração, rastreamento e criação de perfil](./debug-trace-profile/index.md)  

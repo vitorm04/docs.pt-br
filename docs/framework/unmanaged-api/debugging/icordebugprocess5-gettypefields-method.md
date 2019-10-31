@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132663"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>Método ICorDebugProcess5::GetTypeFields
 Fornece informações sobre os campos que pertencem a um tipo.  
@@ -40,22 +38,22 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>Parâmetros  
  `id`  
- [in] O identificador do tipo cujas informações de campo são recuperadas.  
+ no O identificador do tipo cujas informações de campo são recuperadas.  
   
  `celt`  
- [in] O número de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objetos cujas informações de campo deve ser recuperado.  
+ no O número de objetos [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) cujas informações de campo serão recuperadas.  
   
  `fields`  
- [out] Uma matriz de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objetos que fornecem informações sobre os campos que pertencem ao tipo.  
+ fora Uma matriz de objetos [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) que fornece informações sobre os campos que pertencem ao tipo.  
   
  `pceltNeeded`  
- [out] Um ponteiro para o número de [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objetos incluídos no `fields`.  
+ fora Um ponteiro para o número de objetos [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) incluídos no `fields`.  
   
 ## <a name="remarks"></a>Comentários  
- O `celt` parâmetro, que especifica o número de campos cujas informações de campo, o método usa para popular `fields`, deve corresponder ao valor da `COR_TYPE_LAYOUT::numFields` campo.  
+ O parâmetro `celt`, que especifica o número de campos cujas informações de campo que o método usa para preencher `fields`, devem corresponder ao valor do campo `COR_TYPE_LAYOUT::numFields`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

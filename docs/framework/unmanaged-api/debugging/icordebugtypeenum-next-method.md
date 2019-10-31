@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5efc83152763c5ef8b65a1fad33460c5354c0dc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772432"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110061"
 ---
 # <a name="icordebugtypeenumnext-method"></a>Método ICorDebugTypeEnum::Next
-Obtém o número de instâncias de "ICorDebugType" especificado pelo `celt` de enumeração, começando na posição atual.  
+Obtém o número de instâncias "ICorDebugType" especificadas por `celt` da enumeração, começando na posição atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de `ICorDebugType` instâncias a serem recuperados.  
+ no O número de instâncias de `ICorDebugType` a serem recuperadas.  
   
  `values`  
- [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugType` objeto.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugType`.  
   
  `pceltFetched`  
- [out] Ponteiro para o número de `ICorDebugType` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
+ fora Aponta para o número de instâncias de `ICorDebugType` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir informações localizadas de data e hora para usuários da Web'
+title: Como exibir informações localizadas de data e hora para usuários da Web
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,16 +13,14 @@ ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: 51142a168aba4408e6ce550a032960c4df6c3ae7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882482"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138741"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como: Exibir informações localizadas de data e hora para usuários da Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como exibir informações localizadas de data e hora para usuários da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações que analisam e formatam valores de data e hora não devem depender de um formato padrão (que geralmente é o formato da cultura local do servidor Web) ao interagir com o usuário. Em vez disso, formulários da Web que lidam com cadeias de caracteres de data e hora inseridas pelo usuário devem analisar as cadeias de caracteres usando a cultura preferencial do usuário. Da mesma forma, os dados de data e hora devem ser exibidos para o usuário em um formato compatível com a respectiva cultura. Este tópico mostra como fazer isso.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analisar a data e a hora em cadeias de caracteres de entrada do usuário  

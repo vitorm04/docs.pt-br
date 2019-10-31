@@ -12,14 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e80e524a8bac28195067ce6bd30504005fc4b5a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592530"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140571"
 ---
 # <a name="automatic-memory-management"></a>Gerenciamento automático de memória
 O gerenciamento automático de memória é um dos serviços que o Common Language Runtime fornece durante a [Execução gerenciada](../../docs/standard/managed-execution-process.md). O coletor de lixo do Common Language Runtime gerencia a alocação e a liberação de memória para um aplicativo. Para desenvolvedores, isso significa que você não tem que escrever código para executar tarefas de gerenciamento de memória quando desenvolver aplicativos gerenciados. O gerenciamento automático de memória pode eliminar problemas comuns, como esquecer de liberar um objeto e causar um vazamento de memória ou tentar acessar a memória de um objeto que já tinha sido liberado. Esta seção descreve como o coletor de lixo aloca e libera memória.  

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f5a311a-839a-465f-89d9-ff1c74da9736
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05bc472711838236ed18b00ce808d022d9581dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3531cfc0815c3f8a9479e35b2df60b2825801b39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136859"
 ---
 # <a name="couninitializeee-function"></a>Função CoUninitializeEE
 `CoUninitializeEE` é obsoleto e não fornece nenhuma funcionalidade.  
@@ -36,7 +34,7 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O mecanismo de execução do common language runtime não pode ser descarregado de um processo. Para desligar a chamada de mecanismo de execução [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
+ O mecanismo de execução de Common Language Runtime não pode ser descarregado de um processo. Para desligar a chamada do mecanismo de execução [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
   
 ## <a name="see-also"></a>Consulte também
 

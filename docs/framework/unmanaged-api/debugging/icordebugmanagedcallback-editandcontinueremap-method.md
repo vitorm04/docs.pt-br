@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137384"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>Método ICorDebugManagedCallback::EditAndContinueRemap
-Esse método foi substituído. Notifica o depurador que um evento de remapeamento foi enviado para o ambiente de desenvolvimento integrado (IDE).  
+Esse método foi substituído. Ele notifica o depurador de que um evento de remapeamento foi enviado para o ambiente de desenvolvimento integrado (IDE).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,10 +37,10 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O `EditAndContinueRemap` método é chamado quando a execução do código em uma versão antiga de uma função atualizada foi tentada. As chamadas de tempo de execução de linguagem comum a `EditAndContinueRemap` método para enviar um evento de remapeamento ao IDE.  
+ O método `EditAndContinueRemap` é chamado quando a execução do código em uma versão antiga de uma função atualizada foi tentada. O Common Language Runtime chama o método `EditAndContinueRemap` para enviar um evento de remapeamento para o IDE.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

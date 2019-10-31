@@ -1,5 +1,5 @@
 ---
-title: Método IcorDebugVariableHome::GetLiveRange
+title: 'Método IcorDebugVariableHome:: GetLiveRange'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125123"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>Método IcorDebugVariableHome::GetLiveRange
-Obtém o intervalo nativo através da qual esta variável está ativo.  
+# <a name="icordebugvariablehomegetliverange-method"></a>Método IcorDebugVariableHome:: GetLiveRange
+Obtém o intervalo nativo no qual essa variável está ativa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +36,13 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>Parâmetros  
  `pStartOffset`  
- [out] O deslocamento lógico no qual a variável é primeiro ao vivo.  
+ fora O deslocamento lógico no qual a variável é ativada pela primeira vez.  
   
  `pEndOffset`  
- [out] O deslocamento lógico imediatamente após o ponto em que a variável é passada ao vivo.  
+ fora O deslocamento lógico imediatamente após o ponto em que a variável é o último Live.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

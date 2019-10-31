@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113697"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>Método ICLRDataTarget::GetTLSValue
-Obtém um valor de armazenamento local de thread (TLS) do thread no processo de destino especificado. Esse método é chamado pelo serviço de acesso de dados do common language runtime (CLR).  
+Obtém um valor do armazenamento local do thread (TLS) do thread especificado no processo de destino. Esse método é chamado pelos serviços de acesso a dados do Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,21 +37,21 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `threadID`  
- [in] O identificador de sistema operacional de um thread no processo de destino.  
+ no O identificador do sistema operacional de um thread no processo de destino.  
   
  `index`  
- [in] O índice do local. Esse valor deve ser um índice válido no repositório local do thread especificado.  
+ no O índice do local. Esse valor deve ser um índice válido no repositório local do thread especificado.  
   
  `value`  
- [out] Um ponteiro para um `CLRDATA_ADDRESS` valor que especifica o valor retornado do local indicado TLS.  
+ fora Um ponteiro para um valor `CLRDATA_ADDRESS` que especifica o valor retornado do local TLS fornecido.  
   
 ## <a name="remarks"></a>Comentários  
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

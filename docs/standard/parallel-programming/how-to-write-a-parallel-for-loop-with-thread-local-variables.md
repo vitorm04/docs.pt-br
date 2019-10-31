@@ -1,5 +1,5 @@
 ---
-title: 'Como: Gravar um loop Parallel.For com variáveis locais de thread'
+title: Como escrever um loop Parallel.For com variáveis locais de thread
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139717"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Como: Gravar um loop Parallel.For com variáveis locais de thread
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Como escrever um loop Parallel.For com variáveis locais de thread
 Este exemplo mostra como usar variáveis de thread local para armazenar e recuperar o estado em cada tarefa separada criada por um loop <xref:System.Threading.Tasks.Parallel.For%2A>. Usando dados de thread local, você pode evitar a sobrecarga de sincronizar um grande número de acessos com estado compartilhado. Em vez de gravar em um recurso compartilhado em cada iteração, você computa e armazena o valor até todas as iterações da tarefas serem concluídas. Em seguida, é possível gravar o resultado final uma vez no recurso compartilhado ou passá-lo para outro método.  
   
 ## <a name="example"></a>Exemplo  

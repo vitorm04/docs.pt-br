@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121303"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>Método ICorDebugHeapValue3::GetMonitorEventWaitList
-Fornece uma lista ordenada de threads que estão na fila o evento que está associado com um bloqueio do monitor.  
+Fornece uma lista ordenada de threads que são enfileirados no evento que está associado a um bloqueio de monitor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +35,10 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppThreadEnum`  
- [out] O enumerador ICorDebugThreadEnum que fornece a lista ordenada de threads.  
+ fora O enumerador ICorDebugThreadEnum que fornece a lista ordenada de threads.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -50,18 +48,18 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- O primeiro thread na lista é o primeiro thread que é lançado pela próxima chamada para <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. O próximo thread na lista é liberado na chamada a seguir e assim por diante.  
+ O primeiro thread na lista é o primeiro thread que é liberado pela próxima chamada para <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. O próximo thread na lista é liberado na chamada a seguir e assim por diante.  
   
- Se a lista não estiver vazia, esse método retorna S_OK. Se a lista estiver vazia, o método retorna S_FALSE; Nesse caso, a enumeração é ainda é válida, embora ele está vazio.  
+ Se a lista não estiver vazia, esse método retornará S_OK. Se a lista estiver vazia, o método retornará S_FALSE; Nesse caso, a enumeração ainda é válida, embora esteja vazia.  
   
- Em ambos os casos, a interface de enumeração é utilizável apenas para a duração do estado atual de sincronizado. No entanto, as interfaces do thread liberadas dele são válidos até que o thread seja encerrado.  
+ Em ambos os casos, a interface de enumeração é utilizável somente pela duração do estado atual sincronizado. No entanto, as interfaces do thread dispensadas a partir dela são válidas até que o thread saia.  
   
  Se `ppThreadEnum` não for um ponteiro válido, o resultado será indefinido.  
   
- Se ocorrer um erro, de modo que ele não pode ser determinado que, se houver, segmentos estão aguardando o monitor, o método retorna um HRESULT que indica falha.  
+ Se ocorrer um erro de modo que não possa ser determinado que, se houver, os threads estão aguardando o monitor, o método retornará um HRESULT que indica falha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

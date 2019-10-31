@@ -12,14 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973316"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122505"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
 
@@ -66,17 +64,17 @@ O recurso de desvio se aplica a qualquer assembly que está assinado com um nome
 
 - Não assinado com atraso.
 
-Esse recurso pode ser desabilitado para aplicativos individuais ou para um computador. Confira [Como Desabilite o recurso](disable-strong-name-bypass-feature.md)de bypass de nome forte.
+Esse recurso pode ser desabilitado para aplicativos individuais ou para um computador. Consulte [como desabilitar o recurso de bypass de nome forte](disable-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Como: Criar um par de chaves pública/privada](create-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
-|[Como: assinar um assembly com um nome forte](sign-strong-name.md)|Descreve como criar um assembly de nome forte.|
+|[Como criar um par de chaves pública/privada](create-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
+|[Como assinar um assembly com um nome forte](sign-strong-name.md)|Descreve como criar um assembly de nome forte.|
 |[Nome forte aprimorado](enhanced-strong-naming.md)|Descreve aprimoramentos para nomes fortes no .NET Framework 4.5.|
-|[Como: Referenciar um assembly de nome forte](reference-strong-named.md)|Descreve como referenciar tipos ou recursos em um assembly de nome forte no tempo de compilação ou no tempo de execução.|
-|[Como: Desabilitar o recurso de bypass de nome forte](disable-strong-name-bypass-feature.md)|Descreve como desabilitar o recurso que ignora a validação de assinaturas de nome forte. Esse recurso pode ser desabilitado para todos ou para aplicativos específicos.|
+|[Como referenciar um assembly de nome forte](reference-strong-named.md)|Descreve como referenciar tipos ou recursos em um assembly de nome forte no tempo de compilação ou no tempo de execução.|
+|[Como desabilitar o recurso de bypass de nome forte](disable-strong-name-bypass-feature.md)|Descreve como desabilitar o recurso que ignora a validação de assinaturas de nome forte. Esse recurso pode ser desabilitado para todos ou para aplicativos específicos.|
 |[Criar assemblies](create.md)|Fornece uma visão geral dos assemblies de arquivo único e vários arquivos.|
 |[Como atrasar a assinatura de um assembly no Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explica como assinar um assembly com um nome forte, depois que o assembly foi criado.|
 |[Sn. exe (ferramenta Strong Name)](../../framework/tools/sn-exe-strong-name-tool.md)|Descreve a ferramenta incluída no .NET Framework que ajuda a criar assemblies com nomes fortes. Esta ferramenta oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.|

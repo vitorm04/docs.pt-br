@@ -7,22 +7,20 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 35b4c6201b5181b8d7241906f60a731e4175d523
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991232"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118174"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<Elemento bypassTrustedAppStrongNames>
 
-Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em uma confiança <xref:System.AppDomain>total.
+Especifica se deve ignorar a validação de nomes fortes em assemblies de confiança total que são carregados em um <xref:System.AppDomain>de confiança total.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames >**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,8 +43,8 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`true`|As assinaturas de nome forte em assemblies de confiança total não são validadas quando os assemblies são carregados em uma confiança <xref:System.AppDomain>total. Esse é o padrão.|
-|`false`|As assinaturas de nome forte em assemblies de confiança total são validadas quando os assemblies são carregados em uma confiança <xref:System.AppDomain>total. A assinatura de nome forte é verificada apenas quanto à exatidão da assinatura; Ela não é comparada com outro nome forte para uma correspondência.|
+|`true`|As assinaturas de nome forte em assemblies de confiança total não são validadas quando os assemblies são carregados em um <xref:System.AppDomain>de confiança total. Esse é o padrão.|
+|`false`|As assinaturas de nome forte em assemblies de confiança total são validadas quando os assemblies são carregados em um <xref:System.AppDomain>de confiança total. A assinatura de nome forte é verificada apenas quanto à exatidão da assinatura; Ela não é comparada com outro nome forte para uma correspondência.|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -65,7 +63,7 @@ O recurso de bypass de nome forte evita a sobrecarga de verificação de assinat
 
 O recurso de desvio se aplica a qualquer assembly que está assinado com um nome forte e que tem as seguintes características:
 
-- Totalmente confiável sem a <xref:System.Security.Policy.StrongName> evidência (por exemplo, tem `MyComputer` evidências de zona).
+- Totalmente confiável sem a evidência de <xref:System.Security.Policy.StrongName> (por exemplo, tem evidências de zona de `MyComputer`).
 
 - Carregado em um <xref:System.AppDomain> totalmente confiável.
 
@@ -74,7 +72,7 @@ O recurso de desvio se aplica a qualquer assembly que está assinado com um nome
 - Não assinado com atraso.
 
 > [!NOTE]
-> Se o recurso de bypass tiver sido desativado para todos os aplicativos no computador usando uma chave do registro, essa configuração do arquivo de configuração não terá nenhum efeito. Para obter mais informações, confira [Como: desabilitar a funcionalidade de bypass de nome forte](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).
+> Se o recurso de bypass tiver sido desativado para todos os aplicativos no computador usando uma chave do registro, essa configuração do arquivo de configuração não terá nenhum efeito. Para obter mais informações, consulte [como: desabilitar o recurso de bypass de nome forte](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -92,4 +90,4 @@ O exemplo a seguir mostra como especificar o comportamento que valida a assinatu
 
 - [Esquema de configurações do tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como: Desabilitar o recurso de bypass de nome forte](../../../../standard/assembly/disable-strong-name-bypass-feature.md)
+- [Como desabilitar o recurso de bypass de nome forte](../../../../standard/assembly/disable-strong-name-bypass-feature.md)

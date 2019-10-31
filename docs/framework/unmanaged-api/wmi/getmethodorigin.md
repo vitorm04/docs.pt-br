@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102540"
 ---
 # <a name="getmethodorigin-function"></a>Função GetMethodOrigin
 Determina a classe na qual um método é declarado.
@@ -69,12 +67,12 @@ Essa função encapsula uma chamada para o método [IWbemClassObject:: GetMethod
 
 Como uma classe pode herdar métodos de uma ou mais classes base, os desenvolvedores geralmente desejam determinar a classe na qual um determinado método é definido.
 
-O `pstrClassName` parâmetro não deve apontar para um válido `BSTR` antes que a função seja chamada porque esse é `out` um parâmetro; esse ponteiro não é desalocado depois que a função retorna.
+O parâmetro `pstrClassName` não deve apontar para um `BSTR` válido antes que a função seja chamada porque este é um parâmetro `out`; Esse ponteiro não é desalocado depois que a função retorna.
 
 ## <a name="requirements"></a>Requisitos  
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils.idl  
+ **Cabeçalho:** WMINet_Utils. idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

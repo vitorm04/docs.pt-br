@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c48c222a34e2e78f29c33e49da331d97d409bae1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949754"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088840"
 ---
 # <a name="icordebugappdomainenum-interface"></a>Interface ICorDebugAppDomainEnum
 
-Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` valores começando no próximo local na enumeração. Essa interface é uma subclasse de "ICorDebugEnum".  
+Fornece o método `Next`, que retorna um número especificado de valores de `ICorDebugAppDomainEnum` começando no próximo local na enumeração. Essa interface é uma subclasse de "ICorDebugEnum".  
   
 ## <a name="methods"></a>Métodos  
   
@@ -39,11 +37,11 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

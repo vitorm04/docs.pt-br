@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738622"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113351"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Método ICLRDataTarget::Request
-Chamado pelo serviço common language runtime (CLR) dados acesso para solicitar uma operação, conforme definido pela implementação.  
+Chamado pelos serviços de acesso a dados do Common Language Runtime (CLR) para solicitar uma operação, conforme definido pela implementação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,29 +41,29 @@ HRESULT Request (
   
 ## <a name="parameters"></a>Parâmetros  
  `reqCode`  
- [in] Definido pelo usuário.  
+ no Definido pelo usuário.  
   
  `inBufferSize`  
- [in] O tamanho do buffer de entrada, que é usado para a solicitação de entrada.  
+ no O tamanho do buffer de entrada, que é usado para a solicitação de entrada.  
   
  `inBuffer`  
- [in] Um buffer que contém a solicitação.  
+ no Um buffer que contém a solicitação.  
   
  `outBufferSize`  
- [in] O tamanho do buffer de saída, que é usado para a resposta.  
+ no O tamanho do buffer de saída, que é usado para a resposta.  
   
  `outBuffer`  
- [out] Um Buffer que contém a resposta.  
+ fora Um buffer que contém a resposta.  
   
 ## <a name="remarks"></a>Comentários  
- O `Request` método facilita a adição de operações personalizadas não especificadas. Ou seja, esse método fornece extensibilidade sem a necessidade de revisão da definição da interface.  
+ O método `Request` facilita a adição de operações personalizadas não especificadas. Ou seja, esse método fornece extensibilidade sem exigir a revisão da definição da interface.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   

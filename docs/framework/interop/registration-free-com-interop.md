@@ -10,14 +10,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ae92232b1d50d1381b6873e21a4c185db6efd25
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051644"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124972"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidade COM sem registro
 A interoperabilidade COM sem registro ativa um componente sem usar o Registro do Windows para armazenar informações de assembly. Em vez de registrar um componente em um computador durante a implantação, você pode criar arquivos de manifesto estilo Win32 em tempo de design que contêm informações sobre associação e a ativação. Esses arquivos de manifesto, em vez de chaves do Registro, direcionam a ativação de um objeto.  
@@ -56,4 +54,4 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)
+- [Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130025"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nomes de tipo totalmente qualificado
 
@@ -128,7 +126,7 @@ Use a barra invertida (\\) como um caractere de escape para separar os seguintes
 |\\*|Tipo do ponteiro.|
 |\\[|Delimitador de dimensão da matriz.|
 |\\]|Delimitador de dimensão da matriz.|
-|\\.|Use a barra invertida antes de um ponto somente se ele for usado em uma especificação de matriz. Os pontos em NamespaceSpec não usam a barra invertida.|
+|\\|Use a barra invertida antes de um ponto somente se ele for usado em uma especificação de matriz. Os pontos em NamespaceSpec não usam a barra invertida.|
 |\\\|Barra invertida quando for necessária como uma cadeia de caracteres literal.|
 
 Observe que, em todos os componentes de TypeSpec, exceto AssemblyNameSpec, os espaços são relevantes. No AssemblyNameSpec, os espaços antes do separador ',' são relevantes, mas espaços depois do separador ',' são ignorados.

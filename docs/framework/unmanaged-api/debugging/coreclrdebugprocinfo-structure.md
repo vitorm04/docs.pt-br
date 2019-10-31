@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21fc34add4038d25d60e4728847e0d84914a14e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e12882e53d1aa2120ab5c4b6793d7f2e34be76eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739420"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132161"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>Estrutura CoreClrDebugProcInfo
-Representa um processo que está em execução em um computador remoto.  
+Representa um processo que está sendo executado em um computador remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,15 +40,15 @@ struct  CoreClrDebugProcInfo {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`m_dwPID`|Identificador do processo atribuída pelo sistema operacional.|  
-|`m_dwInternalID`|Identificador de processo que é atribuído pelo proxy de depuração remoto em execução no computador de destino. Esse identificador é reciclado com menos frequência do que o identificador de sistema operacional.|  
-|`m_wszName`|Linha de comando do processo. Esse membro pode ser truncado.|  
+|`m_dwPID`|Identificador de processo atribuído pelo sistema operacional.|  
+|`m_dwInternalID`|Identificador de processo atribuído pelo proxy de depuração remota em execução no computador de destino. Esse identificador recicla com menos frequência do que o identificador do sistema operacional.|  
+|`m_wszName`|Linha de comando do processo. Esse membro pode estar truncado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h  
+ **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **Versões do .NET framework:** 3,5 SP1
+ **Versões do .NET Framework:** 3,5 SP1

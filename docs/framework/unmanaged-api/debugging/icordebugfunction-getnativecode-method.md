@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8a34916-0eef-4987-8d29-c8bcb4be9cf6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0507d59011f6b584ecb1ae11c35c456c80793af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5bb41b2b49922475550997f18832b391522e2f26
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137866"
 ---
 # <a name="icordebugfunctiongetnativecode-method"></a>Método ICorDebugFunction::GetNativeCode
-Obtém o código nativo para a função que é representada por esta instância de ICorDebugFunction.  
+Obtém o código nativo para a função que é representada por essa instância de ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT GetNativeCode (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppCode`  
- [out] Um ponteiro para a instância de ICorDebugCode que representa o código nativo para essa função, ou nulo, se essa função é o código do Microsoft intermediate language (MSIL) que não tenha sido just-in-time (JIT) compilado.  
+ fora Um ponteiro para a instância ICorDebugCode que representa o código nativo para essa função, ou NULL, se essa função for um código MSIL (Microsoft Intermediate Language) que não tenha sido compilado JIT (just-in-time).  
   
 ## <a name="remarks"></a>Comentários  
- Se a função que é representada por esse `ICorDebugFunction` instância tiver sido compilado por JIT mais de uma vez, como no caso de tipos genéricos, `GetNativeCode` retorna um objeto aleatório de código nativo.  
+ Se a função representada por essa instância de `ICorDebugFunction` tiver sido compilada por JIT mais de uma vez, como no caso de tipos genéricos, `GetNativeCode` retornará um objeto de código nativo aleatório.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

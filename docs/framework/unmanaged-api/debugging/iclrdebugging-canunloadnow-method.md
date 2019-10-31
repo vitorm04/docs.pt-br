@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e69957bdc5f70aba361b2574a7f6ebe26d4dd43f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb6682ac5a8b7788d97f752f249d85886fba0b6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738399"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111644"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>Método ICLRDebugging::CanUnloadNow
-Determina se uma biblioteca que foi fornecida por um [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface ainda está em uso ou pode ser descarregado.  
+Determina se uma biblioteca fornecida por uma interface [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) ainda está em uso ou pode ser descarregada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,24 +33,24 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
 ## <a name="parameters"></a>Parâmetros  
  `hmodule`  
- [in] O endereço básico de um módulo no processo de destino.  
+ no O endereço base de um módulo no processo de destino.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O módulo que é referenciado por `hmodule` pode ser descarregado.|  
-|S_FALSE|O módulo que é referenciado por `hmodule` ainda está em uso.|  
+|S_FALSE|O módulo que é referenciado pelo `hmodule` ainda está em uso.|  
 |COR_E_NOT_CLR|O módulo indicado não é um módulo CLR.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Esse método verifica se todas as instâncias do `ICorDebug*` interfaces foram lançadas e nenhum thread está atualmente em uma chamada para o [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método.  
+ Esse método verifica se todas as instâncias de interfaces de `ICorDebug*` foram liberadas e nenhum thread está em uma chamada no método [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

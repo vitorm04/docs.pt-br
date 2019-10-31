@@ -1,5 +1,5 @@
 ---
-title: ServicePointManager.s_ServicePointTable Field
+title: Campo ServicePointManager. s_ServicePointTable
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 840d068d282e3ba35df5aee6a11ff96d9e6bfdbd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 68445f4a290b9f4fe2696e35cda391b6c0ee8f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119998"
 ---
-# <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable campo
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_campo do objectpointtable
 
-`ServicePointManager.s_ServicePointTable` é um <xref:System.Collections.Hashtable> que contém a lista de conexões ativas de HTTP (<xref:System.Net.ServicePoint>s) na <xref:System.AppDomain>.
+`ServicePointManager.s_ServicePointTable` é uma <xref:System.Collections.Hashtable> que contém a lista de conexões HTTP ativas (<xref:System.Net.ServicePoint>s) no <xref:System.AppDomain>.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -30,9 +30,9 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> O `ServicePointManager.s_ServicePointTable` campo é privado e não se destina a ser usado diretamente em seu código.
+> O campo `ServicePointManager.s_ServicePointTable` é privado e não deve ser usado diretamente no seu código.
 > 
-> Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,4 +40,4 @@ private static Hashtable s_ServicePointTable
 
 **Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

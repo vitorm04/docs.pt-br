@@ -2,14 +2,12 @@
 title: Medindo o aprimoramento da inicialização com o .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927075"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128349"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medindo o aprimoramento da inicialização com o .NET Nativo
 .NET Native melhora significativamente o tempo de inicialização dos aplicativos. Esse aprimoramento é particularmente perceptível em dispositivos portáteis, de baixa energia e com aplicativos complexos. Este tópico ajuda você a começar a trabalhar com a instrumentação básica necessária para medir essa melhoria de inicialização.  
@@ -47,7 +45,7 @@ ms.locfileid: "70927075"
   
 - Quando seu aplicativo concluir a sincronização dos textos novos.  
   
- Instrumentação de um aplicativo é simples: Basta chamar o método apropriado na classe derivada. Usando o `AppEventSource` do exemplo anterior, você pode instrumentar um aplicativo da seguinte maneira:  
+ A instrumentação de um aplicativo é simples: basta chamar o método apropriado na classe derivada. Usando o `AppEventSource` do exemplo anterior, você pode instrumentar um aplicativo da seguinte maneira:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   

@@ -13,14 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
-ms.translationtype: HT
+ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091565"
 ---
 # <a name="composite-formatting"></a>Formatação composta
 
@@ -67,7 +65,7 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de caracteres de formato composto como: "0x{0:X} {0:E} {0:N}", como mostrado no exemplo a seguir.  
+ Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de formato de composição como "0x{0:X} {0:E} {0:N}", conforme demonstrado no exemplo a seguir.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -142,7 +140,7 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
  [!code-vb[Formatting.Composite#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#3)]  
   
- Supondo que o dia atual seja uma quinta-feira de maio, o valor de ambas as cadeias de caracteres no exemplo anterior será `Thursday May` na cultura do inglês nos EUA.  
+ Supondo que o dia atual seja uma quinta-feira de maio, o valor de ambas as cadeias de caracteres no exemplo anterior é `Thursday May` na cultura do inglês dos EUA.  
   
  <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> expõe a mesma funcionalidade que <xref:System.String.Format%2A?displayProperty=nameWithType>. A única diferença entre os dois métodos é que <xref:System.String.Format%2A?displayProperty=nameWithType> retorna o resultado como uma cadeia de caracteres, enquanto que <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> grava o resultado no fluxo de saída associado ao objeto <xref:System.Console>. O exemplo a seguir usa o método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> para formatar o valor de `MyInt` como um valor de moeda.  
   

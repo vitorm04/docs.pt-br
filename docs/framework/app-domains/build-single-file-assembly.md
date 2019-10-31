@@ -1,5 +1,5 @@
 ---
-title: 'Como: Compilar um .NET Framework assembly de arquivo único'
+title: Como compilar um .NET Framework assembly de arquivo único
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,16 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98f06e62e1070f78faa77ef7d83fd80a62984684
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991242"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119944"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Como: Compilar um .NET Framework assembly de arquivo único
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Como compilar um .NET Framework assembly de arquivo único
 
 Um assembly de arquivo único, que é o tipo mais simples de assembly, contém informações sobre o tipo e a implementação, bem como o [manifesto do assembly](../../standard/assembly/manifest.md). Você pode usar compiladores de linha de comando ou o Visual Studio para criar um assembly de arquivo único que tenha como destino o .NET Framework. Por padrão, o compilador cria um arquivo de assembly com uma extensão *. exe* .
 
@@ -39,7 +37,7 @@ No prompt de comando, digite o seguinte comando:
 
 Neste comando, *comando do compilador* é o comando do compilador para a linguagem usada no módulo do código e *nome do módulo* é o nome do módulo do código a ser compilado no assembly.
 
-O exemplo a seguir cria um assembly chamado *myCode. exe* a partir de um `myCode`módulo de código chamado.
+O exemplo a seguir cria um assembly chamado *myCode. exe* a partir de um módulo de código chamado `myCode`.
 
 ```csharp
 csc myCode.cs
@@ -57,7 +55,7 @@ No prompt de comando, digite o seguinte comando:
 
 Neste comando, o *comando do compilador* é o comando do compilador para a linguagem usada no módulo do código, *nome de arquivo* é o nome de arquivo de saída e *nome do módulo* é o nome do módulo do código a ser compilado no assembly.
 
-O exemplo a seguir cria um assembly chamado *myAssembly. exe* a partir de um `myCode`módulo de código chamado.
+O exemplo a seguir cria um assembly chamado *myAssembly. exe* a partir de um módulo de código chamado `myCode`.
 
 ```csharp
 csc -out:myAssembly.exe myCode.cs
@@ -76,7 +74,7 @@ Para criar um assembly de biblioteca, no prompt de comando, digite o seguinte co
 
 Neste comando, *comando do compilador* é o comando do compilador para a linguagem usada no módulo do código e *nome do módulo* é o nome do módulo do código a ser compilado no assembly. Você também pode usar outras opções do compilador, como a opção **-out:** .
 
-O exemplo a seguir cria um assembly de biblioteca chamado *myCodeAssembly. dll* a partir de `myCode`um módulo de código chamado.
+O exemplo a seguir cria um assembly de biblioteca chamado *myCodeAssembly. dll* a partir de um módulo de código chamado `myCode`.
 
 ```csharp
 csc -out:myCodeLibrary.dll -t:library myCode.cs
@@ -90,5 +88,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Criar assemblies](../../standard/assembly/create.md)
 - [Assemblies de multiarquivo](multifile-assemblies.md)
-- [Como: Compilar um assembly de multiarquivos](build-multifile-assembly.md)
+- [Como compilar um assembly de multiarquivos](build-multifile-assembly.md)
 - [Programa com assemblies](../../standard/assembly/program.md)

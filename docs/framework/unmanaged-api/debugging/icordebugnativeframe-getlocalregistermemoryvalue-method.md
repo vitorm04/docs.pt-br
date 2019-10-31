@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc179236f5453724639d47558770179a1e80f706
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44d7c23f88f5ea93f608d06b69f69b2c3637b5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746198"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096841"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>Método ICorDebugNativeFrame::GetLocalRegisterMemoryValue
-Obtém o valor de um argumento ou uma variável local, dos quais a palavra baixa e a palavra alta são armazenados no local da memória e especificado o registro, respectivamente, para este quadro nativo.  
+Obtém o valor de um argumento ou uma variável local, da qual a palavra inferior e a palavra alta são armazenadas no local da memória e no registro especificado, respectivamente, para esse quadro nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,22 +39,22 @@ HRESULT GetLocalRegisterMemoryValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `highWordReg`  
- [in] Um valor de enumeração "CorDebugRegister" que especifica o registro que contém a palavra alta do valor.  
+ no Um valor da enumeração "CorDebugRegister" que especifica o registro que contém a palavra alta do valor.  
   
  `lowWordAddress`  
- [in] Um `CORDB_ADDRESS` valor que especifica o local da memória que contém a palavra inferior do valor.  
+ no Um valor `CORDB_ADDRESS` que especifica o local da memória que contém a palavra inferior do valor.  
   
  `cbSigBlob`  
- [in] Um inteiro que especifica o tamanho da assinatura de metadados binária que é referenciado pelo `pvSigBlob` parâmetro.  
+ no Um inteiro que especifica o tamanho da assinatura de metadados binários que é referenciada pelo parâmetro `pvSigBlob`.  
   
  `pvSigBlob`  
- [in] Um `PCCOR_SIGNATURE` valor que aponta para a assinatura binária metadados de tipo de valor.  
+ no Um valor `PCCOR_SIGNATURE` que aponta para a assinatura de metadados binários do tipo do valor.  
   
  `ppValue`  
- [out] Um ponteiro para o endereço de um objeto de "ICorDebugValue" que representa o valor recuperado armazenado no local de registro e de memória especificado.  
+ fora Um ponteiro para o endereço de um objeto "ICorDebugValue" que representa o valor recuperado que é armazenado no registro especificado e no local da memória.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

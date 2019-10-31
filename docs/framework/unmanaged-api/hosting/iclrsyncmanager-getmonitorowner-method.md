@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2e08af840d1c4a654fa9b9ff8b2064f5265afaf9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3aec11674275769bb5c4b68521a40a72a1d68a22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124680"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>Método ICLRSyncManager::GetMonitorOwner
 Obtém a instância de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) que possui o monitor identificado pelo cookie especificado.  
@@ -43,11 +41,11 @@ HRESULT GetMonitorOwner (
  `ppOwnerHostTask`  
  fora Um ponteiro para o `IHostTask` que atualmente possui o monitor ou nulo se nenhuma tarefa tiver propriedade.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`GetMonitorOwner`retornado com êxito.|  
+|S_OK|`GetMonitorOwner` retornado com êxito.|  
 |HOST_E_CLRNOTAVAILABLE|O CLR não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
 |HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
@@ -60,14 +58,14 @@ HRESULT GetMonitorOwner (
 > [!NOTE]
 > Uma chamada para liberar o evento subjacente ao monitor pode bloquear — mas não trava — se uma chamada para esse método estiver atualmente em vigor no cookie associado a esse monitor. Outras tarefas também podem bloquear se tentarem adquirir esse monitor.  
   
- `GetMonitorOwner`sempre retorna imediatamente e pode ser chamado a qualquer momento após uma chamada `CreateMonitorEvent`para. O host não precisa aguardar até que uma tarefa esteja aguardando o evento.  
+ `GetMonitorOwner` sempre retorna imediatamente e pode ser chamado a qualquer momento após uma chamada para `CreateMonitorEvent`. O host não precisa aguardar até que uma tarefa esteja aguardando o evento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

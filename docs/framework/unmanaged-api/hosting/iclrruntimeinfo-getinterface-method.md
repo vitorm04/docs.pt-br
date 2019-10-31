@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120248"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Método ICLRRuntimeInfo::GetInterface
-Carrega o CLR no processo atual e retorna o tempo de execução de ponteiros de interface, tais como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+Carrega o CLR no processo atual e retorna ponteiros de interface de tempo de execução, como [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)e [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
   
- Esse método substitui todos o `CorBindTo`* funções na [funções de hospedagem de CLR preterido](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) seção.  
+ Esse método substitui todas as funções `CorBindTo`* na seção [funções de Hospedagem de CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,26 +38,26 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>Parâmetros  
  `rclsid`  
- [in] A interface do CLSID para coclass.  
+ no A interface CLSID para a coclass.  
   
  `riid`  
- [in] O IID da solicitada `rclsid` interface.  
+ no O IID da interface de `rclsid` solicitada.  
   
  `ppUnk`  
- [out] Um ponteiro para a interface consultado.  
+ fora Um ponteiro para a interface consultada.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
 |E_POINTER|`ppUnk` é nulo.|  
-|E_OUTOFMEMORY|Não há memória suficiente está disponível para tratar a solicitação.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Um tempo de execução diferente já foi associado à política de 2 de ativação de versão do CLR herdada.|  
+|E_OUTOFMEMORY|Não há memória suficiente disponível para lidar com a solicitação.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Um tempo de execução diferente já estava associado à política de ativação do CLR versão 2 herdada.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse método faz com que o CLR a ser carregado, mas não inicializado.  
+ Esse método faz com que o CLR seja carregado, mas não inicializado.  
   
  A tabela a seguir mostra as combinações com suporte para `rclsid` e `riid`.  
   
@@ -75,11 +73,11 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MetaHost.h  
+ **Cabeçalho:** MetaHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

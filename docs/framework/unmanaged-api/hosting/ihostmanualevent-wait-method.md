@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fbb7d8b-8a23-4c2b-8376-1a70cd2d6030
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2242395a02254268c9492e534309c690a343ffbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f39a5af706ef49e3f6e4bd040d752e5698063b29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767271"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136753"
 ---
 # <a name="ihostmanualeventwait-method"></a>Método IHostManualEvent::Wait
-Faz com que o atual [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instância aguardar até que ele pertence, ou uma quantidade especificada de tempo passa.  
+Faz com que a instância [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) atual aguarde até que ela seja propriedade ou um período de tempo especificado decorre.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,29 +36,29 @@ HRESULT Wait (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwMilliseconds`  
- [in] O número de milissegundos de espera antes de retornar, se o atual `IHostManualEvent` instância não é de propriedade.  
+ no O número de milissegundos a aguardar antes de retornar, se a instância de `IHostManualEvent` atual não pertence.  
   
  `option`  
- [in] Um dos [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) valores, que indica a ação que o host deve executar se este blocos de operação.  
+ no Um dos valores de [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , indicando a ação que o host deve executar se essa operação for bloqueada.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`Wait` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_DEADLOCK|O host detectou um deadlock durante o intervalo de espera e escolheu atual `IHostManualEvent` instância como a vítima de deadlock.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_DEADLOCK|O host detectou um deadlock durante o intervalo de espera e escolheu a instância de `IHostManualEvent` atual como a vítima do deadlock.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

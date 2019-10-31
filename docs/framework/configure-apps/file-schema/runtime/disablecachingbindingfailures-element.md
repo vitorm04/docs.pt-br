@@ -10,21 +10,19 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5b45ea4b30677d17e72685b16c19f9192c8c144
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252674"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117494"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<Elemento de > disableCachingBindingFailures
+# <a name="disablecachingbindingfailures-element"></a>\<elemento de > disableCachingBindingFailures
 Especifica se é para desabilitar o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de tempo de execução**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +37,7 @@ Especifica se é para desabilitar o cache de falhas de associação que ocorrem 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|enabled|Atributo obrigatório.<br /><br /> Especifica se é para desabilitar o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação.|  
+|habilitado|Atributo obrigatório.<br /><br /> Especifica se é para desabilitar o cache de falhas de associação que ocorrem porque o assembly não foi encontrado pela investigação.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
@@ -61,7 +59,7 @@ Especifica se é para desabilitar o cache de falhas de associação que ocorrem 
 ## <a name="remarks"></a>Comentários  
  A partir do .NET Framework versão 2,0, o comportamento padrão para carregar assemblies é armazenar em cache todas as falhas de associação e carregamento. Ou seja, se uma tentativa de carregar um assembly falhar, as solicitações subsequentes para carregar o mesmo assembly falharão imediatamente, sem nenhuma tentativa de localizar o assembly. Esse elemento desabilita esse comportamento padrão para falhas de associação que ocorrem porque o assembly não foi encontrado no caminho de investigação. Essas falhas geram <xref:System.IO.FileNotFoundException>.  
   
- Algumas falhas de ligação e carregamento não são afetadas por esse elemento e sempre são armazenadas em cache. Essas falhas ocorrem porque o assembly foi encontrado, mas não pôde ser carregado. Eles <xref:System.BadImageFormatException> lançam <xref:System.IO.FileLoadException>ou. A lista a seguir inclui alguns exemplos de tais falhas.  
+ Algumas falhas de ligação e carregamento não são afetadas por esse elemento e sempre são armazenadas em cache. Essas falhas ocorrem porque o assembly foi encontrado, mas não pôde ser carregado. Eles lançam <xref:System.BadImageFormatException> ou <xref:System.IO.FileLoadException>. A lista a seguir inclui alguns exemplos de tais falhas.  
   
 - Se você tentar carregar um arquivo não for um assembly válido, as tentativas subsequentes de carregar o assembly falharão mesmo que o arquivo incorreto seja substituído pelo assembly correto.  
   

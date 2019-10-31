@@ -12,14 +12,12 @@ helpviewer_keywords:
 - delegates [.NET Framework], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce77e57eb049c031ed506e8812fff59ba97a978e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4e17e6a96a12b705cf455d70add7e12a30f5fa90
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950858"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121740"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programação assíncrona usando delegados
 Os representantes permitem que você chame um método síncrono de maneira assíncrona. Quando você chama um representante de forma síncrona, o método `Invoke` chama o método de destino diretamente no thread atual. Se o método `BeginInvoke` for chamado, o CLR (Common Language Runtime) enfileira a solicitação e retorna imediatamente ao chamador. O método de destino é chamado de forma assíncrona em um thread a partir do pool de threads. O thread original, que enviou a solicitação, permanece livre para continuar a executar em paralelo com o método de destino. Se um método de retorno de chamada foi especificado na chamada para o método `BeginInvoke`, o método de retorno de chamada é chamado quando termina o método de destino. O método de retorno de chamada, o método `EndInvoke` obtém o valor retornado e os parâmetros de entrada/saída ou somente de saída. Se nenhum método de retorno de chamada for especificado ao chamar `BeginInvoke`, `EndInvoke` pode ser chamado do thread que chamou `BeginInvoke`.  

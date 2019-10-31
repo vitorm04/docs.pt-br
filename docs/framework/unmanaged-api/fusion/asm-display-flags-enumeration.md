@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8befdb454a564ec834532653dd44cf230fa43d79
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a34648bece3b14d6175168f45916ca04aeeef71d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109238"
 ---
 # <a name="asm_display_flags-enumeration"></a>Enumeração ASM_DISPLAY_FLAGS
 Indica a versão, a compilação, a cultura, a assinatura e assim por diante, do assembly cujo nome de exibição será recuperado pelo método [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) .  
@@ -52,14 +50,14 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Comentários  
- `ASM_DISPLAYF_FULL`reflete as alterações feitas na versão do objeto [IAssemblyName](iassemblyname-interface.md) . Não assuma que o valor retornado seja imutável.  
+ `ASM_DISPLAYF_FULL` reflete as alterações feitas na versão do objeto [IAssemblyName](iassemblyname-interface.md) . Não assuma que o valor retornado seja imutável.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion. h  
   
- **Biblioteca** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

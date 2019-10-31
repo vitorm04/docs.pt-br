@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902766"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122440"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>Método ICorDebugThread4::GetCurrentCustomDebuggerNotification
 
-Obtém a atual [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) objeto no thread atual.
+Obtém o objeto [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) atual no thread atual.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,15 +37,15 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>Parâmetros
 
 `ppNotificationObject`\
-[out] Um ponteiro para a atual `ICorDebugManagedCallback3::CustomNotification` objeto no thread atual.
+fora Um ponteiro para o objeto de `ICorDebugManagedCallback3::CustomNotification` atual no thread atual.
 
 ## <a name="remarks"></a>Comentários
 
-O valor de `ppNotificationObject` será nulo se o método não é chamado de dentro um `ICorDebugManagedCallback3::CustomNotification` retorno de chamada, ou se não existe nenhum objeto de notificação atual.
+O valor de `ppNotificationObject` será nulo se o método não for chamado de dentro de um retorno de chamada `ICorDebugManagedCallback3::CustomNotification` ou se não existir nenhum objeto de notificação atual.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
 **Cabeçalho:** CorDebug.idl, CorDebug.h
 

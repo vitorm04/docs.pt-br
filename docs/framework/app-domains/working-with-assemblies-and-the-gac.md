@@ -8,14 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0331e0ad30743d5f0bba125e8e61e636e1c2a5be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053023"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119715"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
 
@@ -47,13 +45,13 @@ Há diversas razões para instalar um assembly no cache de assembly global:
  Observe que há situações em que explicitamente não é recomendado instalar um assembly no cache de assembly global. Se colocar um dos assemblies que compõem um aplicativo no cache de assembly global, você não poderá mais replicar nem instalar o aplicativo usando XCOPY para copiar o diretório do aplicativo. Nesse caso, você também deve mover o assembly para o cache de assembly global.  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Como: Instalar um assembly no cache de assembly global](install-assembly-into-gac.md)  
+[Como instalar um assembly no cache de assembly global](install-assembly-into-gac.md)  
 Descreve as maneiras de instalar um assembly no cache de assembly global.  
   
-[Como: Exibir o conteúdo do cache de assembly global](how-to-view-the-contents-of-the-gac.md)  
+[Como exibir o conteúdo do cache de assembly global](how-to-view-the-contents-of-the-gac.md)  
 Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para exibir o conteúdo do cache de assembly global.  
   
-[Como: Remover um assembly do cache de assembly global](how-to-remove-an-assembly-from-the-gac.md)  
+[Como remover um assembly do cache de assembly global](how-to-remove-an-assembly-from-the-gac.md)  
 Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para remover um assembly do cache de assembly global.  
   
 [Uso de componentes atendidos com o cache de assembly global](use-serviced-components-with-the-gac.md)  
@@ -67,7 +65,7 @@ Apresenta uma visão geral da criação de assemblies.
 [Cache de assembly global](gac.md)  
 Descreve o cache de assembly global.  
   
-[Como: Exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)  
+[Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)  
 Explica como usar o [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) para exibir informações MSIL (Microsoft Intermediate Language) em um assembly.  
   
 [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)  

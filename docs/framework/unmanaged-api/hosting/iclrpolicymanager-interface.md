@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 5c834aa1-f2db-408a-b230-c7bec093d364
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2eeccc4dfd7a7147fe791444eeeca2bd3a844305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59aa904d4c67326b60381d3476eaab179d7fa42b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638860"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140810"
 ---
 # <a name="iclrpolicymanager-interface"></a>Interface ICLRPolicyManager
-Fornece métodos que permitem que o host especificar ações de política a ser executada no caso de falhas e tempos limite.  
+Fornece métodos que permitem que o host especifique ações de política a serem executadas em caso de falhas e tempos limite.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)|Especifica a ação de política, que o common language runtime (CLR) deve tomar quando ocorre a falha especificada.|  
-|[Método SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)|Especifica a ação de política, que o CLR deve tomar quando a operação especificada expira.|  
-|[Método SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)|Especifica a ação de política, que o CLR deve tomar quando ocorre a operação especificada.|  
+|[Método SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)|Especifica a ação de política que o Common Language Runtime (CLR) deve executar quando a falha especificada ocorrer.|  
+|[Método SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)|Especifica a ação de política que o CLR deve executar quando a operação especificada atingir o tempo limite.|  
+|[Método SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)|Especifica a ação de política que o CLR deve executar quando a operação especificada ocorre.|  
 |[Método SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)|Define um valor de tempo limite para a operação especificada.|  
-|[Método SetTimeoutAndAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)|Define um valor de tempo limite para a operação especificada e especifica a ação de política, que o CLR deve tomar quando a operação ocorre.|  
+|[Método SetTimeoutAndAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)|Define um valor de tempo limite para a operação especificada e especifica a ação de política que o CLR deve executar quando a operação ocorre.|  
 |[Método SetUnhandledExceptionPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)|Especifica o comportamento do CLR quando ocorre uma exceção sem tratamento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

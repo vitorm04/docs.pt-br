@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7325e84d8fe4df9a31543426c6376d0941306fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 199f58456e64ccf7ef771d42d5c7d64b189cb670
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125494"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>Método ICorDebugComObjectValue::GetCachedInterfaceTypes
-Fornece um enumerador para os tipos de interface que o objeto atual foi convertido em ou usado como.  
+Fornece um enumerador para os tipos de interface para os quais o objeto atual foi convertido ou usado como.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +33,15 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>Parâmetros  
  `bIInspectableOnly`  
- [in] Um valor que indica se o método retorna apenas interfaces do tempo de execução do Windows (`IInspectable` interfaces) ou todas as interfaces COM armazenados em cache pelo runtime callable wrapper (RCW).  
+ no Um valor que indica se o método retorna apenas interfaces Windows Runtime (interfaces`IInspectable`) ou todas as interfaces COM armazenadas em cache pelo RCW (Runtime Callable Wrapper).  
   
  `ppInterfacesEnum`  
- [out] Um ponteiro para o endereço de um enumerador de ICorDebugTypeEnum que fornece acesso a objetos ICorDebugType que representam os tipos de interface em cache é filtrado acordo com a `bIInspectableOnly`.  
+ fora Um ponteiro para o endereço de um enumerador ICorDebugTypeEnum que fornece acesso a objetos ICorDebugType que representam tipos de interface em cache filtrados de acordo com `bIInspectableOnly`.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

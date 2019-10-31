@@ -12,17 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772419"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129414"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>Enumeração EInitializeNewDomainFlags
-Permite que o host fornecer o tempo de execução com informações sobre a inicialização de um domínio de aplicativo.  
+Permite que o host forneça o tempo de execução com informações sobre a inicialização de um domínio de aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +36,17 @@ typedef enum {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|Sem sinalizadores.|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|Informa o common language runtime (CLR) que o host não fará alterações para o estado de segurança do domínio do aplicativo na <xref:System.AppDomainManager.InitializeNewDomain%2A> método.|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|Informa ao Common Language Runtime (CLR) que o host não fará alterações no estado de segurança do domínio do aplicativo no método <xref:System.AppDomainManager.InitializeNewDomain%2A>.|  
   
 ## <a name="remarks"></a>Comentários  
- O [iclrdomainmanager:: Setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) método utiliza um parâmetro de tipo `EInitializeNewDomainFlags`.  
+ O método [ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) usa um parâmetro do tipo `EInitializeNewDomainFlags`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE.dll  
+ **Biblioteca:** MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

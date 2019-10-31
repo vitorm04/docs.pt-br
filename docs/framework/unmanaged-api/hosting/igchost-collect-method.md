@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c4fa79f4918412720592bce449a001a349ae657
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e20ea6addc1ae3f99b4b3d65f532e0128ac160b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134968"
 ---
 # <a name="igchostcollect-method"></a>Método IGCHost::Collect
-Força uma coleta ocorrer para a geração de determinado, independentemente do estado da coleta de lixo atual.  
+Força a ocorrência de uma coleção para a geração determinada, independentemente do estado da coleta de lixo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,14 +35,14 @@ HRESULT Collect (
   
 ## <a name="parameters"></a>Parâmetros  
  `Generation`  
- [in] A geração na qual executar a coleta de lixo. Um valor de -1 indica que todas as gerações passará por uma coleta de lixo.  
+ no A geração na qual executar a coleta de lixo. Um valor de-1 indica que todas as gerações passarão por uma coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost.idl, GCHost.h  
+ **Cabeçalho:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad31df899fe98e66e39a1af785618b3679e644bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cfdcfc69400fccf824d019f3904aeca76b6b37a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098137"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Enumeração CorDebugInterfaceVersion
 Especifica uma interface, uma versão do .NET Framework ou uma versão do .NET Framework na qual uma interface foi introduzida.  
@@ -204,7 +202,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugCode2`|[ICorDebugCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-interface.md)|2.0|  
 |`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
 |`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
-|`ver_ICorDebugEval2`|"ICorDebugEval2".|2.0|  
+|`ver_ICorDebugEval2`|O "ICorDebugEval2".|2.0|  
 |`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)|4|  
@@ -222,7 +220,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|A versão do .NET Framework, incluindo todos os service packs, é a mais recente.|-|  
   
 ## <a name="remarks"></a>Comentários  
- Um depurador pode usar o `CorDebugInterfaceVersion` enumeração em de [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) função para especificar a versão mais recente do .NET Framework que o depurador oferece suporte.  
+ Um depurador pode usar a enumeração `CorDebugInterfaceVersion` na função [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) para especificar a versão mais recente do .NET Framework ao qual o depurador dá suporte.  
   
 ## <a name="interface-names"></a>Nomes de Interface  
  O número que é exibido no final dos nomes de interface na API do depurador (por exemplo, o "3" em `ICorDebugThread3`) especifica a versão da interface, não a versão do .NET Framework. Todos os nomes de interface na API do depurador incluem números da versão, exceto as interfaces que foram introduzidas na versão 1 do .NET Framework. Qualquer correspondência entre números da versão de interface e números da versão do .NET Framework são coincidentes.  
@@ -235,10 +233,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - As versões 3.0 e 3.5 do .NET Framework usam as interfaces existentes do .NET Framework 2.0 e não introduzem nenhuma nova interface.  
   
-- O .NET Framework 4 apresenta uma mistura de versões da interface. Por exemplo, `ICorDebugThread3` e `ICorDebugThread4` são exibidas como a terceira e quarta versões da interface `ICorDebugThread`. O .NET Framework 4 também apresenta a primeira versão dos `ICorDebugStackWalk` interface e a segunda versão dos `ICorDebugNativeFrame` interface (`ICorDebugNativeFrame2`).  
+- O .NET Framework 4 introduz uma mistura de versões de interface. Por exemplo, `ICorDebugThread3` e `ICorDebugThread4` são exibidas como a terceira e quarta versões da interface `ICorDebugThread`. O .NET Framework 4 também apresenta a primeira versão da interface `ICorDebugStackWalk` e a segunda versão da interface `ICorDebugNativeFrame` (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e5422ac-afa1-403d-a894-2d7348673e38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a2213c146374033c5a985a714352edad04f178a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83192fd2d24e740ab470988531db823b34df4494
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131432"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>Método ICorDebugManagedCallback3::CustomNotification
-Indica que uma notificação personalizada de depurador foi gerada.  
+Indica que uma notificação de depurador personalizada foi gerada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +34,13 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
 ## <a name="parameters"></a>Parâmetros  
  `pThread`  
- [in] Um ponteiro para o thread que gerou a notificação.  
+ no Um ponteiro para o thread que gerou a notificação.  
   
  `pAppDomain`  
- [in] Um ponteiro para o domínio do aplicativo que contém o thread que gerou a notificação.  
+ no Um ponteiro para o domínio do aplicativo que contém o thread que gerou a notificação.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -51,12 +49,12 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Uma chamada subsequente para o [ICorDebugThread4::GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) método recupera o objeto de thread que foi passado para o <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método. Tipo do objeto de thread deve ter sido habilitado por meio da chamada a [ICorDebugProcess3::SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) método. O depurador pode ler os parâmetros de tipo específico dos campos do objeto de thread e pode armazenar as respostas nos campos.  
+ Uma chamada subsequente para o método [ICorDebugThread4:: GetCurrentCustomDebuggerNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md) recupera o objeto de thread que foi passado para o método <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType>. O tipo do objeto de thread deve ter sido habilitado anteriormente chamando o método [ICorDebugProcess3:: SetEnableCustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md) . O depurador pode ler parâmetros específicos de tipo dos campos do objeto de thread e pode armazenar respostas em campos.  
   
- O [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface não impõe nenhuma política sobre os tipos de notificações ou seu conteúdo e a semântica das notificações é estritamente um contrato entre depuradores, aplicativos e o .NET Framework.  
+ A interface [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) impõe nenhuma política sobre os tipos de notificações ou seu conteúdo, e a semântica das notificações é estritamente um contrato entre os depuradores, os aplicativos e a .NET Framework.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

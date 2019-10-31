@@ -2,20 +2,18 @@
 title: Compilação e .NET nativo
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049433"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128253"
 ---
 # <a name="net-native-and-compilation"></a>Compilação e .NET nativo
 
 Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcionados ao .NET Framework são escritos em uma linguagem de programação específica e compilados em IL (linguagem intermediária). Em tempo de execução, um compilador JIT (Just-in-Time) é responsável pela compilação de IL em código nativo para o computador local antes de um método ser executado pela primeira vez. Por outro lado, a cadeia de ferramentas do .NET Native converte código-fonte em código nativo em tempo de compilação. Este tópico compara .NET Native com outras tecnologias de compilação disponíveis para aplicativos do .NET Framework e também fornece uma visão prática de como o .NET Native produz código nativo que pode lhe ajudar a entender por que as exceções que ocorrem no código compilado com o .NET Native não ocorrem no código com compilação JIT.
 
-## <a name="net-native-generating-native-binaries"></a>.NET Native: Gerando binários nativos
+## <a name="net-native-generating-native-binaries"></a>.NET Native: gerando binários nativos
 
 Um aplicativo que tem como destino o .NET Framework e que não é compilado usando a cadeia de ferramentas do .NET Native consiste em seu assembly de aplicativo, que inclui o seguinte:
 

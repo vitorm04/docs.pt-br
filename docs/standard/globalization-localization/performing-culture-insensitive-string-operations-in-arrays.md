@@ -7,14 +7,12 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b52ff8d72132c1076dfdece5e1ce47bbece37b81
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856001"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120800"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Executando operações de cadeia de caracteres que não levam em conta a cultura em matrizes
 

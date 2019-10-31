@@ -16,14 +16,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124089"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Como empacotar um assembly .NET Framework para o COM
 
@@ -61,7 +59,7 @@ Desenvolvedores COM podem aproveitar as informações a seguir sobre os tipos ge
 
   Independentemente do mecanismo escolhido, somente os tipos públicos definidos no assembly que você fornecer são incluídos na biblioteca de tipos gerada.
 
-Para obter instruções, veja [Como: Inserir bibliotecas de tipos como recursos do Win32 em aplicativos baseados no .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Para obter instruções, consulte [Como inserir bibliotecas de tipos como recursos do Win32 em aplicativos baseados em .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -99,4 +97,4 @@ A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-
 - [Considerações sobre segurança de assembly](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrando assemblies usando COM](registering-assemblies-with-com.md)
-- [Como: Inserir bibliotecas de tipos como recursos do Win32 em aplicativos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Como inserir bibliotecas de tipo como recursos do Win32 em aplicativos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

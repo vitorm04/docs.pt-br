@@ -13,21 +13,19 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5934a342f653f294c07e00d38d51dae6b159dab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968540"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122488"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 <a name="Top"></a> As substituições são elementos de linguagem que são reconhecidos apenas em padrões de substituição. Eles usam um padrão de expressão regular para definir o todo ou parte do texto que substitui o texto correspondente na cadeia de caracteres de entrada. O padrão de substituição pode consistir em uma ou mais substituições junto com caracteres literais. Padrões de substituição são fornecidos para sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que têm um parâmetro `replacement` e para o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Os métodos substituem o padrão correspondente pelo padrão que é definido pelo parâmetro `replacement`.  
   
  O .NET Framework define os elementos de substituição listados na tabela a seguir.  
   
-|Substituição|DESCRIÇÃO|  
+|Substituição|Descrição|  
 |------------------|-----------------|  
 |$ *número*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo numerado](#Numbered).|  
 |${ *name* }|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado que é designado por `(?<`*name*`> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo nomeado](#Named).|  
@@ -63,7 +61,7 @@ ms.locfileid: "69968540"
   
  O padrão de expressão regular `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Corresponde a zero ou mais caracteres de símbolos de moedas.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
@@ -89,7 +87,7 @@ ms.locfileid: "69968540"
   
  O padrão de expressão regular `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Corresponde a zero ou mais caracteres de símbolos de moedas.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
@@ -111,7 +109,7 @@ ms.locfileid: "69968540"
   
  O padrão de expressão regular `\b(\d+)(\.(\d+))?` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Inicia a correspondência no começo de um limite de palavra.|  
 |`(\d+)`|Corresponde a um ou mais dígitos decimais. Este é o primeiro grupo de captura.|  
@@ -130,7 +128,7 @@ ms.locfileid: "69968540"
   
  O padrão de expressão regular `^(\w+\s?)+$` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres de entrada.|  
 |`(\w+\s?)+`|Corresponde ao padrão de um ou mais caracteres de palavra seguidos por zero ou um espaço em branco uma ou mais vezes.|  
@@ -142,7 +140,7 @@ ms.locfileid: "69968540"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Substituindo texto antes da correspondência  
- A substituição ``$` `` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(O exemplo fornece uma ilustração.\) Se não houver correspondência, a substituição ``$` `` não terá efeito.  
+ A substituição ``$` `` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(exemplo fornece uma ilustração.\) se não houver nenhuma correspondência, a substituição de ``$` `` não terá nenhum efeito.  
   
  O exemplo a seguir usa o padrão de expressão regular `\d+` para corresponder a uma sequência de um ou mais dígitos decimais na cadeia de caracteres de entrada. A cadeia de caracteres de substituição ``$` `` substitui esses dígitos pelo texto que precede a correspondência.  
   
@@ -193,7 +191,7 @@ ms.locfileid: "69968540"
   
  O padrão de expressão regular `\b(\w+)\s\1\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  

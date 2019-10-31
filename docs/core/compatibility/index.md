@@ -1,15 +1,13 @@
 ---
 title: Avaliar alterações da falha – .NET Core
 description: Saiba mais sobre as maneiras como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 4c3f051bf37ea4753d916ee22fedf97a9bad5892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "67736563"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089343"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Avaliar alterações da falha no .NET Core
 
@@ -26,7 +24,7 @@ Este artigo descreve as categorias de alterações de compatibilidade (ou altera
 > [!NOTE]
 > Para obter uma definição das categorias de compatibilidade, como compatibilidade binária e compatibilidade com versões anteriores, confira [Categorias de alterações significativas](categories.md).
 
-As seções a seguir descrevem as categorias de alterações feitas nas APIs do .NET Core e o impacto delas na compatibilidade do aplicativo. O ícone ✔️ indica que um tipo específico de alteração é permitido, ❌ indica que não é permitido e ❓ indica uma alteração que pode ou não ser permitida. Alterações nessa última categoria exigem uma avaliação do quanto o comportamento anterior era previsível, óbvio e consistente.
+As seções a seguir descrevem as categorias de alterações feitas nas APIs do .NET Core e o impacto delas na compatibilidade do aplicativo. O ícone de ✔️ indica que um determinado tipo de alteração é permitido, ❌ indica que ele não é permitido e ❓ indica uma alteração que pode ou não ser permitida. Alterações nessa última categoria exigem uma avaliação do quanto o comportamento anterior era previsível, óbvio e consistente.
 
 > [!NOTE]
 > Além de servir como um guia de como as alterações nas bibliotecas .NET Core são avaliadas, os desenvolvedores de bibliotecas também podem usar esses critérios para avaliar as alterações em suas bibliotecas voltadas a várias implementações e versões do .NET.
@@ -59,19 +57,19 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
 - **✔️ Expandir a visibilidade de um tipo**
 
-- **❌ Alterar o namespace ou nome de um tipo**
+- **❌ alterar o namespace ou o nome de um tipo**
 
-- **❌ Renomear ou remover um tipo público**
+- **❌ renomear ou remover um tipo público**
 
    Isso interrompe todo o código que usa o tipo renomeado ou removido.
 
-- **❌ Alterar o tipo subjacente de uma enumeração**
+- **❌ alterar o tipo subjacente de uma enumeração**
 
    Esta é uma alteração significativa de tempo de compilação e comportamental, bem como uma alteração significativa binária que pode tornar os argumentos de atributo inseparáveis.
 
-- **❌ Selar um tipo que estava sem selo**
+- **❌ selando um tipo que não foi lacrado anteriormente**
 
-- **❌ Adicionar uma interface ao conjunto de tipos base de uma interface**
+- **❌ adicionar uma interface ao conjunto de tipos de base de uma interface**
 
    Se uma interface implementar uma interface não implementada anteriormente, todos os tipos que implementaram a versão original da interface serão corrompidos.
 
@@ -79,13 +77,13 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
   Há uma exceção à regra para remoção de interface: é possível adicionar a implementação de uma interface derivada da interface removida. Por exemplo, você pode remover <xref:System.IDisposable> se o tipo ou interface agora implementa <xref:System.ComponentModel.IComponent>, que implementa <xref:System.IDisposable>.
 
-- **❌ Alterar um tipo `readonly struct` para um tipo [struct](../../csharp/language-reference/keywords/struct.md)**
+- **❌ alterar um tipo de `readonly struct` para um tipo de [struct](../../csharp/language-reference/keywords/struct.md)**
 
   A alteração de um tipo `struct` para um tipo `readonly struct` é permitida.
 
-- **❌ Alterar um tipo [struct](../../csharp/language-reference/keywords/struct.md) para um tipo `ref struct` e vice-versa**
+- **❌ alterar um tipo de [struct](../../csharp/language-reference/keywords/struct.md) para um tipo `ref struct`, e vice-versa**
 
-- **❌ Reduzir a visibilidade de um tipo**
+- **❌ reduzir a visibilidade de um tipo**
 
    No entanto, aumentar a visibilidade de um tipo é permitido.
 
@@ -121,23 +119,23 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
    Essa alteração afeta a serialização.
 
-- **❌ Renomear ou remover um membro ou parâmetro público**
+- **❌ renomear ou remover um membro público ou parâmetro**
 
    Isso interrompe todo o código que usa o membro ou parâmetro renomeado ou removido.
 
    Isso inclui remover ou renomear um getter ou setter de uma propriedade, bem como renomear ou remover membros de enumeração.
 
-- **❌ Adicionar um membro a uma interface**
+- **❌ adicionar um membro a uma interface**
 
-- **❌ Alterar o valor de uma constante pública ou membro de enumeração**
+- **❌ alterar o valor de uma constante pública ou membro de enumeração**
 
-- **❌ Alterar o tipo de uma propriedade, campo, parâmetro ou valor de retorno**
+- **❌ alterar o tipo de uma propriedade, campo, parâmetro ou valor de retorno**
 
-- **❌ Adicionar, remover ou alterar a ordem dos parâmetros**
+- **❌ adicionar, remover ou alterar a ordem dos parâmetros**
 
-- **❌ Adicionar ou remover a palavra-chave [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) ou [ref](../../csharp/language-reference/keywords/ref.md) de um parâmetro**
+- **❌ adicionar ou remover a palavra-chave [in](../../csharp/language-reference/keywords/in.md), [out](../../csharp/language-reference/keywords/out.md) ou [ref](../../csharp/language-reference/keywords/ref.md) de um parâmetro**
 
-- **❌ Renomear um parâmetro (incluindo alterar a capitalização)**
+- **❌ renomear um parâmetro (incluindo a alteração de seu caso)**
 
   Isso é considerado significativo por dois motivos:
   
@@ -145,13 +143,13 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
   
   - Interrompe a [compatibilidade de origem](categories.md#source-compatibility) quando os desenvolvedores usam [argumentos nomeados](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
-- **❌ Alterar de um valor de retorno `ref` para um valor de retorno `ref readonly`**
+- **❌ alterar de um valor de retorno de `ref` para um valor de retorno `ref readonly`**
 
-- **❌️ Alterar de um valor de retorno `ref readonly` para um `ref` em um método ou interface virtual**
+- **❌️ alteração de um `ref readonly` para um valor de retorno de `ref` em um método ou interface virtual**
 
-- **❌ Adicionar ou remover [abstract](../../csharp/language-reference/keywords/abstract.md) de um membro**
+- **❌ adicionar ou remover [abstrato](../../csharp/language-reference/keywords/abstract.md) de um membro**
 
-- **❌ Remover a palavra-chave [virtual](../../csharp/language-reference/keywords/virtual.md) de um membro**
+- **❌ remover a palavra-chave [virtual](../../csharp/language-reference/keywords/virtual.md) de um membro**
 
   Embora isso geralmente não seja uma alteração significativa, pois o compilador C# tende a emitir instruções [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) de IL (Intermediate Language) para chamar métodos não virtuais (`callvirt` executa uma verificação nula, enquanto uma chamada normal não), esse comportamento não é invariável por vários motivos:
   - C# não é a única linguagem de destino do .NET.
@@ -160,48 +158,48 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
   
   Tornar um método virtual significa que o código do consumidor em geral acabaria chamando-o não virtualmente.
 
-- **❌ Adicionar a palavra-chave [virtual](../../csharp/language-reference/keywords/virtual.md) a um membro**
+- **❌ adicionar a palavra-chave [virtual](../../csharp/language-reference/keywords/virtual.md) a um membro**
 
-- **❌ Transformar um membro virtual em abstrato**
+- **❌ tornar um membro Virtual abstrato**
 
   Um [membro virtual](../../csharp/language-reference/keywords/virtual.md) fornece uma implementação de método que *pode ser* substituída por uma classe derivada. Um [membro abstrato](../../csharp/language-reference/keywords/abstract.md) não fornece nenhuma implementação e *precisa ser* substituído.
 
-- **❌ Adicionar um membro abstrato a um tipo público que tenha construtores acessíveis (públicos ou protegidos) e não seja [sealed](../../csharp/language-reference/keywords/sealed.md)**
+- **❌ adicionar um membro abstrato a um tipo público que tem construtores acessíveis (públicos ou protegidos) e que não está [lacrado](../../csharp/language-reference/keywords/sealed.md)**
 
-- **❌ Adicionar ou remover a palavra-chave [static](../../csharp/language-reference/keywords/static.md) de um membro**
+- **❌ adicionar ou remover a palavra-chave [estática](../../csharp/language-reference/keywords/static.md) de um membro**
 
-- **❌ Adicionar uma sobrecarga que impede uma sobrecarga existente e define um comportamento diferente**
+- **❌ adicionar uma sobrecarga que impede uma sobrecarga existente e define um comportamento diferente**
 
   Isso interrompe os clientes existentes que estavam vinculados à sobrecarga anterior. Por exemplo, se uma classe tiver uma única versão de um método que aceite um <xref:System.UInt32>, um consumidor existente será vinculado a essa sobrecarga ao passar um valor <xref:System.Int32>. No entanto, se você adicionar uma sobrecarga que aceita um <xref:System.Int32>, ao recompilar ou usar associação tardia, o compilador agora se associa à nova sobrecarga. Se resultar em um comportamento diferente, significa que essa é uma alteração significativa.
 
-- **❌ Adicionar um construtor a uma classe que anteriormente não tinha construtor sem adicionar o construtor sem parâmetros**
+- **❌ adicionar um construtor a uma classe que anteriormente não tinha nenhum construtor sem adicionar o construtor de parâmetros**
 
-- **❌️ Adicionar [readonly](../../csharp/language-reference/keywords/readonly.md) a um campo**
+- **❌️ adicionar [ReadOnly](../../csharp/language-reference/keywords/readonly.md) a um campo**
 
-- **❌ Reduzir a visibilidade de um membro**
+- **❌ reduzir a visibilidade de um membro**
 
    Isso inclui restringir a visibilidade de um membro [protegido](../../csharp/language-reference/keywords/protected.md) quando o tipo não tem construtores *acessíveis* (públicos ou protegidos) e o tipo *não* é [sealed](../../csharp/language-reference/keywords/sealed.md). Se esse não for o caso, será permitido reduzir a visibilidade de um membro protegido.
 
    Aumentar a visibilidade de um tipo é permitido.
 
-- **❌ Alterar o tipo de um membro**
+- **❌ alterar o tipo de um membro**
 
    Não é possível modificar o valor de retorno de um método ou o tipo de uma propriedade ou campo. Por exemplo, a assinatura de um método que retorna um <xref:System.Object> não pode ser alterada para retornar um <xref:System.String> ou vice-versa.
 
-- **❌ Adicionar um campo a um struct que anteriormente não tinha estado**
+- **❌ adicionar um campo a uma struct que anteriormente não tinha nenhum estado**
 
   As regras de atribuição definidas permitem o uso de variáveis ​​não inicializadas, desde que o tipo de variável seja um struct sem estado. Se o struct for alterado para “com estado”, o código poderá acabar com dados não inicializados. Isso é potencialmente uma interrupção de fonte e uma alteração binária significativa.
 
-- **❌ Disparar um evento existente quando ele nunca foi disparado antes**
+- **❌ acionar um evento existente quando ele nunca foi acionado antes**
 
-## <a name="behavioral-changes"></a>Alterações de comportamento
+## <a name="behavioral-changes"></a>Alterações comportamentais
 
 ### <a name="assemblies"></a>Assemblies
 
 - **✔️ Tornar um assembly portátil quando ainda há suporte para as mesmas plataformas**
 
-- **❌ Alterar o nome de um assembly**
-- **❌ Alterar a chave pública de um assembly**
+- **❌ alterar o nome de um assembly**
+- **❌ alterar a chave pública de um assembly**
 
 ### <a name="properties-fields-parameters-and-return-values"></a>Propriedades, campos, parâmetros e valores retornados
 
@@ -213,19 +211,19 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
   Embora o intervalo de valores que podem ser passados ​​para o método ou retornados pelo membro possa ser expandidos, o parâmetro ou o tipo de membro não pode. Por exemplo, enquanto os valores passados ​​para um método podem ser expandidos de 0-124 para 0-255, o tipo de parâmetro não pode ser alterado de <xref:System.Byte> para <xref:System.Int32>.
 
-- **❌Aumentar o intervalo de valores aceitos para uma propriedade ou parâmetro se o membro for [virtual](../../csharp/language-reference/keywords/virtual.md)**
+- **❌ aumentar o intervalo de valores aceitos para uma propriedade ou parâmetro se o membro for [virtual](../../csharp/language-reference/keywords/virtual.md)**
 
    Essa alteração interrompe os membros substituídos existentes, que não funcionarão corretamente para o intervalo estendido de valores.
 
-- **❌Reduzir o intervalo de valores aceitos de uma propriedade ou parâmetro**
+- **❌ diminuindo o intervalo de valores aceitos para uma propriedade ou parâmetro**
 
-- **❌ Aumentar o intervalo de valores retornados de uma propriedade, campo, valor de retorno ou parâmetro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
+- **❌ aumentar o intervalo de valores retornados para uma propriedade, campo, valor de retorno ou parâmetro de [saída](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
-- **❌ Alterar os valores retornados de uma propriedade, campo, valor de retorno ou parâmetro [out](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
+- **❌ alterar os valores retornados para uma propriedade, campo, valor de retorno de método ou parâmetro de [saída](../../csharp/language-reference/keywords/out-parameter-modifier.md)**
 
-- **❌ Alterar o valor padrão de uma propriedade, campo ou parâmetro**
+- **❌ alterar o valor padrão de uma propriedade, campo ou parâmetro**
 
-- **❌ Alterar a precisão de um valor retornado numérico**
+- **❌ alterar a precisão de um valor numérico de retorno**
 
 - **❓ Uma alteração na análise de entrada e no lançamento de novas exceções (mesmo se o comportamento de análise não for especificado na documentação**
 
@@ -258,15 +256,15 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
   Os desenvolvedores não devem se basear no texto de mensagens de erro, que também mudam com base na cultura do usuário.
 
-- **❌ Lançar uma exceção em qualquer outro caso não listado acima**
+- **❌ lançar uma exceção em qualquer outro caso não listado acima**
 
-- **❌ Remover uma exceção em qualquer outro caso não listado acima**
+- **❌ remover uma exceção em qualquer outro caso não listado acima**
 
 ### <a name="attributes"></a>Atributos
 
 - **✔️ Alterar o valor de um atributo que é *não* observável**
 
-- **❌ Alterar o valor de um atributo que *é* observável**
+- **❌ alterar o valor de um atributo que *é* observável**
 
 - **❓ Remover um atributo**
 
@@ -276,7 +274,7 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
 - **✔️ Dar suporte a uma operação em uma plataforma que não tinha suporte anteriormente**
 
-- **❌ Não oferecer suporte ou agora exigir um pacote de serviço específico para uma operação que anteriormente tinha suporte em uma plataforma**
+- **❌ não dá suporte ou agora exigindo uma service pack específica para uma operação que tinha suporte anteriormente em uma plataforma**
 
 ## <a name="internal-implementation-changes"></a>Alterações na implementação interna
 
@@ -296,26 +294,26 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
   Se a alteração em questão não for categorizada como significativa por algum outro motivo, isso será aceitável. Geralmente, ações precisam ser realizadas, o que pode incluir operações extras ou a adição de novas funcionalidades. Isso quase sempre afetará o desempenho, mas pode ser essencial para que a API em questão funcione conforme o esperado.
 
-- **❌ Alterar uma API síncrona para assíncrona (e vice-versa)**
+- **❌ alterar uma API síncrona para assíncrona (e vice-versa)**
 
 ## <a name="code-changes"></a>Alterações de código
 
 - **✔️ Adicionar [parâmetros](../../csharp/language-reference/keywords/params.md) a um parâmetro**
 
-- **❌ Alterar uma [struct](../../csharp/language-reference/keywords/struct.md) para uma [classe](../../csharp/language-reference/keywords/class.md) e vice-versa**
+- **❌ alterar uma [struct](../../csharp/language-reference/keywords/struct.md) para uma [classe](../../csharp/language-reference/keywords/class.md) e vice-versa**
 
-- **❌ Adicionar a palavra-chave [verificado](../../csharp/language-reference/keywords/virtual.md) a um bloco de código**
+- **❌ adicionar a palavra-chave [Checked](../../csharp/language-reference/keywords/virtual.md) a um bloco de código**
 
    Essa alteração pode fazer com que um código que foi executado anteriormente lance um <xref:System.OverflowException>, o que é inaceitável.
 
-- **❌ Remover [parâmetros](../../csharp/language-reference/keywords/params.md) de um parâmetro**
+- **❌ remover [params](../../csharp/language-reference/keywords/params.md) de um parâmetro**
 
-- **❌ Alterar a ordem na qual os eventos são disparados**
+- **❌ alterar a ordem na qual os eventos são acionados**
 
   Os desenvolvedores podem razoavelmente esperar que os eventos sejam disparados na mesma ordem, e o código do desenvolvedor frequentemente depende da ordem em que os eventos são disparados.
 
-- **❌ Remover o aumento de um evento em uma determinada ação**
+- **❌ remover a geração de um evento em uma determinada ação**
 
-- **❌ Alterar o número de vezes em que determinados eventos são chamados**
+- **❌ alterar o número de vezes que os eventos fornecidos são chamados**
 
-- **❌ Adicionar o <xref:System.FlagsAttribute> a um tipo de enumeração**
+- **❌ adicionar o <xref:System.FlagsAttribute> a um tipo de enumeração**

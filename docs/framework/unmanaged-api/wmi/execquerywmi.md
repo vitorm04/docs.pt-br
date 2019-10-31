@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c6ea58eca5ac635893a24b57ade261e04a69721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798681"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130430"
 ---
 # <a name="execquerywmi-function"></a>Função ExecQueryWmi
 
@@ -64,11 +62,11 @@ no Uma combinação de sinalizadores que afetam o comportamento dessa função. 
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador causa uma chamada de semisynchronous. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador somente encaminhamento. Normalmente, enumeradores somente de encaminhamento são mais rápidos e usam menos memória do que enumeradores convencionais, mas não permitem que as chamadas [clonem](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | O WMI retém ponteiros para objetos na enumeração até que sejam liberados. |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Garante que todos os objetos retornados tenham informações suficientes para que as propriedades do sistema, como **__PATH**, **__RELPATH**e **__SERVER**, não `null`sejam. |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Garante que todos os objetos retornados tenham informações suficientes para que as propriedades do sistema, como **__PATH**, **__RELPATH**e **__SERVER**, não sejam `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Este sinalizador é usado para criação de protótipos. Ele não executa a consulta e, em vez disso, retorna um objeto que se parece com um objeto de resultado típico. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Faz com que o acesso direto ao provedor para a classe especificada sem considerar sua classe pai ou qualquer subclasse. |
 
-Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para obter o melhor desempenho.
+Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para melhor desempenho.
 
 `pCtx`\
 no Normalmente, esse valor é `null`. Caso contrário, é um ponteiro para uma instância de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que pode ser usada pelo provedor que está fornecendo as classes solicitadas.
@@ -116,17 +114,17 @@ Os valores a seguir retornados por essa função são definidos no arquivo de ca
 
 Essa função encapsula uma chamada para o método [IWbemServices:: ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) .
 
-Essa função processa a consulta especificada no `strQuery` parâmetro e cria um enumerador por meio do qual o chamador pode acessar os resultados da consulta. O enumerador é um ponteiro para uma interface [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) ; os resultados da consulta são instâncias de objetos de classe disponibilizados por meio da interface [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+Essa função processa a consulta especificada no parâmetro `strQuery` e cria um enumerador por meio do qual o chamador pode acessar os resultados da consulta. O enumerador é um ponteiro para uma interface [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) ; os resultados da consulta são instâncias de objetos de classe disponibilizados por meio da interface [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Há limites para o número de `AND` palavras-chave e `OR` que podem ser usadas em consultas WQL. Grandes números de palavras-chave WQL usadas em uma consulta complexa podem fazer com que o WMI `WBEM_E_QUOTA_VIOLATION` retorne o código de erro (ou `HRESULT` 0x8004106c) como um valor. O limite de palavras-chave WQL depende da complexidade da consulta.
+Há limites para o número de `AND` e `OR` palavras-chave que podem ser usadas em consultas WQL. Grandes números de palavras-chave WQL usadas em uma consulta complexa podem fazer com que o WMI retorne o código de erro `WBEM_E_QUOTA_VIOLATION` (ou 0x8004106c) como um valor de `HRESULT`. O limite de palavras-chave WQL depende da complexidade da consulta.
 
 Se a chamada de função falhar, você poderá obter informações adicionais sobre o erro chamando a função [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

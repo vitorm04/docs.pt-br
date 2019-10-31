@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 78cbb98d4fb3887b82b2432451c47ac64d96ab91
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122230"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Execução lado a lado no .NET Framework
 
@@ -122,7 +120,7 @@ publicKeyToken=...,
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Como: Habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
+|[Como habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Descreve como associar um aplicativo a uma versão específica de um assembly.|  
 |[Configurando o redirecionamento de associação de assembly](configuring-assembly-binding-redirection.md)|Explica como redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework.|  
 |[Execução lado a lado em processo](in-process-side-by-side-execution.md)|Discute como você pode usar a ativação de host de tempo de execução lado a lado em processo para executar várias versões do CLR em um único processo.|  
 |[Assemblies no .NET](../../standard/assembly/index.md)|Fornece uma visão geral conceitual de assemblies.|  

@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Período de bloqueio do pool'
+title: 'Mitigação: período de bloqueio de pool'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71f1b06e53b3851ca3f65edc1755527779b42a67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b29649be8b52525e1e917d823997521825d56c1b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789962"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126179"
 ---
-# <a name="mitigation-pool-blocking-period"></a>Mitigação: Período de bloqueio do pool
+# <a name="mitigation-pool-blocking-period"></a>Mitigação: período de bloqueio de pool
 O pool de conexão no período de bloqueio foi removido para conexões com bancos de dados SQL do Azure.  
   
 ## <a name="additional-description"></a>Descrição adicional  

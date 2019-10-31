@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123281"
 ---
 # <a name="ivalidatorvalidate-method"></a>Método IValidator::Validate
-Valida o executável especificado portátil (PE) ou arquivo do Microsoft intermediate language (MSIL).  
+Valida o executável portátil (PE) ou o arquivo. MSIL (Microsoft Intermediate Language) especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,34 +42,34 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parâmetros  
  `veh`  
- [in] Um ponteiro para um `IVEHandler` instância que manipula erros de validação.  
+ no Um ponteiro para uma instância de `IVEHandler` que lida com erros de validação.  
   
  `pAppDomain`  
- [in] Um ponteiro para o domínio do aplicativo no qual o arquivo é carregado.  
+ no Um ponteiro para o domínio do aplicativo no qual o arquivo é carregado.  
   
  `ulFlags`  
- [in] Uma combinação bit a bit de [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) valores, que indica as validações que devem ser executadas.  
+ no Uma combinação de bits de valor [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) , que indica as validações que devem ser executadas.  
   
  `ulMaxError`  
- [in] O número máximo de erros para permitir que antes de sair da validação.  
+ no O número máximo de erros a serem permitidos antes de sair da validação.  
   
  `token`  
- [in] Não usado.  
+ no Não usado.  
   
  `fileName`  
- [in] Uma cadeia de caracteres que especifica o nome do arquivo a ser validado.  
+ no Uma cadeia de caracteres que especifica o nome do arquivo a ser validado.  
   
  `pe`  
- [in] Um ponteiro para o buffer de memória no qual o arquivo está armazenado.  
+ no Um ponteiro para o buffer de memória no qual o arquivo está armazenado.  
   
  `ulSize`  
- [in] O tamanho, em bytes, do arquivo a ser validado.  
+ no O tamanho, em bytes, do arquivo a ser validado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** IValidator.idl, IValidator.h  
+ **Cabeçalho:** IValidator. idl, IValidator. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

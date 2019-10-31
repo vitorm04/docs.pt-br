@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdbec0101de269b3d5b09e750d552c993a0198ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748486"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125509"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Método ICorDebugComObjectValue::GetCachedInterfacePointers
-Obtém os ponteiros de interface bruto armazenado em cache no runtime callable wrapper atual (RCW).  
+Obtém os ponteiros de interface bruto armazenados em cache no RCW (tempo de execução Callable Wrapper) atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,21 +35,21 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Parâmetros  
  `bIInspectableOnly`  
- [in] Um valor que indica se o método retornará somente interfaces de tempo de execução do Windows (`IInspectable` interfaces) ou todas as interfaces COM que são armazenados em cache, o runtime callable wrapper (RCW).  
+ no Um valor que indica se o método retornará apenas interfaces Windows Runtime (interfaces`IInspectable`) ou todas as interfaces COM armazenadas em cache pelo RCW (Runtime Callable Wrapper).  
   
  `celt`  
- [in] O número de objetos cujos endereços devem ser recuperadas.  
+ no O número de objetos cujos endereços devem ser recuperados.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `CORDB_ADDRESS` valores realmente retornados na `ptrs`.  
+ fora Um ponteiro para o número de `CORDB_ADDRESS` valores realmente retornados em `ptrs`.  
   
  `ptrs`  
- Um ponteiro para o endereço inicial de uma matriz de `CORDB_ADDRESS` que contêm os endereços dos valores armazenados em cache objetos de interface.  
+ Um ponteiro para o endereço inicial de uma matriz de `CORDB_ADDRESS` valores que contêm os endereços dos objetos de interface em cache.  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

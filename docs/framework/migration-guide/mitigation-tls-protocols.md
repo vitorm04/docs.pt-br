@@ -1,21 +1,19 @@
 ---
-title: 'Mitigação: Protocolos TLS'
+title: 'Mitigação: protocolos TLS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e98b447028ef9fa96233a71133aa82184d83cec8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2a2f95be92ec08185f627e862b0f62e40a1d764b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126133"
 ---
-# <a name="mitigation-tls-protocols"></a>Mitigação: Protocolos TLS
-Do .NET Framework 4.6 em diante, as classes <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> têm permissão para usar um dos três seguintes protocolos: TLS 1.0, TLS 1.1 ou TLS 1.2. Não há suporte para o protocolo SSL 3.0 e a criptografia RC4.  
+# <a name="mitigation-tls-protocols"></a>Mitigação: protocolos TLS
+A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?displayProperty=nameWithType> e <xref:System.Net.Security.SslStream?displayProperty=nameWithType> têm permissão para usar um dos três protocolos a seguir: Tls1.0, Tls1.1 ou Tls 1.2. Não há suporte para o protocolo SSL 3.0 e a criptografia RC4.  
   
 ## <a name="impact"></a>Impacto  
  Essa alteração afeta:  

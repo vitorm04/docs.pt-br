@@ -1,5 +1,5 @@
 ---
-title: Método ICorDebugVariableHome::GetRegister
+title: 'Método ICorDebugVariableHome:: getregister'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetRegister
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125068"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a>Método ICorDebugVariableHome::GetRegister
-Obtém o registro que contém uma variável com um tipo de local de `VLT_REGISTER`e o registro de base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE`.  
+# <a name="icordebugvariablehomegetregister-method"></a>Método ICorDebugVariableHome:: getregister
+Obtém o registro que contém uma variável com um tipo de local de `VLT_REGISTER`e o registro base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,18 +35,18 @@ HRESULT GetRegister(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRegister`  
- [out] Um valor de enumeração CorDebugRegister que indica o registro para uma variável com um tipo de local de `VLT_REGISTER`e o registro de base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE`.  
+ fora Um valor de enumeração CorDebugRegister que indica o registro para uma variável com um tipo de local de `VLT_REGISTER`e o registro de base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O método retorna os seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`S_OK`|A variável está no registro, indicado pelo `pRegister` argumento.|  
-|`E_FAIL`|A variável não está em um registro ou em um local relativo ao registro.|  
+|`S_OK`|A variável está no registro indicado pelo argumento `pRegister`.|  
+|`E_FAIL`|A variável não está em um local de registro ou relativo ao registro.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

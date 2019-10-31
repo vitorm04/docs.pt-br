@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81c3eec9b33f51bd30cf8724eaf010d7cd0b6cd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131833"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Método ICorDebugStackWalk::GetFrame
-Obtém o quadro atual na [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
+Obtém o quadro atual no objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,26 +33,26 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="parameters"></a>Parâmetros  
  `pFrame`  
- [in] Um ponteiro para o endereço do objeto criado do quadro que representa o quadro atual na pilha.  
+ no Um ponteiro para o endereço do objeto frame criado que representa o quadro atual na pilha.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O tempo de execução retornado com êxito o quadro atual.|  
+|S_OK|O tempo de execução retornou com êxito o quadro atual.|  
 |E_FAIL|O quadro atual não foi retornado.|  
-|S_FALSE|O quadro atual é um quadro de pilha nativo.|  
+|S_FALSE|O quadro atual é um quadro de ativação nativo.|  
 |E_INVALIDARG|`pFrame` é nulo.|  
-|CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, não há quadros adicionais podem ser acessados.|  
+|CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, nenhum quadro adicional pode ser acessado.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebugStackWalk` Retorna somente os quadros de pilha real. Use o [ICorDebugThread3::GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) método para retornar os quadros internos. (Quadros internos são colocadas na pilha em tempo de execução para armazenar dados temporários de estruturas de dados).  
+ `ICorDebugStackWalk` retorna apenas os quadros de pilhas reais. Use o método [ICorDebugThread3:: GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) para retornar quadros internos. (Os quadros internos são estruturas de dados enviadas por push para a pilha pelo tempo de execução para armazenar dados temporários.)  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   

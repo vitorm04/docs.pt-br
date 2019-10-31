@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092031"
 ---
 # <a name="waitortimercallback-function-pointer"></a>Ponteiro de função WAITORTIMERCALLBACK
-Aponta para uma função que notifica o host que lidam com uma espera (<xref:System.Threading.WaitHandle>) foi sinalizado ou atingiu o tempo limite.  
+Aponta para uma função que notifica o host que um identificador de espera (<xref:System.Threading.WaitHandle>) foi sinalizado ou esgotou o tempo limite.  
   
  Esse ponteiro de função foi preterido no .NET Framework 4.  
   
@@ -39,20 +37,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpParameter`  
- [in] Um ponteiro para um objeto que contém informações definidas pelo host.  
+ no Um ponteiro para um objeto que contém informações definidas pelo host.  
   
  `TimerOrWaitFired`  
- [in] `true` se o identificador de espera atingiu o tempo limite, ou `false` se ele tiver sido sinalizado.  
+ [in] `true` se o identificador de espera expirou ou `false` se ele foi sinalizado.  
   
 ## <a name="remarks"></a>Comentários  
- A função à qual `WAITORTIMERCALLBACK` pontos é uma função de retorno de chamada e devem ser implementados pelo gravador do aplicativo host.  
+ A função à qual os pontos de `WAITORTIMERCALLBACK` é uma função de retorno de chamada e deve ser implementada pelo gravador do aplicativo de hospedagem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks.dll  
+ **Biblioteca:** MSCorWks. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119337"
 ---
 # <a name="add-element-for-appsettings"></a>\<Adicionar > elemento para \<appSettings >
 
@@ -22,7 +22,7 @@ Adiciona uma configuração de aplicativo personalizada.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<adicionar >**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,7 +59,7 @@ O exemplo a seguir mostra como adicionar uma definição de configuração perso
 </appSettings>
 ```
 
-O exemplo a seguir usa `<add>` o elemento para definir duas configurações de compatibilidade em um aplicativo ASP.net:
+O exemplo a seguir usa o elemento `<add>` para definir duas configurações de compatibilidade em um aplicativo ASP.NET:
 
 ```xml
 <appSettings>

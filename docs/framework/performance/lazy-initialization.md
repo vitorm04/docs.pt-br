@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 54776304e484fc7f1db2c56b102034ed0e8650c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130311"
 ---
 # <a name="lazy-initialization"></a>Inicialização lenta
-*Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar a computação dispendiosa e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
+*Inicialização lenta* de um objeto significa que a criação dele é adiada até que ele seja usado pela primeira vez. (Para este tópico, os termos *inicialização lenta* e *instanciação lenta* são sinônimos.) A inicialização lenta é usada principalmente para melhorar o desempenho, evitar o desperdício de computação e reduzir os requisitos de memória do programa. Estes são os cenários mais comuns:  
   
 - Quando você tem um objeto de criação dispendiosa e o programa pode não vir a usá-lo. Por exemplo, suponha que você tenha na memória um objeto `Customer` que tem uma propriedade `Orders` contendo uma grande variedade de objetos `Order` que, ao serem inicializados, requerem uma conexão de banco de dados. Se o usuário nunca solicita a exibição das Ordens nem usa os dados em uma computação, não há motivo para usar a memória do sistema ou ciclos de computação para criá-lo. Ao usar `Lazy<Orders>` para declarar o objeto `Orders` para inicialização lenta, você pode evitar desperdício de recursos de sistema quando o objeto não é usado.  
   
@@ -27,7 +25,7 @@ ms.locfileid: "71046407"
   
  A tabela a seguir lista os tipos que o .NET Framework versão 4 fornece para permitir a inicialização lenta em cenários diferentes.  
   
-|Tipo|Descrição|  
+|Digite|Descrição|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|Uma classe wrapper que fornece a semântica de inicialização lenta para qualquer biblioteca de classes ou tipo definido pelo usuário.|  
 |<xref:System.Threading.ThreadLocal%601>|Ela é semelhante a <xref:System.Lazy%601>, exceto pelo fato de que ela fornece a semântica de inicialização lenta por local de thread. Cada thread tem acesso ao seu próprio valor exclusivo.|  
@@ -51,7 +49,7 @@ ms.locfileid: "71046407"
  [!code-csharp[Lazy#3](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#3)]
  [!code-vb[Lazy#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#3)]  
   
- Um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado. Portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se <xref:System.Lazy%601.Value%2A> armazena um tipo de referência, você não pode atribuir um novo objeto a ela. (No entanto, você pode alterar o valor das propriedades e campos públicos configuráveis dela.) Se <xref:System.Lazy%601.Value%2A> armazena um valor de tipo, você não pode modificar o valor dela. No entanto, você pode criar uma nova variável, invocando o construtor de variável novamente usando novos argumentos.  
+ Um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado. Portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se <xref:System.Lazy%601.Value%2A> armazena um tipo de referência, você não pode atribuir um novo objeto a ela. (No entanto, você pode alterar o valor de seus campos públicos e propriedades de tabela.) Se <xref:System.Lazy%601.Value%2A> armazenar um tipo de valor, você não poderá modificar seu valor. No entanto, você pode criar uma nova variável, invocando o construtor de variável novamente usando novos argumentos.  
   
  [!code-csharp[Lazy#4](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#4)]
  [!code-vb[Lazy#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#4)]  
@@ -87,9 +85,9 @@ ms.locfileid: "71046407"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>Exceções em objetos lentos  
- Conforme mencionado anteriormente, um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado e, portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se você habilitar o cache de exceção, essa imutabilidade também se estenderá ao comportamento de exceção. Se um objeto inicializado por Lazy tiver o cache de exceção habilitado e lançar uma exceção de seu método <xref:System.Lazy%601.Value%2A> de inicialização quando a propriedade for acessada pela primeira vez, essa mesma exceção será <xref:System.Lazy%601.Value%2A> lançada em todas as tentativas subsequentes de acessar a propriedade . Em outras palavras, o construtor do tipo encapsulado nunca será invocado novamente, mesmo em cenários com vários threads. Portanto, o objeto <xref:System.Lazy%601> não é capaz de gerar uma exceção em um acesso e retorna um valor em um acesso subsequente.  
+ Conforme mencionado anteriormente, um objeto <xref:System.Lazy%601> sempre retorna o mesmo objeto ou valor com o qual ele foi inicializado e, portanto, a propriedade <xref:System.Lazy%601.Value%2A> é somente leitura. Se você habilitar o cache de exceção, essa imutabilidade também se estenderá ao comportamento de exceção. Se um objeto inicializado por Lazy tiver o cache de exceção habilitado e lançar uma exceção a partir de seu método de inicialização quando a propriedade <xref:System.Lazy%601.Value%2A> for acessada pela primeira vez, essa mesma exceção será lançada em todas as tentativas subsequentes de acessar a propriedade <xref:System.Lazy%601.Value%2A>. Em outras palavras, o construtor do tipo encapsulado nunca será invocado novamente, mesmo em cenários com vários threads. Portanto, o objeto <xref:System.Lazy%601> não é capaz de gerar uma exceção em um acesso e retorna um valor em um acesso subsequente.  
   
- O cache de exceção é habilitado quando você usar qualquer construtor <xref:System.Lazy%601?displayProperty=nameWithType> que usa um método de inicialização (parâmetro `valueFactory`); por exemplo, ele é habilitado quando você usa o construtor `Lazy(T)(Func(T))`. Se o construtor também usa um valor <xref:System.Threading.LazyThreadSafetyMode> (parâmetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor sem parâmetros para `T`: `new Lazy<Contents>(() => new Contents(), mode)` in C#ou `New Lazy(Of Contents)(Function() New Contents())` em Visual Basic. Se você usar um construtor <xref:System.Lazy%601?displayProperty=nameWithType> que não especifique um método de inicialização, as exceções geradas pelo construtor sem parâmetros para `T` não serão armazenadas em cache. Para obter mais informações, consulte a enumeração <xref:System.Threading.LazyThreadSafetyMode>.  
+ O cache de exceção é habilitado quando você usar qualquer construtor <xref:System.Lazy%601?displayProperty=nameWithType> que usa um método de inicialização (parâmetro `valueFactory`); por exemplo, ele é habilitado quando você usa o construtor `Lazy(T)(Func(T))`. Se o construtor também usa um valor <xref:System.Threading.LazyThreadSafetyMode> (parâmetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> ou <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Especificar um método de inicialização permite o cache de exceções para esses dois modos. O método de inicialização pode ser muito simples. Por exemplo, ele pode chamar o construtor sem parâmetros para `T`: `new Lazy<Contents>(() => new Contents(), mode)` em C#ou `New Lazy(Of Contents)(Function() New Contents())` em Visual Basic. Se você usar um construtor <xref:System.Lazy%601?displayProperty=nameWithType> que não especifique um método de inicialização, as exceções geradas pelo construtor sem parâmetros para `T` não serão armazenadas em cache. Para obter mais informações, consulte a enumeração <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
 > Se você criar um objeto <xref:System.Lazy%601> com o parâmetro de construtor `isThreadSafe` definido como `false` ou o parâmetro de construtor `mode` definido como <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, você deverá acessar o objeto <xref:System.Lazy%601> de um único thread ou fornecer sua própria sincronização. Isso se aplica a todos os aspectos do objeto, incluindo o cache de exceção.  
@@ -140,7 +138,7 @@ ms.locfileid: "71046407"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variáveis locais de thread em Parallel.For e ForEach  
- Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, confira [Como: Gravar um loop Parallel.For com variáveis locais de thread](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como: Gravar um loop Parallel.ForEach com variáveis locais de partição](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Quando você usa o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou o método <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar por fontes de dados em paralelo, você pode usar as sobrecargas que têm suporte interno para dados locais de thread. Esses métodos, a localidade do thread é obtida usando delegados locais para criar, acessar e limpar os dados. Para obter mais informações, consulte [Como gravar um loop Parallel.For com variáveis locais de thread](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) e [Como gravar um loop Parallel.ForEach com variáveis locais de partição](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usando inicialização lenta para cenários de baixa sobrecarga  
  Em cenários em que você precisa fazer inicialização lenta de um grande número de objetos, você pode decidir que encapsular cada objeto em um <xref:System.Lazy%601> requer memória ou recursos de computação demais. Ou então, você pode ter requisitos rigorosos para como a inicialização lenta é exposta. Nesses casos, você pode usar os métodos `static` (`Shared` no Visual Basic) da classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para fazer inicialização lenta de cada objeto sem encapsulá-lo em uma instância de <xref:System.Lazy%601>.  
@@ -157,4 +155,4 @@ ms.locfileid: "71046407"
 - [Noções básicas de threading gerenciado](../../standard/threading/managed-threading-basics.md)
 - [Threads e threading](../../standard/threading/threads-and-threading.md)
 - [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Como: Executar inicialização lenta de objetos](how-to-perform-lazy-initialization-of-objects.md)
+- [Como executar a inicialização lenta de objetos](how-to-perform-lazy-initialization-of-objects.md)

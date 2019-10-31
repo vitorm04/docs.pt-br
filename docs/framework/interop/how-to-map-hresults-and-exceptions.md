@@ -1,5 +1,5 @@
 ---
-title: 'Como: Mapear HRESULTs e exceções'
+title: Como mapear HRESULTs e exceções
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123872"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Como: Mapear HRESULTs e exceções
+# <a name="how-to-map-hresults-and-exceptions"></a>Como mapear HRESULTs e exceções
 Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando exceções. O tempo de execução manipula a transição entre os dois. Cada classe de exceção do .NET Framework mapeia para um HRESULT.  
   
  Classes de exceção definidas pelo usuário podem especificar qualquer HRESULT apropriado. Essas classes de exceção podem alterar dinamicamente o HRESULT a ser retornado quando a exceção é gerada, definindo o campo **HResult** no objeto de exceção. Informações adicionais sobre a exceção são fornecidas ao cliente por meio da interface **IErrorInfo**, que é implementada no objeto .NET no processo não gerenciado.  

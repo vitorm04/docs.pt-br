@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0da962a3-ce55-44dd-ab7a-14ad7105af4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1d578fa0f8e80ae2c8fbada9e383bcd849ff2f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf09f7bc6c3e3aabfc16f9cad277c46be024b01d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753613"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139459"
 ---
 # <a name="ihostsemaphorewait-method"></a>Método IHostSemaphore::Wait
-Faz com que o atual [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) instância aguardar até que ele pertence ou a quantidade especificada de tempo passa.  
+Faz com que a instância de [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) atual aguarde até que ela seja propriedade ou a quantidade especificada de tempo decorre.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,29 +36,29 @@ HRESULT Wait (
   
 ## <a name="parameters"></a>Parâmetros  
  `dwMilliseconds`  
- [in] O número de milissegundos de espera antes de retornar, se o atual `IHostSemaphore` instância não é de propriedade.  
+ no O número de milissegundos a aguardar antes de retornar, se a instância de `IHostSemaphore` atual não pertence.  
   
  `option`  
- [in] Um dos [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) valores, especificando qual ação o host deve executar se este blocos de operação.  
+ no Um dos valores de [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) , especificando a ação que o host deve executar se essa operação bloquear.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|`Wait` retornado com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O Common Language Runtime (CLR) não foi carregado em um processo ou o CLR está em um estado no qual não pode executar código gerenciado ou processar a chamada com êxito.|  
 |HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
-|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_DEADLOCK|O host detectou um deadlock durante o intervalo de espera e escolheu atual `IHostSemaphore` instância como uma vítima de deadlock.|  
+|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread ou uma fibra bloqueada estava esperando.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retorna E_FAIL, o CLR não é mais utilizável no processo. As chamadas subsequentes para métodos de hospedagem retornam HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_DEADLOCK|O host detectou um deadlock durante o intervalo de espera e escolheu a instância de `IHostSemaphore` atual como uma vítima de deadlock.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

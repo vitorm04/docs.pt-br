@@ -6,14 +6,12 @@ helpviewer_keywords:
 - debugging [.NET Framework], using the unmanaged API
 - native API reference [.NET Framework], debugging
 ms.assetid: f0bf70be-42ef-4c46-8709-1694b5f99018
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f6e6f011bf3970dac280f2fed2f3e84c9bae132a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763679"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103306"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Depuração (referência de API não gerenciada)
 A API de depuração permite a um depurador depurar código que é executado no ambiente de tempo de execução de linguagem comum (CLR). O código a ser depurado pode ser qualquer tipo de código suportado pelo CLR.  

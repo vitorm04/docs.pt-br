@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06ce2da435df9458ca59d76fa426becbede2e619
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131867"
 ---
 # <a name="icordebugstackwalk-interface"></a>Interface ICorDebugStackWalk
 Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha de thread.  
@@ -30,10 +28,10 @@ Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha 
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Retorna o contexto do quadro atual no `ICorDebugStackWalk` objeto.|  
-|[Método SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Define o `ICorDebugStackWalk` contexto atual do objeto como um contexto válido para o thread.|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Move o `ICorDebugStackWalk` objeto para o próximo quadro.|  
-|[Método GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Obtém o quadro atual no `ICorDebugStackWalk` objeto.|  
+|[Método GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Retorna o contexto para o quadro atual no objeto `ICorDebugStackWalk`.|  
+|[Método SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Define o contexto atual do objeto de `ICorDebugStackWalk` como um contexto válido para o thread.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Move o objeto `ICorDebugStackWalk` para o próximo quadro.|  
+|[Método GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Obtém o quadro atual no objeto `ICorDebugStackWalk`.|  
   
 ## <a name="remarks"></a>Comentários  
   
@@ -41,11 +39,11 @@ Fornece métodos para colocar os métodos gerenciados, ou quadros, em uma pilha 
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

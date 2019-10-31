@@ -1,17 +1,15 @@
 ---
-title: 'Mitigação: Quadros PNG em objetos de ícone'
+title: 'Mitigação: quadros PNG em objetos de ícone'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85a76681cf6efd649fe366a68d956246334975fe
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28787eff0dd4ce92394a66a936b3d422dfe513bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789978"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126182"
 ---
-# <a name="mitigation-png-frames-in-icon-objects"></a>Mitigação: Quadros PNG em objetos de ícone
+# <a name="mitigation-png-frames-in-icon-objects"></a>Mitigação: quadros PNG em objetos de ícone
 A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> converte com êxito ícones com quadros PNG em objetos <xref:System.Drawing.Bitmap>.  
   
  Em aplicativos direcionados ao .NET Framework 4.5.2 e versões anteriores, o método <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> gera uma exceção <xref:System.ArgumentOutOfRangeException> quando o objeto <xref:System.Drawing.Icon> tem quadros PNG.  

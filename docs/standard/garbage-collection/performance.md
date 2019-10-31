@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141376"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
@@ -99,7 +97,7 @@ A primeira etapa é [determinar se o problema é realmente a coleta de lixo](#Is
 
 <a name="Issue_OOM"></a>
 
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: Uma exceção de falta de memória é lançada
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problema: uma exceção de falta de memória é lançada
 
 Há dois casos legítimos para um <xref:System.OutOfMemoryException> gerenciado ser lançado:
 
@@ -137,7 +135,7 @@ Se você determinar que o problema não é causado pelo heap gerenciado, use a d
 
 <a name="Issue_NotFastEnough"></a>
 
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problema: O coletor de lixo não recupera objetos com rapidez suficiente
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Problema: o coletor de lixo não recupera objetos com rapidez suficiente
 
 Quando ele é exibido como se objetos não estivessem sendo recuperados conforme o esperado para coleta de lixo, determine se há quaisquer referências fortes a esses objetos.
 
@@ -149,7 +147,7 @@ Você também poderá encontrar esse problema caso não tenha havido nenhuma col
 
 <a name="Issue_Fragmentation"></a>
 
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: O heap gerenciado está fragmentado demais
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problema: o heap gerenciado está fragmentado demais
 
 O nível de fragmentação é calculado como a proporção entre o espaço livre e o total de memória alocada para a geração. Para a geração 2, um nível aceitável de fragmentação é de não mais que 20%. Já que a geração 2 pode ficar muito grande, a taxa de fragmentação é mais importante do que o valor absoluto.
 
@@ -179,7 +177,7 @@ Se você acha que não há nenhuma causa legítima para a fragmentação, entre 
 
 <a name="Issue_LongPauses"></a>
 
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: As pausas na coleta de lixo são longas demais
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Problema: as pausas na coleta de lixo são longas demais
 
 A coleta de lixo opera em tempo real flexível, de modo que um aplicativo deve ser capaz de tolerar algumas pausas. Um critério para o tempo real flexível é que 95% das operações deve terminar no prazo.
 
@@ -197,13 +195,13 @@ Você pode usar [notificações de coleta de lixo](../../../docs/standard/garbag
 
 <a name="Issue_Gen0"></a>
 
-### <a name="issue-generation-0-is-too-big"></a>Problema: A geração 0 é grande demais
+### <a name="issue-generation-0-is-too-big"></a>Problema: a geração 0 é grande demais
 
 É provável que a geração 0 tenha um número maior de objetos em um sistema de 64 bits, especialmente quando você usa a coleta de lixo do servidor em vez de uma coleta de lixo de estação de trabalho. Isso ocorre porque o limite para disparar uma coleta de lixo de geração 0 é maior nesses ambientes e as coletas da geração 0 podem ficar muito maiores. O desempenho é aprimorado quando um aplicativo aloca mais memória antes de uma coleta de lixo ser disparada.
 
 <a name="Issue_HighCPU"></a>
 
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: O uso da CPU durante uma coleta de lixo é alto demais
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Problema: o uso da CPU durante uma coleta de lixo é alto demais
 
 O uso da CPU será alto durante uma coleta de lixo. Se uma quantidade significativa de tempo de processamento é gasto em uma coleta de lixo, isso indica que o número de coletas é frequente demais ou que a coleta é longa demais. Uma maior taxa de alocação de objetos no heap gerenciado faz com que a coleta de lixo ocorra com mais frequência. Diminuir a taxa de alocação reduz a frequência de coletas de lixo.
 
@@ -361,7 +359,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Neste exemplo, o tamanho da maior região livre é aproximadamente 24.000 KB (3A980 em hexadecimal). Essa região é menor do que o tamanho requerido pelo coletor de lixo para um segmento.
 
-  - ou -
+  \- ou -
 
 - Use o comando **vmstat**:
 

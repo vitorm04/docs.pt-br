@@ -7,14 +7,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113802"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrando assemblies com o COM
 Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de registro do Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar ou cancelar o registro de um assembly para uso com o COM. Regasm.exe adiciona informações sobre a classe no registro do sistema para que clientes COM possam usar a classe do .NET Framework de forma transparente. A classe <xref:System.Runtime.InteropServices.RegistrationServices> fornece a funcionalidade equivalente.  
@@ -46,6 +44,6 @@ Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de re
 ## <a name="see-also"></a>Consulte também
 
 - [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Como: Referenciar tipos .NET por meio do COM](how-to-reference-net-types-from-com.md)
+- [Como referenciar tipos do .NET com base no COM](how-to-reference-net-types-from-com.md)
 - [Calling a .NET Object](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) (Chamando um objeto .NET)
 - [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

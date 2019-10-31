@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4fa9c5ec35391a0e772e25112f305bfa6e1564
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126897"
 ---
 # <a name="iappdomainbinding-interface"></a>Interface IAppDomainBinding
-Fornece um método que é chamado pelo common language runtime (CLR) para notificar o aplicativo host que um domínio de aplicativo foi criado.  
+Fornece um método que é chamado pelo Common Language Runtime (CLR) para notificar o aplicativo host de que um domínio de aplicativo foi criado.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chamado pelo common language runtime (CLR) para notificar o host que um domínio de aplicativo foi criado.|  
+|[Método OnAppDomain](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Chamado pelo Common Language Runtime (CLR) para notificar o host de que um domínio de aplicativo foi criado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** MSCorEE. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

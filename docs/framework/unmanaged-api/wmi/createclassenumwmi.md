@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a696a6f02f6d3a5afbcb45e5566e4b667739e2c5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798732"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107527"
 ---
 # <a name="createclassenumwmi-function"></a>Função CreateClassEnumWmi
 Retorna um enumerador para todas as classes que satisfaçam os critérios de seleção especificados.
@@ -48,7 +46,7 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parâmetros
 
 `strSuperclass`\
-no Se não `null` estiver ou em branco, especifica o nome de uma classe pai; o enumerador retorna apenas subclasses dessa classe. Se estiver `null` ou em branco e `lFlags` for WBEM_FLAG_SHALLOW, retornará somente classes de nível superior (classes sem classe pai). Se estiver `null` ou em branco e `lFlags` for `WBEM_FLAG_DEEP`, retorna todas as classes no namespace.
+no Se não for `null` ou em branco, especifica o nome de uma classe pai; o enumerador retorna apenas subclasses dessa classe. Se for `null` ou em branco e `lFlags` for WBEM_FLAG_SHALLOW, o retornará somente classes de nível superior (classes sem classe pai). Se for `null` ou em branco e `lFlags` for `WBEM_FLAG_DEEP`, o retornará todas as classes no namespace.
 
 `lFlags`\
 no Uma combinação de sinalizadores que afetam o comportamento dessa função. Os valores a seguir são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
@@ -62,7 +60,7 @@ no Uma combinação de sinalizadores que afetam o comportamento dessa função. 
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | A função retorna um enumerador somente encaminhamento. Normalmente, enumeradores somente de encaminhamento são mais rápidos e usam menos memória do que enumeradores convencionais, mas não permitem que as chamadas [clonem](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | O WMI retém ponteiros para objetos na enumeração até que sejam liberados. |
 
-Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para obter o melhor desempenho.
+Os sinalizadores recomendados são `WBEM_FLAG_RETURN_IMMEDIATELY` e `WBEM_FLAG_FORWARD_ONLY` para melhor desempenho.
 
 `pCtx`\
 no Normalmente, esse valor é `null`. Caso contrário, é um ponteiro para uma instância de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que pode ser usada pelo provedor que está fornecendo as classes solicitadas.
@@ -111,9 +109,9 @@ Se a chamada de função falhar, você poderá obter informações adicionais so
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
-**Cabeçalho:** WMINet_Utils.idl
+**Cabeçalho:** WMINet_Utils. idl
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
