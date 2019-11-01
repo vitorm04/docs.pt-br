@@ -9,14 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6a7f29a95cd3042cda1c508ad7472e9378817ebe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126430"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 O mecanismo de expressões regulares do .NET Framework é um correspondente de expressão regular de retrocesso que incorpora um mecanismo de NFA (Automação Finita Não Determinística) tradicional, como o usado pelo Perl, Python, Emacs e Tcl. Isso o distingue de mecanismos de DFA (Autômato finito determinístico) de expressões regulares puras mais rápidos, porém mais limitados, como os encontrados em awk, egrep ou lex. Também o distingue de NFAs POSIX padronizados, porém mais lentos. A seção a seguir descreve os três tipos de mecanismos de expressões regulares e explica por que as expressões regulares no .NET Framework são implementadas usando um mecanismo de NFA tradicional.  
@@ -124,7 +122,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
   
      Para obter mais informações sobre a correspondência da direita para a esquerda, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
-- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` para lookbehind positivo e `(?<!`*subexpression*`)` para lookbehind negativo. Esse recurso é semelhante ao lookahead, que é discutido neste tópico. Como o mecanismo de expressões regulares possibilita uma correspondência completa da direita para a esquerda, expressões regulares permitem lookbehinds irrestritos. O lookbehind positivo e negativo também pode ser usado para evitar o aninhamento de quantificadores quando a subexpressão aninhada é um superconjunto de uma expressão externa. Expressões regulares com tais quantificadores aninhados geralmente oferecem um desempenho ruim. Por exemplo, o exemplo a seguir verifica se uma cadeia de caracteres começa e termina com um caractere alfanumérico e se qualquer outro caractere na cadeia de caracteres faz parte de um subconjunto maior. Faz parte da expressão regular usada para validar endereços de email. Para obter mais informações, veja [Como: verificar se as cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` para lookbehind positivo e `(?<!`*subexpression*`)` para lookbehind negativo. Esse recurso é semelhante ao lookahead, que é discutido neste tópico. Como o mecanismo de expressões regulares possibilita uma correspondência completa da direita para a esquerda, expressões regulares permitem lookbehinds irrestritos. O lookbehind positivo e negativo também pode ser usado para evitar o aninhamento de quantificadores quando a subexpressão aninhada é um superconjunto de uma expressão externa. Expressões regulares com tais quantificadores aninhados geralmente oferecem um desempenho ruim. Por exemplo, o exemplo a seguir verifica se uma cadeia de caracteres começa e termina com um caractere alfanumérico e se qualquer outro caractere na cadeia de caracteres faz parte de um subconjunto maior. Faz parte da expressão regular usada para validar endereços de email. Para obter mais informações, consulte [Como verificar se cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
@@ -135,7 +133,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
     |-------------|-----------------|  
     |`^`|Começar a correspondência no início da cadeia de caracteres.|  
     |`[A-Z0-9]`|Corresponder a qualquer caractere numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Corresponder a zero ou mais ocorrências de qualquer caractere de palavra ou qualquer um destes caracteres:  -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124;, ou ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>| Coincida com zero ou mais ocorrências de qualquer caractere de palavra ou qualquer um dos seguintes caracteres:-,!, #, $,%, &, ',., \*, +,/, =,?, ^, \`, {,} &#124;, ou ~.|  
     |`(?<=[A-Z0-9])`|Olhar para o caractere anterior, que precisa ser numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|  
     |`$`|Encerrar a correspondência ao final da cadeia de caracteres.|  
   

@@ -12,15 +12,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120609"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 
@@ -74,7 +72,7 @@ Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais po
 
 Alguns padrões de expressões regulares comuns que contêm classes de caracteres positivos são listados na tabela a seguir.  
   
-|Pattern|Descrição|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`[aeiou]`|Corresponder a todas as vogais.|  
 |`[\p{P}\d]`|Corresponder a todos os caracteres de pontuação e dígitos decimais.|  
@@ -87,7 +85,7 @@ Alguns padrões de expressões regulares comuns que contêm classes de caractere
   
  A expressão regular `gr[ae]y\s\S+?[\s|\p{P}]` é definida da seguinte forma:  
   
-|Pattern|Descrição|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`gr`|Corresponder aos caracteres literais “gr”.|  
 |`[ae]`|Corresponder a um "a" ou "e".|  
@@ -102,7 +100,7 @@ Alguns padrões de expressões regulares comuns que contêm classes de caractere
   
  A expressão regular `\b[A-Z]\w*\b` é definida conforme mostrado na tabela a seguir.  
   
-|Pattern|Descrição|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`[A-Z]`|Corresponder a qualquer caractere maiúsculo de A a Z.|  
@@ -137,7 +135,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  Alguns padrões de expressões regulares comuns que contêm grupos de caracteres negativos são listados na tabela a seguir.  
   
-|Pattern|Descrição|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`[^aeiou]`|Corresponder a todos os caracteres, exceto vogais.|  
 |`[^\p{P}\d]`|Corresponder a todos os caracteres, exceto de pontuação e dígitos decimais.|  
@@ -149,7 +147,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  A expressão regular `\bth[^o]\w+\b` é definida conforme mostrado na tabela a seguir.  
   
-|Pattern|Descrição|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`th`|Corresponder aos caracteres literais “th”.|  
@@ -196,7 +194,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  A expressão regular `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` é definida conforme mostrado na tabela a seguir.  
   
-|Pattern|Descrição|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`\p{IsGreek}+`|Corresponder a um ou mais caracteres gregos.|  
@@ -442,7 +440,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - ou -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> \- ou -<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -486,7 +484,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - ou -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- ou -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
