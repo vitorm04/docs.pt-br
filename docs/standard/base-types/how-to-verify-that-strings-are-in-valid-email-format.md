@@ -18,16 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 352808e561a0f59d41f092eb7c70c40a591da5b6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846774"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197589"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se as cadeias de caracteres estão em um formato de email válido
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Como verificar se cadeias de caracteres estão em um formato de email válido
 
 O exemplo a seguir usa uma expressão regular para verificar se uma cadeia de caracteres está no formato de email válido.
 
@@ -52,7 +50,7 @@ O método `IsValidEmail` não realiza a autenticação para validar o endereço 
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-Neste exemplo, o padrão de expressão regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` é interpretado conforme mostrado na legenda a seguir. A expressão regular é compilada usando o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
+Neste exemplo, o padrão de expressão regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` é interpretado conforme mostrado na legenda a seguir. A expressão regular é compilada usando o sinalizador <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
 
 `^`padrão: Inicie a correspondência no início da cadeia de caracteres.
 
@@ -64,7 +62,7 @@ Neste exemplo, o padrão de expressão regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z
 
 `(\.(?!\.))`padrão: se o próximo caractere for um ponto, combine-o. Se ele não for um ponto final, observe o próximo caractere e continue a correspondência. `(?!\.)` é uma asserção lookahead negativa de largura zero que impede dois pontos finais consecutivos de serem exibidos na parte local de um endereço de email.
 
-``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``padrão: se o próximo caractere não for um ponto, corresponda a qualquer caractere de palavra ou um dos seguintes caracteres:-! # $% & ' * +/=? ^ '{}| ~
+``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``padrão: se o próximo caractere não for um ponto, corresponda a qualquer caractere de palavra ou um dos seguintes caracteres:-! # $% & '\*+/=? ^\`{}| ~
 
 ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``padrão: corresponder ao padrão de alternância (um ponto seguido por um período que não seja um ponto ou um de vários caracteres) zero ou mais vezes.
 
