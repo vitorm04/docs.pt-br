@@ -124,11 +124,11 @@ O roll forward da versão de patch é independente dessa configuração e é fei
 
 ### <a name="self-contained-application-servicing"></a>Serviço de aplicativo autocontido
 
-`dotnet publish` agora publica aplicativos autocontidos com uma versão de tempo de execução atendido. Quando você publica um aplicativo autocontido com o SDK do .NET Core 2.1 (v 2.1.300), seu aplicativo inclui a versão mais recente de tempo de execução atendido conhecida por esse SDK. Quando você faz upgrade para o SDK mais recente, publica com a versão mais recente do tempo de execução do .NET Core. Isso se aplica aos tempos de execução do .NET Core 1.0 e posteriores.
+`dotnet publish` agora publica aplicativos autocontidos com uma versão de tempo de execução atendido. Quando você publica um aplicativo autocontido com o SDK do .NET Core 2.1 (v 2.1.300), seu aplicativo inclui a versão mais recente de runtime atendido conhecida por esse SDK. Quando você faz upgrade para o SDK mais recente, publica com a versão mais recente do runtime do .NET Core. Isso se aplica aos runtimes do .NET Core 1.0 e posteriores.
 
 A publicação independente depende das versões de tempo de execução no NuGet.org. Você não precisa ter o tempo de execução de serviço em seu computador.
 
-Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o tempo de execução do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de tempo de execução maior para um aplicativo autocontido. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
+Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o tempo de execução do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de runtime maior para um aplicativo autocontido. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
 
 Veja mais informações em [Efetuar roll forward de tempo de execução de implantação autossuficiente](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pacote de Compatibilidade do Windows
@@ -139,7 +139,7 @@ Ao transmitir código existente do .NET Framework para o .NET Core, você pode u
 
 O .NET Core incorpora uma nova tecnologia de compilador JIT chamada de *compilação em camadas* (também conhecida como *otimização adaptativa*) que pode melhorar significativamente o desempenho. A compilação em camadas é uma configuração opcional.
 
-Uma das tarefas importantes executadas pelo compilador JIT é otimizar a execução de código. No entanto, para caminhos de código pouco usados, o compilador pode gastar mais tempo otimizando o código do que o tempo de execução gasta executando código não otimizado. A compilação em camadas introduz dois estágios na compilação JIT:
+Uma das tarefas importantes executadas pelo compilador JIT é otimizar a execução de código. No entanto, para caminhos de código pouco usados, o compilador pode gastar mais tempo otimizando o código do que o runtime gasta executando código não otimizado. A compilação em camadas introduz dois estágios na compilação JIT:
 
 - Uma **primeira camada**, que gera código o mais rápido possível.
 

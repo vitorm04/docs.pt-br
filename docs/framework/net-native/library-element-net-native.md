@@ -49,7 +49,7 @@ Elemento \<Library>
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Directives>](directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de tempo de execução.|  
+|[\<Directives>](directives-element-net-native.md)|O elemento raiz de um arquivo de diretivas de runtime.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento [\<Directives>](directives-element-net-native.md) pode conter zero, um ou mais elementos `<Library>`.  

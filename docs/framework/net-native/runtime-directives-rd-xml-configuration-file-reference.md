@@ -1,5 +1,5 @@
 ---
-title: Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
+title: Referência do arquivo de configuração de diretivas do runtime (rd.xml)
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
@@ -9,9 +9,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73128136"
 ---
-# <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
+# <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do runtime (rd.xml)
 
-O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de configuração XML que especifica se os elementos do programa designado estão disponíveis para reflexão. Aqui está um exemplo de um arquivo de diretivas de tempo de execução:
+O arquivo de diretivas de runtime (. rd.xml) é um arquivo de configuração XML que especifica se os elementos do programa designado estão disponíveis para reflexão. Aqui está um exemplo de um arquivo de diretivas de runtime:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -31,7 +31,7 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
 </Directives>
 ```
 
-## <a name="the-structure-of-a-runtime-directives-file"></a>A estrutura de um arquivo de diretivas de tempo de execução
+## <a name="the-structure-of-a-runtime-directives-file"></a>A estrutura de um arquivo de diretivas de runtime
 
 O arquivo de diretivas de tempo de execução usa o namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.
 
@@ -78,7 +78,7 @@ Um elemento [Library](library-element-net-native.md) tem um único atributo, `Na
 
 <a name="Directives"></a>
 
-## <a name="runtime-directives-and-policy"></a>Política e diretivas de tempo de execução
+## <a name="runtime-directives-and-policy"></a>Política e diretivas de runtime
 
 O próprio elemento [Application](application-element-net-native.md) e os elementos filhos dos elementos [Library](library-element-net-native.md) e [Application](application-element-net-native.md) expressam a política, ou seja, definem a maneira pela qual o aplicativo pode aplicar reflexão a um elemento do programa. O tipo de política é definido por um atributo do elemento (por exemplo, `Serialize`). O valor de política é definido pelo valor do atributo (por exemplo, `Serialize="Required"`).
 
@@ -90,13 +90,13 @@ A política que pode ser expressa pelos elementos [Application](application-elem
 
 Os elementos [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) dão suporte aos seguintes tipos de política:
 
-- `Activate` Controla o acesso de tempo de execução a construtores para habilitar a ativação de instâncias.
+- `Activate` Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.
 
-- `Browse` Controla as consultas para obter informações sobre elementos do programa, mas não permite qualquer acesso do tempo de execução.
+- `Browse` Controla as consultas para obter informações sobre elementos do programa, mas não permite qualquer acesso do runtime.
 
-- `Dynamic` Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.
+- `Dynamic` Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.
 
-- `Serialize` Controla o acesso ao tempo de execução para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.
+- `Serialize` Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.
 
 - `DataContractSerializer` Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
@@ -128,7 +128,7 @@ As configurações associadas a esses tipos de política são:
 
 - `Required All` Necessita da cadeia de ferramentas para manter todos os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
 
-Por exemplo, o seguinte arquivo de diretivas de tempo de execução define a política para todos os tipos e membros no assembly DataClasses.dll. Ele habilita a reflexão para serialização de todas as propriedades públicas, permite procurar todos os tipos e membros de tipo, permite a ativação de todos os tipos de (devido ao atributo `Dynamic`) e permite a reflexão para todos os tipos e membros públicos.
+Por exemplo, o seguinte arquivo de diretivas de runtime define a política para todos os tipos e membros no assembly DataClasses.dll. Ele habilita a reflexão para serialização de todas as propriedades públicas, permite procurar todos os tipos e membros de tipo, permite a ativação de todos os tipos de (devido ao atributo `Dynamic`) e permite a reflexão para todos os tipos e membros públicos.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -169,7 +169,7 @@ Os elementos [Method](method-element-net-native.md) e [Event](event-element-net-
 
 - `Required` - Necessita que a cadeia de ferramentas mantenha esse membro mesmo se parece ser não usados e habilita a política para ele.
 
-## <a name="runtime-directives-file-semantics"></a>Semântica do arquivo de diretivas de tempo de execução
+## <a name="runtime-directives-file-semantics"></a>Semântica do arquivo de diretivas de runtime
 
 A política pode ser definida simultaneamente para elementos de nível superior e de nível inferior. Por exemplo, a política pode ser definida para um assembly e para alguns dos tipos contidos neste assembly. Se um determinado elemento de nível inferior não for representado, ele herdará a política do pai. Por exemplo, se um elemento `Assembly` estiver presente, mas elementos `Type` não estiverem, a política especificada no elemento `Assembly` se aplica a cada tipo no assembly. Vários elementos também podem aplicar a política ao mesmo elemento de programa. Por exemplo, diferentes elementos [Assembly](assembly-element-net-native.md) podem definir o mesmo elemento de política para o mesmo assembly diferentemente. As seções a seguir explicam como a política para um determinado tipo é resolvida nesses casos.
 
@@ -179,7 +179,7 @@ Quando um elemento é ambíguo, o mecanismo procura correspondências e, se enco
 
 ### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>Se as duas diretivas aplicam a política ao mesmo elemento de programa
 
-Se dois elementos em arquivos de diretivas de tempo de execução diferentes tentarem definir o mesmo tipo de política para o mesmo elemento de programa (como um assembly ou tipo) com valores diferentes, o conflito é resolvido da seguinte maneira:
+Se dois elementos em arquivos de diretivas de runtime diferentes tentarem definir o mesmo tipo de política para o mesmo elemento de programa (como um assembly ou tipo) com valores diferentes, o conflito é resolvido da seguinte maneira:
 
 1. Se o elemento `Excluded` estiver presente, ele tem precedência.
 
@@ -213,7 +213,7 @@ Por exemplo, se um único projeto inclui os dois seguintes arquivos de diretivas
 </Directives>
 ```
 
-No entanto, se duas diretivas em um mesmo arquivo de diretivas de tempo de execução tentarem definir o mesmo tipo de política para o mesmo elemento de programa, a ferramenta de Definição de Esquema de XML exibe uma mensagem de erro.
+No entanto, se duas diretivas em um mesmo arquivo de diretivas de runtime tentarem definir o mesmo tipo de política para o mesmo elemento de programa, a ferramenta de Definição de Esquema de XML exibe uma mensagem de erro.
 
 ### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>Se os elementos filho e pai aplicam o mesmo tipo de política
 

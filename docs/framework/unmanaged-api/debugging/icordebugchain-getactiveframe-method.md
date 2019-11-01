@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744990"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192149"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>Método ICorDebugChain::GetActiveFrame
-Obtém o ativo (ou seja, mais recente) quadro da cadeia.  
+Obtém o quadro ativo (ou seja, mais recente) na cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,15 +35,15 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppFrame`  
- [out] Um ponteiro para o endereço de um objeto ICorDebugFrame que representa o ativo (ou seja, mais recente) quadro da cadeia.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugFrame que representa o quadro ativo (ou seja, mais recente) na cadeia.  
   
 ## <a name="remarks"></a>Comentários  
- Se nenhum quadro de pilha gerenciada estiver disponível, `ppFrame` é definido como null.  
+ Se nenhum quadro de pilha gerenciado estiver disponível, `ppFrame` será definido como nulo.  
   
- Se o quadro ativo não estiver disponível, a chamada será bem-sucedida e `ppFrame` será nulo. Quadros ativa não estará disponíveis para cadeias de iniciada devido ao CHAIN_ENTER_UNMANAGED e para algumas cadeias iniciadas devido ao CHAIN_CLASS_INIT. Consulte a enumeração CorDebugChainReason.  
+ Se o quadro ativo não estiver disponível, a chamada terá sucesso e `ppFrame` será NULL. Os quadros ativos não estarão disponíveis para cadeias iniciadas devido a CHAIN_ENTER_UNMANAGED e para algumas cadeias iniciadas devido a CHAIN_CLASS_INIT. Consulte a enumeração CorDebugChainReason.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
