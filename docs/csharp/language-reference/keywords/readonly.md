@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191864"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454966"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
@@ -33,7 +33,7 @@ A palavra-chave `readonly` é um modificador que pode ser usado em quatro contex
 - Em uma [definição de membro`readonly`](#readonly-member-examples), `readonly` indica que um membro de um `struct` não modifica o estado interno da estrutura.
 - Em um [retorno de método`ref readonly`](#ref-readonly-return-example), o modificador `readonly` indica que o método retorna uma referência e as gravações não são permitidas para essa referência.
 
-Os contextos de `readonly sturct` e `ref readonly` foram adicionados C# em 7,2. `readonly` membros de struct foram adicionados C# em 8,0
+Os contextos de `readonly struct` e `ref readonly` foram adicionados C# em 7,2. `readonly` membros de struct foram adicionados C# em 8,0
 
 ## <a name="readonly-field-example"></a>Exemplo de campo readonly
 
@@ -55,7 +55,7 @@ Você pode atribuir um valor a um campo `readonly` apenas nos seguintes contexto
 Esses contextos de Construtor também são os únicos contextos em que é válido passar um campo de `readonly` como um parâmetro [out](out-parameter-modifier.md) ou [ref](ref.md) .
 
 > [!NOTE]
-> A palavra-chave `readonly` é diferente da palavra-chave [const](const.md). O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser atribuído várias vezes na declaração do campo e em qualquer construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, enquanto um campo `const` é uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de tempo de execução, como no exemplo a seguir:
+> A palavra-chave `readonly` é diferente da palavra-chave [const](const.md). O campo `const` pode ser inicializado apenas na declaração do campo. Um campo `readonly` pode ser atribuído várias vezes na declaração do campo e em qualquer construtor. Portanto, campos `readonly` podem ter valores diferentes dependendo do construtor usado. Além disso, enquanto um campo `const` é uma constante em tempo de compilação, o campo `readonly` pode ser usado para constantes de runtime, como no exemplo a seguir:
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -161,6 +161,6 @@ Você também pode ver as propostas de especificação de idioma:
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [const](const.md)
 - [Campos](../../programming-guide/classes-and-structs/fields.md)
