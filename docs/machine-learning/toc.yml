@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: Classificar sentimentos usando TensorFlow (classificação de textos)
           href: tutorials/text-classification-tf.md
-    - name: Ferramentas
+    - name: Construtor de Modelo e CLI
       items:
-        - name: Prever preços com o Construtor de modelo
+        - name: Prever preços (Construtor de Modelos e regressão)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Analisar sentimentos com a CLI do ML.NET
           href: tutorials/mlnet-cli.md
-        - name: Analisar sentimentos usando o Construtor de modelo e as Razor Pages
+        - name: Analisar sentimentos no Razor Pages (Construtor de Modelos e classificação binária)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Categorizar violações de integridade (Construtor de Modelos e classificação multiclasse)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Programação probabilística com o Infer.NET
