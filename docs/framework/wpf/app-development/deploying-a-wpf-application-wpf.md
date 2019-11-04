@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a1441f0cc3a7ac715a173be12e68c055ce36ff00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421071"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460138"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implantando um aplicativo do WPF (WPF)
 Depois que os aplicativos do Windows Presentation Foundation (WPF) são criados, eles precisam ser implantados. O Windows e o .NET Framework incluem várias tecnologias de implantação. A tecnologia de implantação que é usada para implantar um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende do tipo de aplicativo. Este tópico fornece uma breve visão geral de cada tecnologia de implantação e como elas são usadas em conjunto com os requisitos de implantação de cada tipo de aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -83,7 +83,7 @@ Depois que os aplicativos do Windows Presentation Foundation (WPF) são criados,
   
  As páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] somente marcação podem ser instaladas no sistema de arquivos local usando o XCopy ou o Windows Installer. Essas páginas podem ser exibidas usando o Internet Explorer ou o Windows Explorer.  
   
- Para obter mais informações sobre XAML, consulte [Visão geral de XAML (WPF)](../advanced/xaml-overview-wpf.md).  
+ Para obter mais informações sobre XAML, consulte [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Implantando aplicativos de navegador XAML  

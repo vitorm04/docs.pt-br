@@ -1,18 +1,15 @@
 ---
-title: 'Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
+title: 'Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
 ms.date: 03/30/2017
-dev_langs:
-- csharp
-- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834834"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460881"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: habilitar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
 
 Este tópico descreve como configurar o recurso de Store de instância de fluxo de trabalho SQL para ativar persistência para os fluxos de trabalho e fluxo de trabalho serviços de aplicativos por meio e usando um arquivo de configuração.
 
@@ -29,7 +26,7 @@ Antes de usar o recurso de Store de instância de fluxo de trabalho SQL, crie um
 > [!IMPORTANT]
 > Se você não criar um base de dados de persistência, o recurso de Store de instância de fluxo de trabalho do SQL gerencie uma exceção similar à seguinte quando um host tenta manter fluxos de trabalho.
 >
-> System.Data.SqlClient.SqlException: Não foi possível encontrar o procedimento armazenado ' System. Activities. DurableInstancing. CreateLockOwner '
+> System.Data.SqlClient.SqlException: Não foi possível encontrar o procedimento armazenado “System.Activities.DurableInstancing.CreateLockOwner”
 
 As seguintes seções descrevem como ativar persistência para fluxos de trabalho e serviços de fluxo de trabalho usando a instância Store de fluxo de trabalho SQL. Para obter mais informações sobre as propriedades do repositório de instâncias do fluxo de trabalho SQL, consulte [Propriedades do repositório de instâncias do fluxo de trabalho SQL](properties-of-sql-workflow-instance-store.md).
 
@@ -72,7 +69,7 @@ Você pode ativar persistência para fluxos de trabalho são hospedados que usam
    ```
 
 > [!NOTE]
-> Consulte o [How para: Crie e execute uma etapa de fluxo de trabalho de longa execução @ no__t-0 do [Tutorial introdução](getting-started-tutorial.md) para obter instruções passo a passo.
+> Consulte a etapa [como: criar e executar um fluxo de trabalho de longa execução](how-to-create-and-run-a-long-running-workflow.md) do [tutorial de introdução](getting-started-tutorial.md) para obter instruções passo a passo.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Ativando a persistência para os serviços são hospedados de fluxo de trabalho que usam o WorkflowServiceHost
 
@@ -140,9 +137,8 @@ O `SqlWorkflowInstanceStoreBehavior`, um comportamento de serviço que permite a
                     instanceCompletionAction="DeleteAll | DeleteNothing"
                     instanceLockedExceptionAction="NoRetry | BasicRetry |AggressiveRetry"
                     hostLockRenewalPeriod="00:00:30"
-                    runnableInstancesDetectionPeriod="00:00:05">
+                    runnableInstancesDetectionPeriod="00:00:05" />
 
-        <sqlWorkflowInstanceStore/>
     </behavior>
 </serviceBehaviors>
 ```
@@ -172,6 +168,6 @@ A instalação de [!INCLUDE[netfx_current_short](../../../includes/netfx-current
                     <add name="sqlWorkflowInstanceStore" type="System.Activities.DurableInstancing.SqlWorkflowInstanceStoreElement, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
                 </behaviorExtensions>
             </extensions>
-        <system.serviceModel>
-    <configuration>
+        </system.serviceModel>
+    </configuration>
     ```

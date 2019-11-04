@@ -2,12 +2,12 @@
 title: 'Mitigação: serviços WCF e autenticação de certificado'
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-ms.openlocfilehash: cc8afaf0592a26f7bab15ab94b04ba4a9bfac930
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8c8493efa2c3223809ad87e01e3faddaea859ca8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126125"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457801"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigação: serviços WCF e autenticação de certificado
 
@@ -56,4 +56,4 @@ Você pode contornar esse problema para que um cliente WCF possa se conectar a u
 
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações no tempo de execução](runtime-changes-in-the-net-framework-4-6.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)

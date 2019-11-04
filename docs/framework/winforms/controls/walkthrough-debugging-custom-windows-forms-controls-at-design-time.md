@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Depurando controles do Windows Forms no tempo de design'
+title: 'Instruções passo a passo: depurando controles dos Windows Forms na hora do design'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 824d8a7de8e9e37899cb84d6cee9621f84a5bc65
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015694"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460621"
 ---
-# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Passo a passo: Depurar controles de Windows Forms personalizados em tempo de design
+# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Walkthrough: Depurar controles de Windows Forms personalizados em tempo de design
 
-Quando criar um controle personalizado, frequentemente você achará necessário depurar seu comportamento em tempo de design. Isso será especialmente válido se você estiver criando um designer personalizado para seu controle personalizado. Para obter detalhes, [consulte Passo a passos: Criar um controle de Windows Forms que aproveita os recursos](creating-a-wf-control-design-time-features.md)de tempo de design do Visual Studio.
+Quando criar um controle personalizado, frequentemente você achará necessário depurar seu comportamento em tempo de design. Isso será especialmente válido se você estiver criando um designer personalizado para seu controle personalizado. Para obter detalhes, consulte [Instruções passo a passo: criando um controle dos Windows Forms que aproveite os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md).
 
 Você pode depurar seus controles personalizados usando o Visual Studio, da mesma forma que depuraria qualquer outra classe do .NET Framework. A diferença é que você depurará uma instância separada do Visual Studio que está executando o código do controle personalizado.
 
@@ -111,7 +111,7 @@ Para depurar o comportamento em tempo de design do seu controle personalizado, v
 
 2. Na folha de propriedades **DebugControlLibrary**, selecione a guia **Depurar**.
 
-     Na seção **Iniciar Ação**, selecione **Iniciar programa externo**. Você estará Depurando uma instância separada do Visual Studio, então clique nas reticências (![o botão de reticências (...) no botão janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png)) para procurar o IDE do Visual Studio. O nome do arquivo executável é **devenv. exe**e, se você tiver instalado no local padrão, seu caminho será *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
+     Na seção **Iniciar Ação**, selecione **Iniciar programa externo**. Você estará Depurando uma instância separada do Visual Studio, então clique nas reticências (![botão de reticências (...) no botão janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png)) para procurar o IDE do Visual Studio. O nome do arquivo executável é **devenv. exe**e, se você tiver instalado no local padrão, seu caminho será *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
 
 3. Selecione **OK** para fechar a caixa de diálogo.
 
@@ -143,12 +143,12 @@ Agora, você está pronto para depurar o controle personalizado enquanto ele é 
 
 Agora que você pode depurar seus controles personalizados em tempo de design, há muitas possibilidades para expandir a interação do controle com o IDE do Visual Studio.
 
-- Você pode usar a <xref:System.ComponentModel.Component.DesignMode%2A> propriedade <xref:System.ComponentModel.Component> da classe para escrever o código que será executado somente no momento do design. Para obter detalhes, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.
+- Você pode usar a propriedade <xref:System.ComponentModel.Component.DesignMode%2A> da classe <xref:System.ComponentModel.Component> para escrever o código que será executado somente no momento do design. Para obter detalhes, consulte <xref:System.ComponentModel.Component.DesignMode%2A>.
 
-- Há vários atributos que você pode aplicar a propriedades do controle para manipular a interação do seu controle personalizado com o designer. Você pode encontrar esses atributos no <xref:System.ComponentModel?displayProperty=nameWithType> namespace.
+- Há vários atributos que você pode aplicar a propriedades do controle para manipular a interação do seu controle personalizado com o designer. Você pode encontrar esses atributos no namespace <xref:System.ComponentModel?displayProperty=nameWithType>.
 
-- Você pode escrever um designer personalizado para seu controle personalizado. Isso lhe dá controle total sobre a experiência de design usando a infra-estrutura de designer extensível exposta pelo Visual Studio. Para obter detalhes, [consulte Passo a passos: Criar um controle de Windows Forms que aproveita os recursos](creating-a-wf-control-design-time-features.md)de tempo de design do Visual Studio.
+- Você pode escrever um designer personalizado para seu controle personalizado. Isso lhe dá controle total sobre a experiência de design usando a infra-estrutura de designer extensível exposta pelo Visual Studio. Para obter detalhes, consulte [Instruções passo a passo: criando um controle dos Windows Forms que aproveite os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Passo a passo: Criando um controle de Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
+- [Instruções passo a passo: criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: f4cbb22a3cdd7b966c36f6c8246b13b5c58e056d
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991796"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458488"
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -21,7 +21,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
  Essa técnica cria uma referência forte da origem do evento para o ouvinte de eventos. Normalmente, anexar um manipulador de eventos para um ouvinte faz com que o ouvinte tenha um tempo de vida do objeto que é influenciado pelo tempo de vida do objeto da origem (a menos que o manipulador de eventos seja explicitamente removido). Mas, em determinadas circunstâncias, você pode desejar que o tempo de vida do objeto do ouvinte seja controlado por outros fatores, como se ele pertencesse à árvore visual do aplicativo e não pelo tempo de vida de origem. Sempre que o tempo de vida do objeto de origem ultrapassa o tempo de vida do objeto do ouvinte, o padrão de eventos normal ocasiona um vazamento de memória: o ouvinte é mantido ativo mais que o previsto.  
   
- O padrão de evento fraco é projetado para resolver esse problema de vazamento de memória. O padrão de evento fraco pode ser usado sempre que um ouvinte precisa registrar um evento, mas não sabe explicitamente quando cancelar o registro. O padrão de evento fraco também pode ser usado sempre que o tempo de vida do objeto de origem exceder o tempo de vida útil do objeto do ouvinte. (Nesse caso, o que é *útil* é determinado por você.) O padrão de evento fraco permite que o ouvinte registre e receba o evento sem afetar as características de tempo de vida do objeto do ouvinte. Na verdade, a referência implícita da origem não determina se o ouvinte está qualificado para coleta de lixo. A referência é uma referência fraca, portanto, o nome do padrão de evento fraco e as APIs relacionadas. O ouvinte pode ter o lixo coletado ou destruído, e a origem pode continuar sem reter manipulador referências não colecionáveis do manipulador para um objeto agora destruído.  
+ O padrão de evento fraco é projetado para resolver esse problema de vazamento de memória. O padrão de evento fraco pode ser usado sempre que um ouvinte precisa registrar um evento, mas não sabe explicitamente quando cancelar o registro. O padrão de evento fraco também pode ser usado sempre que o tempo de vida do objeto de origem exceder o tempo de vida útil do objeto do ouvinte. (Nesse caso, o *útil* é determinado por você.) O padrão de evento fraco permite que o ouvinte se registre e receba o evento sem afetar as características de tempo de vida do objeto do ouvinte de qualquer forma. Na verdade, a referência implícita da origem não determina se o ouvinte está qualificado para coleta de lixo. A referência é uma referência fraca, portanto, o nome do padrão de evento fraco e as APIs relacionadas. O ouvinte pode ter o lixo coletado ou destruído, e a origem pode continuar sem reter manipulador referências não colecionáveis do manipulador para um objeto agora destruído.  
   
 ## <a name="who-should-implement-the-weak-event-pattern"></a>Por que implementar o padrão de evento fraco?  
  Implementar o padrão de evento fraco é interessante principalmente para autores de controle. Como um autor de controle, você é basicamente responsável pelo comportamento e confinamento de seu controle e o impacto em aplicativos em que ele é inserido. Isso inclui o comportamento de tempo de vida do objeto de controle, em particular, o tratamento do problema de vazamento de memória descrito.  
@@ -33,9 +33,9 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 |Abordagem|Quando implementar|  
 |--------------|-----------------------|  
-|Usar uma classe existente de gerenciamento de evento fraco|Se o evento que você deseja assinar tiver um correspondente <xref:System.Windows.WeakEventManager>, use o Gerenciador de eventos fraco existente. Para obter uma lista de gerenciadores de eventos fracos que estão incluídos no WPF, consulte a hierarquia <xref:System.Windows.WeakEventManager> de herança na classe. Como os gerenciadores de eventos fracos inclusos são limitados, você provavelmente precisará escolher uma das outras abordagens.|  
-|Usar uma classe de gerenciador de evento fraco genérico|Use um genérico <xref:System.Windows.WeakEventManager%602> quando um existente <xref:System.Windows.WeakEventManager> não estiver disponível, você deseja uma maneira fácil de implementar e não está preocupado com a eficiência. O genérico <xref:System.Windows.WeakEventManager%602> é menos eficiente do que um Gerenciador de eventos fraco existente ou personalizado. Por exemplo, a classe genérica faz mais reflexão para descobrir o evento que recebeu o nome do evento. Além disso, o código para registrar o evento usando o genérico <xref:System.Windows.WeakEventManager%602> é mais detalhado do que usar um existente ou <xref:System.Windows.WeakEventManager>personalizado.|  
-|Criar uma classe de gerenciador de evento fraco personalizado|Crie um personalizado <xref:System.Windows.WeakEventManager> quando um existente <xref:System.Windows.WeakEventManager> não estiver disponível e você quiser a melhor eficiência. Usar um personalizado <xref:System.Windows.WeakEventManager> para assinar um evento será mais eficiente, mas você incorrerá no custo de escrever mais código no início.|  
+|Usar uma classe existente de gerenciamento de evento fraco|Se o evento que você deseja assinar tiver um <xref:System.Windows.WeakEventManager>correspondente, use o Gerenciador de eventos fraco existente. Para obter uma lista de gerenciadores de eventos fracos que estão incluídos no WPF, consulte a hierarquia de herança na classe <xref:System.Windows.WeakEventManager>. Como os gerenciadores de eventos fracos inclusos são limitados, você provavelmente precisará escolher uma das outras abordagens.|  
+|Usar uma classe de gerenciador de evento fraco genérico|Use um <xref:System.Windows.WeakEventManager%602> genérico quando um <xref:System.Windows.WeakEventManager> existente não estiver disponível, você deseja uma maneira fácil de implementar e não está preocupado com a eficiência. O <xref:System.Windows.WeakEventManager%602> genérico é menos eficiente do que um Gerenciador de eventos fraco existente ou personalizado. Por exemplo, a classe genérica faz mais reflexão para descobrir o evento que recebeu o nome do evento. Além disso, o código para registrar o evento usando o <xref:System.Windows.WeakEventManager%602> genérico é mais detalhado do que usar um <xref:System.Windows.WeakEventManager>personalizado ou existente.|  
+|Criar uma classe de gerenciador de evento fraco personalizado|Crie um <xref:System.Windows.WeakEventManager> personalizado quando um <xref:System.Windows.WeakEventManager> existente não estiver disponível e você quiser a melhor eficiência. Usar um <xref:System.Windows.WeakEventManager> personalizado para assinar um evento será mais eficiente, mas você incorrerá no custo de escrever mais código no início.|  
 |Usar um Gerenciador de eventos fraco de terceiros|O NuGet tem [vários gerenciadores de eventos fracos](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) e muitas estruturas do WPF também dão suporte ao padrão (por exemplo, consulte a [documentação do Prism sobre a assinatura de evento menos rígida](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
 
  As seções a seguir descrevem como implementar o padrão de evento fraco.  Para fins desta discussão, o evento que deve ser assinado tem as seguintes características.  
@@ -52,7 +52,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 1. Encontre um gerenciador de evento fraco existente.  
   
-     Para obter uma lista de gerenciadores de eventos fracos que estão incluídos no WPF, consulte a hierarquia <xref:System.Windows.WeakEventManager> de herança na classe.  
+     Para obter uma lista de gerenciadores de eventos fracos que estão incluídos no WPF, consulte a hierarquia de herança na classe <xref:System.Windows.WeakEventManager>.  
   
 2. Use o novo gerenciador de evento fraco em vez da conexão de evento normal.  
   
@@ -84,7 +84,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 1. Use a classe <xref:System.Windows.WeakEventManager%602> genérica em vez da conexão de evento normal.  
   
-     Ao usar <xref:System.Windows.WeakEventManager%602> o para registrar ouvintes de evento, você fornece a origem e <xref:System.EventArgs> o tipo do evento como os parâmetros de tipo para <xref:System.Windows.WeakEventManager%602.AddHandler%2A> a classe e chama, conforme mostrado no código a seguir:  
+     Ao usar <xref:System.Windows.WeakEventManager%602> para registrar ouvintes de eventos, você fornece a origem do evento e o tipo de <xref:System.EventArgs> como os parâmetros de tipo para a classe e chama <xref:System.Windows.WeakEventManager%602.AddHandler%2A>, conforme mostrado no código a seguir:  
   
     ```csharp  
     WeakEventManager<EventSource, SomeEventEventArgs>.AddHandler(source, "SomeEvent", source_SomeEvent);  
@@ -94,7 +94,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
   
 1. Copie o seguinte modelo de classe no seu projeto.  
   
-     Essa classe herda da <xref:System.Windows.WeakEventManager> classe.  
+     Essa classe herda da classe <xref:System.Windows.WeakEventManager>.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
@@ -135,4 +135,4 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Visão geral da vinculação de dados](../data/data-binding-overview.md)
+- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)

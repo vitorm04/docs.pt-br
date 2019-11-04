@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425278"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459776"
 ---
 # <a name="navigation-overview"></a>Visão geral de navegação
 
@@ -742,7 +742,7 @@ Como <xref:System.Windows.Controls.Frame>, navegar para HTML usando <xref:System
 
 ### <a name="navigating-to-custom-objects"></a>Navegar para objetos personalizados
 
-Se você tiver dados armazenados como objetos personalizados, uma maneira de exibir esses dados é criar um <xref:System.Windows.Controls.Page> com conteúdo associado a esses objetos (consulte [visão geral de ligação de dados](../data/data-binding-overview.md)). Se você não precisar da sobrecarga resultante da criação de uma página inteira apenas para exibir os objetos, você poderá navegar diretamente para eles em vez disso.
+Se você tiver dados armazenados como objetos personalizados, uma maneira de exibir esses dados é criar um <xref:System.Windows.Controls.Page> com conteúdo associado a esses objetos (consulte [visão geral de ligação de dados](../../../desktop-wpf/data/data-binding-overview.md)). Se você não precisar da sobrecarga resultante da criação de uma página inteira apenas para exibir os objetos, você poderá navegar diretamente para eles em vez disso.
 
 Considere a classe `Person` que é implementada no código a seguir.
 

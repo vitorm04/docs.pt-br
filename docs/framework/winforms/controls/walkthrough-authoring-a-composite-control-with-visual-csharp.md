@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Criando um controle composto com o Visual C#'
+title: 'Instruções passo a passo: criando um controle composto com o Visual C#'
 ms.date: 03/30/2017
 dev_langs:
 - CSharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c1d9be77550b1255a24120c68f20d25640e0ebdf
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015686"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460635"
 ---
-# <a name="walkthrough-author-a-composite-control-with-c"></a>Passo a passo: Criar um controle composto com C\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>Walkthrough: criar um controle composto com C\#
 
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.
 
@@ -34,10 +34,10 @@ Ao criar um novo projeto, você especifica seu nome para definir o namespace rai
 
      O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecem componentes chamados `ctlClock`, será possível especificar o componente `ctlClock` usando `ctlClockLib.ctlClock.`
 
-2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **UserControl1.cs**e clique em Renomear. Altere o nome de arquivo para `ctlClock.cs`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **UserControl1.cs**e clique em **renomear**. Altere o nome de arquivo para `ctlClock.cs`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.
 
     > [!NOTE]
-    > Por padrão, um controle composto é herdado <xref:System.Windows.Forms.UserControl> da classe fornecida pelo sistema. A <xref:System.Windows.Forms.UserControl> classe fornece a funcionalidade exigida por todos os controles de composição e implementa métodos e propriedades padrão.
+    > Por padrão, um controle composto herda da classe <xref:System.Windows.Forms.UserControl> fornecida pelo sistema. A classe <xref:System.Windows.Forms.UserControl> fornece a funcionalidade exigida por todos os controles de composição e implementa métodos e propriedades padrão.
 
 3. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.
 
@@ -51,11 +51,11 @@ Uma interface visual é uma parte essencial do controle de composição. Essa in
 
 2. Na **Caixa de Ferramentas**, expanda o nó **Controles Comuns** e clique duas vezes em **Rótulo**.
 
-     Um <xref:System.Windows.Forms.Label> controle chamado `label1` é adicionado ao seu controle na superfície do designer.
+     Um controle de <xref:System.Windows.Forms.Label> chamado `label1` é adicionado ao seu controle na superfície do designer.
 
 3. No designer, clique em **label1**. Na janela Propriedades, defina as propriedades a seguir.
 
-    |Propriedade|Altere para|
+    |propriedade|Altere para|
     |--------------|---------------|
     |**Nome**|`lblDisplay`|
     |**Texto**|`(blank space)`|
@@ -66,9 +66,9 @@ Uma interface visual é uma parte essencial do controle de composição. Essa in
 
      Como um <xref:System.Windows.Forms.Timer> é um componente, ele não tem nenhuma representação visual em tempo de execução. Portanto, ele não é exibido com os controles na superfície do designer, mas no **Designer de Componentes** (uma bandeja na parte inferior da superfície do designer).
 
-5. No **Designer de componentes**, clique **em timer1**e defina a <xref:System.Windows.Forms.Timer.Interval%2A> Propriedade como `1000` e a <xref:System.Windows.Forms.Timer.Enabled%2A> Propriedade como `true`.
+5. No **Designer de componentes**, clique em **Timer1**e, em seguida, defina a propriedade <xref:System.Windows.Forms.Timer.Interval%2A> como `1000` e a propriedade <xref:System.Windows.Forms.Timer.Enabled%2A> como `true`.
 
-     A <xref:System.Windows.Forms.Timer.Interval%2A> propriedade controla a frequência com a qual <xref:System.Windows.Forms.Timer> o componente é tique. A cada tique de `timer1`, ele executa o código no evento `timer1_Tick`. O intervalo representa o número de milissegundos entre os tiques.
+     A propriedade <xref:System.Windows.Forms.Timer.Interval%2A> controla a frequência com a qual o componente de <xref:System.Windows.Forms.Timer> é tique. A cada tique de `timer1`, ele executa o código no evento `timer1_Tick`. O intervalo representa o número de milissegundos entre os tiques.
 
 6. No **Designer de Componentes**, clique duas vezes em **timer1** para acessar o evento `timer1_Tick` de `ctlClock`.
 
@@ -94,7 +94,7 @@ Uma interface visual é uma parte essencial do controle de composição. Essa in
 
 ## <a name="add-properties-to-the-composite-control"></a>Adicionar propriedades ao controle composto
 
-O controle de relógio agora encapsula um <xref:System.Windows.Forms.Label> controle e um <xref:System.Windows.Forms.Timer> componente, cada um com seu próprio conjunto de propriedades inerentes. Embora as propriedades individuais desses controles não estejam acessíveis aos próximos usuários do controle, você poderá criar e expor propriedades personalizadas, escrevendo os blocos de código apropriados. No procedimento a seguir, você adicionará propriedades ao controle que permitem ao usuário alterar a cor da tela de fundo e do texto.
+O controle de relógio agora encapsula um controle de <xref:System.Windows.Forms.Label> e um componente <xref:System.Windows.Forms.Timer>, cada um com seu próprio conjunto de propriedades inerentes. Embora as propriedades individuais desses controles não estejam acessíveis aos próximos usuários do controle, você poderá criar e expor propriedades personalizadas, escrevendo os blocos de código apropriados. No procedimento a seguir, você adicionará propriedades ao controle que permitem ao usuário alterar a cor da tela de fundo e do texto.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>Para adicionar uma propriedade ao controle de composição
 
@@ -151,7 +151,7 @@ O controle de relógio agora encapsula um <xref:System.Windows.Forms.Label> cont
 
 ## <a name="test-the-control"></a>Testar o controle
 
-Controles não são aplicativos autônomos; eles devem ser hospedados em um contêiner. Teste o comportamento do tempo de execução do controle e exerça suas propriedades com o **Contêiner de Teste de UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
+Controles não são aplicativos autônomos; eles devem ser hospedados em um contêiner. Teste o comportamento do tempo de execução do controle e exerça suas propriedades com o **Contêiner de Teste de UserControl**. Para obter mais informações, consulte [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md) (Como testar o comportamento de tempo de execução de um UserControl).
 
 ### <a name="to-test-your-control"></a>Para testar o controle
 
@@ -249,11 +249,11 @@ O controle herdado tem uma interface visual que é idêntica ao controle do qual
     > [!NOTE]
     > Se você desejar que os próximos usuários do controle de composição tenham acesso a seus controles internos, declare-os como `public` ou `protected`. Isso permitirá definir e modificar as propriedades de controles contidos no controle de composição usando o código apropriado.
 
-3. Adicione um <xref:System.Windows.Forms.Label> controle ao seu controle composto.
+3. Adicione um controle de <xref:System.Windows.Forms.Label> ao seu controle composto.
 
-4. Usando o mouse, arraste o <xref:System.Windows.Forms.Label> controle imediatamente abaixo da caixa de exibição. Na janela Propriedades, defina as propriedades a seguir.
+4. Usando o mouse, arraste o controle de <xref:System.Windows.Forms.Label> imediatamente abaixo da caixa de exibição. Na janela Propriedades, defina as propriedades a seguir.
 
-    |Propriedade|Configuração|
+    |propriedade|Configuração|
     |--------------|-------------|
     |**Nome**|`lblAlarm`|
     |**Texto**|**Alarme!**|
@@ -326,7 +326,7 @@ Nos procedimentos anteriores, você adicionou propriedades e um controle que hab
 
 2. Adicione um botão no controle. Defina as propriedades do botão da seguinte maneira.
 
-    |Propriedade|Valor|
+    |propriedade|Valor|
     |--------------|-----------|
     |**Nome**|`btnAlarmOff`|
     |**Texto**|**Desabilitar o alarme**|
@@ -351,7 +351,7 @@ Nos procedimentos anteriores, você adicionou propriedades e um controle que hab
 
 ### <a name="use-the-inherited-control-on-a-form"></a>Usar o controle herdado em um formulário
 
-Você pode testar seu controle herdado da mesma maneira que testou o controle de classe `ctlClock`base,: Pressione **F5** para compilar o projeto e executar o controle no **contêiner de teste do UserControl**. Para obter mais informações, confira [Como: Testar o comportamento de tempo de execução de um](how-to-test-the-run-time-behavior-of-a-usercontrol.md)UserControl.
+Você pode testar seu controle herdado da mesma maneira que testou o controle da classe base, `ctlClock`: pressione **F5** para compilar o projeto e executar o controle no **contêiner de teste do UserControl**. Para obter mais informações, consulte [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md) (Como testar o comportamento de tempo de execução de um UserControl).
 
 Para colocar o controle em funcionamento, você precisará hospedá-lo em um formulário. Assim como ocorre com um controle de composição padrão, um controle de composição herdado não pode ser autônomo e deve ser hospedado em um formulário ou em outro contêiner. Já que `ctlAlarmClock` tem uma profundidade maior de funcionalidade, um código adicional é necessário para testá-lo. Neste procedimento, você escreverá um programa simples para testar a funcionalidade de `ctlAlarmClock`. Você escreverá um código para definir e exibir a propriedade `AlarmTime` de `ctlAlarmClock` e testará suas funções inerentes.
 
@@ -369,13 +369,13 @@ Para colocar o controle em funcionamento, você precisará hospedá-lo em um for
 
 6. Clique duas vezes em **ctlAlarmClock** para adicionar uma cópia de `ctlAlarmClock` ao seu formulário.
 
-7. Na **caixa de ferramentas**, localize e clique duas vezes em **DateTimePicker** para <xref:System.Windows.Forms.DateTimePicker> adicionar um controle ao formulário e, em seguida <xref:System.Windows.Forms.Label> , adicione um controle clicando duas vezes em **rótulo**.
+7. Na **caixa de ferramentas**, localize e clique duas vezes em **DateTimePicker** para adicionar um controle de <xref:System.Windows.Forms.DateTimePicker> ao formulário e, em seguida, adicione um controle de <xref:System.Windows.Forms.Label> clicando duas vezes em **rótulo**.
 
 8. Use o mouse para posicionar os controles em um local conveniente do formulário.
 
 9. Defina as propriedades desses controles conforme mostrado a seguir.
 
-    |Controle|Propriedade|Valor|
+    |Controle|propriedade|Valor|
     |-------------|--------------|-----------|
     |`label1`|**Texto**|`(blank space)`|
     ||**Nome**|`lblTest`|
@@ -402,9 +402,9 @@ Para colocar o controle em funcionamento, você precisará hospedá-lo em um for
 
 13. No menu **Depuração**, clique em **Iniciar Depuração**.
 
-     O programa de teste é iniciado. Observe que a hora atual é atualizada no `ctlAlarmClock` controle e que a hora de início é mostrada <xref:System.Windows.Forms.DateTimePicker> no controle.
+     O programa de teste é iniciado. Observe que a hora atual é atualizada no controle de `ctlAlarmClock` e que a hora de início é mostrada no controle de <xref:System.Windows.Forms.DateTimePicker>.
 
-14. Clique no <xref:System.Windows.Forms.DateTimePicker> local em que os minutos da hora são exibidos.
+14. Clique no <xref:System.Windows.Forms.DateTimePicker> em que os minutos da hora são exibidos.
 
 15. Usando o teclado, defina um valor de minutos que tem um minuto a mais que a hora atual mostrada por `ctlAlarmClock`.
 
@@ -417,5 +417,5 @@ Este artigo abordou vários conceitos importantes. Você aprendeu a criar um con
 ## <a name="see-also"></a>Consulte também
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Como: Exibir um controle na caixa de diálogo escolher itens da Toolbox](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Passo a passo: Herdar de um controle de Windows Forms com o VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Passo a passo: herdando um controle dos Windows Forms com Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

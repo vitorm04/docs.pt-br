@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: df9c66d47d1f5e345858ae08b3d926d0e938a255
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038319"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460491"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no .NET no namespace <xref:System.Globalization>.
@@ -97,7 +97,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - Mongol
 
-- Odia
+- Oriá
 
 - Siríaco
 
@@ -149,7 +149,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ### <a name="localizable-user-interface"></a>Interface do usuário localizável
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos usam [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para definir seus [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permite que os desenvolvedores especifiquem uma hierarquia de objetos com um conjunto de propriedades e lógica. O uso principal do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é desenvolver [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, mas pode ser usado para especificar uma hierarquia de objetos Common Language Runtime (CLR). A maioria dos desenvolvedores usa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para especificar a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do seu aplicativo e usar uma linguagem C# de programação, como reagir à interação do usuário.
 
- Do ponto de vista de um recurso, um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] projetado para descrever um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dependente de idioma é um elemento de recurso e, portanto, seu formato de distribuição final deve ser localizável para dar suporte a idiomas internacionais. Como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não pode manipular eventos muitos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplicativos contêm blocos de código para fazer isso. Para obter mais informações, consulte [visão geral de XAML (WPF)](xaml-overview-wpf.md). O código é removido e compilado em binários diferentes quando um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é indexado na forma BAML do XAML. O formulário BAML de arquivos XAML, imagens e outros tipos de objetos de recursos gerenciados são inseridos no assembly de recursos satélite, que pode ser localizado em outros idiomas ou o assembly principal quando a localização não é necessária.
+ Do ponto de vista de um recurso, um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] projetado para descrever um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dependente de idioma é um elemento de recurso e, portanto, seu formato de distribuição final deve ser localizável para dar suporte a idiomas internacionais. Como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não pode manipular eventos muitos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplicativos contêm blocos de código para fazer isso. Para obter mais informações, consulte [visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md). O código é removido e compilado em binários diferentes quando um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é indexado na forma BAML do XAML. O formulário BAML de arquivos XAML, imagens e outros tipos de objetos de recursos gerenciados são inseridos no assembly de recursos satélite, que pode ser localizado em outros idiomas ou o assembly principal quando a localização não é necessária.
 
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos dão suporte a todos os [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]recursos CLR, incluindo tabelas de cadeias de caracteres, imagens e assim por diante.

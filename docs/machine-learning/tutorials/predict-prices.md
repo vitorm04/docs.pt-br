@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um modelo de regressão usando do M
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 298dd4aa97518bcfdb0c5c4f00e0135a328b3b9a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774430"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459167"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: prever preços usando regressão com ML.NET
 
@@ -41,7 +41,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
-1. Baixe os conjuntos de dados [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) e [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) e salve-os na pasta *Data* criada na etapa anterior. Esses conjuntos de dados são usados para treinar o modelo de aprendizado de máquina e, em seguida, avaliar a precisão dele. Esses conjuntos de dados são originalmente do [Conjunto de dados NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. Baixe os conjuntos de dados [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) e [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) e salve-os na pasta *Data* criada na etapa anterior. Esses conjuntos de dados são usados para treinar o modelo de aprendizado de máquina e, em seguida, avaliar a precisão dele. Esses conjuntos de dados são originalmente do [Conjunto de dados NYC TLC Taxi Trip](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em cada um dos arquivos \*.csv e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
 

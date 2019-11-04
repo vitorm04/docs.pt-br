@@ -8,21 +8,21 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962429"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460478"
 ---
 # <a name="element-tree-and-serialization"></a>Árvore de elementos e serialização
-Elementos de programação do WPF geralmente existe em alguma forma de relação de árvore entre si. Por exemplo, um aplicativo de que interface do usuário criada em XAML pode ser conceitualizado como uma árvore de objetos. A árvore de elementos pode ser dividida em duas árvores discretos ainda, às vezes, paralelas: a árvore lógica e a árvore visual. Serialização no WPF envolve salvar o estado dessas duas árvores, bem como o estado do aplicativo e gravá-los em um arquivo, potencialmente, como XAML.  
+Os elementos de programação do WPF geralmente existem em alguma forma de relação de árvore entre si. Por exemplo, uma interface do usuário de aplicativo criada em XAML pode ser conceituada como uma árvore de objetos. A árvore de elementos pode ser dividida ainda em duas árvores discretas, às vezes paralelas: a árvore lógica e a árvore visual. A serialização no WPF envolve salvar o estado dessas duas árvores, bem como o estado do aplicativo, e gravá-lo em um arquivo, potencialmente como XAML.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Árvores no WPF](trees-in-wpf.md)  
  [Limitações de serialização de XamlWriter.Save](serialization-limitations-of-xamlwriter-save.md)  
  [Inicialização de elementos de objeto que não estão em uma árvore de objetos](initialization-for-object-elements-not-in-an-object-tree.md)  
- [Tópicos de instruções](element-tree-and-serialization-how-to-topics.md)  
+ [Tópicos explicativos](element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Markup>  
@@ -39,5 +39,5 @@ Elementos de programação do WPF geralmente existe em alguma forma de relação
   [Eventos](events-wpf.md)  
   [Entrada](input-wpf.md)  
   [Recursos](resources-wpf.md)  
-  [Estilo e modelagem](../controls/styling-and-templating.md)  
+  [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modelo de threading](threading-model.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 6b1a78ec56032d84d9699c2ecda89308779ee2da
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421144"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460921"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
 Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm dados não executáveis, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. O Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados de aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
@@ -52,7 +52,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
 - O arquivo de dados do aplicativo precisa ser localizável (consulte [visão geral de globalização e localização do WPF](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
-> Os arquivos de recursos descritos nesta seção são diferentes dos arquivos de recursos descritos em [recursos XAML](../advanced/xaml-resources.md) e diferentes dos recursos incorporados ou vinculados descritos em [gerenciar recursos do aplicativo (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
+> Os arquivos de recursos descritos nesta seção são diferentes dos arquivos de recursos descritos em [recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) e diferentes dos recursos incorporados ou vinculados descritos em [gerenciar recursos do aplicativo (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Configurando arquivos de recurso  
  No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], um arquivo de recurso é um arquivo que é incluído em um projeto do Microsoft Build Engine (MSBuild) como um item de `Resource`.  

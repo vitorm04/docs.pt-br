@@ -9,34 +9,34 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 32d8aac99d40693e66c7b52a6c7d2c116d2f3baf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aae14299b3959e7d2122991954cc62505d2a19e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770650"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460197"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>Estilos e modelos NavigationWindow
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Navigation.NavigationWindow> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Navigation.NavigationWindow>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="navigationwindow-parts"></a>Partes do NavigationWindow  
- A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Navigation.NavigationWindow> controle.  
+## <a name="navigationwindow-parts"></a>Partes NavigationWindow  
+ A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Navigation.NavigationWindow>.  
   
-|Parte|Tipo|Descrição|  
+|Parte|Digite|Descrição|  
 |-|-|-|  
-|PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|A área de conteúdo.|  
+|PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|A área do conteúdo.|  
   
-## <a name="navigationwindow-states"></a>Estados de NavigationWindow  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Navigation.NavigationWindow> controle.  
+## <a name="navigationwindow-states"></a>Estados da NavigationWindow  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Navigation.NavigationWindow>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
+|InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
+|InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
   
-## <a name="navigationwindow-controltemplate-example"></a>Exemplo de ControlTemplate NavigationWindow  
- Embora este exemplo contém todos os elementos que são definidos na <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Navigation.NavigationWindow> por padrão, os valores específicos devem ser pensados como exemplos.  
+## <a name="navigationwindow-controltemplate-example"></a>Exemplo de ControlTemplate de NavigationWindow  
+ Embora este exemplo contenha todos os elementos que são definidos no <xref:System.Windows.Controls.ControlTemplate> de um <xref:System.Windows.Navigation.NavigationWindow> por padrão, os valores específicos devem ser considerados como exemplos.  
   
  [!code-xaml[ControlTemplateExamples#NavigationWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/navigationwindow.xaml#navigationwindow)]  
   
@@ -53,5 +53,5 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Navigatio
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

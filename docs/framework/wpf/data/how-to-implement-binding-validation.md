@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 245b05d9cfa7ca66dec310bd9a5291def0101d19
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920164"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459115"
 ---
 # <a name="how-to-implement-binding-validation"></a>Como implementar validação de associação
 
@@ -41,9 +41,9 @@ Conforme mostrado no exemplo a seguir, a <xref:System.Windows.Controls.ToolTip> 
 
 Para obter o exemplo completo, consulte [exemplo de validação de associação](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
   
-Observe que, se você não fornecer um <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> personalizado, o modelo de erro padrão será exibido para fornecer comentários visuais ao usuário quando houver um erro de validação. Consulte “Validação de dados” na [Visão geral de associação de dados](data-binding-overview.md) para obter mais informações. Além disso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma regra de validação interna que captura exceções que são geradas durante a atualização da propriedade de origem de associação. Para obter mais informações, consulte <xref:System.Windows.Controls.ExceptionValidationRule>.
+Observe que, se você não fornecer um <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> personalizado, o modelo de erro padrão será exibido para fornecer comentários visuais ao usuário quando houver um erro de validação. Consulte “Validação de dados” na [Visão geral de associação de dados](../../../desktop-wpf/data/data-binding-overview.md) para obter mais informações. Além disso, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma regra de validação interna que captura exceções que são geradas durante a atualização da propriedade de origem de associação. Para obter mais informações, consulte <xref:System.Windows.Controls.ExceptionValidationRule>.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
 - [Tópicos explicativos](data-binding-how-to-topics.md)

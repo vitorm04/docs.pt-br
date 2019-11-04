@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: f92f3c0f8d7b849772f96415d03b0924b1e341a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922519"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459253"
 ---
 # <a name="examples-of-xml-serialization"></a>Exemplos de Serialização XML
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serializando um XmlElement e um XmlNode
 
-Você também pode serializar instâncias de um <xref:System.Xml.XmlElement> ou <xref:System.Xml.XmlNode> de classe, conforme mostrado no exemplo de código a seguir.
+Você também pode serializar instâncias de uma classe <xref:System.Xml.XmlElement> ou <xref:System.Xml.XmlNode>, conforme mostrado no exemplo de código a seguir.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -192,11 +192,11 @@ A instância de classe serializada pode ter a seguinte aparência, se dois itens
         <Item>
             <ItemID>aaa111</ItemID>
             <ItemPrice>34.22</ItemPrice>
-        <Item>
+        </Item>
         <Item>
             <ItemID>bbb222</ItemID>
             <ItemPrice>2.89</ItemPrice>
-        <Item>
+        </Item>
     </ItemsOrders>
 </PurchaseOrder>
 ```
@@ -370,7 +370,7 @@ Neste exemplo, uma classe denominada `PurchaseOrder` é serializada e desseriali
 
 O método `CreatePO` cria os objetos de classe `PurchaseOrder`, `Address` e `OrderedItem`, e define os valores de campo público. O método também cria uma instância da classe <xref:System.Xml.Serialization.XmlSerializer> que é usada para serializar e desserializar `PurchaseOrder`. Observe que o código passa o tipo da classe que será serializada para o construtor. O código também cria um `FileStream` que é usado para gravar o fluxo XML em um documento XML.
 
-O método `ReadPo` é um pouco mais simples. Ele apenas cria os objetos a serem desserializados e lê seus valores. Assim como acontece com o `CreatePo` método, primeiro você precisa criar um <xref:System.Xml.Serialization.XmlSerializer>, passando o tipo da classe a ser desserializado para o construtor. Além disso, <xref:System.IO.FileStream> é necessário para ler o documento XML. Para desserializar objetos, chame o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> com <xref:System.IO.FileStream> como um argumento. O objeto desserializado deve ser convertido em um variável de objeto do tipo `PurchaseOrder`. Em seguida, o código lê os valores de `PurchaseOrder` desserializado. Observe que você também pode ler o arquivo PO.xml que é criado para ver a saída XML real.
+O método `ReadPo` é um pouco mais simples. Ele apenas cria os objetos a serem desserializados e lê seus valores. Assim como com o método `CreatePo`, primeiro você deve construir um <xref:System.Xml.Serialization.XmlSerializer>, passando o tipo da classe a ser desserializada para o construtor. Além disso, <xref:System.IO.FileStream> é necessário para ler o documento XML. Para desserializar objetos, chame o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> com <xref:System.IO.FileStream> como um argumento. O objeto desserializado deve ser convertido em um variável de objeto do tipo `PurchaseOrder`. Em seguida, o código lê os valores de `PurchaseOrder` desserializado. Observe que você também pode ler o arquivo PO.xml que é criado para ver a saída XML real.
 
 ```vb
 Imports System
@@ -771,9 +771,9 @@ A saída XML pode ter a seguinte aparência.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Atributos que controlam a serialização XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
+- [Apresentando a serialização XML](introducing-xml-serialization.md)
+- [Controlando a serialização XML usando atributos](controlling-xml-serialization-using-attributes.md)
+- [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
 - [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
-- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)

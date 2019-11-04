@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: b174a817e82f9a9f123c79581656cc8e7179b435
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929034"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423985"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
 
@@ -26,7 +26,7 @@ O .NET fornece o atributo <xref:System.Runtime.InteropServices.StructLayoutAttri
 
 **✔️ USE** somente `LayoutKind.Explicit` no marshaling quando seu struct nativo também tiver um layout explícito, como uma união.
 
-**❌ EVITE** usar `LayoutKind.Explicit` ao realizar marshaling de estruturas em plataformas que não sejam Windows. O tempo de execução do .NET Core não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o tempo de execução dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
+**❌ Evite** usar `LayoutKind.Explicit` ao realizar o marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .net Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o tempo de execução dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalização do marshaling de campo booliano
 

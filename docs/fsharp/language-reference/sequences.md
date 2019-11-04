@@ -2,19 +2,19 @@
 title: Sequências
 description: Saiba como usar F# sequências, quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos.
 ms.date: 02/19/2019
-ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216765"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424977"
 ---
 # <a name="sequences"></a>Sequências
 
 > [!NOTE]
 > Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
-Uma *sequência* é uma série lógica de elementos de um tipo. As sequências são particularmente úteis quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos. Os elementos de sequência individuais são calculados somente conforme necessário, portanto, uma sequência pode fornecer um melhor desempenho do que uma lista em situações nas quais nem todos os elementos são usados. As `seq<'T>` sequências são representadas pelo tipo, que é um `System.Collections.Generic.IEnumerable`alias para. Portanto, qualquer tipo de .NET Framework que `System.IEnumerable` implemente possa ser usado como uma sequência. O [módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornece suporte para manipulações que envolvem sequências.
+Uma *sequência* é uma série lógica de elementos de um tipo. As sequências são particularmente úteis quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos. Os elementos de sequência individuais são calculados somente conforme necessário, portanto, uma sequência pode fornecer um melhor desempenho do que uma lista em situações nas quais nem todos os elementos são usados. As sequências são representadas pelo tipo de `seq<'T>`, que é um alias para `System.Collections.Generic.IEnumerable`. Portanto, qualquer tipo de .NET Framework que implemente `System.IEnumerable` pode ser usado como uma sequência. O [módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornece suporte para manipulações que envolvem sequências.
 
 ## <a name="sequence-expressions"></a>Expressões de sequência
 
@@ -22,13 +22,13 @@ Uma *expressão de sequência* é uma expressão que é avaliada como uma sequê
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Expressões de sequência são constituídas F# de expressões que produzem valores da sequência. Eles podem usar a `yield` palavra-chave para produzir valores que se tornam parte da sequência.
+Expressões de sequência são constituídas F# de expressões que produzem valores da sequência. Eles podem usar a palavra-chave `yield` para produzir valores que se tornam parte da sequência.
 
 Veja a seguir um exemplo.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-Você pode usar o `->` operador em vez `yield`de, caso em que você pode omitir a `do` palavra-chave, conforme mostrado no exemplo a seguir.
+Você pode usar o operador de `->` em vez de `yield`; nesse caso, você pode omitir a palavra-chave `do`, conforme mostrado no exemplo a seguir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
@@ -36,11 +36,11 @@ O código a seguir gera uma lista de pares de coordenadas junto com um índice e
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
-Uma `if` expressão usada em uma sequência é um filtro. Por exemplo, para gerar uma sequência de apenas números primos, supondo que você tenha `isprime` uma função `int -> bool`do tipo, construa a sequência da seguinte maneira.
+Uma expressão de `if` usada em uma sequência é um filtro. Por exemplo, para gerar uma sequência de apenas números primos, supondo que você tenha uma função `isprime` do tipo `int -> bool`, construa a sequência da seguinte maneira.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-Quando você usa `yield` ou `->` em uma iteração, espera-se que cada iteração gere um único elemento da sequência. Se cada iteração produzir uma sequência de elementos, `yield!`use. Nesse caso, os elementos gerados em cada iteração são concatenados para produzir a sequência final.
+Quando você usa `yield` ou `->` em uma iteração, espera-se que cada iteração gere um único elemento da sequência. Se cada iteração produzir uma sequência de elementos, use `yield!`. Nesse caso, os elementos gerados em cada iteração são concatenados para produzir a sequência final.
 
 Você pode combinar várias expressões juntas em uma expressão de sequência. Os elementos gerados por cada expressão são concatenados juntos. Para obter um exemplo, consulte a seção "exemplos" deste tópico.
 
@@ -50,11 +50,11 @@ O primeiro exemplo usa uma expressão de sequência que contém uma iteração, 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-O código a seguir `yield` usa para criar uma tabela de multiplicação que consiste em tuplas de três elementos, cada um consistindo de dois fatores e do produto.
+O código a seguir usa `yield` para criar uma tabela de multiplicação que consiste em tuplas de três elementos, cada um consistindo de dois fatores e do produto.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
-O exemplo a seguir demonstra o uso `yield!` de para combinar Sequências individuais em uma única sequência final. Nesse caso, as sequências para cada subárvore em uma árvore binária são concatenadas em uma função recursiva para produzir a sequência final.
+O exemplo a seguir demonstra o uso de `yield!` para combinar Sequências individuais em uma única sequência final. Nesse caso, as sequências para cada subárvore em uma árvore binária são concatenadas em uma função recursiva para produzir a sequência final.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1509.fs)]
 
@@ -62,7 +62,7 @@ O exemplo a seguir demonstra o uso `yield!` de para combinar Sequências individ
 
 As sequências dão suporte a muitas das mesmas funções que as [listas](lists.md). As sequências também dão suporte a operações como agrupamento e contagem usando funções de geração de chaves. As sequências também dão suporte a funções mais diversificadas para extração de subsequências.
 
-Muitos tipos de dados, como listas, matrizes, conjuntos e mapas são implicitamente sequências porque são coleções enumeráveis. Uma função que usa uma sequência como um argumento funciona com qualquer um dos tipos F# de dados comuns, além de qualquer .NET Framework tipo de dados que `System.Collections.Generic.IEnumerable<'T>`implementa. Compare isso com uma função que usa uma lista como um argumento, que só pode receber listas. O tipo `seq<'T>` é uma abreviação de tipo `IEnumerable<'T>`para. Isso significa que qualquer tipo que implementa o genérico `System.Collections.Generic.IEnumerable<'T>`, que inclui matrizes, listas, conjuntos e mapas no F#, e também a maioria .NET Framework tipos de coleção, é compatível `seq` com o tipo e pode ser usado sempre que uma sequência é esperada .
+Muitos tipos de dados, como listas, matrizes, conjuntos e mapas são implicitamente sequências porque são coleções enumeráveis. Uma função que usa uma sequência como um argumento funciona com qualquer um dos tipos F# de dados comuns, além de qualquer .NET Framework tipo de dados que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare isso com uma função que usa uma lista como um argumento, que só pode receber listas. O tipo `seq<'T>` é uma abreviação de tipo para `IEnumerable<'T>`. Isso significa que qualquer tipo que implementa o `System.Collections.Generic.IEnumerable<'T>`genérico, que inclui matrizes, listas, conjuntos e mapas no F#, e também a maioria .NET Framework tipos de coleção, é compatível com o tipo de `seq` e pode ser usado sempre que uma sequência é esperada.
 
 ## <a name="module-functions"></a>Funções do módulo
 
@@ -76,7 +76,7 @@ Você pode criar uma sequência vazia usando [Seq. Empty](https://msdn.microsoft
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet9.fs)]
 
-Você pode usar [Seq. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576) para criar uma sequência para a qual os elementos são criados usando uma função que você fornece. Você também fornece um tamanho para a sequência. Essa função é exatamente como [list. init](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83), exceto que os elementos não são criados até que você itere pela sequência. O código a seguir ilustra o uso `Seq.init`de.
+Você pode usar [Seq. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576) para criar uma sequência para a qual os elementos são criados usando uma função que você fornece. Você também fornece um tamanho para a sequência. Essa função é exatamente como [list. init](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83), exceto que os elementos não são criados até que você itere pela sequência. O código a seguir ilustra o uso de `Seq.init`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet10.fs)]
 
@@ -90,7 +90,7 @@ Usando [Seq. ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet11.fs)]
 
-Usando [Seq. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334), você pode criar uma sequência de uma coleção de tipo fraco, como aquelas definidas em `System.Collections`. Essas coleções tipadas de forma fraca têm o `System.Object` tipo de elemento e são enumeradas usando o tipo `System.Collections.Generic.IEnumerable&#96;1` não genérico. O código a seguir ilustra o uso `Seq.cast` de para converter `System.Collections.ArrayList` um em uma sequência.
+Usando [Seq. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334), você pode criar uma sequência de uma coleção de tipo fraco, como aquelas definidas em `System.Collections`. Essas coleções tipadas de forma fraca têm o tipo de elemento `System.Object` e são enumeradas usando o tipo não genérico `System.Collections.Generic.IEnumerable&#96;1`. O código a seguir ilustra o uso de `Seq.cast` para converter um `System.Collections.ArrayList` em uma sequência.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet12.fs)]
 
@@ -98,7 +98,7 @@ Você pode definir sequências infinitas usando a função [Seq. initInfinite](h
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq. desdobrar](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) gera uma sequência de uma função de computação que usa um estado e a transforma para produzir cada elemento subsequente na sequência. O estado é apenas um valor que é usado para computar cada elemento e pode ser alterado conforme cada elemento é computado. O segundo argumento para `Seq.unfold` é o valor inicial usado para iniciar a sequência. `Seq.unfold`usa um tipo de opção para o estado, que permite que você finalize a sequência retornando `None` o valor. O código a seguir mostra dois exemplos de `seq1` sequências `fib`e, que são gerados por `unfold` uma operação. A primeira, `seq1`, é apenas uma sequência simples com números de até 20. O segundo, `fib`,, `unfold` usa para calcular a sequência Fibonacci. Como cada elemento na sequência Fibonacci é a soma dos dois números de Fibonacci anteriores, o valor de estado é uma tupla que consiste nos dois números anteriores na sequência. O valor inicial é `(1,1)`, os dois primeiros números na sequência.
+[Seq. desdobrar](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) gera uma sequência de uma função de computação que usa um estado e a transforma para produzir cada elemento subsequente na sequência. O estado é apenas um valor que é usado para computar cada elemento e pode ser alterado conforme cada elemento é computado. O segundo argumento para `Seq.unfold` é o valor inicial usado para iniciar a sequência. `Seq.unfold` usa um tipo de opção para o estado, que permite que você finalize a sequência retornando o valor de `None`. O código a seguir mostra dois exemplos de sequências, `seq1` e `fib`, que são gerados por uma operação de `unfold`. A primeira, `seq1`, é apenas uma sequência simples com números de até 20. O segundo, `fib`, usa `unfold` para computar a sequência Fibonacci. Como cada elemento na sequência Fibonacci é a soma dos dois números de Fibonacci anteriores, o valor de estado é uma tupla que consiste nos dois números anteriores na sequência. O valor inicial é `(1,1)`, os dois primeiros números na sequência.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -126,32 +126,32 @@ As sequências dão suporte à funcionalidade disponível com listas: [Seq. Exis
 
 [Seq. Filter](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) e [Seq. Choose](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) são como as funções correspondentes que estão disponíveis para listas, exceto que a filtragem e a escolha não ocorrem até que os elementos de sequência sejam avaliados.
 
-[Seq. Truncate](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) cria uma sequência de outra sequência, mas limita a sequência a um número especificado de elementos. [Seq. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) cria uma nova sequência que contém apenas um número especificado de elementos desde o início de uma sequência. Se houver menos elementos na sequência do que você especificar para executar, `Seq.take` o lançará um. `System.InvalidOperationException` A diferença entre `Seq.take` e `Seq.truncate` é que `Seq.truncate` o não produzirá um erro se o número de elementos for menor que o número especificado.
+[Seq. Truncate](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) cria uma sequência de outra sequência, mas limita a sequência a um número especificado de elementos. [Seq. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) cria uma nova sequência que contém apenas um número especificado de elementos desde o início de uma sequência. Se houver menos elementos na sequência do que você especificar a serem adotados, `Seq.take` lançará uma `System.InvalidOperationException`. A diferença entre `Seq.take` e `Seq.truncate` é que `Seq.truncate` não produzirá um erro se o número de elementos for menor que o número especificado.
 
-O código a seguir mostra o comportamento e as diferenças `Seq.truncate` entre `Seq.take`e.
+O código a seguir mostra o comportamento e as diferenças entre `Seq.truncate` e `Seq.take`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet16.fs)]
 
 A saída, antes da ocorrência do erro, é a seguinte.
 
 ```console
-1 4 9 16 25 
-1 4 9 16 25 36 49 64 81 100 
-1 4 9 16 25 
+1 4 9 16 25
+1 4 9 16 25 36 49 64 81 100
+1 4 9 16 25
 1 4 9 16 25 36 49 64 81 100
 ```
 
-Usando [Seq. TakeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92), você pode especificar uma função de predicado (uma função booleana) e criar uma sequência de outra sequência composta desses elementos da sequência original para a qual o predicado é `true`, mas parar antes do primeiro elemento para o qual o predicado retorna `false`. [Seq. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) retorna uma sequência que ignora um número especificado dos primeiros elementos de outra sequência e retorna os elementos restantes. [Seq. SkipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) retorna uma sequência que ignora os primeiros elementos de outra sequência, desde que o predicado `true`retorne e, em seguida, retorne os elementos restantes, começando com o primeiro elemento `false` para o qual o predicado retorna .
+Usando [Seq. TakeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92), você pode especificar uma função de predicado (uma função booleana) e criar uma sequência de outra sequência composta desses elementos da sequência original para a qual o predicado é `true`, mas parar antes do primeiro elemento para que o predicado retorna `false`. [Seq. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) retorna uma sequência que ignora um número especificado dos primeiros elementos de outra sequência e retorna os elementos restantes. [Seq. SkipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) retorna uma sequência que ignora os primeiros elementos de outra sequência, desde que o predicado retorne `true`e, em seguida, retorne os elementos restantes, começando com o primeiro elemento para o qual o predicado retorna `false`.
 
-O exemplo de código a seguir ilustra o comportamento e as `Seq.takeWhile`diferenças `Seq.skip`entre, `Seq.skipWhile`e.
+O exemplo de código a seguir ilustra o comportamento e as diferenças entre `Seq.takeWhile`, `Seq.skip`e `Seq.skipWhile`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet17.fs)]
 
 A saída é a seguinte.
 
 ```console
-1 4 9 
-36 49 64 81 100 
+1 4 9
+36 49 64 81 100
 16 25 36 49 64 81 100
 ```
 
@@ -161,7 +161,7 @@ A saída é a seguinte.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet18.fs)]
 
-O [Seq. Window](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) é como `Seq.pairwise`, exceto que, em vez de produzir uma sequência de tuplas, ele produz uma sequência de matrizes que contêm cópias de elementos adjacentes (uma *janela*) da sequência. Você especifica o número de elementos adjacentes que deseja em cada matriz.
+[Seq. Window](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) é como `Seq.pairwise`, exceto que, em vez de produzir uma sequência de tuplas, ele produz uma sequência de matrizes que contêm cópias de elementos adjacentes (uma *janela*) da sequência. Você especifica o número de elementos adjacentes que deseja em cada matriz.
 
 O exemplo de código a seguir demonstra o uso de `Seq.windowed`. Nesse caso, o número de elementos na janela é 3. O exemplo usa `printSeq`, que é definido no exemplo de código anterior.
 
@@ -172,12 +172,12 @@ A saída é a seguinte.
 Sequência inicial:
 
 ```console
-1.0 1.5 2.0 1.5 1.0 1.5 
+1.0 1.5 2.0 1.5 1.0 1.5
 
-Windows of length 3: 
-[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|] 
+Windows of length 3:
+[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|]
 
-Moving average: 
+Moving average:
 1.5 1.666666667 1.5 1.333333333
 ```
 
@@ -197,7 +197,7 @@ O código a seguir demonstra o uso de `Seq.compareWith`.
 
 No código anterior, apenas o primeiro elemento é computado e examinado, e o resultado é-1.
 
-[Seq. countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) usa uma função que gera um valor chamado *chave* para cada elemento. Uma chave é gerada para cada elemento chamando essa função em cada elemento. `Seq.countBy`em seguida, retorna uma sequência que contém os valores de chave e uma contagem do número de elementos que geraram cada valor da chave.
+[Seq. countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) usa uma função que gera um valor chamado *chave* para cada elemento. Uma chave é gerada para cada elemento chamando essa função em cada elemento. `Seq.countBy` retorna uma sequência que contém os valores de chave e uma contagem do número de elementos que geraram cada valor da chave.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -209,9 +209,9 @@ A saída é a seguinte.
 
 A saída anterior mostra que havia 34 elementos da sequência original que produziram os valores de chave 1, 33 que produziram a chave 2 e 33 valores que produziram a chave 0.
 
-Você pode agrupar elementos de uma sequência chamando [Seq. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy`usa uma sequência e uma função que gera uma chave de um elemento. A função é executada em cada elemento da sequência. `Seq.groupBy`Retorna uma sequência de tuplas, em que o primeiro elemento de cada tupla é a chave e a segunda é uma sequência de elementos que produzem essa chave.
+Você pode agrupar elementos de uma sequência chamando [Seq. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy` usa uma sequência e uma função que gera uma chave de um elemento. A função é executada em cada elemento da sequência. `Seq.groupBy` retorna uma sequência de tuplas, em que o primeiro elemento de cada tupla é a chave e a segunda é uma sequência de elementos que produzem essa chave.
 
-O exemplo de código a seguir mostra o `Seq.groupBy` uso de para particionar a sequência de números de 1 a 100 em três grupos que têm os valores de chave distintos 0, 1 e 2.
+O exemplo de código a seguir mostra o uso de `Seq.groupBy` para particionar a sequência de números de 1 a 100 em três grupos que têm os valores de chave distintos 0, 1 e 2.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet202.fs)]
 
@@ -223,17 +223,17 @@ A saída é a seguinte.
 
 Você pode criar uma sequência que elimina elementos duplicados chamando [Seq. Distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401). Ou você pode usar [Seq. distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), que usa uma função de geração de chaves a ser chamada em cada elemento. A sequência resultante contém elementos da sequência original que têm chaves exclusivas; os elementos posteriores que produzem uma chave duplicada para um elemento anterior são descartados.
 
-O exemplo de código a seguir ilustra o `Seq.distinct`uso de. `Seq.distinct`é demonstrado pela geração de sequências que representam números binários e, em seguida, mostrando que os únicos elementos distintos são 0 e 1.
+O exemplo de código a seguir ilustra o uso de `Seq.distinct`. `Seq.distinct` é demonstrado pela geração de sequências que representam números binários e, em seguida, mostrando que os únicos elementos distintos são 0 e 1.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet22.fs)]
 
-O código a seguir `Seq.distinctBy` demonstra iniciando com uma sequência que contém números negativos e positivos e usando a função de valor absoluto como a função de geração de chaves. A sequência resultante não tem todos os números positivos que correspondem aos números negativos na sequência, pois os números negativos aparecem anteriormente na sequência e, portanto, são selecionados em vez dos números positivos que têm o mesmo absoluto valor ou chave.
+O código a seguir demonstra `Seq.distinctBy` iniciando com uma sequência que contém números negativos e positivos e usando a função de valor absoluto como a função de geração de chaves. A sequência resultante não tem todos os números positivos que correspondem aos números negativos na sequência, pois os números negativos aparecem anteriormente na sequência e, portanto, são selecionados em vez dos números positivos que têm o mesmo absoluto valor ou chave.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet23.fs)]
 
 ## <a name="readonly-and-cached-sequences"></a>Sequências ReadOnly e armazenadas em cache
 
-[Seq. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) cria uma cópia somente leitura de uma sequência. `Seq.readonly`é útil quando você tem uma coleção de leitura/gravação, como uma matriz, e não deseja modificar a coleção original. Essa função pode ser usada para preservar o encapsulamento de dados. No exemplo de código a seguir, um tipo que contém uma matriz é criado. Uma propriedade expõe a matriz, mas em vez de retornar uma matriz, ela retorna uma sequência que é criada a partir da matriz `Seq.readonly`usando.
+[Seq. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) cria uma cópia somente leitura de uma sequência. `Seq.readonly` é útil quando você tem uma coleção de leitura/gravação, como uma matriz, e não deseja modificar a coleção original. Essa função pode ser usada para preservar o encapsulamento de dados. No exemplo de código a seguir, um tipo que contém uma matriz é criado. Uma propriedade expõe a matriz, mas em vez de retornar uma matriz, ela retorna uma sequência que é criada a partir da matriz usando `Seq.readonly`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet24.fs)]
 

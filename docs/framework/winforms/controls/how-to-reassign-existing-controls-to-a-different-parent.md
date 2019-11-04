@@ -1,46 +1,46 @@
 ---
-title: 'Como: Transferir controles existentes a um pai diferente'
+title: Como reatribuir controles existentes a um pai diferente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 84e662e0bd2689115abe128c6442e4462eed3e18
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 1767fcff1742f4ad630b4b996c709b7ded53a129
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987034"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459203"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Como: Reatribuir controles existentes a um pai diferente
 
 Você pode atribuir controles que existem no formulário a um novo controle de contêiner.
 
-1. No Visual Studio, arraste três <xref:System.Windows.Forms.Button> controles da **caixa de ferramentas** para o formulário. Posicione-os próximo entre si, mas deixe-os desalinhados.
+1. No Visual Studio, arraste três controles de <xref:System.Windows.Forms.Button> da **caixa de ferramentas** para o formulário. Posicione-os próximo entre si, mas deixe-os desalinhados.
 
-2. Na **caixa de ferramentas**, clique <xref:System.Windows.Forms.FlowLayoutPanel> no ícone de controle. (Não arraste o ícone para o formulário.)
+2. Na **caixa de ferramentas**, clique no ícone controle de <xref:System.Windows.Forms.FlowLayoutPanel>. (Não arraste o ícone para o formulário.)
 
-3. Mova o ponteiro do mouse para perto dos <xref:System.Windows.Forms.Button> três controles.
+3. Mova o ponteiro do mouse para perto dos três <xref:System.Windows.Forms.Button> controles.
 
-   O ponteiro muda para um cruzado com <xref:System.Windows.Forms.FlowLayoutPanel> o ícone de controle anexado.
+   O ponteiro muda para uma cruz com o ícone de controle de <xref:System.Windows.Forms.FlowLayoutPanel> anexado.
 
 4. Clique e mantenha o botão do mouse pressionado.
 
-5. Arraste o ponteiro do mouse para desenhar a estrutura de <xref:System.Windows.Forms.FlowLayoutPanel> tópicos do controle.
+5. Arraste o ponteiro do mouse para desenhar a estrutura de tópicos do controle de <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-6. Desenhe a estrutura de tópicos em <xref:System.Windows.Forms.Button> torno dos três controles.
+6. Desenhe a estrutura de tópicos em torno dos três controles de <xref:System.Windows.Forms.Button>.
 
 7. Solte o botão do mouse.
 
-   Os três <xref:System.Windows.Forms.Button> controles agora são inseridos <xref:System.Windows.Forms.FlowLayoutPanel> no controle.
+   Os três controles de <xref:System.Windows.Forms.Button> agora são inseridos no controle de <xref:System.Windows.Forms.FlowLayoutPanel>.
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Passo a passo: Organizando controles em Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Passo a passo: Organizando controles em Windows Forms usando Snaplines](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

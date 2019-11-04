@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920262"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460101"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Instruções passo a passo: criar um botão usando o Microsoft Expression Blend
 
@@ -255,7 +255,7 @@ Para concluir, durante o processo de personalização de um modelo de botão, vo
 ## <a name="see-also"></a>Consulte também
 
 - [Criar um botão usando XAML](walkthrough-create-a-button-by-using-xaml.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Visão geral da animação](../graphics-multimedia/animation-overview.md)
 - [Visão geral da pintura com cores sólidas e gradientes](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [Visão geral dos efeitos de bitmap](../graphics-multimedia/bitmap-effects-overview.md)

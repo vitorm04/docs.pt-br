@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8c650ceab57a46cb6dd396111e7a93163a62299f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040873"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424937"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
 Os usuários interagem com aplicativos autônomos do Windows Presentation Foundation (WPF) por meio do Windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autônomos fornecem suas próprias janelas usando a classe <xref:System.Windows.Window>. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os conceitos básicos da criação e gerenciamento de janelas em aplicativos autônomos.  
   
 > [!NOTE]
-> Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedados no navegador, incluindo [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e páginas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] soltas, não fornecem suas próprias janelas. Em vez disso, eles são hospedados no Windows fornecido pelo Windows Internet Explorer. Consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).  
+> Aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedados no navegador, incluindo aplicativos de navegador XAML (XBAPs) e páginas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] flexíveis, não fornecem suas próprias janelas. Em vez disso, eles são hospedados no Windows fornecido pelo Windows Internet Explorer. Consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>A classe Window  
@@ -257,7 +257,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- O manipulador de eventos <xref:System.Windows.Window.Closing> é passado por um <xref:System.ComponentModel.CancelEventArgs>, que implementa a propriedade<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `Boolean`que você define como `true` para impedir que uma janela seja fechada.  
+ O manipulador de eventos <xref:System.Windows.Window.Closing> é passado por um <xref:System.ComponentModel.CancelEventArgs>, que implementa a propriedade <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `Boolean`que você define como `true` para impedir que uma janela seja fechada.  
   
  Se <xref:System.Windows.Window.Closing> não for manipulada ou for manipulada, mas não cancelada, a janela será fechada. Logo antes de uma janela ser realmente fechada, <xref:System.Windows.Window.Closed> é gerado. Neste ponto, uma janela não pode ser impedida de fechar.  
   
@@ -471,7 +471,7 @@ A aparência padrão de uma janela inclui um botão da barra de tarefas, como aq
   
  No entanto, isso fica fora do conjunto de permissões concedidos a aplicativos iniciados pela Internet ou pela zona da intranet local usando o ClickOnce. Consequentemente, os usuários receberão um aviso de segurança do ClickOnce e precisarão elevar o conjunto de permissões do aplicativo para confiança total.  
   
- Além disso, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] não pode mostrar janelas ou caixas de diálogo por padrão. Para obter uma discussão sobre considerações de segurança de aplicativo autônomo, consulte [estratégia de segurança do WPF – segurança da plataforma](../wpf-security-strategy-platform-security.md).  
+ Além disso, XBAPs não podem mostrar janelas ou caixas de diálogo por padrão. Para obter uma discussão sobre considerações de segurança de aplicativo autônomo, consulte [estratégia de segurança do WPF – segurança da plataforma](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Outros tipos de janelas  

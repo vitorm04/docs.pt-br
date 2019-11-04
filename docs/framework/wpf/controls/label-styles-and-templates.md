@@ -9,34 +9,34 @@ helpviewer_keywords:
 - Label [WPF], styles and templates
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
-ms.openlocfilehash: d2bb348fc9c0348fd8093452e022df7ab4e0b3f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3bf4dc629bbb3e4ea21862c6893b001749f4649
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696243"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459396"
 ---
 # <a name="label-styles-and-templates"></a>Estilos e modelos de rótulo
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Label> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.Label>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="label-parts"></a>Partes de rótulo  
- O <xref:System.Windows.Controls.Label> controle não tem nenhuma parte nomeada.  
+ O controle de <xref:System.Windows.Controls.Label> não tem nenhuma parte nomeada.  
   
 ## <a name="label-states"></a>Estados de rótulo  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Label> controle.  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Controls.Label>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
+|InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
+|InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
   
 ## <a name="label-controltemplate-example"></a>Exemplo de ControlTemplate de rótulo  
- O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Label> controle.  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o controle de <xref:System.Windows.Controls.Label>.  
   
  [!code-xaml[ControlTemplateExamples#Label](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/label.xaml#label)]  
   
- O <xref:System.Windows.Controls.ControlTemplate> usa um ou mais dos seguintes recursos.  
+ O <xref:System.Windows.Controls.ControlTemplate> usa um ou mais dos recursos a seguir.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
@@ -48,5 +48,5 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

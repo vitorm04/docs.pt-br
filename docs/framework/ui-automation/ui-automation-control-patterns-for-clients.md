@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039454"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458107"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Padrões de Controle para Clientes de Automação de IU
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039454"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Controles com padrões de variáveis  
- Alguns tipos de controle dão suporte a padrões diferentes, dependendo do Estado ou da maneira como o controle está sendo usado. Exemplos de controles que podem ter padrões de variáveis são exibições de lista (miniaturas, blocos, ícones, lista, detalhes), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] gráficos (pizza, linha, barra, valor da célula com uma fórmula), área do documento do [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](normal, layout da Web, estrutura de tópicos, layout de impressão, visualização de impressão) e Capas do Microsoft Windows Media Player.  
+ Alguns tipos de controle dão suporte a padrões diferentes, dependendo do Estado ou da maneira como o controle está sendo usado. Exemplos de controles que podem ter padrões de variáveis são exibições de lista (miniaturas, blocos, ícones, lista, detalhes), gráficos do Microsoft Excel (pizza, linha, barra, valor de célula com uma fórmula), área de documento do Microsoft Word (normal, layout da Web, estrutura de tópicos, layout de impressão, impressão Visualização) e capas do Microsoft Windows Media Player.  
   
  Controles que implementam tipos de controle personalizados podem ter qualquer conjunto de padrões de controle que são necessários para representar sua funcionalidade.  
   

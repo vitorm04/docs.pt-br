@@ -8,18 +8,18 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f3ab7a11757ba1936aae6e63ace28c4b336292b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981884"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458701"
 ---
 # <a name="resources-wpf"></a>Recursos (WPF)
-Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. WPF dá suporte a diferentes tipos de recursos. Esses recursos são basicamente dois tipos de recursos: Recursos XAML e arquivos de dados do recurso. Exemplos de recursos XAML incluem pincéis e estilos. Arquivos de dados de recurso são arquivos de dados não executáveis que precisa de um aplicativo.  
+Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicativo. O WPF dá suporte a diferentes tipos de recursos. Esses recursos são basicamente dois tipos de recursos: recursos XAML e arquivos de dados de recursos. Exemplos de recursos XAML incluem pincéis e estilos. Os arquivos de dados de recurso são arquivos de dados não executáveis que um aplicativo precisa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Recursos XAML](xaml-resources.md)  
+ [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
  [URIs "pack://" no WPF](../app-development/pack-uris-in-wpf.md)  
   

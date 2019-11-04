@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601978"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422574"
 ---
 # <a name="protected-c-reference"></a>protected (Referência de C#)
 
@@ -49,7 +49,7 @@ Se você alterar os níveis de acesso de `x` e `y` para [private](private.md), o
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#  
 
-Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Consulte também
 
@@ -58,7 +58,7 @@ Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spe
 - [Palavras-chave do C#](index.md)
 - [Modificadores de acesso](access-modifiers.md)
 - [Níveis de acessibilidade](accessibility-levels.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

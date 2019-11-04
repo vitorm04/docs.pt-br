@@ -2,12 +2,12 @@
 title: Configurando o rastreamento para um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353060"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458907"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurando o rastreamento para um fluxo de trabalho
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 Um fluxo de trabalho pode ser exposto como um serviço WCF quando hospedado no host de serviço <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> é uma implementação específica do .NET ServiceHost para um serviço fluxo de trabalho- base. Esta seção explica como configurar o controle para uma execução de serviço do fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] em <xref:System.ServiceModel.Activities.WorkflowServiceHost>. É configurada por um arquivo web.config (para um serviço web hospedado) ou um arquivo App.config (para um serviço hospedado em um aplicativo autônomo, como um aplicativo de console) especificando um comportamento do serviço ou com o código adicionando um comportamento acompanhamento- específico à coleção de <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> para o host serviço.
 
-Para um serviço de fluxo de trabalho hospedado no <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o elemento < `behavior` > em um arquivo de configuração, conforme mostrado no exemplo a seguir.
+Para um serviço de fluxo de trabalho hospedado no <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o elemento <`behavior`> em um arquivo de configuração, conforme mostrado no exemplo a seguir.
 
 ```xml
 <behaviors>
@@ -61,7 +61,7 @@ Para um serviço de fluxo de trabalho hospedado no <xref:System.ServiceModel.Wor
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
 Como alternativa, para um serviço de fluxo de trabalho hospedado em <xref:System.ServiceModel.WorkflowServiceHost>, você pode adicionar a extensão do comportamento de <xref:System.Activities.Tracking.EtwTrackingParticipant> com o código. Para adicionar um participante personalizado de rastreamento, criar uma nova extensão do comportamento e adicioná-lo a <xref:System.ServiceModel.ServiceHost> conforme mostrado no código de exemplo a seguir.
@@ -196,7 +196,7 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
     </system.serviceModel>
     ```
 
-2. Copie o arquivo de manifesto da versão%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man para um local temporário e renomeie-o para Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Copie o arquivo de manifesto de%windir%\Microsoft.NET\Framework\\\<versão mais recente do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man para um local temporário e renomeie-o para Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Altere o GUID no arquivo de manifesto a nova GUID.
 

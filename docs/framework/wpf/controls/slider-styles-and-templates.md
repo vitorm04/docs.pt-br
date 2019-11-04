@@ -9,26 +9,26 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: 385a69ad2bd17ae4c51437245915109aad446bdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 334cb4a44788980262110eadac3305283bb61a92
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970970"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458398"
 ---
 # <a name="slider-styles-and-templates"></a>Estilos e modelos de controle deslizante
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Slider> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.Slider>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="slider-parts"></a>Partes do controle deslizante  
- A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.Slider> controle.  
+ A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Slider>.  
   
-|Parte|Tipo|Descrição|  
+|Parte|Digite|Descrição|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|O contêiner para o elemento que indica a posição do <xref:System.Windows.Controls.Slider>.|  
-|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|O elemento que exibe um intervalo de seleção junto a <xref:System.Windows.Controls.Slider>.  O intervalo de seleção é visível somente se o <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> é de propriedade `true`.|  
+|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|O elemento que exibe um intervalo de seleção ao longo do <xref:System.Windows.Controls.Slider>.  O intervalo de seleção só será visível se a propriedade <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> for `true`.|  
   
 ## <a name="slider-states"></a>Estados do controle deslizante  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Slider> controle.  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Controls.Slider>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |----------------------|---------------------------|-----------------|  
@@ -37,12 +37,12 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Disabled|CommonStates|O controle está desabilitado.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
+|InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
+|InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
   
-## <a name="slider-controltemplate-example"></a>Exemplo de ControlTemplate de controle deslizante  
- O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Slider> controle.  
+## <a name="slider-controltemplate-example"></a>Exemplo de ControlTemplate de Slider  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o controle de <xref:System.Windows.Controls.Slider>.  
   
  [!code-xaml[ControlTemplateExamples#Slider](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
   
@@ -58,5 +58,5 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

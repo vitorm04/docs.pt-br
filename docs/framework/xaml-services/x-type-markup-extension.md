@@ -14,15 +14,15 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: bf62987c61c1d4f6aefce515f79e997b41272b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df0b3fe53cb8f284fc6e2d79a9b2cea86318d701
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622959"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459921"
 ---
 # <a name="xtype-markup-extension"></a>Extensão de marcação x:Type
-Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XAML especificado.  
+Fornece o objeto CLR <xref:System.Type> que é o tipo subjacente para um tipo XAML especificado.  
   
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
   
@@ -40,48 +40,48 @@ Fornece o CLR <xref:System.Type> objeto que é o tipo subjacente para um tipo XA
   
 |||  
 |-|-|  
-|`prefix`|Opcional. Um prefixo que mapeia um namespace XAML não padrão. Especificando um prefixo com frequência não é necessário. Consulte Observações.|  
-|`typeNameValue`|Necessário. Um nome de tipo que pode ser resolvido para o namespace XAML padrão atual; ou especificado prefixo mapeado se `prefix` for fornecido.|  
+|`prefix`|Opcional. Um prefixo que mapeia um namespace XAML não padrão. A especificação de um prefixo frequentemente não é necessária. Consulte Observações.|  
+|`typeNameValue`|Necessário. Um nome de tipo que possa ser resolvido para o namespace XAML padrão atual; ou o prefixo mapeado especificado se `prefix` for fornecido.|  
   
 ## <a name="remarks"></a>Comentários  
- O `x:Type` extensão de marcação tem uma função semelhante para o `typeof()` operador em c# ou o `GetType` operador no Microsoft Visual Basic.  
+ A extensão de marcação de `x:Type` tem uma função semelhante ao operador de C# `typeof()` no ou no operador de `GetType` no Microsoft Visual Basic.  
   
- O `x:Type` extensão de marcação fornece um comportamento de conversão de cadeia de caracteres para propriedades que usam o tipo <xref:System.Type>. A entrada é um tipo XAML. A relação entre o tipo de XAML de entrada e saída CLR <xref:System.Type> é que a saída <xref:System.Type> é o <xref:System.Xaml.XamlType.UnderlyingType%2A> da entrada <xref:System.Xaml.XamlType>, depois de pesquisar o necessário <xref:System.Xaml.XamlType> com base no contexto do esquema XAML e o <xref:System.Windows.Markup.IXamlTypeResolver>fornece o contexto de serviço.  
+ A extensão de marcação de `x:Type` fornece um comportamento de conversão de cadeia de caracteres para propriedades que usam o tipo <xref:System.Type>. A entrada é um tipo XAML. A relação entre o tipo XAML de entrada e o CLR de saída <xref:System.Type> é que a <xref:System.Type> de saída é a <xref:System.Xaml.XamlType.UnderlyingType%2A> do <xref:System.Xaml.XamlType>de entrada, depois de Pesquisar o <xref:System.Xaml.XamlType> necessário com base no contexto de esquema XAML e no serviço de <xref:System.Windows.Markup.IXamlTypeResolver> que o contexto fornece.  
   
- Nos serviços de XAML do .NET Framework, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.Markup.TypeExtension> classe.  
+ Em .NET Framework serviços XAML, o tratamento para essa extensão de marcação é definido pela classe <xref:System.Windows.Markup.TypeExtension>.  
   
- Em implementações de estrutura específica, algumas propriedades que recebem <xref:System.Type> como um valor pode aceitar o nome do tipo diretamente (o valor de cadeia de caracteres do tipo `Name`). No entanto, implementar esse comportamento é um cenário complexo. Para obter exemplos, consulte a seção "Observações de uso do WPF" que segue.  
+ Em implementações de estrutura específicas, algumas propriedades que levam <xref:System.Type> como um valor podem aceitar o nome do tipo diretamente (o valor da cadeia de caracteres do tipo `Name`). No entanto, a implementação desse comportamento é um cenário complexo. Para obter exemplos, consulte a seção "observações de uso do WPF" a seguir.  
   
- A sintaxe de atributo é a sintaxe mais comum usada com essa extensão de marcação. O token da cadeia de caracteres fornecido após a cadeia de caracteres identificadora `x:Type` é atribuído como o valor <xref:System.Windows.Markup.TypeExtension.TypeName%2A> da classe de extensão subjacente <xref:System.Windows.Markup.TypeExtension>. Sob o contexto de esquema XAML padrão para serviços de XAML do .NET Framework, que se baseia em tipos CLR, o valor desse atributo é o <xref:System.Reflection.MemberInfo.Name%2A> do tipo desejado, ou contém que <xref:System.Reflection.MemberInfo.Name%2A> precedido por um prefixo para um namespace XAML não padrão mapeamento.  
+ A sintaxe de atributo é a sintaxe mais comum usada com essa extensão de marcação. O token da cadeia de caracteres fornecido após a cadeia de caracteres identificadora `x:Type` é atribuído como o valor <xref:System.Windows.Markup.TypeExtension.TypeName%2A> da classe de extensão subjacente <xref:System.Windows.Markup.TypeExtension>. No contexto de esquema XAML padrão para .NET Framework serviços XAML, que é baseado em tipos CLR, o valor desse atributo é o <xref:System.Reflection.MemberInfo.Name%2A> do tipo desejado ou contém esse <xref:System.Reflection.MemberInfo.Name%2A> precedido por um prefixo para um mapeamento de namespace XAML não padrão.  
   
- O `x:Type` extensão de marcação pode ser usada na sintaxe de elemento de objeto. Nesse caso, especificando o valor da <xref:System.Windows.Markup.TypeExtension.TypeName%2A> propriedade é necessária para inicializar adequadamente a extensão.  
+ A extensão de marcação de `x:Type` pode ser usada na sintaxe do elemento de objeto. Nesse caso, especificar o valor da propriedade <xref:System.Windows.Markup.TypeExtension.TypeName%2A> é necessário para inicializar corretamente a extensão.  
   
- O `x:Type` extensão de marcação também pode ser usada como um atributo detalhado; no entanto esse uso não é típico: `<object property="{x:Type TypeName=typeNameValue}" .../>`  
+ A extensão de marcação de `x:Type` também pode ser usada como um atributo detalhado; no entanto, esse uso não é típico: `<object property="{x:Type TypeName=typeNameValue}" .../>`  
   
-## <a name="wpf-usage-notes"></a>Notas de uso do WPF  
+## <a name="wpf-usage-notes"></a>Observações de uso do WPF  
   
-### <a name="default-xaml-namespace-and-type-mapping"></a>Namespace XAML e mapeamento de tipo padrão  
- O namespace XAML padrão para a programação do WPF contém a maioria dos tipos de XAML, que você precisa para cenários típicos de XAML; Portanto, você geralmente pode evitar prefixos ao fazer referência a valores de tipo XAML. Você talvez precise mapear um prefixo se você está fazendo referência a um tipo de um assembly personalizado ou para tipos existentes em um assembly do WPF, mas que são de um namespace CLR que não foi mapeado para o namespace XAML padrão. Para obter mais informações sobre prefixos, namespaces XAML e namespaces CLR de mapeamento, consulte [Namespaces de XAML e mapeamento de Namespace para XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+### <a name="default-xaml-namespace-and-type-mapping"></a>Namespace XAML padrão e mapeamento de tipo  
+ O namespace XAML padrão para a programação do WPF contém a maioria dos tipos XAML necessários para cenários típicos de XAML; Portanto, geralmente você pode evitar prefixos ao referenciar valores de tipo XAML. Talvez seja necessário mapear um prefixo se você estiver fazendo referência a um tipo de um assembly personalizado ou a tipos que existem em um assembly do WPF, mas que são de um namespace CLR que não foi mapeado para o namespace XAML padrão. Para obter mais informações sobre prefixos, namespaces XAML e mapeamento de namespaces CLR, consulte [namespaces XAML e mapeamento de namespace para WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-### <a name="type-properties-that-support-typename-as-string"></a>Esse suporte Typename como cadeia de propriedades de tipo  
- WPF dá suporte a técnicas que permitem especificar o valor de algumas propriedades do tipo <xref:System.Type> sem a necessidade de um `x:Type` uso de extensão de marcação. Em vez disso, você pode especificar o valor como uma cadeia de caracteres que nomeia o tipo. Exemplos são <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> e <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Suporte para esse comportamento não é fornecido por meio de extensões de marcação ou conversores de tipo. Em vez disso, isso é implementado por meio de um comportamento de adiamento <xref:System.Windows.FrameworkElementFactory>.  
+### <a name="type-properties-that-support-typename-as-string"></a>Propriedades de tipo que dão suporte a TypeName como cadeia de caracteres  
+ O WPF dá suporte a técnicas que permitem especificar o valor de algumas propriedades do tipo <xref:System.Type> sem a necessidade de um uso de extensão de marcação `x:Type`. Em vez disso, você pode especificar o valor como uma cadeia de caracteres que nomeia o tipo. Exemplos disso são <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> e <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. O suporte para esse comportamento não é fornecido por meio de conversores de tipo ou extensões de marcação. Em vez disso, esse é um comportamento de adiamento implementado por meio de <xref:System.Windows.FrameworkElementFactory>.  
   
- O Silverlight oferece suporte a uma convenção semelhante. Na verdade, o Silverlight não oferece suporte a `{x:Type}` em seu suporte de linguagem XAML e não aceita `{x:Type}` usos fora algumas circunstâncias que destinam-se para dar suporte à migração de XAML do Silverlight do WPF. Portanto, o comportamento de typename como cadeia de caracteres é incorporado a avaliação de propriedade nativa do Silverlight todos os onde um <xref:System.Type> é o valor.  
+ O Silverlight dá suporte a uma convenção semelhante. Na verdade, o Silverlight atualmente não oferece suporte a `{x:Type}` em seu suporte a idioma XAML e não aceita usos de `{x:Type}` fora de algumas circunstâncias que têm o objetivo de oferecer suporte à migração de XAML do WPF-Silverlight. Portanto, o comportamento de TypeName como cadeia de caracteres é interno a toda a avaliação de propriedade nativa do Silverlight, na qual um <xref:System.Type> é o valor.  
   
 ## <a name="xaml-2009"></a>XAML 2009  
- XAML 2009 fornece suporte adicional para tipos de genéricos e modifica o comportamento do recurso do `x:TypeArguments` e `x:Type` oferecer esse suporte.  
+ O XAML 2009 fornece suporte adicional para tipos genéricos e modifica o comportamento do recurso de `x:TypeArguments` e `x:Type` para fornecer esse suporte.  
   
-- `x:TypeArguments` e o elemento de objeto associado para uma instanciação genérica de objeto pode ser em elementos que não seja a raiz. Para obter mais informações, consulte a seção "XAML 2009" [diretiva X:TypeArguments](x-typearguments-directive.md).  
+- `x:TypeArguments` e o elemento de objeto associado para uma instanciação de objeto genérico podem estar em elementos diferentes da raiz. Para obter mais informações, consulte a seção "XAML 2009" da [diretiva x:TypeArguments](x-typearguments-directive.md).  
   
-- XAML 2009 dá suporte a uma sintaxe para especificar a restrição de um tipo genérico na marcação. Isso pode ser usado por `x:TypeArguments`, por `x:Type`, ou os dois recursos em combinação.  
+- O XAML 2009 dá suporte a uma sintaxe para especificar a restrição de um tipo genérico na marcação. Isso pode ser usado por `x:TypeArguments`, por `x:Type`ou por dois recursos em combinação.  
   
-- Implementação de XAML WPF durante o processamento de XAML 2009 para carga também adiciona esse recurso para o comportamento de conversão de tipo implícito para determinadas propriedades de estrutura que usam o tipo <xref:System.Type>.  
+- A implementação XAML do WPF ao processar o XAML 2009 para carga também adiciona esse recurso ao comportamento de conversão de tipo implícito para determinadas propriedades de estrutura que usam o tipo <xref:System.Type>.  
   
- No WPF, você pode usar os recursos do XAML 2009 mas somente para XAML flexível (XAML não é compilado por marcação). Compilado por marcação XAML para WPF e o formato BAML de XAML têm suporte no momento, as palavras-chave do XAML 2009 e os recursos.  
+ No WPF, você pode usar os recursos do XAML 2009, mas apenas para XAML flexível (XAML que não é compilado por marcação). O XAML com compilação de marcação para WPF e a forma de BAML do XAML atualmente não dão suporte às palavras-chave e aos recursos do XAML 2009.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Style>
 - [Estilo e modelagem](../wpf/controls/styling-and-templating.md)
-- [Visão geral de XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Visão geral de XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [Extensões de marcação e XAML do WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -3,22 +3,22 @@ title: Métricas do ML.NET
 description: Entenda as métricas que são usadas para avaliar o desempenho de um modelo do ML.NET
 ms.date: 04/29/2019
 author: natke
-ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: HT
+ms.openlocfilehash: 362f2f382d050ff9ae246af2dffe3e15d22452eb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410527"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460734"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Métricas de avaliação de modelo do ML.NET
 
 ## <a name="metrics-for-binary-classification"></a>Métricas para classificação binária
 
-| Métricas   |      DESCRIÇÃO      |  Procurar |
+| Métricas   |      Descrição      |  Procurar |
 |-----------|-----------------------|-----------|
 | **Precisão** |  [Precisão](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) é a proporção de previsões corretas com um conjunto de dados de teste. É a taxa do número de previsões corretas para o número total de amostras de entrada. Ele funcionará bem apenas se houver um número semelhante de amostras que pertencem a cada classe.| **Quanto mais próximo de 1,00, melhor**. Mas exatamente 1,00 indica um problema (geralmente: vazamento de rótulo/destino, ajuste excessivo ou teste com os dados de treinamento). Quando os dados de teste estão desbalanceados (em que a maioria das instâncias pertence a uma das classes), o conjunto de dados é muito pequeno ou as pontuações se aproximam de 0,00 ou 1,00, a precisão realmente não captura a eficácia de um classificador e você precisa verificar métricas adicionais. |
-| **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) ou *área sob a curva*: Isso está medindo a área sob a curva criada varrendo a taxa de positivos verdadeiros versus a taxa de falsos positivos.  |   **Quanto mais próximo de 1,00, melhor**. Ela deve ser maior que 0.50 para que um modelo seja aceitável; um modelo com AUC de 0.50 ou menos é inútil. |
-| **AUCPR** | [aucPR](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8) ou *área sob a curva de uma curva de recall de precisão*: Medida útil de sucesso da previsão quando as classes estão muito desequilibradas (conjuntos de dados altamente distorcidos). |  **Quanto mais próximo de 1,00, melhor**. Pontuações elevadas próximas de 1,00 mostram que o classificador retorna resultados precisos (precisão alta), além de retornar uma maioria de todos os resultados positivos (recall alto). |
+| **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) ou *área sob a curva*: isso está medindo a área sob a curva criada ao varrer a taxa de verdadeiro positivo versus a taxa de falsos positivos.  |   **Quanto mais próximo de 1,00, melhor**. Ela deve ser maior que 0.50 para que um modelo seja aceitável; um modelo com AUC de 0.50 ou menos é inútil. |
+| **AUCPR** | [aucPR](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8) ou *área sob a curva de uma curva de recall de precisão*: medida útil do sucesso da previsão quando as classes são muito desbalanceadas (conjuntos de valores altamente distorcidos). |  **Quanto mais próximo de 1,00, melhor**. Pontuações elevadas próximas de 1,00 mostram que o classificador retorna resultados precisos (precisão alta), além de retornar uma maioria de todos os resultados positivos (recall alto). |
 | **Pontuação F1** | A [pontuação F1](https://en.wikipedia.org/wiki/F1_score), também conhecida como *pontuação F balanceada ou medida F*. É a média harmônica da precisão e do recall. A pontuação F1 é útil quando você deseja buscar um equilíbrio entre a precisão e o recall.| **Quanto mais próximo de 1,00, melhor**.  Uma pontuação F1 atinge seu melhor valor em 1,00 e o pior em 0,00. Ela informa o nível de precisão do classificador. |
 
 Para obter mais detalhes sobre as métricas de classificação binária, leia os artigos a seguir:
@@ -29,7 +29,7 @@ Para obter mais detalhes sobre as métricas de classificação binária, leia os
 
 ## <a name="metrics-for-multi-class-classification"></a>Métricas para classificação multiclasse
 
-| Métricas   |      DESCRIÇÃO      |  Procurar |
+| Métricas   |      Descrição      |  Procurar |
 |-----------|-----------------------|-----------|
 | **Microprecisão** |  A [precisão de micromédia](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) agrega as contribuições de todas as classes para computar a métrica média. Ela é a fração de instâncias previstas corretamente. A micromédia não leva membros da classe em consideração. Basicamente, cada par de classe de exemplo contribui igualmente para a métrica de precisão. | **Quanto mais próximo de 1,00, melhor**. Em uma tarefa de classificação multiclasse, a microprecisão será preferível à macroprecisão se você suspeitar que há desequilíbrio de classe (ou seja, você pode ter muitos outros exemplos de uma classe do que de outras classes).|
 | **Macroprecisão** | A [precisão de macromédia](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) é a precisão média no nível de classe. A precisão para cada classe é calculada e a macroprecisão é a média desses precisões. Basicamente, cada classe contribui igualmente para a métrica de precisão. Classes minoritárias recebem o mesmo peso que as classes maiores. A métrica de macromédia fornece o mesmo peso a cada classe, não importa quantas instâncias dessa classe o conjunto de dados contém. |  **Quanto mais próximo de 1,00, melhor**.  Ele calcula a métrica de forma independente para cada classe e, em seguida, usa a média (tratando assim todas as classes igualmente) |
@@ -47,12 +47,12 @@ A macroprecisão sobrecarrega equipes pequenas neste exemplo; uma equipe pequena
 
 Para obter mais detalhes sobre métricas de classificação multiclasse, leia os artigos a seguir:
 
-- [Micro e macromédia de precisão, recall e pontuação F](http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
+- [Micro e macromédia de precisão, recall e pontuação F](https://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html)
 - [Classificação multiclasse com conjunto de dados em desequilíbrio](https://towardsdatascience.com/machine-learning-multiclass-classification-with-imbalanced-data-set-29f6a177c1a)
 
 ## <a name="metrics-for-regression"></a>Métricas de regressão
 
-| Métricas   |      DESCRIÇÃO      |  Procurar |
+| Métricas   |      Descrição      |  Procurar |
 |-----------|-----------------------|-----------|
 | **R quadrado** |  O [R2 (R quadrado)](https://en.wikipedia.org/wiki/Coefficient_of_determination) ou *coeficiente de determinação* representa a capacidade de previsão do modelo como um valor entre -inf e 1,00. 1,00 significa que há um ajuste perfeito e o ajuste pode ser arbitrariamente ruim. Portanto, as pontuações podem ser negativas. Uma pontuação de 0,00 significa quo modelo está adivinhando o valor esperado para o rótulo. R2 mede o quão próximos os valores de dados de teste reais são dos valores previstos. | **Quanto mais próximo de 1,00, melhor a qualidade**. No entanto, às vezes, valores de R quadrado baixos (por exemplo, 0,50) podem ser totalmente normais suficientemente bons para seu cenário, enquanto valores de R quadrado altos nem sempre são bons. Convém sempre suspeitar. |
 | **Perda absoluta** |  A [perda absoluta](https://en.wikipedia.org/wiki/Mean_absolute_error) ou *MAE (erro de média absoluta)* mede o quão próximas as previsões são dos resultados reais. É a média de todos os erros do modelo, em que o erro do modelo é a distância absoluta entre o valor de rótulo previsto e o valor de rótulo correto. Esse erro de previsão é calculado para cada registro do conjunto de dados de teste. Por fim, o valor médio é calculado para todos os erros absolutos gravados.| **Quanto mais próximo de 0,00, melhor a qualidade.** Observe que o erro de média absoluta usa a mesma escala que os dados que estão sendo medidos (não são normalizados para o intervalo específico). Perda absoluta, perda quadrática e perda de RMS somente podem ser usadas para fazer comparações entre modelos para o mesmo conjunto de dados ou com um conjunto de dados com uma distribuição de valor de rótulo similar. |
@@ -61,7 +61,7 @@ Para obter mais detalhes sobre métricas de classificação multiclasse, leia os
 
 Para obter mais detalhes sobre as métricas de regressão, leia os artigos a seguir:
 
-- [Análise de regressão: como interpretar R quadrado e avaliar a adequação do ajuste?](https://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit)
+- [Análise de regressão: Como faço para interpretar o R-quadrado e avaliar a imescolha de adequação?](https://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit)
 - [Como interpretar R quadrado na análise de regressão](https://statisticsbyjim.com/regression/interpret-r-squared-regression)
 - [Definição de R quadrado](https://www.investopedia.com/terms/r/r-squared.asp)
 - [Definição de erro médio quadrático](https://www.statisticshowto.datasciencecentral.com/mean-squared-error/)

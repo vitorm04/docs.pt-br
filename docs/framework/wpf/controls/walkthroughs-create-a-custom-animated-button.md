@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920170"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460052"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Instruções passo a passo: criar um botão animado personalizado
 Como seu nome sugere, Windows Presentation Foundation (WPF) é excelente para fazer experiências de apresentação avançadas para os clientes. Essas instruções passo a passo mostram como personalizar a aparência e o comportamento de um botão (incluindo animações). Essa personalização é feita usando um estilo e modelo para que você possa aplicar esse botão personalizado facilmente aos botões em seu aplicativo. A ilustração a seguir mostra o botão personalizado que você criará.
@@ -26,7 +26,7 @@ Como seu nome sugere, Windows Presentation Foundation (WPF) é excelente para fa
  [Criar um botão usando XAML](walkthrough-create-a-button-by-using-xaml.md) Demonstra como criar botões com comportamento personalizado usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e o Visual Studio.
 
 ## <a name="related-sections"></a>Seções relacionadas
- [Estilo e modelagem](styling-and-templating.md) Descreve como estilos e modelos podem ser usados para determinar a aparência e o comportamento de controles.
+ [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Descreve como estilos e modelos podem ser usados para determinar a aparência e o comportamento de controles.
 
  [Visão geral da animação](../graphics-multimedia/animation-overview.md) Descreve como os objetos podem ser animados usando a animação de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e o sistema de tempo.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131509"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458101"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Visão Geral de Padrões de Controle de Automação de Interface de Usuário
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131509"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Usado para controles que podem ser encaixados em um contêiner de encaixe. Por exemplo, barras de ferramentas ou paletas de ferramentas.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Usado para controles que podem ser expandidos ou recolhidos. Por exemplo, itens de menu em um aplicativo, como o menu **arquivo** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Usado para controles que dão suporte à funcionalidade de grade, como dimensionar e mover para uma célula especificada. Por exemplo, o modo de exibição de ícones grandes no Windows Explorer ou tabelas simples sem cabeçalhos no [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Usado para controles que dão suporte à funcionalidade de grade, como dimensionar e mover para uma célula especificada. Por exemplo, o modo de exibição de ícones grandes no Windows Explorer ou tabelas simples sem cabeçalhos no Microsoft Word.|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Usado para controles que têm células dentro de grades. As células individuais devem dar suporte ao padrão GridItem. Por exemplo, cada célula no modo de exibição de detalhes do Microsoft Windows Explorer.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Usado para controles que podem ser invocados, como um botão.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Usado para controles que podem alternar entre as várias representações do mesmo conjunto de informações, dados ou filhos. Por exemplo, um controle de exibição de lista onde os dados estão disponíveis nas exibições de miniatura, bloco, ícone, lista ou detalhes.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131509"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Usado para controles que têm itens individuais em uma lista que rola. Por exemplo, um controle de lista que tem itens individuais na lista de rolagem, como um controle de caixa de combinação.|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Usado para controles de contêiner de seleção. Por exemplo, caixas de listagem e caixas de combinação.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Usado para itens individuais em controles de contêiner de seleção, como caixas de listagem e caixas de combinação.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Usado para controles que têm uma grade, bem como informações de cabeçalho. Por exemplo, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] planilhas.|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Usado para controles que têm uma grade, bem como informações de cabeçalho. Por exemplo, planilhas do Microsoft Excel.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Usado para itens em uma tabela.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Usado para controles de edição e documentos que expõem informações textuais.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Usado para controles em que o estado pode ser alternado. Por exemplo, caixas de seleção e itens de menu verificável.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Usado para controles que podem ser redimensionados, movidos e girados. Usos típicos para o padrão de controle transformar são em designers, formulários, editores gráficos e aplicativos de desenho.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Permite que os clientes obtenham ou definam um valor em controles que não dão suporte a um intervalo de valores. Por exemplo, um seletor de data e hora.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expõe informações específicas ao Windows, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas são janelas de aplicativo de nível superior ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Microsoft Windows Explorer e assim por diante), janelas filho MDI (interface de vários documentos) e caixas de diálogo.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Expõe informações específicas ao Windows, um conceito fundamental para o sistema operacional Microsoft Windows. Exemplos de controles que são janelas são janelas de aplicativo de nível superior (Microsoft Word, Microsoft Windows Explorer e assim por diante), janelas filho MDI (interface de vários documentos) e caixas de diálogo.|  
   
 ## <a name="see-also"></a>Consulte também
 

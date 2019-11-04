@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: a5a91d6a1f046b31ff26e769e9fcc1c7516904c8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0fbb515afbeac05168ced6f0a99f50eb29a5c848
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662597"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459653"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Diretrizes para criar controles com estilo
 
@@ -30,15 +30,15 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
 
 - Modelos de dados.
 
-Para obter uma introdução à definição de estilo e de modelo, consulte [Styling and Templating](styling-and-templating.md) (Definição de estilo e de modelo).
+Para obter uma introdução à definição de estilo e de modelo, consulte [Styling and Templating](../../../desktop-wpf/fundamentals/styles-templates-overview.md) (Definição de estilo e de modelo).
 
 <a name="Before_You_Start__Understanding_Your_Control"></a>
 
-## <a name="before-you-start-understanding-your-control"></a>Antes de começar: Entendendo seu controle
+## <a name="before-you-start-understanding-your-control"></a>Antes de iniciar: entendendo seu controle
 
 Antes de começarmos com essas diretrizes, é importante compreender e definir o uso comum do seu controle. A definição de estilo expõe um conjunto geralmente irregular de possibilidades. Controles que são escritos para serem usados amplamente (em vários aplicativos, por vários desenvolvedores) enfrentam o desafio de que os estilos possam ser usados para fazer alterações de grande alcance na aparência visual do controle. Na verdade, o controle com estilo aplicado nem sempre se parece com a intenção do autor do controle. Como a flexibilidade oferecida pela definição de estilo é essencialmente ilimitada, você pode usar o conceito de uso comum para ajudá-lo a definir o escopo de suas decisões.
 
-Para entender o uso comum do controle, é bom pensar sobre a proposta de valor do controle. O que seu controle tem de especial que nenhum outro controle pode oferecer? O uso comum não implica nenhuma aparência visual específica, mas sim a filosofia do controle e um conjunto razoável de expectativas sobre seu uso. Essa compreensão permite que você faça algumas suposições sobre o modelo de composição e os comportamentos definidos pelo estilo do controle no caso comum. No caso de <xref:System.Windows.Controls.ComboBox>, por exemplo, Noções básicas sobre o uso comum não dará nenhuma informação sobre se um determinado <xref:System.Windows.Controls.ComboBox> tem cantos arredondados, mas ele fornecerá informações sobre o fato de que o <xref:System.Windows.Controls.ComboBox> provavelmente precisa de uma janela pop-up e alguma forma de alternância se ele é aberto.
+Para entender o uso comum do controle, é bom pensar sobre a proposta de valor do controle. O que seu controle tem de especial que nenhum outro controle pode oferecer? O uso comum não implica nenhuma aparência visual específica, mas sim a filosofia do controle e um conjunto razoável de expectativas sobre seu uso. Essa compreensão permite que você faça algumas suposições sobre o modelo de composição e os comportamentos definidos pelo estilo do controle no caso comum. No caso de <xref:System.Windows.Controls.ComboBox>, por exemplo, entender o uso comum não dará nenhuma idéia sobre se um determinado <xref:System.Windows.Controls.ComboBox> tem cantos arredondados, mas fornecerá informações sobre o fato de que a <xref:System.Windows.Controls.ComboBox> provavelmente precisa de uma janela pop-up e de alguma forma de alternando se ele está aberto.
 
 <a name="General_Guidelines"></a>
 
@@ -62,10 +62,10 @@ Para entender o uso comum do controle, é bom pensar sobre a proposta de valor d
 
   A tabela a seguir mostra elementos auxiliares empregados por estilos de controle atualmente (essa lista não está completa):
 
-  |Elemento|Tipo|Usado por|
+  |Elemento|Digite|Usado por|
   |-------------|----------|-------------|
-  |<xref:System.Windows.Controls.ContentPresenter>|Baseado em tipo|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>e assim por diante (todos os <xref:System.Windows.Controls.ContentControl> tipos)|
-  |<xref:System.Windows.Controls.ItemsPresenter>|Baseado em tipo|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>e assim por diante (todos os <xref:System.Windows.Controls.ItemsControl> tipos)|
+  |<xref:System.Windows.Controls.ContentPresenter>|Baseado em tipo|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>e assim por diante (todos os tipos de <xref:System.Windows.Controls.ContentControl>)|
+  |<xref:System.Windows.Controls.ItemsPresenter>|Baseado em tipo|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>e assim por diante (todos os tipos de <xref:System.Windows.Controls.ItemsControl>)|
   |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Nomeado|<xref:System.Windows.Controls.ToolBar>|
   |<xref:System.Windows.Controls.Primitives.Popup>|Autônomo|<xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolTip>e assim por diante|
   |<xref:System.Windows.Controls.Primitives.RepeatButton>|Nomeado|<xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.ScrollBar>e assim por diante|
@@ -79,7 +79,7 @@ Para entender o uso comum do controle, é bom pensar sobre a proposta de valor d
 
   - Os elementos auxiliares nomeados devem ser identificados pelo pai e o pai deve estabelecer qualquer configuração necessária no elemento auxiliar.
 
-  - Os elementos auxiliares baseados em tipo devem estabelecer as configurações necessárias diretamente neles mesmos. Isso pode exigir que o elemento auxiliar consulte o contexto de informações no qual está sendo usado, incluindo seu `TemplatedParent` (o tipo de controle do modelo no qual ele está sendo usado). Por exemplo, <xref:System.Windows.Controls.ContentPresenter> associa automaticamente a `Content` propriedade de seus `TemplatedParent` para sua <xref:System.Windows.Controls.ContentPresenter.Content%2A> propriedade quando usado em um <xref:System.Windows.Controls.ContentControl> tipo derivado.
+  - Os elementos auxiliares baseados em tipo devem estabelecer as configurações necessárias diretamente neles mesmos. Isso pode exigir que o elemento auxiliar consulte o contexto de informações no qual está sendo usado, incluindo seu `TemplatedParent` (o tipo de controle do modelo no qual ele está sendo usado). Por exemplo, <xref:System.Windows.Controls.ContentPresenter> associa automaticamente a propriedade `Content` de seu `TemplatedParent` à sua propriedade <xref:System.Windows.Controls.ContentPresenter.Content%2A> quando usada em um tipo derivado de <xref:System.Windows.Controls.ContentControl>.
 
   - Os elementos auxiliares autônomos não podem ser otimizados dessa maneira porque, por definição, nem o elemento auxiliar nem o pai sabem da existência um do outro.
 
@@ -89,13 +89,13 @@ Para entender o uso comum do controle, é bom pensar sobre a proposta de valor d
 
   1. Associação de propriedade. Exemplo: associação entre <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.
 
-  2. Alterações de propriedade ou animações de propriedade disparadas. Exemplo: o estado de focalização de uma <xref:System.Windows.Controls.Button>.
+  2. Alterações de propriedade ou animações de propriedade disparadas. Exemplo: o estado de foco de um <xref:System.Windows.Controls.Button>.
 
-  3. Comando. Exemplo: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> em <xref:System.Windows.Controls.Primitives.ScrollBar>.
+  3. Comando. Exemplo: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand> / <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> no <xref:System.Windows.Controls.Primitives.ScrollBar>.
 
   4. Elementos auxiliares autônomos. Exemplo: <xref:System.Windows.Controls.Primitives.TabPanel> em <xref:System.Windows.Controls.TabControl>.
 
-  5. Tipos auxiliares baseados em tipo. Exemplo: <xref:System.Windows.Controls.ContentPresenter> na <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> em <xref:System.Windows.Controls.Slider>.
+  5. Tipos auxiliares baseados em tipo. Exemplo: <xref:System.Windows.Controls.ContentPresenter> em <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Primitives.TickBar> em <xref:System.Windows.Controls.Slider>.
 
   6. Elementos auxiliares nomeados. Exemplo: <xref:System.Windows.Controls.TextBox> em <xref:System.Windows.Controls.ComboBox>.
 
@@ -119,7 +119,7 @@ Para entender o uso comum do controle, é bom pensar sobre a proposta de valor d
 
 ## <a name="theme-considerations"></a>Considerações de tema
 
-- **Os estilos de tema devem tentar ter uma semântica de propriedade consistente em todos os temas, mas não oferecer garantia**. Como parte de sua documentação, o controle deve ter um documento que descreva a semântica de propriedade do controle, ou seja, o "significado" de uma propriedade para um controle. Por exemplo, o <xref:System.Windows.Controls.ComboBox> controle deve definir o significado do <xref:System.Windows.Controls.Control.Background%2A> propriedade dentro de <xref:System.Windows.Controls.ComboBox>. Os estilos padrão do controle devem tentar seguir a semântica definida nesse documento para todos os temas. Por outro lado, os usuários do controle devem estar cientes de que a semântica de propriedade pode mudar de tema para tema. Em alguns casos, uma determinada propriedade talvez não possa ser expressada sob as restrições visuais exigidas por um tema específico. (O tema clássico, por exemplo, não tem uma borda única para que `Thickness` possa ser aplicado a vários controles.)
+- **Os estilos de tema devem tentar ter uma semântica de propriedade consistente em todos os temas, mas não oferecer garantia**. Como parte de sua documentação, o controle deve ter um documento que descreva a semântica de propriedade do controle, ou seja, o "significado" de uma propriedade para um controle. Por exemplo, o controle <xref:System.Windows.Controls.ComboBox> deve definir o significado da propriedade <xref:System.Windows.Controls.Control.Background%2A> dentro de <xref:System.Windows.Controls.ComboBox>. Os estilos padrão do controle devem tentar seguir a semântica definida nesse documento para todos os temas. Por outro lado, os usuários do controle devem estar cientes de que a semântica de propriedade pode mudar de tema para tema. Em alguns casos, uma determinada propriedade talvez não possa ser expressada sob as restrições visuais exigidas por um tema específico. (O tema clássico, por exemplo, não tem uma borda única para que `Thickness` possa ser aplicado a vários controles.)
 
 - **Os estilos de tema não precisam ter a semântica de gatilho consistente entre todos os temas**. O comportamento exposto por um estilo de controle por meio de gatilhos ou animações pode variar de tema para tema. Os usuários do controle devem estar cientes de que um controle não vai necessariamente empregar o mesmo mecanismo para atingir um determinado comportamento em todos os temas. Um tema, por exemplo, pode usar uma animação para expressar o comportamento de focalização enquanto outro tema usa um gatilho. Isso pode resultar em inconsistências na preservação do comportamento em controles personalizados. (Alterar a propriedade de tela de fundo, por exemplo, poderá não afetar o estado de focalização do controle se esse estado for expresso usando um gatilho. No entanto, se o estado de focalização for implementado usando uma animação, alterar a tela de fundo poderá interromper irremediavelmente a animação e, portanto, a transição de estado.)
 
@@ -127,5 +127,5 @@ Para entender o uso comum do controle, é bom pensar sobre a proposta de valor d
 
 ## <a name="see-also"></a>Consulte também
 
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Visão geral da criação de controle](control-authoring-overview.md)

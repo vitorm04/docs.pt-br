@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 31ab511bf88bfbc2134029564ecbf70aa75119d7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 3c6f29ead76f2e835d78a15d782e1aaca28942c8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659844"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423276"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegados genéricos (Guia de Programação em C#)
-Um [delegado](../../language-reference/keywords/delegate.md) pode definir seus próprios parâmetros de tipo. O código que referencia o delegado genérico pode especificar o argumento de tipo para criar um tipo construído fechado, assim como quando uma classe genérica é instanciada ou quando um método genérico é chamado, conforme mostrado no exemplo a seguir:  
+Um [delegado](../../language-reference/builtin-types/reference-types.md) pode definir seus próprios parâmetros de tipo. O código que referencia o delegado genérico pode especificar o argumento de tipo para criar um tipo construído fechado, assim como quando uma classe genérica é instanciada ou quando um método genérico é chamado, conforme mostrado no exemplo a seguir:  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  
   

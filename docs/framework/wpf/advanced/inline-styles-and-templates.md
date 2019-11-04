@@ -7,15 +7,15 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b88ef444283f4e1e85009c59b39f3cc41965d300
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050999"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460010"
 ---
 # <a name="inline-styles-and-templates"></a>Estilos e modelos embutidos
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece <xref:System.Windows.Style> objetos e objetos de modelo (<xref:System.Windows.FrameworkTemplate> subclasses) como uma maneira de definir a aparência visual de um elemento em recursos, para que eles podem ser usados várias vezes. Por esse motivo, os atributos no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que levam os tipos <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate> quase sempre fazem referências de recurso a estilos e modelos existentes em vez de definir novos embutidos.  
+o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece objetos de <xref:System.Windows.Style> e objetos de modelo (subclasses de<xref:System.Windows.FrameworkTemplate>) como uma maneira de definir a aparência visual de um elemento em recursos, para que eles possam ser usados várias vezes. Por esse motivo, os atributos em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que usam os tipos <xref:System.Windows.Style> e <xref:System.Windows.FrameworkTemplate> quase sempre fazem referências de recursos a estilos e modelos existentes, em vez de definir novos itens embutidos.  
   
 ## <a name="limitations-of-inline-styles-and-templates"></a>Limitações de estilos e modelos embutidos  
  No [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], as propriedades de estilo e modelo podem ser definidas tecnicamente de uma de duas maneiras. Você pode usar a sintaxe de atributo para fazer referência a um estilo que foi definido dentro de um recurso, por exemplo `<`*objeto*`Style="{StaticResource`*myResourceKey*`}" .../>`. Ou então, você pode usar a sintaxe de elemento da propriedade para definir um estilo embutido, por exemplo:  
@@ -24,7 +24,7 @@ ms.locfileid: "62050999"
   
  `<` *objeto* `.Style>`  
   
- `<` `Style`  `.../>`  
+ `<` `Style``.../>`  
   
  `</` *objeto* `.Style>`  
   
@@ -34,8 +34,8 @@ ms.locfileid: "62050999"
   
  Geralmente não haverá nenhum motivo para definir um estilo ou modelo embutido, mesmo se você pretender usar esse estilo ou modelo nesse local. A maioria dos elementos que podem assumir um estilo ou modelo também dão suporte a uma propriedade e um modelo de conteúdo. Se você estivesse usando uma árvore lógica criada por meio de estilos ou modelagem, seria ainda mais fácil preencher somente essa propriedade de conteúdo com os elementos filho equivalentes na marcação direta. Isso ignoraria totalmente os mecanismos de estilo e modelo.  
   
- Outras sintaxes habilitadas por extensões de marcação que retornam um objeto também são possíveis para os estilos e modelos. Duas destas extensões têm possíveis cenários incluem [TemplateBinding](templatebinding-markup-extension.md) e <xref:System.Windows.Data.Binding>.  
+ Outras sintaxes habilitadas por extensões de marcação que retornam um objeto também são possíveis para os estilos e modelos. Duas dessas extensões que têm possíveis cenários incluem [TemplateBinding](templatebinding-markup-extension.md) e <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Estilo e modelagem](../controls/styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 7730ab452e227b11e5a9dd69cdabec51f333ce4f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: d8cfae2fb47876d578c51e5f4acdfe0c31e752fe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321192"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460908"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Como configurar o Visual Studio para depurar um aplicativo de navegador XAML para chamar um serviço Web
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] executado em uma área restrita de segurança de confiança parcial que é restrita ao conjunto de permissões da zona da Internet. Esse conjunto de permissões restringe as chamadas de serviço Web para apenas os serviços Web que estão localizados no site de origem do aplicativo [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. No entanto, quando um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é depurado do Visual Studio 2005, não é considerado ter o mesmo site de origem que o serviço Web referenciado. Isso faz com que exceções de segurança sejam geradas quando o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] tenta chamar o serviço Web. No entanto, um projeto do Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] pode ser configurado para simular ter o mesmo site de origem que o serviço Web que ele chama durante a depuração. Isso permite que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] chame com segurança o serviço Web sem causar exceções de segurança.
+Os aplicativos de navegador XAML (XBAPs) são executados em uma área de segurança de confiança parcial que é restrita ao conjunto de permissões de zona da Internet. Esse conjunto de permissões restringe as chamadas de serviço Web somente a serviços Web que estão localizados no site de origem do aplicativo XBAP. No entanto, quando um XBAP é depurado do Visual Studio 2005, não é considerado ter o mesmo site de origem que o serviço Web referenciado. Isso faz com que as exceções de segurança sejam geradas quando o XBAP tentar chamar o serviço Web. No entanto, um projeto do WPF (aplicativo de navegador XAML) do Visual Studio 2005 pode ser configurado para simular ter o mesmo site de origem que o serviço Web que ele chama durante a depuração. Isso permite que o XBAP chame com segurança o serviço Web sem causar exceções de segurança.
 
 ## <a name="configuring-visual-studio"></a>Configurando o Visual Studio
- Para configurar o Visual Studio 2005 para depurar um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que chama um serviço Web:
+ Para configurar o Visual Studio 2005 para depurar um XBAP que chama um serviço Web:
 
 1. Com um projeto selecionado no **Gerenciador de Soluções**, no menu **Projeto**, clique em **Propriedades**.
 
@@ -38,7 +38,7 @@ ms.locfileid: "72321192"
      `-debug c:\example.xbap`
 
 > [!NOTE]
-> Essa é a configuração padrão para soluções criadas com o modelo de projeto do Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)].
+> Essa é a configuração padrão para soluções que são criadas com o modelo de projeto do WPF (aplicativo de navegador XAML) do Visual Studio 2005.
 
 1. Com um projeto selecionado no **Gerenciador de Soluções**, no menu **Projeto**, clique em **Propriedades**.
 
@@ -50,7 +50,7 @@ ms.locfileid: "72321192"
 
      O valor da *URL* para o parâmetro **-DEBUGSECURITYZONEURL** é a URL para o local que você deseja simular como sendo o site de origem do seu aplicativo.
 
- Como exemplo, considere um [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] que usa um serviço Web com a seguinte URL:
+ Como exemplo, considere um aplicativo de navegador XAML (XBAP) que usa um serviço Web com a seguinte URL:
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 

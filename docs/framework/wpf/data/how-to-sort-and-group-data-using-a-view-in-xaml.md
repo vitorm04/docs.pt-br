@@ -1,5 +1,5 @@
 ---
-title: 'Como: Classificar e agrupar dados usando uma exibição em XAML'
+title: Como organizar e agrupar dados usando uma exibição em XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e42dd330535f71438ab7af3dca9d078e9dfd8d3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020732"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460120"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Como: Classificar e agrupar dados usando uma exibição em XAML
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Como organizar e agrupar dados usando uma exibição em XAML
 Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Modos de exibição permitem as funcionalidades de agrupamento, classificação, filtragem e a noção de um item atual.  
   
 ## <a name="example"></a>Exemplo  
@@ -32,7 +32,7 @@ Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INC
   
  [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- Para associações a dados XML definidos em um <xref:System.Windows.Data.XmlDataProvider> recurso, preceda o nome XML com um símbolo @.  
+ Para associações a dados XML definidos em um recurso <xref:System.Windows.Data.XmlDataProvider>, preceda o nome XML com um símbolo @.  
   
  [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
@@ -42,5 +42,5 @@ Este exemplo mostra como criar uma exibição de uma coleção de dados em [!INC
 
 - <xref:System.Windows.Data.CollectionViewSource>
 - [Obter a exibição padrão de uma coleta de dados](how-to-get-the-default-view-of-a-data-collection.md)
-- [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
+- [Tópicos explicativos](data-binding-how-to-topics.md)

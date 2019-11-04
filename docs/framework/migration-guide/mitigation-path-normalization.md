@@ -2,12 +2,12 @@
 title: 'Mitigação: normalização do caminho'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126220"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457889"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigação: normalização do caminho
 Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho no .NET Framework foi alterada.  
@@ -26,7 +26,7 @@ Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normaliza�
 ## <a name="the-changes"></a>As alterações  
  Começando com os aplicativos direcionados ao .NET Framework 4.6.2, a normalização do caminho foi alterada nos seguintes aspectos:  
   
-- O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.  
+- O runtime atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.  
   
 - A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).  
   
@@ -61,4 +61,4 @@ Aplicativos destinados ao .NET Framework 4.6.1 ou anteriores, mas que são execu
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)

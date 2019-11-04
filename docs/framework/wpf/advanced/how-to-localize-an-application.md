@@ -1,5 +1,5 @@
 ---
-title: 'Como: Localizar um aplicativo'
+title: Como localizar um aplicativo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913678"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460842"
 ---
-# <a name="how-to-localize-an-application"></a>Como: Localizar um aplicativo
+# <a name="how-to-localize-an-application"></a>Como localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
   
 > [!NOTE]
 > A ferramenta LocBaml não é um aplicativo pronto para produção. Ela é apresentada como um exemplo que usa algumas das APIs de localização e ilustra como você pode escrever uma ferramenta de localização.  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>Visão geral  
+## <a name="overview"></a>Visão Geral  
  Esta discussão oferece uma abordagem passo a passo para a localização de um aplicativo. Primeiro, você preparará o seu aplicativo para que o texto que será convertido possa ser extraído. Depois que o texto for traduzido, você o mesclará em uma nova cópia do aplicativo original.  
   
 <a name="Requirements"></a>   
@@ -36,7 +36,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Criar um aplicativo de exemplo  
- Nesta etapa, você preparará seu aplicativo para a localização. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Nos exemplos, é fornecido um exemplo de HelloApp que será usado para os exemplos de código nesta discussão. Se você quiser usar este exemplo, baixe os [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arquivos do exemplo da [ferramenta LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
+ Nesta etapa, você preparará seu aplicativo para a localização. Nos exemplos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], é fornecido um exemplo de HelloApp que será usado para os exemplos de código nesta discussão. Se você quiser usar este exemplo, baixe os arquivos de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do exemplo da [ferramenta LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 1. Desenvolva seu aplicativo até o ponto em que você deseja iniciar a localização.  
   
@@ -44,9 +44,9 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
      `<UICulture>en-US</UICulture>`  
   
-3. Adicione UIDs aos seus [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos. Os Uids são usados para controlar as alterações nos arquivos e para identificar os itens que devem ser traduzidos. Para adicionar UIDs aos seus arquivos, execute **updateuid** em seu arquivo de projeto:  
+3. Adicione UIDs a seus arquivos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Os Uids são usados para controlar as alterações nos arquivos e para identificar os itens que devem ser traduzidos. Para adicionar UIDs aos seus arquivos, execute **updateuid** em seu arquivo de projeto:  
   
-     **msbuild -t:updateuid helloapp.csproj**  
+     **MSBuild-t:updateuid HelloApp. csproj**  
   
      Para verificar se você não tem UIDs ausentes ou duplicados, execute **checkuid**:  
   
@@ -81,7 +81,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilar a ferramenta LocBaml  
   
-1. Todos os arquivos necessários para compilar LocBaml estão localizados nos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exemplos. Baixe os C# arquivos do [exemplo da ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Todos os arquivos necessários para compilar LocBaml estão localizados nos exemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Baixe os C# arquivos do [exemplo da ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2. Na linha de comando, execute o arquivo de projeto (locbaml.csproj) para compilar a ferramenta:  
   
@@ -91,21 +91,21 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 4. As opções que você pode especificar ao executar a LocBaml são as seguintes:  
   
-    - **Parse** ou **-p:** Analisa arquivos BAML, recursos ou DLL para gerar um arquivo. csv ou. txt.  
+    - **Parse** ou **-p:** analisa os arquivos BAML, Resources ou dll para gerar um arquivo. csv ou. txt.  
   
-    - **gerar** ou **-g:** Gera um arquivo binário localizado usando um arquivo traduzido.  
+    - **Generate** ou **-g:** gera um arquivo binário localizado usando um arquivo traduzido.  
   
-    - **out** ou **-o** {fileDirectory] **:** Nome do arquivo de saída.  
+    - **out** ou **-o** {*fileDirectory*] **:** nome do arquivo de saída.  
   
-    - **Culture** ou **-cul** {*Culture*] **:** Localidade dos assemblies de saída.  
+    - **Culture** ou **-cul** {*Culture*] **:** localidade dos assemblies de saída.  
   
-    - **translation** ou **-Trans** {*translation. csv*] **:** Arquivo traduzido ou localizado.  
+    - **translation** ou **-Trans** {*translation. csv*] **:** arquivo traduzido ou localizado.  
   
-    - **asmpath** ou **-asmpath:** {fileDirectory] **:** Se o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contiver controles personalizados, você deverá fornecer o **asmpath** para o assembly de controle personalizado.  
+    - **asmpath** ou **-asmpath:** {*fileDirectory*] **:** se seu código de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contiver controles personalizados, você deverá fornecer o **asmpath** para o assembly de controle personalizado.  
   
-    - **nologo** Não exibe nenhum logotipo ou informações de direitos autorais.  
+    - **nologo:** não exibe nenhuma informação de logotipo ou direitos autorais.  
   
-    - **extensa** Exibe informações de modo detalhado.  
+    - **verbose:** exibe informações de modo detalhado.  
   
     > [!NOTE]
     > Se você precisar de uma lista das opções ao executar a ferramenta, digite **LocBaml. exe** e pressione Enter.  
@@ -151,7 +151,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
    |Nome BAML|Chave de recurso|Categoria|Legibilidade|Modificabilidade|Comentários|Valor|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||#Text1; #Text2|
    |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Goodbye World|
   
@@ -161,7 +161,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Traduzir o conteúdo localizável  
- Use qualquer ferramenta que você tiver disponível para traduzir o conteúdo extraído. Uma boa maneira de fazer isso é gravar os recursos em um arquivo. csv e exibi-los no [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], fazendo alterações de tradução na última coluna (valor).  
+ Use qualquer ferramenta que você tiver disponível para traduzir o conteúdo extraído. Uma boa maneira de fazer isso é gravar os recursos em um arquivo. csv e exibi-los no Microsoft Excel, fazendo alterações de tradução na última coluna (valor).  
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Usar a LocBaml para gerar um novo arquivo .resources.dll  

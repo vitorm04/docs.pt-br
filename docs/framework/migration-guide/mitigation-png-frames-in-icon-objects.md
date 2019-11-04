@@ -2,12 +2,12 @@
 title: 'Mitigação: quadros PNG em objetos de ícone'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: 28787eff0dd4ce92394a66a936b3d422dfe513bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a4ae0c069a4cd6d53bce77e64822ebf3fbb5361
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126182"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457874"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Mitigação: quadros PNG em objetos de ícone
 A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> converte com êxito ícones com quadros PNG em objetos <xref:System.Drawing.Bitmap>.  
@@ -34,4 +34,4 @@ A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)

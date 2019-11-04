@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Herdando um controle do Windows Forms com Visual C#'
+title: 'Instruções passo a passo: herdando um controle dos Windows Forms com Visual C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015675"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460585"
 ---
-# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Passo a passo: Herdar de um controle de Windows Forms com C\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Walkthrough: herdar de um controle de Windows Forms com C\#
 
-Com o C#Visual, você pode criar controles personalizados avançados por meio de *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará a funcionalidade do controle de <xref:System.Windows.Forms.Button> Windows Forms padrão e apresentará uma propriedade personalizada chamada `ButtonValue`.
+Com o C#Visual, você pode criar controles personalizados avançados por meio de *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão irá herdar a funcionalidade do controle de <xref:System.Windows.Forms.Button> de Windows Forms padrão e exporá uma propriedade personalizada chamada `ButtonValue`.
 
 ## <a name="create-the-project"></a>Criar o projeto
 
@@ -36,16 +36,16 @@ Quando cria um novo projeto, você especifica seu nome para definir o namespace 
 
 3. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **ValueButton.cs** e selecione **Exibir Código**.
 
-4. Localize a `class` linha de instrução `public partial class ValueButton`, e altere o tipo do <xref:System.Windows.Forms.UserControl> qual <xref:System.Windows.Forms.Button>esse controle herda. Isso permite que o controle herdado herde toda a funcionalidade <xref:System.Windows.Forms.Button> do controle.
+4. Localize a linha da instrução `class`, `public partial class ValueButton`e altere o tipo do qual esse controle herda de <xref:System.Windows.Forms.UserControl> para <xref:System.Windows.Forms.Button>. Isso permite que o controle herdado herde toda a funcionalidade do controle de <xref:System.Windows.Forms.Button>.
 
 5. No **Gerenciador de Soluções**, abra o nó **ValueButton.cs** para exibir o arquivo de código gerado pelo designer, **ValueButton.Designer.cs**. Abra esse arquivo no **Editor de Códigos**.
 
-6. Localize o `InitializeComponent` método e remova a linha que atribui a <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriedade. Esta propriedade não existe no <xref:System.Windows.Forms.Button> controle.
+6. Localize o método `InitializeComponent` e remova a linha que atribui a propriedade <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>. Esta propriedade não existe no controle de <xref:System.Windows.Forms.Button>.
 
 7. No menu **Arquivo**, escolha **Salvar Tudo** para salvar o projeto.
 
     > [!NOTE]
-    > Um designer visual não está mais disponível. Como o <xref:System.Windows.Forms.Button> controle faz sua própria pintura, você não pode modificar sua aparência no designer. Sua representação visual será exatamente igual à da classe da qual ela herda (ou seja, <xref:System.Windows.Forms.Button>), a menos que seja modificada no código. Você ainda pode adicionar componentes, que não têm uma interface do usuário, à superfície de design.
+    > Um designer visual não está mais disponível. Como o controle de <xref:System.Windows.Forms.Button> faz sua própria pintura, você não pode modificar sua aparência no designer. Sua representação visual será exatamente igual à da classe da qual ela herda (ou seja, <xref:System.Windows.Forms.Button>), a menos que seja modificada no código. Você ainda pode adicionar componentes, que não têm uma interface do usuário, à superfície de design.
 
 ## <a name="add-a-property-to-your-inherited-control"></a>Adicionar uma propriedade ao controle herdado
 
@@ -115,9 +115,9 @@ No menu **Compilar**, clique em **Compilar Solução**. O build deve ser bem-suc
 
 4. Na janela **Propriedades**, examine as propriedades desse controle. Observe que eles são idênticos às propriedades expostas por um botão padrão, exceto pelo fato de que há uma propriedade adicional, ButtonValue.
 
-5. Defina a Propriedade ButtonValue como **5**.
+5. Defina a propriedade **ButtonValue** como **5**.
 
-6. Na guia **todos os Windows Forms** da **caixa de ferramentas**, clique duas vezes em **rótulo** para <xref:System.Windows.Forms.Label> adicionar um controle ao formulário.
+6. Na guia **todos os Windows Forms** da **caixa de ferramentas**, clique duas vezes em **rótulo** para adicionar um controle de <xref:System.Windows.Forms.Label> ao formulário.
 
 7. Reposicione o rótulo no centro do formulário.
 
@@ -143,5 +143,5 @@ No menu **Compilar**, clique em **Compilar Solução**. O build deve ser bem-suc
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Exibir um controle na caixa de diálogo escolher itens da Toolbox](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Passo a passo: Criando um controle composto com VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Passo a passo: criando um controle de composição com o Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

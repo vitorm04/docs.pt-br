@@ -2,12 +2,12 @@
 title: 'Mitigação: método X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: 5591ecebeb924f84cc0efdaf78f40f9d835d2d02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126080"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457758"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: método X509CertificateClaimSet.FindClaims
 Começando com aplicativos direcionados ao .NET Framework 4.6.1, o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> tentará corresponder o argumento `claimType` com todas as entradas DNS em seu campo SAN.  
@@ -36,4 +36,4 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o método <xref
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)

@@ -6,51 +6,51 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 54991ce16aa905f4138013944fb8b5a317675d9b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 75cf628b6faad1f8c52a70c77baa4ede21160510
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043156"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458138"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Este tópico apresenta diretrizes e convenções para implementação <xref:System.Windows.Automation.Provider.IValueProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.  
+ Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IValueProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.  
   
- O <xref:System.Windows.Automation.ValuePattern> padrão de controle é usado para dar suporte a controles que têm um valor intrínseco que não abrange um intervalo e que pode ser representado como uma cadeia de caracteres. Essa cadeia de caracteres pode ser editável, dependendo do controle e de suas configurações. Para obter exemplos de controles que implementam esse padrão, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
+ O padrão de controle de <xref:System.Windows.Automation.ValuePattern> é usado para dar suporte a controles que têm um valor intrínseco que não abrange um intervalo e que pode ser representado como uma cadeia de caracteres. Essa cadeia de caracteres pode ser editável, dependendo do controle e de suas configurações. Para obter exemplos de controles que implementam esse padrão, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
  Ao implementar o padrão de controle de valor, observe as seguintes diretrizes e convenções:  
   
-- Controles como <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> devem oferecer suporte <xref:System.Windows.Automation.ValuePattern> se o valor de qualquer um dos itens for editável, independentemente do modo de edição atual do controle. O controle pai também deve oferecer <xref:System.Windows.Automation.ValuePattern> suporte se os itens filho forem editáveis.  
+- Controles como <xref:System.Windows.Automation.ControlType.ListItem> e <xref:System.Windows.Automation.ControlType.TreeItem> devem dar suporte a <xref:System.Windows.Automation.ValuePattern> se o valor de qualquer um dos itens for editável, independentemente do modo de edição atual do controle. O controle pai também deve oferecer suporte a <xref:System.Windows.Automation.ValuePattern> se os itens filho forem editáveis.  
   
  ![Item de lista editável.](./media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Exemplo de um item de lista editável  
   
-- Os controles de edição de linha única dão suporte ao acesso programático <xref:System.Windows.Automation.Provider.IValueProvider>a seu conteúdo implementando. No entanto, os controles de edição de várias <xref:System.Windows.Automation.Provider.IValueProvider>linhas não são implementados; em vez disso, <xref:System.Windows.Automation.Provider.ITextProvider>eles fornecem acesso ao seu conteúdo implementando.  
+- Os controles de edição de linha única dão suporte ao acesso programático ao seu conteúdo implementando <xref:System.Windows.Automation.Provider.IValueProvider>. No entanto, os controles de edição de várias linhas não implementam <xref:System.Windows.Automation.Provider.IValueProvider>; em vez disso, eles fornecem acesso ao seu conteúdo implementando <xref:System.Windows.Automation.Provider.ITextProvider>.  
   
-- Para recuperar o conteúdo textual de um controle de edição de várias linhas, o controle deve <xref:System.Windows.Automation.Provider.ITextProvider>implementar. No entanto, <xref:System.Windows.Automation.Provider.ITextProvider> o não oferece suporte à definição do valor de um controle.  
+- Para recuperar o conteúdo textual de um controle de edição de várias linhas, o controle deve implementar <xref:System.Windows.Automation.Provider.ITextProvider>. No entanto, <xref:System.Windows.Automation.Provider.ITextProvider> não dá suporte à definição do valor de um controle.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>o não oferece suporte à recuperação de informações de formatação ou valores de subcadeias. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> não oferece suporte à recuperação de informações de formatação ou valores de subcadeias. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> nesses cenários.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>deve ser implementado por controles como o controle de seleção de **seletor de cor** de (ilustrado abaixo), que dá suporte ao mapeamento de cadeia de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] caracteres entre um valor de cor (por exemplo, "amarelo") e uma estrutura RGB interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> deve ser implementado por controles como o controle de seleção do **seletor de cores** do Microsoft Word (ilustrado abaixo), que oferece suporte ao mapeamento de cadeia de caracteres entre um valor de cor (por exemplo, "amarelo") e uma estrutura RGB interna equivalente.  
   
  ![Seletor de cores com amarelo realçado.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Exemplo de mapeamento de cadeia de caracteres de amostra de cor  
   
-- Um controle deve ter seu <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> definido como `true` e seu <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> definido como `false` antes de permitir uma chamada <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>para.  
+- Um controle deve ter seu <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> definido como `true` e seu <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> definido como `false` antes de permitir uma chamada para <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-ivalueprovider"></a>Membros necessários para IValueProvider  
- As propriedades e os métodos a seguir são necessários <xref:System.Windows.Automation.Provider.IValueProvider>para implementar o.  
+ As propriedades e os métodos a seguir são necessários para implementar <xref:System.Windows.Automation.Provider.IValueProvider>.  
   
-|Membros necessários|Tipo de membro|Observações|  
+|Membros necessários|Tipo de membro|Anotações|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Propriedade|Nenhum|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|propriedade|Nenhum|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|propriedade|Nenhum|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Método|Nenhum|  
   
 <a name="Exceptions"></a>   

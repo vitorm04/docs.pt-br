@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: a72b2886c63a80a4887aa16fc6a952fa837a800f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991439"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458821"
 ---
 # <a name="mcignorable-attribute"></a>Atributo mc:Ignorable
 Especifica quais prefixos do namespace [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] encontrados em um arquivo de marcação podem ser ignorados por um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. O atributo `mc:Ignorable` dá suporte à compatibilidade de marcação para o mapeamento de namespace personalizado e para controle de versão de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -55,19 +55,19 @@ Especifica quais prefixos do namespace [!INCLUDE[TLA2#tla_xml](../../../../inclu
   
  Elementos ou atributos em que a parte do prefixo do nome do elemento é identificado como `mc:Ignorable` não gerarão erros quando processados por um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se esse atributo não puder ser resolvido para um tipo subjacente ou constructo de programação, esse elemento será ignorado. No entanto, observe que elementos ignorados ainda podem gerar erros de análise adicionais para requisitos de elementos adicionais que são efeitos colaterais do elemento não estar sendo processado. Por exemplo, um modelo de conteúdo do elemento específico pode requerer exatamente um elemento filho, porém, se o elemento filho especificado estava em um prefixo `mc:Ignorable` e o elemento filho especificado não pôde ser resolvido para um tipo, então o processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pode gerar um erro.  
   
- `mc:Ignorable` aplica-se somente a mapeamentos de namespace para cadeias de caracteres de identificador. `mc:Ignorable`Não se aplica a mapeamentos de namespace em assemblies, que especificam um namespace CLR e um assembly (ou, por padrão, o executável atual como o assembly).  
+ `mc:Ignorable` aplica-se somente a mapeamentos de namespace para cadeias de caracteres de identificador. `mc:Ignorable` não se aplica a mapeamentos de namespace em assemblies, que especificam um namespace CLR e um assembly (ou, por padrão, o executável atual como o assembly).  
   
  Se você estiver implementando um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a implementação do processador não deverá gerar erros de análise ou de processamento na resolução de tipos para qualquer elemento ou atributo qualificado por um prefixo identificado como `mc:Ignorable`. Contudo, a implementação do processador pode, ainda assim, gerar exceções que são um resultado secundário da falha de um elemento ao carregar ou ser processado, como no exemplo de filho único fornecido anteriormente.  
   
  Por padrão, um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ignorará o conteúdo dentro de um elemento ignorado. No entanto, você pode especificar um atributo adicional, [Atributo mc:ProcessContent](mc-processcontent-attribute.md), para exigir o processamento de conteúdo contínuo dentro de um elemento ignorado pelo próximo elemento pai disponível.  
   
- Vários prefixos podem ser especificados no atributo, usando um ou mais caracteres de espaço em branco como separador, por `mc:Ignorable="ignore1 ignore2"`exemplo:.  
+ Vários prefixos podem ser especificados no atributo, usando um ou mais caracteres de espaço em branco como separador, por exemplo: `mc:Ignorable="ignore1 ignore2"`.  
 
- O `http://schemas.openxmlformats.org/markup-compatibility/2006` namespace define outros elementos e atributos que não estão documentados nessa área do SDK. Para obter mais informações, consulte [Especificação de compatibilidade de marcação XML](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
+ O namespace `http://schemas.openxmlformats.org/markup-compatibility/2006` define outros elementos e atributos que não estão documentados nessa área do SDK. Para obter mais informações, consulte [Especificação de compatibilidade de marcação XML](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Markup.XamlReader>
 - [Atributo PresentationOptions:Freeze](presentationoptions-freeze-attribute.md)
-- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
+- [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Documentos no WPF](documents-in-wpf.md)

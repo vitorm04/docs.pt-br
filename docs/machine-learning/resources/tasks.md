@@ -4,16 +4,16 @@ description: Explore as diferentes tarefas de aprendizado de máquina e as taref
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630058"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424226"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tarefas de aprendizado de máquina no ML.NET
 
-Ao criar um modelo de aprendizado de máquina, primeiro é preciso definir o que você espera conseguir com seus dados. Isso permite escolher a tarefa de aprendizado de máquina correta para sua situação. A lista a seguir descreve as diferentes tarefas de aprendizado de máquina que você pode escolher e alguns casos de uso comuns.
+Ao criar um modelo de aprendizado de máquina, primeiro é preciso definir o que você espera conseguir com seus dados. Isso permite escolher a tarefa de aprendizado de máquina correta para sua situação. A lista a seguir descreve as diferentes tarefas de aprendizado de máquina que você pode escolher e alguns casos de uso comuns. Para obter mais informações sobre como escolher a tarefa apropriada para seu cenário, consulte [algoritmos](../how-to-choose-an-ml-net-algorithm.md).
 
 Depois de decidir a tarefa ideal para seu cenário, será preciso escolher o melhor algoritmo para treinar seu modelo. Os algoritmos disponíveis são listados na seção para cada tarefa.
 
@@ -24,7 +24,7 @@ Uma tarefa de [aprendizado de máquina supervisionado](glossary.md#supervised-ma
 * [Reconhece](../tutorials/sentiment-analysis.md) como "positivo" ou "negativo".
 * Diagnosticar se um paciente tem uma determinada doença ou não.
 * Tomar a decisão de marcar um email como "spam" ou não.
-* Determinar se uma foto exibe um cachorro ou frutas.
+* Determinar se uma foto contém um item específico ou não, como um cão ou frutas.
 
 Para obter mais informações, consulte o artigo [Classificação binária](https://en.wikipedia.org/wiki/Binary_classification) na Wikipédia.
 
@@ -54,7 +54,7 @@ Os dados da coluna de recursos de entrada devem ser um vetor de tamanho fixo de 
 
 Esses treinadores geram as seguintes colunas:
 
-| Nome da Coluna de Saída | Tipo de coluna | DESCRIÇÃO|
+| Nome da Coluna de Saída | Tipo de coluna | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação bruta calculada pelo modelo|
 | `PredictedLabel` | <xref:System.Boolean> | O rótulo previsto com base no sinal da pontuação. Uma pontuação negativa é mapeada para `false` e uma pontuação positiva é mapeada para `true`.|
@@ -91,7 +91,7 @@ A coluna de recursos deve ser um vetor de tamanho fixo de <xref:System.Single>.
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Tipo | DESCRIÇÃO|
+| Nome de Saída | Digite | Descrição|
 | -- | -- | -- |
 | `Score` | Vetor de <xref:System.Single> | As pontuações de todas as classes. Um valor mais alto significa maior probabilidade de se enquadrar na classe associada. Se o elemento iº elemento tiver o maior valor, o índice de rótulo previsto será i. Observe que i é o índice baseado em zero. |
 | `PredictedLabel` | Tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do rótulo previsto. Se seu valor for i, o rótulo real será a iº categoria no tipo de rótulo de entrada com valor de chave. |
@@ -124,7 +124,7 @@ Os dados da coluna de rótulo de entrada devem ser <xref:System.Single>.
 
 Os treinadores para esta tarefa produzem a seguinte saída:
 
-| Nome de Saída | Tipo | DESCRIÇÃO|
+| Nome de Saída | Digite | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação bruta prevista pelo modelo |
 
@@ -148,7 +148,7 @@ Os dados de recursos de entrada devem ser <xref:System.Single>. Nenhum rótulo �
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Tipo | DESCRIÇÃO|
+| Nome de Saída | Digite | Descrição|
 | -- | -- | -- |
 | `Score` | vetor de <xref:System.Single> | As distâncias do ponto de dados fornecido para todos os centroides |
 | `PredictedLabel` | Tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do cluster mais próximo previsto pelo modelo. |
@@ -180,7 +180,7 @@ Os recursos de entrada devem ser um vetor de tamanho fixo de <xref:System.Single
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Tipo | DESCRIÇÃO|
+| Nome de Saída | Digite | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não negativa não associada calculada pelo modelo de detecção de anomalias |
 
@@ -203,7 +203,7 @@ Os dados do recurso devem ser um vetor de tamanho fixo de <xref:System.Single> e
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Tipo | DESCRIÇÃO|
+| Nome de Saída | Digite | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não associada calculada pelo modelo para determinar a previsão |
 

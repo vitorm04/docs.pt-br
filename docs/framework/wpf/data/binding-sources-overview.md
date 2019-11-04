@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920282"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459021"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.
@@ -54,7 +54,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 ## <a name="using-entire-objects-as-a-binding-source"></a>Usando objetos inteiros como uma origem da associação
  Você pode usar um objeto inteiro como uma origem da associação. Você pode especificar uma fonte de associação usando o <xref:System.Windows.Data.Binding.Source%2A> ou a propriedade <xref:System.Windows.FrameworkElement.DataContext%2A> e, em seguida, fornecer uma declaração de associação em branco: `{Binding}`. Os cenários em que isso é útil incluem a associação a objetos que são do tipo cadeia de caracteres, associação a objetos com várias propriedades nas quais você está interessado ou associação a objetos de coleção. Para obter um exemplo de associação a um objeto de coleção inteira, consulte [Usar o padrão de detalhes mestre com os dados hierárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Observe que talvez seja necessário aplicar uma lógica personalizada para que os dados sejam significativos para a propriedade de destino associada. A lógica personalizada pode estar na forma de um conversor personalizado (se a conversão de tipo padrão não existir) ou uma <xref:System.Windows.DataTemplate>. Para obter mais informações sobre conversores, consulte a seção Conversão de dados da [Visão geral de associação de dados](data-binding-overview.md). Para obter mais informações sobre modelos de dados, consulte [Visão geral de modelagem de dados](data-templating-overview.md).
+ Observe que talvez seja necessário aplicar uma lógica personalizada para que os dados sejam significativos para a propriedade de destino associada. A lógica personalizada pode estar na forma de um conversor personalizado (se a conversão de tipo padrão não existir) ou uma <xref:System.Windows.DataTemplate>. Para obter mais informações sobre conversores, consulte a seção Conversão de dados da [Visão geral de associação de dados](../../../desktop-wpf/data/data-binding-overview.md). Para obter mais informações sobre modelos de dados, consulte [Visão geral de modelagem de dados](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Usando objetos de coleção como uma origem da associação
@@ -64,7 +64,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 
  A classe <xref:System.Collections.ObjectModel.ObservableCollection%601> é uma implementação interna de uma coleção de dados que expõe a interface <xref:System.Collections.Specialized.INotifyCollectionChanged>. Os objetos de dados individuais dentro da coleção devem satisfazer aos requisitos descritos nas seções anteriores. Para obter um exemplo, consulte [Criar e associar a uma ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Antes de implementar sua própria coleção, considere o uso de <xref:System.Collections.ObjectModel.ObservableCollection%601> ou uma das classes de coleção existentes, como <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>e <xref:System.ComponentModel.BindingList%601>, entre muitas outras.
 
- O WPF nunca se associa diretamente a uma coleção. Se você especificar uma coleção como uma origem da associação, o WPF, na verdade, associará ao modo de exibição padrão da coleção. Para obter informações sobre os modos de exibição padrão, consulte [Visão geral de associação de dados](data-binding-overview.md).
+ O WPF nunca se associa diretamente a uma coleção. Se você especificar uma coleção como uma origem da associação, o WPF, na verdade, associará ao modo de exibição padrão da coleção. Para obter informações sobre os modos de exibição padrão, consulte [Visão geral de associação de dados](../../../desktop-wpf/data/data-binding-overview.md).
 
  Se você tiver um cenário avançado e desejar implementar sua própria coleção, considere usar a interface <xref:System.Collections.IList>. <xref:System.Collections.IList> fornece uma coleção não genérica de objetos que podem ser acessados individualmente por índice, o que pode melhorar o desempenho.
 
@@ -97,6 +97,6 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Especificar a origem da associação](how-to-specify-the-binding-source.md)
-- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
 - [Visão geral da vinculação de dados do WPF com LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Otimizar o desempenho da Associação de dados](../advanced/optimizing-performance-data-binding.md)

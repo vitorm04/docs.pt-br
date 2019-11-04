@@ -8,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 896f89304289fd90c10da9aaa7ea15ada35ef8f7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 560218361f470266654734971a12de7862722a46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589086"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423179"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidade (Guia de Programação em C#)
 A interoperabilidade permite que você mantenha e aproveite os investimentos existentes em código não gerenciado. O código que é executado sob o controle do CLR (Common Language Runtime) é chamado de *código gerenciado*, e o código que é executado fora do CLR é chamado de *código não gerenciado*. COM, COM+, componentes do C++, componentes do ActiveX e a API do Microsoft Windows são exemplos de código não gerenciado.  
@@ -24,13 +24,13 @@ A interoperabilidade permite que você mantenha e aproveite os investimentos exi
  [Visão geral sobre interoperabilidade](./interoperability-overview.md)  
  Descreve métodos para fins de interoperabilidade entre código gerenciado em C# e código não gerenciado.  
   
- [Como: acessar objetos de interoperabilidade do Office usando recursos do Visual C#](./how-to-access-office-onterop-objects.md)  
+ [Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](./how-to-access-office-onterop-objects.md)  
  Descreve os recursos que são introduzidos no Visual C# para facilitar a programação do Office.  
   
- [Como: usar propriedades indexadas na programação para interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Como usar propriedades indexadas na programação para interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Descreve como usar propriedades indexadas para acesso propriedades COM que têm parâmetros.  
   
- [Como: usar invocação de plataforma para executar um arquivo wave](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [Como usar invocação de plataforma para executar um arquivo wave](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Descreve como usar os serviços de invocação de plataforma para reproduzir um arquivo de som .wav no sistema operacional Windows.  
   
  [Passo a passo: programação do Office](./walkthrough-office-programming.md)  
@@ -41,7 +41,7 @@ A interoperabilidade permite que você mantenha e aproveite os investimentos exi
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
-Para obter mais informações, veja [Noções básicas](~/_csharplang/spec/unsafe-code.md) na [Especificação da linguagem C#](../../language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, veja [Noções básicas](~/_csharplang/spec/unsafe-code.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 

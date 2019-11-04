@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 56d795d309aec98d43bfba506cbc4e862f13cc68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131546"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424967"
 ---
 # <a name="framework-libraries"></a>Bibliotecas do Framework
 
@@ -26,7 +26,7 @@ As BCL fornecem a funcionalidade de utilitário e tipos mais básicos e são a b
 
 O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáveis) em todos os programas. Esses tipos contêm dados, como números, cadeias de caracteres, bytes e objetos arbitrários. A linguagem C# inclui palavras-chave para esses tipos. Um conjunto de amostra desses tipos é listado abaixo, com palavras-chave do C# correspondentes.
 
-* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) – a classe base ultimate no sistema de tipos CLR. É a raiz da hierarquia de tipos.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) – a classe base ultimate no sistema de tipos CLR. É a raiz da hierarquia de tipos.
 * <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – tipo inteiro com sinal de 16 bits. O <xref:System.UInt16> sem sinal também existe.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – um tipo inteiro com sinal de 32 bits. O [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) sem sinal também existe.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) – um tipo de ponto flutuante de 32 bits.
@@ -34,7 +34,7 @@ O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáv
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – um inteiro de 8 bits sem sinal que representa um byte de memória.
 * <xref:System.Boolean?displayProperty=nameWithType>([bool](../csharp/language-reference/keywords/bool.md)) – um tipo booliano que representa `true` ou `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) – um tipo numérico de 16 bits que representa um caractere Unicode.
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
 
 ## <a name="data-structures"></a>Estruturas de dados
 

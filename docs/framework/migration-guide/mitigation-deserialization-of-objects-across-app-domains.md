@@ -2,12 +2,12 @@
 title: 'Mitigação: desserialização de objetos em domínios de aplicativos'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: 43a1a045560b54cc831e69f9e1d4dba76a8569e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126251"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457929"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigação: desserialização de objetos em domínios de aplicativos
 Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes, a tentativa de desserializar objetos no contexto da chamada lógica nos domínios de aplicativo aciona uma exceção.  
@@ -48,4 +48,4 @@ Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo c
   
 ## <a name="see-also"></a>Consulte também
 
-- [Alterações no tempo de execução](runtime-changes-in-the-net-framework-4-5-1.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)

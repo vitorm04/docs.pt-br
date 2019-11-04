@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1f13053ea23e45b66b4767295af28a758f474ab5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121547"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457987"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -43,7 +43,7 @@ Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#
 > [!NOTE]
 > A frase ".NET Framework 4.5 e suas versões pontuais" refere-se ao .NET Framework 4.5 e a todas as versões posteriores.
 
-- As versões do .NET Framework de .NET Framework 4.5.1 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] são atualizações in-loco para o .NET Framework 4.5, o que significa que eles usam a mesma versão de tempo de execução, mas as versões de assembly foram atualizadas e incluem novos tipos e membros.
+- As versões do .NET Framework de .NET Framework 4.5.1 a [!INCLUDE[net_current](../../../includes/net-current-version.md)] são atualizações in-loco para o .NET Framework 4.5, o que significa que eles usam a mesma versão de runtime, mas as versões de assembly foram atualizadas e incluem novos tipos e membros.
 
 - O .NET Framework 4.5 e suas versões de ponto são compilados de maneira incremental no .NET Framework 4. Quando você instala o .NET Framework 4.5, ou suas versões de ponto, em um sistema que tem o .NET Framework 4 instalado, os assemblies da versão 4 são substituídos pelas versões mais recentes.
 
@@ -168,7 +168,7 @@ No Visual Studio, para escolher a implantação do InstallShield e adicionar uma
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Implantação do WiX (Windows Installer XML)
 
-O conjunto de ferramentas do Windows Installer XML (WiX) compila pacotes de instalação do Windows a partir do código-fonte XML. O WiX oferece suporte a um ambiente de linha de comando que pode ser integrado aos processos de compilação para compilar pacotes de instalação MSI e MSM. Usando o WiX, você pode [especificar o .NET Framework como um pré-requisito](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html) ou [criar um encadeador](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) para controlar totalmente a experiência de implantação do .NET Framework. Para obter mais informações sobre o WiX, consulte o site do [Conjunto de ferramentas WiX (Windows Installer XML)](http://wixtoolset.org/).
+O conjunto de ferramentas do Windows Installer XML (WiX) compila pacotes de instalação do Windows a partir do código-fonte XML. O WiX oferece suporte a um ambiente de linha de comando que pode ser integrado aos processos de compilação para compilar pacotes de instalação MSI e MSM. Usando o WiX, você pode [especificar o .NET Framework como um pré-requisito](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html) ou [criar um encadeador](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) para controlar totalmente a experiência de implantação do .NET Framework. Para obter mais informações sobre o WiX, consulte o site do [Conjunto de ferramentas WiX (Windows Installer XML)](https://wixtoolset.org/).
 
 <a name="installing_manually"></a>
 

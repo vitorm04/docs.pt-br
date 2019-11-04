@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761320"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458294"
 ---
 # <a name="treeview"></a>TreeView
-O <xref:System.Windows.Controls.TreeView> controle exibe informações em uma estrutura hierárquica usando nós recolhíveis.  
+O controle de <xref:System.Windows.Controls.TreeView> exibe informações em uma estrutura hierárquica usando nós recolhíveis.  
   
- A ilustração a seguir está um exemplo de uma <xref:System.Windows.Controls.TreeView> controle aninhou <xref:System.Windows.Controls.TreeViewItem> controles:  
+ A ilustração a seguir é um exemplo de um controle de <xref:System.Windows.Controls.TreeView> que tem controles de <xref:System.Windows.Controls.TreeViewItem> aninhados:  
   
- ![Ilustração que mostra os controles de TreeViewItem aninhados.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![Ilustração que mostra controles TreeViewItem aninhados.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de TreeView](treeview-overview.md)  
- [Tópicos de instruções](treeview-how-to-topics.md)  
+ [Tópicos explicativos](treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral da vinculação de dados](../data/data-binding-overview.md)  
+ [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)  
   [Visão geral de modelagem dos dados](../data/data-templating-overview.md)

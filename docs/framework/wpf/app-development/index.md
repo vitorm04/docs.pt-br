@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920208"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420650"
 ---
 # <a name="application-development"></a>Desenvolvimento do aplicativo
 <a name="introduction"></a>O Windows Presentation Foundation (WPF) é uma estrutura de apresentação que pode ser usada para desenvolver os seguintes tipos de aplicativos:  
   
 - Aplicativos autônomos (aplicativos de estilo tradicional do Windows criados como assemblies executáveis que são instalados e executados no computador cliente).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplicativos compostos de páginas de navegação criadas como assemblies executáveis e hospedados por navegadores da Web, como o Microsoft Internet Explorer ou Mozilla Firefox).  
+- Aplicativos de navegador XAML (XBAPs) (aplicativos compostos por páginas de navegação criadas como assemblies executáveis e hospedados por navegadores da Web, como o Microsoft Internet Explorer ou Mozilla Firefox).  
   
 - Bibliotecas de controles personalizados (assemblies não executáveis contendo controles reutilizáveis).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920208"
   
 - Gerenciar janelas de aplicativos autônomas.  
   
-- Acompanhar a navegação em [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e aplicativos autônomos com quadros e janelas de navegação.  
+- Rastreamento de navegação em aplicativos de navegador XAML (XBAPs) e aplicativos autônomos com janelas de navegação e quadros.  
   
  Esses recursos são implementados pela classe <xref:System.Windows.Application>, que você adiciona a seus aplicativos usando uma *definição de aplicativo*.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920208"
   
 - Páginas autônomas que são hospedadas em um navegador da Web.  
   
-- Páginas compiladas em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que é hospedado em um navegador da Web.  
+- Páginas compiladas em um XBAP que é hospedado em um navegador da Web.  
   
 - Páginas compiladas em um aplicativo autônomo e hospedadas por uma janela de navegação (<xref:System.Windows.Navigation.NavigationWindow>).  
   
-- Páginas hospedadas por um quadro (<xref:System.Windows.Controls.Frame>), que pode ser hospedado em uma página autônoma, ou uma página compilada em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ou um aplicativo autônomo.  
+- Páginas que são hospedadas por um quadro (<xref:System.Windows.Controls.Frame>), que podem ser hospedadas em uma página autônoma ou uma página compilada em um XBAP ou em um aplicativo autônomo.  
   
  Para facilitar a navegação, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa o seguinte:  
   
-- <xref:System.Windows.Navigation.NavigationService>, o mecanismo de navegação compartilhada para processar solicitações de navegação que é usado por <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para oferecer suporte à navegação intra-aplicativo.  
+- <xref:System.Windows.Navigation.NavigationService>, o mecanismo de navegação compartilhado para processar solicitações de navegação que é usado por <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>e XBAPs para dar suporte à navegação dentro do aplicativo.  
   
 - Métodos de navegação para iniciar a navegação.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920208"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hospedagem  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] pode ser hospedado no Microsoft Internet Explorer ou no Firefox. Cada modelo de hospedagem tem seu próprio conjunto de considerações e restrições que são abordados em [Hospedagem](hosting-wpf-applications.md).  
+ XBAPs podem ser hospedados no Microsoft Internet Explorer ou no Firefox. Cada modelo de hospedagem tem seu próprio conjunto de considerações e restrições que são abordados em [Hospedagem](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilar e implantar  
@@ -124,7 +124,7 @@ ms.locfileid: "72920208"
 |[Visão geral do gerenciamento de aplicativos](application-management-overview.md)|Fornece uma visão geral da classe <xref:System.Windows.Application>, incluindo o gerenciamento do tempo de vida do aplicativo, janelas, recursos de aplicativos e navegação.|  
 |[Janelas no WPF](windows-in-wpf-applications.md)|Fornece detalhes do gerenciamento de janelas em seu aplicativo, incluindo como usar a classe <xref:System.Windows.Window> e caixas de diálogo.|  
 |[Visão geral de navegação](navigation-overview.md)|Fornece uma visão geral do gerenciamento de navegação entre páginas do seu aplicativo.|  
-|[Hospedagem](hosting-wpf-applications.md)|Apresenta uma visão geral de [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
+|[Hospedagem](hosting-wpf-applications.md)|Fornece uma visão geral dos aplicativos de navegador XAML (XBAPs).|  
 |[Compilar e implantar](building-and-deploying-wpf-applications.md)|Descreve como compilar e implantar seu aplicativo WPF.|  
 |[Introdução ao WPF no Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Descreve os principais recursos do WPF.|  
 |[Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Um passo a passo que mostra como criar um aplicativo WPF usando a navegação de página, layout, controles, imagens, estilos e associação.|

@@ -9,38 +9,38 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: f948cf2b4f4cd2a4cb73b0cd5fc754240c850b83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1bea39ba9b6d2cff9937a3fee1d1de41daf16b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770520"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459877"
 ---
 # <a name="progressbar-styles-and-templates"></a>Estilos e modelos ProgressBar
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ProgressBar> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.ProgressBar>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="progressbar-parts"></a>Partes da barra de progresso  
- A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.ProgressBar> controle.  
+## <a name="progressbar-parts"></a>Partes de ProgressBar  
+ A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.ProgressBar>.  
   
-|Parte|Tipo|Descrição|  
+|Parte|Digite|Descrição|  
 |-|-|-|  
-|PART_Indicator|<xref:System.Windows.FrameworkElement>|O objeto que indica o andamento.|  
+|PART_Indicator|<xref:System.Windows.FrameworkElement>|O objeto que indica o progresso.|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|O objeto que define o caminho do indicador de progresso.|  
-|PART_GlowRect|<xref:System.Windows.FrameworkElement>|Um objeto que embellishes a barra de progresso.|  
+|PART_GlowRect|<xref:System.Windows.FrameworkElement>|Um objeto que ornamenta a barra de progresso.|  
   
 ## <a name="progressbar-states"></a>Estados de ProgressBar  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.ProgressBar> controle.  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Controls.ProgressBar>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |----------------------|---------------------------|-----------------|  
-|Determinada|CommonStates|<xref:System.Windows.Controls.ProgressBar> relata o progresso com base no <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> propriedade.|  
-|Indeterminado|CommonStates|<xref:System.Windows.Controls.ProgressBar> relata o andamento genérico com um padrão de repetição.|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Barra|CommonStates|<xref:System.Windows.Controls.ProgressBar> relata o progresso com base na propriedade <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.|  
+|Indeterminado|CommonStates|<xref:System.Windows.Controls.ProgressBar> relata o progresso genérico com um padrão repetido.|  
+|Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
+|InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
+|InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
   
-## <a name="progressbar-controltemplate-example"></a>Exemplo de ControlTemplate ProgressBar  
- O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.ProgressBar> controle.  
+## <a name="progressbar-controltemplate-example"></a>Exemplo de ControlTemplate de ProgressBar  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o controle de <xref:System.Windows.Controls.ProgressBar>.  
   
  [!code-xaml[ControlTemplateExamples#ProgressBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
   
@@ -56,5 +56,5 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

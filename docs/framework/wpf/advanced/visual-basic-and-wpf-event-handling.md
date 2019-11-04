@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920335"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458305"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic e manipulação de eventos WPF
 Para a linguagem Microsoft Visual Basic .NET especificamente, você pode usar a palavra-chave `Handles` específica do idioma para associar manipuladores de eventos a instâncias, em vez de anexar manipuladores de eventos a atributos ou usar o método <xref:System.Windows.UIElement.AddHandler%2A>. No entanto, a técnica `Handles` para anexar manipuladores às instâncias tem algumas limitações, uma vez que a sintaxe `Handles` não dá suporte a alguns dos recursos específicos de evento roteado do sistema de eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -47,4 +47,4 @@ Para a linguagem Microsoft Visual Basic .NET especificamente, você pode usar a 
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Marcando eventos roteados como manipulados e tratamento de classes](marking-routed-events-as-handled-and-class-handling.md)
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
+- [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

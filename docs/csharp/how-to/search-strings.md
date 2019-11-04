@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202867"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420316"
 ---
 # <a name="how-to-search-strings"></a>Como pesquisar cadeias de caracteres
 
@@ -19,7 +19,7 @@ Você pode usar duas estratégias principais para pesquisar texto em cadeias de 
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-O tipo [string](../language-reference/keywords/string.md), que é um alias para a classe <xref:System.String?displayProperty=nameWithType>, fornece uma série de métodos úteis para pesquisar o conteúdo de uma cadeia de caracteres. Entre elas estão <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A> e <xref:System.String.LastIndexOf%2A>. A classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> fornece um vocabulário avançado para pesquisar por padrões de texto. Neste artigo, você aprenderá essas técnicas e como escolher o melhor método para suas necessidades.
+O tipo [string](../language-reference/builtin-types/reference-types.md#the-string-type), que é um alias para a classe <xref:System.String?displayProperty=nameWithType>, fornece uma série de métodos úteis para pesquisar o conteúdo de uma cadeia de caracteres. Entre elas estão <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A> e <xref:System.String.LastIndexOf%2A>. A classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> fornece um vocabulário avançado para pesquisar por padrões de texto. Neste artigo, você aprenderá essas técnicas e como escolher o melhor método para suas necessidades.
 
 ## <a name="does-a-string-contain-text"></a>Uma cadeia de caracteres contém texto?
 
