@@ -8,74 +8,74 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
-ms.translationtype: HT
+ms.openlocfilehash: 84f838645bed6facc8b59ebf596d16373a9c6f86
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833341"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422372"
 ---
-# <a name="sealed-c-reference"></a><span data-ttu-id="5975f-102">sealed (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="5975f-102">sealed (C# Reference)</span></span>
+# <a name="sealed-c-reference"></a><span data-ttu-id="656f9-102">sealed (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="656f9-102">sealed (C# Reference)</span></span>
 
-<span data-ttu-id="5975f-103">Quando aplicado a uma classe, o modificador `sealed` impede que outras classes herdem dela.</span><span class="sxs-lookup"><span data-stu-id="5975f-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="5975f-104">No exemplo a seguir, a classe `B` herda da classe `A`, mas nenhuma classe pode herdar da classe `B`.</span><span class="sxs-lookup"><span data-stu-id="5975f-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>
+<span data-ttu-id="656f9-103">Quando aplicado a uma classe, o modificador `sealed` impede que outras classes herdem dela.</span><span class="sxs-lookup"><span data-stu-id="656f9-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="656f9-104">No exemplo a seguir, a classe `B` herda da classe `A`, mas nenhuma classe pode herdar da classe `B`.</span><span class="sxs-lookup"><span data-stu-id="656f9-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>
 
 ```csharp
 class A {}
 sealed class B : A {}
 ```
 
-<span data-ttu-id="5975f-105">Você também pode usar o modificador `sealed` em um método ou propriedade que substitui um método ou propriedade virtual em uma classe base.</span><span class="sxs-lookup"><span data-stu-id="5975f-105">You can also use the `sealed` modifier on a method or property that overrides a virtual method or property in a base class.</span></span> <span data-ttu-id="5975f-106">Com isso, você pode permitir que classes sejam derivadas de sua classe e impedir que substituam métodos ou propriedades virtuais.</span><span class="sxs-lookup"><span data-stu-id="5975f-106">This enables you to allow classes to derive from your class and prevent them from overriding specific virtual methods or properties.</span></span>
+<span data-ttu-id="656f9-105">Você também pode usar o modificador `sealed` em um método ou propriedade que substitui um método ou propriedade virtual em uma classe base.</span><span class="sxs-lookup"><span data-stu-id="656f9-105">You can also use the `sealed` modifier on a method or property that overrides a virtual method or property in a base class.</span></span> <span data-ttu-id="656f9-106">Com isso, você pode permitir que classes sejam derivadas de sua classe e impedir que substituam métodos ou propriedades virtuais.</span><span class="sxs-lookup"><span data-stu-id="656f9-106">This enables you to allow classes to derive from your class and prevent them from overriding specific virtual methods or properties.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5975f-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5975f-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="656f9-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="656f9-107">Example</span></span>
 
-<span data-ttu-id="5975f-108">No exemplo a seguir, `Z` herda de `Y`, mas `Z` não pode substituir a função virtual `F` declarada em `X` e lacrada em `Y`.</span><span class="sxs-lookup"><span data-stu-id="5975f-108">In the following example, `Z` inherits from `Y` but `Z` cannot override the virtual function `F` that is declared in `X` and sealed in `Y`.</span></span>
+<span data-ttu-id="656f9-108">No exemplo a seguir, `Z` herda de `Y`, mas `Z` não pode substituir a função virtual `F` declarada em `X` e lacrada em `Y`.</span><span class="sxs-lookup"><span data-stu-id="656f9-108">In the following example, `Z` inherits from `Y` but `Z` cannot override the virtual function `F` that is declared in `X` and sealed in `Y`.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#16)]
 
-<span data-ttu-id="5975f-109">Quando define novos métodos ou propriedades em uma classe, você pode impedir que classes derivadas as substituam ao não declará-las como [virtuais](virtual.md).</span><span class="sxs-lookup"><span data-stu-id="5975f-109">When you define new methods or properties in a class, you can prevent deriving classes from overriding them by not declaring them as [virtual](virtual.md).</span></span>
+<span data-ttu-id="656f9-109">Quando define novos métodos ou propriedades em uma classe, você pode impedir que classes derivadas as substituam ao não declará-las como [virtuais](virtual.md).</span><span class="sxs-lookup"><span data-stu-id="656f9-109">When you define new methods or properties in a class, you can prevent deriving classes from overriding them by not declaring them as [virtual](virtual.md).</span></span>
 
-<span data-ttu-id="5975f-110">É um erro usar o modificador [abstract](abstract.md) com uma classe selada, porque uma classe abstrata deve ser herdada por uma classe que fornece uma implementação dos métodos ou propriedades abstratas.</span><span class="sxs-lookup"><span data-stu-id="5975f-110">It is an error to use the [abstract](abstract.md) modifier with a sealed class, because an abstract class must be inherited by a class that provides an implementation of the abstract methods or properties.</span></span>
+<span data-ttu-id="656f9-110">É um erro usar o modificador [abstract](abstract.md) com uma classe selada, porque uma classe abstrata deve ser herdada por uma classe que fornece uma implementação dos métodos ou propriedades abstratas.</span><span class="sxs-lookup"><span data-stu-id="656f9-110">It is an error to use the [abstract](abstract.md) modifier with a sealed class, because an abstract class must be inherited by a class that provides an implementation of the abstract methods or properties.</span></span>
 
-<span data-ttu-id="5975f-111">Quando aplicado a um método ou propriedade, o modificador `sealed` sempre deve ser usado com [override](override.md).</span><span class="sxs-lookup"><span data-stu-id="5975f-111">When applied to a method or property, the `sealed` modifier must always be used with [override](override.md).</span></span>
+<span data-ttu-id="656f9-111">Quando aplicado a um método ou propriedade, o modificador `sealed` sempre deve ser usado com [override](override.md).</span><span class="sxs-lookup"><span data-stu-id="656f9-111">When applied to a method or property, the `sealed` modifier must always be used with [override](override.md).</span></span>
 
-<span data-ttu-id="5975f-112">Como structs são lacrados implicitamente, eles não podem ser herdados.</span><span class="sxs-lookup"><span data-stu-id="5975f-112">Because structs are implicitly sealed, they cannot be inherited.</span></span>
+<span data-ttu-id="656f9-112">Como structs são lacrados implicitamente, eles não podem ser herdados.</span><span class="sxs-lookup"><span data-stu-id="656f9-112">Because structs are implicitly sealed, they cannot be inherited.</span></span>
 
-<span data-ttu-id="5975f-113">Para obter mais informações, consulte [Herança](../../programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="5975f-113">For more information, see [Inheritance](../../programming-guide/classes-and-structs/inheritance.md).</span></span>
+<span data-ttu-id="656f9-113">Para obter mais informações, consulte [Herança](../../programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="656f9-113">For more information, see [Inheritance](../../programming-guide/classes-and-structs/inheritance.md).</span></span>
 
-<span data-ttu-id="5975f-114">Para obter mais exemplos, consulte [Classes e membros de classes abstratas e lacradas](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="5975f-114">For more examples, see [Abstract and Sealed Classes and Class Members](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>
+<span data-ttu-id="656f9-114">Para obter mais exemplos, consulte [Classes e membros de classes abstratas e lacradas](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="656f9-114">For more examples, see [Abstract and Sealed Classes and Class Members](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="5975f-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5975f-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="656f9-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="656f9-115">Example</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#17)]
 
-<span data-ttu-id="5975f-116">No exemplo anterior, você pode tentar herdar da classe lacrada usando a instrução a seguir:</span><span class="sxs-lookup"><span data-stu-id="5975f-116">In the previous example, you might try to inherit from the sealed class by using the following statement:</span></span>
+<span data-ttu-id="656f9-116">No exemplo anterior, você pode tentar herdar da classe lacrada usando a instrução a seguir:</span><span class="sxs-lookup"><span data-stu-id="656f9-116">In the previous example, you might try to inherit from the sealed class by using the following statement:</span></span>
 
 `class MyDerivedC: SealedClass {}   // Error`
 
-<span data-ttu-id="5975f-117">O resultado é uma mensagem de erro:</span><span class="sxs-lookup"><span data-stu-id="5975f-117">The result is an error message:</span></span>
+<span data-ttu-id="656f9-117">O resultado é uma mensagem de erro:</span><span class="sxs-lookup"><span data-stu-id="656f9-117">The result is an error message:</span></span>
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="remarks"></a><span data-ttu-id="5975f-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="5975f-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="656f9-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="656f9-118">Remarks</span></span>
 
-<span data-ttu-id="5975f-119">Para determinar se deve lacrar uma classe, método ou propriedade, geralmente você deve considerar os dois pontos a seguir:</span><span class="sxs-lookup"><span data-stu-id="5975f-119">To determine whether to seal a class, method, or property, you should generally consider the following two points:</span></span>
+<span data-ttu-id="656f9-119">Para determinar se deve lacrar uma classe, método ou propriedade, geralmente você deve considerar os dois pontos a seguir:</span><span class="sxs-lookup"><span data-stu-id="656f9-119">To determine whether to seal a class, method, or property, you should generally consider the following two points:</span></span>
 
-- <span data-ttu-id="5975f-120">Os possíveis benefícios que as classes derivadas podem obter por meio da capacidade de personalizar a sua classe.</span><span class="sxs-lookup"><span data-stu-id="5975f-120">The potential benefits that deriving classes might gain through the ability to customize your class.</span></span>
+- <span data-ttu-id="656f9-120">Os possíveis benefícios que as classes derivadas podem obter por meio da capacidade de personalizar a sua classe.</span><span class="sxs-lookup"><span data-stu-id="656f9-120">The potential benefits that deriving classes might gain through the ability to customize your class.</span></span>
 
-- <span data-ttu-id="5975f-121">O potencial de as classes derivadas modificarem suas classes de forma que elas deixem de funcionar corretamente ou como esperado.</span><span class="sxs-lookup"><span data-stu-id="5975f-121">The potential that deriving classes could modify your classes in such a way that they would no longer work correctly or as expected.</span></span>
+- <span data-ttu-id="656f9-121">O potencial de as classes derivadas modificarem suas classes de forma que elas deixem de funcionar corretamente ou como esperado.</span><span class="sxs-lookup"><span data-stu-id="656f9-121">The potential that deriving classes could modify your classes in such a way that they would no longer work correctly or as expected.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="5975f-122">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="5975f-122">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="656f9-122">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="656f9-122">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5975f-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5975f-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="656f9-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="656f9-123">See also</span></span>
 
-- [<span data-ttu-id="5975f-124">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="5975f-124">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="5975f-125">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="5975f-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="5975f-126">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="5975f-126">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="5975f-127">Classes static e membros de classes static</span><span class="sxs-lookup"><span data-stu-id="5975f-127">Static Classes and Static Class Members</span></span>](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [<span data-ttu-id="5975f-128">Classes e membros de classes abstract e sealed</span><span class="sxs-lookup"><span data-stu-id="5975f-128">Abstract and Sealed Classes and Class Members</span></span>](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [<span data-ttu-id="5975f-129">Modificadores de acesso</span><span class="sxs-lookup"><span data-stu-id="5975f-129">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [<span data-ttu-id="5975f-130">Modificadores</span><span class="sxs-lookup"><span data-stu-id="5975f-130">Modifiers</span></span>](modifiers.md)
-- [<span data-ttu-id="5975f-131">override</span><span class="sxs-lookup"><span data-stu-id="5975f-131">override</span></span>](override.md)
-- [<span data-ttu-id="5975f-132">virtual</span><span class="sxs-lookup"><span data-stu-id="5975f-132">virtual</span></span>](virtual.md)
+- [<span data-ttu-id="656f9-124">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="656f9-124">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="656f9-125">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="656f9-125">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="656f9-126">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="656f9-126">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="656f9-127">Classes static e membros de classes static</span><span class="sxs-lookup"><span data-stu-id="656f9-127">Static Classes and Static Class Members</span></span>](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [<span data-ttu-id="656f9-128">Classes e membros de classes abstract e sealed</span><span class="sxs-lookup"><span data-stu-id="656f9-128">Abstract and Sealed Classes and Class Members</span></span>](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [<span data-ttu-id="656f9-129">Modificadores de acesso</span><span class="sxs-lookup"><span data-stu-id="656f9-129">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="656f9-130">Modificadores</span><span class="sxs-lookup"><span data-stu-id="656f9-130">Modifiers</span></span>](index.md)
+- [<span data-ttu-id="656f9-131">override</span><span class="sxs-lookup"><span data-stu-id="656f9-131">override</span></span>](override.md)
+- [<span data-ttu-id="656f9-132">virtual</span><span class="sxs-lookup"><span data-stu-id="656f9-132">virtual</span></span>](virtual.md)

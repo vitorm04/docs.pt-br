@@ -7,30 +7,30 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: 5f8218d0f369f25b1add501fdc975d6dccfe90fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: faa7a32766a3ea1ef9cddcdb8af8fd0dd5a6f287
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126143"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457815"
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a><span data-ttu-id="01c78-102">Mitigação: serialização de caracteres de controle com o DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="01c78-102">Mitigation: Serialization of Control Characters with the DataContractJsonSerializer</span></span>
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a><span data-ttu-id="46a27-102">Mitigação: serialização de caracteres de controle com o DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="46a27-102">Mitigation: Serialization of Control Characters with the DataContractJsonSerializer</span></span>
 
-<span data-ttu-id="01c78-103">A partir do .NET Framework 4.7, a maneira com a qual os caracteres de controle são serializados com o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> foi alterada para estar em conformidade com o ECMAScript V6 e V8.</span><span class="sxs-lookup"><span data-stu-id="01c78-103">Starting with the .NET Framework 4.7, the way in which control characters are serialized with the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> has changed to conform to ECMAScript V6 and V8.</span></span> 
+<span data-ttu-id="46a27-103">A partir do .NET Framework 4.7, a maneira com a qual os caracteres de controle são serializados com o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> foi alterada para estar em conformidade com o ECMAScript V6 e V8.</span><span class="sxs-lookup"><span data-stu-id="46a27-103">Starting with the .NET Framework 4.7, the way in which control characters are serialized with the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> has changed to conform to ECMAScript V6 and V8.</span></span> 
  
-## <a name="impact"></a><span data-ttu-id="01c78-104">Impacto</span><span class="sxs-lookup"><span data-stu-id="01c78-104">Impact</span></span>
+## <a name="impact"></a><span data-ttu-id="46a27-104">Impacto</span><span class="sxs-lookup"><span data-stu-id="46a27-104">Impact</span></span>
 
-<span data-ttu-id="01c78-105">No .NET framework 4.6.2 e nas versões anteriores, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> não serializava alguns caracteres de controle especiais, como `\b`, `\f` e `\t`, de uma forma compatível com os padrões ECMAScript V6 e V8.</span><span class="sxs-lookup"><span data-stu-id="01c78-105">In the .NET framework 4.6.2 and earlier versions, the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> did not serialize some special control characters, such as `\b`, `\f`, and `\t`, in a way that was compatible with the ECMAScript V6 and V8 standards.</span></span>
+<span data-ttu-id="46a27-105">No .NET framework 4.6.2 e nas versões anteriores, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> não serializava alguns caracteres de controle especiais, como `\b`, `\f` e `\t`, de uma forma compatível com os padrões ECMAScript V6 e V8.</span><span class="sxs-lookup"><span data-stu-id="46a27-105">In the .NET framework 4.6.2 and earlier versions, the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> did not serialize some special control characters, such as `\b`, `\f`, and `\t`, in a way that was compatible with the ECMAScript V6 and V8 standards.</span></span>
 
-<span data-ttu-id="01c78-106">Para aplicativos destinados a versões do .NET Framework, a partir do .NET Framework 4.7, a serialização desses caracteres de controle é compatível com o ECMAScript V6 e V8.</span><span class="sxs-lookup"><span data-stu-id="01c78-106">For apps that target versions of the .NET Framework starting with the .NET Framework 4.7, serialization of these control characters is compatible with ECMAScript V6 and V8.</span></span> <span data-ttu-id="01c78-107">As seguintes APIs são afetadas:</span><span class="sxs-lookup"><span data-stu-id="01c78-107">The following APIs are affected:</span></span>
+<span data-ttu-id="46a27-106">Para aplicativos destinados a versões do .NET Framework, a partir do .NET Framework 4.7, a serialização desses caracteres de controle é compatível com o ECMAScript V6 e V8.</span><span class="sxs-lookup"><span data-stu-id="46a27-106">For apps that target versions of the .NET Framework starting with the .NET Framework 4.7, serialization of these control characters is compatible with ECMAScript V6 and V8.</span></span> <span data-ttu-id="46a27-107">As seguintes APIs são afetadas:</span><span class="sxs-lookup"><span data-stu-id="46a27-107">The following APIs are affected:</span></span>
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
 
-## <a name="mitigation"></a><span data-ttu-id="01c78-108">Redução</span><span class="sxs-lookup"><span data-stu-id="01c78-108">Mitigation</span></span>
+## <a name="mitigation"></a><span data-ttu-id="46a27-108">Redução</span><span class="sxs-lookup"><span data-stu-id="46a27-108">Mitigation</span></span>
 
-<span data-ttu-id="01c78-109">Para aplicativos destinados a versões do .NET Framework, a partir do .NET Framework 4.7, esse comportamento é habilitado por padrão.</span><span class="sxs-lookup"><span data-stu-id="01c78-109">For apps that target versions of the .NET Framework starting with the .NET Framework 4.7, this behavior is enabled by default.</span></span>
+<span data-ttu-id="46a27-109">Para aplicativos destinados a versões do .NET Framework, a partir do .NET Framework 4.7, esse comportamento é habilitado por padrão.</span><span class="sxs-lookup"><span data-stu-id="46a27-109">For apps that target versions of the .NET Framework starting with the .NET Framework 4.7, this behavior is enabled by default.</span></span>
 
-<span data-ttu-id="01c78-110">Se esse comportamento não for desejado, você poderá recusar esse recurso adicionando a seguinte linha na seção `<runtime>` do arquivo app.config ou web.config:</span><span class="sxs-lookup"><span data-stu-id="01c78-110">If this behavior is not desirable, you can opt out of this feature by adding the following line to the `<runtime>` section of the app.config or web.config file:</span></span>
+<span data-ttu-id="46a27-110">Se esse comportamento não for desejado, você poderá recusar esse recurso adicionando a seguinte linha na seção `<runtime>` do arquivo app.config ou web.config:</span><span class="sxs-lookup"><span data-stu-id="46a27-110">If this behavior is not desirable, you can opt out of this feature by adding the following line to the `<runtime>` section of the app.config or web.config file:</span></span>
 
 ```xml
 <runtime>
@@ -38,6 +38,6 @@ ms.locfileid: "73126143"
 </runtime>
 ```
  
-## <a name="see-also"></a><span data-ttu-id="01c78-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="01c78-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46a27-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="46a27-111">See also</span></span>
 
-- [<span data-ttu-id="01c78-112">Alterações de redirecionamento no .NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="01c78-112">Retargeting Changes in the .NET Framework 4.7</span></span>](retargeting-changes-in-the-net-framework-4-7.md)
+- [<span data-ttu-id="46a27-112">Compatibilidade de aplicativos</span><span class="sxs-lookup"><span data-stu-id="46a27-112">Application compatibility</span></span>](application-compatibility.md)
